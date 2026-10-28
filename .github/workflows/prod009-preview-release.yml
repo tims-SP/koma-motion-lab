@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     env:
-      PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+      PROD_PRIVATE: /tmp/spine-rive-private
       PROD_REPORT: ${{ github.workspace }}/out/spine-rive
       PROD009_FPS: "24"
       PROD009_VIEWPORT: "960x540"
