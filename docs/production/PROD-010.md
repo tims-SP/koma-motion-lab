@@ -26,3 +26,14 @@ PROD-009 的 MP4 通过逐帧删除 Rive `Skin` 与 `Weight`，然后覆写 Mesh
 - **FULL_RIG_AND_ANIMATION_FIDELITY：FAIL / NOT_TESTED**。其他骨骼、所有动作的逐帧顶点保真、IK/Path/Transform、剪切、FFD、附件/绘制顺序、超四骨权重都尚未全部解决。
 
 媒体仅存在临时 Runner 或访问受限的 GitHub **Draft Releases**；Git 仓库仅保存源代码、工作流和此类纯文本 QA 数据。未向 `tims-SP/koma-motion` 本体仓库写入任何内容。
+
+## 交付后的独立二次验收
+
+- Draft Release（仅仓库所有者可见）：https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-5005837b96653619e0cc
+- 完整生成及上传 Run：https://github.com/tims-SP/koma-motion-lab/actions/runs/40787778633
+- 新 Runner 独立从 Release 重新下载并检测 Run：https://github.com/tims-SP/koma-motion-lab/actions/runs/40788038515
+- **验证级别仅为 `PASS_DRAFT_SETUP_PROOF_ONLY`**，不是成品动画通过。检查交付 ZIP 内：147 Bone、1 RootBone、51 Mesh、51 Skin、125 Tendon、843 ContourMeshVertex、843 Weight。
+- 独立读取交付 PNG 的实际像素，静止原生 Skin / 无 Skin 对照轮廓 IoU=1.0；旋转一根 Bone 后原生 Skin 的前景变化=0.2491435；移除 Skin 的同旋转控制组变化=0。
+- Release 包含原生/无 Skin 静止图、原生/无 Skin 骨骼扰动图、RML 工程压缩包、原始测量 JSON 和 `06-independent-release-recheck.json`。
+- **仍旧未通过：** 20 顶点存在超四骨影响截断，旧 Python Solver 与官方 Spine Runtime 世界顶点位置 RMS 偏差 8.97，IK/Transform/Path 等约束与多骨骼动作未保真，未输出可编辑完整 .riv 动画。
+- 自动检测在真正的 PNG 像素上执行，但没有由当前会话直接观看完整游戏角色图像的人工视觉验收；不能据此断言外观美观或动画合理。
