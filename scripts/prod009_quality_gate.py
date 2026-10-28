@@ -200,6 +200,28 @@ def main(folder: Path):
 
     info["action_samples"]=sample_report
     info["pose_samples"]=poses
+    # Emit only heavily downsampled *shape diagnostics* (no texture/pixel blobs)
+    # and numeric measurements to allow independent reviewer checks from CI logs.
+    # This is NOT a substitute for viewing the full-resolution video.
+    print("FRAME_SAMPLE_SUMMARY_BEGIN",flush=True)
+    for label, dataset in (("action", sample_report), ("pose", poses)):
+        for name, result in dataset.items():
+            print(label, name,
+                  "bbox_mid", result["sample_frames"][1]["bbox"],
+                  "foreground_mid",result["sample_frames"][1]["foreground_fraction"],
+                  "near_neutral_iou",result.get("pose_neutral_iou"),
+                  "motion_iou",result.get("motion_sample_iou",result.get("first_middle_iou")),
+                  flush=True)
+    print("FRAME_SAMPLE_SUMMARY_END",flush=True)
+    print("POSE_SILHOUETTES_COARSE_START",flush=True)
+    for idx, pose in enumerate(POSES):
+        middle=still_at(pose_video,idx*48+24)
+        mask=foreground_mask(middle).astype(np.uint8)*255
+        small=np.asarray(Image.fromarray(mask).resize((32,16),Image.Resampling.BOX))
+        print("POSE",pose,flush=True)
+        for row in small:
+            print("".join("#" if cell>=45 else "." for cell in row),flush=True)
+    print("POSE_SILHOUETTES_COARSE_END",flush=True)
     for name, result in {**sample_report,**poses}.items():
         sampled=result["sample_frames"]
         for frame in sampled:
