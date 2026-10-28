@@ -1,0 +1,41 @@
+name: PROD-010 - independent delivered Rive Skin proof audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/prod010-release-recheck.yml'
+      - 'scripts/prod010_release_audit.py'
+permissions:
+  contents: write
+jobs:
+  recheck-draft-assets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PROOF_TAG: prod010-rive-skin-proof-40787778633
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pixel test dependency
+        run: |
+          python3 -m venv "$RUNNER_TEMP/audit"
+          "$RUNNER_TEMP/audit/bin/pip" install --disable-pip-version-check "Pillow==11.3.0"
+          echo "$RUNNER_TEMP/audit/bin" >> "$GITHUB_PATH"
+      - name: Fetch actual private game-derived DRAFT Release files into ephemeral runner
+        run: |
+          mkdir -p "$RUNNER_TEMP/proof"
+          gh release download "$PROOF_TAG" --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/proof"
+      - name: Inspect contents of delivered RML and all four actual PNGs
+        run: |
+          python scripts/prod010_release_audit.py "$RUNNER_TEMP/proof" "$RUNNER_TEMP/report"
+      - name: Attach verified text-only QA to same DRAFT Release
+        if: always()
+        run: |
+          if test -s "$RUNNER_TEMP/report/06-independent-release-recheck.json"; then
+            gh release upload "$PROOF_TAG" "$RUNNER_TEMP/report/06-independent-release-recheck.json" \
+              --repo "$GITHUB_REPOSITORY" --clobber
+            cat "$RUNNER_TEMP/report/06-independent-release-recheck.json" >> "$GITHUB_STEP_SUMMARY"
+          else
+            exit 1
+          fi
