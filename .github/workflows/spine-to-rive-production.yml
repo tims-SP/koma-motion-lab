@@ -1,0 +1,81 @@
+name: PROD-002 — Real Spine to Rive Conversion + Video
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/spine-to-rive-production.yml'
+      - 'scripts/spine_conversion_probe.py'
+      - 'scripts/spine_to_rive_production.py'
+
+permissions:
+  contents: read
+
+jobs:
+  convert-and-render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout lab scripts
+        uses: actions/checkout@v4
+      - name: Install C++ toolchain, graphics, Python image processing, video encoder
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends cmake g++ git make ffmpeg python3-venv libegl1 libgles2 libx11-6 libgl1 libgbm1 libxkbcommon0 libx11-xcb1
+          python3 -m venv "$RUNNER_TEMP/spine-venv"
+          "$RUNNER_TEMP/spine-venv/bin/pip" install --disable-pip-version-check Pillow==11.3.0
+          mkdir -p out/spine-rive-production
+      - name: Install official Rive CLI
+        run: |
+          set -euo pipefail
+          curl --retry 3 --retry-all-errors -fsSL https://releases.rive.app/cli/install.sh -o "$RUNNER_TEMP/rive-install.sh"
+          bash "$RUNNER_TEMP/rive-install.sh"
+          echo "$HOME/.rive/bin" >> "$GITHUB_PATH"
+      - name: Build existing noncommercial Spine 3.5–4.2 binary reader
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth 1 --filter=blob:none --sparse https://github.com/wang606/SpineSkeletonDataConverter.git "$RUNNER_TEMP/spine-converter"
+          cd "$RUNNER_TEMP/spine-converter"
+          git sparse-checkout set CMakeLists.txt LICENSE src include spine
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release > "$GITHUB_WORKSPACE/out/spine-rive-production/cmake-config.log" 2>&1
+          cmake --build build --parallel 2 --target SpineSkeletonDataConverter > "$GITHUB_WORKSPACE/out/spine-rive-production/cmake-build.log" 2>&1
+          echo "SPINE_CONVERTER=$RUNNER_TEMP/spine-converter/build/SpineSkeletonDataConverter" >> "$GITHUB_ENV"
+          "$RUNNER_TEMP/spine-converter/build/SpineSkeletonDataConverter" --help | head -20 || true
+      - name: Convert original game skeletons to structured Spine JSON
+        run: |
+          "$RUNNER_TEMP/spine-venv/bin/python" scripts/spine_conversion_probe.py
+      - name: Read official Rive CLI animation syntax for converter
+        if: always()
+        run: |
+          rive docs animation > out/spine-rive-production/rive-animation-reference.log 2>&1 || true
+          rive docs rigging > out/spine-rive-production/rive-rigging-reference.log 2>&1 || true
+          head -120 out/spine-rive-production/rive-animation-reference.log
+      - name: Convert Spine scene/mesh/actions to RML and render verification MP4
+        if: success()
+        run: |
+          if test -f scripts/spine_to_rive_production.py; then
+            "$RUNNER_TEMP/spine-venv/bin/python" scripts/spine_to_rive_production.py
+          else
+            echo "PROD-002 spine-to-RML translation not yet installed" >> out/spine-rive-production/summary.md
+          fi
+      - name: Publish validation summary
+        if: always()
+        run: |
+          if test -f out/spine-rive-production/summary.md; then cat out/spine-rive-production/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+          if test -f out/spine-rive-production/conversion-scout.json; then
+            python3 -c "import json; d=json.load(open('out/spine-rive-production/conversion-scout.json')); print({k:v.get('version') for k,v in d['conversion'].items()})"
+          fi
+      - name: Upload sanitized conversion and render metrics only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spine-to-rive-prod-metadata-${{ github.run_number }}
+          path: |
+            out/spine-rive-production/conversion-scout.json
+            out/spine-rive-production/summary.md
+            out/spine-rive-production/render-metrics.json
+            out/spine-rive-production/rive-animation-reference.log
+          retention-days: 14
+          if-no-files-found: warn
