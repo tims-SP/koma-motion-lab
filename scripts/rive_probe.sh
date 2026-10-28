@@ -38,6 +38,8 @@ capture cli_schema_MeshVertex rive schema MeshVertex
 capture cli_schema_Weight rive schema Weight
 capture cli_schema_IKConstraint rive schema IKConstraint
 capture cli_samples_help rive samples --help
+capture cli_samples_list rive samples
+capture cli_samples_path rive samples --path
 capture cli_inspect_help rive inspect --help
 
 capture scaffold rive create arm_probe
