@@ -43,6 +43,14 @@ jobs:
           else
             echo 'Metadata probe failed before creating summary.' >> "$GITHUB_STEP_SUMMARY"
           fi
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if test -f out/uttu-browser/summary.md; then
+            cat out/uttu-browser/summary.md >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo '**Production readiness: BLOCKED unless a real model successfully loads.**' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Browser verification not completed.' >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Upload metadata evidence only
         if: always()
         uses: actions/upload-artifact@v4
