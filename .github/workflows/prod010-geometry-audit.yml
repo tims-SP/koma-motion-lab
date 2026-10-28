@@ -1,0 +1,51 @@
+name: PROD-010 - official Spine vs converted rig geometry
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/prod010-geometry-audit.yml'
+      - 'scripts/spine_official_geometry.mjs'
+      - 'scripts/spine_geometry_audit.py'
+permissions:
+  contents: read
+jobs:
+  spine-truth:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PROD_PRIVATE: /tmp/koma-spine-rive-reference
+      PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned official Spine 4.2 + source binary converter
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/rig-venv"
+          "$RUNNER_TEMP/rig-venv/bin/pip" install --disable-pip-version-check \
+            "git+https://github.com/BastienGimbert/SkelToJson.git" "Pillow==11.3.0"
+          echo "$RUNNER_TEMP/rig-venv/bin" >> "$GITHUB_PATH"
+          npm install --prefix "$RUNNER_TEMP/spinecore" --no-save --no-audit --no-fund "@esotericsoftware/spine-core@4.2.120"
+      - name: Fetch source real skeleton and atlas only to ephemeral runner
+        run: |
+          python scripts/spine_binary_conversion.py
+          curl -fsSL --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/roles/300401_hongnujian/300401_hongnujian.atlas \
+            -o "$PROD_PRIVATE/character.atlas"
+      - name: Evaluate source setup world vertices and actual attachment selection through official Spine runtime
+        env:
+          SPINE_CORE_ENTRY: ${{ runner.temp }}/spinecore/node_modules/@esotericsoftware/spine-core/dist/index.js
+        run: |
+          node scripts/spine_official_geometry.mjs \
+            "$PROD_PRIVATE/source_spine.json" "$PROD_PRIVATE/character.atlas" \
+            "$PROD_PRIVATE/spine-official-world-vertices.json"
+      - name: Compare Python converter against authoritative Spine mesh and UV truth
+        run: |
+          python scripts/spine_geometry_audit.py \
+            "$PROD_PRIVATE/source_spine.json" \
+            "$PROD_PRIVATE/character.atlas" \
+            "$PROD_PRIVATE/spine-official-world-vertices.json"
+      - name: Record strict failure
+        if: always()
+        run: |
+          echo "Spine UV, world vertex and source attachment completeness are enforced. A green Rive bake cannot override this gate." >> "$GITHUB_STEP_SUMMARY"
