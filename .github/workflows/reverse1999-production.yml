@@ -1,0 +1,65 @@
+name: PROD-001 — Reverse1999 Asset Intake
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/reverse1999-production.yml'
+      - 'scripts/production_reverse1999.py'
+
+permissions:
+  contents: read
+
+jobs:
+  reverse1999-real-assets-to-rive:
+    name: Real asset → atlas crop → Rive textured Mesh
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout tests only
+        uses: actions/checkout@v4
+
+      - name: Linux graphics libraries and Python dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libgles2 libx11-6 libgl1 libgbm1 libxkbcommon0 libx11-xcb1 python3-venv
+          python3 -m venv "$RUNNER_TEMP/rig-venv"
+          "$RUNNER_TEMP/rig-venv/bin/pip" install --disable-pip-version-check Pillow==11.3.0
+          mkdir -p out/reverse1999-evidence/logs
+
+      - name: Install Rive CLI on ephemeral runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --retry 3 --retry-all-errors -fsSL https://releases.rive.app/cli/install.sh -o "$RUNNER_TEMP/rive-install.sh"
+          sha256sum "$RUNNER_TEMP/rive-install.sh" > out/reverse1999-evidence/installer.sha256
+          bash "$RUNNER_TEMP/rive-install.sh"
+          echo "$HOME/.rive/bin" >> "$GITHUB_PATH"
+
+      - name: Real game asset intake and headless Rive adaptation
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$RUNNER_TEMP/rig-venv/bin/python" scripts/production_reverse1999.py
+
+      - name: Publish sanitized results only
+        if: always()
+        shell: bash
+        run: |
+          if test -f out/reverse1999-evidence/summary.md; then
+            cat out/reverse1999-evidence/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No report generated. Inspect preceding job steps." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload JSON metadata and CLI logs ONLY
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reverse1999-production-metadata-${{ github.run_number }}
+          path: out/reverse1999-evidence/
+          retention-days: 14
+          if-no-files-found: warn
