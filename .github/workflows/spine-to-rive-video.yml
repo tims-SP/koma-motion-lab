@@ -1,4 +1,4 @@
-name: PROD-002 · Spine to Rive video conversion
+name: PROD-002 · Spine to Rive video conversion and weighted mesh
 
 on:
   workflow_dispatch:
