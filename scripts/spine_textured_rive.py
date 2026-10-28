@@ -357,6 +357,8 @@ def render():
     duration=2.0;fps=12;count=24
     frames=ROOT/"textured-original-frames";frames.mkdir(exist_ok=True)
     hashes=[];sample_alpha=[]
+    basegroup=next(n for n in tree.getroot().iter("Node") if n.get("name")=="SpineRoot")
+    base_x=float(basegroup.get("x","0"));base_y=float(basegroup.get("y","0"))
     for i in range(count):
         t=i/(count-1)*duration
         for name,keys in tracks.items():
@@ -368,6 +370,11 @@ def render():
             group=next(n for n in tree.getroot().iter("Node") if n.get("name")=="SpineRoot")
             source_deg=frame_value(METRIC["_reference_track"],t)
             group.set("rotation",f"{math.radians(max(-25,min(25,source_deg*0.09))):.7g}")
+            # This motion is deliberately camera-level preview choreography,
+            # NOT a claim to have transferred the Spine skeletal animation.
+            group.set("x",f"{base_x+11*math.sin(2*math.pi*i/count):.7g}")
+            group.set("y",f"{base_y+5*math.cos(2*math.pi*i/count):.7g}")
+            METRIC["additional_camera_only_motion"]=True
         tree.write(project/"scene.rml",encoding="unicode")
         if i==0:
             run(["rive",str(project),"--verify"])
