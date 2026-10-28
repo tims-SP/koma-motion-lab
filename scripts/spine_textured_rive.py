@@ -15,6 +15,7 @@ from __future__ import annotations
 import base64,hashlib,json,math,os,struct,subprocess,sys,urllib.request,xml.etree.ElementTree as ET
 from pathlib import Path
 from PIL import Image
+from spine_atlas_uv import parse_atlas, convert_mesh_uvs
 
 ROOT=Path(os.environ.get("PROD_PRIVATE","/tmp/koma-spine-rive-private"))
 OUT=Path(os.environ.get("PROD_REPORT","out/spine-rive"))
@@ -161,6 +162,12 @@ def construct():
     (ROOT/"atlas.png").write_bytes(urllib.request.urlopen(SRC+"300401_hongnujian.png",timeout=90).read())
     with Image.open(ROOT/"atlas.png") as image:
         aw,ah=image.size
+    atlas_source=urllib.request.urlopen(SRC+"300401_hongnujian.atlas",timeout=90).read().decode("utf-8")
+    atlas_regions=parse_atlas(atlas_source)
+    expected_page="300401_hongnujian.png"
+    for region in atlas_regions.values():
+        if region.page_width!=aw or region.page_height!=ah:
+            raise ValueError("Atlas dimensions mismatch image PNG")
     METRIC["source_bones"]=len(bones)
     METRIC["source_slots"]=len(slots)
     METRIC["atlas_dimensions"]=[aw,ah]
@@ -209,6 +216,10 @@ def construct():
         b.get("transform","normal")!="normal" for b in bones)
     METRIC["bone_scale_transfer"]=True
     imported=[]; bounds=[]; weighted_count=0; translated_weights=0; lost=[]
+    atlas_rotation_counts={0:0,90:0,180:0,270:0}
+    atlas_uv_vertex_count=0
+    atlas_uv_changed_count=0
+    atlas_uv_max_diff=0.0
     for j,slot in enumerate(slots):
         sn=slot["name"]
         bn=slot.get("bone")
@@ -223,7 +234,15 @@ def construct():
         if geo is None:
             lost.append({"slot":sn,"reason":"unsupported vertex/tri encoding"})
             continue
-        # Original UV from Spine .skel points to the entire atlas, not to a crop.
+        # Spine Mesh UV is relative to a texture region, NOT the full atlas.
+        mapped_uv, region = convert_mesh_uvs(geo["uv"], atlas=atlas_regions,
+            attachment=attachment, attachment_name=target, expected_page=expected_page)
+        atlas_rotation_counts[region.degrees]+=1
+        atlas_uv_vertex_count+=len(mapped_uv)
+        for (raw_u,raw_v),(mapped_u,mapped_v) in zip(geo["uv"],mapped_uv):
+            diff=max(abs(raw_u-mapped_u),abs(raw_v-mapped_v))
+            atlas_uv_max_diff=max(atlas_uv_max_diff,diff)
+            if diff>1e-7:atlas_uv_changed_count+=1
         n=len(geo["vertex"])
         used={name for _,_,inf in geo["vertex"] for name,w in inf}
         if len(used)>130:
@@ -238,7 +257,7 @@ def construct():
         reversed_triangles=[j for i in range(0,len(src),3) for j in (src[i],src[i+2],src[i+1])]
         encoded=base64.b64encode(bytes(reversed_triangles)).decode()
         mesh=ET.SubElement(image,"Mesh",{"triangleIndexBytes":encoded,"id":"0:"+str(1500+j),"name":"sourceMesh"})
-        for i,((x,y,inf),(u,v)) in enumerate(zip(geo["vertex"],geo["uv"])):
+        for i,((x,y,inf),(u,v)) in enumerate(zip(geo["vertex"],mapped_uv)):
             vertex=ET.SubElement(mesh,"ContourMeshVertex",{"x":f"{x:.7g}","y":f"{y:.7g}",
                 "u":f"{u:.8g}","v":f"{v:.8g}","name":f"v{i}"})
             value,index=weightpack(inf,tendon_by_name)
@@ -259,6 +278,11 @@ def construct():
     if not bounds:raise ValueError("No original mesh convertible")
     METRIC.update({"mesh_attachments_transferred":len(imported),"skinned_mesh_attachments_transferred":weighted_count,
       "vertices_transferred":translated_weights,"source_mesh_slots_skipped":len(lost),
+       "atlas_region_count":len(atlas_regions),
+       "atlas_rotation_counts_by_mesh":atlas_rotation_counts,
+       "atlas_uv_mapped_vertices":atlas_uv_vertex_count,
+       "atlas_uv_changed_vertices":atlas_uv_changed_count,
+       "atlas_uv_max_change":round(atlas_uv_max_diff,7),
       "skipped_sample":lost[:6],"source_slot_details":imported[:30]})
     minx,maxx=min(x for x,y in bounds),max(x for x,y in bounds)
     miny,maxy=min(y for x,y in bounds),max(y for x,y in bounds)
@@ -295,7 +319,8 @@ def construct():
     METRIC["native_rive_bind_pose_tendons"]=assigned
     METRIC["native_rive_bind_pose_source"]="authored Rive Bone local hierarchy, not original Spine world matrix"
     METRIC["preserved"]=["source hierarchy for 85 bones","source animated rotation samples",
-      "source texture atlas","source mesh triangles and original UV arrays",
+      "source atlas with region UV transformations (including 90/180/270 + trim)",
+       "source mesh triangles and mapped atlas UV arrays",
       "source skin influence indices and normalized weights for selected mesh attachments","setup draw order for imported mesh slots"]
     return tree,project,bones,objects,doc,imported
 
