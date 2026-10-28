@@ -10,6 +10,7 @@ on:
       - 'scripts/spine_rive_renderer.py'
       - 'scripts/spine_full_skeleton_rive.py'
       - 'scripts/spine_textured_rive.py'
+      - 'scripts/spine_skin_diagnostics.py'
 
 permissions:
   contents: read
@@ -63,6 +64,12 @@ jobs:
           PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
           PROD_REPORT: ${{ github.workspace }}/out/spine-rive
         run: python scripts/spine_textured_rive.py
+      - name: Diagnose source skin binding using native Rive render variants
+        if: success()
+        env:
+          PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+          PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+        run: python scripts/spine_skin_diagnostics.py
       - name: Publish acceptance record
         if: always()
         run: |
@@ -75,6 +82,9 @@ jobs:
           fi
           if [ -f out/spine-rive/textured-transfer-summary.md ]; then
             cat out/spine-rive/textured-transfer-summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f out/spine-rive/skin-diagnostics.md ]; then
+            cat out/spine-rive/skin-diagnostics.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload metadata-only report
         if: always()
