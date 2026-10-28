@@ -6,7 +6,7 @@ Each variant runs inside ephemeral GitHub Actions. Safe JSON counts only.
 A visible skinned result is not fidelity proof.
 """
 from __future__ import annotations
-import copy,json,math,os,sys,xml.etree.ElementTree as ET
+import copy,json,math,os,sys,shutil,xml.etree.ElementTree as ET
 from pathlib import Path
 from PIL import Image
 import spine_textured_rive as src
@@ -50,7 +50,7 @@ def visible(path):
         corner=px[:4]
         return sum(px[i:i+4]!=corner for i in range(0,len(px),4))
 def main():
-    tree,project,bones,objects,doc,imported=src.construct()
+    # PROD-004 already built the same project path; rive create does not reset\n    # an existing RML scene. Start with a clean private scratch project.\n    shutil.rmtree(ROOT/"source-mesh-rive",ignore_errors=True)\n    tree,project,bones,objects,doc,imported=src.construct()
     template=copy.deepcopy(tree)
     variants=["original","original-no-scale","rive-local-pose","rive-local-pose-no-scale",
               "identity-tendons","zero-tendon-xy","one-source-mesh","one-source-mesh-rive-local",
@@ -103,7 +103,8 @@ def main():
     records=[(k,v["visible_pixels"]) for k,v in REPORT["probes"].items()
              if v.get("visible_pixels",0)>400]
     REPORT["skinned_visible_variants"]=records
-    REPORT["status"]="SKIN_RENDER_PRESENT" if any(k!="original" for k,p in records) else "STILL_BLOCKED"
+    REPORT["status"]=("INCONCLUSIVE_BUILD_ERROR" if all(v["status"]=="ERROR" for v in REPORT["probes"].values())
+        else "SKIN_RENDER_PRESENT" if records else "STILL_BLOCKED")
     (OUT/"skin-diagnostics.json").write_text(json.dumps(REPORT,indent=2,ensure_ascii=False)+"\n")
     (OUT/"skin-diagnostics.md").write_text("# Real Spine skinning diagnostics\n\n"+
         f"**{REPORT['status']}**\n\n"+
