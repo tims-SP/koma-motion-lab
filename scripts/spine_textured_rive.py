@@ -166,7 +166,7 @@ def construct():
                "length":str(max(.5,float(bone.get("length",0)))),
                "rotation":str(math.radians(ang)-bridge)}
         if not parent:props.update({"x":str(float(bone.get("x",0))),"y":str(float(bone.get("y",0)))})
-        objs[bone["name"]]=ET.SubElement(p,"Bone" if parent else "RootBone",props)
+        objects[bone["name"]]=ET.SubElement(p,"Bone" if parent else "RootBone",props)
         bone["_bridge"]=bridge
     METRIC["rive_bones"]=len(objects)
     imported=[]; bounds=[]; weighted_count=0; translated_weights=0; lost=[]
