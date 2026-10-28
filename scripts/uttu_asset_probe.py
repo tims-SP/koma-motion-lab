@@ -83,6 +83,8 @@ for path in PAGES:
         entry.update({k:v for k,v in r.items() if k != "body"})
         entry["html_bytes_inspected"] = len(r["body"])
         entry["first_party_js_count"] = len(p.scripts)
+        entry["script_hosts"] = dict(collections.Counter(parse.urlparse(parse.urljoin(url,s)).hostname for s in p.scripts))
+        entry["sample_script_paths"] = [parse.urlparse(parse.urljoin(url,s)).path for s in p.scripts[:5]]
         entry["contains_live2d_keyword"] = bool(re.search("live2d|cubism", text, re.I))
         entry["contains_spine_keyword"] = bool(re.search("spine", text, re.I))
         entry["file_extensions_mentioned"] = sorted(set(m.group(0).lower() for m in EXT.finditer(text)))
@@ -141,6 +143,7 @@ summary = ["# UTTU asset production compatibility probe", "",
            "| Page | HTTP | Text inspected | Live2D ref | Spine ref |", "|---|---:|---:|---|---|"]
 for e in report["pages"]:
     summary.append(f'| {e["page"]} | {e.get("status",e.get("error","ERROR"))} | {e.get("html_bytes_inspected",0)} | {e.get("contains_live2d_keyword",False)} | {e.get("contains_spine_keyword",False)} |')
+summary += ["", "## Script hosts", "", json.dumps([{"page":e["page"],"hosts":e.get("script_hosts",{}),"sample_paths":e.get("sample_script_paths",[])} for e in report["pages"]],ensure_ascii=False), "", "## Sampled JS", "", json.dumps(report["script_samples"],ensure_ascii=False)]
 summary += ["", "## Format markers", "", json.dumps(report["format_evidence"], ensure_ascii=False),
             "", "## Conclusions", "",
             "- Official Rive importer compatibility has **not** been established.",
