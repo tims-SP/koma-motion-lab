@@ -59,8 +59,14 @@ def main():
         if parent_name:
             x-=float(indexed[parent_name].get("length",0))
         length=max(1.,abs(float(b.get("length",1))))
-        attr={"id":f"0:{200+n}","name":b["name"],"x":f"{x:.5f}","y":f"{y:.5f}",
+        if parent_name:
+            # Rive Bone has rotation/length but no authored x/y. Introduce a
+            # translated Node and keep the Bone under that container.
+            p=ET.SubElement(p,"Node",{"name":f"Offset_{n}","x":f"{x:.5f}","y":f"{y:.5f}"})
+        attr={"id":f"0:{200+n}","name":b["name"],
               "length":f"{length:.5f}","rotation":str(math.radians(float(b.get("rotation",0))))}
+        if not parent_name:
+            attr.update({"x":f"{x:.5f}","y":f"{y:.5f}"})
         obj=ET.SubElement(p,native,attr)
         objs[b["name"]]=obj
         if float(b.get("length",0))>12:
