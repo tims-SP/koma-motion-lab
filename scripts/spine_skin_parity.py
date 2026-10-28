@@ -52,6 +52,16 @@ def main():
     REPORT["min_mask_iou"]=min(x["mask_iou"] for x in REPORT["samples"])
     REPORT["median_mask_iou"]=statistics.median(x["mask_iou"] for x in REPORT["samples"])
     REPORT["median_pixel_difference"]=statistics.median(x["foreground_changed_fraction"] for x in REPORT["samples"])
+    # A green build is not proof that the animation is production-ready.
+    # Conservative internal reference thresholds; true Spine-runtime parity
+    # needs a separate independent source-runtime render.
+    REPORT["internal_reference_threshold"]={"median_mask_iou_min":0.75,
+        "median_changed_foreground_max":0.25}
+    REPORT["production_fidelity_gate"]=(
+        "PASS_INTERNAL_REFERENCE_ONLY" if
+        REPORT["median_mask_iou"]>=0.75 and REPORT["median_pixel_difference"]<=0.25
+        else "FAIL_LOW_PARITY")
+    REPORT["source_runtime_parity"]="NOT_TESTED"
     REPORT["status"]="MEASURED"
 def finish():
     OUT.mkdir(parents=True,exist_ok=True)
@@ -62,7 +72,7 @@ def finish():
         "|---:|---:|---:|---:|---:|"]
     for x in REPORT["samples"]:
         lines.append(f"| {x['frame']} | {x['source_native_visible']} | {x['baked_visible']} | {x['mask_iou']:.3f} | {x['foreground_changed_fraction']:.3f} |")
-    lines+=["",f"Median mask IoU: {REPORT.get('median_mask_iou','N/A')}",
+    lines+=["",f"Production fidelity gate: **{REPORT.get('production_fidelity_gate','N/A')}**",f"Median mask IoU: {REPORT.get('median_mask_iou','N/A')}",
             f"Median changed foreground fraction: {REPORT.get('median_pixel_difference','N/A')}",
             "","Source-runtime frame parity is still NOT established.",
             "Original source/derived game artwork remains in temporary runner storage only.",
