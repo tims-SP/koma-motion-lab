@@ -77,9 +77,9 @@ def main():
         report["binary_sha256"]=hashlib.sha256(src.read_bytes()).hexdigest()
         print("Binary sample size",src.stat().st_size,"header",report["binary_header_hex"],flush=True)
         out=ROOT/"source_spine.json"
-        converter=["skel_to_json",str(src),"-o",str(out),"--format","3.8"]
+        converter=["skel-to-json",str(src),"-o",str(out)]
         r=subprocess.run(converter,capture_output=True,text=True,timeout=90)
-        report["conversion_tools"].append({"name":"AyalaKaguya/skel_to_json",
+        report["conversion_tools"].append({"name":"BastienGimbert/SkelToJson (Spine 4.2)",
           "returncode":r.returncode,"output_exists":out.exists(),
           "detail":(r.stdout+r.stderr)[-2200:]})
         if r.returncode!=0 or not out.exists() or out.stat().st_size<100:
