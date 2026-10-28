@@ -1,0 +1,68 @@
+name: PROD-009 - audit actual Release videos
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/prod009-audit-release.yml'
+      - 'scripts/prod009_quality_gate.py'
+permissions:
+  contents: write
+jobs:
+  independent-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PROD009_RELEASE_TAG: prod009-preview-40778781058
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout scripts (no binary assets)
+        uses: actions/checkout@v4
+      - name: Install image + video auditing dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg python3-venv
+          python3 -m venv "$RUNNER_TEMP/audit-venv"
+          "$RUNNER_TEMP/audit-venv/bin/pip" install "Pillow==11.3.0" "numpy==2.2.6"
+          echo "$RUNNER_TEMP/audit-venv/bin" >> "$GITHUB_PATH"
+      - name: Download verified existing DRAFT Release into ephemeral runner
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/prod009-release"
+          gh release download "$PROD009_RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --dir "$RUNNER_TEMP/prod009-release" \
+            --pattern '01-*.mp4' \
+            --pattern '02-*.mp4' \
+            --pattern '03-*.png' \
+            --pattern '04-*.json' \
+            --pattern 'rive-native-rig-scaffold.zip'
+          find "$RUNNER_TEMP/prod009-release" -maxdepth 1 -type f -printf '%f %s bytes\n'
+      - name: Sample 36 real frames and audit RML scaffold
+        run: |
+          set -euo pipefail
+          python scripts/prod009_quality_gate.py "$RUNNER_TEMP/prod009-release" "$RUNNER_TEMP/prod009-audit"
+      - name: Attach independent text QA results to same DRAFT Release
+        if: always()
+        run: |
+          set -euo pipefail
+          if test -s "$RUNNER_TEMP/prod009-audit/05-prod009-independent-audit.json"; then
+            gh release upload "$PROD009_RELEASE_TAG" \
+              "$RUNNER_TEMP/prod009-audit/05-prod009-independent-audit.json" \
+              "$RUNNER_TEMP/prod009-audit/05-prod009-independent-audit.md" \
+              --repo "$GITHUB_REPOSITORY" --clobber
+            cat "$RUNNER_TEMP/prod009-audit/05-prod009-independent-audit.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Audit did not produce metadata; asset must not pass review" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - name: Enforce production quality gate (NOT the media upload gate)
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"prod009-audit/05-prod009-independent-audit.json"
+          obj=json.loads(p.read_text())
+          print("PRODUCTION_QUALITY_GATE:",obj["production_gate"],"status:",obj["status"])
+          if obj["production_gate"]!="PASS": raise SystemExit("QUALITY_GATE_REJECTED: see Draft Release audit JSON/MD")
+          PY
