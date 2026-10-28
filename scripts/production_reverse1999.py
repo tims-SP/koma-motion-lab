@@ -174,7 +174,14 @@ def real_image_rive_mesh(face: Path) -> dict:
         result["rendered"] = rendered.exists()
         if result["rendered"]:
             with Image.open(rendered) as rendered_image:
-                result["rgba_sha256"] = hashlib.sha256(rendered_image.convert("RGBA").tobytes()).hexdigest()
+                rgba = rendered_image.convert("RGBA")
+                data = rgba.tobytes()
+                result["rgba_sha256"] = hashlib.sha256(data).hexdigest()
+                corner = data[:4]
+                result["non_background_pixels"] = sum(
+                    data[i:i+4] != corner for i in range(0, len(data), 4)
+                )
+                result["size"] = list(rgba.size)
         results[str(angle)] = result
     return results
 
@@ -254,6 +261,10 @@ def main() -> int:
             for p in poses.values())
         report["checks"]["rive_pose_images_differ"] = len({
             p.get("rgba_sha256") for p in poses.values()}) == len(poses)
+        report["checks"]["rive_rasters_contain_actual_subject"] = all(
+            p.get("non_background_pixels", 0) > 100 for p in poses.values())
+        report["reuse"]["rive_pose_non_background_pixels"] = {
+            angle: p.get("non_background_pixels", 0) for angle, p in poses.items()}
 
         # Do not export Rive scene files, source images, source skeletons,
         # textures or their derived screenshots from this public repo.
@@ -268,6 +279,7 @@ def main() -> int:
             "live2d_model3_valid", "cubism_core_binary_present",
             "spine_atlas_target_region_found", "spine_binary_files_present",
             "spine_atlas_crop", "rive_coded_mesh_renders", "rive_pose_images_differ",
+            "rive_rasters_contain_actual_subject",
         ]
         report["pass"] = all(report["checks"].get(x) for x in required)
     except Exception as exc:
