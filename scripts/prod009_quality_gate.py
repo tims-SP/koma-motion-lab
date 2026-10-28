@@ -72,7 +72,7 @@ def visual_metrics(image: Image.Image):
     denominator = (mask.shape[0]-70)*mask.shape[1]
     if area:
         bbox = [int(x.min()), int(y.min()), int(x.max()), int(y.max())]
-        clip_edges = bool(x.min() <= 4 or y.min() <= 73 or
+        clip_edges = bool(x.min() <= 4 or
                           x.max() >= mask.shape[1]-5 or y.max() >= mask.shape[0]-5)
     else:
         bbox = None
@@ -225,16 +225,17 @@ def main(folder: Path):
     for name, result in {**sample_report,**poses}.items():
         sampled=result["sample_frames"]
         for frame in sampled:
-            if frame["foreground_fraction"] < .004:
-                findings.append("BLANK_OR_TINY_CHARACTER:"+name)
+            if frame["foreground_fraction"] < .02:
+                findings.append("CHARACTER_MOSTLY_MISSING:"+name)
                 break
             if frame["foreground_fraction"] > .80:
                 findings.append("WHOLE_FRAME_FOREGROUND:"+name)
                 break
             if frame["edge_touching"]:
-                warnings.append("POTENTIAL_CLIPPING:"+name)
+                findings.append("CHARACTER_CROPPED_AT_VIEWPORT:"+name)
                 break
 
+    warnings.append("Top-edge cropping is not assessed: title overlay masks the top 70px of frames.")
     warnings.append("Automated pixel sampling cannot establish anatomical plausibility or visual quality.")
     warnings.append("PROD-009 pose generation lacks IK, contact and pose-specific re-art; visual review remains NOT_TESTED.")
     warnings.append("No direct comparison against authoritative Spine Runtime frames.")
