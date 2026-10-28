@@ -31,6 +31,9 @@ capture cli_schema_weight rive schema --search weight
 capture cli_schema_ik rive schema --search ik
 # Capture the actual 1.8.0 rigging model, not inferred legacy editor syntax.
 capture cli_docs_rigging_full rive docs rigging
+printf "\n=== RML RIGGING FULL REFERENCE ===\n"
+sed -n "35,245p" "$EVIDENCE_DIR/logs/cli_docs_rigging_full.log"
+
 capture cli_schema_RootBone rive schema RootBone
 capture cli_schema_Bone rive schema Bone
 capture cli_schema_Mesh rive schema Mesh
