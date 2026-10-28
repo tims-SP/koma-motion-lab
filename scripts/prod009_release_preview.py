@@ -116,6 +116,57 @@ def experimental_pose(bones, name: str, frame: int, count: int, roles):
         bone["rotation"] = float(bone.get("rotation", 0)) + rotation * weight
     return result, changed
 
+def group_camera(tree):
+    group = next((item for item in tree.getroot().iter("Node")
+                  if item.get("name") == "SpineRoot"), None)
+    if group is None:
+        raise RuntimeError("Authored Rive SpineRoot Node missing")
+    return group
+
+def camera_values(group):
+    return tuple(float(group.get(name, default)) for name, default in (
+        ("x", 0), ("y", 0), ("scaleX", 1)))
+
+def apply_camera(group, camera):
+    x, y, scale = camera
+    group.set("x", f"{x:.8g}")
+    group.set("y", f"{y:.8g}")
+    group.set("scaleX", f"{scale:.8g}")
+    group.set("scaleY", f"{-scale:.8g}")
+
+def track_camera_for_pose(bones, active, peak_bones, original_scale):
+    """Fit the same weighted vertex geometry that is sent to Rive.
+
+    This is only camera framing; it does not repair a malformed skeletal pose.
+    Uses trimmed 3-97 percentile bounds to limit influence of isolated FX mesh.
+    """
+    world = src.world_transform(peak_bones)
+    xs, ys = [], []
+    for information in active.values():
+        geometry = src.parse_attachment(information["attachment"],
+                                        peak_bones, world, information["bone"])
+        if geometry is None:
+            continue
+        for x, y, _ in geometry["vertex"]:
+            if math.isfinite(x) and math.isfinite(y):
+                xs.append(x)
+                ys.append(y)
+    if len(xs) < 3:
+        raise RuntimeError("Cannot frame Rive pose without deformed vertices")
+    xs.sort()
+    ys.sort()
+    def quantile(values, fraction):
+        return values[min(len(values)-1, max(0, int((len(values)-1)*fraction)))]
+    lx, hx = quantile(xs, .03), quantile(xs, .97)
+    ly, hy = quantile(ys, .03), quantile(ys, .97)
+    center_x, center_y = (lx+hx)/2, (ly+hy)/2
+    scale=min(original_scale, 520/max(25,hx-lx), 290/max(25,hy-ly))
+    return (320-center_x*scale, 180+center_y*scale, scale)
+
+def lerp_camera(start, end, strength):
+    return tuple(a+(b-a)*strength for a,b in zip(start,end))
+
+
 def render_frame(tree, project, bones, active, posed, path, label):
     world = src.world_transform(posed)
     moved = 0
@@ -238,11 +289,17 @@ def process():
     views = []
     cursor = 0
     frame_per_pose = FPS * 2
+    camera_group = group_camera(tree)
+    base_camera = camera_values(camera_group)
     for pose in POSE_ORDER:
         hashes, selected = [], set()
         middle_frame = None
+        peak, _ = experimental_pose(bones, pose, frame_per_pose//2, frame_per_pose, roles)
+        target_camera = track_camera_for_pose(bones, active, peak, base_camera[2])
         for frame in range(frame_per_pose):
             posed, used = experimental_pose(bones, pose, frame, frame_per_pose, roles)
+            apply_camera(camera_group, lerp_camera(
+                base_camera, target_camera, pose_amplitude(frame, frame_per_pose)))
             selected.update(used)
             image_path = per_pose / f"{cursor:05d}.png"
             digest, _ = render_frame(tree, project, bones, active, posed, image_path,
@@ -256,6 +313,8 @@ def process():
             "status": "RENDERED_EXPERIMENTAL",
             "frames": frame_per_pose,
             "duration": frame_per_pose / FPS,
+            "pose_camera_target": [round(v, 5) for v in target_camera],
+            "camera_tracks_pose": True,
             "roles_modified": sorted(selected),
             "unique_frames": len(set(hashes)),
             "limitations": ["no IK, Path or source runtime equivalence",
