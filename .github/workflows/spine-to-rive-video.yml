@@ -9,6 +9,7 @@ on:
       - 'scripts/spine_binary_conversion.py'
       - 'scripts/spine_rive_renderer.py'
       - 'scripts/spine_full_skeleton_rive.py'
+      - 'scripts/spine_textured_rive.py'
 
 permissions:
   contents: read
@@ -56,6 +57,12 @@ jobs:
           PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
           PROD_REPORT: ${{ github.workspace }}/out/spine-rive
         run: python scripts/spine_full_skeleton_rive.py
+      - name: Convert original weighted mesh UV skin and render actual character clip
+        if: success()
+        env:
+          PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+          PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+        run: python scripts/spine_textured_rive.py
       - name: Publish acceptance record
         if: always()
         run: |
@@ -65,6 +72,9 @@ jobs:
           fi
           if [ -f out/spine-rive/full-skeleton-summary.md ]; then
             cat out/spine-rive/full-skeleton-summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f out/spine-rive/textured-transfer-summary.md ]; then
+            cat out/spine-rive/textured-transfer-summary.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload metadata-only report
         if: always()
