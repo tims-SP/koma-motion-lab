@@ -126,6 +126,10 @@ def setup_scene():
     shutil.rmtree(ROOT/"source-mesh-rive",ignore_errors=True)
     tree,project,bones,objects,doc,imported=src.construct()
     root=tree.getroot()
+    # Preserve the unmodified, native Bone/Mesh/Skin RML before this
+    # per-frame bake removes the native Skin and Weight elements.
+    # PROD-009 packages this saved original RML, not the rive-create blank template.
+    tree.write(ROOT/"spine-native-rig-scaffold.rml",encoding="unicode")
     skins=doc.get("skins",[])
     entries=skins[0].get("attachments",{}) if isinstance(skins,list) else skins.get("default",{})
     slots={x["name"]:x for x in doc["slots"]}
