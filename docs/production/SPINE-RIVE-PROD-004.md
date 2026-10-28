@@ -44,9 +44,30 @@ This route is a deterministic fallback, **not** a reusable native Rive rig.
 - At frame 0: 80,054 non-background pixels native vs 61,840 baked (mask IoU 0.345).
 - Across nine frames mask IoU ranged from 0.083 to 0.464.
 
-**Result: FAIL_LOW_PARITY for production fidelity.** Import/render success is valid but not yet suitable for claiming source character animation preservation. Even the baked branch is only an approximation to the Spine runtime since constraints, shear/inherit handling and FFD may differ. Full source runtime side-by-side remains necessary.
+**Historical #28 result (superseded after transferring bone scales): FAIL_LOW_PARITY.** Import/render success is valid but not yet suitable for claiming source character animation preservation. Even the baked branch is only an approximation to the Spine runtime since constraints, shear/inherit handling and FFD may differ. Full source runtime side-by-side remains necessary.
 
 A programmatic fidelity gate has been added with intentionally conservative internal targets: median silhouette IoU ≥ 0.75 and differing foreground fraction ≤ 0.25. Passing those internal targets will still **not** prove true source-runtime parity.
+
+## PROD-008 — Bone scale transfer closes the internal parity gap
+
+[Workflow #30](https://github.com/tims-SP/koma-motion-lab/actions/runs/40772860346), 2026-10-28 UTC / 2026-10-29 JST, **SUCCESS**.
+
+The missing source `Bone.scaleX/scaleY` values were transferred to the native Rive bone components. The Rive-local tendon bind-pose computation was updated to include scale; the `idle_room` action once again uses the original rotation samples, without injecting camera-only motion.
+
+Nine frame comparisons of native Rive Skin vs independently source-weight-baked Rive Mesh:
+
+| Metric | Historical #28 | Improved #30 |
+| --- | ---: | ---: |
+| Median foreground mask IoU | 0.30099 | **0.99185** |
+| Median changed foreground pixels | 0.90588 | **0.13463** |
+| Setup frame mask IoU | 0.345 | **0.996** |
+| 24 native Rive frames distinct | PASS | PASS |
+| Native `Skin/Tendon/Weight` enabled | PASS | PASS |
+| FFmpeg original-art MP4 generated on private runner | PASS | PASS |
+
+The internal gated comparison reports `PASS_INTERNAL_REFERENCE_ONLY`. **It is not a measurement against official Spine Runtime**, so cannot certify complete playback fidelity. The sampled reference is computed by our own Spine vertex bake and may share omissions (constraint solving, FFD, shear/inheritance modes, draw-order changes, curve interpolation).
+
+Remaining production hard gates: independently compare against source Spine runtime, preserve the full supported source timeline semantics, visually inspect representative motion and increase the final output resolution/frame rate.
 
 ## Production readiness
 
