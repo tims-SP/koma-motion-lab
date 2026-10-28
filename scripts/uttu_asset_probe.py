@@ -21,7 +21,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 UA = "KomaMotionLab-CompatibilityProbe/0.1 (single-sample format metadata; GitHub Actions)"
 MAX_HTML = 400_000
 MAX_SCRIPT = 350_000
-MAX_SCRIPTS = 8
+MAX_SCRIPTS = 16
 TIMEOUT = 18
 EXT = re.compile(r"(?i)(?:\\.moc3|\\.model3\\.json|\\.physics3\\.json|\\.motion3\\.json|\\.exp3\\.json|\\.cmo3|\\.can3|\\.skel|\\.atlas(?:\\.txt)?|\\.riv|\\.psd)")
 FINDINGS = re.compile(r"(?i)(?:cubism|live2d|spine|model3|moc3|atlas|skel|rive|assets/|asseturl|resourceurl|cdn)")
@@ -84,7 +84,7 @@ for path in PAGES:
         entry["html_bytes_inspected"] = len(r["body"])
         entry["first_party_js_count"] = len(p.scripts)
         entry["script_hosts"] = dict(collections.Counter(parse.urlparse(parse.urljoin(url,s)).hostname for s in p.scripts))
-        entry["sample_script_paths"] = [parse.urlparse(parse.urljoin(url,s)).path for s in p.scripts[:5]]
+        entry["sample_script_paths"] = [parse.urlparse(parse.urljoin(url,s)).path for s in p.scripts if parse.urlparse(parse.urljoin(url,s)).hostname == parse.urlparse(BASE).hostname][:25]
         entry["contains_live2d_keyword"] = bool(re.search("live2d|cubism", text, re.I))
         entry["contains_spine_keyword"] = bool(re.search("spine", text, re.I))
         entry["file_extensions_mentioned"] = sorted(set(m.group(0).lower() for m in EXT.finditer(text)))
@@ -99,6 +99,11 @@ for path in PAGES:
     report["pages"].append(entry)
 
 seen = set()
+# Favor player-related Astro chunks over generic navigation and analytics.
+all_scripts = sorted(all_scripts, key=lambda u: (
+    0 if re.search(r'live2d|spine|sandbox|viewer|model|profile|npc|character|renderer', u, re.I) else 1,
+    u
+))
 for url in all_scripts:
     if len(report["script_samples"]) >= MAX_SCRIPTS:
         break
