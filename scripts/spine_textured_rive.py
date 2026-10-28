@@ -213,7 +213,7 @@ def construct():
                 "tx":f"{tx:.7g}","ty":f"{ty:.7g}",
                 "xx":f"{a:.7g}","xy":f"{b:.7g}","yx":f"{c:.7g}","yy":f"{d:.7g}",
                 "name":name})
-        imported.append({"slot":sn,"attachment":target,"vertices":n,
+        imported.append({"slot":sn,"bone":bn,"attachment":target,"vertices":n,
                          "triangles":len(geo["triangles"])//3,
                          "tendons":len(used),"weighted":geo["weighted"]})
         if geo["weighted"]:weighted_count+=1
@@ -286,7 +286,47 @@ def render():
     tree.write(project/"scene.rml",encoding="unicode")
     print("Rive draw diagnosis:",json.dumps(METRIC["diagnostics"]),flush=True)
     if METRIC["diagnostics"]["original"].get("pixels",0)<100:
-        raise ValueError("Skinned Rive scene blank; see draw diagnostics")
+        if METRIC["diagnostics"]["unskinned"].get("pixels",0)<100:
+            raise ValueError("Source atlas and unskinned Mesh renderer cannot draw")
+        # Preserve genuine source mesh topology and UVs, but use the source
+        # slot-bone for rigid attachment. Original weighted skin is NOT active.
+        # This is a fallback for a watchable partial character video only.
+        scene_group=next(n for n in tree.getroot().iter("Node") if n.get("name")=="SpineRoot")
+        rest_world=world_transform(bones)
+        rigid=0
+        for item in imported:
+            name="src_"+item["slot"]
+            image=next((n for n in list(scene_group) if n.tag=="Image" and n.get("name")==name),None)
+            if image is None:continue
+            bone_name=item["bone"]
+            bone_node=objects.get(bone_name)
+            if bone_node is None:continue
+            a,b,c,d,tx,ty=rest_world[bone_name]
+            determinant=a*d-b*c
+            if abs(determinant)<1e-8:continue
+            mesh=next(n for n in image if n.tag=="Mesh")
+            for vert in mesh.findall("ContourMeshVertex"):
+                x=float(vert.get("x"))-tx;y=float(vert.get("y"))-ty
+                vert.set("x",f"{(d*x-c*y)/determinant:.7g}")
+                vert.set("y",f"{(-b*x+a*y)/determinant:.7g}")
+                for weight in list(vert.findall("Weight")):vert.remove(weight)
+            for skin in list(mesh.findall("Skin")):mesh.remove(skin)
+            scene_group.remove(image)
+            bone_node.append(image)
+            rigid+=1
+        METRIC["mesh_skinning_status"]="FAIL; original Tendon/Weight binding renders transparent"
+        METRIC["fallback"]="rigid source slot-bone attachments, original mesh UV retained; vertex skinning not active"
+        METRIC["rigid_attachments"]=rigid
+        METRIC["preserved"]=[x for x in METRIC["preserved"] if not x.startswith("source skin influence")]
+        tree.write(project/"scene.rml",encoding="unicode")
+        rigid_file=ROOT/"rigid-pose-diagnostic.png"
+        run(["rive",str(project),f"--screenshot={rigid_file}","--viewport=640x360","--advance=0s"])
+        METRIC["rigid_probe_visible_pixels"]=visible(rigid_file)
+        print("Rive rigid fallback pixels",METRIC["rigid_probe_visible_pixels"],flush=True)
+        if METRIC["rigid_probe_visible_pixels"]<100:
+            raise ValueError("Rigid attached mesh also invisible; source skin conversion blocked")
+    else:
+        METRIC["mesh_skinning_status"]="PASS"
     duration=2.0;fps=12;count=24
     frames=ROOT/"textured-original-frames";frames.mkdir(exist_ok=True)
     hashes=[];sample_alpha=[]
@@ -323,7 +363,7 @@ def render():
         str(frames/"%04d.png"),"-c:v","libx264","-pix_fmt","yuv420p",str(dest)])
     METRIC["private_video_bytes"]=dest.stat().st_size
     METRIC["private_video_sha256"]=hashlib.sha256(dest.read_bytes()).hexdigest()
-    METRIC["status"]="PASS_SUBSET"
+    METRIC["status"]="PASS_RIGID_FALLBACK" if METRIC.get("fallback") else "PASS_SUBSET"
     METRIC["source_art_publicly_uploaded"]=False
 
 def finish():
@@ -350,4 +390,4 @@ if __name__=="__main__":
     except Exception as e:
         METRIC["status"]="FAIL";METRIC["error"]=repr(e)
     finish()
-    if METRIC["status"]!="PASS_SUBSET":sys.exit(1)
+    if METRIC["status"] not in ("PASS_SUBSET","PASS_RIGID_FALLBACK"):sys.exit(1)
