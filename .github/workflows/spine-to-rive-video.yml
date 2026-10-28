@@ -13,6 +13,7 @@ on:
       - 'scripts/spine_skin_diagnostics.py'
       - 'scripts/spine_baked_mesh_motion.py'
       - 'scripts/spine_skin_parity.py'
+      - 'scripts/spine_multitrack_bake.py'
 
 permissions:
   contents: read
@@ -84,6 +85,12 @@ jobs:
           PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
           PROD_REPORT: ${{ github.workspace }}/out/spine-rive
         run: python scripts/spine_skin_parity.py
+      - name: PROD-008 — Bake multiple original Spine motion channels in Rive
+        if: success()
+        env:
+          PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+          PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+        run: python scripts/spine_multitrack_bake.py
       - name: Publish acceptance record
         if: always()
         run: |
@@ -105,6 +112,9 @@ jobs:
           fi
           if [ -f out/spine-rive/skin-vs-bake-parity.md ]; then
             cat out/spine-rive/skin-vs-bake-parity.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f out/spine-rive/multichannel-summary.md ]; then
+            cat out/spine-rive/multichannel-summary.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload metadata-only report
         if: always()
