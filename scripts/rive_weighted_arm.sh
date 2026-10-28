@@ -11,39 +11,41 @@ cd "$OUT/weighted-arm"
 
 python3 - <<'PY'
 from pathlib import Path
-from html import escape
-for degrees in (0, 45, 90, 135):
+import math, subprocess, xml.etree.ElementTree as ET
+
+for degrees in (0,45,90,135):
     project=Path(f'arm_{degrees:03d}')
-    project.mkdir(parents=True,exist_ok=True)
-    (project/'rive.yaml').write_text(f'name: arm_{degrees:03d}\n')
-    import math
-    r=math.radians(degrees)
-    # Node groups skeleton and skinned path under the same local transform.
-    # Weight value 32640/indices 513 is a 128:127 blend per official Rive rigging docs.
-    xml=f'''<Artboard width="480" height="320" name="WeightedArm">
-  <Node x="125" y="130" name="RigLocal">
-    <RootBone x="0" y="0" length="85" rotation="0" name="UpperArm" id="0:40">
-      <Bone length="85" rotation="{r:.8f}" name="Forearm" id="0:41"/>
-    </RootBone>
-    <Shape name="Arm" id="0:50">
-      <PointsPath name="Path" id="0:51">
-        <StraightVertex x="0" y="-18"><Weight values="255" indices="1"/></StraightVertex>
-        <StraightVertex x="85" y="-18"><Weight values="32640" indices="513"/></StraightVertex>
-        <StraightVertex x="170" y="-14"><Weight values="255" indices="2"/></StraightVertex>
-        <StraightVertex x="170" y="14"><Weight values="255" indices="2"/></StraightVertex>
-        <StraightVertex x="85" y="18"><Weight values="32640" indices="513"/></StraightVertex>
-        <StraightVertex x="0" y="18"><Weight values="255" indices="1"/></StraightVertex>
-        <Skin tx="0" ty="0" name="Skin">
-          <Tendon boneId="0:40" tx="0" ty="0" name="Upper"/>
-          <Tendon boneId="0:41" tx="85" ty="0" name="Fore"/>
-        </Skin>
-      </PointsPath>
-      <Fill name="Fill"><SolidColor colorValue="FF7DB9D9" name="ArmPaint"/></Fill>
-    </Shape>
-  </Node>
-</Artboard>
-'''
-    (project/'scene.rml').write_text(xml)
+    # Preserve the official scaffold's Rive/Backboard root and style IDs.
+    subprocess.run(['rive','create',str(project)],check=True,capture_output=True,text=True)
+    file=project/'scene.rml'
+    tree=ET.parse(file)
+    artboard=next((e for e in tree.getroot().iter() if e.tag=='Artboard'),None)
+    if artboard is None:
+        raise SystemExit('Official scaffold has no <Artboard>')
+    artboard.set('width','480'); artboard.set('height','320'); artboard.set('name','WeightedArm')
+    angle=math.radians(degrees)
+    arm_xml=f"""<Node x="125" y="130" name="RigLocal">
+      <RootBone x="0" y="0" length="85" rotation="0" name="UpperArm" id="0:40">
+        <Bone length="85" rotation="{angle:.8f}" name="Forearm" id="0:41"/>
+      </RootBone>
+      <Shape name="Arm" id="0:50">
+        <PointsPath name="Path" id="0:51">
+          <StraightVertex x="0" y="-18"><Weight values="255" indices="1"/></StraightVertex>
+          <StraightVertex x="85" y="-18"><Weight values="32640" indices="513"/></StraightVertex>
+          <StraightVertex x="170" y="-14"><Weight values="255" indices="2"/></StraightVertex>
+          <StraightVertex x="170" y="14"><Weight values="255" indices="2"/></StraightVertex>
+          <StraightVertex x="85" y="18"><Weight values="32640" indices="513"/></StraightVertex>
+          <StraightVertex x="0" y="18"><Weight values="255" indices="1"/></StraightVertex>
+          <Skin tx="0" ty="0" name="Skin">
+            <Tendon boneId="0:40" tx="0" ty="0" name="Upper"/>
+            <Tendon boneId="0:41" tx="85" ty="0" name="Fore"/>
+          </Skin>
+        </PointsPath>
+        <Fill name="Fill"><SolidColor colorValue="FF7DB9D9" name="ArmPaint"/></Fill>
+      </Shape>
+    </Node>"""
+    artboard.append(ET.fromstring(arm_xml))
+    tree.write(file,encoding='unicode',xml_declaration=False)
 PY
 
 probe() {
