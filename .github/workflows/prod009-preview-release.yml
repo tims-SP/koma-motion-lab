@@ -1,0 +1,79 @@
+name: PROD-009 - Rive video preview to DRAFT Release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/prod009-preview-release.yml'
+      - 'scripts/prod009_release_preview.py'
+permissions:
+  contents: write
+jobs:
+  render-release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+      PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+      PROD009_FPS: "24"
+      PROD009_VIEWPORT: "960x540"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Git history is text-only
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          blocked = (".png",".jpg",".jpeg",".webp",".skel",".mp4",".gif",".webm",".riv",".rev",".zip",".7z",".exe",".dll",".so",".bin")
+          tracked = subprocess.check_output(["git","ls-files","-z"]).decode().split("\0")
+          offenders = [p for p in tracked if p.lower().endswith(blocked)]
+          if offenders: raise SystemExit("BINARY_IN_GIT: " + repr(offenders))
+          print("PASS_TEXT_ONLY",len([p for p in tracked if p]))
+          PY
+      - name: Install runtime dependencies and Spine decoder
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libgles2 libx11-6 libgl1 libgbm1 libxkbcommon0 libx11-xcb1 ffmpeg python3-venv
+          python3 -m venv "$RUNNER_TEMP/rig-venv"
+          "$RUNNER_TEMP/rig-venv/bin/pip" install "git+https://github.com/BastienGimbert/SkelToJson.git" "Pillow==11.3.0"
+          echo "$RUNNER_TEMP/rig-venv/bin" >> "$GITHUB_PATH"
+      - name: Install official Rive CLI
+        run: |
+          set -euo pipefail
+          curl --retry 3 --retry-all-errors -fsSL https://releases.rive.app/cli/install.sh -o "$RUNNER_TEMP/rive-install.sh"
+          bash "$RUNNER_TEMP/rive-install.sh"
+          echo "$HOME/.rive/bin" >> "$GITHUB_PATH"
+      - name: Decode original Spine 4.2 skeleton in ephemeral runner
+        run: python scripts/spine_binary_conversion.py
+      - name: Render original motions and eight Rive pose experiments
+        run: python scripts/prod009_release_preview.py
+      - name: Verify preview deliverables
+        run: |
+          set -euo pipefail
+          dir="$PROD_PRIVATE/prod009/release"
+          for asset in 01-source-actions-rive-baked.mp4 02-common-poses-rive-baked.mp4 03-common-poses-contact-sheet.png rive-native-rig-scaffold.zip; do
+            test -s "$dir/$asset"
+          done
+          cp "$PROD_REPORT/prod009-result.json" "$dir/04-prod009-metadata.json"
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads((Path(os.environ["PROD_REPORT"])/"prod009-result.json").read_text())
+          assert r["status"]=="PASS_EXPERIMENTAL_PREVIEW", r
+          assert len(r["clips"])==12, r.get("clips")
+          assert all(v["status"].startswith("RENDERED") for v in r["clips"].values())
+          print("PASS_PREVIEW",len(r["clips"]))
+          PY
+      - name: Upload videos only to GitHub DRAFT Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="prod009-preview-${GITHUB_RUN_ID}"
+          gh release create "$tag" "$PROD_PRIVATE/prod009/release/"* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft --title "PROD-009 preview run ${GITHUB_RUN_NUMBER}" --notes-file "$PROD_REPORT/prod009-release-notes.md"
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json url,isDraft,assets --jq '{url:.url,isDraft:.isDraft,assets:[.assets[].name]}'
+      - name: Print text diagnostics
+        if: always()
+        run: |
+          if test -f "$PROD_REPORT/prod009-release-notes.md"; then cat "$PROD_REPORT/prod009-release-notes.md" >> "$GITHUB_STEP_SUMMARY"; fi
+          echo "No media are committed or uploaded to Actions artifacts; release draft only." >> "$GITHUB_STEP_SUMMARY"
