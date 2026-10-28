@@ -1,0 +1,67 @@
+name: PROD-002 · Spine to Rive video conversion
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/spine-to-rive-video.yml'
+      - 'scripts/spine_binary_conversion.py'
+      - 'scripts/spine_rive_renderer.py'
+
+permissions:
+  contents: read
+
+jobs:
+  spine-to-rive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install source converter and renderer dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libegl1 libgles2 libx11-6 libgl1 libgbm1 libxkbcommon0 libx11-xcb1 \
+            ffmpeg python3-venv
+          python3 -m venv "$RUNNER_TEMP/rig-venv"
+          "$RUNNER_TEMP/rig-venv/bin/pip" install --disable-pip-version-check \
+            "skel_to_json" "Pillow==11.3.0"
+          echo "$RUNNER_TEMP/rig-venv/bin" >> "$GITHUB_PATH"
+      - name: Install official Rive CLI
+        run: |
+          set -euo pipefail
+          curl --retry 3 --retry-all-errors -fsSL https://releases.rive.app/cli/install.sh -o "$RUNNER_TEMP/rive-install.sh"
+          bash "$RUNNER_TEMP/rive-install.sh"
+          echo "$HOME/.rive/bin" >> "$GITHUB_PATH"
+      - name: Convert real Spine binary and inspect source semantics
+        env:
+          PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+          PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+        run: |
+          set -euo pipefail
+          python scripts/spine_binary_conversion.py
+      - name: Render converted animation in Rive and encode acceptance video
+        if: success()
+        env:
+          PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+          PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+        run: python scripts/spine_rive_renderer.py
+      - name: Publish acceptance record
+        if: always()
+        run: |
+          cat out/spine-rive/summary.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || echo "No summary; inspect step logs." >> "$GITHUB_STEP_SUMMARY"
+          if [ -f out/spine-rive/render-summary.md ]; then
+            cat out/spine-rive/render-summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload metadata-only report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spine-to-rive-metadata-${{ github.run_number }}
+          path: |
+            out/spine-rive/
+          retention-days: 7
+          if-no-files-found: warn
