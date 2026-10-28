@@ -2,6 +2,15 @@
 
 Status: FAIL_PRODUCTION_QUALITY (upload and render passed; independent frame inspection failed)
 
+## Follow-up verification: pose framing repaired, production NOT accepted
+
+- Latest video render/QA: [Actions run 40782427734](https://github.com/tims-SP/koma-motion-lab/actions/runs/40782427734), **FAIL intentionally at production quality gate** after real render and 36-frame sampling.
+- Latest candidate remains a [DRAFT Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-28af2638a7fc37ab0018); the QA JSON and Markdown accompany the MP4/PNG/RML ZIP there.
+- Mid-frame `prone`: foreground fraction improved from 0.00786 to 0.09947 and bounding box changed from [0,415,385,539] (cropped) to [116,70,476,372] (no side/bottom crop).
+- Mid-frame `sit`: bounding box changed from [151,139,588,539] (cropped) to [142,70,501,350] (not cropped).
+- The second RML ZIP audit confirmed Bone/Mesh/Skin are included after fixing the initially blank scene archive.
+- **Still rejected:** no original Spine Runtime parity, no exported editable .riv/native animation tracks, no verified IK/contact, and no evidence that the invented sit/squat/prone motions are anatomically correct. Geometry framing is not pose repair.
+
 ## Independent QA correction
 
 The 36-frame independent audit [run 40781670993](https://github.com/tims-SP/koma-motion-lab/actions/runs/40781670993) confirmed: (1) the original ZIP contained an empty Rive template rather than the authored rig; (2) the prone pose left almost all of the character outside the viewport (foreground area approximately 0.79% versus 8.75% for neutral); (3) the sit pose touched the bottom edge. The original package must not be accepted. The RML packaging bug was fixed and [rechecked in run 40782178687](https://github.com/tims-SP/koma-motion-lab/actions/runs/40782178687); pose framing and actual animation editability remain unaccepted. The QA pipeline now rejects incomplete outputs by design.
