@@ -61,12 +61,39 @@ def apply(mat,x,y):
     return a*x+c*y+tx,b*x+d*y+ty
 
 def frame_value(keys,t):
-    vals=sorted((float(k.get("time",0)),float(k.get("angle",0))) for k in keys)
+    vals=sorted((float(k.get("time",0)),float(k.get("angle",k.get("value",0)))) for k in keys)
     if not vals:return 0.0
     if t<=vals[0][0]:return vals[0][1]
     for (t0,a),(t1,b) in zip(vals,vals[1:]):
         if t<=t1:return a+(b-a)*(t-t0)/(t1-t0) if t1>t0 else b
     return vals[-1][1]
+
+def rive_local_bind_pose(root):
+    """Rive Bone bind matrices in image Mesh's shared parent Node coordinates.
+
+    Spine setup world matrices are not interchangeable with native Rive bones,
+    especially after inserting intermediate offset bones. Tendon bind pose must
+    equal the native Bone's actual rest transform in the same image-local space.
+    Proven by skin-diagnostics (rive-local-pose rendered 61,974 pixels).
+    """
+    def mul(a,b):
+        A,B,C,D,X,Y=a;E,F,G,H,U,V=b
+        return (A*E+C*F,B*E+D*F,A*G+C*H,B*G+D*H,A*U+C*V+X,B*U+D*V+Y)
+    ident=(1.,0.,0.,1.,0.,0.)
+    def rotated(r,x,y):
+        return (math.cos(r),math.sin(r),-math.sin(r),math.cos(r),x,y)
+    result={}
+    def descend(parent,matrix,tip=0.):
+        for child in list(parent):
+            if child.tag not in ("Bone","RootBone"):
+                continue
+            angle=float(child.get("rotation",0))
+            x,y=(float(child.get("x",0)),float(child.get("y",0))) if child.tag=="RootBone" else (tip,0.)
+            world=mul(matrix,rotated(angle,x,y))
+            result[child.get("id")]=world
+            descend(child,world,float(child.get("length",0)))
+    descend(root,ident)
+    return result
 
 def parse_attachment(attachment, bones,world,slot_bone):
     """Return original Spine mesh vertices in setup world-space, with influences."""
@@ -240,6 +267,21 @@ def construct():
     METRIC["source_bbox"]=[minx,miny,maxx,maxy]
     METRIC["triangle_winding_flipped"]=True
     METRIC["image_scale"]=scale
+    # Set Tendon transforms from the authored native Rive bone rest pose, NOT
+    # from Spine's incompatible world transforms. Both bone and Mesh are direct
+    # children of SpineRoot in the shared local coordinate space.
+    binding=rive_local_bind_pose(group)
+    assigned=0
+    for tendon in group.iter("Tendon"):
+        bone_id=tendon.get("boneId")
+        if bone_id not in binding:
+            raise RuntimeError(f"Missing native Rive bone bind pose: {bone_id}")
+        transform=binding[bone_id]
+        for attr,value in zip(("xx","xy","yx","yy","tx","ty"),transform):
+            tendon.set(attr,f"{value:.9g}")
+        assigned+=1
+    METRIC["native_rive_bind_pose_tendons"]=assigned
+    METRIC["native_rive_bind_pose_source"]="authored Rive Bone local hierarchy, not original Spine world matrix"
     METRIC["preserved"]=["source hierarchy for 85 bones","source animated rotation samples",
       "source texture atlas","source mesh triangles and original UV arrays",
       "source skin influence indices and normalized weights for selected mesh attachments","setup draw order for imported mesh slots"]
