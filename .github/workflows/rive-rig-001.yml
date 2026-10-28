@@ -1,0 +1,64 @@
+name: RIVE-RIG-001 — CLI probe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rive-rig-001.yml'
+      - 'scripts/rive_probe.sh'
+      - 'AGENTS.md'
+
+permissions:
+  contents: read
+
+jobs:
+  rive-cli-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout lab repository
+        uses: actions/checkout@v4
+
+      - name: Prepare experiment directory
+        shell: bash
+        run: mkdir -p out/rive-rig-001/logs
+
+      - name: Install official Rive CLI on runner (do not commit proprietary binary)
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --retry 3 --retry-all-errors -fsSL \
+            https://releases.rive.app/cli/install.sh \
+            -o "$RUNNER_TEMP/rive-install.sh"
+          sha256sum "$RUNNER_TEMP/rive-install.sh" | tee out/rive-rig-001/installer.sha256
+          bash "$RUNNER_TEMP/rive-install.sh" 2>&1 | tee out/rive-rig-001/logs/installer.log
+          echo "$HOME/.rive/bin" >> "$GITHUB_PATH"
+          if [ -x "$HOME/.rive/bin/rive" ]; then
+            sha256sum "$HOME/.rive/bin/rive" | tee out/rive-rig-001/rive-cli.sha256
+          fi
+
+      - name: RIVE-RIG-001 no-editor smoke test and capability discovery
+        shell: bash
+        env:
+          EVIDENCE_DIR: ${{ github.workspace }}/out/rive-rig-001
+        run: bash scripts/rive_probe.sh
+
+      - name: Publish actionable summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f out/rive-rig-001/summary.md ]; then
+            cat out/rive-rig-001/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Rive CLI probe did not reach result generation. Inspect installer.log.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload logs, project scaffold, schema and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rive-rig-001-evidence-${{ github.run_number }}
+          path: out/rive-rig-001/
+          retention-days: 14
+          if-no-files-found: warn
