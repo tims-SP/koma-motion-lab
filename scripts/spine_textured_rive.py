@@ -80,8 +80,8 @@ def rive_local_bind_pose(root):
         A,B,C,D,X,Y=a;E,F,G,H,U,V=b
         return (A*E+C*F,B*E+D*F,A*G+C*H,B*G+D*H,A*U+C*V+X,B*U+D*V+Y)
     ident=(1.,0.,0.,1.,0.,0.)
-    def rotated(r,x,y):
-        return (math.cos(r),math.sin(r),-math.sin(r),math.cos(r),x,y)
+    def rotated(r,x,y,sx=1.,sy=1.):
+        return (math.cos(r)*sx,math.sin(r)*sx,-math.sin(r)*sy,math.cos(r)*sy,x,y)
     result={}
     def descend(parent,matrix,tip=0.):
         for child in list(parent):
@@ -89,7 +89,8 @@ def rive_local_bind_pose(root):
                 continue
             angle=float(child.get("rotation",0))
             x,y=(float(child.get("x",0)),float(child.get("y",0))) if child.tag=="RootBone" else (tip,0.)
-            world=mul(matrix,rotated(angle,x,y))
+            world=mul(matrix,rotated(angle,x,y,
+                float(child.get("scaleX",1)),float(child.get("scaleY",1))))
             result[child.get("id")]=world
             descend(child,world,float(child.get("length",0)))
     descend(root,ident)
@@ -191,11 +192,22 @@ def construct():
                     "length":f"{dist:.7g}","rotation":f"{bridge:.9g}"})
         props={"name":bone["name"],"id":"0:"+str(200+index),
                "length":str(max(.5,float(bone.get("length",0)))),
-               "rotation":str(math.radians(ang)-bridge)}
+               "rotation":str(math.radians(ang)-bridge),
+               "scaleX":str(float(bone.get("scaleX",1))),
+               "scaleY":str(float(bone.get("scaleY",1)))}
         if not parent:props.update({"x":str(float(bone.get("x",0))),"y":str(float(bone.get("y",0)))})
         objects[bone["name"]]=ET.SubElement(p,"Bone" if parent else "RootBone",props)
         bone["_bridge"]=bridge
     METRIC["rive_bones"]=len(objects)
+    METRIC["source_nonunit_scale_bones"]=sum(
+        abs(float(b.get("scaleX",1))-1)>0.0001 or abs(float(b.get("scaleY",1))-1)>0.0001
+        for b in bones)
+    METRIC["source_sheared_bones"]=sum(
+        abs(float(b.get("shearX",0)))>0.0001 or abs(float(b.get("shearY",0)))>0.0001
+        for b in bones)
+    METRIC["source_nondefault_inherit_bones"]=sum(
+        b.get("transform","normal")!="normal" for b in bones)
+    METRIC["bone_scale_transfer"]=True
     imported=[]; bounds=[]; weighted_count=0; translated_weights=0; lost=[]
     for j,slot in enumerate(slots):
         sn=slot["name"]
