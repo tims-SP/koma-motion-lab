@@ -1,0 +1,54 @@
+name: PROD-010 - real Spine reference to native Rive Skin setup
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/prod010-native-skin.yml'
+      - 'scripts/spine_authoritative_rive.py'
+permissions:
+  contents: read
+jobs:
+  native-skin-setup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    env:
+      PROD_PRIVATE: /tmp/koma-spine-rive-reference
+      PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install official reference and Rive dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libgles2 libx11-6 libgl1 libgbm1 libxkbcommon0 libx11-xcb1 python3-venv
+          python3 -m venv "$RUNNER_TEMP/rig-venv"
+          "$RUNNER_TEMP/rig-venv/bin/pip" install --disable-pip-version-check \
+            "git+https://github.com/BastienGimbert/SkelToJson.git" "Pillow==11.3.0"
+          echo "$RUNNER_TEMP/rig-venv/bin" >> "$GITHUB_PATH"
+          npm install --prefix "$RUNNER_TEMP/spinecore" --no-save --no-audit --no-fund "@esotericsoftware/spine-core@4.2.120"
+          curl -fsSL --retry 3 --retry-all-errors https://releases.rive.app/cli/install.sh -o "$RUNNER_TEMP/rive-install.sh"
+          bash "$RUNNER_TEMP/rive-install.sh"
+          echo "$HOME/.rive/bin" >> "$GITHUB_PATH"
+      - name: Decode source and fetch original atlas only in runner
+        run: |
+          python scripts/spine_binary_conversion.py
+          curl -fsSL --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/roles/300401_hongnujian/300401_hongnujian.atlas \
+            -o "$PROD_PRIVATE/character.atlas"
+      - name: Generate original setup vertex geometry by official Spine Runtime
+        env:
+          SPINE_CORE_ENTRY: ${{ runner.temp }}/spinecore/node_modules/@esotericsoftware/spine-core/dist/index.js
+        run: |
+          node scripts/spine_official_geometry.mjs \
+            "$PROD_PRIVATE/source_spine.json" "$PROD_PRIVATE/character.atlas" \
+            "$PROD_PRIVATE/spine-official-world-vertices.json"
+      - name: Validate native Rive weighted Skin vs unskinned exact source setup
+        run: python scripts/spine_authoritative_rive.py
+      - name: Publish text-only status
+        if: always()
+        run: |
+          if test -s "$PROD_REPORT/prod010-native-skin-check.json"; then
+            cat "$PROD_REPORT/prod010-native-skin-check.json" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "No source images, screenshots, RML or generated binary published to Git." >> "$GITHUB_STEP_SUMMARY"
