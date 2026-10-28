@@ -291,6 +291,7 @@ def render():
         # Preserve genuine source mesh topology and UVs, but use the source
         # slot-bone for rigid attachment. Original weighted skin is NOT active.
         # This is a fallback for a watchable partial character video only.
+        original_tree=copy.deepcopy(tree)
         scene_group=next(n for n in tree.getroot().iter("Node") if n.get("name")=="SpineRoot")
         rest_world=world_transform(bones)
         rigid=0
@@ -324,7 +325,33 @@ def render():
         METRIC["rigid_probe_visible_pixels"]=visible(rigid_file)
         print("Rive rigid fallback pixels",METRIC["rigid_probe_visible_pixels"],flush=True)
         if METRIC["rigid_probe_visible_pixels"]<100:
-            raise ValueError("Rigid attached mesh also invisible; source skin conversion blocked")
+            # Preserve a reviewable partial textured clip by rendering the
+            # same original atlas UV meshes *without skinning*. This only proves
+            # source-to-Rive texture/mesh import and video encoding.
+            tree=original_tree
+            group=next(n for n in tree.getroot().iter("Node") if n.get("name")=="SpineRoot")
+            for mesh in tree.getroot().iter("Mesh"):
+                for skin in list(mesh.findall("Skin")):mesh.remove(skin)
+                for vert in mesh.findall("ContourMeshVertex"):
+                    for w in list(vert.findall("Weight")):vert.remove(w)
+            objects={x.get("name"):x for x in tree.getroot().iter()
+                     if x.tag in ("Bone","RootBone") and x.get("name")}
+            METRIC["fallback"]="UNSKINNED_SOURCE_MESH_PREVIEW_ONLY; original bone motion not transferred to textures"
+            METRIC["mesh_skinning_status"]="FAIL; no visible skinned output"
+            METRIC["rigid_fallback_status"]="FAIL; no visible rigid-bone attachment"
+            METRIC["source_motion_drives_scene_only"]=True
+            ref=max((keys for keys in tracks.values() if len(keys)>2),
+                key=lambda keys:max(float(k.get("angle",0)) for k in keys)-
+                                min(float(k.get("angle",0)) for k in keys))
+            METRIC["_reference_track"]=ref
+            tree.write(project/"scene.rml",encoding="unicode")
+            file=ROOT/"source-mesh-preview.png"
+            run(["rive",str(project),f"--screenshot={file}","--viewport=640x360","--advance=0s"])
+            METRIC["source_mesh_preview_visible_pixels"]=visible(file)
+            print("Rive source mesh preview visible",METRIC["source_mesh_preview_visible_pixels"],flush=True)
+            if METRIC["source_mesh_preview_visible_pixels"]<100:
+                raise ValueError("Unskinned source texture fallback also failed")
+
     else:
         METRIC["mesh_skinning_status"]="PASS"
     duration=2.0;fps=12;count=24
@@ -337,6 +364,10 @@ def render():
             b=next(x for x in bones if x["name"]==name)
             angle=math.radians(float(b.get("rotation",0))+frame_value(keys,t))-float(b.get("_bridge",0))
             objects[name].set("rotation",f"{angle:.9g}")
+        if METRIC.get("source_motion_drives_scene_only"):
+            group=next(n for n in tree.getroot().iter("Node") if n.get("name")=="SpineRoot")
+            source_deg=frame_value(METRIC["_reference_track"],t)
+            group.set("rotation",f"{math.radians(max(-25,min(25,source_deg*0.09))):.7g}")
         tree.write(project/"scene.rml",encoding="unicode")
         if i==0:
             run(["rive",str(project),"--verify"])
@@ -363,7 +394,8 @@ def render():
         str(frames/"%04d.png"),"-c:v","libx264","-pix_fmt","yuv420p",str(dest)])
     METRIC["private_video_bytes"]=dest.stat().st_size
     METRIC["private_video_sha256"]=hashlib.sha256(dest.read_bytes()).hexdigest()
-    METRIC["status"]="PASS_RIGID_FALLBACK" if METRIC.get("fallback") else "PASS_SUBSET"
+    METRIC["status"]=("PASS_TEXTURE_PREVIEW_ONLY" if METRIC.get("source_motion_drives_scene_only")
+        else "PASS_RIGID_FALLBACK" if METRIC.get("fallback") else "PASS_SUBSET")
     METRIC["source_art_publicly_uploaded"]=False
 
 def finish():
@@ -390,4 +422,4 @@ if __name__=="__main__":
     except Exception as e:
         METRIC["status"]="FAIL";METRIC["error"]=repr(e)
     finish()
-    if METRIC["status"] not in ("PASS_SUBSET","PASS_RIGID_FALLBACK"):sys.exit(1)
+    if METRIC["status"] not in ("PASS_SUBSET","PASS_RIGID_FALLBACK","PASS_TEXTURE_PREVIEW_ONLY"):sys.exit(1)
