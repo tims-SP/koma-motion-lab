@@ -84,7 +84,7 @@ result={'experiment':'RIVE-RIG-001','stage':'authored-weighted-vector-rig','pose
 print(json.dumps(result,indent=2))
 PY
 
-for degrees in 000 045 090 135; do
+# Evaluate actual PNG pixels, not merely build status.\npython3 "$ROOT/scripts/assert_pose_pixels.py" "$OUT/screenshots" || exit 1\n\nfor degrees in 000 045 090 135; do
   for stage in verify build inspect screenshot; do
     [ "$(cat "$OUT/logs/weighted_${stage}_${degrees}.exit")" = 0 ] || exit 1
   done
