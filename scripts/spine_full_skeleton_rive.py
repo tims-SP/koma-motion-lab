@@ -59,15 +59,27 @@ def main():
         if parent_name:
             x-=float(indexed[parent_name].get("length",0))
         length=max(1.,abs(float(b.get("length",1))))
+        # Spine supports arbitrary child-bone local x/y; Rive Bone cannot
+        # specify x/y, and must be a direct child of another Bone.
+        # Adapt using an invisible offset Bone at the parent's tip. The
+        # child rotation compensates for the offset Bone's local angle.
+        bridge_angle=0.0
         if parent_name:
-            # Rive Bone has rotation/length but no authored x/y. Introduce a
-            # translated Node and keep the Bone under that container.
-            p=ET.SubElement(p,"Node",{"name":f"Offset_{n}","x":f"{x:.5f}","y":f"{y:.5f}"})
+            delta_x=x
+            delta_y=y
+            bridge_angle=math.atan2(delta_y,delta_x) if math.hypot(delta_x,delta_y)>0.001 else 0.0
+            bridge_len=math.hypot(delta_x,delta_y)
+            if bridge_len>0.001:
+                p=ET.SubElement(p,"Bone",{"name":f"SpineOffset_{n}",
+                    "id":f"0:{500+n}","length":f"{bridge_len:.5f}",
+                    "rotation":f"{bridge_angle:.8f}"})
         attr={"id":f"0:{200+n}","name":b["name"],
-              "length":f"{length:.5f}","rotation":str(math.radians(float(b.get("rotation",0))))}
+              "length":f"{length:.5f}",
+              "rotation":str(math.radians(float(b.get("rotation",0)))-bridge_angle)}
         if not parent_name:
             attr.update({"x":f"{x:.5f}","y":f"{y:.5f}"})
         obj=ET.SubElement(p,native,attr)
+        b["_rive_bridge_angle"]=bridge_angle
         objs[b["name"]]=obj
         if float(b.get("length",0))>12:
             shape=ET.SubElement(obj,"Shape",{"name":f"visual_{n}"})
@@ -84,7 +96,7 @@ def main():
         for n,keys in rot_channels.items():
             if n not in objs:continue
             base=float(indexed[n].get("rotation",0))
-            objs[n].set("rotation",str(math.radians(base+sample_curve(keys,t,"angle"))))
+            objs[n].set("rotation",str(math.radians(base+sample_curve(keys,t,"angle"))-float(indexed[n].get("_rive_bridge_angle",0))))
         tree.write(project/"scene.rml",encoding="unicode")
         if frame==0:cmd("rive",str(project),"--verify")
         dest=frames/f"{frame:04d}.png"
