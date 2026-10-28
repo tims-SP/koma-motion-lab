@@ -253,6 +253,40 @@ def render():
         if isinstance(timeline,dict) and isinstance(timeline.get("rotate"),list)}
     METRIC["animated_rotation_bones"]=len(tracks)
     METRIC["action"]="idle_room"
+    # Isolate asset import vs mesh geometry vs binding. No game frames published.
+    import copy
+    def visible(path):
+        with Image.open(path) as im:
+            raw=im.convert("RGBA").tobytes()
+        corner=raw[:4]
+        return sum(raw[k:k+4]!=corner for k in range(0,len(raw),4))
+    def diagnostic(label, variant):
+        probe=copy.deepcopy(tree)
+        root=probe.getroot()
+        artboard=next(n for n in root.iter() if n.tag=="Artboard")
+        if variant=="direct-image":
+            ET.SubElement(artboard,"Image",{"assetId":"0:60","name":"AtlasImportControl",
+                 "x":"320","y":"180","scaleX":"0.14","scaleY":"0.14"})
+        elif variant=="unskinned":
+            for mesh in root.iter("Mesh"):
+                for skin in list(mesh.findall("Skin")):mesh.remove(skin)
+                for vert in mesh.findall("ContourMeshVertex"):
+                    for weight in list(vert.findall("Weight")):vert.remove(weight)
+        probe.write(project/"scene.rml",encoding="unicode")
+        dest=ROOT/f"probe-{label}.png"
+        try:
+            run(["rive",str(project),f"--screenshot={dest}","--viewport=640x360","--advance=0s"])
+            return {"pixels":visible(dest),"status":"rendered"}
+        except Exception as exc:
+            return {"status":"fail","error":str(exc)[-350:]}
+    METRIC["diagnostics"]={
+        "original":diagnostic("original","original"),
+        "unskinned":diagnostic("unskinned","unskinned"),
+        "direct_atlas":diagnostic("direct_atlas","direct-image")}
+    tree.write(project/"scene.rml",encoding="unicode")
+    print("Rive draw diagnosis:",json.dumps(METRIC["diagnostics"]),flush=True)
+    if METRIC["diagnostics"]["original"].get("pixels",0)<100:
+        raise ValueError("Skinned Rive scene blank; see draw diagnostics")
     duration=2.0;fps=12;count=24
     frames=ROOT/"textured-original-frames";frames.mkdir(exist_ok=True)
     hashes=[];sample_alpha=[]
