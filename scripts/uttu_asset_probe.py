@@ -23,7 +23,7 @@ MAX_HTML = 400_000
 MAX_SCRIPT = 350_000
 MAX_SCRIPTS = 16
 TIMEOUT = 18
-EXT = re.compile(r"(?i)(?:\\.moc3|\\.model3\\.json|\\.physics3\\.json|\\.motion3\\.json|\\.exp3\\.json|\\.cmo3|\\.can3|\\.skel|\\.atlas(?:\\.txt)?|\\.riv|\\.psd)")
+EXT = re.compile(r"(?i)(?:\.moc3|\.model3\.json|\.physics3\.json|\.motion3\.json|\.exp3\.json|\.cmo3|\.can3|\.skel|\.atlas(?:\.txt)?|\.riv|\.psd)")
 FINDINGS = re.compile(r"(?i)(?:cubism|live2d|spine|model3|moc3|atlas|skel|rive|assets/|asseturl|resourceurl|cdn)")
 ALLOWED_WEB_SCHEMES = ("https",)
 
