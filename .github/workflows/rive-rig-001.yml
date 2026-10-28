@@ -8,7 +8,9 @@ on:
       - '.github/workflows/rive-rig-001.yml'
       - 'scripts/rive_probe.sh'
       - 'scripts/rive_weighted_arm.sh'
+      - 'scripts/rive_image_mesh.sh'
       - 'AGENTS.md'
+      - 'scripts/assert_pose_pixels.py'
 
 permissions:
   contents: read
@@ -59,6 +61,12 @@ jobs:
           EVIDENCE_DIR: ${{ github.workspace }}/out/rive-rig-001
         run: bash scripts/rive_weighted_arm.sh
 
+      - name: RIVE-RIG-002 synthetic image mesh and skinning probe
+        shell: bash
+        env:
+          EVIDENCE_DIR_002: ${{ github.workspace }}/out/rive-rig-002
+        run: bash scripts/rive_image_mesh.sh
+
       - name: Publish actionable summary
         if: always()
         shell: bash
@@ -74,6 +82,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: rive-rig-001-evidence-${{ github.run_number }}
-          path: out/rive-rig-001/
+          path: |
+            out/rive-rig-001/
+            out/rive-rig-002/
           retention-days: 14
           if-no-files-found: warn
