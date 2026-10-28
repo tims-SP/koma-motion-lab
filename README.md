@@ -2,10 +2,11 @@
 
 ## Current experimental preview — PROD-009 (2026-10-29)
 
-- [GitHub Actions run #2](https://github.com/tims-SP/koma-motion-lab/actions/runs/40778781058): **SUCCESS**.
+- [GitHub Actions run #2](https://github.com/tims-SP/koma-motion-lab/actions/runs/40778781058): **RENDERED, QUALITY GATE FAILED**.
 - [DRAFT Release preview](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-8d225fef6491014e9a15) (repository owner access): source-action video, eight experimental common-pose video, contact sheet, JSON report and Rive RML rig scaffold ZIP.
 - Source artwork, generated videos, screenshots and RML assets are **Release-only**. Git history is text-only, enforced in CI and `.gitignore`.
-- Videos are **Rive mesh-baked experiments**; this is not an editable native Rive animation transfer or original-Spine-runtime fidelity claim. A signed `.riv` was not exported.
+- **Independent audit FAILED**: [inspection run](https://github.com/tims-SP/koma-motion-lab/actions/runs/40781670993) sampled 36 actual frames and found the prone pose mostly outside the viewport, sit cropped, and the original rig ZIP missing Bone/Mesh/Skin nodes. Rig packaging has since been fixed in code, but a replacement release must be revalidated. **Do not treat the previous draft release as accepted.**
+- Videos are **Rive mesh-baked experiments**, not an editable native Rive animation transfer or original-Spine-runtime fidelity claim. A signed `.riv` was not exported.
 - [PROD-009 report](docs/production/PROD-009.md).
 
 ## Current production milestone — PROD-008 (2026-10-29)
