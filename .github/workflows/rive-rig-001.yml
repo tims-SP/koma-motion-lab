@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/rive-rig-001.yml'
       - 'scripts/rive_probe.sh'
+      - 'scripts/rive_weighted_arm.sh'
       - 'AGENTS.md'
 
 permissions:
@@ -51,6 +52,12 @@ jobs:
         env:
           EVIDENCE_DIR: ${{ github.workspace }}/out/rive-rig-001
         run: bash scripts/rive_probe.sh
+
+      - name: RIVE-RIG-001 actual weighted arm pose probe
+        shell: bash
+        env:
+          EVIDENCE_DIR: ${{ github.workspace }}/out/rive-rig-001
+        run: bash scripts/rive_weighted_arm.sh
 
       - name: Publish actionable summary
         if: always()
