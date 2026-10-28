@@ -7,7 +7,7 @@ on:
       - '.github/workflows/prod010-native-skin.yml'
       - 'scripts/spine_authoritative_rive.py'
 permissions:
-  contents: read
+  contents: write
 jobs:
   native-skin-setup:
     runs-on: ubuntu-24.04
@@ -45,6 +45,43 @@ jobs:
             "$PROD_PRIVATE/spine-official-world-vertices.json"
       - name: Validate native Rive weighted Skin vs unskinned exact source setup
         run: python scripts/spine_authoritative_rive.py
+      - name: Package verified native-skin scene and four pixel-level evidence frames
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,os,shutil,zipfile
+          from pathlib import Path
+          root=Path(os.environ["PROD_PRIVATE"])
+          dest=root/"prod010-draft"
+          dest.mkdir(exist_ok=True)
+          report=json.loads((Path(os.environ["PROD_REPORT"])/"prod010-native-skin-check.json").read_text())
+          assert report["status"]=="PASS_NATIVE_SETUP_AND_BONE_POKE"
+          samples=[
+            "native-referenced-setup.png",
+            "unskinned-referenced-setup.png",
+            "native-skin-bone-poked.png",
+            "unskinned-bone-poked.png",
+          ]
+          for name in samples:
+            assert (root/name).is_file() and (root/name).stat().st_size>5000,name
+            shutil.copy2(root/name,dest/name)
+          shutil.copy2(Path(os.environ["PROD_REPORT"])/"prod010-native-skin-check.json",dest/"05-rig-skin-diagnostics.json")
+          project=root/"source-mesh-rive"
+          assert (project/"scene.rml").is_file()
+          with zipfile.ZipFile(dest/"native-skin-rml-project.zip","w",zipfile.ZIP_DEFLATED) as archive:
+            for file in project.rglob("*"):
+              if file.is_file():
+                archive.write(file,file.relative_to(project))
+          print("PASS_PRIVATE_PROOF_PACKAGE",[(p.name,p.stat().st_size) for p in dest.iterdir()])
+          PY
+      - name: Store images and source-asset-derived RML ONLY in DRAFT Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="prod010-rive-skin-proof-${GITHUB_RUN_ID}"
+          gh release create "$tag" "$PROD_PRIVATE/prod010-draft/"*             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft             --title "PROD-010 native Rive Skin setup proof only - NOT full conversion"             --notes "Independent official Spine 4.2 setup vertex and UV basis. Native Rive Skin vs unskinned pixel parity and actual Bone rotation poke verified. Experimental setup-only proof: incomplete source constraints, unhandled >4 weight vertices, no editable .riv animation, no approved pose video. Media is stored only in this DRAFT Release, not the Git tree."
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json url,isDraft,assets             --jq '{url:.url,isDraft:.isDraft,assets:[.assets[].name]}'
       - name: Publish text-only status
         if: always()
         run: |
