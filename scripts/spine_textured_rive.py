@@ -284,6 +284,8 @@ def finish():
     summary=["# PROD-004 · Spine original weighted meshes to Rive",
         "",f"**Status:** {METRIC['status']}","",
         f"- Native Rive bones: {METRIC.get('rive_bones','?')}",
+        f"- Source mesh world bbox: {METRIC.get('source_bbox','?')}; scene scale: {METRIC.get('image_scale','?')}",
+        f"- Render visible pixels range: {METRIC.get('visible_pixels_min','?')}–{METRIC.get('visible_pixels_max','?')}",
         f"- Original Spine mesh attachments transferred: {METRIC.get('mesh_attachments_transferred','?')}",
         f"- Original weighted attachments transferred: {METRIC.get('skinned_mesh_attachments_transferred','?')}",
         f"- Original vertices/weights translated: {METRIC.get('vertices_transferred','?')}",
