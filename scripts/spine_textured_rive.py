@@ -218,9 +218,16 @@ def construct():
       "skipped_sample":lost[:6],"source_slot_details":imported[:30]})
     minx,maxx=min(x for x,y in bounds),max(x for x,y in bounds)
     miny,maxy=min(y for x,y in bounds),max(y for x,y in bounds)
-    width=max(1,maxx-minx);height=max(1,maxy-miny)
+    # Frame the visible body cluster rather than rare off-screen VFX meshes.
+    # These statistics change only camera framing, never source vertex data.
+    xs=sorted(x for x,y in bounds);ys=sorted(y for x,y in bounds)
+    def pct(seq,q):return seq[min(len(seq)-1,max(0,int((len(seq)-1)*q)))]
+    lx,hx=pct(xs,.10),pct(xs,.90)
+    ly,hy=pct(ys,.10),pct(ys,.90)
+    width=max(60,hx-lx);height=max(80,hy-ly)
     scale=min(560/width,280/height,1.75)
-    centerx=(minx+maxx)/2;centery=(miny+maxy)/2
+    centerx=(lx+hx)/2;centery=(ly+hy)/2
+    METRIC["focus_bbox_p10_p90"]=[lx,ly,hx,hy]
     group.set("x",str(320-centerx*scale))
     group.set("y",str(180+centery*scale))
     group.set("scaleX",str(scale))
