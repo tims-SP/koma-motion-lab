@@ -1,6 +1,10 @@
 # PROD-009 — Rive preview delivery via GitHub DRAFT Release
 
-Status: PASS_EXPERIMENTAL_PREVIEW (run #2; visual acceptance pending)
+Status: FAIL_PRODUCTION_QUALITY (upload and render passed; independent frame inspection failed)
+
+## Independent QA correction
+
+The 36-frame independent audit [run 40781670993](https://github.com/tims-SP/koma-motion-lab/actions/runs/40781670993) confirmed: (1) the original ZIP contained an empty Rive template rather than the authored rig; (2) the prone pose left almost all of the character outside the viewport (foreground area approximately 0.79% versus 8.75% for neutral); (3) the sit pose touched the bottom edge. The original package must not be accepted. The RML packaging bug was fixed and [rechecked in run 40782178687](https://github.com/tims-SP/koma-motion-lab/actions/runs/40782178687); pose framing and actual animation editability remain unaccepted. The QA pipeline now rejects incomplete outputs by design.
 
 ## Verified execution (2026-10-29 JST)
 
