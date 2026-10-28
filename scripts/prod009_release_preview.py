@@ -181,8 +181,13 @@ def process():
     REPORT["fps"] = FPS
     REPORT["bone_roles"] = bone_roles(bones)
 
-    # setup_scene has not yet written the skin-stripped tree to disk.
-    # This archive therefore retains the native Rive Skin/Tendon RML scaffold.
+    # Save and verify the ACTUAL authored Rive rig, not rive-create's blank
+    # scene.rml template. setup_scene preserves pristine Skin and Tendon data
+    # before stripping those elements for the frame-bake render path.
+    native_rml = ROOT / "spine-native-rig-scaffold.rml"
+    if not native_rml.is_file():
+        raise RuntimeError("Native source rig was not captured before bake")
+    shutil.copyfile(native_rml, project / "scene.rml")
     src.run(["rive", str(project), "--verify"])
     scaffold = RELEASE / "rive-native-rig-scaffold.zip"
     with zipfile.ZipFile(scaffold, "w", compression=zipfile.ZIP_DEFLATED) as archive:
