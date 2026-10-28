@@ -399,6 +399,8 @@ def render():
     METRIC["source_art_publicly_uploaded"]=False
 
 def finish():
+    # Strip private third-party animation keyframes from public metadata.
+    METRIC.pop("_reference_track",None)
     (OUT/"textured-transfer-result.json").write_text(json.dumps(METRIC,ensure_ascii=False,indent=2)+"\n")
     summary=["# PROD-004 · Spine original weighted meshes to Rive",
         "",f"**Status:** {METRIC['status']}","",
