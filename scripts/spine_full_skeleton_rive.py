@@ -18,7 +18,7 @@ def cmd(*args):
     return r
 
 def sample_curve(keys,t,field):
-    valid=[(float(k.get("time",0)),float(k.get(field,0))) for k in keys if isinstance(k,dict)]
+    valid=[(float(k.get("time",0)),float(k.get(field,k.get("value",0)))) for k in keys if isinstance(k,dict)]
     if not valid:return 0.
     valid.sort()
     if t<=valid[0][0]:return valid[0][1]
@@ -93,7 +93,7 @@ def main():
     # that falls outside the artboard cannot produce a false no-motion result.
     # This control renders the exact same source rotation channel; it does
     # NOT count as full-rig pose fidelity.
-    eligible=[(max(float(k.get("angle",0)) for k in keys)-min(float(k.get("angle",0)) for k in keys),name,keys)
+    eligible=[(max(float(k.get("angle",k.get("value",0))) for k in keys)-min(float(k.get("angle",0)) for k in keys),name,keys)
               for name,keys in rot_channels.items() if len(keys)>=3]
     if not eligible:raise RuntimeError("No source rotation track for visible debug")
     spread,control_name,control_keys=max(eligible,key=lambda q:q[0])
