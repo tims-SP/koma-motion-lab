@@ -1,6 +1,17 @@
 # PROD-009 — Rive preview delivery via GitHub DRAFT Release
 
-Status: IMPLEMENTED_PENDING_CI (final status must be read from GitHub Actions and release assets)
+Status: PASS_EXPERIMENTAL_PREVIEW (run #2; visual acceptance pending)
+
+## Verified execution (2026-10-29 JST)
+
+- Run: https://github.com/tims-SP/koma-motion-lab/actions/runs/40778781058 — **SUCCESS**.
+- Draft Release: https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-8d225fef6491014e9a15 — **isDraft=true**.
+- Release tag: `prod009-preview-40778781058`.
+- Checked 33 Git-tracked entries as text-only before rendering; subsequent `.gitignore` excludes generated binary files.
+- Verified 12 rendered clips (4 source actions + 8 experimental poses), two MP4s, one PNG contact sheet, one JSON diagnostic file, and one native-rig RML project ZIP.
+- Release assets and sizes: 01-source-actions-rive-baked.mp4 (831,489 bytes); 02-common-poses-rive-baked.mp4 (1,090,712 bytes); 03-common-poses-contact-sheet.png (290,411 bytes); 04-prod009-metadata.json (5,123 bytes); rive-native-rig-scaffold.zip (524,639 bytes).
+- Status: `PASS_EXPERIMENTAL_PREVIEW`; neither human visual acceptance nor source Spine Runtime parity has been performed.
+- The RML archive is a native Rig scaffold, not an exported signed `.riv`, and not a native editable animation timeline.
 
 ## Scope
 Source: [myssal/Reverse-1999-CN-Asset](https://github.com/myssal/Reverse-1999-CN-Asset), fixed commit 45e75248ba3b25053fd32e63ab13c2f9f54dd9df,
