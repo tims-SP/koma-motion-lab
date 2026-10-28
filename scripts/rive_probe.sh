@@ -40,6 +40,17 @@ capture cli_schema_Mesh rive schema Mesh
 capture cli_schema_MeshVertex rive schema MeshVertex
 capture cli_schema_Weight rive schema Weight
 capture cli_schema_IKConstraint rive schema IKConstraint
+capture cli_docs_assets rive docs assets
+capture cli_schema_Image rive schema Image
+capture cli_schema_ImageAsset rive schema ImageAsset
+capture cli_schema_FileAsset rive schema FileAsset
+capture cli_schema_Skin rive schema Skin
+capture cli_schema_Tendon rive schema Tendon
+capture cli_schema_ContourMeshVertex rive schema ContourMeshVertex
+
+printf '\n=== RML IMAGE ASSET REFERENCE (selected lines) ===\n'
+grep -nE '(assetId|ImageAsset|FileAsset|<Image|<Asset|assets/|source=|uri=|file=)' "$EVIDENCE_DIR/logs/cli_docs_assets.log" | head -85 || true
+
 capture cli_samples_help rive samples --help
 capture cli_samples_list rive samples
 capture cli_samples_path rive samples --path
