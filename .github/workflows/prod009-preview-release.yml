@@ -35,7 +35,7 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends libegl1 libgles2 libx11-6 libgl1 libgbm1 libxkbcommon0 libx11-xcb1 ffmpeg python3-venv
           python3 -m venv "$RUNNER_TEMP/rig-venv"
-          "$RUNNER_TEMP/rig-venv/bin/pip" install "git+https://github.com/BastienGimbert/SkelToJson.git" "Pillow==11.3.0"
+          "$RUNNER_TEMP/rig-venv/bin/pip" install "git+https://github.com/BastienGimbert/SkelToJson.git" "Pillow==11.3.0" "numpy==2.2.6"
           echo "$RUNNER_TEMP/rig-venv/bin" >> "$GITHUB_PATH"
       - name: Install official Rive CLI
         run: |
@@ -59,19 +59,37 @@ jobs:
           import json,os
           from pathlib import Path
           r=json.loads((Path(os.environ["PROD_REPORT"])/"prod009-result.json").read_text())
-          assert r["status"]=="PASS_EXPERIMENTAL_PREVIEW", r
+          assert r["status"]=="RENDERED_UNVERIFIED", r
           assert len(r["clips"])==12, r.get("clips")
           assert all(v["status"].startswith("RENDERED") for v in r["clips"].values())
           print("PASS_PREVIEW",len(r["clips"]))
           PY
-      - name: Upload videos only to GitHub DRAFT Release
+      - name: Independent video sampling and project inspection
+        run: |
+          set -euo pipefail
+          dir="$PROD_PRIVATE/prod009/release"
+          python scripts/prod009_quality_gate.py "$dir" "$RUNNER_TEMP/prod009-audit"
+          cp "$RUNNER_TEMP/prod009-audit/05-prod009-independent-audit.json" "$dir/"
+          cp "$RUNNER_TEMP/prod009-audit/05-prod009-independent-audit.md" "$dir/"
+      - name: Upload QA-labeled candidate only to GitHub DRAFT Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           tag="prod009-preview-${GITHUB_RUN_ID}"
-          gh release create "$tag" "$PROD_PRIVATE/prod009/release/"* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft --title "PROD-009 preview run ${GITHUB_RUN_NUMBER}" --notes-file "$PROD_REPORT/prod009-release-notes.md"
+          gh release create "$tag" "$PROD_PRIVATE/prod009/release/"* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft --title "QA UNVERIFIED - PROD-009 experimental preview run ${GITHUB_RUN_NUMBER}" --notes-file "$PROD_REPORT/prod009-release-notes.md"
           gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json url,isDraft,assets --jq '{url:.url,isDraft:.isDraft,assets:[.assets[].name]}'
+      - name: Fail closed on unaccepted production quality
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"prod009-audit/05-prod009-independent-audit.json"
+          obj=json.loads(p.read_text())
+          print("PRODUCTION_GATE:", obj["production_gate"], obj["status"])
+          if obj["production_gate"]!="PASS":
+              raise SystemExit("REJECTED: do not label the Rive pose preview as a deliverable")
+          PY
       - name: Print text diagnostics
         if: always()
         run: |
