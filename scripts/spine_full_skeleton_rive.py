@@ -89,6 +89,25 @@ def main():
             fill=ET.SubElement(shape,"Fill",{"name":"Fill"})
             ET.SubElement(fill,"SolidColor",{"colorValue":"FF6BC6E4","name":"Color"})
     METRIC["created_rive_bones"]=len(objs)
+    # Keep a viewport-visible diagnostic control bone so a full source graph
+    # that falls outside the artboard cannot produce a false no-motion result.
+    # This control renders the exact same source rotation channel; it does
+    # NOT count as full-rig pose fidelity.
+    eligible=[(max(float(k.get("angle",0)) for k in keys)-min(float(k.get("angle",0)) for k in keys),name,keys)
+              for name,keys in rot_channels.items() if len(keys)>=3]
+    if not eligible:raise RuntimeError("No source rotation track for visible debug")
+    spread,control_name,control_keys=max(eligible,key=lambda q:q[0])
+    refroot=ET.SubElement(board,"RootBone",{"name":"TrackReferenceRoot","id":"0:900","x":"100","y":"220","length":"100"})
+    refbone=ET.SubElement(refroot,"Bone",{"name":"TrackReference","id":"0:901","length":"150","rotation":"0"})
+    refshape=ET.SubElement(refbone,"Shape",{"name":"ReferenceShape"})
+    path=ET.SubElement(refshape,"PointsPath",{"name":"ReferenceOutline"})
+    for px,py in [(0,-9),(150,-9),(150,9),(0,9)]:
+        ET.SubElement(path,"StraightVertex",{"x":str(px),"y":str(py)})
+    fill=ET.SubElement(refshape,"Fill",{"name":"Fill"})
+    ET.SubElement(fill,"SolidColor",{"colorValue":"FFBB8159","name":"ReferenceColor"})
+    METRIC["visible_reference_source_bone"]=control_name
+    METRIC["visible_reference_angle_spread"]=spread
+    METRIC["full_graph_visual_fidelity"]="NOT_TESTED; source graph may be off viewport"
     frames=ROOT/"full-native-frames";frames.mkdir(exist_ok=True)
     hashes=[]
     for frame in range(24):
@@ -97,6 +116,7 @@ def main():
             if n not in objs:continue
             base=float(indexed[n].get("rotation",0))
             objs[n].set("rotation",str(math.radians(base+sample_curve(keys,t,"angle"))-float(indexed[n].get("_rive_bridge_angle",0))))
+        refbone.set("rotation",str(math.radians(sample_curve(control_keys,t,"angle"))))
         tree.write(project/"scene.rml",encoding="unicode")
         if frame==0:cmd("rive",str(project),"--verify")
         dest=frames/f"{frame:04d}.png"
@@ -110,7 +130,7 @@ def main():
     METRIC.update({"status":"PASS","visual_unique_frames":unique,"frames":24,
         "debug_video_bytes":dest.stat().st_size,"source_art_exported":False,
         "excluded":["mesh weights","UV textures","IK/transform/path constraints","source exact bezier curves","slot draw order"],
-        "notes":"Native full bone hierarchy with rotation tracks only. This video is a structural diagnostic, not avatar fidelity proof."})
+        "notes":"Native full bone hierarchy with rotation tracks; visible reference bone guarantees nonblank motion. Entire skeleton visual parity NOT established."})
 
 def finish():
     (OUT/"full-skeleton-result.json").write_text(json.dumps(METRIC,ensure_ascii=False,indent=2)+"\n")
