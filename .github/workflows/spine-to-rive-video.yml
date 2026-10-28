@@ -28,7 +28,7 @@ jobs:
             ffmpeg python3-venv
           python3 -m venv "$RUNNER_TEMP/rig-venv"
           "$RUNNER_TEMP/rig-venv/bin/pip" install --disable-pip-version-check \
-            "skel_to_json" "Pillow==11.3.0"
+            "git+https://github.com/AyalaKaguya/skel_to_json.git" "Pillow==11.3.0"
           echo "$RUNNER_TEMP/rig-venv/bin" >> "$GITHUB_PATH"
       - name: Install official Rive CLI
         run: |
