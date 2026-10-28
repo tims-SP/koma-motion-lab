@@ -98,3 +98,11 @@ async def run():
 
 if __name__=="__main__":
   asyncio.run(run())
+  report=json.loads((OUT/"report.json").read_text())
+  verified=any(
+      r.get("navigation")==200 and r.get("canvas_count",0)>0
+      and r["request_counts"]["successful_model_requests"]>0
+      for r in report["results"])
+  if not verified:
+      print("BLOCKED: No browser successfully loaded and rendered a model. Not production-ready.")
+      raise SystemExit(2)
