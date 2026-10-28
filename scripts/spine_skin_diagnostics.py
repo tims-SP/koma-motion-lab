@@ -50,7 +50,10 @@ def visible(path):
         corner=px[:4]
         return sum(px[i:i+4]!=corner for i in range(0,len(px),4))
 def main():
-    # PROD-004 already built the same project path; rive create does not reset\n    # an existing RML scene. Start with a clean private scratch project.\n    shutil.rmtree(ROOT/"source-mesh-rive",ignore_errors=True)\n    tree,project,bones,objects,doc,imported=src.construct()
+    # PROD-004 already built the same project path; rive create does not reset
+    # an existing RML scene. Start with a clean private scratch project.
+    shutil.rmtree(ROOT/"source-mesh-rive",ignore_errors=True)
+    tree,project,bones,objects,doc,imported=src.construct()
     template=copy.deepcopy(tree)
     variants=["original","original-no-scale","rive-local-pose","rive-local-pose-no-scale",
               "identity-tendons","zero-tendon-xy","one-source-mesh","one-source-mesh-rive-local",
