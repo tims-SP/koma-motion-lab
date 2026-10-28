@@ -29,6 +29,17 @@ capture cli_schema_bone rive schema --search bone
 capture cli_schema_mesh rive schema --search mesh
 capture cli_schema_weight rive schema --search weight
 capture cli_schema_ik rive schema --search ik
+# Capture the actual 1.8.0 rigging model, not inferred legacy editor syntax.
+capture cli_docs_rigging_full rive docs rigging
+capture cli_schema_RootBone rive schema RootBone
+capture cli_schema_Bone rive schema Bone
+capture cli_schema_Mesh rive schema Mesh
+capture cli_schema_MeshVertex rive schema MeshVertex
+capture cli_schema_Weight rive schema Weight
+capture cli_schema_IKConstraint rive schema IKConstraint
+capture cli_samples_help rive samples --help
+capture cli_inspect_help rive inspect --help
+
 capture scaffold rive create arm_probe
 
 if [ -d arm_probe ]; then
