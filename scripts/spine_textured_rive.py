@@ -192,7 +192,12 @@ def construct():
             continue
         tendon_by_name={name:i+1 for i,name in enumerate(sorted(used))}
         image=ET.SubElement(group,"Image",{"assetId":"0:60","id":"0:"+str(1000+j),"name":"src_"+sn})
-        encoded=base64.b64encode(bytes(geo["triangles"])).decode()
+        # Flip triangle winding when converting Spine's Y-up coordinates to
+        # Rive's Y-down scene (scaleY is negative). Winding mismatch can
+        # cull every triangle even though the Mesh parses successfully.
+        src=geo["triangles"]
+        reversed_triangles=[j for i in range(0,len(src),3) for j in (src[i],src[i+2],src[i+1])]
+        encoded=base64.b64encode(bytes(reversed_triangles)).decode()
         mesh=ET.SubElement(image,"Mesh",{"triangleIndexBytes":encoded,"id":"0:"+str(1500+j),"name":"sourceMesh"})
         for i,((x,y,inf),(u,v)) in enumerate(zip(geo["vertex"],geo["uv"])):
             vertex=ET.SubElement(mesh,"ContourMeshVertex",{"x":f"{x:.7g}","y":f"{y:.7g}",
@@ -233,6 +238,7 @@ def construct():
     group.set("scaleX",str(scale))
     group.set("scaleY",str(-scale))
     METRIC["source_bbox"]=[minx,miny,maxx,maxy]
+    METRIC["triangle_winding_flipped"]=True
     METRIC["image_scale"]=scale
     METRIC["preserved"]=["source hierarchy for 85 bones","source animated rotation samples",
       "source texture atlas","source mesh triangles and original UV arrays",
