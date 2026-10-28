@@ -7,6 +7,7 @@ All source art, RML and screenshots remain in ephemeral CI runner.
 """
 from __future__ import annotations
 import copy,json,math,os,shutil,sys
+from collections import Counter
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from PIL import Image
@@ -97,11 +98,51 @@ def main():
     src.run(["rive",str(project),f"--screenshot={unskinned}",
              "--viewport=640x360","--advance=0s"])
     REPORT.update(compare_images(native,unskinned))
-    REPORT["status"]=("PASS_NATIVE_SETUP" if
+
+    # A matching static image does not prove bone-to-skin binding.
+    # Rotate a bone referenced by the most Tendons. Only the native Skin
+    # should move mesh pixels; the unskinned control must stay unchanged.
+    tendon_counts=Counter(t.get("boneId") for t in tree.getroot().iter("Tendon"))
+    if not tendon_counts:
+        raise RuntimeError("No Tendon references in native Rive rig")
+    selected_id, selected_count=tendon_counts.most_common(1)[0]
+    selected_bone=next((b for b in tree.getroot().iter()
+                        if b.tag in ("Bone","RootBone") and b.get("id")==selected_id),None)
+    if selected_bone is None:
+        raise RuntimeError("Most-used Tendon has no referenced Bone")
+    REPORT["poked_bone_name"]=selected_bone.get("name")
+    REPORT["poked_bone_tendon_count"]=selected_count
+    poked=copy.deepcopy(tree)
+    bone_to_poke=next(b for b in poked.getroot().iter()
+                      if b.tag in ("Bone","RootBone") and b.get("id")==selected_id)
+    bone_to_poke.set("rotation",str(float(bone_to_poke.get("rotation","0"))+0.35))
+    poked.write(project/"scene.rml",encoding="unicode")
+    native_poked=ROOT/"native-skin-bone-poked.png"
+    src.run(["rive",str(project),f"--screenshot={native_poked}",
+             "--viewport=640x360","--advance=0s"])
+    control=copy.deepcopy(poked)
+    for mesh in control.getroot().iter("Mesh"):
+        for skin in list(mesh.findall("Skin")):mesh.remove(skin)
+        for vertex in mesh.findall("ContourMeshVertex"):
+            for weight in list(vertex.findall("Weight")):vertex.remove(weight)
+    control.write(project/"scene.rml",encoding="unicode")
+    unskinned_poked=ROOT/"unskinned-bone-poked.png"
+    src.run(["rive",str(project),f"--screenshot={unskinned_poked}",
+             "--viewport=640x360","--advance=0s"])
+    moved=compare_images(native,native_poked)
+    unaffected=compare_images(unskinned,unskinned_poked)
+    REPORT["native_skin_poke_changed_fraction"]=moved["changed_foreground_fraction"]
+    REPORT["unskinned_control_poke_changed_fraction"]=unaffected["changed_foreground_fraction"]
+    REPORT["native_skin_poke_mask_iou"]=moved["native_unskinned_mask_iou"]
+    REPORT["native_skin_responds_to_bone_rotation"]=(
+        moved["changed_foreground_fraction"]>.01 and
+        unaffected["changed_foreground_fraction"]<.001)
+    REPORT["status"]=("PASS_NATIVE_SETUP_AND_BONE_POKE" if
         REPORT["native_unskinned_mask_iou"]>=.99 and
-        REPORT["changed_foreground_fraction"]<=.05
-        else "FAIL_NATIVE_SKIN_SETUP")
-    # Main project scene must remain native Skin, not the diagnostic no-skin copy.
+        REPORT["changed_foreground_fraction"]<=.05 and
+        REPORT["native_skin_responds_to_bone_rotation"]
+        else "FAIL_NATIVE_SKIN_BINDING")
+    # Restore native rig (not the diagnostic no-Skin control copy).
     tree.write(project/"scene.rml",encoding="unicode")
 def finish():
     OUT.mkdir(parents=True,exist_ok=True)
@@ -114,4 +155,4 @@ if __name__=="__main__":
         REPORT["status"]="FAIL"
         REPORT["error"]=repr(error)
     finish()
-    if REPORT["status"]!="PASS_NATIVE_SETUP":sys.exit(1)
+    if REPORT["status"]!="PASS_NATIVE_SETUP_AND_BONE_POKE":sys.exit(1)
