@@ -326,7 +326,7 @@ def process():
         views, RELEASE / "03-common-poses-contact-sheet.png")
     REPORT["source_original_media_committed_to_git"] = False
     REPORT["all_release_files"] = sorted(p.name for p in RELEASE.iterdir() if p.is_file())
-    REPORT["status"] = "PASS_EXPERIMENTAL_PREVIEW"
+    REPORT["status"] = "RENDERED_UNVERIFIED"
 
 def finalize():
     OUT.mkdir(parents=True, exist_ok=True)
@@ -366,5 +366,5 @@ if __name__ == "__main__":
         REPORT["error"] = repr(error)
     finally:
         finalize()
-    if REPORT["status"] != "PASS_EXPERIMENTAL_PREVIEW":
+    if REPORT["status"] != "RENDERED_UNVERIFIED":
         sys.exit(1)
