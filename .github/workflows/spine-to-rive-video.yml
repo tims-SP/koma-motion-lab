@@ -8,6 +8,7 @@ on:
       - '.github/workflows/spine-to-rive-video.yml'
       - 'scripts/spine_binary_conversion.py'
       - 'scripts/spine_rive_renderer.py'
+      - 'scripts/spine_full_skeleton_rive.py'
 
 permissions:
   contents: read
@@ -49,12 +50,21 @@ jobs:
           PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
           PROD_REPORT: ${{ github.workspace }}/out/spine-rive
         run: python scripts/spine_rive_renderer.py
+      - name: Convert full bone hierarchy and original rotation tracks
+        if: success()
+        env:
+          PROD_PRIVATE: ${{ runner.temp }}/spine-rive-private
+          PROD_REPORT: ${{ github.workspace }}/out/spine-rive
+        run: python scripts/spine_full_skeleton_rive.py
       - name: Publish acceptance record
         if: always()
         run: |
           cat out/spine-rive/summary.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || echo "No summary; inspect step logs." >> "$GITHUB_STEP_SUMMARY"
           if [ -f out/spine-rive/render-summary.md ]; then
             cat out/spine-rive/render-summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f out/spine-rive/full-skeleton-summary.md ]; then
+            cat out/spine-rive/full-skeleton-summary.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload metadata-only report
         if: always()
