@@ -1,0 +1,53 @@
+name: Spine 4.2 atlas UV independent validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/spine_atlas_uv.py'
+      - 'scripts/spine_uv_official_parity.mjs'
+      - 'tests/test_spine_atlas_uv.py'
+      - '.github/workflows/spine-atlas-uv-validation.yml'
+permissions:
+  contents: read
+jobs:
+  uv-reference-parity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify local synthetic 0/90/180/270 and whitespace offset tests
+        run: python3 -m unittest discover -s tests -p 'test_spine_atlas_uv.py' -v
+      - name: Get original game Atlas text only in ephemeral runner
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/roles/300401_hongnujian/300401_hongnujian.atlas \
+            -o "$RUNNER_TEMP/character.atlas"
+      - name: Compute candidate UV reference coordinates for every real atlas region
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from spine_atlas_uv import parse_atlas, to_atlas_uv
+          root=Path(os.environ["RUNNER_TEMP"])
+          regions=parse_atlas((root/"character.atlas").read_text())
+          assert len(regions)>=75,len(regions)
+          rotations={deg:sum(r.degrees==deg for r in regions.values()) for deg in (0,90,180,270)}
+          assert all(rotations.values()),rotations
+          samples=((0,0),(.5,.5),(1,1))
+          data={"regions":{name:[to_atlas_uv(region,u,v) for u,v in samples] for name,region in regions.items()}}
+          (root/"candidate-uv.json").write_text(json.dumps(data))
+          print("ATLAS_REGION_COUNT",len(regions),"ROTATIONS",rotations)
+          PY
+      - name: Pin official Spine 4.2 core runtime
+        run: |
+          set -euo pipefail
+          npm install --prefix "$RUNNER_TEMP/spinecore" --no-save --no-audit --no-fund "@esotericsoftware/spine-core@4.2.120"
+      - name: Check every region UV against official runtime updateRegion
+        env:
+          SPINE_CORE_ENTRY: ${{ runner.temp }}/spinecore/node_modules/@esotericsoftware/spine-core/dist/index.js
+        run: |
+          node scripts/spine_uv_official_parity.mjs \
+            "$RUNNER_TEMP/character.atlas" "$RUNNER_TEMP/candidate-uv.json"
