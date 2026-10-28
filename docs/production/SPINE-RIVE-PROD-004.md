@@ -35,6 +35,19 @@ Date: 2026-10-29 (JST). Validation: [PROD-002 workflow run #27](https://github.c
 
 This route is a deterministic fallback, **not** a reusable native Rive rig.
 
+## PROD-007 numerical animation comparison
+
+[Workflow #28](https://github.com/tims-SP/koma-motion-lab/actions/runs/40772369321) executed both branches and compared nine matching frames:
+
+- Median native-Rive vs source-weight-baked **foreground mask IoU = 0.30099**.
+- Median differing foreground pixels (8/255 threshold) **= 0.90588**, or 90.6%.
+- At frame 0: 80,054 non-background pixels native vs 61,840 baked (mask IoU 0.345).
+- Across nine frames mask IoU ranged from 0.083 to 0.464.
+
+**Result: FAIL_LOW_PARITY for production fidelity.** Import/render success is valid but not yet suitable for claiming source character animation preservation. Even the baked branch is only an approximation to the Spine runtime since constraints, shear/inherit handling and FFD may differ. Full source runtime side-by-side remains necessary.
+
+A programmatic fidelity gate has been added with intentionally conservative internal targets: median silhouette IoU ≥ 0.75 and differing foreground fraction ≤ 0.25. Passing those internal targets will still **not** prove true source-runtime parity.
+
 ## Production readiness
 
 **Working:** Original-game Spine 4.2 binary → decoded skeleton → native Rive 85-bone scene + selected textured Mesh and Skin; original source key sampling; Rive CLI headless frame/video export.
