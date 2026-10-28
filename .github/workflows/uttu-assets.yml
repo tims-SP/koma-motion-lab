@@ -1,0 +1,41 @@
+name: UTTU asset production compatibility
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/uttu-assets.yml'
+      - 'scripts/uttu_asset_probe.py'
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-public-asset-metadata:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Checkout validation repository
+        uses: actions/checkout@v4
+      - name: Check publicly served UTTU format metadata
+        run: python3 scripts/uttu_asset_probe.py
+        env:
+          OUT_DIR: out/uttu-asset-probe
+      - name: Publish compatibility summary
+        if: always()
+        shell: bash
+        run: |
+          if test -f out/uttu-asset-probe/summary.md; then
+            cat out/uttu-asset-probe/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Metadata probe failed before creating summary.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload metadata evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uttu-compatibility-metadata-${{ github.run_number }}
+          path: out/uttu-asset-probe/
+          retention-days: 14
+          if-no-files-found: warn
