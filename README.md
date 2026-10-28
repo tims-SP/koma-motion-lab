@@ -1,5 +1,13 @@
 # Koma Motion Lab
 
+## Current experimental preview — PROD-009 (2026-10-29)
+
+- [GitHub Actions run #2](https://github.com/tims-SP/koma-motion-lab/actions/runs/40778781058): **SUCCESS**.
+- [DRAFT Release preview](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-8d225fef6491014e9a15) (repository owner access): source-action video, eight experimental common-pose video, contact sheet, JSON report and Rive RML rig scaffold ZIP.
+- Source artwork, generated videos, screenshots and RML assets are **Release-only**. Git history is text-only, enforced in CI and `.gitignore`.
+- Videos are **Rive mesh-baked experiments**; this is not an editable native Rive animation transfer or original-Spine-runtime fidelity claim. A signed `.riv` was not exported.
+- [PROD-009 report](docs/production/PROD-009.md).
+
 ## Current production milestone — PROD-008 (2026-10-29)
 
 **Spine 4.2.36 game asset -> Rive weighted Mesh motion bake** has run successfully in the headless Linux Actions pipeline. The last passing Actions run is [#31](https://github.com/tims-SP/koma-motion-lab/actions/runs/40773868508).
