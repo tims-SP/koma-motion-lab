@@ -16,7 +16,7 @@ const reader = new spine.SkeletonJson(loader);
 const data = reader.readSkeletonData(JSON.parse(fs.readFileSync(sourceJson,'utf8')));
 const skeleton = new spine.Skeleton(data);
 skeleton.setToSetupPose();
-skeleton.updateWorldTransform();
+skeleton.updateWorldTransform(spine.Physics.pose);
 const result = {spineVersion:data.version,bones:data.bones.length,
   slots:data.slots.length,atlasRegions:atlas.regions.length,
   mesh:{},regions:[],other:[],drawOrder:[]};
