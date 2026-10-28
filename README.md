@@ -1,5 +1,18 @@
 # Koma Motion Lab
 
+## Current production milestone — PROD-008 (2026-10-29)
+
+**Spine 4.2.36 game asset -> Rive weighted Mesh motion bake** has run successfully in the headless Linux Actions pipeline. The last passing Actions run is [#31](https://github.com/tims-SP/koma-motion-lab/actions/runs/40773868508).
+
+- One real character (`300401_hongnujian`) from [Reverse-1999-CN-Asset](https://github.com/myssal/Reverse-1999-CN-Asset).
+- Source binary decoded into 85 bones, 101 source mesh attachments and 8 source actions; the Rive conversion currently handles a **51-mesh subset, including 27 weighted meshes and 843 vertices**.
+- Four original actions (`idle_room`, `walk`, `sleep`, `hit`) were transformed by original bone rotate/translate/scale/shear channel samples and rendered as **Rive** frame sequences + temporary MP4 clips (12 frames each).
+- **Not yet a complete or lossless conversion:** IK, constraints, source Bezier easing, FFD, slot switching and source Spine-runtime parity are not yet implemented.
+- The upstream repo contains copyrighted game assets without a root redistribution license. No source art / derived game video is distributed through public Actions artifacts.
+
+Detailed findings: [PROD-008](docs/production/PROD-008.md) · [Production workflow](.github/workflows/spine-to-rive-video.yml).
+
+
 Experimental/validation repository for [koma-motion](https://github.com/tims-SP/koma-motion). This is **not** the production repository.
 
 ## RIVE-RIG-001 — Agent-first, no-editor rigging gate
