@@ -360,6 +360,17 @@ jobs:
           done
           python3 scripts/godot_004_hires_audit.py
           cat out/godot-004/quality-audit.json >> "$GITHUB_STEP_SUMMARY"
+      - name: GODOT-004 transient owner preview videos (never Git history)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-004-owner-video-${{ github.run_number }}
+          path: |
+            out/godot-004/nod-1080p.mp4
+            out/godot-004/idle-1080p.mp4
+            out/godot-004/quality-audit.json
+          if-no-files-found: warn
+          retention-days: 1
       - name: GODOT-004 owner-only draft review (game-derived videos)
         if: always()
         shell: bash
