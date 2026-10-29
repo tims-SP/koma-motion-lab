@@ -32,3 +32,6 @@ dist/
 *.so
 *.dylib
 *.bin
+
+# CI-only native extension compile cache, never commit binaries
+.ci-cache/
