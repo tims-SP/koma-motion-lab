@@ -123,9 +123,30 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
             total = sum(w for _,w in ranked)
             skinidx.append([bid for bid,_ in ranked]+[0]*(4-len(ranked)))
             skinweight.append([w/total for _,w in ranked]+[0.]*(4-len(ranked)))
+        # The 2D front alone becomes edge-on at 90 degrees. Explicitly
+        # construct a *neutral* back/side proxy using exposed boundary edges.
+        # This is only a geometric proxy: hidden artwork is NOT reconstructed.
+        n=len(verts)
+        half=0.5*(max(v[0] for v in verts)-min(v[0] for v in verts))
+        back_depth=max(0.25,min(0.75,half))
+        shell_pos=[v[:] for v in verts] + [[v[0],v[1],-back_depth] for v in verts]
+        shell_index=[]
+        edges={}
+        for a,b,c in zip(tris[0::3],tris[1::3],tris[2::3]):
+            shell_index.extend([c+n,b+n,a+n])
+            for i,j in [(a,b),(b,c),(c,a)]:
+                k=tuple(sorted((i,j)))
+                edges.setdefault(k,[]).append((i,j))
+        for orientations in edges.values():
+            if len(orientations)!=1: continue
+            a,b=orientations[0]
+            shell_index.extend([a,b,b+n,a,b+n,a+n])
+        shell={"vertices":shell_pos,"indices":shell_index,
+               "skinIndex":skinidx+skinidx,"skinWeight":skinweight+skinweight,
+               "appearance":"UNPAINTED_NEUTRAL_PROXY"}
         meshes.append({"name":name,"vertices":verts,"uv":[[u/width,1-v/height] for u,v in uv],
                        "indices":tris, "skinIndex":skinidx,"skinWeight":skinweight,
-                       "layer":len(meshes)})
+                       "shell":shell,"layer":len(meshes)})
     if not meshes: raise ValueError("No Polygon2D meshes")
     points=[v for m in meshes for v in m["vertices"]]
     bounds=[[min(v[k] for v in points),max(v[k] for v in points)] for k in (0,1,2)]
