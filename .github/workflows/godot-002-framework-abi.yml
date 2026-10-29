@@ -6,7 +6,7 @@ on:
       - '.github/workflows/godot-002-framework-abi.yml'
       - 'experiments/godot-002/framework_probe*'
   push:
-    branches: [validation/godot-002-framework-abi]
+    branches: [validation/godot-002-framework-abi, validation/godot-002-motion-asan]
     paths:
       - '.github/workflows/godot-002-framework-abi.yml'
       - 'experiments/godot-002/framework_probe*'
@@ -36,6 +36,17 @@ jobs:
             -o "$RUNNER_TEMP/model.moc3"
           test "$(head -c 4 "$RUNNER_TEMP/model.moc3")" = "MOC3"
           sha256sum "$RUNNER_TEMP/model.moc3" > out/godot-002-fw/model-sha256.txt
+          for motion in b_diantou t_idle; do
+            curl -fsSL --retry 3 \
+              "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/master/live2d/roles/301003_x/motions/${motion}.motion3.json" \
+              -o "$RUNNER_TEMP/${motion}.motion3.json"
+            python3 -m json.tool "$RUNNER_TEMP/${motion}.motion3.json" >/dev/null
+            sha256sum "$RUNNER_TEMP/${motion}.motion3.json" >> out/godot-002-fw/model-sha256.txt
+          done
+          python3 scripts/godot_002_normalize_motion.py \
+            "$RUNNER_TEMP/b_diantou.motion3.json" "$RUNNER_TEMP/t_idle.motion3.json" \
+            > out/godot-002-fw/motion-normalization.json
+          cat out/godot-002-fw/motion-normalization.json
           git clone --depth 1 --branch 5-r.1 \
             https://github.com/Live2D/CubismNativeFramework.git "$RUNNER_TEMP/sdk/Framework"
           git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
@@ -88,6 +99,7 @@ jobs:
           set +e
           ASAN_OPTIONS=detect_leaks=0:abort_on_error=1:halt_on_error=1 \
             timeout 90s "$RUNNER_TEMP/probe-build/framework_probe" "$RUNNER_TEMP/model.moc3" \
+              "$RUNNER_TEMP/b_diantou.motion3.json" "$RUNNER_TEMP/t_idle.motion3.json" \
             > out/godot-002-fw/framework-probe.log 2>&1
           code=$?
           set -e
@@ -107,4 +119,5 @@ jobs:
           path: |
             out/godot-002-fw/*.log
             out/godot-002-fw/*.txt
+            out/godot-002-fw/*.json
           retention-days: 7
