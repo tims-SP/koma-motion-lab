@@ -20,7 +20,8 @@ Prove, by real rendered frames, that a character from myssal/Reverse-1999-CN-Ass
 - [Run 1](https://github.com/tims-SP/koma-motion-lab/actions/runs/40801481710): **FAIL** compilation — latest CubismNativeFramework changed constructor and render order API, incompatible with GDCubism v0.9.1.
 - [Run 2](https://github.com/tims-SP/koma-motion-lab/actions/runs/40802604509): **FAIL** compilation — nested `stdint.h` in the legacy Cubism Core C++ namespace breaks glibc system types.
 - [Run 3](https://github.com/tims-SP/koma-motion-lab/actions/runs/40802859043): **FAIL** compilation — Purism Core static library built as v5 but host-facing header defaulted to v6, so legacy `csmGetDrawableRenderOrders` declaration was absent.
-- [Run 4](https://github.com/tims-SP/koma-motion-lab/actions/runs/40803372939): v5 ABI header and static library aligned; **final result requires CI inspection**.
+- [Run 4](https://github.com/tims-SP/koma-motion-lab/actions/runs/40803372939): **FAIL at runtime**. v5 ABI GDCubism extension successfully compiled; Godot editor could not load `libgd_cubism.linux.debug.x86_64.so` because only the release variant was copied. It generated 90 *empty background frames* before a log assertion rejected the run; these are not valid character animation.
+- [Run 6](https://github.com/tims-SP/koma-motion-lab/actions/runs/40806123334): GDExtension descriptor patched to use the built release variant during editor import and runtime, unrelated addon examples removed; verdict pending independent playback/pixel check.
 
 Do not interpret the existence of a MOC3 file, its SHA, successful Purism build, successful GDExtension build, or a nonempty movie as visual parity with the official Cubism runtime. For parity, capture matched parameter/time/frame references and explicitly assess clipping masks, blend modes, part order, facial and garment deformation.
 
