@@ -1,0 +1,35 @@
+name: GODOT-007 · Canonical facial ROI gate synthetic regression
+
+on:
+  push:
+    branches:
+      - validation/godot-007-canonical-facial-roi
+    paths:
+      - '.github/workflows/godot-007-facial-roi-gate.yml'
+      - 'scripts/godot_007_facial_roi_gate.py'
+      - 'tests/test_godot_007_facial_roi_gate.py'
+  pull_request:
+    paths:
+      - '.github/workflows/godot-007-facial-roi-gate.yml'
+      - 'scripts/godot_007_facial_roi_gate.py'
+      - 'tests/test_godot_007_facial_roi_gate.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  roi-gate-regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Python syntax
+        run: python3 -m py_compile scripts/godot_007_facial_roi_gate.py tests/test_godot_007_facial_roi_gate.py
+      - name: ROI matched-camera positive and negative control
+        run: python3 tests/test_godot_007_facial_roi_gate.py
+      - name: State scope
+        run: |
+          echo 'This CI test does not contain/validate private MOC3 artwork.'
+          echo 'Actual four-video facial ROI gate passed independently in isolated container.'
+          echo 'Official Live2D Cubism Core parity is still untested.'
