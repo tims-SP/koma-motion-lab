@@ -1,0 +1,145 @@
+name: GODOT-002 · Real MOC3 Godot movie
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/godot-002-live2d.yml'
+      - 'experiments/godot-002/**'
+      - 'scripts/godot_002_*.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  real-live2d:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - name: Checkout only source code
+        uses: actions/checkout@v4
+      - name: Install toolchain, Mesa and validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            git build-essential cmake ninja-build pkg-config python3-venv \
+            xvfb xauth mesa-utils libgl1-mesa-dri libgl1 ffmpeg unzip
+          python3 -m venv "$RUNNER_TEMP/gd002venv"
+          "$RUNNER_TEMP/gd002venv/bin/pip" install --disable-pip-version-check \
+            'scons==4.7.0' 'Pillow==11.3.0'
+          echo "$RUNNER_TEMP/gd002venv/bin" >> "$GITHUB_PATH"
+      - name: Stage real source model privately inside runner
+        shell: bash
+        env:
+          GODOT002_PROJECT: ${{ runner.temp }}/gd002-project
+          GODOT002_OUT: ${{ github.workspace }}/out/godot-002
+        run: |
+          set -euo pipefail
+          mkdir -p "$GODOT002_PROJECT" "$GODOT002_OUT"
+          cp -a experiments/godot-002/. "$GODOT002_PROJECT/"
+          python scripts/godot_002_stage.py
+      - name: Build open-source Purism Core v5 ABI replacement
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out/godot-002
+          git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
+          git -C "$RUNNER_TEMP/PurismCore" rev-parse HEAD | tee out/godot-002/purism-commit.txt
+          cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/build" \
+            -DCMAKE_BUILD_TYPE=Release -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF
+          cmake --build "$RUNNER_TEMP/PurismCore/build" --parallel 2 \
+            2>&1 | tee out/godot-002/purism-build.log
+          find "$RUNNER_TEMP/PurismCore/build" -name '*.a' | tee out/godot-002/purism-archives.txt
+      - name: Build GDCubism with Purism Core, no proprietary SDK download
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch v0.9.1 https://github.com/MizunagiKB/gd_cubism.git "$RUNNER_TEMP/gd_cubism"
+          git -C "$RUNNER_TEMP/gd_cubism" submodule update --init --depth 1 godot-cpp
+          git clone --depth 1 https://github.com/Live2D/CubismNativeFramework.git "$RUNNER_TEMP/CubismNativeFramework"
+          git -C "$RUNNER_TEMP/gd_cubism" rev-parse HEAD | tee out/godot-002/gdcubism-commit.txt
+          cd "$RUNNER_TEMP/gd_cubism"
+          sdk="$PWD/thirdparty/CubismSdkForNative-Lab"
+          mkdir -p "$sdk/Core/include" "$sdk/Core/lib/linux/x86_64"
+          cp "$RUNNER_TEMP/PurismCore/include/"*.h "$sdk/Core/include/"
+          archive=$(find "$RUNNER_TEMP/PurismCore/build" -name 'libPurismCore-v5.a' -print -quit)
+          test -n "$archive" && test -s "$archive"
+          cp "$archive" "$sdk/Core/lib/linux/x86_64/libLive2DCubismCore.a"
+          ln -s "$RUNNER_TEMP/CubismNativeFramework" "$sdk/Framework"
+          scons platform=linux arch=x86_64 target=template_release -j2 \
+            2>&1 | tee "$GITHUB_WORKSPACE/out/godot-002/gdcubism-build.log"
+          lib=demo/addons/gd_cubism/bin/libgd_cubism.linux.release.x86_64.so
+          test -s "$lib"
+          mkdir -p "$RUNNER_TEMP/gd002-project/addons"
+          cp -a demo/addons/gd_cubism "$RUNNER_TEMP/gd002-project/addons/"
+          sha256sum "$lib" | tee "$GITHUB_WORKSPACE/out/godot-002/gdcubism-library.sha256"
+      - name: Install official Godot 4.7.2 Linux binary
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 --retry-all-errors \
+            https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip \
+            -o "$RUNNER_TEMP/godot.zip"
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP"
+          mv "$RUNNER_TEMP/Godot_v4.7.2-stable_linux.x86_64" "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot"
+          "$RUNNER_TEMP/godot" --version
+          echo "GODOT_BIN=$RUNNER_TEMP/godot" >> "$GITHUB_ENV"
+      - name: Render real character nod motion with Xvfb and Mesa llvmpipe
+        shell: bash
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          GALLIUM_DRIVER: llvmpipe
+        run: |
+          set -euo pipefail
+          xvfb-run -a -s '-screen 0 1280x720x24' \
+            glxinfo -B | tee out/godot-002/glxinfo.txt
+          xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --editor --path "$RUNNER_TEMP/gd002-project" --import \
+            2>&1 | tee out/godot-002/import.log
+          xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+            --rendering-method gl_compatibility --rendering-driver opengl3 \
+            --write-movie "$GITHUB_WORKSPACE/out/godot-002/shot.png" \
+            --fixed-fps 30 --quit-after 90 \
+            2>&1 | tee out/godot-002/godot-render.log
+          grep -q 'GODOT002_REAL_MOTION_STARTED' out/godot-002/godot-render.log
+          ffmpeg -hide_banner -loglevel warning -y -framerate 30 \
+            -pattern_type glob -i 'out/godot-002/shot*.png' \
+            -c:v libx264 -crf 18 -pix_fmt yuv420p \
+            out/godot-002/preview.mp4
+      - name: Validate pixels, animation and MP4 independently
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/godot_002_verify.py
+          cat out/godot-002/summary.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Keep game-derived preview in draft Release, not public release
+        if: success()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="godot-002-review-${GITHUB_RUN_NUMBER}"
+          gh release create "$tag" \
+            out/godot-002/preview.mp4 \
+            out/godot-002/contact-sheet.jpg \
+            out/godot-002/summary.json \
+            --draft \
+            --title "GODOT-002 private inspection #${GITHUB_RUN_NUMBER}" \
+            --notes "Draft only: contains game-derived character footage. Do not publish without asset rights. Playback test, not original Cubism visual parity."
+      - name: Upload text-only diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-002-text-diagnostics-${{ github.run_number }}
+          path: |
+            out/godot-002/*.json
+            out/godot-002/*.log
+            out/godot-002/*.txt
+            out/godot-002/*.sha256
+          if-no-files-found: warn
+          retention-days: 7
