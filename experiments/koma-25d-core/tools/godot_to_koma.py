@@ -151,6 +151,9 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
                 if len(weights)!=len(xy): raise ValueError(f"{name}: bad skin channels")
                 if path in bone_by_path: channels.append((bone_by_path[path],weights))
         offset = vec(block,"position")
+        # Godot Polygon2D.offset shifts local vertices *without modifying UVs*.
+        # GBot Chin uses a large offset; omitting it detached the jaw in video.
+        image_offset = vec(block,"offset")
         center_x = (min(p[0] for p in xy)+max(p[0] for p in xy))/2
         halfwidth = max(4,(max(p[0] for p in xy)-min(p[0] for p in xy))/2)
         verts = []
@@ -158,7 +161,8 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
         for i,(p,t) in enumerate(zip(xy,uv)):
             r = min(1,abs(p[0]-center_x)/halfwidth)
             z = depth * max(0.0,1-r*r)**0.5
-            verts.append([(p[0]+offset[0])*SCALE,-(p[1]+offset[1])*SCALE,z])
+            verts.append([(p[0]+offset[0]+image_offset[0])*SCALE,
+                          -(p[1]+offset[1]+image_offset[1])*SCALE,z])
             ranked = sorted([(bid,ws[i]) for bid,ws in channels if ws[i]>1e-5],
                             key=lambda v:v[1],reverse=True)[:4]
             if not ranked: ranked=[(0,1.)]
@@ -183,7 +187,33 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
             if len(orientations)!=1: continue
             a,b=orientations[0]
             shell_index.extend([a,b,b+n,a,b+n,a+n])
+        # Separate side-facing and back-facing triangles: these require
+        # DIFFERENT view UV mappings and have no genuine original artwork yet.
+        rear_idx=[]
+        side_idx=[]
+        edge_count={}
+        for a,b,c in zip(tris[0::3],tris[1::3],tris[2::3]):
+            rear_idx.extend([c+n,b+n,a+n])
+            for i,j in [(a,b),(b,c),(c,a)]:
+                k=tuple(sorted((i,j)))
+                edge_count.setdefault(k,[]).append((i,j))
+        for orientation in edge_count.values():
+            if len(orientation)!=1:continue
+            a,b=orientation[0]
+            side_idx.extend([a,b,b+n,a,b+n,a+n])
+        min_y=min(v[1] for v in verts)
+        max_y=max(v[1] for v in verts)
+        height_y=max(0.001,max_y-min_y)
+        # Side textures live in a canonical per-mesh UV rectangle. The runtime
+        # enforces source provenance; canary views do NOT claim real side art.
+        side_uv=[[
+          max(0.,min(1.,(v[2]+back_depth)/(depth+back_depth))),
+          max(0.,min(1.,(v[1]-min_y)/height_y))
+        ] for v in shell_pos]
+        back_uv=[[u/width,1-v/height] for u,v in uv]
         shell={"vertices":shell_pos,"indices":shell_index,
+               "rearIndices":rear_idx,"sideIndices":side_idx,
+               "backUv":back_uv+back_uv,"sideUv":side_uv,
                "skinIndex":skinidx+skinidx,"skinWeight":skinweight+skinweight,
                "appearance":"UNPAINTED_NEUTRAL_PROXY"}
         meshes.append({"name":name,"vertices":verts,"uv":[[u/width,1-v/height] for u,v in uv],
@@ -196,6 +226,7 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
     return {"schema":"koma-25d-pilot/2","source":"Godot Skeleton2D GBot MIT",
             "source_revision":REV,"source_animation_parity":"NOT_TESTED",
             "source_uv_preserved":True,"width":width,"height":height,
+            "view_registration":"SOURCE_FRONT_ONLY","back_side_artwork":"ABSENT",
             "depth":depth,"bounds":bounds,"bones":bones,"meshes":meshes,"clips":clips,
             "limitations":["2D bone rotations not yet retargeted",
                            "generated depth is an open front shell, not a complete 360-degree character",
