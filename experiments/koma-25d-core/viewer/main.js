@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 const canvasW=960,canvasH=540;
 let camera,renderer,model,angle=0,pose=0;
+const SOURCE_SCALE=0.012;
 const query=new URLSearchParams(location.search);
 const initialAngle=Number(query.get('angle')||0);
 const initialPose=Number(query.get('pose')||0);
@@ -15,7 +16,13 @@ async function setup(){
   tex.magFilter=THREE.LinearFilter; tex.minFilter=THREE.LinearMipmapLinearFilter;
   const scene=new THREE.Scene();
   scene.background=new THREE.Color('#f2f4f8');
-  const bones=doc.bones.map(b=>{const bone=new THREE.Bone(); bone.name=b.path;bone.position.set(...b.local);return bone});
+  const bones=doc.bones.map(b=>{
+    const bone=new THREE.Bone();
+    bone.name=b.path;
+    bone.position.set(...b.local);
+    bone.rotation.z=-Number(b.restRotation||0);
+    return bone;
+  });
   for(let i=0;i<bones.length;i++){
     const parent=doc.bones[i].parent;
     if(parent>=0)bones[parent].add(bones[i]);
@@ -74,23 +81,57 @@ async function setup(){
   $('detail').textContent=doc.meshes.length+' meshes / '+bones.length+
     ' bones / '+verts+' vertices · original UV';
   window.__komaDiagnostics={meshes:doc.meshes.length,bones:bones.length,verts,
-    source:doc.source,sourceAnimationParity:'NOT_TESTED',newViews:'NOT_AVAILABLE'};
-  window.__komaSetAngle=(a,p=pose)=>{
-    angle=Number(a); pose=Number(p);
-    for(const b of bones)b.rotation.set(0,0,0);
-    const forearm=bones.find(b=>b.name.endsWith('/LeftForearm'));
-    if(forearm && pose)forearm.rotation.x=THREE.MathUtils.degToRad(30)*pose;
-    const rad=THREE.MathUtils.degToRad(angle);
-    const distance=14;
+    source:doc.source,sourceAnimationParity:'RAW_CLIPS_ONLY',newViews:'NOT_AVAILABLE',clips:Object.keys(doc.clips||{})};
+  const lerpKeys=(track,t)=>{
+    const {times,values}=track;
+    if(t<=times[0])return values[0];
+    for(let i=1;i<times.length;i++){
+      if(t<=times[i]){
+        const f=(t-times[i-1])/(times[i]-times[i-1]||1);
+        const a=values[i-1],b=values[i];
+        if(Array.isArray(a))return a.map((v,k)=>v+(b[k]-v)*f);
+        return a+(b-a)*f;
+      }
+    }
+    return values[values.length-1];
+  };
+  window.__komaSetMotion=({yaw=0,clip=null,time=0,reach=0}={})=>{
+    angle=Number(yaw);pose=Number(reach);
+    for(let i=0;i<bones.length;i++){
+      bones[i].position.set(...doc.bones[i].local);
+      bones[i].rotation.set(0,0,-Number(doc.bones[i].restRotation||0));
+    }
+    if(clip){
+      const act=doc.clips?.[clip];
+      if(!act)throw Error('Source clip missing: '+clip);
+      const localT=((Number(time)%act.duration)+act.duration)%act.duration;
+      for(const track of act.tracks){
+        const b=bones[track.bone];
+        const value=lerpKeys(track,localT);
+        if(track.property==='rotation_degrees')b.rotation.z=THREE.MathUtils.degToRad(-value);
+        if(track.property==='position')b.position.set(value[0]*SOURCE_SCALE,-value[1]*SOURCE_SCALE,0);
+      }
+    }
+    // Spatial-axis test, intentionally outside the original 2D Godot controls.
+    // This does NOT claim original animation equivalence.
+    const upper=bones.find(b=>b.name.endsWith('/RightArm'));
+    const lower=bones.find(b=>b.name.endsWith('/RightForearm'));
+    if(upper&&reach)upper.rotation.y=THREE.MathUtils.degToRad(34)*reach;
+    if(lower&&reach)lower.rotation.x=THREE.MathUtils.degToRad(51)*reach;
+    model.scene.updateMatrixWorld(true);
+    const rad=THREE.MathUtils.degToRad(angle),distance=14;
     camera.position.copy(model.center).add(new THREE.Vector3(
       Math.sin(rad)*distance,0,Math.cos(rad)*distance));
     camera.lookAt(model.center);
     camera.updateProjectionMatrix();
     renderer.render(model.scene,camera);
-    $('angle').textContent='Camera yaw '+angle.toFixed(1)+'° · Pose '+pose.toFixed(1);
-    return true;
+    $('angle').textContent='Camera '+angle.toFixed(1)+'° · '+(clip||'spatial')+
+      ' · '+Number(time).toFixed(2)+'s · Reach '+reach.toFixed(2);
+    return {yaw,clip,time,reach};
   };
-  window.__komaSetAngle(initialAngle,initialPose);
+  window.__komaSetAngle=(a,p=pose)=>window.__komaSetMotion({yaw:a,reach:p});
+  window.__komaClipNames=Object.keys(doc.clips||{});
+  window.__komaSetMotion({yaw:initialAngle,reach:initialPose});
   window.__komaReady=true;
 }
 setup().catch(err=>{console.error(err);$('status').textContent='FAILED · '+err.message;
