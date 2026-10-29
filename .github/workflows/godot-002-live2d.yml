@@ -254,21 +254,6 @@ jobs:
           set -euo pipefail
           python scripts/godot_002_verify.py
           cat out/godot-002/summary.json >> "$GITHUB_STEP_SUMMARY"
-      - name: Keep game-derived preview in draft Release, not public release
-        if: success()
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          tag="godot-002-review-${GITHUB_RUN_NUMBER}"
-          gh release create "$tag" \
-            out/godot-002/preview.mp4 \
-            out/godot-002/contact-sheet.jpg \
-            out/godot-002/summary.json \
-            --draft \
-            --title "GODOT-002 private inspection #${GITHUB_RUN_NUMBER}" \
-            --notes "Draft only: contains game-derived character footage. Do not publish without asset rights. Playback test, not original Cubism visual parity."
       - name: Keep one original character still in owner-only draft Release
         if: always()
         shell: bash
