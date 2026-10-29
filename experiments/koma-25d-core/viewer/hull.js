@@ -66,6 +66,7 @@ async function setup(){
  const material=new THREE.MeshBasicMaterial({
   map:atlas,side:THREE.DoubleSide,depthTest:true,depthWrite:true
  });
+ const matteMaterial=new THREE.MeshBasicMaterial({color:0x000000,side:THREE.DoubleSide});
  const loader=new GLTFLoader();
  const models={},stats={};
  for(const name of ['visual_hull','fixed_extrusion']){
@@ -93,15 +94,18 @@ async function setup(){
  scene.add(models.visual_hull);
  scene.add(models.fixed_extrusion);
  models.fixed_extrusion.visible=false;
- window.__hullSetPose=({name='visual_hull',yaw=0}={})=>{
+ window.__hullSetPose=({name='visual_hull',yaw=0,matte=false}={})=>{
   if(!models[name])throw Error('Unknown geometry '+name);
-  for(const [key,mesh] of Object.entries(models))mesh.visible=key===name;
+  for(const [key,mesh] of Object.entries(models)){
+    mesh.visible=key===name;
+    if(mesh.visible)mesh.traverse(o=>{if(o.isMesh)o.material=matte?matteMaterial:material;});
+  }
   const angle=THREE.MathUtils.degToRad(yaw);
   camera.position.set(4*Math.sin(angle),0,-4*Math.cos(angle));
   camera.lookAt(0,0,0);
   camera.updateProjectionMatrix();
   renderer.render(scene,camera);
-  return {name,yaw};
+  return {name,yaw,matte};
  };
  window.__hullInfo={
   algorithm:meta.geometry_algorithm,grid:meta.grid_yxz,modelData:meta.assets,
