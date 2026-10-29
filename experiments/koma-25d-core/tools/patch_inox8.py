@@ -28,6 +28,11 @@ assert src.count("Vec2::splat(0.15)")==1, "Unexpected upstream camera source"
 # Keep upstream source camera. It was demonstrated to work for Aka.
 assert src.count('WindowBuilder::new()')==1
 src=src.replace("PhysicalSize::new(600, 800)","PhysicalSize::new(720, 880)")
+# Upstream app starts width/height = 0; Mesa under Xvfb may never emit
+# an initial Resized event before the first draw. This creates 0x0 FBOs
+# and GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT (depth/stencil).
+assert src.count("width: 0,")==1 and src.count("height: 0,")==1
+src=src.replace("width: 0,","width: 720,").replace("height: 0,","height: 880,")
 main.write_text(src)
 a.report.parent.mkdir(parents=True,exist_ok=True)
 report={
@@ -39,6 +44,8 @@ report={
   "param_pitch":0,
   "duration_control":"REPEATING 6s arc, 0.7s front plus 4.0s positive yaw and return; independent of GUI startup delay",
   "screen":"720x880",
+  "patched_zero_size_window":True,
+  "why":"Prevent 0x0 depth-stencil FBO on Mesa/Xvfb before first resize callback",
   "official_inx_reference_engine":"INOX2D_RUST_PORT_NOT_CANONICAL_D_SDK",
   "preserved_native_rig":"YES",
   "pose_degrees":"NOT_CALIBRATED",
