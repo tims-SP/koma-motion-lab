@@ -41,6 +41,18 @@ for name in MODES:
     frames=sorted((BASE/name).glob("*.png"))
     if len(frames)!=48:raise SystemExit(f"FAIL_FRAME_COUNT {name}: {len(frames)}")
     shots=[crop(image(frames[i])) for i in PICKS]
+    # Inspect EVERY adjacent frame, not just sparse screenshots. Captures
+    # interpolation jumps, bad frame exports, or sudden mesh visibility pops.
+    previous=crop(image(frames[0]))
+    continuous=[]
+    for frame in frames[1:]:
+        current=crop(image(frame))
+        continuous.append(frac(previous,current))
+        previous=current
+    if max(continuous)>0.12:
+        raise SystemExit(f"FAIL_TEMPORAL_POP {name}: {max(continuous):.4%}")
+    if name in ("head_yaw","elbow_bend") and frac(shots[0],shots[-1],10)>0.008:
+        raise SystemExit(f"FAIL_POSE_NOT_RETURNING_TO_ORIGINAL {name}")
     coverage=[frac(f,background,24) for f in shots]
     changed=[frac(shots[i],shots[i+1]) for i in range(len(shots)-1)]
     from_start=frac(shots[0],shots[2])
@@ -59,6 +71,8 @@ for name in MODES:
     comparison[name]={
       "coverage_excluding_overlay":coverage,
       "sampled_adjacent_changed_fraction":changed,
+      "max_full_sequence_adjacent_change":max(continuous),
+      "mean_full_sequence_adjacent_change":sum(continuous)/len(continuous),
       "start_to_mid_changed_fraction":from_start
     }
 # 4 rows: source/original front pair, head, elbow, camera. Full video pngs.
