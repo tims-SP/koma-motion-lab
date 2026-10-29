@@ -4,12 +4,17 @@
 #include <ICubismAllocator.hpp>
 #include <Model/CubismMoc.hpp>
 #include <Model/CubismModel.hpp>
+#include <Rendering/CubismRenderer.hpp>
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
 #include <iterator>
 #include <vector>
 #include <algorithm>
+
+// The runtime-only test has no graphics backend. Framework::Dispose expects
+// the backend's static cleanup symbol; no renderer instance is created here.
+void Live2D::Cubism::Framework::Rendering::CubismRenderer::StaticRelease() {}
 
 namespace Csm = Live2D::Cubism::Framework;
 
