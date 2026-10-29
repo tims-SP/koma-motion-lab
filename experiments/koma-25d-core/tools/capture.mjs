@@ -8,8 +8,8 @@ const root=path.resolve(import.meta.dirname,'..');
 const dir=path.join(root,'out');
 const frames=path.join(dir,'frames');
 fs.mkdirSync(frames,{recursive:true});
-const server=spawn('node',['viewer/node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','4179'],
-  {cwd:root,stdio:['ignore','pipe','pipe']});
+const server=spawn('node',['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','4179'],
+  {cwd:path.join(root,'viewer'),stdio:['ignore','pipe','pipe']});
 let serverLogs='';
 server.stderr.on('data',b=>{serverLogs+=b.toString();});
 server.stdout.on('data',b=>{serverLogs+=b.toString();});
