@@ -47,12 +47,18 @@ jobs:
           mkdir -p out/godot-002
           git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
           git -C "$RUNNER_TEMP/PurismCore" rev-parse HEAD | tee out/godot-002/purism-commit.txt
+          # GDCubism itself requires legacy v5 ABI, but the upstream moc3info
+          # diagnostic is v6-only. Build each in an isolated CMake directory.
           cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/build" \
-            -DCMAKE_BUILD_TYPE=Release -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF -DPURISM_CORE_BUILD_SAMPLES=ON
+            -DCMAKE_BUILD_TYPE=Release -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF
           cmake --build "$RUNNER_TEMP/PurismCore/build" --parallel 2 \
             2>&1 | tee out/godot-002/purism-build.log
           find "$RUNNER_TEMP/PurismCore/build" -name '*.a' | tee out/godot-002/purism-archives.txt
-          "$RUNNER_TEMP/PurismCore/build/moc3info" \
+          cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/build-v6" \
+            -DCMAKE_BUILD_TYPE=Release -DPURISM_CORE_ABI=v6 -DBUILD_SHARED_LIBS=OFF -DPURISM_CORE_BUILD_SAMPLES=ON
+          cmake --build "$RUNNER_TEMP/PurismCore/build-v6" --parallel 2 \
+            2>&1 | tee out/godot-002/purism-v6-build.log
+          "$RUNNER_TEMP/PurismCore/build-v6/moc3info" \
             "$RUNNER_TEMP/gd002-project/assets/301003_x/301003_x.moc3" \
             > out/godot-002/purism-moc3info.json
           python -m json.tool out/godot-002/purism-moc3info.json > /dev/null
