@@ -106,13 +106,24 @@ def run(psdfile,out):
     if len(layers)<40:raise ValueError("Expected real layered anime PSD, got "+str(len(layers)))
     canonical=original.crop(box).resize((SIZE,SIZE),Image.Resampling.LANCZOS)
     canonical.save(out/"source_front.png")
-    a=np.asarray(canonical)
+    def over_white(image):
+        white=Image.new("RGBA",(SIZE,SIZE),(255,255,255,255))
+        white.alpha_composite(image if isinstance(image,Image.Image)
+                              else Image.fromarray(image,"RGBA"))
+        return np.asarray(white.convert("RGB")).astype(np.int16)
+    # Native PSD is white-backed and independent parts can be transparent.
+    # Compare *visible RGB* on the SAME white background, not unassociated
+    # RGB bytes in transparent pixels (which produced a false MAE ~162).
+    expected=over_white(canonical)
     candidates=[]
     for order_name,items in (("source_sequence",layers),("reverse_sequence",list(reversed(layers)))):
         preview=np.zeros((SIZE,SIZE,4),np.uint8)
         for _name,arr,_role in items:compose_rgba(preview,arr)
-        mask=np.logical_or(a[...,3]>12,preview[...,3]>12)
-        mae=float(np.abs(a.astype(np.int16)-preview.astype(np.int16))[mask,:3].mean())
+        visible=over_white(preview)
+        from_white=np.array([255,255,255],dtype=np.int16)
+        mask=(np.max(np.abs(expected-from_white),axis=2)>15)|(
+            np.max(np.abs(visible-from_white),axis=2)>15)
+        mae=float(np.abs(expected-visible)[mask].mean())
         candidates.append((mae,order_name,items,preview))
     mae,chosen_order,layers,layer_comp=min(candidates,key=lambda x:x[0])
     Image.fromarray(layer_comp,"RGBA").save(out/"layer_composite.png")
