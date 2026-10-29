@@ -46,7 +46,8 @@ async function setup(){
     modelType:'REAL_3D_REFERENCE_NOT_2D_CONVERSION',
     loader:'GLTFLoader_NOT_FULL_VRM_MTOON'};
   window.__renderReference=(angle)=>{
-    const rad=THREE.MathUtils.degToRad(angle);
+    // Model's canonical -Z face is toward viewer at yaw=0.
+    const rad=THREE.MathUtils.degToRad(angle+180);
     camera.position.set(center.x+radius*Math.sin(rad),center.y,center.z+radius*Math.cos(rad));
     camera.lookAt(center);
     camera.updateProjectionMatrix();
