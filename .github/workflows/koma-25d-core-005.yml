@@ -73,7 +73,7 @@ jobs:
         working-directory: experiments/koma-25d-core
         run: |
           set -euo pipefail
-          for mode in visual_hull fixed_extrusion; do
+          for mode in visual_hull fixed_extrusion matte_visual_hull matte_fixed_extrusion; do
             ffmpeg -hide_banner -loglevel error -y -framerate 24 \
               -i "out/core005/$mode/%04d.png" \
               -c:v libx264 -pix_fmt yuv420p "out/core005/$mode.mp4"
@@ -153,6 +153,8 @@ jobs:
             experiments/koma-25d-core/out/core005/blend.mp4 \
             experiments/koma-25d-core/out/core005/fixed_extrusion.mp4 \
             experiments/koma-25d-core/out/core005/visual_hull.mp4 \
+            experiments/koma-25d-core/out/core005/matte_visual_hull.mp4 \
+            experiments/koma-25d-core/out/core005/matte_fixed_extrusion.mp4 \
             experiments/koma-25d-core/out/core005/contact.png \
             experiments/koma-25d-core/out/core005/encoded_audit.jpg \
             experiments/koma-25d-core/out/core005/encoded_audit.json \
