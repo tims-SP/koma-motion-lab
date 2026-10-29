@@ -73,7 +73,7 @@ jobs:
           p = Path(sys.argv[1])
           s = p.read_text()
           assert '#include "PurismCore.h"' in s
-          s = s.replace('#include "PurismCore.h"', '#define PSM_HAS_STDINT 0\n#include "PurismCore.h"')
+          s = s.replace('#include "PurismCore.h"', '#define PSM_COMPAT_VERSION 0x05010000L\n#define PSM_HAS_STDINT 0\n#include "PurismCore.h"')
           p.write_text(s)
           PY
           archive=$(find "$RUNNER_TEMP/PurismCore/build" -name 'libPurismCore-v5.a' -print -quit)
