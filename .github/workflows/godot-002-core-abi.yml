@@ -1,0 +1,109 @@
+name: GODOT-002 · Real MOC3 v5 ABI diagnostic
+
+on:
+  push:
+    branches: [validation/godot-002-core-abi]
+    paths:
+      - '.github/workflows/godot-002-core-abi.yml'
+      - 'experiments/godot-002/purism_v5_probe.c'
+  pull_request:
+    paths:
+      - '.github/workflows/godot-002-core-abi.yml'
+      - 'experiments/godot-002/purism_v5_probe.c'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  v5-core-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install C toolchain
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends build-essential cmake gdb
+      - name: Fetch genuine MOC3 temporarily and record integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out/godot-002-core
+          curl -fL --retry 3 --retry-all-errors \
+            "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/master/live2d/roles/301003_x/301003_x.moc3" \
+            -o "$RUNNER_TEMP/301003_x.moc3"
+          python3 - "$RUNNER_TEMP/301003_x.moc3" <<'PY'
+          import hashlib, json, sys
+          from pathlib import Path
+          p=Path(sys.argv[1]); b=p.read_bytes()
+          assert len(b)>64 and b[:4]==b'MOC3', 'Not a real MOC3'
+          print(json.dumps({'magic':'MOC3','bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()}))
+          PY
+          sha256sum "$RUNNER_TEMP/301003_x.moc3" > out/godot-002-core/model-sha256.txt
+      - name: Build pinned-ABI PurismCore (baseline + AddressSanitizer)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
+          git -C "$RUNNER_TEMP/PurismCore" rev-parse HEAD > out/godot-002-core/purism-revision.txt
+          cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/build" \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF
+          cmake --build "$RUNNER_TEMP/PurismCore/build" --parallel 2 \
+            > out/godot-002-core/build.log 2>&1
+          cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/asan" \
+            -DCMAKE_BUILD_TYPE=Debug -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF \
+            -DCMAKE_C_FLAGS="-O0 -g -fsanitize=address -fno-omit-frame-pointer"
+          cmake --build "$RUNNER_TEMP/PurismCore/asan" --parallel 2 \
+            > out/godot-002-core/build-asan.log 2>&1
+      - name: Run same genuine model through v5 ABI in both builds
+        shell: bash
+        run: |
+          set -euo pipefail
+          src="experiments/godot-002/purism_v5_probe.c"
+          include="$RUNNER_TEMP/PurismCore/include"
+          for mode in baseline asan; do
+            if [ "$mode" = baseline ]; then
+              lib="$RUNNER_TEMP/PurismCore/build/libPurismCore-v5.a"
+              flags="-O0 -g"
+            else
+              lib="$RUNNER_TEMP/PurismCore/asan/libPurismCore-v5.a"
+              flags="-O0 -g -fsanitize=address -fno-omit-frame-pointer"
+            fi
+            test -s "$lib"
+            cc -std=c11 $flags -DPSM_COMPAT_VERSION=0x05010000L \
+              -I "$include" "$src" "$lib" -lm -o "$RUNNER_TEMP/probe-$mode"
+            set +e
+            ASAN_OPTIONS=detect_leaks=0:abort_on_error=1 \
+              timeout 50s "$RUNNER_TEMP/probe-$mode" "$RUNNER_TEMP/301003_x.moc3" \
+              > "out/godot-002-core/$mode.log" 2>&1
+            code=$?
+            set -e
+            echo "$code" > "out/godot-002-core/$mode-exit-code.txt"
+            cat "out/godot-002-core/$mode.log"
+            echo "$mode exit=$code"
+            if [ "$code" -ne 0 ]; then
+              if [ "$mode" = baseline ]; then
+                gdb -q -batch -ex 'set pagination off' \
+                  -ex run -ex 'thread apply all bt 15' \
+                  --args "$RUNNER_TEMP/probe-$mode" "$RUNNER_TEMP/301003_x.moc3" \
+                  > out/godot-002-core/gdb.log 2>&1 || true
+              fi
+              exit "$code"
+            fi
+            grep -q '^PSM_V5_PHASE_PASS$' "out/godot-002-core/$mode.log"
+            grep -E '^PSM_V5_(MODEL_SIZE|PARAMETER_COUNT|DRAWABLE_COUNT)' \
+              "out/godot-002-core/$mode.log"
+          done
+          echo 'GODOT002_CORE_V5_BASELINE_AND_ASAN_PASS' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload text-only diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-002-core-v5-diagnostics-${{ github.run_number }}
+          path: |
+            out/godot-002-core/*.txt
+            out/godot-002-core/*.log
+          retention-days: 7
+          if-no-files-found: warn
