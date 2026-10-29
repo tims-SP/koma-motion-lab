@@ -43,6 +43,10 @@ jobs:
             python3 -m json.tool "$RUNNER_TEMP/${motion}.motion3.json" >/dev/null
             sha256sum "$RUNNER_TEMP/${motion}.motion3.json" >> out/godot-002-fw/model-sha256.txt
           done
+          python3 scripts/godot_002_normalize_motion.py \
+            "$RUNNER_TEMP/b_diantou.motion3.json" "$RUNNER_TEMP/t_idle.motion3.json" \
+            > out/godot-002-fw/motion-normalization.json
+          cat out/godot-002-fw/motion-normalization.json
           git clone --depth 1 --branch 5-r.1 \
             https://github.com/Live2D/CubismNativeFramework.git "$RUNNER_TEMP/sdk/Framework"
           git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
@@ -115,4 +119,5 @@ jobs:
           path: |
             out/godot-002-fw/*.log
             out/godot-002-fw/*.txt
+            out/godot-002-fw/*.json
           retention-days: 7
