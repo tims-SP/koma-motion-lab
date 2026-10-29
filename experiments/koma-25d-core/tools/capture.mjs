@@ -45,7 +45,7 @@ try{
     status:'RENDERED_NOT_ART_ACCEPTED',frames:N,
     angles:[0,45,90],source:diagnostics,playwright_errors:errors,
     reference_2d_parity:'NOT_TESTED',anime_quality:'NOT_TESTED',
-    3d_full_body:'NOT_SUPPORTED',runtime_animation_parity:'NOT_TESTED'
+    full_3d_body:'NOT_SUPPORTED',runtime_animation_parity:'NOT_TESTED'
   },null,2));
   console.log('CAPTURE_OK',JSON.stringify(diagnostics));
 }finally{
