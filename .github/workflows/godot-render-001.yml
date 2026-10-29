@@ -1,0 +1,96 @@
+name: RENDER-001 · Godot Xvfb Mesa movie proof
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/godot-render-001.yml'
+      - 'experiments/godot-render-001/**'
+      - 'scripts/godot_render_001_verify.py'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout text-only lab
+        uses: actions/checkout@v4
+      - name: Install Xvfb Mesa ffmpeg verification dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb xauth mesa-utils libgl1-mesa-dri libgl1 libasound2t64 ffmpeg python3-venv unzip
+          python3 -m venv "$RUNNER_TEMP/verify"
+          "$RUNNER_TEMP/verify/bin/pip" install --disable-pip-version-check 'Pillow==11.3.0'
+          echo "$RUNNER_TEMP/verify/bin" >> "$GITHUB_PATH"
+      - name: Download pinned official Godot 4.7.2 engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          url=https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          curl -fL --retry 4 --retry-all-errors "$url" -o "$RUNNER_TEMP/godot.zip"
+          sha256sum "$RUNNER_TEMP/godot.zip" | tee godot-download.sha256
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP"
+          mv "$RUNNER_TEMP/Godot_v4.7.2-stable_linux.x86_64" "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot"
+          "$RUNNER_TEMP/godot" --version
+          echo "GODOT_BIN=$RUNNER_TEMP/godot" >> "$GITHUB_ENV"
+      - name: Render 90 frames on CPU OpenGL using a virtual screen
+        shell: bash
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          GALLIUM_DRIVER: llvmpipe
+        run: |
+          set -euo pipefail
+          mkdir -p out/godot-render-001
+          xvfb-run -a -s '-screen 0 1280x720x24' glxinfo -B | tee out/godot-render-001/glxinfo.txt
+          xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --path experiments/godot-render-001 \
+            --rendering-method gl_compatibility --rendering-driver opengl3 \
+            --write-movie "$GITHUB_WORKSPACE/out/godot-render-001/shot.png" \
+            --fixed-fps 30 --quit-after 90 \
+            --verbose 2>&1 | tee out/godot-render-001/godot.log
+          ls -lh out/godot-render-001 | tail -12
+          ffmpeg -hide_banner -loglevel warning -y -framerate 30 \
+            -pattern_type glob -i 'out/godot-render-001/shot*.png' \
+            -c:v libx264 -crf 18 -preset veryfast -pix_fmt yuv420p \
+            out/godot-render-001/preview.mp4
+      - name: Independently verify real frames and encoded video
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/godot_render_001_verify.py
+          cat out/godot-render-001/summary.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish synthetic preview to GitHub Release only
+        if: success()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="godot-render-001-${GITHUB_RUN_NUMBER}"
+          gh release create "$tag" \
+            out/godot-render-001/preview.mp4 \
+            out/godot-render-001/contact-sheet.jpg \
+            out/godot-render-001/summary.json \
+            out/godot-render-001/glxinfo.txt \
+            --title "RENDER-001 · Godot CPU software-render proof #${GITHUB_RUN_NUMBER}" \
+            --notes "Original programmatic test pattern; 90 frames at 30 fps, 960x540, Xvfb + Mesa llvmpipe. Not a Live2D or Spine quality claim." \
+            --prerelease
+      - name: Always publish diagnostics (text-only)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-render-001-text-diagnostics-${{ github.run_number }}
+          path: |
+            out/godot-render-001/*.txt
+            out/godot-render-001/*.json
+            out/godot-render-001/*.log
+            godot-download.sha256
+          if-no-files-found: warn
+          retention-days: 7
