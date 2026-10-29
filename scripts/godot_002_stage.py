@@ -42,6 +42,14 @@ if nod not in source_motions or idle not in source_motions:
 files += [nod, idle]
 for f in files:
     download(f)
+# Original motion3 Meta point counters underreport real curve point counts.
+# Normalize transient copies only; original curve data, times, Beziers untouched.
+from godot_002_normalize_motion import repair
+motion_repairs = [repair(dest / f) for f in (nod, idle)]
+for entry in motion_repairs:
+    print("GODOT002_MOTION_META_REPAIRED", json.dumps({
+        "path": entry["path"], "original": entry["original_meta"],
+        "corrected": entry["verified_meta"]}))
 refs["Motions"] = {"nod": [{"File": nod}], "idle": [{"File": idle}]}
 (dest / "301003_x.model3.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 moc = (dest / refs["Moc"]).read_bytes()
@@ -52,6 +60,7 @@ integrity = {"model": "301003_x", "origin": "myssal/Reverse-1999-CN-Asset",
              "files": [{"name": p, "bytes": (dest/p).stat().st_size,
                         "sha256": hashlib.sha256((dest/p).read_bytes()).hexdigest()}
                        for p in sorted(set(files))],
-             "preview_policy": "No third-party artwork in git or public release"}
+             "preview_policy": "No third-party artwork in git or public release",
+             "motion_metadata_repairs": motion_repairs}
 (report / "asset-integrity.json").write_text(json.dumps(integrity, indent=2) + "\n")
 print("GODOT002_STAGED_REAL_MODEL", len(integrity["files"]), "files")
