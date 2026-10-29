@@ -19,7 +19,7 @@ before='.set("Head:: Yaw-Pitch", Vec2::new(t.cos(), t.sin()));'
 after='''.set("Head:: Yaw-Pitch", Vec2::new({
                     // Fixed-camera positive-yaw arc. Model param units [-1,1]
                     // are NOT guaranteed physical degrees.
-                    let phase = ((t - 0.7).max(0.0) / 4.0).clamp(0.0, 1.0);
+                    let phase = (((t % 6.0) - 0.7).max(0.0) / 4.0).clamp(0.0, 1.0);
                     (phase * std::f32::consts::PI).sin() * 0.85
                 }, 0.0));'''
 assert src.count(before)==1, "Upstream sample changed; refuse silent fallback"
@@ -37,7 +37,7 @@ report={
   "parameter":"Head:: Yaw-Pitch",
   "param_start":0,"param_max":0.85,
   "param_pitch":0,
-  "duration_control":"0.7s front; 4.0s positive yaw and return",
+  "duration_control":"REPEATING 6s arc, 0.7s front plus 4.0s positive yaw and return; independent of GUI startup delay",
   "screen":"720x880",
   "official_inx_reference_engine":"INOX2D_RUST_PORT_NOT_CANONICAL_D_SDK",
   "preserved_native_rig":"YES",
