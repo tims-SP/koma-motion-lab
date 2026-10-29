@@ -31,8 +31,8 @@ for frame in frames:
 if any(v<0.013 for v in (coverage[0],coverage[18],coverage[36],coverage[54],coverage[72])):
     raise SystemExit(f"FAIL: blank model at one canonical angle: {[coverage[i] for i in (0,18,36,54,72)]}")
 # A source front should remain mostly unchanged when the side/back shell is present.
-if front_changes>0.03:
-    raise SystemExit(f"FAIL: side/back proxy destroys source view (>3% changed): {front_changes:.4%}")
+if front_changes>0.001:
+    raise SystemExit(f"FAIL: side/back proxy leaks into source view (>0.1% changed): {front_changes:.4%}")
 # In profile & rear pose, actual side/back material must alter rendered pixels.
 new_views={}
 for angle in (45,90,135,180):
