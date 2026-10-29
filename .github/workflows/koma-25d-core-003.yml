@@ -53,6 +53,42 @@ jobs:
               assert all(0<=u<=1 and 0<=v<=1 for u,v in shell["backUv"])
           print("CORE003_IMPORT_AND_PROVENANCE_CHECK_OK")
           PY
+      - name: Validate registered side/back artwork ingestion without claiming fidelity
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import json, shutil, subprocess, sys
+          from pathlib import Path
+          src=Path("viewer/public/asset")
+          target=Path("out/registered-view-smoke")
+          target.mkdir(parents=True,exist_ok=True)
+          for f in ("character.json","gBot.png"):
+              shutil.copyfile(src/f,target/f)
+          character=json.loads((target/"character.json").read_text())
+          mapping={"schema":"koma-view-uv-registration/1",
+                   "meshes":{m["name"]:{"sideUv":m["shell"]["sideUv"],"backUv":m["shell"]["backUv"]}
+                             for m in character["meshes"]}}
+          registration=target/"registration.json"
+          registration.write_text(json.dumps(mapping))
+          cmd=[sys.executable,"tools/register_views.py",
+               "--asset-dir",str(target),
+               "--side-image",str(src/"side.png"),
+               "--back-image",str(src/"back.png"),
+               "--registration",str(registration)]
+          subprocess.check_call(cmd)
+          view=json.loads((target/"appearance.json").read_text())
+          assert view["production_accepted"] is False
+          assert view["side"]["provenance"]=="REGISTERED_UNREVIEWED"
+          assert view["back"]["provenance"]=="REGISTERED_UNREVIEWED"
+          # Broken correspondence must be rejected, not silently stretched.
+          broken=json.loads(registration.read_text())
+          first=next(iter(broken["meshes"]))
+          broken["meshes"][first]["sideUv"]=[]
+          registration.write_text(json.dumps(broken))
+          result=subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+          assert result.returncode!=0,"Malformed UV registration unexpectedly accepted"
+          print("CORE003_REGISTERED_VIEW_CONTRACT_OK; authentic side/back art NOT evaluated")
+          PY
       - name: Install headless Three.js browser dependencies
         working-directory: experiments/koma-25d-core/viewer
         run: |
