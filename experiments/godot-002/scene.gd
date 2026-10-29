@@ -30,7 +30,7 @@ func _ready() -> void:
     character.position = Vector2(480, 270)
     character.scale = Vector2.ONE * factor
     var zenv := OS.get_environment("GODOT002_ZOOM")
-    if not zenv.is_empty() and OS.get_environment("GODOT002_DISABLE_MOTIONS") != "1":
+    if not zenv.is_empty() and (OS.get_environment("GODOT002_DISABLE_MOTIONS") != "1" or OS.get_environment("GODOT002_FRAMED_STATIC") == "1"):
         var diagnostic_zoom: float = clampf(float(zenv), 1.0, 2.75)
         var diagnostic_dx: float = float(OS.get_environment("GODOT002_SHIFT_X"))
         var diagnostic_dy: float = float(OS.get_environment("GODOT002_SHIFT_Y"))
