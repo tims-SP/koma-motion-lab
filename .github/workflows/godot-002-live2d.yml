@@ -268,6 +268,17 @@ jobs:
           cat out/godot-002/summary.json >> "$GITHUB_STEP_SUMMARY"
           echo '### GODOT-003 visual metrics (not official Cubism parity)' >> "$GITHUB_STEP_SUMMARY"
           cat out/godot-002/visual-audit.json >> "$GITHUB_STEP_SUMMARY"
+      - name: GODOT-003 full body camera sweep (9 real frames)
+        shell: bash
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          GALLIUM_DRIVER: llvmpipe
+        run: |
+          set -euo pipefail
+          xvfb-run -a -s '-screen 0 1280x720x24' \
+            python3 scripts/godot_003_camera_sweep.py "$GODOT_BIN" "$RUNNER_TEMP/gd002-project"
+          test -s out/godot-002/fullbody-camera-sweep.jpg
+          test -s out/godot-002/camera-sweep.json
       - name: Keep one original character still in owner-only draft Release
         if: always()
         shell: bash
@@ -287,7 +298,7 @@ jobs:
           if test -s out/godot-002/preview.mp4; then
             files+=(out/godot-002/preview.mp4)
           fi
-          for f in out/godot-002/summary.json out/godot-002/autoframe.json out/godot-002/contact-sheet.jpg out/godot-002/visual-audit.json out/godot-002/visual-comparison.jpg out/godot-002/visual-crops.jpg; do
+          for f in out/godot-002/summary.json out/godot-002/autoframe.json out/godot-002/contact-sheet.jpg out/godot-002/visual-audit.json out/godot-002/visual-comparison.jpg out/godot-002/visual-crops.jpg out/godot-002/fullbody-camera-sweep.jpg out/godot-002/camera-sweep.json; do
             if test -s "$f"; then files+=("$f"); fi
           done
           tag="godot-002-static-inspection-${GITHUB_RUN_NUMBER}"
@@ -313,6 +324,8 @@ jobs:
           path: |
             out/godot-002/visual-comparison.jpg
             out/godot-002/visual-crops.jpg
+            out/godot-002/fullbody-camera-sweep.jpg
+            out/godot-002/camera-sweep.json
             out/godot-002/visual-audit.json
           if-no-files-found: warn
           retention-days: 1
