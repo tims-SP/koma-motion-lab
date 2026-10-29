@@ -1,12 +1,45 @@
 /**
- * CORE-005 viewer: real curved 3D mesh constructed from exactly two 2D PNG
- * silhouettes. Source front/side/back PNG images are projected from world
- * space. A matching naive 2D silhouette extrusion is the geometry control.
+ * CORE-005: use explicit UVs + Three.MeshBasicMaterial. Earlier custom
+ * ShaderMaterial rendered BLACK despite silhouette geometry QA passing.
+ * This approach reuses the renderer's proven normal texture sampling path.
  *
- * Source full 3D VRM is NEVER loaded into this viewer.
+ * The glTF geometry here is generated ONLY from 2D image silhouettes.
  */
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+
+function mapUVsPerTriangle(geometry){
+  const nonindexed=geometry.index?geometry.toNonIndexed():geometry.clone();
+  const pos=nonindexed.getAttribute('position');
+  if(!pos || pos.count%3!==0)throw Error('Invalid triangle surface');
+  const coords=new Float32Array(pos.count*2);
+  const a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3();
+  const n=new THREE.Vector3();
+  const x1=new THREE.Vector3(),x2=new THREE.Vector3();
+  const faceTypes=[0,0,0];
+  for(let i=0;i<pos.count;i+=3){
+    a.fromBufferAttribute(pos,i);
+    b.fromBufferAttribute(pos,i+1);
+    c.fromBufferAttribute(pos,i+2);
+    n.copy(x1.subVectors(b,a).cross(x2.subVectors(c,a))).normalize();
+    // Source cameras: front at -Z; side at +X; back at +Z.
+    let slot;
+    if(Math.abs(n.x)>Math.abs(n.z)*0.75)slot=1;
+    else slot=n.z<=0?0:2;
+    faceTypes[slot]++;
+    for(let k=0;k<3;k++){
+      const x=pos.getX(i+k),y=pos.getY(i+k),z=pos.getZ(i+k);
+      const originalU=slot===0?0.5-x*0.5:slot===1?0.5-z*0.5:0.5+x*0.5;
+      const originalV=0.5+y*0.5;
+      const u=0.002+0.996*THREE.MathUtils.clamp(originalU,0,1);
+      const v=0.002+0.996*THREE.MathUtils.clamp(originalV,0,1);
+      coords[(i+k)*2]=(slot+u)/3;
+      coords[(i+k)*2+1]=v;
+    }
+  }
+  nonindexed.setAttribute('uv',new THREE.BufferAttribute(coords,2));
+  return {geometry:nonindexed,facesByProjection:faceTypes};
+}
 
 async function setup(){
  const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
@@ -17,70 +50,42 @@ async function setup(){
  renderer.toneMapping=THREE.NoToneMapping;
  document.body.appendChild(renderer.domElement);
  const camera=new THREE.OrthographicCamera(-1,1,1,-1,0.05,100);
- const loader=new THREE.TextureLoader();
- const [front,side,back,meta]=await Promise.all([
-   loader.loadAsync('/asset/front.png'),
-   loader.loadAsync('/asset/side.png'),
-   loader.loadAsync('/asset/back.png'),
-   fetch('/asset/hull_meta.json').then(r=>{if(!r.ok)throw Error('missing 2D-hull metadata');return r.json()})
+ const [atlas,meta]=await Promise.all([
+  new THREE.TextureLoader().loadAsync('/asset/atlas.png'),
+  fetch('/asset/hull_meta.json').then(r=>{if(!r.ok)throw Error('missing 2D-hull metadata');return r.json()})
  ]);
  if(meta.source_reconstruction_uses_original_3d_mesh!==false ||
     meta.input_kind!=='RENDERED_2D_IMAGE_VIEWS_ONLY')throw Error('Provenance mismatch');
- for(const tex of [front,side,back]){
-  tex.colorSpace=THREE.SRGBColorSpace;
-  tex.wrapS=THREE.ClampToEdgeWrapping;
-  tex.wrapT=THREE.ClampToEdgeWrapping;
-  tex.magFilter=THREE.LinearFilter;
-  tex.minFilter=THREE.LinearMipmapLinearFilter;
- }
- const material=new THREE.ShaderMaterial({
-  uniforms:{frontTex:{value:front},sideTex:{value:side},backTex:{value:back}},
-  vertexShader:`
-    varying vec3 vObj;
-    varying vec3 vNorm;
-    void main(){
-      vObj=position;
-      vNorm=normalize(normalMatrix*normal);
-      gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);
-    }
-  `,
-  fragmentShader:`
-    uniform sampler2D frontTex;
-    uniform sampler2D sideTex;
-    uniform sampler2D backTex;
-    varying vec3 vObj;
-    varying vec3 vNorm;
-    void main(){
-      vec2 uvF=clamp(vec2(0.5-vObj.x*0.5,0.5+vObj.y*0.5),0.001,0.999);
-      vec2 uvS=clamp(vec2(0.5-vObj.z*0.5,0.5+vObj.y*0.5),0.001,0.999);
-      vec2 uvB=clamp(vec2(0.5+vObj.x*0.5,0.5+vObj.y*0.5),0.001,0.999);
-      vec3 a=texture2D(frontTex,uvF).rgb;
-      vec3 b=texture2D(sideTex,uvS).rgb;
-      vec3 c=texture2D(backTex,uvB).rgb;
-      vec3 n=normalize(vNorm);
-      // Surface-based projection, NOT whole-image crossfade.
-      float wf=pow(max(-n.z,0.0),3.0)+0.002;
-      float ws=pow(abs(n.x),3.0)+0.002;
-      float wb=pow(max(n.z,0.0),3.0)+0.002;
-      vec3 col=(wf*a+ws*b+wb*c)/(wf+ws+wb);
-      gl_FragColor=vec4(col,1.0);
-      #include <tonemapping_fragment>
-      #include <colorspace_fragment>
-    }
-  `,
-  side:THREE.DoubleSide,depthTest:true,depthWrite:true
+ atlas.colorSpace=THREE.SRGBColorSpace;
+ atlas.wrapS=THREE.ClampToEdgeWrapping;
+ atlas.wrapT=THREE.ClampToEdgeWrapping;
+ atlas.magFilter=THREE.LinearFilter;
+ atlas.minFilter=THREE.LinearMipmapLinearFilter;
+ if(atlas.image?.width!==1920 || atlas.image?.height!==640)
+    throw Error('Invalid 3-view texture atlas');
+ const material=new THREE.MeshBasicMaterial({
+  map:atlas,side:THREE.DoubleSide,depthTest:true,depthWrite:true
  });
- const l=new GLTFLoader();
- const models={};
+ const loader=new GLTFLoader();
+ const models={},stats={};
  for(const name of ['visual_hull','fixed_extrusion']){
-  const gltf=await l.loadAsync('/asset/'+name+'.glb');
+  const gltf=await loader.loadAsync('/asset/'+name+'.glb');
   const m=gltf.scene;
-  m.traverse(n=>{
-   if(n.isMesh){
-    n.material=material;
-    n.frustumCulled=false;
-   }
+  let totalFaces=0,projection=[0,0,0];
+  m.traverse(o=>{
+    if(o.isMesh){
+      const mapped=mapUVsPerTriangle(o.geometry);
+      o.geometry.dispose();
+      o.geometry=mapped.geometry;
+      o.material=material;
+      o.frustumCulled=false;
+      totalFaces+=mapped.geometry.getAttribute('position').count/3;
+      projection=projection.map((x,i)=>x+mapped.facesByProjection[i]);
+    }
   });
+  if(totalFaces<150 || !projection.every(Number.isFinite))
+    throw Error('Empty projection/geometry for '+name);
+  stats[name]={triangles:totalFaces,projections:projection};
   models[name]=m;
  }
  const scene=new THREE.Scene();
@@ -91,22 +96,22 @@ async function setup(){
  window.__hullSetPose=({name='visual_hull',yaw=0}={})=>{
   if(!models[name])throw Error('Unknown geometry '+name);
   for(const [key,mesh] of Object.entries(models))mesh.visible=key===name;
-  const a=THREE.MathUtils.degToRad(yaw);
-  camera.position.set(4*Math.sin(a),0,-4*Math.cos(a));
+  const angle=THREE.MathUtils.degToRad(yaw);
+  camera.position.set(4*Math.sin(angle),0,-4*Math.cos(angle));
   camera.lookAt(0,0,0);
   camera.updateProjectionMatrix();
   renderer.render(scene,camera);
   return {name,yaw};
  };
  window.__hullInfo={
-  algorithm:meta.geometry_algorithm,
-  grid:meta.grid_yxz,
-  modelData:meta.assets,
-  original2DArt:meta.source_art_is_original_layered_live2d,
+  algorithm:meta.geometry_algorithm,grid:meta.grid_yxz,modelData:meta.assets,
   source3DMeshUsed:meta.source_reconstruction_uses_original_3d_mesh,
-  rig:meta.rig
+  original2DArt:meta.source_art_is_original_layered_live2d,
+  atlasSize:[atlas.image.width,atlas.image.height],
+  shader:'STANDARD_MESH_BASIC_WITH_PER_TRIANGLE_VIEW_UV',
+  projections:stats,rig:meta.rig
  };
  window.__hullSetPose({name:'visual_hull',yaw:0});
  window.__hullReady=true;
 }
-setup().catch(e=>{console.error(e);window.__hullError=e.message});
+setup().catch(e=>{console.error(e);window.__hullError=e.message;});
