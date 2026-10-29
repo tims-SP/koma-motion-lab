@@ -16,11 +16,11 @@ OUT=Path("out/godot-004")
 DARK_BG=(18,28,43)
 STILLS=sorted(OUT.glob("dark-still*.png"))
 WHITE=sorted(OUT.glob("white-still*.png"))
-SPECS=[("nod",90,[0,20,40,65,89]),("idle",120,[0,25,50,75,119])]
+SPECS=[("nod",90,[0,20,40,65,89]),("idle",270,[0,60,120,190,269])]
 errors=[]
 report={"stage":"GODOT-004","status":"FAIL",
         "reference_parity":"NOT_TESTED_NO_OFFICIAL_CORE_REFERENCE",
-        "real_assets":"301003_x original MOC3, corrected Meta only in genuine motions",
+        "real_assets":"301003_x original MOC3, nod=b_diantou (3.167s), idle=b_idle (9s); temporary metadata corrections only",
         "expected_size":[1920,1080], "motion_results":{}}
 
 def get_image(path):
