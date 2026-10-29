@@ -181,6 +181,29 @@ jobs:
             --quit-after 5 \
             2>&1 | tee out/godot-002/construct-only.log
           grep -q 'GODOT002_CONSTRUCT_ONLY_PASS' out/godot-002/construct-only.log
+          # Isolate model JSON + MOC + mesh/texture initialization WITHOUT
+          # the original motion parser. Keep static art strictly private in Runner.
+          GODOT002_DISABLE_MOTIONS=1 xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+            --audio-driver Dummy \
+            --rendering-method gl_compatibility --rendering-driver opengl3 \
+            --write-movie "$GITHUB_WORKSPACE/out/godot-002/static.png" \
+            --fixed-fps 30 --quit-after 15 \
+            2>&1 | tee out/godot-002/static-model.log
+          grep -q 'GODOT002_STATIC_MODEL_LOAD_PASS' out/godot-002/static-model.log
+          python3 - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          paths=sorted(Path("out/godot-002").glob("static*.png"))
+          assert len(paths)==15, f"expected 15 static model frames, got {len(paths)}"
+          image=Image.open(paths[len(paths)//2]).convert("RGB").resize((96,54))
+          bg=(18,28,43)
+          coverage=sum(1 for p in image.getdata()
+              if sum(abs(p[c]-bg[c]) for c in range(3))>90)/5184
+          print("GODOT002_STATIC_VISIBLE_FOREGROUND_RATIO",round(coverage,4))
+          assert coverage>=0.025, "real model has not produced visible pixels"
+          print("GODOT002_STATIC_REAL_MODEL_VISIBLE_PASS")
+          PY
           set +e
           xvfb-run -a -s '-screen 0 1280x720x24' \
             "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
