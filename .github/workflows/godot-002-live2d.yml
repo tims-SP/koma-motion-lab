@@ -141,6 +141,28 @@ jobs:
           sha256sum "$lib" | tee "$GITHUB_WORKSPACE/out/godot-002/gdcubism-library.sha256"
           mkdir -p "$GITHUB_WORKSPACE/.ci-cache/gdcubism"
           cp -a "$RUNNER_TEMP/gd002-project/addons/gd_cubism" "$GITHUB_WORKSPACE/.ci-cache/gdcubism/"
+      - name: GODOT-006 package private original MOC3 plus native extension for isolated local validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          project="$RUNNER_TEMP/gd002-project"
+          test -s "$project/assets/301003_x/301003_x.moc3"
+          test -s "$project/addons/gd_cubism/bin/libgd_cubism.linux.release.x86_64.so"
+          mkdir -p out/godot-006
+          tar -C "$project" --exclude='./.godot' -czf out/godot-006/private-real-moc3-project.tar.gz .
+          (cd out/godot-006 && sha256sum private-real-moc3-project.tar.gz > private-real-moc3-project.sha256)
+          ls -lh out/godot-006
+      - name: GODOT-006 hand off privately to isolated container (never public Release or git)
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-006-private-real-moc3-project-${{ github.run_number }}
+          path: |
+            out/godot-006/private-real-moc3-project.tar.gz
+            out/godot-006/private-real-moc3-project.sha256
+            out/godot-002/asset-integrity.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 2
       - name: Cache successful native extension compilation
         if: success() && steps.gd002-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
