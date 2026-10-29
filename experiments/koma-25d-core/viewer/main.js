@@ -105,7 +105,8 @@ async function setup(){
   document.body.appendChild(renderer.domElement);
   model={scene,bones,center:new THREE.Vector3(midx,midy,0),doc,verts,proxyMeshes,appearance};
   window.__komaViewMode='part-shell';
-  $('status').textContent='Koma CORE-001 · MIT source mesh';
+  $('status').textContent=doc.schema==='koma-25d-pilot/6'?
+    'Koma CORE-006 · Head/Elbow Diagnostic':'Koma CORE-001 · MIT source mesh';
   $('detail').textContent=doc.meshes.length+' meshes / '+bones.length+
     ' bones / '+verts+' vertices · original UV';
   window.__komaDiagnostics={meshes:doc.meshes.length,bones:bones.length,verts,
@@ -176,8 +177,9 @@ async function setup(){
       }
     }
     renderer.render(model.scene,camera);
-    $('angle').textContent='Camera '+angle.toFixed(1)+'° · '+(clip||'spatial')+
-      ' · '+Number(time).toFixed(2)+'s · Reach '+reach.toFixed(2);
+    $('angle').textContent='Camera '+angle.toFixed(1)+'° · Head '+Number(headYaw).toFixed(1)+
+      '° · Elbow '+Number(elbow).toFixed(1)+'° · Shell '+window.__komaViewMode+
+      ' · '+(clip||'spatial')+' · Synthetic side art';
     return {yaw,clip,time,reach};
   };
   window.__komaSetAngle=(a,p=pose)=>window.__komaSetMotion({yaw:a,reach:p});
