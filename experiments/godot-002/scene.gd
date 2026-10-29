@@ -29,6 +29,14 @@ func _ready() -> void:
     var factor: float = min(750.0 / max(dims.x, 1.0), 495.0 / max(dims.y, 1.0))
     character.position = Vector2(480, 270)
     character.scale = Vector2.ONE * factor
+    var zenv := OS.get_environment("GODOT002_ZOOM")
+    if not zenv.is_empty() and OS.get_environment("GODOT002_DISABLE_MOTIONS") != "1":
+        var diagnostic_zoom: float = clampf(float(zenv), 1.0, 2.75)
+        var diagnostic_dx: float = float(OS.get_environment("GODOT002_SHIFT_X"))
+        var diagnostic_dy: float = float(OS.get_environment("GODOT002_SHIFT_Y"))
+        character.scale *= diagnostic_zoom
+        character.position += Vector2(diagnostic_dx, diagnostic_dy)
+        print("GODOT002_DIAGNOSTIC_AUTOFRAME=", diagnostic_zoom, " OFFSET=", Vector2(diagnostic_dx, diagnostic_dy))
     print("GODOT002_MODEL_CANVAS=", dims, " SCALE=", factor)
     if OS.get_environment("GODOT002_DISABLE_MOTIONS") == "1":
         print("GODOT002_STATIC_MODEL_LOAD_PASS")
