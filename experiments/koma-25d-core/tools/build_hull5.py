@@ -18,6 +18,7 @@ import cv2
 from scipy.ndimage import gaussian_filter
 from skimage.measure import marching_cubes
 import trimesh
+from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"out"/"core005"
@@ -50,6 +51,7 @@ def occupancy_to_mesh(raw:np.ndarray,name):
     positions=np.stack((x,y,z),axis=1)
     tm=trimesh.Trimesh(vertices=positions,faces=faces,process=False)
     # No color/UV baked into GLB; appearance is independently projected.
+    tm.fix_normals()
     tm.export(ASSETS/f"{name}.glb")
     return {
         "vertices":int(len(positions)),"triangles":int(len(faces)),
@@ -65,6 +67,12 @@ def main():
     for key,idx in (("front",0),("side",36),("back",72)):
         masks[key]=mask_image(idx)
         shutil.copyfile(SRC/f"{idx:04d}.png",ASSETS/f"{key}.png")
+    # Standard UV texture atlas eliminates fragile custom shader sampling.
+    # Three image areas share a single well-tested MeshBasicMaterial texture.
+    atlas=Image.new("RGB",(640*3,640))
+    for slot,name in enumerate(("front","side","back")):
+        atlas.paste(Image.open(ASSETS/(name+".png")).convert("RGB"),(slot*640,0))
+    atlas.save(ASSETS/"atlas.png")
     ny,nx,nz=GRID
     f=cv2.resize(masks["front"],(nx,ny),interpolation=cv2.INTER_NEAREST)>0
     s=cv2.resize(masks["side"],(nz,ny),interpolation=cv2.INTER_NEAREST)>0
