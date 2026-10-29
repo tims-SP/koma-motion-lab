@@ -16,6 +16,7 @@ func _ready() -> void:
     print("GODOT002_PHASE_BEFORE_ASSETS")
     character.assets = "res://assets/301003_x/301003_x.model3.json"
     print("GODOT002_PHASE_AFTER_ASSETS")
+    print("GODOT002_MOC3_SOURCE=301003_x")
     var canvas: Dictionary = character.get_canvas_info()
     if canvas.is_empty() or not canvas.has("size_in_pixels"):
         push_error("GODOT002_MODEL_LOAD_FAILED")
