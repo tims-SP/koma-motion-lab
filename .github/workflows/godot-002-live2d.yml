@@ -210,7 +210,7 @@ jobs:
                    "status":"VISIBLE_THRESHOLD_PASS" if coverage>=0.025 else "VISUAL_REVIEW_REQUIRED"}
           print("GODOT002_STATIC_PIXEL_DIAGNOSTICS",json.dumps(summary))
           Path("out/godot-002/static-pixel-diagnostics.json").write_text(
-              json.dumps(summary,indent=2)+"\\n")
+              json.dumps(summary,indent=2))
           print("GODOT002_STATIC_MODEL_FRAMES_GENERATED")
           PY
           set +e
