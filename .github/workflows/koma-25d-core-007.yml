@@ -1,0 +1,119 @@
+name: CORE-007 · actual anime layered PSD and Inochi rig audit
+
+on:
+  push:
+    branches: [feature/koma-25d-core-007]
+    paths:
+      - '.github/workflows/koma-25d-core-007.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  real-anime-asset:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PSD and image tooling
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check \
+            'psd-tools==1.10.9' 'Pillow==12.0.0' 'numpy==2.2.6' \
+            'opencv-python-headless==4.11.0.86'
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Download pinned official tutorial Aka PSD + real INX authoring rig
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          mkdir -p out/core007/raw out/core007/review
+          src=https://raw.githubusercontent.com/Inochi2D/inochi2d-docs/593c657855d5679f01443ef311346298fd25e117/docs/source/creator/first-model
+          curl -fL --retry 4 --max-time 120 "$src/tutorial-aka.psd" -o out/core007/raw/tutorial-aka.psd
+          curl -fL --retry 4 --max-time 120 "$src/tutorial-aka02.inx" -o out/core007/raw/tutorial-aka02.inx
+          test "$(stat -c%s out/core007/raw/tutorial-aka.psd)" -gt 5000000
+          test "$(stat -c%s out/core007/raw/tutorial-aka02.inx)" -gt 5000000
+          sha256sum out/core007/raw/*
+          printf '%s\n' \
+            'Attribution: Aka, original design and rigging by seagetch, CC BY 4.0.' \
+            'Source: Inochi2D official creator tutorial, pinned at 593c657855d5679f01443ef311346298fd25e117.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Read and audit actual layered source art and binary INX rig
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/inspect_aka7.py \
+            --psd out/core007/raw/tutorial-aka.psd \
+            --inx out/core007/raw/tutorial-aka02.inx \
+            --out out/core007/review
+      - name: "Animate genuine 62-layer Aka art - flat vs shallow-curved surface"
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/render_aka7.py \
+            --psd out/core007/raw/tutorial-aka.psd \
+            --out out/core007/review
+          python tools/qa_aka7.py
+      - name: Encode two explicit original-art comparative videos
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          for method in flat curved; do
+            ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+              -i "out/core007/review/$method/%04d.png" \
+              -c:v libx264 -pix_fmt yuv420p \
+              "out/core007/review/$method.mp4"
+            test -s "out/core007/review/$method.mp4"
+          done
+      - name: Decode encoded MP4 images and expose visual contact for independent audit
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import base64,json,subprocess,textwrap
+          from pathlib import Path
+          from PIL import Image
+          out=Path("out/core007/review")
+          board=Image.new("RGB",(640*3,640*2),(241,242,246))
+          result={}
+          for row,method in enumerate(("flat","curved")):
+              movie=out/(method+".mp4")
+              subprocess.run(["ffmpeg","-hide_banner","-loglevel","error",
+                "-y","-i",str(movie),"-vf",
+                "select=eq(n\,0)+eq(n\,18)+eq(n\,35)","-vsync","0",
+                str(out/(method+"_decoded_%02d.png"))],check=True)
+              frames=sorted(out.glob(method+"_decoded_*.png"))
+              assert len(frames)==3
+              for col,frame in enumerate(frames):
+                  im=Image.open(frame).convert("RGB")
+                  assert im.size==(640,640)
+                  board.paste(im,(col*640,row*640))
+              result[method]={"video_size":movie.stat().st_size,
+                              "decoded_frames":len(frames)}
+          board.save(out/"decoded_contact.png")
+          board.thumbnail((1300,900))
+          board.save(out/"decoded_preview.jpg",quality=80,optimize=True)
+          (out/"decoded7.json").write_text(json.dumps(result,indent=2)+"\n")
+          print("CORE007_REAL_ENCODED_VIDEO",json.dumps(result))
+          print("KOMA_CORE007_ENCODED_VISUAL_BEGIN")
+          p=out/"decoded_preview.jpg"
+          for line in textwrap.wrap(base64.b64encode(p.read_bytes()).decode(),120):
+              print(line)
+          print("KOMA_CORE007_ENCODED_VISUAL_END")
+          PY
+      - name: Publish audited diagnostic source raster only as draft
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "koma-25d-core007-asset-$GITHUB_RUN_ID" \
+            experiments/koma-25d-core/out/core007/review/source_audit.json \
+            experiments/koma-25d-core/out/core007/review/original_psd.png \
+            experiments/koma-25d-core/out/core007/review/flat.mp4 \
+            experiments/koma-25d-core/out/core007/review/curved.mp4 \
+            experiments/koma-25d-core/out/core007/review/contact.png \
+            experiments/koma-25d-core/out/core007/review/decoded_contact.png \
+            experiments/koma-25d-core/out/core007/review/qa7.json \
+            experiments/koma-25d-core/out/core007/review/layer_roles.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-007 Aka 62-layer real anime head, two video candidates" \
+            --notes "Aka © seagetch, CC BY 4.0. Real source PSD + INX are downloaded but not redistributed. Model originally from Inochi2D tutorial. This Release contains 2 animated experimental videos of original 62-layer 2D art; DOES NOT use native INX animation deformers or demonstrate correct side painting. Anime visual acceptance is pending inspection."
