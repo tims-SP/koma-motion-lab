@@ -23,9 +23,15 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p review
-          gh release view godot-002-static-inspection-66 --repo "$GITHUB_REPOSITORY" --json name,isDraft,assets
-          gh release download godot-002-static-inspection-66 --repo "$GITHUB_REPOSITORY" --pattern 'preview.mp4' --dir review
-          gh release download godot-002-static-inspection-66 --repo "$GITHUB_REPOSITORY" --pattern 'contact-sheet.jpg' --dir review
+          gh api "/repos/$GITHUB_REPOSITORY/releases/427452896" --jq '{id, name, draft, assets: [.assets[] | {id,name,size}]}'
+          curl -fsSL --retry 3 -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/octet-stream" -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/releases/assets/687289218" \
+            -o review/preview.mp4
+          curl -fsSL --retry 3 -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/octet-stream" -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/releases/assets/687289234" \
+            -o review/contact-sheet.jpg
           test "$(stat -c%s review/preview.mp4)" -eq 136011
           echo 'c58ef51241144455539143c0cf5ce7e73f55c67e1ba508af046abbb2f7acf3de  review/preview.mp4' | sha256sum -c -
           echo '7112e7fe72c3e271e228cafb2f086bcf57b67658fc0199ea1d2adf5c6aeb31d7  review/contact-sheet.jpg' | sha256sum -c -
