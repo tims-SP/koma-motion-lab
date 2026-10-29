@@ -82,6 +82,8 @@ async function setup(){
         g.computeVertexNormals();
         const proxy=new THREE.SkinnedMesh(g,diagnosticMaterials[role]);
         proxy.frustumCulled=false;
+        proxy.userData.sourcePart=m.name;
+        proxy.userData.sideSurfaceEnabled=Boolean(m.sideSurfaceEnabled);
         proxy.renderOrder=m.layer*2;
         scene.add(proxy);
         proxy.bind(skeleton,new THREE.Matrix4());
@@ -102,8 +104,9 @@ async function setup(){
   renderer.outputColorSpace=THREE.SRGBColorSpace;
   document.body.appendChild(renderer.domElement);
   model={scene,bones,center:new THREE.Vector3(midx,midy,0),doc,verts,proxyMeshes,appearance};
-  window.__komaViewMode='diagnostic';
-  $('status').textContent='Koma CORE-001 · MIT source mesh';
+  window.__komaViewMode='part-shell';
+  $('status').textContent=doc.schema==='koma-25d-pilot/6'?
+    'Koma CORE-006 · Head/Elbow Diagnostic':'Koma CORE-001 · MIT source mesh';
   $('detail').textContent=doc.meshes.length+' meshes / '+bones.length+
     ' bones / '+verts+' vertices · original UV';
   window.__komaDiagnostics={meshes:doc.meshes.length,bones:bones.length,verts,
@@ -123,7 +126,7 @@ async function setup(){
     }
     return values[values.length-1];
   };
-  window.__komaSetMotion=({yaw=0,clip=null,time=0,reach=0}={})=>{
+  window.__komaSetMotion=({yaw=0,clip=null,time=0,reach=0,headYaw=0,elbow=0}={})=>{
     angle=Number(yaw);pose=Number(reach);
     for(let i=0;i<bones.length;i++){
       bones[i].position.set(...doc.bones[i].local);
@@ -146,6 +149,10 @@ async function setup(){
     const lower=bones.find(b=>b.name.endsWith('/RightForearm'));
     if(upper&&reach)upper.rotation.y=THREE.MathUtils.degToRad(34)*reach;
     if(lower&&reach)lower.rotation.x=THREE.MathUtils.degToRad(51)*reach;
+    const head=bones.find(b=>b.name.endsWith('/Head'));
+    const forearm=bones.find(b=>b.name.endsWith('/RightForearm'));
+    if(head&&headYaw)head.rotation.y=THREE.MathUtils.degToRad(Number(headYaw));
+    if(forearm&&elbow)forearm.rotation.x+=THREE.MathUtils.degToRad(Number(elbow));
     model.scene.updateMatrixWorld(true);
     const rad=THREE.MathUtils.degToRad(angle),distance=14;
     camera.position.copy(model.center).add(new THREE.Vector3(
@@ -155,9 +162,11 @@ async function setup(){
     // Preserve the source frontal artwork exactly at yaw=0. Fading-in new
     // surfaces avoids rear/side placeholders leaking through transparent holes.
     // It does NOT solve true multi-view seam/illustration correspondence.
-    const shellBlend=THREE.MathUtils.smoothstep(Math.abs(angle),1,24);
+    const visibleTurn=Math.max(Math.abs(angle),Math.abs(Number(headYaw)));
+    const shellBlend=THREE.MathUtils.smoothstep(visibleTurn,1,24);
     for(const proxy of model.proxyMeshes)
-      proxy.visible=(window.__komaViewMode==='diagnostic' && shellBlend>0.0001);
+      proxy.visible=((window.__komaViewMode==='diagnostic' ||
+        (window.__komaViewMode==='part-shell' && proxy.userData.sideSurfaceEnabled)) && shellBlend>0.0001);
     for(const mat of Object.values(diagnosticMaterials)){
       mat.opacity=shellBlend;
       const shouldBlend=shellBlend<0.999;
@@ -168,16 +177,20 @@ async function setup(){
       }
     }
     renderer.render(model.scene,camera);
-    $('angle').textContent='Camera '+angle.toFixed(1)+'° · '+(clip||'spatial')+
-      ' · '+Number(time).toFixed(2)+'s · Reach '+reach.toFixed(2);
+    $('angle').textContent='Camera '+angle.toFixed(1)+'° · Head '+Number(headYaw).toFixed(1)+
+      '° · Elbow '+Number(elbow).toFixed(1)+'° · Shell '+window.__komaViewMode+
+      ' · '+(clip||'spatial')+' · Synthetic side art';
     return {yaw,clip,time,reach};
   };
   window.__komaSetAngle=(a,p=pose)=>window.__komaSetMotion({yaw:a,reach:p});
   window.__komaSetViewMode=(mode)=>{
-    if(!['diagnostic','source-front'].includes(mode))throw Error('Unknown view mode');
+    if(!['diagnostic','source-front','part-shell'].includes(mode))throw Error('Unknown view mode');
     window.__komaViewMode=mode;
-    for(const mesh of model.proxyMeshes)mesh.visible=(mode==='diagnostic');
+    for(const mesh of model.proxyMeshes)
+      mesh.visible=(mode==='diagnostic'||(mode==='part-shell'&&mesh.userData.sideSurfaceEnabled));
   };
+  window.__komaSetPartMode=(mode)=>window.__komaSetViewMode(mode);
+  window.__komaPartContract=doc.head_elbow_experiment||null;
   window.__komaClipNames=Object.keys(doc.clips||{});
   window.__komaSetMotion({yaw:initialAngle,reach:initialPose});
   window.__komaReady=true;
