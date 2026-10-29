@@ -78,6 +78,57 @@ jobs:
               -pix_fmt yuv420p "out/core004/$mode.mp4"
             test -s "out/core004/$mode.mp4"
           done
+      - name: Independently render original 2D GBot with stronger proportion-derived 3D profile
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/godot_to_koma.py --out viewer/public/asset --depth 0.16 \
+            --profile-mode proportional
+          python tools/make_view_canaries.py
+          node tools/capture3.mjs
+          python tools/qa3.py
+          python - <<'PY'
+          import json,shutil
+          from pathlib import Path
+          src=Path("out/core003")
+          dest=Path("out/core004")
+          r=json.loads((src/"qa.json").read_text())
+          profile=r["visible_coverage_0_45_90_135_180"][2]
+          old=0.03187742248062016
+          ratio=profile/old
+          assert profile>0.045 and ratio>1.4, \
+            f"PROFILE_STILL_TOO_THIN; coverage={profile}, ratio={ratio}"
+          assert r["front_with_shell_changed_fraction"]<=0.001
+          report={"status":"PASS_PROFILE_GEOMETRY_SMOKE_NOT_ART",
+                  "source":"Original MIT Godot GBot 2D art and rig",
+                  "legacy_90_coverage":old,
+                  "proportional_90_coverage":profile,
+                  "relative_coverage_improvement":ratio,
+                  "reference_src_2d_pixel_parity":"NOT_TESTED_WITH_GODOT",
+                  "anatomical_side_silhouette":"NOT_TESTED",
+                  "front_source_art_protected":True,
+                  "genuine_back_side_art":"ABSENT"}
+          (dest/"profile_qa.json").write_text(json.dumps(report,indent=2)+"\n")
+          shutil.copy(src/"contact.png",dest/"profile_contact.png")
+          print("CORE004_PROFILE_QA",json.dumps(report))
+          PY
+          ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+            -i out/core003/turn/%04d.png -c:v libx264 -pix_fmt yuv420p \
+            out/core004/profile_turn.mp4
+      - name: Emit 2D source + improved shell profile visual montage
+        run: |
+          python - <<'PY'
+          import base64,io,textwrap
+          from PIL import Image
+          p="experiments/koma-25d-core/out/core004/profile_contact.png"
+          im=Image.open(p).convert("RGB")
+          im.thumbnail((1500,500))
+          buf=io.BytesIO()
+          im.save(buf,format="JPEG",quality=78)
+          print("KOMA_CORE004_PROFILE_VISUAL_BEGIN")
+          for line in textwrap.wrap(base64.b64encode(buf.getvalue()).decode(),120):
+              print(line)
+          print("KOMA_CORE004_PROFILE_VISUAL_END")
+          PY
       - name: Provide compressed contact frame for independent image review
         run: |
           python - <<'PY'
@@ -96,6 +147,9 @@ jobs:
         run: |
           tag="koma-25d-core004-$GITHUB_RUN_ID"
           gh release create "$tag" \
+            experiments/koma-25d-core/out/core004/profile_turn.mp4 \
+            experiments/koma-25d-core/out/core004/profile_contact.png \
+            experiments/koma-25d-core/out/core004/profile_qa.json \
             experiments/koma-25d-core/out/core004/reference.mp4 \
             experiments/koma-25d-core/out/core004/blend.mp4 \
             experiments/koma-25d-core/out/core004/flow.mp4 \
