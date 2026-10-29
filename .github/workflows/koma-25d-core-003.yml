@@ -98,6 +98,21 @@ jobs:
         run: node experiments/koma-25d-core/tools/capture3.mjs
       - name: Verify source front protection and view diagnostics
         run: python experiments/koma-25d-core/tools/qa3.py
+      - name: Emit tiny source-contact JPG in logs for independent visual review
+        run: |
+          python - <<'PY'
+          import base64,io,textwrap
+          from PIL import Image
+          p="experiments/koma-25d-core/out/core003/contact.png"
+          im=Image.open(p).convert("RGB")
+          im.thumbnail((1440,320))
+          b=io.BytesIO()
+          im.save(b,format="JPEG",quality=77,optimize=True)
+          print("KOMA_CORE003_VISUAL_START")
+          for line in textwrap.wrap(base64.b64encode(b.getvalue()).decode(),120):
+              print(line)
+          print("KOMA_CORE003_VISUAL_END")
+          PY
       - name: Encode turnaround
         working-directory: experiments/koma-25d-core
         run: |
