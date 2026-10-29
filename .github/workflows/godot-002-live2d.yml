@@ -65,6 +65,17 @@ jobs:
           sdk="$PWD/thirdparty/CubismSdkForNative-Lab"
           mkdir -p "$sdk/Core/include" "$sdk/Core/lib/linux/x86_64"
           cp "$RUNNER_TEMP/PurismCore/include/"*.h "$sdk/Core/include/"
+          # Cubism 5-r.1 includes the Core header inside a C++ namespace. PurismCore's
+          # stdint include must not import glibc typedefs into that namespace.
+          python3 - "$sdk/Core/include/Live2DCubismCore.h" <<'PY'
+          from pathlib import Path
+          import sys
+          p = Path(sys.argv[1])
+          s = p.read_text()
+          assert '#include "PurismCore.h"' in s
+          s = s.replace('#include "PurismCore.h"', '#define PSM_HAS_STDINT 0\n#include "PurismCore.h"')
+          p.write_text(s)
+          PY
           archive=$(find "$RUNNER_TEMP/PurismCore/build" -name 'libPurismCore-v5.a' -print -quit)
           test -n "$archive" && test -s "$archive"
           cp "$archive" "$sdk/Core/lib/linux/x86_64/libLive2DCubismCore.a"
