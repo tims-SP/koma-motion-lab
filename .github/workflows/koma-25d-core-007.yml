@@ -47,7 +47,7 @@ jobs:
             --psd out/core007/raw/tutorial-aka.psd \
             --inx out/core007/raw/tutorial-aka02.inx \
             --out out/core007/review
-      - name: Animate genuine 62-layer Aka art: flat vs shallow-curved surface
+      - name: "Animate genuine 62-layer Aka art - flat vs shallow-curved surface"
         working-directory: experiments/koma-25d-core
         run: |
           python tools/render_aka7.py \
