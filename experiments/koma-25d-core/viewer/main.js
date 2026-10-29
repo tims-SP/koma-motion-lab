@@ -152,6 +152,21 @@ async function setup(){
       Math.sin(rad)*distance,0,Math.cos(rad)*distance));
     camera.lookAt(model.center);
     camera.updateProjectionMatrix();
+    // Preserve the source frontal artwork exactly at yaw=0. Fading-in new
+    // surfaces avoids rear/side placeholders leaking through transparent holes.
+    // It does NOT solve true multi-view seam/illustration correspondence.
+    const shellBlend=THREE.MathUtils.smoothstep(Math.abs(angle),1,24);
+    for(const proxy of model.proxyMeshes)
+      proxy.visible=(window.__komaViewMode==='diagnostic' && shellBlend>0.0001);
+    for(const mat of Object.values(diagnosticMaterials)){
+      mat.opacity=shellBlend;
+      const shouldBlend=shellBlend<0.999;
+      if(mat.transparent!==shouldBlend){
+        mat.transparent=shouldBlend;
+        mat.depthWrite=!shouldBlend;
+        mat.needsUpdate=true;
+      }
+    }
     renderer.render(model.scene,camera);
     $('angle').textContent='Camera '+angle.toFixed(1)+'° · '+(clip||'spatial')+
       ' · '+Number(time).toFixed(2)+'s · Reach '+reach.toFixed(2);
