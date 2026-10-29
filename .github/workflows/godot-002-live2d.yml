@@ -78,8 +78,7 @@ jobs:
           "$RUNNER_TEMP/psm-v5-probe" \
             "$RUNNER_TEMP/gd002-project/assets/301003_x/301003_x.moc3" \
             2>&1 | tee out/godot-002/purism-v5-probe.log
-          grep -q '^PSM_V5_PHASE_PASS
-      - name: Restore GDCubism build cache (no artwork)
+          grep -q '^PSM_V5_PHASE_PASS      - name: Restore GDCubism build cache (no artwork)
         id: gd002-cache
         uses: actions/cache/restore@v4
         with:
