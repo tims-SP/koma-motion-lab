@@ -5,6 +5,8 @@
 #include <Model/CubismMoc.hpp>
 #include <Model/CubismModel.hpp>
 #include <Rendering/CubismRenderer.hpp>
+#include <Motion/CubismMotion.hpp>
+#include <Motion/CubismMotionManager.hpp>
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
@@ -31,7 +33,7 @@ struct Allocator final : Csm::ICubismAllocator {
 };
 
 int main(int argc, char** argv) {
-    if(argc!=2) return 2;
+    if(argc<2) return 2;
     std::ifstream file(argv[1], std::ios::binary);
     if(!file) return 3;
     std::vector<unsigned char> bytes{std::istreambuf_iterator<char>(file), {}};
@@ -53,6 +55,35 @@ int main(int argc, char** argv) {
     model->SaveParameters();
     model->Update();
     std::puts("FW_V5_PHASE_UPDATED"); std::fflush(stdout);
+    // Exercise genuine long game motion files under ASan, not synthetic curves.
+    for (int arg = 2; arg < argc; ++arg) {
+        std::ifstream motion_file(argv[arg], std::ios::binary);
+        if (!motion_file) return 20;
+        std::vector<unsigned char> data{std::istreambuf_iterator<char>(motion_file), {}};
+        if (data.size() < 50 || data.size() > 15000000) return 21;
+        std::printf("FW_V5_MOTION_BEFORE_PARSE=%s bytes=%zu\\n", argv[arg], data.size());
+        std::fflush(stdout);
+        Csm::CubismMotion* motion = Csm::CubismMotion::Create(data.data(),
+            static_cast<Csm::csmSizeInt>(data.size()));
+        if (!motion) return 22;
+        std::printf("FW_V5_MOTION_AFTER_PARSE=%s duration=%.3f\\n",
+            argv[arg], static_cast<double>(motion->GetDuration()));
+        std::fflush(stdout);
+        {
+            Csm::CubismMotionManager manager;
+            auto handle = manager.StartMotionPriority(motion, false, 3);
+            if (!handle) return 23;
+            for (int frame=0; frame<90; ++frame) {
+                model->LoadParameters();
+                manager.UpdateMotion(model, 1.0f/30.0f);
+                model->SaveParameters();
+                model->Update();
+            }
+        }
+        Csm::ACubismMotion::Delete(motion);
+        std::printf("FW_V5_MOTION_PLAYBACK_PASS=%s frames=90\\n", argv[arg]);
+        std::fflush(stdout);
+    }
     moc->DeleteModel(model);
     Csm::CubismMoc::Delete(moc);
     Csm::CubismFramework::Dispose();
