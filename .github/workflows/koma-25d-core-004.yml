@@ -1,0 +1,167 @@
+name: KOMA-25D-CORE-004 · real anime multiview ground truth benchmark
+
+on:
+  push:
+    branches: [feature/koma-25d-core-004]
+    paths:
+      - '.github/workflows/koma-25d-core-004.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  multiview-benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install FFmpeg, Python image / optical flow tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check \
+            "Pillow==12.0.0" "numpy==2.2.6" "opencv-python-headless==4.11.0.86"
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Download legally verified real CC0 anime VRM reference
+        working-directory: experiments/koma-25d-core
+        run: |
+          mkdir -p viewer/public/asset
+          curl -fsSL --retry 3 --max-time 180 \
+            -o viewer/public/asset/reference.vrm \
+            https://raw.githubusercontent.com/madjin/vrm-samples/e16eb187100149a315ad92c3c9968f1d5baa6c7d/vroid/beta/Sendagaya_Shino.vrm
+          test "$(stat -c %s viewer/public/asset/reference.vrm)" -gt 12000000
+          sha256sum viewer/public/asset/reference.vrm > viewer/public/asset/reference.sha256
+          cat viewer/public/asset/reference.sha256
+          echo "VRoid beta sample CC0 licence verified at vroid.pixiv.help." >> "$GITHUB_STEP_SUMMARY"
+          echo "This is REAL FULL 3D source art, used solely to derive a controlled multi-view 2D reference. It is NOT imported 2D Live2D." >> "$GITHUB_STEP_SUMMARY"
+      - name: Install Three.js and Chromium for true-source rendering
+        working-directory: experiments/koma-25d-core/viewer
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Generate 0–180 3D reference at every 2.5 degrees
+        run: node experiments/koma-25d-core/tools/capture4.mjs
+      - name: Create 5-view source sheet, image-space controls, held-out quality comparison
+        run: python experiments/koma-25d-core/tools/qa4.py
+      - name: Reject blank original reference, corrupt assets and invalid metrics
+        run: |
+          python - <<'PY'
+          import json,math
+          from pathlib import Path
+          r=Path("experiments/koma-25d-core/out/core004")
+          q=json.loads((r/"qa.json").read_text())
+          info=json.loads((r/"source.json").read_text())
+          assert info["reference"]["meshes"]>=2
+          assert info["reference"]["triangles"]>100
+          assert q["withheld_views"]==68
+          assert all(math.isfinite(q[n]) and q[n]>0 for n in
+              ("mean_subject_mae_blend","mean_subject_mae_flow"))
+          assert max(q["per_frame"][i]["source_coverage"] for i in (0,18,36,54,72))>0.035
+          assert q["baseline_source_view_exact_by_construction"]
+          assert q["source_2d_layered_mesh"]=="NOT_CREATED"
+          assert q["production_quality"]=="NOT_ACCEPTED"
+          print("CORE004_CONTROLLED_MULTIVIEW_REFERENCE_PASS")
+          PY
+      - name: Encode real 3D source and two 2D image-space alternatives
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          for mode in reference blend flow; do
+            ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+              -i "out/core004/$mode/%04d.png" -c:v libx264 \
+              -pix_fmt yuv420p "out/core004/$mode.mp4"
+            test -s "out/core004/$mode.mp4"
+          done
+      - name: Independently render original 2D GBot with stronger proportion-derived 3D profile
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/godot_to_koma.py --out viewer/public/asset --depth 0.16 \
+            --profile-mode proportional
+          python tools/make_view_canaries.py
+          node tools/capture3.mjs
+          python tools/qa3.py
+          python - <<'PY'
+          import json,shutil
+          from pathlib import Path
+          src=Path("out/core003")
+          dest=Path("out/core004")
+          r=json.loads((src/"qa.json").read_text())
+          profile=r["visible_coverage_0_45_90_135_180"][2]
+          old=0.03187742248062016
+          ratio=profile/old
+          assert profile>0.045 and ratio>1.4, \
+            f"PROFILE_STILL_TOO_THIN; coverage={profile}, ratio={ratio}"
+          assert r["front_with_shell_changed_fraction"]<=0.001
+          report={"status":"PASS_PROFILE_GEOMETRY_SMOKE_NOT_ART",
+                  "source":"Original MIT Godot GBot 2D art and rig",
+                  "legacy_90_coverage":old,
+                  "proportional_90_coverage":profile,
+                  "relative_coverage_improvement":ratio,
+                  "reference_src_2d_pixel_parity":"NOT_TESTED_WITH_GODOT",
+                  "anatomical_side_silhouette":"NOT_TESTED",
+                  "front_source_art_protected":True,
+                  "genuine_back_side_art":"ABSENT"}
+          (dest/"profile_qa.json").write_text(json.dumps(report,indent=2)+"\n")
+          shutil.copy(src/"contact.png",dest/"profile_contact.png")
+          print("CORE004_PROFILE_QA",json.dumps(report))
+          PY
+          ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+            -i out/core003/turn/%04d.png -c:v libx264 -pix_fmt yuv420p \
+            out/core004/profile_turn.mp4
+      - name: Emit 2D source + improved shell profile visual montage
+        run: |
+          python - <<'PY'
+          import base64,io,textwrap
+          from PIL import Image
+          p="experiments/koma-25d-core/out/core004/profile_contact.png"
+          im=Image.open(p).convert("RGB")
+          im.thumbnail((1500,500))
+          buf=io.BytesIO()
+          im.save(buf,format="JPEG",quality=78)
+          print("KOMA_CORE004_PROFILE_VISUAL_BEGIN")
+          for line in textwrap.wrap(base64.b64encode(buf.getvalue()).decode(),120):
+              print(line)
+          print("KOMA_CORE004_PROFILE_VISUAL_END")
+          PY
+      - name: Provide compressed contact frame for independent image review
+        run: |
+          python - <<'PY'
+          import base64,textwrap
+          from pathlib import Path
+          p=Path("experiments/koma-25d-core/out/core004/contact_preview.jpg")
+          print("KOMA_CORE004_VISUAL_BEGIN")
+          for line in textwrap.wrap(base64.b64encode(p.read_bytes()).decode(),120):
+              print(line)
+          print("KOMA_CORE004_VISUAL_END")
+          PY
+      - name: Independently decode and visually sample actual encoded MP4 files
+        run: python experiments/koma-25d-core/tools/audit_encoded4.py
+      - name: Publish only permitted derived media to DRAFT Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="koma-25d-core004-$GITHUB_RUN_ID"
+          gh release create "$tag" \
+            experiments/koma-25d-core/out/core004/encoded_audit.jpg \
+            experiments/koma-25d-core/out/core004/encoded_audit.json \
+            experiments/koma-25d-core/out/core004/profile_turn.mp4 \
+            experiments/koma-25d-core/out/core004/profile_contact.png \
+            experiments/koma-25d-core/out/core004/profile_qa.json \
+            experiments/koma-25d-core/out/core004/reference.mp4 \
+            experiments/koma-25d-core/out/core004/blend.mp4 \
+            experiments/koma-25d-core/out/core004/flow.mp4 \
+            experiments/koma-25d-core/out/core004/source_views.png \
+            experiments/koma-25d-core/out/core004/contact.png \
+            experiments/koma-25d-core/out/core004/qa.json \
+            experiments/koma-25d-core/out/core004/source.json \
+            experiments/koma-25d-core/viewer/public/asset/reference.sha256 \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-004 real CC0 anime multi-view benchmark (not 2D rig)" \
+            --notes "CC0 VRoid beta Sendagaya_Shino derivative views vs five-view image interpolation. Reference comes from actual full 3D model: NOT a completed Live2D-to-3D conversion or source skin mapping. Original model binary not redistributed."
