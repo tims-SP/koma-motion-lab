@@ -91,8 +91,9 @@ def run(psdfile,out):
     size=(psd.width,psd.height)
     layers=[]
     all_nodes=list(psd.descendants())
-    # Leaf order follows original PSD top-to-bottom; reverse when composing.
-    for layer in reversed(all_nodes):
+    # A PSD's layer order can differ from renderer draw order. Never assume.
+    # Determine the correct front-to-back ordering by source pixel parity.
+    for layer in all_nodes:
         if layer.is_group() or not layer.is_visible():continue
         if layer.width<=0 or layer.height<=0:continue
         im=layer.composite()
@@ -105,12 +106,23 @@ def run(psdfile,out):
     if len(layers)<40:raise ValueError("Expected real layered anime PSD, got "+str(len(layers)))
     canonical=original.crop(box).resize((SIZE,SIZE),Image.Resampling.LANCZOS)
     canonical.save(out/"source_front.png")
-    layer_comp=np.zeros((SIZE,SIZE,4),np.uint8)
-    for name,arr,role in layers:compose_rgba(layer_comp,arr)
-    Image.fromarray(layer_comp,"RGBA").save(out/"layer_composite.png")
     a=np.asarray(canonical)
-    mask=np.logical_or(a[...,3]>12,layer_comp[...,3]>12)
-    mae=float(np.abs(a.astype(np.int16)-layer_comp.astype(np.int16))[mask,:3].mean())
+    candidates=[]
+    for order_name,items in (("source_sequence",layers),("reverse_sequence",list(reversed(layers)))):
+        preview=np.zeros((SIZE,SIZE,4),np.uint8)
+        for _name,arr,_role in items:compose_rgba(preview,arr)
+        mask=np.logical_or(a[...,3]>12,preview[...,3]>12)
+        mae=float(np.abs(a.astype(np.int16)-preview.astype(np.int16))[mask,:3].mean())
+        candidates.append((mae,order_name,items,preview))
+    mae,chosen_order,layers,layer_comp=min(candidates,key=lambda x:x[0])
+    Image.fromarray(layer_comp,"RGBA").save(out/"layer_composite.png")
+    print("CORE007_DRAW_ORDER_CHECK",json.dumps({
+        "selected":chosen_order,
+        "candidate_maes":{x[1]:x[0] for x in candidates},
+        "best_mae":mae
+    }))
+    if mae>48.0:
+        raise ValueError(f"FAIL_SOURCE_LAYER_COMPOSITION_PARITY: {mae:.2f}; cannot animate falsely ordered layers")
     report={
       "status":"SOURCE_PSD_LAYER_ANIMATION_DIAGNOSTIC",
       "actual_source":"Inochi2D official tutorial Aka layered PSD, 62 leaf layers",
@@ -118,6 +130,7 @@ def run(psdfile,out):
       "source_psd_size":list(size),"working_crop":box,
       "render_size":[SIZE,SIZE],"active_layers":len(layers),
       "flattened_vs_independent_layer_composite_subject_rgb_mae":mae,
+      "source_draw_order":chosen_order,
       "native_inx_parameter_curves_used":False,
       "native_inx_mesh_weights_used":False,
       "original_front_exactness":"SOURCE_FRAME_EXACT_ONLY; off-angle is approximated",
