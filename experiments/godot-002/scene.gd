@@ -29,6 +29,12 @@ func _ready() -> void:
     var factor: float = min(750.0 / max(dims.x, 1.0), 495.0 / max(dims.y, 1.0))
     character.position = Vector2(480, 270)
     character.scale = Vector2.ONE * factor
+    if OS.get_environment("GODOT003_SWEEP") == "1":
+        var sweep_zoom: float = float(OS.get_environment("GODOT003_SWEEP_ZOOM"))
+        var sweep_shift: float = float(OS.get_environment("GODOT003_SWEEP_SHIFT_Y"))
+        character.scale *= sweep_zoom
+        character.position.y += sweep_shift
+        print("GODOT003_CAMERA_SWEEP_APPLIED ZOOM=", sweep_zoom, " SHIFT_Y=", sweep_shift)
     var zenv := OS.get_environment("GODOT002_ZOOM")
     if not zenv.is_empty() and (OS.get_environment("GODOT002_DISABLE_MOTIONS") != "1" or OS.get_environment("GODOT002_FRAMED_STATIC") == "1"):
         var diagnostic_zoom: float = clampf(float(zenv), 1.0, 2.75)
