@@ -25,6 +25,8 @@ async function setup(){
   const skeleton=new THREE.Skeleton(bones);
   const mat=new THREE.MeshBasicMaterial({map:tex,transparent:true,alphaTest:0.02,
     depthWrite:true,side:THREE.DoubleSide});
+  const proxyMaterial=new THREE.MeshBasicMaterial({color:0x8190a8,
+    side:THREE.DoubleSide,depthWrite:true});
   let verts=0;
   for(const m of doc.meshes){
     const geometry=new THREE.BufferGeometry();
@@ -37,10 +39,24 @@ async function setup(){
     geometry.computeVertexNormals();
     const skinned=new THREE.SkinnedMesh(geometry,mat);
     skinned.frustumCulled=false;
-    skinned.renderOrder=m.layer;
+    skinned.renderOrder=m.layer*2+1;
     scene.add(skinned);
     skinned.bind(skeleton,new THREE.Matrix4());
     skinned.normalizeSkinWeights();
+    if(m.shell){
+      const g=new THREE.BufferGeometry();
+      g.setAttribute('position',new THREE.Float32BufferAttribute(flat(m.shell.vertices),3));
+      g.setAttribute('skinIndex',new THREE.Uint16BufferAttribute(flat(m.shell.skinIndex),4));
+      g.setAttribute('skinWeight',new THREE.Float32BufferAttribute(flat(m.shell.skinWeight),4));
+      g.setIndex(m.shell.indices);
+      g.computeVertexNormals();
+      const proxy=new THREE.SkinnedMesh(g,proxyMaterial);
+      proxy.frustumCulled=false;
+      proxy.renderOrder=m.layer*2;
+      scene.add(proxy);
+      proxy.bind(skeleton,new THREE.Matrix4());
+      proxy.normalizeSkinWeights();
+    }
     verts+=m.vertices.length;
   }
   const [xb,yb]=doc.bounds;
