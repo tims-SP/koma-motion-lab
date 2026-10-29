@@ -6,7 +6,7 @@ import {spawn} from 'node:child_process';
 import {chromium} from '../viewer/node_modules/playwright/index.mjs';
 const root=path.resolve(import.meta.dirname,'..');
 const output=path.join(root,'out','core005');
-const modes=['visual_hull','fixed_extrusion'];
+const modes=['visual_hull','fixed_extrusion','matte_visual_hull','matte_fixed_extrusion'];
 for(const name of modes)fs.mkdirSync(path.join(output,name),{recursive:true});
 const server=spawn('node',['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','4179'],
   {cwd:path.join(root,'viewer'),stdio:['ignore','pipe','pipe']});
@@ -37,13 +37,14 @@ try{
  for(const name of modes){
   for(let i=0;i<=72;i++){
    const yaw=i*2.5;
-   await page.evaluate(pose=>window.__hullSetPose(pose),{name,yaw});
+   await page.evaluate(pose=>window.__hullSetPose(pose),{
+     name:name.startsWith('matte_')?name.slice(6):name,yaw,matte:name.startsWith('matte_')});
    await page.screenshot({path:path.join(output,name,String(i).padStart(4,'0')+'.png')});
   }
  }
  if(errors.length)throw Error('Three.js browser warnings/errors: '+errors.slice(0,8).join('; '));
  const capture={status:'RENDERED_NOT_ART_ACCEPTED',frame_count:73,source_views:[0,90,180],
-   algorithms:modes,rig:'NONE_STATIC_HULL',provenance:info.model,
+   algorithms:modes,mattePass:'RENDERER_BLACK_UNLIT',rig:'NONE_STATIC_HULL',provenance:info.model,
    facial_registration:'SHARED_WORLD_PROJECTED_TEXTURES_ONLY',
    original2dLayeredLive2D:'NO',animeQuality:'NOT_TESTED'};
  fs.writeFileSync(path.join(output,'capture.json'),JSON.stringify(capture,null,2)+'\n');
