@@ -140,6 +140,8 @@ jobs:
               print(line)
           print("KOMA_CORE004_VISUAL_END")
           PY
+      - name: Independently decode and visually sample actual encoded MP4 files
+        run: python experiments/koma-25d-core/tools/audit_encoded4.py
       - name: Publish only permitted derived media to DRAFT Release
         if: success()
         env:
@@ -147,6 +149,8 @@ jobs:
         run: |
           tag="koma-25d-core004-$GITHUB_RUN_ID"
           gh release create "$tag" \
+            experiments/koma-25d-core/out/core004/encoded_audit.jpg \
+            experiments/koma-25d-core/out/core004/encoded_audit.json \
             experiments/koma-25d-core/out/core004/profile_turn.mp4 \
             experiments/koma-25d-core/out/core004/profile_contact.png \
             experiments/koma-25d-core/out/core004/profile_qa.json \
