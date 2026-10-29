@@ -61,6 +61,16 @@ for name in MODES:
         ref=load(REFERENCE/f"{i:04d}.png")
         candidate=load((BASE/name if name!="blend" else BLEND)/f"{i:04d}.png")
         metrics=compare(ref,candidate)
+        if name!="blend":
+            # A black unlit geometry matte is independent of original artwork,
+            # avoiding false shape scores from missing/black/white textures.
+            matte=load(BASE/("matte_"+name)/f"{i:04d}.png")
+            target=mask(ref);observed=mask(matte)
+            union=int(np.logical_or(target,observed).sum())
+            if union<4000:raise SystemExit("FAIL_MATTE_EMPTY")
+            metrics["color_threshold_iou"]=metrics["silhouette_iou"]
+            metrics["silhouette_iou"]=int(np.logical_and(target,observed).sum())/union
+            metrics["matte_coverage"]=float(observed.mean())
         metrics["frame"]=i;metrics["yaw_deg"]=i*2.5
         frames.append(metrics)
     scored[name]=frames
@@ -83,6 +93,7 @@ reported={
  "status":"GEOMETRY_AND_IMAGE_METRICS_COMPUTED_ART_NOT_ACCEPTED",
  "source":"5 CC0 anime 2D rendered views from original true 3D reference",
  "geometry_inputs":"ONLY_FRONT_AND_SIDE_2D_SILHOUETTES",
+ "geometry_silhouette_score":"UNLIT_BINARY_MATTE_SEPARATE_FROM_ART_TEXTURE",
  "appearance_inputs":"FRONT_SIDE_BACK_2D_PNG",
  "ground_truth":"INDEPENDENT_ORIGINAL_3D_RENDER",
  "comparison":"single-character fixed depth vs 2-silhouette visual hull vs 2D crossfade",
