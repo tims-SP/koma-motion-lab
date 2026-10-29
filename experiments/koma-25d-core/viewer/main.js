@@ -12,6 +12,19 @@ async function setup(){
     fetch('/asset/character.json').then(r=>{if(!r.ok)throw Error('missing Koma JSON');return r.json()}),
     new THREE.TextureLoader().loadAsync('/asset/gBot.png')
   ]);
+  const appearance=await fetch('/asset/appearance.json').then(r=>{if(!r.ok)throw Error('appearance manifest missing');return r.json();});
+  if(appearance.production_accepted!==false)throw Error('Diagnostic canary provenance must be non-production');
+  const loadCanary=async (record)=>{
+    if(record.provenance!=='SYNTHETIC_DIAGNOSTIC_ONLY')throw Error('Unverified view registration: '+record.provenance);
+    const image=await new THREE.TextureLoader().loadAsync('/asset/'+record.texture);
+    image.colorSpace=THREE.SRGBColorSpace;
+    image.magFilter=THREE.LinearFilter;
+    image.minFilter=THREE.LinearMipmapLinearFilter;
+    return image;
+  };
+  const [sideTexture,backTexture]=await Promise.all([
+    loadCanary(appearance.side),loadCanary(appearance.back)
+  ]);
   tex.colorSpace=THREE.SRGBColorSpace;
   tex.magFilter=THREE.LinearFilter; tex.minFilter=THREE.LinearMipmapLinearFilter;
   const scene=new THREE.Scene();
@@ -32,8 +45,11 @@ async function setup(){
   const skeleton=new THREE.Skeleton(bones);
   const mat=new THREE.MeshBasicMaterial({map:tex,transparent:true,alphaTest:0.02,
     depthWrite:true,side:THREE.DoubleSide});
-  const proxyMaterial=new THREE.MeshBasicMaterial({color:0x8190a8,
-    side:THREE.DoubleSide,depthWrite:true});
+  const diagnosticMaterials={
+    side:new THREE.MeshBasicMaterial({map:sideTexture,side:THREE.DoubleSide,depthWrite:true}),
+    back:new THREE.MeshBasicMaterial({map:backTexture,side:THREE.DoubleSide,depthWrite:true})
+  };
+  const proxyMeshes=[];
   let verts=0;
   for(const m of doc.meshes){
     const geometry=new THREE.BufferGeometry();
@@ -51,18 +67,26 @@ async function setup(){
     skinned.bind(skeleton,new THREE.Matrix4());
     skinned.normalizeSkinWeights();
     if(m.shell){
-      const g=new THREE.BufferGeometry();
-      g.setAttribute('position',new THREE.Float32BufferAttribute(flat(m.shell.vertices),3));
-      g.setAttribute('skinIndex',new THREE.Uint16BufferAttribute(flat(m.shell.skinIndex),4));
-      g.setAttribute('skinWeight',new THREE.Float32BufferAttribute(flat(m.shell.skinWeight),4));
-      g.setIndex(m.shell.indices);
-      g.computeVertexNormals();
-      const proxy=new THREE.SkinnedMesh(g,proxyMaterial);
-      proxy.frustumCulled=false;
-      proxy.renderOrder=m.layer*2;
-      scene.add(proxy);
-      proxy.bind(skeleton,new THREE.Matrix4());
-      proxy.normalizeSkinWeights();
+      for(const role of ['side','back']){
+        const shell=m.shell;
+        const attr=role==='side'?'sideUv':'backUv';
+        const index=role==='side'?'sideIndices':'rearIndices';
+        if(!shell[attr] || !shell[index])throw Error('Missing '+role+' view geometry');
+        const g=new THREE.BufferGeometry();
+        g.setAttribute('position',new THREE.Float32BufferAttribute(flat(shell.vertices),3));
+        g.setAttribute('uv',new THREE.Float32BufferAttribute(flat(shell[attr]),2));
+        g.setAttribute('skinIndex',new THREE.Uint16BufferAttribute(flat(shell.skinIndex),4));
+        g.setAttribute('skinWeight',new THREE.Float32BufferAttribute(flat(shell.skinWeight),4));
+        g.setIndex(shell[index]);
+        g.computeVertexNormals();
+        const proxy=new THREE.SkinnedMesh(g,diagnosticMaterials[role]);
+        proxy.frustumCulled=false;
+        proxy.renderOrder=m.layer*2;
+        scene.add(proxy);
+        proxy.bind(skeleton,new THREE.Matrix4());
+        proxy.normalizeSkinWeights();
+        proxyMeshes.push(proxy);
+      }
     }
     verts+=m.vertices.length;
   }
@@ -76,12 +100,14 @@ async function setup(){
   renderer.setPixelRatio(1);
   renderer.outputColorSpace=THREE.SRGBColorSpace;
   document.body.appendChild(renderer.domElement);
-  model={scene,bones,center:new THREE.Vector3(midx,midy,0),doc,verts};
+  model={scene,bones,center:new THREE.Vector3(midx,midy,0),doc,verts,proxyMeshes,appearance};
+  window.__komaViewMode='diagnostic';
   $('status').textContent='Koma CORE-001 · MIT source mesh';
   $('detail').textContent=doc.meshes.length+' meshes / '+bones.length+
     ' bones / '+verts+' vertices · original UV';
   window.__komaDiagnostics={meshes:doc.meshes.length,bones:bones.length,verts,
-    source:doc.source,sourceAnimationParity:'RAW_CLIPS_ONLY',newViews:'NOT_AVAILABLE',clips:Object.keys(doc.clips||{})};
+    source:doc.source,sourceAnimationParity:'RAW_CLIPS_ONLY',newViews:'DIAGNOSTIC_ONLY',
+    appearanceProvenance:'SYNTHETIC_DIAGNOSTIC_ONLY',clips:Object.keys(doc.clips||{})};
   const lerpKeys=(track,t)=>{
     const {times,values}=track;
     if(t<=times[0])return values[0];
@@ -130,6 +156,11 @@ async function setup(){
     return {yaw,clip,time,reach};
   };
   window.__komaSetAngle=(a,p=pose)=>window.__komaSetMotion({yaw:a,reach:p});
+  window.__komaSetViewMode=(mode)=>{
+    if(!['diagnostic','source-front'].includes(mode))throw Error('Unknown view mode');
+    window.__komaViewMode=mode;
+    for(const mesh of model.proxyMeshes)mesh.visible=(mode==='diagnostic');
+  };
   window.__komaClipNames=Object.keys(doc.clips||{});
   window.__komaSetMotion({yaw:initialAngle,reach:initialPose});
   window.__komaReady=true;
