@@ -102,7 +102,7 @@ def source_animation_clips(scene: str, bone_by_path: dict[str,int]) -> dict:
                           "interpolation":"LINEAR_APPROXIMATION","source_runtime_parity":"NOT_TESTED"}
     return result
 
-def convert(scene: str, png: bytes, depth: float) -> dict:
+def convert(scene: str, png: bytes, depth: float, profile_mode: str = 'legacy') -> dict:
     if png[:8] != b"\x89PNG\r\n\x1a\n": raise ValueError("Not a PNG")
     width, height = struct.unpack(">II", png[16:24])
     blocks = re.findall(r"(?m)^\[node [^\n]*\]\n(?:(?!^\[).*\n?)*", scene)
@@ -174,7 +174,11 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
         # This is only a geometric proxy: hidden artwork is NOT reconstructed.
         n=len(verts)
         half=0.5*(max(v[0] for v in verts)-min(v[0] for v in verts))
-        back_depth=max(0.25,min(0.75,half))
+        # CORE-004: a profile-constrained-by-original-width hypothesis,
+        # not an anatomically accurate side drawing. Increases volume of
+        # body components relative to the old arbitrary 0.75-unit cap.
+        back_depth=(max(0.40,min(3.2,half*0.95)) if profile_mode=='proportional'
+                    else max(0.25,min(0.75,half)))
         shell_pos=[v[:] for v in verts] + [[v[0],v[1],-back_depth] for v in verts]
         shell_index=[]
         edges={}
@@ -227,7 +231,7 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
             "source_revision":REV,"source_animation_parity":"NOT_TESTED",
             "source_uv_preserved":True,"width":width,"height":height,
             "view_registration":"SOURCE_FRONT_ONLY","back_side_artwork":"ABSENT",
-            "depth":depth,"bounds":bounds,"bones":bones,"meshes":meshes,"clips":clips,
+            "depth":depth,"profile_mode":profile_mode,"bounds":bounds,"bones":bones,"meshes":meshes,"clips":clips,
             "limitations":["2D bone rotations not yet retargeted",
                            "generated depth is an open front shell, not a complete 360-degree character",
                            "back/side texture not available; no new artwork is invented",
@@ -239,11 +243,12 @@ def main():
     p.add_argument("--image", type=Path, help="local gBot.png")
     p.add_argument("--out", type=Path, default=Path("viewer/public/asset"))
     p.add_argument("--depth",type=float,default=0.16)
+    p.add_argument("--profile-mode",choices=("legacy","proportional"),default="legacy")
     a=p.parse_args()
     if not (0 <= a.depth <= 2): raise ValueError("Depth outside allowed range")
     scene = a.source.read_text() if a.source else download(BASE+"/player.tscn").decode()
     image = a.image.read_bytes() if a.image else download(BASE+"/gBot.png")
-    doc = convert(scene,image,a.depth)
+    doc = convert(scene,image,a.depth,profile_mode=a.profile_mode)
     a.out.mkdir(parents=True,exist_ok=True)
     (a.out/"character.json").write_text(json.dumps(doc,separators=(",",":")),encoding="utf-8")
     (a.out/"gBot.png").write_bytes(image)
@@ -251,6 +256,7 @@ def main():
             "vertices":sum(len(x["vertices"]) for x in doc["meshes"]),
             "triangles":sum(len(x["indices"])//3 for x in doc["meshes"]),
             "source_texture_dimensions":[doc["width"],doc["height"]],
+            "profile_mode":a.profile_mode,
             "geometry_status":"PASS","source_clips_parsed":list(doc["clips"]),"animation_parity":"NOT_TESTED",
             "art_quality":"NOT_TESTED","full_3d_character":"NO"}
     (a.out/"import-report.json").write_text(json.dumps(report,indent=2)+"\n")
