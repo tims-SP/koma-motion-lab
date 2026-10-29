@@ -350,7 +350,7 @@ jobs:
           GODOT002_DISABLE_MOTIONS=1 GODOT004_BG_WHITE=1 render_movie white-still 1
           grep -q 'GODOT004_WHITE_BACKGROUND_ENABLED' out/godot-004/white-still.log
           for motion in nod idle; do
-            GODOT004_MOTION_GROUP="$motion" render_movie "${motion}-frame" "$([ "$motion" = nod ] && echo 90 || echo 120)"
+            GODOT004_MOTION_GROUP="$motion" render_movie "${motion}-frame" "$([ "$motion" = nod ] && echo 90 || echo 270)"
             grep -q "GODOT004_REAL_MOTION_GROUP_STARTED=${motion}" "out/godot-004/${motion}-frame.log" \
               || grep -q "GODOT004_REAL_MOTION_GROUP_STARTED= ${motion}" "out/godot-004/${motion}-frame.log"
             ffmpeg -hide_banner -loglevel warning -y -framerate 30 \
@@ -375,7 +375,7 @@ jobs:
           if [ "${#files[@]}" -eq 0 ]; then exit 0; fi
           gh release create "godot-004-private-${GITHUB_RUN_NUMBER}" "${files[@]}" \
             --draft \
-            --title "GODOT-004 PRIVATE 1080p / nod+idle #${GITHUB_RUN_NUMBER}" \
+            --title "GODOT-004 PRIVATE 1080p / nod+body-idle #${GITHUB_RUN_NUMBER}" \
             --notes "Owner-only draft. Game-derived footage and original asset content must not be published. Motion/frame diagnostics do NOT certify visual parity with official Cubism."
       - name: GODOT-004 temporary 1080p audit attachments
         if: always()
