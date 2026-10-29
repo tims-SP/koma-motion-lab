@@ -1,0 +1,165 @@
+name: KOMA-25D-CORE-005 · image-silhouette-constrained 3D skins
+
+on:
+  push:
+    branches: [feature/koma-25d-core-005]
+    paths:
+      - '.github/workflows/koma-25d-core-005.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  silhouette-to-surface:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install image hull builder and video encoder
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check \
+            "Pillow==12.0.0" "numpy==2.2.6" "opencv-python-headless==4.11.0.86" \
+            "scikit-image==0.25.2" "trimesh==4.6.8"
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Download pinned CC0 anime character; keep 3D binary out of Git and Release
+        working-directory: experiments/koma-25d-core
+        run: |
+          mkdir -p viewer/public/asset
+          curl -fsSL --retry 3 --max-time 180 \
+            -o viewer/public/asset/reference.vrm \
+            https://raw.githubusercontent.com/madjin/vrm-samples/e16eb187100149a315ad92c3c9968f1d5baa6c7d/vroid/beta/Sendagaya_Shino.vrm
+          test "$(stat -c %s viewer/public/asset/reference.vrm)" -gt 12000000
+          sha256sum viewer/public/asset/reference.vrm > viewer/public/asset/reference.sha256
+      - name: Install Three.js browser and headless software GL
+        working-directory: experiments/koma-25d-core/viewer
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Create truth render from CC0 3D source; this is NOT the candidate mesh
+        run: node experiments/koma-25d-core/tools/capture4.mjs
+      - name: Derive source 2D five-view model sheet and crossfade baseline
+        run: python experiments/koma-25d-core/tools/qa4.py
+      - name: From 2D PNG silhouette ONLY generate visual hull + naive extrusion
+        run: python experiments/koma-25d-core/tools/build_hull5.py
+      - name: Enforce 2D-only candidate geometry provenance and reasonable mesh bounds
+        run: |
+          python - <<'PY'
+          import json,math
+          from pathlib import Path
+          root=Path("experiments/koma-25d-core/viewer/public/asset")
+          m=json.loads((root/"hull_meta.json").read_text())
+          assert m["source_reconstruction_uses_original_3d_mesh"] is False
+          assert m["input_kind"]=="RENDERED_2D_IMAGE_VIEWS_ONLY"
+          for k in ("visual_hull","fixed_extrusion"):
+              info=m["assets"][k]
+              assert 200 < info["vertices"] < 100000
+              assert 200 < info["triangles"] < 200000
+              assert (root/(k+".glb")).stat().st_size>4000
+          print("CORE005_2D_INPUT_GEOMETRY_CONTRACT_OK",m["assets"])
+          PY
+      - name: Render BOTH candidate 3D meshes across 73 views in browser
+        run: node experiments/koma-25d-core/tools/capture5.mjs
+      - name: Quantify 68 held-out 3D-view matches for silhouette and source colors
+        run: python experiments/koma-25d-core/tools/qa5.py
+      - name: Encode 3D truth and 2 candidate 2D-to-surface videos
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          for mode in visual_hull fixed_extrusion; do
+            ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+              -i "out/core005/$mode/%04d.png" \
+              -c:v libx264 -pix_fmt yuv420p "out/core005/$mode.mp4"
+            test -s "out/core005/$mode.mp4"
+          done
+          ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+            -i out/core004/reference/%04d.png \
+            -c:v libx264 -pix_fmt yuv420p out/core005/reference.mp4
+          cp out/core004/blend.mp4 out/core005/blend.mp4 2>/dev/null || \
+            ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+              -i out/core004/blend/%04d.png -c:v libx264 -pix_fmt yuv420p \
+              out/core005/blend.mp4
+          cat out/core005/qa.json >> "$GITHUB_STEP_SUMMARY"
+          echo "ART ACCEPTANCE: NOT COMPLETED BY MACHINE METRICS" >> "$GITHUB_STEP_SUMMARY"
+      - name: Audit decoded frames from final MP4, not only source screenshots
+        working-directory: experiments/koma-25d-core
+        run: |
+          mkdir -p out/core005/decoded
+          python - <<'PY'
+          import subprocess,base64,io,textwrap,json
+          from pathlib import Path
+          from PIL import Image,ImageDraw,ImageChops
+          base=Path("out/core005")
+          names=("reference","blend","fixed_extrusion","visual_hull")
+          collage=Image.new("RGB",(480*3,480*4),(255,255,255))
+          summary={}
+          for row,name in enumerate(names):
+              video=base/(name+".mp4")
+              assert video.stat().st_size>10000
+              stem=str(base/"decoded"/(name+"_%02d.png"))
+              subprocess.run(["ffmpeg","-hide_banner","-loglevel","error","-y",
+                 "-i",str(video),"-vf",
+                 "select=eq(n\\,9)+eq(n\\,36)+eq(n\\,63)",
+                 "-vsync","0",stem],check=True)
+              captures=sorted((base/"decoded").glob(name+"_*.png"))
+              assert len(captures)==3
+              stats=[]
+              for col,p in enumerate(captures):
+                  im=Image.open(p).convert("RGB")
+                  bg=Image.new("RGB",im.size,(239,241,245))
+                  delta=ImageChops.difference(im,bg).convert("L")
+                  frac=sum(num for level,num in enumerate(delta.histogram()) if level>25)/(im.width*im.height)
+                  assert frac>0.018,(name,col,frac)
+                  stats.append(frac)
+                  im.thumbnail((460,450))
+                  collage.paste(im,(col*480+(480-im.width)//2,row*480+(480-im.height)//2+13))
+              ImageDraw.Draw(collage).text((6,row*480+2),name,fill=(0,0,0))
+              summary[name]={"decoded_frame_coverage":stats,"bytes":video.stat().st_size}
+          (base/"encoded_audit.json").write_text(json.dumps(summary,indent=2)+"\n")
+          collage.thumbnail((1300,1700))
+          collage.save(base/"encoded_audit.jpg",quality=80,optimize=True)
+          print("CORE005_DECODED_MP4_AUDIT",json.dumps(summary))
+          print("KOMA_CORE005_ENCODED_VISUAL_BEGIN")
+          b=base64.b64encode((base/"encoded_audit.jpg").read_bytes()).decode()
+          for line in textwrap.wrap(b,120):print(line)
+          print("KOMA_CORE005_ENCODED_VISUAL_END")
+          PY
+      - name: Include independent pre-encode montage for face and seam inspection
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import base64,textwrap
+          from pathlib import Path
+          p=Path("out/core005/contact_preview.jpg")
+          print("KOMA_CORE005_FULL_CONTACT_BEGIN")
+          for line in textwrap.wrap(base64.b64encode(p.read_bytes()).decode(),120):print(line)
+          print("KOMA_CORE005_FULL_CONTACT_END")
+          PY
+      - name: Draft Release diagnostic media only (not production quality)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="koma-25d-core005-$GITHUB_RUN_ID"
+          gh release create "$tag" \
+            experiments/koma-25d-core/out/core005/reference.mp4 \
+            experiments/koma-25d-core/out/core005/blend.mp4 \
+            experiments/koma-25d-core/out/core005/fixed_extrusion.mp4 \
+            experiments/koma-25d-core/out/core005/visual_hull.mp4 \
+            experiments/koma-25d-core/out/core005/contact.png \
+            experiments/koma-25d-core/out/core005/encoded_audit.jpg \
+            experiments/koma-25d-core/out/core005/encoded_audit.json \
+            experiments/koma-25d-core/out/core005/qa.json \
+            experiments/koma-25d-core/out/core005/capture.json \
+            experiments/koma-25d-core/viewer/public/asset/hull_meta.json \
+            experiments/koma-25d-core/viewer/public/asset/reference.sha256 \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-005: 2D silhouette-to-surface vs fixed extrusion" \
+            --notes "Generated solely from CC0 model's 2D projected views using silhouette visual hull and standard marching cubes. Original 3D mesh was NOT used for reconstruction. Static experiment, no Live2D skeleton. Visual quality not yet accepted; original 3D reference used for independent comparison. Binary originals not committed."
