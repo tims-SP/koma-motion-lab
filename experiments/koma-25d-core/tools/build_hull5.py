@@ -15,7 +15,7 @@ import json, math, shutil
 from pathlib import Path
 import numpy as np
 import cv2
-from scipy.ndimage import gaussian_filter
+from scipy.ndimage import gaussian_filter, distance_transform_edt
 from skimage.measure import marching_cubes
 import trimesh
 from PIL import Image
@@ -71,7 +71,17 @@ def main():
     # Three image areas share a single well-tested MeshBasicMaterial texture.
     atlas=Image.new("RGB",(640*3,640))
     for slot,name in enumerate(("front","side","back")):
-        atlas.paste(Image.open(ASSETS/(name+".png")).convert("RGB"),(slot*640,0))
+        original=np.asarray(Image.open(ASSETS/(name+".png")).convert("RGB"))
+        foreground=np.max(np.abs(original.astype(np.int16)-BG),axis=2)>22
+        if foreground.sum()<15000:raise ValueError("Not enough foreground pixels to pad "+name)
+        # UV projection can sample just outside a silhouette at joints/sidewalls.
+        # Use nearest-source-foreground extension, the standard texture border
+        # padding principle. This does NOT reconstruct real hidden colors.
+        missing=~foreground
+        near=distance_transform_edt(missing,return_distances=False,return_indices=True)
+        filled=original.copy()
+        filled[missing]=original[near[0][missing],near[1][missing]]
+        atlas.paste(Image.fromarray(filled,"RGB"),(slot*640,0))
     atlas.save(ASSETS/"atlas.png")
     ny,nx,nz=GRID
     f=cv2.resize(masks["front"],(nx,ny),interpolation=cv2.INTER_NEAREST)>0
@@ -98,6 +108,7 @@ def main():
         "source_reconstruction_uses_original_3d_mesh":False,
         "grid_yxz":GRID,"assets":results,
         "rig":"ABSENT","texture_semantics":"world-space orthographic projection",
+        "atlas_padding":"NEAREST_SOURCE_FOREGROUND_NOT_HIDDEN_RECONSTRUCTION",
         "notes":["Static character only, no 3D skeleton/weights",
                  "This experiment does not solve missing views",
                  "2D projections are from matching original character"]
