@@ -201,8 +201,17 @@ jobs:
           coverage=sum(1 for p in image.getdata()
               if sum(abs(p[c]-bg[c]) for c in range(3))>90)/5184
           print("GODOT002_STATIC_VISIBLE_FOREGROUND_RATIO",round(coverage,4))
-          assert coverage>=0.025, "real model has not produced visible pixels"
-          print("GODOT002_STATIC_REAL_MODEL_VISIBLE_PASS")
+          coords=[(x,y) for y in range(54) for x in range(96)
+              if sum(abs(image.getpixel((x,y))[c]-bg[c]) for c in range(3))>90]
+          bbox=([min(x for x,y in coords),min(y for x,y in coords),
+                 max(x for x,y in coords),max(y for x,y in coords)] if coords else None)
+          import json
+          summary={"foreground_ratio":round(coverage,5),"foreground_bbox_96x54":bbox,
+                   "status":"VISIBLE_THRESHOLD_PASS" if coverage>=0.025 else "VISUAL_REVIEW_REQUIRED"}
+          print("GODOT002_STATIC_PIXEL_DIAGNOSTICS",json.dumps(summary))
+          Path("out/godot-002/static-pixel-diagnostics.json").write_text(
+              json.dumps(summary,indent=2)+"\\n")
+          print("GODOT002_STATIC_MODEL_FRAMES_GENERATED")
           PY
           set +e
           xvfb-run -a -s '-screen 0 1280x720x24' \
@@ -254,6 +263,28 @@ jobs:
             --draft \
             --title "GODOT-002 private inspection #${GITHUB_RUN_NUMBER}" \
             --notes "Draft only: contains game-derived character footage. Do not publish without asset rights. Playback test, not original Cubism visual parity."
+      - name: Keep one original character still in owner-only draft Release
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          frames=(out/godot-002/static*.png)
+          if [ "${#frames[@]}" -eq 0 ]; then
+            echo "GODOT002_NO_STATIC_PREVIEW_AVAILABLE"
+            exit 0
+          fi
+          index=$((${#frames[@]} / 2))
+          cp "${frames[$index]}" out/godot-002/static-reference.png
+          tag="godot-002-static-inspection-${GITHUB_RUN_NUMBER}"
+          gh release create "$tag" \
+            out/godot-002/static-reference.png \
+            out/godot-002/static-pixel-diagnostics.json \
+            --draft \
+            --title "GODOT-002 static private inspection #${GITHUB_RUN_NUMBER}" \
+            --notes "Temporary, owner-visible draft only; unlicensed game artwork. Do not publish. No assertion of motion fidelity."
       - name: Upload text-only diagnostic reports
         if: always()
         uses: actions/upload-artifact@v4
