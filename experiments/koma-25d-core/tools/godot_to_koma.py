@@ -151,6 +151,9 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
                 if len(weights)!=len(xy): raise ValueError(f"{name}: bad skin channels")
                 if path in bone_by_path: channels.append((bone_by_path[path],weights))
         offset = vec(block,"position")
+        # Godot Polygon2D.offset shifts local vertices *without modifying UVs*.
+        # GBot Chin uses a large offset; omitting it detached the jaw in video.
+        image_offset = vec(block,"offset")
         center_x = (min(p[0] for p in xy)+max(p[0] for p in xy))/2
         halfwidth = max(4,(max(p[0] for p in xy)-min(p[0] for p in xy))/2)
         verts = []
@@ -158,7 +161,8 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
         for i,(p,t) in enumerate(zip(xy,uv)):
             r = min(1,abs(p[0]-center_x)/halfwidth)
             z = depth * max(0.0,1-r*r)**0.5
-            verts.append([(p[0]+offset[0])*SCALE,-(p[1]+offset[1])*SCALE,z])
+            verts.append([(p[0]+offset[0]+image_offset[0])*SCALE,
+                          -(p[1]+offset[1]+image_offset[1])*SCALE,z])
             ranked = sorted([(bid,ws[i]) for bid,ws in channels if ws[i]>1e-5],
                             key=lambda v:v[1],reverse=True)[:4]
             if not ranked: ranked=[(0,1.)]
