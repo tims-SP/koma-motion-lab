@@ -1,0 +1,87 @@
+name: KOMA-25D-CORE-003 · multiview UV and artifact provenance
+
+on:
+  push:
+    branches: [feature/koma-25d-core-003]
+    paths:
+      - '.github/workflows/koma-25d-core-003.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose-multiview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install offline video and image tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check Pillow==12.0.0
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Import authentic MIT sample and generate explicitly synthetic view canaries
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          python tools/godot_to_koma.py --out viewer/public/asset --depth 0.16
+          python tools/make_view_canaries.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("viewer/public/asset")
+          model=json.loads((root/"character.json").read_text())
+          views=json.loads((root/"appearance.json").read_text())
+          assert len(model["meshes"])==7 and len(model["bones"])==16
+          assert views["production_accepted"] is False
+          assert views["front"]["provenance"]=="ORIGINAL_SOURCE_ART"
+          for v in ("side","back"):
+              assert views[v]["provenance"]=="SYNTHETIC_DIAGNOSTIC_ONLY"
+          for m in model["meshes"]:
+              shell=m["shell"]
+              n=len(shell["vertices"])
+              assert len(shell["sideUv"])==len(shell["backUv"])==n
+              assert len(shell["sideIndices"])>0 and len(shell["rearIndices"])>0
+              assert all(0<=u<=1 and 0<=v<=1 for u,v in shell["sideUv"])
+              assert all(0<=u<=1 and 0<=v<=1 for u,v in shell["backUv"])
+          print("CORE003_IMPORT_AND_PROVENANCE_CHECK_OK")
+          PY
+      - name: Install headless Three.js browser dependencies
+        working-directory: experiments/koma-25d-core/viewer
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Capture separate original front and 180 degree diagnostic turn
+        run: node experiments/koma-25d-core/tools/capture3.mjs
+      - name: Verify source front protection and view diagnostics
+        run: python experiments/koma-25d-core/tools/qa3.py
+      - name: Encode turnaround
+        working-directory: experiments/koma-25d-core
+        run: |
+          ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+            -i out/core003/turn/%04d.png -c:v libx264 -pix_fmt yuv420p out/core003/turn.mp4
+          test -s out/core003/turn.mp4
+          cat out/core003/qa.json >> "$GITHUB_STEP_SUMMARY"
+          echo "Caution: views are DIAGNOSTIC canaries. Character art is NOT completed." >> "$GITHUB_STEP_SUMMARY"
+      - name: Save only draft diagnostic assets to Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="koma-25d-core003-$GITHUB_RUN_ID"
+          gh release create "$TAG" \
+            experiments/koma-25d-core/out/core003/turn.mp4 \
+            experiments/koma-25d-core/out/core003/contact.png \
+            experiments/koma-25d-core/out/core003/qa.json \
+            experiments/koma-25d-core/out/core003/capture.json \
+            experiments/koma-25d-core/viewer/public/asset/import-report.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-003 diagnostic UV multi-view (NOT artwork)" \
+            --notes "Two diagnostics are SYNTHETIC CANARY textures, NOT original side/back art. Only geometry, UV pipeline and source-front preservation are machine tested. Visual anime quality and source runtime parity NOT accepted."
