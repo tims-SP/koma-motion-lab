@@ -1,0 +1,110 @@
+name: GODOT-002 · Cubism Framework v5 model test
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/godot-002-framework-abi.yml'
+      - 'experiments/godot-002/framework_probe*'
+  push:
+    branches: [validation/godot-002-framework-abi]
+    paths:
+      - '.github/workflows/godot-002-framework-abi.yml'
+      - 'experiments/godot-002/framework_probe*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  framework-v5:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends cmake build-essential git
+      - name: Prepare actual model, old Framework and open Core
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out/godot-002-fw "$RUNNER_TEMP/sdk/Core/include"
+          curl -fsSL --retry 3 \
+            "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/master/live2d/roles/301003_x/301003_x.moc3" \
+            -o "$RUNNER_TEMP/model.moc3"
+          test "$(head -c 4 "$RUNNER_TEMP/model.moc3")" = "MOC3"
+          sha256sum "$RUNNER_TEMP/model.moc3" > out/godot-002-fw/model-sha256.txt
+          git clone --depth 1 --branch 5-r.1 \
+            https://github.com/Live2D/CubismNativeFramework.git "$RUNNER_TEMP/sdk/Framework"
+          git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
+          git -C "$RUNNER_TEMP/sdk/Framework" rev-parse HEAD > out/godot-002-fw/framework-revision.txt
+          git -C "$RUNNER_TEMP/PurismCore" rev-parse HEAD > out/godot-002-fw/purism-revision.txt
+          cp "$RUNNER_TEMP/PurismCore/include/"*.h "$RUNNER_TEMP/sdk/Core/include/"
+          # This test covers MOC/Model only. Do not compile Cocos2d render sources.
+          python3 - "$RUNNER_TEMP/sdk/Framework/src/Rendering/CMakeLists.txt" <<'PY'
+          from pathlib import Path
+          import sys
+          p=Path(sys.argv[1])
+          s=p.read_text()
+          assert "add_subdirectory(${FRAMEWORK_SOURCE})" in s
+          p.write_text(s.replace("add_subdirectory(${FRAMEWORK_SOURCE})", "# disabled: standalone model ABI probe"))
+          PY
+          python3 - "$RUNNER_TEMP/sdk/Core/include/Live2DCubismCore.h" <<'PY'
+          from pathlib import Path
+          import sys
+          p=Path(sys.argv[1])
+          c=p.read_text()
+          assert '#include "PurismCore.h"' in c
+          c=c.replace('#include "PurismCore.h"',
+            '#define PSM_COMPAT_VERSION 0x05010000L\n#define PSM_HAS_STDINT 0\n#include "PurismCore.h"')
+          p.write_text(c)
+          PY
+      - name: Build matching ASan v5 core and CubismNativeFramework
+        shell: bash
+        run: |
+          set -euo pipefail
+          cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/asan" \
+            -DCMAKE_BUILD_TYPE=Debug -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF \
+            -DCMAKE_C_FLAGS="-O0 -g -fsanitize=address -fno-omit-frame-pointer"
+          cmake --build "$RUNNER_TEMP/PurismCore/asan" --parallel 3 \
+            > out/godot-002-fw/core-build.log 2>&1
+          mkdir -p "$RUNNER_TEMP/probe-src"
+          cp experiments/godot-002/framework_probe.cpp "$RUNNER_TEMP/probe-src/"
+          cp experiments/godot-002/framework_probe_CMakeLists.txt "$RUNNER_TEMP/probe-src/CMakeLists.txt"
+          cmake -S "$RUNNER_TEMP/probe-src" -B "$RUNNER_TEMP/probe-build" \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DFRAMEWORK_ROOT="$RUNNER_TEMP/sdk/Framework" \
+            -DPURISM_STATIC="$RUNNER_TEMP/PurismCore/asan/libPurismCore-v5.a" \
+            -DCMAKE_CXX_FLAGS="-O0 -g -fsanitize=address -fno-omit-frame-pointer" \
+            -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address"
+          cmake --build "$RUNNER_TEMP/probe-build" --parallel 3 \
+            > out/godot-002-fw/framework-build.log 2>&1
+      - name: Run with AddressSanitizer against actual MOC3
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          ASAN_OPTIONS=detect_leaks=0:abort_on_error=1:halt_on_error=1 \
+            timeout 90s "$RUNNER_TEMP/probe-build/framework_probe" "$RUNNER_TEMP/model.moc3" \
+            > out/godot-002-fw/framework-probe.log 2>&1
+          code=$?
+          set -e
+          echo "$code" > out/godot-002-fw/exit-code.txt
+          cat out/godot-002-fw/framework-probe.log
+          if [ "$code" -ne 0 ]; then
+            echo "GODOT002_FRAMEWORK_ASAN_FAIL: $code" >> "$GITHUB_STEP_SUMMARY"
+            exit "$code"
+          fi
+          grep -q '^FW_V5_PHASE_PASS$' out/godot-002-fw/framework-probe.log
+          echo 'GODOT002_FRAMEWORK_V5_ASAN_PASS' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload text diagnostics only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-002-framework-diagnostics-${{ github.run_number }}
+          path: |
+            out/godot-002-fw/*.log
+            out/godot-002-fw/*.txt
+          retention-days: 7

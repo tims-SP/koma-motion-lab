@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.16)
+project(Godot002FrameworkProbe LANGUAGES C CXX)
+
+set(FRAMEWORK_ROOT "" CACHE PATH "CubismNativeFramework source root")
+set(PURISM_STATIC "" CACHE FILEPATH "PurismCore v5 static library")
+set(RENDER_INCLUDE_PATH "")
+set(FRAMEWORK_DEFINITIOINS "")
+if(NOT EXISTS "${FRAMEWORK_ROOT}/src/CubismFramework.hpp")
+  message(FATAL_ERROR "CubismNativeFramework missing")
+endif()
+if(NOT EXISTS "${PURISM_STATIC}")
+  message(FATAL_ERROR "PurismCore v5 archive missing")
+endif()
+
+add_subdirectory("${FRAMEWORK_ROOT}" framework-build)
+add_executable(framework_probe framework_probe.cpp)
+target_compile_features(framework_probe PRIVATE cxx_std_17)
+target_include_directories(framework_probe PRIVATE
+  "${FRAMEWORK_ROOT}/src" "${FRAMEWORK_ROOT}/../Core/include")
+target_link_libraries(framework_probe PRIVATE Framework "${PURISM_STATIC}" m)
