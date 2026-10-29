@@ -40,3 +40,13 @@ The GDCubism assembly uses the user-provided upstream model and independent open
 - Further comparison against the official Cubism reference is a **separate** fidelity gate.
 
 This document describes experimental results and deliberately leaves the final gate open until the Action completes.
+
+## 2026-10-29: narrowed native crash with independent ASan probes
+
+- [Core ABI Action](https://github.com/tims-SP/koma-motion-lab/actions/runs/40809101502): **PASS** using the real `301003_x.moc3` in both baseline and AddressSanitizer builds. `csmReviveMocInPlace`, `csmInitializeModelInPlace`, `csmUpdateModel` completed with 137 parameters, 316 drawables and 825616-byte model buffer.
+- [Framework API Action](https://github.com/tims-SP/koma-motion-lab/actions/runs/40809922256): **PASS** under ASan; `CubismFramework::Initialize` → `CubismMoc::Create` → `CreateModel` → `SaveParameters` → `Update` → cleanup. Same 137 parameters and 316 drawables.
+- Both diagnostics use the same temporary upstream MOC3, with no proprietary Cubism Core binary. Passing these tests does **not** establish fidelity, runtime animation, or the absence of all possible defects.
+- Primary runtime issue is now suspected in `GDCubismUserModel::load_model`, the Godot/GDExtension wrapper, the full `InternalCubismUserModel::model_load` path, or renderer/texture/JSON/motion initialization. It is **not** established that PurismCore has a fundamental inability to load this MOC3.
+- [Native trace Action](https://github.com/tims-SP/koma-motion-lab/actions/runs/40810176001): builds a temporary instrumented GDCubism native extension and logs precise phase markers before/after JSON parsing, MOC loading, motions, texture resources and mesh creation. Outcome must be inspected independently.
+
+**Acceptance remains open:** no full real-character Godot movie has passed visual validation.
