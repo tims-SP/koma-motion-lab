@@ -60,6 +60,48 @@ def earclip(poly: list[int], pts: list[list[float]]) -> list[int]:
     out += rem if ccw else [rem[0],rem[2],rem[1]]
     return out
 
+
+def source_animation_clips(scene: str, bone_by_path: dict[str,int]) -> dict:
+    """Extract literal Godot Animation keyframe tracks. Do NOT claim BlendTree parity.
+
+    Intended for source-clip sampling in the pilot; transitions are not interpolated
+    and the game's AnimationTree runtime state machine is not yet reproduced.
+    """
+    lib = re.search(r'\[sub_resource type="AnimationLibrary"[^\n]*\]\n(.*?)(?=\n\[)', scene, re.S)
+    id_names = dict((ident, name) for name, ident in
+        re.findall(r'&"([^"]+)": SubResource\("(\d+)"\)', lib.group(1))) if lib else {}
+    blocks = re.finditer(r'\[sub_resource type="Animation" id="(\d+)"\]\n(.*?)(?=\n\[|\Z)',scene,re.S)
+    result = {}
+    for block in blocks:
+        ident, body = block.group(1),block.group(2)
+        name = id_names.get(ident, "clip_"+ident)
+        paths = {int(n):p for n,p in re.findall(r'tracks/(\d+)/path = NodePath\("([^"]+)"\)',body)}
+        tracks = []
+        for num, raw in re.findall(r'tracks/(\d+)/keys = \{(.*?)^\}',body,re.S|re.M):
+            path = paths.get(int(num),"")
+            prefix = "Sprite2D/Skeleton2D/"
+            if not path.startswith(prefix) or ":" not in path:continue
+            bone_path, property_name = path[len(prefix):].rsplit(":",1)
+            if bone_path not in bone_by_path or property_name not in ("rotation_degrees","position"):continue
+            times_match = re.search(r'"times": PackedFloat32Array\(([^)]*)\)',raw)
+            values_match = re.search(r'"values": \[(.*?)\]\s*',raw,re.S)
+            if not times_match or not values_match:continue
+            times = [float(v) for v in times_match.group(1).split(",") if v.strip()]
+            if property_name=="position":
+                values = pairs(", ".join(v for v in re.findall(r'Vector2\(([^)]*)\)',values_match.group(1))))
+            else:
+                values = [float(v) for v in values_match.group(1).split(",") if v.strip()]
+            if not times or len(times)!=len(values) or any(b<a for a,b in zip(times,times[1:])):
+                raise ValueError(f"Invalid keys in clip {name} track {num}")
+            tracks.append({"bone":bone_by_path[bone_path],"property":property_name,"times":times,"values":values})
+        length_match = re.search(r'^length = ([\d.]+)',body,re.M)
+        length = float(length_match.group(1)) if length_match else max(
+            (t for tr in tracks for t in tr["times"]),default=0)
+        if tracks and length>0:
+            result[name]={"duration":length,"tracks":tracks,
+                          "interpolation":"LINEAR_APPROXIMATION","source_runtime_parity":"NOT_TESTED"}
+    return result
+
 def convert(scene: str, png: bytes, depth: float) -> dict:
     if png[:8] != b"\x89PNG\r\n\x1a\n": raise ValueError("Not a PNG")
     width, height = struct.unpack(">II", png[16:24])
@@ -86,7 +128,7 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
             world = [pw[0]+loc[0],pw[1]+loc[1]]
         bones.append({"name":name,"path":path,"parent":parent_id,
                       "local":[loc[0]*SCALE,-loc[1]*SCALE,0],
-                      "world_px":world})
+                      "world_px":world,"restRotation":float(re.search(r"^rotation = ([^\n]+)",block,re.M).group(1)) if re.search(r"^rotation = ([^\n]+)",block,re.M) else 0.0})
     if not bones: raise ValueError("No Bone2D joints")
     bone_by_path = {b["path"]:i for i,b in enumerate(bones)}
     meshes=[]
@@ -150,10 +192,11 @@ def convert(scene: str, png: bytes, depth: float) -> dict:
     if not meshes: raise ValueError("No Polygon2D meshes")
     points=[v for m in meshes for v in m["vertices"]]
     bounds=[[min(v[k] for v in points),max(v[k] for v in points)] for k in (0,1,2)]
-    return {"schema":"koma-25d-pilot/1","source":"Godot Skeleton2D GBot MIT",
+    clips=source_animation_clips(scene,bone_by_path)
+    return {"schema":"koma-25d-pilot/2","source":"Godot Skeleton2D GBot MIT",
             "source_revision":REV,"source_animation_parity":"NOT_TESTED",
             "source_uv_preserved":True,"width":width,"height":height,
-            "depth":depth,"bounds":bounds,"bones":bones,"meshes":meshes,
+            "depth":depth,"bounds":bounds,"bones":bones,"meshes":meshes,"clips":clips,
             "limitations":["2D bone rotations not yet retargeted",
                            "generated depth is an open front shell, not a complete 360-degree character",
                            "back/side texture not available; no new artwork is invented",
@@ -177,7 +220,7 @@ def main():
             "vertices":sum(len(x["vertices"]) for x in doc["meshes"]),
             "triangles":sum(len(x["indices"])//3 for x in doc["meshes"]),
             "source_texture_dimensions":[doc["width"],doc["height"]],
-            "geometry_status":"PASS","animation_parity":"NOT_TESTED",
+            "geometry_status":"PASS","source_clips_parsed":list(doc["clips"]),"animation_parity":"NOT_TESTED",
             "art_quality":"NOT_TESTED","full_3d_character":"NO"}
     (a.out/"import-report.json").write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps(report,indent=2))
