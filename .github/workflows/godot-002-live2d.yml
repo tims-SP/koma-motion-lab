@@ -279,6 +279,38 @@ jobs:
             python3 scripts/godot_003_camera_sweep.py "$GODOT_BIN" "$RUNNER_TEMP/gd002-project"
           test -s out/godot-002/fullbody-camera-sweep.jpg
           test -s out/godot-002/camera-sweep.json
+      - name: GODOT-003 full-body corrected nod video (original rig / real motion)
+        shell: bash
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          GALLIUM_DRIVER: llvmpipe
+          GODOT003_SWEEP: '1'
+          GODOT003_SWEEP_ZOOM: '1.0'
+          GODOT003_SWEEP_SHIFT_Y: '210'
+        run: |
+          set -euo pipefail
+          GODOT002_DISABLE_MOTIONS=1 xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+            --audio-driver Dummy \
+            --rendering-method gl_compatibility --rendering-driver opengl3 \
+            --write-movie "$GITHUB_WORKSPACE/out/godot-002/fullbody-static.png" \
+            --fixed-fps 30 --quit-after 8 \
+            2>&1 | tee out/godot-002/fullbody-static.log
+          grep -q 'GODOT002_STATIC_MODEL_LOAD_PASS' out/godot-002/fullbody-static.log
+          xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+            --audio-driver Dummy \
+            --rendering-method gl_compatibility --rendering-driver opengl3 \
+            --write-movie "$GITHUB_WORKSPACE/out/godot-002/fullbody-anim.png" \
+            --fixed-fps 30 --quit-after 90 \
+            2>&1 | tee out/godot-002/fullbody-nod.log
+          grep -q 'GODOT002_REAL_MOTION_STARTED' out/godot-002/fullbody-nod.log
+          ffmpeg -hide_banner -loglevel warning -y -framerate 30 \
+            -pattern_type glob -i 'out/godot-002/fullbody-anim*.png' \
+            -c:v libx264 -crf 18 -pix_fmt yuv420p \
+            out/godot-002/fullbody-nod.mp4
+          python3 scripts/godot_003_fullbody_verify.py
+          cat out/godot-002/fullbody-verify.json >> "$GITHUB_STEP_SUMMARY"
       - name: Keep one original character still in owner-only draft Release
         if: always()
         shell: bash
@@ -298,7 +330,7 @@ jobs:
           if test -s out/godot-002/preview.mp4; then
             files+=(out/godot-002/preview.mp4)
           fi
-          for f in out/godot-002/summary.json out/godot-002/autoframe.json out/godot-002/contact-sheet.jpg out/godot-002/visual-audit.json out/godot-002/visual-comparison.jpg out/godot-002/visual-crops.jpg out/godot-002/fullbody-camera-sweep.jpg out/godot-002/camera-sweep.json; do
+          for f in out/godot-002/summary.json out/godot-002/autoframe.json out/godot-002/contact-sheet.jpg out/godot-002/visual-audit.json out/godot-002/visual-comparison.jpg out/godot-002/visual-crops.jpg out/godot-002/fullbody-camera-sweep.jpg out/godot-002/camera-sweep.json out/godot-002/fullbody-nod.mp4 out/godot-002/fullbody-verify.json out/godot-002/fullbody-contact.jpg; do
             if test -s "$f"; then files+=("$f"); fi
           done
           tag="godot-002-static-inspection-${GITHUB_RUN_NUMBER}"
@@ -313,6 +345,8 @@ jobs:
           name: godot-002-owner-video-${{ github.run_number }}
           path: |
             out/godot-002/preview.mp4
+            out/godot-002/fullbody-nod.mp4
+            out/godot-002/fullbody-contact.jpg
             out/godot-002/contact-sheet.jpg
           if-no-files-found: warn
           retention-days: 1
@@ -325,6 +359,8 @@ jobs:
             out/godot-002/visual-comparison.jpg
             out/godot-002/visual-crops.jpg
             out/godot-002/fullbody-camera-sweep.jpg
+            out/godot-002/fullbody-contact.jpg
+            out/godot-002/fullbody-verify.json
             out/godot-002/camera-sweep.json
             out/godot-002/visual-audit.json
           if-no-files-found: warn
