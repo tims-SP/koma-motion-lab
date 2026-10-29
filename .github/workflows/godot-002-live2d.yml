@@ -1,6 +1,13 @@
 name: GODOT-002 · Real MOC3 Godot movie
 
 on:
+  push:
+    branches:
+      - validation/godot-002-live2d
+    paths:
+      - '.github/workflows/godot-002-live2d.yml'
+      - 'experiments/godot-002/**'
+      - 'scripts/godot_002_*.py'
   pull_request:
     paths:
       - '.github/workflows/godot-002-live2d.yml'
