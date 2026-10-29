@@ -25,7 +25,7 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends \
             git build-essential cmake ninja-build pkg-config python3-venv \
-            xvfb xauth mesa-utils libgl1-mesa-dri libgl1 ffmpeg unzip
+            xvfb xauth mesa-utils libgl1-mesa-dri libgl1 ffmpeg unzip gdb
           python3 -m venv "$RUNNER_TEMP/gd002venv"
           "$RUNNER_TEMP/gd002venv/bin/pip" install --disable-pip-version-check \
             'scons==4.7.0' 'Pillow==11.3.0'
@@ -48,14 +48,34 @@ jobs:
           git clone --depth 1 https://github.com/SakuraMotion/PurismCore.git "$RUNNER_TEMP/PurismCore"
           git -C "$RUNNER_TEMP/PurismCore" rev-parse HEAD | tee out/godot-002/purism-commit.txt
           cmake -S "$RUNNER_TEMP/PurismCore" -B "$RUNNER_TEMP/PurismCore/build" \
-            -DCMAKE_BUILD_TYPE=Release -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF
+            -DCMAKE_BUILD_TYPE=Release -DPURISM_CORE_ABI=v5 -DBUILD_SHARED_LIBS=OFF -DPURISM_CORE_BUILD_SAMPLES=ON
           cmake --build "$RUNNER_TEMP/PurismCore/build" --parallel 2 \
             2>&1 | tee out/godot-002/purism-build.log
           find "$RUNNER_TEMP/PurismCore/build" -name '*.a' | tee out/godot-002/purism-archives.txt
+          "$RUNNER_TEMP/PurismCore/build/moc3info" \
+            "$RUNNER_TEMP/gd002-project/assets/301003_x/301003_x.moc3" \
+            > out/godot-002/purism-moc3info.json
+          python -m json.tool out/godot-002/purism-moc3info.json > /dev/null
+          echo "GODOT002_PURISM_CORE_REAL_MOC3_DECODE_PASS"
+      - name: Restore GDCubism build cache (no artwork)
+        id: gd002-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .ci-cache/gdcubism
+          key: gd002-gdcubism-0.9.1-purism-v5-cubism-5r1-20261029-v1
       - name: Build GDCubism with Purism Core, no proprietary SDK download
         shell: bash
         run: |
           set -euo pipefail
+          cached="$GITHUB_WORKSPACE/.ci-cache/gdcubism/gd_cubism"
+          if test -s "$cached/bin/libgd_cubism.linux.release.x86_64.so"; then
+            mkdir -p "$RUNNER_TEMP/gd002-project/addons"
+            cp -a "$cached" "$RUNNER_TEMP/gd002-project/addons/gd_cubism"
+            sha256sum "$cached/bin/libgd_cubism.linux.release.x86_64.so" \
+              | tee out/godot-002/gdcubism-library.sha256
+            echo "GODOT002_CACHED_EXTENSION_REUSED"
+            exit 0
+          fi
           git clone --depth 1 --branch v0.9.1 https://github.com/MizunagiKB/gd_cubism.git "$RUNNER_TEMP/gd_cubism"
           git -C "$RUNNER_TEMP/gd_cubism" submodule update --init --depth 1 godot-cpp
           git clone --depth 1 --branch 5-r.1 https://github.com/Live2D/CubismNativeFramework.git "$RUNNER_TEMP/CubismNativeFramework"
@@ -93,6 +113,14 @@ jobs:
           # Demo scenes are not part of the experiment and can introduce unrelated errors.
           rm -rf "$RUNNER_TEMP/gd002-project/addons/gd_cubism/example"
           sha256sum "$lib" | tee "$GITHUB_WORKSPACE/out/godot-002/gdcubism-library.sha256"
+          mkdir -p "$GITHUB_WORKSPACE/.ci-cache/gdcubism"
+          cp -a "$RUNNER_TEMP/gd002-project/addons/gd_cubism" "$GITHUB_WORKSPACE/.ci-cache/gdcubism/"
+      - name: Cache successful native extension compilation
+        if: success() && steps.gd002-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .ci-cache/gdcubism
+          key: gd002-gdcubism-0.9.1-purism-v5-cubism-5r1-20261029-v1
       - name: Install official Godot 4.7.2 Linux binary
         shell: bash
         run: |
@@ -121,12 +149,30 @@ jobs:
             echo "GODOT002_FAIL_IMPORT_HAS_EXTENSION_ERRORS"
             exit 21
           fi
+          set +e
           xvfb-run -a -s '-screen 0 1280x720x24' \
             "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+            --audio-driver Dummy \
             --rendering-method gl_compatibility --rendering-driver opengl3 \
             --write-movie "$GITHUB_WORKSPACE/out/godot-002/shot.png" \
             --fixed-fps 30 --quit-after 90 \
             2>&1 | tee out/godot-002/godot-render.log
+          render_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$render_status" -ne 0 ]; then
+            echo "GODOT002_RUNTIME_CRASH rc=$render_status; collecting native stack trace"
+            ulimit -c 0
+            xvfb-run -a -s '-screen 0 1280x720x24' \
+              gdb -q -batch \
+              -ex 'set pagination off' -ex 'run' -ex 'thread apply all bt 20' \
+              --args "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+              --audio-driver Dummy \
+              --rendering-method gl_compatibility --rendering-driver opengl3 \
+              --write-movie "$GITHUB_WORKSPACE/out/godot-002/debug-shot.png" \
+              --fixed-fps 30 --quit-after 5 \
+              2>&1 | tee out/godot-002/gdb-backtrace.log || true
+            exit "$render_status"
+          fi
           grep -q 'GODOT002_REAL_MOTION_STARTED' out/godot-002/godot-render.log
           ffmpeg -hide_banner -loglevel warning -y -framerate 30 \
             -pattern_type glob -i 'out/godot-002/shot*.png' \
