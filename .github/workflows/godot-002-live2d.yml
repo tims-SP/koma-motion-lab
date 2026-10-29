@@ -4,15 +4,18 @@ on:
   push:
     branches:
       - validation/godot-002-live2d
+      - validation/godot-004-hires-idle
     paths:
       - '.github/workflows/godot-002-live2d.yml'
       - 'experiments/godot-002/**'
       - 'scripts/godot_002_*.py'
+      - 'scripts/godot_004_*.py'
   pull_request:
     paths:
       - '.github/workflows/godot-002-live2d.yml'
       - 'experiments/godot-002/**'
       - 'scripts/godot_002_*.py'
+      - 'scripts/godot_004_*.py'
   workflow_dispatch:
 
 permissions:
@@ -311,6 +314,92 @@ jobs:
             out/godot-002/fullbody-nod.mp4
           python3 scripts/godot_003_fullbody_verify.py
           cat out/godot-002/fullbody-verify.json >> "$GITHUB_STEP_SUMMARY"
+      - name: GODOT-004 native Live2D 1080p nod + idle / dark-white stills
+        shell: bash
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          GALLIUM_DRIVER: llvmpipe
+          GODOT003_SWEEP: '1'
+          GODOT003_SWEEP_ZOOM: '1.0'
+          GODOT003_SWEEP_SHIFT_Y: '210'
+          GODOT004_HIRES: '1'
+        run: |
+          set -euo pipefail
+          mkdir -p out/godot-004
+          python3 - "$RUNNER_TEMP/gd002-project/project.godot" <<'PY'
+          from pathlib import Path
+          import sys
+          f=Path(sys.argv[1])
+          s=f.read_text()
+          assert 'viewport_width=960' in s and 'viewport_height=540' in s
+          f.write_text(s.replace('viewport_width=960','viewport_width=1920')
+                        .replace('viewport_height=540','viewport_height=1080'))
+          PY
+          render_movie() {
+            local file="$1" num="$2"
+            xvfb-run -a -s '-screen 0 2048x1280x24' "$GODOT_BIN" \
+              --path "$RUNNER_TEMP/gd002-project" --audio-driver Dummy \
+              --rendering-method gl_compatibility --rendering-driver opengl3 \
+              --write-movie "$GITHUB_WORKSPACE/out/godot-004/${file}.png" \
+              --fixed-fps 30 --quit-after "$num" \
+              2>&1 | tee "out/godot-004/${file}.log"
+          }
+          GODOT002_DISABLE_MOTIONS=1 render_movie dark-still 8
+          grep -q 'GODOT004_HIRES_2X_APPLIED' out/godot-004/dark-still.log
+          grep -q 'GODOT002_STATIC_MODEL_LOAD_PASS' out/godot-004/dark-still.log
+          GODOT002_DISABLE_MOTIONS=1 GODOT004_BG_WHITE=1 render_movie white-still 1
+          grep -q 'GODOT004_WHITE_BACKGROUND_ENABLED' out/godot-004/white-still.log
+          for motion in nod idle; do
+            GODOT004_MOTION_GROUP="$motion" render_movie "${motion}-frame" "$([ "$motion" = nod ] && echo 90 || echo 270)"
+            grep -q "GODOT004_REAL_MOTION_GROUP_STARTED=${motion}" "out/godot-004/${motion}-frame.log" \
+              || grep -q "GODOT004_REAL_MOTION_GROUP_STARTED= ${motion}" "out/godot-004/${motion}-frame.log"
+            ffmpeg -hide_banner -loglevel warning -y -framerate 30 \
+              -pattern_type glob -i "out/godot-004/${motion}-frame*.png" \
+              -c:v libx264 -crf 18 -preset veryfast -pix_fmt yuv420p \
+              "out/godot-004/${motion}-1080p.mp4"
+          done
+          python3 scripts/godot_004_hires_audit.py
+          cat out/godot-004/quality-audit.json >> "$GITHUB_STEP_SUMMARY"
+      - name: GODOT-004 transient owner preview videos (never Git history)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-004-owner-video-${{ github.run_number }}
+          path: |
+            out/godot-004/nod-1080p.mp4
+            out/godot-004/idle-1080p.mp4
+            out/godot-004/quality-audit.json
+          if-no-files-found: warn
+          retention-days: 1
+      - name: GODOT-004 owner-only draft review (game-derived videos)
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=()
+          for f in out/godot-004/{nod-1080p.mp4,idle-1080p.mp4,quality-audit.json,mask-contrast-head.jpg,nod-head-detail.jpg,idle-head-detail.jpg}; do
+            if test -s "$f"; then files+=("$f"); fi
+          done
+          if [ "${#files[@]}" -eq 0 ]; then exit 0; fi
+          gh release create "godot-004-private-${GITHUB_RUN_NUMBER}" "${files[@]}" \
+            --draft \
+            --title "GODOT-004 PRIVATE 1080p / nod+body-idle #${GITHUB_RUN_NUMBER}" \
+            --notes "Owner-only draft. Game-derived footage and original asset content must not be published. Motion/frame diagnostics do NOT certify visual parity with official Cubism."
+      - name: GODOT-004 temporary 1080p audit attachments
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-004-private-review-${{ github.run_number }}
+          path: |
+            out/godot-004/quality-audit.json
+            out/godot-004/mask-contrast-head.jpg
+            out/godot-004/nod-head-detail.jpg
+            out/godot-004/idle-head-detail.jpg
+          if-no-files-found: warn
+          retention-days: 1
       - name: Keep one original character still in owner-only draft Release
         if: always()
         shell: bash

@@ -36,21 +36,23 @@ refs = manifest["FileReferences"]
 files = [refs["Moc"]] + list(refs["Textures"])
 source_motions = [entry["File"] for group in refs.get("Motions", {}).values() for entry in group]
 nod = "motions/b_diantou.motion3.json"
-idle = "motions/t_idle.motion3.json"
-if nod not in source_motions or idle not in source_motions:
+idle = "motions/b_idle.motion3.json"
+face_idle = "motions/t_idle.motion3.json"
+if any(p not in source_motions for p in (nod, idle, face_idle)):
     raise RuntimeError("original model lacks chosen nod or idle motion")
-files += [nod, idle]
+files += [nod, idle, face_idle]
 for f in files:
     download(f)
 # Original motion3 Meta point counters underreport real curve point counts.
 # Normalize transient copies only; original curve data, times, Beziers untouched.
 from godot_002_normalize_motion import repair
-motion_repairs = [repair(dest / f) for f in (nod, idle)]
+motion_repairs = [repair(dest / f) for f in (nod, idle, face_idle)]
 for entry in motion_repairs:
     print("GODOT002_MOTION_META_REPAIRED", json.dumps({
         "path": entry["path"], "original": entry["original_meta"],
         "corrected": entry["verified_meta"]}))
-refs["Motions"] = {"nod": [{"File": nod}], "idle": [{"File": idle}]}
+refs["Motions"] = {"nod": [{"File": nod}], "idle": [{"File": idle}],
+                   "face_idle": [{"File": face_idle}]}
 (dest / "301003_x.model3.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 moc = (dest / refs["Moc"]).read_bytes()
 if moc[:4] != b"MOC3":
