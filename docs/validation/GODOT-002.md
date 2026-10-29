@@ -50,3 +50,19 @@ This document describes experimental results and deliberately leaves the final g
 - [Native trace Action](https://github.com/tims-SP/koma-motion-lab/actions/runs/40810176001): builds a temporary instrumented GDCubism native extension and logs precise phase markers before/after JSON parsing, MOC loading, motions, texture resources and mesh creation. Outcome must be inspected independently.
 
 **Acceptance remains open:** no full real-character Godot movie has passed visual validation.
+
+## 2026-10-29: genuine motion3 meta overflow fixed; movie now renders
+
+- [GDCubism native trace, run 36](https://github.com/tims-SP/koma-motion-lab/actions/runs/40810176001) proved that original `LoadModel` returns and the original crash happens at `motion_load`, before any character video.
+- [No-motion model, run 41](https://github.com/tims-SP/koma-motion-lab/actions/runs/40813189646) proved original texture loading, rendering object and mesh construction, with a real 15-frame static sequence. Visual check found only 0.64% foreground; no quality pass.
+- [Raw motion ASan, run 19](https://github.com/tims-SP/koma-motion-lab/actions/runs/40813817328) reproduced **heap-buffer-overflow** at CubismNativeFramework 5-r.1 `src/Motion/CubismMotion.cpp:633`, from `Points.UpdateSize(json->GetMotionTotalPointCount())` at line 568. This was triggered by mismatched upstream `motion3.json` Meta counters; do not attribute it solely to Godot or OpenGL.
+- Counts recomputed from actual segment arrays:
+  - `b_diantou.motion3.json`: declared 126 curves, 305 segments, 337 points. Verified **126 curves, 304 segments, 462 points**.
+  - `t_idle.motion3.json`: declared 6 curves, 20 segments, 24 points. Verified **6 curves, 19 segments, 29 points**.
+- Created `scripts/godot_002_normalize_motion.py`; applies count correction **only to transient CI copies**, preserving original curves, interpolation, parameter IDs, time values, textures and MOC3. This change is transparent and reproducible.
+- [ASan normalized motion, run 24](https://github.com/tims-SP/koma-motion-lab/actions/runs/40814230230): **PASS**, both original motions parsed and applied through 90 numerical frames each. A required UserData event callback was registered in the independent test harness.
+- [Godot motion render, run 54](https://github.com/tims-SP/koma-motion-lab/actions/runs/40814383002): **PASS runtime** (GDCubism motion loading, scene init, `GODOT002_REAL_MOTION_STARTED`, 90 PNG and MP4 frames at 960x540). **FAIL visual QA**: small foreground (around 0.64%); whole-frame motion differences under initial fixed threshold.
+- [Auto-frame, run 62](https://github.com/tims-SP/koma-motion-lab/actions/runs/40814958058): **PASS foreground visibility threshold**: character-focused diagnostic framing applied zoom 1.9583x with original MOC and curves unchanged; foreground 2.62–2.66%. Still **FAIL motion QA** due an absolute whole-frame threshold that undercounts localized nod movement.
+- [Independent motion-vs-static validator, run 66](https://github.com/tims-SP/koma-motion-lab/actions/runs/40815188894): tests visible-normalized motion signal and a static control instead of simply reducing the whole-frame threshold; **result pending audit**.
+
+**Strict interpretation:** Godot + Xvfb + Mesa has now rendered an original MOC3 and authentic (count-normalized) motion into a full MP4, but this is **not** proof of official Cubism visual parity, complete body appearance, masking correctness, or production-grade anime quality. Owner-only draft Releases preserve diagnostic footage for inspection; no third-party game art is committed to git or publicly released.
