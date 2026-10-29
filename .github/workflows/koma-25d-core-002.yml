@@ -1,0 +1,82 @@
+name: KOMA-25D-CORE-002 · source actions and spatial skinning
+
+on:
+  push:
+    branches: [feature/koma-25d-core-002]
+    paths:
+      - '.github/workflows/koma-25d-core-002.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render-and-verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install FFmpeg and image QA
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check "Pillow==12.0.0"
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Import pinned MIT licensed Polygon2D, rig and source animation tracks
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/godot_to_koma.py --out viewer/public/asset --depth 0.16
+          python - <<'PY'
+          import json
+          x=json.load(open('viewer/public/asset/character.json'))
+          assert x['schema']=='koma-25d-pilot/2'
+          assert len(x['bones'])==16 and len(x['meshes'])==7
+          assert len(x['clips'])==8 and len(x['clips']['walk']['tracks'])>=15
+          assert all(len(m['uv'])==len(m['vertices']) for m in x['meshes'])
+          assert all(abs(sum(w)-1)<1e-6 for m in x['meshes'] for w in m['skinWeight'])
+          assert all(len(m['shell']['vertices'])==2*len(m['vertices']) for m in x['meshes'])
+          print('CORE002_IMPORT_OK',list(x['clips']))
+          PY
+      - name: Install Chromium and Three.js
+        working-directory: experiments/koma-25d-core/viewer
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Render real source motion, out-of-plane bone and camera independently
+        run: node experiments/koma-25d-core/tools/capture2.mjs
+      - name: Reject missing source motion and static spatial skinning
+        run: python experiments/koma-25d-core/tools/qa2.py
+      - name: Encode three isolated motion videos
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          for name in yaw walk reach; do
+            ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+              -i "out/core002/$name/%04d.png" \
+              -c:v libx264 -pix_fmt yuv420p "out/core002/$name.mp4"
+            test -s "out/core002/$name.mp4"
+          done
+          cat out/core002/qa.json >> "$GITHUB_STEP_SUMMARY"
+          echo "Aesthetic / source-runtime parity: NOT ACCEPTED" >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish candidate frames in DRAFT Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="koma-25d-core002-$GITHUB_RUN_ID"
+          gh release create "$TAG" \
+            experiments/koma-25d-core/out/core002/yaw.mp4 \
+            experiments/koma-25d-core/out/core002/walk.mp4 \
+            experiments/koma-25d-core/out/core002/reach.mp4 \
+            experiments/koma-25d-core/out/core002/contact.png \
+            experiments/koma-25d-core/out/core002/qa.json \
+            experiments/koma-25d-core/out/core002/capture.json \
+            experiments/koma-25d-core/viewer/public/asset/import-report.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "KOMA-25D-CORE-002 · isolated motion candidate (not art accepted)" \
+            --notes "MIT-licensed Godot GBot source. Separately tests yaw, source 2D clip and out-of-plane arm rotation. Full runtime parity, side/back painting and anime-style visual acceptance remain NOT TESTED."
