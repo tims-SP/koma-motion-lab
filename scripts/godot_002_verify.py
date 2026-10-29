@@ -36,8 +36,23 @@ if paths:
     differences = [round(sum(ImageStat.Stat(ImageChops.difference(a,b)).mean)/3,3)
                    for a,b in zip(samples,samples[1:])]
     report["frame_differences"] = differences
-    if not differences or max(differences) < .65:
-        errors.append("no_visible_motion")
+    # A whole-frame mean undercounts a nod affecting a small character.
+    # Compare against the no-motion control and normalize by visible pixels.
+    controls = sorted(glob.glob(str(out / "static*.png")))
+    static_diff = None
+    if len(controls) >= 2:
+        with Image.open(controls[0]) as sa, Image.open(controls[-1]) as sb:
+            diff = ImageChops.difference(sa.convert("RGB"), sb.convert("RGB"))
+            static_diff = sum(ImageStat.Stat(diff).mean) / 3
+    if static_diff is None:
+        errors.append("missing_static_control")
+    largest = max(differences) if differences else 0.0
+    relative_signal = largest / max(max(coverage), 0.001)
+    report["motion_signal_per_foreground"] = round(relative_signal, 2)
+    report["static_control_mean_difference"] = round(static_diff or 0.0, 4)
+    report["motion_difference_global_max"] = round(largest, 4)
+    if relative_signal < 10 or largest <= max(0.05, (static_diff or 0.0) * 5):
+        errors.append("insufficient_motion_vs_static_control")
     contact = Image.new("RGB", (960, 540*len(samples)))
     for index, frame in enumerate(samples):
         contact.paste(frame, (0,540*index))
