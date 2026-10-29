@@ -51,7 +51,21 @@ jobs:
               assert len(shell["sideIndices"])>0 and len(shell["rearIndices"])>0
               assert all(0<=u<=1 and 0<=v<=1 for u,v in shell["sideUv"])
               assert all(0<=u<=1 and 0<=v<=1 for u,v in shell["backUv"])
-          print("CORE003_IMPORT_AND_PROVENANCE_CHECK_OK")
+          # Visual regression: the first preview exposed a detached Chin because
+          # Polygon2D.offset was omitted. Detect the real source relationship.
+          pieces={m["name"]:m for m in model["meshes"]}
+          assert "Chin" in pieces and "Head" in pieces
+          def bbox(mesh):
+              x=[p[0] for p in mesh["vertices"]]
+              y=[p[1] for p in mesh["vertices"]]
+              return min(x),max(x),min(y),max(y)
+          hx0,hx1,hy0,hy1=bbox(pieces["Head"])
+          cx0,cx1,cy0,cy1=bbox(pieces["Chin"])
+          head_height=hy1-hy0
+          assert cx1>=hx0 and cx0<=hx1 and cy0<hy1 and cy1>=hy0, \
+              f"DETACHED_JAW: Head={hx0,hx1,hy0,hy1}; Chin={cx0,cx1,cy0,cy1}"
+          assert (cy0+cy1)/2 <= hy1+0.35*head_height
+          print("CORE003_IMPORT_AND_PROVENANCE_CHECK_OK", "CHIN_ATTACHED",bbox(pieces["Chin"]))
           PY
       - name: Validate registered side/back artwork ingestion without claiming fidelity
         working-directory: experiments/koma-25d-core
