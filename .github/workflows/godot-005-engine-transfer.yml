@@ -1,0 +1,41 @@
+name: GODOT-005 · Transfer official Godot engine to isolated validation container
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/godot-005-engine-transfer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  engine-package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Download pinned official Godot 4.7.2 Linux x86_64 release
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p handoff
+          curl -fL --retry 4 --retry-all-errors --connect-timeout 15 \
+            https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip \
+            -o handoff/Godot_v4.7.2-stable_linux.x86_64.zip
+          sha256sum handoff/Godot_v4.7.2-stable_linux.x86_64.zip > handoff/archive.sha256
+          unzip -q handoff/Godot_v4.7.2-stable_linux.x86_64.zip -d /tmp
+          chmod +x /tmp/Godot_v4.7.2-stable_linux.x86_64
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --version | tee handoff/engine-version.txt
+          file /tmp/Godot_v4.7.2-stable_linux.x86_64 > handoff/engine-file.txt
+          sha256sum /tmp/Godot_v4.7.2-stable_linux.x86_64 > handoff/engine.sha256
+          test "$(cat handoff/engine-version.txt)" = '4.7.2.stable.official.764163e1f'
+          ls -lh handoff/
+      - name: Stage verifiable engine as a short-lived Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-005-official-4.7.2-linux-x86_64
+          path: handoff/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 2
