@@ -23,7 +23,7 @@ combos = list(itertools.product((0.85,1.0,1.15),(180,250,320)))
 records = []
 sheets = []
 for index,(zoom,shift_y) in enumerate(combos):
-    stem = sweep_dir / f"camera-{index:02d}"
+    stem = (sweep_dir / f"camera-{index:02d}").resolve()
     env = os.environ.copy()
     env.update({
         "GODOT003_SWEEP":"1",
