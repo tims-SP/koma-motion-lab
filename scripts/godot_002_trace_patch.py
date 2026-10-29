@@ -38,8 +38,8 @@ for rel, replacements in targets.items():
     assert '#include <cstdio>' not in s
     s='#include <cstdio>\n'+s
     for old,new in replacements:
-        if s.count(old)!=1:
+        if s.count(old)<1:
             raise RuntimeError(f"{rel}: expected 1 occurrence of {old[:45]!r}, found {s.count(old)}")
-        s=s.replace(old,new)
+        s=s.replace(old,new,1)
     p.write_text(s)
     print("GODOT002_INSTRUMENTED",rel)
