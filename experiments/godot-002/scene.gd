@@ -13,6 +13,9 @@ func _ready() -> void:
         print("GODOT002_CONSTRUCT_ONLY_PASS")
         get_tree().quit()
         return
+    if OS.get_environment("GODOT002_DISABLE_MOTIONS") == "1":
+        character.load_motions = false
+        print("GODOT002_PRELOAD_MOTIONS_DISABLED")
     print("GODOT002_PHASE_BEFORE_ASSETS")
     character.assets = "res://assets/301003_x/301003_x.model3.json"
     print("GODOT002_PHASE_AFTER_ASSETS")
@@ -27,6 +30,9 @@ func _ready() -> void:
     character.position = Vector2(480, 270)
     character.scale = Vector2.ONE * factor
     print("GODOT002_MODEL_CANVAS=", dims, " SCALE=", factor)
+    if OS.get_environment("GODOT002_DISABLE_MOTIONS") == "1":
+        print("GODOT002_STATIC_MODEL_LOAD_PASS")
+        return
     var motions: Dictionary = character.get_motions()
     print("GODOT002_MOTIONS=", JSON.stringify(motions))
     if not motions.has("nod"):
