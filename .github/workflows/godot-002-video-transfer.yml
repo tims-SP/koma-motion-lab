@@ -1,0 +1,41 @@
+name: Transfer existing GODOT-002 #66 preview for owner review
+
+on:
+  push:
+    branches:
+      - validation/godot-002-video-transfer
+    paths:
+      - '.github/workflows/godot-002-video-transfer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  transfer-original-draft-assets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Retrieve exact draft Release 66 assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p review
+          gh release view godot-002-static-inspection-66 --repo "$GITHUB_REPOSITORY" --json name,isDraft,assets
+          gh release download godot-002-static-inspection-66 --repo "$GITHUB_REPOSITORY" --pattern 'preview.mp4' --dir review
+          gh release download godot-002-static-inspection-66 --repo "$GITHUB_REPOSITORY" --pattern 'contact-sheet.jpg' --dir review
+          test "$(stat -c%s review/preview.mp4)" -eq 136011
+          echo 'c58ef51241144455539143c0cf5ce7e73f55c67e1ba508af046abbb2f7acf3de  review/preview.mp4' | sha256sum -c -
+          echo '7112e7fe72c3e271e228cafb2f086bcf57b67658fc0199ea1d2adf5c6aeb31d7  review/contact-sheet.jpg' | sha256sum -c -
+          file review/preview.mp4 review/contact-sheet.jpg
+      - name: Transfer private review copy (not Git history or public release)
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-002-run66-original-video-transfer
+          path: |
+            review/preview.mp4
+            review/contact-sheet.jpg
+          retention-days: 1
+          if-no-files-found: error
