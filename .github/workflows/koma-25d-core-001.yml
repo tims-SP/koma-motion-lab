@@ -1,0 +1,76 @@
+name: KOMA-25D-CORE-001 · real source mesh / curved UV validation
+
+on:
+  push:
+    branches: [feature/koma-25d-core-001]
+    paths:
+      - '.github/workflows/koma-25d-core-001.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install video encoder
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Prepare Python image QA
+        run: |
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check "Pillow==12.0.0"
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Import real MIT Godot rig with original UV and vertex weights
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/godot_to_koma.py --out viewer/public/asset --depth 0.16
+          python - <<'PY'
+          import json
+          p=json.load(open('viewer/public/asset/character.json'))
+          assert len(p['bones'])>=10 and len(p['meshes'])>=5
+          assert all(len(m['vertices'])==len(m['uv'])==len(m['skinIndex'])==len(m['skinWeight']) for m in p['meshes'])
+          assert all(abs(sum(w)-1)<1e-5 for m in p['meshes'] for w in m['skinWeight'])
+          assert all(0<=u<=1 and 0<=v<=1 for m in p['meshes'] for u,v in m['uv'])
+          print('PASS_IMPORT_STRUCTURE_AND_UV',len(p['meshes']),len(p['bones']))
+          PY
+      - name: Install Three.js / headless Chromium
+        working-directory: experiments/koma-25d-core/viewer
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Render original 2D source mesh with 3D yaw
+        run: node experiments/koma-25d-core/tools/capture.mjs
+      - name: Reject blank, static or invalid frames
+        run: python experiments/koma-25d-core/tools/qa.py
+      - name: Encode acceptance candidate only after structural QA
+        working-directory: experiments/koma-25d-core
+        run: |
+          ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+            -i out/frames/%04d.png -c:v libx264 -pix_fmt yuv420p out/preview.mp4
+          test -s out/preview.mp4
+          cat out/qa.json >> "$GITHUB_STEP_SUMMARY"
+          echo "ART QUALITY: NOT TESTED; FULL 3D: NOT SUPPORTED" >> "$GITHUB_STEP_SUMMARY"
+      - name: Store MIT sample preview only in DRAFT Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="koma-25d-core001-$GITHUB_RUN_ID"
+          gh release create "$TAG" \
+            experiments/koma-25d-core/out/preview.mp4 \
+            experiments/koma-25d-core/out/contact.png \
+            experiments/koma-25d-core/out/qa.json \
+            experiments/koma-25d-core/out/capture.json \
+            experiments/koma-25d-core/viewer/public/asset/import-report.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "KOMA-25D-CORE-001 · structural candidate (not art accepted)" \
+            --notes "MIT GBot source (Godot Skeleton2D demo). This is a structural render, NOT production-quality anime, full 3D, or original runtime parity. Review artifacts before acceptance."
