@@ -1,0 +1,60 @@
+name: CORE-007 · actual anime layered PSD and Inochi rig audit
+
+on:
+  push:
+    branches: [feature/koma-25d-core-007]
+    paths:
+      - '.github/workflows/koma-25d-core-007.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  real-anime-asset:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PSD and image tooling
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check \
+            'psd-tools==1.10.9' 'Pillow==12.0.0' 'numpy==2.2.6' \
+            'opencv-python-headless==4.11.0.86'
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Download pinned official tutorial Aka PSD + real INX authoring rig
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          mkdir -p out/core007/raw out/core007/review
+          src=https://raw.githubusercontent.com/Inochi2D/inochi2d-docs/593c657855d5679f01443ef311346298fd25e117/docs/source/creator/first-model
+          curl -fL --retry 4 --max-time 120 "$src/tutorial-aka.psd" -o out/core007/raw/tutorial-aka.psd
+          curl -fL --retry 4 --max-time 120 "$src/tutorial-aka02.inx" -o out/core007/raw/tutorial-aka02.inx
+          test "$(stat -c%s out/core007/raw/tutorial-aka.psd)" -gt 5000000
+          test "$(stat -c%s out/core007/raw/tutorial-aka02.inx)" -gt 5000000
+          sha256sum out/core007/raw/*
+          printf '%s\n' \
+            'Attribution: Aka, original design and rigging by seagetch, CC BY 4.0.' \
+            'Source: Inochi2D official creator tutorial, pinned at 593c657855d5679f01443ef311346298fd25e117.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Read and audit actual layered source art and binary INX rig
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/inspect_aka7.py \
+            --psd out/core007/raw/tutorial-aka.psd \
+            --inx out/core007/raw/tutorial-aka02.inx \
+            --out out/core007/review
+      - name: Publish audited diagnostic source raster only as draft
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "koma-25d-core007-asset-$GITHUB_RUN_ID" \
+            experiments/koma-25d-core/out/core007/review/source_audit.json \
+            experiments/koma-25d-core/out/core007/review/original_psd.png \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-007 Aka REAL CC-BY layered PSD and rig audit" \
+            --notes "Aka © seagetch, CC BY 4.0. Real source PSD + INX are downloaded but not redistributed. Model originally from Inochi2D tutorial. This Release is source analysis only; motion/novel-view visual acceptance not yet tested."
