@@ -7,6 +7,7 @@ on:
       - '.github/workflows/koma-25d-core-008.yml'
       - 'experiments/koma-25d-core/tools/prepare_aka8.py'
       - 'experiments/koma-25d-core/tools/check_full_inx8.py'
+      - 'experiments/koma-25d-core/tools/extract_head_param8.py'
       - 'docs/plans/CORE-008-multiview-asset-production.md'
       - 'docs/prompts/CORE-008-Aka-view-generation-prompts.md'
   workflow_dispatch:
@@ -62,6 +63,24 @@ jobs:
           python tools/check_full_inx8.py \
             --input out/core008/raw/Aka-complete.inx \
             --output out/core008/source/native_parameter_inventory.json
+      - name: Inspect native Head Yaw-Pitch keyframe binding grids
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import json,subprocess,sys
+          from pathlib import Path
+          folder=Path("out/core008/source")
+          inv=json.loads((folder/"native_parameter_inventory.json").read_text())
+          if inv.get("verified_full_model"):
+              subprocess.run([sys.executable,"tools/extract_head_param8.py",
+                "--input","out/core008/raw/Aka-complete.inx",
+                "--output",str(folder/"head_native_bindings.json")],check=True)
+          else:
+              (folder/"head_native_bindings.json").write_text(json.dumps({
+                  "status":"FULL_NATIVE_INX_NOT_AVAILABLE",
+                  "native_pose_evaluation":"NOT_IMPLEMENTED"
+              },indent=2)+"\n")
+          PY
       - name: Export small actual source images to CI logs for independent visual inspection
         working-directory: experiments/koma-25d-core
         run: |
@@ -91,6 +110,7 @@ jobs:
             experiments/koma-25d-core/out/core008/source/source_review.jpg \
             experiments/koma-25d-core/out/core008/source/reference_manifest.json \
             experiments/koma-25d-core/out/core008/source/native_parameter_inventory.json \
+            experiments/koma-25d-core/out/core008/source/head_native_bindings.json \
             --target "$GITHUB_SHA" --draft \
             --title "CORE-008 REAL Aka original + 16-component GPT reference pack" \
             --notes "Source Aka art/rig © seagetch, CC BY 4.0; original 1630x1630 PSD from official pinned tutorial. These images are authentic FRONT reference assets only. No AI 30/45 images have been generated/accepted. PSD and INX binaries downloaded but NOT redistributed."
