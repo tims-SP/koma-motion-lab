@@ -61,12 +61,12 @@ int main(int argc, char** argv) {
         if (!motion_file) return 20;
         std::vector<unsigned char> data{std::istreambuf_iterator<char>(motion_file), {}};
         if (data.size() < 50 || data.size() > 15000000) return 21;
-        std::printf("FW_V5_MOTION_BEFORE_PARSE=%s bytes=%zu\\n", argv[arg], data.size());
+        std::printf("FW_V5_MOTION_BEFORE_PARSE=%s bytes=%zu\n", argv[arg], data.size());
         std::fflush(stdout);
         Csm::CubismMotion* motion = Csm::CubismMotion::Create(data.data(),
             static_cast<Csm::csmSizeInt>(data.size()));
         if (!motion) return 22;
-        std::printf("FW_V5_MOTION_AFTER_PARSE=%s duration=%.3f\\n",
+        std::printf("FW_V5_MOTION_AFTER_PARSE=%s duration=%.3f\n",
             argv[arg], static_cast<double>(motion->GetDuration()));
         std::fflush(stdout);
         {
@@ -81,7 +81,7 @@ int main(int argc, char** argv) {
             }
         }
         Csm::ACubismMotion::Delete(motion);
-        std::printf("FW_V5_MOTION_PLAYBACK_PASS=%s frames=90\\n", argv[arg]);
+        std::printf("FW_V5_MOTION_PLAYBACK_PASS=%s frames=90\n", argv[arg]);
         std::fflush(stdout);
     }
     moc->DeleteModel(model);
