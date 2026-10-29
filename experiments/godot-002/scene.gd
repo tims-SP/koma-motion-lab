@@ -59,7 +59,7 @@ func _ready() -> void:
     var motion_name := OS.get_environment("GODOT004_MOTION_GROUP")
     if motion_name.is_empty():
         motion_name = "nod"
-    if motion_name != "nod" and motion_name != "idle":
+    if motion_name != "nod" and motion_name != "idle" and motion_name != "face_idle":
         push_error("GODOT004_UNSUPPORTED_MOTION_GROUP")
         get_tree().quit(26)
         return
