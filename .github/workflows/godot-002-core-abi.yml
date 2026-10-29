@@ -6,6 +6,10 @@ on:
     paths:
       - '.github/workflows/godot-002-core-abi.yml'
       - 'experiments/godot-002/purism_v5_probe.c'
+  pull_request:
+    paths:
+      - '.github/workflows/godot-002-core-abi.yml'
+      - 'experiments/godot-002/purism_v5_probe.c'
   workflow_dispatch:
 
 permissions:
