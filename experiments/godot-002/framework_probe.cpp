@@ -71,6 +71,12 @@ int main(int argc, char** argv) {
         std::fflush(stdout);
         {
             Csm::CubismMotionManager manager;
+            // Real game motions contain UserData events. The v5 Framework
+            // unconditionally invokes the registered event callback.
+            manager.SetEventCallback([](
+                const Csm::CubismMotionQueueManager*,
+                const Csm::csmString&,
+                void*) { });
             auto handle = manager.StartMotionPriority(motion, false, 3);
             if (!handle) return 23;
             for (int frame=0; frame<90; ++frame) {
