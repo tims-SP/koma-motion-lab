@@ -1,0 +1,130 @@
+name: KOMA-25D-CORE-006 · original UV part-shell and articulated video audit
+
+on:
+  push:
+    branches: [feature/koma-25d-core-006]
+    paths:
+      - '.github/workflows/koma-25d-core-006.yml'
+      - 'experiments/koma-25d-core/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-source-art-head-elbow:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install reference image and video tooling
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check Pillow==12.0.0
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Download pinned real MIT GBot source and retain original UV and bones
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          python tools/godot_to_koma.py --out viewer/public/asset --depth 0.16
+          python tools/make_view_canaries.py
+          python tools/build_part6.py --asset-dir viewer/public/asset
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('viewer/public/asset')
+          x=json.loads((path/'character.json').read_text())
+          a=json.loads((path/'part006.json').read_text())
+          assert x['schema']=='koma-25d-pilot/6'
+          assert len(x['meshes'])==7 and len(x['bones'])==16
+          assert len(x['clips'])==8
+          assert set(x['head_elbow_experiment']['part_shells'])=={'Head','Chin','LeftArm','RightArm'}
+          assert all(d['uv_unchanged'] and d['indices_unchanged'] and
+                     d['weights_unchanged'] and d['front_z_exactly_zero']
+                     for d in a['art_uv_triangle_weight_checks'].values())
+          assert x['head_elbow_experiment']['side_back_artwork']=='MISSING_DIAGNOSTIC_CANARY'
+          print('CORE006_REAL_SOURCE_PAYLOAD_AND_INTEGRITY_CHECK_OK')
+          PY
+      - name: Install Three.js + Chromium with SwiftShader
+        working-directory: experiments/koma-25d-core/viewer
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Render original and part shells; independently move head and elbow
+        run: node experiments/koma-25d-core/tools/capture6.mjs
+      - name: Verify front texture preserved and bone pose deforms pixels
+        run: python experiments/koma-25d-core/tools/qa6.py
+      - name: Encode three motion test MP4s
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          for scenario in head_yaw elbow_bend camera_turn; do
+            ffmpeg -hide_banner -loglevel error -y -framerate 24 \
+              -i "out/core006/$scenario/%04d.png" \
+              -c:v libx264 -pix_fmt yuv420p "out/core006/$scenario.mp4"
+            test -s "out/core006/$scenario.mp4"
+          done
+      - name: Decode ACTUAL final video and make sampled review images
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import subprocess,base64,textwrap,io,json
+          from pathlib import Path
+          from PIL import Image,ImageChops
+          out=Path("out/core006")
+          summary={}
+          for scenario in ("head_yaw","elbow_bend","camera_turn"):
+              vid=out/(scenario+".mp4")
+              out_pattern=str(out/(scenario+"_decoded_%02d.png"))
+              subprocess.run([
+                'ffmpeg','-hide_banner','-loglevel','error','-y',
+                '-i',str(vid),'-vf','select=eq(n\,0)+eq(n\,24)+eq(n\,47)',
+                '-vsync','0',out_pattern
+              ],check=True)
+              decoded=sorted(out.glob(scenario+"_decoded_*.png"))
+              if len(decoded)!=3:raise RuntimeError("Bad decoded MP4 frame count for "+scenario)
+              summary[scenario]={
+                "mp4_bytes":vid.stat().st_size,
+                "actual_decoded_frames":len(decoded),
+                "images":[p.name for p in decoded]
+              }
+          collage=Image.new("RGB",(960*3,540*3))
+          for row,scenario in enumerate(("head_yaw","elbow_bend","camera_turn")):
+              decoded=sorted(out.glob(scenario+"_decoded_*.png"))
+              for col,p in enumerate(decoded):
+                  im=Image.open(p).convert("RGB")
+                  if im.size!=(960,540):raise ValueError("Wrong video frame dimensions")
+                  collage.paste(im,(col*960,row*540))
+          collage.save(out/"decoded_contact.png")
+          collage.thumbnail((1530,950))
+          collage.save(out/"decoded_preview.jpg",quality=80,optimize=True)
+          (out/"decoded_audit.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print("CORE006_MP4_DECODE_SUCCESS",json.dumps(summary))
+          print("KOMA_CORE006_ENCODED_VISUAL_BEGIN")
+          for line in textwrap.wrap(base64.b64encode((out/"decoded_preview.jpg").read_bytes()).decode(),120):
+              print(line)
+          print("KOMA_CORE006_ENCODED_VISUAL_END")
+          PY
+      - name: Publish owner-review candidate to DRAFT Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="koma-25d-core006-$GITHUB_RUN_ID"
+          gh release create "$tag" \
+            experiments/koma-25d-core/out/core006/head_yaw.mp4 \
+            experiments/koma-25d-core/out/core006/elbow_bend.mp4 \
+            experiments/koma-25d-core/out/core006/camera_turn.mp4 \
+            experiments/koma-25d-core/out/core006/contact.png \
+            experiments/koma-25d-core/out/core006/decoded_contact.png \
+            experiments/koma-25d-core/out/core006/qa.json \
+            experiments/koma-25d-core/out/core006/decoded_audit.json \
+            experiments/koma-25d-core/viewer/public/asset/part006.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-006 Original 2D ArtMesh + head/elbow motion (NOT anime accepted)" \
+            --notes "Real MIT Godot GBot source mesh/UV and skin weights retained. Part-shells are DIAGNOSTIC only; source Godot runtime parity, genuine side/back artwork and anime quality NOT accepted. Inspect actual videos before promoting."
