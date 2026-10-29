@@ -84,7 +84,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .ci-cache/gdcubism
-          key: gd002-gdcubism-0.9.1-purism-v5-cubism-5r1-20261029-v1
+          key: gd002-gdcubism-0.9.1-purism-v5-cubism-5r1-trace-v2
       - name: Build GDCubism with Purism Core, no proprietary SDK download
         shell: bash
         run: |
@@ -103,6 +103,7 @@ jobs:
           git clone --depth 1 --branch 5-r.1 https://github.com/Live2D/CubismNativeFramework.git "$RUNNER_TEMP/CubismNativeFramework"
           git -C "$RUNNER_TEMP/gd_cubism" rev-parse HEAD | tee out/godot-002/gdcubism-commit.txt
           git -C "$RUNNER_TEMP/CubismNativeFramework" rev-parse HEAD | tee out/godot-002/framework-commit.txt
+          python3 "$GITHUB_WORKSPACE/scripts/godot_002_trace_patch.py" "$RUNNER_TEMP/gd_cubism"
           cd "$RUNNER_TEMP/gd_cubism"
           sdk="$PWD/thirdparty/CubismSdkForNative-Lab"
           mkdir -p "$sdk/Core/include" "$sdk/Core/lib/linux/x86_64"
@@ -142,7 +143,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .ci-cache/gdcubism
-          key: gd002-gdcubism-0.9.1-purism-v5-cubism-5r1-20261029-v1
+          key: gd002-gdcubism-0.9.1-purism-v5-cubism-5r1-trace-v2
       - name: Install official Godot 4.7.2 Linux binary
         shell: bash
         run: |
