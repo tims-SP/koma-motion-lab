@@ -27,7 +27,7 @@ for index in sorted(set([0, len(files)//4, len(files)//2, len(files)*3//4, len(f
         frames.append(src.convert("RGB"))
 if any(im.size != (960, 540) for im in frames):
     errors.append("PNG resolution mismatch")
-stddev = [round(v, 3) for v in ImageStat.Stat(im).stddev]
+stddev = [round(v, 3) for v in ImageStat.Stat(frames[-1]).stddev]
 record["last_frame_rgb_stddev"] = stddev
 if max(stddev) < 15:
     errors.append("near-flat last frame")
