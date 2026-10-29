@@ -9,7 +9,7 @@ Each frame is explicitly labeled as source-derived diagnostic. The INX's
 original meshes are audited separately but not yet driven by this renderer.
 """
 from __future__ import annotations
-import argparse,json,math,time
+import argparse,json,math,time,base64,textwrap,io
 from pathlib import Path
 import cv2,numpy as np
 from PIL import Image,ImageOps
@@ -121,7 +121,20 @@ def run(psdfile,out):
         "candidate_maes":{x[1]:x[0] for x in candidates},
         "best_mae":mae
     }))
+    # A failure MUST include actual source-vs-layer images for inspection,
+    # because numerical MAE alone cannot diagnose PSD clipping/blending.
+    view=Image.new("RGB",(SIZE*3,SIZE),(241,242,246))
+    for col,img in enumerate((canonical,candidates[0][3],candidates[1][3])):
+        layer_img=Image.new("RGBA",(SIZE,SIZE),(241,242,246,255))
+        layer_img.alpha_composite(Image.fromarray(img,"RGBA") if isinstance(img,np.ndarray) else img)
+        view.paste(layer_img.convert("RGB"),(col*SIZE,0))
+    view.thumbnail((1350,490))
+    view.save(out/"composition_debug.jpg",quality=79)
     if mae>48.0:
+        print("KOMA_CORE007_COMPOSE_DEBUG_BEGIN")
+        for line in textwrap.wrap(base64.b64encode((out/"composition_debug.jpg").read_bytes()).decode(),120):
+            print(line)
+        print("KOMA_CORE007_COMPOSE_DEBUG_END")
         raise ValueError(f"FAIL_SOURCE_LAYER_COMPOSITION_PARITY: {mae:.2f}; cannot animate falsely ordered layers")
     report={
       "status":"SOURCE_PSD_LAYER_ANIMATION_DIAGNOSTIC",
