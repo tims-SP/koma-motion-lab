@@ -1,0 +1,158 @@
+{
+  "schema": "koma-core008-asset-plan/1",
+  "stage": "PLAN_ONLY",
+  "character": {
+    "id": "aka-seagetch",
+    "original_author": "seagetch",
+    "license": "CC-BY-4.0",
+    "source": "Inochi2D official tutorial; complete Aka.inx needs native parameter verification"
+  },
+  "coordinate_system": {
+    "camera": "fixed_orthographic",
+    "positive_yaw": "nose_moves_toward_image_right",
+    "reference_angle": 0,
+    "geometry_angles": [
+      0,
+      15,
+      30,
+      45
+    ],
+    "mirrored_direction": "separate_test_only"
+  },
+  "source_asset_contract": [
+    {
+      "key": "psd_source",
+      "uri": "Inochi2D/inochi2d-docs/docs/source/creator/first-model/tutorial-aka.psd",
+      "type": "ORIGINAL_2D",
+      "required": true,
+      "sha256": "VERIFY_AT_RUN"
+    },
+    {
+      "key": "inx_tutorial",
+      "uri": "Inochi2D/inochi2d-docs/docs/source/creator/first-model/tutorial-aka02.inx",
+      "type": "ORIGINAL_2D_RIG_LAYOUT",
+      "required": true,
+      "sha256": "VERIFY_AT_RUN"
+    },
+    {
+      "key": "inx_complete",
+      "uri": "Inochi2D/example-models/Aka.inx (LFS POINTER — FETCH REAL BINARY)",
+      "type": "NATIVE_ANIMATION_REFERENCE",
+      "required": false,
+      "sha256": "VERIFY_AT_RUN",
+      "status": "NOT_YET_VERIFIED"
+    }
+  ],
+  "generated_view_jobs": [
+    {
+      "id": "aka_head_yaw_plus_030",
+      "nominal_yaw_degrees": 30,
+      "count": 4,
+      "reference_images": [
+        "official_source_front",
+        "original_psd_parts_contact"
+      ],
+      "prompt_id": "CORE008_30_V1",
+      "status": "NOT_GENERATED",
+      "release_directory": "generated/aka/yaw_plus_030"
+    },
+    {
+      "id": "aka_head_yaw_plus_045",
+      "nominal_yaw_degrees": 45,
+      "count": 4,
+      "reference_images": [
+        "official_source_front",
+        "original_psd_parts_contact",
+        "approved_yaw_plus_030_optional"
+      ],
+      "prompt_id": "CORE008_45_V1",
+      "status": "NOT_GENERATED",
+      "release_directory": "generated/aka/yaw_plus_045"
+    }
+  ],
+  "review_angle_only": [
+    15,
+    7.5,
+    22.5,
+    37.5
+  ],
+  "output_contract": {
+    "front_source_uv": "IMMUTABLE",
+    "new_view_uv": "REGISTER_EXPLICITLY_PER_PART",
+    "source_layer_structure": "PRESERVE",
+    "candidate_status": "GENERATED_UNREGISTERED",
+    "accepted_status_requires": [
+      "IMAGE_IDENTITY_REVIEW",
+      "ANGLE_LANDMARK_REVIEW",
+      "SEGMENT_COMPOSITE_REVIEW",
+      "VIEW_UV_REGISTRATION",
+      "VIDEO_VISUAL_REVIEW"
+    ],
+    "binary_artifacts": "DRAFT_RELEASE_ONLY",
+    "source_repository": "TEXT_ONLY"
+  },
+  "pipeline_steps": [
+    {
+      "id": "A",
+      "task": "SOURCE_FREEZE_NATIVE_RIG_AUDIT",
+      "depends_on": [],
+      "status": "PLANNED"
+    },
+    {
+      "id": "B",
+      "task": "GPT_CANDIDATE_IMAGES_30_45",
+      "depends_on": [
+        "A"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "C",
+      "task": "SELECT_AND_SEGMENT_BY_ORIGINAL_PSD_ID",
+      "depends_on": [
+        "B"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "D",
+      "task": "PART_UV_SURFACE_AND_OCCLUSION_REGISTRATION",
+      "depends_on": [
+        "C"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "E",
+      "task": "TURN_VIDEO_FINAL_MP4_FRAME_AUDIT",
+      "depends_on": [
+        "D"
+      ],
+      "status": "PLANNED"
+    }
+  ],
+  "acceptance_targets": {
+    "source_front": "SAME_RENDERER_ZERO_SHELL_LEAKAGE; NATIVE_REFERENCE_PARITY_SEPARATE",
+    "generated_anchor_silhouette_iou_min": 0.9,
+    "selected_anchor_landmark_error_head_width_max": 0.02,
+    "sampled_angles": [
+      0,
+      7.5,
+      15,
+      22.5,
+      30,
+      37.5,
+      45
+    ],
+    "video_frames": 96,
+    "video_fps": 24,
+    "final_review_resolution": [
+      1920,
+      1080
+    ],
+    "visual_acceptance": "DIRECT_REVIEW_REQUIRED",
+    "skin_completion": "FAIL_UNTIL_GENUINE_MATCHED_SIDE_ART_AND_REPROJECTION_QA"
+  },
+  "license_notice": "Original Aka art and rig by seagetch, CC BY 4.0; generated derivatives require attribution and provenance.",
+  "note": "Planning metadata only. No source/generation/mesh/video produced by this document."
+}
