@@ -4,6 +4,9 @@ var character: GDCubismUserModel
 var tick: float = 0.0
 
 func _ready() -> void:
+    if OS.get_environment("GODOT004_BG_WHITE") == "1":
+        RenderingServer.set_default_clear_color(Color(0.98, 0.98, 0.98, 1.0))
+        print("GODOT004_WHITE_BACKGROUND_ENABLED")
     print("GODOT002_PHASE_BEFORE_CONSTRUCT")
     character = GDCubismUserModel.new()
     print("GODOT002_PHASE_AFTER_CONSTRUCT")
@@ -43,19 +46,31 @@ func _ready() -> void:
         character.scale *= diagnostic_zoom
         character.position += Vector2(diagnostic_dx, diagnostic_dy)
         print("GODOT002_DIAGNOSTIC_AUTOFRAME=", diagnostic_zoom, " OFFSET=", Vector2(diagnostic_dx, diagnostic_dy))
+    if OS.get_environment("GODOT004_HIRES") == "1":
+        character.position *= 2.0
+        character.scale *= 2.0
+        print("GODOT004_HIRES_2X_APPLIED")
     print("GODOT002_MODEL_CANVAS=", dims, " SCALE=", factor)
     if OS.get_environment("GODOT002_DISABLE_MOTIONS") == "1":
         print("GODOT002_STATIC_MODEL_LOAD_PASS")
         return
     var motions: Dictionary = character.get_motions()
     print("GODOT002_MOTIONS=", JSON.stringify(motions))
-    if not motions.has("nod"):
-        push_error("GODOT002_MOTION_NOD_MISSING")
+    var motion_name := OS.get_environment("GODOT004_MOTION_GROUP")
+    if motion_name.is_empty():
+        motion_name = "nod"
+    if motion_name != "nod" and motion_name != "idle":
+        push_error("GODOT004_UNSUPPORTED_MOTION_GROUP")
+        get_tree().quit(26)
+        return
+    if not motions.has(motion_name):
+        push_error("GODOT004_MOTION_GROUP_MISSING=" + motion_name)
         get_tree().quit(25)
         return
     character.playback_process_mode = GDCubismUserModel.IDLE
-    character.start_motion("nod", 0, GDCubismUserModel.PRIORITY_FORCE)
+    character.start_motion(motion_name, 0, GDCubismUserModel.PRIORITY_FORCE)
     print("GODOT002_REAL_MOTION_STARTED")
+    print("GODOT004_REAL_MOTION_GROUP_STARTED=", motion_name)
 
 func _process(delta: float) -> void:
     tick += delta
