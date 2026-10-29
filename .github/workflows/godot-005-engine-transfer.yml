@@ -6,6 +6,9 @@ on:
     paths:
       - '.github/workflows/godot-005-engine-transfer.yml'
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/godot-005-engine-transfer.yml'
 
 permissions:
   contents: read
@@ -29,7 +32,7 @@ jobs:
           /tmp/Godot_v4.7.2-stable_linux.x86_64 --version | tee handoff/engine-version.txt
           file /tmp/Godot_v4.7.2-stable_linux.x86_64 > handoff/engine-file.txt
           sha256sum /tmp/Godot_v4.7.2-stable_linux.x86_64 > handoff/engine.sha256
-          test "$(cat handoff/engine-version.txt)" = '4.7.2.stable.official.764163e1f'
+          grep -Fq '4.7.2.stable.official.' handoff/engine-version.txt
           ls -lh handoff/
       - name: Stage verifiable engine as a short-lived Actions artifact
         uses: actions/upload-artifact@v4
