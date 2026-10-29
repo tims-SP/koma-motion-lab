@@ -2,6 +2,11 @@ name: RENDER-001 · Godot Xvfb Mesa movie proof
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/godot-render-001.yml'
+      - 'experiments/godot-render-001/**'
+      - 'scripts/godot_render_001_verify.py'
   push:
     branches: [main]
     paths:
