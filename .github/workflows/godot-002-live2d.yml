@@ -86,6 +86,12 @@ jobs:
           test -s "$lib"
           mkdir -p "$RUNNER_TEMP/gd002-project/addons"
           cp -a demo/addons/gd_cubism "$RUNNER_TEMP/gd002-project/addons/"
+          # The editor requests linux.debug; use the exact same tested template_release
+          # shared object for both editor import and runtime. No mocked model class.
+          sed -i 's@bin/libgd_cubism.linux.debug.x86_64.so@bin/libgd_cubism.linux.release.x86_64.so@g' \
+            "$RUNNER_TEMP/gd002-project/addons/gd_cubism/gd_cubism.gdextension"
+          # Demo scenes are not part of the experiment and can introduce unrelated errors.
+          rm -rf "$RUNNER_TEMP/gd002-project/addons/gd_cubism/example"
           sha256sum "$lib" | tee "$GITHUB_WORKSPACE/out/godot-002/gdcubism-library.sha256"
       - name: Install official Godot 4.7.2 Linux binary
         shell: bash
@@ -111,6 +117,10 @@ jobs:
           xvfb-run -a -s '-screen 0 1280x720x24' \
             "$GODOT_BIN" --editor --path "$RUNNER_TEMP/gd002-project" --import \
             2>&1 | tee out/godot-002/import.log
+          if grep -E 'GDExtension dynamic library not found|Can.t open dynamic library|SCRIPT ERROR|Failed loading.*gd_cubism' out/godot-002/import.log; then
+            echo "GODOT002_FAIL_IMPORT_HAS_EXTENSION_ERRORS"
+            exit 21
+          fi
           xvfb-run -a -s '-screen 0 1280x720x24' \
             "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
             --rendering-method gl_compatibility --rendering-driver opengl3 \
