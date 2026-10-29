@@ -281,6 +281,16 @@ jobs:
             --draft \
             --title "GODOT-002 private visual QA #${GITHUB_RUN_NUMBER}" \
             --notes "Draft only: unlicensed game-derived stills and motion preview. No public release, and visual/motion fidelity has NOT passed unless the independent summary explicitly says so."
+      - name: Temporary video transfer attachment for owner's ChatGPT preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-002-owner-video-${{ github.run_number }}
+          path: |
+            out/godot-002/preview.mp4
+            out/godot-002/contact-sheet.jpg
+          if-no-files-found: warn
+          retention-days: 1
       - name: Upload text-only diagnostic reports
         if: always()
         uses: actions/upload-artifact@v4
