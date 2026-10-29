@@ -155,6 +155,15 @@ jobs:
             echo "GODOT002_FAIL_IMPORT_HAS_EXTENSION_ERRORS"
             exit 21
           fi
+          # First prove that GDCubism can be instantiated independently of
+          # real MOC3 parsing. This probe intentionally does NOT count as playback.
+          GODOT002_CONSTRUCT_ONLY=1 xvfb-run -a -s '-screen 0 1280x720x24' \
+            "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
+            --audio-driver Dummy \
+            --rendering-method gl_compatibility --rendering-driver opengl3 \
+            --quit-after 5 \
+            2>&1 | tee out/godot-002/construct-only.log
+          grep -q 'GODOT002_CONSTRUCT_ONLY_PASS' out/godot-002/construct-only.log
           set +e
           xvfb-run -a -s '-screen 0 1280x720x24' \
             "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
