@@ -39,6 +39,21 @@ def compare(a,b):
         "reference_coverage":float(x.mean())
     }
 
+# Critical regression: first attempt had valid 3D silhouettes but all-black
+# character surfaces because the custom shader sampled the textures wrongly.
+# A structural/shape PASS must never mask lost artwork color.
+color_checks={}
+for geometry_name in ("visual_hull","fixed_extrusion"):
+    original=load(BASE/geometry_name/"0000.png")
+    subject=mask(original)
+    if subject.sum()<5000:raise SystemExit("FAIL_SOURCE_SUBJECT_BLANK "+geometry_name)
+    pixels=original[subject]
+    mean_luma=float(pixels.mean())
+    not_black=float((pixels.max(axis=1)>45).mean())
+    color_checks[geometry_name]={"mean_rgb_subject":mean_luma,
+                                 "fraction_subject_brightness_gt45":not_black}
+    if mean_luma<30 or not_black<0.30:
+        raise SystemExit(f"FAIL_ARTWORK_TEXTURE_BLACK {geometry_name}: {color_checks[geometry_name]}")
 scored={}
 for name in MODES:
     frames=[]
@@ -64,6 +79,7 @@ side_naive=summary["fixed_extrusion"]["by_angle"]["90.0"]
 front=summary["visual_hull"]["by_angle"]["0.0"]
 reported={
  "experiment":"KOMA_CORE005",
+ "source_color_preservation_smoke":color_checks,
  "status":"GEOMETRY_AND_IMAGE_METRICS_COMPUTED_ART_NOT_ACCEPTED",
  "source":"5 CC0 anime 2D rendered views from original true 3D reference",
  "geometry_inputs":"ONLY_FRONT_AND_SIDE_2D_SILHOUETTES",
