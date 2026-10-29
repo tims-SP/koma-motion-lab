@@ -215,7 +215,10 @@ jobs:
           PY
           # Reframe only the second movie; keep the original static reference.
           python3 scripts/godot_002_autoframe.py > out/godot-002/autoframe.env
+          set -a
           source out/godot-002/autoframe.env
+          set +a
+          echo "GODOT002_EXPORTED_AUTOFRAME_ZOOM=$GODOT002_ZOOM"
           set +e
           xvfb-run -a -s '-screen 0 1280x720x24' \
             "$GODOT_BIN" --path "$RUNNER_TEMP/gd002-project" \
