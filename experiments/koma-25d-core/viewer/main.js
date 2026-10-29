@@ -15,7 +15,8 @@ async function setup(){
   const appearance=await fetch('/asset/appearance.json').then(r=>{if(!r.ok)throw Error('appearance manifest missing');return r.json();});
   if(appearance.production_accepted!==false)throw Error('Diagnostic canary provenance must be non-production');
   const loadCanary=async (record)=>{
-    if(record.provenance!=='SYNTHETIC_DIAGNOSTIC_ONLY')throw Error('Unverified view registration: '+record.provenance);
+    if(!['SYNTHETIC_DIAGNOSTIC_ONLY','REGISTERED_UNREVIEWED'].includes(record.provenance))
+      throw Error('Unverified view registration: '+record.provenance);
     const image=await new THREE.TextureLoader().loadAsync('/asset/'+record.texture);
     image.colorSpace=THREE.SRGBColorSpace;
     image.magFilter=THREE.LinearFilter;
@@ -106,8 +107,9 @@ async function setup(){
   $('detail').textContent=doc.meshes.length+' meshes / '+bones.length+
     ' bones / '+verts+' vertices · original UV';
   window.__komaDiagnostics={meshes:doc.meshes.length,bones:bones.length,verts,
-    source:doc.source,sourceAnimationParity:'RAW_CLIPS_ONLY',newViews:'DIAGNOSTIC_ONLY',
-    appearanceProvenance:'SYNTHETIC_DIAGNOSTIC_ONLY',clips:Object.keys(doc.clips||{})};
+    source:doc.source,sourceAnimationParity:'RAW_CLIPS_ONLY',
+    newViews:appearance.side.provenance,appearanceProvenance:appearance.side.provenance,
+    clips:Object.keys(doc.clips||{})};
   const lerpKeys=(track,t)=>{
     const {times,values}=track;
     if(t<=times[0])return values[0];
