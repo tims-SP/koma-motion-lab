@@ -5,6 +5,7 @@ on:
     branches: [feature/koma-25d-core-020]
     paths:
       - '.github/workflows/koma-25d-param-domain-020.yml'
+      - 'experiments/koma-25d-core/tools/headyaw_domain20.py'
   workflow_dispatch:
 
 permissions:
@@ -74,6 +75,10 @@ jobs:
           out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
           print("CORE020_ALL_EAR_ANCESTRY_PARAMETER_DEFAULTS",json.dumps(result)[:10000])
           PY
+      - name: Verify actual source parameter input normalization and bilinear interpolation
+        run: |
+          python3 experiments/koma-25d-core/tools/headyaw_domain20.py \
+            --source-domain experiments/koma-25d-core/out/core020/source_headyaw_domain.json
       - uses: actions/upload-artifact@v4
         with:
           name: CORE020-actual-Aka-HeadYaw-source-parameter-domain
