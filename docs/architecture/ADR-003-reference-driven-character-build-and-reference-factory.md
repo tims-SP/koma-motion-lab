@@ -285,6 +285,314 @@ Each Reference Atlas release must record:
 
 A reference update can invalidate previous QA thresholds. References are versioned inputs, not informal documentation.
 
+
+## Additional closed-loop invariants: anchors, regional truth, dependency invalidation, compositing
+
+The following contracts complete the asset model. They are required before scaling from the first Aka proof to multiple views, expressions, characters, or automated rebuilds.
+
+### 13. Anchor Lattice: view, expression, and variant anchors
+
+Character identity cannot be represented only by yaw.
+
+The reusable reference model is a sparse **Anchor Lattice**:
+
+    Character Identity
+      x View Anchor
+      x Expression Anchor
+      x Part Variant
+
+Do not materialize the full Cartesian product. Use a sparse graph of authoritative anchors.
+
+Initial view anchors:
+
+    0
+    45
+    90
+    135
+    180
+
+Optional denser structural anchors:
+
+    0
+    22.5
+    45
+    67.5
+    90
+    112.5
+    135
+    157.5
+    180
+
+Initial expression anchors should remain minimal:
+
+    neutral
+    blink
+    mouth_open
+    smile
+
+The first character proof only requires a complete neutral multi-view set. Expression anchors may be authored at selected views and propagated through the accepted rig/ArtMesh system later.
+
+Part-variant anchors may include:
+
+    eye_open / eye_closed
+    mouth_closed / mouth_open
+    front_hair_variant
+    ear_variant
+    accessory_variant
+
+Every anchor must have a stable ID and explicit authority/provenance.
+
+### 14. Canonicalization is explicit and reversible
+
+The source artwork and the canonical model-sheet view are distinct assets.
+
+Never modify SOURCE_TRUTH merely to make it easier for downstream models.
+
+Record a reversible source -> canonical transform including, where applicable:
+
+    source asset/version
+    source rig parameters
+    crop
+    scale
+    translation
+    rotation
+    camera/pivot
+    background/alpha handling
+    color-space conversion
+    canonicalization tool/version
+
+The canonical front used for generation is a derived reference asset, not a replacement for the original source.
+
+### 15. Regional truth, authority, confidence, and uncertainty
+
+Whole-image provenance is too coarse.
+
+A single accepted view may contain regions with different authority levels. Provenance must therefore be available at semantic-part and, where useful, mask/pixel-region level.
+
+Example:
+
+    Aka_180
+      rear_hair:
+        authority = HUMAN_APPROVED_DESIGN
+        confidence = 1.0
+      ear_back_L:
+        authority = AUTHORED_HIDDEN_AREA
+        confidence = 0.92
+      collar_hidden:
+        authority = GENERATED_CANDIDATE
+        confidence = 0.71
+      palette:
+        authority = SOURCE_TRUTH
+
+Recommended fields:
+
+    authority
+    source_asset_ids[]
+    source_region_ids[]
+    confidence
+    uncertainty
+    editable
+    locked
+    approval_id
+    notes
+
+Optional confidence/uncertainty maps may be stored for generated geometry, masks, depth, or hidden-region completion.
+
+Agent repair must preferentially modify low-authority / low-confidence regions and must not rewrite locked SOURCE_TRUTH or GOLDEN regions without an explicit new-version operation.
+
+### 16. Asset Dependency DAG and invalidation
+
+Lineage alone is insufficient. The build system must know when downstream assets are stale.
+
+Represent the character build as a dependency DAG, for example:
+
+    source_front
+      -> golden_090_v1
+      -> segmentation_090
+      -> correspondence_v1
+      -> scaffold_v3
+      -> uv_v2
+      -> turntable_v5
+
+If a parent asset changes:
+
+    golden_090_v1 -> golden_090_v2
+
+all affected descendants must become:
+
+    STALE
+
+until explicitly rebuilt or revalidated.
+
+Asset states therefore include at least:
+
+    CURRENT
+    STALE
+    REBUILDING
+    REVALIDATED
+    SUPERSEDED
+
+The dependency system must support:
+
+- direct dependencies;
+- transitive invalidation;
+- dependency hashes;
+- rebuild reasons;
+- revalidation without rebuild when a change is proven irrelevant;
+- reproducible rebuild ordering.
+
+A stale downstream artifact must not be silently promoted, rendered, or used for production QA.
+
+### 17. Stable semantic part identity across versions
+
+Semantic role names alone are not stable enough.
+
+Every persistent semantic part needs an immutable part UUID.
+
+Example:
+
+    part_uuid = hair.rear.cluster.03
+
+If a later version splits or merges a part, record migration relations rather than silently renumbering:
+
+    parent_part_uuid
+    child_part_uuids[]
+    split_from
+    merged_from[]
+    supersedes
+
+Rig bindings, visibility rules, correspondence, and animation references must target stable semantic IDs/UUIDs rather than positional array indexes.
+
+### 18. Compositing and appearance schema
+
+A 2.75D character part is more than RGBA + mesh + UV.
+
+The schema must preserve, where available:
+
+    part_uuid
+    semantic_role
+
+    rgba
+    lineart
+    base_color
+    baked_shadow
+    emission
+    normal_optional
+
+    opacity
+    blend_mode
+
+    mask_sources[]
+    mask_mode
+
+    draw_order
+    physical_depth
+
+    alpha_mode
+    underpaint_padding
+    overscan
+
+    authority_map
+    confidence_map
+
+Critical distinction:
+
+    draw_order != physical_depth
+
+2D authoring may intentionally place a part earlier/later for visual composition even when that order is not a physically correct Z relationship. Preserve both concepts independently.
+
+### 19. Alpha, edge bleed, and hidden-underpaint safety
+
+Generated or separated layers must not stop exactly at the visible mask boundary.
+
+Every deformable/rotating layer needs configurable hidden margin:
+
+    underpaint_padding
+    edge_bleed
+    overscan
+    dilation_radius
+
+The image contract must explicitly define:
+
+    straight alpha vs premultiplied alpha
+    RGB values under transparent pixels
+    texture-border behavior
+    filtering behavior
+
+This prevents white/black fringes, transparent holes, and exposed empty pixels when a mesh deforms or rotates.
+
+### 20. Line art and paint may be separate production stages
+
+The workflow must support a conservative alternative to whole-image regeneration:
+
+    structural guide
+      -> accepted lineart / contour
+      -> reference-guided color/detail transfer
+      -> final candidate
+
+This becomes the fourth Aka 90-degree experimental arm, **D**.
+
+The purpose is to test whether preserving geometry/line structure first and transferring Aka color/detail second produces better identity retention than regenerating the entire view.
+
+This is optional for production, but the asset schema must not force line art and color to be inseparable.
+
+### 21. View-conditioned skin transition contract
+
+View-specific textures require a deterministic runtime transition model.
+
+Every view-conditioned part may define:
+
+    support_yaw_range
+    preferred_yaw
+    blend_in_curve
+    blend_out_curve
+    visibility_curve
+    seam_zone
+    hysteresis
+    fallback_view
+
+Do not leave texture switching to ad-hoc runtime thresholds.
+
+The transition model must be validated at anchor and mid-angle frames for:
+
+    temporal popping
+    double features
+    seam exposure
+    alpha discontinuity
+    inconsistent baked lighting
+    visibility inversion
+
+### 22. Human review protocol must be reproducible
+
+Human approval is the final artistic authority, but the review procedure itself must be controlled.
+
+For A/B/C/D comparisons:
+
+- use the same crop, scale, background, and target angle;
+- use the same contact-sheet layout;
+- randomize candidate order where practical;
+- hide provider/model identity during first-pass visual ranking where practical;
+- score the same dimensions for every candidate;
+- record rejection reasons using the failure taxonomy;
+- preserve the reviewed contact sheet and chosen candidate IDs.
+
+Suggested review dimensions:
+
+    identity
+    angle accuracy
+    silhouette
+    facial structure
+    hair structure
+    ears/accessories
+    costume
+    asymmetry
+    line quality
+    color/palette
+    hidden-region plausibility
+    reference contamination
+
+A human decision without the reviewed evidence/contact sheet is not sufficient for promotion to GOLDEN.
+
 ## Reference Factory instead of one universal reference character
 
 A single Seed-san/VRM character is useful for smoke tests but is too narrow to serve as the universal reference. The preferred long-term design is a small **Reference Factory** built from license-clear source assets that can deterministically produce task-specific reference material.
@@ -366,6 +674,19 @@ The reusable output of the factory is not one character. It is a library of acce
 
 ```text
 reference-atlas/
+  anchors/
+    views/
+      000/
+      045/
+      090/
+      135/
+      180/
+    expressions/
+      neutral/
+      blink/
+      mouth-open/
+      smile/
+    variants/
   views/
     000/
     045/
@@ -409,6 +730,9 @@ reference-atlas/
     approved-hidden-regions/
     asymmetry/
   lineage/
+  dependencies/
+  compositing/
+  regional-truth/
   qa/
     pass/
     fail/
@@ -488,6 +812,7 @@ Required inputs:
 - fixed neutral expression;
 - fixed canvas, crop, camera convention, and scale;
 - explicit coordinate/yaw/image/color-space contract;
+- a reversible source -> canonical transform manifest;
 - a written character-fact checklist for face, hair, ears, accessories, clothing, and asymmetries;
 - optional high-resolution identity anchors for face/hair/ears/accessories where needed.
 
@@ -544,7 +869,7 @@ Acceptance:
 - publish the actual comparison sheet and failure cases;
 - do not treat a generated PSD as correct merely because layers exist.
 
-### Phase M4 — One-angle A/B/C experiment: Aka 90 degrees
+### Phase M4 — One-angle A/B/C/D experiment: Aka 90 degrees
 
 Before generating the entire turnaround, isolate one difficult target: 90 degrees.
 
@@ -573,9 +898,19 @@ Aka identity
 -> high-fidelity Aka 90 repair/refinement
 ```
 
-Keep the target crop/angle/output contract identical across A/B/C.
+**D. structure/lineart first, reference-guided color/detail transfer**
 
-Generate a candidate set for each arm rather than relying on one sample. Persist provider/model/checkpoint, prompt/reference hashes, parameters, parent/repair lineage and QA results for every candidate.
+```text
+90-degree structural guide
+-> accepted 90-degree lineart/contour
++ Aka source color/detail references
++ semantic correspondence controls
+-> Aka 90-degree colored candidate
+```
+
+Keep the target crop/angle/output contract identical across A/B/C/D.
+
+Generate a candidate set for each arm rather than relying on one sample. Preserve regional authority/confidence metadata when repairs or transfers combine multiple sources. Persist provider/model/checkpoint, prompt/reference hashes, parameters, parent/repair lineage and QA results for every candidate.
 
 Acceptance criteria:
 
@@ -636,7 +971,7 @@ body
 major_accessory
 ```
 
-Then establish the same semantic part IDs across views.
+Then establish the same stable semantic part UUIDs across views and versions.
 
 Acceptance:
 
@@ -668,6 +1003,7 @@ This is **not** a traditional full character-modeling milestone. Geometry exists
 
 Acceptance:
 
+- scaffold dependencies point to the exact Golden views, masks, correspondence graph, and schema versions;
 - 0-degree source view remains high-fidelity;
 - front/back occlusion is correct at anchor angles;
 - no requirement to create a production-quality closed 3D avatar.
@@ -703,7 +1039,9 @@ Check:
 - seam/texture switching;
 - bad occlusion;
 - depth inversion;
-- silhouette discontinuity.
+- silhouette discontinuity;
+- view-conditioned texture blend/visibility curve failures;
+- alpha-edge/underpaint exposure.
 
 Acceptance requires decoded video and extracted-frame inspection, not merely successful encoding.
 
@@ -740,7 +1078,7 @@ QA is layered:
 
 1. **Human visual acceptance** — final authority for character identity and artistic correctness.
 2. **Reference comparison** — pass/fail examples for each operation, with a stable failure taxonomy and repair route.
-3. **Structural checks** — yaw, camera, silhouette, depth, landmarks, semantic masks, part ordering.
+3. **Structural checks** — yaw, camera, silhouette, depth, landmarks, semantic masks, part ordering, regional authority/confidence and dependency freshness.
 4. **Cross-view consistency metrics** — research metrics such as MEt3R-style comparison where practical.
 5. **Runtime/video checks** — decoded frame inspection at anchors and mid-angles.
 
@@ -755,7 +1093,7 @@ input example
 accepted output example
 optional rejected examples
 structure guide
-metadata describing the exact task, coordinate/camera/color contract, authority/precedence, and reference version
+metadata describing the exact task, coordinate/camera/color contract, authority/precedence, regional truth/confidence, dependency version, and reference version
 ```
 
 Examples are preferable to prose when an exact visual result is important.
@@ -801,7 +1139,9 @@ For external datasets/models:
 - record whether redistribution is allowed;
 - distinguish code license from checkpoint/data license;
 - record provider/model/checkpoint, prompt template version, reference/content hashes and generation lineage for generated candidates;
-- version Reference Atlas releases and never mutate GOLDEN assets in place.
+- version Reference Atlas releases and never mutate GOLDEN assets in place;
+- persist dependency hashes and STALE/revalidation state;
+- preserve stable part UUID migration records across split/merge changes.
 
 ## What is deliberately NOT decided yet
 
@@ -824,17 +1164,18 @@ The architecture intentionally makes these replaceable.
 
 The next work should be ordered as follows:
 
-1. freeze the coordinate/yaw/camera/image/color-space contract and the asset lifecycle/provenance schema;
+1. freeze the coordinate/yaw/camera/image/color-space contract, canonicalization manifest, Anchor Lattice schema, and asset lifecycle/provenance schema;
 2. inventory and provenance for Aka/Midori + small VRM/VRoid reference bank;
 3. render nine-yaw structural references with fixed, machine-recorded camera metadata;
 4. benchmark Aka flatten -> semantic decomposition -> compare with real PSD/INX;
 5. prepare one accepted generic 90-degree task example and neutral structural guide that cannot donate identity;
 6. define Aka source truth, optional detail anchors, and the policy for human-approved hidden/back design truth;
-7. run Aka 90-degree A/B/C comparison using N candidates per arm and full lineage metadata;
-8. inspect actual candidates, classify failures, select and freeze the first accepted Aka 90-degree Golden view;
-9. only then generate 45/135/180 using the non-linear reference graph and create a five-view contact sheet;
-10. run reverse/loop consistency checks and explicitly inspect asymmetries;
-11. only after five-view acceptance begin semantic correspondence and spatial scaffold work.
+7. run Aka 90-degree A/B/C/D comparison using N candidates per arm, regional truth/confidence, and full lineage metadata;
+8. inspect actual candidates with the controlled human-review protocol, classify failures, select and freeze the first accepted Aka 90-degree Golden view;
+9. create the dependency DAG and verify that changing the Golden 90-degree parent marks dependent masks/correspondence/scaffold/UV/video artifacts STALE;
+10. only then generate 45/135/180 using the non-linear reference graph and create a five-view contact sheet;
+11. run reverse/loop consistency checks and explicitly inspect asymmetries;
+12. only after five-view acceptance begin stable-UUID semantic correspondence and spatial scaffold work.
 
 **Do not proceed to rig/IK automation before this chain is visually demonstrated.**
 
@@ -842,15 +1183,19 @@ The next work should be ordered as follows:
 
 This ADR moves from PROPOSED to ACCEPTED FOR CHARACTER-BUILD RESEARCH only after the repository contains reproducible evidence for:
 
-- one versioned coordinate/camera/image/color-space contract;
-- one versioned asset lifecycle / lineage / provenance schema;
+- one versioned coordinate/camera/image/color-space contract plus reversible canonicalization manifest;
+- one versioned Anchor Lattice definition;
+- one versioned asset lifecycle / lineage / provenance schema with regional authority/confidence;
 - one deterministic Reference Factory structural render set;
 - one Aka semantic-decomposition comparison against real source layers;
-- one A/B/C Aka 90-degree comparison using candidate sets;
+- one A/B/C/D Aka 90-degree comparison using candidate sets and controlled human review;
 - one explicitly approved Aka 90-degree Golden view with source/design-truth provenance;
 - an accepted five-view Aka reference set with asymmetry and reverse/loop consistency review;
 - documented failure taxonomy, representative rejected examples, and chosen repair strategies;
-- semantic correspondence capable of split/merge/occlusion states;
+- semantic correspondence capable of split/merge/occlusion states with stable part UUIDs;
+- a working dependency invalidation proof that marks descendants STALE when a Golden parent changes;
+- a compositing/appearance schema preserving draw order separately from physical depth, blend/mask/alpha semantics, and hidden underpaint margins;
+- a deterministic view-conditioned texture transition contract;
 - evidence that Golden assets and Reference Atlas versions are immutable/versioned.
 
 Production promotion remains a separate gate in `tims-SP/koma-motion`.
