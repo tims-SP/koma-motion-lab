@@ -29,9 +29,9 @@ ys,xs=np.where(foreground)
 if len(xs)<400:raise RuntimeError("Native character head not found in real video")
 center_x=int(np.median(xs))
 top_y=int(np.percentile(ys,4))
-side=370
+side=285
 left=max(0,min(w-side,center_x-side//2))
-upper=max(0,min(h-side,top_y-12))
+upper=max(0,min(h-side,top_y-78))
 crop=(left,upper,side,side)
 outmp4=a.out/"native_head_closeup.mp4"
 subprocess.run(["ffmpeg","-hide_banner","-loglevel","error","-y",
@@ -61,6 +61,7 @@ report={
  "source":"Actual MP4 from pinned Inox2D OpenGL renderer, no generated art",
  "input_movie":"native_head_yaw.mp4",
  "head_crop_xywh":crop,
+ "cropping_correction":"SHOW_COMPLETE_FOX_EARS_WITH_HEAD_FOCUSED_FRAMING",
  "output":"native_head_closeup.mp4",
  "input_size":[w,h],"crop_output_size":[640,640],
  "decoded_samples":len(imgs),"contact_indices":sel,
