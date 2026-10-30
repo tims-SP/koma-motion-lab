@@ -1,0 +1,123 @@
+name: CORE-020 · 17 native original Aka ear HeadYaw frames and encoded QA
+
+on:
+  push:
+    branches: [feature/koma-25d-core-020]
+    paths:
+      - '.github/workflows/koma-25d-core-020.yml'
+      - 'experiments/koma-25d-core/tools/patch_inox_ears_only19.py'
+      - 'experiments/koma-25d-core/tools/qa_native_ears_only19.py'
+      - 'experiments/koma-25d-core/tools/qa_native_pose20.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native-puppet-preserved-ear-draw-filter:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install original OpenGL/X11 runtime and PNG QA
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libgl1-mesa-dev libegl1-mesa-dev libx11-dev libxkbcommon-dev \
+            libxkbcommon-x11-dev libxcursor-dev libxi-dev libxrandr-dev \
+            libxcb-xfixes0-dev libwayland-dev pkg-config xvfb xauth xdotool mesa-utils ffmpeg
+          python3 -m venv "$RUNNER_TEMP/core019"
+          "$RUNNER_TEMP/core019/bin/pip" install "Pillow==12.0.0" "numpy==2.2.6"
+          echo "$RUNNER_TEMP/core019/bin" >> "$GITHUB_PATH"
+      - name: Download fixed full Aka INX and pinned upstream Rust renderer
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/koma-25d-core/out/core020
+          curl -fsSL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+          git clone --quiet https://github.com/Inochi2D/inox2d.git "$RUNNER_TEMP/inox2d"
+          git -C "$RUNNER_TEMP/inox2d" checkout -q d4dd9dd7f16b775042cbda44370570abf9a8cf81
+      - name: Patch ONLY debug draw filter, fixed source parameters, source GL resize
+        run: |
+          python experiments/koma-25d-core/tools/patch_inox_fixed8.py \
+            --checkout "$RUNNER_TEMP/inox2d" \
+            --report experiments/koma-25d-core/out/core020/source_parameter_patch.json
+          python experiments/koma-25d-core/tools/patch_inox_ears_only19.py \
+            --checkout "$RUNNER_TEMP/inox2d" \
+            --report experiments/koma-25d-core/out/core020/native_draw_filter.json
+          cargo build --release --manifest-path "$RUNNER_TEMP/inox2d/Cargo.toml" -p render-opengl
+      - name: Render 17 ACTUAL native OpenGL ear-only poses from independent fresh launches
+        run: |
+          set -euo pipefail
+          out=experiments/koma-25d-core/out/core020
+          export DISPLAY=:88 LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe
+          export KOMA_NATIVE_EARS_ONLY=1
+          Xvfb :88 -screen 0 1024x900x24 -ac +extension GLX +render -noreset > "$out/xvfb.log" 2>&1 &
+          xvfbpid=$!
+          sleep 3
+          glxinfo -B > "$out/glxinfo.txt"
+          xdotool mousemove 1010 880 || true
+          for i in $(seq 0 16); do
+            yaw=$(python3 - "$i" <<'PY'
+          import sys
+          i=int(sys.argv[1])
+          print(f"{.5 + .5*(i if i <= 8 else 16-i)/8:.6f}")
+          PY
+            )
+            export KOMA_HEAD_YAW="$yaw"
+            tag=$(printf '%03d' "$i")
+            echo "CORE020_ACTUAL_NATIVE_FRAME index=$tag yaw=$yaw normalized pitch=0.5"
+            "$RUNNER_TEMP/inox2d/target/release/render-opengl" "$RUNNER_TEMP/Aka.inx" > "$out/native_$tag.log" 2>&1 &
+            pid=$!
+            sleep 3
+            if ! kill -0 "$pid" 2>/dev/null; then
+              tail -90 "$out/native_$tag.log"
+              exit 1
+            fi
+            xdotool search --name "Render Inochi2D Puppet" windowmove 0 0 || true
+            sleep 1
+            ffmpeg -hide_banner -loglevel error -y -f x11grab -video_size 1024x900 \
+              -framerate 1 -i :88.0+0,0 -frames:v 1 "$out/native_$tag.x11.png"
+            if grep -Eq "FBO incomplete|GL_INVALID_FRAMEBUFFER_OPERATION|thread.*panicked" "$out/native_$tag.log"; then
+              tail -120 "$out/native_$tag.log"
+              exit 1
+            fi
+            python3 - "$out/native_$tag.x11.png" "$out/native_$tag.png" <<'PY'
+          import sys
+          from PIL import Image
+          Image.open(sys.argv[1]).convert("RGB").crop((0,0,720,880)).save(sys.argv[2])
+          PY
+            kill "$pid" 2>/dev/null || true
+            wait "$pid" || true
+          done
+          kill "$xvfbpid" 2>/dev/null || true
+      - name: Encode ONLY actual GPU-rendered source frames, no optical flow or synthetic in-betweens
+        run: |
+          out=experiments/koma-25d-core/out/core020
+          ffmpeg -hide_banner -loglevel error -y -framerate 4 \
+            -i "$out/native_%03d.png" -vf fps=24 -c:v libx264 \
+            -crf 18 -preset veryfast -pix_fmt yuv420p "$out/actual_native_ear_17pose_hold24.mp4"
+      - name: Decode FINAL real MP4, validate 17 original GL poses and no false 3D claims
+        run: |
+          python experiments/koma-25d-core/tools/qa_native_pose20.py \
+            experiments/koma-25d-core/out/core020
+      - name: Emit decoded real MP4 audit preview in Actions job log
+        run: |
+          python3 - <<'PY'
+          import base64,textwrap
+          from pathlib import Path
+          path=Path('experiments/koma-25d-core/out/core020/real_native_h264_decode_contact.jpg')
+          print('CORE020_ACTUAL_NATIVE_MP4_CONTACT_BEGIN')
+          for line in textwrap.wrap(base64.b64encode(path.read_bytes()).decode(),120):
+              print(line)
+          print('CORE020_ACTUAL_NATIVE_MP4_CONTACT_END')
+          PY
+      - name: Publish actual native OpenGL PNGs and provenance as regular Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE020-17-native-Inox-GL-ear-poses-and-H264
+          path: experiments/koma-25d-core/out/core020/
+          retention-days: 30
+          if-no-files-found: error
