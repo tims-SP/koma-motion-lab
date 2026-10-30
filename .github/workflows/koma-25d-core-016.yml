@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/koma-25d-core-016.yml'
       - 'experiments/koma-25d-core/tools/extract_native_ear16.py'
+      - 'experiments/koma-25d-core/tools/build_native_ear_shell16.py'
   workflow_dispatch:
 
 permissions:
@@ -18,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install bounded original texture reader
-        run: python -m pip install "Pillow==12.0.0"
+        run: python -m pip install "Pillow==12.0.0" "trimesh==4.11.1" "numpy==2.2.6"
       - name: Fetch genuine full Aka INX at pinned commit
         run: |
           curl -fsSL --retry 3 --max-time 180 \
@@ -32,6 +33,11 @@ jobs:
           python experiments/koma-25d-core/tools/extract_native_ear16.py \
             --input "$RUNNER_TEMP/Aka.inx" \
             --out experiments/koma-25d-core/out/core016/native
+      - name: Build actual 3D shell with ORIGINAL source ear UV and TGA front
+        run: |
+          python experiments/koma-25d-core/tools/build_native_ear_shell16.py \
+            --original-ears experiments/koma-25d-core/out/core016/native \
+            --out experiments/koma-25d-core/out/core016/native/original_INX_UV_3D_ear_shell.glb
       - name: Verify no false new-view binding claims
         run: |
           python - <<'PY'
@@ -65,6 +71,8 @@ jobs:
             "$dir/native_ear_texture_contact.png" \
             "$dir/original_Ear_Left.png" \
             "$dir/original_Ear_Right.png" \
+            "$dir/original_INX_UV_3D_ear_shell.glb" \
+            "$dir/original_INX_UV_3D_ear_shell.qa.json" \
             --draft --target "$GITHUB_SHA" \
             --title "CORE-016 original Aka native ArtMesh ear UV + textures" \
             --notes "Original character and rig © seagetch, CC BY 4.0. Native INX source verified. Extracted native ear UV + texture only; source INX binary not redistributed. NOT a new-view UV binding, NOT a successful 3D skin."
