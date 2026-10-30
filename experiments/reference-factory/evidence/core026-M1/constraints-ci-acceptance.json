@@ -1,0 +1,100 @@
+{
+  "schema": "core026-m1c1-ci-acceptance/1",
+  "code_commit": "76d7f70951aab4ce358ef73b9095fcc01889d8cc",
+  "run": 41144806591,
+  "job": 124367323613,
+  "status": "success",
+  "constraints": {
+    "status": "VERIFIED",
+    "records": 62,
+    "multiply": 11,
+    "default_clips": 9,
+    "late_overlaps": [
+      28,
+      15,
+      2156,
+      1954
+    ],
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_receiver_compositor": "NOT_IMPLEMENTED"
+  },
+  "supervisor": {
+    "schema": "core026-m1c1-supervisor/1",
+    "status": "PASS_SOURCE_FACTS_AND_DESIGN_CONTRACT",
+    "constraints_sha256": "2aefaa9ae0829dfe4bfb0e3d1708e037f4ec98fcc52c44e0b88d86b64ddeb482",
+    "records": 62,
+    "source_facts_checked": 62,
+    "multiply_count": 11,
+    "default_clip_count": 9,
+    "late_overlap_counts": [
+      28,
+      15,
+      2156,
+      1954
+    ],
+    "problems": [],
+    "overall_M1": "NOT_ACCEPTED_BY_THIS_CHECK",
+    "runtime_compositor": "NOT_IMPLEMENTED",
+    "natural_3d_turn": "NOT_EVALUATED"
+  },
+  "regressions": {
+    "status": "PASS",
+    "negative_cases": 9,
+    "all_rejected_by_both": true,
+    "repeated_build_identical": true,
+    "original_candidate_unchanged": true,
+    "problems": []
+  },
+  "reference_recovery": {
+    "status": "RESTORED_AND_HASH_VERIFIED",
+    "bundle_sha256": "8b0e9511c2781108a4335e287ab419c7563cf3e54e933d98d79be1eb6c263f73",
+    "full_pngs": 9,
+    "crop_pngs": 9,
+    "natural_3d_turn": "NOT_EVALUATED"
+  },
+  "reference_hash_qa": {
+    "full_sha_verified": 9,
+    "crop_sha_verified": 9,
+    "top_margins": [
+      12,
+      13,
+      13,
+      13,
+      12,
+      13,
+      13,
+      13,
+      12
+    ],
+    "fit_acceptance": false
+  },
+  "text_artifact": {
+    "id": 13019339164,
+    "name": "CORE026-supervisor-text-evidence",
+    "size_in_bytes": 28996,
+    "url": "https://api.github.com/repos/tims-SP/koma-motion-lab/actions/artifacts/13019339164",
+    "archive_download_url": "https://api.github.com/repos/tims-SP/koma-motion-lab/actions/artifacts/13019339164/zip",
+    "expired": false,
+    "created_at": "2026-10-30T23:31:45Z",
+    "expires_at": "2027-01-28T23:29:53Z",
+    "updated_at": "2026-10-30T23:31:45Z",
+    "digest": "sha256:678b88d718d97429d227402895b0b91632c7b2e8dd839bf1abd316e1c2fa0456",
+    "workflow_run": {
+      "id": 41144806591,
+      "repository_id": 1437062786,
+      "head_repository_id": 1437062786,
+      "head_branch": "feature/koma-25d-core-021",
+      "head_sha": "76d7f70951aab4ce358ef73b9095fcc01889d8cc"
+    }
+  },
+  "diagnostic_draft": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-8b4fe7fd1b5e4146569e",
+  "author": "Codex local fallback; mcode execution blocked; no mcode implementation claimed",
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED",
+  "natural_3d_turn": "NOT_ACCEPTED",
+  "legacy_regression": {
+    "run": 41144806561,
+    "job": 124367323502,
+    "status": "success"
+  }
+}

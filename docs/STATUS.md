@@ -18,9 +18,9 @@
 
 ## 下一工单与实际阻塞
 
-M1C1已由Codex本地实现：[验收报告](research/CORE-026-M1C1-local-fallback-acceptance.md)。extract_core026_constraints.py、config/core026-constraints.json已完成62条源事实/接收提案，独立源事实比对通过；9组错误配置均被两个验证器以exit11拒绝，重复build字节一致，verify不改配置。原始10文件/186PNG及默认坐标继续通过。当前为LOCAL_PASS，干净CI结果须实测后补记；不把保存或接入工作流当CI成功。
+M1C1已由Codex本地实现并通过干净CI：[验收报告](research/CORE-026-M1C1-local-fallback-acceptance.md)。代码76d7f70的[监督CI41144806591](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806591)及[旧回归41144806561](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806561)均实际success。62条源事实/接收提案、9组双验证器exit11验拒、重复build一致、verify不改配置、10保护文件/186PNG、默认坐标与18张原生参考SHA均通过。M1C1通过范围仅为源事实和未验证设计契约。
 
-下一步为19槽位的逐姿态可用范围/可见性复核和M1总验收。现有NCC候选仍非拟合真值；receiver均为未验证设计提案，三维深度和运动遮挡UNKNOWN。M1放行后才实施M2，不直接盲调Z。[M1C1精确工单及当前执行归属](plans/CORE-026-M1C1-constraints-order.md)。
+下一步按[M1C2精确工单](plans/CORE-026-M1C2-landmark-and-reference-order.md)完成19槽位逐姿态可用范围/可见性复核和M1总验收。现有NCC候选仍非拟合真值；receiver均为未验证设计提案，三维深度和运动遮挡UNKNOWN。M1放行后才实施M2，不直接盲调Z。[M1C1执行归属](plans/CORE-026-M1C1-constraints-order.md)。
 
 Work已恢复且本地仓库已同步。源像素/10保护文件/186PNG、62默认坐标、11Multiply/9clip及18张原生参考哈希均重新实测通过。监工查看了实际9姿态标点接触图与默认652×652图；19槽位的13图像候选仍有语义限制，所有点仍不自动具备拟合资格。[本轮实际记录](../experiments/reference-factory/evidence/core026-M1/supervisor-resume-and-reference-review.json)。
 

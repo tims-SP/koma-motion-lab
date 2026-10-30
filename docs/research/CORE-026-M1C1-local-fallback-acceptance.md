@@ -1,6 +1,6 @@
 # CORE026 M1C1：本地兜底实现与接收提案验收
 
-日期2026-10-31（Asia/Shanghai）。状态LOCAL_PASS，CI待实际运行。M1整体NOT_ACCEPTED、M2未开始，自然3D转头未验收。
+日期2026-10-31（Asia/Shanghai）。状态PASS_SOURCE_FACTS_AND_RECEIVER_PROPOSALS，本地与干净CI均通过。M1整体NOT_ACCEPTED、M2未开始，自然3D转头未验收。
 
 ## 实际归属与安全边界
 
@@ -52,6 +52,10 @@ python extract_core026_constraints.py --verify
 
 ## CI与下一门禁
 
-已将新生产/监督/篡改检查接入koma-26-supervisor-qa.yml。CI先verify已提交配置，不能先build覆盖它；新增artifact仍仅JSON。工作流接入不等于已运行成功，实际结果后补。
+已将新生产/监督/篡改检查接入koma-26-supervisor-qa.yml。CI先verify已提交配置，不能先build覆盖它；新增artifact仍仅JSON。
 
-下一任务是逐姿态确认19槽位的可用范围与可见性，并完成M1总验收；未知耳根、鼻根、颈连接等不补造。源阴影/层序表还不是运行时三维前后关系，M1放行后才实施M2并先过0°原画保真。
+代码76d7f70951aab4ce358ef73b9095fcc01889d8cc的[监督CI41144806591/job124367323613](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806591)全部success：已提交配置SHA保持2aefaa9ae0829dfe4bfb0e3d1708e037f4ec98fcc52c44e0b88d86b64ddeb482；62条源事实、9组双验拒、重复构建和不改文件均真实通过。原生9图和9裁切SHA也全部核对，仍是既有原生2D参考，不是新的3D渲染结果。
+
+同代码[旧工厂/视频回归41144806561/job124367323502](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806561)也全部success。JSON artifact13019339164为28996字节；[诊断媒体Draft](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-8b4fe7fd1b5e4146569e)已创建成功。机器可读证据在evidence/core026-M1/constraints-ci-acceptance.json。最终文档检查点不改变这份已通过代码。
+
+下一任务按CORE-026-M1C2-landmark-and-reference-order.md逐姿态确认19槽位的可用范围与可见性，并完成M1总验收；未知耳根、鼻根、颈连接等不补造。源阴影/层序表还不是运行时三维前后关系，M1放行后才实施M2并先过0°原画保真。

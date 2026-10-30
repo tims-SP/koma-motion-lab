@@ -1,6 +1,6 @@
 # CORE-026 M1工单：源对应与真实头部参考
 
-状态IN_PROGRESS。主计划见[CORE-026-depth-and-occlusion-plan.md](CORE-026-depth-and-occlusion-plan.md)。工单已下达；M1A源像素对应完成，当前执行M1B真实原生参考。M1整体尚未通过。
+状态IN_PROGRESS。主计划见[CORE-026-depth-and-occlusion-plan.md](CORE-026-depth-and-occlusion-plan.md)。M1A源像素/默认空间对应、M1B清洁原生9姿态和M1C1源事实/接收提案已通过对应验收，下一步为[M1C2](CORE-026-M1C2-landmark-and-reference-order.md)。M1C1代码76d7f70由Codex本地兜底，不能将本工单的原定mcode作者当实际作者。M1整体尚未通过。
 
 ## 允许修改
 

@@ -123,5 +123,6 @@
   "overall_M1": "NOT_ACCEPTED",
   "M2": "NOT_STARTED",
   "natural_3d_turn": "NOT_ACCEPTED",
-  "ci_status": "PENDING_ACTUAL_RUN"
+  "ci_status": "PASS_CI_SOURCE_FACTS_AND_RECEIVER_PROPOSALS",
+  "ci_evidence": "constraints-ci-acceptance.json"
 }
