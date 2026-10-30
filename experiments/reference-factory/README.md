@@ -68,3 +68,46 @@ seed and request ID were not exposed and are explicitly recorded as unavailable.
 Images/video/source binaries remain outside Git blobs and belong in owner-only
 Draft Release evidence. Persistent archive ownership/retention beyond a draft
 release and hermetic cross-machine pixel identity are separate unverified gates.
+
+## CORE-023 Task A — deterministic candidate canonicalization
+
+`canonicalize_candidates.py` is offline deterministic image processing (Pillow IO,
+alpha compositing and BICUBIC resampling — no hand-written resampler). It is
+**not** AI redrawing: it fits the ENTIRE source canvas into one canonical
+1024x1024 opaque-white canvas with a uniform scale and letterboxing, using a
+single affine source→canonical matrix and its exact inverse in an explicit
+edge-coordinate domain (pixel index `i` has its center at `i+0.5`). No
+foreground crop, no local warp, no inpainting, no redesign.
+
+```sh
+cd experiments/reference-factory
+python -m unittest discover -s tests          # 23 unit tests
+python canonicalize_candidates.py \
+  --input-dir out --output-dir out/core023 \
+  --config config/canonicalization-v2.json \
+  --evidence-dir evidence/local-2026-10-30
+```
+
+- v2 (accepted algorithm) uses `config/canonicalization-v2.json`; the rejected v1
+  config/code/outputs stay preserved under `out/core023/rejected-A1`.
+- Every source mode (including indexed-color PNGs with tRNS transparency) is
+  composited over opaque white before the RGB conversion.
+- Resampling is Pillow's maintained `Image.transform` AFFINE + `BICUBIC`; the
+  edge-domain inverse is passed verbatim (no extra half-pixel shift).
+- Inputs are hash-verified against committed evidence. The identity hash
+  authority is `evidence/local-2026-10-30/source_freeze.json` (`identity_sha256`);
+  the mutable `out/identity/reference_manifest.json` is only consistency-checked
+  and can never override the committed hash. Missing input, hash mismatch, blank
+  candidate, invalid transform/config or insufficient resulting margin fail
+  closed; no candidate is silently skipped.
+- `canonicalize_file` refuses to write a derivative over its own source (same
+  path or symlink) before any write happens.
+- Outputs are new versioned derivatives only; original bytes are untouched:
+  `out/core023/canonical/*-canonical-v2.png`, `out/core023/report.json`,
+  `out/core023/contact_sheet.png`.
+- The identity derivative is a `DERIVED_REFERENCE` over `SOURCE_TRUTH`; candidate
+  art is never promoted.
+- A framing PASS is a framing statement only. Anatomy / identity / angle / style
+  stay `NOT_TESTED`, human approval stays `MANUAL_REVIEW_REQUIRED`, benchmark
+  ranking stays `NONE_ACCEPTED`, the full A/B/C/D benchmark stays `NOT_TESTED`,
+  and no APPROVED/GOLDEN state is written.

@@ -33,6 +33,10 @@ jobs:
           sudo apt-get install -y --no-install-recommends ffmpeg
           npm ci --no-audit --no-fund
           npx playwright install --with-deps chromium
+      - name: Run synthetic regression and offline decomposition probe (not the local imagegen candidates)
+        run: |
+          python -m unittest discover -s tests -v
+          python probe_decomposition.py --skip-network
       - name: Acquire pinned original sources and prepare real Aka references
         run: python prepare.py
       - name: Render twice in independent browser processes and validate maps/video

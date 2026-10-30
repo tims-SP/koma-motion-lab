@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests_run": 46,
+  "elapsed_seconds": 3.537,
+  "log_sha256": "7359e82d5111bf5ba4419475c567ec4d9314701452335cc77ba0d22e63ee55ba",
+  "executed_by": "supervisor",
+  "gpu_or_network_inference": false
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS_FRAME_CANONICALIZATION_ONLY",
+  "rows": [
+    {
+      "id": "source-A-aka-front",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "margins": [
+        184,
+        70,
+        185,
+        87
+      ],
+      "repeat_sha_equal": true,
+      "original_gate": "FAIL",
+      "derived_gate": "PASS",
+      "authority": "SOURCE_TRUTH",
+      "role": "DERIVED_REFERENCE"
+    },
+    {
+      "id": "pilot-A-001",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "margins": [
+        206,
+        72,
+        226,
+        90
+      ],
+      "repeat_sha_equal": true,
+      "original_gate": "FAIL",
+      "derived_gate": "PASS",
+      "authority": "GENERATED_CANDIDATE",
+      "role": "GENERATED_CANDIDATE"
+    },
+    {
+      "id": "pilot-C-001",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "margins": [
+        206,
+        70,
+        243,
+        91
+      ],
+      "repeat_sha_equal": true,
+      "original_gate": "FAIL",
+      "derived_gate": "PASS",
+      "authority": "GENERATED_CANDIDATE",
+      "role": "GENERATED_CANDIDATE"
+    }
+  ],
+  "ranking": "NONE_ACCEPTED",
+  "approval": "NOT_APPROVED"
+}

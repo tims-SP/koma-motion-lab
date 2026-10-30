@@ -1,0 +1,280 @@
+{
+  "schema": "koma-core023-decomposition-readiness/2",
+  "task": "CORE-023 Task B — official semantic-decomposition readiness (ADR-003 M3)",
+  "generated_by": "experiments/reference-factory/probe_decomposition.py",
+  "constraints_observed": [
+    "no package installs",
+    "no checkpoint downloads",
+    "no inference executed",
+    "no image upload",
+    "no account/login/credentials",
+    "no commits",
+    "no delegation",
+    "stdlib only probe",
+    "explicit known paths only, no home directory scanning",
+    "readiness is fail-closed on missing or mismatched inputs"
+  ],
+  "pinned_upstream": {
+    "repo": "shitagaki-lab/see-through",
+    "commit": "df019de5129d6c4b406587a14c3501669441a783",
+    "evidence_files": {
+      "README.md": {
+        "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/core023/upstream/README.md",
+        "repo_path": "README.md",
+        "source_url": "https://raw.githubusercontent.com/shitagaki-lab/see-through/df019de5129d6c4b406587a14c3501669441a783/README.md",
+        "present": true,
+        "sha256": "6b9f5e6e65db5c9c56dd4a0463a42f3ecee9e3d88f42da101b475013e0950bec",
+        "expected_sha256": "6b9f5e6e65db5c9c56dd4a0463a42f3ecee9e3d88f42da101b475013e0950bec",
+        "bytes": 16495,
+        "hash_matches_pinned": true
+      },
+      "inference_psd.py": {
+        "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/core023/upstream/inference_psd.py",
+        "repo_path": "inference/scripts/inference_psd.py",
+        "source_url": "https://raw.githubusercontent.com/shitagaki-lab/see-through/df019de5129d6c4b406587a14c3501669441a783/inference/scripts/inference_psd.py",
+        "present": true,
+        "sha256": "a7fdfb44b89e98d0618e5b4e87925dfe7bb536e90cd64aba0398e206507739dc",
+        "expected_sha256": "a7fdfb44b89e98d0618e5b4e87925dfe7bb536e90cd64aba0398e206507739dc",
+        "bytes": 3079,
+        "hash_matches_pinned": true
+      },
+      "inference_utils.py": {
+        "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/core023/upstream/inference_utils.py",
+        "repo_path": "common/utils/inference_utils.py",
+        "source_url": "https://raw.githubusercontent.com/shitagaki-lab/see-through/df019de5129d6c4b406587a14c3501669441a783/common/utils/inference_utils.py",
+        "present": true,
+        "sha256": "35ecd38fe2b519206e78cd19aee8fe57066c3d0366196a1ec085058c6fd78055",
+        "expected_sha256": "35ecd38fe2b519206e78cd19aee8fe57066c3d0366196a1ec085058c6fd78055",
+        "bytes": 26064,
+        "hash_matches_pinned": true
+      }
+    },
+    "all_evidence_hashes_match": true
+  },
+  "expected_checkpoints": {
+    "repo_id_layerdiff": "layerdifforg/seethroughv0.0.2_layerdiff3d",
+    "repo_id_depth": "24yearsold/seethroughv0.0.1_marigold",
+    "sam_body_parsing": "24yearsold/l2d_sam_iter2"
+  },
+  "local_readiness": {
+    "status": "BLOCKED",
+    "python": {
+      "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "version": "3.12.14",
+      "implementation": "CPython",
+      "status": "PASS"
+    },
+    "torch": {
+      "spec_found": false,
+      "spec_origin": null,
+      "version": null,
+      "import_ok": null,
+      "import_error": null,
+      "cuda_available": null,
+      "status": "FAIL",
+      "note": "torch module spec not found; upstream inference/scripts/inference_psd.py imports torch at module load"
+    },
+    "gpu": {
+      "nvidia_smi_on_path": null,
+      "nvidia_smi_version": null,
+      "nvidia_device_nodes": [],
+      "cuda_visible_devices_env": null,
+      "status": "FAIL",
+      "note": "no NVIDIA device nodes under /dev and no usable nvidia-smi output"
+    },
+    "weights": {
+      "status": "FAIL",
+      "note": "no see-through checkpoint payload at any explicit known path",
+      "weights_complete": false,
+      "complete_paths": [],
+      "paths_inspected": [
+        {
+          "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/models",
+          "exists": false,
+          "is_dir": false,
+          "is_file": false,
+          "bytes": null,
+          "weight_files": [],
+          "index_files": [],
+          "holds_checkpoint_payload": false
+        },
+        {
+          "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/checkpoints",
+          "exists": false,
+          "is_dir": false,
+          "is_file": false,
+          "bytes": null,
+          "weight_files": [],
+          "index_files": [],
+          "holds_checkpoint_payload": false
+        },
+        {
+          "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/see-through",
+          "exists": false,
+          "is_dir": false,
+          "is_file": false,
+          "bytes": null,
+          "weight_files": [],
+          "index_files": [],
+          "holds_checkpoint_payload": false
+        },
+        {
+          "path": "/root/.cache/huggingface/hub/models--layerdifforg--seethroughv0.0.2_layerdiff3d",
+          "exists": false,
+          "is_dir": false,
+          "is_file": false,
+          "bytes": null,
+          "weight_files": [],
+          "index_files": [],
+          "holds_checkpoint_payload": false
+        },
+        {
+          "path": "/root/.cache/huggingface/hub/models--24yearsold--seethroughv0.0.1_marigold",
+          "exists": false,
+          "is_dir": false,
+          "is_file": false,
+          "bytes": null,
+          "weight_files": [],
+          "index_files": [],
+          "holds_checkpoint_payload": false
+        },
+        {
+          "path": "/root/.cache/huggingface/hub/models--24yearsold--l2d_sam_iter2",
+          "exists": false,
+          "is_dir": false,
+          "is_file": false,
+          "bytes": null,
+          "weight_files": [],
+          "index_files": [],
+          "holds_checkpoint_payload": false
+        }
+      ],
+      "expected_checkpoints": {
+        "repo_id_layerdiff": "layerdifforg/seethroughv0.0.2_layerdiff3d",
+        "repo_id_depth": "24yearsold/seethroughv0.0.1_marigold",
+        "sam_body_parsing": "24yearsold/l2d_sam_iter2"
+      }
+    },
+    "aka_identity": {
+      "manifest_path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/identity/reference_manifest.json",
+      "manifest_present": true,
+      "status": "PASS",
+      "note": "canonical Aka PSD hash matches prior recorded manifest hash",
+      "recorded_source_psd_sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+      "observed_source_psd_sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+      "match": true,
+      "psd_path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/source/tutorial-aka.psd",
+      "psd_present": true,
+      "part_count": 16,
+      "character": "Aka"
+    },
+    "input_hash": {
+      "flattened_aka_image": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/identity/source_A_aka_front.png",
+      "input_sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+      "recorded_input_sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+      "input_hash_matches_manifest": true,
+      "status": "PASS",
+      "note": "flattened input hash matches recorded manifest hash"
+    },
+    "blockers": [
+      "torch is not importable in this interpreter (/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3); upstream inference/scripts/inference_psd.py imports torch at module load",
+      "no see-through checkpoint payload at any explicit known path"
+    ]
+  },
+  "online_metadata_status": {
+    "status": "PASS",
+    "detail": {
+      "attempted": true,
+      "url": "https://24yearsold-see-through-demo.hf.space/config",
+      "space": "24yearsold/see-through-demo",
+      "timeout_s": 20,
+      "status": "PASS",
+      "http_status": 200,
+      "elapsed_ms": 4785,
+      "api_prefix": "/gradio_api",
+      "advertised_api_names": [
+        "inference",
+        "load_example"
+      ],
+      "callable_verified": false,
+      "auth": {
+        "status": "UNKNOWN",
+        "fields": {},
+        "source": "config payload has no auth-related fields"
+      },
+      "error": null,
+      "note": "public /config metadata GET returned valid dependency metadata (advertised api names only)",
+      "gradio_version": "6.12.0"
+    },
+    "auth_readme_citation": "Pinned upstream README (out/core023/upstream/README.md, 'Online Demo' section): 'if you register with HuggingFace, you should be able to run 1-2 PSD extractions per day'. Authentication is therefore required by the upstream authors' own statement; the /config payload itself does not advertise auth fields, so auth status stays UNKNOWN from the metadata endpoint and is cited separately from this README.",
+    "interpretation": "A successful /config metadata GET proves only that the public Space exposes a Gradio API surface and that dependency metadata is well formed. The api names are ADVERTISED, not verified callable: no endpoint was called, no image was uploaded, no inference was attempted, and no account was created. Anonymous inference is not inferred to work."
+  },
+  "M3_actual_decomposition": "NOT_TESTED",
+  "M3_actual_decomposition_note": "No model decomposition was run. Existing original PSD layers (16 parts) remain ground truth, not a model prediction. No inference was ordered for this task.",
+  "input": {
+    "flattened_aka_image": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/identity/source_A_aka_front.png",
+    "input_sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+    "recorded_input_sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+    "input_hash_matches_manifest": true,
+    "input_hash_status": "PASS",
+    "ground_truth_psd": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/source/tutorial-aka.psd",
+    "ground_truth_psd_sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+    "ground_truth_part_count": 16
+  },
+  "requirements": [
+    "# 1. clone the pinned upstream checkout FIRST (requirements live in it)",
+    "git clone https://github.com/shitagaki-lab/see-through",
+    "cd see-through",
+    "git checkout df019de5129d6c4b406587a14c3501669441a783",
+    "",
+    "# 2. create and activate an isolated environment",
+    "conda create -n see_through python=3.12 -y",
+    "conda activate see_through",
+    "",
+    "# 3. install torch (cu128) into that environment",
+    "pip install torch==2.8.0+cu128 torchvision==0.23.0+cu128 torchaudio==2.8.0+cu128 --index-url https://download.pytorch.org/whl/cu128",
+    "",
+    "# 4. install the dependencies FROM THE CHECKOUT (repo root as working directory)",
+    "pip install -r requirements.txt",
+    "",
+    "# 5. assets symlink as documented by the pinned README",
+    "ln -sf common/assets assets",
+    "",
+    "# NOTE: no overlay of inference_psd.py / inference_utils.py is required —",
+    "# the pinned checkout already contains the same code",
+    "# (inference/scripts/inference_psd.py and common/utils/inference_utils.py).",
+    "# NOTE: always run inference from the repository root as the working directory."
+  ],
+  "executable_upstream_command": "cd see-through   # repository root is the required working directory\npython inference/scripts/inference_psd.py --srcp /workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/identity/source_A_aka_front.png --save_dir out/core023/seethrough_output --seed 42 --resolution 1280 --resolution_depth 768 --inference_steps 30 --save_to_psd --group_offload",
+  "upstream_run_defaults": {
+    "repo_id_layerdiff": "layerdifforg/seethroughv0.0.2_layerdiff3d",
+    "repo_id_depth": "24yearsold/seethroughv0.0.1_marigold",
+    "seed": 42,
+    "resolution": 1280,
+    "resolution_depth": 768,
+    "inference_steps": 30,
+    "save_to_psd": true,
+    "group_offload": true,
+    "precision_paths": {
+      "bf16_default": "~12-16 GB VRAM @1280 (upstream README)",
+      "group_offload_12gb": "~10 GB VRAM @1280",
+      "nf4_quantized_8gb": "~8 GB VRAM @1280 via requirements-inference-bnb.txt + inference_psd_quantized.py",
+      "blockswap_8gb_bf16": "~8 GB VRAM @1280 via inference_psd_blockswap.py"
+    }
+  },
+  "blocker_evidence": [
+    "torch is not importable in this interpreter (/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3); upstream inference/scripts/inference_psd.py imports torch at module load",
+    "no see-through checkpoint payload at any explicit known path"
+  ],
+  "next_executable_path": [
+    "Obtain a CUDA-capable runner (>=12 GB VRAM for bf16, or >=8 GB with NF4/group-offload) and install the pinned upstream requirements.",
+    "Clone shitagaki-lab/see-through at commit df019de5129d6c4b406587a14c3501669441a783 and install torch + requirements from that checkout (no overlay needed).",
+    "Run the executable_upstream_command from the repository root on the flattened Aka front image (input_sha256 recorded above).",
+    "Compare the produced layered PSD against the 16 original PSD layer bounds recorded in reference_manifest.json (ground truth).",
+    "Only then set M3_actual_decomposition to PASS or FAIL with measured layer correspondence."
+  ],
+  "ranking": "NONE_ACCEPTED",
+  "production_approval": "OPEN",
+  "output_path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/core023/decomposition_readiness.json",
+  "offline_mode": false
+}

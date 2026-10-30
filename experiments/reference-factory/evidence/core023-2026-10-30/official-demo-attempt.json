@@ -1,0 +1,97 @@
+{
+  "schema": "koma-core023-official-demo-attempt/1",
+  "task": "CORE-023 Task C — one bounded anonymous official-demo inference attempt",
+  "generated_by": "experiments/reference-factory/try_official_decomposition.py",
+  "space_url": "https://24yearsold-see-through-demo.hf.space",
+  "api_name": "/inference",
+  "constraints_observed": [
+    "anonymous only: token=None, HF_HUB_DISABLE_IMPLICIT_TOKEN=1, no local token read",
+    "exactly one inference submission, no inference retries",
+    "bounded wait with cancellation on timeout",
+    "no login, account, payment, rent/upgrade, duplicate space, TLS change, endpoint hopping",
+    "no production approval inferred, no 360 claimed",
+    "no delegation, no commit, no push",
+    "no install into the global environment"
+  ],
+  "input": {
+    "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/out/identity/source_A_aka_front.png",
+    "sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+    "bytes": 405265,
+    "expected_sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+    "license": "CC BY 4.0, PSD by seagetch (public, license-clear)",
+    "hash_matches_expected": true
+  },
+  "client_versions": {
+    "gradio_client": "2.7.2",
+    "httpx": "0.28.1",
+    "python": "3.12.14",
+    "python_executable": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/out/core023/demo-runtime/venv/bin/python"
+  },
+  "public_api_signature": {
+    "present": true,
+    "endpoint_name": "/inference",
+    "advertised_endpoints": [
+      "/inference"
+    ],
+    "parameters": [
+      {
+        "parameter_name": "image",
+        "label": "Upload image (non-square images will be padded)",
+        "python_type": "filepath",
+        "parameter_has_default": false,
+        "parameter_default": null,
+        "description": null
+      },
+      {
+        "parameter_name": "resolution",
+        "label": "Resolution",
+        "python_type": "float",
+        "parameter_has_default": true,
+        "parameter_default": 768,
+        "description": "numeric value between 768 and 1280"
+      },
+      {
+        "parameter_name": "seed",
+        "label": "Seed",
+        "python_type": "float",
+        "parameter_has_default": true,
+        "parameter_default": 42,
+        "description": "numeric value between 0 and 9999"
+      },
+      {
+        "parameter_name": "tblr_split",
+        "label": "Split arms, eyes and ears into left/right layers",
+        "python_type": "bool",
+        "parameter_has_default": true,
+        "parameter_default": false,
+        "description": null
+      }
+    ],
+    "returns": [
+      "Download layered PSD",
+      "Separated layers"
+    ]
+  },
+  "submitted_arguments": {
+    "image": "<handle_file(source_A_aka_front.png)>",
+    "non_image_args_from_advertised_defaults": {
+      "resolution": 768,
+      "seed": 42,
+      "tblr_split": false
+    }
+  },
+  "elapsed_s": 23.21,
+  "stage_reached": "WAIT",
+  "status": "FAIL",
+  "error_classification": "QUOTA_ERROR",
+  "error": "AppError: You have exceeded your ZeroGPU quota (180s requested vs. 26s left). Try again in 0:34:34. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens",
+  "outputs": [],
+  "output_hashes": {},
+  "production_approval": false,
+  "notes": [
+    "Non-image arguments were taken verbatim from the Space's own advertised parameter defaults; no value was guessed.",
+    "Job submitted once; waiting with bounded timeout.",
+    "Job cancel attempted: True",
+    "Traceback (most recent call last):\n  File \"/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/try_official_decomposition.py\", line 256, in main\n    result = job.result(timeout=args.timeout)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/9cd8ec77aca4/koma-motion-lab/out/core023/demo-runtime/venv/lib/python3.12/site-packages/gradio_client/client.py\", line 1707, in result\n    return super().result(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py\", line 456, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\ngradio_client.exceptions.AppError: You have exceeded your ZeroGPU quota (180s requested vs. 26s left). Try again in 0:34:34. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens\n"
+  ]
+}
