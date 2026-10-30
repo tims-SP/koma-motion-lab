@@ -41,3 +41,7 @@ mcode原任务出现服务端500和超时，未产出可验收的extract_core026
 需要的确认范围仅为：允许mcode将本项目相关代码、任务文档和必要文本执行结果发往其服务agent.minimax.cn；排除凭据、登录文件和其他目录。Work也需要恢复可用。
 
 恢复后先运行现有验收；完成CORE-026-M1C1-constraints-order.md的实现与对照，人工复核可用标点范围/源位置/遮挡，M1放行后才开始M2。不要从CORE025重新开工，不要把源事实观察冒充接收面合成已实现。
+
+## 恢复CI首轮失败及修复
+
+run41125161542在source verify-source处exit11，缺out/core025/render/manifest.json和supervisor-qa.json。源组装及58个像素对应已实际通过，但流程没有先生成这两份保护报告。已补锁定Node/Chromium依赖、真实17图capture_core025 --anchors和独立QA作为前置，不删保护项、不造占位文件。修复后的运行必须真实成功，不能沿用首轮绿色准备步骤作为整体PASS。

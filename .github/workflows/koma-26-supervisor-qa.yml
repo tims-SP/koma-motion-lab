@@ -28,13 +28,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install pinned source-analysis dependencies
-        run: python -m pip install -r requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned source-analysis and protected baseline dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
       - name: Rebuild genuine pinned PSD layers and default derived assembly
         run: |
           python prepare.py
           python native_layers.py
           python prepare_core025.py
+      - name: Recreate protected CORE025 render reports using real browser captures
+        run: |
+          node capture_core025.mjs --anchors
+          python verify_core025_supervisor.py
       - name: Independent source, raster identity and default coordinate checks
         run: |
           python audit_core026.py --audit

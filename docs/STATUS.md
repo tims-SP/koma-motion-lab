@@ -58,3 +58,5 @@ M1A提交a6226cc。[M1B捕获程序检查点](research/CORE-026-M1B-native-captu
 - 新增koma-26-supervisor-qa.yml：在GitHub重建源数据，读固定成功原生job日志恢复PNG，并复跑监督脚本；媒体只进入Draft，artifact只JSON。新CI结果需实际检查后记录。
 - mcode约束实现仍未完成；服务500/超时及平台具体目的地审批阻塞均有文本记录。完整工作区模式未绕过拒绝。Work已变为不可用；GitHub仍可写，因此本检查点独立保存于仓库。
 - 下一步：明确agent.minimax.cn的数据发送范围并恢复执行环境后，继续M1C1实现/验收和标点人工复核，M1放行后进入M2。不要重跑已通过的CORE025作为进度。
+
+恢复CI首轮41125161542实际失败（exit11）：干净环境尚未生成两个CORE025保护报告。已补真实Chromium17图捕获与独立QA作为前置，不降低检查、不写占位。下一轮实际结果待验收。

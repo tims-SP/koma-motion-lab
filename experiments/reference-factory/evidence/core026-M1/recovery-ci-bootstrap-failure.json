@@ -1,0 +1,20 @@
+{
+  "schema": "core026-recovery-ci-bootstrap-failure/1",
+  "run_id": 41125161542,
+  "job_id": 124301510965,
+  "commit": "5b32a5ec4fc83199b3ea39762134acfcc2f00b9a",
+  "conclusion": "failure",
+  "actual_exit": 11,
+  "source_audit": {
+    "layers": 62,
+    "verified_raster": 58,
+    "unresolved_raster": 4
+  },
+  "cause": "Fresh recovery workflow had not generated two mandatory protected CORE025 render outputs.",
+  "missing": [
+    "out/core025/render/manifest.json",
+    "out/core025/render/supervisor-qa.json"
+  ],
+  "fix": "Install pinned Node/browser dependencies and run real capture_core025 --anchors + verify_core025_supervisor before source audit. No protection relaxation, no fabricated reports.",
+  "new_checks_status": "AWAIT_ACTUAL_RERUN"
+}
