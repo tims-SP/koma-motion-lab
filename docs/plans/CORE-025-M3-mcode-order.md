@@ -1,5 +1,7 @@
 # CORE-025-M3：连续转头、真实视频编码与抽帧
 
+**实现文件路径已更新**：为保持M2输入SHA稳定，后续执行CORE-025-M3-video-capture-order.md和CORE-025-M3-video-QA-order.md，分别创建独立capture_core025_video.mjs和qa_core025_video.py。本文件的97帧/24fps/抽帧/质量要求仍保留，但修改旧M2文件及--video命令的实现安排不再执行。
+
 仅在M2前视/曲面门禁通过并提交后执行。执行mcode，监工Codex。只扩展capture_core025.mjs、qa_core025.py，新增docs/research/CORE-025-M3-results.md；输出只写out/core025/turntable/。不改M1、依赖锁、旧工厂或原图，不安装、不联网、不委派、不后台运行、不git提交。
 
 ## 步骤1：扩展捕获模式

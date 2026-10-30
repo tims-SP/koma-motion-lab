@@ -13,8 +13,8 @@
 1. `python prepare_core025.py`（M1）
 2. `node capture_core025.mjs --anchors`
 3. `python qa_core025.py`（M2）
-4. `node capture_core025.mjs --video`
-5. `python qa_core025.py --video`（M3，包含编码/解码/视频QA，具体以已验收实际命令实现为准；若编码目前在capture内则不重复编码，必须在说明中写清）
+4. `node capture_core025_video.mjs`
+5. `python qa_core025_video.py`（M3，包含编码/解码/视频QA）
 
 若某阶段只有结构通过、视觉失败，CI只验证数值/结构，不得把这种状态改成视觉通过；发布说明应准确反映监工报告。只允许阶段任务规定的原型验收，生产门禁保持NOT_ACCEPTED。
 
@@ -32,7 +32,7 @@ release说明必须包含：Aka/seagetch/CC-BY-4.0；62原生部件；默认姿�
 
 根README顶部新增当前CORE-025检查点，链接docs/STATUS.md、M1/M2/M3监工报告（只链接实际存在文件）。原CORE-022当前标题改为历史基线，保留原始run/release链接。CI新run链接在监工验证后补齐，现在只能写PENDING。
 
-reference-factory/README追加完整恢复命令：已有requirements/npm锁安装→prepare.py→native_layers.py→prepare_core025.py→capture --anchors→qa→capture --video→qa --video。说明本地模型/生图配额不影响此确定性源码复现；新视角资产仍未齐。
+reference-factory/README追加完整恢复命令：已有requirements/npm锁安装→prepare.py→native_layers.py→prepare_core025.py→node capture_core025.mjs --anchors→python qa_core025.py→node capture_core025_video.mjs→python qa_core025_video.py。说明本地模型/生图配额不影响此确定性源码复现；新视角资产仍未齐。
 
 ## 步骤5：本地静态核对
 

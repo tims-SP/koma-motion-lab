@@ -1,0 +1,32 @@
+{
+  "source_white": {
+    "MAE": 0.048877645502645506,
+    "over16_fraction": 0.0,
+    "max": 2.0,
+    "repeat_equal": true
+  },
+  "source_black": {
+    "MAE": 0.04891335978835979,
+    "over16_fraction": 0.0,
+    "max": 2.0,
+    "repeat_equal": true
+  },
+  "clean_white": {
+    "MAE": 0.04247065087857197,
+    "over16_fraction": 0.0,
+    "max": 2.0,
+    "repeat_equal": true
+  },
+  "clean_black": {
+    "MAE": 0.04246366889832803,
+    "over16_fraction": 0.0,
+    "max": 2.0,
+    "repeat_equal": true
+  },
+  "face": {
+    "vertices": 3886,
+    "z_range": 0.07453756779432297,
+    "nonplanar_max": 0.03701808903753998
+  },
+  "geometries": 62
+}

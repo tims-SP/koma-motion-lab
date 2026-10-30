@@ -1,0 +1,14 @@
+{
+  "numeric_gate": "PASS",
+  "UV_roundtrip_max_source_px": 4.8279762268066406e-05,
+  "surface_formula_max_world_error": 1.009627223491627e-08,
+  "group_rotation_max_error": 0,
+  "fixed_camera": true,
+  "curved_vs_flat_anchor_mean_px_at640": 8.313518813544595,
+  "geometries": 62,
+  "capture_count": 17,
+  "inputs_and_png_hashes_valid": true,
+  "visual_scope": "open shallow-surface prototype only",
+  "artistic_turn_quality": "NOT_ACCEPTED",
+  "production_gate": "NOT_ACCEPTED"
+}

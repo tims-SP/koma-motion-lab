@@ -12,9 +12,11 @@
 ## 当前任务
 
 - CORE-025-M1：PASS（默认姿态组装与指定9层阴影裁剪，限原型）。[监工验收](research/CORE-025-M1-supervisor-acceptance.md)：source白底MAE0.125177/255、黑底0.144745/255，独立Pillow复合最大差1色阶；49测试及真实准备均exit0。保留颈部源图软边和微小游离片段为待修整项。
-- CORE-025-M2：IN_PROGRESS。mcode官方CLI已确认授权成功，且A1真实模型执行成功。A1固定配置与HTML已落盘，监工逐字段比较配置与明确工单完全一致，7个锚点及HTML静态核对PASS；此时GPU和转头仍NOT_TESTED。下一项为A2曲面场景代码。
-- M2按[拆分工单](plans/CORE-025-M2-split-orders.md)执行：[A1固定配置与HTML](plans/CORE-025-M2-A1-setup-order.md)已完成→[A2场景](plans/CORE-025-M2-A2-renderer-order.md)执行中；[B捕获](plans/CORE-025-M2-B-capture-order.md)代码已由mcode写出并通过监工node --check，17项捕获计划/真实哈希/清理逻辑已核对，实际浏览器执行待A2；[C独立QA](plans/CORE-025-M2-C-QA-order.md)代码编写中。尚无GPU验收或视频。
-- CORE-025-M3/M4：TODO，分别为连续转头抽帧、Actions复现与Draft Release归档。
+- CORE-025-M2：IN_PROGRESS（补齐C自动QA）。授权已恢复，A1静态合同、A2场景及B真实捕获均已完成。监工已独立验收实际GPU和几何；C可重复执行的自动QA程序正在补齐。
+- M2按[拆分工单](plans/CORE-025-M2-split-orders.md)执行：[A1固定配置与HTML](plans/CORE-025-M2-A1-setup-order.md)已完成→[A2场景](plans/CORE-025-M2-A2-renderer-order.md)已完成→[B捕获](plans/CORE-025-M2-B-capture-order.md)实际17图/geometry/manifest已完成；[C独立QA](plans/CORE-025-M2-C-QA-order.md)程序编写中。尚无连续视频。
+- M2-A2/B实际执行：17张真实GPU捕获已生成；监工独立检查0°四种MAE<0.05/255、62个非平面几何、UV/公式/矩阵/哈希均PASS。[监工报告](research/CORE-025-M2-supervisor-acceptance.md)。艺术级转头仍NOT_ACCEPTED，C自动QA程序补齐中。
+- CORE-025-M3：独立[录像工单](plans/CORE-025-M3-video-capture-order.md)与[视频QA工单](plans/CORE-025-M3-video-QA-order.md)待执行，目标97帧/24fps；不改M2已验收文件。
+- CORE-025-M4：TODO，Actions复现与Draft Release归档。
 
 ## 干净环境恢复
 
