@@ -20,9 +20,11 @@
 
 [CORE-026-M1C1精确工单](plans/CORE-026-M1C1-constraints-order.md)：实现extract_core026_constraints.py与config/core026-constraints.json；明确62条记录的源事实/设计提案字段、接收/投影阴影/高光映射、晚叠画和UNKNOWN；按--build、--verify、独立对照及篡改验拒后提交。19标点人工复核仍是并列门禁，M1放行后才实施M2。
 
-mcode本轮已登录；约束实现遇到服务端500/超时，没有可验收产物，不计完成。平台自动审批实际拒绝过向agent.minimax.cn的mcode请求；完整工作区模式随后暂停。公开仓库及官方包CN生产端点已核实，纯通用、无文件工具的轻量请求试验不等于恢复完整授权。需要明确本项目相关代码、任务文档及必要文本输出的发送范围，排除凭据、登录文件和其他目录。[事件记录](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。
+Work已恢复且本地仓库已同步。源像素/10保护文件/186PNG、62默认坐标、11Multiply/9clip及18张原生参考哈希均重新实测通过。监工查看了实际9姿态标点接触图与默认652×652图；19槽位的13图像候选仍有语义限制，所有点仍不自动具备拟合资格。[本轮实际记录](../experiments/reference-factory/evidence/core026-M1/supervisor-resume-and-reference-review.json)。
 
-Work执行环境收尾时变为unavailable；GitHub检查点和CI仍可恢复。不要再登录来代替具体发送范围确认，也不要读取认证文件或改用代理绕过拒绝。
+mcode首次启动exit3提示登录失效；已通过官方CN登录流程恢复，CLI实际返回Signed in with MiniMax、exit0。用户在agent.minimax.cn精确范围问题后回复继续，本轮按该范围启动任务；平台自动审批再次拒绝，理由是CLI还可能将项目上下文发送至agent.minimaxi.com，超出此前单域名范围。公开包代码确认CN模型接口为agent.minimax.cn，CN步骤报告接口使用agent.minimaxi.com。没有获得可验收实现文件，未在新拒绝后重试完整工作区任务。
+
+当前剩余阻塞仅为两个官方服务域名的发送范围：本项目相关代码、任务文档及必要文本执行输出；排除凭据、登录文件和其他目录。当前不需要再次登录。此前服务500/超时、旧目的地审批与环境不可用均保留为历史，不与本轮阻塞混写。[早期事件记录](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。
 
 ## 确定性恢复顺序
 

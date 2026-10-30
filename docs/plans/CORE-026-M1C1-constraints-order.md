@@ -1,6 +1,6 @@
 # CORE-026 M1C1：接收关系与美术叠画约束
 
-执行者mcode；监工Codex。仅新增experiments/reference-factory/extract_core026_constraints.py、config/core026-constraints.json及ignored out/core026输出。不得修改旧来源/锁、旧渲染器或认证文件。当前实现未完成；服务目的地确认和Work恢复后继续。
+执行者mcode；监工Codex。仅新增experiments/reference-factory/extract_core026_constraints.py、config/core026-constraints.json及ignored out/core026输出。不得修改旧来源/锁、旧渲染器或认证文件。当前实现未完成。Work及官方CN登录已恢复；实际任务被自动审批以agent.minimaxi.com超出agent.minimax.cn单域名发送范围为由拒绝，确认这两个官方域名的数据范围后继续。不得因登录成功或下达工单就记实现完成。
 
 1. 使用core025-layer-contract.json、原始Aka.inx和监工生成的out/core026/default-registration.json。核验源哈希、62个selected_uuid唯一且存在，默认源坐标检查PASS。
 2. 每层保留身份/纹理SHA、原生UUID、完整祖先、nearest_mapped_ancestor_order、实际blend_mode/zsort、HeadYaw绑定名称。zsort是绘画顺序，不能当3D深度。

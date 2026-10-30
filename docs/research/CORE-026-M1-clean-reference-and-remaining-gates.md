@@ -59,3 +59,15 @@ run41125161542在source verify-source处exit11，缺out/core025/render/manifest.
 本次通过范围仅为源事实、真实参考恢复和诊断可复现；M1整体、接收面合成、运动遮挡和自然3D转头仍未放行。mcode约束实现及19标点人工复核仍按工单继续，服务具体目的地发送范围确认和Work恢复是当前剩余阻塞。
 
 同一代码5f9aef8的旧工厂回归[run41126811438](https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811438)、job124307344949也已真实success。最终文档提交不改变已通过的代码。
+
+## Work恢复后的实际执行与新的域名范围阻塞
+
+用户在单域名agent.minimax.cn的限定范围问题后回复继续。本地从801d904干净快进至11866b7；Work已可执行。官方公开安装mcode0.7.2仍在原位置，但未加入PATH，因此使用绝对路径。第一次exec实际exit3要求登录；随后官方CN登录进程实际返回Signed in with MiniMax、exit0。
+
+源像素/保护文件、62默认坐标、源叠画观察及19槽位诊断均已在恢复后的Work重新执行通过。实际候选数仍4/5/6/11/13/9/7/6/4，9原图与9裁切SHA一致。监工查看真实9姿态标点接触图与默认652×652标点图，记录可见图像特征、4眼白边界代理、轮廓滑动和隐藏根部的限制；未把这些点升级为拟合真值。
+
+重新启动完整mcode任务后，等待执行的工具调用被平台自动审批拒绝，明确理由为：可能向agent.minimaxi.com发送项目代码、任务文档和工作区上下文，而此前保留的批准只覆盖agent.minimax.cn。任务日志为0字节，没有实现产物；随后检查未发现仍存活的匹配任务进程。没有更换代理、修改SDK、读凭据或在新拒绝后重试完整任务。
+
+只读核对公开安装包发现：模型CN生产接口为https://agent.minimax.cn/mavis/api/v1/llm/v1；步骤报告的CN生产origin为https://agent.minimaxi.com，路径/mavis/api/v1/eval/steps/report。该事实说明两个服务域名确实同时存在，不证明本次已发送任何项目内容，也不替代用户对额外目的地的许可。包代码SHA及实际检查结果保存在supervisor-resume-and-reference-review.json。
+
+当前需要确认的范围：允许mcode将本项目相关代码、任务文档和必要文本执行输出发送至agent.minimax.cn及agent.minimaxi.com，排除凭据、登录文件和其他目录。Work与登录已经恢复，当前不要求再次登录。得到此范围后重新执行已落盘M1C1精确工单，先检查是否有产物再启动，按build/verify/独立比对/三项篡改验拒提交；M1整体与M2状态保持未通过/未开始。

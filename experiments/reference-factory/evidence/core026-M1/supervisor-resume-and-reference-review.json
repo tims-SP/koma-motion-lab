@@ -1,0 +1,470 @@
+{
+  "schema": "core026-supervisor-resume-reference-review/1",
+  "date_local": "2026-10-31 Asia/Shanghai",
+  "base_commit": "11866b76e7c3a1fa15affa289696419273dab633",
+  "work_environment": "AVAILABLE",
+  "mcode_version": "0.7.2",
+  "official_login_result": "Signed in with MiniMax; CLI exit0",
+  "first_exec_exit_code": 3,
+  "first_exec_reason": "Sign in required after environment restoration",
+  "authenticated_exec": "AUTO_REVIEW_REJECTED_DOMAIN_SCOPE_MISMATCH",
+  "authenticated_exec_log_bytes": 0,
+  "implementation_outputs": "NONE; constraints extractor/config not produced",
+  "rejected_destination": "agent.minimaxi.com",
+  "retained_destination_scope": "agent.minimax.cn",
+  "rejection_reason": "Official CLI may transmit project code, task documentation and workspace context to a second domain not covered by retained approval.",
+  "public_package_checks": {
+    "llm_CN_production": "https://agent.minimax.cn/mavis/api/v1/llm/v1",
+    "CN_eval_report_origin": "https://agent.minimaxi.com",
+    "eval_report_path": "/mavis/api/v1/eval/steps/report",
+    "package_chunks_sha256": {
+      "chunk-CPCJLLQA.js": "f2416b317066961a848aacc708e08336ba8e6c68e272c87310fa6f613b171dc4",
+      "chunk-OLXBUSOI.js": "3f9ae7ac7a0c6e6f208b126183190c0f4d5d27fcb19a3a428ade4dabc4d5cc68"
+    }
+  },
+  "independent_checks": {
+    "source_pixel_status": "SOURCE_PIXEL_CHECK_PASS",
+    "protected_files": 10,
+    "layer_pngs": 186,
+    "default_coordinate_status": "PASS_DEFAULT_SOURCE_COORDINATES",
+    "source_constraint_records": 62,
+    "multiply_count": 11,
+    "default_clip_count": 9,
+    "late_overlap_counts": [
+      28,
+      15,
+      2156,
+      1954
+    ],
+    "full_png_sha_verified": 9,
+    "crop_png_sha_verified": 9,
+    "candidate_counts": [
+      4,
+      5,
+      6,
+      11,
+      13,
+      9,
+      7,
+      6,
+      4
+    ]
+  },
+  "visual_review_scope": "Supervisor inspected the actual nine-pose annotated contact sheet and the default 652x652 annotated head at full displayed resolution. No all-pose anatomical correspondence or physical-angle acceptance.",
+  "visual_observations": {
+    "head_and_ear_tips_in_frame": true,
+    "cursor_overlay_observed": false,
+    "source_default_candidates": 13,
+    "unknown_slots": 6
+  },
+  "landmarks": [
+    {
+      "id": "nose_tip",
+      "psd_order": 21,
+      "source_xy": [
+        811.9666667,
+        1072.3333333
+      ],
+      "source_alpha_at_seed": 255,
+      "native_default_xy": [
+        325.1866669499748,
+        429.133333806377
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Painted nose mark visible; anatomical tip/root and physical protrusion are not established.",
+      "candidate_raw_yaws": [
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "nose_root",
+      "psd_order": 21,
+      "source_xy": null,
+      "source_alpha_at_seed": null,
+      "native_default_xy": null,
+      "semantic_class": "UNKNOWN",
+      "default_review": "UNKNOWN",
+      "review_note": "anatomical nasal root is not visibly defined",
+      "candidate_raw_yaws": [],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "chin",
+      "psd_order": 13,
+      "source_xy": [
+        816,
+        1305.5
+      ],
+      "source_alpha_at_seed": 198,
+      "native_default_xy": [
+        327.19999910254603,
+        522.800002869308
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible lower contour sample; correspondence along a sliding contour is not a material-point constraint.",
+      "candidate_raw_yaws": [
+        -0.5,
+        -0.25,
+        0.0,
+        0.25,
+        0.5
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "mouth_cornerL",
+      "psd_order": 22,
+      "source_xy": null,
+      "source_alpha_at_seed": null,
+      "native_default_xy": null,
+      "semantic_class": "UNKNOWN",
+      "default_review": "UNKNOWN",
+      "review_note": "raw mouth-inner extrema rejected: hidden beneath Lip in actual native composite",
+      "candidate_raw_yaws": [],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "mouth_cornerR",
+      "psd_order": 22,
+      "source_xy": null,
+      "source_alpha_at_seed": null,
+      "native_default_xy": null,
+      "semantic_class": "UNKNOWN",
+      "default_review": "UNKNOWN",
+      "review_note": "raw mouth-inner extrema rejected: hidden beneath Lip in actual native composite",
+      "candidate_raw_yaws": [],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "face_edgeL",
+      "psd_order": 13,
+      "source_xy": [
+        657.5,
+        1225.5
+      ],
+      "source_alpha_at_seed": 163,
+      "native_default_xy": [
+        263.7999997781784,
+        490.80000237920717
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible lower jaw/face-edge sample; hair overlap and contour sliding limit its use.",
+      "candidate_raw_yaws": [
+        -0.25,
+        0.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "face_edgeR",
+      "psd_order": 13,
+      "source_xy": [
+        962.5,
+        1225.5
+      ],
+      "source_alpha_at_seed": 187,
+      "native_default_xy": [
+        385.79999860216856,
+        490.80000236548517
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible lower jaw/face-edge sample; hair overlap and contour sliding limit its use.",
+      "candidate_raw_yaws": [
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "eye_innerL",
+      "psd_order": 27,
+      "source_xy": [
+        721.5,
+        1001
+      ],
+      "source_alpha_at_seed": 170,
+      "native_default_xy": [
+        288.2000005408803,
+        399.7999999669822
+      ],
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible eye-white boundary proxy, not an anatomical eye corner.",
+      "candidate_raw_yaws": [
+        -0.25,
+        0.0,
+        0.25
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "eye_outerL",
+      "psd_order": 27,
+      "source_xy": [
+        579.5,
+        1022
+      ],
+      "source_alpha_at_seed": 255,
+      "native_default_xy": [
+        231.40000003266658,
+        408.20000067718445
+      ],
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible eye-white boundary proxy, not an anatomical eye corner.",
+      "candidate_raw_yaws": [
+        -1.0,
+        -0.75,
+        -0.5,
+        -0.25,
+        0.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "pupilL",
+      "psd_order": 28,
+      "source_xy": [
+        666.5,
+        1004.5
+      ],
+      "source_alpha_at_seed": 255,
+      "native_default_xy": [
+        266.1999999999993,
+        401.20000076658675
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Eye image fiducial visible; not a proof of anatomical pupil centre.",
+      "candidate_raw_yaws": [
+        -0.75,
+        -0.5,
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "eye_innerR",
+      "psd_order": 37,
+      "source_xy": [
+        905.5,
+        993
+      ],
+      "source_alpha_at_seed": 151,
+      "native_default_xy": [
+        361.60000022018596,
+        396.79999951927283
+      ],
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible eye-white boundary proxy, not an anatomical eye corner.",
+      "candidate_raw_yaws": [
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "eye_outerR",
+      "psd_order": 37,
+      "source_xy": [
+        1045.5,
+        1009.75
+      ],
+      "source_alpha_at_seed": 255,
+      "native_default_xy": [
+        417.60000002160047,
+        403.49999926341616
+      ],
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Visible eye-white boundary proxy, not an anatomical eye corner.",
+      "candidate_raw_yaws": [
+        -1.0,
+        -0.75,
+        -0.5,
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "pupilR",
+      "psd_order": 38,
+      "source_xy": [
+        964.5,
+        1005.5
+      ],
+      "source_alpha_at_seed": 255,
+      "native_default_xy": [
+        385.40000000000003,
+        401.80000000000007
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Eye image fiducial visible; not a proof of anatomical pupil centre.",
+      "candidate_raw_yaws": [
+        -1.0,
+        -0.75,
+        -0.5,
+        -0.25,
+        0.0,
+        0.25
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "ear_rootL",
+      "psd_order": 1,
+      "source_xy": null,
+      "source_alpha_at_seed": null,
+      "native_default_xy": null,
+      "semantic_class": "UNKNOWN",
+      "default_review": "UNKNOWN",
+      "review_note": "covered by hair; native node origin is not a verified anatomical root",
+      "candidate_raw_yaws": [],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "ear_rootR",
+      "psd_order": 2,
+      "source_xy": null,
+      "source_alpha_at_seed": null,
+      "native_default_xy": null,
+      "semantic_class": "UNKNOWN",
+      "default_review": "UNKNOWN",
+      "review_note": "covered by hair; native node origin is not a verified anatomical root",
+      "candidate_raw_yaws": [],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "ear_tipL",
+      "psd_order": 1,
+      "source_xy": [
+        637,
+        44.5
+      ],
+      "source_alpha_at_seed": 255,
+      "native_default_xy": [
+        254.8000000652985,
+        17.80000111780498
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Outer ear tip visible; the hidden ear root is not inferred.",
+      "candidate_raw_yaws": [
+        -1.0,
+        -0.75,
+        -0.5,
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "ear_tipR",
+      "psd_order": 2,
+      "source_xy": [
+        991,
+        32.5
+      ],
+      "source_alpha_at_seed": 226,
+      "native_default_xy": [
+        396.3999992100576,
+        12.800000409321171
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Outer ear tip visible; the hidden ear root is not inferred.",
+      "candidate_raw_yaws": [
+        0.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "neck_connection",
+      "psd_order": 11,
+      "source_xy": null,
+      "source_alpha_at_seed": null,
+      "native_default_xy": null,
+      "semantic_class": "UNKNOWN",
+      "default_review": "UNKNOWN",
+      "review_note": "hidden beneath chin/choker; no verified visible point",
+      "candidate_raw_yaws": [],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    },
+    {
+      "id": "leaf_stem",
+      "psd_order": 62,
+      "source_xy": [
+        647.5,
+        420
+      ],
+      "source_alpha_at_seed": 203,
+      "native_default_xy": [
+        259.2000003453776,
+        168.20000073390474
+      ],
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "default_review": "IMAGE_FEATURE_PRESENT_WITH_LIMITS",
+      "review_note": "Painted stem endpoint visible; physical root/attachment is not established.",
+      "candidate_raw_yaws": [
+        0.0
+      ],
+      "multi_pose_status": "NCC_CANDIDATE_ONLY_NOT_VISIBILITY_GROUND_TRUTH",
+      "eligible_for_fitting": false
+    }
+  ],
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED",
+  "natural_3d_turn": "NOT_ACCEPTED",
+  "next_order": "docs/plans/CORE-026-M1C1-constraints-order.md",
+  "safety": "No full-workspace mcode retry after the new rejection; task process check found no remaining matching process; no credentials read or modified."
+}
