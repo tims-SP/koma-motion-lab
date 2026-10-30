@@ -1,0 +1,67 @@
+name: CORE-011 · generated Aka view FAIL-CLOSED intake regression
+
+on:
+  push:
+    branches: [feature/koma-25d-core-011]
+    paths:
+      - '.github/workflows/koma-25d-core-011.yml'
+      - 'experiments/koma-25d-core/tools/precheck_generated_view11.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reject-invalid-sheet-art:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deterministic test PIL
+        run: python -m pip install "Pillow==12.0.0"
+      - name: Generate synthetic test fixtures ONLY, not Aka art
+        run: |
+          mkdir -p "$RUNNER_TEMP/core011"
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          import os
+          d=Path(os.environ['RUNNER_TEMP'])/'core011'
+          for file,size in [('wrong_multiview_sheet.png',(1536,1024)),
+                            ('wrong_cropped_low_res.png',(192,325)),
+                            ('placeholder_single_view.png',(1024,1024))]:
+              Image.new("RGB",size,(255,245,243)).save(d/file)
+          PY
+      - name: Assert fake multi-panel and low-resolution crops BLOCK
+        run: |
+          set -euo pipefail
+          dir="$RUNNER_TEMP/core011"
+          for file in wrong_multiview_sheet.png wrong_cropped_low_res.png; do
+            set +e
+            python experiments/koma-25d-core/tools/precheck_generated_view11.py \
+              --candidate "$dir/$file" --yaw 90 --out "$dir/$file.json"
+            code=$?
+            set -e
+            test "$code" -eq 2
+            python - "$dir/$file.json" <<'PY'
+          import json,sys
+          x=json.load(open(sys.argv[1]))
+          assert x["status"]=="REJECTED_AUTOMATIC_LAYOUT_OR_SIZE"
+          assert x["native_INX_uv_registered"] is False
+          PY
+          done
+      - name: Assert even valid-sized dummy NEVER auto-passes art/rig QA
+        run: |
+          d="$RUNNER_TEMP/core011"
+          python experiments/koma-25d-core/tools/precheck_generated_view11.py \
+            --candidate "$d/placeholder_single_view.png" \
+            --yaw 180 --out "$d/accepted_dimensions_ONLY.json"
+          python - "$d/accepted_dimensions_ONLY.json" <<'PY'
+          import json,sys
+          x=json.load(open(sys.argv[1]))
+          assert x['status']=='PENDING_VISUAL_IDENTITY_REVIEW'
+          assert x['identity_from_real_Aka_PSD_verified'] is False
+          assert x['native_INX_uv_registered'] is False
+          assert x['360_quality_acceptance'] is False
+          print("CORE011_SYNTHETIC_INPUT_HARD_GATES_PASS")
+          PY
