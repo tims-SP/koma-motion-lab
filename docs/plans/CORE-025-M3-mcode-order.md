@@ -6,6 +6,8 @@
 
 保留已通过的 `--anchors` 行为。新增互斥 `--video` 模式；对未知CLI参数报错，不能把错拼参数当默认模式。
 
+capture/QA扩展后，先重新运行anchors和无flag QA，刷新当前脚本SHA并证明原有17张检查未退化，然后再运行video分支；不以旧manifest通过新代码的哈希门禁。
+
 读取已验收M2场景，使用已有window.core025.render API。97帧，编号0000..0096；每帧实际调用renderer，参数明确：version=clean，depth=curved，pass=beauty，background=white，size=640，yaw_deg=15*sin(2*pi*i/96)。绝对值<1e-10的yaw设成0。首尾0°、024帧+15°、048帧0°、072帧−15°、096帧0°。固定相机，不新增自主动画循环，不用已有图片重复拼出角度。
 
 逐帧保存out/core025/turntable/frames/%04d.png，必须是真实GPU canvas截图，尺寸640×640。每帧记录实际render返回的camera/group矩阵、yaw、锚点投影、PNG SHA。video-manifest.json记录97项、输入assembly/config/场景代码SHA及Node/Chromium/renderer版本。比较三种0°的原始截图，检查往返稳定。

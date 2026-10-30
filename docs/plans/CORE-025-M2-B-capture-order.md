@@ -1,6 +1,6 @@
 # M2-B：只实现并运行capture_core025.mjs
 
-依赖A2的core025.js已通过语法检查并保存。只新建experiments/reference-factory/capture_core025.mjs，建议≤180行；输出out/core025/render/。禁止修改场景、M1、配置或锁文件，禁止安装/联网/委派/后台/git提交。只支持一个明确参数--anchors；未知或缺少参数报错。
+实际运行依赖A2的core025.js已通过语法检查并保存。代码编写可先按固定接口与A2分别进行，此时只执行node --check，不生成manifest、不声称捕获成功；待A2就绪再按第8步真实运行。只新建experiments/reference-factory/capture_core025.mjs，建议≤180行；输出out/core025/render/。禁止修改场景、M1、配置或锁文件，禁止安装/联网/委派/后台/git提交。只支持一个明确参数--anchors；未知或缺少参数报错。
 
 1. 复用既有capture.mjs中的Vite/Playwright启动方式。ROOT=本文件所在reference-factory目录。Vite绑定127.0.0.1:4175 strictPort。Chromium使用已装的headless浏览器、--no-sandbox、--use-angle=swiftshader、--enable-unsafe-swiftshader，页面1630×1630/DPR1。
 2. 访问/core025.html，等待core025Ready为true（60秒）。收集pageerror、console.error、加载失败及HTTP≥400（可忽略favicon），任一实际错误使捕获失败。不要用静态PNG替代渲染。
