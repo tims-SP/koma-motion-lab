@@ -9,7 +9,7 @@ def main():
     ap.add_argument('--job-log',type=Path,required=True)
     ap.add_argument('--out',type=Path,default=Path(__file__).resolve().parent/'out/core026/reference')
     a=ap.parse_args()
-    lines=[re.sub(r'^\d{4}-\d\d-\d\dT\S+\s','',l) for l in a.job_log.read_text(encoding='utf-8-sig').splitlines()]
+    lines=[re.sub(r'^\d{4}-\d\d-\d\dT\S+\s','',l.lstrip('\ufeff')) for l in a.job_log.read_text(encoding='utf-8-sig').splitlines()]
     i=lines.index('CORE026_REVIEW_BUNDLE_BEGIN');j=lines.index('CORE026_REVIEW_BUNDLE_END',i+1)
     b=base64.b64decode(''.join(lines[i+1:j]),validate=True)
     expected=next(l.split()[1] for l in lines if l.startswith('CORE026_BUNDLE_SHA256 '))
