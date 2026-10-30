@@ -1,0 +1,84 @@
+{
+  "psd": {
+    "file": "out/source/tutorial-aka.psd",
+    "sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+    "sha256_verified": true,
+    "source_url": "https://raw.githubusercontent.com/Inochi2D/inochi2d-docs/593c657855d5679f01443ef311346298fd25e117/docs/source/creator/first-model/tutorial-aka.psd",
+    "license": "CC-BY-4.0"
+  },
+  "canvas": [
+    1630,
+    1630
+  ],
+  "color_mode": "3",
+  "channels": 3,
+  "outputs_dir": "out/core024/native-v2",
+  "errors": [],
+  "notes": [
+    "Leaf PNGs are raw topil() RGBA buffers: they do NOT bake layer masks, blend modes, opacity or clipping, so masked/blended leaves are not appearance-equivalent standalone images.",
+    "No white-keying or thresholding was applied; alpha comes from the PSD itself.",
+    "Composite uses psd.composite(force=True, alpha=0.0, color=(1,1,1)): genuine source-layer rendering.",
+    "The forced composite is a forced layer render: it is NOT verified full-front-view parity and NOT UV parity. Per-layer alpha / opacity / blend mode are preserved in this report; the leaf PNGs themselves do not bake masks, blend modes, opacity or clipping.",
+    "Native alpha channel of the source PSD is preserved (no white-keying, no repainting). Forced compositing can spill shadows/halos outside the intended shape."
+  ],
+  "composite_transparent": {
+    "file": "out/core024/native-v2/composite-transparent.png",
+    "sha256": "68601900f604e5aeb5b26b77bbfe94cd60dd7e0b8a4e18040b5a8732f0a1d3a0",
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "opaque_px": 868038,
+      "transparent_px": 1648900,
+      "partial_px": 139962,
+      "transparent_fraction": 0.62061,
+      "opaque_fraction": 0.326711,
+      "partial_fraction": 0.052679,
+      "unique_values": 256
+    }
+  },
+  "composite_cached": {
+    "file": "out/core024/native-v2/composite-cached.png",
+    "sha256": "df045d2cd24fc118d9b04f68d50bc1b20dd626ce356f96d0e7d42ee1e1dd5793",
+    "alpha": {
+      "min": 255,
+      "max": 255,
+      "opaque_px": 2656900,
+      "transparent_px": 0,
+      "partial_px": 0,
+      "transparent_fraction": 0.0,
+      "opaque_fraction": 1.0,
+      "partial_fraction": 0.0,
+      "unique_values": 1
+    }
+  },
+  "fidelity_white_vs_cached": {
+    "definition": "white-composited native rendering vs cached merged PSD RGB, foreground pixels (native alpha > 0)",
+    "mae_rgb_definition": "mean over pixels and over the 3 RGB channels of |native - cached|",
+    "max_abs_definition": "max over pixels of max over the 3 RGB channels of |native - cached| (single-channel maximum error, 0..255)",
+    "max_rgb_sum_abs_definition": "max over pixels of the SUM of the 3 channel absolute differences (reference only, not the headline error)",
+    "foreground_px": 1008000,
+    "mae_rgb": 0.1602,
+    "mae_max_channel": 0.3109,
+    "max_abs": 3,
+    "max_rgb_sum_abs": 6,
+    "mae_all_px": 0.0608
+  },
+  "qa_backgrounds": {
+    "file": "out/core024/native-v2/qa-backgrounds.png",
+    "sha256": "7a53d63d68a7d78e73e2669ef46e45a598f847d05668ffbd6d25ba9c9c86bd43"
+  },
+  "contact_sheet": {
+    "file": "out/core024/native-v2/contact-sheet-layers.png",
+    "sha256": "efbb72535915bd799edcc5a98957999c130b31f84d14b14646c9c3281cb2331e",
+    "tiles": 62,
+    "cols": 8,
+    "rows": 8
+  },
+  "summary": {
+    "leaf_count": 62,
+    "expected_leaf_count": 62,
+    "leaf_errors": 0,
+    "all_topil_pixel_equal": true,
+    "mismatched_png_layers": []
+  }
+}

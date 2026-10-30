@@ -1,0 +1,6 @@
+{
+  "cpu_rembg_result": "BLOCKED",
+  "reason": "mcode background dependency installation did not finish; unified execution reported network approval cancelled before a decision",
+  "model_inference_executed": false,
+  "fallback": "native PSD alpha export using already installed SDK; no install retry"
+}

@@ -39,6 +39,8 @@ jobs:
           python probe_decomposition.py --skip-network
       - name: Acquire pinned original sources and prepare real Aka references
         run: python prepare.py
+      - name: Export native PSD source layers (62 native RGBA leaves, no white-keying)
+        run: python native_layers.py
       - name: Render twice in independent browser processes and validate maps/video
         run: |
           npm run render
@@ -55,6 +57,7 @@ jobs:
             experiments/reference-factory/out/source_freeze.json
             experiments/reference-factory/out/native_topology_index.json
             experiments/reference-factory/out/structure/manifest.json
+            experiments/reference-factory/out/core024/native-v2/native-export.json
           if-no-files-found: error
       - name: Archive original sources and generated media in owner-only Draft Release
         env:
@@ -76,4 +79,4 @@ jobs:
             CORE022-reference-evidence.zip SHA256SUMS.txt \
             --draft --target "$COMMIT_SHA" \
             --title "CORE-022 structural reference evidence ${RUN_NUMBER}" \
-            --notes "Generic pixiv VRM structural reference and original Aka source preparation. Nine held anchors, not continuous Aka animation. No AI generation runs in CI; local pilot candidates are separate. Production and full-front native parity NOT accepted. Source license conditions recorded in source_freeze.json."
+            --notes "Generic pixiv VRM structural reference and original Aka source preparation. Nine held anchors, not continuous Aka animation. No AI generation runs in CI; local pilot candidates are separate. Production and full-front native parity NOT accepted. Source license conditions recorded in source_freeze.json. Also includes the CORE-024 native source-layer export: 62 native RGBA leaf layers plus native-alpha transparent front-view composite from the pinned PSD (alpha preserved, no white-keying, no repainting). This archive does NOT include the local C candidate images and does NOT include any automatic semantic decomposition; it is not a rig and not a multi-view character."

@@ -1,0 +1,8 @@
+{
+  "same_canvas": true,
+  "core_pixel_count": 529907,
+  "eroded_foreground_rgb_mae_255": 17.057359750547423,
+  "core_rgb_changed_fraction_max_gt16": 0.683229321371486,
+  "imagegen_alpha_foreground_median": 253.0,
+  "native_RGB_preservation": "FAIL"
+}

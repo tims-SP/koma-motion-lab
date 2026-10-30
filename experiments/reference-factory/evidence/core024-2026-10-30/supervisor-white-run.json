@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "cutout_white_canvas.py"
+  ],
+  "exit_code": 0,
+  "seconds": 4.3388319920004506
+}

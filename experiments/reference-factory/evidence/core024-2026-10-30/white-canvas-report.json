@@ -1,0 +1,80 @@
+{
+  "source": {
+    "path": "out/candidates/pilot-C-001.png",
+    "sha256": "66d661022b811874afb68ac9a033e8cede5d591d005503e4d023702de5424169",
+    "mode": "RGB",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "imagegen_cutout": {
+    "path": "out/core024/imagegen-cutout-C.png",
+    "sha256": "220ee4ff62baae15aa0fa14f9dfb967c74ad14028f902699df2562c1aa9e8f25"
+  },
+  "variants": {
+    "W250": {
+      "path": "out/core024/white-canvas/white-canvas-W250.png",
+      "sha256": "f9dafa444a810e069023e4b515bcbc14451389f09f61a43d9d249a608720bf4c",
+      "threshold": 250,
+      "method": "border-connected near-white",
+      "alpha": {
+        "zero_px": 1027647,
+        "partial_px": 0,
+        "full_px": 544869,
+        "nonzero_px": 544869,
+        "transparent_px": 1027647,
+        "coverage": 0.346495,
+        "bbox_xywh": [
+          208,
+          23,
+          790,
+          1180
+        ],
+        "edge_contact_px": 0
+      }
+    },
+    "W245": {
+      "path": "out/core024/white-canvas/white-canvas-W245.png",
+      "sha256": "d8d8c2fb3e8ec659e4b1af9b13f844428dfed1e7011c010952526e66e7a88f35",
+      "threshold": 245,
+      "method": "border-connected near-white",
+      "alpha": {
+        "zero_px": 1032571,
+        "partial_px": 0,
+        "full_px": 539945,
+        "nonzero_px": 539945,
+        "transparent_px": 1032571,
+        "coverage": 0.343364,
+        "bbox_xywh": [
+          210,
+          24,
+          784,
+          1178
+        ],
+        "edge_contact_px": 0
+      }
+    },
+    "XGEN": {
+      "path": "out/core024/white-canvas/white-canvas-XGEN.png",
+      "sha256": "b47a4b1c5a972a7e15867f86692701b5cb39f3caa24955aded6b5bfb0f86c518",
+      "method": "imagegen alpha transferred to original RGB",
+      "alpha": {
+        "zero_px": 993799,
+        "partial_px": 577634,
+        "full_px": 1083,
+        "nonzero_px": 578717,
+        "transparent_px": 993799,
+        "coverage": 0.36802,
+        "bbox_xywh": [
+          0,
+          10,
+          1240,
+          1244
+        ],
+        "edge_contact_px": 36
+      }
+    }
+  },
+  "note": "EXPERIMENTAL cutout only. Not semantic decomposition, not a rig, not exact alpha ground truth, not an approved multi-view character."
+}

@@ -1,0 +1,339 @@
+{
+  "native_leaf_count": 62,
+  "native_all_rgba_equal": true,
+  "native_all_bounds_equal": true,
+  "native_cached_white_MAE": 0.16021097883597885,
+  "native_cached_white_max_channel_abs": 3.0,
+  "variants": {
+    "W245": {
+      "rgb_bit_identical": true,
+      "zero_px": 1032571,
+      "partial_px": 0,
+      "opaque_px": 539945
+    },
+    "W250": {
+      "rgb_bit_identical": true,
+      "zero_px": 1027647,
+      "partial_px": 0,
+      "opaque_px": 544869
+    },
+    "XGEN": {
+      "rgb_bit_identical": true,
+      "zero_px": 993799,
+      "partial_px": 577634,
+      "opaque_px": 1083
+    }
+  },
+  "leaf_checks": [
+    {
+      "name": "Fox: Ear L",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Fox: Ear R",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair L2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair R2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair L1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair L3",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair R1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Back Side Hair R3",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Neck",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Neck Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Face",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Side Hair L Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Side Hair R Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair R2 Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair L2 Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair R1 Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair L1 Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair C Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Nose",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Mouth Inner",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Lip",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Shadow Lower",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Shadow Upper",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyelid2 Shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L White",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyeball",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyelash2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyelid Side",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyelash1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyelid",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Shadow Lower",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Shadow Upper",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyelid2 shadow",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R White",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyeball",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyelash2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyelid Side",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyelash1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyelid1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Side Hair L",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Side Hair L Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Side Hair R",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Side Hair R Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair L2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair L2 Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair R2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair R2 Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair L1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair L1 Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair R1",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair R1 Ligth",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair C",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Front Hair C Light",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye L Eyelid2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eye R Eyelid2",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eyebrow L",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Eyebrow R",
+      "equal": true,
+      "bounds_match": true
+    },
+    {
+      "name": "Leaf",
+      "equal": true,
+      "bounds_match": true
+    }
+  ]
+}
