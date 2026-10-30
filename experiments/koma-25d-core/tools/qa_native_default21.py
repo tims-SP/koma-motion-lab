@@ -27,8 +27,20 @@ for i,x in enumerate(ORDER):
     poses.append({"index":i,"raw_yaw":x,"raw_pitch":0.,
                  "actual_png_sha256":hashlib.sha256(p.read_bytes()).hexdigest(),
                  "foreground":int(fg.sum())})
+roundtrip=[]
 for a,b in [(0,12),(1,11),(2,10),(3,9),(4,8),(5,7)]:
-    assert poses[a]["actual_png_sha256"]==poses[b]["actual_png_sha256"],(a,b)
+    p=np.asarray(Image.open(ROOT/f"native_{a:03d}.png").convert("RGB"),np.int16)
+    q=np.asarray(Image.open(ROOT/f"native_{b:03d}.png").convert("RGB"),np.int16)
+    region=(p.max(2)>48)|(q.max(2)>48)
+    diff=np.max(np.abs(p-q),axis=2)
+    pixel_fraction=float(((diff>16)&region).sum()/max(1,region.sum()))
+    mae=float(np.abs(p-q)[region].mean()) if region.any() else 0.
+    roundtrip.append({"first":a,"return":b,"raw_yaw":ORDER[a],
+      "byte_identical":poses[a]["actual_png_sha256"]==poses[b]["actual_png_sha256"],
+      "changed_frac_in_union_foreground_gt16":round(pixel_fraction,5),
+      "foreground_rgb_mae":round(mae,3)})
+assert len(roundtrip)==6
+print("CORE021_ROUNDTRIP_GPU_SOURCE_VARIANCE",json.dumps(roundtrip))
 assert len({p["actual_png_sha256"] for p in poses[:7]})>=6
 assert poses[2]["actual_png_sha256"]!=poses[4]["actual_png_sha256"],"TRUE default differs from raw (0.5,0)!"
 video=ROOT/"actual_native_default_13frame_GL_H264.mp4"
@@ -67,6 +79,9 @@ qa={"schema":"core021-authentic-default-Aka-ear-GL/1",
    "decoded_frame_indexes":sample_indexes},
  "production_3d_head_360":"NOT_DONE",
  "original_two_ear_pixel_parity_to_independent_renderer":"NOT_EVALUATED_IN_THIS_GPU_JOB",
+ "repeat_capture_variance":roundtrip,
+ "repeat_capture_byte_identical":all(x["byte_identical"] for x in roundtrip),
+ "repeat_capture_quality":"FLAGGED_NOT_PIXEL_IDENTICAL" if not all(x["byte_identical"] for x in roundtrip) else "BYTE_IDENTICAL",
  "capture":poses}
 (ROOT/"native_default_gpu_qa.json").write_text(json.dumps(qa,indent=2)+"\n")
 print("CORE021_NATIVE_DEFAULT_SOURCE_AND_FINAL_H264_DECODE_PASS",json.dumps({k:v for k,v in qa.items() if k!="capture"}))
