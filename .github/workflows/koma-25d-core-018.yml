@@ -1,0 +1,94 @@
+name: CORE-018 A · native Aka 0° baseline pixel captures
+
+on:
+  push:
+    branches: [feature/koma-25d-core-018]
+    paths:
+      - '.github/workflows/koma-25d-core-018.yml'
+      - 'experiments/koma-25d-core/tools/qa_native_baseline18.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture-native-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install genuine Mesa X11 OpenGL and PNG verification
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libgl1-mesa-dev libegl1-mesa-dev libx11-dev libxkbcommon-dev \
+            libxkbcommon-x11-dev libxcursor-dev libxi-dev libxrandr-dev \
+            libxcb-xfixes0-dev libwayland-dev pkg-config xvfb xauth xdotool mesa-utils ffmpeg
+          python -m pip install "Pillow==12.0.0" "numpy==2.2.6"
+      - name: Download SHA-verified genuine Aka binary and pinned Inox2D source
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/koma-25d-core/out/core018/reference
+          curl -fL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' \
+            dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f \
+            "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+          git clone --quiet https://github.com/Inochi2D/inox2d.git "$RUNNER_TEMP/inox2d"
+          git -C "$RUNNER_TEMP/inox2d" checkout -q d4dd9dd7f16b775042cbda44370570abf9a8cf81
+          python experiments/koma-25d-core/tools/patch_inox_fixed8.py \
+            --checkout "$RUNNER_TEMP/inox2d" \
+            --report experiments/koma-25d-core/out/core018/reference/patched_upstream.json
+          python - "$RUNNER_TEMP/inox2d/examples/render-opengl/src/main.rs" <<'PY'
+          import sys
+          from pathlib import Path
+          p=Path(sys.argv[1]);s=p.read_text()
+          needle="}, 0.0));"
+          assert s.count(needle)==1, "Do not silently claim neutral pitch"
+          p.write_text(s.replace(needle,"}, 0.5));"))
+          print("CORE018_PINNED_REFERENCE_PITCH_AT_NEUTRAL_0_5")
+          PY
+          cargo build --release --manifest-path "$RUNNER_TEMP/inox2d/Cargo.toml" -p render-opengl
+      - name: Capture actual native OpenGL neutral HeadYaw 0.5 and max 1.0
+        run: |
+          set -euo pipefail
+          dir=experiments/koma-25d-core/out/core018/reference
+          export DISPLAY=:88 LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe
+          Xvfb :88 -screen 0 1024x900x24 -ac +extension GLX +render -noreset > "$dir/xvfb.log" 2>&1 &
+          xvfbpid=$!
+          sleep 3
+          glxinfo -B > "$dir/glxinfo.txt"
+          xdotool mousemove 1010 880 || true
+          for pair in "neutral 0.50" "maximum 1.00"; do
+            read -r tag value <<< "$pair"
+            export KOMA_HEAD_YAW="$value"
+            "$RUNNER_TEMP/inox2d/target/release/render-opengl" "$RUNNER_TEMP/Aka.inx" > "$dir/native_$tag.log" 2>&1 &
+            pid=$!
+            sleep 5
+            kill -0 "$pid"
+            xdotool search --name "Render Inochi2D Puppet" windowmove 0 0 || true
+            sleep 2
+            ffmpeg -hide_banner -loglevel error -y -f x11grab -video_size 1024x900 \
+              -framerate 1 -i :88.0+0,0 -frames:v 1 "$dir/native_$tag.x11.png"
+            if grep -Eq "FBO incomplete|GL_INVALID_FRAMEBUFFER_OPERATION" "$dir/native_$tag.log"; then
+              tail -70 "$dir/native_$tag.log"
+              echo "FATAL_INCOMPLETE_NATIVE_FBO"
+              exit 1
+            fi
+            kill "$pid" || true
+            wait "$pid" || true
+            sleep 1
+          done
+          kill "$xvfbpid" || true
+      - name: Strict screen nonblank, model appearance and reference lineage QA
+        run: |
+          python experiments/koma-25d-core/tools/qa_native_baseline18.py \
+            --input experiments/koma-25d-core/out/core018/reference
+      - name: Upload original reference image pair as normal Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE018-pinned-Inox2D-real-render-reference
+          path: experiments/koma-25d-core/out/core018/reference/
+          retention-days: 30
+          if-no-files-found: error
