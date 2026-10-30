@@ -12,8 +12,8 @@
 ## 当前任务
 
 - CORE-025-M1：PASS（默认姿态组装与指定9层阴影裁剪，限原型）。[监工验收](research/CORE-025-M1-supervisor-acceptance.md)：source白底MAE0.125177/255、黑底0.144745/255，独立Pillow复合最大差1色阶；49测试及真实准备均exit0。保留颈部源图软边和微小游离片段为待修整项。
-- CORE-025-M2：BLOCKED_AUTH。上轮执行会话不可查询且未留下曲面代码；2026-10-30重试时mcode CLI明确要求登录。已启动官方中国区授权，授权信息只在会话中展示，不写入仓库。M1已完成提交不受影响。
-- M2恢复后按[拆分工单](plans/CORE-025-M2-split-orders.md)执行：[A1固定配置与HTML](plans/CORE-025-M2-A1-setup-order.md)→[A2场景](plans/CORE-025-M2-A2-renderer-order.md)→[B捕获](plans/CORE-025-M2-B-capture-order.md)→[C独立QA](plans/CORE-025-M2-C-QA-order.md)。M2当前没有已验收代码或截图；不得把规划日志计为实现。
+- CORE-025-M2：IN_PROGRESS。mcode官方CLI已确认授权成功，且A1真实模型执行成功。A1固定配置与HTML已落盘，监工逐字段比较配置与明确工单完全一致，7个锚点及HTML静态核对PASS；此时GPU和转头仍NOT_TESTED。下一项为A2曲面场景代码。
+- M2按[拆分工单](plans/CORE-025-M2-split-orders.md)执行：[A1固定配置与HTML](plans/CORE-025-M2-A1-setup-order.md)已完成→[A2场景](plans/CORE-025-M2-A2-renderer-order.md)执行中→[B捕获](plans/CORE-025-M2-B-capture-order.md)待执行→[C独立QA](plans/CORE-025-M2-C-QA-order.md)待执行。尚无GPU验收或视频。
 - CORE-025-M3/M4：TODO，分别为连续转头抽帧、Actions复现与Draft Release归档。
 
 ## 干净环境恢复
