@@ -45,3 +45,17 @@ mcode原任务出现服务端500和超时，未产出可验收的extract_core026
 ## 恢复CI首轮失败及修复
 
 run41125161542在source verify-source处exit11，缺out/core025/render/manifest.json和supervisor-qa.json。源组装及58个像素对应已实际通过，但流程没有先生成这两份保护报告。已补锁定Node/Chromium依赖、真实17图capture_core025 --anchors和独立QA作为前置，不删保护项、不造占位文件。修复后的运行必须真实成功，不能沿用首轮绿色准备步骤作为整体PASS。
+
+## 监督恢复最终实测
+
+代码5f9aef894813d8692242a04798b5817e1892d8ea的[run41126811519](https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811519)、job124307345047所有步骤真实success。源层重建、旧17图真实保护报告、186PNG/10保护文件、58唯一像素对应、4重复项默认空间区分、62源叠画记录、11Multiply与9clip均通过。
+
+恢复接口还实际暴露两项日志格式问题：run41125557918被GitHub CLI的终端转义拦截；改为仅将原始响应写文件后，run41126370320发现日志中段第二个BOM，导致时间戳混入Base64。已仅去除每行开头BOM后再剥时间戳，保留严格Base64解码、ZIP白名单、来源/补丁/图片SHA检查。三个失败运行不改记为成功。
+
+最终恢复9张真实720×880原图和9张652×652裁切，所有SHA与原生manifest一致；审阅ZIP哈希仍为8b0e9511c2781108a4335e287ab419c7563cf3e54e933d98d79be1eb6c263f73。顶部余量实际为12/13/13/13/12/13/13/13/12像素；候选数实际复现4/5/6/11/13/9/7/6/4。所有候选仍不具备自动拟合资格。
+
+[监督诊断Draft](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-270a8f25943b4d8f5dd0)创建成功；JSON artifact13010862995仅26799字节。媒体不进git和artifact。机器可读记录位于experiments/reference-factory/evidence/core026-M1/supervisor-recovery-ci-acceptance.json。
+
+本次通过范围仅为源事实、真实参考恢复和诊断可复现；M1整体、接收面合成、运动遮挡和自然3D转头仍未放行。mcode约束实现及19标点人工复核仍按工单继续，服务具体目的地发送范围确认和Work恢复是当前剩余阻塞。
+
+同一代码5f9aef8的旧工厂回归[run41126811438](https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811438)、job124307344949也已真实success。最终文档提交不改变已通过的代码。

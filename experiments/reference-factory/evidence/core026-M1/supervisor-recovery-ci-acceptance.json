@@ -1,0 +1,250 @@
+{
+  "schema": "core026-supervisor-ci-acceptance/1",
+  "code_commit": "5f9aef894813d8692242a04798b5817e1892d8ea",
+  "workflow_run": 41126811519,
+  "job": 124307345047,
+  "workflow_url": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811519",
+  "status": "PASS_SOURCE_REFERENCE_RECOVERY_AND_DIAGNOSTICS",
+  "protected_baseline": {
+    "preceding_commit": "18c6af440276783d07f04199c3cda729bdd631f2",
+    "legacy_regression_run": 41125557955,
+    "legacy_regression_status": "success",
+    "latest_code_regression": {
+      "code_commit": "5f9aef894813d8692242a04798b5817e1892d8ea",
+      "run": 41126811438,
+      "job": 124307344949,
+      "status": "success",
+      "url": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811438"
+    }
+  },
+  "rejected_attempts": [
+    {
+      "run": 41125161542,
+      "reason": "Required protected CORE025 render reports were not generated",
+      "fix": "Actually regenerate 17 Chromium captures and independent QA; preserve guards"
+    },
+    {
+      "run": 41125557918,
+      "reason": "GitHub CLI refused terminal escape sequences in archived log response",
+      "fix": "Allow raw response only into a file for offline parsing and hash validation"
+    },
+    {
+      "run": 41126370320,
+      "reason": "Archived job log contains a second segment BOM before a timestamp inside the bundle block",
+      "fix": "Strip BOM only at each log line start, then remove timestamp; retain strict base64, ZIP, source and PNG SHA checks"
+    }
+  ],
+  "scope": "Source facts, real native reference recovery and candidate diagnostics only",
+  "overall_m1": "NOT_ACCEPTED",
+  "m2": "NOT_STARTED",
+  "natural_3d_turn": "NOT_ACCEPTED",
+  "mcode_constraints_implementation": "NOT_COMPLETED",
+  "work_environment": "unavailable at checkpoint",
+  "full_workspace_mcode": "paused pending explicit task-data destination scope",
+  "source_pixels": {
+    "schema": "core026-supervisor-independent-source/1",
+    "status": "SOURCE_PIXEL_CHECK_PASS",
+    "overall_m1": "NOT_EVALUATED",
+    "native_capture": "NOT_EVALUATED",
+    "protected_files_checked": 10,
+    "layer_pngs_checked": 186,
+    "source_layers": 62,
+    "native_textures": 76,
+    "method": "Exact alpha after alpha>0 trim; rounded PSD RGB*alpha/255 vs INX RGB, max<=1. No mirror/resampling/names.",
+    "unique_pixel_correspondences": 58,
+    "ambiguous_pixel_orders": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "mcode_verified_independently_supported": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
+    ],
+    "mcode_unresolved": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "default_coordinates": {
+    "schema": "core026-supervisor-default-source-space/1",
+    "status": "PASS_DEFAULT_SOURCE_COORDINATES",
+    "source_inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+    "contract_sha256": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d",
+    "pixel_audit_sha256": "bcc5206c4203d04568e04ae51c0bc4eb1110258a5b8011f4e1f2fb6829916c80",
+    "source_node_count": 100,
+    "global_world_minus_source_translation": [
+      -896.9999934,
+      -2587.999977
+    ],
+    "raster_unique_median_residual_source_px": 0.7071309148651893,
+    "raster_unique_max_residual_source_px": 3.9051234807720783,
+    "convention": "native TGA UV*full texture size + PSD layer bounds + source alpha offset - native alpha offset; original source parent scale/Rz/translation; one global translation only",
+    "guards": {
+      "unique_max_source_px": 5,
+      "duplicate_best_source_px_lt": 2,
+      "duplicate_second_source_px_gt": 20
+    },
+    "claims": {
+      "original_uv_changed": false,
+      "GPU_registration": "NOT_TESTED",
+      "HeadYaw_motion": "NOT_TESTED",
+      "depth_3d": "NOT_RECOVERED",
+      "overall_M1": "NOT_ACCEPTED_BY_THIS_CHECK"
+    }
+  },
+  "source_constraints": {
+    "records": 62,
+    "multiply": 11,
+    "clips": 9,
+    "late_overlaps": [
+      28,
+      15,
+      2156,
+      1954
+    ]
+  },
+  "reference_recovery": {
+    "status": "RESTORED_AND_HASH_VERIFIED",
+    "bundle_sha256": "8b0e9511c2781108a4335e287ab419c7563cf3e54e933d98d79be1eb6c263f73",
+    "full_pngs": 9,
+    "crop_pngs": 9,
+    "natural_3d_turn": "NOT_EVALUATED"
+  },
+  "candidate_counts_by_raw_yaw": [
+    [
+      -1,
+      4
+    ],
+    [
+      -0.75,
+      5
+    ],
+    [
+      -0.5,
+      6
+    ],
+    [
+      -0.25,
+      11
+    ],
+    [
+      0,
+      13
+    ],
+    [
+      0.25,
+      9
+    ],
+    [
+      0.5,
+      7
+    ],
+    [
+      0.75,
+      6
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "reference_hash_qa": {
+    "full_sha_verified": 9,
+    "crop_sha_verified": 9,
+    "top_margins": [
+      12,
+      13,
+      13,
+      13,
+      12,
+      13,
+      13,
+      13,
+      12
+    ],
+    "fit_acceptance": false
+  },
+  "diagnostic_draft_release": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-270a8f25943b4d8f5dd0",
+  "original_native_clean_run": 41119224557,
+  "original_native_clean_commit": "801d90409ff3e8680a63caf3b7a164902cbe360f",
+  "full_source_identity_scope": "58 distinct alpha/premultiplied-raster matches plus four duplicate-image nodes separated by original default source-space coordinates; not GPU, physical depth or motion acceptance",
+  "text_artifact": {
+    "id": 13010862995,
+    "name": "CORE026-supervisor-text-evidence",
+    "size_in_bytes": 26799,
+    "url": "https://api.github.com/repos/tims-SP/koma-motion-lab/actions/artifacts/13010862995",
+    "archive_download_url": "https://api.github.com/repos/tims-SP/koma-motion-lab/actions/artifacts/13010862995/zip",
+    "expired": false,
+    "created_at": "2026-10-30T20:55:19Z",
+    "expires_at": "2027-01-28T20:53:49Z",
+    "updated_at": "2026-10-30T20:55:19Z",
+    "digest": "sha256:1fbb66a2f16da09f4b5e3ff6238e30e56d7327d0ec755b94eddd1dccd8c622d6",
+    "workflow_run": {
+      "id": 41126811519,
+      "repository_id": 1437062786,
+      "head_repository_id": 1437062786,
+      "head_branch": "feature/koma-25d-core-021",
+      "head_sha": "5f9aef894813d8692242a04798b5817e1892d8ea"
+    }
+  }
+}
