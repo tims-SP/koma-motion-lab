@@ -1,0 +1,219 @@
+{
+  "code_commit": "c876100f6c0eea0623e3cbb60e06152b86d1b472",
+  "run_id": 41084893009,
+  "job_id": 124163345904,
+  "conclusion": "success",
+  "regression_tests": 49,
+  "release_url": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-38eb4ff6aa4c88363e39",
+  "M2": {
+    "schema": "koma-core025-supervisor-qa/1",
+    "numeric_gate": "PASS",
+    "visual_gate": "NOT_REVIEWED",
+    "production_gate": "NOT_ACCEPTED",
+    "failures": [],
+    "geometry_count": 62,
+    "total_vertices": 63063,
+    "face": {
+      "vertices": 3886,
+      "z_range": 0.07453756779432297,
+      "max_plane_residual": 0.03701808903753998
+    },
+    "uv_max_source_px": 0.000048279762268066406,
+    "surface_max_world_error": 1.0096272241855164e-8,
+    "front_fidelity": {
+      "source_white": {
+        "mae_0_255": 0.048877645502645506,
+        "max_channel_error": 2,
+        "over16_fraction": 0,
+        "outside_foreground_mae": 0
+      },
+      "source_black": {
+        "mae_0_255": 0.04891335978835979,
+        "max_channel_error": 2,
+        "over16_fraction": 0,
+        "outside_foreground_mae": 0
+      },
+      "clean_white": {
+        "mae_0_255": 0.04247065087857197,
+        "max_channel_error": 2,
+        "over16_fraction": 0,
+        "outside_foreground_mae": 0
+      },
+      "clean_black": {
+        "mae_0_255": 0.04246366889832803,
+        "max_channel_error": 2,
+        "over16_fraction": 0,
+        "outside_foreground_mae": 0
+      }
+    },
+    "curved_flat_mean_anchor_px_at640": 8.313518813544595,
+    "capture_count": 17,
+    "all_hashes_valid": true,
+    "fixed_camera": true,
+    "inputs": {
+      "assembly_sha256": "06ffade8399609b961dafb3c5c3bf6f3f185200b98d8ae06f30fed9603e65673",
+      "config_sha256": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3",
+      "scene_sha256": "4b67da33763b87394f161ade560b1fc721d6f8f60d8a3c505ebccc8e2b769228",
+      "capture_sha256": "d0c4f05292295af829f99c4ca3bf8fedadc785f26a2e2c7ebcbbe103314aa028"
+    },
+    "validator_sha256": "78b70663543c436a99f5655db127d497c36df2870001add012af1640e6873866"
+  },
+  "M3": {
+    "schema": "koma-core025-video-supervisor-qa/1",
+    "numeric_gate": "PASS",
+    "visual_gate": "NOT_REVIEWED",
+    "production_gate": "NOT_ACCEPTED",
+    "failures": [],
+    "frames": 97,
+    "fps": 24,
+    "unique_raw_images": 49,
+    "min_subject_margin_px": 12,
+    "zero_roundtrip_mae": [
+      0,
+      0,
+      0
+    ],
+    "extreme_vs_zero_mae": [
+      8.435143229166666,
+      8.4541455078125
+    ],
+    "fixed_camera": true,
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 640,
+          "r_frame_rate": "24/1",
+          "nb_read_frames": "97"
+        }
+      ],
+      "format": {
+        "duration": "4.041667"
+      }
+    },
+    "video": {
+      "file": "core025-head-yaw-15deg.mp4",
+      "sha256": "dc428ec847c318bd09021b7d63756697c2f93725e9f2e51d64fd6a529a6b5df2",
+      "bytes": 438568
+    },
+    "decoded_samples": [
+      {
+        "source_frame": 0,
+        "yaw_deg": 0,
+        "file": "decoded-review/001.png",
+        "sha256": "ea30683f0d19a61607087bfcca81ab6e3c758108d301cedc1134bd1aa3943212"
+      },
+      {
+        "source_frame": 8,
+        "yaw_deg": 7.499999999999999,
+        "file": "decoded-review/002.png",
+        "sha256": "62870482d261998e0b2f4cd71638a6f81a2290a752ac222147247e6855a09958"
+      },
+      {
+        "source_frame": 16,
+        "yaw_deg": 12.990381056766578,
+        "file": "decoded-review/003.png",
+        "sha256": "8e422c18667da49c90866351173ddb0594bac95be771580ced9e1d3dceed4e80"
+      },
+      {
+        "source_frame": 24,
+        "yaw_deg": 15,
+        "file": "decoded-review/004.png",
+        "sha256": "1f95b8b1d538d4dbe62c337f33bfe869956db6e51a930fae375361b7173bd041"
+      },
+      {
+        "source_frame": 32,
+        "yaw_deg": 12.99038105676658,
+        "file": "decoded-review/005.png",
+        "sha256": "be9c188beaf768c91ffc9e74fa9bd8e409e4a6a6fd74d97d0b1a88fa512453c7"
+      },
+      {
+        "source_frame": 40,
+        "yaw_deg": 7.499999999999999,
+        "file": "decoded-review/006.png",
+        "sha256": "e8d1cee7af3ed5f19efe54ed3f308a8563ba4e64e9fe4bd138fdd37d08afac87"
+      },
+      {
+        "source_frame": 48,
+        "yaw_deg": 0,
+        "file": "decoded-review/007.png",
+        "sha256": "1d22e6e856e7e11dfd38668fa662154aea57a9b95b1bf6dc68e203dbd5bba99f"
+      },
+      {
+        "source_frame": 56,
+        "yaw_deg": -7.499999999999996,
+        "file": "decoded-review/008.png",
+        "sha256": "e9c3b001a5831f51e80a42be600ada5eee922679efd1ce6ec443b9aaea631f37"
+      },
+      {
+        "source_frame": 64,
+        "yaw_deg": -12.990381056766577,
+        "file": "decoded-review/009.png",
+        "sha256": "db0eba6b9737bae04056cbf6a3b697bff033565f7912a86f7c23b29b336a0c29"
+      },
+      {
+        "source_frame": 72,
+        "yaw_deg": -15,
+        "file": "decoded-review/010.png",
+        "sha256": "204cde1b97790b35f383b423c1fae819a0f915d55dfcbd89c923432190c94551"
+      },
+      {
+        "source_frame": 80,
+        "yaw_deg": -12.990381056766578,
+        "file": "decoded-review/011.png",
+        "sha256": "64cb2e377aa5ae194dbfe054bfb11d32f553455a48c0853d5d7fd3370b36f89d"
+      },
+      {
+        "source_frame": 88,
+        "yaw_deg": -7.500000000000007,
+        "file": "decoded-review/012.png",
+        "sha256": "fe0619b391172d329391b716f87768ce6d91b95b20ffc6e55a8b1b03585de25f"
+      },
+      {
+        "source_frame": 96,
+        "yaw_deg": 0,
+        "file": "decoded-review/013.png",
+        "sha256": "dc3a07440f1dab1ded4d0d9de840993de33389707ffaeaa5f24bb5c2db064c69"
+      }
+    ],
+    "rois": {
+      "eyes": [
+        200,
+        340,
+        440,
+        445
+      ],
+      "ear_roots": [
+        150,
+        135,
+        490,
+        310
+      ],
+      "fringe_face": [
+        155,
+        275,
+        500,
+        540
+      ],
+      "neck": [
+        245,
+        500,
+        390,
+        610
+      ]
+    },
+    "inputs": {
+      "assembly_sha256": "06ffade8399609b961dafb3c5c3bf6f3f185200b98d8ae06f30fed9603e65673",
+      "config_sha256": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3",
+      "scene_sha256": "4b67da33763b87394f161ade560b1fc721d6f8f60d8a3c505ebccc8e2b769228",
+      "anchor_manifest_sha256": "af703c0b78304b0ef9a101ea3a31a4635bb3c23b2f328bc2465282c3224dbe77",
+      "video_capture_sha256": "163065a259930d0ebcfa879a0ba66c9fc6910fd3984b818d2b5aea078b1913f1"
+    },
+    "validator_sha256": "44a74bc0b20f6f6eeeebe7ac38419b2f766bb96e4dfa0e0d89095c895458e9b4",
+    "bbox_method": "RGB difference from white >3; coarse outline, not alpha truth"
+  },
+  "visual_gate": "FAIL",
+  "production_gate": "NOT_ACCEPTED"
+}

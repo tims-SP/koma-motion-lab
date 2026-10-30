@@ -114,6 +114,11 @@ python canonicalize_candidates.py \
 
 ## CORE-025 — layered turn prototype: full recovery commands
 
+[Clean-environment CI PASS](https://github.com/tims-SP/koma-motion-lab/actions/runs/41084893009)
+at `c876100f6c0eea0623e3cbb60e06152b86d1b472`;
+[Draft Release evidence](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-38eb4ff6aa4c88363e39).
+The artistic failure below remains in effect.
+
 Current state: the numeric/structural chain is **PASS**, the **artistic head-turn
 gate is FAIL** (the motion still reads as a shallow-surface sway, the face stays
 too frontal and the facial silhouette perspective change is too weak), and

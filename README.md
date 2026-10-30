@@ -2,13 +2,14 @@
 
 ## Current research checkpoint — CORE-025 layered turn prototype (2026-10-30)
 
-**Status: numeric/structural chain PASS, artistic head-turn gate FAILED, production NOT ACCEPTED, clean-environment CI PENDING.**
+**Status: numeric/structural chain PASS, artistic head-turn gate FAILED, production NOT ACCEPTED, clean-environment CI PASS.**
 
 - Recovery entry point and task status: [docs/STATUS.md](docs/STATUS.md).
 - M1 (native layered assembly): [supervisor acceptance report](docs/research/CORE-025-M1-supervisor-acceptance.md) — PASS.
 - M2 (curved surface + front-view restoration): [supervisor acceptance report](docs/research/CORE-025-M2-supervisor-acceptance.md) — numeric gate PASS, artistic head turn NOT_ACCEPTED.
 - M3 (continuous turntable video): [supervisor acceptance report](docs/research/CORE-025-M3-supervisor-acceptance.md) — numeric chain PASS, **artistic head turn FAIL**.
-- Clean-environment Actions reproduction run: **PENDING** — no new CI run has been observed yet, so no run or release link is claimed here. The supervisor fills in the real run/release links after verification.
+- [Clean-environment Actions reproduction PASS](https://github.com/tims-SP/koma-motion-lab/actions/runs/41084893009), code commit `c876100f6c0eea0623e3cbb60e06152b86d1b472`: 49 regressions, M1 assembly, 17 M2 captures, 97-frame video with encoding/decoding, and the existing 45-map repeat all passed.
+- [Owner-only Draft Release evidence](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-38eb4ff6aa4c88363e39): `CORE025-layered-turn-evidence.zip` plus checksum. This archive records a prototype with **failed artistic acceptance**.
 - The current turn prototype is an inferred open shallow surface driven to ±15°; the motion still reads as a shallow-surface sway, the face stays too frontal and the facial silhouette perspective change is too weak. A PASS on the numeric chain is **not** an artistic pass.
 - The original Inochi runtime, full-front-view binding, bone skinning/IK, and real side, back and 360° views remain unaccepted; new-view assets are still incomplete.
 
