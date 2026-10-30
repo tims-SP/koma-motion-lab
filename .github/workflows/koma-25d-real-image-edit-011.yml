@@ -49,6 +49,13 @@ jobs:
               assert d["accepted_visual"] is False
           print("CORE011_TRUE_ORIGINAL_REFERENCE_INPUT_OK_AND_NO_API_CALL")
           PY
+      - name: Provide verified Aka original PNG as directly downloadable Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aka-original-front-1024-verified
+          path: ${{ runner.temp }}/source_A_aka_front.png
+          if-no-files-found: error
+          retention-days: 30
   optional-paid-single-image-edit:
     if: github.event_name == 'workflow_dispatch' && inputs.paid_image_edit == true
     needs: [verify-real-original-free]
