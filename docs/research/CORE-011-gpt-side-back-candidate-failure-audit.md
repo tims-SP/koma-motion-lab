@@ -54,3 +54,15 @@ Thus **6 of 8 nominal anchor views are still wholly missing**. Source count is o
 The next image generation must be an **actual image-to-image EDIT of the real official Aka original reference**, with an explicit attached source image (not just an image visible in a chat UI, text citation, or prompt). Generate exactly one head profile pointing IMAGE RIGHT on plain background, not a contact sheet. Then separately generate a face-free rear view, both high-resolution. Use independent true 0° Aka source, existing genuine native INX HeadYaw frames, and approved +3/4 as *secondary*. Fix original-visible hair/leaf/ear identity **before** segmentation or 3D reconstruction.
 
 If the current generator integration cannot prove the reference image was ingested and consistently returns infographic collages, **STOP / FLAG BLOCKER**. Repeating unlimited calls or cropping sheets must not count as progress. Do not merge CORE-011 into production.
+
+## Verified alternate input chain (separate successful CI; still no image edit)
+
+Following five failures from the in-chat implicit-reference image-generation route, a direct **OpenAI Images Edit** path was implemented, following the official October 2026 docs: https://developers.openai.com/api/reference/resources/images/methods/edit . The selected explicit-edit model is \`gpt-image-2.5-sunburst\`, quality high, one 1024×1024 output, **one attached source image, not a text-only prompt**.
+
+- \`experiments/koma-25d-core/tools/edit_real_aka11.py\`: reads actual image bytes, checks immutable SHA256 of original Aka PSD-derived \`source_A_aka_front.png\`, constructs ONE +90 or ONE 180 single-view editing prompt and \`client.images.edit(model=...,image=infile,...)\`. API response, if ever returned, is **PENDING_DIRECT_IMAGE_VISUAL_REVIEW**, not a real rig or successful 360 skin. API key never committed.
+- \`.github/workflows/koma-25d-real-image-edit-011.yml\`: FREE source integrity check on pushes; optional paid edit behind manual workflow_dispatch boolean \`paid_image_edit=true\` and securely configured \`OPENAI_API_KEY\` GitHub Secret.
+- [GitHub Actions #40994420605](https://github.com/tims-SP/koma-motion-lab/actions/runs/40994420605) **SUCCESS**: actually downloaded original 1024×1024 Aka front PNG from owner-only earlier draft release, checked SHA256 \`c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4\`, successfully constructed 90/180 edit request manifests. No paid API call was made and paid job was SKIPPED.
+- Locally, the script was intentionally pointed to an old GPT-generated front composite; it correctly STOPPED with \`CORE011_REF_SHA_REJECTED\` instead of silently treating a new synthetic front image as canonical Aka.
+
+**NEW status distinction:** explicit image-reference provenance **verified**. Model-side conditioning result, accepted side/back art, true layers, original 2D mesh UV binding and 360° video **NOT VERIFIED**. The next real image generation is correctly guarded by deliberate manual API authorization rather than more repeated prompt-only sheet attempts. No paid action was triggered or charged by these tests.
+
