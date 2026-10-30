@@ -1,0 +1,78 @@
+name: CORE-016 · authentic Aka ear UV and original texture extraction
+
+on:
+  push:
+    branches: [feature/koma-25d-core-016]
+    paths:
+      - '.github/workflows/koma-25d-core-016.yml'
+      - 'experiments/koma-25d-core/tools/extract_native_ear16.py'
+      - 'experiments/koma-25d-core/tools/build_native_ear_shell16.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  original-ear-artmesh-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install bounded original texture reader
+        run: python -m pip install "Pillow==12.0.0" "trimesh==4.11.1" "numpy==2.2.6"
+      - name: Fetch genuine full Aka INX at pinned commit
+        run: |
+          curl -fsSL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' \
+            dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f \
+            "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+      - name: Export ORIGINAL ear node meshes / unchanged UV and TGA pixels
+        run: |
+          python experiments/koma-25d-core/tools/extract_native_ear16.py \
+            --input "$RUNNER_TEMP/Aka.inx" \
+            --out experiments/koma-25d-core/out/core016/native
+      - name: Build actual 3D shell with ORIGINAL source ear UV and TGA front
+        run: |
+          python experiments/koma-25d-core/tools/build_native_ear_shell16.py \
+            --original-ears experiments/koma-25d-core/out/core016/native \
+            --out experiments/koma-25d-core/out/core016/native/original_INX_UV_3D_ear_shell.glb
+      - name: Verify no false new-view binding claims
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('experiments/koma-25d-core/out/core016/native/native_ear_parts.json')
+          d=json.loads(path.read_text())
+          assert d["source_sha256"]=="dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f"
+          assert sorted(a["vertex_count"] for a in d["ears"])==[57,59]
+          assert sum(a["triangle_count"] for a in d["ears"])==182
+          assert all(len(a["mesh"]["verts"])==len(a["mesh"]["uvs"]) for a in d["ears"])
+          assert d["original_native_artmesh_unchanged"] is True
+          assert d["new_view_uv_registered"] is False
+          assert d["profile_to_volume_binding"]=="NOT_VALIDATED"
+          print("CORE016_INX_EAR_UV_ACTUAL_SOURCE_VALIDATED")
+          PY
+      - name: Upload actual original ear parts as owner-accessible Actions artifact (not Git)
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE016-true-Aka-native-ear-UV-and-art
+          path: experiments/koma-25d-core/out/core016/native/
+          retention-days: 30
+          if-no-files-found: error
+      - name: Preserve original ear references in Draft Release for owner-only research
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          dir="experiments/koma-25d-core/out/core016/native"
+          gh release create "koma-25d-core016-native-ears-$GITHUB_RUN_ID" \
+            "$dir/native_ear_parts.json" \
+            "$dir/native_ear_texture_contact.png" \
+            "$dir/original_Ear_Left.png" \
+            "$dir/original_Ear_Right.png" \
+            "$dir/original_INX_UV_3D_ear_shell.glb" \
+            "$dir/original_INX_UV_3D_ear_shell.qa.json" \
+            --draft --target "$GITHUB_SHA" \
+            --title "CORE-016 original Aka native ArtMesh ear UV + textures" \
+            --notes "Original character and rig © seagetch, CC BY 4.0. Native INX source verified. Extracted native ear UV + texture only; source INX binary not redistributed. NOT a new-view UV binding, NOT a successful 3D skin."
