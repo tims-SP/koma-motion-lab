@@ -1,0 +1,61 @@
+name: CORE-008 C · inspect native Aka face from MP4
+
+on:
+  push:
+    branches: [feature/koma-25d-core-008]
+    paths:
+      - '.github/workflows/koma-25d-native-head-review8.yml'
+      - 'experiments/koma-25d-core/tools/native_head_closeup8.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-native-head:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install FFmpeg and Pillow
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv "$RUNNER_TEMP/core008-head"
+          "$RUNNER_TEMP/core008-head/bin/pip" install --disable-pip-version-check "Pillow==12.0.0" "numpy==2.2.6"
+          echo "$RUNNER_TEMP/core008-head/bin" >> "$GITHUB_PATH"
+      - name: Download EXACT final native INX video from owner-only DRAFT Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/koma-25d-core/out/core008/native
+          gh release download koma-25d-core008-native-40976547059 \
+            --pattern native_head_yaw.mp4 \
+            --dir experiments/koma-25d-core/out/core008/native
+          test "$(stat -c%s experiments/koma-25d-core/out/core008/native/native_head_yaw.mp4)" -gt 50000
+      - name: Crop real rendered head, decode video, make visual montage
+        run: |
+          python experiments/koma-25d-core/tools/native_head_closeup8.py \
+            --movie experiments/koma-25d-core/out/core008/native/native_head_yaw.mp4 \
+            --out experiments/koma-25d-core/out/core008/native/head
+      - name: Include true decoded native head frames for assistant inspection
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,textwrap
+          p=Path("experiments/koma-25d-core/out/core008/native/head/native_head_contact_preview.jpg")
+          print("CORE008_NATIVE_CLOSEUP_VISUAL_BEGIN")
+          for s in textwrap.wrap(base64.b64encode(p.read_bytes()).decode(),120):
+              print(s)
+          print("CORE008_NATIVE_CLOSEUP_VISUAL_END")
+          PY
+      - name: Append closeup diagnostics to existing owner-only Draft Release
+        env:
+          GH_TOKEN: GHTOKENPLACEHOLDER
+        run: |
+          p=experiments/koma-25d-core/out/core008/native/head
+          gh release upload koma-25d-core008-native-40976547059 \
+            "$p/native_head_closeup.mp4" \
+            "$p/native_head_contact.png" \
+            "$p/head_closeup_qa.json"
