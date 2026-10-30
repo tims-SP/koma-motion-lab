@@ -1,0 +1,118 @@
+{
+  "schema": "koma-core015-real-z-evidence/1",
+  "stage": "REAL_LOCAL_3D_MESH_RENDER_NOT_ORIGINAL_INX",
+  "execution_date": "2026-10-30",
+  "source_images": [
+    {
+      "kind": "ORIGINAL_AKA_PSD_NORMALIZED_FRONT",
+      "file": "norm0.png",
+      "sha256": "2bb2719541db6e72f977593054dd0e01f6c413ce59fe9c68e46d13ae0a4f48ab"
+    },
+    {
+      "kind": "GPT_UNCALIBRATED_NOMINAL_90",
+      "file": "norm1.png",
+      "sha256": "958057bfdc3814c302648f371335c321ee9c472a8ecadb0ac6e95aae5d29814b"
+    },
+    {
+      "kind": "GPT_LOCAL_REPAIRED_UNCALIBRATED_180",
+      "file": "norm2.png",
+      "sha256": "48afe45d526f7e329607c5e5509f923002574a4caa573da6522349a4a0679abd"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "neck",
+      "vertices": 676,
+      "triangles": 1248
+    },
+    {
+      "name": "head",
+      "vertices": 3577,
+      "triangles": 6912
+    },
+    {
+      "name": "hair",
+      "vertices": 3577,
+      "triangles": 4833
+    },
+    {
+      "name": "left_ear",
+      "vertices": 460,
+      "triangles": 880
+    },
+    {
+      "name": "right_ear",
+      "vertices": 460,
+      "triangles": 880
+    }
+  ],
+  "total_vertices": 8750,
+  "total_triangles": 14753,
+  "actual_3d_positions": true,
+  "actual_zbuffer_depth_test": true,
+  "exported_glb_is_real_3d": true,
+  "original_inx_native_artmesh_uv_reused": false,
+  "original_inx_rig_parameters_replayed": false,
+  "generated_new_true_45_or_135_art": false,
+  "source_pose_physical_degrees_calibrated": false,
+  "video": {
+    "debug": {
+      "name": "core015_true_zbuffer_multiview_DEBUG.mp4",
+      "sha256": "d9b68be6603590be5bcf442b8863528df7a1bf290e8ffad5d893418df04c8e80"
+    },
+    "missing_overlay": {
+      "name": "core015_true_zbuffer_MISSING_HIGHLIGHT.mp4",
+      "sha256": "53494644043740491fa941c72d92c272d74ad4867174bd4493514a0551d64e5e"
+    },
+    "width": 520,
+    "height": 560,
+    "fps": 24,
+    "frames": 97,
+    "actual_decoded_samples": [
+      0,
+      12,
+      24,
+      36,
+      48,
+      60,
+      72,
+      84,
+      96
+    ],
+    "execution": "LOCAL_SANDBOX_NOT_GITHUB_ACTIONS",
+    "quality": "FAILED_DIRECT_VISUAL_AUDIT"
+  },
+  "source_coverage_diagnostic": {
+    "scope": "INDICATOR_ON_PROXY_SURFACE_NOT_VALID_ART_COVERAGE",
+    "yaw_45": {
+      "geometry_pixels": 57447,
+      "unpainted_pixels": 4442,
+      "unpainted_fraction": 0.0773
+    },
+    "yaw_135": {
+      "geometry_pixels": 57444,
+      "unpainted_pixels": 3823,
+      "unpainted_fraction": 0.0666
+    },
+    "limitations": [
+      "Near white fur pixels can be misclassified as background",
+      "Wrong but nonwhite projected art still counts as painted",
+      "Synthetic source cameras are not physically calibrated"
+    ]
+  },
+  "visual_failures": [
+    "45 FACE TOO FRONTAL; incorrect profile alignment",
+    "90 FOX EARS BECOME THIN STRIPS ON SYNTHETIC CONE",
+    "135 REAR HAIR AND EAR SEAMS; original hair/ear skin absent",
+    "At 0° source PSD does NOT reproduce pixel-perfect native original due to proxy geometry"
+  ],
+  "rejected_generation": "CURRENT_CHAT_GPT_IMAGE_OUTPUT_WAS_MULTIPANEL_INFOGRAPHIC_NOT_SINGLE_45_OR_135_ART",
+  "binary_location": "CONVERSATION_SANDBOX_PACKAGE_ONLY",
+  "package_name": "CORE015_realZ_Aka_multiview_DIAGNOSTIC.zip",
+  "mature_sources": [
+    "Du et al I3D 2018 Montage4D view-dependent texture montage",
+    "Correa et al SIGGRAPH 1998 Texture Mapping for Cel Animation",
+    "Bunraku arxiv 2026 layered mesh occlusion completion"
+  ],
+  "production_accepted": false
+}
