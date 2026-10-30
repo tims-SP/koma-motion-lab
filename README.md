@@ -1,5 +1,14 @@
 # Koma Motion Lab
 
+## Current 2.75D research checkpoint — CORE-022 (2026-10-30)
+
+- [Executed source/reference/structural-map report](docs/research/CORE-022-reference-factory-first-execution.md).
+- [Successful Actions run](https://github.com/tims-SP/koma-motion-lab/actions/runs/41034480617): pinned Aka PSD/INX preparation, nine real generic-VRM angles, 45 structural maps, independent-process repeat, H.264 encode/decode.
+- [Owner-only Draft Release evidence](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-34c8042721642fcd5cce): original source archive, actual rendered images, decoded review sheets, video and JSON. Git stays text-only.
+- Work-vs-Actions comparison: all 45 PNG hashes match for this pair of environments; encoded MP4 hashes differ. No universal cross-machine/encoder determinism claim.
+- [Actual MiniMax Code collaboration record](docs/research/CORE-022-mcode-collaboration.md): Work OAuth and real model verified; targeted shader-cache review completed, two broader review attempts timed out.
+- Two fresh built-in imagegen profile candidates were generated and reviewed. Both fail requested canvas/margin gates; full A/B/C/D benchmark, approved Aka profile, per-view UV and continuous Aka 360° remain open. **Research checkpoint only, not character-production acceptance.**
+
 ## Current experimental preview — PROD-009 (2026-10-29)
 
 - [GitHub Actions run #2](https://github.com/tims-SP/koma-motion-lab/actions/runs/40778781058): **RENDERED, QUALITY GATE FAILED**.

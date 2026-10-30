@@ -110,3 +110,24 @@ Next: normalize generation framing through an explicit canonicalization step,
 build/validate Aka-compatible skull/fox-ear structure, execute the decomposition
 and complete controlled candidate comparison, then obtain design acceptance
 before freezing a Golden profile and building surface/UV correspondence.
+
+## Independent CI execution and retrieved evidence
+
+[Actions run 41034480617](https://github.com/tims-SP/koma-motion-lab/actions/runs/41034480617)
+completed successfully. Both renderer-process repeats, source acquisition, data-map
+QA, encode/decode, text-only artifact upload and owner-only Draft Release archive
+steps passed. The [Draft Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-34c8042721642fcd5cce)
+contains the 22,120,098-byte `CORE022-reference-evidence.zip` and SHA256SUMS.
+AI pilot images were generated locally and are not part of this CI-produced archive.
+
+The actual Actions text artifact (ID 12967153136) was downloaded and ZIP CRC
+checked. Its 45 image hashes were compared individually against Work outputs:
+**45/45 match**. This is evidence for this specific pair of environments, not
+a universal deterministic-GPU guarantee. CI's 108-frame MP4 SHA-256 is
+`089b63a8810985ee805706256f0cf39aa70d0ca185b4d3a6c57150a8254a434a`,
+different from the local encode; encoder byte identity is **not** established.
+Local final decoded images were visually reviewed; CI's source-image hash
+correspondence and executable encode/decode QA were verified from retrieved data.
+
+[mcode record](CORE-022-mcode-collaboration.md) contains the successful targeted
+review and the two failed broader attempts, with their limits kept explicit.
