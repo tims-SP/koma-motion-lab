@@ -1,0 +1,69 @@
+{
+  "shadow_checks": [
+    {
+      "shadow": 6,
+      "base": 5,
+      "exact": true,
+      "changed_px": 183966
+    },
+    {
+      "shadow": 12,
+      "base": 11,
+      "exact": true,
+      "changed_px": 45737
+    },
+    {
+      "shadow": 14,
+      "base": 13,
+      "exact": true,
+      "changed_px": 66685
+    },
+    {
+      "shadow": 15,
+      "base": 13,
+      "exact": true,
+      "changed_px": 56530
+    },
+    {
+      "shadow": 16,
+      "base": 13,
+      "exact": true,
+      "changed_px": 49687
+    },
+    {
+      "shadow": 17,
+      "base": 13,
+      "exact": true,
+      "changed_px": 36675
+    },
+    {
+      "shadow": 18,
+      "base": 13,
+      "exact": true,
+      "changed_px": 21095
+    },
+    {
+      "shadow": 19,
+      "base": 13,
+      "exact": true,
+      "changed_px": 16454
+    },
+    {
+      "shadow": 20,
+      "base": 13,
+      "exact": true,
+      "changed_px": 9952
+    }
+  ],
+  "all_186_texture_file_hashes_valid": true,
+  "canvas": [
+    1630,
+    1630
+  ],
+  "clean_visual_gate": "PASS",
+  "scope": "9 shadow clipping operations only; prototype",
+  "remaining_source_artifacts": [
+    "neck soft fringe and isolated small alpha fragment retained from native art"
+  ],
+  "production_gate": "NOT_ACCEPTED"
+}

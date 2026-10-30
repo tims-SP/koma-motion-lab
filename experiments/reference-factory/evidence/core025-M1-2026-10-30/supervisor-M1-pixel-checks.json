@@ -1,0 +1,20 @@
+{
+  "versions": {
+    "source": {
+      "normal_RGB_preserved": 51,
+      "required_alpha_preserved": 62,
+      "independent_Pillow_recomposite_RGBA_MAE": 0.003920138888888889,
+      "max_RGBA_abs": 1
+    },
+    "clean": {
+      "normal_RGB_preserved": 51,
+      "required_alpha_preserved": 53,
+      "independent_Pillow_recomposite_RGBA_MAE": 0.005155181860374359,
+      "max_RGBA_abs": 1
+    }
+  },
+  "protected_inputs": {
+    "count": 14,
+    "changed": []
+  }
+}

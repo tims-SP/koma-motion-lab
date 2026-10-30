@@ -11,8 +11,9 @@
 
 ## 当前任务
 
-- CORE-025-M1：IN_PROGRESS，执行[明确工单](plans/CORE-025-M1-mcode-order.md)。尚无通过声明。
-- CORE-025-M2/M3/M4：TODO，分别为Three.js前视/曲面、连续转头抽帧、Actions复现与Draft Release归档。
+- CORE-025-M1：PASS（默认姿态组装与指定9层阴影裁剪，限原型）。[监工验收](research/CORE-025-M1-supervisor-acceptance.md)：source白底MAE0.125177/255、黑底0.144745/255，独立Pillow复合最大差1色阶；49测试及真实准备均exit0。保留颈部源图软边和微小游离片段为待修整项。
+- CORE-025-M2：IN_PROGRESS，执行[明确工单](plans/CORE-025-M2-mcode-order.md)，只新增独立Three.js入口/捕获/QA，不改已验收M1算法。
+- CORE-025-M3/M4：TODO，分别为连续转头抽帧、Actions复现与Draft Release归档。
 
 ## 干净环境恢复
 
@@ -26,4 +27,4 @@ python prepare.py
 python native_layers.py
 ```
 
-M1脚本提交后再增加其运行命令。本地已有源码缓存时不重新下载模型或请求生图。所有媒体在out/和Draft Release，git只存文本。
+然后运行 `python prepare_core025.py` 重建M1。M2实现完成前不声称有转头视频。本地已有源码缓存时不重新下载模型或请求生图。所有媒体在out/和Draft Release，git只存文本。

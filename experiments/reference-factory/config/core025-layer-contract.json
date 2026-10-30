@@ -1,0 +1,1604 @@
+{
+  "schema": "koma-core025-layer-contract/1",
+  "source": {
+    "file": "out/source/tutorial-aka.psd",
+    "sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+    "sha256_fixed": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+    "license": "CC-BY-4.0"
+  },
+  "canvas": [
+    1630,
+    1630
+  ],
+  "pixel_convention": "source coordinates are pixel EDGE based; a pixel (i,j) covers [j, j+1) x [i, i+1) and its centre is at (j+0.5, i+0.5)",
+  "default_order": "bottom-to-top (order 1 = bottom-most, order 62 = top-most)",
+  "version_semantics": {
+    "source": "DERIVED_REFERENCE: not a byte copy of the PSD. Every layer keeps its original alpha; the 51 NORMAL layers keep their original RGB bytes unchanged, the 11 MULTIPLY layers have their RGB changed (baked to NORMAL effective_source_rgb against the default lower-layer backdrop) and their alpha preserved",
+    "clean": "same as source (also DERIVED_REFERENCE) except the 9 shadow layers listed in clean_shadow_alpha_clip have their alpha multiplied by the alpha of their base layer, aligned on the full canvas",
+    "original_source": "the original PSD and the original CORE-024 layer PNGs remain the authoritative source of record; this contract describes derived textures only"
+  },
+  "authority": {
+    "psd": "AUTHORITATIVE_SOURCE (original artwork)",
+    "core024_layer_pngs": "AUTHORITATIVE_SOURCE (original per-layer PNGs, recorded per layer in raw_source_texture)",
+    "source_version": "DERIVED_REFERENCE (multiply -> normal bake at the default pose)",
+    "clean_version": "DERIVED_REFERENCE (shadow alpha repair on top of the source bake)"
+  },
+  "numeric_domain": "sRGB value domain 0..1, straight (non-premultiplied) RGB, no linearisation, no lighting",
+  "blend_formula": {
+    "effective_source_rgb": "Cs (NORMAL) | Cs * (1 - Ab + Ab * Cb) (MULTIPLY)",
+    "premult_out": "As * effective_source_rgb + (1 - As) * Ab * Cb",
+    "alpha_out": "As + Ab * (1 - As)",
+    "reference": "W3C compositing-1, alpha compositing section"
+  },
+  "baked_blend_mode": "NORMAL",
+  "semantic_family_rules": {
+    "1-2": "ear",
+    "3-10": "rear_hair",
+    "11-12": "neck",
+    "13-20": "face_base",
+    "21": "nose",
+    "22-23": "mouth",
+    "24-33,58": "left_eye",
+    "34-43,59": "right_eye",
+    "44-47": "side_hair",
+    "48-57": "front_hair",
+    "60-61": "eyebrow",
+    "62": "leaf"
+  },
+  "clean_shadow_alpha_clip": [
+    {
+      "shadow_order": 6,
+      "shadow_name": "Back Side Hair Shadow",
+      "base_order": 5,
+      "base_name": "Back Side Hair",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 12,
+      "shadow_name": "Neck Shadow",
+      "base_order": 11,
+      "base_name": "Neck",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 14,
+      "shadow_name": "Side Hair L Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 15,
+      "shadow_name": "Side Hair R Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 16,
+      "shadow_name": "Front Hair R2 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 17,
+      "shadow_name": "Front Hair L2 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 18,
+      "shadow_name": "Front Hair R1 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 19,
+      "shadow_name": "Front Hair L1 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 20,
+      "shadow_name": "Front Hair C Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    }
+  ],
+  "eyebrow_note": "layers 60/61 (Eyebrow L/R) stay MULTIPLY-baked; they are NOT treated as spill shadows and are not alpha-clipped",
+  "layers": [
+    {
+      "order": 1,
+      "name": "Fox: Ear L",
+      "semantic_family": "ear",
+      "bounds": [
+        381,
+        43,
+        715,
+        883
+      ],
+      "size": [
+        334,
+        840
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-01-Fox__Ear_L.png",
+        "sha256": "ca01db3992731754ddc3cae58f58c0215485406d5971971e975d4496b8f513b1",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 2,
+      "name": "Fox: Ear R",
+      "semantic_family": "ear",
+      "bounds": [
+        903,
+        31,
+        1228,
+        812
+      ],
+      "size": [
+        325,
+        781
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-02-Fox__Ear_R.png",
+        "sha256": "7e4e016a50b2cb486f987dacb0a9fd97e6425fb9aa0aa8667b869b9b380376d1",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 3,
+      "name": "Back Side Hair L2",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        250,
+        509,
+        685,
+        1329
+      ],
+      "size": [
+        435,
+        820
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-03-Back_Side_Hair_L2.png",
+        "sha256": "69525e19cc292b8546614a9ef7ab9f9fd5caa259508e85238cf62639690aea8f",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 4,
+      "name": "Back Side Hair R2",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        951,
+        509,
+        1378,
+        1341
+      ],
+      "size": [
+        427,
+        832
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-04-Back_Side_Hair_R2.png",
+        "sha256": "326611fde7a6fd882eed8d269b997b2029259b339d592830e379e5ce9907b925",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 5,
+      "name": "Back Side Hair",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        336,
+        425,
+        1355,
+        1339
+      ],
+      "size": [
+        1019,
+        914
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-05-Back_Side_Hair.png",
+        "sha256": "646f7f09d79b4c33b5f0ec3f615ec1e4cbfb21712a74c1b970a39a3cee5bd2a5",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 6,
+      "name": "Back Side Hair Shadow",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        308,
+        396,
+        1329,
+        1323
+      ],
+      "size": [
+        1021,
+        927
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-06-Back_Side_Hair_Shadow.png",
+        "sha256": "4bd3ea6d3f95a920b0fb1b4fc80640e017fa5febf124cf0adbfa1f80360fae0a",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 7,
+      "name": "Back Side Hair L1",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        336,
+        437,
+        814,
+        1349
+      ],
+      "size": [
+        478,
+        912
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-07-Back_Side_Hair_L1.png",
+        "sha256": "251059ad7aedf4508610a0656c71c916c5769f399bb555b02ce2fa4a6cf5a165",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 8,
+      "name": "Back Side Hair L3",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        392,
+        437,
+        870,
+        1349
+      ],
+      "size": [
+        478,
+        912
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-08-Back_Side_Hair_L3.png",
+        "sha256": "67ef8936d404d028948464f70f0d39422b4d68e5bb167f845b05012e2a2db2c4",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 9,
+      "name": "Back Side Hair R1",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        814,
+        428,
+        1355,
+        1339
+      ],
+      "size": [
+        541,
+        911
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-09-Back_Side_Hair_R1.png",
+        "sha256": "08c15c247251d4ee5ee49a6a09dcf8d4468cff0ec1792cb0cad61ec9133ddcd4",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 10,
+      "name": "Back Side Hair R3",
+      "semantic_family": "rear_hair",
+      "bounds": [
+        745,
+        428,
+        1286,
+        1339
+      ],
+      "size": [
+        541,
+        911
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-10-Back_Side_Hair_R3.png",
+        "sha256": "0b5eebbfda3e88d98779d28da5177957fad688f0cac9fc6d37069dcb2f666d6b",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 11,
+      "name": "Neck",
+      "semantic_family": "neck",
+      "bounds": [
+        650,
+        1006,
+        970,
+        1527
+      ],
+      "size": [
+        320,
+        521
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-11-Neck.png",
+        "sha256": "ed43835b645c3fa0a2b8615ebdadaf0fba5ae7dfec75c02af0a8152419a7a52c",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 12,
+      "name": "Neck Shadow",
+      "semantic_family": "neck",
+      "bounds": [
+        650,
+        993,
+        983,
+        1400
+      ],
+      "size": [
+        333,
+        407
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-12-Neck_Shadow.png",
+        "sha256": "d852eec81a9048c08e41ca316b1dda9dada2df8ccf533f164a3974f7a3e5e241",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 13,
+      "name": "Face",
+      "semantic_family": "face_base",
+      "bounds": [
+        465,
+        521,
+        1139,
+        1306
+      ],
+      "size": [
+        674,
+        785
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-13-Face.png",
+        "sha256": "f7eb372ccbf8d80204ad0526f008d3f8cebf0d3b0aa0d8efeae06d214f9bf669",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 14,
+      "name": "Side Hair L Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        465,
+        488,
+        794,
+        1108
+      ],
+      "size": [
+        329,
+        620
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-14-Side_Hair_L_Shadow.png",
+        "sha256": "b789150d2cfb55457eef144f8364d496d82fb9809ba7453a568e9b095e4ceaf7",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 15,
+      "name": "Side Hair R Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        882,
+        486,
+        1138,
+        1116
+      ],
+      "size": [
+        256,
+        630
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-15-Side_Hair_R_Shadow.png",
+        "sha256": "a6e4771a4c4b0085809527ed365034b97becee8f61bd5a8db036b5b5e65ac2af",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 16,
+      "name": "Front Hair R2 Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        828,
+        487,
+        1149,
+        1004
+      ],
+      "size": [
+        321,
+        517
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-16-Front_Hair_R2_Shadow.png",
+        "sha256": "5c7a555c22b0e09f1be82a8b37e69855371f57da340456df577df2bcb5b5341f",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 17,
+      "name": "Front Hair L2 Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        478,
+        501,
+        799,
+        952
+      ],
+      "size": [
+        321,
+        451
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-17-Front_Hair_L2_Shadow.png",
+        "sha256": "c5f377b8c076e114178de8cbf44a561fa6925fb31510e518317cddf71aaddc8d",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 18,
+      "name": "Front Hair R1 Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        848,
+        524,
+        1077,
+        956
+      ],
+      "size": [
+        229,
+        432
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-18-Front_Hair_R1_Shadow.png",
+        "sha256": "eeeea678f29f8dd825cb2282d7849d7c6f20b74f69f6b564ddd81fbd7083b8ce",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 19,
+      "name": "Front Hair L1 Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        568,
+        503,
+        764,
+        967
+      ],
+      "size": [
+        196,
+        464
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-19-Front_Hair_L1_Shadow.png",
+        "sha256": "5a51501ee61949271553782a40c7df1757a413328a36542249c25f3fc8a86f90",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 20,
+      "name": "Front Hair C Shadow",
+      "semantic_family": "face_base",
+      "bounds": [
+        699,
+        531,
+        906,
+        955
+      ],
+      "size": [
+        207,
+        424
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": true,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-20-Front_Hair_C_Shadow.png",
+        "sha256": "d8e520c88931ff8fc45390c0e6afc01804955aee84acf5e2880c9647eab97215",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 21,
+      "name": "Nose",
+      "semantic_family": "nose",
+      "bounds": [
+        762,
+        997,
+        856,
+        1078
+      ],
+      "size": [
+        94,
+        81
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-21-Nose.png",
+        "sha256": "e0f158b07f180a91d72d62e6ba7bf71e1078099c0a207770305ea25073acb869",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 22,
+      "name": "Mouth Inner",
+      "semantic_family": "mouth",
+      "bounds": [
+        735,
+        1129,
+        885,
+        1243
+      ],
+      "size": [
+        150,
+        114
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-22-Mouth_Inner.png",
+        "sha256": "c840c013609df7f71bc3d35221961efb752894b90258b684b07357db74679c39",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 23,
+      "name": "Lip",
+      "semantic_family": "mouth",
+      "bounds": [
+        723,
+        1113,
+        893,
+        1272
+      ],
+      "size": [
+        170,
+        159
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-23-Lip.png",
+        "sha256": "747f0f1f3af70d3e86298bb866cb52a3c9445e9324e51c57bd5ad091545c9318",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 24,
+      "name": "Eye L Shadow Lower",
+      "semantic_family": "left_eye",
+      "bounds": [
+        531,
+        988,
+        737,
+        1080
+      ],
+      "size": [
+        206,
+        92
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-24-Eye_L_Shadow_Lower.png",
+        "sha256": "42000d7b3b18e84152d2fd4d351a58e860b2d1eac6a9b1b8d54243fa1f6ead42",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 25,
+      "name": "Eye L Shadow Upper",
+      "semantic_family": "left_eye",
+      "bounds": [
+        530,
+        903,
+        773,
+        1028
+      ],
+      "size": [
+        243,
+        125
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-25-Eye_L_Shadow_Upper.png",
+        "sha256": "35ea74e9a41eaccb94ec65cb273bbfe44779b528f035c99989c205fd96910d31",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 26,
+      "name": "Eye L Eyelid2 Shadow",
+      "semantic_family": "left_eye",
+      "bounds": [
+        613,
+        884,
+        744,
+        931
+      ],
+      "size": [
+        131,
+        47
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-26-Eye_L_Eyelid2_Shadow.png",
+        "sha256": "dbd369b23c1f534aee916a3e699caa1b7eb2780b95c3fc9e3352f5c42f20fbba",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 27,
+      "name": "Eye L White",
+      "semantic_family": "left_eye",
+      "bounds": [
+        579,
+        929,
+        723,
+        1056
+      ],
+      "size": [
+        144,
+        127
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-27-Eye_L_White.png",
+        "sha256": "537509a3a72a6458078d3058ab48ed0313950274344b9839d8f72f9aa407e67a",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 28,
+      "name": "Eye L Eyeball",
+      "semantic_family": "left_eye",
+      "bounds": [
+        616,
+        939,
+        710,
+        1068
+      ],
+      "size": [
+        94,
+        129
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-28-Eye_L_Eyeball.png",
+        "sha256": "7d941fd84775f8c132af752b79fa677721c79ac95af29b123ed068005c8d4d30",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 29,
+      "name": "Eye L Light",
+      "semantic_family": "left_eye",
+      "bounds": [
+        622,
+        965,
+        704,
+        1035
+      ],
+      "size": [
+        82,
+        70
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-29-Eye_L_Light.png",
+        "sha256": "1de1a2c93b0ff30a50fb80ae8919f1a8a55104fa2463e7a520a889dcd7ebe538",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 30,
+      "name": "Eye L Eyelash2",
+      "semantic_family": "left_eye",
+      "bounds": [
+        556,
+        1001,
+        578,
+        1043
+      ],
+      "size": [
+        22,
+        42
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-30-Eye_L_Eyelash2.png",
+        "sha256": "bf233fe032150bb0904b8a1dfe75eb80a980522e144fa899ae8b48b478b31405",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 31,
+      "name": "Eye L Eyelid Side",
+      "semantic_family": "left_eye",
+      "bounds": [
+        565,
+        987,
+        614,
+        1059
+      ],
+      "size": [
+        49,
+        72
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-31-Eye_L_Eyelid_Side.png",
+        "sha256": "c4bb19f5d57b445b7bd0f265fb51b7131a4c0f5096b4b929c1b06c0d3ce51e60",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 32,
+      "name": "Eye L Eyelash1",
+      "semantic_family": "left_eye",
+      "bounds": [
+        564,
+        963,
+        594,
+        991
+      ],
+      "size": [
+        30,
+        28
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-32-Eye_L_Eyelash1.png",
+        "sha256": "283820e942d6d5955ab2b29572fe15685065852b37a283ece58dbcc8dadaf1f7",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 33,
+      "name": "Eye L Eyelid",
+      "semantic_family": "left_eye",
+      "bounds": [
+        565,
+        915,
+        751,
+        1016
+      ],
+      "size": [
+        186,
+        101
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-33-Eye_L_Eyelid.png",
+        "sha256": "d52f72a7989c5b7a53962a04a1a860b939bcc56b4f2f2c4073e082fbf5b0fe3f",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 34,
+      "name": "Eye R Shadow Lower",
+      "semantic_family": "right_eye",
+      "bounds": [
+        955,
+        1010,
+        1099,
+        1069
+      ],
+      "size": [
+        144,
+        59
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-34-Eye_R_Shadow_Lower.png",
+        "sha256": "db827980ce5d6726772dd5a546ded9b7a18ef7d0fbd9753ff2511b3f4afb6479",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 35,
+      "name": "Eye R Shadow Upper",
+      "semantic_family": "right_eye",
+      "bounds": [
+        863,
+        901,
+        1098,
+        1014
+      ],
+      "size": [
+        235,
+        113
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-35-Eye_R_Shadow_Upper.png",
+        "sha256": "68d33028f04110d81536a24b77074e34519210a8d2f08a110c27b5a550f9cce3",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 36,
+      "name": "Eye R Eyelid2 shadow",
+      "semantic_family": "right_eye",
+      "bounds": [
+        878,
+        890,
+        995,
+        938
+      ],
+      "size": [
+        117,
+        48
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-36-Eye_R_Eyelid2_shadow.png",
+        "sha256": "b25a43f3a70ae8373caa3e43287400d6fb6a5598d5287ccd246bfa4c5e0557fa",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 37,
+      "name": "Eye R White",
+      "semantic_family": "right_eye",
+      "bounds": [
+        895,
+        942,
+        1046,
+        1058
+      ],
+      "size": [
+        151,
+        116
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-37-Eye_R_White.png",
+        "sha256": "819d50cffc96417d237e8f27b4d0550edfac1543bf5e45b20be2ff640b24800b",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 38,
+      "name": "Eye R Eyeball",
+      "semantic_family": "right_eye",
+      "bounds": [
+        919,
+        942,
+        1009,
+        1068
+      ],
+      "size": [
+        90,
+        126
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-38-Eye_R_Eyeball.png",
+        "sha256": "96533c3e51116cd665296c4dd4b880956610357c3710bcf6fc4547ed6c300fd6",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 39,
+      "name": "Eye R Light",
+      "semantic_family": "right_eye",
+      "bounds": [
+        916,
+        970,
+        1006,
+        1034
+      ],
+      "size": [
+        90,
+        64
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-39-Eye_R_Light.png",
+        "sha256": "aa6868dbb7ffda583f6b8d42df8df8bb67ed2a244e2ada2dcaa50e46e2bd1c68",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 40,
+      "name": "Eye R Eyelash2",
+      "semantic_family": "right_eye",
+      "bounds": [
+        1056,
+        996,
+        1089,
+        1030
+      ],
+      "size": [
+        33,
+        34
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-40-Eye_R_Eyelash2.png",
+        "sha256": "5a332aa9413590ee70148be9ecf11a977f9195b5a4421d74d16c3220236c802c",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 41,
+      "name": "Eye R Eyelid Side",
+      "semantic_family": "right_eye",
+      "bounds": [
+        1012,
+        992,
+        1070,
+        1064
+      ],
+      "size": [
+        58,
+        72
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-41-Eye_R_Eyelid_Side.png",
+        "sha256": "d30c8ddb8f996707972eadbc49a42cd3aecc4b84fd011828ff1fe53e72750c5d",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 42,
+      "name": "Eye R Eyelash1",
+      "semantic_family": "right_eye",
+      "bounds": [
+        1044,
+        972,
+        1077,
+        992
+      ],
+      "size": [
+        33,
+        20
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-42-Eye_R_Eyelash1.png",
+        "sha256": "f1730928e65171c4eaa0d461aeb65c4dacc07e13206e708554cc207adf940430",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 43,
+      "name": "Eye R Eyelid1",
+      "semantic_family": "right_eye",
+      "bounds": [
+        886,
+        904,
+        1070,
+        1012
+      ],
+      "size": [
+        184,
+        108
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-43-Eye_R_Eyelid1.png",
+        "sha256": "3c65c5d4420e08e98f07ba0593ee7c8235e5af6550191a55ee61a8e13704f6f0",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 44,
+      "name": "Side Hair L",
+      "semantic_family": "side_hair",
+      "bounds": [
+        437,
+        511,
+        707,
+        1271
+      ],
+      "size": [
+        270,
+        760
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-44-Side_Hair_L.png",
+        "sha256": "d106cae5a74dabdc5b1079251a5a7d04848cdfa91663141b06d0531baa2777ef",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 45,
+      "name": "Side Hair L Light",
+      "semantic_family": "side_hair",
+      "bounds": [
+        452,
+        1035,
+        586,
+        1183
+      ],
+      "size": [
+        134,
+        148
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-45-Side_Hair_L_Light.png",
+        "sha256": "e948994afc8517be94175b313935d80f33faddbb221d1cd1b6105fe65814aa07",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 46,
+      "name": "Side Hair R",
+      "semantic_family": "side_hair",
+      "bounds": [
+        894,
+        527,
+        1202,
+        1257
+      ],
+      "size": [
+        308,
+        730
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-46-Side_Hair_R.png",
+        "sha256": "db0f844dfa5a3ddfa5af8ec254641a0379ba55d7bba5d787d16f3825025c10be",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 47,
+      "name": "Side Hair R Light",
+      "semantic_family": "side_hair",
+      "bounds": [
+        1044,
+        1033,
+        1179,
+        1152
+      ],
+      "size": [
+        135,
+        119
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-47-Side_Hair_R_Light.png",
+        "sha256": "88138ed618009014b6df14b2503bb1617b75abd17932d4a4accfc12a4c566bec",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 48,
+      "name": "Front Hair L2",
+      "semantic_family": "front_hair",
+      "bounds": [
+        472,
+        452,
+        786,
+        965
+      ],
+      "size": [
+        314,
+        513
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-48-Front_Hair_L2.png",
+        "sha256": "3dc2af0def887aa883fd7aa4918ab97a704955223f3ea873028fe7404a1e76cf",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 49,
+      "name": "Front Hair L2 Light",
+      "semantic_family": "front_hair",
+      "bounds": [
+        472,
+        697,
+        786,
+        850
+      ],
+      "size": [
+        314,
+        153
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-49-Front_Hair_L2_Light.png",
+        "sha256": "0730bc4a1006d3b010099560d0a0e4b79f2bd2d4111e86429b3c6fe5cd7a4aa3",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 50,
+      "name": "Front Hair R2",
+      "semantic_family": "front_hair",
+      "bounds": [
+        874,
+        474,
+        1152,
+        1020
+      ],
+      "size": [
+        278,
+        546
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-50-Front_Hair_R2.png",
+        "sha256": "363c0b6acf80a64e801724c9837979948ea1b452edc019d70395aa53ba2914b3",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 51,
+      "name": "Front Hair R2 Light",
+      "semantic_family": "front_hair",
+      "bounds": [
+        864,
+        687,
+        1150,
+        834
+      ],
+      "size": [
+        286,
+        147
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-51-Front_Hair_R2_Light.png",
+        "sha256": "681bdb475adf8b42c12c72cb98b76e4c68bac08eef53886e1ba5470a4da184a3",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 52,
+      "name": "Front Hair L1",
+      "semantic_family": "front_hair",
+      "bounds": [
+        579,
+        451,
+        802,
+        925
+      ],
+      "size": [
+        223,
+        474
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-52-Front_Hair_L1.png",
+        "sha256": "45c382f15042ab3b08cb71fbcba23592f87729d67c2b8e665c6a20dec3a82f50",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 53,
+      "name": "Front Hair L1 Light",
+      "semantic_family": "front_hair",
+      "bounds": [
+        570,
+        684,
+        807,
+        830
+      ],
+      "size": [
+        237,
+        146
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-53-Front_Hair_L1_Light.png",
+        "sha256": "9fe3a10cf4fdd586ad0ff5ce0cffa4fc616802b9e4db2028b6b799cfdf12fed4",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 54,
+      "name": "Front Hair R1",
+      "semantic_family": "front_hair",
+      "bounds": [
+        814,
+        456,
+        1073,
+        935
+      ],
+      "size": [
+        259,
+        479
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-54-Front_Hair_R1.png",
+        "sha256": "9f2abd9f6738c5efb509776c14d3a0628d8d1c51b541f9700331406e7a2ee99b",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 55,
+      "name": "Front Hair R1 Ligth",
+      "semantic_family": "front_hair",
+      "bounds": [
+        815,
+        683,
+        1094,
+        823
+      ],
+      "size": [
+        279,
+        140
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-55-Front_Hair_R1_Ligth.png",
+        "sha256": "4b92420a8d516d795f4e1195c4085738042d0447a276f6919095a216c2400c1c",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 56,
+      "name": "Front Hair C",
+      "semantic_family": "front_hair",
+      "bounds": [
+        706,
+        451,
+        906,
+        927
+      ],
+      "size": [
+        200,
+        476
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-56-Front_Hair_C.png",
+        "sha256": "988ea8c3ceb886f62966c6198c28bc41976ae1e71c0b90f88ee6269c9a3809cb",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 57,
+      "name": "Front Hair C Light",
+      "semantic_family": "front_hair",
+      "bounds": [
+        704,
+        671,
+        905,
+        817
+      ],
+      "size": [
+        201,
+        146
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-57-Front_Hair_C_Light.png",
+        "sha256": "a55da8bf466fe488c0fa63ad8e24233bee424192276866b1d267669d77a2cdac",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 58,
+      "name": "Eye L Eyelid2",
+      "semantic_family": "left_eye",
+      "bounds": [
+        627,
+        900,
+        715,
+        928
+      ],
+      "size": [
+        88,
+        28
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-58-Eye_L_Eyelid2.png",
+        "sha256": "7831e0b4a16ff220a0c3581ee8e8d3ec2700577ea670a7e4bdb39154fab80bee",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 59,
+      "name": "Eye R Eyelid2",
+      "semantic_family": "right_eye",
+      "bounds": [
+        899,
+        900,
+        1025,
+        942
+      ],
+      "size": [
+        126,
+        42
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-59-Eye_R_Eyelid2.png",
+        "sha256": "31d64895645ccf999fc9478a22a4e7d8f5b300a3187793a1acf59e643d63b629",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    },
+    {
+      "order": 60,
+      "name": "Eyebrow L",
+      "semantic_family": "eyebrow",
+      "bounds": [
+        562,
+        782,
+        726,
+        843
+      ],
+      "size": [
+        164,
+        61
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-60-Eyebrow_L.png",
+        "sha256": "18517ce3ef4083c2cbd5abdf59e6c188fcb7aa0086c510920c9afaad50b0d170",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 61,
+      "name": "Eyebrow R",
+      "semantic_family": "eyebrow",
+      "bounds": [
+        890,
+        782,
+        1056,
+        841
+      ],
+      "size": [
+        166,
+        59
+      ],
+      "source_blend_mode": "BlendMode.MULTIPLY",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-61-Eyebrow_R.png",
+        "sha256": "4b436ac3277f71506f8d85be73a07d99af45dba7ab08cee21a692c78e2b52c56",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": false
+    },
+    {
+      "order": 62,
+      "name": "Leaf",
+      "semantic_family": "leaf",
+      "bounds": [
+        647,
+        415,
+        930,
+        548
+      ],
+      "size": [
+        283,
+        133
+      ],
+      "source_blend_mode": "BlendMode.NORMAL",
+      "baked_blend_mode": "NORMAL",
+      "alpha_modified_in_clean": false,
+      "raw_source_texture": {
+        "file": "out/core024/native-v2/layers/leaf-62-Leaf.png",
+        "sha256": "542e3163bcc788dbfe7e50bbe884f10fb781c371e83764c193e0640649c05b96",
+        "pixel_compared_against_sdk_rgba": true
+      },
+      "rgb_unchanged_vs_raw_source": true
+    }
+  ]
+}

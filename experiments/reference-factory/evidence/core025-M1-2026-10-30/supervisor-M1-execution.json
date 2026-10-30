@@ -1,0 +1,25 @@
+[
+  {
+    "label": "tests",
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": 3.632
+  },
+  {
+    "label": "assembly",
+    "command": [
+      "python",
+      "prepare_core025.py"
+    ],
+    "exit_code": 0,
+    "seconds": 16.305
+  }
+]
