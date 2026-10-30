@@ -40,7 +40,7 @@ def main(folder):
        "native_renderer_pinned_commit":"d4dd9dd7f16b775042cbda44370570abf9a8cf81",
        "renderer":"upstream Inox2D OpenGL sample with deterministic parameter test patch",
        "x11_software_gl":True,"raw_reference_png_not_encoded_MP4":True,
-       "model_native_head_yaw":[0.5,1.0],"pitch_normalized":0.0,
+       "model_native_head_yaw":[0.5,1.0],"pitch_normalized":0.5,
        "native_head_yaw_3d_degrees":"NOT_KNOWN",
        "side_rear_new_skin":"NOT_AVAILABLE",
        "ear_only_zero_pose_custom_pixel_parity":"NOT_YET_TESTED",
