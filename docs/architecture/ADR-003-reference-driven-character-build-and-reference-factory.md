@@ -1250,6 +1250,307 @@ Do not make the core architecture depend on optional ecosystem support for anima
 
 If a standard extension such as KHR_animation_pointer becomes universally supported by the selected runtime stack, Koma may add an adapter or export path, but the canonical Koma semantics remain independent and versioned.
 
+
+### 43. Topology, Vertex Identity, and Topology Migration
+
+A semantic part UUID is not sufficient to preserve geometry-dependent bindings. Every persistent surface must also have explicit topology identity.
+
+Record:
+
+    surface_id
+    part_uuid
+    topology_id
+    topology_version
+    topology_hash
+    vertex_count
+    face_count
+    vertex_ids[]
+    face_ids[]
+
+Bindings that depend on topology include:
+
+    UVs
+    skin weights
+    morph targets
+    FFD cages/bindings
+    view/surface correspondence
+    seam ownership
+    visibility masks projected to surface
+    LOD transfer maps
+
+A topology change is not an ordinary asset revision.
+
+If:
+
+    head_surface_v1
+      -> retopology
+      -> head_surface_v2
+
+the migration record must contain, where possible:
+
+    source_topology_id
+    target_topology_id
+    vertex_remap
+    face_remap
+    surface/barycentric transfer map
+    unmapped regions
+    transfer confidence
+    migration report
+
+All topology-dependent descendants become STALE unless explicitly transferred and revalidated.
+
+Never assume vertex array order is a stable identity across topology versions.
+
+### 44. Persistent Artifact Registry and Retention Contract
+
+Actions artifacts are temporary CI/review outputs, not permanent storage for SOURCE_TRUTH, GOLDEN, or Reference Atlas binaries.
+
+Every non-Git binary asset must have a machine-readable registry record:
+
+    asset_id
+    asset_version
+    sha256
+    byte_size
+    mime_type
+    logical_role
+    provenance_class
+    retention_class
+    primary_locator
+    mirror_locator_optional
+    created_at
+    source/license metadata
+    availability_status
+
+Retention classes:
+
+    EPHEMERAL
+    REVIEW
+    GOLDEN
+    SOURCE_TRUTH
+
+Recommended policy:
+
+    EPHEMERAL
+      CI workspace / Actions artifact
+
+    REVIEW
+      Actions artifact and/or Draft Release
+
+    GOLDEN
+      persistent asset location + manifest hash
+
+    SOURCE_TRUTH
+      persistent asset location + manifest hash + independent backup/mirror where practical
+
+Git stores identifiers, hashes, provenance, and locators; it does not need to store large binaries.
+
+Rules:
+
+- an asset is not considered safely frozen merely because an Actions run once uploaded it;
+- every GOLDEN/SOURCE_TRUTH binary must be retrievable from a persistent locator;
+- missing persistent binaries make dependent builds UNAVAILABLE, not silently regenerated;
+- moving storage must preserve asset_id and content hash;
+- storage migration must produce an audit record.
+
+### 45. Package Integrity and Conformance Validator
+
+No .koma-character or Runtime Package may be loaded for production use before conformance validation.
+
+Provide a machine-readable validator contract, conceptually:
+
+    koma validate <package>
+
+Validation must cover at least:
+
+    manifest/schema compatibility
+    required feature support
+    file existence
+    content hashes
+    asset registry resolution
+    dependency freshness
+    stable part UUID references
+    topology hashes
+    topology-dependent binding compatibility
+    rig/bind compatibility
+    expression bindings
+    surface correspondence
+    render-state profile
+    texture derivative/master links
+    capability profile
+    fallback policy
+    provenance/license records where required
+    package integrity
+
+Representative errors:
+
+    E_SCHEMA_UNSUPPORTED
+    E_REQUIRED_FEATURE_UNSUPPORTED
+    E_HASH_MISMATCH
+    E_ASSET_UNAVAILABLE
+    E_DEPENDENCY_STALE
+    E_PART_UUID_MISSING
+    E_TOPOLOGY_MISMATCH
+    E_BINDING_TOPOLOGY_MISMATCH
+    E_RIG_BIND_MISMATCH
+    E_CORRESPONDENCE_STALE
+    E_TEXTURE_PROFILE_UNSUPPORTED
+    E_RENDER_PROFILE_UNSUPPORTED
+    E_FALLBACK_ILLEGAL
+
+Identity-critical or structural integrity failures are fail-closed.
+
+The validator itself is versioned, and validation reports are retained as QA evidence.
+
+### 46. Hermetic Toolchain Lock and Build Provenance
+
+An environment fingerprint describes what happened; a hermetic build contract defines what must happen again.
+
+Maintain a toolchain/build lock containing exact or digest-pinned dependencies where practical:
+
+    Node version
+    package-manager version
+    JS lockfile hash
+    Three.js exact version/commit
+
+    Rust toolchain
+    Cargo.lock hash
+
+    Python version
+    Python lockfile hash
+
+    FFmpeg version/build
+    texture encoder/transcoder version
+    geometry optimizer version
+
+    container image digest
+    OS/base image digest
+
+    AI model/checkpoint revision and SHA256 where available
+    external model/code commit
+    downloaded dependency hashes
+
+Every Runtime Package build records:
+
+    build_id
+    source_commit
+    authoring_package_hash
+    toolchain_lock_hash
+    container_digest
+    resolved_dependencies[]
+    build_parameters_hash
+    input_asset_hashes[]
+    output_asset_hashes[]
+    builder/runtime version
+    build_timestamp
+
+Borrow the useful ideas of software supply-chain provenance without requiring full external certification.
+
+Cache reuse is allowed only when the complete cache key contract matches.
+
+Recommended cache key inputs:
+
+    source/input hashes
+    schema version
+    toolchain lock hash
+    build config hash
+    renderer/profile version
+    relevant model/checkpoint hash
+
+A cache hit must never bypass conformance validation.
+
+### 47. LOD, Texture Atlas, and Other Runtime Derivative Mapping
+
+Performance derivatives must remain traceable to Authoring Master data.
+
+Geometry LOD example:
+
+    Authoring Surface
+      -> LOD0
+      -> LOD1
+      -> LOD2
+
+Each LOD records:
+
+    source_topology_hash
+    lod_topology_hash
+    generation_tool/version
+    reduction parameters
+    vertex/surface transfer map
+    weight transfer
+    UV transfer
+    semantic part preservation
+    silhouette/error metrics
+    fidelity QA
+
+Changing LOD topology does not change the Authoring Master topology.
+
+Texture atlas/repacking example:
+
+    Master texture + Master UV
+      -> runtime atlas packing
+      -> atlas UV transform
+
+Record:
+
+    source_texture_ids[]
+    source_uv_profile
+    atlas_id
+    atlas_region_map
+    UV transform per source region
+    padding/gutter
+    mip policy
+    compression profile
+    fidelity QA
+
+Runtime atlas UVs are derivatives. They never replace source/front UV0 or Golden authoring UVs.
+
+The same rule applies to mesh quantization, geometry compression, texture transcoding, shader specialization, and baked runtime caches.
+
+### 48. Release Channels, Rollback, and Conformance Matrix
+
+Versioned assets need explicit release state and rollback semantics.
+
+Recommended package channels:
+
+    CANDIDATE
+    REVIEW
+    STABLE
+    REJECTED
+    SUPERSEDED
+
+A release record contains:
+
+    release_id
+    package_version
+    authoring_package_hash
+    runtime_package_hash
+    schema versions
+    toolchain/build provenance
+    conformance report id
+    QA report ids
+    target capability profiles
+    previous_stable_release
+    rollback_target
+    release notes
+
+Promotion to STABLE requires all mandatory gates for the declared scope.
+
+Rollback must be atomic at the package level: do not mix files from old/new runtime packages.
+
+Maintain a conformance matrix across supported environments/profiles, for example:
+
+    package version
+    runtime version
+    browser/backend
+    capability profile
+    validator version
+    result
+    known limitations
+
+A new runtime, schema migration, renderer backend, or major toolchain update must run the applicable conformance matrix before replacing the previous stable baseline.
+
+The existence of a newer CANDIDATE never invalidates the last known-good STABLE package unless its Authoring Master dependencies themselves have been explicitly revoked.
+
 ## Reference Factory instead of one universal reference character
 
 A single Seed-san/VRM character is useful for smoke tests but is too narrow to serve as the universal reference. The preferred long-term design is a small **Reference Factory** built from license-clear source assets that can deterministically produce task-specific reference material.
@@ -1405,6 +1706,13 @@ reference-atlas/
   motion-contracts/
   environment-fingerprints/
   fallback-policies/
+  topology/
+  artifact-registry/
+  conformance/
+  toolchain-lock/
+  build-provenance/
+  lod-derivatives/
+  release-channels/
   compositing/
   regional-truth/
   qa/
@@ -1490,6 +1798,8 @@ Required inputs:
 - declared scope profile (HEAD_ONLY / UPPER_BODY / FULL_BODY);
 - declared reproducibility level for each pipeline stage;
 - declared authoring/runtime schema versions and compatibility policy;
+- declared topology identity/version policy for persistent surfaces;
+- declared persistent binary-asset registry/retention policy;
 - declared ReferenceCamera profile distinct from future SceneCamera behavior;
 - a written character-fact checklist for face, hair, ears, accessories, clothing, and asymmetries;
 - optional high-resolution identity anchors for face/hair/ears/accessories where needed.
@@ -1753,7 +2063,12 @@ Only now convert proven manual actions into:
 - deterministic Authoring Master -> Runtime Package build;
 - runtime texture/geometry optimization profiles;
 - schema migration tooling;
+- topology migration/transfer tooling;
+- persistent artifact registry resolution;
+- package conformance validator;
+- hermetic toolchain/build lock and cache-key generation;
 - capability/fallback validation;
+- release/rollback tooling;
 - `koma character build ...` orchestration.
 
 The Agent may choose a repair strategy, but it must not invent the production process ad hoc.
@@ -1833,7 +2148,12 @@ For external datasets/models:
 - preserve Authoring Master hashes separately from Runtime Package derivative hashes;
 - record schema compatibility/migration history;
 - record render-state, runtime capability, fallback-policy and environment-fingerprint versions;
-- retain texture compression/resizing/mipmap fidelity reports.
+- retain texture compression/resizing/mipmap fidelity reports;
+- never rely on expiring CI artifacts as the only copy of GOLDEN/SOURCE_TRUTH binaries;
+- maintain persistent asset registry records for all non-Git GOLDEN/SOURCE_TRUTH files;
+- record topology IDs/hashes and migration reports;
+- record toolchain-lock/build-provenance hashes and conformance-validator reports;
+- record LOD/atlas derivative mapping and release/rollback metadata.
 
 ## What is deliberately NOT decided yet
 
@@ -1853,6 +2173,9 @@ The following remain experimental until the manual path proves them:
 - final runtime texture compression/profile policy after fidelity/performance tests;
 - final device capability tiers and budgets;
 - final GLB/Koma-manifest packaging details;
+- final persistent binary storage backend, while the registry/retention contract remains fixed;
+- final topology simplification/LOD algorithms;
+- final software-BOM/provenance interchange format;
 - whether SeparateGen or later component-aware methods replace any current candidate.
 
 The architecture intentionally makes these replaceable.
@@ -1880,7 +2203,13 @@ The next work should be ordered as follows:
 15. before full runtime promotion, complete FULL_FRONT_SOURCE_PARITY for the whole Aka front/default composition, not only the ear subset;
 16. define Authoring Master -> Runtime Package build, schema compatibility/migration, render-state profile, runtime texture derivative policy, capability budget, and fallback behavior;
 17. fingerprint the accepted renderer/encoder environment and run performance/memory QA for the selected capability profile;
-18. after Aka passes end to end, run a second structurally different license-clear character through the same contracts as a Generalization Gate.
+18. define topology/vertex identity and prove that a topology revision invalidates or explicitly migrates all dependent UV/weight/morph/correspondence assets;
+19. establish the persistent artifact registry and verify GOLDEN/SOURCE_TRUTH binaries remain retrievable independently of expiring CI artifacts;
+20. implement/run package conformance validation, including hash/topology/dependency/rig/render/capability checks;
+21. lock the toolchain/build provenance and verify a clean rebuild of the same Runtime Package inputs produces an auditable equivalent result;
+22. validate one LOD/atlas derivative path without mutating Authoring Master UV/topology;
+23. define STABLE/CANDIDATE release metadata and execute one package-level rollback test;
+24. after Aka passes end to end, run a second structurally different license-clear character through the same contracts as a Generalization Gate.
 
 **Do not proceed to rig/IK automation before this chain is visually demonstrated.**
 
@@ -1914,6 +2243,12 @@ This ADR moves from PROPOSED to ACCEPTED FOR CHARACTER-BUILD RESEARCH only after
 - a versioned Motion Clip Contract for reusable motion assets;
 - renderer/encoder environment fingerprints for accepted image/video evidence;
 - structured asset-load fallback policies with fail-closed behavior for identity-critical assets;
+- stable topology/vertex identity plus a topology migration/invalidation proof for geometry-dependent bindings;
+- a persistent artifact registry demonstrating GOLDEN/SOURCE_TRUTH binaries are not dependent on expiring CI artifact retention;
+- a versioned package conformance validator with fail-closed integrity/topology/dependency checks;
+- a pinned toolchain/build-provenance record and cache-key contract;
+- one validated LOD/atlas derivative with transfer mappings and fidelity evidence while Authoring Master remains unchanged;
+- release-channel metadata plus a successful package-level rollback/conformance-matrix test;
 - a FULL_FRONT_SOURCE_PARITY gate tracked separately from the ear-only CORE-021 evidence;
 - a second-character Generalization Gate before claiming the Reference Factory broadly reusable;
 - evidence that Golden assets and Reference Atlas versions are immutable/versioned.
