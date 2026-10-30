@@ -1,5 +1,7 @@
 # CORE-026 M1C1：接收关系与美术叠画约束
 
+最新状态：Codex本地兜底实现LOCAL_PASS，CI待实测；mcode无工具轻量请求仍被自动审批拒绝，未产出本轮代码。62条真实记录、独立源事实比对、9组双验证器篡改验拒、重复build一致和verify不改配置均实测通过。详见[实际归属与验收](../research/CORE-026-M1C1-local-fallback-acceptance.md)。下面保留最初mcode执行边界和精确实现要求，不能将原计划执行者当作实际作者。
+
 执行者mcode；监工Codex。仅新增experiments/reference-factory/extract_core026_constraints.py、config/core026-constraints.json及ignored out/core026输出。不得修改旧来源/锁、旧渲染器或认证文件。当前实现未完成。Work及官方CN登录已恢复，用户已明确放行agent.minimax.cn与agent.minimaxi.com限定数据范围；后续SDK公共目录用途已核对，第三方对象存储实际载荷仍未确认。首轮实际12个本地工具调用后超时exit6，无实现文件；低思考强度精简重试被自动审批以阿里云上传/存储未获授权为由拒绝。不得因登录成功、下达工单或耗时就记实现完成。
 
 1. 使用core025-layer-contract.json、原始Aka.inx和监工生成的out/core026/default-registration.json。核验源哈希、62个selected_uuid唯一且存在，默认源坐标检查PASS。

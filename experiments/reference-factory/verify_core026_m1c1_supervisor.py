@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""DRAFT: independent M1C1 checker; awaits a real mcode candidate for full validation.
-Does not accept overall M1 or a runtime compositor.
-"""
+"""Independent source/contract check; does not accept M1 overall or a compositor."""
 import argparse
 import hashlib
 import json
@@ -26,15 +24,10 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def strings(value):
-    if isinstance(value, str):
-        yield value
-    elif isinstance(value, dict):
-        for v in value.values():
-            yield from strings(v)
-    elif isinstance(value, list):
-        for v in value:
-            yield from strings(v)
+def equal_json(left, right):
+    # A representation check independent of the producer's recursive comparator.
+    options = {'sort_keys': True, 'allow_nan': False, 'separators': (',', ':')}
+    return json.dumps(left, **options) == json.dumps(right, **options)
 
 
 def verify(path):
@@ -42,6 +35,8 @@ def verify(path):
     reg_path = ROOT / 'out/core026/default-registration.json'
     facts = json.loads((ROOT / 'out/core026/supervisor-constraints.json').read_text())
     data = json.loads(path.read_text())
+    if not isinstance(data, dict):
+        raise ValueError('Constraints must be a JSON object')
     problems = []
 
     def require(ok, message):
@@ -54,13 +49,14 @@ def verify(path):
     require(facts['status'] == 'SOURCE_OBSERVATIONS_VERIFIED', 'Independent facts not verified')
     require(data.get('schema') == 'core026-constraints/1', 'Wrong schema')
     require(data.get('scope') == 'DEFAULT_SOURCE_AND_UNVALIDATED_DESIGN', 'Wrong scope')
-    values = set(strings(data.get('inputs', {})))
-    require({SHA_INX, SHA_CONTRACT, sha(reg_path)} <= values, 'Missing/wrong input provenance SHA')
+    require(equal_json(data.get('inputs'), {'inx_sha256': SHA_INX,
+            'contract_sha256': SHA_CONTRACT, 'registration_sha256': sha(reg_path)}),
+            'Missing/wrong input provenance SHA')
     rows = data.get('records', [])
     require(isinstance(rows, list) and len(rows) == 62, 'Need exactly 62 records')
     if not isinstance(rows, list):
         rows = []
-    require([r.get('psd_order') for r in rows if isinstance(r, dict)] == list(range(1, 63)),
+    require(equal_json([r.get('psd_order') for r in rows if isinstance(r, dict)], list(range(1, 63))),
             'Record identity/order/uniqueness mismatch')
     require(SURFACES | RECEIVERS.keys() == set(range(1, 63)) and not SURFACES & RECEIVERS.keys(),
             'Supervisor work-order coverage is incomplete')
@@ -75,7 +71,7 @@ def verify(path):
         if not isinstance(observed, dict) or not isinstance(design, dict):
             require(False, f'{order}: malformed observed/design'); continue
         for key, value in expected.items():
-            require(observed.get(key) == value, f'{order}.observed.{key}: differs from native facts')
+            require(equal_json(observed.get(key), value), f'{order}.observed.{key}: differs from native facts')
         observed_uuids.append(observed.get('native_uuid'))
         layer = c['layers'][order - 1]
         texture = ROOT / layer['raw_source_texture']['file']
@@ -84,24 +80,31 @@ def verify(path):
         require(design.get('status') == 'DESIGN_PROPOSAL_NOT_RENDER_VALIDATED',
                 f'{order}: design was promoted to observed/accepted')
         require(design.get('physical_depth') == 'UNKNOWN', f'{order}: invented physical depth')
-        require('receiver_order' in design and design['receiver_order'] == RECEIVERS.get(order),
+        require(design.get('local_before_behind') == 'UNKNOWN', f'{order}: unvalidated physical ordering')
+        require(design.get('local_mask') == 'UNKNOWN', f'{order}: unvalidated runtime mask')
+        require(design.get('pose_scope') == 'DEFAULT_ONLY', f'{order}: scope exceeds default source evidence')
+        require('receiver_order' in design and equal_json(design['receiver_order'], RECEIVERS.get(order)),
                 f'{order}: wrong receiver')
-        require('shadow_caster_order' in design and design['shadow_caster_order'] == CASTERS.get(order),
+        require('shadow_caster_order' in design and equal_json(design['shadow_caster_order'], CASTERS.get(order)),
                 f'{order}: wrong caster')
         require(design.get('late_paint') is (order in {58, 59, 60, 61}), f'{order}: wrong late-paint flag')
         require(isinstance(design.get('role'), str) and bool(design['role']), f'{order}: role missing')
         if order in {27, 37}:
             require(design.get('role') == 'LOCAL_EYE_CANVAS', f'{order}: eye canvas role missing')
     require(len(observed_uuids) == len(set(observed_uuids)) == 62, 'Native UUIDs not unique')
-    require(data.get('multiply_orders') == facts['multiply_orders'], 'Multiply list mismatch')
-    require(data.get('default_shadow_clips') == facts['default_shadow_clips'], 'Default clip list mismatch')
+    require(equal_json(data.get('multiply_orders'), facts['multiply_orders']), 'Multiply list mismatch')
+    require(equal_json(data.get('default_shadow_clips'), facts['default_shadow_clips']), 'Default clip list mismatch')
     late = data.get('late_face_paint_over_hair', [])
-    require(len(late) == 4, 'Need all four late-face observations')
-    if len(late) == 4:
+    require(isinstance(late, list) and len(late) == 4, 'Need all four late-face observations')
+    if isinstance(late, list) and len(late) == 4:
         for actual, expected in zip(late, facts['late_face_paint_over_hair']):
+            if not isinstance(actual, dict):
+                require(False, 'Malformed late-paint observation'); continue
             for key in ['psd_order', 'alpha_gt0_pixels', 'overlap_hair_alpha_ge253_pixels']:
-                require(actual.get(key) == expected[key], f'Late-paint observation {key} mismatch')
+                require(equal_json(actual.get(key), expected[key]), f'Late-paint observation {key} mismatch')
     claims = data.get('claims', {})
+    if not isinstance(claims, dict):
+        require(False, 'Claims must be an object'); claims = {}
     for key, expected in {'overall_M1': 'NOT_ACCEPTED', 'runtime_receiver_compositor': 'NOT_IMPLEMENTED',
                           'physical_yaw_degrees': 'UNKNOWN'}.items():
         require(claims.get(key) == expected, f'Claim {key} overstates acceptance')

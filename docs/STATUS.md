@@ -1,6 +1,6 @@
 # 当前恢复入口
 
-更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。mcode负责实现，Codex下达明确工单并独立验收；每完成一段提交保存。生产仓库koma-motion未改。
+更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode实现、Codex监督；mcode的无工具轻量请求仍被自动审批拒绝，本轮M1C1改由Codex在本地兜底实现并验收，明确不算mcode产物。每完成一段提交保存。生产仓库koma-motion未改。
 
 ## CORE026当前状态
 
@@ -18,7 +18,9 @@
 
 ## 下一工单与实际阻塞
 
-[CORE-026-M1C1精确工单](plans/CORE-026-M1C1-constraints-order.md)：实现extract_core026_constraints.py与config/core026-constraints.json；明确62条记录的源事实/设计提案字段、接收/投影阴影/高光映射、晚叠画和UNKNOWN；按--build、--verify、独立对照及篡改验拒后提交。19标点人工复核仍是并列门禁，M1放行后才实施M2。
+M1C1已由Codex本地实现：[验收报告](research/CORE-026-M1C1-local-fallback-acceptance.md)。extract_core026_constraints.py、config/core026-constraints.json已完成62条源事实/接收提案，独立源事实比对通过；9组错误配置均被两个验证器以exit11拒绝，重复build字节一致，verify不改配置。原始10文件/186PNG及默认坐标继续通过。当前为LOCAL_PASS，干净CI结果须实测后补记；不把保存或接入工作流当CI成功。
+
+下一步为19槽位的逐姿态可用范围/可见性复核和M1总验收。现有NCC候选仍非拟合真值；receiver均为未验证设计提案，三维深度和运动遮挡UNKNOWN。M1放行后才实施M2，不直接盲调Z。[M1C1精确工单及当前执行归属](plans/CORE-026-M1C1-constraints-order.md)。
 
 Work已恢复且本地仓库已同步。源像素/10保护文件/186PNG、62默认坐标、11Multiply/9clip及18张原生参考哈希均重新实测通过。监工查看了实际9姿态标点接触图与默认652×652图；19槽位的13图像候选仍有语义限制，所有点仍不自动具备拟合资格。[本轮实际记录](../experiments/reference-factory/evidence/core026-M1/supervisor-resume-and-reference-review.json)。
 
@@ -26,7 +28,7 @@ mcode首次启动exit3提示登录失效；已通过官方CN登录流程恢复�
 
 用户随后明确放行.com，agent.minimax.cn与agent.minimaxi.com的前述范围已确认；当前不需要再次登录。重试先遇filecdn.minimax.chat审批，公开包已证实它是无认证/无正文的公共模型目录GET。另遇阿里云存储审批，公开包只定位到自定义data-URL头像的内容安全上传分支，不能据此确认实际请求载荷。复用已有会话、不进行头像操作后，mcode实际完成12个本地工具调用，但8分钟超时exit6，未生成提取器或配置。精简、低思考强度重试再次被自动审批以阿里云上传/存储未获授权且命令禁止上传为由拒绝；现已停止重试。[本轮实测记录](../experiments/reference-factory/evidence/core026-M1/mcode-post-domain-approval.json)。
 
-剩余执行阻塞是mcode官方SDK所需第三方存储操作的范围/载荷，已发现matrix-internal-cn.oss-cn-shanghai.aliyuncs.com，公开SDK还列有matrix-internal.oss-us-east-1.aliyuncs.com。两者用于公开代码中的头像内容安全上传，不是已确认项目上传结果。不得直接扩大项目数据发送或声称已经完成实现。监工独立验收脚本verify_core026_m1c1_supervisor.py已按恢复草稿保存，62条映射定义完整，缺候选时实际exit11；真实候选正例与3项篡改测试仍NOT_RUN_NO_CANDIDATE，未接入PASS门禁。
+上述SDK阻塞现只影响mcode协作，本地M1C1已推进。已发现的两个阿里云host存在于公开SDK头像上传白名单，但没有网络日志证明本任务真实访问或上传载荷；审批提示不能当请求抓包结果。最后一次lightweight/permission off、仅通用公开schema的尝试也被审批拒绝，随后停止mcode调用，采用本地替代。当前不因这些提示再次要求登录或逐个域名授权。
 
 此前服务500/超时、旧目的地审批与环境不可用均保留为历史，不与本轮阻塞混写。[早期事件记录](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。
 
@@ -37,6 +39,8 @@ mcode首次启动exit3提示登录失效；已通过官方CN登录流程恢复�
 本地恢复时，先安装requirements.txt、npm ci、Playwright Chromium，随后依次运行prepare.py、native_layers.py、prepare_core025.py、capture_core025.mjs --anchors、verify_core025_supervisor.py，生成旧保护报告。再依次运行audit_core026.py --audit、audit_core026.py --verify-source、verify_core026_supervisor.py、verify_core026_registration.py、verify_core026_constraints.py。
 
 从已授权GitHub日志接口取得job124281335070的原始日志后，以restore_core026_reference.py --job-log PATH恢复实际截图；或使用上述原生Draft及其manifest。随后运行prepare_core026_landmark_seeds.py和verify_core026_reference.py。不得用重新生成或占位图片冒充原生参考。
+
+M1C1在源检查后依次运行python extract_core026_constraints.py --verify、python verify_core026_m1c1_supervisor.py、python run_core026_m1c1_regressions.py。仅有意重新生成候选时使用--build；CI首先verify已提交配置，不能先build覆盖错误配置。完整命令/结果见上述验收报告及evidence/core026-M1/constraints-local-acceptance.json。
 
 ## 已完成的前序阶段
 

@@ -9,6 +9,10 @@ on:
       - 'experiments/reference-factory/verify_core026_reference.py'
       - 'experiments/reference-factory/verify_core026_constraints.py'
       - 'experiments/reference-factory/config/core026-landmark-seeds.json'
+      - 'experiments/reference-factory/extract_core026_constraints.py'
+      - 'experiments/reference-factory/verify_core026_m1c1_supervisor.py'
+      - 'experiments/reference-factory/run_core026_m1c1_regressions.py'
+      - 'experiments/reference-factory/config/core026-constraints.json'
   workflow_dispatch:
 permissions:
   actions: read
@@ -52,6 +56,11 @@ jobs:
           python verify_core026_supervisor.py
           python verify_core026_registration.py
           python verify_core026_constraints.py
+      - name: Verify receiver proposals and reject isolated corruptions
+        run: |
+          python extract_core026_constraints.py --verify
+          python verify_core026_m1c1_supervisor.py
+          python run_core026_m1c1_regressions.py
       - name: Restore actual clean native PNGs from pinned successful job log
         run: |
           gh api --allow-escape-sequences "repos/$GH_REPO/actions/jobs/124281335070/logs" > "$RUNNER_TEMP/core026-native-job.log"
@@ -70,6 +79,8 @@ jobs:
             experiments/reference-factory/out/core026/verify-source.json
             experiments/reference-factory/out/core026/supervisor-source-qa.json
             experiments/reference-factory/out/core026/supervisor-constraints.json
+            experiments/reference-factory/out/core026/m1c1-supervisor.json
+            experiments/reference-factory/out/core026/m1c1-regressions.json
             experiments/reference-factory/out/core026/landmark-seeds-projected.json
             experiments/reference-factory/out/core026/landmarks/landmarks.json
             experiments/reference-factory/out/core026/reference/restore-evidence.json
