@@ -1,0 +1,119 @@
+name: CORE-008 D · native Aka INX fixed-yaw parameter sweep
+
+on:
+  push:
+    branches: [feature/koma-25d-core-008]
+    paths:
+      - '.github/workflows/koma-25d-inox-fixed8.yml'
+      - 'experiments/koma-25d-core/tools/patch_inox_fixed8.py'
+      - 'experiments/koma-25d-core/tools/qa_inox_fixed8.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  independent-five-native-poses:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install actual OpenGL and X11 software renderer dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libgl1-mesa-dev libegl1-mesa-dev libx11-dev libxkbcommon-dev \
+            libxkbcommon-x11-dev libxcursor-dev libxi-dev libxrandr-dev \
+            libxcb-xfixes0-dev libwayland-dev pkg-config \
+            xvfb xauth xdotool mesa-utils ffmpeg
+          python3 -m venv "$RUNNER_TEMP/koma-q8"
+          "$RUNNER_TEMP/koma-q8/bin/pip" install --disable-pip-version-check "Pillow==12.0.0" "numpy==2.2.6"
+          echo "$RUNNER_TEMP/koma-q8/bin" >> "$GITHUB_PATH"
+      - name: Verify complete Aka INX and prepare reproducible renderer
+        run: |
+          set -euo pipefail
+          output=experiments/koma-25d-core/out/core008/fixed
+          mkdir -p "$output"
+          curl -fL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' \
+            dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f \
+            "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+          git clone --quiet https://github.com/Inochi2D/inox2d.git "$RUNNER_TEMP/inox2d"
+          git -C "$RUNNER_TEMP/inox2d" checkout -q d4dd9dd7f16b775042cbda44370570abf9a8cf81
+          python experiments/koma-25d-core/tools/patch_inox_fixed8.py \
+            --checkout "$RUNNER_TEMP/inox2d" \
+            --report "$output/renderer_provenance.json"
+          cargo build --release --manifest-path "$RUNNER_TEMP/inox2d/Cargo.toml" -p render-opengl
+          test -x "$RUNNER_TEMP/inox2d/target/release/render-opengl"
+      - name: Render FIVE independent fixed-value native INX head poses
+        run: |
+          set -euo pipefail
+          out=experiments/koma-25d-core/out/core008/fixed
+          export DISPLAY=:88 LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe
+          Xvfb :88 -screen 0 1024x900x24 -ac +extension GLX +render -noreset \
+            > "$out/xvfb.log" 2>&1 &
+          xvfb_pid=$!
+          sleep 3
+          glxinfo -B > "$out/glxinfo.txt"
+          xdotool mousemove 1020 890 || true
+          for entry in "000 0.00" "025 0.25" "050 0.50" "075 0.75" "100 1.00"; do
+            read -r tag value <<< "$entry"
+            export KOMA_HEAD_YAW="$value"
+            "$RUNNER_TEMP/inox2d/target/release/render-opengl" \
+              "$RUNNER_TEMP/Aka.inx" > "$out/pose_$tag.log" 2>&1 &
+            pid=$!
+            sleep 4
+            if ! kill -0 "$pid" 2>/dev/null; then
+              tail -100 "$out/pose_$tag.log"
+              exit 1
+            fi
+            xdotool search --name "Render Inochi2D Puppet" windowmove 0 0 || true
+            sleep 1
+            ffmpeg -hide_banner -loglevel error -y -f x11grab \
+              -video_size 1024x900 -framerate 1 -i :88.0+0,0 \
+              -frames:v 1 "$out/native_param_$tag.png"
+            test -s "$out/native_param_$tag.png"
+            if grep -E -m1 'FBO incomplete|GL_INVALID_FRAMEBUFFER_OPERATION' "$out/pose_$tag.log"; then
+              echo "FAIL_INCOMPLETE_NATIVE_FRAMEBUFFER $tag"
+              exit 1
+            fi
+            kill "$pid" 2>/dev/null || true
+            wait "$pid" || true
+            sleep 1
+          done
+          kill "$xvfb_pid" 2>/dev/null || true
+      - name: Independently audit real pixel content in all five poses
+        run: |
+          python experiments/koma-25d-core/tools/qa_inox_fixed8.py \
+            --input experiments/koma-25d-core/out/core008/fixed
+      - name: Expose source-model pose montage to independent visual inspection
+        run: |
+          python - <<'PY'
+          import base64,textwrap
+          from pathlib import Path
+          p=Path("experiments/koma-25d-core/out/core008/fixed/fixed_parameter_contact.jpg")
+          print("CORE008_NATIVE_POSE_GRID_VISUAL_BEGIN")
+          for line in textwrap.wrap(base64.b64encode(p.read_bytes()).decode(),120):
+              print(line)
+          print("CORE008_NATIVE_POSE_GRID_VISUAL_END")
+          PY
+      - name: Publish diagnostic images only to Draft Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          out=experiments/koma-25d-core/out/core008/fixed
+          gh release create "koma-25d-core008-fixed-$GITHUB_RUN_ID" \
+            "$out/native_param_000.png" \
+            "$out/native_param_025.png" \
+            "$out/native_param_050.png" \
+            "$out/native_param_075.png" \
+            "$out/native_param_100.png" \
+            "$out/fixed_parameter_contact.png" \
+            "$out/fixed_parameter_qa.json" \
+            "$out/renderer_provenance.json" \
+            --target "$GITHUB_SHA" --draft \
+            --title "Aka five REAL Inox2D normalized head yaw poses" \
+            --notes "Independent native renders using real pinned complete Aka.inx. Aka © seagetch CC BY 4.0. Native parameter values 0/0.25/0.5/0.75/1.0, NOT physical degrees. No GPT-generated assets. Video is in earlier native Draft Release; these are independent fixed-value pose screenshots."

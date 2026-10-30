@@ -3,6 +3,36 @@
 **Status: prompts authored, NO AI view imagery yet generated.**
 Always pass the *actual Aka source front head image* as reference input. A text-only invocation is INVALID: arbitrary model-remembered "Aka" designs would be unauthentic.
 
+## ACTUAL source-identity verification before any GPT call (hard requirement)
+
+The real original Aka PSD reference pack was exported and visually examined in
+CORE-008. Identity anchors: **short golden-orange bob haircut**, very large
+**amber/orange fox ears with white fur interiors**, **magenta-red eyes**, a
+single **burgundy-red leaf ornament resting on the bangs**, distinctive
+orange-outlined side hair loops, and a small neck with a dark purple choker.
+Aka's official PSD is a **head/neck illustration**, NOT a pink-haired shrine
+girl with white ribbons, bells, floral hair ornaments or an elaborate costume.
+
+**First generated image FAILED:** a pink/cream-haired ornate fox shrine girl
+in a four-panel labeled turnaround, inconsistent with all of these original
+Aka identity markers. The first candidate was rejected and is not registered.
+
+CRITICAL: The image-generation engine must receive the **actual rendered
+\`source_A_aka_front.png\` image as its native reference/edit input** — not
+merely this document, an URL, or an image preview in an assistant tool trace.
+If the generator does not demonstrably ingest that image, stop. Prompt-only
+generated anime fox girls cannot be counted as Aka assets. Always output
+ONE single rotated view on the same neutral canvas (never a montage).
+
+Before scoring identity, the candidate must pass these hard checks:
+- Main hair is golden/orange, NOT pink/white.
+- Both fox ears are gigantic amber/orange, white inner ear fur.
+- Eyes are magenta-red, with original ink outline, not generic brown.
+- Distinct burgundy LEAF on top of original bangs, not flowers or ribbons.
+- No novel clothing, bells or decorative ornaments.
+- One angle per image, no multi-panel sheets and no labels.
+- Nose points to image right for positive yaw.
+
 ## Reference image pack before generation
 
 - SOURCE_A = full, unmodified composite of official Aka \`tutorial-aka.psd\` head. This is the MASTER identity, color, contour and original linework reference.

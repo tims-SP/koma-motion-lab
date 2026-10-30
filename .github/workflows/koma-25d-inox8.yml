@@ -1,0 +1,117 @@
+name: CORE-008 B · Inox2D native Aka head yaw OpenGL video
+
+on:
+  push:
+    branches: [feature/koma-25d-core-008]
+    paths:
+      - '.github/workflows/koma-25d-inox8.yml'
+      - 'experiments/koma-25d-core/tools/patch_inox8.py'
+      - 'experiments/koma-25d-core/tools/qa_native8.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  native-inx-yaw:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install real software OpenGL, X11 window, FFmpeg, and Python QA
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libgl1-mesa-dev libegl1-mesa-dev libx11-dev libxkbcommon-dev \
+            libxkbcommon-x11-dev libxcursor-dev libxi-dev libxrandr-dev \
+            libxcb-xfixes0-dev libwayland-dev pkg-config \
+            xvfb xauth xdotool mesa-utils ffmpeg
+          python3 -m venv "$RUNNER_TEMP/aka-native"
+          "$RUNNER_TEMP/aka-native/bin/pip" install --disable-pip-version-check \
+            "Pillow==12.0.0" "numpy==2.2.6"
+          echo "$RUNNER_TEMP/aka-native/bin" >> "$GITHUB_PATH"
+      - name: Obtain real complete Aka INX (Git LFS binary, not pointer)
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/koma-25d-core/out/core008/native
+          curl -fL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' \
+            dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f \
+            "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+          test "$(stat -c%s "$RUNNER_TEMP/Aka.inx")" = 17731911
+      - name: Build upstream Inox2D OpenGL viewer with ONLY a deterministic pose sweep
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Inochi2D/inox2d.git "$RUNNER_TEMP/inox2d"
+          git -C "$RUNNER_TEMP/inox2d" checkout -q d4dd9dd7f16b775042cbda44370570abf9a8cf81
+          python experiments/koma-25d-core/tools/patch_inox8.py \
+            --checkout "$RUNNER_TEMP/inox2d" \
+            --report experiments/koma-25d-core/out/core008/native/renderer_provenance.json
+          cargo build --release --manifest-path "$RUNNER_TEMP/inox2d/Cargo.toml" \
+            -p render-opengl
+          test -x "$RUNNER_TEMP/inox2d/target/release/render-opengl"
+          echo "CORE008_UPSTREAM_RUST_OPENGL_BUILD_OK"
+      - name: Run real native puppet and record actual X11 OpenGL window video
+        run: |
+          set -euo pipefail
+          folder=experiments/koma-25d-core/out/core008/native
+          export DISPLAY=:88
+          export LIBGL_ALWAYS_SOFTWARE=1
+          export GALLIUM_DRIVER=llvmpipe
+          Xvfb :88 -screen 0 1024x900x24 -ac +extension GLX +render -noreset \
+            > "$folder/xvfb.log" 2>&1 &
+          xvfb_pid=$!
+          sleep 3
+          glxinfo -B > "$folder/glxinfo.txt"
+          "$RUNNER_TEMP/inox2d/target/release/render-opengl" \
+            "$RUNNER_TEMP/Aka.inx" > "$folder/inox2d_run.log" 2>&1 &
+          pid=$!
+          sleep 5
+          if ! kill -0 "$pid" 2>/dev/null; then
+            tail -150 "$folder/inox2d_run.log"
+            exit 1
+          fi
+          xdotool search --name "Render Inochi2D Puppet" \
+            windowmove 0 0 || true
+          ffmpeg -hide_banner -loglevel warning -y \
+            -f x11grab -framerate 24 -video_size 1024x900 -i :88.0+0,0 \
+            -t 6 -c:v libx264 -preset veryfast -pix_fmt yuv420p \
+            "$folder/native_head_yaw.mp4"
+          kill "$pid" 2>/dev/null || true
+          kill "$xvfb_pid" 2>/dev/null || true
+          test -s "$folder/native_head_yaw.mp4"
+          tail -80 "$folder/inox2d_run.log"
+          echo "CORE008_ACTUAL_XVFB_OPENGL_MP4_ENCODED"
+      - name: Independently decode final MP4 and inspect real frames
+        run: |
+          python experiments/koma-25d-core/tools/qa_native8.py \
+            --mp4 experiments/koma-25d-core/out/core008/native/native_head_yaw.mp4 \
+            --out experiments/koma-25d-core/out/core008/native/decoded
+      - name: Include actual encoded movie frames in logs for visual review
+        run: |
+          python - <<'PY'
+          import base64,textwrap
+          from pathlib import Path
+          file=Path("experiments/koma-25d-core/out/core008/native/decoded/native_contact_preview.jpg")
+          print("CORE008_REAL_NATIVE_VIDEO_VISUAL_BEGIN")
+          for line in textwrap.wrap(base64.b64encode(file.read_bytes()).decode(),120):
+              print(line)
+          print("CORE008_REAL_NATIVE_VIDEO_VISUAL_END")
+          PY
+      - name: Release only CC-BY derived previews as DRAFT, never source INX
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          folder=experiments/koma-25d-core/out/core008/native
+          gh release create "koma-25d-core008-native-$GITHUB_RUN_ID" \
+            "$folder/native_head_yaw.mp4" \
+            "$folder/decoded/native_contact.png" \
+            "$folder/decoded/native_video_qa.json" \
+            "$folder/renderer_provenance.json" \
+            "$folder/glxinfo.txt" \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-008 native Inox2D Aka head-yaw OpenGL turn (reference, not 3D)" \
+            --notes "Aka design and rigging by seagetch, CC BY 4.0, Inochi2D example-models. Experimental Inox2D OpenGL native INX renderer pinned d4dd9dd; original model not redistributed. Head Yaw parameter -1..1 normalized, NOT physical 3D degrees. Official D reference runtime parity and generated side artwork not accepted."

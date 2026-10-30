@@ -1,0 +1,116 @@
+name: CORE-008 · authentic Aka source pack and native model parameter inventory
+
+on:
+  push:
+    branches: [feature/koma-25d-core-008]
+    paths:
+      - '.github/workflows/koma-25d-core-008.yml'
+      - 'experiments/koma-25d-core/tools/prepare_aka8.py'
+      - 'experiments/koma-25d-core/tools/check_full_inx8.py'
+      - 'experiments/koma-25d-core/tools/extract_head_param8.py'
+      - 'docs/plans/CORE-008-multiview-asset-production.md'
+      - 'docs/prompts/CORE-008-Aka-view-generation-prompts.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aka-original-reference-pack:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PSD software
+        run: |
+          python3 -m venv "$RUNNER_TEMP/koma-venv"
+          "$RUNNER_TEMP/koma-venv/bin/pip" install --disable-pip-version-check "psd-tools==1.10.9" "Pillow==12.0.0" "numpy==2.2.6"
+          echo "$RUNNER_TEMP/koma-venv/bin" >> "$GITHUB_PATH"
+      - name: Download pinned official Aka original PSD and tutorial INX
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          mkdir -p out/core008/source out/core008/raw
+          src=https://raw.githubusercontent.com/Inochi2D/inochi2d-docs/593c657855d5679f01443ef311346298fd25e117/docs/source/creator/first-model
+          curl -fsSL --retry 3 --max-time 120 "$src/tutorial-aka.psd" -o out/core008/raw/tutorial-aka.psd
+          curl -fsSL --retry 3 --max-time 120 "$src/tutorial-aka02.inx" -o out/core008/raw/tutorial-aka02.inx
+          test "$(stat -c%s out/core008/raw/tutorial-aka.psd)" -gt 5000000
+          test "$(stat -c%s out/core008/raw/tutorial-aka02.inx)" -gt 5000000
+          sha256sum out/core008/raw/*
+      - name: Export REAL 0 degree PSD and genuine separated-component references
+        working-directory: experiments/koma-25d-core
+        run: |
+          python tools/prepare_aka8.py \
+            --psd out/core008/raw/tutorial-aka.psd \
+            --out out/core008/source
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path("out/core008/source/reference_manifest.json").read_text())
+          assert m["part_count"]==16
+          assert m["source_canvas"]==[1630,1630]
+          assert m["generated_angle_status"]=={"30":"NOT_GENERATED","45":"NOT_GENERATED"}
+          assert m["image_A_sha256"]!=m["image_B_sha256"]
+          print("CORE008_ACTUAL_ORIGINAL_SOURCE_REFERENCE_ACCEPTED")
+          PY
+      - name: Optionally get complete Aka INX Git LFS binary and inspect actual parameters
+        working-directory: experiments/koma-25d-core
+        run: |
+          set -euo pipefail
+          curl -fL --retry 2 --max-time 120 \
+            "https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx" \
+            -o out/core008/raw/Aka-complete.inx || true
+          python tools/check_full_inx8.py \
+            --input out/core008/raw/Aka-complete.inx \
+            --output out/core008/source/native_parameter_inventory.json
+      - name: Inspect native Head Yaw-Pitch keyframe binding grids
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import json,subprocess,sys
+          from pathlib import Path
+          folder=Path("out/core008/source")
+          inv=json.loads((folder/"native_parameter_inventory.json").read_text())
+          if inv.get("verified_full_model"):
+              subprocess.run([sys.executable,"tools/extract_head_param8.py",
+                "--input","out/core008/raw/Aka-complete.inx",
+                "--output",str(folder/"head_native_bindings.json")],check=True)
+          else:
+              (folder/"head_native_bindings.json").write_text(json.dumps({
+                  "status":"FULL_NATIVE_INX_NOT_AVAILABLE",
+                  "native_pose_evaluation":"NOT_IMPLEMENTED"
+              },indent=2)+"\n")
+          PY
+      - name: Export small actual source images to CI logs for independent visual inspection
+        working-directory: experiments/koma-25d-core
+        run: |
+          python - <<'PY'
+          import base64, textwrap,io
+          from PIL import Image
+          for key,p in [
+            ("AKA_SOURCE_A","out/core008/source/source_A_aka_front.jpg"),
+            ("AKA_SOURCE_B","out/core008/source/source_B_aka_parts.png")]:
+            im=Image.open(p).convert("RGB")
+            im.thumbnail((960,960))
+            buf=io.BytesIO()
+            im.save(buf,format="JPEG",quality=76,optimize=True)
+            print(key+"_BEGIN")
+            for line in textwrap.wrap(base64.b64encode(buf.getvalue()).decode(),120): print(line)
+            print(key+"_END")
+          PY
+      - name: Save REAL source reference pack in draft release, not Git
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="koma-25d-core008-source-$GITHUB_RUN_ID"
+          gh release create "$tag" \
+            experiments/koma-25d-core/out/core008/source/source_A_aka_front.png \
+            experiments/koma-25d-core/out/core008/source/source_B_aka_parts.png \
+            experiments/koma-25d-core/out/core008/source/source_review.jpg \
+            experiments/koma-25d-core/out/core008/source/reference_manifest.json \
+            experiments/koma-25d-core/out/core008/source/native_parameter_inventory.json \
+            experiments/koma-25d-core/out/core008/source/head_native_bindings.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-008 REAL Aka original + 16-component GPT reference pack" \
+            --notes "Source Aka art/rig © seagetch, CC BY 4.0; original 1630x1630 PSD from official pinned tutorial. These images are authentic FRONT reference assets only. No AI 30/45 images have been generated/accepted. PSD and INX binaries downloaded but NOT redistributed."
