@@ -1,0 +1,39 @@
+name: CORE-017 A · inspect real Aka native ear hierarchy and HeadYaw bindings
+
+on:
+  push:
+    branches: [feature/koma-25d-core-017]
+    paths:
+      - '.github/workflows/koma-25d-core-017.yml'
+      - 'experiments/koma-25d-core/tools/inspect_ear_ancestry17.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native-parent-and-binding-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify genuine full Aka INX
+        run: |
+          curl -fsSL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' \
+            dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f \
+            "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+      - name: Extract real node parent transforms and Head Yaw parameter bindings
+        run: |
+          python3 experiments/koma-25d-core/tools/inspect_ear_ancestry17.py \
+            --input "$RUNNER_TEMP/Aka.inx" \
+            --out "experiments/koma-25d-core/out/core017/native_ear_transform_bindings.json"
+      - name: Publish downloadable source metadata without original binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE017-original-ear-transforms-bindings
+          path: experiments/koma-25d-core/out/core017/native_ear_transform_bindings.json
+          retention-days: 30
+          if-no-files-found: error
