@@ -118,7 +118,8 @@ jobs:
           for line in textwrap.wrap(base64.b64encode(b).decode(),120):print(line)
           print("CORE021_NATIVE_DEFAULT_DECODED_CONTACT_END")
           PY
-      - name: Publish actual native OpenGL PNGs and provenance as regular Actions artifact
+      - name: Publish actual native OpenGL PNGs even on a failed pixel QA
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: CORE021-17-native-Inox-GL-ear-poses-and-H264
