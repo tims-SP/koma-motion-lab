@@ -1,0 +1,88 @@
+name: CORE-020 B · audit ORIGINAL Aka HeadYaw source input min/max
+
+on:
+  push:
+    branches: [feature/koma-25d-core-020]
+    paths:
+      - '.github/workflows/koma-25d-param-domain-020.yml'
+      - 'experiments/koma-25d-core/tools/headyaw_domain20.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-INX-parameter-domain:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Obtain SHA-verified actual original INX not guessed parameter schema
+        run: |
+          curl -fsSL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+      - name: Audit exact HeadYaw authoring range, defaults and axis normalized grid
+        run: |
+          mkdir -p experiments/koma-25d-core/out/core020
+          python3 - <<'PY'
+          import os,json,struct
+          from pathlib import Path
+          path=Path(os.environ["RUNNER_TEMP"])/"Aka.inx"
+          b=path.read_bytes()
+          assert b[:8]==b"TRNSRTS\x00"
+          n=struct.unpack(">I",b[8:12])[0]
+          doc=json.loads(b[12:12+n])
+          p=next(x for x in doc["param"] if x["name"]=="Head:: Yaw-Pitch")
+          result={"schema":"core020-original-HeadYaw-domain/1",
+                  "source_exact_sha256":"dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+                  "name":p["name"],
+                  "all_source_param_keys":list(p.keys()),
+                  "raw_source_min":p.get("min"),
+                  "raw_source_max":p.get("max"),
+                  "raw_source_defaults":p.get("defaults",p.get("default")),
+                  "raw_axis_points":p.get("axis_points"),
+                  "original_headYaw_bindings_count":len(p["bindings"]),
+                  "notes":"Native API .set(value) normalizes (value - param.min) / (param.max-param.min) before evaluating axis_points."}
+          output=Path("experiments/koma-25d-core/out/core020/source_headyaw_domain.json")
+          output.write_text(json.dumps(result,indent=2)+"\n")
+          print("CORE020_ACTUAL_SOURCE_HEADYAW_DOMAIN",json.dumps(result))
+          assert result["raw_source_min"] is not None and result["raw_source_max"] is not None
+          PY
+      - name: Audit additional parameter bindings on complete original ear ancestors
+        run: |
+          python3 - <<'PY'
+          import json,os,struct
+          from pathlib import Path
+          b=(Path(os.environ["RUNNER_TEMP"])/"Aka.inx").read_bytes()
+          n=struct.unpack(">I",b[8:12])[0]
+          puppet=json.loads(b[12:12+n])
+          ids={68362597,4166575140,2611544751,3736853925,2432586950,3424078890,3453251657}
+          rows=[]
+          for param in puppet.get("param",[]):
+              relevant=[{"node":z.get("node"),"name":z.get("param_name"),"mode":z.get("interpolate_mode")}
+                        for z in param.get("bindings",[]) if z.get("node") in ids]
+              if not relevant:continue
+              rows.append({"param":param["name"],"min":param.get("min"),
+                "max":param.get("max"),"defaults":param.get("defaults"),
+                "head_ear_ancestry_bindings_count":len(relevant),"binding_targets":relevant})
+          result={"schema":"core020-all-ear-ancestry-parameter-defaults/1",
+                  "real_original_full_INX":True,"matching_parameter_channels":len(rows),
+                  "headYaw_sole_ear_parameter":len(rows)==1,
+                  "all_effective_ear_ancestry_params":rows}
+          out=Path("experiments/koma-25d-core/out/core020/ear_ancestry_all_defaults.json")
+          out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
+          print("CORE020_ALL_EAR_ANCESTRY_PARAMETER_DEFAULTS",json.dumps(result)[:10000])
+          PY
+      - name: Verify actual source parameter input normalization and bilinear interpolation
+        run: |
+          python3 experiments/koma-25d-core/tools/headyaw_domain20.py \
+            --source-domain experiments/koma-25d-core/out/core020/source_headyaw_domain.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CORE020-actual-Aka-HeadYaw-source-parameter-domain
+          path: |
+            experiments/koma-25d-core/out/core020/source_headyaw_domain.json
+            experiments/koma-25d-core/out/core020/ear_ancestry_all_defaults.json
+          retention-days: 30
