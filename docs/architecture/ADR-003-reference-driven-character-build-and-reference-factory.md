@@ -855,6 +855,401 @@ covering, at minimum:
 
 Reference Factory experiments may proceed using authentic source/canonical art, but production acceptance of the full Koma character runtime must not claim front fidelity complete until this full-front gate passes.
 
+
+### 30. Authoring Master and Runtime Package are separate artifacts
+
+Koma must distinguish editable/source-of-truth assets from optimized runtime delivery assets.
+
+The authoring package is authoritative:
+
+    Koma Authoring Package
+      source truth
+      canonical/golden art
+      PSD/INX and source decomposition
+      masks/depth/normal/part maps
+      correspondence
+      scaffold source
+      rig source
+      lineage/dependency DAG
+      provenance/licenses
+      QA evidence
+
+The runtime package is a deterministic derivative:
+
+    Koma Runtime Package
+      optimized geometry
+      runtime textures
+      rig/animation payloads
+      view-skin tables
+      expression/visibility/physics data
+      runtime manifest
+      dependency/version fingerprints
+
+Rules:
+
+- runtime optimization never overwrites Authoring Master data;
+- compressed/quantized runtime assets never become new GOLDEN references;
+- the build from Authoring Master -> Runtime Package must be reproducible/auditable;
+- a runtime package records the exact authoring asset hashes from which it was built;
+- rebuilding runtime derivatives after tool/runtime upgrades must not silently modify authoring truth.
+
+### 31. Schema Migration and Runtime Compatibility Contract
+
+Version numbers alone are insufficient. Koma packages must declare compatibility explicitly.
+
+At minimum:
+
+    package_schema_version
+    authoring_schema_version
+    runtime_manifest_version
+    min_runtime_version
+    max_tested_runtime_version
+    required_features[]
+    optional_features[]
+    migration_history[]
+
+Compatibility is fail-closed for required features.
+
+If a runtime does not understand a required feature, it must reject the package with a machine-readable error rather than silently ignoring the field.
+
+Schema migrations must:
+
+- preserve stable asset/part UUIDs whenever semantics are unchanged;
+- record source schema and target schema;
+- be deterministic where practical;
+- produce a migration report;
+- invalidate affected downstream assets through the dependency DAG;
+- never mutate an immutable GOLDEN version in place.
+
+### 32. Golden Textures and Runtime Texture Derivatives
+
+Golden visual assets are stored at authoring fidelity. Runtime textures may be resized, tiled, atlased, mipmapped, or compressed, but are derivative assets.
+
+Record:
+
+    master_texture_id
+    master_texture_hash
+    runtime_texture_id
+    runtime_format
+    compression_profile
+    resize_policy
+    mip_policy
+    alpha_policy
+    color_space
+    fidelity_report
+
+Anime line art, eyes, eyelashes, small accessories, and alpha edges are compression-sensitive. Runtime texture generation therefore requires visual regression QA.
+
+Supported runtime formats are implementation choices, not source truth. KTX2/Basis-class GPU texture delivery may be used where appropriate, but the original lossless master remains authoritative.
+
+### 33. Render State Contract
+
+A correct texture/mesh is insufficient without the render state that produced the accepted appearance.
+
+Version and record, where applicable:
+
+    depth_test
+    depth_write
+    depth_func
+    cull_mode
+    alpha_test
+    alpha_to_coverage
+    blend_mode
+    blend_equation
+    blend_factors
+    stencil/mask behavior
+    polygon_offset
+    MSAA/sample count
+    texture filtering
+    anisotropy
+    texture wrapping
+    mip policy
+    tone mapping
+    output color space
+    post-processing chain
+
+Reference renders and production renders must identify their render-state profile.
+
+Changing a render-state profile may invalidate pixel/color QA even when geometry and textures are unchanged.
+
+### 34. ReferenceCamera and SceneCamera are different concepts
+
+The camera used to author or validate canonical views must not be conflated with the camera used by an animation scene.
+
+Define:
+
+    ReferenceCamera
+      canonical generation/calibration camera
+      exact yaw/pitch/roll
+      projection
+      scale/FOV
+      pivot/target
+      crop/canvas
+
+    SceneCamera
+      animation/cinematic camera
+      free scene transform
+      lens/projection
+      framing
+      camera animation
+
+View-conditioned appearance must be chosen from the relative relationship between the final character/surface state and SceneCamera, not from a raw scene-camera yaw value alone.
+
+Inputs may include:
+
+    relative view direction
+    surface normal
+    final character pose
+    expression state
+    occlusion
+    part-specific visibility
+    approved skin support domain
+
+### 35. Runtime Capability and Resource Budget Profiles
+
+A character may be visually valid but operationally unusable on a target device.
+
+Each Runtime Package must declare measured/expected resource requirements and a target capability profile.
+
+Track at least:
+
+    max_texture_dimension
+    decoded_texture_memory
+    geometry_memory
+    draw_calls
+    triangle_count
+    bone_count
+    active deformers
+    morph targets
+    simultaneously resident view skins
+    preload/streaming memory
+    shader/material count
+
+Define quality/capability profiles such as:
+
+    QUALITY_HIGH
+    QUALITY_MEDIUM
+    QUALITY_LOW
+
+A lower profile may use derived runtime assets:
+
+    lower texture resolution
+    different compression
+    fewer simultaneously resident views
+    reduced secondary motion
+    reduced optional effects
+
+but may not replace the Authoring Master.
+
+Performance acceptance should report:
+
+    load time
+    peak memory
+    steady-state memory
+    frame time / FPS
+    dropped-frame behavior
+
+for the declared target environment.
+
+### 36. Deformer Stack is explicit per semantic part
+
+Evaluation order is global; each part also needs a declared local deformer stack.
+
+A part may use zero or more:
+
+    INX_ARTMESH
+    PARAMETRIC_MORPH
+    MORPH_TARGET
+    SKELETAL_SKINNING
+    FFD
+    VIEW_SURFACE
+    PROCEDURAL_DEFORM
+    PHYSICS
+
+Example:
+
+    front_hair:
+      INX_ARTMESH
+      -> SKELETAL_SKINNING
+      -> VIEW_SURFACE
+      -> PHYSICS
+
+The stack must state which representation each stage reads/writes and whether it is additive, absolute, or constrained.
+
+Do not assume every 2.75D part is bone-skinned. Some facial/line-art parts may remain ArtMesh/morph-driven while hair/body use different stacks.
+
+### 37. Canonical Expression Vocabulary
+
+Expression channels need stable semantic names so rigs and motions can be retargeted.
+
+Initial vocabulary should support at least:
+
+    blink
+    blink_L
+    blink_R
+
+    look_L
+    look_R
+    look_U
+    look_D
+
+    aa
+    ih
+    ou
+    ee
+    oh
+
+    happy
+    angry
+    sad
+    relaxed
+    surprised
+
+A character may map these semantic channels to source INX parameters, morphs, texture swaps, ArtMesh deforms, or procedural controls.
+
+The expression mixer defines:
+
+    semantic channel
+    target bindings
+    weight conversion
+    priority
+    override group
+    exclusion group
+    fallback
+
+Character-specific extra expressions may extend the vocabulary without changing the standard semantics.
+
+### 38. Motion Clip Contract
+
+A reusable motion is more than animation curves.
+
+Each motion clip should declare:
+
+    motion_id
+    rig_profile
+    duration
+    timebase/fps
+    loop_mode
+    in_place_or_root_motion
+    root_trajectory
+    keyframe/interpolation policy
+    transition_in
+    transition_out
+    contact events
+    foot/hand lock windows where relevant
+    event markers
+    required expression channels
+    required secondary-motion behavior
+    source/provenance
+    retargeting status
+
+Motion acceptance must distinguish:
+
+    source motion fidelity
+    retarget fidelity
+    character-specific artistic adjustment
+
+A generic retargeted motion is not automatically accepted for a production shot.
+
+### 39. Renderer and Encoder Environment Fingerprint
+
+Visual/video evidence must identify the environment that produced it.
+
+Record, where observable:
+
+    OS
+    browser/version
+    Three.js version
+    runtime commit
+    WebGL/WebGPU backend
+    GPU/vendor/device
+    renderer capabilities/limits
+    devicePixelRatio
+    canvas resolution
+    FFmpeg version
+    codec
+    codec profile
+    pixel format
+    color primaries
+    transfer characteristics
+    matrix
+    full/limited range
+
+A video acceptance result is tied to this fingerprint.
+
+Changing renderer/backend/encoder may require revalidation even when source assets are unchanged.
+
+### 40. Generalization Gate beyond Aka
+
+Aka is the first proof character, not proof that the Reference Factory generalizes.
+
+After the complete Aka manual path succeeds, validate at least one structurally different second character without redesigning the core schema.
+
+Prefer differences such as:
+
+    different face shape
+    different hair topology
+    obvious left/right asymmetry
+    different accessory placement
+    different costume silhouette
+
+Midori or another license-clear character is a suitable candidate if provenance permits.
+
+The Reference Factory is considered generalized only if the second character can pass through the same contracts with configuration/data changes rather than architecture rewrites.
+
+### 41. Asset Load Failure and Runtime Fallback Policy
+
+Runtime degradation must be explicit.
+
+Possible policies include:
+
+    FAIL_CLOSED
+    FALLBACK_NEAREST_VIEW
+    FALLBACK_SOURCE_FRONT
+    DISABLE_OPTIONAL_PART
+    DISABLE_OPTIONAL_EFFECT
+    FALLBACK_LOWER_QUALITY_PROFILE
+
+Each asset/feature declares which policy is allowed.
+
+Examples:
+
+- missing required face skin -> FAIL_CLOSED;
+- unavailable optional high-resolution texture -> fallback lower-quality derivative;
+- unsupported optional secondary-motion system -> disable only if the package marks it optional;
+- missing/corrupt mask required for compositing -> FAIL_CLOSED.
+
+The runtime must emit structured diagnostics and must never silently fabricate a fallback that changes approved character identity.
+
+### 42. glTF carries standard transport data; Koma manifest carries Koma semantics
+
+Use standard GLB/glTF capabilities for standard geometry/animation transport where practical:
+
+    mesh
+    material
+    skin
+    morph target
+    ordinary node transforms
+    texture references
+
+Keep Koma-specific behavior in a versioned Koma Runtime Manifest:
+
+    view-conditioned skins
+    visibility rules
+    semantic part graph
+    correspondence
+    Anchor Lattice bindings
+    expression mixer
+    evaluation order
+    physics configuration
+    provenance/dependencies
+    fallback policies
+    capability profile
+
+Do not make the core architecture depend on optional ecosystem support for animating arbitrary glTF extension properties.
+
+If a standard extension such as KHR_animation_pointer becomes universally supported by the selected runtime stack, Koma may add an adapter or export path, but the canonical Koma semantics remain independent and versioned.
+
 ## Reference Factory instead of one universal reference character
 
 A single Seed-san/VRM character is useful for smoke tests but is too narrow to serve as the universal reference. The preferred long-term design is a small **Reference Factory** built from license-clear source assets that can deterministically produce task-specific reference material.
@@ -1002,6 +1397,14 @@ reference-atlas/
   rig-contract/
   surface-correspondence/
   reproducibility/
+  authoring-package/
+  runtime-package/
+  schema-migrations/
+  render-profiles/
+  capability-profiles/
+  motion-contracts/
+  environment-fingerprints/
+  fallback-policies/
   compositing/
   regional-truth/
   qa/
@@ -1086,6 +1489,8 @@ Required inputs:
 - a reversible source -> canonical transform manifest;
 - declared scope profile (HEAD_ONLY / UPPER_BODY / FULL_BODY);
 - declared reproducibility level for each pipeline stage;
+- declared authoring/runtime schema versions and compatibility policy;
+- declared ReferenceCamera profile distinct from future SceneCamera behavior;
 - a written character-fact checklist for face, hair, ears, accessories, clothing, and asymmetries;
 - optional high-resolution identity anchors for face/hair/ears/accessories where needed.
 
@@ -1318,7 +1723,7 @@ Check:
 - view-conditioned texture blend/visibility curve failures;
 - alpha-edge/underpaint exposure.
 
-Acceptance requires decoded video and extracted-frame inspection, not merely successful encoding. The test must record fps/timebase, evaluation-order version, view-skin transition version, and deterministic physics/reset state if secondary motion is enabled.
+Acceptance requires decoded video and extracted-frame inspection, not merely successful encoding. The test must record fps/timebase, evaluation-order version, view-skin transition version, render-state profile, runtime capability profile, renderer/encoder environment fingerprint, and deterministic physics/reset state if secondary motion is enabled.
 
 ### Phase M9 — Rig, weights, IK, then motion
 
@@ -1333,7 +1738,7 @@ Only after the static/multi-view/turn path is accepted:
 
 Rigging research projects such as UniRig, Make-It-Animatable, and DRiVE may provide reference skeletons/weights, but must be fitted and visually verified against the accepted Koma character asset.
 
-Before accepting rigged motion, freeze the rig contract: unit scale, rest/bind pose, bone local axes, inverse bind transforms, joint limits, IK ownership/targets, retarget semantic map, expression mixer rules, and secondary-motion update/reset behavior.
+Before accepting rigged motion, freeze the rig contract: unit scale, rest/bind pose, bone local axes, inverse bind transforms, joint limits, IK ownership/targets, retarget semantic map, canonical expression vocabulary/mixer rules, secondary-motion update/reset behavior, and the Motion Clip Contract.
 
 ### Phase M10 — Automation last
 
@@ -1345,6 +1750,10 @@ Only now convert proven manual actions into:
 - semantic schemas;
 - deterministic rendering jobs;
 - automated QA;
+- deterministic Authoring Master -> Runtime Package build;
+- runtime texture/geometry optimization profiles;
+- schema migration tooling;
+- capability/fallback validation;
 - `koma character build ...` orchestration.
 
 The Agent may choose a repair strategy, but it must not invent the production process ad hoc.
@@ -1420,7 +1829,11 @@ For external datasets/models:
 - persist dependency hashes and STALE/revalidation state;
 - preserve stable part UUID migration records across split/merge changes;
 - record evaluation-order, rig-contract, expression-mixer, surface-correspondence, timebase, scope-profile and reproducibility versions;
-- record actual provider payload transforms (resize/crop/mask/reference ordering/compression) where observable.
+- record actual provider payload transforms (resize/crop/mask/reference ordering/compression) where observable;
+- preserve Authoring Master hashes separately from Runtime Package derivative hashes;
+- record schema compatibility/migration history;
+- record render-state, runtime capability, fallback-policy and environment-fingerprint versions;
+- retain texture compression/resizing/mipmap fidelity reports.
 
 ## What is deliberately NOT decided yet
 
@@ -1437,6 +1850,9 @@ The following remain experimental until the manual path proves them:
 - exact full-body humanoid bone/retarget profile;
 - final expression mixing policy after facial-motion tests;
 - final physics system and parameters;
+- final runtime texture compression/profile policy after fidelity/performance tests;
+- final device capability tiers and budgets;
+- final GLB/Koma-manifest packaging details;
 - whether SeparateGen or later component-aware methods replace any current candidate.
 
 The architecture intentionally makes these replaceable.
@@ -1461,7 +1877,10 @@ The next work should be ordered as follows:
 12. run reverse/loop consistency checks, explicitly inspect asymmetries, and reserve the +180/-180 cyclic seam contract for later 360 validation;
 13. only after five-view acceptance begin stable-UUID semantic correspondence and spatial scaffold work;
 14. before rig/IK promotion, freeze rig/bind/expression/timebase/physics contracts and verify deformation exposure envelopes;
-15. before full runtime promotion, complete FULL_FRONT_SOURCE_PARITY for the whole Aka front/default composition, not only the ear subset.
+15. before full runtime promotion, complete FULL_FRONT_SOURCE_PARITY for the whole Aka front/default composition, not only the ear subset;
+16. define Authoring Master -> Runtime Package build, schema compatibility/migration, render-state profile, runtime texture derivative policy, capability budget, and fallback behavior;
+17. fingerprint the accepted renderer/encoder environment and run performance/memory QA for the selected capability profile;
+18. after Aka passes end to end, run a second structurally different license-clear character through the same contracts as a Generalization Gate.
 
 **Do not proceed to rig/IK automation before this chain is visually demonstrated.**
 
@@ -1486,7 +1905,17 @@ This ADR moves from PROPOSED to ACCEPTED FOR CHARACTER-BUILD RESEARCH only after
 - a rig/bind/unit/constraint and expression-mixer contract before accepting rigged motion;
 - one surface-correspondence record with mapping confidence, invalid regions, seam ownership, and deformation exposure envelope;
 - declared reproducibility level and scope profile for every promoted artifact;
+- an explicit Authoring Master -> Runtime Package boundary with deterministic derivative hashes;
+- schema compatibility and migration rules with fail-closed required features;
+- Golden-vs-runtime texture derivative policy with visual fidelity QA;
+- versioned render-state profile and ReferenceCamera/SceneCamera separation;
+- a declared runtime capability/resource budget and measured performance/memory report;
+- explicit per-part deformer stacks and canonical expression vocabulary;
+- a versioned Motion Clip Contract for reusable motion assets;
+- renderer/encoder environment fingerprints for accepted image/video evidence;
+- structured asset-load fallback policies with fail-closed behavior for identity-critical assets;
 - a FULL_FRONT_SOURCE_PARITY gate tracked separately from the ear-only CORE-021 evidence;
+- a second-character Generalization Gate before claiming the Reference Factory broadly reusable;
 - evidence that Golden assets and Reference Atlas versions are immutable/versioned.
 
 Production promotion remains a separate gate in `tims-SP/koma-motion`.
