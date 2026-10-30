@@ -52,7 +52,7 @@ jobs:
           PY
       - name: Append closeup diagnostics to existing owner-only Draft Release
         env:
-          GH_TOKEN: GHTOKENPLACEHOLDER
+          GH_TOKEN: ${{ github.token }}
         run: |
           p=experiments/koma-25d-core/out/core008/native/head
           gh release upload koma-25d-core008-native-40976547059 \
