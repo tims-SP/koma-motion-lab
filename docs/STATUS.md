@@ -47,4 +47,4 @@ CORE-025执行链路已跑通并归档，不重跑A1、不重新生成源资产�
 
 M1A提交a6226cc。[M1B捕获程序检查点](research/CORE-026-M1B-native-capture-checkpoint.md)记录mcode实现和监工修正的接口/归档缺陷。首轮真实捕获已经通过；以下是最新恢复位置。
 
-最新实际恢复点：512d3f2的[原生CI41116198599](https://github.com/tims-SP/koma-motion-lab/actions/runs/41116198599)全部success，Draft已归档，9张实际PNG及9张固定裁切的SHA由监工独立核对。依次运行audit_core026.py --audit、--verify-source、verify_core026_supervisor.py、verify_core026_registration.py复现源/默认坐标验收；最后一项生成完整out/core026/default-registration.json，不代表动态GPU/3D通过。下一项为新增--head-view模式的真实高清捕获，再做19特征及局部约束。
+最新实际恢复点：原生首轮CI41116198599和高清CI41118184385均success，Draft均归档；两轮9张实际PNG及固定裁切SHA均由监工独立核对。高清图目视发现X11鼠标指针叠在头发上，因此高清参考视觉门禁FAIL_RETAKE_CURSOR_OVERLAY；mcode已增加ffmpeg -draw_mouse 0，需真实重拍再验收。依次运行audit_core026.py --audit、--verify-source、verify_core026_supervisor.py、verify_core026_registration.py复现源/默认坐标验收；最后一项不代表动态GPU/3D通过。M1C1接收/遮挡约束工单已下达，19特征尚待清洁参考；不进入M2。
