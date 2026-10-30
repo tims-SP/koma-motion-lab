@@ -22,7 +22,7 @@ jobs:
             https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
             -o "$RUNNER_TEMP/Aka.inx"
           printf '%s  %s\n' dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f "$RUNNER_TEMP/Aka.inx" | sha256sum -c
-      - name: Audit exact Head:: Yaw-Pitch authoring range, defaults and axis normalized grid
+      - name: Audit exact HeadYaw authoring range, defaults and axis normalized grid
         run: |
           mkdir -p experiments/koma-25d-core/out/core020
           python3 - <<'PY'
