@@ -44,6 +44,247 @@ Aka canonical front
 -> Aka 90-degree candidate
 ```
 
+
+## Production invariants that must be fixed before the first Aka 90-degree acceptance
+
+These constraints are part of the asset contract, not optional implementation details.
+
+### 1. Coordinate, camera, image, and color contract
+
+Every generated or rendered view must record and obey one explicit convention:
+
+- right-handed/left-handed world convention;
+- semantic meaning of +X/+Y/+Z;
+- semantic meaning of positive and negative yaw;
+- whether view direction is described from the character or camera perspective;
+- orthographic versus perspective camera;
+- orthographic scale / FOV;
+- camera target and character pivot;
+- canvas width/height;
+- character crop and margins;
+- pixel-center convention;
+- transparent/opaque background;
+- alpha representation;
+- texture orientation / flipY;
+- texture filtering and wrapping;
+- input texture color space;
+- internal working color space;
+- output/display color space.
+
+For the Three.js/WebGL path, source color textures must be explicitly tagged and converted according to the selected color-management contract instead of relying on defaults. A structurally correct reference is not accepted if color conversion changes the source art materially.
+
+The exact numeric convention may change during manual research, but once a Golden Reference Set is created it must be versioned and immutable for that set.
+
+### 2. Separate SOURCE TRUTH from CHARACTER DESIGN TRUTH
+
+Not every target view has an original ground truth. A source front image can prove what the visible front looks like, but it cannot prove hidden back hair, ear backs, rear clothing, or occluded accessories.
+
+Every visual datum must carry one provenance class:
+
+    SOURCE_TRUTH
+    INFERRED_STRUCTURE
+    GENERATED_CANDIDATE
+    AUTHORED_HIDDEN_AREA
+    HUMAN_APPROVED_DESIGN
+    GOLDEN_REFERENCE
+
+Rules:
+
+- SOURCE_TRUTH is never overwritten by generated content.
+- INFERRED_STRUCTURE may constrain geometry but is not automatically art truth.
+- GENERATED_CANDIDATE has no authority until reviewed.
+- A hidden/back design becomes character canon only after explicit human approval as HUMAN_APPROVED_DESIGN.
+- Accepted design truth is frozen into a versioned GOLDEN_REFERENCE.
+- Later model upgrades must not silently redesign an already approved hidden region.
+
+This creates an explicit Character Design Truth layer between source truth and animation assets.
+
+### 3. Reference precedence and contamination control
+
+More references are not automatically better. Different references have different authority.
+
+Default precedence:
+
+    SOURCE / GOLDEN IDENTITY
+      > APPROVED CHARACTER DESIGN TRUTH
+      > CHARACTER DETAIL REFERENCES
+      > STRUCTURE REFERENCES
+      > TASK EXAMPLES
+      > TEXT INSTRUCTIONS
+
+A task example should communicate the operation, camera, crop, or desired organization, not donate identity/style details.
+
+When possible:
+
+- use silhouette/depth/normal/landmark guides instead of a full-color unrelated character;
+- mask or simplify task examples to prevent hair/face/costume leakage;
+- keep structure guidance style-neutral;
+- reject candidates that copy distinguishing features from the task example.
+
+### 4. Multi-view generation is a graph, not a one-way chain
+
+Do not rely on a single 0 -> 45 -> 90 -> 135 -> 180 chain because errors accumulate.
+
+Each view is a node in a reference graph. A target view may consume immutable source identity, approved neighboring views, the target structural reference, character detail references, and an approved far/opposite anchor when available.
+
+Example for Aka 90:
+
+    canonical 0
+    + accepted 45
+    + target 90 structural guide
+    + face/hair/ear detail anchors
+    + accepted 180 design anchor when available
+    -> Aka 90 candidate set
+
+After a complete set exists, run reverse and loop consistency checks:
+
+    0 -> 45 -> 90 -> 135 -> 180
+    180 -> 135 -> 90 -> 45 -> 0
+
+A regenerated downstream view never automatically replaces the upstream Golden Reference that helped create it.
+
+### 5. Candidate sets, ranking, and generation lineage
+
+The generation unit is not one prompt -> one image. It is:
+
+    task
+    -> N candidates
+    -> automated/visual comparison
+    -> human selection
+    -> accepted candidate
+    -> frozen Golden version
+
+For every candidate, retain lineage sufficient to reproduce or audit it:
+
+    character_id
+    task_id
+    view/yaw
+    provider
+    model
+    model_version/checkpoint
+    seed when meaningful
+    request/job id when meaningful
+    prompt template version
+    compiled prompt hash
+    reference asset ids + hashes
+    structure guide ids + hashes
+    generation parameters
+    timestamp
+    parent candidate ids
+    repair history
+    QA results
+    approval state
+
+If a provider cannot expose a seed, preserve all identifiers and inputs it does expose.
+
+### 6. Semantic correspondence is a graph, not a strict one-to-one mapping
+
+A semantic part can split, merge, disappear, or be partially occluded between views.
+
+The correspondence model must support at least:
+
+    VISIBLE
+    PARTIAL
+    OCCLUDED
+    SPLIT
+    MERGED
+    NOT_APPLICABLE
+
+A stable semantic identity may map to multiple render fragments in a given view. UV/scaffold code must not assume one bitmap/mesh per semantic part at every angle.
+
+### 7. Lighting and paint must be controlled separately
+
+Cross-view source art must use a controlled visual-lighting contract.
+
+Prefer a neutral/flat anime base, explicitly fixed key/fill lighting, or source-authored cel shadows that are declared part of the character texture.
+
+Do not allow every generated view to invent independent highlights or shadows, because view switching would animate lighting discontinuously.
+
+Runtime lighting/post effects must be distinguishable from baked character paint. If a shadow/highlight is intentionally baked, record that fact in metadata.
+
+### 8. Asymmetry must be supported from the schema level
+
+The first manual proof may render only one side, but the schema must not assume mirroring.
+
+Support distinct signed views such as:
+
+    -180 ... -135 -90 -45 0 +45 +90 +135 +180
+
+Hair clips, earrings, ears, eye details, costume ornaments, scars, weapons, and other asymmetric elements may require independently authored left/right views.
+
+Mirroring is an optimization only when an explicit symmetry rule permits it.
+
+### 9. Identity references may include local high-resolution anchors
+
+A single full-body/front image is not sufficient for all identity-sensitive operations.
+
+The character package should support optional anchors:
+
+    face_closeup
+    eye_detail
+    hair_detail
+    ear_detail
+    accessory_detail
+    costume_detail
+    hand_detail
+
+These remain subordinate to source/golden truth but may be supplied to a generation or repair task when the full-frame reference does not preserve small features reliably.
+
+### 10. Freeze states and versioning
+
+Every important visual asset must have an explicit lifecycle:
+
+    CANDIDATE
+    REVIEWED
+    APPROVED
+    GOLDEN
+    SUPERSEDED
+    REJECTED
+
+GOLDEN is immutable.
+
+A corrected or redesigned view becomes a new version, for example Aka Reference Set v1 -> v2. Never overwrite an approved asset in place and never silently move a character to a new model-generated appearance.
+
+### 11. Failure taxonomy and repair routing
+
+A generic FAIL flag is insufficient. At minimum classify:
+
+    IDENTITY_DRIFT
+    VIEW_ANGLE_ERROR
+    CAMERA_CROP_ERROR
+    STRUCTURE_ERROR
+    SILHOUETTE_ERROR
+    STYLE_DRIFT
+    COLOR_DRIFT
+    DETAIL_LOSS
+    PART_MISSING
+    PART_DUPLICATED
+    ASYMMETRY_ERROR
+    OCCLUSION_ERROR
+    HIDDEN_AREA_DESIGN_ERROR
+    SEMANTIC_CORRESPONDENCE_ERROR
+    TEMPORAL_POP
+    SEAM_ERROR
+
+The failure class determines the repair action: whole-view regenerate, local masked repair, strengthen identity references, replace structure guide, choose a different candidate, revise approved hidden design, or correct scaffold/visibility instead of repainting.
+
+### 12. Reference Factory evidence must itself be versioned
+
+Task examples, pass/fail examples, structural guides, camera metadata, and reference renderers are production dependencies.
+
+Each Reference Atlas release must record:
+
+- version;
+- source provenance;
+- source licenses;
+- renderer/tool versions;
+- camera contract version;
+- semantic schema version;
+- content hashes;
+- changelog.
+
+A reference update can invalidate previous QA thresholds. References are versioned inputs, not informal documentation.
+
 ## Reference Factory instead of one universal reference character
 
 A single Seed-san/VRM character is useful for smoke tests but is too narrow to serve as the universal reference. The preferred long-term design is a small **Reference Factory** built from license-clear source assets that can deterministically produce task-specific reference material.
@@ -53,6 +294,7 @@ A single Seed-san/VRM character is useful for smoke tests but is too narrow to s
 | Class | Initial source | Role |
 |---|---|---|
 | 2D animation truth | Inochi2D Aka / Midori INX + PSD | Real layered art, ArtMesh, UV, node hierarchy, parameter deformation, source-render comparison |
+| Character design truth | Human-approved side/back/hidden-region designs derived from generated candidates | Canonical appearance for information not present in source truth; versioned and frozen after approval |
 | 3D structure truth | Small VRoid/VRM sample bank with clear reuse terms, prioritizing CC0 samples | Exact camera/yaw renders, silhouette, depth, normal, body/head/hair structure, humanoid skeleton baseline |
 | Layer/occlusion candidate | See-through | Candidate semantic RGBA layers, occluded-region completion, pseudo-depth/drawing order; must be benchmarked against real Aka PSD/INX |
 | Multi-view structure candidate | MV-Adapter | Geometry-consistent view candidates and structural guidance; not accepted as final art without visual QA |
@@ -157,9 +399,20 @@ reference-atlas/
   motion/
     head-turn/
     idle/
+  identity/
+    face/
+    hair/
+    ears/
+    accessories/
+    costume/
+  design-truth/
+    approved-hidden-regions/
+    asymmetry/
+  lineage/
   qa/
     pass/
     fail/
+    taxonomy/
 ```
 
 Each task reference should show both **what is correct** and, where useful, common failure modes.
@@ -180,16 +433,22 @@ reference factory         task examples
         |                      |
         +----------+-----------+
                    v
-          view candidate generation
+          N-view candidate generation
                    |
                    v
-             cross-view QA
-            /             \
-         PASS             FAIL
-          |                 |
-          |          region/view repair
-          |                 |
-          +--------<--------+
+             cross-view QA/ranking
+            /                 \
+         SELECT              REJECT/REPAIR
+          |                       |
+          |                region/view repair
+          |                       |
+          +-----------<-----------+
+                   |
+                   v
+          human design acceptance
+                   |
+                   v
+          versioned GOLDEN views
                    |
                    v
            semantic decomposition
@@ -228,7 +487,9 @@ Required inputs:
 - one canonical front render from the known source pose;
 - fixed neutral expression;
 - fixed canvas, crop, camera convention, and scale;
-- a written character-fact checklist for face, hair, ears, accessories, clothing, and asymmetries.
+- explicit coordinate/yaw/image/color-space contract;
+- a written character-fact checklist for face, hair, ears, accessories, clothing, and asymmetries;
+- optional high-resolution identity anchors for face/hair/ears/accessories where needed.
 
 Acceptance:
 
@@ -314,6 +575,8 @@ Aka identity
 
 Keep the target crop/angle/output contract identical across A/B/C.
 
+Generate a candidate set for each arm rather than relying on one sample. Persist provider/model/checkpoint, prompt/reference hashes, parameters, parent/repair lineage and QA results for every candidate.
+
 Acceptance criteria:
 
 - identity stability;
@@ -337,7 +600,7 @@ After a 90-degree method passes, create:
 0 / 45 / 90 / 135 / 180
 ```
 
-Use adjacent accepted views as additional references.
+Use adjacent accepted views as additional references, but never as the sole identity source. Multi-view generation must follow the reference-graph rule: every target remains anchored to immutable source/golden identity and its target structural guide, so drift cannot propagate unchecked from one generated view to the next.
 
 Example:
 
@@ -379,7 +642,8 @@ Acceptance:
 
 - one part can be traced across visible views;
 - disappearance/reappearance is explicit, not accidental;
-- overlap and front/back ordering are recorded.
+- overlap and front/back ordering are recorded;
+- correspondence explicitly supports VISIBLE / PARTIAL / OCCLUDED / SPLIT / MERGED / NOT_APPLICABLE.
 
 Do not start with dozens of micro-parts.
 
@@ -475,7 +739,7 @@ The Agent may choose a repair strategy, but it must not invent the production pr
 QA is layered:
 
 1. **Human visual acceptance** — final authority for character identity and artistic correctness.
-2. **Reference comparison** — pass/fail examples for each operation.
+2. **Reference comparison** — pass/fail examples for each operation, with a stable failure taxonomy and repair route.
 3. **Structural checks** — yaw, camera, silhouette, depth, landmarks, semantic masks, part ordering.
 4. **Cross-view consistency metrics** — research metrics such as MEt3R-style comparison where practical.
 5. **Runtime/video checks** — decoded frame inspection at anchors and mid-angles.
@@ -491,7 +755,7 @@ input example
 accepted output example
 optional rejected examples
 structure guide
-metadata describing the exact task
+metadata describing the exact task, coordinate/camera/color contract, authority/precedence, and reference version
 ```
 
 Examples are preferable to prose when an exact visual result is important.
@@ -535,7 +799,9 @@ For external datasets/models:
 - record exact version/commit/checkpoint;
 - record license;
 - record whether redistribution is allowed;
-- distinguish code license from checkpoint/data license.
+- distinguish code license from checkpoint/data license;
+- record provider/model/checkpoint, prompt template version, reference/content hashes and generation lineage for generated candidates;
+- version Reference Atlas releases and never mutate GOLDEN assets in place.
 
 ## What is deliberately NOT decided yet
 
@@ -552,18 +818,23 @@ The following remain experimental until the manual path proves them:
 
 The architecture intentionally makes these replaceable.
 
-## Immediate CORE-021 experiment sequence
+## Immediate experiment sequence after the existing CORE-021
+
+**Numbering correction:** PR #31 already owns `CORE-021` for authentic Aka source GPU/CPU parity. This ADR must not reuse that milestone number. The Reference Factory/manual character-build work starts **after CORE-021**, nominally at `CORE-022+`, unless later split into a separate `REF-xxx` / `CHAR-xxx` track.
 
 The next work should be ordered as follows:
 
-1. inventory and provenance for Aka/Midori + small VRM/VRoid reference bank;
-2. render nine-yaw structural references with fixed camera metadata;
-3. benchmark Aka flatten -> semantic decomposition -> compare with real PSD/INX;
-4. prepare one accepted generic 90-degree task example;
-5. run Aka 90-degree A/B/C comparison;
-6. inspect actual images and select the strongest path;
-7. only then generate 45/135/180 and create a five-view contact sheet;
-8. only after five-view acceptance begin semantic correspondence and spatial scaffold work.
+1. freeze the coordinate/yaw/camera/image/color-space contract and the asset lifecycle/provenance schema;
+2. inventory and provenance for Aka/Midori + small VRM/VRoid reference bank;
+3. render nine-yaw structural references with fixed, machine-recorded camera metadata;
+4. benchmark Aka flatten -> semantic decomposition -> compare with real PSD/INX;
+5. prepare one accepted generic 90-degree task example and neutral structural guide that cannot donate identity;
+6. define Aka source truth, optional detail anchors, and the policy for human-approved hidden/back design truth;
+7. run Aka 90-degree A/B/C comparison using N candidates per arm and full lineage metadata;
+8. inspect actual candidates, classify failures, select and freeze the first accepted Aka 90-degree Golden view;
+9. only then generate 45/135/180 using the non-linear reference graph and create a five-view contact sheet;
+10. run reverse/loop consistency checks and explicitly inspect asymmetries;
+11. only after five-view acceptance begin semantic correspondence and spatial scaffold work.
 
 **Do not proceed to rig/IK automation before this chain is visually demonstrated.**
 
@@ -571,10 +842,15 @@ The next work should be ordered as follows:
 
 This ADR moves from PROPOSED to ACCEPTED FOR CHARACTER-BUILD RESEARCH only after the repository contains reproducible evidence for:
 
+- one versioned coordinate/camera/image/color-space contract;
+- one versioned asset lifecycle / lineage / provenance schema;
 - one deterministic Reference Factory structural render set;
 - one Aka semantic-decomposition comparison against real source layers;
-- one A/B/C Aka 90-degree comparison;
-- an accepted five-view Aka reference set;
-- documented failure cases and the chosen repair strategy.
+- one A/B/C Aka 90-degree comparison using candidate sets;
+- one explicitly approved Aka 90-degree Golden view with source/design-truth provenance;
+- an accepted five-view Aka reference set with asymmetry and reverse/loop consistency review;
+- documented failure taxonomy, representative rejected examples, and chosen repair strategies;
+- semantic correspondence capable of split/merge/occlusion states;
+- evidence that Golden assets and Reference Atlas versions are immutable/versioned.
 
 Production promotion remains a separate gate in `tims-SP/koma-motion`.
