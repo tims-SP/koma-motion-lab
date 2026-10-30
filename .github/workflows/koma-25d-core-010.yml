@@ -1,0 +1,50 @@
+name: CORE-010 · 360 head source-paint coverage geometry gate
+
+on:
+  push:
+    branches: [feature/koma-25d-core-010]
+    paths:
+      - '.github/workflows/koma-25d-core-010.yml'
+      - 'experiments/koma-25d-core/tools/coverage_geometry10.py'
+      - 'docs/research/CORE-010-360-asset-coverage-results.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  synthetic-geometry-coverage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install minimum math dependency
+        run: |
+          python3 -m venv "$RUNNER_TEMP/core010"
+          "$RUNNER_TEMP/core010/bin/pip" install "numpy==2.2.6"
+          echo "$RUNNER_TEMP/core010/bin" >> "$GITHUB_PATH"
+      - name: Run actual ray / ellipsoid visibility test without inventing rear artwork
+        run: |
+          mkdir -p experiments/koma-25d-core/out/core010
+          python experiments/koma-25d-core/tools/coverage_geometry10.py \
+            --output experiments/koma-25d-core/out/core010/geometry_only_360.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("experiments/koma-25d-core/out/core010/geometry_only_360.json")
+          d=json.loads(p.read_text())
+          assert d["status"]=="GEOMETRIC_SOURCE_VISIBILITY_ONLY"
+          assert d["input_art"]=="NONE_SYNTHETIC_SMOKE"
+          assert d["results"][4]["missing_geom_projection_pct"]==100
+          assert d["results"][5]["missing_geom_projection_pct"]>99.9
+          print("CORE010_CI_GEOMETRY_PASS_NO_CLAIM_OF_ART_QA")
+          PY
+      - name: Preserve synthetic geometry result as owner-only Draft Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "koma-25d-core010-geometry-$GITHUB_RUN_ID" \
+            experiments/koma-25d-core/out/core010/geometry_only_360.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-010 geometry-only 360 skin coverage regression" \
+            --notes "Synthetic ellipsoid visibility gate only. No authentic/generative Aka image binaries in this run; no character 360 video. Actual GPT pair 360 diagnostic MP4, decoded frames and source-paint statistics were independently generated locally and delivered via ChatGPT sandbox; not stored in Git."
