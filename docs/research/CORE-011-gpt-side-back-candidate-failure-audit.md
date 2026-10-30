@@ -66,3 +66,18 @@ Following five failures from the in-chat implicit-reference image-generation rou
 
 **NEW status distinction:** explicit image-reference provenance **verified**. Model-side conditioning result, accepted side/back art, true layers, original 2D mesh UV binding and 360° video **NOT VERIFIED**. The next real image generation is correctly guarded by deliberate manual API authorization rather than more repeated prompt-only sheet attempts. No paid action was triggered or charged by these tests.
 
+
+
+## Additional current-chat image generation trials: two more rejected (CORE-012 probe)
+
+After the user requested a **single +90° Aka side profile in ChatGPT itself**, not an API call, an authoritative official Aka frontal PSD-derived **JPEG preview** was retrieved from the earlier pinned source CI log and actually visually inspected in the conversation. The user-supplied 1254×1254 three-quarter image was also available. Two new `image_gen` calls attempted to generate a **single right-facing +90° image**, the second explicitly referencing the user image. Both instead returned **multi-panel turnaround/part sheets** with fabricated accessories, no actual source INX UV, and no standalone head texture. The source-preview's presence in a prior tool result **did not prove the image editing engine ingested it as an attached image-to-image reference**.
+
+| Current-chat attempt | Actual returned binary | Dimensions | SHA256 | Result |
+|---|---|---|---|---|
+| 6 | `a_clean_character_reference_sheet_turnaround_ill.png` | 2172×724 | `b259b8e3757e1c41414a6156286cf0a7d4392112ee425968d1f062e70b99882d` | REJECTED: multi-view/extra ornaments |
+| 7 | `a_clean_character_reference_sheet_collage_in_a_stu.png` | 1774×887 | `9a318c7bd877ee7cdd01bc7ae9e2cf465e6644cfff73e048a65fe3c97cd85661` | REJECTED: multi-view/extra ornaments |
+
+Diagnostic crop of the alleged side pose has only **310×420** and **221×328** source pixels respectively, no new hidden face/ear/hair painting separate from infographic and no verified source likeness. Crops, screenshot comparison and machine-readable fail audit reside in current conversation output at `/mnt/data/core012/`, **not GitHub**.
+
+**Result:** after these two further trials, still **0 accepted new +90°**, **0 accepted new 180°**, **0 new native side/back UV**, **0 production-quality new video**. No further blind current-chat image-gen retries. The next step requires a **real original PNG attached as an editable image in a fresh, narrow image-edit interaction** with one-view-only user instruction; should this fail again, pursue explicit API image edit when user authorizes it. Uploaded official PNG is stronger than model-visible CI-log preview but still requires output visual QA.
+
