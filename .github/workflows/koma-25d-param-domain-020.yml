@@ -49,8 +49,35 @@ jobs:
           print("CORE020_ACTUAL_SOURCE_HEADYAW_DOMAIN",json.dumps(result))
           assert result["raw_source_min"] is not None and result["raw_source_max"] is not None
           PY
+      - name: Audit additional parameter bindings on complete original ear ancestors
+        run: |
+          python3 - <<'PY'
+          import json,os,struct
+          from pathlib import Path
+          b=(Path(os.environ["RUNNER_TEMP"])/"Aka.inx").read_bytes()
+          n=struct.unpack(">I",b[8:12])[0]
+          puppet=json.loads(b[12:12+n])
+          ids={68362597,4166575140,2611544751,3736853925,2432586950,3424078890,3453251657}
+          rows=[]
+          for param in puppet.get("param",[]):
+              relevant=[{"node":z.get("node"),"name":z.get("param_name"),"mode":z.get("interpolate_mode")}
+                        for z in param.get("bindings",[]) if z.get("node") in ids]
+              if not relevant:continue
+              rows.append({"param":param["name"],"min":param.get("min"),
+                "max":param.get("max"),"defaults":param.get("defaults"),
+                "head_ear_ancestry_bindings_count":len(relevant),"binding_targets":relevant})
+          result={"schema":"core020-all-ear-ancestry-parameter-defaults/1",
+                  "real_original_full_INX":True,"matching_parameter_channels":len(rows),
+                  "headYaw_sole_ear_parameter":len(rows)==1,
+                  "all_effective_ear_ancestry_params":rows}
+          out=Path("experiments/koma-25d-core/out/core020/ear_ancestry_all_defaults.json")
+          out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
+          print("CORE020_ALL_EAR_ANCESTRY_PARAMETER_DEFAULTS",json.dumps(result)[:10000])
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: CORE020-actual-Aka-HeadYaw-source-parameter-domain
-          path: experiments/koma-25d-core/out/core020/source_headyaw_domain.json
+          path: |
+            experiments/koma-25d-core/out/core020/source_headyaw_domain.json
+            experiments/koma-25d-core/out/core020/ear_ancestry_all_defaults.json
           retention-days: 30
