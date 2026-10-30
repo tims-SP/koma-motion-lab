@@ -48,6 +48,9 @@ jobs:
           assert all(x["mesh"]["uvs"] and x["mesh"]["indices"] for x in o["parts"])
           print("CORE009_ORIGINAL_UV_INTACT",o["mesh_count"],o["total_vertices"],o["total_triangles"])
           PY
+      - name: Visualize original mesh
+        run: |
+          python experiments/koma-25d-core/tools/visualize_native_uv9.py --mesh experiments/koma-25d-core/out/core009/source_mesh_original.json --out experiments/koma-25d-core/out/core009/source_uv_wireframe.png
       - name: Publish text-only source mesh provenance, no original INX redistributable binary
         env:
           GH_TOKEN: ${{ github.token }}
@@ -56,6 +59,7 @@ jobs:
           gh release create "koma-25d-core009-nativeuv-$GITHUB_RUN_ID" \
             "$out/source_mesh_original.json" \
             "$out/source_mesh_summary.json" \
+            "$out/source_uv_wireframe.png" \
             --target "$GITHUB_SHA" --draft \
             --title "CORE-009 original Aka INX ArtMesh/UV inspection data" \
             --notes "Source Aka by seagetch CC BY 4.0, pinned genuine full Aka INX SHA256. Original INX binary not redistributed. This export has source native vertices/UV/triangles and node identifiers, but DOES NOT assert GPT generated views are rigged, skinned, aligned, or 3D."
