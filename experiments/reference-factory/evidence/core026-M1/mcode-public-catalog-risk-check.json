@@ -1,0 +1,22 @@
+{
+  "schema": "core026-mcode-public-catalog-risk-check/1",
+  "prior_rejection": "filecdn.minimax.chat purpose and payload not established",
+  "approved_project_destinations": [
+    "agent.minimax.cn",
+    "agent.minimaxi.com"
+  ],
+  "public_package": "@minimax-ai/code 0.7.2",
+  "public_chunk_sha256": "8d44e237a6ce3cf876b933f7d518291f3064bbe54fd72fee34db09164463e6a7",
+  "evidence": {
+    "GGt": "fetch(catalogUrl,{headers:KYr(cn,etag),redirect:error,signal}); no method/body, therefore GET",
+    "KYr_cn": {
+      "accept": "application/json"
+    },
+    "HGt": "https only; hostname filecdn.minimax.chat; no username/password/port/search/hash; catalog URL must match public/models-dev/catalog/<sha256>/api.json",
+    "all_static_filecdn_uses": [
+      "default public SVG avatar",
+      "public model catalog and logos"
+    ]
+  },
+  "assessment": "Low-risk inbound public metadata download; no project code, tool output or credentials in this catalog request. This is a public-source check after auto-review, not an endpoint override or SDK patch."
+}

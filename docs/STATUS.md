@@ -24,7 +24,11 @@ Work已恢复且本地仓库已同步。源像素/10保护文件/186PNG、62默�
 
 mcode首次启动exit3提示登录失效；已通过官方CN登录流程恢复，CLI实际返回Signed in with MiniMax、exit0。用户在agent.minimax.cn精确范围问题后回复继续，本轮按该范围启动任务；平台自动审批再次拒绝，理由是CLI还可能将项目上下文发送至agent.minimaxi.com，超出此前单域名范围。公开包代码确认CN模型接口为agent.minimax.cn，CN步骤报告接口使用agent.minimaxi.com。没有获得可验收实现文件，未在新拒绝后重试完整工作区任务。
 
-当前剩余阻塞仅为两个官方服务域名的发送范围：本项目相关代码、任务文档及必要文本执行输出；排除凭据、登录文件和其他目录。当前不需要再次登录。此前服务500/超时、旧目的地审批与环境不可用均保留为历史，不与本轮阻塞混写。[早期事件记录](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。
+用户随后明确放行.com，agent.minimax.cn与agent.minimaxi.com的前述范围已确认；当前不需要再次登录。重试先遇filecdn.minimax.chat审批，公开包已证实它是无认证/无正文的公共模型目录GET。另遇阿里云存储审批，公开包只定位到自定义data-URL头像的内容安全上传分支，不能据此确认实际请求载荷。复用已有会话、不进行头像操作后，mcode实际完成12个本地工具调用，但8分钟超时exit6，未生成提取器或配置。精简、低思考强度重试再次被自动审批以阿里云上传/存储未获授权且命令禁止上传为由拒绝；现已停止重试。[本轮实测记录](../experiments/reference-factory/evidence/core026-M1/mcode-post-domain-approval.json)。
+
+剩余执行阻塞是mcode官方SDK所需第三方存储操作的范围/载荷，已发现matrix-internal-cn.oss-cn-shanghai.aliyuncs.com，公开SDK还列有matrix-internal.oss-us-east-1.aliyuncs.com。两者用于公开代码中的头像内容安全上传，不是已确认项目上传结果。不得直接扩大项目数据发送或声称已经完成实现。监工独立验收脚本verify_core026_m1c1_supervisor.py已按恢复草稿保存，62条映射定义完整，缺候选时实际exit11；真实候选正例与3项篡改测试仍NOT_RUN_NO_CANDIDATE，未接入PASS门禁。
+
+此前服务500/超时、旧目的地审批与环境不可用均保留为历史，不与本轮阻塞混写。[早期事件记录](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。
 
 ## 确定性恢复顺序
 

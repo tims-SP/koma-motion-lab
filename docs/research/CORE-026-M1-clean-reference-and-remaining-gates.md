@@ -71,3 +71,15 @@ run41125161542在source verify-source处exit11，缺out/core025/render/manifest.
 只读核对公开安装包发现：模型CN生产接口为https://agent.minimax.cn/mavis/api/v1/llm/v1；步骤报告的CN生产origin为https://agent.minimaxi.com，路径/mavis/api/v1/eval/steps/report。该事实说明两个服务域名确实同时存在，不证明本次已发送任何项目内容，也不替代用户对额外目的地的许可。包代码SHA及实际检查结果保存在supervisor-resume-and-reference-review.json。
 
 当前需要确认的范围：允许mcode将本项目相关代码、任务文档和必要文本执行输出发送至agent.minimax.cn及agent.minimaxi.com，排除凭据、登录文件和其他目录。Work与登录已经恢复，当前不要求再次登录。得到此范围后重新执行已落盘M1C1精确工单，先检查是否有产物再启动，按build/verify/独立比对/三项篡改验拒提交；M1整体与M2状态保持未通过/未开始。
+
+## 用户明确放行.com之后的真实结果
+
+两个MiniMax接口域名的限定范围现已由用户明确放行，上一段属于历史阻塞。b496ae7的旧回归run41137822195/job124344522596已success。后续审批先拦截filecdn.minimax.chat；只读检查官方公开安装包发现GGt为公共模型目录GET，KYr在CN仅设置accept:application/json，HGt限制HTTPS、固定hostname、无凭据/查询参数、SHA256目录路径。代码SHA与调用摘要已存mcode-public-catalog-risk-check.json。此检查不授权向CDN上传项目数据。
+
+审批随后指出matrix-internal-cn.oss-cn-shanghai.aliyuncs.com。公开包中H1r白名单列CN及US两个阿里云host；gBt用途为agent-avatar、purpose3、私有CONTENT_SAFETY上传，唯一调用方X1r仅对data:格式头像调用它，HTTPS头像只返回image_url。代码事实已存mcode-avatar-storage-risk-check.json；它不是本次实际请求载荷的抓包结果。
+
+复用既有任务会话、明确不创建Agent/不编辑头像/不上传图片或文件后，mcode实际读取工单、合同、原生字段等，完成12个本地工具调用；8分钟上限到达，实际exit6，未产出extract_core026_constraints.py或core026-constraints.json。没有把耗时或12个工具调用当完成。后续将工单缩成先写提取器再build/verify，使用官方支持的effort low；该重试在工具调用前再次被自动审批拒绝，理由是阿里云上传/存储超出已批准MiniMax域名，且命令明确禁止上传。未在此次新拒绝后重试。
+
+监工验收程序作为DRAFT保存到verify_core026_m1c1_supervisor.py，独立定义19曲面+43接收映射覆盖全部62层；当前缺真实候选，实际exit11并指出配置不存在，未误判PASS。候选正例、错误UUID/receiver/late_paint三项验拒均NOT_RUN_NO_CANDIDATE，不能宣称验收程序整体通过。未来先接受mcode真实产物、复核输入SHA与源事实后再运行这几项，并接入CI。
+
+当前需要的是一次明确的SDK依赖范围确认：mcode使用MiniMax官方接口及其指定CDN/阿里云存储完成本项目任务，限定项目代码、工单、必要文本执行记录和SDK默认公开素材，排除凭据、登录文件和无关目录。已发现的存储host见上述两个白名单项；具体请求载荷尚未确认，不能悄悄开放或绕过审批。当前不需要重新登录；M1整体未放行、M2未开始，深度和动态遮挡尚未实现。
