@@ -1,0 +1,389 @@
+{
+  "schema": "core026-first-native-supervisor-review/1",
+  "status": "PASS_REAL_NATIVE_CAPTURE_AND_HASH_REVIEW",
+  "run_id": 41116198599,
+  "job_id": 124270963962,
+  "commit": "512d3f2ea51b85ce38062bd7956fa80ee23eb073",
+  "run_url": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41116198599",
+  "draft_release": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-a5e625495c0e1b679d8c",
+  "review_bundle_sha256": "b2eda609c31ea96cbd189c076137f48524321c6c3b6488e3d4c0575b712e8303",
+  "all9_full_png_sha_verified": true,
+  "all9_independently_derived_head_crop_sha_verified": true,
+  "source": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+  "patch_report_sha256": "cbd92dc6c871e1a70b572b9c5bf18fb7c9216275b2b34b642e17fa959dea07e5",
+  "checks": {
+    "nine_frames_present": true,
+    "all_full_nonblank": true,
+    "all_head_nonblank": true,
+    "dimensions_expected": true,
+    "head_unique_images": 9,
+    "head_uniqueness_min_7": true,
+    "same_roi_all_poses": true,
+    "no_adaptive_crop": true
+  },
+  "camera_scale": 0.15,
+  "raw_pitch": 0,
+  "physical_degrees": "UNKNOWN_UNCALIBRATED",
+  "visual_review": {
+    "actual_images_viewed": 9,
+    "complete_head_and_ears_present": true,
+    "usable": "Limited native 2D head/eye/hair relative motion, not calibrated physical side views.",
+    "limitation": "Head is approximately150px wide in original720x880 full-body view; a fixed close-up capture is next for landmark registration.",
+    "natural_three_dimensional_turn": "NOT_ACCEPTED",
+    "overall_M1": "NOT_YET_ACCEPTED"
+  },
+  "poses": [
+    {
+      "raw_yaw": -1,
+      "normalized_head_yaw": [
+        0,
+        0.5
+      ],
+      "full_sha256": "6f9279bd8ddad8bc484241d5f2f1038c641147ddf378764b24746e22d4749ad7",
+      "head_sha256": "30cef6f435f283d5fdf420ca3a81854a1b4bd72404aa4c26c782ca2de5c97200",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "-1.0"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.95057922979798,
+        "head_mean_luma": 37.43976351351351,
+        "full_std_luma": 74.665615982523,
+        "head_std_luma": 79.81456181030563,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": -0.75,
+      "normalized_head_yaw": [
+        0.125,
+        0.5
+      ],
+      "full_sha256": "7ba59b0274353e64cd5830509059fc06d3c4b55582ae88542f9d5f6faf2e2e4e",
+      "head_sha256": "33a1e57954eee6fb6d585f3f787467d063bd12718f114489707f4d46fd588fb9",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "-0.75"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.8994476010101,
+        "head_mean_luma": 37.25734797297297,
+        "full_std_luma": 74.61865595132849,
+        "head_std_luma": 79.66557121561922,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": -0.5,
+      "normalized_head_yaw": [
+        0.25,
+        0.5
+      ],
+      "full_sha256": "687bca33750e357f6fdec6ec53f20043b3cf87cc918168f8517958a1b3a11f6b",
+      "head_sha256": "64512500675920954635e59a6c0f607c5d7365263b41b9ac74605a12ca9cc042",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "-0.5"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.887051767676766,
+        "head_mean_luma": 37.213125,
+        "full_std_luma": 74.62783908881121,
+        "head_std_luma": 79.6981076054352,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": -0.25,
+      "normalized_head_yaw": [
+        0.375,
+        0.5
+      ],
+      "full_sha256": "db85a60610df039d2904ba49e937656ba15f888263b4a428b1ff96565ee2229f",
+      "head_sha256": "f616ba84f0f6cbb8e62fb05f4804824dd3ff510d157a3b7efb0b51ce47415c0e",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "-0.25"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.89595801767677,
+        "head_mean_luma": 37.24489864864865,
+        "full_std_luma": 74.65055852237666,
+        "head_std_luma": 79.77265035945975,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": 0,
+      "normalized_head_yaw": [
+        0.5,
+        0.5
+      ],
+      "full_sha256": "9c88b5515c2689d6e62ddad53a8f98da4a8b8b14af2b963b5aead612fe95c598",
+      "head_sha256": "d77b8dc51cb73ebcd26fbe5f574bd0f10c037ef0bd01a94f00e56e75ea9cb7c2",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "0.0"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.96441445707071,
+        "head_mean_luma": 37.48912162162162,
+        "full_std_luma": 74.73064388944644,
+        "head_std_luma": 80.02922428568824,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": 0.25,
+      "normalized_head_yaw": [
+        0.625,
+        0.5
+      ],
+      "full_sha256": "28e9852be66e935e416940d543baf76080a369bafbfadb5476dde222027a4ec5",
+      "head_sha256": "0080d8768442548a1e155c337c5a178f63177f40d15e5320675106cb779e1ec6",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "0.25"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.90877840909091,
+        "head_mean_luma": 37.29063626126126,
+        "full_std_luma": 74.66399417285133,
+        "head_std_luma": 79.8155682062476,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": 0.5,
+      "normalized_head_yaw": [
+        0.75,
+        0.5
+      ],
+      "full_sha256": "98d673a99e8de9bc43e0da38e92f70953be4dd8faba1f3eda2a8c44938612064",
+      "head_sha256": "f21c9d734513af20f15c0c3c7eb25f73d514f8a5fef581db2fac7071a4f72aba",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "0.5"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.90382733585859,
+        "head_mean_luma": 37.27297297297297,
+        "full_std_luma": 74.6457740013498,
+        "head_std_luma": 79.75549376253385,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": 0.75,
+      "normalized_head_yaw": [
+        0.875,
+        0.5
+      ],
+      "full_sha256": "b52758a83f5b5948ed75c9fb0a49a6e1c1546e3f8b7a267d85788e0847daa26d",
+      "head_sha256": "04ef51ed3b6070840c9456ae117edb83188d08f3f32d4b7aa1b7bf3e309109d2",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "0.75"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.942621527777774,
+        "head_mean_luma": 37.41137387387387,
+        "full_std_luma": 74.67073933915395,
+        "head_std_luma": 79.83289653008177,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    },
+    {
+      "raw_yaw": 1,
+      "normalized_head_yaw": [
+        1,
+        0.5
+      ],
+      "full_sha256": "71896b2548a496c81eb35e07dec8282fd951559f853d82208100357a6d6d9ff5",
+      "head_sha256": "4fa4aae439e8e5ffd7ebd400e5dbe4858a18ce53d0a8bd815a7c2e20958cb293",
+      "app_command": [
+        "/home/runner/work/_temp/inox2d/target/release/render-opengl",
+        "/home/runner/work/_temp/Aka.inx"
+      ],
+      "app_pose_environment": {
+        "KOMA_HEAD_YAW": "1.0"
+      },
+      "app_exit_returncode": -15,
+      "app_terminated_by_capture": true,
+      "metrics": {
+        "screen_size": [
+          1024,
+          900
+        ],
+        "full_size": [
+          720,
+          880
+        ],
+        "head_size": [
+          480,
+          370
+        ],
+        "full_mean_luma": 33.99348327020202,
+        "head_mean_luma": 37.59282657657658,
+        "full_std_luma": 74.69125869723432,
+        "head_std_luma": 79.89332117493812,
+        "full_nonblank": true,
+        "head_nonblank": true
+      }
+    }
+  ],
+  "regression_runs": [
+    {
+      "run_id": 41115461156,
+      "conclusion": "success"
+    },
+    {
+      "run_id": 41116198362,
+      "conclusion": "success"
+    }
+  ]
+}

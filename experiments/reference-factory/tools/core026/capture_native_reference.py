@@ -64,12 +64,18 @@ RAW_YAWS: Tuple[float, ...] = (-1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1
 RAW_PITCH = 0.0
 
 FULL_W, FULL_H = 720, 880
-HEAD_ROI = (120, 0, 600, 370)  # x0, y0, x1, y1 - FIXED for all poses
+# DEFAULT (baseline full-body reference) head ROI: x0, y0, x1, y1 - FIXED for all poses
+HEAD_ROI = (120, 0, 600, 370)
+# HEAD-VIEW mode: one fixed 652x652 head crop of the ACTUAL 720x880 full frame
+HEAD_ROI_HEAD_VIEW = (34, 114, 686, 766)
 
 SCREEN_W, SCREEN_H, SCREEN_DEPTH = 1024, 900, 24
 DISPLAY = ":88"
 
 CAMERA_SCALE = 0.15
+CAMERA_POSITION = [0.0, 0.0]
+CAMERA_SCALE_HEAD_VIEW = 0.4
+CAMERA_POSITION_HEAD_VIEW = [82.0, 1773.0]
 DT0_POLICY = "frozen_time_no_physics_equilibrium_claim"
 
 APP_WINDOW_W, APP_WINDOW_H = 720, 880
@@ -439,7 +445,29 @@ def main(argv: Optional[List[str]] = None) -> int:
         required=True,
         help="path to the real example patch report JSON (must exist)",
     )
+    ap.add_argument(
+        "--head-view",
+        action="store_true",
+        help=(
+            "capture the source-consistent high-resolution head view "
+            "(camera scale 0.4, camera position (82,1773), fixed 652x652 head ROI). "
+            "Python helper only - the native binary argv is unchanged."
+        ),
+    )
     args = ap.parse_args(argv)
+
+    # ---- capture mode selection (Python side only) ----
+    global HEAD_ROI, CAMERA_SCALE, CAMERA_POSITION
+    if args.head_view:
+        HEAD_ROI = HEAD_ROI_HEAD_VIEW
+        CAMERA_SCALE = CAMERA_SCALE_HEAD_VIEW
+        CAMERA_POSITION = CAMERA_POSITION_HEAD_VIEW
+        capture_mode = "head_view"
+    else:
+        HEAD_ROI = (120, 0, 600, 370)
+        CAMERA_SCALE = 0.15
+        CAMERA_POSITION = [0.0, 0.0]
+        capture_mode = "full_body_baseline"
 
     binary = Path(args.binary).expanduser().resolve()
     source = Path(args.source).expanduser().resolve()
@@ -581,6 +609,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         }
         # The ear-only filter environment variable MUST be absent.
         for banned in (
+            "KOMA_REFERENCE_HEAD_VIEW",
             "KOMA_NATIVE_EARS_ONLY",
             "KOMA_EARS_ONLY_TEST_FILTER",
             "INOX_EAR_ONLY",
@@ -613,6 +642,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             app_cmd = build_app_argv(binary, source, raw_yaw)
             log("pose raw_yaw=%s -> %s" % (raw_yaw, " ".join(app_cmd)))
             pose_env = {**app_env_base, 'KOMA_HEAD_YAW': str(raw_yaw)}
+            if args.head_view:
+                pose_env['KOMA_REFERENCE_HEAD_VIEW'] = '1'
             proc = mgr.spawn(app_cmd, env=pose_env, stdout_path=app_log)
 
             # wait for renderer ready + no FBO/panic in the log
@@ -695,10 +726,12 @@ def main(argv: Optional[List[str]] = None) -> int:
                     "normalized_head_yaw": [(raw_yaw + 1.0) / 2.0, 0.5],
                     "raw_pitch": RAW_PITCH,
                     "camera_scale": CAMERA_SCALE,
+                    "camera_position": list(CAMERA_POSITION),
+                    "capture_mode": capture_mode,
                     "angle_units": "raw_inx_parameter_units (no physical degree claim)",
                     "dt0_policy": DT0_POLICY,
                     "app_command": app_cmd,
-                    "app_pose_environment": {'KOMA_HEAD_YAW': str(raw_yaw)},
+                    "app_pose_environment": {k: pose_env[k] for k in ('KOMA_HEAD_YAW', 'KOMA_REFERENCE_HEAD_VIEW') if k in pose_env},
                     "app_exit_returncode": app_rc,
                     "app_terminated_by_capture": terminated_by_capture,
                     "app_successful_native_exit": False,
@@ -805,6 +838,8 @@ def main(argv: Optional[List[str]] = None) -> int:
                     "ear_only_filter_env_absent": True,
                     "mouse_parked_at": list(MOUSE_PARK),
                     "camera_scale": CAMERA_SCALE,
+                    "camera_position": list(CAMERA_POSITION),
+                    "capture_mode": capture_mode,
                     "dt0_policy": DT0_POLICY,
                     "ready_timeout_s": READY_TIMEOUT_S,
                     "capture_duration_s": CAPTURE_DURATION_S,

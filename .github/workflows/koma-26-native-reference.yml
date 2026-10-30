@@ -91,7 +91,8 @@ jobs:
             --binary "$RUNNER_TEMP/inox2d/target/release/render-opengl" \
             --source "$RUNNER_TEMP/Aka.inx" \
             --out experiments/reference-factory/out/core026/reference \
-            --patch-report experiments/reference-factory/out/core026/source_parameter_patch.json
+            --patch-report experiments/reference-factory/out/core026/source_parameter_patch.json \
+            --head-view
 
       - name: Archive native reference
         run: |

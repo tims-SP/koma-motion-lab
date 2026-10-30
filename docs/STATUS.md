@@ -2,7 +2,7 @@
 
 ## 目标与分工
 
-当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。CORE-025复现与归档已完成，艺术门禁FAIL保留；当前执行CORE-026分部件深度、附着与遮挡校准。详细[CORE-026计划](plans/CORE-026-depth-and-occlusion-plan.md)与[首项M1工单](plans/CORE-026-M1-mcode-order.md)。mcode登录已成功；[M1A源像素对应PASS](research/CORE-026-M1A-source-correspondence.md)：58唯一、4重复后发未解决，空间配准尚未验收。M1整体未完成；M2–M5尚未执行。
+当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。CORE-025复现与归档已完成，艺术门禁FAIL保留；当前执行CORE-026分部件深度、附着与遮挡校准。详细[CORE-026计划](plans/CORE-026-depth-and-occlusion-plan.md)与[首项M1工单](plans/CORE-026-M1-mcode-order.md)。mcode登录已成功；58个唯一纹理对应与4个重复后发的默认空间区分均通过，62部件对应62原生UUID。首轮真实9姿态CI通过，正在提高头部参考分辨率。[最新报告](research/CORE-026-M1-default-space-and-native-reference.md)。19特征和局部遮挡约束未完成，M1整体未放行；M2–M5尚未执行。
 
 ## 已完成
 
@@ -45,4 +45,6 @@ CORE-025执行链路已跑通并归档，不重跑A1、不重新生成源资产�
 
 上述认证阻塞已解除。当前恢复点：M1A三条实际命令均exit0，源审计与58个像素对应已验收；4项重复纹理保持UNRESOLVED，全部空间配准NOT_TESTED。后续继续真实原生完整头部9姿态捕获、19特征槽位与局部遮挡约束，不将像素对应PASS当作M1整体PASS。
 
-M1A提交a6226cc。[M1B捕获程序检查点](research/CORE-026-M1B-native-capture-checkpoint.md)记录mcode实现和监工修正的接口/归档缺陷。新工作流koma-26-native-reference.yml以本分支限定路径push触发真实上游Rust/GL编译与9姿态捕获；需查看实际run及PNG后再验收，不能将静态检查当成原生捕获成功。
+M1A提交a6226cc。[M1B捕获程序检查点](research/CORE-026-M1B-native-capture-checkpoint.md)记录mcode实现和监工修正的接口/归档缺陷。首轮真实捕获已经通过；以下是最新恢复位置。
+
+最新实际恢复点：512d3f2的[原生CI41116198599](https://github.com/tims-SP/koma-motion-lab/actions/runs/41116198599)全部success，Draft已归档，9张实际PNG及9张固定裁切的SHA由监工独立核对。依次运行audit_core026.py --audit、--verify-source、verify_core026_supervisor.py、verify_core026_registration.py复现源/默认坐标验收；最后一项生成完整out/core026/default-registration.json，不代表动态GPU/3D通过。下一项为新增--head-view模式的真实高清捕获，再做19特征及局部约束。

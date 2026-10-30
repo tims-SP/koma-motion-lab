@@ -63,12 +63,22 @@ def main() -> None:
         "window_physical_size_720x880",
     )
 
-    # 2) fixed camera: declare the scale explicitly, drop the interactive update
+    # 2) fixed camera: two explicit modes, no interactive update
+    #    default (KOMA_REFERENCE_HEAD_VIEW absent): scale 0.15, position origin
+    #    head view (KOMA_REFERENCE_HEAD_VIEW present): scale 0.4, position (82, 1773)
+    #    the camera stays FIXED in both modes: scene_ctrl.update is removed below.
     text = sub(
         text,
         "renderer.camera.scale = Vec2::splat(0.15);",
-        "let fixed_camera_scale: f32 = 0.15;\n\t\t\t\trenderer.camera.scale = Vec2::splat(fixed_camera_scale);",
-        "declare_fixed_camera_scale_0_15",
+        "let head_view_mode = std::env::var(\"KOMA_REFERENCE_HEAD_VIEW\").is_ok();\n"
+        "\t\t\t\tif head_view_mode {\n"
+        "\t\t\t\t\trenderer.camera.scale = Vec2::splat(0.4);\n"
+        "\t\t\t\t\trenderer.camera.position = Vec2::new(82.0, 1773.0);\n"
+        "\t\t\t\t} else {\n"
+        "\t\t\t\t\trenderer.camera.scale = Vec2::splat(0.15);\n"
+        "\t\t\t\t\trenderer.camera.position = Vec2::new(0.0, 0.0);\n"
+        "\t\t\t\t}",
+        "camera_two_mode_scale_0_15_or_0_4_with_position",
     )
     text = sub(text, "\t\tscene_ctrl.update(&mut renderer.camera);\n", "", "remove_scene_ctrl_update")
     text = sub(
@@ -125,7 +135,27 @@ def main() -> None:
             "raw_pitch": 0.0,
         },
         "time_policy": "puppet.end_frame(0.0) — dt = 0, no simulated time advance",
-        "camera": "fixed camera, declared scale 0.15, scene_ctrl.update removed",
+        "camera": (
+            "fixed camera (no scene_ctrl.update, no interactive motion); two explicit modes: "
+            "default mode (KOMA_REFERENCE_HEAD_VIEW absent) uses scale 0.15 and position (0,0); "
+            "head-view mode (KOMA_REFERENCE_HEAD_VIEW present) uses scale 0.4 and position (82, 1773)"
+        ),
+        "camera_modes": {
+            "default": {
+                "env": "KOMA_REFERENCE_HEAD_VIEW absent",
+                "scale": 0.15,
+                "position": [0.0, 0.0],
+                "note": "baseline full-body reference view (retained unchanged)",
+            },
+            "head_view": {
+                "env": "KOMA_REFERENCE_HEAD_VIEW present",
+                "scale": 0.4,
+                "position": [82.0, 1773.0],
+                "note": "source-consistent high-resolution head view for landmark work",
+            },
+        },
+        "camera_fixed": True,
+        "scene_ctrl_update_removed": True,
         "physics_equilibrium_validated": False,
         "physical_yaw_degrees": "UNKNOWN",
         "physical_pitch_degrees": "UNKNOWN",
