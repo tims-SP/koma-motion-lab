@@ -1,0 +1,28 @@
+name: CORE-015 · local real-Z render evidence policy
+
+on:
+  push:
+    branches: [feature/koma-25d-core-015]
+    paths:
+      - '.github/workflows/koma-25d-core-015.yml'
+      - 'experiments/koma-25d-core/tools/verify_core015_evidence.py'
+      - 'experiments/koma-25d-core/config/core015-real3d-local-evidence.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-local-render-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enforce truthful source, 3D GLB, video, painted-art gates
+        run: |
+          python3 experiments/koma-25d-core/tools/verify_core015_evidence.py \
+            --manifest experiments/koma-25d-core/config/core015-real3d-local-evidence.json
+      - name: Explicit binary-provenance note
+        run: |
+          echo "CORE015: this is META QA ONLY; the actual 3D rendered MP4, GLB, Python code and input PNGs were created and decoded in the conversation sandbox."
+          echo "CORE015: source native INX UV NOT bound; 45/135 extra artwork NOT accepted; anime visual quality FAIL."
