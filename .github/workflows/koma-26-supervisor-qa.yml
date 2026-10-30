@@ -54,7 +54,7 @@ jobs:
           python verify_core026_constraints.py
       - name: Restore actual clean native PNGs from pinned successful job log
         run: |
-          gh api "repos/$GH_REPO/actions/jobs/124281335070/logs" > "$RUNNER_TEMP/core026-native-job.log"
+          gh api --allow-escape-sequences "repos/$GH_REPO/actions/jobs/124281335070/logs" > "$RUNNER_TEMP/core026-native-job.log"
           python restore_core026_reference.py --job-log "$RUNNER_TEMP/core026-native-job.log"
       - name: Reproduce candidate fiducial diagnostics (not fit or art acceptance)
         run: |
