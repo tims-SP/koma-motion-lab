@@ -1,0 +1,75 @@
+name: CORE-022 Reference Factory deterministic structure
+
+on:
+  push:
+    branches: [feature/koma-25d-core-021]
+    paths:
+      - 'experiments/reference-factory/**'
+      - '.github/workflows/koma-reference-factory-022.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  structural-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: experiments/reference-factory
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned direct dependencies and Chromium
+        run: |
+          python -m pip install -r requirements.txt
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Acquire pinned original sources and prepare real Aka references
+        run: python prepare.py
+      - name: Render twice in independent browser processes and validate maps/video
+        run: |
+          npm run render
+          cp out/structure/manifest.json out/baseline-manifest.json
+          npm run render
+          python qa.py --baseline out/baseline-manifest.json
+      - name: Publish text evidence only to Actions artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE022-text-evidence-${{ github.run_number }}
+          path: |
+            experiments/reference-factory/out/qa.json
+            experiments/reference-factory/out/source_freeze.json
+            experiments/reference-factory/out/native_topology_index.json
+            experiments/reference-factory/out/structure/manifest.json
+          if-no-files-found: error
+      - name: Archive original sources and generated media in owner-only Draft Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_NUMBER: ${{ github.run_number }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,zipfile
+          with zipfile.ZipFile('CORE022-reference-evidence.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(Path('out').rglob('*')):
+                  if p.is_file():z.write(p,p.as_posix())
+          p=Path('CORE022-reference-evidence.zip')
+          Path('SHA256SUMS.txt').write_text(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n')
+          PY
+          gh release create "core022-reference-${RUN_NUMBER}" \
+            CORE022-reference-evidence.zip SHA256SUMS.txt \
+            --draft --target "$COMMIT_SHA" \
+            --title "CORE-022 structural reference evidence ${RUN_NUMBER}" \
+            --notes "Generic pixiv VRM structural reference and original Aka source preparation. Nine held anchors, not continuous Aka animation. No AI generation runs in CI; local pilot candidates are separate. Production and full-front native parity NOT accepted. Source license conditions recorded in source_freeze.json."

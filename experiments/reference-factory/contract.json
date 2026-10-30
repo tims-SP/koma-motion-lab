@@ -1,0 +1,10 @@
+{
+  "schema": "koma-reference-contract/1",
+  "scope": "HEAD_ONLY",
+  "world": {"handedness": "right", "unit": "meter", "x": "character left at front", "y": "up", "z": "character front", "yaw": "positive character rotation about +Y; nose moves to image right", "angles_deg": [0,22.5,45,67.5,90,112.5,135,157.5,180]},
+  "camera": {"type": "orthographic", "position_relative_to_target": [0,0,2], "target": "source humanoid head joint plus target_offset_m", "target_offset_m": [0,0.1,0], "up": [0,1,0], "vertical_span_m": 0.46, "near_m": 0.01, "far_m": 5, "width": 512, "height": 512, "pixel_center": "integer + 0.5", "device_pixel_ratio": 1},
+  "render": {"background": "opaque black for structural maps", "alpha": "opaque structure outputs; source identity uses straight RGBA", "input_color_space": "sRGB color textures", "working_space": "linear-sRGB", "beauty_output": "sRGB", "data_output": "no color conversion or tone mapping", "tone_mapping": "none", "antialias": false, "filter": "source sampler preserved", "depth": "camera view distance, normalized linearly between near and far; near is white; RGB8 diagnostic only", "normal": "camera-space, xyz mapped from [-1,1] to [0,1]; RGB8 diagnostic", "part_id": "source mesh Body=red, Face=green, Hair=blue; not semantic decomposition ground truth"},
+  "lattice": {"view_pitch_deg": [0], "view_roll_deg": [0], "source_head_yaw_raw": 0, "source_head_pitch_raw": 0, "expression": "source default", "body_pose": "source rest", "variant": "default"},
+  "authority": {"aka_psd": "SOURCE_TRUTH for PSD default composition only; not certified INX runtime default parity", "vrm": "INFERRED_STRUCTURE relative to Aka; exact sample geometry relative to VRM source", "generated_views": "GENERATED_CANDIDATE", "hidden_design": "requires explicit human approval"},
+  "gates": {"source_full_front_parity": "NOT_TESTED", "structure_to_aka_registration": "NOT_TESTED", "aka_90_golden": "BLOCKED", "production": "NOT_ACCEPTED"}
+}

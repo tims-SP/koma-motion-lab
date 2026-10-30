@@ -1,0 +1,1060 @@
+{
+  "schema": "koma-structure-evidence/1",
+  "sourceSha256": "12c2b97e95e700783a6a550dc0eee2d7880aeedccef9ae67bc4c5a2f0f2631a2",
+  "contractSha256": "8b61d85eecee1575b78f3b0c8010d0a9ddfdf1973babdb47b7838c9134ed406f",
+  "environment": {
+    "node": "v24.22.1",
+    "chromium": "141.0.7390.37",
+    "three": "180",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "headJoint": [
+      -1.6782664876921788e-16,
+      1.3862668816536048,
+      -0.024711044968708126
+    ],
+    "cameraTarget": [
+      -1.6782664876921788e-16,
+      1.4862668816536049,
+      -0.024711044968708126
+    ],
+    "selection": "Face and Hair source meshes; Body excluded for HEAD_ONLY",
+    "meshCount": 13,
+    "sourceMeshes": [
+      {
+        "name": "Body_1",
+        "category": "Body",
+        "visible": false,
+        "vertices": 5307
+      },
+      {
+        "name": "Body_2",
+        "category": "Body",
+        "visible": false,
+        "vertices": 470
+      },
+      {
+        "name": "Body_3",
+        "category": "Body",
+        "visible": false,
+        "vertices": 600
+      },
+      {
+        "name": "Body_4",
+        "category": "Body",
+        "visible": false,
+        "vertices": 717
+      },
+      {
+        "name": "Body_5",
+        "category": "Body",
+        "visible": false,
+        "vertices": 883
+      },
+      {
+        "name": "Face_1",
+        "category": "Face",
+        "visible": true,
+        "vertices": 1074
+      },
+      {
+        "name": "Face_2",
+        "category": "Face",
+        "visible": true,
+        "vertices": 194
+      },
+      {
+        "name": "Face_3",
+        "category": "Face",
+        "visible": true,
+        "vertices": 2286
+      },
+      {
+        "name": "Face_4",
+        "category": "Face",
+        "visible": true,
+        "vertices": 290
+      },
+      {
+        "name": "Face_5",
+        "category": "Face",
+        "visible": true,
+        "vertices": 116
+      },
+      {
+        "name": "Face_6",
+        "category": "Face",
+        "visible": true,
+        "vertices": 44
+      },
+      {
+        "name": "Face_7",
+        "category": "Face",
+        "visible": true,
+        "vertices": 102
+      },
+      {
+        "name": "Hair",
+        "category": "Hair",
+        "visible": true,
+        "vertices": 12868
+      }
+    ],
+    "cameraMatrix": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -1.6782664876921788e-16,
+      1.4862668816536049,
+      1.975288955031292,
+      1
+    ],
+    "projectionMatrix": [
+      4.3478260869565215,
+      0,
+      0,
+      0,
+      0,
+      4.3478260869565215,
+      0,
+      0,
+      0,
+      0,
+      -0.4008016032064128,
+      0,
+      0,
+      0,
+      -1.0040080160320641,
+      1
+    ]
+  },
+  "reproducibility": "same-process pixel hash comparison; separate process comparison performed by qa.py",
+  "views": [
+    {
+      "yaw_deg": 0,
+      "passes": {
+        "beauty": {
+          "file": "00000_beauty.png",
+          "sha256": "59a1fb5aa2971a693d7d9f6056565b1cec428927bf8301132edd402901410734",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "00000_silhouette.png",
+          "sha256": "d86965e20d0c6dcbbc3c44feed1ecf87c0253ac9aaaf1a529f329d65f59eac26",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "00000_depth.png",
+          "sha256": "45ca4b69f2516911c7044dec054689928f530fd84e02df470c9990e313d22502",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "00000_normal.png",
+          "sha256": "418530a5cbeb111902587a8de82c8703d175c196f4c73aefa657ee2621a45ea5",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "00000_part_id.png",
+          "sha256": "957a19174cb684881a3fc5c4f586361200e5ff914b85d42d91afa9be9baa79c7",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 0,
+        "pass": "part_id",
+        "characterMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.6782664876921788e-16,
+              1.3862668816536048,
+              -0.024711044968708126
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -1.3201001164286998e-16,
+              1.3130926740100157,
+              -0.03385973211559633
+            ],
+            "pixel": [
+              256.00000000000006,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.01732159644865688,
+              1.4489100828640695,
+              -0.0032749198223601395
+            ],
+            "pixel": [
+              275.27968996024435,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              -0.017321625604179703,
+              1.4489100802806354,
+              -0.0032749123297237427
+            ],
+            "pixel": [
+              236.72027758839147,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 22.5,
+      "passes": {
+        "beauty": {
+          "file": "022_5_beauty.png",
+          "sha256": "0c560da939107bb36044cd00f3d0d2ba524fdc2d0c51be8c8beee6c48b9a9ce2",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "022_5_silhouette.png",
+          "sha256": "1bc2cd21ab7354735db2bc6cabd5f4b50da62bd911aa9f361b9512a4bfc42839",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "022_5_depth.png",
+          "sha256": "1bb6d1b374da4b0ec300cc9a3b78347e6230d884a2c177efd8dc352fe417aeb4",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "022_5_normal.png",
+          "sha256": "f7f01b2f7364eb35fbef5ecf54c04a8ff7784119d6d6b93416d9036f6d799dac",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "022_5_part_id.png",
+          "sha256": "a7b7e1f2ffe427636b4be5b48b665ea54f91ecaad4ab5ddb7e850bf5b25d7359",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 22.5,
+        "pass": "part_id",
+        "characterMatrix": [
+          0.9238795325112867,
+          0,
+          -0.3826834323650897,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.3826834323650897,
+          0,
+          0.9238795325112867,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.721713049906981e-16,
+              1.3862668816536048,
+              -0.024711044968708115
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.003501050999005698,
+              1.3130926740100157,
+              -0.03316332977306723
+            ],
+            "pixel": [
+              252.1031780184982,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.02420631837694633,
+              1.4489100828640695,
+              -0.011535335672661714
+            ],
+            "pixel": [
+              282.9426848021665,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              -0.007799842550605226,
+              1.4489100802806354,
+              0.0017220583729971664
+            ],
+            "pixel": [
+              247.31843611758742,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 45,
+      "passes": {
+        "beauty": {
+          "file": "00045_beauty.png",
+          "sha256": "378cb2c9a8c977f734172b21038a49c882c1bbeeecae784a9e6d36f4fb68d848",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "00045_silhouette.png",
+          "sha256": "a7489f075947c6be909aa0931f02f4c5fa87d38943ef68f5c1e57d92d40bef18",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "00045_depth.png",
+          "sha256": "69f56d35cab0151c12a24af547d7a59dcbbc54262462a74de27b1605f7995cdb",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "00045_normal.png",
+          "sha256": "20ea544c7646fbeb1a40b93c30fc521e8171f9c6b910c7b10337006cd98b216f",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "00045_part_id.png",
+          "sha256": "b3eb35a573ae8f96c372f94bfbe6bbf15acbcd7179db3a2502213299fc31ca13",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 45,
+        "pass": "part_id",
+        "characterMatrix": [
+          0.7071067811865475,
+          0,
+          -0.7071067811865476,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.7071067811865476,
+          0,
+          0.7071067811865475,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.6653345369377348e-16,
+              1.3862668816536048,
+              -0.02471104496870811
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.006469098720518998,
+              1.3130926740100157,
+              -0.031180143689226995
+            ],
+            "pixel": [
+              248.7996118589008,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.02740584776316819,
+              1.4489100828640695,
+              -0.021801633825184193
+            ],
+            "pixel": [
+              286.50390011900475,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.0029093958255500974,
+              1.4489100802806354,
+              0.002694828708621911
+            ],
+            "pixel": [
+              259.2382840493081,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 67.5,
+      "passes": {
+        "beauty": {
+          "file": "067_5_beauty.png",
+          "sha256": "81126089116a5803e4ac9d85b38282c76bb8719aeaf4e311f7f10a9056dc3921",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "067_5_silhouette.png",
+          "sha256": "105f9212bbfd07453506303406146ef6029cb7342427c42aeb23e7a803369de5",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "067_5_depth.png",
+          "sha256": "f94ad402762d781d553bf7c151f65d09f5780ec02687ee6f301b20c04412591b",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "067_5_normal.png",
+          "sha256": "8ed87477180dd76cf6b58f9325d6d1bafe02f50e2ae4e2882b3b216faed61e2d",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "067_5_part_id.png",
+          "sha256": "679460f43fd7f503b58bd59e97550c64db55aec465bb1c8152267151033b0d33",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 67.5,
+        "pass": "part_id",
+        "characterMatrix": [
+          0.38268343236508984,
+          0,
+          -0.9238795325112866,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.9238795325112866,
+          0,
+          0.38268343236508984,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.5612511283791264e-16,
+              1.3862668816536048,
+              -0.024711044968708126
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.008452284804359236,
+              1.3130926740100157,
+              -0.028212095967713718
+            ],
+            "pixel": [
+              246.59223952210468,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.026433085262076297,
+              1.4489100828640695,
+              -0.0325108634504305
+            ],
+            "pixel": [
+              285.4211731612677,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.013175705061004227,
+              1.4489100802806354,
+              -0.0005046967882633251
+            ],
+            "pixel": [
+              270.66513258963965,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 90,
+      "passes": {
+        "beauty": {
+          "file": "00090_beauty.png",
+          "sha256": "510d1a765cb36d7ea336c483dbe08d2f3df6de79d9c5514b5e3e5e43a3f80e64",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "00090_silhouette.png",
+          "sha256": "c7fd361508540f6004cb899e0ed9d1a7c0ac3c40dd9364dbae4085c346d5516b",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "00090_depth.png",
+          "sha256": "04d1c2ebfc8a24aa37882c4dd39d458da9208f425ee3d2ce9003544ae4b3f396",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "00090_normal.png",
+          "sha256": "cfb59e8e348520579e26fc3d09c77e50318ac011428b570658d026887965c579",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "00090_part_id.png",
+          "sha256": "aef74b4e44d2a0277563b90daf9f148dfd71dd8ef39ded65730bd13e9ca615ed",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 90,
+        "pass": "part_id",
+        "characterMatrix": [
+          2.220446049250313e-16,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          2.220446049250313e-16,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.700029006457271e-16,
+              1.3862668816536048,
+              -0.024711044968708126
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.009148687146888372,
+              1.3130926740100157,
+              -0.024711044968708164
+            ],
+            "pixel": [
+              245.81711343650704,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.021436125146347823,
+              1.4489100828640695,
+              -0.042032641417365166
+            ],
+            "pixel": [
+              279.85933929332646,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.02143613263898421,
+              1.4489100802806354,
+              -0.007389419364528582
+            ],
+            "pixel": [
+              279.85934763295654,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 112.5,
+      "passes": {
+        "beauty": {
+          "file": "112_5_beauty.png",
+          "sha256": "2f8a0b6731d44a578117df2fd43543b206f8bbc11a3b087a2bee97bce2f7f31e",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "112_5_silhouette.png",
+          "sha256": "3c3fe31acde6fcce43605edb9545e086a9164f32d4cf97252f4516d791d89f25",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "112_5_depth.png",
+          "sha256": "4c3fdfa2cf17ba4ec4cc5cabf5ed90464df101986ff6fc5628ea09e42a482f21",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "112_5_normal.png",
+          "sha256": "49cdc23e7975cbe08116cc263c96213291f5b62bc1182bc22cdab7814908d022",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "112_5_part_id.png",
+          "sha256": "217f400c418b4a329f0f2a319490930d12247467cfd4ec11aa3292b007fea142",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 112.5,
+        "pass": "part_id",
+        "characterMatrix": [
+          -0.38268343236508984,
+          0,
+          -0.9238795325112868,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.9238795325112868,
+          0,
+          -0.38268343236508984,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.5265566588595902e-16,
+              1.3862668816536048,
+              -0.024711044968708126
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.008452284804359264,
+              1.3130926740100157,
+              -0.0212099939697026
+            ],
+            "pixel": [
+              246.59223952210465,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.01317570929604625,
+              1.4489100828640695,
+              -0.048917363345654635
+            ],
+            "pixel": [
+              270.6651373034256,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.026433103341705136,
+              1.4489100802806354,
+              -0.016911202418103073
+            ],
+            "pixel": [
+              285.42119328468067,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 135,
+      "passes": {
+        "beauty": {
+          "file": "00135_beauty.png",
+          "sha256": "bfa85b0da65050e632864ddbdda1e36fdc9d647e70a60b6b528f59edf7192129",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "00135_silhouette.png",
+          "sha256": "6242846a1c59232c7b4cb17e10cabeaf5bdd852e3ac8c29d83c3b48154df92b2",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "00135_depth.png",
+          "sha256": "3e4b4912deb0620f9677014ff5249fa7849422b696493b1a8756468143559aaf",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "00135_normal.png",
+          "sha256": "0f03c3c5beffb63bf910b1749619316ed1aff5b6b792e92faf342a6158e230ac",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "00135_part_id.png",
+          "sha256": "f45327db6ee2f5b1796d9a08ce213a1261594c03ae75f530d2d07c508d3bdf07",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 135,
+        "pass": "part_id",
+        "characterMatrix": [
+          -0.7071067811865475,
+          0,
+          -0.7071067811865477,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.7071067811865477,
+          0,
+          -0.7071067811865475,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.5092094240998222e-16,
+              1.3862668816536048,
+              -0.024711044968708143
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.00646909872051904,
+              1.3130926740100157,
+              -0.018241946248189308
+            ],
+            "pixel": [
+              248.79961185890073,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              0.0029094111435237803,
+              1.4489100828640695,
+              -0.0521168927318765
+            ],
+            "pixel": [
+              259.2383010988788,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.027405873677329877,
+              1.4489100802806354,
+              -0.027620440794258405
+            ],
+            "pixel": [
+              286.5039289625934,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 157.5,
+      "passes": {
+        "beauty": {
+          "file": "157_5_beauty.png",
+          "sha256": "c6100df4f4231e5daf68dfbbdf0af8abd85186096be521ac0a083fd6d190271b",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "157_5_silhouette.png",
+          "sha256": "d32e1665b9742202b4060ffee7d76453df22c21a65ed9190fe9f250d0058052e",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "157_5_depth.png",
+          "sha256": "36be75d2f7d000106eb50aea83cdf17c239dfdfb376208784d3035b0f1393d9c",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "157_5_normal.png",
+          "sha256": "afe03d411a9476cc0dfc117a4a6cd9c64060afb3151d7b6373c9895719e143e5",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "157_5_part_id.png",
+          "sha256": "226ab4a250bb7245d6f780fbea9f7cae3021f4fa00ebdcb4fd7eaab506eff9bf",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 157.5,
+        "pass": "part_id",
+        "characterMatrix": [
+          -0.9238795325112867,
+          0,
+          -0.3826834323650899,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.3826834323650899,
+          0,
+          -0.9238795325112867,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.6436504934880247e-16,
+              1.3862668816536048,
+              -0.02471104496870813
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -0.003501050999005757,
+              1.3130926740100157,
+              -0.016258760164349045
+            ],
+            "pixel": [
+              252.1031780184981,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              -0.007799818481722537,
+              1.4489100828640695,
+              -0.05114413023078459
+            ],
+            "pixel": [
+              247.31846290730033,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.024206348180444637,
+              1.4489100802806354,
+              -0.037886750029712514
+            ],
+            "pixel": [
+              282.94271797475596,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    },
+    {
+      "yaw_deg": 180,
+      "passes": {
+        "beauty": {
+          "file": "00180_beauty.png",
+          "sha256": "cb264dfdb647f64e491c06d4d9e3cd4500555b9666f3fe496bba5af5f9844cee",
+          "repeatIdentical": true
+        },
+        "silhouette": {
+          "file": "00180_silhouette.png",
+          "sha256": "a37e85c8a9b5178aba56c7235fed531f7261bb8e6d4e8d2465bc056e90ba0e13",
+          "repeatIdentical": true
+        },
+        "depth": {
+          "file": "00180_depth.png",
+          "sha256": "5fa8943572b3ca424582857a090503d3e4f95cf54026bdffa44ad2b486b9d2ea",
+          "repeatIdentical": true
+        },
+        "normal": {
+          "file": "00180_normal.png",
+          "sha256": "62940dda92d37cf6e6d845e91914b951afc1b187b67f0bd14c1115251af002db",
+          "repeatIdentical": true
+        },
+        "part_id": {
+          "file": "00180_part_id.png",
+          "sha256": "a87f9a61e75c1a1b486aa692095c50932b378a9389fe8087ac98e72ad94010a3",
+          "repeatIdentical": true
+        }
+      },
+      "pose": {
+        "yaw_deg": 180,
+        "pass": "part_id",
+        "characterMatrix": [
+          -1,
+          0,
+          -1.2246467991473532e-16,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.2246467991473532e-16,
+          0,
+          -1,
+          0,
+          -1.6782664876921788e-16,
+          1.4862668816536049,
+          -0.024711044968708126,
+          1
+        ],
+        "landmarks": {
+          "head": {
+            "world": [
+              -1.6782664876921785e-16,
+              1.3862668816536048,
+              -0.024711044968708133
+            ],
+            "pixel": [
+              256,
+              367.30434782608705
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "neck": {
+            "world": [
+              -2.0476367693864947e-16,
+              1.3130926740100157,
+              -0.01556235782181993
+            ],
+            "pixel": [
+              255.99999999999997,
+              448.7504224206905
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "leftEye": {
+            "world": [
+              -0.01732159644865721,
+              1.4489100828640695,
+              -0.04614717011505612
+            ],
+            "pixel": [
+              236.72031003975565,
+              297.57974126139584
+            ],
+            "visibility": "NOT_TESTED"
+          },
+          "rightEye": {
+            "world": [
+              0.017321625604179373,
+              1.4489100802806354,
+              -0.04614717760769251
+            ],
+            "pixel": [
+              275.27972241160853,
+              297.5797441368704
+            ],
+            "visibility": "NOT_TESTED"
+          }
+        }
+      }
+    }
+  ]
+}

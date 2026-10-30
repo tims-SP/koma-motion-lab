@@ -1,0 +1,70 @@
+# CORE-022 — Reference Factory first executed checkpoint
+
+This is the first manual experiment after CORE-021 under ADR-003. The canonical
+source is Aka by seagetch (CC BY 4.0); the generic structural reference is pixiv's
+VRM1_Constraint_Twist_Sample under its embedded VRM Public License 1.0 conditions,
+**not CC0 and not an Aka model**. The production repository is untouched.
+
+Implemented and locally executed:
+
+- SHA-256-verified original PSD/INX/VRM acquisition with pinned source revisions.
+- Source PSD identity and 16 genuine PSD-part examples; exact reversible coordinate
+  crop/resize/paste mapping. Original pixels remain in the PSD; resizing is lossy.
+- Immutable native INX topology/UV hashes and node UUIDs for all 76 ArtMeshes.
+- A versioned HEAD_ONLY, positive-yaw-to-image-right, orthographic camera and data
+  color contract. Body meshes are explicitly excluded. Long hair continues below
+  the head-camera bottom crop; this is not a full-hair silhouette reference.
+- Real Three.js/VRM WebGL rendering at nine 0–180° anchors, each with beauty,
+  binary silhouette, linear diagnostic depth, camera-space normal and exact
+  source-part-ID maps. IDs are source Face/Hair groups, not inferred Aka semantics.
+- Same-process repeat of every image plus a second independent browser-process
+  repeat of all 45 PNG hashes. This proves determinism only in this environment.
+- Actual 108-frame H.264 with nine held anchors (12 frames each), ffprobe validation,
+  final-video decoding and direct contact-sheet review. No continuous-motion claim.
+- Two manually executed built-in imagegen candidates: one A and one C pilot.
+  Both failed requested canvas/margin gates; no Golden or hidden design approval.
+
+## Reproduce structural evidence
+
+```sh
+cd experiments/reference-factory
+python -m pip install -r requirements.txt
+python prepare.py
+npm ci
+npx playwright install --with-deps chromium
+npm run render
+cp out/structure/manifest.json out/baseline-manifest.json
+npm run render
+python qa.py --baseline out/baseline-manifest.json
+```
+
+`out/structure/contact.jpg` and `out/decoded_contact.jpg` are direct-review sheets.
+`out/qa.json`, `out/source_freeze.json`, `out/native_topology_index.json` and the
+render manifest contain machine-readable evidence. Reruns do not regenerate AI
+candidates. Preserve candidate original files and run `python audit_candidates.py`
+only after restoring the actual matching files in `out/candidates/`.
+
+## mcode collaboration
+
+MiniMax Code 0.7.2 was installed in the Work environment via the official npm
+package `@minimax-ai/code`. The user completed CN OAuth; a real model returned
+`MCODE_AUTH_OK`. mcode is used for a read-only engineering review, with no account
+credentials copied into the repository or workflow. The CLI installation/login
+is specific to this Work environment; it is not assumed to exist in CI.
+
+## Current limits and next gates
+
+M0 source preparation is executed; full-front native runtime parity remains
+NOT_TESTED. M1 has one generic VRM sample, not the planned multi-character bank.
+M2 structural-render mechanics pass; the VRM has no fox ears and no source-to-Aka
+shape registration. Its exact yaw is structure truth only for that VRM.
+M3 automated decomposition benchmark, M4 full multi-candidate A/B/C/D comparison,
+human-approved 90° design, five-view Aka set, per-view UV correspondence, shallow
+3D shells, rig/IK and continuous Aka 360° remain open. Do not promote these
+diagnostic renders into production character assets.
+
+Source image generation prompts are versioned under `prompts/`; built-in tool model,
+seed and request ID were not exposed and are explicitly recorded as unavailable.
+Images/video/source binaries remain outside Git blobs and belong in owner-only
+Draft Release evidence. Persistent archive ownership/retention beyond a draft
+release and hermetic cross-machine pixel identity are separate unverified gates.

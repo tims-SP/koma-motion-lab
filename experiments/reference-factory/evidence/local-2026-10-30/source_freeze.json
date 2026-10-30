@@ -1,0 +1,130 @@
+{
+  "schema": "koma-source-freeze/1",
+  "character": "Aka",
+  "scope": "HEAD_ONLY",
+  "source_lock_sha256": "8f9acc8a26591cfa381c2ca0a4a076befe0de35ebf6e84aedec34828c8e4d6b6",
+  "contract_sha256": "8b61d85eecee1575b78f3b0c8010d0a9ddfdf1973babdb47b7838c9134ed406f",
+  "identity_file": "identity/source_A_aka_front.png",
+  "identity_sha256": "c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4",
+  "source_pose": "PSD stored default composition; open mouth, not neutral expression",
+  "source_runtime_pose": {
+    "HeadYaw_raw": [
+      0,
+      0
+    ],
+    "full_front_parity": "NOT_TESTED"
+  },
+  "canonicalization": {
+    "coordinate_domain": "continuous pixel EDGE coordinates, centers at i+0.5",
+    "crop_source_xyxy": [
+      190,
+      0,
+      1438,
+      1587
+    ],
+    "resized_wh": [
+      805,
+      1024
+    ],
+    "paste_xy": [
+      109,
+      0
+    ],
+    "source_to_canonical": [
+      [
+        0.6450320512820513,
+        0.0,
+        -13.556089743589752
+      ],
+      [
+        0.0,
+        0.6452425960932577,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "canonical_to_source": [
+      [
+        1.5503105590062112,
+        0.0,
+        21.016149068322992
+      ],
+      [
+        0.0,
+        1.5498046875,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "roundtrip_error_px": 0.0,
+    "reversibility": "coordinate mapping only; crop/resampling lose pixels; immutable original PSD retained"
+  },
+  "character_facts": [
+    "orange bob hair",
+    "two tall fox ears with light inner fur",
+    "red/pink leaf ornament near crown",
+    "pink/red eyes with gold highlights",
+    "dark neck band",
+    "source mouth open; do not label neutral"
+  ],
+  "source_node_count": 100,
+  "source_artmesh_count": 76,
+  "vrm_embedded_license": {
+    "allowAntisocialOrHateUsage": false,
+    "allowExcessivelySexualUsage": true,
+    "allowExcessivelyViolentUsage": true,
+    "allowPoliticalOrReligiousUsage": true,
+    "allowRedistribution": true,
+    "authors": [
+      "pixiv Inc."
+    ],
+    "avatarPermission": "everyone",
+    "commercialUsage": "corporation",
+    "copyrightInformation": "(c) 2022 pixiv Inc.",
+    "creditNotation": "unnecessary",
+    "licenseUrl": "https://vrm.dev/licenses/1.0/",
+    "modification": "allowModificationRedistribution",
+    "name": "VRM1_Constraint_Twist_Sample",
+    "thumbnailImage": 18,
+    "version": "v1.0.1"
+  },
+  "artifacts": [
+    {
+      "id": "tutorial-aka.psd",
+      "sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+      "retrieval_uri": "https://raw.githubusercontent.com/Inochi2D/inochi2d-docs/593c657855d5679f01443ef311346298fd25e117/docs/source/creator/first-model/tutorial-aka.psd",
+      "retention": "pinned upstream plus local workspace cache; independent owner-controlled archive NOT_TESTED",
+      "state": "SOURCE_TRUTH"
+    },
+    {
+      "id": "Aka.inx",
+      "sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+      "retrieval_uri": "https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx",
+      "retention": "pinned upstream plus local workspace cache; independent owner-controlled archive NOT_TESTED",
+      "state": "SOURCE_TRUTH"
+    },
+    {
+      "id": "reference.vrm",
+      "sha256": "12c2b97e95e700783a6a550dc0eee2d7880aeedccef9ae67bc4c5a2f0f2631a2",
+      "retrieval_uri": "https://raw.githubusercontent.com/pixiv/three-vrm/3caf7a21ee68f0d5dfa363ab3d577450bbf60136/packages/three-vrm/examples/models/VRM1_Constraint_Twist_Sample.vrm",
+      "retention": "pinned upstream plus local workspace cache; independent owner-controlled archive NOT_TESTED",
+      "state": "SOURCE_TRUTH"
+    }
+  ],
+  "gates": {
+    "M0_source_freeze": "PASS_WITH_OPEN_FULL_FRONT_GATE",
+    "M1_source_bank": "PARTIAL_ONE_VRM_SAMPLE",
+    "M3_decomposition_benchmark": "NOT_TESTED",
+    "M4_ABCD": "NOT_TESTED",
+    "GOLDEN_90": "BLOCKED_HUMAN_REVIEW",
+    "FULL_FRONT_SOURCE_PARITY": "NOT_TESTED"
+  }
+}
