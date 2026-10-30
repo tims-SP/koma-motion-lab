@@ -41,7 +41,7 @@ def main(inp,out):
     params=data.get("param",[])
     param=next(x for x in params if x.get("name")=="Head:: Yaw-Pitch")
     bindings=param["bindings"]
-    wanted={r["uuid"] for r in ear_records}
+    wanted={a["uuid"] for r in ear_records for a in r["ancestry"]}
     native_bindings=[]
     for i,bind in enumerate(bindings):
         nodeid=bind.get("node")
@@ -52,14 +52,15 @@ def main(inp,out):
       "real_INX_node_data":True,"source_parameters":len(params),"headYaw_name":param["name"],
       "headYaw_axis_points":param.get("axis_points"),"headYaw_keys":list(param),
       "headYaw_binding_count":len(bindings),"headYaw_binding_samples":[shape(x) for x in bindings[:5]],
-      "headYaw_exact_ear_binding_matches":len(native_bindings),
-      "headYaw_ear_bindings":native_bindings,"native_ears":ear_records,
+      "headYaw_target_chain_binding_count":len(native_bindings),
+      "headYaw_exact_ear_binding_matches":sum(b["binding"].get("node") in {r["uuid"] for r in ear_records} for b in native_bindings),
+      "headYaw_target_chain_bindings":native_bindings,"native_ears":ear_records,
       "node_samples":[{k:x[k] for k in ("name","uuid","node_type","transform")} for x in ordered[:10]],
       "all_parts_node_count":len(ordered),
       "validated_original_INX_pose_engine":"NO_PIXEL_PARITY_YET"}
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
-    compact={k:v for k,v in result.items() if k not in ("headYaw_ear_bindings","headYaw_binding_samples","node_samples")}
+    compact={k:v for k,v in result.items() if k not in ("headYaw_target_chain_bindings","headYaw_binding_samples","node_samples")}
     compact["headYaw_binding_samples"]=result["headYaw_binding_samples"][:2]
     print("CORE017_NATIVE_POSE_ANCESTRY",json.dumps(compact,ensure_ascii=False)[:28000])
 if __name__=="__main__":
