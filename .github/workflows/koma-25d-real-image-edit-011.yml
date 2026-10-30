@@ -84,4 +84,4 @@ jobs:
         run: |
           dir="experiments/koma-25d-core/out/core011/api_$VIEW_YAW"
           suffix=$(printf '%03d' "$VIEW_YAW")
-          gh release create "koma-25d-core011-gpt-$GITHUB_RUN_ID" "$dir/edit_request_manifest.json" "$dir/aka_yaw_$suffix_generated_candidate.png" --target "$GITHUB_SHA" --draft --title "CORE-011 Aka original-image edit $VIEW_YAW degrees UNVERIFIED" --notes "Original Aka seagetch CC BY 4.0. Generated candidate only, not original UV/rigger/animation. Manual identity and direct video QA PENDING."
+          gh release create "koma-25d-core011-gpt-$GITHUB_RUN_ID" "$dir/edit_request_manifest.json" "$dir/aka_yaw_${suffix}_generated_candidate.png" --target "$GITHUB_SHA" --draft --title "CORE-011 Aka original-image edit $VIEW_YAW degrees UNVERIFIED" --notes "Original Aka seagetch CC BY 4.0. Generated candidate only, not original UV/rigger/animation. Manual identity and direct video QA PENDING."
