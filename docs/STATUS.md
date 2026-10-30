@@ -2,7 +2,7 @@
 
 ## 目标与分工
 
-当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。目标为CORE-025：原生62部件的前视复原与±15°轻量曲面转头。详细步骤见[执行计划](plans/CORE-025-execution-plan.md)。
+当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。CORE-025复现与归档已完成，艺术门禁FAIL保留；下一轮CORE-026校准分部件深度、附着与遮挡。详细[CORE-026计划](plans/CORE-026-depth-and-occlusion-plan.md)与[首项M1工单](plans/CORE-026-M1-mcode-order.md)。当前为规划保存，M1–M5尚未执行。
 
 ## 已完成
 
@@ -38,3 +38,5 @@ M1检查点提交：`f44b669add0dd425b3848667fbfac71121f613a7`。对应Actions r
 ## 本轮结束时的恢复位置
 
 CORE-025执行链路已跑通并归档，不重跑A1、不重新生成源资产。详细[干净环境验收](research/CORE-025-M4-CI-acceptance.md)及[M3视觉失败与下一任务](research/CORE-025-M3-supervisor-acceptance.md)。后续重点为经过可靠斜面/原生形变对照的逐部件头型深度与遮挡校准；侧背、骨骼蒙皮、IK和360°仍未完成。
+
+2026-10-31：已保存CORE-026规划及明确M1工单。恢复后先审计原生raw yaw/pitch与62层对应，再真实捕获9个完整头部姿态；旧ear-only证据不能当全头参考。M1通过后才实施分部件接收曲面/局部合成、A两组深度与必要的B形变残差。当前实现/捕获均NOT_TESTED，不把计划当成完成。
