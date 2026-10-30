@@ -1,7 +1,7 @@
 # CORE-011 · GPT 90° profile / 180° rear creation and actual acceptance results
 
 **Round date:** 2026-10-30. **STATUS: ALL NEW GENERATED ART REJECTED.**
-**Output type produced:** 4 multi-panel 360° character-sheet **ILLUSTRATIONS**, not standalone source-paint or rig/mesh/UV/video files.
+**Output type produced:** 5 multi-panel 360° character-sheet **ILLUSTRATIONS**, not standalone source-paint or rig/mesh/UV/video files.
 
 ## Real inputs and observed generation attempts
 
@@ -9,7 +9,7 @@ Previous user-generated Aka-like reference images (both 1254×1254 RGB, not inde
 - \`金色狐耳少女肖像.png\`: SHA256 \`48647551a17ea5216d9af9703f01f37873c412fe9d9d331bb7210027022193a4\`
 - \`三分之四侧颜狐耳少女.png\`: SHA256 \`59ad8cfa30575a59b959339e9f38c5c112b0b9ef966b9fed9948a80abe73745a\`
 
-Four actual new image-generation outputs, **each 1536×1024 RGB**, not correct 90°/180° standalone outputs:
+Five actual new image-generation outputs, **each 1536×1024 RGB**, not correct 90°/180° standalone outputs:
 
 | Run | Local generated image | SHA256 | Artwork decision |
 |---|---|---|---|
@@ -18,7 +18,7 @@ Four actual new image-generation outputs, **each 1536×1024 RGB**, not correct 9
 | 3 | \`wide_clean_infographic_style_character_sheet_m.png\` | \`f8df114dfca5ed470de81aa5116c2387ef84b5436b96c5f28e6fc06add4f4bc0\` | REJECT |
 | 4 | \`a_clean_professionally_designed_character_referen.png\` | \`33c4004a987010fdac9d2fda59fc59ac227b11109c83d7a39e8b3d297055db42\` | REJECT |
 
-**Direct image review** of all four real files:
+**Direct image review** of all five real files:
 - Rather than one 90° side or one 180° rear on a clean canvas, the generator repeatedly returned eight-view **turnaround-infographic montages**.
 - The character drifted: original Aka-like input has simple short gold bob, tall amber ears, small red leaf at top bangs and black choker; generated panels invent **braided rear locks**, **large ribbon/tassels**, costume redesign and bell collar. These are NOT authenticated side/back depictions of source Aka.
 - Some 90° panels point the nose to IMAGE LEFT despite asking for nose toward IMAGE RIGHT.
@@ -28,9 +28,9 @@ Four actual new image-generation outputs, **each 1536×1024 RGB**, not correct 9
 
 ## Actual production artifacts created and inspected locally
 
-- \`core011/audit_generated_views11.py\` processes all four actual 1536×1024 generated binaries; records image hashes, text/visual rejection decisions, clips 90°/180° evidence and makes reference contact image.
+- \`core011/audit_generated_views11.py\` processes all five actual 1536×1024 generated binaries; records image hashes, text/visual rejection decisions, clips 90°/180° evidence and makes reference contact image.
 - \`core011/identity_contact_4runs.jpg\`: visual comparison of real user-provided front / three-quarter GPT portraits vs the actual four generations' extracted side/back panels. **Visual inspection completed.**
-- \`core011/identity_qc.json\`: four generated attempts all \`REJECTED_NOT_INGESTIBLE\`. Eight crop evidence images saved, explicitly not accepted artwork.
+- \`core011/identity_qc.json\`: five generated attempts all \`REJECTED_NOT_INGESTIBLE\`. Ten crop evidence images saved, explicitly not accepted artwork.
 - \`core011/single_view_asset_gate11.py\`: reusable local precheck. Whole 1536×1024 sheet rejected for wrong aspect ratio; 192×325 crop rejected for missing resolution. A plausible 1024×1024 single-view image would be only \`PENDING_VISUAL_IDENTITY_REVIEW\` and not automatically accepted.
 - \`CORE011_rejected_imagegen_QA_bundle.zip\`: actual generated binary sheets and diagnostics, **delivered in conversation runtime**. No binaries committed to Git or added to private Releases. A zip of rejected output is **not** a skin library.
 
