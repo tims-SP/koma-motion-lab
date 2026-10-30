@@ -12,15 +12,15 @@
 
 1. `python prepare_core025.py`（M1）
 2. `node capture_core025.mjs --anchors`
-3. `python qa_core025.py`（M2）
+3. `python verify_core025_supervisor.py`（M2，独立监工验收脚本）
 4. `node capture_core025_video.mjs`
-5. `python qa_core025_video.py`（M3，包含编码/解码/视频QA）
+5. `python verify_core025_video.py`（M3，监工脚本包含编码/解码/视频QA）
 
 若某阶段只有结构通过、视觉失败，CI只验证数值/结构，不得把这种状态改成视觉通过；发布说明应准确反映监工报告。只允许阶段任务规定的原型验收，生产门禁保持NOT_ACCEPTED。
 
 ## 步骤2：Artifacts仅放文本
 
-保留现有公共安全的JSON，并加入：out/core025/assembly/qa.json、out/core025/render/qa.json、out/core025/render/manifest.json、out/core025/turntable/video-manifest.json、out/core025/turntable/video-qa.json。若已验收实现采用不同的文件名，先读取真实脚本并使用实际文件名，不创建伪造的同名PASS文件。禁止PNG/视频/纹理二进制进入公共Artifacts。
+保留现有公共安全的JSON，并加入：out/core025/assembly/qa.json、out/core025/render/supervisor-qa.json、out/core025/render/manifest.json、out/core025/turntable/video-manifest.json、out/core025/turntable/video-qa.json。禁止PNG/视频/纹理二进制进入公共Artifacts。
 
 ## 步骤3：媒体只进Draft Release
 
@@ -28,11 +28,13 @@
 
 release说明必须包含：Aka/seagetch/CC-BY-4.0；62原生部件；默认姿态multiply→normal烘焙局限；推断的开放式浅曲面±15°原型；本地AI候选C不在CI包中；原始Inochi运行时全前视、骨骼蒙皮/IK、真实侧背与360°未验收。不得使用“所有素材已齐”或“生产可用”。
 
+当前M3监工目视结论明确为**艺术级转头FAIL**（主要像浅表面摆动，面部轮廓视角变化不足）；release/README必须保留此结论。数值链路PASS不等于艺术通过。实际QA由Codex监工独立编写，mcode负责场景与捕获，不能误写所有代码均由mcode完成。
+
 ## 步骤4：更新恢复文档
 
 根README顶部新增当前CORE-025检查点，链接docs/STATUS.md、M1/M2/M3监工报告（只链接实际存在文件）。原CORE-022当前标题改为历史基线，保留原始run/release链接。CI新run链接在监工验证后补齐，现在只能写PENDING。
 
-reference-factory/README追加完整恢复命令：已有requirements/npm锁安装→prepare.py→native_layers.py→prepare_core025.py→node capture_core025.mjs --anchors→python qa_core025.py→node capture_core025_video.mjs→python qa_core025_video.py。说明本地模型/生图配额不影响此确定性源码复现；新视角资产仍未齐。
+reference-factory/README追加完整恢复命令：已有requirements/npm锁安装→prepare.py→native_layers.py→prepare_core025.py→node capture_core025.mjs --anchors→python verify_core025_supervisor.py→node capture_core025_video.mjs→python verify_core025_video.py。说明场景与捕获由mcode实现，独立数值验收由Codex监工编写并运行；本地模型/生图配额不影响此确定性源码复现；新视角资产仍未齐。
 
 ## 步骤5：本地静态核对
 

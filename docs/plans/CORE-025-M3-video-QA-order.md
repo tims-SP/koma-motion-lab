@@ -1,5 +1,7 @@
 # M3视频QA：只创建qa_core025_video.py
 
+**所有权及执行入口已更新**：由Codex监工独立编写并运行 `verify_core025_video.py`，避免让渲染实现自行决定通过。本文件的数字门槛/编码/解码/裁剪要求保持不变，旧qa_core025_video.py文件名不再作为实际入口。
+
 新建独立QA以保持M2文件不变。本工单替代原M3修改旧QA的部分。只创建experiments/reference-factory/qa_core025_video.py，建议≤230行；输出out/core025/turntable/。使用已安装Python/NumPy/Pillow/ffmpeg/ffprobe，无安装/联网/后台/委派/git提交；不得修改旧文件或降低门槛。
 
 1. 读取M3录像工单的实际video-manifest.json schema；验证5项输入SHA与当前文件一致、97帧index连续0..96、文件SHA/640尺寸相符、yaw按正弦计划（零值归零）一致。

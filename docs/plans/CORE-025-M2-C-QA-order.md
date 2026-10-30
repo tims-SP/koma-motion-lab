@@ -1,5 +1,7 @@
 # M2-C：只实现并运行qa_core025.py
 
+**当前验收入口已改为监工独立实现** `verify_core025_supervisor.py`，真实17图已运行PASS。mcode的C编写尝试超时、无可验收文件；不再等待其自动评分脚本。保留本文件作为原始门槛记录，实际恢复命令以docs/STATUS.md为准。场景/捕获仍由mcode实现。
+
 依赖真实17张anchors截图/manifest/geometry.json已由B产生。只新建experiments/reference-factory/qa_core025.py，建议≤250行；输出out/core025/render/qa.json和review-sheet.png。仅用既有Python/NumPy/Pillow，不安装、不联网、不委派、不后台、不改阈值、原图、场景或M1、不git提交。
 
 独立从磁盘读取实际JSON/PNG；不要import场景实现或用配置值代替实测。读取split-order规定的固定schema，按capture.params选择截图；源像素参考取assembly.comparisons[version].cpu_composite.file。ROOT=自己的文件所在reference-factory目录。

@@ -12,11 +12,10 @@
 ## 当前任务
 
 - CORE-025-M1：PASS（默认姿态组装与指定9层阴影裁剪，限原型）。[监工验收](research/CORE-025-M1-supervisor-acceptance.md)：source白底MAE0.125177/255、黑底0.144745/255，独立Pillow复合最大差1色阶；49测试及真实准备均exit0。保留颈部源图软边和微小游离片段为待修整项。
-- CORE-025-M2：IN_PROGRESS（补齐C自动QA）。授权已恢复，A1静态合同、A2场景及B真实捕获均已完成。监工已独立验收实际GPU和几何；C可重复执行的自动QA程序正在补齐。
-- M2按[拆分工单](plans/CORE-025-M2-split-orders.md)执行：[A1固定配置与HTML](plans/CORE-025-M2-A1-setup-order.md)已完成→[A2场景](plans/CORE-025-M2-A2-renderer-order.md)已完成→[B捕获](plans/CORE-025-M2-B-capture-order.md)实际17图/geometry/manifest已完成；[C独立QA](plans/CORE-025-M2-C-QA-order.md)程序编写中。尚无连续视频。
-- M2-A2/B实际执行：17张真实GPU捕获已生成；监工独立检查0°四种MAE<0.05/255、62个非平面几何、UV/公式/矩阵/哈希均PASS。[监工报告](research/CORE-025-M2-supervisor-acceptance.md)。艺术级转头仍NOT_ACCEPTED，C自动QA程序补齐中。
-- CORE-025-M3：独立[录像工单](plans/CORE-025-M3-video-capture-order.md)与[视频QA工单](plans/CORE-025-M3-video-QA-order.md)待执行，目标97帧/24fps；不改M2已验收文件。
-- CORE-025-M4：TODO，Actions复现与Draft Release归档。
+- CORE-025-M2：数值/映射原型PASS。A1配置、A2场景、B真实17图均完成；实际C入口为监工独立编写的verify_core025_supervisor.py，真实运行PASS。mcode的旧C编写尝试未产出可验收文件，不计为完成。
+- M2实际0°四种MAE<0.05/255，62个非平面几何、UV/公式/矩阵/哈希均PASS。[监工报告](research/CORE-025-M2-supervisor-acceptance.md)。艺术级转头仍NOT_ACCEPTED。
+- CORE-025-M3：97帧/24fps/4.041667秒H.264已真实生成并解码抽检，数值链路PASS；**艺术级转头FAIL**，主要仍像浅表面摆动。[目视与数值报告](research/CORE-025-M3-supervisor-acceptance.md)。实际入口为capture_core025_video.mjs与监工verify_core025_video.py。
+- CORE-025-M4：IN_PROGRESS，接入干净Actions复现与Draft Release归档；未观察新CI前不得标PASS。
 
 ## 干净环境恢复
 
@@ -30,7 +29,7 @@ python prepare.py
 python native_layers.py
 ```
 
-然后运行 `python prepare_core025.py` 重建M1。M2实现完成前不声称有转头视频。本地已有源码缓存时不重新下载模型或请求生图。所有媒体在out/和Draft Release，git只存文本。
+然后运行 `python prepare_core025.py` 重建M1，再依次执行 `node capture_core025.mjs --anchors`、`python verify_core025_supervisor.py`、`node capture_core025_video.mjs`、`python verify_core025_video.py`。本地已有源码缓存时不重新下载模型或请求生图。所有媒体在out/和Draft Release，git只存文本。
 
 M1检查点提交：`f44b669add0dd425b3848667fbfac71121f613a7`。对应Actions run 41048675339已通过49个回归测试及既有结构工厂；完整M1/M2/M3干净环境流水线接入仍属于M4，不能把旧工厂归档当成CORE025转头成品。
 

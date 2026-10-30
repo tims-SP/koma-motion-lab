@@ -1,0 +1,29 @@
+{
+  "visual_gate": "FAIL",
+  "mapping_stability_prototype": "PASS",
+  "production_gate": "NOT_ACCEPTED",
+  "reviewed_decoded_source_frames": [
+    0,
+    8,
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80,
+    88,
+    96
+  ],
+  "black_checks_reviewed": [
+    "black-plus15.png"
+  ],
+  "observations": [
+    "face remains too frontal; motion reads as shallow-surface sway",
+    "no observed major eye/ear detachment in sampled frames",
+    "source neck fringe and small alpha island remain"
+  ],
+  "next": "calibrate per-part depth and occlusion against accepted angled references or native HeadYaw evidence"
+}

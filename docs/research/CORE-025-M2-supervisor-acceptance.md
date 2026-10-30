@@ -1,6 +1,6 @@
 # M2曲面与前视复原：监工检查点
 
-mcode编写A2场景和B捕获程序，Codex独立运行Chromium并检查实际PNG/几何/矩阵。日期2026-10-30。结论：**前视复原、真实曲面与±15°几何原型数值门禁PASS；艺术级转头、生产绑定NOT_ACCEPTED**。C自动QA程序尚在补齐；本报告不是C程序完成声明。
+mcode编写A2场景和B捕获程序，Codex独立运行Chromium并检查实际PNG/几何/矩阵。日期2026-10-30。结论：**前视复原、真实曲面与±15°几何原型数值门禁PASS；艺术级转头、生产绑定NOT_ACCEPTED**。C验收已由监工整理成独立verify_core025_supervisor.py并实际运行PASS；不把mcode未完成的C编写尝试记成通过。
 
 ## 实际执行与独立测量
 
