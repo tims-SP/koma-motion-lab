@@ -1,0 +1,29 @@
+name: CORE-014 · evidence gating for partwise multi-view diagnosis
+
+on:
+  push:
+    branches: [feature/koma-25d-core-014]
+    paths:
+      - '.github/workflows/koma-25d-core-014.yml'
+      - 'experiments/koma-25d-core/config/core014-result-and-bridge-gates.json'
+      - 'experiments/koma-25d-core/tools/verify_core014_gates.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa-evidence-fail-closed:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate truthful source/native-mesh and actual local-video metadata ONLY
+        run: |
+          python3 experiments/koma-25d-core/tools/verify_core014_gates.py \
+            --manifest experiments/koma-25d-core/config/core014-result-and-bridge-gates.json
+      - name: Do NOT confuse policy test with actual final MP4 art review
+        run: |
+          echo "CORE014_CI_PASS_METADATA_ONLY"
+          echo "USER_ART_AND_REAL_VIDEO_EXIST_IN_CONVERSATION_SANDBOX_NOT_IN_THIS_RUN"
+          echo "INX_UV_NEW_VIEW_UNREGISTERED; 45/135 ART MISSING; VISUAL_QA_FAIL"

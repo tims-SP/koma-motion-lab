@@ -1,0 +1,98 @@
+{
+  "schema": "koma-core014-partwise-qa/1",
+  "stage": "EXECUTED_LOCALLY_WITH_ACTUAL_USER_IMAGES",
+  "input": {
+    "original_front": {
+      "sha256": "edb4c6d78874c95cca8e6d0b8398be457b40ddcb7fb93bd5d5087e3b02f1b21d",
+      "art": "original Aka PSD-derived, user provided"
+    },
+    "nominal_right_profile": {
+      "sha256": "330a90c6819f6e74bcb5af33f9cca27441f9dedefae97d7371c4f5c6c7d25c81",
+      "art": "GPT generated, uncalibrated"
+    },
+    "rear": {
+      "sha256": "127430a3e41ae0f8376b62428830c73ecdcd1d03348473c3e6391a8c57e04a1d",
+      "art": "GPT generated with local repair, uncalibrated"
+    }
+  },
+  "result": {
+    "fps": 24,
+    "frames": 97,
+    "dimensions": [
+      1080,
+      588
+    ],
+    "video_sha256": "216ed56b513ca016e290c67e64e2d96b00dbd5d7413a1c8e0eb8145e548c363f",
+    "final_mp4_decoded_frames": [
+      0,
+      12,
+      24,
+      36,
+      48,
+      60,
+      72,
+      84,
+      96
+    ],
+    "patch_mode": "manual visible 2D masks + TPS / view-conditioned occlusion and far-eye suppression",
+    "control": "whole-image crossfade",
+    "angle_45": "FAILED_DUAL_EYE_AND_HAIR_SEAMS_UNREGISTERED",
+    "angle_135": "FAILED_PALE_FACE_UNDERPAINTING_AND_HAIR_OCCLUSION",
+    "native_inx_artmesh_uv_reused": false,
+    "native_inx_animation_replayed": false,
+    "shallow_z_surface": false,
+    "acquired_true_new_45_art": false,
+    "acquired_true_new_135_art": false,
+    "anime_visual_quality": "FAIL"
+  },
+  "source_native_model": {
+    "artist": "seagetch",
+    "license": "CC BY 4.0",
+    "verified_source_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+    "mesh_count": 76,
+    "total_vertices": 3427,
+    "total_triangles": 5353,
+    "source_uv_original_untouched": true,
+    "registered_to_generated_45_or_135": false
+  },
+  "next_required_parts": [
+    {
+      "yaw": 45,
+      "node_group": "Eye:: Left / Eye:: Right",
+      "need": "near eye contour and far-eye inpainting; separate eyelid/eyeball/white/pupil/shadow"
+    },
+    {
+      "yaw": 45,
+      "node_group": "Face / Nose / Mouth Inner",
+      "need": "valid side cheek/jaw hidden underpaint and nose/mouth alignment"
+    },
+    {
+      "yaw": 45,
+      "node_group": "Front Hair:: Center and Front Hair:: Left/Right",
+      "need": "accurate bang/forehead boundaries and independent occlusion"
+    },
+    {
+      "yaw": 135,
+      "node_group": "Back Side:: Hair and Back Side:: Hair:: Left/Right",
+      "need": "rear/side hair overlap, exposed strands and underpaint"
+    },
+    {
+      "yaw": 135,
+      "node_group": "Ear:: Left / Ear:: Right",
+      "need": "rear-ear root silhouette and front/rear fur visibility"
+    },
+    {
+      "yaw": 135,
+      "node_group": "Face",
+      "need": "natural loss of facial visibility behind skull, no pale paint smear"
+    }
+  ],
+  "acceptance_policy": [
+    "Direct inspect final decoded MP4; no ghosts at 45/135",
+    "Original 0deg source UV untouched",
+    "Do not claim source INX/3D from 2D warp",
+    "New 45/135 art only counted if actually generated and accepted",
+    "No binary previews in Git; code/metadata only"
+  ],
+  "provenance": "Local MP4 + full reproduction code in conversation ZIP, NOT Github Actions/Release, NOT production-ready."
+}
