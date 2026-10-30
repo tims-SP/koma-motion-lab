@@ -1,0 +1,709 @@
+{
+  "schema": "core009-visible-gpt-to-native-aka-part-candidates/1",
+  "source_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+  "source_native_inventory": {
+    "mesh_count": 76,
+    "texture_count": 76,
+    "total_vertices": 3427,
+    "total_triangles": 5353
+  },
+  "all_original_part_names": [
+    "Skirt",
+    "Skirt:: Frill",
+    "Skirt:: Frill:: Shadow",
+    "Tail",
+    "Ribbon",
+    "Body",
+    "Arm:: Left",
+    "Hand:: Left",
+    "Arm:: Right",
+    "Hand:: Right",
+    "Neck",
+    "Neck:: Shadow",
+    "Face",
+    "Front Hair:: Right1:: Shadow",
+    "Front Hair:: Left1:: Shadow",
+    "Front Hair:: Right2:: Shadow",
+    "Front Hair:: Left2:: Shadow",
+    "Side Hair:: Left:: Shadow",
+    "Side Hair:: Right:: Shadow",
+    "Front Hair:: Center:: Shadow",
+    "Eye:: Right:: Eyelid",
+    "Eye:: Right:: Eyelash1",
+    "Eye:: Right:: Eyelid2:: Shadow",
+    "Eye:: Right:: Shadow:: Upper",
+    "Eye:: Right:: Shadow:: Lower",
+    "Eye:: Right:: Eyelid2",
+    "Eye:: Right:: Eyelash2",
+    "Eye:: Right:: Eyelid:: Side",
+    "Eye:: Right:: White",
+    "Eye:: Right:: Eyeball",
+    "Eye:: Right:: Light",
+    "Eye:: Left:: Eyelid",
+    "Eye:: Left:: White",
+    "Eye:: Left:: Eyeball",
+    "Eye:: Left:: Light",
+    "Eye:: Left:: Eyelid2",
+    "Eye:: Left:: Eyelash1",
+    "Eye:: Left:: Eyelid Side",
+    "Eye:: Left:: Eyelash2",
+    "Eye:: Left:: Shadow:: Upper",
+    "Eye:: Left:: Eyelid2:: Shadow",
+    "Eye:: Left:: Shadow:: Lower",
+    "Lip",
+    "Mouth Inner",
+    "Nose",
+    "Back Side:: Hair",
+    "Back Side:: Hair:: Right2",
+    "Back Side:: Hair:: Left2",
+    "Back Side:: Hair:: Left1",
+    "Back Side:: Hair:: Right1",
+    "Back Side:: Hair:: Shadow",
+    "Ear:: Left",
+    "Ear:: Right",
+    "Back Side:: Hair:: Left3",
+    "Back Side:: Hair:: Right3",
+    "Side Hair:: Right",
+    "Side Hair:: Right:: Light",
+    "Front Hair:: Right2",
+    "Front Hair:: Right2:: Light",
+    "Front Hair:: Left2",
+    "Front Hair:: Left2:: Light",
+    "Front Hair:: Right1",
+    "Front Hair:: Right1:: Light",
+    "Front Hair:: Left1",
+    "Front Hair:: Left1:: Ligth",
+    "Front Hair:: Center",
+    "Front Hair:: Center:: Light",
+    "Eyebrow:: Right",
+    "Eyebrow:: Left",
+    "Leaf",
+    "Side Hair:: Left",
+    "Side Hair:: Left:: Light",
+    "Leg:: Left",
+    "Leg:: Left:: Shadow",
+    "Leg:: Right",
+    "Leg:: Right:: Shadow"
+  ],
+  "status": "NAME_MATCHED_ONLY",
+  "original_uv_unchanged": true,
+  "registered_generated_view_uv": false,
+  "warnings": [
+    "Left/right side labels in generated images are IMAGE-SPACE, native node Left/Right can be ANATOMICAL. Mapping unverified.",
+    "Eye and hair art use many independent mesh layers and materials; generated visible regions are not 1:1 source INX layers.",
+    "Source UVs may range outside [0,1] and must not be clamped.",
+    "No hidden region reconstruction, no native deformation replay with new generated art."
+  ],
+  "parts": [
+    {
+      "generated_visible_part": "ear_image_left",
+      "native_candidates": [
+        {
+          "name": "Ear:: Left",
+          "uuid": 3424078890,
+          "texture_id": 51,
+          "vertex_count": 57,
+          "triangle_count": 89
+        },
+        {
+          "name": "Ear:: Right",
+          "uuid": 3453251657,
+          "texture_id": 52,
+          "vertex_count": 59,
+          "triangle_count": 93
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "ear_image_right",
+      "native_candidates": [
+        {
+          "name": "Ear:: Left",
+          "uuid": 3424078890,
+          "texture_id": 51,
+          "vertex_count": 57,
+          "triangle_count": 89
+        },
+        {
+          "name": "Ear:: Right",
+          "uuid": 3453251657,
+          "texture_id": 52,
+          "vertex_count": 59,
+          "triangle_count": 93
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "back_hair",
+      "native_candidates": [
+        {
+          "name": "Back Side:: Hair",
+          "uuid": 2432586950,
+          "texture_id": 45,
+          "vertex_count": 172,
+          "triangle_count": 326
+        },
+        {
+          "name": "Back Side:: Hair:: Right2",
+          "uuid": 3755828177,
+          "texture_id": 46,
+          "vertex_count": 97,
+          "triangle_count": 161
+        },
+        {
+          "name": "Back Side:: Hair:: Left2",
+          "uuid": 233054616,
+          "texture_id": 47,
+          "vertex_count": 122,
+          "triangle_count": 206
+        },
+        {
+          "name": "Back Side:: Hair:: Left1",
+          "uuid": 1096045651,
+          "texture_id": 48,
+          "vertex_count": 95,
+          "triangle_count": 153
+        },
+        {
+          "name": "Back Side:: Hair:: Right1",
+          "uuid": 1625707572,
+          "texture_id": 49,
+          "vertex_count": 110,
+          "triangle_count": 175
+        },
+        {
+          "name": "Back Side:: Hair:: Shadow",
+          "uuid": 2937754650,
+          "texture_id": 50,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Back Side:: Hair:: Left3",
+          "uuid": 4217689816,
+          "texture_id": 53,
+          "vertex_count": 80,
+          "triangle_count": 122
+        },
+        {
+          "name": "Back Side:: Hair:: Right3",
+          "uuid": 4212602175,
+          "texture_id": 54,
+          "vertex_count": 80,
+          "triangle_count": 122
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "front_hair",
+      "native_candidates": [
+        {
+          "name": "Front Hair:: Right1:: Shadow",
+          "uuid": 3993230283,
+          "texture_id": 13,
+          "vertex_count": 57,
+          "triangle_count": 95
+        },
+        {
+          "name": "Front Hair:: Left1:: Shadow",
+          "uuid": 3543760606,
+          "texture_id": 14,
+          "vertex_count": 55,
+          "triangle_count": 89
+        },
+        {
+          "name": "Front Hair:: Right2:: Shadow",
+          "uuid": 2447618885,
+          "texture_id": 15,
+          "vertex_count": 31,
+          "triangle_count": 41
+        },
+        {
+          "name": "Front Hair:: Left2:: Shadow",
+          "uuid": 3855234658,
+          "texture_id": 16,
+          "vertex_count": 24,
+          "triangle_count": 31
+        },
+        {
+          "name": "Front Hair:: Center:: Shadow",
+          "uuid": 2385763375,
+          "texture_id": 19,
+          "vertex_count": 200,
+          "triangle_count": 374
+        },
+        {
+          "name": "Front Hair:: Right2",
+          "uuid": 1357173599,
+          "texture_id": 57,
+          "vertex_count": 22,
+          "triangle_count": 26
+        },
+        {
+          "name": "Front Hair:: Right2:: Light",
+          "uuid": 965831079,
+          "texture_id": 58,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Front Hair:: Left2",
+          "uuid": 1552110117,
+          "texture_id": 59,
+          "vertex_count": 25,
+          "triangle_count": 30
+        },
+        {
+          "name": "Front Hair:: Left2:: Light",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        },
+        {
+          "name": "Front Hair:: Right1",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        },
+        {
+          "name": "Front Hair:: Right1:: Light",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        },
+        {
+          "name": "Front Hair:: Left1",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        },
+        {
+          "name": "Front Hair:: Left1:: Ligth",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        },
+        {
+          "name": "Front Hair:: Center",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        },
+        {
+          "name": "Front Hair:: Center:: Light",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "side_hair_image_left",
+      "native_candidates": [
+        {
+          "name": "Side Hair:: Right",
+          "uuid": 980585604,
+          "texture_id": 55,
+          "vertex_count": 87,
+          "triangle_count": 132
+        },
+        {
+          "name": "Side Hair:: Left",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "side_hair_image_right",
+      "native_candidates": [
+        {
+          "name": "Side Hair:: Right",
+          "uuid": 980585604,
+          "texture_id": 55,
+          "vertex_count": 87,
+          "triangle_count": 132
+        },
+        {
+          "name": "Side Hair:: Left",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "face",
+      "native_candidates": [
+        {
+          "name": "Face",
+          "uuid": 3736853925,
+          "texture_id": 12,
+          "vertex_count": 135,
+          "triangle_count": 242
+        },
+        {
+          "name": "Lip",
+          "uuid": 1354775001,
+          "texture_id": 42,
+          "vertex_count": 91,
+          "triangle_count": 156
+        },
+        {
+          "name": "Mouth Inner",
+          "uuid": 3225607481,
+          "texture_id": 43,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Nose",
+          "uuid": 2330281570,
+          "texture_id": 44,
+          "vertex_count": 13,
+          "triangle_count": 14
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "eye_image_left",
+      "native_candidates": [
+        {
+          "name": "Eye:: Right:: Eyelid",
+          "uuid": 4267081328,
+          "texture_id": 20,
+          "vertex_count": 46,
+          "triangle_count": 58
+        },
+        {
+          "name": "Eye:: Right:: Eyelash1",
+          "uuid": 870544350,
+          "texture_id": 21,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Eyelid2:: Shadow",
+          "uuid": 3053982931,
+          "texture_id": 22,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Shadow:: Upper",
+          "uuid": 3967436499,
+          "texture_id": 23,
+          "vertex_count": 25,
+          "triangle_count": 30
+        },
+        {
+          "name": "Eye:: Right:: Shadow:: Lower",
+          "uuid": 5525880,
+          "texture_id": 24,
+          "vertex_count": 17,
+          "triangle_count": 20
+        },
+        {
+          "name": "Eye:: Right:: Eyelid2",
+          "uuid": 3023088905,
+          "texture_id": 25,
+          "vertex_count": 16,
+          "triangle_count": 18
+        },
+        {
+          "name": "Eye:: Right:: Eyelash2",
+          "uuid": 2415847828,
+          "texture_id": 26,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Eyelid:: Side",
+          "uuid": 3950626023,
+          "texture_id": 27,
+          "vertex_count": 19,
+          "triangle_count": 22
+        },
+        {
+          "name": "Eye:: Right:: White",
+          "uuid": 2563763966,
+          "texture_id": 28,
+          "vertex_count": 19,
+          "triangle_count": 22
+        },
+        {
+          "name": "Eye:: Right:: Eyeball",
+          "uuid": 509331051,
+          "texture_id": 29,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Light",
+          "uuid": 322026080,
+          "texture_id": 30,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Eyelid",
+          "uuid": 2835231730,
+          "texture_id": 31,
+          "vertex_count": 28,
+          "triangle_count": 34
+        },
+        {
+          "name": "Eye:: Left:: White",
+          "uuid": 2683271183,
+          "texture_id": 32,
+          "vertex_count": 16,
+          "triangle_count": 18
+        },
+        {
+          "name": "Eye:: Left:: Eyeball",
+          "uuid": 2464897030,
+          "texture_id": 33,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Light",
+          "uuid": 2794830548,
+          "texture_id": 34,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Eyelid2",
+          "uuid": 163348813,
+          "texture_id": 35,
+          "vertex_count": 13,
+          "triangle_count": 14
+        },
+        {
+          "name": "Eye:: Left:: Eyelash1",
+          "uuid": 8251770,
+          "texture_id": 36,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Eyelid Side",
+          "uuid": 1838220672,
+          "texture_id": 37,
+          "vertex_count": 13,
+          "triangle_count": 14
+        },
+        {
+          "name": "Eye:: Left:: Eyelash2",
+          "uuid": 519787041,
+          "texture_id": 38,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Shadow:: Upper",
+          "uuid": 2433360548,
+          "texture_id": 39,
+          "vertex_count": 22,
+          "triangle_count": 26
+        },
+        {
+          "name": "Eye:: Left:: Eyelid2:: Shadow",
+          "uuid": 479575860,
+          "texture_id": 40,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Shadow:: Lower",
+          "uuid": 2610042602,
+          "texture_id": 41,
+          "vertex_count": 16,
+          "triangle_count": 18
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "eye_image_right",
+      "native_candidates": [
+        {
+          "name": "Eye:: Right:: Eyelid",
+          "uuid": 4267081328,
+          "texture_id": 20,
+          "vertex_count": 46,
+          "triangle_count": 58
+        },
+        {
+          "name": "Eye:: Right:: Eyelash1",
+          "uuid": 870544350,
+          "texture_id": 21,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Eyelid2:: Shadow",
+          "uuid": 3053982931,
+          "texture_id": 22,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Shadow:: Upper",
+          "uuid": 3967436499,
+          "texture_id": 23,
+          "vertex_count": 25,
+          "triangle_count": 30
+        },
+        {
+          "name": "Eye:: Right:: Shadow:: Lower",
+          "uuid": 5525880,
+          "texture_id": 24,
+          "vertex_count": 17,
+          "triangle_count": 20
+        },
+        {
+          "name": "Eye:: Right:: Eyelid2",
+          "uuid": 3023088905,
+          "texture_id": 25,
+          "vertex_count": 16,
+          "triangle_count": 18
+        },
+        {
+          "name": "Eye:: Right:: Eyelash2",
+          "uuid": 2415847828,
+          "texture_id": 26,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Eyelid:: Side",
+          "uuid": 3950626023,
+          "texture_id": 27,
+          "vertex_count": 19,
+          "triangle_count": 22
+        },
+        {
+          "name": "Eye:: Right:: White",
+          "uuid": 2563763966,
+          "texture_id": 28,
+          "vertex_count": 19,
+          "triangle_count": 22
+        },
+        {
+          "name": "Eye:: Right:: Eyeball",
+          "uuid": 509331051,
+          "texture_id": 29,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Right:: Light",
+          "uuid": 322026080,
+          "texture_id": 30,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Eyelid",
+          "uuid": 2835231730,
+          "texture_id": 31,
+          "vertex_count": 28,
+          "triangle_count": 34
+        },
+        {
+          "name": "Eye:: Left:: White",
+          "uuid": 2683271183,
+          "texture_id": 32,
+          "vertex_count": 16,
+          "triangle_count": 18
+        },
+        {
+          "name": "Eye:: Left:: Eyeball",
+          "uuid": 2464897030,
+          "texture_id": 33,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Light",
+          "uuid": 2794830548,
+          "texture_id": 34,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Eyelid2",
+          "uuid": 163348813,
+          "texture_id": 35,
+          "vertex_count": 13,
+          "triangle_count": 14
+        },
+        {
+          "name": "Eye:: Left:: Eyelash1",
+          "uuid": 8251770,
+          "texture_id": 36,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Eyelid Side",
+          "uuid": 1838220672,
+          "texture_id": 37,
+          "vertex_count": 13,
+          "triangle_count": 14
+        },
+        {
+          "name": "Eye:: Left:: Eyelash2",
+          "uuid": 519787041,
+          "texture_id": 38,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Shadow:: Upper",
+          "uuid": 2433360548,
+          "texture_id": 39,
+          "vertex_count": 22,
+          "triangle_count": 26
+        },
+        {
+          "name": "Eye:: Left:: Eyelid2:: Shadow",
+          "uuid": 479575860,
+          "texture_id": 40,
+          "vertex_count": 4,
+          "triangle_count": 2
+        },
+        {
+          "name": "Eye:: Left:: Shadow:: Lower",
+          "uuid": 2610042602,
+          "texture_id": 41,
+          "vertex_count": 16,
+          "triangle_count": 18
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "neck",
+      "native_candidates": [
+        {
+          "name": "Neck",
+          "uuid": 2611544751,
+          "texture_id": 10,
+          "vertex_count": 38,
+          "triangle_count": 54
+        },
+        {
+          "name": "Neck:: Shadow",
+          "uuid": 118677514,
+          "texture_id": 11,
+          "vertex_count": 4,
+          "triangle_count": 2
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    },
+    {
+      "generated_visible_part": "leaf_ornament",
+      "native_candidates": [
+        {
+          "name": "Leaf",
+          "original_source_uuid": "SEE_FULL_NATIVE_UV_EXPORT"
+        }
+      ],
+      "status": "CANDIDATE_NODE_NAMES_NOT_SAME_ARTMESH_REGISTRATION"
+    }
+  ]
+}
