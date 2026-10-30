@@ -1,0 +1,61 @@
+name: CORE-009 · export genuine Aka source ArtMesh/UV mapping
+
+on:
+  push:
+    branches: [feature/koma-25d-core-009]
+    paths:
+      - '.github/workflows/koma-25d-core-009.yml'
+      - 'experiments/koma-25d-core/tools/export_native_uv9.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export-original-source-uv:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install only texture parser
+        run: |
+          python3 -m venv "$RUNNER_TEMP/core009"
+          "$RUNNER_TEMP/core009/bin/pip" install "Pillow==12.0.0"
+          echo "$RUNNER_TEMP/core009/bin" >> "$GITHUB_PATH"
+      - name: Obtain pinned complete original Aka.inx
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/koma-25d-core/out/core009
+          curl -fL --retry 3 --max-time 180 \
+            https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx \
+            -o "$RUNNER_TEMP/Aka.inx"
+          printf '%s  %s\n' \
+            dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f \
+            "$RUNNER_TEMP/Aka.inx" | sha256sum -c
+      - name: Export unmodified real node mesh UV triangles and original atlas dimensions
+        run: |
+          python experiments/koma-25d-core/tools/export_native_uv9.py \
+            --input "$RUNNER_TEMP/Aka.inx" \
+            --out experiments/koma-25d-core/out/core009/source_mesh_original.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("experiments/koma-25d-core/out/core009/source_mesh_original.json")
+          o=json.loads(p.read_text())
+          assert o["mesh_count"]>=35
+          assert o["total_vertices"]>150
+          assert o["gpt_newview_uv"]=="NOT_REGISTERED"
+          assert all(x["mesh"]["uvs"] and x["mesh"]["indices"] for x in o["parts"])
+          print("CORE009_ORIGINAL_UV_INTACT",o["mesh_count"],o["total_vertices"],o["total_triangles"])
+          PY
+      - name: Publish text-only source mesh provenance, no original INX redistributable binary
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          out=experiments/koma-25d-core/out/core009
+          gh release create "koma-25d-core009-nativeuv-$GITHUB_RUN_ID" \
+            "$out/source_mesh_original.json" \
+            "$out/source_mesh_summary.json" \
+            --target "$GITHUB_SHA" --draft \
+            --title "CORE-009 original Aka INX ArtMesh/UV inspection data" \
+            --notes "Source Aka by seagetch CC BY 4.0, pinned genuine full Aka INX SHA256. Original INX binary not redistributed. This export has source native vertices/UV/triangles and node identifiers, but DOES NOT assert GPT generated views are rigged, skinned, aligned, or 3D."
