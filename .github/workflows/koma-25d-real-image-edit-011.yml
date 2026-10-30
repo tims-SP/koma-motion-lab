@@ -1,0 +1,87 @@
+name: CORE-011 B · true original Aka explicit GPT image edit
+on:
+  push:
+    branches: [feature/koma-25d-core-011]
+    paths:
+      - '.github/workflows/koma-25d-real-image-edit-011.yml'
+      - 'experiments/koma-25d-core/tools/edit_real_aka11.py'
+  workflow_dispatch:
+    inputs:
+      paid_image_edit:
+        description: 'Explicit paid opt-in; defaults FALSE'
+        type: boolean
+        default: false
+        required: true
+      yaw:
+        description: 'Nominal 90 or 180 degree single view'
+        type: choice
+        options: ['90', '180']
+        default: '90'
+        required: true
+permissions:
+  contents: write
+jobs:
+  verify-real-original-free:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install "Pillow==12.0.0"
+      - name: Get EXACT real Aka PSD-derived reference PNG from earlier Draft Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "koma-25d-core008-source-40973355001" --pattern source_A_aka_front.png --dir "$RUNNER_TEMP"
+          printf '%s  %s\n' c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4 "$RUNNER_TEMP/source_A_aka_front.png" | sha256sum -c
+      - name: Verify exact input can be passed to image edit (NO PAID API)
+        run: |
+          for yaw in 90 180; do
+            python experiments/koma-25d-core/tools/edit_real_aka11.py --original "$RUNNER_TEMP/source_A_aka_front.png" --yaw "$yaw" --out "experiments/koma-25d-core/out/core011/ref_$yaw" --dry-run
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for y in (90,180):
+              p=Path(f"experiments/koma-25d-core/out/core011/ref_{y}/edit_request_manifest.json")
+              d=json.loads(p.read_text())
+              assert d["status"]=="DRY_RUN_REAL_ORIGINAL_REF_VERIFIED"
+              assert d["explicit_attached_original_png"] is True
+              assert d["accepted_visual"] is False
+          print("CORE011_TRUE_ORIGINAL_REFERENCE_INPUT_OK_AND_NO_API_CALL")
+          PY
+  optional-paid-single-image-edit:
+    if: github.event_name == 'workflow_dispatch' && inputs.paid_image_edit == true
+    needs: [verify-real-original-free]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require configured OPENAI_API_KEY secret
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "OPENAI_API_KEY missing; no edit requested."
+            exit 1
+          fi
+      - run: python -m pip install "Pillow==12.0.0" "openai>=2,<5"
+      - name: Fetch authenticated real source art
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "koma-25d-core008-source-40973355001" --pattern source_A_aka_front.png --dir "$RUNNER_TEMP"
+          printf '%s  %s\n' c22f2af3f426d4e79745e28a1244750d1c46b41d82f46570be63b9543aedb4e4 "$RUNNER_TEMP/source_A_aka_front.png" | sha256sum -c
+      - name: Perform exactly ONE original-image conditioned GPT image edit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          VIEW_YAW: ${{ inputs.yaw }}
+        run: |
+          python experiments/koma-25d-core/tools/edit_real_aka11.py --original "$RUNNER_TEMP/source_A_aka_front.png" --yaw "$VIEW_YAW" --out "experiments/koma-25d-core/out/core011/api_$VIEW_YAW"
+      - name: Draft Release unaccepted candidate with source hashes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VIEW_YAW: ${{ inputs.yaw }}
+        run: |
+          dir="experiments/koma-25d-core/out/core011/api_$VIEW_YAW"
+          suffix=$(printf '%03d' "$VIEW_YAW")
+          gh release create "koma-25d-core011-gpt-$GITHUB_RUN_ID" "$dir/edit_request_manifest.json" "$dir/aka_yaw_$suffix_generated_candidate.png" --target "$GITHUB_SHA" --draft --title "CORE-011 Aka original-image edit $VIEW_YAW degrees UNVERIFIED" --notes "Original Aka seagetch CC BY 4.0. Generated candidate only, not original UV/rigger/animation. Manual identity and direct video QA PENDING."
