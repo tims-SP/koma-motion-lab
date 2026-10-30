@@ -1,0 +1,62 @@
+{
+  "schema": "core026-local-candidate-fiducials/1",
+  "source": "Actual local supervisor execution before Work became unavailable",
+  "slots": 19,
+  "source_candidates": 13,
+  "unknown_slots": [
+    "nose_root",
+    "mouth_cornerL",
+    "mouth_cornerR",
+    "ear_rootL",
+    "ear_rootR",
+    "neck_connection"
+  ],
+  "eye_corners": "4 explicit eye-white-boundary proxies, not anatomical truth",
+  "candidate_counts_by_raw_yaw": [
+    [
+      -1,
+      4
+    ],
+    [
+      -0.75,
+      5
+    ],
+    [
+      -0.5,
+      6
+    ],
+    [
+      -0.25,
+      11
+    ],
+    [
+      0,
+      13
+    ],
+    [
+      0.25,
+      9
+    ],
+    [
+      0.5,
+      7
+    ],
+    [
+      0.75,
+      6
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "method": {
+    "template_half_size": 5,
+    "adjacent_search_radius": 32,
+    "min_NCC_both_directions": 0.82,
+    "max_forward_backward_native_px": 1.25,
+    "stop_branch_on_failure": true
+  },
+  "all_fit_eligibility": false,
+  "scope": "Diagnostics only; source alpha does not prove visibility. No inferred positions for failures/occluded features."
+}

@@ -1,0 +1,74 @@
+name: CORE026 supervisor source and reference diagnostics
+on:
+  push:
+    branches: [feature/koma-25d-core-021]
+    paths:
+      - '.github/workflows/koma-26-supervisor-qa.yml'
+      - 'experiments/reference-factory/restore_core026_reference.py'
+      - 'experiments/reference-factory/prepare_core026_landmark_seeds.py'
+      - 'experiments/reference-factory/verify_core026_reference.py'
+      - 'experiments/reference-factory/verify_core026_constraints.py'
+      - 'experiments/reference-factory/config/core026-landmark-seeds.json'
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  source-and-reference-diagnostics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: experiments/reference-factory
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned source-analysis dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Rebuild genuine pinned PSD layers and default derived assembly
+        run: |
+          python prepare.py
+          python native_layers.py
+          python prepare_core025.py
+      - name: Independent source, raster identity and default coordinate checks
+        run: |
+          python audit_core026.py --audit
+          python audit_core026.py --verify-source
+          python verify_core026_supervisor.py
+          python verify_core026_registration.py
+          python verify_core026_constraints.py
+      - name: Restore actual clean native PNGs from pinned successful job log
+        run: |
+          gh api "repos/$GH_REPO/actions/jobs/124281335070/logs" > "$RUNNER_TEMP/core026-native-job.log"
+          python restore_core026_reference.py --job-log "$RUNNER_TEMP/core026-native-job.log"
+      - name: Reproduce candidate fiducial diagnostics (not fit or art acceptance)
+        run: |
+          python prepare_core026_landmark_seeds.py
+          python verify_core026_reference.py
+      - name: Upload text-only numerical and diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE026-supervisor-text-evidence
+          path: |
+            experiments/reference-factory/out/core026/source-audit.json
+            experiments/reference-factory/out/core026/verify-source.json
+            experiments/reference-factory/out/core026/supervisor-source-qa.json
+            experiments/reference-factory/out/core026/supervisor-constraints.json
+            experiments/reference-factory/out/core026/landmark-seeds-projected.json
+            experiments/reference-factory/out/core026/landmarks/landmarks.json
+            experiments/reference-factory/out/core026/reference/restore-evidence.json
+          if-no-files-found: warn
+      - name: Archive generated media only in owner-only Draft Release
+        run: |
+          python -m zipfile -c "$RUNNER_TEMP/CORE026-supervisor-QA.zip" out/core026/reference out/core026/landmarks
+          sha256sum "$RUNNER_TEMP/CORE026-supervisor-QA.zip" > "$RUNNER_TEMP/SHA256SUMS.txt"
+          gh release create "core026-supervisor-$GITHUB_RUN_NUMBER" --draft --target "$GITHUB_SHA" \
+            "$RUNNER_TEMP/CORE026-supervisor-QA.zip" "$RUNNER_TEMP/SHA256SUMS.txt" \
+            --title "CORE026 source and reference diagnostics $GITHUB_RUN_NUMBER" \
+            --notes "Aka by seagetch, CC-BY-4.0. Actual native PNG recovery and source/coordinate checks. NCC outputs are candidate diagnostics, not visibility ground truth or fit acceptance. M1 overall and corrected natural 3D turn remain unaccepted. M2 compositor not implemented."

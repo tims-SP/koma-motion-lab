@@ -1,0 +1,239 @@
+{
+  "schema": "core026-landmark-seeds/1",
+  "annotator": "Codex supervisor: actual source texture/grid and clean native default inspection",
+  "source_psd_sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+  "coordinate_convention": "1630x1630 pixel EDGE coordinates; centres at i+0.5",
+  "side_convention": "screen/PSD L/R, opposite to native anatomical labels",
+  "note": "19slots,13 source-supported image candidates (including4 explicit eye-white proxies),6unknown. Source alpha does not prove visibility; none accepted for fitting by these annotations alone.",
+  "records": [
+    {
+      "id": "nose_tip",
+      "psd_order": 21,
+      "source_xy": [
+        811.9666667,
+        1072.3333333
+      ],
+      "definition": "painted lower nose-mark centroid",
+      "confidence": "MEDIUM",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "nose_root",
+      "psd_order": 21,
+      "source_xy": null,
+      "definition": "anatomical nasal root is not visibly defined",
+      "confidence": "UNKNOWN",
+      "semantic_class": "UNKNOWN",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "UNKNOWN"
+    },
+    {
+      "id": "chin",
+      "psd_order": 13,
+      "source_xy": [
+        816,
+        1305.5
+      ],
+      "definition": "lowest solid Face-alpha boundary",
+      "confidence": "HIGH",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "mouth_cornerL",
+      "psd_order": 22,
+      "source_xy": null,
+      "definition": "raw mouth-inner extrema rejected: hidden beneath Lip in actual native composite",
+      "confidence": "UNKNOWN",
+      "semantic_class": "UNKNOWN",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "UNKNOWN"
+    },
+    {
+      "id": "mouth_cornerR",
+      "psd_order": 22,
+      "source_xy": null,
+      "definition": "raw mouth-inner extrema rejected: hidden beneath Lip in actual native composite",
+      "confidence": "UNKNOWN",
+      "semantic_class": "UNKNOWN",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "UNKNOWN"
+    },
+    {
+      "id": "face_edgeL",
+      "psd_order": 13,
+      "source_xy": [
+        657.5,
+        1225.5
+      ],
+      "definition": "visible lower-jaw boundary at source row1225; contour-point identity is uncertain under deformation",
+      "confidence": "MEDIUM",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "face_edgeR",
+      "psd_order": 13,
+      "source_xy": [
+        962.5,
+        1225.5
+      ],
+      "definition": "visible lower-jaw boundary at source row1225; contour-point identity is uncertain under deformation",
+      "confidence": "MEDIUM",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "eye_innerL",
+      "psd_order": 27,
+      "source_xy": [
+        721.5,
+        1001
+      ],
+      "definition": "painted eye-white inner extent, explicit canthus proxy",
+      "confidence": "LOW",
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "eye_outerL",
+      "psd_order": 27,
+      "source_xy": [
+        579.5,
+        1022
+      ],
+      "definition": "painted eye-white outer extent, explicit canthus proxy",
+      "confidence": "LOW",
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "pupilL",
+      "psd_order": 28,
+      "source_xy": [
+        666.5,
+        1004.5
+      ],
+      "definition": "manually reviewed painted pupil centre",
+      "confidence": "MEDIUM",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "eye_innerR",
+      "psd_order": 37,
+      "source_xy": [
+        905.5,
+        993
+      ],
+      "definition": "painted eye-white inner extent, explicit canthus proxy",
+      "confidence": "LOW",
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "eye_outerR",
+      "psd_order": 37,
+      "source_xy": [
+        1045.5,
+        1009.75
+      ],
+      "definition": "painted eye-white outer extent, explicit canthus proxy",
+      "confidence": "LOW",
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "pupilR",
+      "psd_order": 38,
+      "source_xy": [
+        964.5,
+        1005.5
+      ],
+      "definition": "manually reviewed painted pupil centre",
+      "confidence": "MEDIUM",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "ear_rootL",
+      "psd_order": 1,
+      "source_xy": null,
+      "definition": "covered by hair; native node origin is not a verified anatomical root",
+      "confidence": "UNKNOWN",
+      "semantic_class": "UNKNOWN",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "UNKNOWN"
+    },
+    {
+      "id": "ear_rootR",
+      "psd_order": 2,
+      "source_xy": null,
+      "definition": "covered by hair; native node origin is not a verified anatomical root",
+      "confidence": "UNKNOWN",
+      "semantic_class": "UNKNOWN",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "UNKNOWN"
+    },
+    {
+      "id": "ear_tipL",
+      "psd_order": 1,
+      "source_xy": [
+        637,
+        44.5
+      ],
+      "definition": "top solid painted ear alpha",
+      "confidence": "HIGH",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "ear_tipR",
+      "psd_order": 2,
+      "source_xy": [
+        991,
+        32.5
+      ],
+      "definition": "top solid painted ear alpha",
+      "confidence": "HIGH",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    },
+    {
+      "id": "neck_connection",
+      "psd_order": 11,
+      "source_xy": null,
+      "definition": "hidden beneath chin/choker; no verified visible point",
+      "confidence": "UNKNOWN",
+      "semantic_class": "UNKNOWN",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "UNKNOWN"
+    },
+    {
+      "id": "leaf_stem",
+      "psd_order": 62,
+      "source_xy": [
+        647.5,
+        420
+      ],
+      "definition": "painted stem endpoint, not proof of a physical root",
+      "confidence": "MEDIUM",
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "fit_status": "NOT_ACCEPTED_PENDING_NATIVE_TRACK_REVIEW",
+      "visibility": "PENDING_NATIVE_REVIEW"
+    }
+  ]
+}

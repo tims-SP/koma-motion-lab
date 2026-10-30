@@ -2,7 +2,7 @@
 
 ## 目标与分工
 
-当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。CORE-025复现与归档已完成，艺术门禁FAIL保留；当前执行CORE-026分部件深度、附着与遮挡校准。详细[CORE-026计划](plans/CORE-026-depth-and-occlusion-plan.md)与[首项M1工单](plans/CORE-026-M1-mcode-order.md)。mcode登录已成功；58个唯一纹理对应与4个重复后发的默认空间区分均通过，62部件对应62原生UUID。首轮真实9姿态CI通过，正在提高头部参考分辨率。[最新报告](research/CORE-026-M1-default-space-and-native-reference.md)。19特征和局部遮挡约束未完成，M1整体未放行；M2–M5尚未执行。
+当前分支 `feature/koma-25d-core-021`；mcode实现，Codex下工单和独立验收。CORE026仍在M1：62部件默认对应已验收，9个清洁高清原生姿态已真实捕获并核对哈希；19标点槽位仍含未知/候选。M2–M5未开始，自然3D转头未通过。[最新恢复与阻塞](research/CORE-026-M1-clean-reference-and-remaining-gates.md)。完整工作区mcode模式暂停，等待具体服务目的地确认；Work环境当前不可用。
 
 ## 已完成
 
@@ -48,3 +48,13 @@ CORE-025执行链路已跑通并归档，不重跑A1、不重新生成源资产�
 M1A提交a6226cc。[M1B捕获程序检查点](research/CORE-026-M1B-native-capture-checkpoint.md)记录mcode实现和监工修正的接口/归档缺陷。首轮真实捕获已经通过；以下是最新恢复位置。
 
 最新实际恢复点：原生首轮CI41116198599和高清CI41118184385均success，Draft均归档；两轮9张实际PNG及固定裁切SHA均由监工独立核对。高清图目视发现X11鼠标指针叠在头发上，因此高清参考视觉门禁FAIL_RETAKE_CURSOR_OVERLAY；mcode已增加ffmpeg -draw_mouse 0，需真实重拍再验收。依次运行audit_core026.py --audit、--verify-source、verify_core026_supervisor.py、verify_core026_registration.py复现源/默认坐标验收；最后一项不代表动态GPU/3D通过。M1C1接收/遮挡约束工单已下达，19特征尚待清洁参考；不进入M2。
+
+
+## 最新恢复点（优先于上面的历史记录）
+
+- 801d904：关闭X11指针的代码已实测；原生CI41119224557/job124281335070全部success，9张720×880及9张652×652裁切SHA均独立核对。清洁媒体Draft untagged-2589bc212d17274d3503。
+- 源遮挡观察额外确认眼皮58/59与头发重叠28/15像素；眉60/61为2156/1954像素。四层晚叠画必须保留候选特殊处理，不能仅按物理深度全部压在刘海后。
+- 19标点槽位：13源支持候选（包括4眼白边界代理）、6未知。嘴部raw图层边界已因被Lip遮挡而拒绝。NCC只作诊断，不能把未知当错误或把候选当拟合真值。
+- 新增koma-26-supervisor-qa.yml：在GitHub重建源数据，读固定成功原生job日志恢复PNG，并复跑监督脚本；媒体只进入Draft，artifact只JSON。新CI结果需实际检查后记录。
+- mcode约束实现仍未完成；服务500/超时及平台具体目的地审批阻塞均有文本记录。完整工作区模式未绕过拒绝。Work已变为不可用；GitHub仍可写，因此本检查点独立保存于仓库。
+- 下一步：明确agent.minimax.cn的数据发送范围并恢复执行环境后，继续M1C1实现/验收和标点人工复核，M1放行后进入M2。不要重跑已通过的CORE025作为进度。
