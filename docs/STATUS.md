@@ -44,3 +44,5 @@ CORE-025执行链路已跑通并归档，不重跑A1、不重新生成源资产�
 最新[启动检查](research/CORE-026-M1-start-preflight.md)：原始哈希、62层、11Multiply、9裁剪与实际原生114绑定已由监工验证；mcode认证阻塞发生在实现开始前。官方登录完成后重发M1 A/B子工单；不重跑CORE025，不越过M1进入盲调深度。
 
 上述认证阻塞已解除。当前恢复点：M1A三条实际命令均exit0，源审计与58个像素对应已验收；4项重复纹理保持UNRESOLVED，全部空间配准NOT_TESTED。后续继续真实原生完整头部9姿态捕获、19特征槽位与局部遮挡约束，不将像素对应PASS当作M1整体PASS。
+
+M1A提交a6226cc。[M1B捕获程序检查点](research/CORE-026-M1B-native-capture-checkpoint.md)记录mcode实现和监工修正的接口/归档缺陷。新工作流koma-26-native-reference.yml以本分支限定路径push触发真实上游Rust/GL编译与9姿态捕获；需查看实际run及PNG后再验收，不能将静态检查当成原生捕获成功。

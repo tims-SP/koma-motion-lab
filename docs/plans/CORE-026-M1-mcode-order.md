@@ -1,6 +1,6 @@
 # CORE-026 M1工单：源对应与真实头部参考
 
-状态PLANNED / NOT_STARTED。主计划见[CORE-026-depth-and-occlusion-plan.md](CORE-026-depth-and-occlusion-plan.md)。本工单供下一次执行使用，不代表已向mcode发出或执行完成。
+状态IN_PROGRESS。主计划见[CORE-026-depth-and-occlusion-plan.md](CORE-026-depth-and-occlusion-plan.md)。工单已下达；M1A源像素对应完成，当前执行M1B真实原生参考。M1整体尚未通过。
 
 ## 允许修改
 
