@@ -2,7 +2,7 @@
 
 ## 目标与分工
 
-当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。CORE-025复现与归档已完成，艺术门禁FAIL保留；当前启动CORE-026分部件深度、附着与遮挡校准。详细[CORE-026计划](plans/CORE-026-depth-and-occlusion-plan.md)与[首项M1工单](plans/CORE-026-M1-mcode-order.md)。M1启动源检查PASS，mcode两次执行均exit3要求重新登录，当前BLOCKED_AUTH；M2–M5尚未执行。
+当前分支 `feature/koma-25d-core-021`；mcode执行，Codex下工单、验收与提交。CORE-025复现与归档已完成，艺术门禁FAIL保留；当前执行CORE-026分部件深度、附着与遮挡校准。详细[CORE-026计划](plans/CORE-026-depth-and-occlusion-plan.md)与[首项M1工单](plans/CORE-026-M1-mcode-order.md)。mcode登录已成功；[M1A源像素对应PASS](research/CORE-026-M1A-source-correspondence.md)：58唯一、4重复后发未解决，空间配准尚未验收。M1整体未完成；M2–M5尚未执行。
 
 ## 已完成
 
@@ -42,3 +42,5 @@ CORE-025执行链路已跑通并归档，不重跑A1、不重新生成源资产�
 2026-10-31：已保存CORE-026规划及明确M1工单。恢复后先审计原生raw yaw/pitch与62层对应，再真实捕获9个完整头部姿态；旧ear-only证据不能当全头参考。M1通过后才实施分部件接收曲面/局部合成、A两组深度与必要的B形变残差。当前实现/捕获均NOT_TESTED，不把计划当成完成。
 
 最新[启动检查](research/CORE-026-M1-start-preflight.md)：原始哈希、62层、11Multiply、9裁剪与实际原生114绑定已由监工验证；mcode认证阻塞发生在实现开始前。官方登录完成后重发M1 A/B子工单；不重跑CORE025，不越过M1进入盲调深度。
+
+上述认证阻塞已解除。当前恢复点：M1A三条实际命令均exit0，源审计与58个像素对应已验收；4项重复纹理保持UNRESOLVED，全部空间配准NOT_TESTED。后续继续真实原生完整头部9姿态捕获、19特征槽位与局部遮挡约束，不将像素对应PASS当作M1整体PASS。
