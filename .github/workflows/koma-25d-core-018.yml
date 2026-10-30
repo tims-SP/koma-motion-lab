@@ -40,6 +40,15 @@ jobs:
           python experiments/koma-25d-core/tools/patch_inox_fixed8.py \
             --checkout "$RUNNER_TEMP/inox2d" \
             --report experiments/koma-25d-core/out/core018/reference/patched_upstream.json
+          python - "$RUNNER_TEMP/inox2d/examples/render-opengl/src/main.rs" <<'PY'
+          import sys
+          from pathlib import Path
+          p=Path(sys.argv[1]);s=p.read_text()
+          needle="}, 0.0));"
+          assert s.count(needle)==1, "Do not silently claim neutral pitch"
+          p.write_text(s.replace(needle,"}, 0.5));"))
+          print("CORE018_PINNED_REFERENCE_PITCH_AT_NEUTRAL_0_5")
+          PY
           cargo build --release --manifest-path "$RUNNER_TEMP/inox2d/Cargo.toml" -p render-opengl
       - name: Capture actual native OpenGL neutral HeadYaw 0.5 and max 1.0
         run: |
