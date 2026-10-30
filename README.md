@@ -1,6 +1,18 @@
 # Koma Motion Lab
 
-## Current 2.75D research checkpoint — CORE-022 (2026-10-30)
+## Current research checkpoint — CORE-025 layered turn prototype (2026-10-30)
+
+**Status: numeric/structural chain PASS, artistic head-turn gate FAILED, production NOT ACCEPTED, clean-environment CI PENDING.**
+
+- Recovery entry point and task status: [docs/STATUS.md](docs/STATUS.md).
+- M1 (native layered assembly): [supervisor acceptance report](docs/research/CORE-025-M1-supervisor-acceptance.md) — PASS.
+- M2 (curved surface + front-view restoration): [supervisor acceptance report](docs/research/CORE-025-M2-supervisor-acceptance.md) — numeric gate PASS, artistic head turn NOT_ACCEPTED.
+- M3 (continuous turntable video): [supervisor acceptance report](docs/research/CORE-025-M3-supervisor-acceptance.md) — numeric chain PASS, **artistic head turn FAIL**.
+- Clean-environment Actions reproduction run: **PENDING** — no new CI run has been observed yet, so no run or release link is claimed here. The supervisor fills in the real run/release links after verification.
+- The current turn prototype is an inferred open shallow surface driven to ±15°; the motion still reads as a shallow-surface sway, the face stays too frontal and the facial silhouette perspective change is too weak. A PASS on the numeric chain is **not** an artistic pass.
+- The original Inochi runtime, full-front-view binding, bone skinning/IK, and real side, back and 360° views remain unaccepted; new-view assets are still incomplete.
+
+## Historical baseline — CORE-022 reference factory (2026-10-30)
 
 - [Executed source/reference/structural-map report](docs/research/CORE-022-reference-factory-first-execution.md).
 - [Successful Actions run](https://github.com/tims-SP/koma-motion-lab/actions/runs/41034480617): pinned Aka PSD/INX preparation, nine real generic-VRM angles, 45 structural maps, independent-process repeat, H.264 encode/decode.

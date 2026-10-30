@@ -111,3 +111,64 @@ python canonicalize_candidates.py \
   stay `NOT_TESTED`, human approval stays `MANUAL_REVIEW_REQUIRED`, benchmark
   ranking stays `NONE_ACCEPTED`, the full A/B/C/D benchmark stays `NOT_TESTED`,
   and no APPROVED/GOLDEN state is written.
+
+## CORE-025 — layered turn prototype: full recovery commands
+
+Current state: the numeric/structural chain is **PASS**, the **artistic head-turn
+gate is FAIL** (the motion still reads as a shallow-surface sway, the face stays
+too frontal and the facial silhouette perspective change is too weak), and
+production remains **NOT_ACCEPTED**. The turn prototype is an inferred *open*
+shallow surface driven to ±15° of head yaw, not an artistically approved head
+turn. See the supervisor reports in `docs/research/` for the full verdicts.
+
+### Recover from a clean checkout
+
+```sh
+cd experiments/reference-factory
+sudo apt-get update && sudo apt-get install -y ffmpeg  # Linux: ffmpeg + ffprobe
+python -m pip install -r requirements.txt      # pinned Python deps
+npm ci --no-audit --no-fund                    # pinned npm lock
+npx playwright install --with-deps chromium     # pinned Playwright browser
+python prepare.py                              # pinned original sources
+python native_layers.py                        # 62 native RGBA part layers
+python prepare_core025.py                      # CORE-025 M1 layered assembly
+node capture_core025.mjs --anchors             # CORE-025 M2 curved anchor captures
+python verify_core025_supervisor.py            # CORE-025 M2 independent numeric acceptance
+node capture_core025_video.mjs                 # CORE-025 M3 turntable capture
+python verify_core025_video.py                 # CORE-025 M3 independent video acceptance
+```
+
+`verify_core025_supervisor.py` and `verify_core025_video.py` are the actual
+acceptance entry points; there is no `qa_core025.py` or `qa_core025_video.py`
+entry point in this repository.
+
+### Who wrote what
+
+- The CORE-025 scene, anchor capture and turntable capture programs
+  (`core025.js`, `capture_core025.mjs`, `capture_core025_video.mjs`,
+  `prepare_core025.py`) were implemented by **mcode**.
+- The independent numeric acceptance scripts (`verify_core025_supervisor.py`,
+  `verify_core025_video.py`) were written and run by the **Codex supervisor**;
+  they are not mcode-authored.
+
+### Notes
+
+- Local model access and image-generation quota do **not** affect this
+  deterministic source-based reproduction: the whole chain above is pinned
+  source data plus offline geometry, browser rendering and `ffmpeg`. Reruns do
+  not call any generation service, and the locally generated AI candidate C is
+  **not** part of this chain or of the CI package.
+- The default-pose multiply→normal baking of the layered parts is a per-part
+  approximation valid only in the default pose; baked shadow/occlusion
+  correctness under new rotations is not guaranteed.
+- New-view assets are still incomplete. Side, back and 360° views, the global
+  closed UV set, bone skinning and IK, and the original Inochi runtime remain
+  unaccepted.
+- Machine-readable evidence lives in `out/core025/` (`assembly/qa.json`,
+  `render/manifest.json`, `render/supervisor-qa.json`,
+  `turntable/video-manifest.json`, `turntable/video-qa.json`). Generated media
+  (PNGs, video, textures) stays out of Git and goes to the owner-only Draft
+  Release archive `CORE025-layered-turn-evidence.zip`.
+- A numeric PASS on the CI chain is **not** an artistic PASS; the artistic
+  head-turn gate stays FAILED until per-part head-shape depth and occlusion are
+  calibrated against accepted angled references.
