@@ -593,6 +593,268 @@ Suggested review dimensions:
 
 A human decision without the reviewed evidence/contact sheet is not sufficient for promotion to GOLDEN.
 
+
+### 23. Evaluation Order and Transform Stack
+
+Animation correctness depends on a deterministic evaluation order. Deformation systems must not independently mutate the same state in an undefined order.
+
+The initial Koma evaluation contract is:
+
+    Source Rest State
+      -> source/native parameter deformation
+      -> canonical 2D-to-2.75D correspondence
+      -> character skeleton / FK / IK
+      -> view-dependent surface deformation
+      -> expression / eye / mouth / gaze controls
+      -> constraints
+      -> secondary motion (hair / ears / clothes)
+      -> visibility / occlusion evaluation
+      -> view-skin selection / blending
+      -> compositing
+      -> final render
+
+This ordering is a starting contract, not a claim that every stage is already implemented. Any experimentally justified order change must be versioned.
+
+Rules:
+
+- the same vertex/parameter must not be deformed twice by two stages without an explicit composition rule;
+- source INX deformation remains distinguishable from Koma skeleton deformation;
+- camera yaw is not silently substituted for native source HeadYaw;
+- physics operates on the already-defined upstream pose, not on stale/rest transforms;
+- view-dependent texture selection occurs only after final visibility-relevant pose state is known;
+- the complete transform/evaluation order is part of the asset/runtime version.
+
+### 24. Rig, Bind Pose, Unit, and Constraint Contract
+
+A rig is not only a bone name list.
+
+Every rig profile must define:
+
+    unit scale
+    world axes
+    canonical rest pose
+    bind pose
+    local bone axes
+    parent hierarchy
+    inverse bind transforms
+    joint limits
+    twist policy
+    FK/IK ownership
+    IK targets/poles
+    constraint order
+    retarget role mapping
+
+For humanoid-compatible rigs, use one canonical semantic bone map so motions can be retargeted without relying on arbitrary source bone names.
+
+The first Aka head-only proof may define only:
+
+    root
+    neck
+    head
+    ear_L
+    ear_R
+    selected hair controls
+
+but the schema must already support the full contract.
+
+A rig version change invalidates dependent skin weights, IK setups, motions, physics, and runtime QA unless explicitly revalidated.
+
+### 25. ViewPose and CharacterPose Anchor Extension
+
+The Anchor Lattice is extended from:
+
+    View x Expression x Variant
+
+to:
+
+    ViewPose x CharacterPose x Expression x Variant
+
+ViewPose may contain:
+
+    yaw
+    pitch
+    roll
+    camera distance
+    orthographic scale or FOV
+    camera target
+
+CharacterPose may contain sparse authoritative poses such as:
+
+    neutral
+    head_turn_extreme
+    look_up
+    look_down
+    arm_up
+    sit
+    walk_extreme
+
+Do not build the Cartesian product.
+
+For the first Aka proof, instantiate only:
+
+    CharacterPose = neutral
+    pitch = 0
+    roll = 0
+    yaw = target angle
+
+The purpose of this schema is to prevent later head pitch/body-pose support from forcing a Reference Atlas redesign.
+
+### 26. Expression Mixer and Secondary Motion Contract
+
+Expression anchors alone are insufficient because expressions can overlap.
+
+The runtime must define how these channels combine:
+
+    blink
+    eye gaze
+    mouth/lip-sync
+    smile/emotion
+    brow
+    source INX expression parameters
+    procedural facial controls
+
+Each expression control must define:
+
+    target parts/parameters
+    blend mode
+    weight range
+    priority
+    override/exclusion relationships
+    neutral/default value
+
+Conflicting combinations must be detectable.
+
+Secondary motion must also be deterministic. Hair, ears, clothing, and other spring/physics systems must define:
+
+    fixed timestep
+    substeps
+    initialization pose
+    warm-up frames
+    reset behavior
+    collision shapes
+    damping/stiffness parameters
+    deterministic seed if randomness exists
+
+Physics state is runtime state and must not silently survive between reproducibility tests unless the test explicitly asks for continuity.
+
+### 27. Surface Correspondence and Deformation Exposure Envelope
+
+A view image cannot be treated as valid merely because a UV map exists.
+
+Every view-to-surface binding must record how image regions correspond to the canonical surface:
+
+    source view id
+    target surface id
+    vertex correspondences
+    barycentric correspondences where used
+    invalid/unmapped regions
+    seam ownership
+    mapping confidence
+    fallback mapping
+    visibility applicability
+
+The source front UV remains immutable.
+
+New view UV/correspondence must be independently versioned.
+
+Hidden-region safety must be defined by a deformation exposure envelope, not only edge padding.
+
+For each deformable part, estimate or test the maximum region that can become visible under the supported motion envelope:
+
+    head yaw/pitch/roll
+    approved expression extremes
+    hair/ear spring extremes
+    relevant body pose extremes
+
+If motion can expose pixels outside accepted underpainting, the asset is incomplete even if the neutral anchor view looks correct.
+
+Full 360 assets must also enforce cyclic consistency:
+
+    +180 and -180 describe the same physical rear direction
+
+and must not leave a hidden seam at the periodic boundary.
+
+### 28. Reproducibility, Absolute Gate, Budget, and Scope Contract
+
+Not every stage can promise the same reproducibility level.
+
+Every generated/rebuilt asset must declare one of:
+
+    BIT_EXACT
+    INPUT_REPLAYABLE
+    VISUALLY_REPRODUCIBLE
+    NON_REPRODUCIBLE
+
+Examples:
+
+- deterministic structural/reference rendering should target BIT_EXACT where practical;
+- external image generation may only be INPUT_REPLAYABLE or VISUALLY_REPRODUCIBLE;
+- if a provider cannot replay equivalent inputs, declare NON_REPRODUCIBLE rather than implying determinism.
+
+Provider input lineage must include the actual payload seen by the provider where observable:
+
+    uploaded image dimensions
+    provider-side or client-side resize
+    crop
+    mask
+    reference ordering
+    compression/transcode
+    prompt
+    model/version
+    request/job identifiers
+
+Candidate ranking requires an absolute acceptance gate.
+
+The valid flow is:
+
+    N candidates
+      -> absolute quality gate
+         -> zero pass: NONE_ACCEPTED
+         -> one or more pass: ranking
+      -> human review
+      -> GOLDEN
+
+The best candidate is not automatically acceptable.
+
+Generation and repair loops must also have a budget policy:
+
+    max_candidates
+    max_repairs
+    max_provider_cost
+    max_iterations
+    manual_escalation_reason
+
+Exhausting the budget yields MANUAL_REVIEW_REQUIRED, not infinite retries.
+
+Finally, every experiment/build must declare a scope profile:
+
+    HEAD_ONLY
+    UPPER_BODY
+    FULL_BODY
+
+Passing HEAD_ONLY never implies FULL_BODY acceptance.
+
+### 29. Full-front source parity remains an explicit open gate
+
+PR #31 establishes high-fidelity parity for the authentic Aka ear components across tested source HeadYaw poses. It does not establish whole-character default parity for all Aka ArtMeshes, masks, compositing, and full-puppet source rendering.
+
+Therefore keep an explicit open gate:
+
+    FULL_FRONT_SOURCE_PARITY
+
+covering, at minimum:
+
+    complete Aka front/default source pose
+    all relevant ArtMeshes
+    masks
+    opacity
+    blend/composite behavior
+    full character transforms
+    source textures
+    final composed front render
+
+Reference Factory experiments may proceed using authentic source/canonical art, but production acceptance of the full Koma character runtime must not claim front fidelity complete until this full-front gate passes.
+
 ## Reference Factory instead of one universal reference character
 
 A single Seed-san/VRM character is useful for smoke tests but is too narrow to serve as the universal reference. The preferred long-term design is a small **Reference Factory** built from license-clear source assets that can deterministically produce task-specific reference material.
@@ -686,6 +948,11 @@ reference-atlas/
       blink/
       mouth-open/
       smile/
+    poses/
+      neutral/
+      head-turn-extreme/
+      look-up/
+      look-down/
     variants/
   views/
     000/
@@ -731,6 +998,10 @@ reference-atlas/
     asymmetry/
   lineage/
   dependencies/
+  evaluation/
+  rig-contract/
+  surface-correspondence/
+  reproducibility/
   compositing/
   regional-truth/
   qa/
@@ -813,6 +1084,8 @@ Required inputs:
 - fixed canvas, crop, camera convention, and scale;
 - explicit coordinate/yaw/image/color-space contract;
 - a reversible source -> canonical transform manifest;
+- declared scope profile (HEAD_ONLY / UPPER_BODY / FULL_BODY);
+- declared reproducibility level for each pipeline stage;
 - a written character-fact checklist for face, hair, ears, accessories, clothing, and asymmetries;
 - optional high-resolution identity anchors for face/hair/ears/accessories where needed.
 
@@ -910,7 +1183,9 @@ Aka identity
 
 Keep the target crop/angle/output contract identical across A/B/C/D.
 
-Generate a candidate set for each arm rather than relying on one sample. Preserve regional authority/confidence metadata when repairs or transfers combine multiple sources. Persist provider/model/checkpoint, prompt/reference hashes, parameters, parent/repair lineage and QA results for every candidate.
+Generate a candidate set for each arm rather than relying on one sample. Preserve regional authority/confidence metadata when repairs or transfers combine multiple sources. Persist provider/model/checkpoint, prompt/reference hashes, actual provider payload metadata where observable, parameters, parent/repair lineage and QA results for every candidate.
+
+Before ranking, apply an absolute quality gate. If no candidate passes, record NONE_ACCEPTED and escalate/retry within the configured generation budget; never promote the least-bad image merely because it ranks first.
 
 Acceptance criteria:
 
@@ -1043,7 +1318,7 @@ Check:
 - view-conditioned texture blend/visibility curve failures;
 - alpha-edge/underpaint exposure.
 
-Acceptance requires decoded video and extracted-frame inspection, not merely successful encoding.
+Acceptance requires decoded video and extracted-frame inspection, not merely successful encoding. The test must record fps/timebase, evaluation-order version, view-skin transition version, and deterministic physics/reset state if secondary motion is enabled.
 
 ### Phase M9 — Rig, weights, IK, then motion
 
@@ -1057,6 +1332,8 @@ Only after the static/multi-view/turn path is accepted:
 6. reusable motion references.
 
 Rigging research projects such as UniRig, Make-It-Animatable, and DRiVE may provide reference skeletons/weights, but must be fitted and visually verified against the accepted Koma character asset.
+
+Before accepting rigged motion, freeze the rig contract: unit scale, rest/bind pose, bone local axes, inverse bind transforms, joint limits, IK ownership/targets, retarget semantic map, expression mixer rules, and secondary-motion update/reset behavior.
 
 ### Phase M10 — Automation last
 
@@ -1141,7 +1418,9 @@ For external datasets/models:
 - record provider/model/checkpoint, prompt template version, reference/content hashes and generation lineage for generated candidates;
 - version Reference Atlas releases and never mutate GOLDEN assets in place;
 - persist dependency hashes and STALE/revalidation state;
-- preserve stable part UUID migration records across split/merge changes.
+- preserve stable part UUID migration records across split/merge changes;
+- record evaluation-order, rig-contract, expression-mixer, surface-correspondence, timebase, scope-profile and reproducibility versions;
+- record actual provider payload transforms (resize/crop/mask/reference ordering/compression) where observable.
 
 ## What is deliberately NOT decided yet
 
@@ -1154,6 +1433,10 @@ The following remain experimental until the manual path proves them:
 - exact semantic part granularity;
 - exact scaffold topology;
 - exact automatic rigging system;
+- final evaluation order refinements after real motion tests;
+- exact full-body humanoid bone/retarget profile;
+- final expression mixing policy after facial-motion tests;
+- final physics system and parameters;
 - whether SeparateGen or later component-aware methods replace any current candidate.
 
 The architecture intentionally makes these replaceable.
@@ -1164,7 +1447,7 @@ The architecture intentionally makes these replaceable.
 
 The next work should be ordered as follows:
 
-1. freeze the coordinate/yaw/camera/image/color-space contract, canonicalization manifest, Anchor Lattice schema, and asset lifecycle/provenance schema;
+1. freeze the coordinate/yaw/camera/image/color-space contract, canonicalization manifest, ViewPose/CharacterPose Anchor Lattice schema, scope profile, reproducibility levels, evaluation-order contract, and asset lifecycle/provenance schema;
 2. inventory and provenance for Aka/Midori + small VRM/VRoid reference bank;
 3. render nine-yaw structural references with fixed, machine-recorded camera metadata;
 4. benchmark Aka flatten -> semantic decomposition -> compare with real PSD/INX;
@@ -1173,9 +1456,12 @@ The next work should be ordered as follows:
 7. run Aka 90-degree A/B/C/D comparison using N candidates per arm, regional truth/confidence, and full lineage metadata;
 8. inspect actual candidates with the controlled human-review protocol, classify failures, select and freeze the first accepted Aka 90-degree Golden view;
 9. create the dependency DAG and verify that changing the Golden 90-degree parent marks dependent masks/correspondence/scaffold/UV/video artifacts STALE;
-10. only then generate 45/135/180 using the non-linear reference graph and create a five-view contact sheet;
-11. run reverse/loop consistency checks and explicitly inspect asymmetries;
-12. only after five-view acceptance begin stable-UUID semantic correspondence and spatial scaffold work.
+10. define and test the 90-degree view-to-surface correspondence record, including mapping confidence and invalid/seam regions;
+11. only then generate 45/135/180 using the non-linear reference graph and create a five-view contact sheet;
+12. run reverse/loop consistency checks, explicitly inspect asymmetries, and reserve the +180/-180 cyclic seam contract for later 360 validation;
+13. only after five-view acceptance begin stable-UUID semantic correspondence and spatial scaffold work;
+14. before rig/IK promotion, freeze rig/bind/expression/timebase/physics contracts and verify deformation exposure envelopes;
+15. before full runtime promotion, complete FULL_FRONT_SOURCE_PARITY for the whole Aka front/default composition, not only the ear subset.
 
 **Do not proceed to rig/IK automation before this chain is visually demonstrated.**
 
@@ -1184,11 +1470,11 @@ The next work should be ordered as follows:
 This ADR moves from PROPOSED to ACCEPTED FOR CHARACTER-BUILD RESEARCH only after the repository contains reproducible evidence for:
 
 - one versioned coordinate/camera/image/color-space contract plus reversible canonicalization manifest;
-- one versioned Anchor Lattice definition;
+- one versioned ViewPose/CharacterPose/Expression/Variant Anchor Lattice definition;
 - one versioned asset lifecycle / lineage / provenance schema with regional authority/confidence;
 - one deterministic Reference Factory structural render set;
 - one Aka semantic-decomposition comparison against real source layers;
-- one A/B/C/D Aka 90-degree comparison using candidate sets and controlled human review;
+- one A/B/C/D Aka 90-degree comparison using candidate sets, absolute acceptance gates, generation budgets, and controlled human review;
 - one explicitly approved Aka 90-degree Golden view with source/design-truth provenance;
 - an accepted five-view Aka reference set with asymmetry and reverse/loop consistency review;
 - documented failure taxonomy, representative rejected examples, and chosen repair strategies;
@@ -1196,6 +1482,11 @@ This ADR moves from PROPOSED to ACCEPTED FOR CHARACTER-BUILD RESEARCH only after
 - a working dependency invalidation proof that marks descendants STALE when a Golden parent changes;
 - a compositing/appearance schema preserving draw order separately from physical depth, blend/mask/alpha semantics, and hidden underpaint margins;
 - a deterministic view-conditioned texture transition contract;
+- a versioned evaluation-order/transform-stack contract;
+- a rig/bind/unit/constraint and expression-mixer contract before accepting rigged motion;
+- one surface-correspondence record with mapping confidence, invalid regions, seam ownership, and deformation exposure envelope;
+- declared reproducibility level and scope profile for every promoted artifact;
+- a FULL_FRONT_SOURCE_PARITY gate tracked separately from the ear-only CORE-021 evidence;
 - evidence that Golden assets and Reference Atlas versions are immutable/versioned.
 
 Production promotion remains a separate gate in `tims-SP/koma-motion`.
