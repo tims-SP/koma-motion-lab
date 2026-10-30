@@ -29,7 +29,35 @@ Planned direct-audit questions:
 - Does native coverage stop before the needed 30°/45° novel-view design?
 - Which real source PSD/INX components already have corresponding deformation, and which need generated new view skin?
 
-Before answering, inspect actual five-frame contact image and numeric QA and record its run ID. Until then the pose-grid gate remains **PENDING**.
+## FIVE-POSE GRID — COMPLETED and visually inspected
+
+- Workflow: https://github.com/tims-SP/koma-motion-lab/actions/runs/40979190580 — **SUCCESS**.
+- Owner-only Draft Release with five real native screenshots, contact sheet, source and QA: https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-5232f5fcb469ede29155
+- Independent FULL model process for each fixed normalized yaw (pitch=0), native screen contents captured after OpenGL initialization with no camera orbit, precomputed graphics, fake extra art or interpolation.
+- Actual contact sheet was directly viewed by the agent from GitHub Actions logs.
+
+| Genuine normalized HeadYaw | Subject-changed area vs 0 in source head crop | RGB mean absolute difference |
+|---:|---:|---:|
+| 0.00 | 0% | 0.00 |
+| 0.25 | 10.43% | 7.29 |
+| 0.50 | 13.96% | 10.95 |
+| 0.75 | 16.28% | 13.89 |
+| 1.00 | 18.15% | 16.34 |
+
+Structural smoke tests PASS: all five PNGs are nonblank (minimum RGB standard deviation ~93.58), have distinct hashes, and changing the real parameter deforms rendered pixels.
+
+**Direct visual assessment:** Head hair envelope, cheek outline, near/far eyes and fringe *do* move. However the far eye remains largely visible at maximum native parameter and the face remains close to frontal. The rig is good for limited Live2D-looking movement, not evidence of real 45° three-quarter-view anime artwork or full head spatial rotation. Eye, nose, face contour, exposed far hair and ear overlap likely need new view-conditioned art and part registration when the user requests stronger sideways shots. This is a visual observation, not a calibrated camera angle.
+
+**Important negative findings:** no actual source native 3D depth or side painting; no physical degree mapping; no official D SDK exact reference parity. The original INX ArtMesh is still the best source for 0° and the limited angle it can reliably cover.
+
+## Next explicit implementation phase
+
+1. Use the **actual native 0.00/0.50/1.00 model screenshots** as existing same-character yaw references, not only a PSD 0° source.
+2. Before sending any GPT edit, supply the real Aka original/source screenshot as a native editable image input (no prompt-only generation). Reject any output that changes Aka identity or layout.
+3. Target one supplementary high-quality *single* ~45° three-quarter head image first; constrain to the original fox ears, orange hair, burgundy leaf, red-magenta eyes.
+4. Split only missing semantic patches (far eye, nose/cheek, near/far side hair, ear roots), map them to original part IDs; preserve source UV on original 0° art.
+5. Render actual encoded comparison video, inspect mid-angles and backside holes. A passed test must have convincing face rotation beyond native +1.00, not merely higher pixel delta.
+
 
 ## Rules for CORE-008 next stage
 
