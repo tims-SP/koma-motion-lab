@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { spawn,execFileSync } from 'node:child_process';
 import { mkdirSync,statSync,writeFileSync } from 'node:fs';
+import {createHash} from 'node:crypto';
 import { resolve,join } from 'node:path';
 
 type FrameStats={
@@ -13,6 +14,8 @@ type FrameStats={
 declare global {interface Window {
  renderIntegrated:(frame:number,total:number)=>FrameStats;
  integratedInfo:{parts:number;views:number;method:string};
+ integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
+ exportArtPNG:(partId:'face'|'fringe'|'torso'|'skirt',angle:0|90|180|270)=>string;
 }}
 const out=resolve('out/integrated');
 mkdirSync(out,{recursive:true});
@@ -38,14 +41,33 @@ try{
  await page.goto('http://127.0.0.1:5176/integrated.html',{waitUntil:'networkidle'});
  await page.waitForFunction(()=>typeof window.renderIntegrated==='function');
  const info=await page.evaluate(()=>window.integratedInfo);
- if(Number(info.parts)!==12||Number(info.views)!==3)throw Error('Part/view contract failed');
+ if(Number(info.parts)!==12||Number(info.views)!==4)throw Error('Part/view contract failed');
+ const art=await page.evaluate(()=>window.integratedArtProof);
+ if(!art.transparent||!art.centerOpaque||!art.allDistinct||art.views!==4)
+  throw Error('Actual key-view RGBA artwork registration or transparency failed: '+JSON.stringify(art));
+ // Materialize authored transparent RGBA key art separately for visual
+ // inspection, proving each key view is a real image, not one shared gradient.
+ const artSources:{part:'face'|'fringe'|'torso'|'skirt';angle:0|90|180|270}[]=[];
+ for(const part of ['face','fringe','torso','skirt'] as const)
+   for(const angle of [0,90,180,270] as const)artSources.push({part,angle});
+ const artHashes:string[]=[];
+ for(const src of artSources) {
+  const uri=await page.evaluate(v=>window.exportArtPNG(v.part,v.angle),src);
+  if(!uri.startsWith('data:image/png;base64,'))throw Error('Missing real PNG source: '+JSON.stringify(src));
+  const buf=Buffer.from(uri.split(',')[1],'base64');
+  if(buf.length<600)throw Error('Empty key art PNG');
+  const f=join(out,'key-'+src.part+'-'+src.angle+'.png');
+  writeFileSync(f,buf);
+  artHashes.push(createHash('sha256').update(buf).digest('hex'));
+ }
+ if(new Set(artHashes).size<12)throw Error('Too many duplicate per-view RGBA source assets');
  const meta:FrameStats[]=[];
  const sampleFrames=[0,8,16,24,32,40,48,56,68,80,88,100,112,128,143];
  const screenshots:string[]=[];
  for(let f=0;f<frames;f++){
   const state=await page.evaluate(({frame,total})=>window.renderIntegrated(frame,total),{frame:f,total:frames});
   if(Object.values(state).some(v=>typeof v==='number'&&!Number.isFinite(v)))throw Error('Non-finite state frame '+f);
-  if(state.partCount!==12||state.artMeshCount<10||state.keyViewCount!==3)throw Error('Missing drawables at '+f+' '+JSON.stringify(state));
+  if(state.partCount!==12||state.artMeshCount<10||state.keyViewCount!==4)throw Error('Missing drawables at '+f+' '+JSON.stringify(state));
   meta.push(state);
   const file=join(out,'frame-'+String(f).padStart(3,'0')+'.png');
   await page.locator('#viewport').screenshot({path:file});
@@ -78,9 +100,11 @@ try{
  const report={
    status:'PASS_ENGINEERING_ONLY',visualReview:'REQUIRED',
    goal:'one continuous full-body 360 / 3D IK occlusion crossing / facial deformation and moving shadow',
-   sourceArt:'original procedural 3-view stylized part textures, no third-party assets',
-   drawables:12,explicitSourceKeyViews:3,
-   syntheticLeftView:'mirrored side for this small symmetrical proxy, not a production solution',
+   sourceArt:'original authored 4-view transparent RGBA per-part art textures, generated independently from TS vector art',
+   sourceRGBAKeyPNGs:artSources.length,uniqueArtHashes:new Set(artHashes).size,
+   registeredUV:true,perViewTextureInterpolation:true,alphaClipped:true,alphaProof:art,
+   drawables:12,explicitSourceKeyViews:4,
+   leftView:'independently rasterized 270-degree RGBA artwork with derivative side geometry; not a genuine extra hand-illustrated body model',
    renderedFrames:144,framesPerSecond:24,width:960,height:540,
    maxIkError:maxError,behindArmDepthAt82:meta[82].handMinusTorsoDepth,
    inFrontArmDepthAt110:meta[110].handMinusTorsoDepth,
@@ -88,8 +112,8 @@ try{
    shadowTravel:Math.max(...shadows)-Math.min(...shadows),
    videoBytes:statSync(video).size,
    limitations:['vector/procedural art rather than high fidelity anime illustration',
-   'only three authored key angles, mirrored left profile',
-   'simple fan-triangulated UV part mesh, not ARAP or full contour correspondence',
+   'three independent base contour directions; left contour derived, four keyed per-view RGBA paintings',
+   'registered semantic UV by vertex identity; fan mesh and SVG-like source layers are NOT production illustration assets',
    'art-directed shading shapes, not physically correct normal mapping',
    '3D two-link arm IK, simple leg motion without ground-lock IK',
    'numerical gates and generated frames do not replace independent visual review'],
@@ -97,7 +121,7 @@ try{
  };
  writeFileSync(join(out,'integrated-report.json'),JSON.stringify(report,null,2)+'\n');
  writeFileSync(join(out,'integrated-frame-stats.json'),JSON.stringify(meta,null,2)+'\n');
- console.log('PASS_ENGINEERING_ONLY: 144 frames / one clip / 3 source views / 12 parts');
+ console.log('PASS_ENGINEERING_ONLY: 144 frames / one clip / 4 RGBA views / 12 parts');
  console.log(JSON.stringify({maxError,behind:meta[82].handMinusTorsoDepth,ahead:meta[110].handMinusTorsoDepth,
  videoBytes:report.videoBytes,shadowTravel:report.shadowTravel}));
 } finally{
