@@ -26,6 +26,8 @@ jobs:
         run: npm run dev > /tmp/head009-vite.log 2>&1 &
       - name: Audit real WebGL pixels at seven angles
         run: npm run audit
+      - name: Audit independent eyes, nose, mouth, ears, jaw and hairline
+        run: npm run audit:organs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
