@@ -14,7 +14,11 @@ try{
   const diff=await page.evaluate(y=>{
    window.head009.frame(y);
    const canvas=document.querySelector<HTMLCanvasElement>('#stage')!;
-   const rgba=canvas.getContext('2d')!.getImageData(0,0,canvas.width,canvas.height).data;
+   const scratch=document.createElement('canvas');
+   scratch.width=canvas.width;scratch.height=canvas.height;
+   const ctx=scratch.getContext('2d')!;
+   ctx.drawImage(canvas,0,0);
+   const rgba=ctx.getImageData(0,0,canvas.width,canvas.height).data;
    // page-only diagnostics; no animation information read from held-out art.
    const host=window as unknown as {lastSweepRGBA?:Uint8ClampedArray};
    const previous=host.lastSweepRGBA;
