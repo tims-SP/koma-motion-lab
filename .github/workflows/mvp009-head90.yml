@@ -39,7 +39,12 @@ jobs:
         if: always()
         run: |
           if ls out/head009/sweep-*.png >/dev/null 2>&1; then
+            if ! command -v ffmpeg >/dev/null 2>&1; then
+              sudo apt-get update -qq
+              sudo apt-get install -y -qq ffmpeg
+            fi
             ffmpeg -hide_banner -loglevel error -y -framerate 30 -i out/head009/sweep-%03d.png -c:v libx264 -preset medium -pix_fmt yuv420p out/head009/head90-sweep.mp4
+            ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 out/head009/head90-sweep.mp4
           fi
       - uses: actions/upload-artifact@v4
         if: always()
