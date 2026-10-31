@@ -27,7 +27,6 @@ const layer = new THREE.Group();
 scene.add(layer);
 const ink = new THREE.LineBasicMaterial({ color:'#273049', transparent:true, opacity:.9, depthTest:false });
 const materials=new Map<string,THREE.MeshBasicMaterial>();
-const key=yaw => (Math.floor((((yaw%360)+360)%360)/90) % 4);
 const clamp=(v:number,a:number,b:number)=>Math.min(b,Math.max(a,v));
 const lerp=(a:number,b:number,t:number)=>a+(b-a)*t;
 const mod=(x:number)=>(x%360+360)%360;
