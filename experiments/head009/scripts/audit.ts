@@ -30,7 +30,7 @@ try{
  ];
  for(const [yaw,path,role] of refs){
   const measured=await page.evaluate(async({yaw,path})=>{
-   window.head009.frame(yaw);
+   window.head009.frame(yaw,3); // exact diagnostic alpha coverage, independent of painted color
    const stage=document.querySelector<HTMLCanvasElement>('#stage')!;
    const width=stage.width,height=stage.height;
    const a=document.createElement('canvas');a.width=width;a.height=height;
@@ -42,7 +42,7 @@ try{
    const x=aa.getImageData(0,0,width,height).data,y=bb.getImageData(0,0,width,height).data;
    let intersection=0,union=0;
    for(let i=0;i<x.length;i+=4){
-    const isModel=Math.max(Math.abs(x[i]-41),Math.abs(x[i+1]-50),Math.abs(x[i+2]-73))>30;
+    const isModel=x[i]>200&&x[i+1]>200&&x[i+2]>200;
     const isSource=Math.max(Math.abs(y[i]-233),Math.abs(y[i+1]-237),Math.abs(y[i+2]-245))>30;
     if(isModel&&isSource)intersection++;
     if(isModel||isSource)union++;
@@ -52,7 +52,7 @@ try{
   referenceMatches.push({yaw,path,role,...measured});
  }
  const keyArtAligned=referenceMatches.filter(v=>v.role==='key').every(v=>v.silhouetteIoU>=0.93);
- await writeFile(join(out,'head90-art-compare.json'),JSON.stringify({schema:'HEAD009-ART-COMPARISON-V1',referenceMatches,keyArtAligned},null,2)+'\\n');
+ await writeFile(join(out,'head90-art-compare.json'),JSON.stringify({schema:'HEAD009-ART-COMPARISON-V1',referenceMatches,keyArtAligned},null,2)+'\n');
  console.log('HEAD009_REFERENCE_ALIGNMENT '+JSON.stringify({referenceMatches,keyArtAligned}));
  for(const name of ['front-000','threequarter-045','profile-right-090','heldout-030','heldout-060','heldout-075']) {
   await page.goto((process.env.HEAD009_URL??'http://127.0.0.1:4173/')+'reference/'+name+'.svg');
