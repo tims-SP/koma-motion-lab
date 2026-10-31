@@ -30,7 +30,7 @@ declare global {interface Window {
   exportArtPNG:(partId:PartId,angle:View)=>string;
   renderTurn360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace};
   captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
-  turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
+  turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[];authoredGeometry:{id:string;right:readonly XY[];left:readonly XY[];rightVDD:XY;leftVDD:XY}[]};
   auditTurnOcclusion:()=>ReturnType<typeof auditLocalOcclusion>;
 }}
 
@@ -197,13 +197,13 @@ function transform(anchor:THREE.Vector3,rootYaw:number):THREE.Vector3 {
                                       anchor.z*Math.cos(y)-anchor.x*Math.sin(y));
 }
 function inverseViewingYaw(worldYaw:number):number {return wrap(worldYaw);}
-function solveIK(shoulder:THREE.Vector3,target:THREE.Vector3,L1:number,L2:number):{
+function solveIK(shoulder:THREE.Vector3,target:THREE.Vector3,L1:number,L2:number,pole:THREE.Vector3):{
  elbow:THREE.Vector3;hand:THREE.Vector3;error:number;
 }{
  const delta=target.clone().sub(shoulder),raw=delta.length(),distance=Math.min(raw,L1+L2-1e-4);
  const axis=delta.normalize(),a=(L1*L1-L2*L2+distance*distance)/(2*distance),
  h=Math.sqrt(Math.max(0,L1*L1-a*a));
- const pole=V(.1,-.15,1),pd=pole.addScaledVector(axis,-pole.dot(axis)).normalize();
+ const pd=pole.clone().addScaledVector(axis,-pole.dot(axis)).normalize();
  const elbow=shoulder.clone().addScaledVector(axis,a).addScaledVector(pd,h);
  const hand=shoulder.clone().addScaledVector(axis,distance);
  return {elbow,hand,error:hand.distanceTo(target)};
@@ -258,8 +258,8 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
    else if(part.role==='head')qaBindings.set(part.id,{local:part.anchor,world:headMatrix,boneId:'headBone'});
  }
  qaBindings.set('leftArm',{local:V(-.57,1.75,.03),world:bodyMatrix,boneId:'leftArmElbow'});
- qaBindings.set('leftLeg',{local:V(-.21,.47,.10),world:bodyMatrix,boneId:'leftLegRoot'});
- qaBindings.set('rightLeg',{local:V(.21,.47,.10),world:bodyMatrix,boneId:'rightLegRoot'});
+ qaBindings.set('leftLeg',{local:V(-.22,.47,.09),world:bodyMatrix,boneId:'leftLegRoot'});
+ qaBindings.set('rightLeg',{local:V(.22,.47,.09),world:bodyMatrix,boneId:'rightLegRoot'});
  camera.updateMatrixWorld();
  // Back hair and legs behind the body, based on actual 3D anchor.
  artMesh(defs[0],lookHead(defs[0].anchor),headYaw);
@@ -288,7 +288,7 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  const behind=transform(V(-.18,2.07,-.60),rootYaw);
  const ahead=transform(V(-.18,2.07,.68),rootYaw);
  const target=resting.clone().lerp(behind,reach).lerp(ahead,fore);
- const rig=solveIK(shoulder,target,.63,.63);
+ const rig=solveIK(shoulder,target,.63,.63,transform(V(.10,-.15,.90),rootYaw));
  const forearm=rig.hand.clone().sub(rig.elbow);
  const armLocalYaw=wrap(Math.atan2(forearm.x,forearm.z)/DEG);
  limb(shoulder,rig.elbow,.145,'#526f9d','rightArm');
@@ -347,7 +347,18 @@ window.renderTurn360=(yaw,frameIndex)=>{
  return {stats,trace:qaRecorder.lastFrame};
 };
 window.auditTurnOcclusion=()=>auditLocalOcclusion(renderer,scene,camera,drawn,qaRecorder.yaw);
-window.turnSourceViews={angles:[0,90,180,270],independent270:PART_IDS.every(id=>LEFT_CONTOURS[id]?.length===11),derivedPartIds:PART_IDS.filter(id=>!LEFT_CONTOURS[id])};
+window.turnSourceViews={
+ angles:[0,90,180,270],
+ independent270:PART_IDS.every(id=>LEFT_CONTOURS[id]?.length===11),
+ derivedPartIds:PART_IDS.filter(id=>!LEFT_CONTOURS[id]),
+ authoredGeometry:defs.map(p=>({
+   id:p.id,
+   right:p.keys[1].contour,
+   left:p.keys[3].contour,
+   rightVDD:p.keys[1].shift,
+   leftVDD:p.keys[3].shift
+ }))
+};
 window.captureTurnPass=(pass,includeImage)=>{
  if(!qaRecorder.lastFrame)throw Error('Must render a real turn frame first');
  const width=includeImage?480:240,height=includeImage?270:135;
