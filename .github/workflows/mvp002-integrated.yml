@@ -1,11 +1,6 @@
 name: MVP-002 integrated 2.75D TS core preview
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'experiments/mvp002/**'
-      - '.github/workflows/mvp002-integrated.yml'
 concurrency:
   group: mvp002-${{ github.ref }}
   cancel-in-progress: true
