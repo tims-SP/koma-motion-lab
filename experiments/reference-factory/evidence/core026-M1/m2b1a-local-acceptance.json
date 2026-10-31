@@ -82,7 +82,7 @@
     "config/core025-render.json": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3",
     "capture_core026_eyes_supervisor.mjs": "378b69044c8fb84023cd5d5c53403e4f9a709486b66fe77189d82bb019f65ca4"
   },
-  "ci": "PENDING_CODE_COMMIT_AND_CLEAN_RUN",
+  "ci": "PASS; see m2b1a-ci-acceptance.json (code b622107)",
   "visual_review": "m2b1a-visual-review.json",
   "prior_visual_failure": "m2b1a-fixed-domain-visual-failure.json"
 }

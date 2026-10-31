@@ -25,15 +25,15 @@ Codex已实际看默认鼻/眼/眉发/耳叶/颈部；默认还原可接受，�
 
 本轮只到默认原画还原通过；监督CI41174418164及旧回归41174418131均success。实际下载20份纯JSON并核对ZIP SHA，CI截图SHA与已人工查看的本地图逐张一致。[CI验收与媒体Draft](../experiments/reference-factory/evidence/core026-M1/m2b0-ci-acceptance.json)。媒体仅ignored out/及owner-only Draft，SDK原始流不发布。登录态保留，OSS审批问题与登录成功分开记录。
 
-## M2B1A离散眼动（本地通过，干净CI待核对）
+## M2B1A离散眼动（本地与干净CI通过）
 
 新增明确artist override策略与setEyeGaze：28/29、38/39瞳孔和高光同移，验收范围为默认头部姿态的水平-8/0/+8源像素。第一版虽然数值通过，但Codex看到固定眼域削掉移动虹膜下缘后拒绝；改为原始alpha域水平扩展固定8像素的有界包络，保留旧静止画面与单层诊断行为。原生EyeComposite mesh/UV注册及ClipToLower等价性仍BLOCKED。
 
-实际采集36张图，32正例独立对原始62张RGBA合成oracle全部通过；最大差1，眼域包络外变化0，默认/复位SHA不变。4张高光固定/静止域裁切负例均被原RGB阈值拒绝。已查看六个偏移眼部放大图及整头图，仅验收离散控制，连续眼动画和自然转头未验收。[本地证据](../experiments/reference-factory/evidence/core026-M1/m2b1a-local-acceptance.json)、[视觉判定](../experiments/reference-factory/evidence/core026-M1/m2b1a-visual-review.json)、[实现与限制](research/CORE-026-M2B1A-discrete-eye-control.md)。本轮由Codex本地执行，未重复此前被拒的mcode SDK调用。干净CI尚未核对，不冒称M2B整体通过。
+实际采集36张图，32正例独立对原始62张RGBA合成oracle全部通过；最大差1，眼域包络外变化0，默认/复位SHA不变。4张高光固定/静止域裁切负例均被原RGB阈值拒绝。已查看六个偏移眼部放大图及整头图，仅验收离散控制，连续眼动画和自然转头未验收。[本地证据](../experiments/reference-factory/evidence/core026-M1/m2b1a-local-acceptance.json)、[视觉判定](../experiments/reference-factory/evidence/core026-M1/m2b1a-visual-review.json)、[实现与限制](research/CORE-026-M2B1A-discrete-eye-control.md)。本轮由Codex本地执行，未重复此前被拒的mcode SDK调用。代码b622107的监督CI41181723133与旧回归41181723122均success；实际下载22份纯JSON并核对ZIP SHA，36张眼动和12张默认截图SHA与本地一致。参见[CI验收](../experiments/reference-factory/evidence/core026-M1/m2b1a-ci-acceptance.json)。完整M2B仍未通过。
 
 ## 下一工单
 
-先核对M2B1A代码提交的干净CI实际产物，再按[M2B1空间合成与眼组工单](plans/CORE-026-M2B1-spatial-and-eye-policy-order.md)第5–7步完成接收面RGBA/UV、投影背景相关Multiply及真实depth-test/透明孔验证。原生眼组注册对照仍分列BLOCKED，不能因选定原画覆盖就删掉。完成M2B后才进M3深度方案、M4动态遮挡、M5连续视频。[目标与距离](plans/CORE-026-goals-and-distance.md)。当前尚有这四道主要门禁，不给虚构百分比或固定工期。
+M2B1A干净CI实际产物已核对，接下来按[M2B1空间合成与眼组工单](plans/CORE-026-M2B1-spatial-and-eye-policy-order.md)第5–7步及[空间合成明确工单](plans/CORE-026-M2B1B-spatial-runtime-order.md)完成接收面RGBA/UV、投影背景相关Multiply及真实depth-test/透明孔验证。原生眼组注册对照仍分列BLOCKED，不能因选定原画覆盖就删掉。完成M2B后才进M3深度方案、M4动态遮挡、M5连续视频。[目标与距离](plans/CORE-026-goals-and-distance.md)。当前尚有这四道主要门禁，不给虚构百分比或固定工期。
 
 M2A代码ff2fe1a的监督CI41169579730及旧回归41169579751已success，覆盖顺序/alpha提案，不当作M2B运行时通过。M1仅raw -0.25/0/+0.25有限参考；全部360资产、绑骨/IK与背面模型均未验收。
 
