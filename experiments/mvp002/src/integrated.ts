@@ -119,7 +119,7 @@ function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;baseVi
          visible:baseVisible*frontVisibility,baseVisible,frontMask:frontVisibility,
          keyIndex:indices[0]};
 }
-function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THREE.ShaderMaterial {
+function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1,clipBounds:XY=[0,1]):THREE.ShaderMaterial {
  const pair=keyPair(yaw);
  const angles:[View,View,View,View]=[0,90,180,270];
  return new THREE.ShaderMaterial({
@@ -130,10 +130,11 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THR
    strength:{value:opacity},
    frontMask:{value:frontMask},
    faceWipe:{value:['face','eyes','fringe'].includes(part.id)?1:0},
-   // Exit/re-entry must reveal pixels from the hair-adjacent UV edge.
-   // Revealing the outer cheek first on 250→270° creates a disconnected
-   // line at frames 130-131 before the rest of the face becomes visible.
-   wipeDirection:{value:1}
+   // The face lies camera-right of the hair near yaw 90 (reveal LEFT edge),
+   // and camera-left near yaw 270 (reveal RIGHT edge).
+   // Clip in the actual morphed mesh space, not canonical texture UV.
+   wipeDirection:{value:wrap(yaw)>180?1:-1},
+   wipeBounds:{value:new THREE.Vector2(clipBounds[0],clipBounds[1])}
   },
   // Face/eyes/fringe are an authored art-compositing stack, not generic 3D
   // transparent planes. Their visibility fades across rear-key transitions.
@@ -144,7 +145,8 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THR
   side:THREE.DoubleSide,
   vertexShader:[
    'varying vec2 registeredUV;',
-   'void main(){ registeredUV=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }'
+   'varying float worldPartX;',
+   'void main(){ registeredUV=uv; worldPartX=position.x; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }'
   ].join('\n'),
   fragmentShader:[
    'uniform sampler2D artA;',
@@ -152,15 +154,19 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THR
    'uniform float transition;',
    'uniform float strength;',
    'uniform float frontMask, faceWipe, wipeDirection;',
+   'uniform vec2 wipeBounds;',
    'varying vec2 registeredUV;',
+   'varying float worldPartX;',
    'void main(){',
    '  vec4 a=texture2D(artA,registeredUV);',
    '  vec4 b=texture2D(artB,registeredUV);',
    '  float coverage=mix(a.a,b.a,transition);',
    '  float alpha=coverage*strength;',
    '  if(faceWipe>0.5 && frontMask<0.999){',
-   '    float side=wipeDirection>0.0?registeredUV.x:1.0-registeredUV.x;',
-   '    if(side<1.0-frontMask)discard;',
+   '    float x=clamp((worldPartX-wipeBounds.x)/max(0.0001,wipeBounds.y-wipeBounds.x),0.0,1.0);',
+   '    float side=wipeDirection>0.0?x:1.0-x;',
+   '    float edge=1.0-frontMask;',
+   '    alpha*=smoothstep(edge-0.035,edge+0.035,side);',
    '  }',
    '  if(alpha < 0.08) discard;',
    '  vec3 premultiplied=mix(a.rgb*a.a,b.rgb*b.a,transition);',
@@ -203,8 +209,9 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squas
  // not alpha-faded over the rear hair (which creates a gray ghost wedge).
  const materialAlpha=['face','eyes','fringe'].includes(part.id)?
    f.baseVisible*alpha:amount;
+ const minX=Math.min(...vertices.map(p=>p.x)),maxX=Math.max(...vertices.map(p=>p.x));
  emitGeometry(vertices,uvs,indices,
-   registeredMaterial(part,yaw,materialAlpha,f.frontMask),part.id);
+   registeredMaterial(part,yaw,materialAlpha,f.frontMask,[minX,maxX]),part.id);
  if(qaRecorder.active){
    const key=keyPair(yaw),angles:[View,View,View,View]=[0,90,180,270];
    const binding=qaBindings.get(part.id);
