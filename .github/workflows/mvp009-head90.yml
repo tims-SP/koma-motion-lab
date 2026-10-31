@@ -25,7 +25,8 @@ jobs:
       - run: npm run validate
       - name: Validate source organ semantics and negative controls
         run: npx tsx scripts/validate-organ-data.ts
-      - run: npx playwright install --with-deps chromium
+      - name: Verify hosted Chrome executable
+        run: google-chrome --version
       - name: Start head renderer
         run: npm run dev > /tmp/head009-vite.log 2>&1 &
       - name: Audit real WebGL pixels at seven angles

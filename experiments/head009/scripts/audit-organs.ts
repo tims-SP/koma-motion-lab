@@ -7,7 +7,7 @@ const out=process.env.HEAD009_OUT??'out/head009';
 const reg=JSON.parse(await readFile('reference/organ-landmarks.json','utf8')) as OrganLandmarks;
 const yaws=[0,30,45,60,75,90];
 await mkdir(out,{recursive:true});
-const browser=await chromium.launch({headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--disable-gpu-sandbox']});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--disable-gpu-sandbox']});
 const page=await browser.newPage({viewport:{width:1400,height:760},deviceScaleFactor:1});
 try{
  await page.goto(process.env.HEAD009_URL??'http://127.0.0.1:4173/',{waitUntil:'networkidle'});

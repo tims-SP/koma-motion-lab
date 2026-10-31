@@ -3,7 +3,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import {join} from 'node:path';
 const out=process.env.HEAD009_OUT??'out/head009';
 await mkdir(out,{recursive:true});
-const browser=await chromium.launch({headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--disable-gpu-sandbox']});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--disable-gpu-sandbox']});
 const page=await browser.newPage({viewport:{width:700,height:700},deviceScaleFactor:1});
 const measures:{yaw:number;changedFraction:number;affectedPixels:number}[]=[];
 const organVisibility:{yaw:number;nearEye:number;farEye:number;nose:number;mouth:number;face:number}[]=[];
