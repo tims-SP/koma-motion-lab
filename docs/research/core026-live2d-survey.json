@@ -1,0 +1,251 @@
+{
+  "schema": "core026-live2d-upstream-survey/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "baseline_commit": "097e788f9e853992c0d188cb512b7d5a663b5a41",
+  "status": "SOURCE_AUDIT_COMPLETE; NO_SKILL_INSTALL_OR_LOCAL_AUTORIG_EXECUTION",
+  "official_findings": [
+    {
+      "url": "https://docs.live2d.com/en/cubism-editor-manual/face-auto-edit/",
+      "fact": "Semi-automatic face deformation/motion generation for front-facing art requires separated face/eye/brow/mouth parts and chosen deformers."
+    },
+    {
+      "url": "https://docs.live2d.com/en/cubism-editor-manual/apply-3d-rotation-expression/",
+      "fact": "3D rotation expression generates keyforms from estimated3D shape; depth estimation uses non-default/non-frontal keyform, not the frontal default alone."
+    },
+    {
+      "url": "https://docs.live2d.com/en/cubism-editor-manual/apply-3d-rotation-expression-settings/",
+      "fact": "Explicit camera, rotation center, Z offset, perspective and rotation ranges; depth from keyform remains inferred, not a completed360surface."
+    },
+    {
+      "url": "https://docs.live2d.com/en/cubism-editor-manual/keyform-xydirection/",
+      "fact": "Two3-key parameters produce3x3=9 keyforms; corners/combined controls require verification."
+    },
+    {
+      "url": "https://docs.live2d.com/en/cubism-sdk-manual/cubism-core-api-reference/",
+      "fact": "Core computes drawable vertices/UV/opacity from existing model parameters; Core is not an automatic authoring or rendering engine."
+    },
+    {
+      "url": "https://cubism.live2d.com/editor-alpha/doc/manual/alpha1/ja/external-api-intergration/index.html",
+      "fact": "Official5.4alpha1 added editing APIs for objects, parts, deformers and parameters in modeling mode; do not generalize old15-method limitations to every version."
+    },
+    {
+      "url": "https://www.live2d.com/information/cubism-5_4-alpha/",
+      "fact": "Official announced alpha2 usage deadline2026-10-18; current date2026-10-31. Targeted oldalpha bridge remains unavailable until a usable compatible version is verified."
+    }
+  ],
+  "candidates": [
+    {
+      "repo": "Ariakage/live2d-agent-kit",
+      "commit": "354d95800b7d498246dfb658e0e2ee379c29caa4",
+      "audit_level": "TREE_SKILL_SCRIPTS_READ",
+      "priority": "P0_FIRST_BASELINE",
+      "files": [
+        "SKILL.md",
+        "docs/setup.md",
+        "docs/workflow.md",
+        "scripts/export-model.sh",
+        "integrations/psd2live/engine-lock.json"
+      ],
+      "urls": [
+        "https://github.com/Ariakage/live2d-agent-kit/blob/354d95800b7d498246dfb658e0e2ee379c29caa4/SKILL.md",
+        "https://github.com/Ariakage/live2d-agent-kit/blob/354d95800b7d498246dfb658e0e2ee379c29caa4/docs/setup.md",
+        "https://github.com/Ariakage/live2d-agent-kit/blob/354d95800b7d498246dfb658e0e2ee379c29caa4/docs/workflow.md",
+        "https://github.com/Ariakage/live2d-agent-kit/blob/354d95800b7d498246dfb658e0e2ee379c29caa4/scripts/export-model.sh",
+        "https://github.com/Ariakage/live2d-agent-kit/blob/354d95800b7d498246dfb658e0e2ee379c29caa4/integrations/psd2live/engine-lock.json"
+      ],
+      "finding": "Actual skill with export/native-Core/browser verification scripts. Pins psd2live5526f2e16b57e5f83d34f33730d6fa26d8bc8695 and patches; needs JDK21 and platform-matching official Core for authoritative verification. Verified upstream environment is macOS/M4, not our Linux. Do not mix pinned patch chain with latest engine.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "tsunehimatoi/psd2live",
+      "commit": "d5d2047d3865ee92679a81501861ff79ae644a2a",
+      "audit_level": "TREE_HOST_EXPORT_SOURCE_READ",
+      "priority": "P0_FIRST_BASELINE",
+      "files": [
+        "docs/en/README.md",
+        "docs/zh/spec/HEADLESS_HOST.md",
+        "src/main/kotlin/io/github/psd2live/HeadlessMcp.kt",
+        "src/main/kotlin/io/github/psd2live/ExportCli.kt"
+      ],
+      "urls": [
+        "https://github.com/tsunehimatoi/psd2live/blob/d5d2047d3865ee92679a81501861ff79ae644a2a/docs/en/README.md",
+        "https://github.com/tsunehimatoi/psd2live/blob/d5d2047d3865ee92679a81501861ff79ae644a2a/docs/zh/spec/HEADLESS_HOST.md",
+        "https://github.com/tsunehimatoi/psd2live/blob/d5d2047d3865ee92679a81501861ff79ae644a2a/src/main/kotlin/io/github/psd2live/HeadlessMcp.kt",
+        "https://github.com/tsunehimatoi/psd2live/blob/d5d2047d3865ee92679a81501861ff79ae644a2a/src/main/kotlin/io/github/psd2live/ExportCli.kt"
+      ],
+      "finding": "Concrete headless WorkspaceHost/MCP and export entry points. PSD to rig/deformers/keyforms and target export is candidate executable pipeline, not only an SDK player. Latest engine pin is separate from kit5526f2e; original-art parity and official runtime rendering remain to be tested locally.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "zeikar/iki",
+      "commit": "3d0701733e9d0eb6a2e12a609d8b456626ed8ac0",
+      "audit_level": "TREE_SKILL_ALGORITHM_SOURCE_READ",
+      "priority": "P1_FITTED_2D_COMPARISON",
+      "files": [
+        "plugin/README.md",
+        "packages/editor/AUTO-RIG.md",
+        "packages/editor/src/auto-rig/solve.ts",
+        "packages/editor/src/auto-rig/fields.ts"
+      ],
+      "urls": [
+        "https://github.com/zeikar/iki/blob/3d0701733e9d0eb6a2e12a609d8b456626ed8ac0/plugin/README.md",
+        "https://github.com/zeikar/iki/blob/3d0701733e9d0eb6a2e12a609d8b456626ed8ac0/packages/editor/AUTO-RIG.md",
+        "https://github.com/zeikar/iki/blob/3d0701733e9d0eb6a2e12a609d8b456626ed8ac0/packages/editor/src/auto-rig/solve.ts",
+        "https://github.com/zeikar/iki/blob/3d0701733e9d0eb6a2e12a609d8b456626ed8ac0/packages/editor/src/auto-rig/fields.ts"
+      ],
+      "finding": "Open .iki engine/editor/MCP and agent skills; concrete profile/constraint/warp fitting code. Docs explicitly describe head-turn parallax, per-family displacement and baked keyforms rather than reconstructed complete3D. Candidate feature attachment/turn-reference fit workflow, not360.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "nana7chi/CubismExternalEditMCP",
+      "commit": "863ebc87d0feafd841cf3877b16f0311047b9448",
+      "audit_level": "TREE_README_MCP_SOURCE_READ",
+      "priority": "BLOCKED_CURRENT_EDITOR_RUNTIME",
+      "files": [
+        "i18n/README_EN.md",
+        "cubism_mcp.py"
+      ],
+      "urls": [
+        "https://github.com/nana7chi/CubismExternalEditMCP/blob/863ebc87d0feafd841cf3877b16f0311047b9448/i18n/README_EN.md",
+        "https://github.com/nana7chi/CubismExternalEditMCP/blob/863ebc87d0feafd841cf3877b16f0311047b9448/cubism_mcp.py"
+      ],
+      "finding": "Real MCP wrapper for Editor WebSocket22033, with editing APIs targeting5.4Alpha. Requires Windows/macOS Editor. README alpha1 expiration2026-09-14; official alpha2 deadline2026-10-18 is also past current2026-10-31. No currently usable replacement validated; no expiry bypass.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "HKUDS/CLI-Anything",
+      "commit": "34f519533bc175d2fe287ab8316b0dd99bb9cc43",
+      "audit_level": "TREE_SKILL_READ",
+      "priority": "METADATA_QA_ONLY",
+      "files": [
+        "live2d/agent-harness/cli_anything/live2d/skills/SKILL.md"
+      ],
+      "urls": [
+        "https://github.com/HKUDS/CLI-Anything/blob/34f519533bc175d2fe287ab8316b0dd99bb9cc43/live2d/agent-harness/cli_anything/live2d/skills/SKILL.md"
+      ],
+      "finding": "Skill and Python package provide model manifests, motions, expressions, dependency checks and packaging. Template generation/model metadata edits do not create deformation meshes or prove auto-rig quality.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "henceketh/live2d-autorig-claude",
+      "commit": "9c21423559cd4dafebf4c4304f1b2dacdd9f7d31",
+      "audit_level": "TREE_README_RIG_TEST_SOURCE_READ",
+      "priority": "P1_MOC3_WRITER_COMPARISON",
+      "files": [
+        "README.md",
+        "src/autorig/rig.py",
+        "tests/test_pipeline.py"
+      ],
+      "urls": [
+        "https://github.com/henceketh/live2d-autorig-claude/blob/9c21423559cd4dafebf4c4304f1b2dacdd9f7d31/README.md",
+        "https://github.com/henceketh/live2d-autorig-claude/blob/9c21423559cd4dafebf4c4304f1b2dacdd9f7d31/src/autorig/rig.py",
+        "https://github.com/henceketh/live2d-autorig-claude/blob/9c21423559cd4dafebf4c4304f1b2dacdd9f7d31/tests/test_pipeline.py"
+      ],
+      "finding": "Direct MOC3 authoring pipeline, README includes upstream Aka consistency/loading reports; tests distinguish consistency from visual quality. Head yaw uses translation/shear approximation. Upstream report is not our62-layer run. README claim that Editor cannot edit via API is version-limited/outdated relative to official5.4alpha editing docs.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "Fenglin-Maple/AutoLive2d",
+      "commit": "d5520a61c1df23dd26f79e4cc54e718a7be72cb3",
+      "audit_level": "TREE_ALGORITHM_SOURCE_READ",
+      "priority": "P1_PROXY_HEAD_ALGORITHM",
+      "files": [
+        "docs/project-algorithms-and-workflow.md",
+        "src/lib/deform3d.ts"
+      ],
+      "urls": [
+        "https://github.com/Fenglin-Maple/AutoLive2d/blob/d5520a61c1df23dd26f79e4cc54e718a7be72cb3/docs/project-algorithms-and-workflow.md",
+        "https://github.com/Fenglin-Maple/AutoLive2d/blob/d5520a61c1df23dd26f79e4cc54e718a7be72cb3/src/lib/deform3d.ts"
+      ],
+      "finding": "Concrete per-vertex pseudo-head-shell depth/projection and feature tuning. Docs explicitly separate pseudoZ from painter order. Closely related algorithm reference; does not prove physical-depth recovery, correct native clipping or natural turn for Aka.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "852wa/Anime2.5DRig",
+      "commit": "7ddbd9943ea3152561b3dc8348fd752c850f3e95",
+      "audit_level": "TREE_RIG_RENDER_SOURCE_READ",
+      "priority": "P1_LIGHT_BROWSER_BASELINE",
+      "files": [
+        "README.md",
+        "lib/rigger.js",
+        "lib/renderer.js",
+        "lib/runtime.js"
+      ],
+      "urls": [
+        "https://github.com/852wa/Anime2.5DRig/blob/7ddbd9943ea3152561b3dc8348fd752c850f3e95/README.md",
+        "https://github.com/852wa/Anime2.5DRig/blob/7ddbd9943ea3152561b3dc8348fd752c850f3e95/lib/rigger.js",
+        "https://github.com/852wa/Anime2.5DRig/blob/7ddbd9943ea3152561b3dc8348fd752c850f3e95/lib/renderer.js",
+        "https://github.com/852wa/Anime2.5DRig/blob/7ddbd9943ea3152561b3dc8348fd752c850f3e95/lib/runtime.js"
+      ],
+      "finding": "Role classification, meshes, per-part depth and browser WebGL/mask runtime available. Lightweight PSD-to-browser comparison. Source standard premultiplied blend does not by itself prove all11AkaMultiply semantics; eye-white clipping must be checked against original iris overshoot.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "lTwTlol/Auto-live2D-beta",
+      "commit": "2d67dcabd6ae62c51ea049336b44b5edb8b5b1c6",
+      "audit_level": "TREE_README_ONLY",
+      "priority": "SECONDARY_FORK_NOT_FIRST",
+      "files": [
+        "README.en.md"
+      ],
+      "urls": [
+        "https://github.com/lTwTlol/Auto-live2D-beta/blob/2d67dcabd6ae62c51ea049336b44b5edb8b5b1c6/README.en.md"
+      ],
+      "finding": "Derivative of852wa/Anime2.5DRig; browser PSD auto-rig claim. Prefer inspect original pipeline first; no independent local validation of fork.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "RevStudio/Rev2D",
+      "commit": "f144581cdf1f12d781379c4df90d262b8c2dfa3d",
+      "audit_level": "TREE_README_ONLY",
+      "priority": "P1_SECONDARY_HEADLESS_EDITOR",
+      "files": [
+        "README.md"
+      ],
+      "urls": [
+        "https://github.com/RevStudio/Rev2D/blob/f144581cdf1f12d781379c4df90d262b8c2dfa3d/README.md"
+      ],
+      "finding": "Alternative JSON rig, CLI/MCP and claimed deterministic headless renderer. Distinguish its own rig and Live2D motion/expression interop from full MOC/CMO geometry compatibility; implementation/visual claims not verified here.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "fifteen42/live2d-from-art",
+      "commit": "8cf0ea6c6e7929e29e08149af81d172e500e5c42",
+      "audit_level": "TREE_SKILL_READ",
+      "priority": "P1_EXPERIMENTAL_REFERENCE",
+      "files": [
+        "SKILL.md"
+      ],
+      "urls": [
+        "https://github.com/fifteen42/live2d-from-art/blob/8cf0ea6c6e7929e29e08149af81d172e500e5c42/SKILL.md"
+      ],
+      "finding": "Experimental direct-MOC skill/worked example. Skill explicitly separates loadable/moving/looks good; no promise of official compiler or universal conversion. Local use not tested.",
+      "local_execution": "NOT_TESTED"
+    },
+    {
+      "repo": "bssm-oss/image2live2d",
+      "commit": "ae018778a5c9124e78ce4d8c0a826a585e34a823",
+      "audit_level": "TREE_SKILL_README_READ",
+      "priority": "SCAFFOLD_NOT_PRODUCTION",
+      "files": [
+        "skills/image2live2d/SKILL.md",
+        "README.md"
+      ],
+      "urls": [
+        "https://github.com/bssm-oss/image2live2d/blob/ae018778a5c9124e78ce4d8c0a826a585e34a823/skills/image2live2d/SKILL.md",
+        "https://github.com/bssm-oss/image2live2d/blob/ae018778a5c9124e78ce4d8c0a826a585e34a823/README.md"
+      ],
+      "finding": "Specific audited repository describes stub analysis, contract fixtures, static single-quad and heuristic multi-part runtime-loadable scaffolds. Real-export classification defenses are useful. Name and old search snippets do not establish high-quality full auto-rig.",
+      "local_execution": "NOT_TESTED"
+    }
+  ],
+  "engineering_decision": "Add isolated external automatic-rig baseline using existing Aka sources before expanding custom curve/depth fitting. Prioritize pinned live2d-agent-kit export/Core/browser workflow and separately assess latest PSD2Live headless path; iki is an open warp/fit comparison. No production engine migration implied.",
+  "acceptance_unchanged": {
+    "full_M2B": "BLOCKED_SPATIAL_RUNTIME_AND_NATIVE_REGISTRATION",
+    "M3": "BLOCKED_PENDING_COMPLETE_M2B",
+    "natural_turn": "NOT_ACCEPTED",
+    "full360": "NOT_ACCEPTED"
+  },
+  "inference_note": "Priorities are Codex judgments from source/doc inspection; upstream claims and tests are not local acceptance.",
+  "next_order": "docs/plans/CORE-026-Live2D-baseline-order.md"
+}

@@ -33,6 +33,8 @@ Codex已实际看默认鼻/眼/眉发/耳叶/颈部；默认还原可接受，�
 
 ## 下一工单
 
+用户追加Live2D专项检索后，已复核[官方3D旋转表达与12个skill/自动绑定候选](research/CORE-026-Live2D-skills-and-autorig-survey.md)。优先增加[外部Live2D自动绑定视觉基线](plans/CORE-026-Live2D-baseline-order.md)：固定live2d-agent-kit/PSD2Live，先真实最小模型、再用Aka现有层做默认保真与有限转头对照；iki作开放warp候选。官方3D旋转表达依据非默认关键形估深，不是正面恢复360；旧5.4alpha Editor MCP受使用期限与桌面宿主限制。当前仅源码/文档审阅，候选本地运行NOT_TESTED，不放行主线M3。
+
 已补[GitHub相关skill与源码检索](research/CORE-026-upstream-skills-and-rendering-survey.md)：优先复现与项目同为three0.180.0的深度剥离/深度纹理示例；通用shader/material skill按需参考。排除仅平面视差作为角色深度解法；WBOIT近似混合只作误差对照。Monster Mash/ARAP作为M3后续候选，See-through沿用CORE023历史而不重启。均仅源码审阅，尚未安装或运行集成，不增加已验收完成度。
 
 M2B1A干净CI实际产物已核对，接下来按[M2B1空间合成与眼组工单](plans/CORE-026-M2B1-spatial-and-eye-policy-order.md)第5–7步及[空间合成明确工单](plans/CORE-026-M2B1B-spatial-runtime-order.md)完成接收面RGBA/UV、投影背景相关Multiply及真实depth-test/透明孔验证。原生眼组注册对照仍分列BLOCKED，不能因选定原画覆盖就删掉。完成M2B后才进M3深度方案、M4动态遮挡、M5连续视频。[目标与距离](plans/CORE-026-goals-and-distance.md)。当前尚有这四道主要门禁，不给虚构百分比或固定工期。

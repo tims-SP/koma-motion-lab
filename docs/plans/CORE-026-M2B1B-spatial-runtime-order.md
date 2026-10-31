@@ -4,6 +4,8 @@
 
 本单目标：去掉“默认源域CPU求背景可用于任意投影”的假设，证明19接收面、62来源、25逻辑pass能够进入真实空间合成与depth-test路径。几何深度仍是未拟合候选，不将测试物体或PSD顺序当角色物理深度。
 
+用户追加Live2D专项后，执行前增加[外部自动绑定视觉基线](CORE-026-Live2D-baseline-order.md)的有界对照，先验证现成作者工具是否能缩短有限转头路径，再决定本单哪些实现值得继续自研。外部候选失败/不可用时保留证据并返回本单；候选成功也需保留本单空间语义与主线门禁的独立判定，不把2D候选当完整3D或M3自动放行。
+
 上游复用依据已补：[GitHub skill与渲染源码复核](../research/CORE-026-upstream-skills-and-rendering-survey.md)。优先读取gkjohnson/three-depthpeeling-demo@e6b57e1f的index.js及index.html，其three0.180.0与本项目一致；先复现可重分配深度纹理/透明层fixture，再决定是否需要有限层剥离。普通有序Normal/Multiply仍是保真基准，近似WBOIT不默认替换11项Multiply。CubismWebFramework仅参考遮罩上下文分离；通用threejs skill目标r186，只按需移植已确认适用于r180的内容，保留现有原画颜色算术。上游示例尚未在本项目执行，当前仅SOURCE_REVIEWED，不算实现通过。
 
 1. 保存M2B1A检查点，复用其只读默认基线。新增`core026_spatial.html`、`core026_spatial.js`；保持`core026.js`作为旧已验收默认oracle。不得修改原PNG、INX、UV、CORE025保护文件或基线图。
