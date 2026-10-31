@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Current result — MVP-004 registered multi-view RGBA art (2026-10-31)
+
+**[Successful full video render #41193779622](https://github.com/tims-SP/koma-motion-lab/actions/runs/41193779622)** · **[Corrected 6s MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-23fb286da4223fc7629f/integrated-6sec.mp4)** · **[16 transparent key-art PNGs and clip](https://github.com/tims-SP/koma-motion-lab/actions/runs/41193779622/artifacts/13039753564)** · **[Engineering and visual QA](docs/experiments/MVP-004-rgba-result.md)**
+
+The single original TypeScript 2.75D character scene now uses four keyed transparent RGBA paintings per part and registered canonical UVs while retaining VDD, anchor-based articulation, 3D IK, alpha-tested occlusion, art-directed lighting, and browser MP4. **PASS_ENGINEERING_TEXTURE_PIPELINE; VISUAL_QUALITY_FAIL** — input art is still simple hand-coded Canvas drawings, not polished anime layered illustrations. Do not start extra Spine/Live2D basic replay experiments; next improve real multiview illustration and facial/hand quality on this same character.
+
 ## Current result — MVP-003 six modules in ONE TypeScript shot (2026-10-31)
 
 **[Successful actual browser render #41192559514](https://github.com/tims-SP/koma-motion-lab/actions/runs/41192559514)** · **[One-shot MP4 and contact sheet (owner Draft Release)](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-1950b50997738b4e881f)** · **[Honest engineering/visual QA report](docs/experiments/MVP-003-six-modules-result.md)**
