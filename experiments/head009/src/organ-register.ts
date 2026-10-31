@@ -1,4 +1,5 @@
 import {parts,between,type Point,type Id} from './art';
+import {applyOrganVdd} from './view-vdd';
 export type ViewRole='key'|'heldout';
 export interface OrganLandmarks {
  schema:string;units:'SVG512';keyAngles:number[];heldOutAngles:number[];
@@ -26,10 +27,10 @@ export function predictViewLandmarks(register:OrganLandmarks,yaw:number){
   };
   const ca=getPos(angles[a]),cb=getPos(angles[b]),pos=getPos(yaw);
   const pa=svgToWorld(A),pb=svgToWorld(B);
-  out[semantic]=worldToCanvas([
+  out[semantic]=worldToCanvas(applyOrganVdd(part,[
    lerp(pa[0]-ca[0],pb[0]-cb[0],t)+pos[0],
    lerp(pa[1]-ca[1],pb[1]-cb[1],t)+pos[1]
-  ]);
+  ],yaw));
  }
  return out;
 }

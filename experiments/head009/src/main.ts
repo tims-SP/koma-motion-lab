@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {parts,between,type Part,type Point} from './art';
 import {loadReferenceArt,type SourcePath} from './reference-runtime';
+import {applyOrganVdd} from './view-vdd';
 const size=640;
 const canvas=document.querySelector<HTMLCanvasElement>('#stage');
 if(!canvas)throw Error('missing #stage');
@@ -63,10 +64,10 @@ function sourceFor(part:Part,yaw:number):{pts:Point[];source:SourcePath|null;str
  const pos:Point=[ax*Math.cos(rad)+az*Math.sin(rad),ay];
  for(let i=0;i<src.points.length;i++){
   const pa=(A??B)!.points[i]!,pb=(B??A)!.points[i]!;
-  points.push([
+  points.push(applyOrganVdd(part.id,[
    lerp(pa[0]-ca[0],pb[0]-cb[0],t)+pos[0],
    lerp(pa[1]-ca[1],pb[1]-cb[1],t)+pos[1]
-  ]);
+  ],yaw));
  }
  if(visibilityScale<.999){
   const cx=points.reduce((s,p)=>s+p[0],0)/points.length;

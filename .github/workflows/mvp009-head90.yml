@@ -20,6 +20,8 @@ jobs:
           node-version: '22'
       - run: npm install --no-audit --no-fund
       - run: npm run check
+      - name: Validate view-dependent organ controls and keyview preservation
+        run: npx tsx scripts/validate-vdd.ts
       - run: npm run validate
       - name: Validate source organ semantics and negative controls
         run: npx tsx scripts/validate-organ-data.ts
