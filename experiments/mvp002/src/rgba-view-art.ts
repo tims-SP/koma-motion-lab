@@ -50,9 +50,11 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
  case 'fringe':
   for(let x=-.7;x<.75;x+=.22){
     path([[x,.78],[x+.04,.24],[x-.06,-.51]],'#222d50',.022);
-    path([[x+.065,.72],[x+.09,.20]],'rgba(224,225,255,.35)',.019);
+    path([[x+.065+side*.017,.72],[x+.09+side*.028,.20]],'rgba(224,225,255,.35)',.019);
   }
-  path([[-.63,.73],[0,.97],[.55,.69]],'#8993c7',.026);
+  path([[-.63,.73],[side*.04,.97],[.55+side*.08,.69]],'#8993c7',.026);
+  if(back)path([[-.55,.42],[0,.72],[.61,.46]],'#c1bfd6',.027);
+  if(side)path([[side*.20,.74],[side*.33,.13],[side*.27,-.35]],'#e1ccdb',.017);
   break;
  case 'face':
   if(!back){
@@ -102,10 +104,12 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
   break;
  case 'skirt':
   for(let x=-.75;x<=.8;x+=.27){
-    path([[x*.51,.75],[x,-.85]],'#28345d',.035);
-    path([[x*.49,.63],[x-.055,-.61]],'rgba(175,193,232,.41)',.025);
+    path([[x*.51+side*.04,.75],[x+side*.065,-.85]],'#28345d',.035);
+    path([[x*.49+side*.06,.63],[x-.055+side*.07,-.61]],'rgba(175,193,232,.41)',.025);
   }
   path([[-.69,.81],[.65,.79]],'#d6bdac',.043);
+  if(back)path([[-.7,-.63],[0,-.71],[.69,-.6]],'#d6cfcc',.034);
+  if(side)path([[side*.18,.74],[side*.32,.1],[side*.50,-.78]],'#c9c3dc',.028);
   break;
  case 'scarf':
   path([[-.63,.35],[0,-.15],[.59,.40]],'#f8cdd6',.08);
