@@ -41,7 +41,7 @@ export function compareViewLandmarks(register:OrganLandmarks,yaw:number,deltaPix
  for(const [semantic,point] of Object.entries(view.points)){
   const p=predicted[semantic];
   if(!p){diffs[semantic]={reference:[point[0]*1.25,point[1]*1.25],predicted:[-1,-1],errorPx:-1,status:'MISSING_KEY_CORRESPONDENCE'};continue;}
-  const ref:Point=[point[0]*1.25,point[1]*1.25],test:Point=[p[0]+deltaPixels,p[1]];
+  const ref:Point=[point[0]*1.25,point[1]*1.25],test:Point=[p[0]+(semantic==='nose.tip'?deltaPixels:0),p[1]];
   diffs[semantic]={reference:ref,predicted:test,errorPx:Math.hypot(ref[0]-test[0],ref[1]-test[1]),status:'PROJECTED'};
  }
  const errors=Object.values(diffs).filter(v=>v.errorPx>=0).map(x=>x.errorPx);

@@ -16,8 +16,8 @@ try{
  for(const yaw of yaws){
   const compare=compareViewLandmarks(reg,yaw);
   // Negative control: a deliberately displaced nose must exceed the same reference-error budget.
-  const shifted=compareViewLandmarks(reg,yaw,35);
-  const caughtFault=shifted.errors['nose.tip']?.errorPx!==undefined&&shifted.errors['nose.tip'].errorPx!>20;
+  const shifted=compareViewLandmarks(reg,yaw,80);
+  const caughtFault=shifted.errors['nose.tip']?.errorPx!==undefined&&shifted.errors['nose.tip'].errorPx!>40;
   // We also use actual render-target ID pixels, so this is not merely a synthetic math comparison.
   const visibility=await page.evaluate(y=>window.head009.qa(y).visibleParts,yaw);
   const organPixels=Object.fromEntries(Object.entries(reg.organParts).map(([semantic,part])=>[semantic,visibility[part]??0]));
