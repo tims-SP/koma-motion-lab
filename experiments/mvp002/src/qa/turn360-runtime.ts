@@ -136,7 +136,7 @@ export function idShader(original:THREE.Material, color:readonly [number,number,
     depth?'  gl_FragColor=vec4(vec3(gl_FragCoord.z),1.);':'  gl_FragColor=vec4(partColor,1.);',
     '}'
   ].join('\n'),
-  side:THREE.DoubleSide,depthTest:true,depthWrite:true,transparent:false
+  side:THREE.DoubleSide,depthTest:original.depthTest,depthWrite:original.depthWrite,transparent:false
  });
 }
 export function countIdPixels(buf:Uint8Array,ids:readonly string[],scale:number):Map<string,number>{
