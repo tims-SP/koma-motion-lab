@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 4173",
     "check": "tsc --noEmit",
+    "validate": "tsx scripts/validate-art.ts",
     "audit": "tsx scripts/audit.ts"
   },
   "dependencies": {
