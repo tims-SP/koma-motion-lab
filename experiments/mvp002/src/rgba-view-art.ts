@@ -1,3 +1,4 @@
+import {paintAnimeDetails} from './anime-ink';
 import * as THREE from 'three';
 
 /**
@@ -17,10 +18,10 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
  const cached=cache.get(name);
  if(cached)return cached;
  const canvas=document.createElement('canvas');
- canvas.width=canvas.height=256;
+ canvas.width=canvas.height=512;
  const ctx=canvas.getContext('2d');
  if(!ctx)throw Error('2D layer authoring unavailable');
- ctx.setTransform(128,0,0,-128,128,128);
+ ctx.setTransform(256,0,0,-256,256,256);
  ctx.lineCap='round';ctx.lineJoin='round';
  // Canonical UV mask: all key art for the same part is drawn in the
  // same 2D material domain, even though its screen contour differs per view.
@@ -60,35 +61,8 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
   if(side)path([[side*.20,.74],[side*.33,.13],[side*.27,-.35]],'#e1ccdb',.017);
   break;
  case 'face':
-  if(!back){
-    // Chin/facial blush/nose are registered in material space. Side art is
-    // deliberately different artwork rather than the front texture reused.
-    oval(side*.11-.22,-.27,.17,.045,'rgba(215,123,147,.30)');
-    oval(side*.11+.24,-.26,.13,.045,'rgba(215,123,147,.24)');
-    if(side){
-      path([[side*.24,.05],[side*.38,-.04],[side*.24,-.13]],'#b97c85',.022);
-      path([[side*.12,-.47],[side*.26,-.48]],'#ae6a79',.027);
-    } else {
-      path([[.008,.00],[-.018,-.12],[.058,-.15]],'#bd8990',.017);
-      path([[-.15,-.44],[0,-.48],[.15,-.42]],'#a65d70',.024);
-      oval(-.31,.26,.06,.085,'rgba(255,243,222,.30)');
-    }
-  } else{
-    path([[-.4,.28],[-.1,.40],[.2,.30]],'rgba(245,226,201,.28)',.04);
-  }
-  break;
  case 'eyes':
-  if(!back){
-    const positions=side?[side*.08]:[-.38,.38];
-    for(const x of positions) {
-      oval(x,0,side?.19:.20,.34,'#faf5ed');
-      oval(x+.045*side,-.045,.105,.245,'#497fa1');
-      oval(x+.03,-.045,.047,.17,'#263b63');
-      oval(x-.013,.12,.04,.065,'#ffffff');
-      path([[x-.20,.29],[x,.40],[x+.19,.32]],'#293453',.045);
-      path([[x-.18,-.33],[x,-.36],[x+.18,-.31]],'#7f5471',.017);
-    }
-  }
+  // Detailed feature-only authored art is in anime-ink.ts.
   break;
  case 'torso':
   if(back){
@@ -139,6 +113,7 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
   path([[-.4,.63],[-.3,-.18]],'rgba(255,247,237,.25)',.05);
   break;
  }
+ paintAnimeDetails(ctx,part.id,angle);
  // This thin outline is in the *texture* with alpha, not a black opaque rect.
  if(!isFeaturesOnly){ mask();ctx.lineWidth=.027;ctx.strokeStyle='rgba(31,38,68,.76)';ctx.stroke(); }
  const texture=new THREE.CanvasTexture(canvas);
@@ -157,7 +132,7 @@ export function artTextureProof(part:ArtPart):{transparent:boolean;centerOpaque:
  });
  const centerOpaque=tex.every(t=>{
   const c=t.image as HTMLCanvasElement,ctx=c.getContext('2d');
-  return !!ctx&&ctx.getImageData(128,128,1,1).data[3]>0;
+  return !!ctx&&ctx.getImageData(256,256,1,1).data[3]>0;
  });
  return {transparent,centerOpaque,allDistinct:new Set(datas).size===4,views:4};
 }
