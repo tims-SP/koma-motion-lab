@@ -12,7 +12,7 @@ type FrameStats={
 };
 declare global {interface Window {
  renderIntegrated:(frame:number,total:number)=>FrameStats;
- integratedInfo:Record<string,unknown>;
+ integratedInfo:{parts:number;views:number;method:string};
 }}
 const out=resolve('out/integrated');
 mkdirSync(out,{recursive:true});
