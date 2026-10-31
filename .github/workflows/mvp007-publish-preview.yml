@@ -1,0 +1,44 @@
+name: MVP-007 publish accepted static-360 preview
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mvp007-publish-preview.yml'
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve actual verified video and images (no re-render)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh run download 41200083182 --repo tims-SP/koma-motion-lab \
+            --name mvp006-360-acceptance-evidence --dir output
+          test -s output/turn360-8s.mp4
+          test -s output/angle-board.png
+          test -s output/detail-board.png
+          test -s output/turn360-qa.json
+      - name: Create owner-visible draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="mvp007-static360-tech-20261031"
+          if gh release view "$tag" --repo tims-SP/koma-motion-lab >/dev/null 2>&1; then
+            echo "Draft release already exists: $tag"
+            exit 0
+          fi
+          gh release create "$tag" --repo tims-SP/koma-motion-lab --draft \
+            --target "$GITHUB_SHA" \
+            --title "MVP-007 · Fixed-pose 360° core technical proof (not high-fidelity anime)" \
+            --notes "Single original 12-part TypeScript/Three.js figure, 8s/192 frames. S01-S08 structure PASS, frame-board and temporal clip review. User full-video acceptance and complex motion/anime fidelity are NOT claimed. CI: https://github.com/tims-SP/koma-motion-lab/actions/runs/41200083182" \
+            output/turn360-8s.mp4 output/angle-board.png output/detail-board.png \
+            output/turn360-qa.json
+          echo "Release tag: $tag" >> "$GITHUB_STEP_SUMMARY"
