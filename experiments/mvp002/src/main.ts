@@ -117,9 +117,35 @@ function clearFrame():void {
     if(child instanceof THREE.Mesh||child instanceof THREE.Line)child.geometry.dispose();
   }
 }
+
+// Four authored key contour shapes per body part. They use compatible vertex
+// identities: triangles are constructed from interpolated 2D control points.
+// This is a minimal ArtMesh proof, NOT a bitmap warper or a final asset format.
+type Contour = [number,number][];
+const frontFace:Contour=[[-.65,.75],[-.30,.92],[.30,.92],[.65,.75],[.83,.33],[.78,-.34],[.43,-.75],[0,-1],[-.43,-.75],[-.78,-.34],[-.83,.33]];
+const sideFace:Contour=[[-.55,.72],[-.25,.91],[.2,.9],[.57,.63],[.65,.24],[.92,-.03],[.44,-.68],[.07,-.98],[-.36,-.75],[-.60,-.36],[-.62,.30]];
+const frontFringe:Contour=[[-1,-.1],[-.86,.58],[-.52,1],[-.14,.84],[.17,.99],[.58,.81],[.91,.6],[1,-.14],[.5,-.28],[.08,-.14],[-.39,-.35]];
+const sideFringe:Contour=[[-.9,-.08],[-.82,.5],[-.46,.90],[.1,1],[.55,.79],[.82,.40],[.95,.12],[1,-.30],[.45,-.62],[.05,-.3],[-.42,-.44]];
+const frontSkirt:Contour=[[-.61,.76],[-.38,1],[.38,1],[.61,.76],[.94,-.65],[.52,-.88],[.15,-.77],[-.12,-.9],[-.46,-.75],[-.96,-.64]];
+const sideSkirt:Contour=[[-.48,.76],[-.27,1],[.21,1],[.46,.76],[.66,-.55],[.35,-.78],[.12,-.86],[-.18,-.73],[-.43,-.82],[-.70,-.58]];
+const mirror=(input:Contour):Contour=>input.map(([x,y])=>[-x,y]);
+const KEY_CONTOURS:Record<string,Contour[]> = {
+ face:[frontFace,sideFace,frontFace,mirror(sideFace)],
+ fringe:[frontFringe,sideFringe,frontFringe,mirror(sideFringe)],
+ skirt:[frontSkirt,sideSkirt,frontSkirt,mirror(sideSkirt)]
+};
+function artMesh(partId:string,center:Vec,scale:Vec,yaw:number,color:string,z:number,alpha:number):void{
+ const arr=KEY_CONTOURS[partId], a=Math.floor(mod(yaw)/90)%4,b=(a+1)%4,t=(mod(yaw)%90)/90;
+ const pts=arr[a].map((p,i)=>v(center.x+lerp(p[0],arr[b][i][0],t)*scale.x,
+                                  center.y+lerp(p[1],arr[b][i][1],t)*scale.y));
+ shape(pts,color,z,alpha);
+}
+
 function part(type:string,anchor:Vec3,sizeXY:Vec,yaw:number,color:string,baseZ:number,opacity=1,chin=0):Vec {
  const f=form(type,yaw),p=project(anchor,yaw);
- p.x+=f.shift;ellipse(p.x,p.y,sizeXY.x*f.width,sizeXY.y,color,baseZ+f.depth,opacity*f.visible,true,chin);
+ p.x+=f.shift;
+ if(KEY_CONTOURS[type])artMesh(type,p,v(sizeXY.x*f.width,sizeXY.y),yaw,color,baseZ+f.depth,opacity*f.visible);
+ else ellipse(p.x,p.y,sizeXY.x*f.width,sizeXY.y,color,baseZ+f.depth,opacity*f.visible,true,chin);
  return p;
 }
 function sparkle(x:number,y:number,r:number,z:number,color:string):void{
@@ -154,7 +180,7 @@ function actor(yaw:number,walk:number,reach:number,expr:number,light:number):Rec
    const x=skirt.x+s*.17*form('skirt',yaw).width;
    bone(v(x,1.37),v(x+s*.025,1.08),.014,'#7991bd',.52,false);
  }
- const target=v(1.31+.15*sin(reach*Math.PI),2.10+.06*cos(reach*Math.PI));
+ const target=v(.94+.09*sin(reach*Math.PI),2.10+.06*cos(reach*Math.PI));
  let reachError=0;
  for(let side of [-1,1]){
    const shoulder=project({x:side*.47,y:2.31,z:.02},yaw);
@@ -224,7 +250,7 @@ function effects(time:number,shot:Shot):void {
    sparkle(x,y,radius,2.2,i%3===0?'#f1c0da':'#9ddff4');
  }
  if(shot==='action'){
-   ellipse(1.36,2.10,.12+.07*sin(time*5),.12+.07*sin(time*5),'#88e0f2',2.0,.6,false);
+   ellipse(.96,2.10,.12+.07*sin(time*5),.12+.07*sin(time*5),'#88e0f2',2.0,.6,false);
  }
 }
 function backdrop(time:number,shot:Shot):void {
@@ -265,7 +291,7 @@ function renderFrame(shot:Shot,frame:number,frames:number):Record<string,unknown
 }
 window.demoRender=renderFrame;
 window.demoInfo={quality:'technical stylized vector proxy, not licensed or photoreal final anime art',
-                keyViewDegrees:[0,90,180,270],renderWidth:size.width,renderHeight:size.height};
+                keyViewDegrees:[0,90,180,270],artMeshParts:['face','fringe','skirt'],renderWidth:size.width,renderHeight:size.height};
 renderFrame('turn',0,72);
 declare global {interface Window {
  demoRender:(shot:Shot,frame:number,frames:number)=>Record<string,unknown>;
