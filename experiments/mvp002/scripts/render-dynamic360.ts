@@ -155,12 +155,12 @@ try{
  const median=sorted[Math.floor(sorted.length/2)];
  const peak=Math.max(...diffs),peakAt=diffs.indexOf(peak)+1,ratio=peak/Math.max(median,.00001);
  check('D09_TEMPORAL_IMAGE_SPIKES',ratio<3.2,'peak/median='+ratio.toFixed(3)+' peakFrame='+peakAt);
- const maxShadowMismatch=Math.max(...data.map(x=>Math.abs(x.faceShadowOpacity-.27*x.faceVisibility)));
+ const maxShadowMismatch=Math.max(...data.map(x=>Math.abs(x.faceShadowOpacity-.27*Math.pow(x.faceVisibility,3))));
  const minFaceVisibility=Math.min(...data.map(x=>x.faceVisibility));
  const maxFaceVisibility=Math.max(...data.map(x=>x.faceVisibility));
  check('D11_VIEW_DEPENDENT_FACE_SHADOW',
    maxShadowMismatch<1e-8&&minFaceVisibility<.001&&maxFaceVisibility>.5,
-   'face shadow alpha follows face visibility; max mismatch='+maxShadowMismatch+
+   'face shadow follows cubic view-visibility envelope; max mismatch='+maxShadowMismatch+
    '; face visibility range '+minFaceVisibility+'..'+maxFaceVisibility);
  const status=violations.every(x=>x.status==='PASS')?'PASS_STRUCTURE_PENDING_VISUAL':'FAIL_STRUCTURE';
  const report={
