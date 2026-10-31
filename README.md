@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Current result — MVP-003 six modules in ONE TypeScript shot (2026-10-31)
+
+**[Successful actual browser render #41192559514](https://github.com/tims-SP/koma-motion-lab/actions/runs/41192559514)** · **[One-shot MP4 and contact sheet (owner Draft Release)](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-1950b50997738b4e881f)** · **[Honest engineering/visual QA report](docs/experiments/MVP-003-six-modules-result.md)**
+
+One minimal original three-keyview, 12-part character runs through **360 yaw → 3D IK arm crossing torso depth → blink/VDD/local ArtMesh + animated art-shadow and particles** in a single deterministic 6s/144-frame 960×540 TypeScript render. **PASS_ENGINEERING_ONLY**. Real frame captures reviewed: **NOT high-quality Japanese anime art**; real multi-view RGBA texture registration, refined linework, complex alpha masks, complete skeletal animation still pending. Complex Reverse1999 assets remain optional references, not blockers. Legacy T00–T11/K0–K2 tests are not prerequisites.
+
 ## Current primary research track — MVP-002 core-first integrated TypeScript (2026-10-31)
 
 **[Authoritative MVP-002 plan & results](docs/experiments/MVP-002-core-first.md)** · **[Successful integrated render](https://github.com/tims-SP/koma-motion-lab/actions/runs/41191491411)** · **[Three videos in Draft Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-cbdcb29f362bf38e3849)**
