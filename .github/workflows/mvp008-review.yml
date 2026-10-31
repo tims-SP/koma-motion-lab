@@ -1,0 +1,86 @@
+name: MVP-008 focused moving-pose occlusion and visual inspection
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/mvp002/scripts/audit-dynamic-occlusion.ts'
+      - '.github/workflows/mvp008-review.yml'
+concurrency:
+  group: mvp008-review-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  actions: read
+  contents: write
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: TS and Chromium
+        working-directory: experiments/mvp002
+        run: |
+          npm install --no-audit --no-fund
+          npm run typecheck
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb ffmpeg
+      - name: Real isolated Alpha versus final ID buffer at moving poses
+        working-directory: experiments/mvp002
+        run: xvfb-run -a npm run audit:dynamic360
+      - name: Retrieve existing real 192-frame video without re-rendering
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p reviewed
+          gh run download 41202693389 --repo tims-SP/koma-motion-lab \
+            --name mvp008-dynamic360-evidence --dir reviewed
+          test -s reviewed/dynamic360-8s.mp4
+          test -s reviewed/dynamic-angle-board.png
+      - name: Emit bounded JPEGs for model visual review from REAL MP4
+        run: |
+          set -euo pipefail
+          mkdir -p reviewed/qa
+          ffmpeg -hide_banner -loglevel error -y -i reviewed/dynamic-angle-board.png \
+            -vf "scale=1080:-2" -q:v 12 reviewed/qa/board.jpg
+          for frame in 042 090 144; do
+            ffmpeg -hide_banner -loglevel error -y -i reviewed/dynamic360-8s.mp4 \
+              -vf "select='eq(n,${frame})',scale=640:-2" -vsync 0 -frames:v 1 \
+              -q:v 10 "reviewed/qa/frame-${frame}.jpg"
+          done
+          for item in reviewed/qa/*.jpg; do
+            name="$(basename "$item" .jpg)"
+            printf 'MODEL_QA_%s_BEGIN\n' "$name"
+            base64 -w0 "$item"
+            printf '\nMODEL_QA_%s_END\n' "$name"
+          done
+      - name: Upload occlusion and review images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mvp008-dynamic-local-occlusion-and-visual-review
+          retention-days: 20
+          if-no-files-found: warn
+          path: |
+            experiments/mvp002/out/dynamic-occlusion/*
+            reviewed/qa/*.jpg
+      - name: Optional owner Draft Release for full actual video
+        if: success()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="mvp008-dynamic360-${GITHUB_RUN_ID}"
+          gh release create "$tag" \
+            reviewed/dynamic360-8s.mp4 \
+            reviewed/dynamic-angle-board.png \
+            experiments/mvp002/out/dynamic-occlusion/dynamic-occlusion-audit.json \
+            --repo tims-SP/koma-motion-lab --target "$GITHUB_SHA" --draft \
+            --title "MVP-008 dynamic 360° minimal technical review (NOT production-art acceptance)" \
+            --notes "Same simplified character, 8s/192 frames; nine automated engineering checks pass in Actions 41202693389. Pose-dependent occlusion is separately checked. Actual anime visual quality/foot IK not accepted."
