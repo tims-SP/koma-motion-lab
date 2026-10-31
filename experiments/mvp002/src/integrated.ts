@@ -115,7 +115,7 @@ function emitGeometry(vertices:THREE.Vector3[],uvs:XY[],indices:number[],materia
  const mesh=new THREE.Mesh(g,material);
  root.add(mesh);drawn.push(mesh);
 }
-function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1):void {
+function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squashY=1):void {
  const f=sample(part,yaw),n=f.shape.length,amount=f.visible*alpha;
  if(amount<.025)return;
  // p(theta) = projected(R*A) + per-keyview 2D VDD shift. The UV vertices
@@ -124,7 +124,7 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1):void
  const uvs:XY[]=[[.5,.5]];
  for(const [x,y] of f.shape){
    vertices.push(V(center.x+f.shift[0]+x*part.size[0]*scale,
-                   center.y+f.shift[1]+y*part.size[1]*scale,center.z));
+                   center.y+f.shift[1]+y*part.size[1]*scale*squashY,center.z));
    uvs.push([(x+1)/2,(y+1)/2]);
  }
  const indices:number[]=[];for(let i=1;i<=n;i++)indices.push(0,i,i%n+1);
@@ -239,7 +239,7 @@ export function evaluate(frame:number,total:number):FrameStats {
       V(face.x+.13+shadowShift,face.y+.08,face.z+.16)],'#584968',.17);
  }
  const eyes=lookHead(defs[5].anchor);
- artMesh(defs[5],eyes,headYaw,1-blink);
+ artMesh(defs[5],eyes,headYaw,1,1,1-.95*blink);
  if(sample(defs[5],headYaw).visible>.2) {
    for(const side of [-1,1]){
      const v=eyes.clone().add(V(side*.135,0,.08));
