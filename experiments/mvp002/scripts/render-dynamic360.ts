@@ -10,7 +10,7 @@ mkdirSync(OUT,{recursive:true});
 const FRAMES=192,FPS=24,WIDTH=960,HEIGHT=540;
 type Frame={
  frame:number;yaw:number;time:number;headLocalYaw:number;ikError:number;
- handMinusTorsoDepth:number;blink:number;faceVisibility:number;faceShadowOpacity:number;
+ handMinusTorsoDepth:number;blink:number;faceVisibility:number;faceShadowOpacity:number;headMatteBend:number;
  pose:{reach:number;fore:number;headLocalYaw:number;shoulderXYZ:number[];elbowXYZ:number[];
  handXYZ:number[];targetXYZ:number[];handDistance:number;footLXYZ:number[];
  footRXYZ:number[];poseTime:number;handTorsoLocalZ:number};
@@ -52,7 +52,7 @@ try{
     headLocalYaw:frame.stats.headLocalYaw,ikError:frame.stats.ikError,
     handMinusTorsoDepth:frame.stats.handMinusTorsoDepth,
     blink:frame.stats.blink,faceVisibility:frame.stats.faceVisibility,
-    faceShadowOpacity:frame.stats.faceShadowOpacity,pose:frame.pose,trace:frame.trace,visibleCounts:readback.counts
+    faceShadowOpacity:frame.stats.faceShadowOpacity,headMatteBend:frame.stats.headMatteBend,pose:frame.pose,trace:frame.trace,visibleCounts:readback.counts
   });
   const png=join(OUT,'frame-'+String(i).padStart(3,'0')+'.png');
   await page.locator('#viewport').screenshot({path:png});
@@ -79,6 +79,19 @@ try{
    writeFileSync(join(OUT,pass+'-'+String(deg).padStart(3,'0')+'.png'),
      Buffer.from(result.dataUrl.split(',')[1],'base64'));
   }
+ }
+ // Actual transition images from THIS exact rendering run.
+ for(const [id,indices] of [
+  ['transition-038-045',Array.from({length:8},(_,i)=>38+i)],
+  ['transition-128-136',Array.from({length:9},(_,i)=>128+i)]
+ ] as const) {
+  const board=await browser.newPage({viewport:{width:1280,height:700}});
+  const cards=indices.map(i=>'<figure><figcaption>frame '+i+'</figcaption><img src="data:image/png;base64,'+
+   readFileSync(join(OUT,'frame-'+String(i).padStart(3,'0')+'.png')).toString('base64')+'"></figure>');
+  await board.setContent('<html><style>body{background:#18253b;color:white;font:13px sans-serif}main{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}figure{margin:0}img{width:100%}</style><main>'+
+    cards.join('')+'</main></html>');
+  await board.screenshot({path:join(OUT,id+'.png'),fullPage:true});
+  await board.close();
  }
  const clip=join(OUT,'dynamic360-8s.mp4');
  execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-framerate',String(FPS),
@@ -162,6 +175,9 @@ try{
    maxShadowMismatch<1e-8&&minFaceVisibility<.001&&maxFaceVisibility>.5,
    'face shadow follows cubic view-visibility envelope; max mismatch='+maxShadowMismatch+
    '; face visibility range '+minFaceVisibility+'..'+maxFaceVisibility);
+ const targetBends=[...Array.from({length:8},(_,i)=>38+i),...Array.from({length:9},(_,i)=>128+i)].map(i=>data[i].headMatteBend);
+ check('D12_CONTOUR_MASK_BEND',targetBends.every(x=>Number.isFinite(x)&&x>.008),
+  'True morphed-face contour bend, min='+Math.min(...targetBends).toFixed(5)+'; visual review required');
  const status=violations.every(x=>x.status==='PASS')?'PASS_STRUCTURE_PENDING_VISUAL':'FAIL_STRUCTURE';
  const report={
    phase:'MVP008_DYNAMIC_360',

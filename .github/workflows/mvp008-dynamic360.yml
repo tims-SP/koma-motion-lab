@@ -46,6 +46,7 @@ jobs:
           path: |
             experiments/mvp002/out/dynamic360/dynamic360-8s.mp4
             experiments/mvp002/out/dynamic360/dynamic-angle-board.png
+            experiments/mvp002/out/dynamic360/transition-*.png
             experiments/mvp002/out/dynamic360/dynamic360-qa.json
             experiments/mvp002/out/dynamic360/dynamic360-trace.json
             experiments/mvp002/out/dynamic360/same-pose-*.png

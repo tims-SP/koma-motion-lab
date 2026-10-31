@@ -22,7 +22,7 @@ interface FrameStats {
   partCount:number; keyViewCount:number; artMeshCount:number;
   ikError:number; handMinusTorsoDepth:number; armLocalYaw:number;
   lightAngle:number; shadowOffset:number; blink:number; targetX:number; handX:number;
-  faceVisibility:number;faceShadowOpacity:number;
+  faceVisibility:number;faceShadowOpacity:number;headMatteBend:number;
 }
 declare global {interface Window {
   renderIntegrated:(frame:number,total:number)=>FrameStats;
@@ -119,7 +119,39 @@ function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;baseVi
          visible:baseVisible*frontVisibility,baseVisible,frontMask:frontVisibility,
          keyIndex:indices[0]};
 }
-function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1,clipBounds:XY=[0,1]):THREE.ShaderMaterial {
+
+/** Six semantically registered head-height sections: chin, jaw, cheek, nose,
+ * temple, hairline. Evaluated against real deformed profile vertices per pose.
+ * It is a contour proxy, NOT an independently authored hair/skin seam. */
+const MATTE_ROWS=[-.92,-.64,-.28,.08,.48,.88];
+type Matte={left:number[];right:number[];centerY:number;halfHeight:number;bend:number};
+let activeMatte:Matte|null=null;
+function contourMatte(face:Part,yaw:number,center:THREE.Vector3):Matte {
+ const pose=sample(face,yaw),pts=pose.shape;
+ const ranges=MATTE_ROWS.map(y=>{
+  const xs:number[]=[];
+  for(let i=0;i<pts.length;i++){
+   const p=pts[i],q=pts[(i+1)%pts.length],dy=q[1]-p[1];
+   if(Math.abs(dy)<1e-9){if(Math.abs(y-p[1])<1e-9)xs.push(p[0],q[0]);continue;}
+   const t=(y-p[1])/dy;if(t>=0&&t<=1)xs.push(lerp(p[0],q[0],t));
+  }
+  if(!xs.length){
+   const v=[...pts].sort((a,b)=>Math.abs(a[1]-y)-Math.abs(b[1]-y))[0];xs.push(v[0]);
+  }
+  return [Math.min(...xs),Math.max(...xs)];
+ });
+ const left=ranges.map(x=>center.x+pose.shift[0]+x[0]*face.size[0]);
+ const right=ranges.map(x=>center.x+pose.shift[0]+x[1]*face.size[0]);
+ const dev=(x:number[])=>Math.max(...x.slice(1,-1).map((n,i)=>{
+  const t=(MATTE_ROWS[i+1]-MATTE_ROWS[0])/(MATTE_ROWS[5]-MATTE_ROWS[0]);
+  return Math.abs(n-lerp(x[0],x[5],t));
+ }));
+ return {left,right,centerY:center.y+pose.shift[1],
+  halfHeight:face.size[1],bend:Math.max(dev(left),dev(right))};
+}
+
+function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THREE.ShaderMaterial {
+ const matte=activeMatte;if(!matte)throw Error('Head matte missing');
  const pair=keyPair(yaw);
  const angles:[View,View,View,View]=[0,90,180,270];
  return new THREE.ShaderMaterial({
@@ -134,7 +166,11 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1,clip
    // and camera-left near yaw 270 (reveal RIGHT edge).
    // Clip in the actual morphed mesh space, not canonical texture UV.
    wipeDirection:{value:wrap(yaw)>180?1:-1},
-   wipeBounds:{value:new THREE.Vector2(clipBounds[0],clipBounds[1])}
+   matteY:{value:matte.centerY},matteScale:{value:matte.halfHeight},
+   matteLeftA:{value:new THREE.Vector3(...matte.left.slice(0,3))},
+   matteLeftB:{value:new THREE.Vector3(...matte.left.slice(3,6))},
+   matteRightA:{value:new THREE.Vector3(...matte.right.slice(0,3))},
+   matteRightB:{value:new THREE.Vector3(...matte.right.slice(3,6))}
   },
   // Face/eyes/fringe are an authored art-compositing stack, not generic 3D
   // transparent planes. Their visibility fades across rear-key transitions.
@@ -145,8 +181,8 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1,clip
   side:THREE.DoubleSide,
   vertexShader:[
    'varying vec2 registeredUV;',
-   'varying float worldPartX;',
-   'void main(){ registeredUV=uv; worldPartX=position.x; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }'
+   'varying vec2 partXY;',
+   'void main(){ registeredUV=uv; partXY=position.xy; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }'
   ].join('\n'),
   fragmentShader:[
    'uniform sampler2D artA;',
@@ -154,19 +190,30 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1,clip
    'uniform float transition;',
    'uniform float strength;',
    'uniform float frontMask, faceWipe, wipeDirection;',
-   'uniform vec2 wipeBounds;',
+   'uniform float matteY,matteScale;',
+   'uniform vec3 matteLeftA,matteLeftB,matteRightA,matteRightB;',
+   'float profile(float y,vec3 a,vec3 b){',
+   ' if(y<-.64) return mix(a.x,a.y,clamp((y+.92)/.28,0.,1.));',
+   ' if(y<-.28) return mix(a.y,a.z,clamp((y+.64)/.36,0.,1.));',
+   ' if(y<.08) return mix(a.z,b.x,clamp((y+.28)/.36,0.,1.));',
+   ' if(y<.48) return mix(b.x,b.y,clamp((y-.08)/.4,0.,1.));',
+   ' return mix(b.y,b.z,clamp((y-.48)/.4,0.,1.));',
+   '}',
    'varying vec2 registeredUV;',
-   'varying float worldPartX;',
+   'varying vec2 partXY;',
    'void main(){',
    '  vec4 a=texture2D(artA,registeredUV);',
    '  vec4 b=texture2D(artB,registeredUV);',
    '  float coverage=mix(a.a,b.a,transition);',
    '  float alpha=coverage*strength;',
    '  if(faceWipe>0.5 && frontMask<0.999){',
-   '    float x=clamp((worldPartX-wipeBounds.x)/max(0.0001,wipeBounds.y-wipeBounds.x),0.0,1.0);',
-   '    float side=wipeDirection>0.0?x:1.0-x;',
-   '    float edge=1.0-frontMask;',
-   '    alpha*=smoothstep(edge-0.035,edge+0.035,side);',
+   '    if(frontMask<=0.001) discard;',
+   '    float y=(partXY.y-matteY)/matteScale;',
+   '    float lo=profile(y,matteLeftA,matteLeftB);',
+   '    float hi=profile(y,matteRightA,matteRightB);',
+   '    float boundary=wipeDirection>0.?mix(hi,lo,frontMask):mix(lo,hi,frontMask);',
+   '    float inside=wipeDirection>0.?partXY.x-boundary:boundary-partXY.x;',
+   '    alpha*=smoothstep(-.007,.007,inside);',
    '  }',
    '  if(alpha < 0.08) discard;',
    '  vec3 premultiplied=mix(a.rgb*a.a,b.rgb*b.a,transition);',
@@ -209,9 +256,8 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squas
  // not alpha-faded over the rear hair (which creates a gray ghost wedge).
  const materialAlpha=['face','eyes','fringe'].includes(part.id)?
    f.baseVisible*alpha:amount;
- const minX=Math.min(...vertices.map(p=>p.x)),maxX=Math.max(...vertices.map(p=>p.x));
  emitGeometry(vertices,uvs,indices,
-   registeredMaterial(part,yaw,materialAlpha,f.frontMask,[minX,maxX]),part.id);
+   registeredMaterial(part,yaw,materialAlpha,f.frontMask),part.id);
  if(qaRecorder.active){
    const key=keyPair(yaw),angles:[View,View,View,View]=[0,90,180,270];
    const binding=qaBindings.get(part.id);
@@ -303,6 +349,7 @@ export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=f
  const blink=Math.exp(-Math.pow((t-4.83)*11,2));
  const rootChest=transform(V(0,1.96,0),rootYaw),rootHead=transform(V(0,3.02,.0),rootYaw);
  const lookHead=(p:THREE.Vector3)=>rootHead.clone().add(transform(p,headYaw));
+ activeMatte=contourMatte(defs[3],headYaw,lookHead(defs[3].anchor));
  // These are the matrices actually used for rigid head/root attachment.
  // IK-generated forearm receives its own bone transform below.
  const bodyMatrix=new THREE.Matrix4().makeRotationY(rootYaw*DEG);
@@ -407,7 +454,7 @@ export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=f
    artMeshCount:drawn.filter(o=>o instanceof THREE.Mesh).length,
    ikError:rig.error,handMinusTorsoDepth:rig.hand.z-rootChest.z,
    armLocalYaw,lightAngle,shadowOffset:shadowShift,blink,
-   targetX:target.x,handX:rig.hand.x,faceVisibility,faceShadowOpacity
+   targetX:target.x,handX:rig.hand.x,faceVisibility,faceShadowOpacity,headMatteBend:activeMatte.bend
  };
  return result;
 }
