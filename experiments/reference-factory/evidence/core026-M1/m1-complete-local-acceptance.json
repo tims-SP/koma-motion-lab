@@ -198,6 +198,14 @@
       "unique_texture_median_residual_source_px": 0.7071309148651893,
       "selected_unique_uuids": 62
     },
+    "comparison_metrics": {
+      "reference_image_observations": "AVAILABLE_AT_USABLE_RAW_YAWS_ONLY",
+      "candidate_absolute_landmark_error_px": "BLOCKED_NO_CORE026_CANDIDATE_RENDERER",
+      "candidate_face_silhouette_IoU": "BLOCKED_NO_CORE026_CANDIDATE_RENDERER",
+      "attachment_gap_px": "BLOCKED_UNKNOWN_ATTACHMENT_ROOTS_AND_NO_CANDIDATE",
+      "raw_yaw_to_physical_angle": "BLOCKED_NOT_CALIBRATED",
+      "reference_admission_is_candidate_fit_acceptance": false
+    },
     "scope": {
       "M1": "PASS_REFERENCE_LIMITED",
       "M2_permission": "LOCAL_RECEIVER_COMPOSITOR_PROTOTYPE_ONLY",
