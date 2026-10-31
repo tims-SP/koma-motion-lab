@@ -85,7 +85,7 @@ aside{display:flex;flex-direction:column;gap:14px}.review-row{display:flex;justi
 <div class="note">真实 Three.js 渲染与六张原始 SVG 均打包在此文件中。浏览器直接打开即可使用，包含部件层级、角度切换、参考叠加、机器检查及人工记录。当前为头部 0°–90° 技术原型。</div>
 </section></aside></main></div>
 <script>window.__HEAD009_REFS=${safe(refs)};window.__HEAD009_LANDMARKS=${safe(register)};</script>
-<script type="module">${source.replace(/<\\/script/gi,'<\\\\/script')}</script>
+<script type="module">${source.replaceAll('</script','<\\/script')}</script>
 </body></html>`;
 await mkdir(outputDir,{recursive:true});
 const path=join(outputDir,'acceptance.html');await writeFile(path,html);
