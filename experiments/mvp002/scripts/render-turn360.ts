@@ -237,9 +237,36 @@ try{
    }
    return max;
  }));
- gate('S05_PART_TRAJECTORY_CONTINUITY',maxJump<.22&&maxVertexJump<.25?'PASS':'FAIL',
-   maxJump>=.22||maxVertexJump>=.25?
-   'Large adjacent anchor/mesh vertex jumps: '+maxJump+' / '+maxVertexJump:undefined);
+ // Decode the actual encoded MP4, not just model-local geometry.
+ // The fixed-camera turn previously hid a 90° face/hair z-tie snap despite
+ // all ArtMesh vertex trajectories being numerically continuous.
+ const temporalW=320,temporalH=180;
+ const decoded=execFileSync('ffmpeg',['-v','error','-i',video,
+   '-vf','scale=320:180,format=gray','-f','rawvideo','pipe:1'],
+   {maxBuffer:16*1024*1024});
+ if(decoded.length!==192*temporalW*temporalH)
+   throw Error('Missing decoded temporal gray frame data');
+ const pairDiffs:number[]=[];
+ for(let frame=1;frame<192;frame++){
+   let total=0,count=0;
+   const curr=frame*temporalW*temporalH;
+   const prev=(frame-1)*temporalW*temporalH;
+   for(let y=0;y<temporalH;y++)for(let x=110;x<210;x++){
+     const xy=y*temporalW+x;
+     total+=Math.abs(decoded[curr+xy]-decoded[prev+xy]);count++;
+   }
+   pairDiffs.push(total/count);
+ }
+ const sorted=[...pairDiffs].sort((a,b)=>a-b);
+ const medianTemporalDiff=sorted[Math.floor(sorted.length/2)];
+ const peakTemporalDiff=Math.max(...pairDiffs);
+ const peakTemporalFrame=1+pairDiffs.indexOf(peakTemporalDiff);
+ const temporalSpikeRatio=peakTemporalDiff/Math.max(.0001,medianTemporalDiff);
+ const motionOk=maxJump<.22&&maxVertexJump<.25&&temporalSpikeRatio<2.5;
+ gate('S05_PART_TRAJECTORY_CONTINUITY',motionOk?'PASS':'FAIL',
+   motionOk?undefined:JSON.stringify({
+    maxJump,maxVertexJump,medianTemporalDiff,peakTemporalDiff,
+    peakTemporalFrame,temporalSpikeRatio,limit:2.5}));
  const actualFrameCounts=trace.filter(f=>f.actualVisiblePartIds.length>=4).length;
  const occlusionWrong=occlusionResults.filter(x=>x.status==='FAIL');
  const occlusionUntested=occlusionResults.filter(x=>x.status==='UNTESTED');
@@ -282,7 +309,7 @@ try{
   coreStatus:finalStatus,highFidelityAnimeArtAccepted:false
  };
  const diagnostics={seamEqual,frameCount:P.videoFrames,boundaryImages:8,independentSampleAngles:25,
-   maxAnchorJump:maxJump,maxVertexJump,minimumAreaRatio,flippedOrCollapsed,maxAnchorAudit,maxProjectionAudit,maxDeformationAudit,actualFrameCounts,sources,videoBytes:statSync(video).size,
+   maxAnchorJump:maxJump,maxVertexJump,medianTemporalDiff,peakTemporalDiff,peakTemporalFrame,temporalSpikeRatio,minimumAreaRatio,flippedOrCollapsed,maxAnchorAudit,maxProjectionAudit,maxDeformationAudit,actualFrameCounts,sources,videoBytes:statSync(video).size,
    partTracesCount:parts.length,screenBoundsOkay,occlusionResults,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
  writeFileSync(join(output,'turn360-traces.json'),JSON.stringify({frames:trace,sampled:keyTraces},null,1));
  writeFileSync(join(output,'turn360-qa.json'),JSON.stringify({report,diagnostics},null,2)+'\n');
