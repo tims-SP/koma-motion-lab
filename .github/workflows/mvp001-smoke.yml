@@ -1,0 +1,59 @@
+name: MVP-001 M0 · new multiview renderer infra smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mvp001-smoke.yml'
+      - 'experiments/mvp001/**'
+
+permissions:
+  contents: write
+
+jobs:
+  m0-webgl-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout text-only lab
+        uses: actions/checkout@v4
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned dependencies
+        working-directory: experiments/mvp001
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium, Xvfb and FFmpeg
+        working-directory: experiments/mvp001
+        run: |
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb ffmpeg
+      - name: Execute actual browser WebGL capture and encode
+        working-directory: experiments/mvp001
+        run: xvfb-run -a npm run smoke
+      - name: Show actual M0 report
+        if: always()
+        run: |
+          if [ -f experiments/mvp001/out/summary.md ]; then
+            cat experiments/mvp001/out/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "M0 FAIL — rendering did not produce report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Store procedural fixture preview in private DRAFT Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="mvp001-m0-${GITHUB_RUN_ID}"
+          gh release create "$tag" \
+            experiments/mvp001/out/mvp001-m0-engineering-smoke.mp4 \
+            experiments/mvp001/out/report.json \
+            experiments/mvp001/out/frames/frame-000.png \
+            --target "$GITHUB_SHA" --draft \
+            --title "MVP-001 M0 browser renderer engineering smoke" \
+            --notes "Infrastructure demonstration only: NOT anime fidelity, NOT the multi-view MVP quality gate."
+          echo "Draft Release: $tag" >> "$GITHUB_STEP_SUMMARY"
