@@ -11,7 +11,7 @@ import type {OcclusionRuleResult} from '../src/qa/occlusion-audit';
 declare global {interface Window{
  renderTurn360:(yaw:number,frameIndex:number)=>{stats:{frame:number;time:number;yaw:number;headLocalYaw:number;partCount:number;keyViewCount:number;artMeshCount:number;ikError:number;handMinusTorsoDepth:number;armLocalYaw:number;lightAngle:number;shadowOffset:number;blink:number;targetX:number;handX:number};trace:FrameTrace};
  captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
- turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
+ turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[];authoredGeometry:{id:string;right:readonly (readonly [number,number])[];left:readonly (readonly [number,number])[];rightVDD:readonly [number,number];leftVDD:readonly [number,number]}[]};
  auditTurnOcclusion:()=>OcclusionRuleResult[];
 }}
 const output=resolve('out/turn360');
@@ -221,14 +221,27 @@ try{
  gate('S06_OCCLUSION_ACTUAL_RENDER',occlusionWrong.length?'FAIL':occlusionOk?'PASS':'BLOCKED',
    occlusionOk?undefined:JSON.stringify({rules:occlusionResults.length,
      wrong:occlusionWrong,untested:occlusionUntested,actualFrameCounts}));
- const independentKeys=keyTraces.filter(f=>[90,270].includes(f.yawDegrees)).flatMap(f=>f.parts);
- const all270=independentKeys.filter(p=>p.keyA.yawDegrees===270);
- const keyProof=all270.length===12&&all270.every(p=>p.keyA.independentlyAuthored&&
-   independentKeys.some(other=>other.id===p.id&&other.keyA.yawDegrees===90&&
-   other.keyA.sourceHash!==p.keyA.sourceHash));
- const s07ok=sources.independent270&&sources.derivedPartIds.length===0&&keyProof;
+ const geomProof=sources.authoredGeometry.length===12&&sources.authoredGeometry.every(p=>{
+   if(p.right.length!==p.left.length||p.right.length<8)return false;
+   // Independently stored 270 key must not be exactly a mirrored 90 key.
+   const mirrored=p.right.map(([x,y])=>[-x,y]);
+   const departure=Math.max(...p.left.map(([x,y],i)=>
+     Math.hypot(x-mirrored[i][0],y-mirrored[i][1])));
+   return departure>.015;
+ });
+ const at90=keyTraces.find(f=>f.yawDegrees===90);
+ const at270=keyTraces.find(f=>f.yawDegrees===270);
+ const find=(f:FrameTrace|undefined,id:string)=>f?.parts.find(p=>p.id===id);
+ const emblem90=find(at90,'emblem'),emblem270=find(at270,'emblem');
+ const torso90=find(at90,'torso'),torso270=find(at270,'torso');
+ // A non-symmetric chest emblem moves from camera-right to camera-left.
+ const semanticMarkerOk=!!emblem90&&!!emblem270&&!!torso90&&!!torso270&&
+   emblem90.projectedAnchorXY[0]>torso90.projectedAnchorXY[0]+.1&&
+   emblem270.projectedAnchorXY[0]<torso270.projectedAnchorXY[0]-.1;
+ const s07ok=sources.independent270&&sources.derivedPartIds.length===0&&
+   geomProof&&semanticMarkerOk;
  gate('S07_ANATOMICAL_ASYMMETRY',s07ok?'PASS':'FAIL',
-   s07ok?undefined:'Missing independent left 270° contour sources or distinct per-part authored hashes.',
+   s07ok?undefined:'Independent left contours missing, equal to mirror, or chest-marker anatomical orientation wrong.',
    sources.derivedPartIds);
  gate('S08_RENDER_FRAME_INTEGRITY',videoGood?'PASS':'FAIL',
   videoGood?undefined:'FFprobe frame/resolution mismatch or ID-pass model bounding box clipped/empty');
