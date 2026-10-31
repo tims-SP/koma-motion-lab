@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_ORGAN_VDD_ENGINEERING_SWEEP_PASS_VISUAL_REVIEW",
+  "phase": "HEAD90_HTML_INTERACTIVE_ACCEPTANCE_IN_PROGRESS",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -100,12 +100,9 @@
       ],
       "action": "Render a single head at 0/15/30/45/60/75/90 with 3D anchors, view-dependent depth, semantic ArtMesh warp and shared coverage",
       "evidence": [
-        "head90-angles.png",
-        "head90-beauty.png",
-        "head90-id.png",
-        "head90-depth.png",
-        "head90-alpha.png",
-        "head90-qa.json"
+        "head009-review.html",
+        "html-review-qa.json",
+        "organ-qa.json"
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "IN_PROGRESS",
@@ -238,8 +235,7 @@
       ],
       "action": "Extend head views to 180 and 270 with independently authored rear/left profile and key-specific VDD",
       "evidence": [
-        "head360-angles.png",
-        "head360-profile-strips.png",
+        "head360-review.html",
         "head360-qa.json"
       ],
       "priority": "BLOCKING",
@@ -253,7 +249,7 @@
       ],
       "action": "Combine independent head yaw, calibrated pitch, blink, and local hair movement",
       "evidence": [
-        "head-motion.mp4",
+        "head-motion-review.html",
         "head-motion-qa.json"
       ],
       "priority": "BLOCKING",
@@ -267,7 +263,7 @@
       ],
       "action": "Integrate character body, bone/IK motion, foreshortening, foot contacts and full 192-frame acceptance",
       "evidence": [
-        "fullbody-192.mp4",
+        "fullbody-review.html",
         "fullbody-qa.json"
       ],
       "priority": "BLOCKING",
@@ -354,5 +350,8 @@
       82
     ],
     "acceptanceRequires": "Real screenshot and full turn video with independently authored new reference, organ-mask topology and source provenance"
-  }
+  },
+  "outputFormat": "standalone_html",
+  "qaExecution": "isolated_container_chromium_file_url",
+  "latestValidationWorkflow": ".github/workflows/mvp009-html-review.yml"
 }

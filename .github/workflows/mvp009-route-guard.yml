@@ -51,7 +51,7 @@ jobs:
             const line=plan.split('\n').find(line=>line.startsWith('| '+task.id+' |'));
             if(!line)throw Error('Missing plan row '+task.id);
             const column=line.split('|')[3]||'';
-            const files=[...column.matchAll(/`([^`]+\.(?:json|png|mp4))`/g)].map(m=>m[1]);
+            const files=[...column.matchAll(/`([^`]+\.(?:json|png|html))`/g)].map(m=>m[1]);
             if(JSON.stringify(files)!==JSON.stringify(task.evidence))
               throw Error('Task evidence mismatch '+task.id+': '+files+' != '+task.evidence);
           }

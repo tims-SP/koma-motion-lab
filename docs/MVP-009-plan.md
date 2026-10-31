@@ -1,7 +1,7 @@
 # MVP-009 · Euclid 风格多视角分层 2.75D 角色
 
 日期：2026-11-01  
-状态：**PLANNED_NOT_IMPLEMENTED**  
+状态：**HEAD90_HTML_INTERACTIVE_ACCEPTANCE_IN_PROGRESS**  
 选定架构：**多视角分层原画 + 3D Anchor + 分区域深度遮挡 + ArtMesh/VDD + Three.js**
 
 ## 目标与工程范围
@@ -10,7 +10,7 @@
 
 **外观**由关键视角分层原画和语义 landmark 定义；**空间结构**由骨骼/3D Anchor 的投影与深度确定；**中间角度**使用局部网格形变、VDD 与拓扑状态；**可见像素**由相机相对深度和分区域遮挡决定。局部鼻、耳或头发接缝在可视化对照证明需要时采用小范围真实三维曲面补强。
 
-技术栈：TypeScript strict、Three.js/WebGL2、Vite、Playwright、Chromium、FFmpeg。新实现位置：`experiments/head009/`。源码、manifest、验收 JSON 存入 Git；原画与视频存入 Actions Artifact 或经授权的存储。
+技术栈：TypeScript strict、Three.js/WebGL2、Vite、Playwright、Chromium。新实现位置：`experiments/head009/`。源码、manifest、验收 JSON 存入 Git；可离线打开的 HTML 验收文件、截图及大型参考素材存入 Actions Artifact。
 
 ## 第一阶段资产准备
 
@@ -112,13 +112,19 @@ View-specific residual `Δ_{i,k}` accounts for intentional stylization in the ke
 | T00 | 固定参考角色、源图 SHA、镜头标定与初始姿势 | `baseline.json`、`reference-hashes.json` |
 | T01 | Beauty / ID / Depth / Alpha 使用统一像素覆盖；注入错误深度与掩码 | `coverage-parity.json`、`fault-injection.json` |
 | T02 | 独立绘制 0°、45°、90° 分层头部；30°、60°、75° 独立留出；注册鼻、耳、发际线等语义点 | `reference-manifest.json`、`landmarks.json`、`layer-occlusion.json`、`source-hashes.json` |
-| T03B | 建立 3D 锚点、局部 ArtMesh、分区域空间深度和视角状态；输出 0°–90° 图板 | `head90-angles.png`、`head90-beauty.png`、`head90-id.png`、`head90-depth.png`、`head90-alpha.png`、`head90-qa.json` |
+| T03B | 建立 3D 锚点、局部 ArtMesh、分区域空间深度和视角状态；输出 0°–90° 图板 | `head009-review.html`、`html-review-qa.json`、`organ-qa.json` |
 | T04 | 比较 30°、60°、75° 留出参考及 90° 真正侧脸，测量补画与形变工作量 | `head90-review.json`、`head90-decision.json` |
-| T05 | 扩展左右侧和背面，并加入按部件设定的 VDD 修形 | `head360-angles.png`、`head360-profile-strips.png`、`head360-qa.json` |
-| T06 | 引入独立头部转向、眨眼和发丝运动 | `head-motion.mp4`、`head-motion-qa.json` |
-| T07 | 整合全身骨骼、IK、动作视觉缩短与足部接地 | `fullbody-192.mp4`、`fullbody-qa.json` |
+| T05 | 扩展左右侧和背面，并加入按部件设定的 VDD 修形 | `head360-review.html`、`head360-qa.json` |
+| T06 | 引入独立头部转向、眨眼和发丝运动 | `head-motion-review.html`、`head-motion-qa.json` |
+| T07 | 整合全身骨骼、IK、动作视觉缩短与足部接地 | `fullbody-review.html`、`fullbody-qa.json` |
 
 每一阶段通过对应的程序门禁及独立视觉检查后，才进入依赖它的下一阶段；当前任务及状态以 `docs/MVP-009-tasks.json` 为准。
+
+## HTML 与隔离测试工作流
+
+单个 `head009-review.html` 作为可离线交互的最终验收界面，嵌入真实 Three.js 构建产物、SVG 原画和面部语义标注。其交互项目包括任意 0°–90° 偏航、关键角度、播放/暂停、Beauty / Part-ID / Depth / Alpha、五官点位、独立原画并排对照、JSON 诊断与 PNG 导出。
+
+在隔离 Linux / Chromium 容器中直接以 `file://` 打开**生成的同一个 HTML**，测试角度变化、四通道、原画加载、诊断、下载、控制输入及外部请求数量。执行结果 `html-review-qa.json` 连同界面截图存入 Artifact；静态数据与人工质量标准由原项目验收门禁负责。
 
 ## 机器与视觉验收
 
@@ -128,7 +134,7 @@ View-specific residual `Δ_{i,k}` accounts for intentional stylization in the ke
 4. **Pass parity**: actual Beauty/ID/Depth/Alpha coverage agreement; target <=0.5% non-edge opaque region mismatches, 1 px tolerance edges; negative controls must trigger FAIL. These are *provisional measurable budgets* to be calibrated to output resolution.
 5. **Key reconstruction**: each authored key compared with its independent source at aligned resolution; initial threshold silhouette IoU >=0.93 and semantic landmark position <=2% of head bounding-box height, plus independent visual approval. Held-out 30/60/75 require reported errors and visual assessment; thresholds aren't a substitute for real profile and hair contact.
 6. **Continuity**: 0° and 360° same-pose agree; no disconnected eye/nose/face islands in dense sequences near 90/270; per-frame delta peak can locate a bug but cannot alone pass quality.
-7. **Video truth**: full MP4 / every sample / all diagnostic passes bound to exact Git SHA and same renderer function. Do not consume cached run or claims with mismatched render passes.
+7. **Interactive HTML truth**: single HTML bundles Three.js/WebGL and source references. Angle slider + reference overlay + all diagnostic passes bind to the same renderer. Test by opening the actual generated HTML with a local file URL in an isolated Chromium environment; record SHA, offline resource checks and screenshots.
 8. **Scope**: head pass ≠ full-body pose pass, horizontal 360 ≠ free camera pitch or arbitrary 3D interactions.
 
 ## 阶段决策与产物管理
@@ -138,4 +144,4 @@ View-specific residual `Δ_{i,k}` accounts for intentional stylization in the ke
 - 在同一头部完成 0°–90°，继而覆盖水平 360°，最后增加头部运动和全身运动。
 - 每个阶段保存源代码 SHA、源图 SHA、截图、深度与 ID 诊断、独立检查结论和准确阶段状态。
 - 测试仓库 `tims-SP/koma-motion-lab` 承载实验与验收；经过独立验收的表示再迁入正式仓库 `tims-SP/koma-motion`。
-- 源码与文本证据保存到 Git；原画、视频和大型图像存储在 Actions Artifact 或经授权的存储。
+- 源码与文本证据保存到 Git；交互 HTML、原画和大型验收图像存储在 Actions Artifact 或经授权的存储。
