@@ -4,19 +4,8 @@ import { mkdirSync,statSync,writeFileSync } from 'node:fs';
 import {createHash} from 'node:crypto';
 import { resolve,join } from 'node:path';
 
-type FrameStats={
-  frame:number;time:number;yaw:number;headLocalYaw:number;
-  partCount:number;keyViewCount:number;artMeshCount:number;
-  ikError:number;handMinusTorsoDepth:number;armLocalYaw:number;
-  lightAngle:number;shadowOffset:number;blink:number;
-  targetX:number;handX:number;
-};
-declare global {interface Window {
- renderIntegrated:(frame:number,total:number)=>FrameStats;
- integratedInfo:{parts:number;views:number;method:string};
- integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
- exportArtPNG:(partId:'backHair'|'torso'|'skirt'|'face'|'fringe'|'eyes'|'scarf'|'emblem'|'leftArm'|'rightArm'|'leftLeg'|'rightLeg',angle:0|90|180|270)=>string;
-}}
+type FrameStats=ReturnType<Window['renderIntegrated']>;
+
 const out=resolve('out/integrated');
 mkdirSync(out,{recursive:true});
 const server=spawn(process.execPath,[resolve('node_modules/vite/bin/vite.js'),
