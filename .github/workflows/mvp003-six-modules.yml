@@ -6,6 +6,7 @@ on:
     paths:
       - 'experiments/mvp002/src/integrated.ts'
       - 'experiments/mvp002/src/rgba-view-art.ts'
+      - 'experiments/mvp002/src/anime-ink.ts'
       - 'experiments/mvp002/src/integrated-controls.ts'
       - 'experiments/mvp002/integrated.html'
       - 'experiments/mvp002/scripts/render-integrated.ts'
@@ -39,7 +40,7 @@ jobs:
       - name: Emit bounded visual QA thumbnails for direct inspection
         working-directory: experiments/mvp002
         run: |
-          for frame in 012 087 114; do
+          for frame in 012 087 114 132; do
             ffmpeg -hide_banner -loglevel error -y -i "out/integrated/frame-${frame}.png" \
               -vf scale=480:270 -q:v 6 "out/integrated/qa-${frame}.jpg"
             printf "QA_JPEG_%s_START\n" "$frame"
@@ -54,6 +55,7 @@ jobs:
           path: |
             experiments/mvp002/out/integrated/integrated-6sec.mp4
             experiments/mvp002/out/integrated/integrated-contact.png
+            experiments/mvp002/out/integrated/key-art-contact.png
             experiments/mvp002/out/integrated/integrated-report.json
             experiments/mvp002/out/integrated/integrated-frame-stats.json
             experiments/mvp002/out/integrated/qa-*.jpg
@@ -68,8 +70,9 @@ jobs:
           gh release create "$tag" \
             experiments/mvp002/out/integrated/integrated-6sec.mp4 \
             experiments/mvp002/out/integrated/integrated-contact.png \
+            experiments/mvp002/out/integrated/key-art-contact.png \
             experiments/mvp002/out/integrated/integrated-report.json \
             experiments/mvp002/out/integrated/integrated-frame-stats.json \
             --target "$GITHUB_SHA" --draft \
-            --title "MVP-003 integrated six-module minimal technical validation" \
-            --notes "One original 12-part, three-view 6s test clip. Engineering evidence only; no Japanese anime visual-quality claim."
+            --title "MVP-005 detailed keyed RGBA 2.75D character + closeup in one shot" \
+            --notes "One original 12-part character, four RGBA-view paintings per part and 6s clip with closeup. Technical lookdev only, not final illustrated production quality."
