@@ -52,8 +52,12 @@ export interface PartTrace {
   id:string;
   anatomicalSide?:'left'|'right'|'center';
   parentBoneId:string|null;
+  boneLocalAnchorXYZ:XYZ;
+  boneWorldMatrix:readonly number[];
   worldAnchorXYZ:XYZ;
   projectedAnchorXY:XY;
+  anchorProjectionPixels:XY;
+  deformedCenterPixels:XY;
   vddOffsetXY:XY;
   keyA:ViewKey;
   keyB:ViewKey;
@@ -78,6 +82,8 @@ export interface FrameTrace {
   yawDegrees:number;
   poseHash:string;
   cameraHash:string;
+  cameraViewMatrix:readonly number[];
+  cameraProjectionMatrix:readonly number[];
   lightHash:string;
   characterAssetHash:string;
   rendererCommit:string;
