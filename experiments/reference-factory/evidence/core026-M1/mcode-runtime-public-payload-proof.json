@@ -1,0 +1,14 @@
+{
+  "repository": "tims-SP/koma-motion-lab",
+  "visibility": "public",
+  "private": false,
+  "public_commit": "b5cdae15de0803050d2d4f996293bda18dabb726",
+  "producer_source_matches_public_file": true,
+  "supervisor_source_matches_public_file": true,
+  "producer_exit": 0,
+  "supervisor_exit": 0,
+  "producer_output_equals_published_CI": true,
+  "supervisor_output_equals_published_CI": true,
+  "stderr_empty": true,
+  "output_bytes": 690
+}
