@@ -33,7 +33,7 @@ jobs:
           npx playwright install --with-deps chromium
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends xvfb ffmpeg
-      - name: Render true 192-frame turn WHILE acting; verify motion and structural traces
+      - name: Render concurrent 360, arm IK, head VDD and face-shadow coherence; verify 192 actual frames
         working-directory: experiments/mvp002
         run: xvfb-run -a npm run render:dynamic360
       - name: Preserve truthful video/visual/matrix evidence even when quality FAILS
