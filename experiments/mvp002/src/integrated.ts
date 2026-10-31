@@ -32,7 +32,7 @@ declare global {interface Window {
   renderDynamic360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace;pose:{
     reach:number;fore:number;headLocalYaw:number;shoulderXYZ:number[];elbowXYZ:number[];
     handXYZ:number[];targetXYZ:number[];handDistance:number;footLXYZ:number[];footRXYZ:number[];
-    poseTime:number
+    poseTime:number;handTorsoLocalZ:number
   }};
   captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
   turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[];authoredGeometry:{id:string;right:readonly XY[];left:readonly XY[];rightVDD:XY;leftVDD:XY}[]};
@@ -250,7 +250,7 @@ function glint(t:number):void{
 let lastDynamicPose:{
  reach:number;fore:number;headLocalYaw:number;shoulderXYZ:number[];elbowXYZ:number[];
  handXYZ:number[];targetXYZ:number[];handDistance:number;footLXYZ:number[];footRXYZ:number[];
- poseTime:number
+ poseTime:number;handTorsoLocalZ:number
 }|null=null;
 export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=false):FrameStats {
  if(!Number.isInteger(frame)||frame<0||frame>total)throw Error('Invalid frame');
@@ -328,7 +328,8 @@ export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=f
    handXYZ:rig.hand.toArray(),targetXYZ:target.toArray(),
    handDistance:rig.hand.distanceTo(target),
    footLXYZ:dynamicFeet.left,footRXYZ:dynamicFeet.right,
-   poseTime:t
+   poseTime:t,
+   handTorsoLocalZ:(rig.hand.z-rootChest.z)*Math.cos(rootYaw*DEG)+(rig.hand.x-rootChest.x)*Math.sin(rootYaw*DEG)
  }:null;
  const forearm=rig.hand.clone().sub(rig.elbow);
  const armLocalYaw=wrap(Math.atan2(forearm.x,forearm.z)/DEG);
