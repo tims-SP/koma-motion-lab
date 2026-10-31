@@ -1,6 +1,6 @@
 # 当前恢复入口
 
-更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；最新续跑被自动审批阻塞，按计划明确署名Codex本地兜底。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
+更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；用户最新已明确允许项目操作包括上传，本轮官方CLI正常执行，不加载旧禁止上传guard。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
 
 ## CORE026当前状态
 
@@ -14,6 +14,8 @@ M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611
 - 新增verify_core026_m1.py运行当前来源/保护/默认配准/M1C1/标点只读检查，再汇总有限参考。六个结构合法但不足以支持比较的用例全部BLOCKED；真实CLI缺默认鼻点返回12。标点17项检查（14种损坏拒绝）也通过。[本地验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-local-acceptance.json)。
 
 ## 执行分工与当前阻塞
+
+最新授权：用户明确允许mcode项目操作（包括上传），已沿用官方登录态启动M2B。首轮实际完成14次工具调用后8分钟超时，无运行时文件，本次未观察到此前审批拒绝。改用Codex设计固定补丁、mcode应用/真实截图、Codex独立像素验收；尚无通过声明。[目标与距离](plans/CORE-026-goals-and-distance.md)、[精确M2B工单](plans/CORE-026-M2B-mcode-runtime-order.md)。以下SDK阻塞与兜底作者记录保留为历史。
 
 用户本轮要求官方链接登录，已完成；CLI实际返回Signed in with MiniMax、exit0。登录成功后，公开文字/无本地工具的mcode代码生成请求超时exit6，无产出；第二次缩小函数工单仍被自动审批以未验证Alibaba OSS传输内容/授权未明为由拒绝，无可接纳实现。此后停止调用，不换渠道重试，不把审批提示当作真实上传抓包，也不再次登录。
 
