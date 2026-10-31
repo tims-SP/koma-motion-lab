@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_SOURCE_REGISTERED_PENDING_HELDOUT_REVIEW",
+  "phase": "HEAD90_INTERMEDIATE_CORRESPONDENCE_IN_PROGRESS",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -109,9 +109,9 @@
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "IN_PROGRESS",
-      "visualStatus": "PENDING_HELDOUT_VISUAL_REVIEW",
-      "pending": "30/60/75 image review and optional view-conditioned corrective ArtMesh",
-      "engineeringEvidence": "0/45/90 SVG source key IoU 0.9954/0.9958/0.9940; renderer samples genuine keyed SVG art and SVG path strokes"
+      "visualStatus": "FAIL_HELDOUT_VIEW_CORRESPONDENCE",
+      "pending": "Correct per-part held-out hairline, face profile and side strand correspondences; inspect after corrective key authored independently",
+      "engineeringEvidence": "Actual SVG key views 0/45/90 silhouette IoU 0.9954/0.9958/0.9940; 60/75 farEar visible pixels reduced 2197->687 and 3034->660 with authored key pixels unchanged"
     },
     {
       "id": "T04",
@@ -212,13 +212,13 @@
       "id": "S06",
       "name": "ART_ANCHOR_FIDELITY",
       "criterion": "authored cardinal reference silhouette IoU >=0.93 and landmarks <=2pct head height, plus visual",
-      "status": "PASS_KEY_IOU_PENDING_HELDOUT_VISUAL"
+      "status": "PASS_KEY_IOU_FAIL_HELDOUT_VISUAL"
     },
     {
       "id": "S07",
       "name": "INDEPENDENT_FULL_FRAME_VISUAL",
       "criterion": "full-resolution angle board and contiguous side frame strips reviewed",
-      "status": "PENDING_HELDOUT_VISUAL_REVIEW"
+      "status": "FAIL_HELDOUT_VISUAL"
     },
     {
       "id": "S08",
@@ -231,7 +231,7 @@
   "ownerSelectedPlan": "B",
   "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
   "selectedImplementation": "B",
-  "lastImplementationCommit": "4e16fb721701510bed51bf85d33e8f52d0af86a9",
-  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330",
-  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330/artifacts/13052724463"
+  "lastImplementationCommit": "27b29cc27bbbabc4fd02f958e345de24f2c0912b",
+  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41231186707",
+  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41231186707/artifacts/13053493315"
 }

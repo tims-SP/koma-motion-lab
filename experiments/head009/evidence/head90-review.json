@@ -1,8 +1,8 @@
 {
   "schema": "HEAD009-VISUAL-REVIEW-V1",
-  "sourceCommit": "4e16fb721701510bed51bf85d33e8f52d0af86a9",
-  "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330",
-  "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330/artifacts/13052724463",
+  "sourceCommit": "27b29cc27bbbabc4fd02f958e345de24f2c0912b",
+  "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41231186707",
+  "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41231186707/artifacts/13053493315",
   "angularSamples": [
     0,
     15,
@@ -32,6 +32,21 @@
       "30": 0.9278749474926042,
       "60": 0.9211287390513965,
       "75": 0.9068743796659906
+    },
+    "viewDependentEarDepth": {
+      "sourceCommit": "27b29cc27bbbabc4fd02f958e345de24f2c0912b",
+      "baselineVisiblePixels": {
+        "60": 2197,
+        "75": 3034,
+        "90": 5180
+      },
+      "currentVisiblePixels": {
+        "60": 687,
+        "75": 660,
+        "90": 5180
+      },
+      "changedKeyViewSilhouetteIoU": false,
+      "status": "PASS_ENGINEERING_LOCAL_OCCLUSION"
     }
   },
   "sourceArt": {
@@ -50,24 +65,28 @@
     "isRuntimeSourceRegistered": true
   },
   "visual": {
-    "status": "PENDING_HELDOUT_VISUAL_REVIEW",
+    "status": "FAIL_HELDOUT_VIEW_CORRESPONDENCE",
     "reviewedRealFrameAngles": [
       0,
+      30,
       45,
+      60,
       75,
       90
     ],
     "observations": [
-      "0/45/90 drawn key profiles are reproduced from independent SVG source art with key silhouette IoU above 0.99",
-      "90-degree nose tip, eye, ear, jaw and hair outline have been visually inspected in real output; neck depth was corrected behind chin",
-      "held-out 30/60/75 references have measurable silhouette IoU 0.9279/0.9211/0.9069 and need source-versus-output visual assessment before advancing",
-      "current coverage renderer uses depth-tested vector silhouette geometry and shared opaque fragment coverage; translucent alpha compositing has not been accepted"
+      "0/45/90 key drawings are reconstructed with the existing source registration; key silhouette IoUs remain 0.9954/0.9958/0.9940",
+      "30-degree independent reference exhibits a different overall face/hair/nose proportion from its interpolated output",
+      "60-degree and 75-degree independent references keep the far ear mostly behind hair and face; targeted view-dependent depth reduces observed visible ear pixels from 2197 to 687 and from 3034 to 660 while 90-degree true ear stays visible",
+      "60-degree and 75-degree side strands, jaw contours, and eye/nose relationships still differ from the independent authored references",
+      "the whole-head silhouette IoU remains 0.9279/0.9211/0.9069 on 30/60/75 even when ear visibility improves, demonstrating that whole-mask IoU cannot substitute part-specific occlusion tests",
+      "tested rendering is original stylized SVG part geometry with opaque depth; RGBA texture alpha, arbitrary pitch, and full-body visuals are later stages"
     ]
   },
   "nextBlockingWork": [
-    "inspect held-out 30,60,75 source-vs-render frames and semantic landmark offsets",
-    "correct only the misregistered part contours/occlusion with authored view-dependent keys",
-    "extend to independent left profile/rear only after T04 head90 decision"
+    "derive semantic landmark and image correspondence errors for independent 30,60,75 reference art",
+    "add part-local registered corrective shapes/occlusion to improve intermediate hairline, jaw, and side hair while preserving 0/45/90 authored drawings",
+    "validate side-specific ID/depth overlap counts and independent heldout viewpoints before T04"
   ],
   "stagedDecision": "REMAIN_AT_T03B_HEAD90"
 }
