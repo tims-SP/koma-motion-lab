@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_INTERMEDIATE_CORRESPONDENCE_IN_PROGRESS",
+  "phase": "HEAD90_ORGAN_REFERENCE_PASS_HELDOUT_ALIGNMENT_IN_PROGRESS",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -109,9 +109,43 @@
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "IN_PROGRESS",
-      "visualStatus": "FAIL_HELDOUT_VIEW_CORRESPONDENCE",
-      "pending": "Correct per-part held-out hairline, face profile and side strand correspondences; inspect after corrective key authored independently",
-      "engineeringEvidence": "Actual SVG key views 0/45/90 silhouette IoU 0.9954/0.9958/0.9940; 60/75 farEar visible pixels reduced 2197->687 and 3034->660 with authored key pixels unchanged"
+      "visualStatus": "FAIL_HELDOUT_ORGAN_ALIGNMENT",
+      "pending": "Independent corrective multi-view organ art and fresh held-out references; preserve original reference separation. Correct all nose/eye/mouth/jaw layers rather than adjusting only hair.",
+      "engineeringEvidence": "Actual SVG key views 0/45/90 silhouette IoU 0.9954/0.9958/0.9940; 60/75 farEar visible pixels reduced 2197->687 and 3034->660 with authored key pixels unchanged",
+      "organSubtasks": [
+        {
+          "id": "T03B-2",
+          "name": "organ_semantic_registration",
+          "status": "PASS_ENGINEERING",
+          "output": "experiments/head009/reference/organ-landmarks.json",
+          "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705",
+          "checks": [
+            "6 independent views and 10 semantic registrations",
+            "key source positions and actual visible Part-ID pixels",
+            "explicitly occluded key view far-ear centers",
+            "coordinate/missing-mouth/nose-displacement fault injections"
+          ]
+        },
+        {
+          "id": "T03B-3",
+          "name": "organ_view_deformation",
+          "status": "NOT_STARTED",
+          "dependsOn": [
+            "T03B-2"
+          ],
+          "requiredOutput": [
+            "new corrective view art for eye/nose/mouth/jaw where necessary",
+            "fresh independent holdouts separate from tuning art",
+            "new angle-organ overlays and visual review"
+          ],
+          "blockingDeviationPx": {
+            "30.face.chin": 39.818,
+            "30.nose.tip": 32.39,
+            "60.eye.R.center": 51.079,
+            "75.eye.R.center": 30.171
+          }
+        }
+      ]
     },
     {
       "id": "T04",
@@ -212,13 +246,13 @@
       "id": "S06",
       "name": "ART_ANCHOR_FIDELITY",
       "criterion": "authored cardinal reference silhouette IoU >=0.93 and landmarks <=2pct head height, plus visual",
-      "status": "PASS_KEY_IOU_FAIL_HELDOUT_VISUAL"
+      "status": "PASS_KEY_ORGAN_PIXELS_HELDOUT_DEVIATIONS"
     },
     {
       "id": "S07",
       "name": "INDEPENDENT_FULL_FRAME_VISUAL",
       "criterion": "full-resolution angle board and contiguous side frame strips reviewed",
-      "status": "FAIL_HELDOUT_VISUAL"
+      "status": "FAIL_HELDOUT_ORGAN_VISUAL"
     },
     {
       "id": "S08",
@@ -231,7 +265,7 @@
   "ownerSelectedPlan": "B",
   "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
   "selectedImplementation": "B",
-  "lastImplementationCommit": "27b29cc27bbbabc4fd02f958e345de24f2c0912b",
-  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41231186707",
-  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41231186707/artifacts/13053493315"
+  "lastImplementationCommit": "f2985406ffe237a549bb72c22aee104f1043ee89",
+  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705",
+  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705/artifacts/13060844731"
 }

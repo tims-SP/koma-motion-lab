@@ -1,0 +1,82 @@
+{
+  "schema": "HEAD009-ORGAN-REVIEW-V1",
+  "project": "MVP-009 Plan B · 0-90 degree anatomical registration",
+  "sourceCommit": "f2985406ffe237a549bb72c22aee104f1043ee89",
+  "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705",
+  "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705/artifacts/13060844731",
+  "sourceReference": {
+    "keys": [
+      0,
+      45,
+      90
+    ],
+    "heldout": [
+      30,
+      60,
+      75
+    ],
+    "organIdCount": 10,
+    "data": "experiments/head009/reference/organ-landmarks.json"
+  },
+  "gates": {
+    "sourceSchema": "PASS",
+    "negativeSourceAnnotationTests": "PASS",
+    "keyLandmarkReprojection": "PASS",
+    "keyPartIdPixelProximity": "PASS",
+    "negativeNosePerturbation": "PASS",
+    "heldoutOrganVisual": "FAIL"
+  },
+  "maxHeldoutErrorsPx": {
+    "30": 39.818073266853546,
+    "60": 51.079178863925506,
+    "75": 30.170788877616367
+  },
+  "organTargets": [
+    {
+      "yaw": 30,
+      "organ": "face.chin",
+      "errorPx": 39.818073266853546
+    },
+    {
+      "yaw": 30,
+      "organ": "nose.tip",
+      "errorPx": 32.390097948199994
+    },
+    {
+      "yaw": 60,
+      "organ": "eye.R.center",
+      "errorPx": 51.079178863925506
+    },
+    {
+      "yaw": 75,
+      "organ": "eye.R.center",
+      "errorPx": 30.170788877616367
+    },
+    {
+      "yaw": 75,
+      "organ": "mouth.center",
+      "errorPx": 14.79961582651567
+    },
+    {
+      "yaw": 30,
+      "organ": "fringe.hairline",
+      "errorPx": 21.87949297690672
+    }
+  ],
+  "visibilitySemantics": {
+    "anatomicalLeftRight": "character-local",
+    "occludedFarEarCentersAtYaws": [
+      0,
+      45
+    ],
+    "profileEarAt90": "VISIBLE_PART_ID"
+  },
+  "interpretation": "The key view anatomical source maps are consistent with their visible raster layer IDs. Original independent held-out references still reveal material eye, nose, mouth, jaw and hairline mismatch. Source artwork at held-out views remains test-only and is not used by runtime interpolation.",
+  "next": [
+    "author isolated organ corrective keyviews from a consistent character reference for eye, nose, mouth, jaw and hairline",
+    "prepare new held-out art at other angles before using 30/60/75 to tune warp coefficients",
+    "measure per-organ local silhouettes and landmark coordinates, preserve 0/45/90 key reconstruction",
+    "keep T03B until external held-out organ shapes and occlusion visually pass"
+  ],
+  "scope": "HEAD90_ENGINEERING_ONLY"
+}

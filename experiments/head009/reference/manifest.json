@@ -96,5 +96,10 @@
     "60": 0.9211287390513965,
     "75": 0.9068743796659906
   },
-  "validationRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330"
+  "validationRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330",
+  "organLandmarkAsset": "organ-landmarks.json",
+  "organRegisterVersion": "HEAD009-ORGAN-LANDMARKS-V1",
+  "lastOrganRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705",
+  "organKeyStatus": "PASS_ENGINEERING_KEY_PIXELS",
+  "organHeldoutStatus": "FAIL_ORGAN_ALIGNMENT"
 }
