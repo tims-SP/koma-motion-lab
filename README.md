@@ -4,6 +4,7 @@
 
 - [MVP-009 技术方案与验收标准](docs/MVP-009-plan.md)
 - [MVP-009 任务与状态](docs/MVP-009-tasks.json)
+- [Live2D 官方规范与 Agent 面部器官制作契约](docs/MVP-009-face-authoring-contract.md)
 
 阶段：`HEAD90_INTERMEDIATE_CORRESPONDENCE_IN_PROGRESS`。
 
