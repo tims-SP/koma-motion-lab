@@ -26,6 +26,9 @@ function hasPrivateHeader(headers) {
 }
 function classify(url, method, headers, bodyPresent) {
   if (url.protocol !== 'https:' || url.username || url.password || (url.port && url.port !== '443')) return false;
+  // Command-only work orders never require SDK file/avatar upload preparation.
+  // Deny preparation before the SDK can obtain an object-storage instruction.
+  if (/\/uploads(?:\/|$)/i.test(url.pathname)) return false;
   if (firstParty.has(url.hostname)) return true;
   if (url.hostname === authHost) return ['GET', 'POST', 'CONNECT'].includes(method);
   return url.hostname === 'filecdn.minimax.chat' && method === 'GET' && !bodyPresent &&
@@ -148,6 +151,6 @@ tls.connect = function (...args) {
   return originalTls.apply(this, args);
 };
 syncBuiltinESMExports();
-record({ layer: 'guard', decision: 'installed', policy: 'authorized-first-party-and-public-cdn; object-storage-denied',
+record({ layer: 'guard', decision: 'installed', policy: 'authorized-first-party-and-public-cdn; upload-preparation-and-object-storage-denied',
          scope: 'Node fetch/http/https/tls hooks; no OS-firewall or historical-traffic claim' });
 module.exports = { classify, logfile };

@@ -19,6 +19,10 @@ const { classify, logfile } = require('./mcode_egress_audit.cjs');
   await assert.rejects(fetch(`https://${storage}/`, { method: 'POST', body: form }), /KOMA_MCODE_EGRESS_BLOCKED/);
   assert.throws(() => https.request(`https://${storage}/`, { method: 'POST' }), /KOMA_MCODE_EGRESS_BLOCKED/);
   assert.throws(() => tls.connect({ host: storage, port: 443, servername: storage }), /KOMA_MCODE_EGRESS_BLOCKED/);
+  await assert.rejects(fetch('https://agent.minimax.cn/minimax-cloud/api/v1/uploads/prepare',
+    { method: 'POST', body: '{"file_name":"agent-avatar"}' }), /KOMA_MCODE_EGRESS_BLOCKED/);
+  await assert.rejects(fetch('https://agent.minimaxi.com/minimax-cloud/api/v1/uploads/prepare',
+    { method: 'POST', body: '{}' }), /KOMA_MCODE_EGRESS_BLOCKED/);
   assert.equal(classify(new URL('https://agent.minimax.cn/test'), 'POST', {}, true), true);
   assert.equal(classify(new URL('https://agent.minimaxi.com/test'), 'POST', {}, true), true);
   const cdn = new URL(`https://filecdn.minimax.chat/public/models-dev/catalog/${'a'.repeat(64)}/api.json`);
@@ -30,7 +34,7 @@ const { classify, logfile } = require('./mcode_egress_audit.cjs');
   await new Promise(resolve => server.close(resolve));
   const text = fs.readFileSync(logfile, 'utf8');
   for (const forbidden of ['PUBLIC_DUMMY', 'DUMMY_NEVER_LOG', 'Authorization', 'query=']) assert.equal(text.includes(forbidden), false);
-  console.log(JSON.stringify({ status: 'PASS', denied_live_requests: 5,
+  console.log(JSON.stringify({ status: 'PASS', denied_live_requests: 7,
     local_requests_received: requests, local_connections_received: connections,
     sensitive_values_recorded: false, scope: 'Covered Node request paths only; no external endpoint contacted by test' }));
 })().catch(error => { console.error(error.message); process.exitCode = 1; });
