@@ -40,8 +40,17 @@ On PASS_ENGINEERING_ONLY, next engineering work is **higher-fidelity per-vertex 
 ## Status
 
 - Previous M0 renderer infrastructure: PASS_INFRA_ONLY (historic, separate).
-- MVP-002 TS core code: CREATED / COMPILATION SHOWN ON INITIAL CI; integrated render **currently undergoing GitHub Actions**. Do not mark completion or visual quality pass until actual MP4 is inspected.
+- MVP-002 TS core: **PASS_ENGINEERING_RENDER_ONLY**, [GitHub Actions #41191491411](https://github.com/tims-SP/koma-motion-lab/actions/runs/41191491411) (successful). Actual H.264 clips each contain 72 frames at 960x540: turn.mp4 (133,721 B), action.mp4 (136,192 B), fx.mp4 (266,101 B). Three contact PNGs and quality report created; assets verified in [Draft Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-cbdcb29f362bf38e3849) (owner access). **Visual/manual acceptance NOT DONE**, and **Japanese-anime quality NOT CLAIMED**. Earlier Actions failed on CSS screenshot dimensions/encoder; fixed. First successful preview available after code fixes. 2D planar IK, primitive vector art and incomplete per-vertex RGBA/UV mapping remain limitations.
 - Resource reference: [Reverse-1999 CN Asset](https://github.com/myssal/Reverse-1999-CN-Asset), [2.5D Cartoon Models](https://alecrivers.com/2.5dcartoonmodels/), [VDD](https://arxiv.org/abs/2103.15472), [Puppeteering 2.5D](https://www.brunodorta.com.br/publication/puppeteering-cartoon/), [Anime2.5DRig](https://github.com/852wa/Anime2.5DRig). They are references **only** for this MVP.
+
+## Implementation result and immediate correction
+
+- [360 turn MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-cbdcb29f362bf38e3849/turn.mp4)
+- [full-body action MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-cbdcb29f362bf38e3849/action.mp4)
+- [face FX MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-cbdcb29f362bf38e3849/fx.mp4)
+- [contact sheets](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-cbdcb29f362bf38e3849)
+
+**The next implementation step is not a new K0/K1/K2 investigation. It is a DIRECT ART REPLACEMENT in this same runtime**, moving from vector test parts to RGBA-mesh/UV-keyed art for front/right/back/left. Only after genuine art displays correctly do we strengthen local 3D pose/occlusion/shading for high quality. Existing Reverse1999 assets are not needed to do this first replacement.
 
 ## Next tasks after actual integrated preview
 
