@@ -130,7 +130,10 @@ function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THR
    strength:{value:opacity},
    frontMask:{value:frontMask},
    faceWipe:{value:['face','eyes','fringe'].includes(part.id)?1:0},
-   wipeDirection:{value:wrap(yaw)<180?1:-1}
+   // Exit/re-entry must reveal pixels from the hair-adjacent UV edge.
+   // Revealing the outer cheek first on 250→270° creates a disconnected
+   // line at frames 130-131 before the rest of the face becomes visible.
+   wipeDirection:{value:1}
   },
   // Face/eyes/fringe are an authored art-compositing stack, not generic 3D
   // transparent planes. Their visibility fades across rear-key transitions.
