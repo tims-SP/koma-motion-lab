@@ -9,8 +9,8 @@ declare global{
   headAcceptance?:{setAngle:(angle:number)=>void;runCheck:()=>unknown;getState:()=>unknown};
  }
 }
-const register=window.__HEAD009_LANDMARKS;
-const svg=window.__HEAD009_REFS;
+const register=window.__HEAD009_LANDMARKS as OrganLandmarks;
+const svg=window.__HEAD009_REFS as Record<string,string>;
 if(!register||!svg)throw Error('Acceptance artwork manifest is missing.');
 const $=<T extends HTMLElement=HTMLElement>(id:string):T=>{
  const el=document.getElementById(id);

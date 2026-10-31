@@ -9,7 +9,7 @@ type Runtime=Window & {
 };
 const w=window as Runtime;
 const refs=w.__HEAD009_REFS??{};
-const register=w.__HEAD009_ORGAN;
+const register=w.__HEAD009_ORGAN as OrganLandmarks;
 if(!register)throw Error('Missing embedded original organ landmarks');
 const byId=<T extends HTMLElement>(id:string)=>{const el=document.getElementById(id);if(!el)throw Error('Missing #'+id);return el as T};
 const slider=byId<HTMLInputElement>('yaw'), output=byId<HTMLOutputElement>('angleOut');
@@ -55,7 +55,7 @@ function draw(){
  w.head009.frame(yaw,Number(pass.value));
  output.textContent=yaw+'°';byId('angleCell').textContent=yaw+'°';slider.value=String(yaw);
  byId('renderLabel').textContent=pass.selectedOptions[0].textContent??'Beauty';
- for(const btn of document.querySelectorAll<HTMLButtonElement>('#keyAngles button'))btn.classList.toggle('active',Number(btn.dataset.yaw)===yaw);
+ for(const btn of Array.from(document.querySelectorAll<HTMLButtonElement>('#keyAngles button')))btn.classList.toggle('active',Number(btn.dataset.yaw)===yaw);
  updateReference();overlay();
 }
 function setYaw(next:number){yaw=raw(next);draw();byId('qaStatus').textContent='当前角度的 QA 尚未执行';}

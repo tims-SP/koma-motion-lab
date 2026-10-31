@@ -17,7 +17,7 @@ page.on('request',r=>{if(/^https?:/.test(r.url()))external.push(r.url())});
 let qa:any=null,after:Record<string,unknown>={};
 try{
  await page.goto(pathToFileURL(html).href,{waitUntil:'load'});
- await page.waitForFunction(()=>window.__HEAD009_READY===true,{timeout:45000});
+ await page.waitForFunction(()=>(window as Window & {__HEAD009_READY?:boolean}).__HEAD009_READY===true,{timeout:45000});
  if(await page.locator('#angleOut').textContent()!=='0°')failures.push('initial_angle');
  await page.screenshot({path:join(dir,'review-html-initial.png'),fullPage:true});
  await page.locator('[data-yaw="60"]').click();
