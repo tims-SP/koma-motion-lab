@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Current active experiment — MVP-008 animated 360° (2026-10-31)
+
+**[Actual 8s/192-frame video run #41204945911](https://github.com/tims-SP/koma-motion-lab/actions/runs/41204945911)** · **[Video and structured evidence](https://github.com/tims-SP/koma-motion-lab/actions/runs/41204945911/artifacts/13043762442)** · **[Visual frame strips and occlusion #41205200317](https://github.com/tims-SP/koma-motion-lab/actions/runs/41205200317)** · **[Current exact deficiencies](docs/experiments/MVP-008-visual-review.json)** · **[Full stage report](docs/experiments/MVP-008-dynamic360-result.md)**
+
+**Dynamic 360 status: PASS_STRUCTURE_PENDING_VISUAL, but observed visual P1 defects => FAIL_VISUAL / NOT ACCEPTED.** Same original 12-part TypeScript/Three.js character rotates continuously through horizontal 360° while independently moving head and IK arm; 10/10 automated checks and 10/10 sampled real composited occlusion constraints passed. A real review of video frames 38—45 and 128—136 still finds abrupt planar face/hair boundaries and slice-like face emergence. Replacing UV.X with mesh-space X eliminated isolated face islands and improved temporal score 2.956→2.238, but **a straight mask cannot replace properly registered view-dependent head contours and occlusion geometry**. Next task: head semantic contours and curved view-dependent boundary, then pose-aware arm silhouette/foot contact. No high-fidelity anime or general arbitrary camera claim.
+
 ## Newest verification — MVP-007 static 360° geometric core (2026-10-31)
 
 **[S01—S08 all PASS / 8-second 192-frame Actions #41200083182](https://github.com/tims-SP/koma-motion-lab/actions/runs/41200083182)** · **[Actual MP4, 25-angle board, real ID/depth masks and QA report](https://github.com/tims-SP/koma-motion-lab/actions/runs/41200083182/artifacts/13042725038)** · **[Documented model-image and temporal review](docs/experiments/MVP-007-360-core-final-review.md)**
@@ -94,7 +100,7 @@ Download `rive-rig-001-evidence-<run-number>` from the Actions run. Evidence inc
 1. Never claim automatic rigging succeeded based only on `rive create`, `--verify`, or screenshot.
 2. Capture CLI errors as experiment evidence; do not silently mask missing support.
 3. Do not store login credentials, access tokens, proprietary binaries, or giant generated artifacts in git.
-4. Use Rive CLI/RML as the first test subject. Retain Spine and other auto-rig solutions as fallbacks.
+4. Historical Rive/Spine reproduction work is archived. The active MVP is native TypeScript/Three.js layered 2.5D with view-dependent deformation and 3D anchors; Rive/Spine conversion is not a prerequisite.
 5. This repository is public: generated evidence must contain no personal content or credentials.
 
 Official references: https://rive.app/docs/cli/getting-started , https://rive.app/agents
