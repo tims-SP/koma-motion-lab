@@ -10,7 +10,7 @@ mkdirSync(OUT,{recursive:true});
 const FRAMES=192,FPS=24,WIDTH=960,HEIGHT=540;
 type Frame={
  frame:number;yaw:number;time:number;headLocalYaw:number;ikError:number;
- handMinusTorsoDepth:number;blink:number;
+ handMinusTorsoDepth:number;blink:number;faceVisibility:number;faceShadowOpacity:number;
  pose:{reach:number;fore:number;headLocalYaw:number;shoulderXYZ:number[];elbowXYZ:number[];
  handXYZ:number[];targetXYZ:number[];handDistance:number;footLXYZ:number[];
  footRXYZ:number[];poseTime:number;handTorsoLocalZ:number};
@@ -51,7 +51,8 @@ try{
     frame:i,yaw:frame.stats.yaw,time:frame.stats.time,
     headLocalYaw:frame.stats.headLocalYaw,ikError:frame.stats.ikError,
     handMinusTorsoDepth:frame.stats.handMinusTorsoDepth,
-    blink:frame.stats.blink,pose:frame.pose,trace:frame.trace,visibleCounts:readback.counts
+    blink:frame.stats.blink,faceVisibility:frame.stats.faceVisibility,
+    faceShadowOpacity:frame.stats.faceShadowOpacity,pose:frame.pose,trace:frame.trace,visibleCounts:readback.counts
   });
   const png=join(OUT,'frame-'+String(i).padStart(3,'0')+'.png');
   await page.locator('#viewport').screenshot({path:png});
@@ -154,6 +155,13 @@ try{
  const median=sorted[Math.floor(sorted.length/2)];
  const peak=Math.max(...diffs),peakAt=diffs.indexOf(peak)+1,ratio=peak/Math.max(median,.00001);
  check('D09_TEMPORAL_IMAGE_SPIKES',ratio<3.2,'peak/median='+ratio.toFixed(3)+' peakFrame='+peakAt);
+ const maxShadowMismatch=Math.max(...data.map(x=>Math.abs(x.faceShadowOpacity-.27*x.faceVisibility)));
+ const minFaceVisibility=Math.min(...data.map(x=>x.faceVisibility));
+ const maxFaceVisibility=Math.max(...data.map(x=>x.faceVisibility));
+ check('D11_VIEW_DEPENDENT_FACE_SHADOW',
+   maxShadowMismatch<1e-8&&minFaceVisibility<.001&&maxFaceVisibility>.5,
+   'face shadow alpha follows face visibility; max mismatch='+maxShadowMismatch+
+   '; face visibility range '+minFaceVisibility+'..'+maxFaceVisibility);
  const status=violations.every(x=>x.status==='PASS')?'PASS_STRUCTURE_PENDING_VISUAL':'FAIL_STRUCTURE';
  const report={
    phase:'MVP008_DYNAMIC_360',
@@ -164,6 +172,7 @@ try{
    checks:violations,
    data:{
     maxIK,headRange,handTravel,localDepthMin,localDepthMax,ankleHeightError,
+    maxShadowMismatch,minFaceVisibility,maxFaceVisibility,
     maxAnchorError,maxProjectionError,traceIssues,validFrames,seamSame,
     medianFrameDiff:median,peakFrameDiff:peak,peakAt,temporalRatio:ratio,
     reachRange:[Math.min(...data.map(x=>x.pose.reach)),Math.max(...data.map(x=>x.pose.reach))],
