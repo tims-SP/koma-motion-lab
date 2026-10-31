@@ -1,177 +1,100 @@
-# MVP-001 / M1 — 多视角分层动漫人物 360° 旋转：执行计划
+# MVP-001 / M1 — 现有资产优先的 360° 多视角人物验证（TypeScript）
 
-制定：2026-10-31。状态：**PLANNED；未开始 M1 代码实现；未生成角色原画；未完成 360° 验收**。
+版本：2026-10-31 / 修订 2。状态：**PLANNED；未完成 TS 迁移、现有资产参考渲染或真实 360° 模型质量验收**。
 
-关联总计划：[`MVP-001-multiview-anime-plan.md`](./MVP-001-multiview-anime-plan.md)。
+主计划：[MVP-001-multiview-anime-plan.md](./MVP-001-multiview-anime-plan.md)。
+[现有资产调查、具体路径、限制与 TS 技术路线](./MVP-001-assets-research.md)。
 
-## 0. 前置核验（已完成）
+## 0. 已确认的策略变更
 
-- 已核对 M0 `experiments/mvp001/src/main.js`、`scripts/smoke.mjs` 和 `.github/workflows/mvp001-smoke.yml`。
-- M0 于 [Actions #41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729) 已通过，说明 Chromium + WebGL2 + 25 个**程序化矩形/平面** + 24 帧截图 + MP4 可用。
-- M0 **没有**分层原画、跨视角对应、纹理变形或 VDD；M0 画面只能算渲染器连通性测试。保留它为回归夹具，不可拿来充当 M1 的质量证据。
-- `tims-SP/koma-motion` 为本体；所有阶段先在 `tims-SP/koma-motion-lab` 实验。旧 UV 皮肤、Rive/Spine 转换、Godot 流程均**不是新 MVP 的依赖**。
+- **先真实资产、后建模**：不得再把“从零画原创角色”作为下一轮的起点。优先 `myssal/Reverse-1999-CN-Asset` 中角色的 Spine、Live2D、场景/剧情预制资源，并主动寻找 GitHub/官方样例/论文图形中的分层、骨骼或多视角资产。
+- **代码统一 TypeScript**：浏览器、Node 工具、转换器、校验、测试均编写/维护 TS；使用 `tsx` 执行脚本、`tsc --noEmit` 严格类型检查、Three.js、Playwright、FFmpeg。旧 M0 的 JS 作为待迁移遗留，不能宣称已经迁移。
+- **只迁移有价值的原始数据**：Spine 的骨骼、slot、mesh weights、animation，可帮助 M2；Live2D .moc3 及 motion/expression 可帮助 M3；二者没有被证明同一网格/坐标可一键合并。最终不是 Rive、Spine 或 Cubism 模型，转换为自定义多视角 2.5D 部件数据。
+- **现有资产没有证实完整 360°**：没有真实侧面/背面时，允许在源角色的外观基准上使用 AI 或手绘**补缺的关键视角和被遮挡图层**，但不得重新独立生成另一名人物并声称是在复用资产。
+- **无许可扩张**：研究个人使用。第三方游戏原画不进入公共 Git 历史、公开 Actions artifacts 或已发布的 Release；预览需要访问控制（仅非公开存储或确认未发布的 Draft Release）与许可审核。
 
-## 1. 本任务唯一要回答的问题
+## 1. 最终 M1 输出契约
 
-在同一套**原创日式动漫人物全身分层资产**上，能否经过 **3D Anchor + 视角相关二维形状/纹理 + Live2D 式 ArtMesh + 遮挡规则 + VDD**，生成可重复采样的 360° 水平转身视频；其关键角度和任意中间角度是否仍然具有高水平的原画保真？
+一个经过版本化、可编辑、保留原画细节的日式动漫全身角色资产；必须在同一个角色包内有明确的 per-part ArtMesh、跨视角部件对应、anchor、visibility/occlusion、VDD correction、可供以后 M2 绑定的骨骼父节点。
 
-**本阶段不做：**完整 IK/全身动作片（M2）；法线、面部 SDF、粒子合成（M3）；通用建模器/无限输入人物/全自动化。人物骨骼父节点和锚点必须**预留**，否则后续 M2 无法复用。
+- 固定正交相机；Yaw 0°~360°，**仅水平 360°**，不对 Pitch 任意方向作质量承诺；
+- 8 秒 / 24 fps / 192 视频帧，1920×1080 H.264 MP4；单独求值 360° 并与 0° 对比 loop seam；
+- 24 张每隔 15° 的方位采样，重要遮挡转折点再加 ±5°/±10°，四关键视角及必要八方向对照；
+- 可交互 yaw、逐帧独立求值、图层/网格/深度 debug；视频、分层预览、审计报告；
+- 禁止整身卡片旋转、整身 PNG 切换、整体 alpha crossfade，不能拿运行时的普通 Spine 转头动画当作完整 360° 验证；
+- 后续 M2 全身动作和 M3 面部光照特效必须能够复用同一角色资产，而不是重新做独立视频。
 
-### 准确定义 360°
+## 2. 现有资产分级
 
-M1 验证的是 **水平 Yaw 0°~360° 的全身连续旋转**，固定正交相机、自然站姿、无大幅俯仰。UI 可提供 Pitch ±15° 作为技术诊断，但**不能声称已证明全空间任意方向**。每帧角色必须来自单一的部件资产包，不得整身切图、整身平面绕轴或以整身 alpha 淡入淡出伪造旋转。需要部件层级的连续形变、深度与可见性。
-
-## 2. 角色基准与资产生产方法
-
-### 2.1 角色复杂度和设计约束
-
-原创、无第三方版权争议、正交站姿、不佩戴巨大遮面附件；采用中等复杂度的二次元美少女/少年角色（建议肩部长度的深色头发、短外套及单独衣摆、裙装/裤装、一个**非对称发卡或衣服图案**专门校验镜像错误）。服装、发色、瞳色、四肢长短、肩宽、胸腰比例事先锁定。
-
-1. 写 `character-brief.json`，包含背景、颜色、角色比例、唯一不对称标记、参考图源和使用许可。
-2. 制作**一张正式正面角色图**并检查造型满意后才扩展角度；禁止只靠一句独立提示词生成其他方向。
-3. 将正面作为**显式参考图**，在同一角色约束下制作 90°、180°、270°。所有视角必须为同一姿势、同一相机高度、同一人物尺度（建议单张源图至少 2048×3072），并统一中性光照。
-4. 单独整理正面 / 右侧 / 背面 / 左侧并进行四视图对照（面部一致、服装纹理与发卡位置、鞋型、腿长与肩宽）；多视角生成模型仅做候选，达不到一致性就重绘/修图，不准在引擎中通过模糊处理掩盖错误。
-5. 斜侧 45°、135°、225°、315° 的原画先作为**质量参照**；若相邻关键视角插值明显失真，将对应斜侧图升级为正式形变关键视角。基础目标为 4→按需 8 方向，但绝不假设 8 张必定能保证任意角度质量。
-
-**素材发布规则：** 原画、PNG、PSD/分层工程、视频只放 GitHub DRAFT Release 或经授权私有位置；Git 历史只存文本源代码、清单、散列、报告和工具。必须核实每份资产的来源与可使用权限。
-
-### 2.2 每个视角都必须拆出真实 ArtMesh
-
-初版需要一套稳定语义 ID（估计 25~40 个实际绘画部件，必要时更多）：
-`head.face`, `eyes.left/right`, `brow.left/right`, `mouth`, `hair.front.*`, `hair.side.left/right`, `hair.back`, `ear.left/right`, `neck`, `torso`, `pelvis`, `arm.upper.left/right`, `arm.lower.left/right`, `hand.left/right`, `leg.upper.left/right`, `leg.lower.left/right`, `foot.left/right`，衣摆、发卡等另拆。
-
-每个部件保留透明 RGBA、轮廓关键点、可见性/遮挡状态、局部 pivot、空间 anchor、网格与 UV；跨角度复用相同语义 ID。若部件在某角度消失，标为 `occluded/not-present`，**不能**误删、错配到另一只眼睛、用镜像复制来编造。
-
-从正面/侧面基础参考还原出来的关键视角重新合成回单张图，作为遮罩切割质量测试；局部无法一致的图层必须返工。可选用 See-through 辅助分层/遮挡补全，但其输出必须单独验证；不把它当作完整 rigging 解决方案。
-
-## 3. 数据契约（必须先定再写插值）
-
-角色版本化结构：
-```text
-character.json
-  coordinateConvention: right-handed, +Y up, yaw around +Y, units, camera convention
-  identity: palette, asymmetryMarker, provenance, license, sha256
-  views[]: {yawDeg, portraitAsset, referenceDimensions, cameraOrthoScale}
-  parts[]: {
-    id, parentBoneId, pivot, anchor3D,
-    perView[]: {
-      yawDeg, texturePath, textureSha256,
-      outlineLandmarks[], meshVertices[], triangles[], uv[],
-      visibility: visible|occluded|absent,
-      painterOrder, depthHint, viewCorrectionXY, correspondenceGroup
-    },
-    transitionRules[]
-  }
-```
-明确：每个视角的左右眼均以**角色自己的 left/right** 命名，不能随观看方向交换。允许部件出现/消失和网格局部拓扑变化，但跨拓扑区间必须显式定义分割、替换或遮挡规则，不能把不同顶点数量的网格强行相加。
-
-本阶段创建 JSON Schema 与可运行 validator；至少包含：唯一 ID、纹理存在且散列一致、正交相机尺度一致、轮廓和三角形索引合法、没有 NaN/Inf、没有未定义跨视角匹配、角度 0/360 等价。
-
-## 4. 实现的核心求值顺序
-
-```text
-yawDeg + camera + future bone pose
- -> normalize yaw / wrap 0..360
- -> select adjacent compatible key views per PART (not per whole character)
- -> evaluate 3D anchor projected position
- -> compute VDD view-corrective 2D offsets
- -> warp corresponding triangular ArtMesh / contour
- -> apply per-view visibility, depth and occlusion rules
- -> sample registered RGBA texture / optional controlled part transition
- -> composite painted lines/colors (no lighting in M1)
- -> deterministic renderer.render(frame)
-```
-
-- **基础可行性先行**：通过 2D landmark/triangle correspondence + 有界的 mesh warp 实现，避免在缺乏真实人物和可比较结果前投入全部 ARAP。
-- **VDD 基线**：对同一语义部件用关键视角的二维原画位置与投影位置之差作为 view-dependent correction，在水平角度圆周上无接缝插值；对比“只投影”和“VDD 修正”的关键帧。
-- **纹理**：不得将两个不对应的整个人物 JPEG/PNG 直接 alpha 混合。先在部件内完成对应网格变形；当纹理无法可靠对应时优先补画角度/拆分部件，必要时局部受控切换而不是整脸重影。
-- **层级**：借鉴 Live2D 的 ArtMesh / Warp Deformer / Glue 语义，但自己实现最小局部网格与接缝约束。Three.js BufferGeometry 可存索引、UV、顶点；不能假定普通 morph target 自动解决多视角、遮挡及纹理对应。
-- **遮挡**：以部件 anchor/depth 为初值，增加视角区间覆盖规则及必要的图层拆分。重点验证脸↔刘海、左右眼、手臂↔躯干、头发↔颈部与衣服。
-- **ARAP 分支**：只有基线在相邻关键角度中发生明显三角形折叠、收缩、眼睛/发丝形变时，才对受影响部件加入预计算 ARAP 修正，与基线同帧对照后决定保留。
-
-## 5. 可执行任务顺序、验收与提交
-
-| ID | 明确操作 | 输出/验证 | 失败处理 |
+| 等级 | 来源 | 本阶段实用目标 | 已知短板 |
 |---|---|---|---|
-| M1-00 | 冻结 M0 基线，登记 commit、Action、渲染器与参考论文；创建独立 M1 入口；保留原 M0 冒烟测试 | M0 仍成功；M1 状态初始为 NOT_STARTED | M0 出错先修基础设施，不能混入人物质量判断 |
-| M1-01 | 定义原创角色 brief；产出/审核高精度正面，再基于该图生成右侧、背面、左侧 | 单张统一角色设定参考板、四张整身关键原画、来源与 SHA、镜像标记 | 身份、比例、服装不一致即退回重画 |
-| M1-02 | 分层/补全、稳定部件 ID、拼回四视图；制作可见性矩阵 | 每角度多部件透明图、四张重建对照图、部件清单 | 穿帮和缺失填充必须修正 |
-| M1-03 | JSON Schema、anchors、pivots、landmarks、triangle indices 与 UV；建立跨视角 correspondence | schema validator PASS、对应关系可视化及深度 debug | 错配眼睛/头发、非法拓扑则禁止进入渲染 |
-| M1-04 | 把 M0 平面夹具替换为真正透明贴图部件；在 0/90/180/270 用同一角色包独立重建 | 四个关键方向与原画比对图，五官/服装/背面正确 | 原画重建不通过不开始插值 |
-| M1-05 | 实现 yaw view selector、0/360 环绕、anchor 与部件级形状插值 | 24 个每隔 15° 的静帧、部件形变与角度日志 | 中间角度折叠/失真则定位具体 Part ID |
-| M1-06 | 引入 VDD 修正、图层遮挡规则、连续 transition；针对失真补 45° 等局部关键形状 | same-angle no-VDD vs VDD 对照、遮挡切换诊断、修改前后对照 | 无法对应则改进遮挡/局部补图，不整身交叉淡入淡出 |
-| M1-07 | 按需对坏变形部件加入 ARAP 或结构化局部 mesh warp；修正刘海、脸、衣摆轮廓 | 提供线性变形 vs 修正变形的同角度对照与成本记录 | 无清晰视觉收益的复杂算法不纳入正式核心 |
-| M1-08 | 固定相机和角色尺寸，渲染 192 帧、1920×1080、24fps、8s；额外求 frame 192 = yaw 360° 检测 loop seam | MP4 + 24 方位图 + 边界角度特写 + 深度/mesh debug + QA JSON | 任一缺帧、黑屏、裁切、角度错误直接 FAIL |
-| M1-09 | 独立视觉抽样：正侧背各方向、45°、鼻眼发束遮挡、对称误翻、帧间闪烁、动作设计兼容性；记录修复数量及工时 | 质量 gate PASS/FAIL 与后续 M2 资产接口；Git commit + DRAFT Release | 若广泛中间角度都需要逐帧手工重画，明确 NO-GO |
+| P0 / 主角候选 | `myssal/Reverse-1999-CN-Asset/roles/300401_hongnujian` | 原生 Spine 4.2.36、mesh、atlas、动作、部件纹理 | 不证明有真正侧面/背面绘画 |
+| P0 / 面部候选 | 同仓 `live2d/roles/300401_hongnujian` | 同角色 moc3、25 个 motion、表情、双纹理 | 编译 .moc3 非编辑器分层工程；不能直接解出所有 warp controls |
+| P1 / 其他候选 | `rolesstory/rolesprefab`、`roles` 中其他具有较少遮挡的角色 | 找更适合整身旋转的角色与多视角素材 | 各种相似命名不等于视角证据 |
+| P1 / 绑定基准 | Spine Examples / spine-runtimes 4.2 TS | 检验骨骼/FFD/IK/constraint 解析和渲染完整性 | 卡通示例视觉质量不能代替动漫画质 |
+| P1 / Cubism 基准 | Live2D 官方 Haru/Mao/Hiyori/Miara 等 | 检查参数、mesh 形变、可见性、表情、glue | 需 SDK/Core 与许可，通常不是完整 360° 资产 |
+| P1 / 论文基准 | without-paper/2.5d_cartoon_model/data 多视角 SVG | 定位 Orientation Space/anchor/插值数学问题 | 简单矢量头像，非动漫全身角色 |
 
-**每个 ID 完成后，必须提交代码/文本报告，并写明对应 commit、CI run、可复核的视频/图像位置。不能因为 CI 为绿色就把人物质量标为通过。**
+## 3. M1 的唯一正确执行顺序
 
-## 6. 关键验收定义
+| 任务 | 实施要求（按顺序） | 必交证据 / 阶段门禁 |
+|---|---|---|
+| M1-00 | 保存当前 M0 commit/Action/report，建立 M1 状态文件，完成 `main.js`→`main.ts` 与 `smoke.mjs`→`smoke.ts` 无差异迁移（类型检查、截图、编码回归） | TypeScript 核心与脚本可运行；M0 24 帧/渲染回归 PASS；不得改造成与原 fixture 不同的测试而冒充回归 |
+| M1-01 | **联网现有素材普查**：对 Reverse1999 具体同一角色的 Spine/Live2D/rolesstory 做有限、版本固定、按需下载；再检查另 2~3 个候选；用官方 Live2D/Spine 及论文多视角 SVG 作对照 | TS `asset-inventory.ts` + candidates JSON，路径/散列/格式/角色左右不对称性/版权状态/视角覆盖矩阵；明确有没有真实侧背原画 |
+| M1-02 | **原生参考渲染**：Spine 4.2 TS 匹配加载 .skel/.atlas/.png，复现原始 idle + 3 个动作/姿势（不沿用旧 Python bake 结果作通过证明）；Cubism 通过官方 TS SDK 独立演示眼部/表情（若不可用单独标 blocker） | 提交实际各自运行时的 1080p 关键帧/短视频、骨骼/mesh/FFD/constraints 清单和已知缺口。若原始数据都不能渲染，先修 loader/version |
+| M1-03 | **选定单一最终角色和参考库**：按分层质量、全身完整、衣服/头发的复杂度、骨骼、面部表情、视角覆盖和补图成本打分 | 角色 ID + 源路径/源 commit + 参考图/骨架/需要补图的角度和区域；给出选这个角色而非其他人的理由 |
+| M1-04 | **构建目标多视角资产**：保留源角色部件与外观，定义画质基准；优先复用实际已有视角，缺的 90/180/270 再由 anchored AI/手工补全，失败角度增补 45/135/225/315；将各视角切为可编辑透明部件 | 原图与 4 基本方向的同人一致性对照（头身比例、衣服花纹、非对称饰品）及每角度原画重组差异；人工审核合格才允许正式插值 |
+| M1-05 | **TS 自有部件 schema / 对应关系**：建立稳定 Part ID、二三维 pivots / anchor、对应三角形/轮廓点、源纹理 UV 和 occlusion 的多视角图；向未来 3D bone hierarchy 预留空间 | TS JSON schema validator PASS，左右眼/手/脚与被遮挡的部件按角色实际解剖命名，不能用一张整身 sprite 作为唯一 Mesh |
+| M1-06 | **准确重建原画关键视角**：Three.js BufferGeometry 的多部件 RGBA/UV 原画渲染；逐个部件确认纹理切图、三角网格、alpha 和遮挡 | 0/90/180/270 的原始参考 vs 程序重建 side-by-side；关键视角还原失败则禁止进入任意视角 |
+| M1-07 | **空间和形变**：TS 视角选择、anchor、部件级二维 shape interpolation + VDD；一律处理 0/360；在实物中对比无 VDD/VDD；保持视角相关遮挡/图层可见性 | 24×15° 独立采样图、每部件对应日志、无眼睛双影、衣服错位、侧脸穿帮；缺关键视角先增补角度/局部修形，ARAP 只在真正有收益时追加 |
+| M1-08 | **正式 360° 1080p 视频**：192 帧、24 fps、8s，另外独立求值 360°；输出正常视频、alpha/debug layer 视频和完整元数据，使用 FFprobe 校验编码帧数 | 3 类视频/对照组，非空帧、无画面裁切、接缝状态与像素差异、运行时日志；Release/非公开资产存储位置可访问 |
+| M1-09 | **独立画质与效率验收**：对关键角度、最差中间角度、连续帧、所有层级和纹理人工抽检，统计额外视角和局部补画工时 | 质量 PASS/FAIL/NO-GO，附缺陷复现、修正成本；不得因 CI=green 直接认定画质 PASS |
 
-### Engineering gate
+**每完成一任务必须提交可恢复的 git commit、状态和日志；较大视频/图像严禁进 Git。只完成 M1-01 不能声明 360° 已可行。**
 
-1. 真实带 Alpha 的纹理 ArtMesh 而不是程序化矩形，至少 25 个独立语义部件，带跨视角可见性/对应证据。
-2. 四个原画关键方向可复原；角度 0、90、180、270 与指定参考图一致；禁止镜像错误，尤其是不对称发卡/衣服图案。
-3. `yaw=360°` 与 `yaw=0°` 各项模型状态等价；额外检查两幅渲染结果的差异；**视频本身输出 0°..358.125° 共 192 帧**，保证连续循环。
-4. 24 个每 15° 的独立位置抽样；每帧完整角色不能离开画面；无 NaN、错位纹理、错误索引、空白、WebGL 异常。
-5. 能任意随机跳帧求值，即 `render(yaw=127°)` 不需要依次播放 0°..126°。
-
-### Visual gate（必须独立检查）
-
-6. 眼睛、鼻子、嘴、脸部轮廓清晰，无双眼叠影、面部忽胖忽瘦、发束突然生灭；视角左右侧造型可信。
-7. 刘海/额头、下颌/脖子、手臂/躯干、衣摆/腿部无遮挡穿帮，深度顺序变化不突然跳层。
-8. 头身比例、配色、饰品及服装细节在 360° 保持同一角色；线条无显著模糊、锯齿和涂抹。
-9. 重点比较人工选定的高质量参考视角，而不是只统计 PSNR/SSIM；自动指标仅捕获技术性错误。
-10. 保存**实际人工局部修图量、额外关键视角数量和单次角色制作成本**；若为每个角度重画近似全帧才能过关，判 NO-GO。
-
-## 7. 仓库和运行设计
-
-原 M0 `experiments/mvp001/src/main.js` 保留为 fixture；M1 新增以下文本代码（名称可在首次开发提交时一并固定）：
+## 4. 全部新增维护代码统一为 TS
 
 ```text
 experiments/mvp001/
+  src/main.ts                  # M0 migrated; preserve smoke behavior
+  scripts/smoke.ts             # M0 migrated; preserve reference outputs
+  scripts/asset-inventory.ts   # inventory with commit hash, paths, SHA, feature flags
+  scripts/spine-reference.ts   # 4.2 source runtime reference (adapter)
+  scripts/cubism-reference.ts  # official SDK reference where license/core allows
+  scripts/asset-import.ts      # source -> canonical schema
+  scripts/render-m1.ts         # Playwright/Chromium deterministic frames/FFmpeg
   src/m1/
     types.ts
+    spine-adapter.ts
+    cubism-adapter.ts
     view-space.ts
-    anchors.ts
-    part-mesh.ts
     correspondence.ts
+    part-mesh.ts
     vdd.ts
     visibility.ts
     turntable.ts
   schemas/character-multiview.schema.json
-  scripts/render-m1.mjs
-  tests/m1-{schema,view-wrap,correspondence,occlusion}.test.ts
-docs/experiments/
-  MVP-001-M1-plan.md
-  MVP-001-M1-status.md
+  tests/m1/*.test.ts
+  tsconfig.json
+  package.json
 .github/workflows/mvp001-m1-turntable.yml
+docs/experiments/MVP-001-M1-status.md
 ```
 
-- GitHub Actions Ubuntu + Chromium/Playwright (WebGL/SwiftShader) + FFmpeg，固定依赖，逐帧截图并使用 FFprobe 验证实际编码帧数和时长。
-- 输出到 DRAFT Release：`m1-turntable-1080p.mp4`、`m1-angles-contact-sheet.png`、`m1-reference-comparison.png`、`m1-depth-debug.mp4`、`m1-quality.json` 与授权允许的角色资产 ZIP。
-- Git 历史只保留代码、JSON/MD、素材元数据与 SHA，不上传二进制；使用脚本按允许的存储位置拉取校验过的原画，不在公有仓库泄露原画和密钥。
+Runtime: Node.js + TypeScript + `tsx` + `tsc --noEmit` (strict), Three.js, Vite, Playwright, FFmpeg. Binary loader libraries may be native upstream tools when licensed, but **our own application and test code must be TypeScript**. The old Rive+Python scripts remain historical only; *not* hidden M1 dependencies. Blender/Godot not required.
 
-## 8. 决策点（强制顺序）
+For Spine, choose [official spine-ts 4.2](https://github.com/EsotericSoftware/spine-runtimes/tree/4.2/spine-ts) to match the actual 4.2.36 source. The 4.3 release should not silently be used to read 4.2 .skel. Keep its license/module isolated. Cubism Web TS code requires proper Cubism Core; `.moc3` is not an editable `.cmo3`.
 
-1. **先做 M1-01 原画方向一致性审核**，否则后面的 rigging 不具意义。
-2. **M1-04 四个原画关键视角准确还原**是插值研发入口；若关键视角尚不能复原，不允许跳到旋转视频。
-3. **M1-05 VDD 之前先有简单插值基线**，才能证明 VDD 带来的实际提升。
-4. **M1-08 输出真实 1080p 视频**之后才能判断 M1 成功；720p、640x360 或仅三四张截图不能替代。
-5. 如果 M1 画质失败但 M0 可渲染，故障归因应归入资产生产/形状匹配/遮挡等，不能归因成「Three.js 不支持」。
-6. 如果 M1 被判 NO-GO，只保留成功的基础模块、记录失败原因；暂停 M2/M3 而不是叠加更多功能。
+## 5. Stop/no-go criteria
 
-## 9. 参考材料
+- Data/source: if selected character's source Spine/Cubism cannot be verifiably rendered, **stop and fix the reference renderer before claiming asset extraction works**.
+- Asset geometry: if no trustworthy true side/back keyviews exist, list missing assets explicitly and generate/repaint **only those** while using existing character as a locked reference. This is not an automatic one-image-to-360 guarantee.
+- Visual continuity: no whole-body card flip or total-body crossfade. Fix matching/wrapping/depth first, before adding effects.
+- Evaluation: sample every 15°, independently inspect worst transitions, verify asymmetric details and front/back joint locations, check mesh foldovers and no doubled eyes; deterministic random frame seek.
+- Economic: report amount of manually redrawn new angles + corrected parts; if essentially every intermediate frame must be repainted, report technical possibility but **economic NO-GO**.
+- Rights: public text-only repository, protected storage for third-party binary art; only privately inspect derivative video.
+- If any gate fails: commit failure evidence, mark blocked, do not quietly switch to a different source or success metric.
 
-- Rivers/Igarashi/Durand, `2.5D Cartoon Models`: https://alecrivers.com/2.5dcartoonmodels/
-- Kitamura/Kanamori/Tsuruno, `2.5D Modeling from Illustrations of Different Views`: https://www.jstage.jst.go.jp/article/adada/18/4/18_74/_article/-char/en
-- Fukusato/Maejima, `View-Dependent Deformation for 2.5-D Cartoon Models`: https://pubmed.ncbi.nlm.nih.gov/35544514/
-- Live2D official deformer: https://docs.live2d.com/en/cubism-editor-manual/deformer/
-- Live2D official Glue: https://docs.live2d.com/en/cubism-editor-manual/glue/
-- Three.js BufferGeometry: https://threejs.org/docs/pages/BufferGeometry
-- Third-party 2010 replica for algorithm study (license must be checked before code copying): https://github.com/without-paper/2.5d_cartoon_model
+## 6. Next action (no need to generate unrelated original art)
 
-## 10. 当前状态与下一执行入口
-
-- 此文件为 M1 **计划提交**，不可将它标记为 M1 完成。
-- **紧接着执行 M1-00 与 M1-01**：冻结 M0 验收证据、明确原创角色 Art Direction 和多视角图像生成参考；优先产出可供目视审查的正面、侧面、背面和斜侧候选角色图，确认真实原画能够稳定统一之后才着手部件绑定。
+**First implement M1-00 and M1-01**: migrate the M0 JS files and scripts to TS, run parity tests; then write TS inventory and download only one or two specific character bundles; audit original source rig/mesh/views and select source candidate. Do **not** start automatic generating four different views until existing source assets have been rendered and compared.
