@@ -86,6 +86,7 @@ jobs:
             experiments/reference-factory/out/core026/verify-source.json
             experiments/reference-factory/out/core026/supervisor-source-qa.json
             experiments/reference-factory/out/core026/supervisor-constraints.json
+            experiments/reference-factory/out/core026/default-registration.json
             experiments/reference-factory/out/core026/m1c1-supervisor.json
             experiments/reference-factory/out/core026/m1c1-regressions.json
             experiments/reference-factory/out/core026/landmark-seeds-projected.json

@@ -77,6 +77,16 @@ def build():
 
     visit(model['nodes'], [])
     require(all(uuid in nodes for uuid in by_uuid), 'Mapped node missing in original INX')
+    identity_rows = []
+    for row in registration['entries']:
+        uuid = row['selected_uuid']
+        candidates = [c for c in row['candidates'] if c['inx_uuid'] == uuid]
+        require(len(candidates) == 1, 'Selected registration candidate is not unique')
+        mesh_sha = hashlib.sha256(json.dumps(nodes[uuid]['mesh'], sort_keys=True,
+                                  separators=(',', ':')).encode()).hexdigest()
+        require(candidates[0]['original_mesh_sha256'] == mesh_sha, 'Original registration mesh changed')
+        identity_rows.append([row['psd_order'], uuid, mesh_sha])
+    identity_sha = hashlib.sha256(json.dumps(identity_rows, separators=(',', ':')).encode()).hexdigest()
     parameters = [p for p in model['param'] if p['name'] == 'Head:: Yaw-Pitch']
     require(len(parameters) == 1 and len(parameters[0]['bindings']) == 114, 'Unexpected yaw/pitch bindings')
     bindings = parameters[0]['bindings']
@@ -125,9 +135,10 @@ def build():
     multiply = [r['order'] for r in contract['layers'] if 'MULTIPLY' in r['source_blend_mode']]
     clips = contract['clean_shadow_alpha_clip']
     require(len(multiply) == 11 and len(clips) == 9, 'Unexpected multiply/default-clip count')
-    return {'schema': 'core026-constraints/1', 'scope': 'DEFAULT_SOURCE_AND_UNVALIDATED_DESIGN',
+    return {'schema': 'core026-constraints/2', 'scope': 'DEFAULT_SOURCE_AND_UNVALIDATED_DESIGN',
             'inputs': {'inx_sha256': INX_SHA, 'contract_sha256': CONTRACT_SHA,
-                       'registration_sha256': sha(registration_path)},
+                       'registration_identity_sha256': identity_sha,
+                       'registration_program_sha256': sha(ROOT / 'verify_core026_registration.py')},
             'records': records, 'multiply_orders': multiply, 'default_shadow_clips': clips,
             'late_face_paint_over_hair': late,
             'claims': {'overall_M1': 'NOT_ACCEPTED', 'runtime_receiver_compositor': 'NOT_IMPLEMENTED',

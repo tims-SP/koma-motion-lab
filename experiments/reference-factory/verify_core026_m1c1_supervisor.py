@@ -47,10 +47,18 @@ def verify(path):
     require(sha(ROOT / 'config/core025-layer-contract.json') == SHA_CONTRACT,
             'Frozen contract hash changed')
     require(facts['status'] == 'SOURCE_OBSERVATIONS_VERIFIED', 'Independent facts not verified')
-    require(data.get('schema') == 'core026-constraints/1', 'Wrong schema')
+    require(data.get('schema') == 'core026-constraints/2', 'Wrong schema')
     require(data.get('scope') == 'DEFAULT_SOURCE_AND_UNVALIDATED_DESIGN', 'Wrong scope')
+    registration = json.loads(reg_path.read_text())
+    identity_rows = []
+    for row in registration['entries']:
+        selected = [c for c in row['candidates'] if c['inx_uuid'] == row['selected_uuid']]
+        require(len(selected) == 1, 'Non-unique selected registration mesh')
+        identity_rows.append([row['psd_order'], row['selected_uuid'], selected[0]['original_mesh_sha256']])
+    identity_sha = hashlib.sha256(json.dumps(identity_rows, separators=(',', ':')).encode()).hexdigest()
     require(equal_json(data.get('inputs'), {'inx_sha256': SHA_INX,
-            'contract_sha256': SHA_CONTRACT, 'registration_sha256': sha(reg_path)}),
+            'contract_sha256': SHA_CONTRACT, 'registration_identity_sha256': identity_sha,
+            'registration_program_sha256': sha(ROOT / 'verify_core026_registration.py')}),
             'Missing/wrong input provenance SHA')
     rows = data.get('records', [])
     require(isinstance(rows, list) and len(rows) == 62, 'Need exactly 62 records')

@@ -153,5 +153,13 @@
     "runtime_depth_and_occlusion": "NOT_IMPLEMENTED",
     "M2": "NOT_STARTED"
   },
-  "ci": "PENDING_NEW_COMMIT"
+  "ci": {
+    "code_commit": "ba80ad27d7819a6e308ba837fe46335757562bd8",
+    "legacy_run": 41154947789,
+    "legacy_status": "success",
+    "supervisor_run": 41154947797,
+    "supervisor_status": "failure",
+    "failed_before_new_review_step": true,
+    "failure": "M1C1 inputs.registration_sha256 differs from current generated report; numerical registration gate and source checks passed. New review CI not yet evaluated."
+  }
 }

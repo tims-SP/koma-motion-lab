@@ -18,7 +18,7 @@
 
 ## 下一工单与实际阻塞
 
-M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。CI待本次提交复现；[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。下一步仍是逐图人工判断与M1总门禁，未开始M2。
+M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。代码ba80ad2旧回归CI41154947789通过；监督CI41154947797在旧M1C1整份配准报告SHA比对失败，新标点步骤尚未运行。当前修复为显式v2身份/原始mesh/验证程序指纹，数值门禁不变，待新CI；[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。已实际完成raw0与±0.25的57格判断，9个图像标记可有限比较；后续mcode操作又被自动审批以潜在OSS载荷未知为由拒绝，尚未落盘，受控表仍0审阅/0可拟合。具体57格决定与逐步恢复指令已存[待执行工单](../experiments/reference-factory/evidence/core026-M1/central-review-pending-order.json)。不把该拒绝当实际上传证据，不绕过或重登。下一步仍是由mcode应用该工单，再做其余姿态与M1总门禁，未开始M2。
 
 最新mcode[恢复证据](research/CORE-026-mcode-runtime-diagnostic.md)：用户明确允许本项目网络后，mcode实际执行两条项目验证，CLI/工具/两条命令均exit0，62条源事实无问题；无重新登录。当前恢复范围为该限定验证，下一工单继续由mcode实现、Codex验收。Node请求层自测通过，未知对象存储仍拒绝；不把SDK潜在地址或早前审批提示当作实际上传证据。M1C1原始作者仍为Codex兜底，不能事后改归mcode。
 

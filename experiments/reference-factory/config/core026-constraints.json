@@ -1,10 +1,11 @@
 {
-  "schema": "core026-constraints/1",
+  "schema": "core026-constraints/2",
   "scope": "DEFAULT_SOURCE_AND_UNVALIDATED_DESIGN",
   "inputs": {
     "inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
     "contract_sha256": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d",
-    "registration_sha256": "b44386f6f206a08c9b40bf2a1d777bec20244f5e864e56765fb32fb3e3b71dc8"
+    "registration_identity_sha256": "d71aa67bb1a01006c7aae7136596c6a150a7e8a5bdc57ad3f9e366156d6e01a2",
+    "registration_program_sha256": "e10feb4578f6e0c7c29052d46a17893866bc8dcd166876a39299684688fc5e90"
   },
   "records": [
     {

@@ -3,6 +3,7 @@
 import copy
 import hashlib
 import json
+import math
 import subprocess
 import sys
 from pathlib import Path
@@ -55,7 +56,9 @@ def main():
         ('float-receiver-id', lambda j: replace(j, ['records', 5, 'design', 'receiver_order'], 5.0)),
         ('invent-overlap-count', lambda j: replace(j, ['late_face_paint_over_hair', 2, 'overlap_hair_alpha_ge253_pixels'], 0)),
         ('claim-compositor-implemented', lambda j: replace(j, ['claims', 'runtime_receiver_compositor'], 'IMPLEMENTED')),
-        ('wrong-input-inx-hash', lambda j: replace(j, ['inputs', 'inx_sha256'], '0' * 64))]
+        ('wrong-input-inx-hash', lambda j: replace(j, ['inputs', 'inx_sha256'], '0' * 64)),
+        ('wrong-registration-identities', lambda j: replace(j, ['inputs', 'registration_identity_sha256'], '0' * 64)),
+        ('wrong-registration-program', lambda j: replace(j, ['inputs', 'registration_program_sha256'], '0' * 64))]
     cases = []
     for name, mutate in mutations:
         candidate = copy.deepcopy(data); mutate(candidate)
@@ -77,6 +80,26 @@ def main():
     repeat_equal = reconstruction['exit_code'] == 0 and rebuilt.read_bytes() == CONFIG.read_bytes()
     if not repeat_equal:
         problems.append('Repeated build differs from committed candidate')
+    # The contract consumes selected identities and exact original mesh hashes.
+    # Reformatting/one-ULP diagnostics must not change that input fingerprint;
+    # registration's numerical gate is still rerun by the independent supervisor.
+    registration_path = ROOT / 'out/core026/default-registration.json'
+    registration_bytes = registration_path.read_bytes()
+    try:
+        reg = json.loads(registration_bytes)
+        c = reg['entries'][0]['candidates'][0]
+        c['within_layer_residual_max_px'] = math.nextafter(c['within_layer_residual_max_px'], math.inf)
+        registration_path.write_text(json.dumps(reg, separators=(',', ':')) + '\n')
+        serialization_check = invoke('extract_core026_constraints.py', '--verify')
+        if serialization_check['exit_code'] != 0:
+            problems.append('Unused registration serialization changed consumed-input fingerprint')
+        c['original_mesh_sha256'] = '0' * 64
+        registration_path.write_text(json.dumps(reg) + '\n')
+        mesh_check = invoke('extract_core026_constraints.py', '--verify')
+        if mesh_check['exit_code'] != 11:
+            problems.append('Tampered original registration mesh hash was accepted')
+    finally:
+        registration_path.write_bytes(registration_bytes)
     restored = {
         'producer': invoke('extract_core026_constraints.py', '--verify'),
         'supervisor': invoke('verify_core026_m1c1_supervisor.py')}
@@ -85,6 +108,8 @@ def main():
     report = {'schema': 'core026-m1c1-corruption-regressions/1',
               'status': 'PASS' if not problems else 'FAIL', 'baseline_sha256': baseline_sha,
               'positive': positive, 'cases': cases, 'repeated_build_identical': repeat_equal,
+              'unused_float_and_formatting_independent': serialization_check,
+              'original_registration_mesh_corruption_rejected': mesh_check,
               'original_candidate_unchanged': sha(CONFIG) == baseline_sha, 'restored': restored,
               'problems': problems, 'overall_M1': 'NOT_ACCEPTED_BY_THIS_CHECK'}
     (ROOT / 'out/core026/m1c1-regressions.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
