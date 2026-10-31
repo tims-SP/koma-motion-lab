@@ -1,0 +1,53 @@
+name: MVP-002 integrated 2.75D TS core preview
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/mvp002/**'
+      - '.github/workflows/mvp002-integrated.yml'
+permissions:
+  contents: write
+jobs:
+  integrated:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install TypeScript and renderer
+        working-directory: experiments/mvp002
+        run: npm install --no-audit --no-fund
+      - name: Strict typecheck
+        working-directory: experiments/mvp002
+        run: npm run typecheck
+      - name: Chromium/FFmpeg support
+        working-directory: experiments/mvp002
+        run: |
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb ffmpeg
+      - name: Render actual 360, articulated action, face FX and inspect decoded frames
+        working-directory: experiments/mvp002
+        run: xvfb-run -a npm run render
+      - name: Publish ORIGINAL vector-character preview in DRAFT Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="mvp002-core-${GITHUB_RUN_ID}"
+          gh release create "$tag" \
+            experiments/mvp002/out/turn.mp4 \
+            experiments/mvp002/out/action.mp4 \
+            experiments/mvp002/out/fx.mp4 \
+            experiments/mvp002/out/turn-contact.png \
+            experiments/mvp002/out/action-contact.png \
+            experiments/mvp002/out/fx-contact.png \
+            experiments/mvp002/out/report.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "MVP-002 original vector 2.75D integrated technical preview" \
+            --notes "Original procedural multi-view parts; engineering proof only, not Japanese anime fidelity. Three scenes: 360, reach, face FX."
+          echo "Draft release: $tag" >> "$GITHUB_STEP_SUMMARY"
