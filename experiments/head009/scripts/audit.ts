@@ -16,7 +16,7 @@ try{
   reports.push(report);
   await page.evaluate(y=>window.head009.frame(y),yaw);
   await page.locator('canvas').screenshot({path:join(out,`head-${String(yaw).padStart(3,'0')}.png`)});
-  if ([0,45,75,90].includes(yaw)) {
+  if ([0,30,45,60,75,90].includes(yaw)) {
    const img=await page.locator('canvas').screenshot({type:'jpeg',quality:62});
    console.log('HEAD009_MODEL_IMAGE_'+yaw+' '+img.toString('base64'));
   }
@@ -58,7 +58,7 @@ try{
   await page.goto((process.env.HEAD009_URL??'http://127.0.0.1:4173/')+'reference/'+name+'.svg');
   const el=page.locator('svg');await el.waitFor();
   await el.screenshot({path:join(out,'reference-'+name+'.png')});
-  if(name==='profile-right-090'){const img=await el.screenshot({type:'jpeg',quality:62});console.log('HEAD009_REFERENCE_090 '+img.toString('base64'));}
+  if(['profile-right-090','heldout-030','heldout-060','heldout-075'].includes(name)){const img=await el.screenshot({type:'jpeg',quality:62});console.log('HEAD009_REFERENCE_'+name+' '+img.toString('base64'));}
  }
  const report={schema:'HEAD009-QA-V1',angles:yaws,results:reports,status:reports.every((r:any)=>r.result==='PASS_ENGINEERING')&&keyArtAligned?'PASS_ENGINEERING':'FAIL'};
  await writeFile(join(out,'head90-qa.json'),JSON.stringify(report,null,2)+'\n');
