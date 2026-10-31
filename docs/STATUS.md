@@ -1,6 +1,6 @@
 # 当前恢复入口
 
-更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode实现、Codex监督；mcode的无工具轻量请求仍被自动审批拒绝，本轮M1C1改由Codex在本地兜底实现并验收，明确不算mcode产物。每完成一段提交保存。生产仓库koma-motion未改。
+更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；本轮限定命令执行已恢复。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
 
 ## CORE026当前状态
 
@@ -17,6 +17,8 @@
 - [监督诊断媒体Draft](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-270a8f25943b4d8f5dd0)已归档；Actions artifact只JSON，媒体不进git或artifact。[机器可读验收](../experiments/reference-factory/evidence/core026-M1/supervisor-recovery-ci-acceptance.json)。
 
 ## 下一工单与实际阻塞
+
+M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。CI待本次提交复现；[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。下一步仍是逐图人工判断与M1总门禁，未开始M2。
 
 最新mcode[恢复证据](research/CORE-026-mcode-runtime-diagnostic.md)：用户明确允许本项目网络后，mcode实际执行两条项目验证，CLI/工具/两条命令均exit0，62条源事实无问题；无重新登录。当前恢复范围为该限定验证，下一工单继续由mcode实现、Codex验收。Node请求层自测通过，未知对象存储仍拒绝；不把SDK潜在地址或早前审批提示当作实际上传证据。M1C1原始作者仍为Codex兜底，不能事后改归mcode。
 

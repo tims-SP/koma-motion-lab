@@ -1,0 +1,2708 @@
+{
+  "schema": "core026-landmark-review/1",
+  "inputs": {
+    "source_inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+    "reference_manifest_sha256": "38fd17716db517edd5d9b24abda74c5d3ab801ec9b4e6bc9feee85b52fc80a66",
+    "seed_config_sha256": "f0ac3341dcb0229531177dba590d109eac25245698b4a39dc903badeb8fdff04",
+    "tracker_program_sha256": "28a897c2e30a75c4a34465a720ab055c0dc3a8ce11529aec2cd83b0df0b76e47",
+    "projector_program_sha256": "24ac3bc1274d89e1727335fec9428228f637be252d65cc476298d61ef2eb9b81"
+  },
+  "candidate_tolerance_native_pixels": 1e-05,
+  "claims": {
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_depth_and_occlusion": "NOT_IMPLEMENTED",
+    "scope": "REVIEW_PREPARATION_AND_STRUCTURE_ONLY"
+  },
+  "records": [
+    {
+      "id": "nose_tip",
+      "psd_order": 21,
+      "source_xy": [
+        811.9666667,
+        1072.3333333
+      ],
+      "source_alpha": 255,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "painted lower nose-mark centroid",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            305.353671,
+            430.139685
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            305.353671,
+            430.139685
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            325.186667,
+            429.133334
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            325.186667,
+            429.133334
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            343.412853,
+            430.137944
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            343.412853,
+            430.137944
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            362.173276,
+            431.100223
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            362.173276,
+            431.100223
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": [
+            380.398311,
+            431.292293
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            380.398311,
+            431.292293
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": [
+            399.153525,
+            431.399655
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            399.153525,
+            431.399655
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "nose_root",
+      "psd_order": 21,
+      "source_xy": null,
+      "source_alpha": null,
+      "semantic_class": "UNKNOWN",
+      "definition": "anatomical nasal root is not visibly defined",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "chin",
+      "psd_order": 13,
+      "source_xy": [
+        816,
+        1305.5
+      ],
+      "source_alpha": 198,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "lowest solid Face-alpha boundary",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": [
+            301.189149,
+            524.725727
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            301.189149,
+            524.725727
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            314.185471,
+            523.780761
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            314.185471,
+            523.780761
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            327.199999,
+            522.800003
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            327.199999,
+            522.800003
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            340.507025,
+            522.82916
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            340.507025,
+            522.82916
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            353.637869,
+            522.783924
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            353.637869,
+            522.783924
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "mouth_cornerL",
+      "psd_order": 22,
+      "source_xy": null,
+      "source_alpha": null,
+      "semantic_class": "UNKNOWN",
+      "definition": "raw mouth-inner extrema rejected: hidden beneath Lip in actual native composite",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "mouth_cornerR",
+      "psd_order": 22,
+      "source_xy": null,
+      "source_alpha": null,
+      "semantic_class": "UNKNOWN",
+      "definition": "raw mouth-inner extrema rejected: hidden beneath Lip in actual native composite",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "face_edgeL",
+      "psd_order": 13,
+      "source_xy": [
+        657.5,
+        1225.5
+      ],
+      "source_alpha": 163,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "visible lower-jaw boundary at source row1225; contour-point identity is uncertain under deformation",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            255.804475,
+            492.8043
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            255.804475,
+            492.8043
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            263.8,
+            490.800002
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            263.8,
+            490.800002
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "face_edgeR",
+      "psd_order": 13,
+      "source_xy": [
+        962.5,
+        1225.5
+      ],
+      "source_alpha": 187,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "visible lower-jaw boundary at source row1225; contour-point identity is uncertain under deformation",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            367.982121,
+            495.939098
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            367.982121,
+            495.939098
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            385.799999,
+            490.800002
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            385.799999,
+            490.800002
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            394.736837,
+            491.754014
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            394.736837,
+            491.754014
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            403.749661,
+            492.764759
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            403.749661,
+            492.764759
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": [
+            409.695815,
+            495.721679
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            409.695815,
+            495.721679
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_innerL",
+      "psd_order": 27,
+      "source_xy": [
+        721.5,
+        1001
+      ],
+      "source_alpha": 170,
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "definition": "painted eye-white inner extent, explicit canthus proxy",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            275.489335,
+            399.85851
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            275.489335,
+            399.85851
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            288.200001,
+            399.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            288.200001,
+            399.8
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            304.340204,
+            401.189601
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            304.340204,
+            401.189601
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_outerL",
+      "psd_order": 27,
+      "source_xy": [
+        579.5,
+        1022
+      ],
+      "source_alpha": 255,
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "definition": "painted eye-white outer extent, explicit canthus proxy",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": [
+            204.672648,
+            413.642718
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            204.672648,
+            413.642718
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": [
+            211.276249,
+            412.899679
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            211.276249,
+            412.899679
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": [
+            217.997188,
+            412.003636
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            217.997188,
+            412.003636
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            224.714219,
+            409.998465
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            224.714219,
+            409.998465
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            231.4,
+            408.200001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            231.4,
+            408.200001
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "pupilL",
+      "psd_order": 28,
+      "source_xy": [
+        666.5,
+        1004.5
+      ],
+      "source_alpha": 255,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "manually reviewed painted pupil centre",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": [
+            233.298397,
+            404.528704
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            233.298397,
+            404.528704
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": [
+            244.138547,
+            404.006842
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            244.138547,
+            404.006842
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            255.196671,
+            402.815068
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            255.196671,
+            402.815068
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            266.2,
+            401.200001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            266.2,
+            401.200001
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            282.32156,
+            401.768711
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            282.32156,
+            401.768711
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            298.412418,
+            402.0735
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            298.412418,
+            402.0735
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": [
+            314.489555,
+            401.931188
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            314.489555,
+            401.931188
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": [
+            330.55346,
+            401.776755
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            330.55346,
+            401.776755
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_innerR",
+      "psd_order": 37,
+      "source_xy": [
+        905.5,
+        993
+      ],
+      "source_alpha": 151,
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "definition": "painted eye-white inner extent, explicit canthus proxy",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            344.202325,
+            395.625379
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            344.202325,
+            395.625379
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            361.6,
+            396.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            361.6,
+            396.8
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            372.470301,
+            396.704994
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            372.470301,
+            396.704994
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            383.318083,
+            396.58822
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            383.318083,
+            396.58822
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": [
+            394.302943,
+            395.603497
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            394.302943,
+            395.603497
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": [
+            405.286202,
+            394.634873
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            405.286202,
+            394.634873
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_outerR",
+      "psd_order": 37,
+      "source_xy": [
+        1045.5,
+        1009.75
+      ],
+      "source_alpha": 255,
+      "semantic_class": "PAINTED_BOUNDARY_PROXY",
+      "definition": "painted eye-white outer extent, explicit canthus proxy",
+      "is_proxy": true,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": [
+            352.653215,
+            399.213797
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            352.653215,
+            399.213797
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": [
+            368.863677,
+            400.622538
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            368.863677,
+            400.622538
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": [
+            385.177848,
+            402.220836
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            385.177848,
+            402.220836
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            401.398926,
+            402.900255
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            401.398926,
+            402.900255
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            417.6,
+            403.499999
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            417.6,
+            403.499999
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            422.768213,
+            403.393491
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            422.768213,
+            403.393491
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            427.982949,
+            403.023636
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            427.982949,
+            403.023636
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": [
+            432.954682,
+            401.446535
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            432.954682,
+            401.446535
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "pupilR",
+      "psd_order": 38,
+      "source_xy": [
+        964.5,
+        1005.5
+      ],
+      "source_alpha": 255,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "manually reviewed painted pupil centre",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": [
+            314.661805,
+            396.351073
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            314.661805,
+            396.351073
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": [
+            332.346082,
+            397.990171
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            332.346082,
+            397.990171
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": [
+            350.111342,
+            399.680861
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            350.111342,
+            399.680861
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            367.858166,
+            400.763136
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            367.858166,
+            400.763136
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            385.4,
+            401.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            385.4,
+            401.8
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            395.139534,
+            401.62241
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            395.139534,
+            401.62241
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_rootL",
+      "psd_order": 1,
+      "source_xy": null,
+      "source_alpha": null,
+      "semantic_class": "UNKNOWN",
+      "definition": "covered by hair; native node origin is not a verified anatomical root",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_rootR",
+      "psd_order": 2,
+      "source_xy": null,
+      "source_alpha": null,
+      "semantic_class": "UNKNOWN",
+      "definition": "covered by hair; native node origin is not a verified anatomical root",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_tipL",
+      "psd_order": 1,
+      "source_xy": [
+        637,
+        44.5
+      ],
+      "source_alpha": 255,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "top solid painted ear alpha",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": [
+            282.475446,
+            17.47168
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            282.475446,
+            17.47168
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": [
+            275.684964,
+            17.845572
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            275.684964,
+            17.845572
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": [
+            268.879072,
+            18.165787
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            268.879072,
+            18.165787
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            261.822293,
+            17.987574
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            261.822293,
+            17.987574
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            254.8,
+            17.800001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            254.8,
+            17.800001
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            247.822267,
+            17.987192
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            247.822267,
+            17.987192
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": [
+            240.878992,
+            18.165006
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            240.878992,
+            18.165006
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": [
+            233.685067,
+            17.844683
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            233.685067,
+            17.844683
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": [
+            226.475484,
+            17.47153
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            226.475484,
+            17.47153
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_tipR",
+      "psd_order": 2,
+      "source_xy": [
+        991,
+        32.5
+      ],
+      "source_alpha": 226,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "top solid painted ear alpha",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            396.399999,
+            12.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            396.399999,
+            12.8
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "neck_connection",
+      "psd_order": 11,
+      "source_xy": null,
+      "source_alpha": null,
+      "semantic_class": "UNKNOWN",
+      "definition": "hidden beneath chin/choker; no verified visible point",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "leaf_stem",
+      "psd_order": 62,
+      "source_xy": [
+        647.5,
+        420
+      ],
+      "source_alpha": 203,
+      "semantic_class": "PAINTED_IMAGE_FIDUCIAL",
+      "definition": "painted stem endpoint, not proof of a physical root",
+      "is_proxy": false,
+      "frames": [
+        {
+          "raw_yaw": -1.0,
+          "native_head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.75,
+          "native_head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.5,
+          "native_head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            259.2,
+            168.200001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            259.2,
+            168.200001
+          ],
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.5,
+          "native_head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.75,
+          "native_head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 1.0,
+          "native_head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "UNREVIEWED",
+          "image_feature_evidence": null,
+          "eligible_for_fitting": false
+        }
+      ]
+    }
+  ]
+}

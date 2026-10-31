@@ -13,6 +13,9 @@ on:
       - 'experiments/reference-factory/verify_core026_m1c1_supervisor.py'
       - 'experiments/reference-factory/run_core026_m1c1_regressions.py'
       - 'experiments/reference-factory/config/core026-constraints.json'
+      - 'experiments/reference-factory/prepare_core026_landmark_review.py'
+      - 'experiments/reference-factory/run_core026_landmark_review_regressions.py'
+      - 'experiments/reference-factory/config/core026-landmark-review.json'
   workflow_dispatch:
 permissions:
   actions: read
@@ -69,6 +72,10 @@ jobs:
         run: |
           python prepare_core026_landmark_seeds.py
           python verify_core026_reference.py
+      - name: Verify committed landmark review and reject isolated corruptions
+        run: |
+          python prepare_core026_landmark_review.py --verify
+          python run_core026_landmark_review_regressions.py
       - name: Upload text-only numerical and diagnostic evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -84,6 +91,7 @@ jobs:
             experiments/reference-factory/out/core026/landmark-seeds-projected.json
             experiments/reference-factory/out/core026/landmarks/landmarks.json
             experiments/reference-factory/out/core026/reference/restore-evidence.json
+            experiments/reference-factory/out/core026/landmark-review-regressions/report.json
           if-no-files-found: warn
       - name: Archive generated media only in owner-only Draft Release
         run: |
