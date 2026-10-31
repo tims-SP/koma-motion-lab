@@ -4,7 +4,7 @@ Status: **PLAN / NOT IMPLEMENTED / NOT ACCEPTED**
 Date: 2026-11-01
 Owner repo: `tims-SP/koma-motion` (暂不写入；本仓库仅用于实验与验收)
 Lab repo: `tims-SP/koma-motion-lab`
-Existing baseline: [MVP-008 P0 geometry audit](./MVP-008-P0-root-cause-geometry-audit.md), render [Actions #41206130892](https://github.com/tims-SP/koma-motion-lab/actions/runs/41206130892).
+Existing baseline: [MVP-008 P0 geometry audit](../archive/pre-mvp009-2026-11-01/experiments/MVP-008-P0-root-cause-geometry-audit.md), render [Actions #41206130892](https://github.com/tims-SP/koma-motion-lab/actions/runs/41206130892).
 
 ## 0. Decision / non-negotiable contract
 

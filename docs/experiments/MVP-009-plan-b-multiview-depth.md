@@ -3,7 +3,7 @@
 Status: **DESIGN COMMITTED / NOT IMPLEMENTED / NOT VISUALLY ACCEPTED**  
 Date: 2026-11-01  
 Parent: [MVP-009 head360 plan](./MVP-009-head360-representation-plan.md)  
-Legacy failure: [MVP-008 architecture audit](./MVP-008-P0-root-cause-geometry-audit.md)
+Legacy failure: [MVP-008 architecture audit](../archive/pre-mvp009-2026-11-01/experiments/MVP-008-P0-root-cause-geometry-audit.md)
 
 ## 1. 产品目标、范围、不可混淆之处
 
