@@ -56,7 +56,7 @@ try{
   console.log('HEAD009_ORGAN_'+yaw+' '+JSON.stringify({max:compare.maxErrorPx,mean:compare.meanErrorPx,negativeFault:caughtFault,pixels:organPixels}));
  }
  const key=result.filter(x=>x.role==='key'),heldout=result.filter(x=>x.role==='heldout');
- const visibleAnatomy=key.every(x=>['nose','mouth','face','farEye','farEar'].every(p=>Object.entries(x.organPixels).some(([k,v])=>reg.organParts[k]===p&&v>0)));
+ const visibleAnatomy=key.every(x=>['nose','mouth','face','nearEye','farEar'].every(p=>Object.entries(x.organPixels).some(([k,v])=>reg.organParts[k]===p&&v>0)));
  const keyCoordinatePass=key.every(x=>(x.maxErrorPx??Infinity)<=8);
  const negativeControlsPass=result.every(x=>x.nosePositionFaultDetected);
  const keyVisibleMisses=key.flatMap(x=>{

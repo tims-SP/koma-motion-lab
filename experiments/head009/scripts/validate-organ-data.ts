@@ -28,7 +28,8 @@ const invalid=(doc:OrganLandmarks):string[]=>{
    if(!(name in doc.organParts))problems.push('unknown_organ:'+name);
    if(!Array.isArray(pt)||pt.length!==2||pt.some(x=>!Number.isFinite(x)||x<0||x>512))problems.push('out_of_bounds:'+v.yaw+':'+name);
   }
-  if(v.yaw>=60&&v.points['eye.L.center'])problems.push('hidden_eye_marked_visible:'+v.yaw);
+  if(v.yaw>=60&&v.points['eye.R.center'])problems.push('far_eye_marked_visible:'+v.yaw);
+  if(v.yaw>=60&&!v.points['eye.L.center'])problems.push('persistent_eye_missing:'+v.yaw);
  }
  return problems;
 };

@@ -173,10 +173,6 @@
       "source": "heldout-060.svg",
       "role": "heldout",
       "points": {
-        "eye.R.center": [
-          324,
-          252
-        ],
         "nose.bridge": [
           342,
           250
@@ -200,6 +196,10 @@
         "fringe.hairline": [
           303,
           233
+        ],
+        "eye.L.center": [
+          324,
+          252
         ]
       }
     },
@@ -208,10 +208,6 @@
       "source": "heldout-075.svg",
       "role": "heldout",
       "points": {
-        "eye.R.center": [
-          334,
-          241
-        ],
         "nose.bridge": [
           348,
           243
@@ -235,6 +231,10 @@
         "fringe.hairline": [
           306,
           235
+        ],
+        "eye.L.center": [
+          334,
+          241
         ]
       }
     },
@@ -243,10 +243,6 @@
       "source": "profile-right-090.svg",
       "role": "key",
       "points": {
-        "eye.R.center": [
-          333,
-          239
-        ],
         "nose.bridge": [
           349,
           246
@@ -274,6 +270,10 @@
         "nose.ink": [
           364,
           261
+        ],
+        "eye.L.center": [
+          333,
+          239
         ]
       }
     }

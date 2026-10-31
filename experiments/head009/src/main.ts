@@ -49,7 +49,12 @@ const lerp=(a:number,b:number,t:number)=>a*(1-t)+b*t;
 function sourceFor(part:Part,yaw:number):{pts:Point[];source:SourcePath|null;strokeWidth:number}|null{
  const keys=art[part.id]??[],{a,b,t}=between(yaw),A=keys[a]??null,B=keys[b]??null;
  if(!A&&!B)return null;
- if(!A&&t<.5||!B&&t>=.5)return null;
+ // A missing anatomical part fades by geometric contraction at its last source key.
+ // No far-eye contour is substituted for a different eye at profile.
+ const exitScale=A&&!B?Math.max(0,1-t/.36):1;
+ const enterScale=!A&&B?Math.max(0,Math.min(1,(t-.64)/.36)):1;
+ const visibilityScale=exitScale*enterScale;
+ if(visibilityScale<=.001)return null;
  const src=A??B;
  if(!src)return null;
  const points:Point[]=[];
@@ -63,7 +68,12 @@ function sourceFor(part:Part,yaw:number):{pts:Point[];source:SourcePath|null;str
    lerp(pa[1]-ca[1],pb[1]-cb[1],t)+pos[1]
   ]);
  }
- return {pts:points,source:src,strokeWidth:lerp((A??B)!.strokeWidth,(B??A)!.strokeWidth,t)};
+ if(visibilityScale<.999){
+  const cx=points.reduce((s,p)=>s+p[0],0)/points.length;
+  const cy=points.reduce((s,p)=>s+p[1],0)/points.length;
+  for(let i=0;i<points.length;i++)points[i]=[cx+(points[i]![0]-cx)*visibilityScale,cy+(points[i]![1]-cy)*visibilityScale];
+ }
+ return {pts:points,source:src,strokeWidth:lerp((A??B)!.strokeWidth,(B??A)!.strokeWidth,t)*visibilityScale};
 }
 function shapeGeometry(pts:Point[]):THREE.BufferGeometry{
  const shape=new THREE.Shape();

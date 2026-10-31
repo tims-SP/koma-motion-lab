@@ -4,7 +4,7 @@
 <path data-part-id="ear.far" d="M230 247 C201 227 199 304 229 324 Q250 331 261 292 L250 267 Z" fill="#f3b8a5" stroke="#744e52" stroke-width="5"/>
 <path data-part-id="ear-fold" d="M220 268 Q247 256 238 294 L224 301" fill="none" stroke="#ba7b74" stroke-width="4"/>
 <path data-part-id="face" d="M256 153 Q325 135 345 185 Q354 209 348 232 L380 270 Q402 282 377 296 L360 301 Q379 310 368 324 L355 325 Q357 356 330 377 L295 391 Q257 380 242 351 Q221 311 232 246 Q228 184 256 153 Z" fill="#f7bfad" stroke="#563d4b" stroke-width="5"/>
-<path data-part-id="eye.far" d="M321 237 Q339 223 348 240 Q334 252 321 237 Z" fill="#273956"/>
+<path data-part-id="eye.near" d="M321 237 Q339 223 348 240 Q334 252 321 237 Z" fill="#273956"/>
 <path data-part-id="nose" d="M343 239 L389 281 L365 295" fill="none" stroke="#bc786e" stroke-width="4"/>
 <path data-part-id="mouth" d="M345 322 Q355 330 365 322" fill="none" stroke="#a75662" stroke-width="4"/>
 <path data-part-id="fringe" d="M220 245 Q188 150 243 106 Q300 63 351 119 Q365 162 353 235 L339 206 Q328 227 320 231 L307 187 L277 240 L266 212 L235 262 Z" fill="#334b73" stroke="#162a46" stroke-width="6"/>

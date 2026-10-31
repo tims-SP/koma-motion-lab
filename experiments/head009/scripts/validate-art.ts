@@ -33,6 +33,8 @@ for(const key of all){
  if(!svg.includes('<svg')||!svg.includes('</svg>'))failures.push('invalid_svg:'+key.path);
  if(key.yaw===90&&!svg.includes('data-part-id="ear.far"'))failures.push('profile_missing_ear');
  if(key.yaw===90&&!svg.includes('data-part-id="nose"'))failures.push('profile_missing_nose');
+ if(key.yaw===90&&!svg.includes('data-part-id="eye.near"'))failures.push('profile_missing_persistent_eye');
+ if(key.yaw===90&&svg.includes('data-part-id="eye.far"'))failures.push('profile_far_eye_identity');
 }
 if(new Set(Object.values(hashes)).size!==all.length)failures.push('duplicate_reference_art');
 await mkdir(out,{recursive:true});
