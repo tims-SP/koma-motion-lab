@@ -10,5 +10,5 @@ nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}input[type=range]{wi
 <input id="scrub" type="range" min="0" max="72" step="1" value="0"/><output id="time">0 / 72</output></nav>
 <canvas id="viewport" width="960" height="540"></canvas>
 <script type="module" src="/src/main.ts"></script>
-<script type="module">const s=document.querySelector('#shot'),r=document.querySelector('#scrub'),o=document.querySelector('#time'); const draw=()=>{if(window.demoRender){window.demoRender(s.value,+r.value,72);o.textContent=r.value+' / 72';}};s.addEventListener('change',draw);r.addEventListener('input',draw);setTimeout(draw,900);</script>
+<script type="module" src="/src/controls.ts"></script>
 </main></body></html>
