@@ -7,9 +7,9 @@
   "parentPlan": "docs/experiments/MVP-009-head360-representation-plan.md",
   "originalFailureCommit": "ba3d42bd4bb67c2b40d60a709bc4229cc35562d7",
   "currentVisualStatus": "FAIL_VISUAL",
-  "candidateA": "volume_uv_view_corrected",
+  "candidateA": "DEFERRED_NOT_A_PREREQUISITE",
   "candidateB": "multi_view_art_depth_billboards",
-  "firstImplementation": "A",
+  "firstImplementation": "B",
   "anglesDeg": [
     0,
     45,
@@ -46,7 +46,7 @@
     274
   ],
   "cameraPolicy": "Fixed camera + rotated object and orbit camera + fixed object, same relative view and pose",
-  "hardRule": "No full-body 192 frame movie before head side-profile, depth and parity gates plus independent visual accept",
+  "hardRule": "B first; reference 90 side face must exist; no 360/fullbody advancement until 0->90 and 270 profile plus mask/occlusion pass visually and programmatically",
   "tasks": [
     {
       "id": "T00",
@@ -96,15 +96,15 @@
         "T01",
         "T02"
       ],
-      "action": "real world/camera-relative 3D face nose ears and hair volumes",
+      "action": "ONLY IF documented B failure / high manual redraw cost, evaluate coarse 3D geometry or hybrid",
       "evidence": [
         "A-angle-board.png",
         "A-depth-board.png",
         "A-id-board.png",
         "A-qa.json"
       ],
-      "priority": "BLOCKING",
-      "status": "NOT_STARTED"
+      "priority": "DEFERRED_FALLBACK",
+      "status": "DEFERRED"
     },
     {
       "id": "T03B",
@@ -113,26 +113,27 @@
         "T01",
         "T02"
       ],
-      "action": "Rivers/Kitamura-like explicit depth correspondences and 4 actual side views",
+      "action": "Start 0/45/90 independent head art with held-out 30/60/75 references, correct 3D anchor, per-view occlusion graph and split/merge masks; extend to 360 only after 0-90 visual PASS",
       "evidence": [
         "B-angle-board.png",
         "B-depth-board.png",
         "B-id-board.png",
         "B-qa.json"
       ],
-      "priority": "BLOCKING",
+      "priority": "BLOCKING_PRIMARY",
       "status": "NOT_STARTED"
     },
     {
       "id": "T04",
-      "name": "decision",
+      "name": "plan_b_decision",
       "dependsOn": [
-        "T03A",
         "T03B"
       ],
-      "action": "compare same references, geometry, semantic silhouettes and asset repair costs",
+      "action": "Check B head visual acceptance & artwork cost first; optional A/hybrid only if B NO_GO",
       "evidence": [
-        "ab-comparison.png",
+        "B-angles.png",
+        "B-masks.png",
+        "B-visual-review.json",
         "decision.md"
       ],
       "priority": "BLOCKING",
@@ -144,7 +145,7 @@
       "dependsOn": [
         "T04"
       ],
-      "action": "match art identity at key views before enabling VDD and intermediate turns",
+      "action": "upgrade accepted B layered source art; correct keyed UV, view-dependent warp and new keyviews where needed; no global continuous UV requirement",
       "evidence": [
         "texture-qa.json",
         "art-compare-board.png"
@@ -237,5 +238,37 @@
       "status": "NOT_RUN"
     }
   ],
-  "expectedExit": "PASS_HEAD360_VISUAL or FAIL_VISUAL with exact evidence"
+  "expectedExit": "PASS_HEAD360_VISUAL or FAIL_VISUAL with exact evidence",
+  "ownerSelectedPlan": "B",
+  "ownerSelectionDate": "2026-11-01",
+  "planBDetail": "docs/experiments/MVP-009-plan-b-multiview-depth.md",
+  "planBFirstGate": {
+    "angleKeys": [
+      0,
+      45,
+      90
+    ],
+    "heldOutAngles": [
+      30,
+      60,
+      75
+    ],
+    "scope": "single neutral head",
+    "resolution": "head crop at least 512 pixels tall",
+    "requires": [
+      "real independent right-profile art",
+      "non-mirrored ear and hair",
+      "3D anchor reprojection",
+      "view-dependent draw-order/depth",
+      "beauty/ID/depth/alpha same discard",
+      "independent vision gate"
+    ],
+    "forbidden": [
+      "squeezed frontal face as profile",
+      "single whole-face crossfade",
+      "face depthTest false to force front",
+      "0 overlap PASS",
+      "fullbody before head pass"
+    ]
+  }
 }
