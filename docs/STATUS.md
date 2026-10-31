@@ -18,9 +18,9 @@
 
 ## 下一工单与实际阻塞
 
-M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。代码ba80ad2旧回归CI41154947789通过；监督CI41154947797在旧M1C1整份配准报告SHA比对失败，新标点步骤尚未运行。当前修复为显式v2身份/原始mesh/验证程序指纹，数值门禁不变，待新CI；[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。已实际完成raw0与±0.25的57格判断，9个图像标记可有限比较；后续mcode操作又被自动审批以潜在OSS载荷未知为由拒绝，尚未落盘，受控表仍0审阅/0可拟合。具体57格决定与逐步恢复指令已存[待执行工单](../experiments/reference-factory/evidence/core026-M1/central-review-pending-order.json)。不把该拒绝当实际上传证据，不绕过或重登。下一步仍是由mcode应用该工单，再做其余姿态与M1总门禁，未开始M2。
+M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。代码ba80ad2旧回归CI41154947789通过；监督CI41154947797在旧M1C1整份配准报告SHA比对失败，新标点步骤尚未运行。代码54d1c9f修复为显式v2身份/原始mesh/验证程序指纹，数值门禁不变；新监督CI41155423219与旧回归41155423100均success，已下载并核对11份JSON产物与ZIP SHA。完整报告仅5个未消费距离值差异，最大2.22e-16；[CI验收JSON](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。已实际完成raw0与±0.25的57格判断，9个图像标记可有限比较；后续mcode操作又被自动审批以潜在OSS载荷未知为由拒绝，尚未落盘，受控表仍0审阅/0可拟合。具体57格决定与逐步恢复指令已存[待执行工单](../experiments/reference-factory/evidence/core026-M1/central-review-pending-order.json)。不把该拒绝当实际上传证据，不绕过或重登。下一步仍是由mcode应用该工单，再做其余姿态与M1总门禁，未开始M2。
 
-最新mcode[恢复证据](research/CORE-026-mcode-runtime-diagnostic.md)：用户明确允许本项目网络后，mcode实际执行两条项目验证，CLI/工具/两条命令均exit0，62条源事实无问题；无重新登录。当前恢复范围为该限定验证，下一工单继续由mcode实现、Codex验收。Node请求层自测通过，未知对象存储仍拒绝；不把SDK潜在地址或早前审批提示当作实际上传证据。M1C1原始作者仍为Codex兜底，不能事后改归mcode。
+mcode限定执行确实恢复过：本轮M1C2A应用补丁及prepare/verify有真实工具exit0。随后中央三姿态工单再次被自动审批拒绝；当前不再调用、不重登。详见上方待执行工单。Node诊断不覆盖系统全部网络；未知对象存储仍拒绝，审批提示不能当作上传抓包。M1C1与v2修复作者仍是Codex，不能事后改归mcode。
 
 M1C1已由Codex本地实现并通过干净CI：[验收报告](research/CORE-026-M1C1-local-fallback-acceptance.md)。代码76d7f70的[监督CI41144806591](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806591)及[旧回归41144806561](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806561)均实际success。62条源事实/接收提案、9组双验证器exit11验拒、重复build一致、verify不改配置、10保护文件/186PNG、默认坐标与18张原生参考SHA均通过。M1C1通过范围仅为源事实和未验证设计契约。
 
@@ -28,13 +28,7 @@ M1C1已由Codex本地实现并通过干净CI：[验收报告](research/CORE-026-
 
 Work已恢复且本地仓库已同步。源像素/10保护文件/186PNG、62默认坐标、11Multiply/9clip及18张原生参考哈希均重新实测通过。监工查看了实际9姿态标点接触图与默认652×652图；19槽位的13图像候选仍有语义限制，所有点仍不自动具备拟合资格。[本轮实际记录](../experiments/reference-factory/evidence/core026-M1/supervisor-resume-and-reference-review.json)。
 
-mcode首次启动exit3提示登录失效；已通过官方CN登录流程恢复，CLI实际返回Signed in with MiniMax、exit0。用户在agent.minimax.cn精确范围问题后回复继续，本轮按该范围启动任务；平台自动审批再次拒绝，理由是CLI还可能将项目上下文发送至agent.minimaxi.com，超出此前单域名范围。公开包代码确认CN模型接口为agent.minimax.cn，CN步骤报告接口使用agent.minimaxi.com。没有获得可验收实现文件，未在新拒绝后重试完整工作区任务。
-
-用户随后明确放行.com，agent.minimax.cn与agent.minimaxi.com的前述范围已确认；当前不需要再次登录。重试先遇filecdn.minimax.chat审批，公开包已证实它是无认证/无正文的公共模型目录GET。另遇阿里云存储审批，公开包只定位到自定义data-URL头像的内容安全上传分支，不能据此确认实际请求载荷。复用已有会话、不进行头像操作后，mcode实际完成12个本地工具调用，但8分钟超时exit6，未生成提取器或配置。精简、低思考强度重试再次被自动审批以阿里云上传/存储未获授权且命令禁止上传为由拒绝；现已停止重试。[本轮实测记录](../experiments/reference-factory/evidence/core026-M1/mcode-post-domain-approval.json)。
-
-上述SDK阻塞现只影响mcode协作，本地M1C1已推进。已发现的两个阿里云host存在于公开SDK头像上传白名单，但没有网络日志证明本任务真实访问或上传载荷；审批提示不能当请求抓包结果。最后一次lightweight/permission off、仅通用公开schema的尝试也被审批拒绝，随后停止mcode调用，采用本地替代。当前不因这些提示再次要求登录或逐个域名授权。
-
-此前服务500/超时、旧目的地审批与环境不可用均保留为历史，不与本轮阻塞混写。[早期事件记录](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。
+历史登录/网络/超时记录留在[运行诊断](research/CORE-026-mcode-runtime-diagnostic.md)、[域名授权后记录](../experiments/reference-factory/evidence/core026-M1/mcode-post-domain-approval.json)与[早期事件](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。这些不是当前重新登录的理由，也不能证明SDK真实上传过阿里云。
 
 ## 确定性恢复顺序
 

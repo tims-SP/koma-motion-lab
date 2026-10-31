@@ -3,7 +3,12 @@
   "author_executor": "Codex",
   "date": "2026-10-31 Asia/Shanghai",
   "status": "PASS_LOCAL_ONLY",
-  "ci": "PENDING",
+  "ci": {
+    "status": "PASS",
+    "code_commit": "54d1c9f0b900f87974e3dba788bacde967aaecb2",
+    "supervisor_run": 41155423219,
+    "legacy_run": 41155423100
+  },
   "constraints_sha256": "a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83",
   "config_schema": "core026-constraints/2",
   "62_records_and_all_other_design_content_unchanged_from": "ba80ad27d7819a6e308ba837fe46335757562bd8",
@@ -202,7 +207,48 @@
     "first_differences": [],
     "max_numeric_difference": 0
   },
-  "failed_ci_report_sha_difference_cause": "NOT_CONFIRMED; observed byte-SHA mismatch only",
+  "failed_ci_report_sha_difference_cause": "Failed run report was not archived, but follow-up CI reproduces a full-report SHA difference consisting solely of five unused distance diagnostics, max2.22e-16; input identities/meshes/coordinates unchanged.",
   "overall_M1": "NOT_ACCEPTED",
-  "M2": "NOT_STARTED"
+  "M2": "NOT_STARTED",
+  "follow_up_full_report_comparison": {
+    "artifact_id": 13024108701,
+    "artifact_sha256": "088a3b75926b298dc00ebaf02cc54d22756fe266aacd366c9d20b11f02d27673",
+    "text_files": 11,
+    "ci_registration_sha256": "ca00bdb9f407ca9185a21f2d8872cdf10c035067b3095dc02229ed72739c9260",
+    "local_registration_sha256": "b44386f6f206a08c9b40bf2a1d777bec20244f5e864e56765fb32fb3e3b71dc8",
+    "difference_count": 5,
+    "first_differences": [
+      [
+        "$.entries[15].candidates[0].distance_from_global_translation_px",
+        0.7071253993556453,
+        0.7071253993556454,
+        1.1102230246251565e-16
+      ],
+      [
+        "$.entries[32].candidates[0].distance_from_global_translation_px",
+        1.118017740499471,
+        1.1180177404994711,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[37].candidates[0].distance_from_global_translation_px",
+        1.414234492781407,
+        1.4142344927814068,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[45].candidates[0].distance_from_global_translation_px",
+        1.4141941806230431,
+        1.4141941806230434,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[52].candidates[0].distance_from_global_translation_px",
+        0.5000225000606957,
+        0.5000225000606958,
+        1.1102230246251565e-16
+      ]
+    ],
+    "max_numeric_difference": 2.220446049250313e-16
+  }
 }

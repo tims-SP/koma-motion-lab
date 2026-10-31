@@ -160,6 +160,13 @@
     "supervisor_run": 41154947797,
     "supervisor_status": "failure",
     "failed_before_new_review_step": true,
-    "failure": "M1C1 inputs.registration_sha256 differs from current generated report; numerical registration gate and source checks passed. New review CI not yet evaluated."
+    "failure": "M1C1 inputs.registration_sha256 differs from current generated report; numerical registration gate and source checks passed. New review CI not yet evaluated.",
+    "follow_up_v2": {
+      "commit": "54d1c9f0b900f87974e3dba788bacde967aaecb2",
+      "supervisor_run": 41155423219,
+      "legacy_run": 41155423100,
+      "both_status": "success",
+      "evidence": "landmark-review-ci-acceptance.json"
+    }
   }
 }
