@@ -4,6 +4,8 @@
 
 本单目标：去掉“默认源域CPU求背景可用于任意投影”的假设，证明19接收面、62来源、25逻辑pass能够进入真实空间合成与depth-test路径。几何深度仍是未拟合候选，不将测试物体或PSD顺序当角色物理深度。
 
+上游复用依据已补：[GitHub skill与渲染源码复核](../research/CORE-026-upstream-skills-and-rendering-survey.md)。优先读取gkjohnson/three-depthpeeling-demo@e6b57e1f的index.js及index.html，其three0.180.0与本项目一致；先复现可重分配深度纹理/透明层fixture，再决定是否需要有限层剥离。普通有序Normal/Multiply仍是保真基准，近似WBOIT不默认替换11项Multiply。CubismWebFramework仅参考遮罩上下文分离；通用threejs skill目标r186，只按需移植已确认适用于r180的内容，保留现有原画颜色算术。上游示例尚未在本项目执行，当前仅SOURCE_REVIEWED，不算实现通过。
+
 1. 保存M2B1A检查点，复用其只读默认基线。新增`core026_spatial.html`、`core026_spatial.js`；保持`core026.js`作为旧已验收默认oracle。不得修改原PNG、INX、UV、CORE025保护文件或基线图。
 2. 在新入口只读62张原始RGBA、19接收面映射与25项逻辑pass；逐项记录来源、共享几何、UV、shader、GPU调用及SHA。原始RGBA必须无损解码。局部眼组沿用已明确的artist override及联动，不声称原生ClipToLower通过。
 3. 接收面先使用统一源坐标采样网格，确保默认重叠区域的coplanar插值一致；保留来源到接收面的映射，禁止每个绘画附着偷偷加Z偏移。默认camera/projection与既有1630画布固定，不先开放非零yaw。
