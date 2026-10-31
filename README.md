@@ -1,12 +1,16 @@
 # Koma Motion Lab
 
-## Current primary research track — MVP-001 V2 (2026-10-31)
+## Current primary research track — MVP-002 core-first integrated TypeScript (2026-10-31)
+
+**[Authoritative MVP-002 plan & results](docs/experiments/MVP-002-core-first.md)** · **[Successful integrated render](https://github.com/tims-SP/koma-motion-lab/actions/runs/41191491411)** · **[Three videos in Draft Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-cbdcb29f362bf38e3849)**
+
+Old study documents (historical, not prerequisites):
 
 **[V2 master plan](docs/experiments/MVP-001-V2-master-plan.md)** · **[V2 task status](docs/experiments/MVP-001-V2-status.md)** · [Existing asset audit](docs/experiments/MVP-001-assets-research.md)
 
 New direction: existing anime character assets first (Reverse-1999 Spine/Live2D), TypeScript-only own code, keyed layered 2.5D art + bone/IK + view-dependent deformation + art-directed light/FX. Goal: one consistent character package for 360-degree full-body turn, full-body action, and high-fidelity anime closeup.
 
-M0 had a real **infrastructure-only** pass: [Actions 41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729). T00–T11 of V2 are **NOT IMPLEMENTED** as of the plan commit. The legacy Rive/Spine/Godot runs below remain historical evidence, *not* dependencies or acceptance for the new track.
+M0 had a real **infrastructure-only** pass: [Actions 41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729). T00–T11 of V2 are **CANCELLED AS PREREQUISITES**; MVP-002 integrated render is **PASS_ENGINEERING_RENDER_ONLY**, **VISUAL QUALITY NOT VERIFIED**. The legacy Rive/Spine/Godot runs below remain historical evidence, *not* dependencies or acceptance for the new track.
 
 ## Current experimental preview — PROD-009 (2026-10-29)
 
