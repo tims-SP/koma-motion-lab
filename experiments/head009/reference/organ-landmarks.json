@@ -1,0 +1,262 @@
+{
+  "schema": "HEAD009-ORGAN-LANDMARKS-V1",
+  "description": "Original independent SVG art coordinate annotations. Character-relative anatomical left/right: left corresponds screen-right in 0-degree front view.",
+  "units": "SVG512",
+  "keyAngles": [
+    0,
+    45,
+    90
+  ],
+  "heldOutAngles": [
+    30,
+    60,
+    75
+  ],
+  "organParts": {
+    "eye.R.center": "farEye",
+    "eye.L.center": "nearEye",
+    "nose.bridge": "nose",
+    "nose.tip": "nose",
+    "mouth.center": "mouth",
+    "face.chin": "face",
+    "ear.R.center": "farEar",
+    "ear.L.center": "nearEar",
+    "fringe.hairline": "fringe"
+  },
+  "required": [
+    "eye.R.center",
+    "nose.tip",
+    "mouth.center",
+    "face.chin",
+    "ear.R.center",
+    "fringe.hairline"
+  ],
+  "views": [
+    {
+      "yaw": 0,
+      "source": "front-000.svg",
+      "role": "key",
+      "points": {
+        "eye.R.center": [
+          217,
+          255
+        ],
+        "eye.L.center": [
+          300,
+          255
+        ],
+        "nose.bridge": [
+          256,
+          270
+        ],
+        "nose.tip": [
+          265,
+          303
+        ],
+        "mouth.center": [
+          257,
+          346
+        ],
+        "face.chin": [
+          256,
+          395
+        ],
+        "ear.R.center": [
+          169,
+          279
+        ],
+        "ear.L.center": [
+          347,
+          277
+        ],
+        "fringe.hairline": [
+          264,
+          229
+        ]
+      }
+    },
+    {
+      "yaw": 30,
+      "source": "heldout-030.svg",
+      "role": "heldout",
+      "points": {
+        "eye.R.center": [
+          232,
+          254
+        ],
+        "eye.L.center": [
+          310,
+          255
+        ],
+        "nose.bridge": [
+          319,
+          273
+        ],
+        "nose.tip": [
+          370,
+          285
+        ],
+        "mouth.center": [
+          310,
+          340
+        ],
+        "face.chin": [
+          254,
+          388
+        ],
+        "ear.R.center": [
+          178,
+          283
+        ],
+        "fringe.hairline": [
+          289,
+          239
+        ]
+      }
+    },
+    {
+      "yaw": 45,
+      "source": "threequarter-045.svg",
+      "role": "key",
+      "points": {
+        "eye.R.center": [
+          253,
+          258
+        ],
+        "eye.L.center": [
+          316,
+          255
+        ],
+        "nose.bridge": [
+          340,
+          261
+        ],
+        "nose.tip": [
+          383,
+          284
+        ],
+        "mouth.center": [
+          335,
+          331
+        ],
+        "face.chin": [
+          299,
+          390
+        ],
+        "ear.R.center": [
+          201,
+          278
+        ],
+        "fringe.hairline": [
+          295,
+          218
+        ]
+      }
+    },
+    {
+      "yaw": 60,
+      "source": "heldout-060.svg",
+      "role": "heldout",
+      "points": {
+        "eye.R.center": [
+          324,
+          252
+        ],
+        "nose.bridge": [
+          342,
+          250
+        ],
+        "nose.tip": [
+          388,
+          284
+        ],
+        "mouth.center": [
+          337,
+          334
+        ],
+        "face.chin": [
+          294,
+          388
+        ],
+        "ear.R.center": [
+          202,
+          282
+        ],
+        "fringe.hairline": [
+          303,
+          233
+        ]
+      }
+    },
+    {
+      "yaw": 75,
+      "source": "heldout-075.svg",
+      "role": "heldout",
+      "points": {
+        "eye.R.center": [
+          334,
+          241
+        ],
+        "nose.bridge": [
+          348,
+          243
+        ],
+        "nose.tip": [
+          392,
+          279
+        ],
+        "mouth.center": [
+          340,
+          327
+        ],
+        "face.chin": [
+          305,
+          388
+        ],
+        "ear.R.center": [
+          217,
+          284
+        ],
+        "fringe.hairline": [
+          306,
+          235
+        ]
+      }
+    },
+    {
+      "yaw": 90,
+      "source": "profile-right-090.svg",
+      "role": "key",
+      "points": {
+        "eye.R.center": [
+          333,
+          239
+        ],
+        "nose.bridge": [
+          345,
+          232
+        ],
+        "nose.tip": [
+          390,
+          282
+        ],
+        "mouth.center": [
+          353,
+          324
+        ],
+        "face.chin": [
+          296,
+          390
+        ],
+        "ear.R.center": [
+          228,
+          287
+        ],
+        "fringe.hairline": [
+          310,
+          230
+        ]
+      }
+    }
+  ]
+}
