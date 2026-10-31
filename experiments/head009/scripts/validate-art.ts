@@ -31,7 +31,7 @@ for(const key of all){
  hashes[key.path]=createHash('sha256').update(bytes).digest('hex');
  const svg=bytes.toString('utf8');
  if(!svg.includes('<svg')||!svg.includes('</svg>'))failures.push('invalid_svg:'+key.path);
- if(key.yaw===90&&!svg.includes('data-part-id="ear.near"'))failures.push('profile_missing_ear');
+ if(key.yaw===90&&!svg.includes('data-part-id="ear.far"'))failures.push('profile_missing_ear');
  if(key.yaw===90&&!svg.includes('data-part-id="nose"'))failures.push('profile_missing_nose');
 }
 if(new Set(Object.values(hashes)).size!==all.length)failures.push('duplicate_reference_art');

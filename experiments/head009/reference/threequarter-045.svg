@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="three quarter head independently authored 45 degrees"><rect width="512" height="512" fill="#e9edf5"/><g stroke-linejoin="round" stroke-linecap="round">
 <path data-part-id="neck" d="M235 347 L296 343 L305 448 L226 448 Z" fill="#df9f90" stroke="#4b3546" stroke-width="4"/>
 <path data-part-id="rearHair" d="M179 225 Q167 102 277 77 Q365 78 370 212 L361 382 Q335 455 241 418 Q187 387 179 319 Z" fill="#2f4165" stroke="#172438" stroke-width="7"/>
-<path data-part-id="ear.near" d="M203 260 Q183 229 185 297 Q194 319 221 309" fill="#e8aa9a" stroke="#744e52" stroke-width="4"/>
+<path data-part-id="ear.far" d="M203 260 Q183 229 185 297 Q194 319 221 309" fill="#e8aa9a" stroke="#744e52" stroke-width="4"/>
 <path data-part-id="face" d="M256 144 Q327 143 351 210 L359 259 L384 284 L363 305 Q374 324 347 333 Q341 373 301 390 Q254 393 223 355 Q200 327 201 261 Q197 185 256 144 Z" fill="#f7bfad" stroke="#563d4b" stroke-width="5"/>
 <path data-part-id="eye.far" d="M244 257 Q254 249 264 258 Q254 271 244 257 Z" fill="#273956"/>
 <path data-part-id="eye.near" d="M294 256 Q317 236 336 253 Q314 274 294 256 Z" fill="#273956"/>

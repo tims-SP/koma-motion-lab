@@ -2,7 +2,7 @@
 // Points are head-local 2D drawing coordinates, NOT a 3D UV skin or squeezed front image.
 export type Key = 0 | 45 | 90;
 export type Point = readonly [number, number];
-export type Id = 'rearHair'|'face'|'nearEar'|'farEar'|'fringe'|'sideHair'|'nearEye'|'farEye'|'nose'|'mouth'|'neck';
+export type Id = 'rearHair'|'face'|'nearEar'|'farEar'|'fringe'|'sideHair'|'nearEye'|'farEye'|'nose'|'mouth'|'neck'|'ornament'|'earFold';
 export interface Part {
   id:Id; anchor:readonly [number,number,number]; color:readonly [number,number,number];
   depthBias:readonly [number,number,number];
@@ -19,7 +19,7 @@ export const parts:readonly Part[]=[
  P(-.27,.15,.27,.15,.23,-.35,-.23,-.35),
  P(-.25,.15,.22,.15,.24,-.35,-.16,-.35),
  P(-.17,.14,.21,.14,.16,-.33,-.17,-.33)]},
- {id:'rearHair',anchor:[0,.04,-.37],color:[.16,.23,.38],depthBias:[0,0,0],visible:[true,true,true],keys:[
+ {id:'rearHair',anchor:[0,.04,-.37],color:[.16,.23,.38],depthBias:[-.10,-.20,-.35],visible:[true,true,true],keys:[
  P(-.86,.39,-.74,.83,-.40,1.03,.27,1.01,.79,.64,.90,.04,.80,-.69,.49,-.97,-.57,-.90,-.89,-.48),
  P(-.74,.34,-.62,.86,-.35,1.05,.22,1.01,.60,.65,.62,.02,.42,-.79,.01,-1.02,-.49,-.91,-.79,-.46),
  P(-.58,.28,-.54,.82,-.30,1.02,.18,.93,.46,.58,.42,.03,.22,-.78,-.14,-.94,-.47,-.76,-.58,-.36)]},
@@ -58,7 +58,15 @@ export const parts:readonly Part[]=[
  {id:'mouth',anchor:[0,-.43,.40],color:[.63,.27,.34],depthBias:[.03,.05,.08],visible:[true,true,true],keys:[
  P(-.14,.03,.12,.04,.15,-.03,-.11,-.06),
  P(-.10,.04,.12,.04,.13,-.03,-.08,-.05),
- P(-.08,.04,.13,.04,.12,-.04,-.07,-.06)]}
+ P(-.08,.04,.13,.04,.12,-.04,-.07,-.06)]},
+ {id:'ornament',anchor:[.10,.55,.38],color:[.88,.74,.38],depthBias:[.10,.23,.45],visible:[true,true,true],keys:[
+ P(-.08,.04,.05,.08,.08,-.05,-.03,-.09),
+ P(-.08,.04,.05,.08,.08,-.05,-.03,-.09),
+ P(-.08,.04,.05,.08,.08,-.05,-.03,-.09)]},
+ {id:'earFold',anchor:[-.56,-.05,-.08],color:[.67,.37,.36],depthBias:[.04,.04,.04],visible:[false,false,true],keys:[
+ P(-.08,.08,.04,.08,.04,-.05,-.08,-.05),
+ P(-.08,.08,.04,.08,.04,-.05,-.08,-.05),
+ P(-.08,.08,.04,.08,.04,-.05,-.08,-.05)]}
 ];
 export const keys: readonly Key[]=[0,45,90];
 export function keyed<T>(triple:readonly [T,T,T],yaw:number):T{
