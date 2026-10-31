@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MVP-002 · Layered View-Dependent Anime</title>
+<style>html,body{background:#11192b;color:#edf4fa;margin:0;font:14px system-ui;}main{margin:0 auto;max-width:1024px;padding:12px}
+canvas{width:100%;height:auto;aspect-ratio:16/9;border:1px solid #556277;border-radius:8px}
+nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}input[type=range]{width:290px}</style>
+</head><body><main><h2>Multi-View 2.75D · TypeScript 核心样机</h2>
+<p>四个手工定义的视角形状 + 部件锚点/VDD + 骨骼 IK + 局部遮挡 + 动漫阴影。此画面是技术代理素材，并非正式高质量动漫原画。</p>
+<nav><label>镜头 <select id="shot"><option value="turn">360° Turn</option><option value="action">Full body action</option><option value="fx">Face / lighting FX</option></select></label>
+<input id="scrub" type="range" min="0" max="72" step="1" value="0"/><output id="time">0 / 72</output></nav>
+<canvas id="viewport" width="960" height="540"></canvas>
+<script type="module" src="/src/main.ts"></script>
+<script type="module">const s=document.querySelector('#shot'),r=document.querySelector('#scrub'),o=document.querySelector('#time'); const draw=()=>{if(window.demoRender){window.demoRender(s.value,+r.value,72);o.textContent=r.value+' / 72';}};s.addEventListener('change',draw);r.addEventListener('input',draw);setTimeout(draw,900);</script>
+</main></body></html>
