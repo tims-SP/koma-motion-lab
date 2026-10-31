@@ -2,6 +2,8 @@
 
 前置检查点：M2B0仅PASS_DEFAULT_ART_ONLY。默认四张颜色/透明度/复位已通过本地门禁，监督CI41174418164及旧回归41174418131已全部success，实际产物已下载核对；M2B整体与M3仍未放行。代码/截图必须可复现，不得将M2B0的depthTest=false说成深度测试已完成。
 
+M2B1A进度：明确选择artist override；瞳孔/高光联动的36张实际截图、原始RGBA独立oracle及Codex视觉审阅本地通过，干净CI待核对。固定静止域削虹膜的初版已拒绝并保留4张实际负例中的2张；最终联动使用固定水平8像素alpha包络，默认和旧单层诊断不变。仅-8/0/+8水平离散控制验收，不是连续眼动/原生Clip等价通过。工单见[眼组子任务](CORE-026-M2B1A-eye-control-order.md)。接下来执行第5–7步，原生注册仍BLOCKED。
+
 1. 先复现capture_core026.mjs、capture_core026_supervisor.mjs、verify_core026_compositor_supervisor.py、run_core026_default_art_regressions.py。要求默认RGB/alpha原阈值不变，错误hard-eye-white反例仍失败。旧0姿态基线只读；不能拿新候选当真值。
 2. 阅读锁定Inox2D源码d4dd9dd7的ClipToLower、Composite framebuffer及实际Aka眼组节点。核实RGB/alpha方程和绘制上下文，保留原生4clip/派生9阴影分列。资料见native-eye-primary-source-review.json；不能再把source-alpha乘法+Normal误称原生ClipToLower。
 3. 将眼组策略写成明确受控字段：原画0姿态仍以PSD源为颜色真值。分别测量注册后的原生EyeComposite与原画兼容域方案，记录何处不能同时等同。若选择原画兼容覆盖，保留明确artist override与原生语义差异，不声称GPU原生复现；不能静默切掉虹膜下缘或放宽RGB阈值。

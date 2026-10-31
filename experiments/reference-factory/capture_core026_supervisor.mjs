@@ -61,7 +61,7 @@ try{
   await page.evaluate(()=>window.core026.setEyeMaskPolicy('source_paint_domain'));
   await capture('source_mask_policy_reset',{version:'source',background:'white',pass:'beauty',size:1630});
   const expectedFiles=['core026.html','core026.js','capture_core026.mjs','config/core025-layer-contract.json',
-                       'config/core026-compositor-contract.json','config/core025-render.json'];
+                       'config/core026-compositor-contract.json','config/core025-render.json','config/core026-eye-policy.json'];
   const inputs={};for(const file of expectedFiles)inputs[file]=sha(await readFile(path.join(ROOT,file)));
   const report={schema:'core026-supervisor-captures/1',inputs,metadata:meta,captures,
     requested_raw_pngs:[...requested].sort(),blocked_paths:blocked,page_errors:errors,

@@ -1,4 +1,4 @@
-// Codex design; mcode applies/runs the fixed work order. Default compositor only.
+// Default compositor design/initial application: Codex/mcode. Eye control: Codex.
 // Raw RGBA is decoded losslessly. Multiply is resolved live against preceding
 // artwork, then GPU-rasterized as source operations on19 shared receiver meshes.
 // No old baked layers/whole-head image, no fitted depth or nonzero yaw support.
@@ -28,6 +28,15 @@ async function rgbaPNG(url,expected){
 const contract=await json('/config/core025-layer-contract.json');
 const proposal=await json('/config/core026-compositor-contract.json');
 const cfg=await json('/config/core025-render.json');
+const eyePolicy=await json('/config/core026-eye-policy.json');
+if(eyePolicy.schema!=='core026-eye-policy/1'||eyePolicy.selected_policy!=='artist_override_source_paint_domain'||
+   eyePolicy.runtime_mask_policy!=='source_paint_domain'||eyePolicy.control.integer_min!==-8||eyePolicy.control.integer_max!==8||eyePolicy.coupled_gaze_horizontal_radius!==8)
+  throw Error('Unrecognized explicit artist eye override');
+for(const [side,orders] of [['left',[27,28,29]],['right',[37,38,39]]]){
+  const e=eyePolicy.eyes[side];if(!e||[e.white_order,e.pupil_order,e.highlight_order].some((n,i)=>n!==orders[i]))throw Error('Eye source identity');
+}
+const eyeControls={left:0,right:0};
+const gazeEnvelopes={left:false,right:false};
 if(proposal.painter_schedule.length!==62||proposal.proposed_passes.length!==25)throw Error('M2A contract');
 for(const layer of contract.layers){
   const im=await rgbaPNG('/'+layer.raw_source_texture.file,layer.raw_source_texture.sha256);
@@ -36,7 +45,13 @@ for(const layer of contract.layers){
 }
 const alphaAt=(n,x,y)=>{const r=raw.get(n),[l,t]=r.layer.bounds,xx=x-l,yy=y-t;return xx>=0&&xx<r.w&&yy>=0&&yy<r.h?r.data[(yy*r.w+xx)*4+3]:0;};
 const shadow=new Map(proposal.default_shadow_clips.map(c=>[c.shadow_order,c.base_order]));
-const nativeClip=new Map([[28,27],[29,27],[38,37],[39,37]]);
+const nativeClip=new Map(Object.values(eyePolicy.eyes).flatMap(e=>[[e.pupil_order,e.white_order],[e.highlight_order,e.white_order]]));
+const eyeSideByBase=new Map(Object.entries(eyePolicy.eyes).map(([side,e])=>[e.white_order,side]));
+function eyePaintAlpha(base,x,y){
+  let domain=0;const radius=gazeEnvelopes[eyeSideByBase.get(base)]?eyePolicy.coupled_gaze_horizontal_radius:0;
+  for(let d=-radius;d<=radius;d++)domain=Math.max(domain,alphaAt(base,x+d,y),alphaAt(base+1,x+d,y),alphaAt(base+2,x+d,y));
+  return domain;
+}
 const clipAudits=[];
 
 THREE.ColorManagement.enabled=false;
@@ -71,7 +86,7 @@ for(const op of proposal.painter_schedule){
 
 let cacheKey=null,maskPolicy='source_paint_domain';
 function rebuild(version){
-  const key=maskPolicy+version+JSON.stringify([...shifts]);if(key===cacheKey)return;
+  const key=maskPolicy+version+JSON.stringify([...shifts])+JSON.stringify(gazeEnvelopes);if(key===cacheKey)return;
   const dest=new Float64Array(N*N*4);clipAudits.length=0;
   for(const op of proposal.painter_schedule){
     const n=op.psd_order,r=raw.get(n),[dx,dy]=shifts.get(n)||[0,0],left=r.layer.bounds[0]+dx,top=r.layer.bounds[1]+dy;
@@ -84,7 +99,7 @@ function rebuild(version){
         // The PSD iris intentionally extends beyond its raw eye-white PNG.
         // Preserve the original painted domain; native GPU clip parity remains
         // explicitly BLOCKED, not redefined as a proven anatomical eye mask.
-        const domain=Math.max(white,alphaAt(base+1,X,Y),alphaAt(base+2,X,Y));
+        const domain=eyePaintAlpha(base,X,Y);
         const next=maskPolicy==='eye_white_only'?Math.round(au*white/255):Math.min(au,domain);
         if(next!==au)changedNative++;au=next;
       }
@@ -118,7 +133,8 @@ const metadata={schema:'core026-live-compositor/1',source_count:62,receiver_coun
   geometry:'19 shared receiver grids; unchanged unfitted CORE025 height profile, no per-layer Z offset',
   depth_tested:false,local_eye_uv:'live source-pixel offset with provisional source-painted eye support cap',
   default_mask_policy:'source_paint_domain',native_clip_parity:'BLOCKED_RAW_EYE_WHITE_MASK_FAILS_SOURCE_ART_PARITY',
-  mask_note:'Source paint domain is max raw alpha of eye white/pupil/highlight; cap preserves rest art. Not a claim of native GPU ClipToLower equivalence.',
+  eye_policy:eyePolicy,eye_control_scope:'DISCRETE_HORIZONTAL_DEFAULT_POSE_ONLY; artist override, not native clip equivalence',
+  mask_note:'Rest/manual use fixed source-paint alpha; coupled gaze activates its fixed horizontal 8px alpha-derived envelope. Artist override, not native GPU ClipToLower equivalence.',
   physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED',natural_3d_turn:'NOT_ACCEPTED',supported_pose:'DEFAULT_ONLY',
   camera:cfg.camera,canvas:[N,N]};
 function render(p={}){
@@ -135,11 +151,21 @@ function render(p={}){
   }else{renderer.setClearColor(background==='white'?0xffffff:0,1);renderer.clear();renderer.render(scene,camera);artworkDraws=renderer.info.render.calls;}
   return {version,background,pass,size,camera_matrix:Array.from(camera.matrixWorld.elements),projection_matrix:Array.from(camera.projectionMatrix.elements),
     source_count:62,receiver_count:19,logical_pass_count:25,draw_count:renderer.info.render.calls,artwork_draw_count:artworkDraws,uv_offsets:[...shifts],native_clip_alpha_changes:clipAudits.map(x=>({...x})),
-    mask_policy:maskPolicy,native_clip_parity:'BLOCKED',physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED'};
+    mask_policy:maskPolicy,eye_controls:{...eyeControls},gaze_envelopes:{...gazeEnvelopes},native_clip_parity:'BLOCKED',physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED'};
 }
-function setLayerUvOffset(order,xy){if(!raw.has(order)||!Array.isArray(xy)||xy.length!==2||!xy.every(Number.isInteger))throw Error('Expected layer and integer source-pixel offset');
+function applyOffset(order,xy){
   if(xy[0]===0&&xy[1]===0)shifts.delete(order);else shifts.set(order,[...xy]);cacheKey=null;}
-window.core026={render,metadata,setLayerUvOffset,setEyeMaskPolicy(value){
+function setLayerUvOffset(order,xy){if(!raw.has(order)||!Array.isArray(xy)||xy.length!==2||!xy.every(Number.isInteger))throw Error('Expected layer and integer source-pixel offset');
+  for(const [side,e] of Object.entries(eyePolicy.eyes))if(order===e.pupil_order||order===e.highlight_order)eyeControls[side]='manual_layer_offsets';
+  applyOffset(order,xy);
+}
+function setEyeGaze(eye,dx){
+  if(!['left','right','both'].includes(eye)||!Number.isInteger(dx)||dx< -8||dx>8)throw Error('Expected left/right/both and integer horizontal source offset -8..8');
+  for(const side of eye==='both'?['left','right']:[eye]){
+    const e=eyePolicy.eyes[side];applyOffset(e.pupil_order,[dx,0]);applyOffset(e.highlight_order,[dx,0]);eyeControls[side]=dx;gazeEnvelopes[side]=dx!==0;
+  }
+}
+window.core026={render,metadata,setLayerUvOffset,setEyeGaze,setEyeMaskPolicy(value){
   if(!['source_paint_domain','eye_white_only'].includes(value))throw Error('Unknown mask policy');maskPolicy=value;cacheKey=null;
-},reset(){shifts.clear();maskPolicy='source_paint_domain';cacheKey=null;}};
+},reset(){shifts.clear();eyeControls.left=eyeControls.right=0;gazeEnvelopes.left=gazeEnvelopes.right=false;maskPolicy='source_paint_domain';cacheKey=null;}};
 render();window.core026Ready=true;

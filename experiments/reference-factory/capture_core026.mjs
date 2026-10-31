@@ -27,7 +27,7 @@ try{
   }
   await page.evaluate(()=>window.core026.setLayerUvOffset(28,[8,0]));await snap('source_pupilL_shift8',{version:'source',background:'white',pass:'beauty',size:1630});
   await page.evaluate(()=>window.core026.setLayerUvOffset(28,[0,0]));await snap('source_pupilL_reset',{version:'source',background:'white',pass:'beauty',size:1630});
-  const inputs={};for(const file of ['core026.html','core026.js','capture_core026.mjs','config/core025-layer-contract.json','config/core026-compositor-contract.json'])inputs[file]=sha(await readFile(path.join(ROOT,file)));
+  const inputs={};for(const file of ['core026.html','core026.js','capture_core026.mjs','config/core025-layer-contract.json','config/core026-compositor-contract.json','config/core026-eye-policy.json'])inputs[file]=sha(await readFile(path.join(ROOT,file)));
   const metadata=await page.evaluate(()=>window.core026.metadata);
   await writeFile(path.join(OUT,'manifest.json'),JSON.stringify({schema:'core026-runtime-captures/1',inputs,metadata,captures,errors,physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED'},null,2)+'\n');
   if(errors.length)throw Error(JSON.stringify(errors));

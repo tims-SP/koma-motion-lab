@@ -31,6 +31,9 @@ on:
       - 'experiments/reference-factory/capture_core026_supervisor.mjs'
       - 'experiments/reference-factory/verify_core026_compositor_supervisor.py'
       - 'experiments/reference-factory/run_core026_default_art_regressions.py'
+      - 'experiments/reference-factory/config/core026-eye-policy.json'
+      - 'experiments/reference-factory/capture_core026_eyes_supervisor.mjs'
+      - 'experiments/reference-factory/verify_core026_eyes_supervisor.py'
   workflow_dispatch:
 permissions:
   actions: read
@@ -107,6 +110,10 @@ jobs:
           node capture_core026_supervisor.mjs
           python verify_core026_compositor_supervisor.py
           python run_core026_default_art_regressions.py
+      - name: Discrete eye controls against original source RGBA (artist override only)
+        run: |
+          node capture_core026_eyes_supervisor.mjs
+          python verify_core026_eyes_supervisor.py
       - name: Upload text-only numerical and diagnostic evidence
         # M1 admission is finite reference support, not acceptance of depth or motion.
         if: always()
@@ -134,12 +141,14 @@ jobs:
             experiments/reference-factory/out/core026/runtime-supervisor/manifest.json
             experiments/reference-factory/out/core026/runtime-supervisor/supervisor-qa.json
             experiments/reference-factory/out/core026/default-art-regressions/report.json
+            experiments/reference-factory/out/core026/eyes-supervisor/manifest.json
+            experiments/reference-factory/out/core026/eyes-supervisor/supervisor-qa.json
           if-no-files-found: warn
       - name: Archive generated media only in owner-only Draft Release
         run: |
-          python -m zipfile -c "$RUNNER_TEMP/CORE026-supervisor-QA.zip" out/core026/reference out/core026/landmarks out/core026/landmark-review out/core026/runtime out/core026/runtime-supervisor
+          python -m zipfile -c "$RUNNER_TEMP/CORE026-supervisor-QA.zip" out/core026/reference out/core026/landmarks out/core026/landmark-review out/core026/runtime out/core026/runtime-supervisor out/core026/eyes-supervisor
           sha256sum "$RUNNER_TEMP/CORE026-supervisor-QA.zip" > "$RUNNER_TEMP/SHA256SUMS.txt"
           gh release create "core026-supervisor-$GITHUB_RUN_NUMBER" --draft --target "$GITHUB_SHA" \
             "$RUNNER_TEMP/CORE026-supervisor-QA.zip" "$RUNNER_TEMP/SHA256SUMS.txt" \
             --title "CORE026 source and reference diagnostics $GITHUB_RUN_NUMBER" \
-            --notes "Aka by seagetch, CC-BY-4.0. Native references, reviewed overlays, real default compositor captures and rejected hard-eye-mask counterexample. Only default source artwork parity is admitted. Full M2B receiver/native clip/depth, dynamic occlusion and natural3D turn remain unaccepted."
+            --notes "Aka by seagetch, CC-BY-4.0. Native references, reviewed overlays, default compositor captures, explicit artist eye override, discrete horizontal gaze and rejected hard-mask/static-highlight counterexamples. Default art and discrete eye controls only. Full M2B spatial/native clip/depth, continuous eye motion, dynamic occlusion and natural3D turn remain unaccepted."
