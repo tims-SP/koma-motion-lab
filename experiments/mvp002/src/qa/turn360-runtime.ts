@@ -75,13 +75,14 @@ export class Turn360Recorder {
     this.active=false;
     return this.lastFrame;
   }
-  public updateVisible(counts:Map<string,number>):void{
+  public updateVisible(counts:Map<string,number>,bounds:readonly [number,number,number,number]):void{
     if(!this.lastFrame)throw Error('No frame before ID readback');
     for(const part of this.lastFrame.parts){
       // a PartTrace is mutable during its owning frame's readback.
       part.visiblePixelCountFromIdPass=counts.get(part.id)||0;
       part.actualVisibleAreaPixels=counts.get(part.id)||0;
     }
+    this.lastFrame.characterBoundingBoxPixels=[...bounds];
     this.lastFrame.actualVisiblePartIds=this.lastFrame.parts
       .filter(p=>p.visiblePixelCountFromIdPass>0).map(p=>p.id);
   }
