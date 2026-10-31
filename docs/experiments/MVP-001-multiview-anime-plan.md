@@ -1,6 +1,8 @@
 # MVP-001 — Art-Directed Multi-View 2.75D Anime (2026-10-31)
 
-Status: PLANNED / NOT IMPLEMENTED / NOT RENDERED
+Status: M0 INFRASTRUCTURE SMOKE PASSED (2026-10-31); M1-M4 CHARACTER QUALITY NOT IMPLEMENTED / NOT VERIFIED
+
+M0 verified: [Actions #41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729) SUCCESS, Chromium WebGL 2.0, 25 original procedural parts, 24 frame-accurate PNG screenshots at 640x360, one MP4 (15,700 bytes), 0/360 transform seam check, and independent non-background pixel checks. Preview assets are retained in [DRAFT Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-0ce02cee0dc27dfc74db) (owner access). This proves WebGL export pipeline only; **DOES NOT** prove multi-view interpolation, 360° anime fidelity, IK, normals, SDF, or 1080p video quality. Earlier two FAIL runs identified edge-on blank output and invalid center-pixel QA; they were repaired in the latest run.
 
 ## 0. Decision
 
