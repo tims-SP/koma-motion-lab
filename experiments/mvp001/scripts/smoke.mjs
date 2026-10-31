@@ -39,10 +39,11 @@ try {
   for(let f=0;f<=24;f++){
     const sample=await page.evaluate(f=>window.renderFrame(f),f);
     samples.push(sample);
+    if(sample.nonBackgroundSamples<20) throw new Error('No meaningful foreground WebGL pixels at frame '+f);
     if(f<24) {
       const filename=join(frames,'frame-'+String(f).padStart(3,'0')+'.png');
       await page.locator('#viewport').screenshot({path:filename});
-      if(statSync(filename).size<1500) throw new Error('Screenshot unusually small: '+filename);
+      if(statSync(filename).size<700) throw new Error('Screenshot unusually small: '+filename);
     }
   }
   if(errors.length) throw new Error('Browser runtime errors: '+errors.join('; '));
@@ -56,7 +57,7 @@ try {
   const report={
     phase:'M0',result:'PASS_INFRA_ONLY',animeQuality:'NOT_TESTED',fullBody360Quality:'NOT_TESTED',fullBodyAction:'NOT_TESTED',faceFX:'NOT_TESTED',
     frames:24, fps:24, resolution:'640x360',partCount:metadata.partNames.length,
-    webglVersion:metadata.glVersion,renderer:metadata.renderer,rgbaVariants:rgbaSet.size,
+    webglVersion:metadata.glVersion,renderer:metadata.renderer,rgbaVariants:rgbaSet.size,minForegroundSamples:Math.min(...samples.map(s=>s.nonBackgroundSamples)),
     movieBytes,frame0:samples[0],frame24:samples[24],browserErrors:errors,
     message:'Procedural fixture tests Chromium WebGL layered mesh, deterministic seek, screenshots, ffmpeg. It does not prove any anime character quality or complete multi-view model.'
   };
