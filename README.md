@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Newest verification — MVP-007 static 360° geometric core (2026-10-31)
+
+**[S01—S08 all PASS / 8-second 192-frame Actions #41200083182](https://github.com/tims-SP/koma-motion-lab/actions/runs/41200083182)** · **[Actual MP4, 25-angle board, real ID/depth masks and QA report](https://github.com/tims-SP/koma-motion-lab/actions/runs/41200083182/artifacts/13042725038)** · **[Documented model-image and temporal review](docs/experiments/MVP-007-360-core-final-review.md)**
+
+**Scope carefully limited:** one original simplified 12-part fixed-pose character rotating through horizontal yaw 0–360 with four keyed contours and view-dependent 2.5D ArtMeshes. Actual images were inspected and revealed serious 225°/315° mesh collapse and 90°/270° face/hair snapping (missed by earlier green CI), both corrected; final frame-scan peak/median is 1.694. **High-fidelity Japanese anime art, complex concurrent action and arbitrary camera pitch have NOT been proven; manual full-video acceptance remains pending.** Freeze static-turn core, next test concurrent full-body acting and occlusion on the same model without importing complex game assets first.
+
 ## Latest verified result — MVP-006 formal 360 core acceptance (2026-10-31)
 
 **[Latest 8s/192-frame CI run #41197555224](https://github.com/tims-SP/koma-motion-lab/actions/runs/41197555224)** · **[Real video/25-angle board/ID+depth masks/trace/QA ZIP](https://github.com/tims-SP/koma-motion-lab/actions/runs/41197555224/artifacts/13041610450)** · **[S01—S08 results & next core fixes](docs/experiments/MVP-006-360-run-status.md)**
