@@ -29,6 +29,11 @@ declare global {interface Window {
   integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
   exportArtPNG:(partId:PartId,angle:View)=>string;
   renderTurn360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace};
+  renderDynamic360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace;pose:{
+    reach:number;fore:number;headLocalYaw:number;shoulderXYZ:number[];elbowXYZ:number[];
+    handXYZ:number[];targetXYZ:number[];handDistance:number;footLXYZ:number[];footRXYZ:number[];
+    poseTime:number
+  }};
   captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
   turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[];authoredGeometry:{id:string;right:readonly XY[];left:readonly XY[];rightVDD:XY;leftVDD:XY}[]};
   auditTurnOcclusion:()=>ReturnType<typeof auditLocalOcclusion>;
@@ -242,18 +247,25 @@ function glint(t:number):void{
     i%3===0?'#ffd5df':'#9dcced',.7);
  }
 }
-export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
+let lastDynamicPose:{
+ reach:number;fore:number;headLocalYaw:number;shoulderXYZ:number[];elbowXYZ:number[];
+ handXYZ:number[];targetXYZ:number[];handDistance:number;footLXYZ:number[];footRXYZ:number[];
+ poseTime:number
+}|null=null;
+export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=false):FrameStats {
  if(!Number.isInteger(frame)||frame<0||frame>total)throw Error('Invalid frame');
  cleanup();
- const t=turnYaw===undefined?frame/24:0;
+ const t=dynamicMode||turnYaw===undefined?frame/24:0;
  const isTurnOnly=turnYaw!==undefined;
  // First 2 seconds perform complete 0°→360° rotation. Next the same
  // character raises a hand across the torso from behind to in front.
  const yaw=isTurnOnly?turnYaw!:t<=2?360*smooth(t/2):360;
- const reach=smooth((t-2)/1.4),fore=smooth((t-3.1)/1.1);
- const rootYaw=wrap(yaw),headLocalYaw=(!isTurnOnly&&t>2)?38*Math.sin((t-2)*.85):0;
+ const reach=dynamicMode?smooth((t-.45)/1.8):smooth((t-2)/1.4);
+ const fore=dynamicMode?smooth((t-3.0)/1.8):smooth((t-3.1)/1.1);
+ const rootYaw=wrap(yaw),headLocalYaw=dynamicMode?26*Math.sin(t*1.24):
+   (!isTurnOnly&&t>2)?38*Math.sin((t-2)*.85):0;
  // Real close-up of the *same character in the same take* exposes eye, face and hair quality.
- const closeup=smooth((t-4.05)/1.08);
+ const closeup=dynamicMode?0:smooth((t-4.05)/1.08);
  const cameraScale=1-.67*closeup;
  camera.left=-4.7*cameraScale;camera.right=4.7*cameraScale;
  camera.top=2.64*cameraScale;camera.bottom=-2.64*cameraScale;
@@ -261,7 +273,7 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  camera.position.set(0,eyeLevel,15);camera.lookAt(0,eyeLevel,0);
  camera.updateProjectionMatrix();
  const headYaw=rootYaw+headLocalYaw;
- const lightAngle=-1.3+t*.7,shadowShift=Math.sin(lightAngle)*.18;
+ const lightAngle=dynamicMode?-1.3:-1.3+t*.7,shadowShift=Math.sin(lightAngle)*.18;
  const blink=Math.exp(-Math.pow((t-4.83)*11,2));
  const rootChest=transform(V(0,1.96,0),rootYaw),rootHead=transform(V(0,3.02,.0),rootYaw);
  const lookHead=(p:THREE.Vector3)=>rootHead.clone().add(transform(p,headYaw));
@@ -281,11 +293,15 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  camera.updateMatrixWorld();
  // Back hair and legs behind the body, based on actual 3D anchor.
  artMesh(defs[0],lookHead(defs[0].anchor),headYaw);
- const steps=!isTurnOnly&&t>2?Math.sin(t*5)*.07:0;
+ const steps=dynamicMode?.055*Math.sin(t*2.5):
+   !isTurnOnly&&t>2?Math.sin(t*5)*.07:0;
+ const dynamicFeet:{left:number[];right:number[]}={left:[],right:[]};
  for(const [i,id] of [[10,'leftLeg'],[11,'rightLeg']] as const){
   const x=i===10?-.22:.22,hip=transform(V(x,1.1,0),rootYaw);
   const knee=transform(V(x+steps*(i===10?1:-1),.62,.01),rootYaw);
   const foot=transform(V(x,.12,.18),rootYaw);
+  if(i===10)dynamicFeet.left=foot.toArray();
+  else dynamicFeet.right=foot.toArray();
   limb(hip,knee,.12,'#465c8a',defs[i].id);limb(knee,foot,.108,'#dcbeb2',defs[i].id);
   artMesh(defs[i],V((hip.x+foot.x)/2,.47,(hip.z+foot.z)/2),rootYaw,.78,.65);
  }
@@ -307,6 +323,13 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  const ahead=transform(V(-.18,2.07,.68),rootYaw);
  const target=resting.clone().lerp(behind,reach).lerp(ahead,fore);
  const rig=solveIK(shoulder,target,.63,.63,transform(V(.10,-.15,.90),rootYaw));
+ lastDynamicPose=dynamicMode?{
+   reach,fore,headLocalYaw,shoulderXYZ:shoulder.toArray(),elbowXYZ:rig.elbow.toArray(),
+   handXYZ:rig.hand.toArray(),targetXYZ:target.toArray(),
+   handDistance:rig.hand.distanceTo(target),
+   footLXYZ:dynamicFeet.left,footRXYZ:dynamicFeet.right,
+   poseTime:t
+ }:null;
  const forearm=rig.hand.clone().sub(rig.elbow);
  const armLocalYaw=wrap(Math.atan2(forearm.x,forearm.z)/DEG);
  limb(shoulder,rig.elbow,.145,'#526f9d','rightArm');
@@ -337,14 +360,15 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
   polygon([V(x-.20,2.30,.52),V(x+.07,2.30,.52),
     V(x+.30,1.60,.52),V(x,1.60,.52)],'#273758',.17);
  }
- if(!isTurnOnly&&t>3.5)glint(t);
+ if(!isTurnOnly&&t>3.5&&!dynamicMode)glint(t);
  // Floor/horizon is a scene effect, not a body part.
  polygon([V(-4.7,.03,-4),V(4.7,.03,-4),V(4.7,0,-4),V(-4.7,0,-4)],'#60718a');
  renderer.render(scene,camera);
  if(isTurnOnly){
    const bounds:[number,number,number,number]=[0,0,960,540]; // replaced by pixel readback bounds when available
    qaRecorder.finish({
-     camera,timeSeconds:frame/24,yaw,bounds,rendererCommit:'runtime-main-qa-instrumented'
+     camera,timeSeconds:frame/24,yaw,bounds,rendererCommit:'runtime-main-qa-instrumented',
+     poseHash:dynamicMode?'dynamic-pose:'+frame+':'+headLocalYaw.toFixed(5)+':'+reach.toFixed(5)+':'+fore.toFixed(5):'static-neutral-pose'
    });
  }
  const result:FrameStats={
@@ -363,6 +387,13 @@ window.renderTurn360=(yaw,frameIndex)=>{
  const stats=evaluate(Math.min(frameIndex,192),192,yaw);
  if(!qaRecorder.lastFrame)throw Error('No real frame evidence');
  return {stats,trace:qaRecorder.lastFrame};
+};
+window.renderDynamic360=(yaw,frameIndex)=>{
+ if(!Number.isFinite(yaw)||frameIndex<0||frameIndex>192)throw Error('Invalid dynamic turn frame');
+ qaRecorder.start(yaw,frameIndex);
+ const stats=evaluate(frameIndex,192,yaw,true);
+ if(!qaRecorder.lastFrame||!lastDynamicPose)throw Error('No dynamic frame evidence');
+ return {stats,trace:qaRecorder.lastFrame,pose:lastDynamicPose};
 };
 window.auditTurnOcclusion=()=>auditLocalOcclusion(renderer,scene,camera,drawn,qaRecorder.yaw);
 window.turnSourceViews={
