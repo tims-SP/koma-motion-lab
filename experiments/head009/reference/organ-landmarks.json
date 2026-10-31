@@ -25,7 +25,7 @@
     "nose.ink": "nose"
   },
   "required": [
-    "eye.R.center",
+    "eye.L.center",
     "nose.tip",
     "mouth.center",
     "face.chin",
