@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "protocol": "mvp006-turn360-v1",
+  "status": "SPEC_ONLY_NOT_EXECUTED",
+  "supersedes": "MVP-003~005 video-encoding-is-360-success inference",
+  "shot": {
+    "id": "turn360",
+    "characterIdentity": "ONE_VERSIONED_CHARACTER",
+    "camera": "fixed_orthographic",
+    "pose": "neutral_fixed",
+    "light": "fixed",
+    "yaw": {
+      "initialDeg": 0,
+      "endDeg": 360,
+      "frameMapping": "360*frame/192",
+      "videoFrameStart": 0,
+      "videoFrameEndInclusive": 191,
+      "seamFrameOutsideVideo": 192
+    },
+    "output": {
+      "seconds": 8,
+      "fps": 24,
+      "frames": 192,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "sampling": {
+    "allRgbFrames": true,
+    "angleStepDeg": 15,
+    "angleSamples": [
+      0,
+      15,
+      30,
+      45,
+      60,
+      75,
+      90,
+      105,
+      120,
+      135,
+      150,
+      165,
+      180,
+      195,
+      210,
+      225,
+      240,
+      255,
+      270,
+      285,
+      300,
+      315,
+      330,
+      345
+    ],
+    "cardinalSourceCompare": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "visualModelAngles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "maxExtraModelFrames": 4,
+    "extraDiagnosticFrames": "occlusion_event_and_outlier_only",
+    "renderPasses": [
+      "rgb",
+      "partId",
+      "depth",
+      "wireAnchors"
+    ],
+    "renderPassStrategy": "rgb_every_frame_other_passes_24_angles_plus_events"
+  },
+  "evidence": {
+    "provenance": [
+      "characterId",
+      "characterVersion",
+      "sourceKeyViewHashByPart",
+      "partId",
+      "anchor3D",
+      "sourceViewVisibility",
+      "keyContourAndUVCorrespondence"
+    ],
+    "observed": [
+      "gpuPartIdPixels",
+      "gpuDepthPixels",
+      "gpuActualRgb",
+      "projectedPartBounds",
+      "meshVertices",
+      "visibleMask",
+      "occlusionOverlapRegion",
+      "artOriginAlpha"
+    ],
+    "deterministic": "same_pose_repeated_seek",
+    "preventSelfCertification": "cpu_expected_structured_geometry_compared_to_independent_gpu_id_depth_readback"
+  },
+  "hardGates": [
+    {
+      "id": "A01",
+      "name": "four genuine authored view keyshape sources",
+      "missing": "BLOCKED_EVIDENCE"
+    },
+    {
+      "id": "A02",
+      "name": "same character and pose across frames",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "A03",
+      "name": "valid triangles, UV, declared topology transitions",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "A04",
+      "name": "independent part shape deformation; no whole sprite flip",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "A05",
+      "name": "0/360 same-state full image seam",
+      "metric": "pixelDiffRatio",
+      "max": 0.001,
+      "thresholdStatus": "PROVISIONAL_CALIBRATE",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "A06",
+      "name": "complete body framing and justified visibility",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "A07",
+      "name": "random frame seek deterministic",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "B01",
+      "name": "GPU partId/depth actual pixel confirmation",
+      "missing": "BLOCKED_EVIDENCE"
+    },
+    {
+      "id": "B02",
+      "name": "measured nonempty overlap and actual front/back occlusion transition",
+      "missing": "BLOCKED_INSUFFICIENT_OCCLUSION_SCENE"
+    },
+    {
+      "id": "B03",
+      "name": "cardinal-view actual RGB vs source art registered",
+      "missing": "BLOCKED_EVIDENCE"
+    },
+    {
+      "id": "B04",
+      "name": "screen space per-part correspondence and contour continuity",
+      "missing": "FAIL_STRUCTURAL"
+    },
+    {
+      "id": "B05",
+      "name": "UV/mesh motion compensated temporal difference",
+      "metric": "nonOccludedWarpError",
+      "thresholdStatus": "BASELINE_CALIBRATION_REQUIRED",
+      "missing": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "B06",
+      "name": "decoded video count resolution and blank detection",
+      "missing": "FAIL_STRUCTURAL"
+    }
+  ],
+  "visual": {
+    "statusIfNoReview": "PENDING_VISUAL_REVIEW",
+    "imageEvidenceLimit": 12,
+    "needFullVideoReview": true,
+    "inspect": [
+      "identity",
+      "asymmetricMarker",
+      "faceEyesHair",
+      "limbs",
+      "shapeContinuity",
+      "occlusionEdges",
+      "flicker"
+    ],
+    "defectFields": [
+      "frame",
+      "angle",
+      "partId",
+      "issue",
+      "severity",
+      "imageEvidence",
+      "confidence"
+    ],
+    "forbidden": [
+      "conceptArtAsEvidence",
+      "singleNumericAestheticScoreAsPass",
+      "assumeVideoContinuousFromContactSheet",
+      "claimModelProvesGeometry"
+    ]
+  },
+  "acceptance": {
+    "requiredFor": "PASS_360_CORE",
+    "conditions": [
+      "A_ALL_PASS",
+      "B_ALL_PASS_OR_CALIBRATED_NO_DEFECTS",
+      "VISUAL_NO_MAJOR_DEFECT",
+      "FULL_8S_PLAYBACK_REVIEWED"
+    ],
+    "independentFutureGate": "PASS_ANIME_ART",
+    "override": "ANY_MISSING_EVIDENCE_OR_FATAL_FAILURE_PREVENTS_PASS"
+  },
+  "implementation": {
+    "coreLanguage": "TypeScript",
+    "existingRuntime": "experiments/mvp002",
+    "implementationState": "NOT_STARTED",
+    "avoidExtraStandaloneDemos": true,
+    "execution": "one_evaluator_one_full_render_with_sampled_debug_passes",
+    "suggestedTools": [
+      "Three.js WebGLRenderTarget",
+      "Playwright",
+      "pixelmatch",
+      "sharp",
+      "ffmpeg/ffprobe",
+      "visual_model_on_demand"
+    ]
+  }
+}
