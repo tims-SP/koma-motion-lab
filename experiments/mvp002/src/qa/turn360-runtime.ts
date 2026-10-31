@@ -119,19 +119,28 @@ export function idShader(original:THREE.Material, color:readonly [number,number,
  const getTex=(name:string)=>shader?(original.uniforms[name]?.value as THREE.Texture|undefined):undefined;
  const alpha=shader?(Number(original.uniforms.strength?.value) || 0):1;
  const texA=getTex('artA'),texB=getTex('artB'),mix=shader?(Number(original.uniforms.transition?.value) || 0):0;
+ const frontMask=shader?(Number(original.uniforms.frontMask?.value ?? 1)):1;
+ const faceWipe=shader?(Number(original.uniforms.faceWipe?.value ?? 0)):0;
+ const wipeDirection=shader?(Number(original.uniforms.wipeDirection?.value ?? 1)):1;
  return new THREE.ShaderMaterial({
   uniforms:{artA:{value:texA||null},artB:{value:texB||null},transition:{value:mix},
     strength:{value:alpha},useTex:{value:shader?1:0},
+    frontMask:{value:frontMask},faceWipe:{value:faceWipe},wipeDirection:{value:wipeDirection},
     partColor:{value:new THREE.Vector3(...color.map(x=>x/255))}},
   vertexShader:'varying vec2 vUv; void main(){vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
   fragmentShader:[
     'uniform sampler2D artA,artB;',
     'uniform float transition,strength,useTex;',
+    'uniform float frontMask,faceWipe,wipeDirection;',
     'uniform vec3 partColor;',
     'varying vec2 vUv;',
     'void main(){',
     '  float opacity=1.;',
     '  if(useTex>0.5){opacity=mix(texture2D(artA,vUv).a,texture2D(artB,vUv).a,transition)*strength;}',
+    '  if(faceWipe>0.5 && frontMask<0.999){',
+    '    float side=wipeDirection>0.0?vUv.x:1.0-vUv.x;',
+    '    if(side<1.0-frontMask)discard;',
+    '  }',
     '  if(opacity<0.08)discard;',
     depth?'  gl_FragColor=vec4(vec3(gl_FragCoord.z),1.);':'  gl_FragColor=vec4(partColor,1.);',
     '}'
