@@ -2,7 +2,9 @@
 
 Status: M0 INFRASTRUCTURE SMOKE PASSED (2026-10-31); M1-M4 CHARACTER QUALITY NOT IMPLEMENTED / NOT VERIFIED
 
-> **2026-10-31 资产/语言修订（覆盖早期描述）**：M1 **从现有资产入手**，首选 `myssal/Reverse-1999-CN-Asset` 的 Spine + Live2D 同角色资源；以 Spine 4.2 TS runtime、Cubism Web TS 官方样例及 SIGGRAPH 2010 多视角 SVG 为对照。仅在核实原始角色缺少真正侧/背等关键视角时才进行定向补画/生成，不再从零创作人物作为先决条件。所有新增/维护的自有源码、Node 脚本、渲染器与测试统一 **TypeScript**；M0 旧 JS 迁移为 M1-00，迁移前保留回归。参见 [M1 修订执行计划](./MVP-001-M1-plan.md) 与 [现有资产调查](./MVP-001-assets-research.md)。本段优先于本文较早的旧任务描述。\n\n
+> **2026-10-31 资产/语言修订（覆盖早期描述）**：M1 **从现有资产入手**，首选 `myssal/Reverse-1999-CN-Asset` 的 Spine + Live2D 同角色资源；以 Spine 4.2 TS runtime、Cubism Web TS 官方样例及 SIGGRAPH 2010 多视角 SVG 为对照。仅在核实原始角色缺少真正侧/背等关键视角时才进行定向补画/生成，不再从零创作人物作为先决条件。所有新增/维护的自有源码、Node 脚本、渲染器与测试统一 **TypeScript**；M0 旧 JS 迁移为 M1-00，迁移前保留回归。参见 [M1 修订执行计划](./MVP-001-M1-plan.md) 与 [现有资产调查](./MVP-001-assets-research.md)。本段优先于本文较早的旧任务描述。
+
+
 M0 verified: [Actions #41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729) SUCCESS, Chromium WebGL 2.0, 25 original procedural parts, 24 frame-accurate PNG screenshots at 640x360, one MP4 (15,700 bytes), 0/360 transform seam check, and independent non-background pixel checks. Preview assets are retained in [DRAFT Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-0ce02cee0dc27dfc74db) (owner access). This proves WebGL export pipeline only; **DOES NOT** prove multi-view interpolation, 360° anime fidelity, IK, normals, SDF, or 1080p video quality. Earlier two FAIL runs identified edge-on blank output and invalid center-pixel QA; they were repaired in the latest run.
 
 ## 0. Decision
