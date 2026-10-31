@@ -134,7 +134,11 @@ try{
    '-c:v','libx264','-crf','20','-pix_fmt','yuv420p','-r','24',video],{stdio:'pipe'});
  const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-count_frames',
    '-show_entries','stream=width,height,nb_read_frames','-of','json',video],{encoding:'utf8'}));
- const fmt=probe.streams?.[0];const videoGood=Number(fmt?.nb_read_frames)===192&&fmt?.width===960&&fmt?.height===540;
+ const fmt=probe.streams?.[0];const screenBoundsOkay=trace.every(f=>{
+ const [x0,y0,x1,y1]=f.characterBoundingBoxPixels;
+ return x1>x0&&y1>y0&&x0>=1&&y0>=1&&x1<=959&&y1<=539;
+ });
+ const videoGood=Number(fmt?.nb_read_frames)===192&&fmt?.width===960&&fmt?.height===540&&screenBoundsOkay;
  const brokenAngles=videoAngles.filter((x,i)=>Math.abs(x-i*360/192)>1e-7);
  gate('S01_ANGLE_COVERAGE',brokenAngles.length===0&&final.stats.yaw===360?'PASS':'FAIL',
   brokenAngles.length?'Frame angle mismatch':'');
@@ -165,7 +169,7 @@ try{
  gate('S07_ANATOMICAL_ASYMMETRY',sources.independent270?'PASS':'FAIL',
    sources.independent270?undefined:'270° view geometry is automatically derived by mirroring 90° for '+sources.derivedPartIds.length+' parts.',sources.derivedPartIds);
  gate('S08_RENDER_FRAME_INTEGRITY',videoGood?'PASS':'FAIL',
-  videoGood?undefined:'FFprobe frame/resolution mismatch');
+  videoGood?undefined:'FFprobe frame/resolution mismatch or ID-pass model bounding box clipped/empty');
  const finalStatus=results.some(g=>g.status!=='PASS')?'FAIL_STRUCTURE':'PASS_STRUCTURE_PENDING_VISUAL';
  const report:Turn360AcceptanceReport={
   schemaVersion:'MVP-006-360-V1',characterAssetHash:trace[0].characterAssetHash,
@@ -177,7 +181,7 @@ try{
  };
  const diagnostics={seamEqual,frameCount:P.videoFrames,boundaryImages:8,independentSampleAngles:25,
    maxAnchorJump:maxJump,actualFrameCounts,sources,videoBytes:statSync(video).size,
-   partTracesCount:parts.length,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
+   partTracesCount:parts.length,screenBoundsOkay,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
  writeFileSync(join(output,'turn360-traces.json'),JSON.stringify({frames:trace,sampled:keyTraces},null,1));
  writeFileSync(join(output,'turn360-qa.json'),JSON.stringify({report,diagnostics},null,2)+'\n');
  console.log('QA360_RESULT '+JSON.stringify({status:finalStatus,diagnostics,
