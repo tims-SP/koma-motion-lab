@@ -150,7 +150,7 @@ export function qa(yaw:number){
  for(let i=0;i<id.length;i+=4)if(id[i+3]>0){
   const index=id[i]-1;if(index>=0&&index<parts.length)visibleParts[parts[index]!.id]!++;
  }
- const actualSideAnatomy=yaw!==90||(['farEye','farEar','nose','mouth'] as const).every(name=>visibleParts[name]>80);
+ const actualSideAnatomy=yaw!==90||(['nearEye','farEar','nose','mouth'] as const).every(name=>visibleParts[name]>80);
  return {yaw,coveragePixels:coverage,visibleParts,opaqueCoverageMismatches:parity,
   faultMaskCoverageMismatch:maskFault,faultDepthIdChangedPixels:depthFault,actualSideAnatomy,
   result:coverage>10000&&parity.every(x=>x===0)&&maskFault>500&&depthFault>100&&actualSideAnatomy?'PASS_ENGINEERING':'FAIL'};
