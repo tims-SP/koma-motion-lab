@@ -3,7 +3,13 @@
   "date": "2026-10-31 Asia/Shanghai",
   "author_executor": "Codex local fallback; mcode blocked by automatic approval",
   "status": "PASS_REFERENCE_LIMITED_LOCAL_ONLY",
-  "ci": "PENDING",
+  "ci": {
+    "status": "PASS_REFERENCE_LIMITED",
+    "code_commit": "05e8814b8ef986ace063cf41f58ced5843af04b3",
+    "supervisor_run": 41157121611,
+    "legacy_run": 41157121472,
+    "evidence": "m1-complete-ci-acceptance.json"
+  },
   "aggregate": {
     "schema": "core026-m1-aggregate/1",
     "author_executor": "Codex explicit local fallback",
@@ -373,7 +379,7 @@
     "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
   },
   "visual_review": "complete-visual-review-local.json",
-  "M2": "NOT_STARTED; require clean CI then local receiver compositor prototype only",
+  "M2": "NOT_STARTED; M1 clean CI passed, local receiver compositor prototype may proceed under exact M2 order",
   "physical_depth": "NOT_RECOVERED",
   "natural_3d_turn": "NOT_ACCEPTED"
 }

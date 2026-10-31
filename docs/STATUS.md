@@ -4,7 +4,7 @@
 
 ## CORE026当前状态
 
-本轮M1本地总门禁为PASS_REFERENCE_LIMITED，干净CI待本次代码提交复现。M2尚未开始，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
+M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2尚未开始，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
 
 - 源对应：62层均经原始UV/纹理/默认祖先变换选出唯一身份；58项可单靠像素，7/8/9/10四个重复图项经默认坐标区分。只使用单一全局平移；最大残差3.905124源像素，原始UV未改。
 - 原生参考：固定camera scale0.4、position[82,1773]、720×880全图和652×652头部ROI；raw yaw九姿态[-1..1]、pitch0。18张实际PNG的来源/恢复均已保存。新总门禁核对九张head SHA。
@@ -21,13 +21,13 @@ mcode此前确实执行过M1C2A应用补丁与prepare/verify。最新续跑收�
 
 ## 下一工单
 
-等待新监督CI与旧回归确认M1有限参考门禁，再执行M2局部接收面与附着层整理。先审计跨接收面的原画顺序和Multiply，尤其58/59眼皮与60/61眉的晚画覆盖；不能把全部Face绘画提前烘成一张图而丢失与头发的交叠。先过原画0姿态保真，再进入已放行的三个raw参考点。M2实现、M3深度方案、M4动态遮挡和M5最终视频尚未通过。
+M1有限参考门禁已获两套干净CI确认；下一步执行[M2精确工单](plans/CORE-026-M2-local-compositor-order.md)的M2A接收组顺序与跨组混合审计，完成并提交后再做M2B真实0姿态渲染。先审计跨接收面的原画顺序和Multiply，尤其58/59眼皮与60/61眉的晚画覆盖；不能把全部Face绘画提前烘成一张图而丢失与头发的交叠。先过原画0姿态保真，再进入已放行的三个raw参考点。M2实现、M3深度方案、M4动态遮挡和M5最终视频尚未通过。
 
 前序监督CI41155423219与旧回归41155423100已经success，但只覆盖当时的零审阅初始表，不当作本次171格总验收。[前序CI](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。运行/登录/域名事件保留在[运行诊断](research/CORE-026-mcode-runtime-diagnostic.md)；这些历史不是重登或任意存储上传的理由。
 
 ## 确定性恢复顺序
 
-先使用.github/workflows/koma-26-supervisor-qa.yml；该工作流只调用GitHub与已锁定公开源，不请求MiniMax。真实成功参考为run41126811519。
+先使用.github/workflows/koma-26-supervisor-qa.yml；该工作流只调用GitHub与已锁定公开源，不请求MiniMax。最新完整M1成功参考为run41157121611；早期源恢复参考为run41126811519。
 
 本地恢复时，先安装requirements.txt、npm ci、Playwright Chromium，随后依次运行prepare.py、native_layers.py、prepare_core025.py、capture_core025.mjs --anchors、verify_core025_supervisor.py，生成旧保护报告。再依次运行audit_core026.py --audit、audit_core026.py --verify-source、verify_core026_supervisor.py、verify_core026_registration.py、verify_core026_constraints.py。
 

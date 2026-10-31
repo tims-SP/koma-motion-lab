@@ -26,7 +26,8 @@
     "out/core026/landmark-review/native-nine-contact.png": "8eab709824a41d7fe59e5ef49691e4d6d5b151c13ccf26eff17131d24be84ca0",
     "out/core026/landmark-review/central-face-native-detail.png": "7cd4381e75b089fbec950584dd5815d755d3e935fcae46cfab69bc1e5f0bf0ee"
   },
-  "overall_M1": "PENDING_AGGREGATE_GATE",
+  "overall_M1": "PASS_REFERENCE_LIMITED_BY_SEPARATE_AGGREGATE",
   "physical_depth": "NOT_RECOVERED",
-  "runtime_occlusion": "NOT_IMPLEMENTED"
+  "runtime_occlusion": "NOT_IMPLEMENTED",
+  "aggregate_ci_evidence": "m1-complete-ci-acceptance.json"
 }

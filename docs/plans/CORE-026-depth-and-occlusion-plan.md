@@ -1,6 +1,6 @@
 # CORE-026：分部件深度、附着与遮挡校准
 
-日期：2026-10-31（Asia/Shanghai）。状态：IN_PROGRESS。M1A源对应、M1B清洁高清参考和M1C1源遮挡/接收提案均已通过对应检查；M1C1代码76d7f70的两套CI均success。M1C2已完成171格实际审阅及M1本地总门禁PASS_REFERENCE_LIMITED，仅raw -0.25/0/+0.25离散对照，待新CI；M2–M5尚未通过。本轮M1C1因mcode审批阻塞由Codex本地兜底，不冒称mcode产物。
+日期：2026-10-31（Asia/Shanghai）。状态：IN_PROGRESS。M1A源对应、M1B清洁高清参考和M1C1源遮挡/接收提案均已通过对应检查；M1C1代码76d7f70的两套CI均success。M1C2已完成171格实际审阅及M1本地总门禁PASS_REFERENCE_LIMITED，仅raw -0.25/0/+0.25离散对照，监督CI41157121611及旧回归41157121472均success；M2–M5尚未通过。本轮M1C1因mcode审批阻塞由Codex本地兜底，不冒称mcode产物。
 
 执行者mcode；Codex下明确工单、独立验收、提交恢复检查点。仅在tims-SP/koma-motion-lab的feature/koma-25d-core-021工作。媒体只进入ignored out/与owner-only Draft Release；git只存代码、工单、报告和文本证据。每个阶段无论通过或失败均提交。
 
@@ -124,7 +124,7 @@ M1门禁：源哈希、参数域与实际捕获通过；所有62层有去向；�
 
 后续工单必须给定允许修改的文件、输入哈希、准确命令、输出路径和退出码。mcode超时后先检查落盘文件并由Codex执行验证，不把超时自动算完成；也不因为超时盲目重复整轮。Codex独立验收脚本与mcode实现脚本职责分开。
 
-恢复入口：完成的CORE025从docs/STATUS.md复现；CORE026从M1C2恢复。M1A源对应、M1B清洁原生9姿态和M1C1提案数据/验拒均已保存并实测；不从头重复已验收子项。171格审阅和M1本地有限参考总门禁已完成，待新CI确认后转M2；不将有限图像对照当作物理深度恢复。
+恢复入口：完成的CORE025从docs/STATUS.md复现；CORE026从M1C2恢复。M1A源对应、M1B清洁原生9姿态和M1C1提案数据/验拒均已保存并实测；不从头重复已验收子项。171格审阅和M1本地有限参考总门禁已完成，两套干净CI均确认，按[M2精确工单](CORE-026-M2-local-compositor-order.md)先执行M2A；不将有限图像对照当作物理深度恢复。
 
 ## 仓库依据
 
