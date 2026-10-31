@@ -10,7 +10,7 @@ const organVisibility:{yaw:number;nearEye:number;farEye:number;nose:number;mouth
 try{
  await page.goto(process.env.HEAD009_URL??'http://127.0.0.1:4173/',{waitUntil:'networkidle'});
  await page.waitForFunction(()=>typeof window.head009?.frame==='function');
- for(let yaw=0;yaw<=90;y++){
+ for(let yaw=0;yaw<=90;yaw++){
   const diff=await page.evaluate(y=>{
    window.head009.frame(y);
    const canvas=document.querySelector<HTMLCanvasElement>('#stage')!;
