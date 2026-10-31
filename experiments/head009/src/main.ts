@@ -116,7 +116,13 @@ function setScene(yaw:number,pass:number,fault:'none'|'mask'|'depth'='none'){
    if(!mesh.visible||!v)continue;
    mesh.geometry.dispose();
    mesh.geometry=kind==='fill'?shapeGeometry(v.pts):strokeGeometry(v.pts,v.strokeWidth,v.source!.closed);
-   mesh.position.set(0,0,z+(kind==='stroke'?.008:0));
+   // Keep the side-hair ink behind the cheek wherever its fill is occluded.
+   // At intermediate 45-90 views the former .008 front offset detached the ink
+   // from its own fill, creating a floating black seam.
+   const strandContact=part.id==='sideHair'&&yaw>45&&yaw<90
+     ? 1-Math.sin(Math.PI*(yaw-45)/45) : 1;
+   const strokeOffset=kind==='stroke'?.008*strandContact:0;
+   mesh.position.set(0,0,z+strokeOffset);
    mesh.material.uniforms.uColor!.value.set(kind==='fill'?v.source!.fill:v.source!.stroke);
    mesh.material.uniforms.uPass!.value=pass;
    mesh.material.uniforms.uFaultMask!.value=fault==='mask'&&pass===1?1:0;

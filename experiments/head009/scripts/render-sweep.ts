@@ -23,11 +23,15 @@ try{
    const host=window as unknown as {lastSweepRGBA?:Uint8ClampedArray};
    const previous=host.lastSweepRGBA;
    let changed=0,active=0;
-   if(previous)for(let i=0;i<rgba.length;i+=4){
-    const change=Math.max(Math.abs(previous[i]-rgba[i]),Math.abs(previous[i+1]-rgba[i+1]),Math.abs(previous[i+2]-rgba[i+2]));
-    if(change>25)changed++;
-    const nonBg=Math.max(Math.abs(rgba[i]-41),Math.abs(rgba[i+1]-50),Math.abs(rgba[i+2]-73))>28;
-    if(nonBg)active++;
+   // WebGL clearColor goes through the renderer's output transform; read the
+   // actual corner color instead of comparing to the requested hex constant.
+   const bg=[rgba[0],rgba[1],rgba[2]];
+   for(let i=0;i<rgba.length;i+=4){
+    if(previous){
+     const change=Math.max(Math.abs(previous[i]-rgba[i]),Math.abs(previous[i+1]-rgba[i+1]),Math.abs(previous[i+2]-rgba[i+2]));
+     if(change>25)changed++;
+    }
+    if(Math.max(Math.abs(rgba[i]-bg[0]),Math.abs(rgba[i+1]-bg[1]),Math.abs(rgba[i+2]-bg[2]))>28)active++;
    }
    host.lastSweepRGBA=new Uint8ClampedArray(rgba);
    return {changedFraction:previous?changed/(canvas.width*canvas.height):0,affectedPixels:active};
