@@ -7,7 +7,9 @@
     "check": "tsc --noEmit",
     "validate": "tsx scripts/validate-art.ts",
     "audit": "tsx scripts/audit.ts",
-    "audit:organs": "tsx scripts/audit-organs.ts"
+    "audit:organs": "tsx scripts/audit-organs.ts",
+    "build:review": "node scripts/build-review.mjs",
+    "audit:review": "tsx scripts/audit-review.ts"
   },
   "dependencies": {
     "three": "^0.181.0"

@@ -1,0 +1,46 @@
+name: MVP-009 HTML review
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/head009/**'
+      - '.github/workflows/mvp009-html-review.yml'
+  workflow_dispatch:
+jobs:
+  html_review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: experiments/head009
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned project dependencies
+        run: npm install --no-audit --no-fund
+      - name: Typecheck viewer and renderer
+        run: npm run check
+      - name: Validate independent source art and organ annotations
+        run: |
+          npm run validate
+          npx tsx scripts/validate-organ-data.ts
+          npx tsx scripts/validate-vdd.ts
+      - name: Build standalone HTML with embedded Three.js and SVG sources
+        run: npm run build:review
+      - name: Check available isolated browser
+        run: google-chrome --version
+      - name: Open local HTML file and exercise real WebGL, controls and QA
+        run: npm run audit:review
+      - name: Publish standalone HTML and review screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head009-html-review
+          path: |
+            experiments/head009/out/head009/head009-review.html
+            experiments/head009/out/head009/html-*.json
+            experiments/head009/out/head009/review-html-*.png
+          if-no-files-found: error
+          retention-days: 30
