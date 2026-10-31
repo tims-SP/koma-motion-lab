@@ -207,6 +207,14 @@ export function evaluate(frame:number,total:number):FrameStats {
  const yaw=t<=2?360*smooth(t/2):360;
  const reach=smooth((t-2)/1.4),fore=smooth((t-3.1)/1.1);
  const rootYaw=wrap(yaw),headLocalYaw=t>2?38*Math.sin((t-2)*.85):0;
+ // Real close-up of the *same character in the same take* exposes eye, face and hair quality.
+ const closeup=smooth((t-4.05)/1.08);
+ const cameraScale=1-.67*closeup;
+ camera.left=-4.7*cameraScale;camera.right=4.7*cameraScale;
+ camera.top=2.64*cameraScale;camera.bottom=-2.64*cameraScale;
+ const eyeLevel=lerp(1.95,3.02,closeup);
+ camera.position.set(0,eyeLevel,15);camera.lookAt(0,eyeLevel,0);
+ camera.updateProjectionMatrix();
  const headYaw=rootYaw+headLocalYaw;
  const lightAngle=-1.3+t*.7,shadowShift=Math.sin(lightAngle)*.18;
  const blink=Math.exp(-Math.pow((t-4.83)*11,2));
