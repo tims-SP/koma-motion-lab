@@ -4,11 +4,7 @@
   "phase": "PLANNED_NOT_IMPLEMENTED",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
-  "parentPlan": "docs/experiments/MVP-009-head360-representation-plan.md",
-  "originalFailureCommit": "ba3d42bd4bb67c2b40d60a709bc4229cc35562d7",
-  "currentVisualStatus": "FAIL_VISUAL",
-  "candidateA": "DEFERRED_NOT_A_PREREQUISITE",
-  "candidateB": "multi_view_art_depth_billboards",
+  "parentPlan": "docs/MVP-009-plan.md",
   "firstImplementation": "B",
   "anglesDeg": [
     0,
@@ -46,16 +42,16 @@
     274
   ],
   "cameraPolicy": "Fixed camera + rotated object and orbit camera + fixed object, same relative view and pose",
-  "hardRule": "B first; reference 90 side face must exist; no 360/fullbody advancement until 0->90 and 270 profile plus mask/occlusion pass visually and programmatically",
+  "hardRule": "Accept real 90-degree profile and consistent depth/coverage through held-out angles before 360-degree head expansion; accept head360 before full-body",
   "tasks": [
     {
       "id": "T00",
-      "name": "freeze_baseline",
+      "name": "reference_baseline",
       "dependsOn": [],
-      "action": "snapshot fixed source commit, prior frame crops, repeat visible FAIL",
+      "action": "Register reference character, camera calibration, source hashes and reproducible diagnostic frames",
       "evidence": [
         "baseline.json",
-        "baseline-angles"
+        "reference-hashes.json"
       ],
       "priority": "PENDING",
       "status": "NOT_STARTED"
@@ -66,10 +62,10 @@
       "dependsOn": [
         "T00"
       ],
-      "action": "same beauty/id/depth/alpha fragment discard; negative controls MUST fail",
+      "action": "Verify shared Beauty/ID/Depth/Alpha fragment coverage with depth-order and mask fault injection",
       "evidence": [
-        "parity-report.json",
-        "negative-controls.png"
+        "coverage-parity.json",
+        "fault-injection.json"
       ],
       "priority": "BLOCKING",
       "status": "NOT_STARTED"
@@ -80,7 +76,7 @@
       "dependsOn": [
         "T00"
       ],
-      "action": "original independent side-facing nose, ear, hairline refs and stable IDs",
+      "action": "Create independently authored 0/45/90 reference head layers and held-out 30/60/75 angles with annotated profile and hairline landmarks",
       "evidence": [
         "reference-manifest.json",
         "landmarks.json",
@@ -90,30 +86,13 @@
       "status": "NOT_STARTED"
     },
     {
-      "id": "T03A",
-      "name": "volumetric_head",
-      "dependsOn": [
-        "T01",
-        "T02"
-      ],
-      "action": "ONLY IF documented B failure / high manual redraw cost, evaluate coarse 3D geometry or hybrid",
-      "evidence": [
-        "A-angle-board.png",
-        "A-depth-board.png",
-        "A-id-board.png",
-        "A-qa.json"
-      ],
-      "priority": "DEFERRED_FALLBACK",
-      "status": "DEFERRED"
-    },
-    {
       "id": "T03B",
       "name": "layered_head",
       "dependsOn": [
         "T01",
         "T02"
       ],
-      "action": "Start 0/45/90 independent head art with held-out 30/60/75 references, correct 3D anchor, per-view occlusion graph and split/merge masks; extend to 360 only after 0-90 visual PASS",
+      "action": "Render a single head at 0/15/30/45/60/75/90 with 3D anchors, view-dependent depth, semantic ArtMesh warp and shared coverage",
       "evidence": [
         "B-angle-board.png",
         "B-depth-board.png",
@@ -129,7 +108,7 @@
       "dependsOn": [
         "T03B"
       ],
-      "action": "Check B head visual acceptance & artwork cost first; optional A/hybrid only if B NO_GO",
+      "action": "Review true profile, held-out intermediate views, depth/ID agreement and authoring cost; decide expansion of the selected representation",
       "evidence": [
         "B-angles.png",
         "B-masks.png",
@@ -145,7 +124,7 @@
       "dependsOn": [
         "T04"
       ],
-      "action": "upgrade accepted B layered source art; correct keyed UV, view-dependent warp and new keyviews where needed; no global continuous UV requirement",
+      "action": "Extend head views to 180 and 270 with independently authored rear/left profile and key-specific VDD",
       "evidence": [
         "texture-qa.json",
         "art-compare-board.png"
@@ -159,7 +138,7 @@
       "dependsOn": [
         "T05"
       ],
-      "action": "independent head yaw, pitch diagnostic, blink with hair/skin contacts",
+      "action": "Combine independent head yaw, calibrated pitch, blink, and local hair movement",
       "evidence": [
         "dynamic-head.mp4",
         "dynamic-head-qa.json"
@@ -173,7 +152,7 @@
       "dependsOn": [
         "T06"
       ],
-      "action": "only after head visual pass, integrate articulated whole-body",
+      "action": "Integrate character body, bone/IK motion, foreshortening, foot contacts and full 192-frame acceptance",
       "evidence": [
         "fullbody-192.mp4",
         "fullbody-qa.json"
@@ -240,35 +219,6 @@
   ],
   "expectedExit": "PASS_HEAD360_VISUAL or FAIL_VISUAL with exact evidence",
   "ownerSelectedPlan": "B",
-  "ownerSelectionDate": "2026-11-01",
-  "planBDetail": "docs/experiments/MVP-009-plan-b-multiview-depth.md",
-  "planBFirstGate": {
-    "angleKeys": [
-      0,
-      45,
-      90
-    ],
-    "heldOutAngles": [
-      30,
-      60,
-      75
-    ],
-    "scope": "single neutral head",
-    "resolution": "head crop at least 512 pixels tall",
-    "requires": [
-      "real independent right-profile art",
-      "non-mirrored ear and hair",
-      "3D anchor reprojection",
-      "view-dependent draw-order/depth",
-      "beauty/ID/depth/alpha same discard",
-      "independent vision gate"
-    ],
-    "forbidden": [
-      "squeezed frontal face as profile",
-      "single whole-face crossfade",
-      "face depthTest false to force front",
-      "0 overlap PASS",
-      "fullbody before head pass"
-    ]
-  }
+  "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
+  "selectedImplementation": "B"
 }

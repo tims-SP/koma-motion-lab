@@ -1,4 +1,4 @@
-name: MVP-009 active-route integrity guard
+name: MVP-009 project integrity
 on:
   push:
     branches: [main]
@@ -6,41 +6,25 @@ on:
   workflow_dispatch:
 
 jobs:
-  guard:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check active route and ensure historical workflows remain disabled
-        shell: bash
+      - name: Validate single documentation index and selected implementation
         run: |
           set -euo pipefail
-          test -f docs/ACTIVE_PLAN.md
-          test -f docs/experiments/MVP-009-Euclid-route-decision.md
-          test -f docs/experiments/MVP-009-plan-b-multiview-depth.md
-          test -f docs/experiments/MVP-009-gates-and-tasks.json
-          test -f docs/archive/pre-mvp009-2026-11-01/README.md
-          test -f AGENTS.md
-          test -f README.md
-          # MVP-009 is the only executable workflow namespace. No legacy CI.
-          if find .github/workflows -maxdepth 1 -type f \
-              ! -name 'mvp009-*.yml' ! -name 'mvp009-*.yaml' | grep -q .; then
-            echo 'FAIL: non-MVP-009 legacy workflow reactivated'
-            find .github/workflows -maxdepth 1 -type f
-            exit 1
-          fi
-          # Historical plans must stay out of the active experiments directory.
-          if find docs/experiments -maxdepth 1 -type f \
-              ! -name 'MVP-009-*' | grep -q .; then
-            echo 'FAIL: historical plan found in active docs/experiments'
-            find docs/experiments -maxdepth 1 -type f
-            exit 1
-          fi
           node - <<'NODE'
-          const fs=require('fs');
-          const plan=JSON.parse(fs.readFileSync('docs/experiments/MVP-009-gates-and-tasks.json','utf8'));
-          if(plan.firstImplementation!=='B'||plan.ownerSelectedPlan!=='B')
-            throw new Error('Route selection changed without documented owner approval');
-          if(plan.currentVisualStatus==='PASS_VISUAL'&&plan.phase==='PLANNED_NOT_IMPLEMENTED')
-            throw new Error('Inconsistent visual acceptance/implementation status');
-          console.log('MVP009_ROUTE_GUARD_PASS');
+          const fs=require('fs'),cp=require('child_process');
+          const paths=cp.execFileSync('git',['ls-files'],{encoding:'utf8'}).trim().split('\n');
+          const md=paths.filter(x=>x.endsWith('.md')).sort();
+          if(JSON.stringify(md)!==JSON.stringify(['README.md','docs/MVP-009-plan.md'].sort()))
+            throw Error('Documentation tree should contain index and canonical plan: '+md.join(','));
+          const tasks=JSON.parse(fs.readFileSync('docs/MVP-009-tasks.json','utf8'));
+          if(tasks.parentPlan!=='docs/MVP-009-plan.md'||tasks.selectedImplementation!=='B')throw Error('Architecture mismatch');
+          const ids=new Set(tasks.tasks.map(t=>t.id));
+          for(const t of tasks.tasks)if(t.dependsOn.some(x=>!ids.has(x)))throw Error('Missing dependency in '+t.id);
+          for(const g of tasks.gates)if(!g.id||!g.status)throw Error('Missing gate data');
+          if(paths.filter(x=>x.startsWith('.github/workflows/')).some(x=>!x.startsWith('.github/workflows/mvp009-')))
+            throw Error('Unexpected workflow');
+          console.log('MVP009_PROJECT_INTEGRITY_PASS');
           NODE
