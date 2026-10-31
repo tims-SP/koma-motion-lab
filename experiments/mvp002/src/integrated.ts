@@ -317,7 +317,7 @@ window.renderIntegrated=evaluate;
 window.renderTurn360=(yaw,frameIndex)=>{
  if(!Number.isFinite(yaw))throw Error('Invalid yaw');
  qaRecorder.start(yaw,frameIndex);
- const stats=evaluate(frameIndex,192,yaw);
+ const stats=evaluate(Math.min(frameIndex,192),192,yaw);
  if(!qaRecorder.lastFrame)throw Error('No real frame evidence');
  return {stats,trace:qaRecorder.lastFrame};
 };
@@ -348,7 +348,20 @@ window.captureTurnPass=(pass,includeImage)=>{
    renderer.render(scene,camera);
    renderer.readRenderTargetPixels(target,0,0,width,height,pixels);
    const counts=countIdPixels(pixels,PART_IDS,(960*540)/(width*height));
-   if(pass==='id')qaRecorder.updateVisible(counts);
+   if(pass==='id'){
+     let x0=width,y0=height,x1=-1,y1=-1;
+     for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+       const p=(y*width+x)*4;
+       if(pixels[p]!==0||pixels[p+1]!==0||pixels[p+2]!==0){
+         x0=Math.min(x0,x);x1=Math.max(x1,x);
+         y0=Math.min(y0,y);y1=Math.max(y1,y);
+       }
+     }
+     const bounds:[number,number,number,number]=x1<0?[0,0,0,0]:
+       [x0*960/width,(height-1-y1)*540/height,
+        (x1+1)*960/width,(height-y0)*540/height];
+     qaRecorder.updateVisible(counts,bounds);
+   }
    result={counts:Object.fromEntries(counts)};
    if(includeImage){
      const cv=document.createElement('canvas');cv.width=width;cv.height=height;
