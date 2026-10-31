@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HEAD009 · 面部 0°–90° HTML 验收</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#172237;--edge:#35465f;--muted:#a9bbd0;--ink:#edf4fb;--accent:#83d8ee}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:16px 22px;border-bottom:1px solid var(--edge);display:flex;align-items:center;justify-content:space-between;gap:16px}
+h1{font-size:19px;margin:0}h2{font-size:15px;margin:0 0 12px}small,.hint{font-size:12px;color:var(--muted)}
+main{max-width:1450px;margin:auto;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:16px}
+.panel{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:16px;min-width:0}
+.view-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
+.viewport{position:relative;width:100%;aspect-ratio:1;background:#293249;border:1px solid var(--edge);border-radius:10px;overflow:hidden}
+.viewport canvas,.viewport img{width:100%;height:100%;display:block;object-fit:contain}
+#marks{position:absolute;inset:0;pointer-events:none}
+section.controls{display:grid;gap:16px}
+label{display:block;color:var(--muted);font-size:13px;margin-bottom:7px}
+button,select{border:1px solid #60718b;border-radius:8px;background:#233652;color:var(--ink);padding:9px 11px;font:inherit;cursor:pointer}
+button:hover,button:focus-visible{background:#304769;outline:2px solid var(--accent);outline-offset:1px}
+button.active{border-color:var(--accent);color:#aaf0ff}
+input[type="range"]{width:100%;accent-color:var(--accent)}
+input[type="checkbox"]{accent-color:var(--accent)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.kvs{display:grid;grid-template-columns:1fr auto;gap:7px;font-size:13px}
+.status{font-weight:650;padding:8px 10px;border-radius:7px;background:#233c55}
+.angle{font-size:32px;font-weight:700;font-variant-numeric:tabular-nums}
+.reference-title{display:flex;justify-content:space-between;margin:0 0 8px}
+.checkrow{display:flex;align-items:center;gap:7px;color:var(--ink)}
+fieldset{border:1px solid var(--edge);border-radius:9px;margin:0;padding:10px}
+legend{font-size:13px;color:var(--muted);padding:0 5px}
+.metrics{max-height:280px;overflow:auto;font-size:12px}
+.metrics table{border-collapse:collapse;width:100%}
+.metrics th,.metrics td{border-bottom:1px solid var(--edge);padding:7px;text-align:left;font-variant-numeric:tabular-nums}
+.metrics th:last-child,.metrics td:last-child{text-align:right}
+#log{font-family:ui-monospace,monospace;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--muted)}
+@media(max-width:950px){main{grid-template-columns:1fr}.view-grid{gap:8px}.panel{padding:12px}}
+@media(max-width:600px){.view-grid{grid-template-columns:1fr}header{padding:12px}.angle{font-size:25px}}
+</style>
+<!--HEAD009_EMBED-->
+</head>
+<body>
+<header><div><h1>HEAD009 · 视角与器官交互验收</h1><small>Plan B · 多视角原画 / ArtMesh / 3D Anchor / VDD</small></div><span class="hint" id="loadStatus" role="status">初始化...</span></header>
+<main>
+<section class="panel">
+ <div class="view-grid">
+  <div><div class="reference-title"><strong>实时 WebGL 渲染</strong><small id="renderLabel">Beauty</small></div><div class="viewport"><canvas id="stage" width="640" height="640" aria-label="渲染的动漫头部"></canvas><canvas id="marks" width="640" height="640" aria-hidden="true"></canvas></div></div>
+  <div id="refPanel"><div class="reference-title"><strong>独立原画参考</strong><small id="refLabel">0°</small></div><div class="viewport"><img id="refImage" alt="相应视角的独立 SVG 原画"><canvas id="refMarks" width="640" height="640" style="position:absolute;inset:0;pointer-events:none" aria-hidden="true"></canvas></div></div>
+ </div>
+ <p class="hint">左侧来自实际 Three.js 头部渲染器；右侧使用独立 SVG 原画。30°、60°、75° 为当前开发参考，最终验收还需要新绘制的留出视角。点位仅用于诊断。</p>
+ <div class="panel" style="padding:12px;margin-top:12px">
+ <div class="row" style="justify-content:space-between"><div class="angle"><output id="angleOut">0°</output></div><div class="row"><button type="button" id="prev" aria-label="向前一度">−1°</button><button type="button" id="play">播放旋转</button><button type="button" id="next" aria-label="向后一度">+1°</button></div></div>
+ <input id="yaw" type="range" min="0" max="90" step="1" value="0" aria-label="头部旋转角度">
+ <div class="row" id="keyAngles" aria-label="常用角度"><button data-yaw="0">0°</button><button data-yaw="15">15°</button><button data-yaw="30">30°</button><button data-yaw="45">45°</button><button data-yaw="60">60°</button><button data-yaw="75">75°</button><button data-yaw="90">90°</button></div>
+ </div>
+ </section>
+ <section class="controls">
+ <div class="panel"><h2>显示与诊断</h2>
+  <label for="pass">渲染通道</label><select id="pass" style="width:100%"><option value="0">Beauty · 最终外观</option><option value="1">Part-ID · 部件身份</option><option value="2">Depth · 遮挡诊断</option><option value="3">Alpha · 覆盖检查</option></select>
+  <div class="row" style="margin-top:12px"><label class="checkrow"><input type="checkbox" id="landmarks" checked>器官语义点</label><label class="checkrow"><input type="checkbox" id="showRef" checked>原画对照</label></div>
+  <div class="row" style="margin-top:12px"><button id="runQa">执行当前角度 QA</button><button id="saveShot">保存截图</button><button id="saveReport">导出 QA JSON</button></div>
+ </div>
+ <div class="panel"><h2>定位与测量</h2><div class="kvs"><span>当前角度</span><strong id="angleCell">0°</strong><span>参考角度</span><strong id="refAngleCell">0°</strong><span>器官点位平均偏差</span><strong id="meanCell">—</strong><span>最大偏差</span><strong id="maxCell">—</strong></div><p class="hint" id="referenceNote"></p><div id="qaStatus" class="status">选择「执行当前角度 QA」获取像素检查</div></div>
+ <div class="panel"><h2>器官偏差 · 对照参考角度</h2><div class="metrics" id="organTable" aria-live="polite"></div></div>
+ <div class="panel"><h2>验收说明</h2><div class="hint">黄色：渲染器预计的器官位置。青色：独立原画标注。仅在完全相同角度叠加目标点；对过渡角度不将相邻原画冒充准确目标。</div><p class="hint">快捷键：←/→ 微调角度，空格播放/暂停。页面自包含，无外部网络请求。</p><div id="log"></div></div>
+ </section>
+</main>
+<script type="module" src="/src/review.ts"></script>
+</body>
+</html>
