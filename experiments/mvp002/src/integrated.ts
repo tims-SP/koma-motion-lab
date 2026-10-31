@@ -41,7 +41,7 @@ const lerp=(a:number,b:number,t:number)=>a+(b-a)*t;
 const smooth=(x:number)=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x);};
 const wrap=(a:number)=>(a%360+360)%360;
 const DEG=Math.PI/180;
-const contour=(pairs:number[][]):readonly XY[]=>pairs as XY[];
+const contour=(pairs:number[][]):readonly XY[]=>pairs.map(p=>[p[0],p[1]] as XY);
 const base=contour([[-.65,.74],[-.35,.93],[.2,.98],[.64,.78],[.83,.24],[.75,-.39],[.39,-.82],[0,-1],[-.43,-.78],[-.8,-.35],[-.82,.26]]);
 const side=contour([[-.49,.75],[-.30,.94],[.20,.92],[.53,.62],[.58,.17],[.90,-.07],[.52,-.64],[.06,-.98],[-.38,-.79],[-.60,-.35],[-.60,.28]]);
 const rear=contour([[-.69,.70],[-.30,.93],[.25,.95],[.68,.72],[.82,.20],[.72,-.43],[.40,-.86],[0,-.96],[-.48,-.80],[-.80,-.37],[-.83,.19]]);
