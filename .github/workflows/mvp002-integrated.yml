@@ -6,6 +6,9 @@ on:
     paths:
       - 'experiments/mvp002/**'
       - '.github/workflows/mvp002-integrated.yml'
+concurrency:
+  group: mvp002-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
