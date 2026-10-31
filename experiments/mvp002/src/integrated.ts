@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {createRegisteredArt, artTextureProof, artTexturePNG} from './rgba-view-art';
 
 /**
  * MVP-003: exactly one small 3-keyview, 12-part character driven by
@@ -7,11 +8,11 @@ import * as THREE from 'three';
  * This is technical proxy art: no complex game assets and no photoreal claim.
  */
 type XY = readonly [number, number];
-type View = 0 | 90 | 180;
+type View = 0 | 90 | 180 | 270;
 type PartId = 'backHair'|'torso'|'skirt'|'face'|'fringe'|'eyes'|'scarf'|'emblem'|'leftArm'|'rightArm'|'leftLeg'|'rightLeg';
 type Role = 'body'|'head'|'arm'|'leg';
 interface KeyArt { yaw:View; contour:readonly XY[]; shift:XY; visible:number; }
-interface Part { id:PartId; role:Role; anchor:THREE.Vector3; size:XY; color:string; keys:readonly [KeyArt,KeyArt,KeyArt]; }
+interface Part { id:PartId; role:Role; anchor:THREE.Vector3; size:XY; color:string; keys:readonly [KeyArt,KeyArt,KeyArt,KeyArt]; }
 interface FrameStats {
   frame:number; time:number; yaw:number; headLocalYaw:number;
   partCount:number; keyViewCount:number; artMeshCount:number;
@@ -21,6 +22,8 @@ interface FrameStats {
 declare global {interface Window {
   renderIntegrated:(frame:number,total:number)=>FrameStats;
   integratedInfo:{parts:number;views:number;method:string};
+  integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
+  exportArtPNG:(partId:PartId,angle:View)=>string;
 }}
 
 const screen=document.querySelector<HTMLCanvasElement>('#viewport');
@@ -35,7 +38,6 @@ const camera=new THREE.OrthographicCamera(-4.7,4.7,2.64,-2.64,.1,60);
 camera.position.set(0,1.95,15);camera.lookAt(0,1.95,0);camera.updateProjectionMatrix();
 const root=new THREE.Group();scene.add(root);
 const drawn:THREE.Object3D[]=[];
-const textures=new Map<string,THREE.CanvasTexture>();
 const V=(x:number,y:number,z=0)=>new THREE.Vector3(x,y,z);
 const lerp=(a:number,b:number,t:number)=>a+(b-a)*t;
 const smooth=(x:number)=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x);};
@@ -48,11 +50,15 @@ const rear=contour([[-.69,.70],[-.30,.93],[.25,.95],[.68,.72],[.82,.20],[.72,-.4
 const skirtFront=contour([[-.47,.92],[-.28,1],[.27,1],[.49,.90],[.92,-.60],[.67,-.82],[.22,-.74],[-.13,-.90],[-.54,-.76],[-.91,-.59],[-.72,.2]]);
 const skirtSide=contour([[-.37,.92],[-.20,1],[.22,1],[.42,.85],[.66,-.59],[.38,-.77],[.08,-.79],[-.23,-.86],[-.52,-.73],[-.69,-.55],[-.47,.12]]);
 const elong=contour([[-.67,.82],[-.38,.99],[.33,1],[.70,.76],[.85,.38],[.82,-.28],[.48,-.87],[0,-1],[-.49,-.85],[-.88,-.32],[-.87,.31]]);
-const patch=(front:readonly XY[],sideC:readonly XY[],back:readonly XY[],shifts:readonly XY[]=[[0,0],[0,0],[0,0]],vis:number[]=[1,1,1]):[KeyArt,KeyArt,KeyArt]=>[
- {yaw:0,contour:front,shift:shifts[0],visible:vis[0]},
- {yaw:90,contour:sideC,shift:shifts[1],visible:vis[1]},
- {yaw:180,contour:back,shift:shifts[2],visible:vis[2]}
-];
+const patch=(front:readonly XY[],sideC:readonly XY[],back:readonly XY[],shifts:readonly XY[]=[[0,0],[0,0],[0,0]],vis:number[]=[1,1,1]):[KeyArt,KeyArt,KeyArt,KeyArt]=>{
+ const left=sideC.map(([x,y])=>[-x-.025*(1-y*y),y+.012*(1-Math.abs(x))] as XY);
+ return [
+  {yaw:0,contour:front,shift:shifts[0],visible:vis[0]},
+  {yaw:90,contour:sideC,shift:shifts[1],visible:vis[1]},
+  {yaw:180,contour:back,shift:shifts[2],visible:vis[2]},
+  {yaw:270,contour:left,shift:[-(shifts[1][0]),shifts[1][1]],visible:vis[1]}
+ ];
+};
 const simple=patch(base,side,rear);
 const defs:Part[]=[
  {id:'backHair',role:'head',anchor:V(0,.05,-.21),size:[.57,.69],color:'#303b65',keys:patch(base,side,elong,[[0,0],[.08,.015],[0,0]])},
@@ -69,42 +75,53 @@ const defs:Part[]=[
  {id:'rightLeg',role:'leg',anchor:V(.21,1.08,.02),size:[.20,.82],color:'#d8b6ab',keys:simple},
 ];
 if(defs.length!==12 || defs.some(x=>x.keys.some(k=>k.contour.length!==x.keys[0].contour.length)))throw Error('Incompatible key topology');
-function keyPair(yaw:number):{a:KeyArt;b:KeyArt;t:number;indices:readonly number[]} {
-  const a=wrap(yaw), degs=[0,90,180,270,360],segment=Math.min(3,Math.floor(a/90)),t=smooth((a-degs[segment])/90);
-  // Fourth 270-degree key is the synthesized mirrored side, as permitted for
-  // this symmetric stylized proxy only; it is NOT a replacement for real left art.
-  const indices=[segment,(segment+1)%4];
-  return {a:defs[0].keys[0],b:defs[0].keys[0],t,indices};
+function keyPair(yaw:number):{t:number;indices:readonly [number,number]} {
+  const a=wrap(yaw),segment=Math.min(3,Math.floor(a/90));
+  return {t:smooth((a-segment*90)/90),indices:[segment,(segment+1)%4]};
 }
 function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;keyIndex:number} {
  const {t,indices}=keyPair(yaw);
- const resolve=(n:number):{key:KeyArt;flip:boolean}=>n===3?{key:part.keys[1],flip:true}:{key:part.keys[n],flip:false};
- const A=resolve(indices[0]),B=resolve(indices[1]);
- const point=(k:{key:KeyArt;flip:boolean},i:number):XY=> {
-   const p=k.key.contour[i];return [p[0]*(k.flip?-1:1),p[1]];
- };
+ const A=part.keys[indices[0]],B=part.keys[indices[1]];
  const s=part.keys[0].contour.map((_,i)=>{
-   const a=point(A,i),b=point(B,i);
+   const a=A.contour[i],b=B.contour[i];
    return [lerp(a[0],b[0],t),lerp(a[1],b[1],t)] as XY;
  });
- const ax=A.key.shift[0]*(A.flip?-1:1),bx=B.key.shift[0]*(B.flip?-1:1);
- return {shape:s,shift:[lerp(ax,bx,t),lerp(A.key.shift[1],B.key.shift[1],t)],
-         visible:lerp(A.key.visible,B.key.visible,t),keyIndex:indices[0]};
+ return {shape:s,shift:[lerp(A.shift[0],B.shift[0],t),lerp(A.shift[1],B.shift[1],t)],
+         visible:lerp(A.visible,B.visible,t),keyIndex:indices[0]};
 }
-function textureFor(part:Part):THREE.CanvasTexture {
- const existing=textures.get(part.id);if(existing)return existing;
- const cv=document.createElement('canvas');cv.width=128;cv.height=128;
- const ctx=cv.getContext('2d');if(!ctx)throw Error('2D texture drawing unavailable');
- const grad=ctx.createLinearGradient(0,0,110,125);
- grad.addColorStop(0,part.color);grad.addColorStop(.65,part.color);grad.addColorStop(1,'#26334e');
- ctx.fillStyle=grad;ctx.fillRect(0,0,128,128);
- ctx.lineWidth=1.7;ctx.strokeStyle='rgba(255,255,255,.18)';
- for(let x=14;x<128;x+=22){ctx.beginPath();ctx.moveTo(x,-3);ctx.lineTo(x+27,132);ctx.stroke();}
- if(part.id==='torso'||part.id==='skirt'){
-   ctx.fillStyle='rgba(255,245,215,.08)';ctx.fillRect(55,0,5,128);
- }
- const tex=new THREE.CanvasTexture(cv);tex.colorSpace=THREE.SRGBColorSpace;
- textures.set(part.id,tex);return tex;
+function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMaterial {
+ const pair=keyPair(yaw);
+ const angles:[View,View,View,View]=[0,90,180,270];
+ return new THREE.ShaderMaterial({
+  uniforms:{
+   artA:{value:createRegisteredArt(part,angles[pair.indices[0]])},
+   artB:{value:createRegisteredArt(part,angles[pair.indices[1]])},
+   transition:{value:pair.t},
+   strength:{value:opacity}
+  },
+  transparent:true,depthTest:true,depthWrite:true,side:THREE.DoubleSide,
+  vertexShader:[
+   'varying vec2 registeredUV;',
+   'void main(){ registeredUV=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }'
+  ].join('\n'),
+  fragmentShader:[
+   'uniform sampler2D artA;',
+   'uniform sampler2D artB;',
+   'uniform float transition;',
+   'uniform float strength;',
+   'varying vec2 registeredUV;',
+   'void main(){',
+   '  vec4 a=texture2D(artA,registeredUV);',
+   '  vec4 b=texture2D(artB,registeredUV);',
+   '  float alpha=mix(a.a,b.a,transition)*strength;',
+   '  if(alpha < 0.08) discard;',
+   '  vec3 color=mix(a.rgb,b.rgb,transition);',
+   '  gl_FragColor=vec4(color,alpha);',
+   '  #include <tonemapping_fragment>',
+   '  #include <colorspace_fragment>',
+   '}'
+  ].join('\n')
+ });
 }
 function emitGeometry(vertices:THREE.Vector3[],uvs:XY[],indices:number[],material:THREE.Material):void {
  const g=new THREE.BufferGeometry(),positions=new Float32Array(vertices.flatMap(p=>[p.x,p.y,p.z]));
@@ -125,13 +142,13 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squas
  for(const [x,y] of f.shape){
    vertices.push(V(center.x+f.shift[0]+x*part.size[0]*scale,
                    center.y+f.shift[1]+y*part.size[1]*scale*squashY,center.z));
-   uvs.push([(x+1)/2,(y+1)/2]);
+   // The registered UV belongs to the stable semantic vertex ID,
+   // not its deformed intermediate screen position.
+   const canonical=part.keys[0].contour[uvs.length-1];
+   uvs.push([(canonical[0]+1)/2,(canonical[1]+1)/2]);
  }
  const indices:number[]=[];for(let i=1;i<=n;i++)indices.push(0,i,i%n+1);
- emitGeometry(vertices,uvs,indices,new THREE.MeshBasicMaterial({
-   map:textureFor(part),side:THREE.DoubleSide,transparent:amount<.999,
-   opacity:amount,depthTest:true,depthWrite:amount>.99
- }));
+ emitGeometry(vertices,uvs,indices,registeredMaterial(part,yaw,amount));
 }
 function polygon(points:THREE.Vector3[],color:string,opacity=1):void {
  const ctr=new THREE.Vector3();
@@ -166,7 +183,7 @@ function solveIK(shoulder:THREE.Vector3,target:THREE.Vector3,L1:number,L2:number
  return {elbow,hand,error:hand.distanceTo(target)};
 }
 function cleanup():void{
- for(const obj of drawn){root.remove(obj);if(obj instanceof THREE.Mesh)obj.geometry.dispose();}
+ for(const obj of drawn){root.remove(obj);if(obj instanceof THREE.Mesh){obj.geometry.dispose();if(Array.isArray(obj.material))obj.material.forEach(m=>m.dispose());else obj.material.dispose();}}
  drawn.length=0;
 }
 function canvasLight(x:number,y:number,z:number,shift:number,opacity:number):void {
@@ -240,13 +257,8 @@ export function evaluate(frame:number,total:number):FrameStats {
  }
  const eyes=lookHead(defs[5].anchor);
  artMesh(defs[5],eyes,headYaw,1,1,1-.95*blink);
- if(sample(defs[5],headYaw).visible>.2) {
-   for(const side of [-1,1]){
-     const v=eyes.clone().add(V(side*.135,0,.08));
-     polygon([V(v.x-.044,v.y+.03,v.z),V(v.x+.045,v.y+.03,v.z),
-       V(v.x+.038,v.y-.02+blink*.047,v.z),V(v.x-.045,v.y-.02+blink*.047,v.z)],'#304b70',.9);
-   }
- }
+ // The eyes and eyeliner are painted into the transparent eye ArtMesh layer.
+ // Vertex compression above produces blink; avoid duplicated procedural eyes.
  artMesh(defs[4],lookHead(defs[4].anchor),headYaw);
  // Occasional light streak crosses face. Arm-cast shadow only while in front.
  if(rig.hand.z>rootChest.z+.15 && reach>.2){
@@ -259,7 +271,7 @@ export function evaluate(frame:number,total:number):FrameStats {
  polygon([V(-4.7,.03,-4),V(4.7,.03,-4),V(4.7,0,-4),V(-4.7,0,-4)],'#60718a');
  renderer.render(scene,camera);
  const result:FrameStats={
-   frame,time:t,yaw,headLocalYaw,partCount:defs.length,keyViewCount:3,
+   frame,time:t,yaw,headLocalYaw,partCount:defs.length,keyViewCount:4,
    artMeshCount:drawn.filter(o=>o instanceof THREE.Mesh).length,
    ikError:rig.error,handMinusTorsoDepth:rig.hand.z-rootChest.z,
    armLocalYaw,lightAngle,shadowOffset:shadowShift,blink,
@@ -268,5 +280,10 @@ export function evaluate(frame:number,total:number):FrameStats {
  return result;
 }
 window.renderIntegrated=evaluate;
-window.integratedInfo={parts:defs.length,views:3,method:'3D anchors + cyclic key contour VDD + UV ArtMesh + 3D IK + depth-mask + animated art shadow'};
+window.integratedInfo={parts:defs.length,views:4,method:'4 registered transparent RGBA key images / part + fixed UV ArtMesh + VDD + 3D IK + occlusion + animated art shadow'};
+window.integratedArtProof=artTextureProof(defs[3]);
+window.exportArtPNG=(partId,angle)=>{
+ const part=defs.find(p=>p.id===partId);if(!part)throw Error('unknown part '+partId);
+ return artTexturePNG(part,angle);
+};
 evaluate(0,144);
