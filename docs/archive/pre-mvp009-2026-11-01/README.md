@@ -3,10 +3,10 @@
 Snapshot from `ff0282eeb5099cc1ec2fd4e9f67161b7a0cd50eb`, archived on 2026-11-01. 
 These documents and workflow YAMLs are retained for scientific reproducibility, failed QA evidence, Rive/Spine/Godot legacy experiments and historical decisions. **They are NOT instructions and should NOT be used to choose an active architecture.** Git history preserves the original file paths/contents at the snapshot SHA, so any old internal relative links can be inspected at that commit.
 
-**Current active plan:** [../../../ACTIVE_PLAN.md](../../../ACTIVE_PLAN.md) (or repository `docs/ACTIVE_PLAN.md`).  
+**Current active plan:** [../../ACTIVE_PLAN.md](../../ACTIVE_PLAN.md) (or repository `docs/ACTIVE_PLAN.md`).  
 **Current active experimental route:** `MVP-009`, Euclid-inspired Plan B.
 
-Archived files: **49** total (22 experiments, 7 production reports, 1 validation reports, 19 legacy workflow definitions).
+Archived legacy documents and workflows: **49** total (22 experiments, 7 production reports, 1 validation reports, 19 legacy workflow definitions).
 
 Old workflows have been MOVED OUT of `.github/workflows`; GitHub Actions will no longer auto-trigger them from this branch. They can be restored manually for historical regressions, but require explicit authorization and must not count as MVP-009 acceptance.
 
@@ -65,3 +65,9 @@ Old workflows have been MOVED OUT of `.github/workflows`; GitHub Actions will no
 ## Reproducibility
 
 Retrieve the original repository tree at commit [ff0282eeb5099cc1ec2fd4e9f67161b7a0cd50eb](https://github.com/tims-SP/koma-motion-lab/tree/ff0282eeb5099cc1ec2fd4e9f67161b7a0cd50eb) to run a historical experiment. Historical code under `experiments/mvp001/`, `experiments/mvp002/` and `scripts/` is retained as a baseline. It has no status as an accepted Euclid/360 implementation.
+
+## Preserved historical entrypoints (non-authoritative)
+
+- `README.md` → `docs/archive/pre-mvp009-2026-11-01/entrypoints/old-README.md` (original at `ff0282eeb5099cc1ec2fd4e9f67161b7a0cd50eb`)
+- `AGENTS.md` → `docs/archive/pre-mvp009-2026-11-01/entrypoints/old-AGENTS.md` (original at `ff0282eeb5099cc1ec2fd4e9f67161b7a0cd50eb`)
+- `experiments/mvp002/README.md` → `docs/archive/pre-mvp009-2026-11-01/entrypoints/old-mvp002-README.md` (original at `ff0282eeb5099cc1ec2fd4e9f67161b7a0cd50eb`)

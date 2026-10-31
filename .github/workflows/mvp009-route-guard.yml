@@ -1,0 +1,46 @@
+name: MVP-009 active-route integrity guard
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check active route and ensure historical workflows remain disabled
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f docs/ACTIVE_PLAN.md
+          test -f docs/experiments/MVP-009-Euclid-route-decision.md
+          test -f docs/experiments/MVP-009-plan-b-multiview-depth.md
+          test -f docs/experiments/MVP-009-gates-and-tasks.json
+          test -f docs/archive/pre-mvp009-2026-11-01/README.md
+          test -f AGENTS.md
+          test -f README.md
+          # MVP-009 is the only executable workflow namespace. No legacy CI.
+          if find .github/workflows -maxdepth 1 -type f \
+              ! -name 'mvp009-*.yml' ! -name 'mvp009-*.yaml' | grep -q .; then
+            echo 'FAIL: non-MVP-009 legacy workflow reactivated'
+            find .github/workflows -maxdepth 1 -type f
+            exit 1
+          fi
+          # Historical plans must stay out of the active experiments directory.
+          if find docs/experiments -maxdepth 1 -type f \
+              ! -name 'MVP-009-*' | grep -q .; then
+            echo 'FAIL: historical plan found in active docs/experiments'
+            find docs/experiments -maxdepth 1 -type f
+            exit 1
+          fi
+          node - <<'NODE'
+          const fs=require('fs');
+          const plan=JSON.parse(fs.readFileSync('docs/experiments/MVP-009-gates-and-tasks.json','utf8'));
+          if(plan.firstImplementation!=='B'||plan.ownerSelectedPlan!=='B')
+            throw new Error('Route selection changed without documented owner approval');
+          if(plan.currentVisualStatus==='PASS_VISUAL'&&plan.phase==='PLANNED_NOT_IMPLEMENTED')
+            throw new Error('Inconsistent visual acceptance/implementation status');
+          console.log('MVP009_ROUTE_GUARD_PASS');
+          NODE
