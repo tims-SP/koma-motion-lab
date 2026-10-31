@@ -1,0 +1,93 @@
+{
+  "schema": "core026-m1c2a-ci-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_REVIEW_PREPARATION_AND_PROVENANCE_V2_ONLY",
+  "code_commit": "54d1c9f0b900f87974e3dba788bacde967aaecb2",
+  "attribution": {
+    "initial_patch_design": "Codex",
+    "initial_patch_application_and_prepare_verify": "mcode 0.7.2",
+    "provenance_fix": "Codex",
+    "independent_acceptance": "Codex"
+  },
+  "runs": [
+    {
+      "id": 41155423219,
+      "job_id": 124401041349,
+      "kind": "supervisor",
+      "conclusion": "success"
+    },
+    {
+      "id": 41155423100,
+      "job_id": 124401041065,
+      "kind": "legacy factory full video regression",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 13024108701,
+    "all_files_json": true,
+    "files": 11,
+    "sha256_verified_against_job_log": "088a3b75926b298dc00ebaf02cc54d22756fe266aacd366c9d20b11f02d27673",
+    "downloaded_and_reports_checked": true
+  },
+  "registration_full_report_comparison": {
+    "artifact_id": 13024108701,
+    "artifact_sha256": "088a3b75926b298dc00ebaf02cc54d22756fe266aacd366c9d20b11f02d27673",
+    "text_files": 11,
+    "ci_registration_sha256": "ca00bdb9f407ca9185a21f2d8872cdf10c035067b3095dc02229ed72739c9260",
+    "local_registration_sha256": "b44386f6f206a08c9b40bf2a1d777bec20244f5e864e56765fb32fb3e3b71dc8",
+    "difference_count": 5,
+    "first_differences": [
+      [
+        "$.entries[15].candidates[0].distance_from_global_translation_px",
+        0.7071253993556453,
+        0.7071253993556454,
+        1.1102230246251565e-16
+      ],
+      [
+        "$.entries[32].candidates[0].distance_from_global_translation_px",
+        1.118017740499471,
+        1.1180177404994711,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[37].candidates[0].distance_from_global_translation_px",
+        1.414234492781407,
+        1.4142344927814068,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[45].candidates[0].distance_from_global_translation_px",
+        1.4141941806230431,
+        1.4141941806230434,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[52].candidates[0].distance_from_global_translation_px",
+        0.5000225000606957,
+        0.5000225000606958,
+        1.1102230246251565e-16
+      ]
+    ],
+    "max_numeric_difference": 2.220446049250313e-16
+  },
+  "constraints_sha256": "a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83",
+  "observed_ci_outputs": {
+    "m1c1_negative_cases": 11,
+    "all_rejected_by_both": true,
+    "repeated_build_identical": true,
+    "review_slots": 19,
+    "review_poses": 9,
+    "review_cells": 171,
+    "reviewed": 0,
+    "fit_eligible": 0,
+    "review_regression_checks": 17,
+    "review_rejected_corruptions": 14,
+    "original_config_unchanged": true
+  },
+  "media_draft": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-edc2226c053de04b428d",
+  "pending_central_review": "central-review-pending-order.json; not applied because follow-up mcode operation was rejected by automatic review for potential unknown OSS egress. Not proof of an observed upload.",
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED",
+  "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
+}

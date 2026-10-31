@@ -1,0 +1,184 @@
+{
+  "schema": "core026-upstream-skills-and-rendering-survey/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "project": "tims-SP/koma-motion-lab feature/koma-25d-core-021",
+  "baseline_commit": "961648f85bde41fd5030ad44c2a917f3acd713d6",
+  "method": "Public web discovery plus pinned GitHub recursive-tree/README/source inspection; repository history searched to avoid restarting CORE023 work",
+  "status": "READ_ONLY_SOURCE_AUDIT_COMPLETE; UPSTREAM_RUNTIME_NOT_TESTED",
+  "skills_installed": [],
+  "runtime_or_dependency_changes": [],
+  "candidates": [
+    {
+      "repo": "CloudAI-X/threejs-skills",
+      "kind": "agent_skills",
+      "files": [
+        "skills/threejs-materials/SKILL.md",
+        "skills/threejs-postprocessing/SKILL.md",
+        "skills/threejs-shaders/SKILL.md"
+      ],
+      "priority": "P0_REFERENCE_ONLY",
+      "finding": "General material/shader/framebuffer guidance, targets r186; project pinned r180 with a deliberately raw PSD color arithmetic contract. No drop-in rig/depth solver. Use selectively, no global renderer or color-space replacement.",
+      "commit": "0e181866f095b5f06d005133876e926515390d95",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-materials/SKILL.md",
+        "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-postprocessing/SKILL.md",
+        "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-shaders/SKILL.md"
+      ]
+    },
+    {
+      "repo": "JudyZZ/threejs-parallax-skill",
+      "kind": "agent_skill",
+      "files": [
+        "threejs-parallax/SKILL.md"
+      ],
+      "priority": "EXCLUDE_CHARACTER_DEPTH_SOLUTION",
+      "finding": "Stacked PlaneGeometry, per-layer translation/renderOrder; explicitly depthWrite=false and depthTest=false. Suitable for parallax UI/background only.",
+      "commit": "2e9e083cba725a734791710ccc043116572f0be7",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/JudyZZ/threejs-parallax-skill/blob/2e9e083cba725a734791710ccc043116572f0be7/threejs-parallax/SKILL.md"
+      ]
+    },
+    {
+      "repo": "gkjohnson/three-depthpeeling-demo",
+      "kind": "rendering_implementation",
+      "files": [
+        "index.html",
+        "index.js",
+        "README.md"
+      ],
+      "priority": "P0_FIRST_REPRODUCTION",
+      "finding": "Import map pinned three0.180.0, matches project. Actual reassignable depth textures and per-depth layer render targets/composition/discard. Prototype depth peeling, not a solution for PSD Multiply, native clip semantics, physical depth or infinite layer count.",
+      "commit": "e6b57e1f38d4adcabd8c594feb7a671731289c18",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/gkjohnson/three-depthpeeling-demo/blob/e6b57e1f38d4adcabd8c594feb7a671731289c18/index.html",
+        "https://github.com/gkjohnson/three-depthpeeling-demo/blob/e6b57e1f38d4adcabd8c594feb7a671731289c18/index.js",
+        "https://github.com/gkjohnson/three-depthpeeling-demo/blob/e6b57e1f38d4adcabd8c594feb7a671731289c18/README.md"
+      ]
+    },
+    {
+      "repo": "stevinz/three-wboit",
+      "kind": "rendering_implementation",
+      "files": [
+        "README.md",
+        "package.json",
+        "src/WboitPass.js",
+        "src/materials/MeshWboitMaterial.js"
+      ],
+      "priority": "COMPARISON_ONLY",
+      "finding": "Approximate WBOIT1.0.15; README notes artificially high transparency near opacity1. Source uses accumulation custom blend factors. Declared three peer>=.125 is not proof of .180 compatibility or fidelity. Not automatic replacement for ordered artwork with11Multiply layers.",
+      "commit": "d44c9450f8b240154cb840cb2bf503b1491b92eb",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/stevinz/three-wboit/blob/d44c9450f8b240154cb840cb2bf503b1491b92eb/README.md",
+        "https://github.com/stevinz/three-wboit/blob/d44c9450f8b240154cb840cb2bf503b1491b92eb/package.json",
+        "https://github.com/stevinz/three-wboit/blob/d44c9450f8b240154cb840cb2bf503b1491b92eb/src/WboitPass.js",
+        "https://github.com/stevinz/three-wboit/blob/d44c9450f8b240154cb840cb2bf503b1491b92eb/src/materials/MeshWboitMaterial.js"
+      ]
+    },
+    {
+      "repo": "google/monster-mash",
+      "kind": "geometry_implementation",
+      "files": [
+        "README.md",
+        "src/defengarapl.h"
+      ],
+      "priority": "P1_M3_GEOMETRY_CANDIDATE_AFTER_M2B",
+      "finding": "Sketch inflation into3D and animation; C++/Emscripten, DefEngARAPL with region inequality/depth/ARAP constraints. Candidate geometry/deformation methods, not accurate anime face reconstruction or ready Aka pipeline.",
+      "commit": "eb2869ad23401f8bcb3c9648d824de6b3d7e1818",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/google/monster-mash/blob/eb2869ad23401f8bcb3c9648d824de6b3d7e1818/README.md",
+        "https://github.com/google/monster-mash/blob/eb2869ad23401f8bcb3c9648d824de6b3d7e1818/src/defengarapl.h"
+      ]
+    },
+    {
+      "repo": "Live2D/CubismWebFramework",
+      "kind": "official_runtime",
+      "files": [
+        "src/rendering/cubismrenderer_webgl.ts"
+      ],
+      "priority": "P0_MASK_CONTEXT_REFERENCE",
+      "finding": "Official mask-context/framebuffer and offscreen rendering implementation. Reference context separation; Cubism model/runtime-specific and does not define Inox ClipToLower or our PSD truth.",
+      "commit": "d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/Live2D/CubismWebFramework/blob/d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b/src/rendering/cubismrenderer_webgl.ts"
+      ]
+    },
+    {
+      "repo": "shitagaki-lab/see-through",
+      "kind": "asset_decomposition",
+      "files": [
+        "README.md",
+        "inference/scripts/inference_psd.py"
+      ],
+      "priority": "P2_EXISTING_TRACK_DO_NOT_RESTART",
+      "finding": "Already pinned and assessed in CORE023. Completed semantic RGBA layers/pseudo-depth candidate; authors explicitly exclude rigging. Previous official anonymous inference failed ZeroGPU quota, no PSD obtained; original62 Aka layers already available.",
+      "commit": "df019de5129d6c4b406587a14c3501669441a783",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/shitagaki-lab/see-through/blob/df019de5129d6c4b406587a14c3501669441a783/README.md",
+        "https://github.com/shitagaki-lab/see-through/blob/df019de5129d6c4b406587a14c3501669441a783/inference/scripts/inference_psd.py"
+      ]
+    },
+    {
+      "repo": "SparcAI-Inc/Bunraku",
+      "kind": "research_direction",
+      "files": [
+        "readme.md"
+      ],
+      "priority": "WATCH_NOT_EXECUTABLE",
+      "finding": "At audited commit, recursive repository tree contains only readme.md. Paper/project page are research references; no executable inference/training code in this repository at this revision.",
+      "commit": "b9cc79049a50e36b1ba10db6140edb166f500e4e",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/SparcAI-Inc/Bunraku/blob/b9cc79049a50e36b1ba10db6140edb166f500e4e/readme.md"
+      ]
+    },
+    {
+      "repo": "facebookresearch/AnimatedDrawings",
+      "kind": "deformation_implementation",
+      "files": [
+        "README.md",
+        "animated_drawings/model/arap.py"
+      ],
+      "priority": "P1_SMALL_ARAP_REFERENCE",
+      "finding": "Concrete NumPy/SciPy ARAP solver with tests; repository archived2025-09-03.2D body/drawing deformation reference, not3D anime head turn.",
+      "commit": "b859684857519c7424da51a0b0862fbd1fd258f4",
+      "audit_status": "SOURCE_READ_ONLY; NOT_INSTALLED_OR_RENDER_TESTED",
+      "urls": [
+        "https://github.com/facebookresearch/AnimatedDrawings/blob/b859684857519c7424da51a0b0862fbd1fd258f4/README.md",
+        "https://github.com/facebookresearch/AnimatedDrawings/blob/b859684857519c7424da51a0b0862fbd1fd258f4/animated_drawings/model/arap.py"
+      ]
+    }
+  ],
+  "standards": [
+    {
+      "url": "https://www.w3.org/TR/2024/CRD-compositing-1-20240321/",
+      "use": "Normal/Multiply plus premultiplied source-over math; keep project pixel/color and quantization contract explicit"
+    },
+    {
+      "url": "https://threejs.org/docs/pages/OITPassNode.html",
+      "use": "Current documented OIT qualifies only NormalBlending without transmission; not present in pinned project r180 package, not a drop-in replacement for11sourceMultiply"
+    },
+    {
+      "url": "https://threejs.org/manual/pages/transparency.html",
+      "use": "Object-level transparent sorting is not a general per-triangle/fragment visibility solution"
+    }
+  ],
+  "decision": {
+    "P0": "Reproduce r180 depth-texture/depth-peeling mechanisms in isolated synthetic fixture, preserve ordered Multiply and explicit art overrides. Read selected shader/material skill sections as references, adapting for r180 and raw PSD arithmetic.",
+    "P1": "After complete M2B, compare Monster Mash depth/ARAP and AnimatedDrawings small ARAP solver as geometry/deformation candidates. They do not infer ground-truth character depth.",
+    "P2": "Keep existing See-through asset track for missing-view/layer candidates; do not replace genuine62-layer source or re-run failed anonymous quota inference as if new evidence."
+  },
+  "inference_note": "Priorities and fit judgments are Codex engineering inferences from the inspected sources, not verified integration or upstream promises.",
+  "acceptance_unchanged": {
+    "M2B1A": "PASS_DISCRETE_EYE_CONTROL_ONLY",
+    "full_M2B": "BLOCKED_SPATIAL_RUNTIME_AND_NATIVE_REGISTRATION",
+    "M3": "BLOCKED_PENDING_COMPLETE_M2B",
+    "natural_3d_turn": "NOT_ACCEPTED"
+  }
+}

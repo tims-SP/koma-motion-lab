@@ -1,0 +1,26 @@
+{
+  "schema": "koma-canonicalization-config/2",
+  "config_version": "2.0.0",
+  "stage": "CORE-023 Task A - deterministic offline canonicalization",
+  "intent": "Deterministic image processing only. No AI redrawing, no foreground crop, no local warp, no inpainting, no redesign.",
+  "canvas": {
+    "width": 1024,
+    "height": 1024,
+    "mode": "RGB",
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "alpha": "fully opaque; any source alpha is composited over opaque white"
+  },
+  "min_margin_px": 48,
+  "ink_threshold_rgb_min": 220,
+  "fit": "uniform_scale_entire_source_canvas_letterbox (inner box = canvas inset by min_margin_px + fit_inset_px)",
+  "resampling": "PILLOW_BICUBIC",
+  "color_handling": "8-bit sRGB RGB; no ICC conversion; no gamma change; no sharpening",
+  "coordinate_domain": "edge_coordinates; pixel index i has its center at i+0.5",
+  "transform": "single affine: uniform scale plus translation; no rotation, no shear, no perspective",
+  "derivative_naming": "<source-stem>-canonical-v<config_version_major>.png",
+  "fit_inset_px": 4
+}

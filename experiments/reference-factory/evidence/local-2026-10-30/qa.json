@@ -1,0 +1,132 @@
+{
+  "status": "PASS_STRUCTURAL_FACTORY_ONLY",
+  "views": 9,
+  "maps": 45,
+  "same_process_repeat": "PASS",
+  "separate_process_repeat": "PASS_45_IDENTICAL_PNG_HASHES",
+  "metrics": [
+    {
+      "yaw_deg": 0,
+      "foreground_fraction": 0.3925209045410156,
+      "bbox": [
+        87,
+        112,
+        420,
+        512
+      ],
+      "depth_levels": 14
+    },
+    {
+      "yaw_deg": 22.5,
+      "foreground_fraction": 0.40042877197265625,
+      "bbox": [
+        71,
+        112,
+        430,
+        512
+      ],
+      "depth_levels": 16
+    },
+    {
+      "yaw_deg": 45,
+      "foreground_fraction": 0.38661956787109375,
+      "bbox": [
+        75,
+        112,
+        433,
+        512
+      ],
+      "depth_levels": 16
+    },
+    {
+      "yaw_deg": 67.5,
+      "foreground_fraction": 0.37458038330078125,
+      "bbox": [
+        75,
+        112,
+        417,
+        512
+      ],
+      "depth_levels": 17
+    },
+    {
+      "yaw_deg": 90,
+      "foreground_fraction": 0.3361663818359375,
+      "bbox": [
+        90,
+        112,
+        385,
+        512
+      ],
+      "depth_levels": 13
+    },
+    {
+      "yaw_deg": 112.5,
+      "foreground_fraction": 0.3751487731933594,
+      "bbox": [
+        75,
+        112,
+        417,
+        512
+      ],
+      "depth_levels": 15
+    },
+    {
+      "yaw_deg": 135,
+      "foreground_fraction": 0.38864898681640625,
+      "bbox": [
+        75,
+        112,
+        433,
+        512
+      ],
+      "depth_levels": 11
+    },
+    {
+      "yaw_deg": 157.5,
+      "foreground_fraction": 0.40348052978515625,
+      "bbox": [
+        73,
+        112,
+        430,
+        512
+      ],
+      "depth_levels": 12
+    },
+    {
+      "yaw_deg": 180,
+      "foreground_fraction": 0.39251708984375,
+      "bbox": [
+        92,
+        112,
+        425,
+        512
+      ],
+      "depth_levels": 10
+    }
+  ],
+  "video": {
+    "sha256": "7cf6d7ade76015dae0d771712f85553f1e692a599c57b607b86834a548447b9f",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 1024,
+          "height": 560,
+          "r_frame_rate": "24/1",
+          "nb_read_frames": "108"
+        }
+      ]
+    },
+    "content": "nine actual rendered anchors held 12 frames each; no continuous in-between motion"
+  },
+  "open_gates": {
+    "VRM_aka_registration": "NOT_TESTED",
+    "fox_ear_structure": "MISSING_FROM_GENERIC_VRM",
+    "aka_decomposition_benchmark": "NOT_TESTED",
+    "ABCD_candidates": "NOT_TESTED",
+    "human_approved_90": "NOT_TESTED",
+    "full_front_native_runtime_parity": "NOT_TESTED",
+    "continuous_360_aka": "NOT_BUILT"
+  }
+}

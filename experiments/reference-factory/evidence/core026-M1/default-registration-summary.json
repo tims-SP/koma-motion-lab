@@ -1,0 +1,1380 @@
+{
+  "schema": "core026-supervisor-default-source-space/1",
+  "status": "PASS_DEFAULT_SOURCE_COORDINATES",
+  "source_inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+  "contract_sha256": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d",
+  "pixel_audit_sha256": "bcc5206c4203d04568e04ae51c0bc4eb1110258a5b8011f4e1f2fb6829916c80",
+  "source_node_count": 100,
+  "global_world_minus_source_translation": [
+    -896.9999934,
+    -2587.999977
+  ],
+  "raster_unique_median_residual_source_px": 0.7071309148651893,
+  "raster_unique_max_residual_source_px": 3.9051234807720783,
+  "convention": "native TGA UV*full texture size + PSD layer bounds + source alpha offset - native alpha offset; original source parent scale/Rz/translation; one global translation only",
+  "guards": {
+    "unique_max_source_px": 5,
+    "duplicate_best_source_px_lt": 2,
+    "duplicate_second_source_px_gt": 20
+  },
+  "claims": {
+    "original_uv_changed": false,
+    "GPU_registration": "NOT_TESTED",
+    "HeadYaw_motion": "NOT_TESTED",
+    "depth_3d": "NOT_RECOVERED",
+    "overall_M1": "NOT_ACCEPTED_BY_THIS_CHECK"
+  },
+  "entries": [
+    {
+      "psd_order": 1,
+      "psd_name": "Fox: Ear L",
+      "selected_uuid": 3453251657,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3453251657,
+          "inx_name": "Ear:: Right",
+          "texture_id": 52,
+          "median_world_minus_source": [
+            -896.9999997,
+            -2588.0000019999998
+          ],
+          "within_layer_residual_max_px": 3.808479499523749e-05,
+          "distance_from_global_translation_px": 2.5781582401057962e-05,
+          "original_mesh_sha256": "d39fb947f4102080bed3bed25a64dccd85e8f6adf2db2f1dd73f24648c324025"
+        }
+      ]
+    },
+    {
+      "psd_order": 2,
+      "psd_name": "Fox: Ear R",
+      "selected_uuid": 3424078890,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3424078890,
+          "inx_name": "Ear:: Left",
+          "texture_id": 51,
+          "median_world_minus_source": [
+            -897.00000016,
+            -2588.50000116
+          ],
+          "within_layer_residual_max_px": 5.788286438072012e-05,
+          "distance_from_global_translation_px": 0.5000241600457617,
+          "original_mesh_sha256": "df9d0d2d69f6e0f59f85e912a898fb93a13d24517fd1a0717f0e314301d9ba39"
+        }
+      ]
+    },
+    {
+      "psd_order": 3,
+      "psd_name": "Back Side Hair L2",
+      "selected_uuid": 3755828177,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3755828177,
+          "inx_name": "Back Side:: Hair:: Right2",
+          "texture_id": 46,
+          "median_world_minus_source": [
+            -897.4999978999999,
+            -2587.9999991199998
+          ],
+          "within_layer_residual_max_px": 8.488779054005853e-05,
+          "distance_from_global_translation_px": 0.5000045004892218,
+          "original_mesh_sha256": "17fb4637bdf0b5cb26359a25754ad237bee00fc6578d6be584db2a42fb121baf"
+        }
+      ]
+    },
+    {
+      "psd_order": 4,
+      "psd_name": "Back Side Hair R2",
+      "selected_uuid": 233054616,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 233054616,
+          "inx_name": "Back Side:: Hair:: Left2",
+          "texture_id": 47,
+          "median_world_minus_source": [
+            -897.4999987649999,
+            -2587.9999972
+          ],
+          "within_layer_residual_max_px": 5.643207444770825e-05,
+          "distance_from_global_translation_px": 0.5000053654079146,
+          "original_mesh_sha256": "c221bad56a90305df28c4e3c1f739e019f919280f2d6dc79c69167ac7aa6920b"
+        }
+      ]
+    },
+    {
+      "psd_order": 5,
+      "psd_name": "Back Side Hair",
+      "selected_uuid": 2432586950,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2432586950,
+          "inx_name": "Back Side:: Hair",
+          "texture_id": 45,
+          "median_world_minus_source": [
+            -896.49999927,
+            -2587.0000005
+          ],
+          "within_layer_residual_max_px": 7.61428323063173e-05,
+          "distance_from_global_translation_px": 1.1180103445792717,
+          "original_mesh_sha256": "a9d730039dbffd44989814a8fdc426d1f6195378c3574e7181e986fbb961b937"
+        }
+      ]
+    },
+    {
+      "psd_order": 6,
+      "psd_name": "Back Side Hair Shadow",
+      "selected_uuid": 2937754650,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2937754650,
+          "inx_name": "Back Side:: Hair:: Shadow",
+          "texture_id": 50,
+          "median_world_minus_source": [
+            -897.5000612599999,
+            -2588.5000122364
+          ],
+          "within_layer_residual_max_px": 6.109360394008164e-05,
+          "distance_from_global_translation_px": 0.7071796817262986,
+          "original_mesh_sha256": "8485f0990b877f59a374e5e6c21d1412822386e1e6874c8796dc610a95b536f7"
+        }
+      ]
+    },
+    {
+      "psd_order": 7,
+      "psd_name": "Back Side Hair L1",
+      "selected_uuid": 1625707572,
+      "selection": "RASTER_AND_DEFAULT_SPACE_DISAMBIGUATION",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1625707572,
+          "inx_name": "Back Side:: Hair:: Right1",
+          "texture_id": 49,
+          "median_world_minus_source": [
+            -897.0000005499999,
+            -2587.9999985199997
+          ],
+          "within_layer_residual_max_px": 8.695132442030251e-05,
+          "distance_from_global_translation_px": 2.2676703667075313e-05,
+          "original_mesh_sha256": "279d5ff830f7e2671b97aa0ef32586fa51da589df0b58466db6c5aaca74ca9ce"
+        },
+        {
+          "inx_uuid": 4212602175,
+          "inx_name": "Back Side:: Hair:: Right3",
+          "texture_id": 54,
+          "median_world_minus_source": [
+            -840.99999785,
+            -2587.99999672
+          ],
+          "within_layer_residual_max_px": 4.9328986229281705e-05,
+          "distance_from_global_translation_px": 55.99999555000347,
+          "original_mesh_sha256": "515c2a4aeddb23649072e1d640824467b5c3b764021637543590754ce17fbca6"
+        }
+      ]
+    },
+    {
+      "psd_order": 8,
+      "psd_name": "Back Side Hair L3",
+      "selected_uuid": 4212602175,
+      "selection": "RASTER_AND_DEFAULT_SPACE_DISAMBIGUATION",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 4212602175,
+          "inx_name": "Back Side:: Hair:: Right3",
+          "texture_id": 54,
+          "median_world_minus_source": [
+            -896.99999785,
+            -2587.99999672
+          ],
+          "within_layer_residual_max_px": 4.9328986229281705e-05,
+          "distance_from_global_translation_px": 2.0215857815959774e-05,
+          "original_mesh_sha256": "515c2a4aeddb23649072e1d640824467b5c3b764021637543590754ce17fbca6"
+        },
+        {
+          "inx_uuid": 1625707572,
+          "inx_name": "Back Side:: Hair:: Right1",
+          "texture_id": 49,
+          "median_world_minus_source": [
+            -953.0000005499999,
+            -2587.9999985199997
+          ],
+          "within_layer_residual_max_px": 8.695132442030251e-05,
+          "distance_from_global_translation_px": 56.000007150004,
+          "original_mesh_sha256": "279d5ff830f7e2671b97aa0ef32586fa51da589df0b58466db6c5aaca74ca9ce"
+        }
+      ]
+    },
+    {
+      "psd_order": 9,
+      "psd_name": "Back Side Hair R1",
+      "selected_uuid": 1096045651,
+      "selection": "RASTER_AND_DEFAULT_SPACE_DISAMBIGUATION",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1096045651,
+          "inx_name": "Back Side:: Hair:: Left1",
+          "texture_id": 48,
+          "median_world_minus_source": [
+            -897.4999998600001,
+            -2588.50000282
+          ],
+          "within_layer_residual_max_px": 6.19558172800422e-05,
+          "distance_from_global_translation_px": 0.7071296067262158,
+          "original_mesh_sha256": "69317e6bfd3ac23899308b6e706d50c34538870656d01599be3f1199fa7016d0"
+        },
+        {
+          "inx_uuid": 4217689816,
+          "inx_name": "Back Side:: Hair:: Left3",
+          "texture_id": 53,
+          "median_world_minus_source": [
+            -966.4999998650001,
+            -2588.49999897
+          ],
+          "within_layer_residual_max_px": 0.00013128977836245092,
+          "distance_from_global_translation_px": 69.50180516076927,
+          "original_mesh_sha256": "ae916ff764789bc51cb2bbf94b4077d141a5f4148ab2194a6b7a2d952f92e4be"
+        }
+      ]
+    },
+    {
+      "psd_order": 10,
+      "psd_name": "Back Side Hair R3",
+      "selected_uuid": 4217689816,
+      "selection": "RASTER_AND_DEFAULT_SPACE_DISAMBIGUATION",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 4217689816,
+          "inx_name": "Back Side:: Hair:: Left3",
+          "texture_id": 53,
+          "median_world_minus_source": [
+            -897.4999998650001,
+            -2588.49999897
+          ],
+          "within_layer_residual_max_px": 0.00013128977836245092,
+          "distance_from_global_translation_px": 0.7071268878529376,
+          "original_mesh_sha256": "ae916ff764789bc51cb2bbf94b4077d141a5f4148ab2194a6b7a2d952f92e4be"
+        },
+        {
+          "inx_uuid": 1096045651,
+          "inx_name": "Back Side:: Hair:: Left1",
+          "texture_id": 48,
+          "median_world_minus_source": [
+            -828.49999986,
+            -2588.50000282
+          ],
+          "within_layer_residual_max_px": 6.195581725227916e-05,
+          "distance_from_global_translation_px": 68.50181852185173,
+          "original_mesh_sha256": "69317e6bfd3ac23899308b6e706d50c34538870656d01599be3f1199fa7016d0"
+        }
+      ]
+    },
+    {
+      "psd_order": 11,
+      "psd_name": "Neck",
+      "selected_uuid": 2611544751,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2611544751,
+          "inx_name": "Neck",
+          "texture_id": 10,
+          "median_world_minus_source": [
+            -894.0,
+            -2585.499998715
+          ],
+          "within_layer_residual_max_px": 2.751500005615526e-05,
+          "distance_from_global_translation_px": 3.9051058661085043,
+          "original_mesh_sha256": "c46b6f3a4668440b01963dddeab9ad64c50dba1532004d20fc6619f64c90d98b"
+        }
+      ]
+    },
+    {
+      "psd_order": 12,
+      "psd_name": "Neck Shadow",
+      "selected_uuid": 118677514,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 118677514,
+          "inx_name": "Neck:: Shadow",
+          "texture_id": 11,
+          "median_world_minus_source": [
+            -895.5000000999,
+            -2585.9999946400003
+          ],
+          "within_layer_residual_max_px": 5.853689522245107e-06,
+          "distance_from_global_translation_px": 2.4999818680651527,
+          "original_mesh_sha256": "91f65f749f0c99221b2d81aed87684449c21a136d3e753dd6188b08b26b6a87d"
+        }
+      ]
+    },
+    {
+      "psd_order": 13,
+      "psd_name": "Face",
+      "selected_uuid": 3736853925,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3736853925,
+          "inx_name": "Face",
+          "texture_id": 12,
+          "median_world_minus_source": [
+            -895.0000009800001,
+            -2586.4999983999996
+          ],
+          "within_layer_residual_max_px": 5.1855943585955665e-05,
+          "distance_from_global_translation_px": 2.499981096031713,
+          "original_mesh_sha256": "4cd4099716be37e726d674838fa98521f9245b0ba940aeaa27644d1c955ef180"
+        }
+      ]
+    },
+    {
+      "psd_order": 14,
+      "psd_name": "Side Hair L Shadow",
+      "selected_uuid": 601961872,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 601961872,
+          "inx_name": "Side Hair:: Right:: Shadow",
+          "texture_id": 18,
+          "median_world_minus_source": [
+            -897.500000955,
+            -2588.0000007
+          ],
+          "within_layer_residual_max_px": 3.492060369492774e-05,
+          "distance_from_global_translation_px": 0.5000075555617062,
+          "original_mesh_sha256": "ed9a2559cbeb190d32d694fb057ee0e9929b4972155077bab2f76d25a4790c08"
+        }
+      ]
+    },
+    {
+      "psd_order": 15,
+      "psd_name": "Side Hair R Shadow",
+      "selected_uuid": 2461262611,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2461262611,
+          "inx_name": "Side Hair:: Left:: Shadow",
+          "texture_id": 17,
+          "median_world_minus_source": [
+            -897.0,
+            -2587.99999975
+          ],
+          "within_layer_residual_max_px": 3.732217693242838e-05,
+          "distance_from_global_translation_px": 2.3688024374352638e-05,
+          "original_mesh_sha256": "63c8ae80513c8efea45796b164a53067585d65835c32c0fc6d91b21d5f438840"
+        }
+      ]
+    },
+    {
+      "psd_order": 16,
+      "psd_name": "Front Hair R2 Shadow",
+      "selected_uuid": 3855234658,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3855234658,
+          "inx_name": "Front Hair:: Left2:: Shadow",
+          "texture_id": 16,
+          "median_world_minus_source": [
+            -897.50000077,
+            -2588.49999596
+          ],
+          "within_layer_residual_max_px": 3.1675992491221624e-05,
+          "distance_from_global_translation_px": 0.7071253993556453,
+          "original_mesh_sha256": "27bff7b48909a7806f15076b54795f0425d2b4da6fcb2270ddf4ad986e99d1c3"
+        }
+      ]
+    },
+    {
+      "psd_order": 17,
+      "psd_name": "Front Hair L2 Shadow",
+      "selected_uuid": 2447618885,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2447618885,
+          "inx_name": "Front Hair:: Right2:: Shadow",
+          "texture_id": 15,
+          "median_world_minus_source": [
+            -897.5000001000001,
+            -2588.4999973999998
+          ],
+          "within_layer_residual_max_px": 2.3040019164022443e-05,
+          "distance_from_global_translation_px": 0.7071259438466018,
+          "original_mesh_sha256": "a2f2d0eda272e3fb1756a0be39a67b18b8e30672c4cc51a1fa91afb3721810e6"
+        }
+      ]
+    },
+    {
+      "psd_order": 18,
+      "psd_name": "Front Hair R1 Shadow",
+      "selected_uuid": 3543760606,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3543760606,
+          "inx_name": "Front Hair:: Left1:: Shadow",
+          "texture_id": 14,
+          "median_world_minus_source": [
+            -897.50000015,
+            -2587.9999992000003
+          ],
+          "within_layer_residual_max_px": 2.6623225111355923e-05,
+          "distance_from_global_translation_px": 0.5000067504928447,
+          "original_mesh_sha256": "3d7336fe21b7fb5ae3a1b4312592580817131f504b5671f66a4445979709e7f5"
+        }
+      ]
+    },
+    {
+      "psd_order": 19,
+      "psd_name": "Front Hair L1 Shadow",
+      "selected_uuid": 3993230283,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3993230283,
+          "inx_name": "Front Hair:: Right1:: Shadow",
+          "texture_id": 13,
+          "median_world_minus_source": [
+            -897.00000072,
+            -2587.9999991199998
+          ],
+          "within_layer_residual_max_px": 2.419008064479725e-05,
+          "distance_from_global_translation_px": 2.3299716561021922e-05,
+          "original_mesh_sha256": "0f5d1190d8f947bf2d8919d39fd5743006c920ad1dbc7b7d15f343be9dfdfc10"
+        }
+      ]
+    },
+    {
+      "psd_order": 20,
+      "psd_name": "Front Hair C Shadow",
+      "selected_uuid": 2385763375,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2385763375,
+          "inx_name": "Front Hair:: Center:: Shadow",
+          "texture_id": 19,
+          "median_world_minus_source": [
+            -897.500000245,
+            -2588.00000216
+          ],
+          "within_layer_residual_max_px": 3.379733163264764e-05,
+          "distance_from_global_translation_px": 0.5000068456330468,
+          "original_mesh_sha256": "ee61490a4883c159efd356e59f1a882d736a0c6909aca4e129ba411a54835ef7"
+        }
+      ]
+    },
+    {
+      "psd_order": 21,
+      "psd_name": "Nose",
+      "selected_uuid": 2330281570,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2330281570,
+          "inx_name": "Nose",
+          "texture_id": 44,
+          "median_world_minus_source": [
+            -896.0,
+            -2587.4999993
+          ],
+          "within_layer_residual_max_px": 9.234717142238351e-06,
+          "distance_from_global_translation_px": 1.1180181127963247,
+          "original_mesh_sha256": "bb38374e38c395a8a7d9781b399ca11ef235bebde404ba4d9e3044f501e27b1e"
+        }
+      ]
+    },
+    {
+      "psd_order": 22,
+      "psd_name": "Mouth Inner",
+      "selected_uuid": 3225607481,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3225607481,
+          "inx_name": "Mouth Inner",
+          "texture_id": 43,
+          "median_world_minus_source": [
+            -897.0,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 0.0,
+          "distance_from_global_translation_px": 2.3928226065435308e-05,
+          "original_mesh_sha256": "56a4282053fa3c72a4d52f136ac92b128e424a41f3dff76451cf372f55805349"
+        }
+      ]
+    },
+    {
+      "psd_order": 23,
+      "psd_name": "Lip",
+      "selected_uuid": 1354775001,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1354775001,
+          "inx_name": "Lip",
+          "texture_id": 42,
+          "median_world_minus_source": [
+            -896.0,
+            -2587.49999927
+          ],
+          "within_layer_residual_max_px": 1.3061887249903609e-05,
+          "distance_from_global_translation_px": 1.1180181262123865,
+          "original_mesh_sha256": "7dfde7a62f9464ee30b1692ff21d52e5c19af6c17d5fbfeb576564fce574eaa3"
+        }
+      ]
+    },
+    {
+      "psd_order": 24,
+      "psd_name": "Eye L Shadow Lower",
+      "selected_uuid": 5525880,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 5525880,
+          "inx_name": "Eye:: Right:: Shadow:: Lower",
+          "texture_id": 24,
+          "median_world_minus_source": [
+            -896.99999924,
+            -2588.0000004000003
+          ],
+          "within_layer_residual_max_px": 8.693192689230656e-06,
+          "distance_from_global_translation_px": 2.4117744859783116e-05,
+          "original_mesh_sha256": "4e5a73c848952e7b5f4303c018c45562bb97a0d5c5e79fb749e0efe00d6aaa1a"
+        }
+      ]
+    },
+    {
+      "psd_order": 25,
+      "psd_name": "Eye L Shadow Upper",
+      "selected_uuid": 3967436499,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3967436499,
+          "inx_name": "Eye:: Right:: Shadow:: Upper",
+          "texture_id": 23,
+          "median_world_minus_source": [
+            -897.5000003999999,
+            -2588.5
+          ],
+          "within_layer_residual_max_px": 1.349999979538552e-05,
+          "distance_from_global_translation_px": 0.7071279944804365,
+          "original_mesh_sha256": "75cf6fa25abfd617c889d2ed0d52f777468cabd423ab1c1e06c563591ce0d88c"
+        }
+      ]
+    },
+    {
+      "psd_order": 26,
+      "psd_name": "Eye L Eyelid2 Shadow",
+      "selected_uuid": 3053982931,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3053982931,
+          "inx_name": "Eye:: Right:: Eyelid2:: Shadow",
+          "texture_id": 22,
+          "median_world_minus_source": [
+            -897.4999989127,
+            -2588.4999999295
+          ],
+          "within_layer_residual_max_px": 2.8881060579448056e-07,
+          "distance_from_global_translation_px": 0.7071268929663689,
+          "original_mesh_sha256": "662c3756ae5b374504d89a37bd127f13528fd4ca813412d0c7185f0812f9481b"
+        }
+      ]
+    },
+    {
+      "psd_order": 27,
+      "psd_name": "Eye L White",
+      "selected_uuid": 2563763966,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2563763966,
+          "inx_name": "Eye:: Right:: White",
+          "texture_id": 28,
+          "median_world_minus_source": [
+            -898.0,
+            -2589.49999998
+          ],
+          "within_layer_residual_max_px": 1.0211288036283087e-05,
+          "distance_from_global_translation_px": 1.8027984192838793,
+          "original_mesh_sha256": "b2bc97b8200982000dcbf4d2efbf11d1a6470a2b9c018533a5be16db5cad852c"
+        }
+      ]
+    },
+    {
+      "psd_order": 28,
+      "psd_name": "Eye L Eyeball",
+      "selected_uuid": 509331051,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 509331051,
+          "inx_name": "Eye:: Right:: Eyeball",
+          "texture_id": 29,
+          "median_world_minus_source": [
+            -898.0,
+            -2589.4999981166
+          ],
+          "within_layer_residual_max_px": 2.1166001715755556e-06,
+          "distance_from_global_translation_px": 1.8027968688374725,
+          "original_mesh_sha256": "4616f54f081c4da0fe41db88ab8a9208b07cf8f190c054034c60d7ef7fe02926"
+        }
+      ]
+    },
+    {
+      "psd_order": 29,
+      "psd_name": "Eye L Light",
+      "selected_uuid": 322026080,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 322026080,
+          "inx_name": "Eye:: Right:: Light",
+          "texture_id": 30,
+          "median_world_minus_source": [
+            -899.0,
+            -2590.0
+          ],
+          "within_layer_residual_max_px": 0.0,
+          "distance_from_global_translation_px": 2.8284480551307296,
+          "original_mesh_sha256": "6564bfe1261bc2e513dfad887e7edf7edb5d165efcef66e89308190a938861ef"
+        }
+      ]
+    },
+    {
+      "psd_order": 30,
+      "psd_name": "Eye L Eyelash2",
+      "selected_uuid": 2415847828,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2415847828,
+          "inx_name": "Eye:: Right:: Eyelash2",
+          "texture_id": 26,
+          "median_world_minus_source": [
+            -897.0,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 2.8430781382604815,
+          "distance_from_global_translation_px": 2.3928226065435308e-05,
+          "original_mesh_sha256": "1988ee8711252f57624790484942cfd2b402b352f0034ce9971c6b0ee51543d6"
+        }
+      ]
+    },
+    {
+      "psd_order": 31,
+      "psd_name": "Eye L Eyelid Side",
+      "selected_uuid": 3950626023,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3950626023,
+          "inx_name": "Eye:: Right:: Eyelid:: Side",
+          "texture_id": 27,
+          "median_world_minus_source": [
+            -897.50000024,
+            -2587.9999998
+          ],
+          "within_layer_residual_max_px": 5.813776801129055e-06,
+          "distance_from_global_translation_px": 0.5000068405198019,
+          "original_mesh_sha256": "c6acfb9bd1dd053be99eea524b3c328350d2b2dd8aa08153d4539f190f116599"
+        }
+      ]
+    },
+    {
+      "psd_order": 32,
+      "psd_name": "Eye L Eyelash1",
+      "selected_uuid": 870544350,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 870544350,
+          "inx_name": "Eye:: Right:: Eyelash1",
+          "texture_id": 21,
+          "median_world_minus_source": [
+            -897.0,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 0.0,
+          "distance_from_global_translation_px": 2.3928226065435308e-05,
+          "original_mesh_sha256": "ad70722aec9960d48c6f09268f3bebeef9c9a635a0f62318e29f5819b0e70ce3"
+        }
+      ]
+    },
+    {
+      "psd_order": 33,
+      "psd_name": "Eye L Eyelid",
+      "selected_uuid": 4267081328,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 4267081328,
+          "inx_name": "Eye:: Right:: Eyelid",
+          "texture_id": 20,
+          "median_world_minus_source": [
+            -896.0000000900001,
+            -2587.4999999525
+          ],
+          "within_layer_residual_max_px": 1.2718091649873896e-05,
+          "distance_from_global_translation_px": 1.118017740499471,
+          "original_mesh_sha256": "235991a20bfec0a33ec1a9d2ed49a17f185a48ac704166cc14148e9e7479dc3f"
+        }
+      ]
+    },
+    {
+      "psd_order": 34,
+      "psd_name": "Eye R Shadow Lower",
+      "selected_uuid": 2610042602,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2610042602,
+          "inx_name": "Eye:: Left:: Shadow:: Lower",
+          "texture_id": 41,
+          "median_world_minus_source": [
+            -897.00000028,
+            -2588.5000001649996
+          ],
+          "within_layer_residual_max_px": 7.28557620806735e-06,
+          "distance_from_global_translation_px": 0.5000231650470072,
+          "original_mesh_sha256": "b7318da78e1366e04db3683b0c8bed86581d3112d6d4cfc3cb18afcda6034293"
+        }
+      ]
+    },
+    {
+      "psd_order": 35,
+      "psd_name": "Eye R Shadow Upper",
+      "selected_uuid": 2433360548,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2433360548,
+          "inx_name": "Eye:: Left:: Shadow:: Upper",
+          "texture_id": 39,
+          "median_world_minus_source": [
+            -897.4999991750001,
+            -2588.49999987
+          ],
+          "within_layer_residual_max_px": 1.0866836076028628e-05,
+          "distance_from_global_translation_px": 0.7071270363637245,
+          "original_mesh_sha256": "de7ff8059007e19638191bc22fb451b7f18e397d7251570040b946ef5c9978e7"
+        }
+      ]
+    },
+    {
+      "psd_order": 36,
+      "psd_name": "Eye R Eyelid2 shadow",
+      "selected_uuid": 479575860,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 479575860,
+          "inx_name": "Eye:: Left:: Eyelid2:: Shadow",
+          "texture_id": 40,
+          "median_world_minus_source": [
+            -897.4999984789999,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 1.4890000556988525e-06,
+          "distance_from_global_translation_px": 0.5000050795289424,
+          "original_mesh_sha256": "5b615fec41203803be98aa305ffe94a3f23ccc12dd8a38f3791963adf19fdd79"
+        }
+      ]
+    },
+    {
+      "psd_order": 37,
+      "psd_name": "Eye R White",
+      "selected_uuid": 2683271183,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2683271183,
+          "inx_name": "Eye:: Left:: White",
+          "texture_id": 32,
+          "median_world_minus_source": [
+            -898.4999999300001,
+            -2589.00000177
+          ],
+          "within_layer_residual_max_px": 7.468185938614224e-06,
+          "distance_from_global_translation_px": 1.802794811024358,
+          "original_mesh_sha256": "d8b30cfbfa7792fd36fc4e685fc073a2b3fc027a7e785c3c6c97d47422ac2af8"
+        }
+      ]
+    },
+    {
+      "psd_order": 38,
+      "psd_name": "Eye R Eyeball",
+      "selected_uuid": 2464897030,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2464897030,
+          "inx_name": "Eye:: Left:: Eyeball",
+          "texture_id": 33,
+          "median_world_minus_source": [
+            -898.0,
+            -2589.0
+          ],
+          "within_layer_residual_max_px": 0.0,
+          "distance_from_global_translation_px": 1.414234492781407,
+          "original_mesh_sha256": "2dc0f79e5678f4d7b06d9ebe3158bf924cf44678817fc27709b763cb9204d6c4"
+        }
+      ]
+    },
+    {
+      "psd_order": 39,
+      "psd_name": "Eye R Light",
+      "selected_uuid": 2794830548,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2794830548,
+          "inx_name": "Eye:: Left:: Light",
+          "texture_id": 34,
+          "median_world_minus_source": [
+            -899.0,
+            -2590.0
+          ],
+          "within_layer_residual_max_px": 0.0,
+          "distance_from_global_translation_px": 2.8284480551307296,
+          "original_mesh_sha256": "7427ec2f2a5a340d400469b2b82c714f796c666d2080779ad96c99a357ce753c"
+        }
+      ]
+    },
+    {
+      "psd_order": 40,
+      "psd_name": "Eye R Eyelash2",
+      "selected_uuid": 519787041,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 519787041,
+          "inx_name": "Eye:: Left:: Eyelash2",
+          "texture_id": 38,
+          "median_world_minus_source": [
+            -897.5000000164999,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 4.835000027014758e-07,
+          "distance_from_global_translation_px": 0.5000066170289383,
+          "original_mesh_sha256": "577decfb8f210ab28bfa7dd2cbfbb0f8f04ce9ff93aac11fa7aa9239da63964f"
+        }
+      ]
+    },
+    {
+      "psd_order": 41,
+      "psd_name": "Eye R Eyelid Side",
+      "selected_uuid": 1838220672,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1838220672,
+          "inx_name": "Eye:: Left:: Eyelid Side",
+          "texture_id": 37,
+          "median_world_minus_source": [
+            -896.9999998400001,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 6.4638097981014805e-06,
+          "distance_from_global_translation_px": 2.388458925605398e-05,
+          "original_mesh_sha256": "8bde21eb1cd7e95f1cb51958366d2b5784394efdccd22dd68a014039fd0a350d"
+        }
+      ]
+    },
+    {
+      "psd_order": 42,
+      "psd_name": "Eye R Eyelash1",
+      "selected_uuid": 8251770,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 8251770,
+          "inx_name": "Eye:: Left:: Eyelash1",
+          "texture_id": 36,
+          "median_world_minus_source": [
+            -897.5000000164999,
+            -2588.0
+          ],
+          "within_layer_residual_max_px": 4.835000027014758e-07,
+          "distance_from_global_translation_px": 0.5000066170289383,
+          "original_mesh_sha256": "508e3be36ac58ef3ebec772890b658b3dbf5eb43af2c6b43186ab3e6dac7bdb8"
+        }
+      ]
+    },
+    {
+      "psd_order": 43,
+      "psd_name": "Eye R Eyelid1",
+      "selected_uuid": 2835231730,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2835231730,
+          "inx_name": "Eye:: Left:: Eyelid",
+          "texture_id": 31,
+          "median_world_minus_source": [
+            -896.00000044,
+            -2586.9999996
+          ],
+          "within_layer_residual_max_px": 1.1605584513306336e-05,
+          "distance_from_global_translation_px": 1.4141926037707548,
+          "original_mesh_sha256": "3c6ec587ed916bf623ae397486b089d2b05bc3d08e61c8f07210575b31249db8"
+        }
+      ]
+    },
+    {
+      "psd_order": 44,
+      "psd_name": "Side Hair L",
+      "selected_uuid": 980585604,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 980585604,
+          "inx_name": "Side Hair:: Right",
+          "texture_id": 55,
+          "median_world_minus_source": [
+            -895.999999,
+            -2587.0000019999998
+          ],
+          "within_layer_residual_max_px": 7.402702168216754e-05,
+          "distance_from_global_translation_px": 1.4141919249722423,
+          "original_mesh_sha256": "6172f858f9aca35aaea92bfb7503d97648e843ffbb35cd98aed411e0b75b19fa"
+        }
+      ]
+    },
+    {
+      "psd_order": 45,
+      "psd_name": "Side Hair L Light",
+      "selected_uuid": 2609038935,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2609038935,
+          "inx_name": "Side Hair:: Right:: Light",
+          "texture_id": 56,
+          "median_world_minus_source": [
+            -897.5000008750001,
+            -2588.00000224
+          ],
+          "within_layer_residual_max_px": 4.106850879789639e-06,
+          "distance_from_global_translation_px": 0.500007475637123,
+          "original_mesh_sha256": "45102add20121c9d74562296534283febc69b14306a161a618b3896270f4829b"
+        }
+      ]
+    },
+    {
+      "psd_order": 46,
+      "psd_name": "Side Hair R",
+      "selected_uuid": 2548641512,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2548641512,
+          "inx_name": "Side Hair:: Left",
+          "texture_id": 70,
+          "median_world_minus_source": [
+            -895.9999989800001,
+            -2586.9999988299996
+          ],
+          "within_layer_residual_max_px": 4.696779011831029e-05,
+          "distance_from_global_translation_px": 1.4141941806230431,
+          "original_mesh_sha256": "a2c40812305527cb08c87f82d30eca43fb982b59a93bd77a734c2cb28887da6a"
+        }
+      ]
+    },
+    {
+      "psd_order": 47,
+      "psd_name": "Side Hair R Light",
+      "selected_uuid": 2094776,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2094776,
+          "inx_name": "Side Hair:: Left:: Light",
+          "texture_id": 71,
+          "median_world_minus_source": [
+            -897.00000304,
+            -2587.9999988
+          ],
+          "within_layer_residual_max_px": 6.172454927998791e-06,
+          "distance_from_global_translation_px": 2.3836308463291256e-05,
+          "original_mesh_sha256": "4e0f9e479ebc35fd91d03902dc5d25a6a97b79b6ead397bb005e50e1a6b6bdef"
+        }
+      ]
+    },
+    {
+      "psd_order": 48,
+      "psd_name": "Front Hair L2",
+      "selected_uuid": 1357173599,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1357173599,
+          "inx_name": "Front Hair:: Right2",
+          "texture_id": 57,
+          "median_world_minus_source": [
+            -895.9999990039,
+            -2587.499996975
+          ],
+          "within_layer_residual_max_px": 3.119453876519338e-05,
+          "distance_from_global_translation_px": 1.1180200434831744,
+          "original_mesh_sha256": "8c5284796cb936c3df176ee1a8cee6aeff1320f7411d8bf1fe5f11437cad5898"
+        }
+      ]
+    },
+    {
+      "psd_order": 49,
+      "psd_name": "Front Hair L2 Light",
+      "selected_uuid": 965831079,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 965831079,
+          "inx_name": "Front Hair:: Right2:: Light",
+          "texture_id": 58,
+          "median_world_minus_source": [
+            -897.0000033499999,
+            -2587.9999992700004
+          ],
+          "within_layer_residual_max_px": 1.0768073570336535e-05,
+          "distance_from_global_translation_px": 2.43917080370563e-05,
+          "original_mesh_sha256": "692b12049dbb8d94efbc5c5d15e01f7d85fb25bce16d75de7bc986517f0eeee7"
+        }
+      ]
+    },
+    {
+      "psd_order": 50,
+      "psd_name": "Front Hair R2",
+      "selected_uuid": 1552110117,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1552110117,
+          "inx_name": "Front Hair:: Left2",
+          "texture_id": 59,
+          "median_world_minus_source": [
+            -895.9999993800001,
+            -2586.9999992000003
+          ],
+          "within_layer_residual_max_px": 4.163066621258976e-05,
+          "distance_from_global_translation_px": 1.4141936361502176,
+          "original_mesh_sha256": "9a8d7fc4e61372cd8cb1cfabbd9a7163088bbd5ce343518e0a5b808518d7e29d"
+        }
+      ]
+    },
+    {
+      "psd_order": 51,
+      "psd_name": "Front Hair R2 Light",
+      "selected_uuid": 2391743597,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2391743597,
+          "inx_name": "Front Hair:: Left2:: Light",
+          "texture_id": 60,
+          "median_world_minus_source": [
+            -897.50000045,
+            -2588.500004635
+          ],
+          "within_layer_residual_max_px": 1.0514526410003637e-05,
+          "distance_from_global_translation_px": 0.7071313073351859,
+          "original_mesh_sha256": "d0aeaf8f34f3fbf6183237487d9b87c2eb31aa6f0ab89aec6e8203c0ab83e119"
+        }
+      ]
+    },
+    {
+      "psd_order": 52,
+      "psd_name": "Front Hair L1",
+      "selected_uuid": 540700913,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 540700913,
+          "inx_name": "Front Hair:: Right1",
+          "texture_id": 61,
+          "median_world_minus_source": [
+            -896.50000028,
+            -2587.0000017
+          ],
+          "within_layer_residual_max_px": 2.8900915172111038e-05,
+          "distance_from_global_translation_px": 1.1180088195792057,
+          "original_mesh_sha256": "03396c70633fe399439eadd3ab784380e9e2b785b7efdec1bf27b28dae959d1f"
+        }
+      ]
+    },
+    {
+      "psd_order": 53,
+      "psd_name": "Front Hair L1 Light",
+      "selected_uuid": 476598408,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 476598408,
+          "inx_name": "Front Hair:: Right1:: Light",
+          "texture_id": 62,
+          "median_world_minus_source": [
+            -897.0000011689999,
+            -2588.4999995000003
+          ],
+          "within_layer_residual_max_px": 6.943284606463024e-06,
+          "distance_from_global_translation_px": 0.5000225000606957,
+          "original_mesh_sha256": "dfd5301371ded706fadafae679c1bd934bb4005e76f51abfab804a0e72befe01"
+        }
+      ]
+    },
+    {
+      "psd_order": 54,
+      "psd_name": "Front Hair R1",
+      "selected_uuid": 834512232,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 834512232,
+          "inx_name": "Front Hair:: Left1",
+          "texture_id": 63,
+          "median_world_minus_source": [
+            -896.4999998740001,
+            -2587.499999435
+          ],
+          "within_layer_residual_max_px": 2.509331194200453e-05,
+          "distance_from_global_translation_px": 0.7070863395265354,
+          "original_mesh_sha256": "bd1160e81b6a987de0be143277d8e60fa9db0bf12af625b972d91e5944b5b5ac"
+        }
+      ]
+    },
+    {
+      "psd_order": 55,
+      "psd_name": "Front Hair R1 Ligth",
+      "selected_uuid": 2437287170,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2437287170,
+          "inx_name": "Front Hair:: Left1:: Ligth",
+          "texture_id": 64,
+          "median_world_minus_source": [
+            -897.0000045499999,
+            -2588.0000004000003
+          ],
+          "within_layer_residual_max_px": 7.3973034626658885e-06,
+          "distance_from_global_translation_px": 2.5920696642199476e-05,
+          "original_mesh_sha256": "cd44f9147f8bdbe4f571363ab284c9ce9ffb2ff4dc8233b3fa441269342e34ae"
+        }
+      ]
+    },
+    {
+      "psd_order": 56,
+      "psd_name": "Front Hair C",
+      "selected_uuid": 1992218482,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 1992218482,
+          "inx_name": "Front Hair:: Center",
+          "texture_id": 65,
+          "median_world_minus_source": [
+            -896.0,
+            -2587.00000166
+          ],
+          "within_layer_residual_max_px": 2.8339999971649377e-05,
+          "distance_from_global_translation_px": 1.4141914582726034,
+          "original_mesh_sha256": "4db36a1524e22116a326675db932a97c831da77eef362c0ada738f5db5d29f72"
+        }
+      ]
+    },
+    {
+      "psd_order": 57,
+      "psd_name": "Front Hair C Light",
+      "selected_uuid": 3664369009,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3664369009,
+          "inx_name": "Front Hair:: Center:: Light",
+          "texture_id": 66,
+          "median_world_minus_source": [
+            -897.00000108,
+            -2588.499995139
+          ],
+          "within_layer_residual_max_px": 4.532925128661742e-06,
+          "distance_from_global_translation_px": 0.5000181390590565,
+          "original_mesh_sha256": "534ef4b623de5736a5bd4b683a34e0550f118da24c30784c37d25229314119df"
+        }
+      ]
+    },
+    {
+      "psd_order": 58,
+      "psd_name": "Eye L Eyelid2",
+      "selected_uuid": 3023088905,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 3023088905,
+          "inx_name": "Eye:: Right:: Eyelid2",
+          "texture_id": 25,
+          "median_world_minus_source": [
+            -896.99999936,
+            -2587.999999876
+          ],
+          "within_layer_residual_max_px": 3.368277819817348e-06,
+          "distance_from_global_translation_px": 2.3639648380757875e-05,
+          "original_mesh_sha256": "d94974d6a1fb0db1d3077cd3a108b9c6c04f397196a00f1c8982865c916a32c3"
+        }
+      ]
+    },
+    {
+      "psd_order": 59,
+      "psd_name": "Eye R Eyelid2",
+      "selected_uuid": 163348813,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 163348813,
+          "inx_name": "Eye:: Left:: Eyelid2",
+          "texture_id": 35,
+          "median_world_minus_source": [
+            -896.999999772,
+            -2587.99999956
+          ],
+          "within_layer_residual_max_px": 3.829880394507417e-06,
+          "distance_from_global_translation_px": 2.344261059820494e-05,
+          "original_mesh_sha256": "99599ee074d57fc3b5e851cb786590602649b68ca7e7dd5ee49214f1b801608a"
+        }
+      ]
+    },
+    {
+      "psd_order": 60,
+      "psd_name": "Eyebrow L",
+      "selected_uuid": 4144177566,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 4144177566,
+          "inx_name": "Eyebrow:: Right",
+          "texture_id": 67,
+          "median_world_minus_source": [
+            -896.00000004,
+            -2587.5000000205
+          ],
+          "within_layer_residual_max_px": 5.623020538391899e-06,
+          "distance_from_global_translation_px": 1.1180177548115644,
+          "original_mesh_sha256": "b74570d7b493989355369b3d4ca0781cf15973a2f51a452a22239ae3a98833d8"
+        }
+      ]
+    },
+    {
+      "psd_order": 61,
+      "psd_name": "Eyebrow R",
+      "selected_uuid": 228585614,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 228585614,
+          "inx_name": "Eyebrow:: Left",
+          "texture_id": 68,
+          "median_world_minus_source": [
+            -895.9999991520001,
+            -2587.49999992
+          ],
+          "within_layer_residual_max_px": 8.368799548995083e-06,
+          "distance_from_global_translation_px": 1.1180185940127323,
+          "original_mesh_sha256": "ef4d2046bca734d3c0c8b3bb5b674c51c4aac4d72a5c0011d98f41fec7e70f19"
+        }
+      ]
+    },
+    {
+      "psd_order": 62,
+      "psd_name": "Leaf",
+      "selected_uuid": 2233235985,
+      "selection": "UNIQUE_RASTER",
+      "status": "VERIFIED_DEFAULT_SOURCE_SPACE",
+      "candidates": [
+        {
+          "inx_uuid": 2233235985,
+          "inx_name": "Leaf",
+          "texture_id": 69,
+          "median_world_minus_source": [
+            -896.49999869,
+            -2587.499997834
+          ],
+          "within_layer_residual_max_px": 1.2403443713006768e-05,
+          "distance_from_global_translation_px": 0.7070883088142704,
+          "original_mesh_sha256": "ad9c1ca3fe6018f48ff5a0dea0e0a2a4ae8ca008a72d77ae7360d3cb0eb49988"
+        }
+      ]
+    }
+  ],
+  "full_generated_geometry": "out/core026/default-registration.json (regenerate using verify_core026_registration.py; not committed)"
+}

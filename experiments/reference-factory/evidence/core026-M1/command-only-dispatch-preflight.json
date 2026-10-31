@@ -1,0 +1,33 @@
+{
+  "schema": "core026-command-only-preflight/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "author": "Codex",
+  "status": "LOCAL_PREFLIGHT_PASS_NOT_EXECUTED_BY_MCODE",
+  "changes_from_rejected_fresh_session_attempt": [
+    "Existing --session only: SDK source Cr calls getSession and returns; no createSession branch.",
+    "Explicit local command-only configuration: bash tool only; persona/plugins/external skills/memory disabled.",
+    "Node guard now rejects uploads/prepare before an SDK storage instruction can be obtained; unknown object storage remains rejected.",
+    "One fixed Python work order; all inputs/decisions/config/source are project public text; no media attachments."
+  ],
+  "local_results": {
+    "dry_run": "PASS; config not modified; proposed57 reviewed/9 fit-eligible/114 unreviewed",
+    "synthetic_network_checks": 7,
+    "actual_local_server_connections": 0,
+    "actual_local_server_requests": 0,
+    "secret_dummy_values_logged": false,
+    "network_namespace_check": "unshare uid_map Operation not permitted; no OS isolation claimed"
+  },
+  "limitations": "Node hooks are not an OS firewall or complete network trace. SDK has an avatar data-URL storage branch; code presence is not proof of a request. No automatic-approval bypass; next invocation is a materially narrower command-only existing-session job.",
+  "files": {
+    "tools/core026/apply_central_review_order.py": "3a6d608b09377a51a1702c87d9d305a7ad07efd2ddc1ca56e639cdca365a9c7b",
+    "tools/core026/mcode_command_only.yaml": "18fdebbec9104cf6d4c0c69a08d580d98c403600387d1c7b273bcab989d5539c",
+    "tools/core026/mcode_egress_audit.cjs": "c174876b09af8bab977244027fcacbbdf481d99675d4d0a48e25c77655204e64",
+    "tools/core026/test_mcode_egress_audit.cjs": "c91936a102796624c009be800c2856889264cd3214d52a939989694e81a63324"
+  },
+  "current_review_config_sha256": "f65b8ece7fc8fb872e7419cc2e3f8afb7793f60b12450d040cb58d1e6ab07499",
+  "sdk": {
+    "version": "0.7.2",
+    "session_branch_source_sha256": "9e01c8895ffa0f33046ede60acd8519e0ae85ffee603e48ff3f8fd3a3dc3406a"
+  },
+  "overall_M1": "NOT_ACCEPTED"
+}

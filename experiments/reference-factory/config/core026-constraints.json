@@ -1,0 +1,2978 @@
+{
+  "schema": "core026-constraints/2",
+  "scope": "DEFAULT_SOURCE_AND_UNVALIDATED_DESIGN",
+  "inputs": {
+    "inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+    "contract_sha256": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d",
+    "registration_identity_sha256": "d71aa67bb1a01006c7aae7136596c6a150a7e8a5bdc57ad3f9e366156d6e01a2",
+    "registration_program_sha256": "e10feb4578f6e0c7c29052d46a17893866bc8dcd166876a39299684688fc5e90"
+  },
+  "records": [
+    {
+      "psd_order": 1,
+      "texture_sha256": "ca01db3992731754ddc3cae58f58c0215485406d5971971e975d4496b8f513b1",
+      "observed": {
+        "psd_order": 1,
+        "psd_name": "Fox: Ear L",
+        "native_uuid": 3453251657,
+        "native_name": "Ear:: Right",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.02,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 2,
+      "texture_sha256": "7e4e016a50b2cb486f987dacb0a9fd97e6425fb9aa0aa8667b869b9b380376d1",
+      "observed": {
+        "psd_order": 2,
+        "psd_name": "Fox: Ear R",
+        "native_uuid": 3424078890,
+        "native_name": "Ear:: Left",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.02,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 3,
+      "texture_sha256": "69525e19cc292b8546614a9ef7ab9f9fd5caa259508e85238cf62639690aea8f",
+      "observed": {
+        "psd_order": 3,
+        "psd_name": "Back Side Hair L2",
+        "native_uuid": 3755828177,
+        "native_name": "Back Side:: Hair:: Right2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.01,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 4,
+      "texture_sha256": "326611fde7a6fd882eed8d269b997b2029259b339d592830e379e5ce9907b925",
+      "observed": {
+        "psd_order": 4,
+        "psd_name": "Back Side Hair R2",
+        "native_uuid": 233054616,
+        "native_name": "Back Side:: Hair:: Left2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.049999997,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 5,
+      "texture_sha256": "646f7f09d79b4c33b5f0ec3f615ec1e4cbfb21712a74c1b970a39a3cee5bd2a5",
+      "observed": {
+        "psd_order": 5,
+        "psd_name": "Back Side Hair",
+        "native_uuid": 2432586950,
+        "native_name": "Back Side:: Hair",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.5299998,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 6,
+      "texture_sha256": "4bd3ea6d3f95a920b0fb1b4fc80640e017fa5febf124cf0adbfa1f80360fae0a",
+      "observed": {
+        "psd_order": 6,
+        "psd_name": "Back Side Hair Shadow",
+        "native_uuid": 2937754650,
+        "native_name": "Back Side:: Hair:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.010000007,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 5,
+        "shadow_caster_order": null,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 7,
+      "texture_sha256": "251059ad7aedf4508610a0656c71c916c5769f399bb555b02ce2fa4a6cf5a165",
+      "observed": {
+        "psd_order": 7,
+        "psd_name": "Back Side Hair L1",
+        "native_uuid": 1625707572,
+        "native_name": "Back Side:: Hair:: Right1",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.31,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 8,
+      "texture_sha256": "67ef8936d404d028948464f70f0d39422b4d68e5bb167f845b05012e2a2db2c4",
+      "observed": {
+        "psd_order": 8,
+        "psd_name": "Back Side Hair L3",
+        "native_uuid": 4212602175,
+        "native_name": "Back Side:: Hair:: Right3",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.42999986,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 9,
+      "texture_sha256": "08c15c247251d4ee5ee49a6a09dcf8d4468cff0ec1792cb0cad61ec9133ddcd4",
+      "observed": {
+        "psd_order": 9,
+        "psd_name": "Back Side Hair R1",
+        "native_uuid": 1096045651,
+        "native_name": "Back Side:: Hair:: Left1",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.22000004,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 10,
+      "texture_sha256": "0b5eebbfda3e88d98779d28da5177957fad688f0cac9fc6d37069dcb2f666d6b",
+      "observed": {
+        "psd_order": 10,
+        "psd_name": "Back Side Hair R3",
+        "native_uuid": 4217689816,
+        "native_name": "Back Side:: Hair:: Left3",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2432586950
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Back Side:: Hair"
+        ],
+        "nearest_mapped_ancestor_order": 5,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.32999998,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 11,
+      "texture_sha256": "ed43835b645c3fa0a2b8615ebdadaf0fba5ae7dfec75c02af0a8152419a7a52c",
+      "observed": {
+        "psd_order": 11,
+        "psd_name": "Neck",
+        "native_uuid": 2611544751,
+        "native_name": "Neck",
+        "ancestor_uuids": [
+          68362597,
+          4166575140
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body"
+        ],
+        "nearest_mapped_ancestor_order": null,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.10999997,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 12,
+      "texture_sha256": "d852eec81a9048c08e41ca316b1dda9dada2df8ccf533f164a3974f7a3e5e241",
+      "observed": {
+        "psd_order": 12,
+        "psd_name": "Neck Shadow",
+        "native_uuid": 118677514,
+        "native_name": "Neck:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck"
+        ],
+        "nearest_mapped_ancestor_order": 11,
+        "native_blend_mode": "Multiply",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.13,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 11,
+        "shadow_caster_order": null,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 13,
+      "texture_sha256": "f7eb372ccbf8d80204ad0526f008d3f8cebf0d3b0aa0d8efeae06d214f9bf669",
+      "observed": {
+        "psd_order": 13,
+        "psd_name": "Face",
+        "native_uuid": 3736853925,
+        "native_name": "Face",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck"
+        ],
+        "nearest_mapped_ancestor_order": 11,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.49999976,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "deform",
+          "transform.t.y",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 14,
+      "texture_sha256": "b789150d2cfb55457eef144f8364d496d82fb9809ba7453a568e9b095e4ceaf7",
+      "observed": {
+        "psd_order": 14,
+        "psd_name": "Side Hair L Shadow",
+        "native_uuid": 601961872,
+        "native_name": "Side Hair:: Right:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.23,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 44,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 15,
+      "texture_sha256": "a6e4771a4c4b0085809527ed365034b97becee8f61bd5a8db036b5b5e65ac2af",
+      "observed": {
+        "psd_order": 15,
+        "psd_name": "Side Hair R Shadow",
+        "native_uuid": 2461262611,
+        "native_name": "Side Hair:: Left:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.24,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 46,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 16,
+      "texture_sha256": "5c7a555c22b0e09f1be82a8b37e69855371f57da340456df577df2bcb5b5341f",
+      "observed": {
+        "psd_order": 16,
+        "psd_name": "Front Hair R2 Shadow",
+        "native_uuid": 3855234658,
+        "native_name": "Front Hair:: Left2:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.25,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 50,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 17,
+      "texture_sha256": "c5f377b8c076e114178de8cbf44a561fa6925fb31510e518317cddf71aaddc8d",
+      "observed": {
+        "psd_order": 17,
+        "psd_name": "Front Hair L2 Shadow",
+        "native_uuid": 2447618885,
+        "native_name": "Front Hair:: Right2:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.26,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 48,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 18,
+      "texture_sha256": "eeeea678f29f8dd825cb2282d7849d7c6f20b74f69f6b564ddd81fbd7083b8ce",
+      "observed": {
+        "psd_order": 18,
+        "psd_name": "Front Hair R1 Shadow",
+        "native_uuid": 3543760606,
+        "native_name": "Front Hair:: Left1:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.27,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "transform.s.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 54,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 19,
+      "texture_sha256": "5a51501ee61949271553782a40c7df1757a413328a36542249c25f3fc8a86f90",
+      "observed": {
+        "psd_order": 19,
+        "psd_name": "Front Hair L1 Shadow",
+        "native_uuid": 3993230283,
+        "native_name": "Front Hair:: Right1:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.28,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "transform.s.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 52,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 20,
+      "texture_sha256": "d8e520c88931ff8fc45390c0e6afc01804955aee84acf5e2880c9647eab97215",
+      "observed": {
+        "psd_order": 20,
+        "psd_name": "Front Hair C Shadow",
+        "native_uuid": 2385763375,
+        "native_name": "Front Hair:: Center:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          3011143577
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Hair:: Shadows:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -0.16999999,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "transform.s.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": 56,
+        "role": "RECEIVER_SHADOW",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 21,
+      "texture_sha256": "e0f158b07f180a91d72d62e6ba7bf71e1078099c0a207770305ea25073acb869",
+      "observed": {
+        "psd_order": 21,
+        "psd_name": "Nose",
+        "native_uuid": 2330281570,
+        "native_name": "Nose",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.3,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 22,
+      "texture_sha256": "c840c013609df7f71bc3d35221961efb752894b90258b684b07357db74679c39",
+      "observed": {
+        "psd_order": 22,
+        "psd_name": "Mouth Inner",
+        "native_uuid": 3225607481,
+        "native_name": "Mouth Inner",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          1354775001
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Lip"
+        ],
+        "nearest_mapped_ancestor_order": 23,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.019999985,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 23,
+      "texture_sha256": "747f0f1f3af70d3e86298bb866cb52a3c9445e9324e51c57bd5ad091545c9318",
+      "observed": {
+        "psd_order": 23,
+        "psd_name": "Lip",
+        "native_uuid": 1354775001,
+        "native_name": "Lip",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.32,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "transform.r.x",
+          "transform.r.y",
+          "deform",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 24,
+      "texture_sha256": "42000d7b3b18e84152d2fd4d351a58e860b2d1eac6a9b1b8d54243fa1f6ead42",
+      "observed": {
+        "psd_order": 24,
+        "psd_name": "Eye L Shadow Lower",
+        "native_uuid": 5525880,
+        "native_name": "Eye:: Right:: Shadow:: Lower",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.15999994,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 25,
+      "texture_sha256": "35ea74e9a41eaccb94ec65cb273bbfe44779b528f035c99989c205fd96910d31",
+      "observed": {
+        "psd_order": 25,
+        "psd_name": "Eye L Shadow Upper",
+        "native_uuid": 3967436499,
+        "native_name": "Eye:: Right:: Shadow:: Upper",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.11999994,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 26,
+      "texture_sha256": "dbd369b23c1f534aee916a3e699caa1b7eb2780b95c3fc9e3352f5c42f20fbba",
+      "observed": {
+        "psd_order": 26,
+        "psd_name": "Eye L Eyelid2 Shadow",
+        "native_uuid": 3053982931,
+        "native_name": "Eye:: Right:: Eyelid2:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.35,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 27,
+      "texture_sha256": "537509a3a72a6458078d3058ab48ed0313950274344b9839d8f72f9aa407e67a",
+      "observed": {
+        "psd_order": 27,
+        "psd_name": "Eye L White",
+        "native_uuid": 2563763966,
+        "native_name": "Eye:: Right:: White",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328,
+          977552066
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid",
+          "Eye:: Right:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.7699995,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "LOCAL_EYE_CANVAS",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 28,
+      "texture_sha256": "7d941fd84775f8c132af752b79fa677721c79ac95af29b123ed068005c8d4d30",
+      "observed": {
+        "psd_order": 28,
+        "psd_name": "Eye L Eyeball",
+        "native_uuid": 509331051,
+        "native_name": "Eye:: Right:: Eyeball",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328,
+          977552066
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid",
+          "Eye:: Right:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "ClipToLower",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.37,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 27,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 29,
+      "texture_sha256": "1de1a2c93b0ff30a50fb80ae8919f1a8a55104fa2463e7a520a889dcd7ebe538",
+      "observed": {
+        "psd_order": 29,
+        "psd_name": "Eye L Light",
+        "native_uuid": 322026080,
+        "native_name": "Eye:: Right:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328,
+          977552066,
+          509331051
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid",
+          "Eye:: Right:: Composite",
+          "Eye:: Right:: Eyeball"
+        ],
+        "nearest_mapped_ancestor_order": 28,
+        "native_blend_mode": "ClipToLower",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.38,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 27,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 30,
+      "texture_sha256": "bf233fe032150bb0904b8a1dfe75eb80a980522e144fa899ae8b48b478b31405",
+      "observed": {
+        "psd_order": 30,
+        "psd_name": "Eye L Eyelash2",
+        "native_uuid": 2415847828,
+        "native_name": "Eye:: Right:: Eyelash2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.019999925,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 31,
+      "texture_sha256": "c4bb19f5d57b445b7bd0f265fb51b7131a4c0f5096b4b929c1b06c0d3ce51e60",
+      "observed": {
+        "psd_order": 31,
+        "psd_name": "Eye L Eyelid Side",
+        "native_uuid": 3950626023,
+        "native_name": "Eye:: Right:: Eyelid:: Side",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.019999865,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 32,
+      "texture_sha256": "283820e942d6d5955ab2b29572fe15685065852b37a283ece58dbcc8dadaf1f7",
+      "observed": {
+        "psd_order": 32,
+        "psd_name": "Eye L Eyelash1",
+        "native_uuid": 870544350,
+        "native_name": "Eye:: Right:: Eyelash1",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.13000008,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 33,
+      "texture_sha256": "d52f72a7989c5b7a53962a04a1a860b939bcc56b4f2f2c4073e082fbf5b0fe3f",
+      "observed": {
+        "psd_order": 33,
+        "psd_name": "Eye L Eyelid",
+        "native_uuid": 4267081328,
+        "native_name": "Eye:: Right:: Eyelid",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.42,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 34,
+      "texture_sha256": "db827980ce5d6726772dd5a546ded9b7a18ef7d0fbd9753ff2511b3f4afb6479",
+      "observed": {
+        "psd_order": 34,
+        "psd_name": "Eye R Shadow Lower",
+        "native_uuid": 2610042602,
+        "native_name": "Eye:: Left:: Shadow:: Lower",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.29999986,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 35,
+      "texture_sha256": "68d33028f04110d81536a24b77074e34519210a8d2f08a110c27b5a550f9cce3",
+      "observed": {
+        "psd_order": 35,
+        "psd_name": "Eye R Shadow Upper",
+        "native_uuid": 2433360548,
+        "native_name": "Eye:: Left:: Shadow:: Upper",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.36000013,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 36,
+      "texture_sha256": "b25a43f3a70ae8373caa3e43287400d6fb6a5598d5287ccd246bfa4c5e0557fa",
+      "observed": {
+        "psd_order": 36,
+        "psd_name": "Eye R Eyelid2 shadow",
+        "native_uuid": 479575860,
+        "native_name": "Eye:: Left:: Eyelid2:: Shadow",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.45,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 37,
+      "texture_sha256": "819d50cffc96417d237e8f27b4d0550edfac1543bf5e45b20be2ff640b24800b",
+      "observed": {
+        "psd_order": 37,
+        "psd_name": "Eye R White",
+        "native_uuid": 2683271183,
+        "native_name": "Eye:: Left:: White",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730,
+          200444691
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid",
+          "Eye:: Left:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.46,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "LOCAL_EYE_CANVAS",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 38,
+      "texture_sha256": "96533c3e51116cd665296c4dd4b880956610357c3710bcf6fc4547ed6c300fd6",
+      "observed": {
+        "psd_order": 38,
+        "psd_name": "Eye R Eyeball",
+        "native_uuid": 2464897030,
+        "native_name": "Eye:: Left:: Eyeball",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730,
+          200444691
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid",
+          "Eye:: Left:: Composite"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "ClipToLower",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.47,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 37,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 39,
+      "texture_sha256": "aa6868dbb7ffda583f6b8d42df8df8bb67ed2a244e2ada2dcaa50e46e2bd1c68",
+      "observed": {
+        "psd_order": 39,
+        "psd_name": "Eye R Light",
+        "native_uuid": 2794830548,
+        "native_name": "Eye:: Left:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730,
+          200444691,
+          2464897030
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid",
+          "Eye:: Left:: Composite",
+          "Eye:: Left:: Eyeball"
+        ],
+        "nearest_mapped_ancestor_order": 38,
+        "native_blend_mode": "ClipToLower",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.48,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 37,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 40,
+      "texture_sha256": "5a332aa9413590ee70148be9ecf11a977f9195b5a4421d74d16c3220236c802c",
+      "observed": {
+        "psd_order": 40,
+        "psd_name": "Eye R Eyelash2",
+        "native_uuid": 519787041,
+        "native_name": "Eye:: Left:: Eyelash2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.0799998,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 41,
+      "texture_sha256": "d30c8ddb8f996707972eadbc49a42cd3aecc4b84fd011828ff1fe53e72750c5d",
+      "observed": {
+        "psd_order": 41,
+        "psd_name": "Eye R Eyelid Side",
+        "native_uuid": 1838220672,
+        "native_name": "Eye:: Left:: Eyelid Side",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.1499998,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 42,
+      "texture_sha256": "f1730928e65171c4eaa0d461aeb65c4dacc07e13206e708554cc207adf940430",
+      "observed": {
+        "psd_order": 42,
+        "psd_name": "Eye R Eyelash1",
+        "native_uuid": 8251770,
+        "native_name": "Eye:: Left:: Eyelash1",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": 0.089999795,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 43,
+      "texture_sha256": "3c65c5d4420e08e98f07ba0593ee7c8235e5af6550191a55ee61a8e13704f6f0",
+      "observed": {
+        "psd_order": 43,
+        "psd_name": "Eye R Eyelid1",
+        "native_uuid": 2835231730,
+        "native_name": "Eye:: Left:: Eyelid",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.52,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 44,
+      "texture_sha256": "d106cae5a74dabdc5b1079251a5a7d04848cdfa91663141b06d0531baa2777ef",
+      "observed": {
+        "psd_order": 44,
+        "psd_name": "Side Hair L",
+        "native_uuid": 980585604,
+        "native_name": "Side Hair:: Right",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.53,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "deform",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 45,
+      "texture_sha256": "e948994afc8517be94175b313935d80f33faddbb221d1cd1b6105fe65814aa07",
+      "observed": {
+        "psd_order": 45,
+        "psd_name": "Side Hair L Light",
+        "native_uuid": 2609038935,
+        "native_name": "Side Hair:: Right:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          980585604
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Side Hair:: Right"
+        ],
+        "nearest_mapped_ancestor_order": 44,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.54,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 44,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 46,
+      "texture_sha256": "db0f844dfa5a3ddfa5af8ec254641a0379ba55d7bba5d787d16f3825025c10be",
+      "observed": {
+        "psd_order": 46,
+        "psd_name": "Side Hair R",
+        "native_uuid": 2548641512,
+        "native_name": "Side Hair:: Left",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.55,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "deform",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 47,
+      "texture_sha256": "88138ed618009014b6df14b2503bb1617b75abd17932d4a4accfc12a4c566bec",
+      "observed": {
+        "psd_order": 47,
+        "psd_name": "Side Hair R Light",
+        "native_uuid": 2094776,
+        "native_name": "Side Hair:: Left:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2548641512
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Side Hair:: Left"
+        ],
+        "nearest_mapped_ancestor_order": 46,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.56,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y",
+          "zSort"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 46,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 48,
+      "texture_sha256": "3dc2af0def887aa883fd7aa4918ab97a704955223f3ea873028fe7404a1e76cf",
+      "observed": {
+        "psd_order": 48,
+        "psd_name": "Front Hair L2",
+        "native_uuid": 1357173599,
+        "native_name": "Front Hair:: Right2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.57,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 49,
+      "texture_sha256": "0730bc4a1006d3b010099560d0a0e4b79f2bd2d4111e86429b3c6fe5cd7a4aa3",
+      "observed": {
+        "psd_order": 49,
+        "psd_name": "Front Hair L2 Light",
+        "native_uuid": 965831079,
+        "native_name": "Front Hair:: Right2:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          1357173599
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Front Hair:: Right2"
+        ],
+        "nearest_mapped_ancestor_order": 48,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.58,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 48,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 50,
+      "texture_sha256": "363c0b6acf80a64e801724c9837979948ea1b452edc019d70395aa53ba2914b3",
+      "observed": {
+        "psd_order": 50,
+        "psd_name": "Front Hair R2",
+        "native_uuid": 1552110117,
+        "native_name": "Front Hair:: Left2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.59,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 51,
+      "texture_sha256": "681bdb475adf8b42c12c72cb98b76e4c68bac08eef53886e1ba5470a4da184a3",
+      "observed": {
+        "psd_order": 51,
+        "psd_name": "Front Hair R2 Light",
+        "native_uuid": 2391743597,
+        "native_name": "Front Hair:: Left2:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          1552110117
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Front Hair:: Left2"
+        ],
+        "nearest_mapped_ancestor_order": 50,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.6,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y",
+          "transform.r.z"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 50,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 52,
+      "texture_sha256": "45c382f15042ab3b08cb71fbcba23592f87729d67c2b8e665c6a20dec3a82f50",
+      "observed": {
+        "psd_order": 52,
+        "psd_name": "Front Hair L1",
+        "native_uuid": 540700913,
+        "native_name": "Front Hair:: Right1",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -1.2799994,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "deform",
+          "transform.s.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 53,
+      "texture_sha256": "9fe3a10cf4fdd586ad0ff5ce0cffa4fc616802b9e4db2028b6b799cfdf12fed4",
+      "observed": {
+        "psd_order": 53,
+        "psd_name": "Front Hair L1 Light",
+        "native_uuid": 476598408,
+        "native_name": "Front Hair:: Right1:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          540700913
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Front Hair:: Right1"
+        ],
+        "nearest_mapped_ancestor_order": 52,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.62,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 52,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 54,
+      "texture_sha256": "9f2abd9f6738c5efb509776c14d3a0628d8d1c51b541f9700331406e7a2ee99b",
+      "observed": {
+        "psd_order": 54,
+        "psd_name": "Front Hair R1",
+        "native_uuid": 834512232,
+        "native_name": "Front Hair:: Left1",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -1.3199993,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.s.x",
+          "transform.t.y",
+          "deform"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 55,
+      "texture_sha256": "4b92420a8d516d795f4e1195c4085738042d0447a276f6919095a216c2400c1c",
+      "observed": {
+        "psd_order": 55,
+        "psd_name": "Front Hair R1 Ligth",
+        "native_uuid": 2437287170,
+        "native_name": "Front Hair:: Left1:: Ligth",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          834512232
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Front Hair:: Left1"
+        ],
+        "nearest_mapped_ancestor_order": 54,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.66,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 54,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 56,
+      "texture_sha256": "988ea8c3ceb886f62966c6198c28bc41976ae1e71c0b90f88ee6269c9a3809cb",
+      "observed": {
+        "psd_order": 56,
+        "psd_name": "Front Hair C",
+        "native_uuid": 1992218482,
+        "native_name": "Front Hair:: Center",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -1.4199992,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "deform",
+          "transform.s.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 57,
+      "texture_sha256": "a55da8bf466fe488c0fa63ad8e24233bee424192276866b1d267669d77a2cdac",
+      "observed": {
+        "psd_order": 57,
+        "psd_name": "Front Hair C Light",
+        "native_uuid": 3664369009,
+        "native_name": "Front Hair:: Center:: Light",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          1992218482
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Front Hair:: Center"
+        ],
+        "nearest_mapped_ancestor_order": 56,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.66,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 56,
+        "shadow_caster_order": null,
+        "role": "HIGHLIGHT",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    },
+    {
+      "psd_order": 58,
+      "texture_sha256": "7831e0b4a16ff220a0c3581ee8e8d3ec2700577ea670a7e4bdb39154fab80bee",
+      "observed": {
+        "psd_order": 58,
+        "psd_name": "Eye L Eyelid2",
+        "native_uuid": 3023088905,
+        "native_name": "Eye:: Right:: Eyelid2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          4267081328
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Right:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 33,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.67,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": true,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated. Retain late face painting over hair; face attachment does not put this paint under hair."
+      }
+    },
+    {
+      "psd_order": 59,
+      "texture_sha256": "31d64895645ccf999fc9478a22a4e7d8f5b300a3187793a1acf59e643d63b629",
+      "observed": {
+        "psd_order": 59,
+        "psd_name": "Eye R Eyelid2",
+        "native_uuid": 163348813,
+        "native_name": "Eye:: Left:: Eyelid2",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925,
+          2835231730
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face",
+          "Eye:: Left:: Eyelid"
+        ],
+        "nearest_mapped_ancestor_order": 43,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -0.68,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": true,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated. Retain late face painting over hair; face attachment does not put this paint under hair."
+      }
+    },
+    {
+      "psd_order": 60,
+      "texture_sha256": "18517ce3ef4083c2cbd5abdf59e6c188fcb7aa0086c510920c9afaad50b0d170",
+      "observed": {
+        "psd_order": 60,
+        "psd_name": "Eyebrow L",
+        "native_uuid": 4144177566,
+        "native_name": "Eyebrow:: Right",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Multiply",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -2.3799984,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "transform.s.x",
+          "transform.r.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": true,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated. Retain late face painting over hair; face attachment does not put this paint under hair."
+      }
+    },
+    {
+      "psd_order": 61,
+      "texture_sha256": "4b436ac3277f71506f8d85be73a07d99af45dba7ab08cee21a692c78e2b52c56",
+      "observed": {
+        "psd_order": 61,
+        "psd_name": "Eyebrow R",
+        "native_uuid": 228585614,
+        "native_name": "Eyebrow:: Left",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Multiply",
+        "source_blend_mode": "BlendMode.MULTIPLY",
+        "native_zsort": -2.2499986,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y",
+          "transform.s.x"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": 13,
+        "shadow_caster_order": null,
+        "role": "ATTACHED_PAINT",
+        "late_paint": true,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated. Retain late face painting over hair; face attachment does not put this paint under hair."
+      }
+    },
+    {
+      "psd_order": 62,
+      "texture_sha256": "542e3163bcc788dbfe7e50bbe884f10fb781c371e83764c193e0640649c05b96",
+      "observed": {
+        "psd_order": 62,
+        "psd_name": "Leaf",
+        "native_uuid": 2233235985,
+        "native_name": "Leaf",
+        "ancestor_uuids": [
+          68362597,
+          4166575140,
+          2611544751,
+          3736853925
+        ],
+        "ancestor_names": [
+          "Root",
+          "Body",
+          "Neck",
+          "Face"
+        ],
+        "nearest_mapped_ancestor_order": 13,
+        "native_blend_mode": "Normal",
+        "source_blend_mode": "BlendMode.NORMAL",
+        "native_zsort": -1.4199994,
+        "zsort_meaning": "DEFAULT_PAINT_ORDER_NOT_PHYSICAL_DEPTH",
+        "head_yaw_binding_names": [
+          "transform.t.x",
+          "transform.t.y"
+        ],
+        "physical_depth": "UNKNOWN",
+        "status": "SOURCE_OBSERVED"
+      },
+      "design": {
+        "status": "DESIGN_PROPOSAL_NOT_RENDER_VALIDATED",
+        "receiver_order": null,
+        "shadow_caster_order": null,
+        "role": "INDEPENDENT_SURFACE",
+        "late_paint": false,
+        "physical_depth": "UNKNOWN",
+        "local_before_behind": "UNKNOWN",
+        "local_mask": "UNKNOWN",
+        "pose_scope": "DEFAULT_ONLY",
+        "reason": "Explicit work-order proposal; physical depth, dynamic masks and attachment roots are unvalidated."
+      }
+    }
+  ],
+  "multiply_orders": [
+    6,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    60,
+    61
+  ],
+  "default_shadow_clips": [
+    {
+      "shadow_order": 6,
+      "shadow_name": "Back Side Hair Shadow",
+      "base_order": 5,
+      "base_name": "Back Side Hair",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 12,
+      "shadow_name": "Neck Shadow",
+      "base_order": 11,
+      "base_name": "Neck",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 14,
+      "shadow_name": "Side Hair L Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 15,
+      "shadow_name": "Side Hair R Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 16,
+      "shadow_name": "Front Hair R2 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 17,
+      "shadow_name": "Front Hair L2 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 18,
+      "shadow_name": "Front Hair R1 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 19,
+      "shadow_name": "Front Hair L1 Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    },
+    {
+      "shadow_order": 20,
+      "shadow_name": "Front Hair C Shadow",
+      "base_order": 13,
+      "base_name": "Face",
+      "rule": "alpha_shadow *= alpha_base, full-canvas aligned"
+    }
+  ],
+  "late_face_paint_over_hair": [
+    {
+      "psd_order": 58,
+      "alpha_gt0_pixels": 346,
+      "overlap_hair_alpha_ge253_pixels": 28,
+      "status": "SOURCE_OBSERVED_DEFAULT_ONLY"
+    },
+    {
+      "psd_order": 59,
+      "alpha_gt0_pixels": 326,
+      "overlap_hair_alpha_ge253_pixels": 15,
+      "status": "SOURCE_OBSERVED_DEFAULT_ONLY"
+    },
+    {
+      "psd_order": 60,
+      "alpha_gt0_pixels": 2289,
+      "overlap_hair_alpha_ge253_pixels": 2156,
+      "status": "SOURCE_OBSERVED_DEFAULT_ONLY"
+    },
+    {
+      "psd_order": 61,
+      "alpha_gt0_pixels": 2105,
+      "overlap_hair_alpha_ge253_pixels": 1954,
+      "status": "SOURCE_OBSERVED_DEFAULT_ONLY"
+    }
+  ],
+  "claims": {
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+    "physical_yaw_degrees": "UNKNOWN",
+    "moving_occlusion": "NOT_TESTED"
+  }
+}

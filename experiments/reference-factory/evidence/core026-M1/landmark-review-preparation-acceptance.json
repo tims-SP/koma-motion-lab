@@ -1,0 +1,172 @@
+{
+  "schema": "core026-m1c2a-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_REVIEW_PREPARATION_ONLY",
+  "attribution": {
+    "patch_author": "Codex",
+    "patch_application_and_initial_commands": "mcode 0.7.2",
+    "independent_acceptance": "Codex"
+  },
+  "prior_attempt": {
+    "task": "mcode open-ended M1C2A implementation",
+    "cli_exit": 6,
+    "outcome": "TIMEOUT_NO_IMPLEMENTATION; not counted as completed"
+  },
+  "mcode": {
+    "cli_exit": 0,
+    "completed_bash_tools": 1,
+    "tool_exit": 0,
+    "commands": [
+      "python prepare_core026_landmark_review.py --prepare",
+      "python prepare_core026_landmark_review.py --verify"
+    ],
+    "validation_statuses": [
+      {
+        "status": "PREPARED_PENDING_REVIEW",
+        "slots": 19,
+        "poses": 9,
+        "cells": 171,
+        "reviewed": 0,
+        "fit_eligible": 0,
+        "hard_unknown_slots": 6,
+        "overall_M1": "NOT_ACCEPTED_BY_STRUCTURE_CHECK",
+        "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
+      },
+      {
+        "status": "STRUCTURE_ONLY_PASS",
+        "slots": 19,
+        "poses": 9,
+        "cells": 171,
+        "reviewed": 0,
+        "fit_eligible": 0,
+        "hard_unknown_slots": 6,
+        "overall_M1": "NOT_ACCEPTED_BY_STRUCTURE_CHECK",
+        "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
+      }
+    ],
+    "fresh_login_required": false,
+    "original_patch_sha256": "4cbc46f0d851cc93aae6318e613403302b09d108ba439a3548fadb9abbd8e49b",
+    "raw_stream_sha256": "fd568c6c8a75e586de2888ba71a7907d156e1a7a84764c0a73d05b6adaf1f753",
+    "raw_stream_location": "ignored out/core026/mcode/M1C2A-patch-stream.jsonl; not published"
+  },
+  "review_config_sha256": "f65b8ece7fc8fb872e7419cc2e3f8afb7793f60b12450d040cb58d1e6ab07499",
+  "independent_regressions": {
+    "status": "PASS",
+    "author": "Codex independent supervisor",
+    "scope": "STRUCTURE_AND_REJECTION_ONLY",
+    "synthetic_positive_case_is_not_review_evidence": true,
+    "checks": [
+      {
+        "case": "committed_table_verify",
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_native_png_hash",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "proxy_promoted_to_fit",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "hard_unknown_forged_point",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "unreviewed_candidate_promoted",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "missing_identity",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "missing_pose",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "candidate_coordinate_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "nan_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "bool_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "out_of_bounds_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "source_alpha_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "source_hash_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "overall_m1_claim_promoted",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "visual_evidence_missing",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "synthetic_visual_edit_allowed",
+        "exit_code": 0,
+        "input_unchanged": true
+      },
+      {
+        "case": "existing_review_not_overwritten",
+        "exit_code": 11,
+        "input_unchanged": true
+      }
+    ],
+    "original_config_sha256": "f65b8ece7fc8fb872e7419cc2e3f8afb7793f60b12450d040cb58d1e6ab07499",
+    "original_config_unchanged": true,
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
+  },
+  "scope": {
+    "reviewed_cells": 0,
+    "fit_eligible": 0,
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_depth_and_occlusion": "NOT_IMPLEMENTED",
+    "M2": "NOT_STARTED"
+  },
+  "ci": {
+    "code_commit": "ba80ad27d7819a6e308ba837fe46335757562bd8",
+    "legacy_run": 41154947789,
+    "legacy_status": "success",
+    "supervisor_run": 41154947797,
+    "supervisor_status": "failure",
+    "failed_before_new_review_step": true,
+    "failure": "M1C1 inputs.registration_sha256 differs from current generated report; numerical registration gate and source checks passed. New review CI not yet evaluated.",
+    "follow_up_v2": {
+      "commit": "54d1c9f0b900f87974e3dba788bacde967aaecb2",
+      "supervisor_run": 41155423219,
+      "legacy_run": 41155423100,
+      "both_status": "success",
+      "evidence": "landmark-review-ci-acceptance.json"
+    }
+  }
+}

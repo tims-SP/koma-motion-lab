@@ -1,0 +1,27 @@
+{
+  "schema": "core026-highres-reference-cursor-review/1",
+  "run_id": 41118184385,
+  "job_id": 124277765083,
+  "commit": "03ad67a0274c4929dab7e1854b08025e9d94ee22",
+  "ci_conclusion": "success",
+  "full_png_hashes_checked": 9,
+  "head_crop_hashes_checked": 9,
+  "head_size": [
+    652,
+    652
+  ],
+  "review_bundle_sha256": "b4a6c82d4945fb4851dd3f7a70fdad185c03052f2adb87b34c080e54f1e33218",
+  "draft_release": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-74ab014dad17e5187bbb",
+  "visual_gate": "FAIL_RETAKE_CURSOR_OVERLAY",
+  "finding": "A fixed X11 X-shaped pointer is visible over right-side hair in the actual9frame contact. Numeric/file gates alone do not accept visual reference quality.",
+  "next_fix": "ffmpeg x11grab -draw_mouse 0 (mcode implemented; awaits actual rerender)",
+  "overall_M1": "NOT_ACCEPTED",
+  "camera": {
+    "scale": 0.4,
+    "position": [
+      82,
+      1773
+    ],
+    "mode": "head_view"
+  }
+}

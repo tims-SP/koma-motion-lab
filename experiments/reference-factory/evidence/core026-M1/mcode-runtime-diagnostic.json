@@ -1,0 +1,115 @@
+{
+  "schema": "core026-mcode-runtime-diagnostic/1",
+  "date_local": "2026-10-31 Asia/Shanghai",
+  "sdk_version": "0.7.2",
+  "node_version": "v24.22.1",
+  "base_commit": "b5cdae15de0803050d2d4f996293bda18dabb726",
+  "guard": "tools/core026/mcode_egress_audit.cjs",
+  "guard_scope": "Per-process Node fetch/http/https/tls hooks; not OS firewall, packet capture, DNS or subprocess network audit",
+  "guard_policy": "Approved first-party HTTPS only; CDN and object storage denied",
+  "selftest": {
+    "exit_code": 0,
+    "denied_test_requests": 5,
+    "local_connections": 0,
+    "local_requests": 0,
+    "sensitive_test_values_logged": false
+  },
+  "attempts": [
+    {
+      "name": "probe",
+      "result": "SUCCESS_EXIT0_EXACT_OK",
+      "auto_review_reason": null,
+      "completed_tool_calls": 0,
+      "answer_present": true,
+      "connection_metadata": [
+        {
+          "layer": "tls.connect",
+          "decision": "allow",
+          "hostname": "agent.minimaxi.com",
+          "count": 6
+        },
+        {
+          "layer": "tls.connect",
+          "decision": "allow",
+          "hostname": "agent.minimax.cn",
+          "count": 3
+        },
+        {
+          "layer": "tls.connect",
+          "decision": "block-before-tls",
+          "hostname": "filecdn.minimax.chat",
+          "count": 1
+        }
+      ],
+      "login_prompt_observed": false
+    },
+    {
+      "name": "verify",
+      "result": "AUTO_REVIEW_REJECTED",
+      "auto_review_reason": "Workspace payload to agent.minimax.cn not explicitly authorized per auto-review",
+      "completed_tool_calls": 0,
+      "answer_present": false,
+      "connection_metadata": [
+        {
+          "layer": "tls.connect",
+          "decision": "allow",
+          "hostname": "agent.minimaxi.com",
+          "count": 2
+        }
+      ],
+      "login_prompt_observed": false
+    },
+    {
+      "name": "summary-only",
+      "result": "AUTO_REVIEW_REJECTED",
+      "auto_review_reason": "Repository-derived summaries to agent.minimax.cn not explicitly authorized per auto-review",
+      "completed_tool_calls": 0,
+      "answer_present": false,
+      "connection_metadata": [
+        {
+          "layer": "tls.connect",
+          "decision": "allow",
+          "hostname": "agent.minimaxi.com",
+          "count": 2
+        }
+      ],
+      "login_prompt_observed": false
+    },
+    {
+      "name": "public-summary",
+      "result": "AUTO_REVIEW_REJECTED",
+      "auto_review_reason": "Requested CDN host contradicted the command restriction and was not specifically authorized per auto-review",
+      "completed_tool_calls": 0,
+      "answer_present": false,
+      "connection_metadata": [
+        {
+          "layer": "tls.connect",
+          "decision": "allow",
+          "hostname": "agent.minimaxi.com",
+          "count": 3
+        },
+        {
+          "layer": "tls.connect",
+          "decision": "allow",
+          "hostname": "agent.minimax.cn",
+          "count": 4
+        }
+      ],
+      "login_prompt_observed": false
+    }
+  ],
+  "repository_public_payload_proof": "mcode-runtime-public-payload-proof.json",
+  "conclusion": {
+    "model_transport": "CONFIRMED_WORKING",
+    "existing_login": "CONFIRMED_USABLE_WITHOUT_RELOGIN_FOR_PROBE",
+    "repository_task_execution": "CONFIRMED_TWO_VERIFICATIONS_AFTER_USER_NETWORK_APPROVAL",
+    "Alibaba_upload_required": "NOT_ESTABLISHED",
+    "full_workspace_approval": "Historical refusals superseded for this scoped verification; no unconditional approval claimed"
+  },
+  "remaining_confirmation_scope": "Necessary project code, task documents and execution outputs to agent.minimax.cn / agent.minimaxi.com; public-resource reads from filecdn.minimax.chat; exclude credentials, login files, unrelated directories and unconfirmed object-storage uploads",
+  "processes_stopped": [],
+  "sdk_file_edits_performed": false,
+  "endpoint_substitution_or_proxy_used": false,
+  "raw_trace_published": false,
+  "latest_recovery": "mcode-network-recovery.json"
+}

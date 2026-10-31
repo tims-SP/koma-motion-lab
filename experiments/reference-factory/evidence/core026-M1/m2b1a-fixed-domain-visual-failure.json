@@ -1,0 +1,14 @@
+{
+  "schema": "core026-eye-visual-failure/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "REJECTED_BY_CODEX_VISUAL_REVIEW",
+  "numeric_status": "PASS_DISCRETE_EYE_CONTROL_ONLY",
+  "policy": "Fixed unshifted source paint domain",
+  "observed_failure": "At horizontal +/-8, portions of lower iris contour are cut by the unshifted source-painted domain. Original rest art is intact but moving iris is not.",
+  "reason_numeric_gate_missed_it": "Source-coordinate oracle implements the same explicitly fixed artist domain; pixel parity cannot establish that the domain is artistically appropriate.",
+  "evidence_manifest_sha256": "fb701d1520bae72b0e0adf4bfa62c1f9d1aaa7497c73d43c72c7c05c97419092",
+  "runtime_sha256": "16e9cdfb6a4453c54ead9ef471576e8476506d4fc83d84af14994a59d84390bd",
+  "review_sheet_sha256": "3245063427cf27a5871de503660f299e7f3b83cbc4f13b5c7138c26e90238bd8",
+  "next_policy": "For coupled horizontal gaze only, source alpha support horizontally dilated by fixed command range 8px, preserving moved lower iris. No rectangular clip or RGB threshold change. Native parity/continuous motion remain blocked.",
+  "executor": "Codex; no mcode SDK retry after automatic upload rejection"
+}

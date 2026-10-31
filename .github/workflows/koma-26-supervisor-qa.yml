@@ -1,0 +1,154 @@
+name: CORE026 supervisor source and reference diagnostics
+on:
+  push:
+    branches: [feature/koma-25d-core-021]
+    paths:
+      - '.github/workflows/koma-26-supervisor-qa.yml'
+      - 'experiments/reference-factory/restore_core026_reference.py'
+      - 'experiments/reference-factory/prepare_core026_landmark_seeds.py'
+      - 'experiments/reference-factory/verify_core026_reference.py'
+      - 'experiments/reference-factory/verify_core026_constraints.py'
+      - 'experiments/reference-factory/config/core026-landmark-seeds.json'
+      - 'experiments/reference-factory/extract_core026_constraints.py'
+      - 'experiments/reference-factory/verify_core026_m1c1_supervisor.py'
+      - 'experiments/reference-factory/run_core026_m1c1_regressions.py'
+      - 'experiments/reference-factory/config/core026-constraints.json'
+      - 'experiments/reference-factory/prepare_core026_landmark_review.py'
+      - 'experiments/reference-factory/run_core026_landmark_review_regressions.py'
+      - 'experiments/reference-factory/config/core026-landmark-review.json'
+      - 'experiments/reference-factory/verify_core026_m1.py'
+      - 'experiments/reference-factory/run_core026_m1_regressions.py'
+      - 'experiments/reference-factory/render_core026_review.py'
+      - 'experiments/reference-factory/core026_compositor_groups.py'
+      - 'experiments/reference-factory/core026_compositor_schedule.py'
+      - 'experiments/reference-factory/prepare_core026_compositor.py'
+      - 'experiments/reference-factory/verify_core026_compositor_contract.py'
+      - 'experiments/reference-factory/run_core026_compositor_regressions.py'
+      - 'experiments/reference-factory/config/core026-compositor-contract.json'
+      - 'experiments/reference-factory/core026.html'
+      - 'experiments/reference-factory/core026.js'
+      - 'experiments/reference-factory/capture_core026.mjs'
+      - 'experiments/reference-factory/capture_core026_supervisor.mjs'
+      - 'experiments/reference-factory/verify_core026_compositor_supervisor.py'
+      - 'experiments/reference-factory/run_core026_default_art_regressions.py'
+      - 'experiments/reference-factory/config/core026-eye-policy.json'
+      - 'experiments/reference-factory/capture_core026_eyes_supervisor.mjs'
+      - 'experiments/reference-factory/verify_core026_eyes_supervisor.py'
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  source-and-reference-diagnostics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: experiments/reference-factory
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned source-analysis and protected baseline dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Rebuild genuine pinned PSD layers and default derived assembly
+        run: |
+          python prepare.py
+          python native_layers.py
+          python prepare_core025.py
+      - name: Recreate protected CORE025 render reports using real browser captures
+        run: |
+          node capture_core025.mjs --anchors
+          python verify_core025_supervisor.py
+      - name: Independent source, raster identity and default coordinate checks
+        run: |
+          python audit_core026.py --audit
+          python audit_core026.py --verify-source
+          python verify_core026_supervisor.py
+          python verify_core026_registration.py
+          python verify_core026_constraints.py
+      - name: Verify receiver proposals and reject isolated corruptions
+        run: |
+          python extract_core026_constraints.py --verify
+          python verify_core026_m1c1_supervisor.py
+          python run_core026_m1c1_regressions.py
+      - name: Restore actual clean native PNGs from pinned successful job log
+        run: |
+          gh api --allow-escape-sequences "repos/$GH_REPO/actions/jobs/124281335070/logs" > "$RUNNER_TEMP/core026-native-job.log"
+          python restore_core026_reference.py --job-log "$RUNNER_TEMP/core026-native-job.log"
+      - name: Reproduce candidate fiducial diagnostics (not fit or art acceptance)
+        run: |
+          python prepare_core026_landmark_seeds.py
+          python verify_core026_reference.py
+      - name: Verify committed landmark review and reject isolated corruptions
+        run: |
+          python prepare_core026_landmark_review.py --verify
+          python run_core026_landmark_review_regressions.py
+      - name: Aggregate finite M1 references and prove missing observations block admission
+        run: |
+          python verify_core026_m1.py
+          python run_core026_m1_regressions.py
+          python render_core026_review.py
+      - name: Verify default painter schedule and source alpha support proposals
+        run: |
+          python prepare_core026_compositor.py --verify
+          python verify_core026_compositor_contract.py
+          python run_core026_compositor_regressions.py
+      - name: Real default artwork captures only (full M2B runtime is still unaccepted)
+        run: |
+          node capture_core026.mjs
+          node capture_core026_supervisor.mjs
+          python verify_core026_compositor_supervisor.py
+          python run_core026_default_art_regressions.py
+      - name: Discrete eye controls against original source RGBA (artist override only)
+        run: |
+          node capture_core026_eyes_supervisor.mjs
+          python verify_core026_eyes_supervisor.py
+      - name: Upload text-only numerical and diagnostic evidence
+        # M1 admission is finite reference support, not acceptance of depth or motion.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE026-supervisor-text-evidence
+          path: |
+            experiments/reference-factory/out/core026/source-audit.json
+            experiments/reference-factory/out/core026/verify-source.json
+            experiments/reference-factory/out/core026/supervisor-source-qa.json
+            experiments/reference-factory/out/core026/supervisor-constraints.json
+            experiments/reference-factory/out/core026/default-registration.json
+            experiments/reference-factory/out/core026/m1c1-supervisor.json
+            experiments/reference-factory/out/core026/m1c1-regressions.json
+            experiments/reference-factory/out/core026/landmark-seeds-projected.json
+            experiments/reference-factory/out/core026/landmarks/landmarks.json
+            experiments/reference-factory/out/core026/reference/restore-evidence.json
+            experiments/reference-factory/out/core026/landmark-review-regressions/report.json
+            experiments/reference-factory/out/core026/m1-acceptance.json
+            experiments/reference-factory/out/core026/m1-gate-regressions.json
+            experiments/reference-factory/out/core026/landmark-review/review-media-manifest.json
+            experiments/reference-factory/out/core026/m2a-supervisor.json
+            experiments/reference-factory/out/core026/m2a-regressions.json
+            experiments/reference-factory/out/core026/runtime/manifest.json
+            experiments/reference-factory/out/core026/runtime-supervisor/manifest.json
+            experiments/reference-factory/out/core026/runtime-supervisor/supervisor-qa.json
+            experiments/reference-factory/out/core026/default-art-regressions/report.json
+            experiments/reference-factory/out/core026/eyes-supervisor/manifest.json
+            experiments/reference-factory/out/core026/eyes-supervisor/supervisor-qa.json
+          if-no-files-found: warn
+      - name: Archive generated media only in owner-only Draft Release
+        run: |
+          python -m zipfile -c "$RUNNER_TEMP/CORE026-supervisor-QA.zip" out/core026/reference out/core026/landmarks out/core026/landmark-review out/core026/runtime out/core026/runtime-supervisor out/core026/eyes-supervisor
+          sha256sum "$RUNNER_TEMP/CORE026-supervisor-QA.zip" > "$RUNNER_TEMP/SHA256SUMS.txt"
+          gh release create "core026-supervisor-$GITHUB_RUN_NUMBER" --draft --target "$GITHUB_SHA" \
+            "$RUNNER_TEMP/CORE026-supervisor-QA.zip" "$RUNNER_TEMP/SHA256SUMS.txt" \
+            --title "CORE026 source and reference diagnostics $GITHUB_RUN_NUMBER" \
+            --notes "Aka by seagetch, CC-BY-4.0. Native references, reviewed overlays, default compositor captures, explicit artist eye override, discrete horizontal gaze and rejected hard-mask/static-highlight counterexamples. Default art and discrete eye controls only. Full M2B spatial/native clip/depth, continuous eye motion, dynamic occlusion and natural3D turn remain unaccepted."

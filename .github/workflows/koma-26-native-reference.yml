@@ -1,0 +1,131 @@
+name: CORE026 native full-head reference
+
+on:
+  push:
+    branches:
+      - feature/koma-25d-core-021
+    paths:
+      - .github/workflows/koma-26-native-reference.yml
+      - experiments/reference-factory/tools/core026/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  core026-native-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgl1-mesa-dev \
+            libegl1-mesa-dev \
+            libx11-dev \
+            libxkbcommon-dev \
+            libxkbcommon-x11-dev \
+            libxcursor-dev \
+            libxi-dev \
+            libxrandr-dev \
+            libxcb-xfixes0-dev \
+            libwayland-dev \
+            pkg-config \
+            xvfb \
+            xauth \
+            xdotool \
+            mesa-utils \
+            ffmpeg \
+            zip
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m venv .venv
+          . .venv/bin/activate
+          python -m pip install --upgrade pip
+          python -m pip install Pillow==12.0.0 numpy==2.2.6
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Download and verify original INX
+        run: |
+          curl --fail --location --retry 3 \
+            --output "$RUNNER_TEMP/Aka.inx" \
+            "https://media.githubusercontent.com/media/Inochi2D/example-models/cd95dd00ddff63b1f7d2b84a19914c3c70d05945/Aka.inx"
+          echo "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f  $RUNNER_TEMP/Aka.inx" | sha256sum --check --strict
+
+      - name: Clone Inochi2D/inox2d
+        run: |
+          git clone https://github.com/Inochi2D/inox2d.git "$RUNNER_TEMP/inox2d"
+          git -C "$RUNNER_TEMP/inox2d" checkout --detach d4dd9dd7f16b775042cbda44370570abf9a8cf81
+          test "$(git -C "$RUNNER_TEMP/inox2d" rev-parse HEAD)" = "d4dd9dd7f16b775042cbda44370570abf9a8cf81"
+
+      - name: Patch native reference source parameters
+        run: |
+          . .venv/bin/activate
+          python experiments/reference-factory/tools/core026/patch_native_reference.py \
+            --checkout "$RUNNER_TEMP/inox2d" \
+            --report experiments/reference-factory/out/core026/source_parameter_patch.json
+
+      - name: Build render-opengl
+        run: |
+          cargo build --release \
+            --manifest-path "$RUNNER_TEMP/inox2d/Cargo.toml" \
+            -p render-opengl
+
+      - name: Capture native reference
+        run: |
+          . .venv/bin/activate
+          python experiments/reference-factory/tools/core026/capture_native_reference.py \
+            --binary "$RUNNER_TEMP/inox2d/target/release/render-opengl" \
+            --source "$RUNNER_TEMP/Aka.inx" \
+            --out experiments/reference-factory/out/core026/reference \
+            --patch-report experiments/reference-factory/out/core026/source_parameter_patch.json \
+            --head-view
+
+      - name: Archive native reference
+        run: |
+          cp experiments/reference-factory/out/core026/source_parameter_patch.json \
+            experiments/reference-factory/out/core026/reference/source_parameter_patch.json
+          mkdir -p experiments/reference-factory/out/core026/archive
+          cd experiments/reference-factory/out/core026/reference
+          zip -r ../archive/CORE026-native-reference.zip .
+          cd ../archive
+          sha256sum CORE026-native-reference.zip > SHA256SUMS.txt
+
+      - name: Upload text artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core026-native-reference-text
+          path: |
+            experiments/reference-factory/out/core026/reference/reference-manifest.json
+            experiments/reference-factory/out/core026/source_parameter_patch.json
+            experiments/reference-factory/out/core026/reference/logs/native_*.log
+            experiments/reference-factory/out/core026/reference/logs/xvfb.log
+          if-no-files-found: error
+          compression-level: 0
+
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create "core026-native-${{ github.run_number }}" \
+            --draft \
+            --target "$GITHUB_SHA" \
+            --title "CORE026 native reference ${{ github.run_number }}" \
+            --notes "Creator: seagetch. License: CC-BY-4.0. Raw yaw units: UNKNOWN degrees. dt=0 is not validated equilibrium. Reference-only artifact; not production-ready." \
+            experiments/reference-factory/out/core026/archive/CORE026-native-reference.zip \
+            experiments/reference-factory/out/core026/archive/SHA256SUMS.txt

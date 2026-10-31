@@ -1,0 +1,53 @@
+{
+  "schema": "koma-core025-supervisor-qa/1",
+  "numeric_gate": "PASS",
+  "visual_gate": "NOT_REVIEWED",
+  "production_gate": "NOT_ACCEPTED",
+  "failures": [],
+  "geometry_count": 62,
+  "total_vertices": 63063,
+  "face": {
+    "vertices": 3886,
+    "z_range": 0.07453756779432297,
+    "max_plane_residual": 0.03701808903753998
+  },
+  "uv_max_source_px": 4.8279762268066406e-05,
+  "surface_max_world_error": 1.0096272241855164e-08,
+  "front_fidelity": {
+    "source_white": {
+      "mae_0_255": 0.048877645502645506,
+      "max_channel_error": 2,
+      "over16_fraction": 0.0,
+      "outside_foreground_mae": 0.0
+    },
+    "source_black": {
+      "mae_0_255": 0.04891335978835979,
+      "max_channel_error": 2,
+      "over16_fraction": 0.0,
+      "outside_foreground_mae": 0.0
+    },
+    "clean_white": {
+      "mae_0_255": 0.04247065087857197,
+      "max_channel_error": 2,
+      "over16_fraction": 0.0,
+      "outside_foreground_mae": 0.0
+    },
+    "clean_black": {
+      "mae_0_255": 0.04246366889832803,
+      "max_channel_error": 2,
+      "over16_fraction": 0.0,
+      "outside_foreground_mae": 0.0
+    }
+  },
+  "curved_flat_mean_anchor_px_at640": 8.313518813544595,
+  "capture_count": 17,
+  "all_hashes_valid": true,
+  "fixed_camera": true,
+  "inputs": {
+    "assembly_sha256": "06ffade8399609b961dafb3c5c3bf6f3f185200b98d8ae06f30fed9603e65673",
+    "config_sha256": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3",
+    "scene_sha256": "4b67da33763b87394f161ade560b1fc721d6f8f60d8a3c505ebccc8e2b769228",
+    "capture_sha256": "d0c4f05292295af829f99c4ca3bf8fedadc785f26a2e2c7ebcbbe103314aa028"
+  },
+  "validator_sha256": "78b70663543c436a99f5655db127d497c36df2870001add012af1640e6873866"
+}

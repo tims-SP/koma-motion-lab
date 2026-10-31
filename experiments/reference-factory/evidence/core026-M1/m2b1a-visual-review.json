@@ -1,0 +1,39 @@
+{
+  "schema": "core026-m2b1a-visual-review/1",
+  "reviewer": "Codex",
+  "status": "PASS_DISCRETE_HORIZONTAL_CONTROL_ONLY",
+  "method": "Viewed full-scale eye contact sheet for six offsets, full head source +8 and clean -8, and accepted-vs-fixed-domain-rejected comparison",
+  "runtime_sha256": "d57f029d23749466dbae4f7e0b13e7f9074d35305c39ab83453431ba5528fe26",
+  "policy_sha256": "e23f8553437d7cca116142a6dd9798492493e8261b72251a66a544b292f5c947",
+  "manifest_sha256": "c40f5a3c7848ba7bdc3b96768d90d0ae9a057af63626a4bc2252de60084ad1f2",
+  "reviewed_images": {
+    "left_minus8_source_white": "a053290de7cc078a07e7f1dec317d108f225c45ab0e0f6d1c3cef507502bb1f8",
+    "left_plus8_source_white": "73948f8fe29e73ed09b7599c1bc4424255a406189bdcb80955d85d204123b6fb",
+    "right_minus8_source_white": "7c6be065e67dece9b3a34136c4c39753394ce8acc7f84b12a586f483f879b74a",
+    "right_plus8_source_white": "f40944c5fc7d1ac3f58f40965da696e9fd402ed13d8634b8cbc8e97ea8722478",
+    "both_minus8_source_white": "b168cfa5c611b9bfb1ef00102b42d0047f7c0e809b3404e98484e8e84f972135",
+    "both_plus8_source_white": "9f690758aec61474681389cf085c02e7c8da2b7e71615e4e89bb430c7ff1e817",
+    "default_source_white": "d33c81e1be3e948b3d9533f63c8e323c37358c7e1f942e4f045dd2d331cbbb33",
+    "both_minus8_clean_white": "d08bfb39ca7e14f97b30d110b7f17b454f98dda984803b4255c33b784fe9d58d",
+    "negative_left_fixed_domain_source_white": "b2afa64d167111dbbfa9a5c66ef4d18096ed1b1acfc45f40adcb24167cc98e26",
+    "negative_right_fixed_domain_source_white": "8abfcb16cf49c93cb98014e8700bc6e0f6382649a1bf7f4db45c519bf543e771"
+  },
+  "review_sheet_sha256": "83b61fee16a2254d54877e24de031881cfe50503b698e6bd4d7b166ea45dfe24",
+  "observations": [
+    "First fixed-domain version cut the lower iris; it was rejected despite numeric parity.",
+    "Final bounded horizontal alpha envelope preserves lower iris contours for both eyes at tested +/-8.",
+    "Highlights follow pupils, including independent left/right controls.",
+    "Default rest/reset SHA remains unchanged; source/clean layers outside eye controls retain their pre-existing appearance."
+  ],
+  "scope": "Only discrete horizontal -8/0/+8 source-pixel control at default head pose. Not native ClipToLower, continuous eye animation, head turn, depth, body rig or360.",
+  "limitations": {
+    "visual_gate": "PASS_DISCRETE_HORIZONTAL_CONTROL_ONLY",
+    "native_clip_parity": "BLOCKED_NATIVE_COMPOSITE_MESH_UV_REGISTRATION_NOT_ACCEPTED",
+    "physical_depth": "NOT_RECOVERED",
+    "spatial_compositing": "NOT_IMPLEMENTED",
+    "continuous_eye_motion": "NOT_ACCEPTED",
+    "natural_3d_turn": "NOT_ACCEPTED",
+    "full_M2B": "BLOCKED_SPATIAL_RUNTIME_AND_NATIVE_REGISTRATION",
+    "M3_permission": "BLOCKED_PENDING_COMPLETE_M2B"
+  }
+}

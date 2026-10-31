@@ -1,0 +1,247 @@
+{
+  "schema": "core026-m2a-local-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL_LOCAL_ONLY",
+  "ci": {
+    "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL",
+    "code_commit": "ff2fe1a8386de7600738cc80941e9cf9a2606593",
+    "supervisor_run": 41169579730,
+    "legacy_run": 41169579751,
+    "evidence": "m2a-ci-acceptance.json"
+  },
+  "author_executor": "Codex explicit local fallback",
+  "mcode": {
+    "login": "Official CN CLI returned Signed in with MiniMax and exit0 after user authorization",
+    "first_code_generation": "Public text only / no local tools; timed out exit6; no accepted code file",
+    "second_smaller_generation": "Automatic approval rejected due to unverified Alibaba OSS transfer contents; no accepted code file; stopped without retry",
+    "attribution": "No mcode-generated implementation was accepted. All M2A code in this checkpoint is Codex fallback.",
+    "raw_logs": "ignored out/core026/mcode-M2A and mcode-egress-audit; no tokens, session IDs or login codes published"
+  },
+  "source_contract_sha256": "2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c",
+  "independent": {
+    "schema": "core026-m2a-independent/1",
+    "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL",
+    "contract_sha256": "2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c",
+    "entries": 62,
+    "independent_surfaces": 19,
+    "attached_proposals": 43,
+    "proposed_passes": 25,
+    "native_clip_count": 4,
+    "derived_shadow_clip_count": 9,
+    "multiply_count": 11,
+    "late_overlap_counts": [
+      28,
+      15,
+      2156,
+      1954
+    ],
+    "cross_surface_support_pairs": 108,
+    "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+    "physical_depth": "UNKNOWN",
+    "natural_3d_turn": "NOT_ACCEPTED"
+  },
+  "regressions": {
+    "schema": "core026-m2a-regressions/1",
+    "status": "PASS",
+    "cases": [
+      {
+        "name": "missing_source_layer",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Painter source identity/order/blend/receiver differs\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "swapped_valid_source_uuids",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Painter source identity/order/blend/receiver differs\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "missing_multiply_brow",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Multiply list differs\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "late_paint_moved_before_hair",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Passes merge late painting or lose scene-backdrop blend\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "invented_physical_depth",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Painter source identity/order/blend/receiver differs\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "native_clip_conflated_with_derived",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Wrong native ClipToLower list\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "wrong_late_alpha_overlap",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Source alpha support observations differ\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "face_gaps_baked_away",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Surface groups/spans/gaps differ\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "whole_head_bake_allowed",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Invalid scope/claim global_head_bake_allowed\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "float_receiver_identity",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Painter source identity/order/blend/receiver differs\n"
+        },
+        "candidate_unchanged": true
+      },
+      {
+        "name": "extra_claim_field",
+        "status": "REJECTED_BY_BOTH",
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_COMPOSITOR_CONTRACT_FAIL: Committed compositor contract differs from current source/schedule proposal\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M2A_SUPERVISOR_FAIL: Unexpected top-level fields/claims\n"
+        },
+        "candidate_unchanged": true
+      }
+    ],
+    "positive": {
+      "producer": {
+        "exit_code": 0,
+        "output_tail": "CORE026_COMPOSITOR_CONTRACT {\"status\": \"VERIFIED\", \"schedule_entries\": 62, \"surfaces\": 19, \"proposed_passes\": 25, \"scope\": \"SOURCE_SCHEDULE_AND_PROPOSAL_ONLY\", \"runtime_receiver_compositor\": \"NOT_IMPLEMENTED\", \"physical_depth\": \"UNKNOWN\"}\n"
+      },
+      "supervisor": {
+        "exit_code": 0,
+        "output_tail": "CORE026_M2A_SUPERVISOR {\"schema\": \"core026-m2a-independent/1\", \"status\": \"PASS_SOURCE_SCHEDULE_AND_PROPOSAL\", \"contract_sha256\": \"2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c\", \"entries\": 62, \"independent_surfaces\": 19, \"attached_proposals\": 43, \"proposed_passes\": 25, \"native_clip_count\": 4, \"derived_shadow_clip_count\": 9, \"multiply_count\": 11, \"late_overlap_counts\": [28, 15, 2156, 1954], \"cross_surface_support_pairs\": 108, \"runtime_receiver_compositor\": \"NOT_IMPLEMENTED\", \"physical_depth\": \"UNKNOWN\", \"natural_3d_turn\": \"NOT_ACCEPTED\"}\n"
+      }
+    },
+    "repeated_build_byte_identical": true,
+    "original_controlled_config_unchanged": true,
+    "contract_sha256": "2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c",
+    "scope": "SOURCE_SCHEDULE_AND_PROPOSAL_ONLY",
+    "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+    "physical_depth": "UNKNOWN"
+  },
+  "source_schedule": {
+    "entries": 62,
+    "independent_surfaces": 19,
+    "attached": 43,
+    "proposed_passes": 25,
+    "multiple_pass_surface_groups": [
+      5,
+      11,
+      13
+    ],
+    "native_clip_orders": [
+      28,
+      29,
+      38,
+      39
+    ],
+    "derived_shadow_clips": 9,
+    "source_multiply_orders": [
+      6,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      60,
+      61
+    ],
+    "cross_surface_raw_alpha_support_pairs": 108
+  },
+  "limitations": {
+    "raw_alpha_overlap": "SUPPORT_ONLY_NOT_FINAL_VISIBILITY_OR_PHYSICAL_OCCLUSION",
+    "physical_depth": "UNKNOWN",
+    "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+    "M2B": "NOT_STARTED",
+    "natural_3d_turn": "NOT_ACCEPTED"
+  }
+}

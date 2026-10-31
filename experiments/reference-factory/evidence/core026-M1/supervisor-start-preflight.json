@@ -1,0 +1,128 @@
+{
+  "status": "SOURCE_AND_DOMAIN_AUDIT_ONLY",
+  "all_sources_match": true,
+  "sources": [
+    {
+      "file": "tutorial-aka.psd",
+      "expected": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+      "actual": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+      "pass": true
+    },
+    {
+      "file": "Aka.inx",
+      "expected": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+      "actual": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+      "pass": true
+    },
+    {
+      "file": "reference.vrm",
+      "expected": "12c2b97e95e700783a6a550dc0eee2d7880aeedccef9ae67bc4c5a2f0f2631a2",
+      "actual": "12c2b97e95e700783a6a550dc0eee2d7880aeedccef9ae67bc4c5a2f0f2631a2",
+      "pass": true
+    }
+  ],
+  "param": {
+    "name": "Head:: Yaw-Pitch",
+    "min": [
+      -1.0,
+      -1.0
+    ],
+    "max": [
+      1.0,
+      1.0
+    ],
+    "defaults": [
+      0.0,
+      0.0
+    ],
+    "axis_points": [
+      [
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75,
+        0.875,
+        1.0
+      ],
+      [
+        0.0,
+        0.5,
+        1.0
+      ]
+    ],
+    "binding_count": 114
+  },
+  "base_commit": "4a57ba096309baa6a218be92f65b6ea58191fac3",
+  "implementation": "NOT_STARTED_MCODE_AUTH_REQUIRED",
+  "native_capture": "NOT_TESTED",
+  "m1": "NOT_COMPLETED",
+  "protected_files": [
+    {
+      "path": "experiments/reference-factory/core025.js",
+      "sha256": "4b67da33763b87394f161ade560b1fc721d6f8f60d8a3c505ebccc8e2b769228"
+    },
+    {
+      "path": "experiments/reference-factory/config/core025-render.json",
+      "sha256": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3"
+    },
+    {
+      "path": "experiments/reference-factory/config/core025-layer-contract.json",
+      "sha256": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d"
+    },
+    {
+      "path": "experiments/reference-factory/prepare_core025.py",
+      "sha256": "32cb350af63172df34043b4478749278e826436036daa4a925888bd99830eff8"
+    },
+    {
+      "path": "experiments/reference-factory/capture_core025.mjs",
+      "sha256": "d0c4f05292295af829f99c4ca3bf8fedadc785f26a2e2c7ebcbbe103314aa028"
+    },
+    {
+      "path": "experiments/reference-factory/capture_core025_video.mjs",
+      "sha256": "163065a259930d0ebcfa879a0ba66c9fc6910fd3984b818d2b5aea078b1913f1"
+    },
+    {
+      "path": "experiments/reference-factory/verify_core025_supervisor.py",
+      "sha256": "78b70663543c436a99f5655db127d497c36df2870001add012af1640e6873866"
+    },
+    {
+      "path": "experiments/reference-factory/verify_core025_video.py",
+      "sha256": "44a74bc0b20f6f6eeeebe7ac38419b2f766bb96e4dfa0e0d89095c895458e9b4"
+    },
+    {
+      "path": "experiments/reference-factory/sources.lock.json",
+      "sha256": "8f9acc8a26591cfa381c2ca0a4a076befe0de35ebf6e84aedec34828c8e4d6b6"
+    },
+    {
+      "path": "experiments/reference-factory/package-lock.json",
+      "sha256": "5d585a72895d82b1feb09a92da1440fb9ce241baa2499b2c710932ca0ee2c135"
+    }
+  ],
+  "layer_count": 62,
+  "assembly_count": 62,
+  "multiply_count": 11,
+  "shadow_clip_count": 9,
+  "mcode_attempts": [
+    {
+      "work_order": "M1A audit and correspondence",
+      "started_implementation": false,
+      "error": "Sign in to MiniMax to use Agent features. Run mcode login, then retry.",
+      "exit_code": 3
+    },
+    {
+      "work_order": "M1B native reference workflow",
+      "started_implementation": false,
+      "error": "Sign in to MiniMax to use Agent features. Run mcode login, then retry.",
+      "exit_code": 3
+    }
+  ],
+  "local_native_tools": {
+    "cargo": false,
+    "Xvfb": false,
+    "ffmpeg": true
+  },
+  "next_action": "After official mcode login succeeds, rerun M1A and M1B work orders; native GL capture requires GitHub Actions. No source or CORE025 implementation change."
+}

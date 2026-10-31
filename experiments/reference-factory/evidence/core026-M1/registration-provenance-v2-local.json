@@ -1,0 +1,254 @@
+{
+  "schema": "core026-registration-provenance-v2-local/1",
+  "author_executor": "Codex",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_LOCAL_ONLY",
+  "ci": {
+    "status": "PASS",
+    "code_commit": "54d1c9f0b900f87974e3dba788bacde967aaecb2",
+    "supervisor_run": 41155423219,
+    "legacy_run": 41155423100
+  },
+  "constraints_sha256": "a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83",
+  "config_schema": "core026-constraints/2",
+  "62_records_and_all_other_design_content_unchanged_from": "ba80ad27d7819a6e308ba837fe46335757562bd8",
+  "original_inputs_unchanged": [
+    "INX",
+    "PNG",
+    "UV",
+    "layer contract",
+    "verify_core026_registration.py"
+  ],
+  "regressions": {
+    "schema": "core026-m1c1-corruption-regressions/1",
+    "status": "PASS",
+    "baseline_sha256": "a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83",
+    "positive": {
+      "producer": {
+        "exit_code": 0,
+        "output_tail": "CORE026_CONSTRAINTS {\"status\": \"VERIFIED\", \"records\": 62, \"multiply\": 11, \"default_clips\": 9, \"late_overlaps\": [28, 15, 2156, 1954], \"overall_M1\": \"NOT_ACCEPTED\", \"runtime_receiver_compositor\": \"NOT_IMPLEMENTED\"}\n"
+      },
+      "supervisor": {
+        "exit_code": 0,
+        "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"PASS_SOURCE_FACTS_AND_DESIGN_CONTRACT\", \"constraints_sha256\": \"a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+      }
+    },
+    "cases": [
+      {
+        "name": "swap-valid-native-uuids",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.records[0].observed.native_uuid: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"e2a6b675ef24bc2ef4cd5cec9649e02017d0263ccdb9009cb00c00bb8cc63b5d\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"1.observed.native_uuid: differs from native facts\", \"2.observed.native_uuid: differs from native facts\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "shadow-attached-to-caster",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.records[13].design.receiver_order: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"28e6961e9b6d14a4d919dc6d01b4184fc0a44dafb59ab31c45eb6b154e1d0718\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"14: wrong receiver\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "missing-late-brow-paint",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.records[59].design: keys differ\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"9e78afc42fb9e13a04c0ffcb86a1438e6b4abae9e142d0ccbf527ff5398af809\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"60: wrong late-paint flag\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "invent-normal-instead-of-clip",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.records[27].observed.native_blend_mode: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"1fd0fadfe65c63491452d42eb283b5dbb6df431c1c5f71b465714b3c4d2cd3a9\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"28.observed.native_blend_mode: differs from native facts\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "wrong-source-texture-hash",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.records[12].texture_sha256: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"b6158a560e444078276a1a4e44d10ee366b0575c04a6caced673661cd1ca3389\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"13: raw source texture hash mismatch\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "float-receiver-id",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.records[5].design.receiver_order: type differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"8184f96d5127bf321b46dd718b3189cbd9d64755b9a94758e44eb7bb63b6cb7c\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"6: wrong receiver\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "invent-overlap-count",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.late_face_paint_over_hair[2].overlap_hair_alpha_ge253_pixels: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"b32908507b5073d770430eebab3cdca6a50900056b5adca3e54e5cbe339469c4\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"Late-paint observation overlap_hair_alpha_ge253_pixels mismatch\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "claim-compositor-implemented",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.claims.runtime_receiver_compositor: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"cb415fc8707e52f4cd5d0efe2d7f97e5df54cecaf5347ada73d1201b5b3855de\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"Claim runtime_receiver_compositor overstates acceptance\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "wrong-input-inx-hash",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.inputs.inx_sha256: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"bff51e5404f904906ad646bc4469cd131ba8fabc24062f7a094ab5fbf9805c22\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"Missing/wrong input provenance SHA\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "wrong-registration-identities",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.inputs.registration_identity_sha256: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"4e857e73570c85bddb622873e27f94d3f2c6b7fdb5b696545ead05862bf69b3f\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"Missing/wrong input provenance SHA\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      },
+      {
+        "name": "wrong-registration-program",
+        "status": "REJECTED_AS_EXPECTED",
+        "verify_did_not_modify_candidate": true,
+        "producer": {
+          "exit_code": 11,
+          "output_tail": "CORE026_CONSTRAINTS_FAIL: Constraint verification failed: $.inputs.registration_program_sha256: value differs\n"
+        },
+        "supervisor": {
+          "exit_code": 11,
+          "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"FAIL\", \"constraints_sha256\": \"d47b5ba355d73f2e9350f4a975a214a570fdabb4074f0a9eca45cb1999c02d14\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [\"Missing/wrong input provenance SHA\"], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+        }
+      }
+    ],
+    "repeated_build_identical": true,
+    "unused_float_and_formatting_independent": {
+      "exit_code": 0,
+      "output_tail": "CORE026_CONSTRAINTS {\"status\": \"VERIFIED\", \"records\": 62, \"multiply\": 11, \"default_clips\": 9, \"late_overlaps\": [28, 15, 2156, 1954], \"overall_M1\": \"NOT_ACCEPTED\", \"runtime_receiver_compositor\": \"NOT_IMPLEMENTED\"}\n"
+    },
+    "original_registration_mesh_corruption_rejected": {
+      "exit_code": 11,
+      "output_tail": "CORE026_CONSTRAINTS_FAIL: Original registration mesh changed\n"
+    },
+    "original_candidate_unchanged": true,
+    "restored": {
+      "producer": {
+        "exit_code": 0,
+        "output_tail": "CORE026_CONSTRAINTS {\"status\": \"VERIFIED\", \"records\": 62, \"multiply\": 11, \"default_clips\": 9, \"late_overlaps\": [28, 15, 2156, 1954], \"overall_M1\": \"NOT_ACCEPTED\", \"runtime_receiver_compositor\": \"NOT_IMPLEMENTED\"}\n"
+      },
+      "supervisor": {
+        "exit_code": 0,
+        "output_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"PASS_SOURCE_FACTS_AND_DESIGN_CONTRACT\", \"constraints_sha256\": \"a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n"
+      }
+    },
+    "problems": [],
+    "overall_M1": "NOT_ACCEPTED_BY_THIS_CHECK"
+  },
+  "simd_probe": {
+    "exit": 0,
+    "difference_count": 0,
+    "first_differences": [],
+    "max_numeric_difference": 0
+  },
+  "failed_ci_report_sha_difference_cause": "Failed run report was not archived, but follow-up CI reproduces a full-report SHA difference consisting solely of five unused distance diagnostics, max2.22e-16; input identities/meshes/coordinates unchanged.",
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED",
+  "follow_up_full_report_comparison": {
+    "artifact_id": 13024108701,
+    "artifact_sha256": "088a3b75926b298dc00ebaf02cc54d22756fe266aacd366c9d20b11f02d27673",
+    "text_files": 11,
+    "ci_registration_sha256": "ca00bdb9f407ca9185a21f2d8872cdf10c035067b3095dc02229ed72739c9260",
+    "local_registration_sha256": "b44386f6f206a08c9b40bf2a1d777bec20244f5e864e56765fb32fb3e3b71dc8",
+    "difference_count": 5,
+    "first_differences": [
+      [
+        "$.entries[15].candidates[0].distance_from_global_translation_px",
+        0.7071253993556453,
+        0.7071253993556454,
+        1.1102230246251565e-16
+      ],
+      [
+        "$.entries[32].candidates[0].distance_from_global_translation_px",
+        1.118017740499471,
+        1.1180177404994711,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[37].candidates[0].distance_from_global_translation_px",
+        1.414234492781407,
+        1.4142344927814068,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[45].candidates[0].distance_from_global_translation_px",
+        1.4141941806230431,
+        1.4141941806230434,
+        2.220446049250313e-16
+      ],
+      [
+        "$.entries[52].candidates[0].distance_from_global_translation_px",
+        0.5000225000606957,
+        0.5000225000606958,
+        1.1102230246251565e-16
+      ]
+    ],
+    "max_numeric_difference": 2.220446049250313e-16
+  }
+}

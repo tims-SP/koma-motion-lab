@@ -1,0 +1,41 @@
+{
+  "schema": "core026-native-eye-primary-source-review/1",
+  "source_repository": "Inochi2D/inox2d",
+  "source_revision": "d4dd9dd7f16b775042cbda44370570abf9a8cf81",
+  "sources": [
+    {
+      "path": "inox2d-opengl/src/lib.rs",
+      "lines": "299-301;535-560",
+      "url": "https://github.com/Inochi2D/inox2d/blob/d4dd9dd7f16b775042cbda44370570abf9a8cf81/inox2d-opengl/src/lib.rs#L299"
+    },
+    {
+      "path": "inox2d/src/render.rs",
+      "lines": "311-331",
+      "url": "https://github.com/Inochi2D/inox2d/blob/d4dd9dd7f16b775042cbda44370570abf9a8cf81/inox2d/src/render.rs#L311"
+    }
+  ],
+  "observed_code_facts": [
+    "ClipToLower uses FUNC_ADD with DST_ALPHA,ONE_MINUS_SRC_ALPHA factors.",
+    "Each Composite starts a cleared transparent framebuffer and renders its zsorted children."
+  ],
+  "derived_math": "For premultiplied RGBA: RGBout=RGBsrc*Ad+RGBdst*(1-As); Aout=As*Ad+Ad*(1-As)=Ad. Multiplying only source alpha then ordinary Normal blending is not this equation.",
+  "actual_inx_eye_composites": [
+    {
+      "uuid": 977552066,
+      "orders": [
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "uuid": 200444691,
+      "orders": [
+        37,
+        38,
+        39
+      ]
+    }
+  ],
+  "inference_limit": "Native parity also depends on registered meshes/UV/context. Current raw source paint-domain cap preserves PSD rest art but does not claim native GPU ClipToLower parity."
+}

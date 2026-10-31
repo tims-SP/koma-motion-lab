@@ -1,5 +1,9 @@
 # PROD-009: Git history is strictly text-only. Preview binaries belong in draft Releases.
 __pycache__/
+node_modules/
+*.vrm
+*.inx
+*.psd
 *.py[cod]
 .venv/
 venv/

@@ -1,0 +1,67 @@
+{
+  "schema": "core026-m2a-ci-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL",
+  "code_commit": "ff2fe1a8386de7600738cc80941e9cf9a2606593",
+  "author_executor": "Codex explicit local fallback; no mcode implementation accepted",
+  "mcode_login": "Official CN link login completed and CLI returned Signed in with MiniMax, exit0",
+  "mcode_execution": "One public-only generation timed out exit6; smaller no-tool generation denied by automatic approval for unverified OSS contents. Stopped; no further login/retry.",
+  "runs": [
+    {
+      "id": 41169579730,
+      "job_id": 124444420047,
+      "kind": "supervisor M1 + M2A source schedule and alpha proposals",
+      "conclusion": "success"
+    },
+    {
+      "id": 41169579751,
+      "job_id": 124444420410,
+      "kind": "legacy browser/render/video regression",
+      "conclusion": "success"
+    }
+  ],
+  "artifact_inspection": {
+    "schema": "core026-m2a-ci-artifact-inspection/1",
+    "status": "PASS",
+    "artifact_id": 13031045253,
+    "zip_sha256": "1003658943529b2d5d412610fea5e3c756cfc0f3aa3a7c1806694ea0adfa41e9",
+    "files": 16,
+    "all_files_json": true,
+    "contract_sha256_matches_local": true,
+    "supervisor": {
+      "schema": "core026-m2a-independent/1",
+      "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL",
+      "contract_sha256": "2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c",
+      "entries": 62,
+      "independent_surfaces": 19,
+      "attached_proposals": 43,
+      "proposed_passes": 25,
+      "native_clip_count": 4,
+      "derived_shadow_clip_count": 9,
+      "multiply_count": 11,
+      "late_overlap_counts": [
+        28,
+        15,
+        2156,
+        1954
+      ],
+      "cross_surface_support_pairs": 108,
+      "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+      "physical_depth": "UNKNOWN",
+      "natural_3d_turn": "NOT_ACCEPTED"
+    },
+    "corruptions_rejected_by_both": 11,
+    "repeated_build_byte_identical": true,
+    "original_controlled_config_unchanged": true,
+    "M1": "PASS_REFERENCE_LIMITED",
+    "M2B": "NOT_STARTED",
+    "runtime_receiver_compositor": "NOT_IMPLEMENTED"
+  },
+  "media_draft": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-d73b42d7a91c83b9cffd",
+  "media_scope": "Existing native references and reviewed overlays; no new M2B runtime images claimed",
+  "next_order": "docs/plans/CORE-026-M2-local-compositor-order.md M2B",
+  "M2B": "NOT_STARTED",
+  "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+  "physical_depth": "UNKNOWN",
+  "natural_3d_turn": "NOT_ACCEPTED"
+}

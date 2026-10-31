@@ -1,0 +1,112 @@
+{
+  "schema": "core026-clean-native-acceptance/1",
+  "run_id": 41119224557,
+  "job_id": 124281335070,
+  "commit": "801d90409ff3e8680a63caf3b7a164902cbe360f",
+  "ci_status": "success",
+  "draft_release": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-2589bc212d17274d3503",
+  "bundle_sha256": "8b0e9511c2781108a4335e287ab419c7563cf3e54e933d98d79be1eb6c263f73",
+  "bundle_bytes": 1876570,
+  "full_png_sha_verified": 9,
+  "independent_crop_sha_verified": 9,
+  "head_size": [
+    652,
+    652
+  ],
+  "draw_mouse": false,
+  "camera": {
+    "scale": 0.4,
+    "position": [
+      82,
+      1773
+    ],
+    "crop": [
+      34,
+      114,
+      686,
+      766
+    ]
+  },
+  "cursor_removal": {
+    "actual_before_after_changed_gt16_pixels": [
+      176,
+      176,
+      171,
+      163,
+      155,
+      126,
+      160,
+      174,
+      176
+    ],
+    "all_difference_bboxes": [
+      471,
+      329,
+      487,
+      345
+    ],
+    "source_or_pose_changed": false
+  },
+  "actual_first_ink_y_in_full": [
+    126,
+    127,
+    127,
+    127,
+    126,
+    127,
+    127,
+    127,
+    126
+  ],
+  "visual_gate": "PASS_CLEAN_LIMITED_NATIVE_2D_REFERENCE",
+  "physical_degrees": "UNKNOWN",
+  "natural_3d_turn": "NOT_ACCEPTED",
+  "overall_M1": "NOT_YET_ACCEPTED",
+  "poses": [
+    {
+      "raw_yaw": -1,
+      "full_sha256": "0b03f0bc37fdffc1a797e55bb8d96b5c586f241985e7dd158acb4a1853446c0a",
+      "head_sha256": "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055"
+    },
+    {
+      "raw_yaw": -0.75,
+      "full_sha256": "71173c97f873db0def3fd5fb5b911fa448e7844fb443ce214caabd9c28cf3fe3",
+      "head_sha256": "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123"
+    },
+    {
+      "raw_yaw": -0.5,
+      "full_sha256": "31175209f60915f18678457344dae860e8328f25836ae6c9e124516a54f6ed57",
+      "head_sha256": "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c"
+    },
+    {
+      "raw_yaw": -0.25,
+      "full_sha256": "5e8ae9162b8d70bd1a7754739c62a3a22d514c1d794bd906ae0e9494cacf16e5",
+      "head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a"
+    },
+    {
+      "raw_yaw": 0,
+      "full_sha256": "de9484c8ce054ffba4d560a17c0bd77e2fbfcc239b669da76bb334fd60ba06f9",
+      "head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206"
+    },
+    {
+      "raw_yaw": 0.25,
+      "full_sha256": "35f3010a3ce4b9cd9401380c8d2a61aa82038f933884dc02cca60be64d389968",
+      "head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197"
+    },
+    {
+      "raw_yaw": 0.5,
+      "full_sha256": "867b94b3244d4041a4e6cd929ba66af287e75db7295eb542313821958332d9dc",
+      "head_sha256": "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790"
+    },
+    {
+      "raw_yaw": 0.75,
+      "full_sha256": "42135ba4a40f5a2b6f83a56633ccae974e44f885bffc0376b5aa963b0ea00ee1",
+      "head_sha256": "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09"
+    },
+    {
+      "raw_yaw": 1,
+      "full_sha256": "a611068103260c875079a1aac556abb3b7346222a743d6cf180e5aa2b9d57ed1",
+      "head_sha256": "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e"
+    }
+  ]
+}

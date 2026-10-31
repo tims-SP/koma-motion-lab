@@ -1,0 +1,17 @@
+{
+  "schema": "core026-mcode-avatar-storage-risk-check/1",
+  "prior_rejection": "matrix-internal-cn.oss-cn-shanghai.aliyuncs.com payload and purpose not established",
+  "public_package": "@minimax-ai/code 0.7.2",
+  "public_chunk_sha256": "8d44e237a6ce3cf876b933f7d518291f3064bbe54fd72fee34db09164463e6a7",
+  "call_graph": "AgentConfigAvatar -> X1r(content); only content.startsWith(data:) calls gBt; HTTPS URL takes return image_url without upload. gBt has only this caller in the bundle.",
+  "upload_function": "gBt prepares purpose3 file_name agent-avatar; private content-safety object storage, not a general repository upload function.",
+  "default_avatar": "Public HTTPS SVG URL, not data: content",
+  "task_restrictions": [
+    "Reuse already-created task session",
+    "No Agent creation or configuration",
+    "No avatar content or data URL",
+    "No image/file upload",
+    "No SDK patch or endpoint override"
+  ],
+  "assessment": "This avatar-upload path is outside the requested headless coding task. Public-source checks establish its purpose and branch condition; they do not authorize this storage destination for project data."
+}

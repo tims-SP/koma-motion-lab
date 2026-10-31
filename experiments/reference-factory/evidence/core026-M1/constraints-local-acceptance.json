@@ -1,0 +1,128 @@
+{
+  "schema": "core026-m1c1-local-acceptance/1",
+  "date_local": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_LOCAL_SOURCE_FACTS_AND_RECEIVER_PROPOSALS",
+  "implementation_author": "Codex local fallback; mcode did not produce or execute this implementation",
+  "base_commit": "79d094073a888456fec79b70f33f253d899eb405",
+  "mcode_last_attempt": {
+    "mode": "lightweight",
+    "permission": "off",
+    "workspace_context": "omitted by documented mode",
+    "input": "Generic public schema only; no repository files or images",
+    "result": "AUTO_REVIEW_REJECTED",
+    "reason": "Unverified Alibaba Cloud object-storage destination; actual payload/purpose not established",
+    "implementation_output": "NONE",
+    "retry_after_latest_rejection": false,
+    "matching_task_processes_stopped": []
+  },
+  "config_sha256": "2aefaa9ae0829dfe4bfb0e3d1708e037f4ec98fcc52c44e0b88d86b64ddeb482",
+  "producer_commands": {
+    "extract_core026_constraints.py --build": 0,
+    "extract_core026_constraints.py --verify": 0
+  },
+  "source_checks": {
+    "audit_core026.py --audit": 0,
+    "audit_core026.py --verify-source": 0,
+    "verify_core026_supervisor.py": 0,
+    "verify_core026_registration.py": 0,
+    "verify_core026_constraints.py": 0,
+    "protected_file_hashes": 10,
+    "layer_png_hashes": 186
+  },
+  "independent_acceptance": {
+    "schema": "core026-m1c1-supervisor/1",
+    "status": "PASS_SOURCE_FACTS_AND_DESIGN_CONTRACT",
+    "constraints_sha256": "2aefaa9ae0829dfe4bfb0e3d1708e037f4ec98fcc52c44e0b88d86b64ddeb482",
+    "records": 62,
+    "source_facts_checked": 62,
+    "multiply_count": 11,
+    "default_clip_count": 9,
+    "late_overlap_counts": [
+      28,
+      15,
+      2156,
+      1954
+    ],
+    "problems": [],
+    "overall_M1": "NOT_ACCEPTED_BY_THIS_CHECK",
+    "runtime_compositor": "NOT_IMPLEMENTED",
+    "natural_3d_turn": "NOT_EVALUATED"
+  },
+  "corruption_regressions": {
+    "status": "PASS",
+    "cases": [
+      {
+        "name": "swap-valid-native-uuids",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "shadow-attached-to-caster",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "missing-late-brow-paint",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "invent-normal-instead-of-clip",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "wrong-source-texture-hash",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "float-receiver-id",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "invent-overlap-count",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "claim-compositor-implemented",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      },
+      {
+        "name": "wrong-input-inx-hash",
+        "producer_exit": 11,
+        "supervisor_exit": 11,
+        "candidate_unchanged": true
+      }
+    ],
+    "repeated_build_identical": true,
+    "original_config_unchanged": true
+  },
+  "source_clip_to_lower_orders": [
+    28,
+    29,
+    38,
+    39
+  ],
+  "remaining_gates": [
+    "Manual pose-specific landmark usability and visibility review",
+    "Complete aggregate M1 acceptance before M2",
+    "Receiver compositor, depth and dynamic occlusion are not implemented"
+  ],
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED",
+  "natural_3d_turn": "NOT_ACCEPTED",
+  "ci_status": "PASS_CI_SOURCE_FACTS_AND_RECEIVER_PROPOSALS",
+  "ci_evidence": "constraints-ci-acceptance.json"
+}

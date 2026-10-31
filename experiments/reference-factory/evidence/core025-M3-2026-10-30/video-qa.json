@@ -1,0 +1,156 @@
+{
+  "schema": "koma-core025-video-supervisor-qa/1",
+  "numeric_gate": "PASS",
+  "visual_gate": "NOT_REVIEWED",
+  "production_gate": "NOT_ACCEPTED",
+  "failures": [],
+  "frames": 97,
+  "fps": 24,
+  "unique_raw_images": 49,
+  "min_subject_margin_px": 12,
+  "zero_roundtrip_mae": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "extreme_vs_zero_mae": [
+    8.435143229166666,
+    8.4541455078125
+  ],
+  "fixed_camera": true,
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "97"
+      }
+    ],
+    "format": {
+      "duration": "4.041667"
+    }
+  },
+  "video": {
+    "file": "core025-head-yaw-15deg.mp4",
+    "sha256": "e5b91cb05797eb5f255c59e4577f31744807dce00b8fd36b21dab04cf3a08e19",
+    "bytes": 444005
+  },
+  "decoded_samples": [
+    {
+      "source_frame": 0,
+      "yaw_deg": 0,
+      "file": "decoded-review/001.png",
+      "sha256": "bf4f6ec2de3e580880d7eaa6a4ddd358bd530270ba4be6ca39aeb4462f3db493"
+    },
+    {
+      "source_frame": 8,
+      "yaw_deg": 7.499999999999999,
+      "file": "decoded-review/002.png",
+      "sha256": "baa536a27d335c89386b11e5027764d678adc0ba223bd8026b733910b47e3cd9"
+    },
+    {
+      "source_frame": 16,
+      "yaw_deg": 12.990381056766578,
+      "file": "decoded-review/003.png",
+      "sha256": "02004d19a11cdc70bf0acdf69b148bdc6f0107abe489ddc2e6a9ab5a938e5213"
+    },
+    {
+      "source_frame": 24,
+      "yaw_deg": 15,
+      "file": "decoded-review/004.png",
+      "sha256": "4dc96af984a072fa0a4d60e17f4c98cf98ce97e868ddc9dd8aeae3acc8b5e2ef"
+    },
+    {
+      "source_frame": 32,
+      "yaw_deg": 12.99038105676658,
+      "file": "decoded-review/005.png",
+      "sha256": "f41a28149911d41eb1b876890dab54b2b48133c1f939ce9c1f9de287e5735b3b"
+    },
+    {
+      "source_frame": 40,
+      "yaw_deg": 7.499999999999999,
+      "file": "decoded-review/006.png",
+      "sha256": "7910c485c1bcee54ebce93ea334054fec4ce13ae74f582215676aed38a68c887"
+    },
+    {
+      "source_frame": 48,
+      "yaw_deg": 0,
+      "file": "decoded-review/007.png",
+      "sha256": "0f0368d2a019ad71c3235bbce549df9bafa8896588b1c5364a244010a9440a23"
+    },
+    {
+      "source_frame": 56,
+      "yaw_deg": -7.499999999999996,
+      "file": "decoded-review/008.png",
+      "sha256": "2ccbd0f6751ec24d19ae7a18363efc980ce0d792f276cadc8e6d86d70b4480d0"
+    },
+    {
+      "source_frame": 64,
+      "yaw_deg": -12.990381056766577,
+      "file": "decoded-review/009.png",
+      "sha256": "d887ed517b509f3fc3f8d96d3daa963d35dd58183b7fdd4b6949edd37618f0a4"
+    },
+    {
+      "source_frame": 72,
+      "yaw_deg": -15,
+      "file": "decoded-review/010.png",
+      "sha256": "e60f52b1387da55fd7ed3ec98d637dcd5c1da0da27f94b9081484d5b0fef6837"
+    },
+    {
+      "source_frame": 80,
+      "yaw_deg": -12.990381056766578,
+      "file": "decoded-review/011.png",
+      "sha256": "a5a55acedec56133294f0d5b04374b27de6e6341105b2f06d53cb5b43be58b86"
+    },
+    {
+      "source_frame": 88,
+      "yaw_deg": -7.500000000000007,
+      "file": "decoded-review/012.png",
+      "sha256": "772a41fa028a9f566a7f5cd114ce69bbda27c132427a58d809c2f94458e9f1d7"
+    },
+    {
+      "source_frame": 96,
+      "yaw_deg": 0,
+      "file": "decoded-review/013.png",
+      "sha256": "84441c7cb80b321cdeb58aba20a82295b8eb5055a522a1ac2d6d394c67caaa59"
+    }
+  ],
+  "rois": {
+    "eyes": [
+      200,
+      340,
+      440,
+      445
+    ],
+    "ear_roots": [
+      150,
+      135,
+      490,
+      310
+    ],
+    "fringe_face": [
+      155,
+      275,
+      500,
+      540
+    ],
+    "neck": [
+      245,
+      500,
+      390,
+      610
+    ]
+  },
+  "inputs": {
+    "assembly_sha256": "06ffade8399609b961dafb3c5c3bf6f3f185200b98d8ae06f30fed9603e65673",
+    "config_sha256": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3",
+    "scene_sha256": "4b67da33763b87394f161ade560b1fc721d6f8f60d8a3c505ebccc8e2b769228",
+    "anchor_manifest_sha256": "af703c0b78304b0ef9a101ea3a31a4635bb3c23b2f328bc2465282c3224dbe77",
+    "video_capture_sha256": "163065a259930d0ebcfa879a0ba66c9fc6910fd3984b818d2b5aea078b1913f1"
+  },
+  "validator_sha256": "44a74bc0b20f6f6eeeebe7ac38419b2f766bb96e4dfa0e0d89095c895458e9b4",
+  "bbox_method": "RGB difference from white >3; coarse outline, not alpha truth"
+}

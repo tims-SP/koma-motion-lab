@@ -1,0 +1,20 @@
+{
+  "schema": "core026-mcode-transport-incident/1",
+  "status": "FULL_WORKSPACE_MODE_PAUSED",
+  "actual_rejected_action": "mcode exec lightweight schema-based code generation request; no usable output",
+  "auto_review_reason": "可能向未验证的agent.minimax.cn发送仓库/工作区数据；认为用户未明确授权此具体目的地。",
+  "checked_facts": {
+    "repository_visibility": "public (GitHub metadata)",
+    "package": "@minimax-ai/code 0.7.2",
+    "CN_production_endpoint_in_installed_public_code": "https://agent.minimax.cn",
+    "documented_lightweight_mode": "No workspace instructions, Skills, memory, MCP schemas or full environment; no file tools"
+  },
+  "safer_alternative": {
+    "scope": "generic public schemas/algorithms only; no actual repository records or file context; permission off",
+    "simple_probe": "succeeded in23823ms",
+    "complex_generation": "timeout; no usable extraction program"
+  },
+  "full_workspace_retried_after_rejection": false,
+  "work_environment": "became unavailable during final checkpoint; GitHub connector still usable",
+  "remaining_approval_scope": "Allow task-related project code, plans and necessary textual command output to agent.minimax.cn; exclude credentials, login data and other directories."
+}

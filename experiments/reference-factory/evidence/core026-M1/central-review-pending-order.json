@@ -1,0 +1,1028 @@
+{
+  "schema": "core026-central-review-pending-order/1",
+  "status": "APPLIED_CODEX_FALLBACK",
+  "decision_author": "Codex actual image review",
+  "executor_required": "mcode",
+  "reason_not_applied": "Automatic approval review rejected follow-up CLI operation for potential unknown Alibaba OSS egress; no completed bash call or review mutation. Not evidence of an observed upload.",
+  "input_review_config_sha256": "f65b8ece7fc8fb872e7419cc2e3f8afb7793f60b12450d040cb58d1e6ab07499",
+  "reviewed_raw_yaws": [
+    -0.25,
+    0,
+    0.25
+  ],
+  "actual_inspection_files": [
+    "out/core026/landmarks/annotated_03.png",
+    "out/core026/landmarks/annotated_04.png",
+    "out/core026/landmarks/annotated_05.png",
+    "out/core026/landmark-review/central-face-native-detail.png"
+  ],
+  "native_heads": [
+    {
+      "raw_yaw": -0.25,
+      "sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a"
+    },
+    {
+      "raw_yaw": 0.0,
+      "sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206"
+    },
+    {
+      "raw_yaw": 0.25,
+      "sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "nose_tip",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            305.353671,
+            430.139685
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            305.353671,
+            430.139685
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: small lower nose-mark paint is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            325.186667,
+            429.133334
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            325.186667,
+            429.133334
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: small lower nose-mark paint is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            343.412853,
+            430.137944
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            343.412853,
+            430.137944
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: small lower nose-mark paint is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        }
+      ]
+    },
+    {
+      "id": "nose_root",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: No painted anatomical nasal-root anchor is defined; source slot remains unknown.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: No painted anatomical nasal-root anchor is defined; source slot remains unknown.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: No painted anatomical nasal-root anchor is defined; source slot remains unknown.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "chin",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            314.185471,
+            523.780761
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            314.185471,
+            523.780761
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            327.199999,
+            522.800003
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            327.199999,
+            522.800003
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            340.507025,
+            522.82916
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            340.507025,
+            522.82916
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "mouth_cornerL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Mouth-inner source extremum is covered by Lip in the native composite; visible lip silhouette is not the same source point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Mouth-inner source extremum is covered by Lip in the native composite; visible lip silhouette is not the same source point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: Mouth-inner source extremum is covered by Lip in the native composite; visible lip silhouette is not the same source point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "mouth_cornerR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Mouth-inner source extremum is covered by Lip in the native composite; visible lip silhouette is not the same source point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Mouth-inner source extremum is covered by Lip in the native composite; visible lip silhouette is not the same source point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: Mouth-inner source extremum is covered by Lip in the native composite; visible lip silhouette is not the same source point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "face_edgeL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            255.804475,
+            492.8043
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Candidate overlaps the hair/jaw junction; the source Face boundary cannot be separated confidently from adjacent hair. Rejected for correspondence.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            263.8,
+            490.800002
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            263.8,
+            490.800002
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: hair-adjacent jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: No accepted candidate correspondence. A visible shape alone does not recover source-point identity; missing NCC is not proof of occlusion.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "face_edgeR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            367.982121,
+            495.939098
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            367.982121,
+            495.939098
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: hair-adjacent jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            385.799999,
+            490.800002
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            385.799999,
+            490.800002
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: hair-adjacent jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            394.736837,
+            491.754014
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            394.736837,
+            491.754014
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: hair-adjacent jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_innerL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            275.489335,
+            399.85851
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            275.489335,
+            399.85851
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            288.200001,
+            399.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            288.200001,
+            399.8
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            304.340204,
+            401.189601
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            304.340204,
+            401.189601
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_outerL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            224.714219,
+            409.998465
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            224.714219,
+            409.998465
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            231.4,
+            408.200001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            231.4,
+            408.200001
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: No accepted candidate correspondence. A visible shape alone does not recover source-point identity; missing NCC is not proof of occlusion.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "pupilL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            255.196671,
+            402.815068
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            255.196671,
+            402.815068
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: dark oval painted pupil image feature is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            266.2,
+            401.200001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            266.2,
+            401.200001
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: dark oval painted pupil image feature is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            282.32156,
+            401.768711
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            282.32156,
+            401.768711
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: dark oval painted pupil image feature is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        }
+      ]
+    },
+    {
+      "id": "eye_innerR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            344.202325,
+            395.625379
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            344.202325,
+            395.625379
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            361.6,
+            396.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            361.6,
+            396.8
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            372.470301,
+            396.704994
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            372.470301,
+            396.704994
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "eye_outerR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            401.398926,
+            402.900255
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            401.398926,
+            402.900255
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            417.6,
+            403.499999
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            417.6,
+            403.499999
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            422.768213,
+            403.393491
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "BOUNDARY_PROXY_ONLY",
+          "xy": [
+            422.768213,
+            403.393491
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: painted white/eyelash boundary is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "pupilR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            367.858166,
+            400.763136
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            367.858166,
+            400.763136
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: dark oval painted pupil image feature is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            385.4,
+            401.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            385.4,
+            401.8
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: dark oval painted pupil image feature is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            395.139534,
+            401.62241
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "VERIFIED_IMAGE_FIDUCIAL",
+          "xy": [
+            395.139534,
+            401.62241
+          ],
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: dark oval painted pupil image feature is visibly present and the candidate lies on that feature. Approximate image correspondence only; no anatomical centre, physical depth or subpixel accuracy claim.",
+          "eligible_for_fitting": true
+        }
+      ]
+    },
+    {
+      "id": "ear_rootL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Ear base is covered by hair; no visible material root was established.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Ear base is covered by hair; no visible material root was established.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: Ear base is covered by hair; no visible material root was established.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_rootR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Ear base is covered by hair; no visible material root was established.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Ear base is covered by hair; no visible material root was established.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: Ear base is covered by hair; no visible material root was established.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_tipL",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": [
+            261.822293,
+            17.987574
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            261.822293,
+            17.987574
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Ear-tip/stem feature is visible near the marker, but thin antialiased endpoint identity is not confirmed precisely; retain candidate only, not fit-eligible.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            254.8,
+            17.800001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            254.8,
+            17.800001
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Ear-tip/stem feature is visible near the marker, but thin antialiased endpoint identity is not confirmed precisely; retain candidate only, not fit-eligible.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": [
+            247.822267,
+            17.987192
+          ],
+          "candidate_method": "NCC_CANDIDATE",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            247.822267,
+            17.987192
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: Ear-tip/stem feature is visible near the marker, but thin antialiased endpoint identity is not confirmed precisely; retain candidate only, not fit-eligible.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "ear_tipR",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: No accepted candidate correspondence. A visible shape alone does not recover source-point identity; missing NCC is not proof of occlusion.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            396.399999,
+            12.8
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            396.399999,
+            12.8
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Ear-tip/stem feature is visible near the marker, but thin antialiased endpoint identity is not confirmed precisely; retain candidate only, not fit-eligible.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: No accepted candidate correspondence. A visible shape alone does not recover source-point identity; missing NCC is not proof of occlusion.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "neck_connection",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: Chin/choker covers the proposed attachment region; no verified visible connection point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Chin/choker covers the proposed attachment region; no verified visible connection point.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: Chin/choker covers the proposed attachment region; no verified visible connection point.",
+          "eligible_for_fitting": false
+        }
+      ]
+    },
+    {
+      "id": "leaf_stem",
+      "frames": [
+        {
+          "raw_yaw": -0.25,
+          "native_head_sha256": "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: No accepted candidate correspondence. A visible shape alone does not recover source-point identity; missing NCC is not proof of occlusion.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.0,
+          "native_head_sha256": "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+          "candidate_xy": [
+            259.2,
+            168.200001
+          ],
+          "candidate_method": "SOURCE_PROJECTED_DEFAULT",
+          "state": "NCC_CANDIDATE",
+          "xy": [
+            259.2,
+            168.200001
+          ],
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: Ear-tip/stem feature is visible near the marker, but thin antialiased endpoint identity is not confirmed precisely; retain candidate only, not fit-eligible.",
+          "eligible_for_fitting": false
+        },
+        {
+          "raw_yaw": 0.25,
+          "native_head_sha256": "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+          "candidate_xy": null,
+          "candidate_method": "UNKNOWN",
+          "state": "UNKNOWN",
+          "xy": null,
+          "confidence": "UNKNOWN",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: No accepted candidate correspondence. A visible shape alone does not recover source-point identity; missing NCC is not proof of occlusion.",
+          "eligible_for_fitting": false
+        }
+      ]
+    }
+  ],
+  "current_committed_state": {
+    "reviewed": 57,
+    "fit_eligible": 9,
+    "overall_M1": "NOT_ACCEPTED",
+    "M2": "NOT_STARTED"
+  },
+  "application_evidence": "central-review-local-application.json",
+  "historical_mcode_requirement": "Original executor preference was mcode; actual local fallback explicitly attributed under the repository M1C2 plan after automatic rejection.",
+  "original_execution_steps": [
+    "Assert current config matches input_review_config_sha256; refuse mismatch.",
+    "Apply only listed 57 cell decisions by id/raw_yaw; preserve immutable source and candidate fields.",
+    "Update regression fixtures to prepare an isolated UNREVIEWED baseline, while independently verifying committed reviewed config.",
+    "Run prepare_core026_landmark_review.py --verify and run_core026_landmark_review_regressions.py; report actual command and tool exit codes.",
+    "Codex independently verifies exact 57 changes, unchanged original PNG/INX, counts57 reviewed/9 eligible/114 unreviewed, then commits."
+  ],
+  "next_execution_steps": [
+    "Do not reapply this order. Original input SHA no longer matches.",
+    "Complete the remaining114 cells by actual native image review, then implement the M1 aggregate gate."
+  ]
+}

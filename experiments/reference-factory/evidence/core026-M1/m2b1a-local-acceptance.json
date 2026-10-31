@@ -1,0 +1,88 @@
+{
+  "schema": "core026-m2b1a-local-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "parent_checkpoint": "dee79d981a63eff92dc4e672398781775a7fd3bc",
+  "author_executor": "Codex local implementation and independent source-RGBA/browser review",
+  "mcode_status": "No SDK retry after earlier automatic Alibaba OSS payload rejection; existing user project/upload authorization retained",
+  "status": "PASS_DISCRETE_EYE_CONTROL_ONLY",
+  "full_M2B": "BLOCKED_SPATIAL_RUNTIME_AND_NATIVE_REGISTRATION",
+  "M3_permission": "BLOCKED_PENDING_COMPLETE_M2B",
+  "positive_captures": 32,
+  "negative_captures": 4,
+  "source_pngs_checked": 62,
+  "limits": {
+    "rgb_global_mae": 0.1,
+    "rgb_foreground_union_mae": 0.5,
+    "rgb_max": 4,
+    "rgb_over16_pixels": 0
+  },
+  "worst_positive_metrics": {
+    "global_mae": 0.0023877451164891414,
+    "foreground_union_mae": 0.006993739368557056,
+    "max_channel_error": 1,
+    "over16_pixels": 0
+  },
+  "outside_declared_envelope_pixels": 0,
+  "negative_controls": {
+    "left": {
+      "static_highlight_metric": {
+        "global_mae": 0.02356442972386365,
+        "foreground_union_mae": 0.0621114417989418,
+        "max_channel_error": 207,
+        "over16_pixels": 515
+      },
+      "visible_highlight_contribution_pixels": 541,
+      "static_pupil_oracle_metric": {
+        "global_mae": 0.1585996211123239,
+        "foreground_union_mae": 0.41803902116402114,
+        "max_channel_error": 217,
+        "over16_pixels": 5918
+      },
+      "fixed_rest_domain_metric": {
+        "global_mae": 0.010579121030775214,
+        "foreground_union_mae": 0.027884589947089946,
+        "max_channel_error": 181,
+        "over16_pixels": 315
+      },
+      "status": "BOTH_ACTUAL_NEGATIVES_REJECTED_BY_UNCHANGED_RGB_LIMITS"
+    },
+    "right": {
+      "static_highlight_metric": {
+        "global_mae": 0.021249200195716814,
+        "foreground_union_mae": 0.05600892857142857,
+        "max_channel_error": 209,
+        "over16_pixels": 480
+      },
+      "visible_highlight_contribution_pixels": 624,
+      "static_pupil_oracle_metric": {
+        "global_mae": 0.15325053006636807,
+        "foreground_union_mae": 0.40393981481481483,
+        "max_channel_error": 228,
+        "over16_pixels": 5878
+      },
+      "fixed_rest_domain_metric": {
+        "global_mae": 0.005190384784272398,
+        "foreground_union_mae": 0.013680886243386243,
+        "max_channel_error": 182,
+        "over16_pixels": 100
+      },
+      "status": "BOTH_ACTUAL_NEGATIVES_REJECTED_BY_UNCHANGED_RGB_LIMITS"
+    }
+  },
+  "default_and_reset_sha_unchanged": true,
+  "validator_sha256": "fd38e468d92b55eb1db1484efcca5b1edc30367e0cd2658822a2fa772cdd7640",
+  "manifest_sha256": "c40f5a3c7848ba7bdc3b96768d90d0ae9a057af63626a4bc2252de60084ad1f2",
+  "qa_sha256": "76271a8bc408bb335e05ddd9e61013e7ab491ca2360280c80e4ef530c025ca1c",
+  "inputs": {
+    "core026.html": "96335b66039859b39735171fda70a5808349c801ea7a30eac60e6d4778990e35",
+    "core026.js": "d57f029d23749466dbae4f7e0b13e7f9074d35305c39ab83453431ba5528fe26",
+    "config/core026-eye-policy.json": "e23f8553437d7cca116142a6dd9798492493e8261b72251a66a544b292f5c947",
+    "config/core025-layer-contract.json": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d",
+    "config/core026-compositor-contract.json": "2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c",
+    "config/core025-render.json": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3",
+    "capture_core026_eyes_supervisor.mjs": "378b69044c8fb84023cd5d5c53403e4f9a709486b66fe77189d82bb019f65ca4"
+  },
+  "ci": "PASS; see m2b1a-ci-acceptance.json (code b622107)",
+  "visual_review": "m2b1a-visual-review.json",
+  "prior_visual_failure": "m2b1a-fixed-domain-visual-failure.json"
+}

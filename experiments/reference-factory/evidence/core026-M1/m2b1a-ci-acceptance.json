@@ -1,0 +1,87 @@
+{
+  "schema": "core026-m2b1a-ci-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "code_commit": "b622107ffc3ce0f8acf828fb3c3ea6d3ff42c710",
+  "code_tree": "a184fad81c832b7e78402323fbd62510af82dc76",
+  "status": "PASS_DISCRETE_EYE_CONTROL_ONLY",
+  "supervisor_run": {
+    "id": 41181723133,
+    "job_id": 124480325432,
+    "conclusion": "success",
+    "url": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41181723133"
+  },
+  "legacy_numeric_regression": {
+    "id": 41181723122,
+    "job_id": 124480325355,
+    "conclusion": "success",
+    "url": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41181723122",
+    "note": "Legacy video numeric pass does not admit its natural-turn art gate"
+  },
+  "artifact_inspection": {
+    "schema": "core026-m2b1a-ci-artifact-inspection/1",
+    "artifact_id": 13034843239,
+    "artifact_sha256": "f065bf020ae5d74cfac2204ce70f483d87e1931c0d9e19f7cc39bec4e88dd004",
+    "json_files": [
+      "verify-source.json",
+      "supervisor-source-qa.json",
+      "supervisor-constraints.json",
+      "source-audit.json",
+      "default-registration.json",
+      "m1c1-supervisor.json",
+      "m1c1-regressions.json",
+      "landmark-seeds-projected.json",
+      "landmarks/landmarks.json",
+      "reference/restore-evidence.json",
+      "landmark-review-regressions/report.json",
+      "m1-acceptance.json",
+      "m1-gate-regressions.json",
+      "landmark-review/review-media-manifest.json",
+      "m2a-supervisor.json",
+      "m2a-regressions.json",
+      "runtime/manifest.json",
+      "runtime-supervisor/manifest.json",
+      "runtime-supervisor/supervisor-qa.json",
+      "eyes-supervisor/manifest.json",
+      "default-art-regressions/report.json",
+      "eyes-supervisor/supervisor-qa.json"
+    ],
+    "json_file_count": 22,
+    "only_json": true,
+    "eye_status": "PASS_DISCRETE_EYE_CONTROL_ONLY",
+    "default_status": "PASS_DEFAULT_ART_ONLY",
+    "positive_captures": 32,
+    "negative_captures": 4,
+    "all36_eye_png_hashes_match_locally_reviewed_capture_set": true,
+    "all12_default_png_hashes_match_local": true,
+    "candidate10_match_independent_default": true,
+    "validator_sha_matches": true,
+    "worst_eye_metrics": {
+      "global_mae": 0.0023877451164891414,
+      "foreground_union_mae": 0.006993739368557056,
+      "max_channel_error": 1,
+      "over16_pixels": 0
+    },
+    "default_max_rgb": 3,
+    "default_max_alpha": 1,
+    "M3_permission": "BLOCKED_PENDING_COMPLETE_M2B"
+  },
+  "visual_gate": "PASS_DISCRETE_HORIZONTAL_CONTROL_ONLY; CI PNG hashes match the exact local capture set reviewed in m2b1a-visual-review.json",
+  "media": {
+    "draft": true,
+    "url": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-220620eeca6e4b3e61f6",
+    "zip_asset": "CORE026-supervisor-QA.zip",
+    "bytes": 46090838,
+    "contents": "Native reference and prior review media,10 candidate default captures,12 independent default captures,36 eye-control captures including4 actual counterexamples and eye review sheet",
+    "new_turn_video": false
+  },
+  "limitations": {
+    "full_M2B": "BLOCKED_SPATIAL_RUNTIME_AND_NATIVE_REGISTRATION",
+    "M3_permission": "BLOCKED_PENDING_COMPLETE_M2B",
+    "physical_depth": "NOT_RECOVERED",
+    "natural_3d_turn": "NOT_ACCEPTED",
+    "continuous_eye_motion": "NOT_ACCEPTED",
+    "360_assets": "NOT_ACCEPTED"
+  },
+  "next_order": "docs/plans/CORE-026-M2B1B-spatial-runtime-order.md",
+  "mcode": "Previous Alibaba OSS automatic-approval rejection remains; no SDK retry or login; this eye-control implementation/capture/review is Codex local fallback"
+}

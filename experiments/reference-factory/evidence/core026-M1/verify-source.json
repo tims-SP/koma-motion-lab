@@ -1,0 +1,8 @@
+{
+  "schema": "koma-core026-verify-source/1",
+  "scope": "SOURCE_ONLY",
+  "overall_m1_status": "NOT_EVALUATED",
+  "note": "Source-only pass. This is NOT an overall CORE-026 M1 PASS.",
+  "problems": [],
+  "status": "SOURCE_ONLY_PASS"
+}

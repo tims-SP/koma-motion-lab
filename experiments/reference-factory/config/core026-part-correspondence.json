@@ -1,0 +1,3483 @@
+{
+  "schema": "koma-core026-part-correspondence/1",
+  "source": {
+    "psd_sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+    "inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+    "assembly": "out/core025/assembly/assembly.json",
+    "assembly_sha256": "06ffade8399609b961dafb3c5c3bf6f3f185200b98d8ae06f30fed9603e65673"
+  },
+  "evidence_policy": "VERIFIED requires a UNIQUE raster-content identity between the source layer PNG and a decoded INX texture: both trimmed to their alpha>0 bounding box, equal dimensions, EXACTLY equal alpha arrays, and round(RGB*alpha/255) equal to the native RGB with max absolute difference <= 1. The matched texture_id must actually be owned by the mapped INX node. No flipping, no resampling, no opaque-only sub-crop, and PSD/INX layer names are never authoritative (PSD L/R names are opposite to INX naming). Duplicated rasters stay UNRESOLVED with every exact candidate retained. This accepts raster identity only: spatial_registration is NOT_TESTED.",
+  "count": 62,
+  "verified_count": 58,
+  "unresolved_count": 4,
+  "entries": [
+    {
+      "psd_order": 1,
+      "psd_name": "Fox: Ear L",
+      "source_png": "out/core024/native-v2/layers/leaf-01-Fox__Ear_L.png",
+      "source_png_sha256": "ca01db3992731754ddc3cae58f58c0215485406d5971971e975d4496b8f513b1",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        334,
+        840
+      ],
+      "inx_uuid": 3453251657,
+      "inx_uuid_candidates": [
+        3453251657
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3453251657,
+          "inx_name": "Ear:: Right",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 52,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            334,
+            840
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.006604400166044001
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 52,
+        "decoded_texture_sha256": "44caa25ab92ec71fda6fa0f61b682c55f4bedf3a846474fbf04caebb65b74906",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.006604400166044001,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 2,
+      "psd_name": "Fox: Ear R",
+      "source_png": "out/core024/native-v2/layers/leaf-02-Fox__Ear_R.png",
+      "source_png_sha256": "7e4e016a50b2cb486f987dacb0a9fd97e6425fb9aa0aa8667b869b9b380376d1",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        325,
+        781
+      ],
+      "inx_uuid": 3424078890,
+      "inx_uuid_candidates": [
+        3424078890
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3424078890,
+          "inx_name": "Ear:: Left",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 51,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            89,
+            0,
+            325,
+            781
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.0064096206024778874
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 51,
+        "decoded_texture_sha256": "f4278453a5dac7f1a64801414753f0dd93fb6c3569944b867803dec97005f869",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.0064096206024778874,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 3,
+      "psd_name": "Back Side Hair L2",
+      "source_png": "out/core024/native-v2/layers/leaf-03-Back_Side_Hair_L2.png",
+      "source_png_sha256": "69525e19cc292b8546614a9ef7ab9f9fd5caa259508e85238cf62639690aea8f",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        435,
+        820
+      ],
+      "inx_uuid": 3755828177,
+      "inx_uuid_candidates": [
+        3755828177
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3755828177,
+          "inx_name": "Back Side:: Hair:: Right2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 46,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            435,
+            820
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.02320352931195385
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 46,
+        "decoded_texture_sha256": "0990f390ee9686f1f0eb7712f1085fa76d0229939ac3de1d755bdad2d81cc3cf",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.02320352931195385,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 4,
+      "psd_name": "Back Side Hair R2",
+      "source_png": "out/core024/native-v2/layers/leaf-04-Back_Side_Hair_R2.png",
+      "source_png_sha256": "326611fde7a6fd882eed8d269b997b2029259b339d592830e379e5ce9907b925",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        427,
+        832
+      ],
+      "inx_uuid": 233054616,
+      "inx_uuid_candidates": [
+        233054616
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 233054616,
+          "inx_name": "Back Side:: Hair:: Left2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 47,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            427,
+            832
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.02088742366972994
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 47,
+        "decoded_texture_sha256": "83f1d7ad4402ece11ed37ea385ebf8cea673d04dc97ad821245aa8a2c78cd410",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.02088742366972994,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 5,
+      "psd_name": "Back Side Hair",
+      "source_png": "out/core024/native-v2/layers/leaf-05-Back_Side_Hair.png",
+      "source_png_sha256": "646f7f09d79b4c33b5f0ec3f615ec1e4cbfb21712a74c1b970a39a3cee5bd2a5",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        1019,
+        914
+      ],
+      "inx_uuid": 2432586950,
+      "inx_uuid_candidates": [
+        2432586950
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2432586950,
+          "inx_name": "Back Side:: Hair",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 45,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            1019,
+            914
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.003024275883357245
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 45,
+        "decoded_texture_sha256": "e9e0ddc6083aed28ed15ae0aa1308b6130ffdddb802efbe0cd0a4acf45f7a846",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.003024275883357245,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 6,
+      "psd_name": "Back Side Hair Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-06-Back_Side_Hair_Shadow.png",
+      "source_png_sha256": "4bd3ea6d3f95a920b0fb1b4fc80640e017fa5febf124cf0adbfa1f80360fae0a",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        1021,
+        927
+      ],
+      "inx_uuid": 2937754650,
+      "inx_uuid_candidates": [
+        2937754650
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2937754650,
+          "inx_name": "Back Side:: Hair:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 50,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            1021,
+            927
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3226900020918568
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 50,
+        "decoded_texture_sha256": "6233a1b875f7712f716880d71f2225169fd0bb6249cfb631fa463ec07817910e",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3226900020918568,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 7,
+      "psd_name": "Back Side Hair L1",
+      "source_png": "out/core024/native-v2/layers/leaf-07-Back_Side_Hair_L1.png",
+      "source_png_sha256": "251059ad7aedf4508610a0656c71c916c5769f399bb555b02ce2fa4a6cf5a165",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        478,
+        912
+      ],
+      "inx_uuid": null,
+      "inx_uuid_candidates": [
+        1625707572,
+        4212602175
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1625707572,
+          "inx_name": "Back Side:: Hair:: Right1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 49,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            478,
+            912
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.24841589000418676
+        },
+        {
+          "inx_uuid": 4212602175,
+          "inx_name": "Back Side:: Hair:: Right3",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 54,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            478,
+            912
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.24841589000418676
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "no unique raster-content identity; 2 exact candidate(s) retained (duplicate rasters stay UNRESOLVED)",
+        "candidate_count": 2
+      },
+      "status": "UNRESOLVED",
+      "reason": "raster content is duplicated across 2 INX textures/nodes; the pixel check cannot disambiguate them",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 8,
+      "psd_name": "Back Side Hair L3",
+      "source_png": "out/core024/native-v2/layers/leaf-08-Back_Side_Hair_L3.png",
+      "source_png_sha256": "67ef8936d404d028948464f70f0d39422b4d68e5bb167f845b05012e2a2db2c4",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        478,
+        912
+      ],
+      "inx_uuid": null,
+      "inx_uuid_candidates": [
+        1625707572,
+        4212602175
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1625707572,
+          "inx_name": "Back Side:: Hair:: Right1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 49,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            478,
+            912
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.24841589000418676
+        },
+        {
+          "inx_uuid": 4212602175,
+          "inx_name": "Back Side:: Hair:: Right3",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 54,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            478,
+            912
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.24841589000418676
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "no unique raster-content identity; 2 exact candidate(s) retained (duplicate rasters stay UNRESOLVED)",
+        "candidate_count": 2
+      },
+      "status": "UNRESOLVED",
+      "reason": "raster content is duplicated across 2 INX textures/nodes; the pixel check cannot disambiguate them",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 9,
+      "psd_name": "Back Side Hair R1",
+      "source_png": "out/core024/native-v2/layers/leaf-09-Back_Side_Hair_R1.png",
+      "source_png_sha256": "08c15c247251d4ee5ee49a6a09dcf8d4468cff0ec1792cb0cad61ec9133ddcd4",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        541,
+        911
+      ],
+      "inx_uuid": null,
+      "inx_uuid_candidates": [
+        1096045651,
+        4217689816
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1096045651,
+          "inx_name": "Back Side:: Hair:: Left1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 48,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            541,
+            911
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3324689586187401
+        },
+        {
+          "inx_uuid": 4217689816,
+          "inx_name": "Back Side:: Hair:: Left3",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 53,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            541,
+            911
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3324689586187401
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "no unique raster-content identity; 2 exact candidate(s) retained (duplicate rasters stay UNRESOLVED)",
+        "candidate_count": 2
+      },
+      "status": "UNRESOLVED",
+      "reason": "raster content is duplicated across 2 INX textures/nodes; the pixel check cannot disambiguate them",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 10,
+      "psd_name": "Back Side Hair R3",
+      "source_png": "out/core024/native-v2/layers/leaf-10-Back_Side_Hair_R3.png",
+      "source_png_sha256": "0b5eebbfda3e88d98779d28da5177957fad688f0cac9fc6d37069dcb2f666d6b",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        541,
+        911
+      ],
+      "inx_uuid": null,
+      "inx_uuid_candidates": [
+        1096045651,
+        4217689816
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1096045651,
+          "inx_name": "Back Side:: Hair:: Left1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 48,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            541,
+            911
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3324689586187401
+        },
+        {
+          "inx_uuid": 4217689816,
+          "inx_name": "Back Side:: Hair:: Left3",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Back Side:: Hair"
+          ],
+          "texture_id": 53,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            541,
+            911
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3324689586187401
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "no unique raster-content identity; 2 exact candidate(s) retained (duplicate rasters stay UNRESOLVED)",
+        "candidate_count": 2
+      },
+      "status": "UNRESOLVED",
+      "reason": "raster content is duplicated across 2 INX textures/nodes; the pixel check cannot disambiguate them",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 11,
+      "psd_name": "Neck",
+      "source_png": "out/core024/native-v2/layers/leaf-11-Neck.png",
+      "source_png_sha256": "ed43835b645c3fa0a2b8615ebdadaf0fba5ae7dfec75c02af0a8152419a7a52c",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        320,
+        521
+      ],
+      "inx_uuid": 2611544751,
+      "inx_uuid_candidates": [
+        2611544751
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2611544751,
+          "inx_name": "Neck",
+          "ancestors": [
+            "Root",
+            "Body"
+          ],
+          "texture_id": 10,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            320,
+            521
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.04299688169885301
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 10,
+        "decoded_texture_sha256": "6de57b1e3fc3cbf956398917277523b1a17cba3792d88748bc11e154b4c0116a",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.04299688169885301,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 12,
+      "psd_name": "Neck Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-12-Neck_Shadow.png",
+      "source_png_sha256": "d852eec81a9048c08e41ca316b1dda9dada2df8ccf533f164a3974f7a3e5e241",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        333,
+        407
+      ],
+      "inx_uuid": 118677514,
+      "inx_uuid_candidates": [
+        118677514
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 118677514,
+          "inx_name": "Neck:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck"
+          ],
+          "texture_id": 11,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            333,
+            407
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.5415703233018563
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 11,
+        "decoded_texture_sha256": "24cc107ee7c48aaf69980c4c4148dd1e44d92577136ffa77a8a85d1e2e940a34",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.5415703233018563,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 13,
+      "psd_name": "Face",
+      "source_png": "out/core024/native-v2/layers/leaf-13-Face.png",
+      "source_png_sha256": "f7eb372ccbf8d80204ad0526f008d3f8cebf0d3b0aa0d8efeae06d214f9bf669",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        674,
+        785
+      ],
+      "inx_uuid": 3736853925,
+      "inx_uuid_candidates": [
+        3736853925
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3736853925,
+          "inx_name": "Face",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck"
+          ],
+          "texture_id": 12,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            34,
+            674,
+            785
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.08294348954288457
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 12,
+        "decoded_texture_sha256": "3de3ade4eb39e8afde55ea31c20a914ca5960d4a9300936ca019e3ad81a8abe0",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.08294348954288457,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 14,
+      "psd_name": "Side Hair L Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-14-Side_Hair_L_Shadow.png",
+      "source_png_sha256": "b789150d2cfb55457eef144f8364d496d82fb9809ba7453a568e9b095e4ceaf7",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        329,
+        620
+      ],
+      "inx_uuid": 601961872,
+      "inx_uuid_candidates": [
+        601961872
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 601961872,
+          "inx_name": "Side Hair:: Right:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 18,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            329,
+            620
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.24886017451833847
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 18,
+        "decoded_texture_sha256": "1adb24d91bc361e10d179fb946a0475a342db753dd219eb50e7d9425f46ea6ca",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.24886017451833847,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 15,
+      "psd_name": "Side Hair R Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-15-Side_Hair_R_Shadow.png",
+      "source_png_sha256": "a6e4771a4c4b0085809527ed365034b97becee8f61bd5a8db036b5b5e65ac2af",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        256,
+        630
+      ],
+      "inx_uuid": 2461262611,
+      "inx_uuid_candidates": [
+        2461262611
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2461262611,
+          "inx_name": "Side Hair:: Left:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 17,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            256,
+            630
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.10738008883817597
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 17,
+        "decoded_texture_sha256": "1b12d7b20d24b0e1eb4a2d85f3ebbde2f05b35b7c721b577011da7c23fb142b4",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.10738008883817597,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 16,
+      "psd_name": "Front Hair R2 Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-16-Front_Hair_R2_Shadow.png",
+      "source_png_sha256": "5c7a555c22b0e09f1be82a8b37e69855371f57da340456df577df2bcb5b5341f",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        321,
+        517
+      ],
+      "inx_uuid": 3855234658,
+      "inx_uuid_candidates": [
+        3855234658
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3855234658,
+          "inx_name": "Front Hair:: Left2:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 16,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            321,
+            517
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.04041720225622605
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 16,
+        "decoded_texture_sha256": "3d85581a9d10876b76b98392e7ec7e6ade70c90f484dfa9553c3a0b9b8137c80",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.04041720225622605,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 17,
+      "psd_name": "Front Hair L2 Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-17-Front_Hair_L2_Shadow.png",
+      "source_png_sha256": "c5f377b8c076e114178de8cbf44a561fa6925fb31510e518317cddf71aaddc8d",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        321,
+        451
+      ],
+      "inx_uuid": 2447618885,
+      "inx_uuid_candidates": [
+        2447618885
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2447618885,
+          "inx_name": "Front Hair:: Right2:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 15,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            321,
+            451
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.02761670932803984
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 15,
+        "decoded_texture_sha256": "6612c3c9e0eb86a68eb7b1b2930f09fd3ee5b2fee3ea5d112eefde198c52fdc1",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.02761670932803984,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 18,
+      "psd_name": "Front Hair R1 Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-18-Front_Hair_R1_Shadow.png",
+      "source_png_sha256": "eeeea678f29f8dd825cb2282d7849d7c6f20b74f69f6b564ddd81fbd7083b8ce",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        229,
+        432
+      ],
+      "inx_uuid": 3543760606,
+      "inx_uuid_candidates": [
+        3543760606
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3543760606,
+          "inx_name": "Front Hair:: Left1:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 14,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            229,
+            432
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.04739569443790819
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 14,
+        "decoded_texture_sha256": "562eaba778cd43433dc855cbcc623ccc5d819fb2fd4f39cf9605b92a66670883",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.04739569443790819,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 19,
+      "psd_name": "Front Hair L1 Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-19-Front_Hair_L1_Shadow.png",
+      "source_png_sha256": "5a51501ee61949271553782a40c7df1757a413328a36542249c25f3fc8a86f90",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        196,
+        464
+      ],
+      "inx_uuid": 3993230283,
+      "inx_uuid_candidates": [
+        3993230283
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3993230283,
+          "inx_name": "Front Hair:: Right1:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 13,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            196,
+            464
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.09402738672727479
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 13,
+        "decoded_texture_sha256": "c4349e39005318f32ec847f8669108ce32d9bba16f5afbb375d93915675d1f7f",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.09402738672727479,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 20,
+      "psd_name": "Front Hair C Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-20-Front_Hair_C_Shadow.png",
+      "source_png_sha256": "d8e520c88931ff8fc45390c0e6afc01804955aee84acf5e2880c9647eab97215",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        207,
+        424
+      ],
+      "inx_uuid": 2385763375,
+      "inx_uuid_candidates": [
+        2385763375
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2385763375,
+          "inx_name": "Front Hair:: Center:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Hair:: Shadows:: Composite"
+          ],
+          "texture_id": 19,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            207,
+            424
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.06179480892837398
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 19,
+        "decoded_texture_sha256": "39d5f175ac9b8679d76fbcf1bd0cea7f2d0020a48fb5031812a1986e98a01de3",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.06179480892837398,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 21,
+      "psd_name": "Nose",
+      "source_png": "out/core024/native-v2/layers/leaf-21-Nose.png",
+      "source_png_sha256": "e0f158b07f180a91d72d62e6ba7bf71e1078099c0a207770305ea25073acb869",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        94,
+        81
+      ],
+      "inx_uuid": 2330281570,
+      "inx_uuid_candidates": [
+        2330281570
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2330281570,
+          "inx_name": "Nose",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 44,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            94,
+            81
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.36443632741158893
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 44,
+        "decoded_texture_sha256": "11c32c9feecfb567627ff4e26b1e3f6d09e07ebebaf835b17a0582deba10ea96",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.36443632741158893,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 22,
+      "psd_name": "Mouth Inner",
+      "source_png": "out/core024/native-v2/layers/leaf-22-Mouth_Inner.png",
+      "source_png_sha256": "c840c013609df7f71bc3d35221961efb752894b90258b684b07357db74679c39",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        150,
+        114
+      ],
+      "inx_uuid": 3225607481,
+      "inx_uuid_candidates": [
+        3225607481
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3225607481,
+          "inx_name": "Mouth Inner",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Lip"
+          ],
+          "texture_id": 43,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            150,
+            114
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.022935438230694764
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 43,
+        "decoded_texture_sha256": "3d5ffd41e4423b08afd773bea73673e8afccba6a2abd08dff7945f239bea25a1",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.022935438230694764,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 23,
+      "psd_name": "Lip",
+      "source_png": "out/core024/native-v2/layers/leaf-23-Lip.png",
+      "source_png_sha256": "747f0f1f3af70d3e86298bb866cb52a3c9445e9324e51c57bd5ad091545c9318",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        170,
+        159
+      ],
+      "inx_uuid": 1354775001,
+      "inx_uuid_candidates": [
+        1354775001
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1354775001,
+          "inx_name": "Lip",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 42,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            170,
+            159
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.06237771449603843
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 42,
+        "decoded_texture_sha256": "aa9b67dc4401bfbc44876503446ef67ac26db1a339c91f70cab4c96272179cd3",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.06237771449603843,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 24,
+      "psd_name": "Eye L Shadow Lower",
+      "source_png": "out/core024/native-v2/layers/leaf-24-Eye_L_Shadow_Lower.png",
+      "source_png_sha256": "42000d7b3b18e84152d2fd4d351a58e860b2d1eac6a9b1b8d54243fa1f6ead42",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        206,
+        92
+      ],
+      "inx_uuid": 5525880,
+      "inx_uuid_candidates": [
+        5525880
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 5525880,
+          "inx_name": "Eye:: Right:: Shadow:: Lower",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 24,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            206,
+            92
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.34481198058092655
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 24,
+        "decoded_texture_sha256": "03e918d3953e518c3a4b1634343bca51ebc4afb090883c363aba580f6239c95a",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.34481198058092655,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 25,
+      "psd_name": "Eye L Shadow Upper",
+      "source_png": "out/core024/native-v2/layers/leaf-25-Eye_L_Shadow_Upper.png",
+      "source_png_sha256": "35ea74e9a41eaccb94ec65cb273bbfe44779b528f035c99989c205fd96910d31",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        243,
+        125
+      ],
+      "inx_uuid": 3967436499,
+      "inx_uuid_candidates": [
+        3967436499
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3967436499,
+          "inx_name": "Eye:: Right:: Shadow:: Upper",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 23,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            243,
+            125
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3426886737702254
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 23,
+        "decoded_texture_sha256": "183103880cb98579709d3b40d159c7fe2311c0f1be903a865cdb3d7dc866b5e5",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3426886737702254,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 26,
+      "psd_name": "Eye L Eyelid2 Shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-26-Eye_L_Eyelid2_Shadow.png",
+      "source_png_sha256": "dbd369b23c1f534aee916a3e699caa1b7eb2780b95c3fc9e3352f5c42f20fbba",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        131,
+        47
+      ],
+      "inx_uuid": 3053982931,
+      "inx_uuid_candidates": [
+        3053982931
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3053982931,
+          "inx_name": "Eye:: Right:: Eyelid2:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 22,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            131,
+            47
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3337655321447866
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 22,
+        "decoded_texture_sha256": "599b8323937b90e56704e1a0fded9ab25111dff7f5409048e41a48bdb6148b78",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3337655321447866,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 27,
+      "psd_name": "Eye L White",
+      "source_png": "out/core024/native-v2/layers/leaf-27-Eye_L_White.png",
+      "source_png_sha256": "537509a3a72a6458078d3058ab48ed0313950274344b9839d8f72f9aa407e67a",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        144,
+        127
+      ],
+      "inx_uuid": 2563763966,
+      "inx_uuid_candidates": [
+        2563763966
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2563763966,
+          "inx_name": "Eye:: Right:: White",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid",
+            "Eye:: Right:: Composite"
+          ],
+          "texture_id": 28,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            144,
+            127
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.0052026286966046
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 28,
+        "decoded_texture_sha256": "60fe876f80a126e4d91f474e68090639f63f510a123b77634f242d0ad1132e12",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.0052026286966046,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 28,
+      "psd_name": "Eye L Eyeball",
+      "source_png": "out/core024/native-v2/layers/leaf-28-Eye_L_Eyeball.png",
+      "source_png_sha256": "7d941fd84775f8c132af752b79fa677721c79ac95af29b123ed068005c8d4d30",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        94,
+        129
+      ],
+      "inx_uuid": 509331051,
+      "inx_uuid_candidates": [
+        509331051
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 509331051,
+          "inx_name": "Eye:: Right:: Eyeball",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid",
+            "Eye:: Right:: Composite"
+          ],
+          "texture_id": 29,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            94,
+            129
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.023838221507968393
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 29,
+        "decoded_texture_sha256": "83e801d78875c540157b9a657b22beaa0a9404a473e278f8f48253fd613d6ab1",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.023838221507968393,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 29,
+      "psd_name": "Eye L Light",
+      "source_png": "out/core024/native-v2/layers/leaf-29-Eye_L_Light.png",
+      "source_png_sha256": "1de1a2c93b0ff30a50fb80ae8919f1a8a55104fa2463e7a520a889dcd7ebe538",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        82,
+        70
+      ],
+      "inx_uuid": 322026080,
+      "inx_uuid_candidates": [
+        322026080
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 322026080,
+          "inx_name": "Eye:: Right:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid",
+            "Eye:: Right:: Composite",
+            "Eye:: Right:: Eyeball"
+          ],
+          "texture_id": 30,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            82,
+            70
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 0,
+          "premul_rgb_mae": 0.0
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 30,
+        "decoded_texture_sha256": "2239682925415889cbffb2abf657202add7ad8e812e47d1a90d57ceb83c97a4e",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 0,
+        "premul_rgb_mae": 0.0,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 30,
+      "psd_name": "Eye L Eyelash2",
+      "source_png": "out/core024/native-v2/layers/leaf-30-Eye_L_Eyelash2.png",
+      "source_png_sha256": "bf233fe032150bb0904b8a1dfe75eb80a980522e144fa899ae8b48b478b31405",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        22,
+        42
+      ],
+      "inx_uuid": 2415847828,
+      "inx_uuid_candidates": [
+        2415847828
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2415847828,
+          "inx_name": "Eye:: Right:: Eyelash2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 26,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            22,
+            42
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.27299703264094954
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 26,
+        "decoded_texture_sha256": "2c25d897fc4eaf1069a69ab36708cea20b5be955b8f1fffe65bac773caa3cba1",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.27299703264094954,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 31,
+      "psd_name": "Eye L Eyelid Side",
+      "source_png": "out/core024/native-v2/layers/leaf-31-Eye_L_Eyelid_Side.png",
+      "source_png_sha256": "c4bb19f5d57b445b7bd0f265fb51b7131a4c0f5096b4b929c1b06c0d3ce51e60",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        49,
+        72
+      ],
+      "inx_uuid": 3950626023,
+      "inx_uuid_candidates": [
+        3950626023
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3950626023,
+          "inx_name": "Eye:: Right:: Eyelid:: Side",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 27,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            49,
+            72
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.1387816387816388
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 27,
+        "decoded_texture_sha256": "ef62e6d596ab8b8ce8cc761cbc2772839f6c8508b07595bf0a3cc746fa86ffe7",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.1387816387816388,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 32,
+      "psd_name": "Eye L Eyelash1",
+      "source_png": "out/core024/native-v2/layers/leaf-32-Eye_L_Eyelash1.png",
+      "source_png_sha256": "283820e942d6d5955ab2b29572fe15685065852b37a283ece58dbcc8dadaf1f7",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        30,
+        28
+      ],
+      "inx_uuid": 870544350,
+      "inx_uuid_candidates": [
+        870544350
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 870544350,
+          "inx_name": "Eye:: Right:: Eyelash1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 21,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            30,
+            28
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.1949404761904762
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 21,
+        "decoded_texture_sha256": "50fbe29db007cd3b115096021f5c912727d4a2122cb38bce7f3d24751e4cdc57",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.1949404761904762,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 33,
+      "psd_name": "Eye L Eyelid",
+      "source_png": "out/core024/native-v2/layers/leaf-33-Eye_L_Eyelid.png",
+      "source_png_sha256": "d52f72a7989c5b7a53962a04a1a860b939bcc56b4f2f2c4073e082fbf5b0fe3f",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        186,
+        101
+      ],
+      "inx_uuid": 4267081328,
+      "inx_uuid_candidates": [
+        4267081328
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 4267081328,
+          "inx_name": "Eye:: Right:: Eyelid",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 20,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            186,
+            101
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.07395873880887505
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 20,
+        "decoded_texture_sha256": "9f27811f4b79c989a5d5261306727fb04c67bf61032b432347f305ace503c3df",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.07395873880887505,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 34,
+      "psd_name": "Eye R Shadow Lower",
+      "source_png": "out/core024/native-v2/layers/leaf-34-Eye_R_Shadow_Lower.png",
+      "source_png_sha256": "db827980ce5d6726772dd5a546ded9b7a18ef7d0fbd9753ff2511b3f4afb6479",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        144,
+        59
+      ],
+      "inx_uuid": 2610042602,
+      "inx_uuid_candidates": [
+        2610042602
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2610042602,
+          "inx_name": "Eye:: Left:: Shadow:: Lower",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 41,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            144,
+            59
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.35157894736842105
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 41,
+        "decoded_texture_sha256": "32216bbfe85da632a7c756b8a03ad97dbcd008d0c98494f1d6aa9a744a1fb844",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.35157894736842105,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 35,
+      "psd_name": "Eye R Shadow Upper",
+      "source_png": "out/core024/native-v2/layers/leaf-35-Eye_R_Shadow_Upper.png",
+      "source_png_sha256": "68d33028f04110d81536a24b77074e34519210a8d2f08a110c27b5a550f9cce3",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        235,
+        113
+      ],
+      "inx_uuid": 2433360548,
+      "inx_uuid_candidates": [
+        2433360548
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2433360548,
+          "inx_name": "Eye:: Left:: Shadow:: Upper",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 39,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            235,
+            113
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.35816121862633493
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 39,
+        "decoded_texture_sha256": "b00bb5385176e32d4c7f258791650e89f047f21c3afed1d0f0768b96070b4c52",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.35816121862633493,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 36,
+      "psd_name": "Eye R Eyelid2 shadow",
+      "source_png": "out/core024/native-v2/layers/leaf-36-Eye_R_Eyelid2_shadow.png",
+      "source_png_sha256": "b25a43f3a70ae8373caa3e43287400d6fb6a5598d5287ccd246bfa4c5e0557fa",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        117,
+        48
+      ],
+      "inx_uuid": 479575860,
+      "inx_uuid_candidates": [
+        479575860
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 479575860,
+          "inx_name": "Eye:: Left:: Eyelid2:: Shadow",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 40,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            117,
+            48
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.33496804874424135
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 40,
+        "decoded_texture_sha256": "f916fb51dc4392538a805cf2053eb6d04d73c2ab9cc7991d071405a086f2ae1f",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.33496804874424135,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 37,
+      "psd_name": "Eye R White",
+      "source_png": "out/core024/native-v2/layers/leaf-37-Eye_R_White.png",
+      "source_png_sha256": "819d50cffc96417d237e8f27b4d0550edfac1543bf5e45b20be2ff640b24800b",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        151,
+        116
+      ],
+      "inx_uuid": 2683271183,
+      "inx_uuid_candidates": [
+        2683271183
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2683271183,
+          "inx_name": "Eye:: Left:: White",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid",
+            "Eye:: Left:: Composite"
+          ],
+          "texture_id": 32,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            151,
+            116
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.025966614352974746
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 32,
+        "decoded_texture_sha256": "de98c389b2dff01ee59498f2785f981464a0c88cefe1f42a51a820293e77ebaa",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.025966614352974746,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 38,
+      "psd_name": "Eye R Eyeball",
+      "source_png": "out/core024/native-v2/layers/leaf-38-Eye_R_Eyeball.png",
+      "source_png_sha256": "96533c3e51116cd665296c4dd4b880956610357c3710bcf6fc4547ed6c300fd6",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        90,
+        126
+      ],
+      "inx_uuid": 2464897030,
+      "inx_uuid_candidates": [
+        2464897030
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2464897030,
+          "inx_name": "Eye:: Left:: Eyeball",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid",
+            "Eye:: Left:: Composite"
+          ],
+          "texture_id": 33,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            90,
+            126
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.022983628584562075
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 33,
+        "decoded_texture_sha256": "025375a44d745ced428143b6e4fbcc66321e9cbb1ed7f52008dee0caa91f2cf8",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.022983628584562075,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 39,
+      "psd_name": "Eye R Light",
+      "source_png": "out/core024/native-v2/layers/leaf-39-Eye_R_Light.png",
+      "source_png_sha256": "aa6868dbb7ffda583f6b8d42df8df8bb67ed2a244e2ada2dcaa50e46e2bd1c68",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        90,
+        64
+      ],
+      "inx_uuid": 2794830548,
+      "inx_uuid_candidates": [
+        2794830548
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2794830548,
+          "inx_name": "Eye:: Left:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid",
+            "Eye:: Left:: Composite",
+            "Eye:: Left:: Eyeball"
+          ],
+          "texture_id": 34,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            90,
+            64
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 0,
+          "premul_rgb_mae": 0.0
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 34,
+        "decoded_texture_sha256": "4ded8ab8618b80d15a01cd6827dc837a937a477b261d27db866d6081a2ef972b",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 0,
+        "premul_rgb_mae": 0.0,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 40,
+      "psd_name": "Eye R Eyelash2",
+      "source_png": "out/core024/native-v2/layers/leaf-40-Eye_R_Eyelash2.png",
+      "source_png_sha256": "5a332aa9413590ee70148be9ecf11a977f9195b5a4421d74d16c3220236c802c",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        33,
+        34
+      ],
+      "inx_uuid": 519787041,
+      "inx_uuid_candidates": [
+        519787041
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 519787041,
+          "inx_name": "Eye:: Left:: Eyelash2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 38,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            33,
+            34
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.18556005398110662
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 38,
+        "decoded_texture_sha256": "9c654c2409c7a87895dbb8790702e19d3387097d51fc0cd064ecf6f4a52b06cd",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.18556005398110662,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 41,
+      "psd_name": "Eye R Eyelid Side",
+      "source_png": "out/core024/native-v2/layers/leaf-41-Eye_R_Eyelid_Side.png",
+      "source_png_sha256": "d30c8ddb8f996707972eadbc49a42cd3aecc4b84fd011828ff1fe53e72750c5d",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        58,
+        72
+      ],
+      "inx_uuid": 1838220672,
+      "inx_uuid_candidates": [
+        1838220672
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1838220672,
+          "inx_name": "Eye:: Left:: Eyelid Side",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 37,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            58,
+            72
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.121571072319202
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 37,
+        "decoded_texture_sha256": "f669c37f04a689c5b394673abb95744aed189371f4251783b7653a3d3e5f3de9",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.121571072319202,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 42,
+      "psd_name": "Eye R Eyelash1",
+      "source_png": "out/core024/native-v2/layers/leaf-42-Eye_R_Eyelash1.png",
+      "source_png_sha256": "f1730928e65171c4eaa0d461aeb65c4dacc07e13206e708554cc207adf940430",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        33,
+        20
+      ],
+      "inx_uuid": 8251770,
+      "inx_uuid_candidates": [
+        8251770
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 8251770,
+          "inx_name": "Eye:: Left:: Eyelash1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 36,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            33,
+            20
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.19398907103825136
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 36,
+        "decoded_texture_sha256": "5f66e70f440bb53f739ffd11b699944a8a0f4da1012fc9afeac87aac6d5146c6",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.19398907103825136,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 43,
+      "psd_name": "Eye R Eyelid1",
+      "source_png": "out/core024/native-v2/layers/leaf-43-Eye_R_Eyelid1.png",
+      "source_png_sha256": "3c65c5d4420e08e98f07ba0593ee7c8235e5af6550191a55ee61a8e13704f6f0",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        184,
+        108
+      ],
+      "inx_uuid": 2835231730,
+      "inx_uuid_candidates": [
+        2835231730
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2835231730,
+          "inx_name": "Eye:: Left:: Eyelid",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 31,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            184,
+            108
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.06191931906731403
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 31,
+        "decoded_texture_sha256": "bbb3f001ab0e2de7d951598ac932bab969f6a32a0d92c2d08a9d0c31ce6f11da",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.06191931906731403,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 44,
+      "psd_name": "Side Hair L",
+      "source_png": "out/core024/native-v2/layers/leaf-44-Side_Hair_L.png",
+      "source_png_sha256": "d106cae5a74dabdc5b1079251a5a7d04848cdfa91663141b06d0531baa2777ef",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        270,
+        760
+      ],
+      "inx_uuid": 980585604,
+      "inx_uuid_candidates": [
+        980585604
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 980585604,
+          "inx_name": "Side Hair:: Right",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 55,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            270,
+            760
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.013393443340482338
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 55,
+        "decoded_texture_sha256": "1ba8e4e6f62586aada369a85322d7a376d228700eaf78bc96797a771d2a2830a",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.013393443340482338,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 45,
+      "psd_name": "Side Hair L Light",
+      "source_png": "out/core024/native-v2/layers/leaf-45-Side_Hair_L_Light.png",
+      "source_png_sha256": "e948994afc8517be94175b313935d80f33faddbb221d1cd1b6105fe65814aa07",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        134,
+        148
+      ],
+      "inx_uuid": 2609038935,
+      "inx_uuid_candidates": [
+        2609038935
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2609038935,
+          "inx_name": "Side Hair:: Right:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Side Hair:: Right"
+          ],
+          "texture_id": 56,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            48,
+            52,
+            134,
+            148
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.30866666666666664
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 56,
+        "decoded_texture_sha256": "f9c5ce25ce0466d87c51ccd4117fa6806972dd33146bef7443940f04880b77e3",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.30866666666666664,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 46,
+      "psd_name": "Side Hair R",
+      "source_png": "out/core024/native-v2/layers/leaf-46-Side_Hair_R.png",
+      "source_png_sha256": "db0f844dfa5a3ddfa5af8ec254641a0379ba55d7bba5d787d16f3825025c10be",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        308,
+        730
+      ],
+      "inx_uuid": 2548641512,
+      "inx_uuid_candidates": [
+        2548641512
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2548641512,
+          "inx_name": "Side Hair:: Left",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 70,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            308,
+            730
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.014340769690061336
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 70,
+        "decoded_texture_sha256": "89d241d33eb9df13cd278cea15558a25f632dbbbfe03891d46254268015e4192",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.014340769690061336,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 47,
+      "psd_name": "Side Hair R Light",
+      "source_png": "out/core024/native-v2/layers/leaf-47-Side_Hair_R_Light.png",
+      "source_png_sha256": "88138ed618009014b6df14b2503bb1617b75abd17932d4a4accfc12a4c566bec",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        135,
+        119
+      ],
+      "inx_uuid": 2094776,
+      "inx_uuid_candidates": [
+        2094776
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2094776,
+          "inx_name": "Side Hair:: Left:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Side Hair:: Left"
+          ],
+          "texture_id": 71,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            36,
+            54,
+            135,
+            119
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3290918163672655
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 71,
+        "decoded_texture_sha256": "12fb2adb600c155debbb2d6de99e074bf23f6e7b6a28197733c259cd9fb65fcf",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3290918163672655,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 48,
+      "psd_name": "Front Hair L2",
+      "source_png": "out/core024/native-v2/layers/leaf-48-Front_Hair_L2.png",
+      "source_png_sha256": "3dc2af0def887aa883fd7aa4918ab97a704955223f3ea873028fe7404a1e76cf",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        314,
+        513
+      ],
+      "inx_uuid": 1357173599,
+      "inx_uuid_candidates": [
+        1357173599
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1357173599,
+          "inx_name": "Front Hair:: Right2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 57,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            314,
+            513
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.05742916087743674
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 57,
+        "decoded_texture_sha256": "66d702672136030d930a3199d7b2f8fad0643b5caf89d2b274b6c38ba29097ae",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.05742916087743674,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 49,
+      "psd_name": "Front Hair L2 Light",
+      "source_png": "out/core024/native-v2/layers/leaf-49-Front_Hair_L2_Light.png",
+      "source_png_sha256": "0730bc4a1006d3b010099560d0a0e4b79f2bd2d4111e86429b3c6fe5cd7a4aa3",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        314,
+        153
+      ],
+      "inx_uuid": 965831079,
+      "inx_uuid_candidates": [
+        965831079
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 965831079,
+          "inx_name": "Front Hair:: Right2:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Front Hair:: Right2"
+          ],
+          "texture_id": 58,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            15,
+            50,
+            314,
+            153
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.2095263343937787
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 58,
+        "decoded_texture_sha256": "6986cf8f1ce0f1c9707cd5f20e5021e2819c08eda70df518cd6b64b0956c601c",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.2095263343937787,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 50,
+      "psd_name": "Front Hair R2",
+      "source_png": "out/core024/native-v2/layers/leaf-50-Front_Hair_R2.png",
+      "source_png_sha256": "363c0b6acf80a64e801724c9837979948ea1b452edc019d70395aa53ba2914b3",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        278,
+        546
+      ],
+      "inx_uuid": 1552110117,
+      "inx_uuid_candidates": [
+        1552110117
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1552110117,
+          "inx_name": "Front Hair:: Left2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 59,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            278,
+            546
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.07645823005924982
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 59,
+        "decoded_texture_sha256": "0e3e6dc6da1a896b2fdc91d95bee49d8c3b800ae9ce26114eace4dfe0b12dfdc",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.07645823005924982,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 51,
+      "psd_name": "Front Hair R2 Light",
+      "source_png": "out/core024/native-v2/layers/leaf-51-Front_Hair_R2_Light.png",
+      "source_png_sha256": "681bdb475adf8b42c12c72cb98b76e4c68bac08eef53886e1ba5470a4da184a3",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        286,
+        147
+      ],
+      "inx_uuid": 2391743597,
+      "inx_uuid_candidates": [
+        2391743597
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2391743597,
+          "inx_name": "Front Hair:: Left2:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Front Hair:: Left2"
+          ],
+          "texture_id": 60,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            1,
+            70,
+            286,
+            147
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3316075588920528
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 60,
+        "decoded_texture_sha256": "10955c92f2714f126e1f4be81feaa9c0df8ca4cd6613ea7a9829e5b9a1ac6623",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3316075588920528,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 52,
+      "psd_name": "Front Hair L1",
+      "source_png": "out/core024/native-v2/layers/leaf-52-Front_Hair_L1.png",
+      "source_png_sha256": "45c382f15042ab3b08cb71fbcba23592f87729d67c2b8e665c6a20dec3a82f50",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        223,
+        474
+      ],
+      "inx_uuid": 540700913,
+      "inx_uuid_candidates": [
+        540700913
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 540700913,
+          "inx_name": "Front Hair:: Right1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 61,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            223,
+            474
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.04934757654555251
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 61,
+        "decoded_texture_sha256": "c5fd45829c5ea52905d522c6fe45cef5c097b7eeee17bf3b5fc4e108b941eb90",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.04934757654555251,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 53,
+      "psd_name": "Front Hair L1 Light",
+      "source_png": "out/core024/native-v2/layers/leaf-53-Front_Hair_L1_Light.png",
+      "source_png_sha256": "9fe3a10cf4fdd586ad0ff5ce0cffa4fc616802b9e4db2028b6b799cfdf12fed4",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        237,
+        146
+      ],
+      "inx_uuid": 476598408,
+      "inx_uuid_candidates": [
+        476598408
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 476598408,
+          "inx_name": "Front Hair:: Right1:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Front Hair:: Right1"
+          ],
+          "texture_id": 62,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            18,
+            57,
+            237,
+            146
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3094360962998869
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 62,
+        "decoded_texture_sha256": "05d84ad3477be85206f576fe6e95ed8b91999539cebece3161a9e0d38da9cae0",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3094360962998869,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 54,
+      "psd_name": "Front Hair R1",
+      "source_png": "out/core024/native-v2/layers/leaf-54-Front_Hair_R1.png",
+      "source_png_sha256": "9f2abd9f6738c5efb509776c14d3a0628d8d1c51b541f9700331406e7a2ee99b",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        259,
+        479
+      ],
+      "inx_uuid": 834512232,
+      "inx_uuid_candidates": [
+        834512232
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 834512232,
+          "inx_name": "Front Hair:: Left1",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 63,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            259,
+            479
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.04549051994081415
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 63,
+        "decoded_texture_sha256": "012f02cca02e5ef0df186298dc4c1a76be168ae7d50f63fcd4939676ae89e655",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.04549051994081415,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 55,
+      "psd_name": "Front Hair R1 Ligth",
+      "source_png": "out/core024/native-v2/layers/leaf-55-Front_Hair_R1_Ligth.png",
+      "source_png_sha256": "4b92420a8d516d795f4e1195c4085738042d0447a276f6919095a216c2400c1c",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        279,
+        140
+      ],
+      "inx_uuid": 2437287170,
+      "inx_uuid_candidates": [
+        2437287170
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2437287170,
+          "inx_name": "Front Hair:: Left1:: Ligth",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Front Hair:: Left1"
+          ],
+          "texture_id": 64,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            21,
+            50,
+            279,
+            140
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.31809588306667796
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 64,
+        "decoded_texture_sha256": "880ebd574afbb94078a5ba58e8ab97455e3daa9c56496a86bc439deec36a2f55",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.31809588306667796,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 56,
+      "psd_name": "Front Hair C",
+      "source_png": "out/core024/native-v2/layers/leaf-56-Front_Hair_C.png",
+      "source_png_sha256": "988ea8c3ceb886f62966c6198c28bc41976ae1e71c0b90f88ee6269c9a3809cb",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        200,
+        476
+      ],
+      "inx_uuid": 1992218482,
+      "inx_uuid_candidates": [
+        1992218482
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 1992218482,
+          "inx_name": "Front Hair:: Center",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 65,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            200,
+            476
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.03108869663463948
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 65,
+        "decoded_texture_sha256": "0881cfed3c8dff663f262f2101f7df75b5e065292cdd8284ef62138fc7e02ecf",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.03108869663463948,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 57,
+      "psd_name": "Front Hair C Light",
+      "source_png": "out/core024/native-v2/layers/leaf-57-Front_Hair_C_Light.png",
+      "source_png_sha256": "a55da8bf466fe488c0fa63ad8e24233bee424192276866b1d267669d77a2cdac",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        201,
+        146
+      ],
+      "inx_uuid": 3664369009,
+      "inx_uuid_candidates": [
+        3664369009
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3664369009,
+          "inx_name": "Front Hair:: Center:: Light",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Front Hair:: Center"
+          ],
+          "texture_id": 66,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            18,
+            24,
+            201,
+            146
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3153722819722928
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 66,
+        "decoded_texture_sha256": "4d2041cc7715b8dd3ef2a68aad83cba1c864812e622f4621372015a4baff74aa",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3153722819722928,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 58,
+      "psd_name": "Eye L Eyelid2",
+      "source_png": "out/core024/native-v2/layers/leaf-58-Eye_L_Eyelid2.png",
+      "source_png_sha256": "7831e0b4a16ff220a0c3581ee8e8d3ec2700577ea670a7e4bdb39154fab80bee",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        88,
+        28
+      ],
+      "inx_uuid": 3023088905,
+      "inx_uuid_candidates": [
+        3023088905
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 3023088905,
+          "inx_name": "Eye:: Right:: Eyelid2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Right:: Eyelid"
+          ],
+          "texture_id": 25,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            88,
+            28
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.315028901734104
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 25,
+        "decoded_texture_sha256": "ec5f9963a8e8d007b257249bd1adf4a582b296ab5e56b68aabc5c077010403b6",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.315028901734104,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 59,
+      "psd_name": "Eye R Eyelid2",
+      "source_png": "out/core024/native-v2/layers/leaf-59-Eye_R_Eyelid2.png",
+      "source_png_sha256": "31d64895645ccf999fc9478a22a4e7d8f5b300a3187793a1acf59e643d63b629",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        126,
+        42
+      ],
+      "inx_uuid": 163348813,
+      "inx_uuid_candidates": [
+        163348813
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 163348813,
+          "inx_name": "Eye:: Left:: Eyelid2",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face",
+            "Eye:: Left:: Eyelid"
+          ],
+          "texture_id": 35,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            126,
+            42
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.2740286298568507
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 35,
+        "decoded_texture_sha256": "14043c203b8415803af671d72beb3f1cad9d8960b8f281ead871cfb868f35775",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.2740286298568507,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 60,
+      "psd_name": "Eyebrow L",
+      "source_png": "out/core024/native-v2/layers/leaf-60-Eyebrow_L.png",
+      "source_png_sha256": "18517ce3ef4083c2cbd5abdf59e6c188fcb7aa0086c510920c9afaad50b0d170",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        164,
+        61
+      ],
+      "inx_uuid": 4144177566,
+      "inx_uuid_candidates": [
+        4144177566
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 4144177566,
+          "inx_name": "Eyebrow:: Right",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 67,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            164,
+            61
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3566331731469346
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 67,
+        "decoded_texture_sha256": "58477a86ea3a8d9eb5cf3731de92fc0c1e23dab389a2a21aa248a8f1bd09f7a2",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3566331731469346,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 61,
+      "psd_name": "Eyebrow R",
+      "source_png": "out/core024/native-v2/layers/leaf-61-Eyebrow_R.png",
+      "source_png_sha256": "4b436ac3277f71506f8d85be73a07d99af45dba7ab08cee21a692c78e2b52c56",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        166,
+        59
+      ],
+      "inx_uuid": 228585614,
+      "inx_uuid_candidates": [
+        228585614
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 228585614,
+          "inx_name": "Eyebrow:: Left",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 68,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            166,
+            59
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.3075217735550277
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 68,
+        "decoded_texture_sha256": "1884a3e9def4aa3a30a87d8d4a8af2f3aa98b0381bca5dea690be7e4b25ba5a7",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.3075217735550277,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    },
+    {
+      "psd_order": 62,
+      "psd_name": "Leaf",
+      "source_png": "out/core024/native-v2/layers/leaf-62-Leaf.png",
+      "source_png_sha256": "542e3163bcc788dbfe7e50bbe884f10fb781c371e83764c193e0640649c05b96",
+      "source_png_size": null,
+      "source_alpha_bbox": [
+        0,
+        0,
+        283,
+        133
+      ],
+      "inx_uuid": 2233235985,
+      "inx_uuid_candidates": [
+        2233235985
+      ],
+      "candidates": [
+        {
+          "inx_uuid": 2233235985,
+          "inx_name": "Leaf",
+          "ancestors": [
+            "Root",
+            "Body",
+            "Neck",
+            "Face"
+          ],
+          "texture_id": 69,
+          "owns_texture_id": true,
+          "native_alpha_bbox": [
+            0,
+            0,
+            283,
+            133
+          ],
+          "alpha_max_error": 0,
+          "premul_rgb_max_error": 1,
+          "premul_rgb_mae": 0.02065028820862947
+        }
+      ],
+      "matching_evidence": {
+        "method": "alpha_trim_premultiplied_rgb_match",
+        "detail": "source layer trimmed to alpha>0 bbox; alpha arrays exactly equal to the native texture; round(RGB*alpha/255) vs native RGB max abs diff <= 1; no flip, no resampling, no name authority",
+        "decoded_texture_id": 69,
+        "decoded_texture_sha256": "2b00f7c459a9aafbeecfd3eea3005164c792b73573b6f57a60dd9ab7587db1cb",
+        "alpha_max_error": 0,
+        "premul_rgb_max_error": 1,
+        "premul_rgb_mae": 0.02065028820862947,
+        "candidate_count": 1
+      },
+      "status": "VERIFIED",
+      "reason": "unique raster-content identity: alpha-exact and premultiplied-RGB identical (max diff <= 1) against the decoded INX texture owned by a single node",
+      "spatial_registration": "NOT_TESTED",
+      "spatial_registration_note": "raster-content identity only; geometric/UV registration is NOT evaluated and NOT claimed"
+    }
+  ]
+}

@@ -1,0 +1,1058 @@
+[
+  {
+    "source_node_uuid": 68362597,
+    "parent_uuid": null,
+    "name": "Root",
+    "type": "Node"
+  },
+  {
+    "source_node_uuid": 4079733156,
+    "parent_uuid": 68362597,
+    "name": "Skirt",
+    "type": "Part",
+    "topology_and_uv_sha256": "9fc6c7374b9b33a998d1884299741b50e681f548daacca7104892ab1ab8a23da",
+    "texture_ids": [
+      0
+    ],
+    "vertex_count": 478,
+    "index_count": 1260
+  },
+  {
+    "source_node_uuid": 1540891010,
+    "parent_uuid": 4079733156,
+    "name": "Skirt:: Dummy Node for Physics",
+    "type": "Node"
+  },
+  {
+    "source_node_uuid": 810680760,
+    "parent_uuid": 1540891010,
+    "name": "Skirt ::Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 305080986,
+    "parent_uuid": 4079733156,
+    "name": "Skirt:: Frill",
+    "type": "Part",
+    "topology_and_uv_sha256": "8a6a98cf9868d12dbe43c13df87b3c5b5f0f4261f620430e42bc7c5494f2e7d4",
+    "texture_ids": [
+      1
+    ],
+    "vertex_count": 106,
+    "index_count": 204
+  },
+  {
+    "source_node_uuid": 3870896488,
+    "parent_uuid": 305080986,
+    "name": "Skirt:: Frill:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "de83456bf21c19abb8056dc8d13d549d3b7f6f214e175e938643c6353420c34c",
+    "texture_ids": [
+      2
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3102679707,
+    "parent_uuid": 4079733156,
+    "name": "Tail",
+    "type": "Part",
+    "topology_and_uv_sha256": "0d8b8e4951f4d751602e7edb6963e461e1116a6f6a32e4caac7cc1cbf50bc769",
+    "texture_ids": [
+      3
+    ],
+    "vertex_count": 128,
+    "index_count": 291
+  },
+  {
+    "source_node_uuid": 4082970768,
+    "parent_uuid": 4079733156,
+    "name": "Ribbon",
+    "type": "Part",
+    "topology_and_uv_sha256": "5edee294d3555ec2ee814d34476a3088b7eb94d991e2a8dc3924d5870c9f04d2",
+    "texture_ids": [
+      4
+    ],
+    "vertex_count": 256,
+    "index_count": 588
+  },
+  {
+    "source_node_uuid": 97920338,
+    "parent_uuid": 4082970768,
+    "name": "Ribbon:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 4166575140,
+    "parent_uuid": 68362597,
+    "name": "Body",
+    "type": "Part",
+    "topology_and_uv_sha256": "4fbfd0e7b2e62b72b17921164364b81efb51e5f1a11aeaeac12f54b875cc6bf0",
+    "texture_ids": [
+      5
+    ],
+    "vertex_count": 142,
+    "index_count": 366
+  },
+  {
+    "source_node_uuid": 3356846138,
+    "parent_uuid": 4166575140,
+    "name": "Arm:: Left",
+    "type": "Part",
+    "topology_and_uv_sha256": "9b2d4aaf1764d502c29f8e6a8df471052a908f210354250ed01a09d33ab7af8c",
+    "texture_ids": [
+      6
+    ],
+    "vertex_count": 190,
+    "index_count": 477
+  },
+  {
+    "source_node_uuid": 3836784972,
+    "parent_uuid": 3356846138,
+    "name": "Hand:: Left",
+    "type": "Part",
+    "topology_and_uv_sha256": "0a97b5cd5715b19afcaa5716ba2f0a03893489c20f2541ef009fd49d782a0904",
+    "texture_ids": [
+      7
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 393627109,
+    "parent_uuid": 3836784972,
+    "name": "Hand:: Left:: Sleeve:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 3725483780,
+    "parent_uuid": 4166575140,
+    "name": "Arm:: Right",
+    "type": "Part",
+    "topology_and_uv_sha256": "9bb0672e94a105bab74e35ac3fedb044d754b9cb1d6f7b7e4d6b81751be0ead1",
+    "texture_ids": [
+      8
+    ],
+    "vertex_count": 154,
+    "index_count": 366
+  },
+  {
+    "source_node_uuid": 1122887063,
+    "parent_uuid": 3725483780,
+    "name": "Hand:: Right",
+    "type": "Part",
+    "topology_and_uv_sha256": "8410e535fe078a305bc669724c27f585e3720ec5c775f6701b7ee6d8ee11127a",
+    "texture_ids": [
+      9
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 2656055838,
+    "parent_uuid": 1122887063,
+    "name": "Hand:: Right:: Sleeve:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 2611544751,
+    "parent_uuid": 4166575140,
+    "name": "Neck",
+    "type": "Part",
+    "topology_and_uv_sha256": "c46b6f3a4668440b01963dddeab9ad64c50dba1532004d20fc6619f64c90d98b",
+    "texture_ids": [
+      10
+    ],
+    "vertex_count": 76,
+    "index_count": 162
+  },
+  {
+    "source_node_uuid": 118677514,
+    "parent_uuid": 2611544751,
+    "name": "Neck:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "91f65f749f0c99221b2d81aed87684449c21a136d3e753dd6188b08b26b6a87d",
+    "texture_ids": [
+      11
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3736853925,
+    "parent_uuid": 2611544751,
+    "name": "Face",
+    "type": "Part",
+    "topology_and_uv_sha256": "4cd4099716be37e726d674838fa98521f9245b0ba940aeaa27644d1c955ef180",
+    "texture_ids": [
+      12
+    ],
+    "vertex_count": 270,
+    "index_count": 726
+  },
+  {
+    "source_node_uuid": 3011143577,
+    "parent_uuid": 3736853925,
+    "name": "Hair:: Shadows:: Composite",
+    "type": "Composite"
+  },
+  {
+    "source_node_uuid": 3993230283,
+    "parent_uuid": 3011143577,
+    "name": "Front Hair:: Right1:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "0f5d1190d8f947bf2d8919d39fd5743006c920ad1dbc7b7d15f343be9dfdfc10",
+    "texture_ids": [
+      13
+    ],
+    "vertex_count": 114,
+    "index_count": 285
+  },
+  {
+    "source_node_uuid": 3543760606,
+    "parent_uuid": 3011143577,
+    "name": "Front Hair:: Left1:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "3d7336fe21b7fb5ae3a1b4312592580817131f504b5671f66a4445979709e7f5",
+    "texture_ids": [
+      14
+    ],
+    "vertex_count": 110,
+    "index_count": 267
+  },
+  {
+    "source_node_uuid": 2447618885,
+    "parent_uuid": 3011143577,
+    "name": "Front Hair:: Right2:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "a2f2d0eda272e3fb1756a0be39a67b18b8e30672c4cc51a1fa91afb3721810e6",
+    "texture_ids": [
+      15
+    ],
+    "vertex_count": 62,
+    "index_count": 123
+  },
+  {
+    "source_node_uuid": 3855234658,
+    "parent_uuid": 3011143577,
+    "name": "Front Hair:: Left2:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "27bff7b48909a7806f15076b54795f0425d2b4da6fcb2270ddf4ad986e99d1c3",
+    "texture_ids": [
+      16
+    ],
+    "vertex_count": 48,
+    "index_count": 93
+  },
+  {
+    "source_node_uuid": 2461262611,
+    "parent_uuid": 3011143577,
+    "name": "Side Hair:: Left:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "63c8ae80513c8efea45796b164a53067585d65835c32c0fc6d91b21d5f438840",
+    "texture_ids": [
+      17
+    ],
+    "vertex_count": 96,
+    "index_count": 213
+  },
+  {
+    "source_node_uuid": 601961872,
+    "parent_uuid": 3011143577,
+    "name": "Side Hair:: Right:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "ed9a2559cbeb190d32d694fb057ee0e9929b4972155077bab2f76d25a4790c08",
+    "texture_ids": [
+      18
+    ],
+    "vertex_count": 68,
+    "index_count": 147
+  },
+  {
+    "source_node_uuid": 2385763375,
+    "parent_uuid": 3011143577,
+    "name": "Front Hair:: Center:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "ee61490a4883c159efd356e59f1a882d736a0c6909aca4e129ba411a54835ef7",
+    "texture_ids": [
+      19
+    ],
+    "vertex_count": 400,
+    "index_count": 1122
+  },
+  {
+    "source_node_uuid": 4267081328,
+    "parent_uuid": 3736853925,
+    "name": "Eye:: Right:: Eyelid",
+    "type": "Part",
+    "topology_and_uv_sha256": "235991a20bfec0a33ec1a9d2ed49a17f185a48ac704166cc14148e9e7479dc3f",
+    "texture_ids": [
+      20
+    ],
+    "vertex_count": 92,
+    "index_count": 174
+  },
+  {
+    "source_node_uuid": 870544350,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Eyelash1",
+    "type": "Part",
+    "topology_and_uv_sha256": "ad70722aec9960d48c6f09268f3bebeef9c9a635a0f62318e29f5819b0e70ce3",
+    "texture_ids": [
+      21
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3053982931,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Eyelid2:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "662c3756ae5b374504d89a37bd127f13528fd4ca813412d0c7185f0812f9481b",
+    "texture_ids": [
+      22
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3967436499,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Shadow:: Upper",
+    "type": "Part",
+    "topology_and_uv_sha256": "75cf6fa25abfd617c889d2ed0d52f777468cabd423ab1c1e06c563591ce0d88c",
+    "texture_ids": [
+      23
+    ],
+    "vertex_count": 50,
+    "index_count": 90
+  },
+  {
+    "source_node_uuid": 5525880,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Shadow:: Lower",
+    "type": "Part",
+    "topology_and_uv_sha256": "4e5a73c848952e7b5f4303c018c45562bb97a0d5c5e79fb749e0efe00d6aaa1a",
+    "texture_ids": [
+      24
+    ],
+    "vertex_count": 34,
+    "index_count": 60
+  },
+  {
+    "source_node_uuid": 3023088905,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Eyelid2",
+    "type": "Part",
+    "topology_and_uv_sha256": "d94974d6a1fb0db1d3077cd3a108b9c6c04f397196a00f1c8982865c916a32c3",
+    "texture_ids": [
+      25
+    ],
+    "vertex_count": 32,
+    "index_count": 54
+  },
+  {
+    "source_node_uuid": 2415847828,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Eyelash2",
+    "type": "Part",
+    "topology_and_uv_sha256": "1988ee8711252f57624790484942cfd2b402b352f0034ce9971c6b0ee51543d6",
+    "texture_ids": [
+      26
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3950626023,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Eyelid:: Side",
+    "type": "Part",
+    "topology_and_uv_sha256": "c6acfb9bd1dd053be99eea524b3c328350d2b2dd8aa08153d4539f190f116599",
+    "texture_ids": [
+      27
+    ],
+    "vertex_count": 38,
+    "index_count": 66
+  },
+  {
+    "source_node_uuid": 977552066,
+    "parent_uuid": 4267081328,
+    "name": "Eye:: Right:: Composite",
+    "type": "Composite"
+  },
+  {
+    "source_node_uuid": 2563763966,
+    "parent_uuid": 977552066,
+    "name": "Eye:: Right:: White",
+    "type": "Part",
+    "topology_and_uv_sha256": "b2bc97b8200982000dcbf4d2efbf11d1a6470a2b9c018533a5be16db5cad852c",
+    "texture_ids": [
+      28
+    ],
+    "vertex_count": 38,
+    "index_count": 66
+  },
+  {
+    "source_node_uuid": 509331051,
+    "parent_uuid": 977552066,
+    "name": "Eye:: Right:: Eyeball",
+    "type": "Part",
+    "topology_and_uv_sha256": "4616f54f081c4da0fe41db88ab8a9208b07cf8f190c054034c60d7ef7fe02926",
+    "texture_ids": [
+      29
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 322026080,
+    "parent_uuid": 509331051,
+    "name": "Eye:: Right:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "6564bfe1261bc2e513dfad887e7edf7edb5d165efcef66e89308190a938861ef",
+    "texture_ids": [
+      30
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 2835231730,
+    "parent_uuid": 3736853925,
+    "name": "Eye:: Left:: Eyelid",
+    "type": "Part",
+    "topology_and_uv_sha256": "3c6ec587ed916bf623ae397486b089d2b05bc3d08e61c8f07210575b31249db8",
+    "texture_ids": [
+      31
+    ],
+    "vertex_count": 56,
+    "index_count": 102
+  },
+  {
+    "source_node_uuid": 200444691,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Composite",
+    "type": "Composite"
+  },
+  {
+    "source_node_uuid": 2683271183,
+    "parent_uuid": 200444691,
+    "name": "Eye:: Left:: White",
+    "type": "Part",
+    "topology_and_uv_sha256": "d8b30cfbfa7792fd36fc4e685fc073a2b3fc027a7e785c3c6c97d47422ac2af8",
+    "texture_ids": [
+      32
+    ],
+    "vertex_count": 32,
+    "index_count": 54
+  },
+  {
+    "source_node_uuid": 2464897030,
+    "parent_uuid": 200444691,
+    "name": "Eye:: Left:: Eyeball",
+    "type": "Part",
+    "topology_and_uv_sha256": "2dc0f79e5678f4d7b06d9ebe3158bf924cf44678817fc27709b763cb9204d6c4",
+    "texture_ids": [
+      33
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 2794830548,
+    "parent_uuid": 2464897030,
+    "name": "Eye:: Left:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "7427ec2f2a5a340d400469b2b82c714f796c666d2080779ad96c99a357ce753c",
+    "texture_ids": [
+      34
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 163348813,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Eyelid2",
+    "type": "Part",
+    "topology_and_uv_sha256": "99599ee074d57fc3b5e851cb786590602649b68ca7e7dd5ee49214f1b801608a",
+    "texture_ids": [
+      35
+    ],
+    "vertex_count": 26,
+    "index_count": 42
+  },
+  {
+    "source_node_uuid": 8251770,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Eyelash1",
+    "type": "Part",
+    "topology_and_uv_sha256": "508e3be36ac58ef3ebec772890b658b3dbf5eb43af2c6b43186ab3e6dac7bdb8",
+    "texture_ids": [
+      36
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 1838220672,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Eyelid Side",
+    "type": "Part",
+    "topology_and_uv_sha256": "8bde21eb1cd7e95f1cb51958366d2b5784394efdccd22dd68a014039fd0a350d",
+    "texture_ids": [
+      37
+    ],
+    "vertex_count": 26,
+    "index_count": 42
+  },
+  {
+    "source_node_uuid": 519787041,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Eyelash2",
+    "type": "Part",
+    "topology_and_uv_sha256": "577decfb8f210ab28bfa7dd2cbfbb0f8f04ce9ff93aac11fa7aa9239da63964f",
+    "texture_ids": [
+      38
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 2433360548,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Shadow:: Upper",
+    "type": "Part",
+    "topology_and_uv_sha256": "de7ff8059007e19638191bc22fb451b7f18e397d7251570040b946ef5c9978e7",
+    "texture_ids": [
+      39
+    ],
+    "vertex_count": 44,
+    "index_count": 78
+  },
+  {
+    "source_node_uuid": 479575860,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Eyelid2:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "5b615fec41203803be98aa305ffe94a3f23ccc12dd8a38f3791963adf19fdd79",
+    "texture_ids": [
+      40
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 2610042602,
+    "parent_uuid": 2835231730,
+    "name": "Eye:: Left:: Shadow:: Lower",
+    "type": "Part",
+    "topology_and_uv_sha256": "b7318da78e1366e04db3683b0c8bed86581d3112d6d4cfc3cb18afcda6034293",
+    "texture_ids": [
+      41
+    ],
+    "vertex_count": 32,
+    "index_count": 54
+  },
+  {
+    "source_node_uuid": 1354775001,
+    "parent_uuid": 3736853925,
+    "name": "Lip",
+    "type": "Part",
+    "topology_and_uv_sha256": "7dfde7a62f9464ee30b1692ff21d52e5c19af6c17d5fbfeb576564fce574eaa3",
+    "texture_ids": [
+      42
+    ],
+    "vertex_count": 182,
+    "index_count": 468
+  },
+  {
+    "source_node_uuid": 3225607481,
+    "parent_uuid": 1354775001,
+    "name": "Mouth Inner",
+    "type": "Part",
+    "topology_and_uv_sha256": "56a4282053fa3c72a4d52f136ac92b128e424a41f3dff76451cf372f55805349",
+    "texture_ids": [
+      43
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 2330281570,
+    "parent_uuid": 3736853925,
+    "name": "Nose",
+    "type": "Part",
+    "topology_and_uv_sha256": "bb38374e38c395a8a7d9781b399ca11ef235bebde404ba4d9e3044f501e27b1e",
+    "texture_ids": [
+      44
+    ],
+    "vertex_count": 26,
+    "index_count": 42
+  },
+  {
+    "source_node_uuid": 2432586950,
+    "parent_uuid": 3736853925,
+    "name": "Back Side:: Hair",
+    "type": "Part",
+    "topology_and_uv_sha256": "a9d730039dbffd44989814a8fdc426d1f6195378c3574e7181e986fbb961b937",
+    "texture_ids": [
+      45
+    ],
+    "vertex_count": 344,
+    "index_count": 978
+  },
+  {
+    "source_node_uuid": 3755828177,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Right2",
+    "type": "Part",
+    "topology_and_uv_sha256": "17fb4637bdf0b5cb26359a25754ad237bee00fc6578d6be584db2a42fb121baf",
+    "texture_ids": [
+      46
+    ],
+    "vertex_count": 194,
+    "index_count": 483
+  },
+  {
+    "source_node_uuid": 2675685351,
+    "parent_uuid": 3755828177,
+    "name": "Back Side:: Hair:: Right2:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 233054616,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Left2",
+    "type": "Part",
+    "topology_and_uv_sha256": "c221bad56a90305df28c4e3c1f739e019f919280f2d6dc79c69167ac7aa6920b",
+    "texture_ids": [
+      47
+    ],
+    "vertex_count": 244,
+    "index_count": 618
+  },
+  {
+    "source_node_uuid": 223876631,
+    "parent_uuid": 233054616,
+    "name": "Back Side:: Hair:: Left2:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 1096045651,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Left1",
+    "type": "Part",
+    "topology_and_uv_sha256": "69317e6bfd3ac23899308b6e706d50c34538870656d01599be3f1199fa7016d0",
+    "texture_ids": [
+      48
+    ],
+    "vertex_count": 190,
+    "index_count": 459
+  },
+  {
+    "source_node_uuid": 1912528976,
+    "parent_uuid": 1096045651,
+    "name": "Back Side:: Hair:: Left1:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 1625707572,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Right1",
+    "type": "Part",
+    "topology_and_uv_sha256": "279d5ff830f7e2671b97aa0ef32586fa51da589df0b58466db6c5aaca74ca9ce",
+    "texture_ids": [
+      49
+    ],
+    "vertex_count": 220,
+    "index_count": 525
+  },
+  {
+    "source_node_uuid": 1499988486,
+    "parent_uuid": 1625707572,
+    "name": "Back Side:: Hair:: Right1:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 2937754650,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "8485f0990b877f59a374e5e6c21d1412822386e1e6874c8796dc610a95b536f7",
+    "texture_ids": [
+      50
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3424078890,
+    "parent_uuid": 2432586950,
+    "name": "Ear:: Left",
+    "type": "Part",
+    "topology_and_uv_sha256": "df9d0d2d69f6e0f59f85e912a898fb93a13d24517fd1a0717f0e314301d9ba39",
+    "texture_ids": [
+      51
+    ],
+    "vertex_count": 114,
+    "index_count": 267
+  },
+  {
+    "source_node_uuid": 1589361013,
+    "parent_uuid": 3424078890,
+    "name": "Ear:: Left:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 3453251657,
+    "parent_uuid": 2432586950,
+    "name": "Ear:: Right",
+    "type": "Part",
+    "topology_and_uv_sha256": "d39fb947f4102080bed3bed25a64dccd85e8f6adf2db2f1dd73f24648c324025",
+    "texture_ids": [
+      52
+    ],
+    "vertex_count": 118,
+    "index_count": 279
+  },
+  {
+    "source_node_uuid": 2057709216,
+    "parent_uuid": 3453251657,
+    "name": "Ear:: Right:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 4217689816,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Left3",
+    "type": "Part",
+    "topology_and_uv_sha256": "ae916ff764789bc51cb2bbf94b4077d141a5f4148ab2194a6b7a2d952f92e4be",
+    "texture_ids": [
+      53
+    ],
+    "vertex_count": 160,
+    "index_count": 366
+  },
+  {
+    "source_node_uuid": 1445804808,
+    "parent_uuid": 4217689816,
+    "name": "Back Side:: Hair:: Left3:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 4212602175,
+    "parent_uuid": 2432586950,
+    "name": "Back Side:: Hair:: Right3",
+    "type": "Part",
+    "topology_and_uv_sha256": "515c2a4aeddb23649072e1d640824467b5c3b764021637543590754ce17fbca6",
+    "texture_ids": [
+      54
+    ],
+    "vertex_count": 160,
+    "index_count": 366
+  },
+  {
+    "source_node_uuid": 627115397,
+    "parent_uuid": 4212602175,
+    "name": "Back Side:: Hair:: Right3 ::Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 980585604,
+    "parent_uuid": 3736853925,
+    "name": "Side Hair:: Right",
+    "type": "Part",
+    "topology_and_uv_sha256": "6172f858f9aca35aaea92bfb7503d97648e843ffbb35cd98aed411e0b75b19fa",
+    "texture_ids": [
+      55
+    ],
+    "vertex_count": 174,
+    "index_count": 396
+  },
+  {
+    "source_node_uuid": 4162691050,
+    "parent_uuid": 980585604,
+    "name": "Side Hair:: Right:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 2609038935,
+    "parent_uuid": 980585604,
+    "name": "Side Hair:: Right:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "45102add20121c9d74562296534283febc69b14306a161a618b3896270f4829b",
+    "texture_ids": [
+      56
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 1357173599,
+    "parent_uuid": 3736853925,
+    "name": "Front Hair:: Right2",
+    "type": "Part",
+    "topology_and_uv_sha256": "8c5284796cb936c3df176ee1a8cee6aeff1320f7411d8bf1fe5f11437cad5898",
+    "texture_ids": [
+      57
+    ],
+    "vertex_count": 44,
+    "index_count": 78
+  },
+  {
+    "source_node_uuid": 2764930201,
+    "parent_uuid": 1357173599,
+    "name": "Front Hair:: Right2:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 965831079,
+    "parent_uuid": 1357173599,
+    "name": "Front Hair:: Right2:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "692b12049dbb8d94efbc5c5d15e01f7d85fb25bce16d75de7bc986517f0eeee7",
+    "texture_ids": [
+      58
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 1552110117,
+    "parent_uuid": 3736853925,
+    "name": "Front Hair:: Left2",
+    "type": "Part",
+    "topology_and_uv_sha256": "9a8d7fc4e61372cd8cb1cfabbd9a7163088bbd5ce343518e0a5b808518d7e29d",
+    "texture_ids": [
+      59
+    ],
+    "vertex_count": 50,
+    "index_count": 90
+  },
+  {
+    "source_node_uuid": 4282466173,
+    "parent_uuid": 1552110117,
+    "name": "Front Hair:: Left2:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 2391743597,
+    "parent_uuid": 1552110117,
+    "name": "Front Hair:: Left2:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "d0aeaf8f34f3fbf6183237487d9b87c2eb31aa6f0ab89aec6e8203c0ab83e119",
+    "texture_ids": [
+      60
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 540700913,
+    "parent_uuid": 3736853925,
+    "name": "Front Hair:: Right1",
+    "type": "Part",
+    "topology_and_uv_sha256": "03396c70633fe399439eadd3ab784380e9e2b785b7efdec1bf27b28dae959d1f",
+    "texture_ids": [
+      61
+    ],
+    "vertex_count": 70,
+    "index_count": 153
+  },
+  {
+    "source_node_uuid": 2405794044,
+    "parent_uuid": 540700913,
+    "name": "Front Hair:: Right1:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 476598408,
+    "parent_uuid": 540700913,
+    "name": "Front Hair:: Right1:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "dfd5301371ded706fadafae679c1bd934bb4005e76f51abfab804a0e72befe01",
+    "texture_ids": [
+      62
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 834512232,
+    "parent_uuid": 3736853925,
+    "name": "Front Hair:: Left1",
+    "type": "Part",
+    "topology_and_uv_sha256": "bd1160e81b6a987de0be143277d8e60fa9db0bf12af625b972d91e5944b5b5ac",
+    "texture_ids": [
+      63
+    ],
+    "vertex_count": 60,
+    "index_count": 126
+  },
+  {
+    "source_node_uuid": 3232340242,
+    "parent_uuid": 834512232,
+    "name": "Front Hair:: Left1:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 2437287170,
+    "parent_uuid": 834512232,
+    "name": "Front Hair:: Left1:: Ligth",
+    "type": "Part",
+    "topology_and_uv_sha256": "cd44f9147f8bdbe4f571363ab284c9ce9ffb2ff4dc8233b3fa441269342e34ae",
+    "texture_ids": [
+      64
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 1992218482,
+    "parent_uuid": 3736853925,
+    "name": "Front Hair:: Center",
+    "type": "Part",
+    "topology_and_uv_sha256": "4db36a1524e22116a326675db932a97c831da77eef362c0ada738f5db5d29f72",
+    "texture_ids": [
+      65
+    ],
+    "vertex_count": 168,
+    "index_count": 426
+  },
+  {
+    "source_node_uuid": 3896992131,
+    "parent_uuid": 1992218482,
+    "name": "Front Hair:: Center:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 3664369009,
+    "parent_uuid": 1992218482,
+    "name": "Front Hair:: Center:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "534ef4b623de5736a5bd4b683a34e0550f118da24c30784c37d25229314119df",
+    "texture_ids": [
+      66
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 4144177566,
+    "parent_uuid": 3736853925,
+    "name": "Eyebrow:: Right",
+    "type": "Part",
+    "topology_and_uv_sha256": "b74570d7b493989355369b3d4ca0781cf15973a2f51a452a22239ae3a98833d8",
+    "texture_ids": [
+      67
+    ],
+    "vertex_count": 38,
+    "index_count": 66
+  },
+  {
+    "source_node_uuid": 228585614,
+    "parent_uuid": 3736853925,
+    "name": "Eyebrow:: Left",
+    "type": "Part",
+    "topology_and_uv_sha256": "ef4d2046bca734d3c0c8b3bb5b674c51c4aac4d72a5c0011d98f41fec7e70f19",
+    "texture_ids": [
+      68
+    ],
+    "vertex_count": 32,
+    "index_count": 54
+  },
+  {
+    "source_node_uuid": 2233235985,
+    "parent_uuid": 3736853925,
+    "name": "Leaf",
+    "type": "Part",
+    "topology_and_uv_sha256": "ad9c1ca3fe6018f48ff5a0dea0e0a2a4ae8ca008a72d77ae7360d3cb0eb49988",
+    "texture_ids": [
+      69
+    ],
+    "vertex_count": 40,
+    "index_count": 72
+  },
+  {
+    "source_node_uuid": 2548641512,
+    "parent_uuid": 3736853925,
+    "name": "Side Hair:: Left",
+    "type": "Part",
+    "topology_and_uv_sha256": "a2c40812305527cb08c87f82d30eca43fb982b59a93bd77a734c2cb28887da6a",
+    "texture_ids": [
+      70
+    ],
+    "vertex_count": 216,
+    "index_count": 531
+  },
+  {
+    "source_node_uuid": 803594377,
+    "parent_uuid": 2548641512,
+    "name": "Side Hair:: Left:: Phys",
+    "type": "SimplePhysics"
+  },
+  {
+    "source_node_uuid": 2094776,
+    "parent_uuid": 2548641512,
+    "name": "Side Hair:: Left:: Light",
+    "type": "Part",
+    "topology_and_uv_sha256": "4e0f9e479ebc35fd91d03902dc5d25a6a97b79b6ead397bb005e50e1a6b6bdef",
+    "texture_ids": [
+      71
+    ],
+    "vertex_count": 8,
+    "index_count": 6
+  },
+  {
+    "source_node_uuid": 3453139544,
+    "parent_uuid": 68362597,
+    "name": "Leg:: Left",
+    "type": "Part",
+    "topology_and_uv_sha256": "fb9b7a1c4709447c9c754e9d6dc7aa23a63dfadc44ae9d9881b2657a3f31d80f",
+    "texture_ids": [
+      72
+    ],
+    "vertex_count": 284,
+    "index_count": 705
+  },
+  {
+    "source_node_uuid": 1022832785,
+    "parent_uuid": 3453139544,
+    "name": "Leg:: Left:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "1280348c04e0494264cc98e16a7e9378cc0afe505c5d3a65fb0f2088e64b03e5",
+    "texture_ids": [
+      73
+    ],
+    "vertex_count": 24,
+    "index_count": 30
+  },
+  {
+    "source_node_uuid": 3829618525,
+    "parent_uuid": 68362597,
+    "name": "Leg:: Right",
+    "type": "Part",
+    "topology_and_uv_sha256": "dd6f89d3247a77da777267edaa3ccbdd55fe918b99bf1e9d9a5335cba2c19430",
+    "texture_ids": [
+      74
+    ],
+    "vertex_count": 296,
+    "index_count": 741
+  },
+  {
+    "source_node_uuid": 1173732246,
+    "parent_uuid": 3829618525,
+    "name": "Leg:: Right:: Shadow",
+    "type": "Part",
+    "topology_and_uv_sha256": "74c5dabf659b6ccb6be9da0494239d572510c3d1a730c0b6ee862b8249488c98",
+    "texture_ids": [
+      75
+    ],
+    "vertex_count": 24,
+    "index_count": 30
+  }
+]

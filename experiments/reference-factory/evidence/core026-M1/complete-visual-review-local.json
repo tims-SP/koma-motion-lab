@@ -1,0 +1,33 @@
+{
+  "schema": "core026-complete-visual-review/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "author_executor": "Codex explicit local fallback",
+  "source": "Actual native images only; no generated/painted replacement",
+  "input_central_review_sha256": "867a0abc0f46ac1ecc2c113936c82ac9c2acfd9cde245ecc9caaee06da12fee0",
+  "output_review_sha256": "1a76ef7d416fba455dcfc1755bb2fc69390eb3b605ea15b07304ed98c09b132c",
+  "cells_reviewed": 171,
+  "fit_eligible": 9,
+  "state_counts": {
+    "UNKNOWN": 109,
+    "VERIFIED_IMAGE_FIDUCIAL": 9,
+    "NCC_CANDIDATE": 22,
+    "BOUNDARY_PROXY_ONLY": 31
+  },
+  "central_chin_refinement": "Three chin contour confidence values LOW→MEDIUM after unmarked silhouette inspection; eligibility remains false. Original central pending-order decisions remain historical.",
+  "accepted_comparison_raw_yaws": [
+    -0.25,
+    0,
+    0.25
+  ],
+  "outer_missing_correspondences": "UNKNOWN does not mean visually occluded; no guessed coordinates",
+  "media_local_only": {
+    "out/core026/landmark-review/negative-face-native-detail.png": "0f0c1e743ee374f9239c92e424d2410bfa3c1d899c85f0ffd5ea30919192b846",
+    "out/core026/landmark-review/positive-face-native-detail.png": "4aae4b3a8606b94e0f7e5a6cce71ede8e8d685ed8ddf08de0ccf691ee0d68745",
+    "out/core026/landmark-review/native-nine-contact.png": "8eab709824a41d7fe59e5ef49691e4d6d5b151c13ccf26eff17131d24be84ca0",
+    "out/core026/landmark-review/central-face-native-detail.png": "7cd4381e75b089fbec950584dd5815d755d3e935fcae46cfab69bc1e5f0bf0ee"
+  },
+  "overall_M1": "PASS_REFERENCE_LIMITED_BY_SEPARATE_AGGREGATE",
+  "physical_depth": "NOT_RECOVERED",
+  "runtime_occlusion": "NOT_IMPLEMENTED",
+  "aggregate_ci_evidence": "m1-complete-ci-acceptance.json"
+}

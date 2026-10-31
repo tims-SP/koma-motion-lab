@@ -1,0 +1,126 @@
+{
+  "schema": "core026-mcode-post-domain-approval/1",
+  "date_local": "2026-10-31 Asia/Shanghai",
+  "base_commit": "b496ae7a82fc6c5ce40f0a41eeaa392c9a590bbf",
+  "user_scope": "User explicitly released agent.minimaxi.com after earlier agent.minimax.cn scope; no further login requested.",
+  "preceding_checkpoint_regression": {
+    "run": 41137822195,
+    "job": 124344522596,
+    "status": "success"
+  },
+  "public_catalog_rejection": "Purpose/payload initially unknown; verified official public GET without auth/body and validated static catalog URL.",
+  "avatar_storage_rejection": "Purpose initially unknown; public code proves custom data-URL avatar content-safety uploader. Does not establish payload of the actual rejected runtime request.",
+  "actual_runs": [
+    {
+      "name": "storage-checked existing session",
+      "timeout": "8m",
+      "exit_code": 6,
+      "completed_tool_calls": 12,
+      "tools": [
+        {
+          "name": "read",
+          "status": 2,
+          "description": null,
+          "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/docs/plans/CORE-026-M1C1-constraints-order.md"
+        },
+        {
+          "name": "read",
+          "status": 2,
+          "description": null,
+          "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/AGENTS.md"
+        },
+        {
+          "name": "bash",
+          "status": 3,
+          "description": "Survey repo structure",
+          "path": null
+        },
+        {
+          "name": "read",
+          "status": 2,
+          "description": null,
+          "path": "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/verify_core026_constraints.py"
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Inspect core026 out dir and registration",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Inspect layer contract structure",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Inspect native INX node fields for clip evidence",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "List all 62 layers and clips",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Inspect masks, bindings, blend, zsort fields",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Find CORE026 sections in STATUS",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Map ClipToLower and masks onto selected 62 layers",
+          "path": null
+        },
+        {
+          "name": "bash",
+          "status": 2,
+          "description": "Check node 20, whites, yaw bindings, texture presence",
+          "path": null
+        }
+      ],
+      "tracked_implementation_files_produced": 0
+    },
+    {
+      "name": "compact existing session, effort low",
+      "timeout": "5m",
+      "status": "AUTO_REVIEW_REJECTED",
+      "reason": "Alibaba Cloud upload/storage endpoint outside approved MiniMax domains; command prohibited uploads; specific destination/payload unauthorized.",
+      "log_bytes": 609,
+      "tracked_implementation_files_produced": 0
+    }
+  ],
+  "remaining_block": "Specific third-party object-storage operation and payload not authorized/confirmed; no retry after the latest rejection.",
+  "observed_storage_destination": "matrix-internal-cn.oss-cn-shanghai.aliyuncs.com",
+  "other_public_SDK_avatar_allowlist_host": "matrix-internal.oss-us-east-1.aliyuncs.com",
+  "supervisor_checker": {
+    "file": "experiments/reference-factory/verify_core026_m1c1_supervisor.py",
+    "state": "DRAFT_NO_REAL_PRODUCER_CANDIDATE",
+    "source_order_coverage": 62,
+    "independent_surfaces": 19,
+    "receiver_proposals": 43,
+    "real_candidate_positive_test": "NOT_RUN_NO_CANDIDATE",
+    "uuid_receiver_late_paint_tamper_tests": "NOT_RUN_NO_CANDIDATE",
+    "missing_candidate_check": {
+      "expected_exit": 11,
+      "actual_exit": 11,
+      "result": "FAIL_CLOSED_AS_EXPECTED; not a real-candidate acceptance"
+    }
+  },
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED",
+  "natural_3d_turn": "NOT_ACCEPTED",
+  "remaining_matching_task_processes_stopped": [],
+  "safety": "No SDK patch, endpoint override, proxy, credential inspection or project image upload was used."
+}

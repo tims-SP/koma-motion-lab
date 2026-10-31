@@ -1,0 +1,35 @@
+# Explicit local configuration for bounded public work orders; reuse existing login.
+# Based on official @minimax-ai/code configs/data-minimal.yaml. No SDK patch.
+agents:
+  default:
+    persona:
+      enabled: false
+    tools: [bash]
+    builtinTools: []
+    skills: []
+    features:
+      mavis: false
+      delegation: false
+      webSearch: false
+memory:
+  enabled: false
+  proactive: false
+askUser:
+  enabled: false
+skills:
+  external:
+    enabled: false
+skillEvolve:
+  enabled: false
+beta:
+  autoMemory: false
+  skillEvolve: false
+  skillEvolveBuiltinMr: false
+  skillProposal: false
+  browserBridge: false
+  browserUseTooling: false
+  desktopPlanMode: false
+  keepAlive: false
+  mcodeTools: false
+  ptc: false
+  pluginMarketplaces: false

@@ -1,0 +1,114 @@
+{
+  "schema": "koma-core025-qa/1",
+  "inputs": {
+    "psd": {
+      "file": "out/source/tutorial-aka.psd",
+      "sha256": "979fa62702b25f8af25414637d9ba6c36cbc9eb03bfa0c454470c73bdf51e55e",
+      "sha256_verified": true
+    },
+    "core024_export": {
+      "file": "out/core024/native-v2/native-export.json",
+      "sha256": "d73fd462b980007305abaebaf909f9761f7af8feebb38092ad786495bae953c3"
+    },
+    "layer_count": 62
+  },
+  "outputs": {
+    "source_cpu": {
+      "file": "out/core025/assembly/source/source-cpu.png",
+      "sha256": "4c2f0b1f6b241170b446848373b06c0d5195e9bc2f3bf0beee181f1e50fdbce7",
+      "size": [
+        1630,
+        1630
+      ]
+    },
+    "clean_cpu": {
+      "file": "out/core025/assembly/clean/clean-cpu.png",
+      "sha256": "81200b4c5715c95eae154c6878ec3f09b992d48e08202694ab7819e2a032e42b",
+      "size": [
+        1630,
+        1630
+      ]
+    },
+    "assembly_json": {
+      "file": "out/core025/assembly/assembly.json",
+      "sha256": "06ffade8399609b961dafb3c5c3bf6f3f185200b98d8ae06f30fed9603e65673"
+    }
+  },
+  "measurements": {
+    "source": {
+      "cpu_composite": {
+        "file": "out/core025/assembly/source/source-cpu.png",
+        "sha256": "4c2f0b1f6b241170b446848373b06c0d5195e9bc2f3bf0beee181f1e50fdbce7",
+        "size": [
+          1630,
+          1630
+        ]
+      },
+      "against_sdk_reference": {
+        "white": {
+          "background": "white",
+          "foreground_px": 1008000,
+          "mae_rgb_0_255": 0.125177,
+          "mae_rgb_0_1": 0.00049089,
+          "max_single_channel_error_0_255": 2,
+          "pixels_over_16_fraction": 0.0,
+          "alpha_mae_0_255": 0.025776,
+          "alpha_mae_0_1": 0.00010108
+        },
+        "black": {
+          "background": "black",
+          "foreground_px": 1008000,
+          "mae_rgb_0_255": 0.144745,
+          "mae_rgb_0_1": 0.00056763,
+          "max_single_channel_error_0_255": 2,
+          "pixels_over_16_fraction": 0.0,
+          "alpha_mae_0_255": 0.025776,
+          "alpha_mae_0_1": 0.00010108
+        }
+      }
+    },
+    "clean": {
+      "cpu_composite": {
+        "file": "out/core025/assembly/clean/clean-cpu.png",
+        "sha256": "81200b4c5715c95eae154c6878ec3f09b992d48e08202694ab7819e2a032e42b",
+        "size": [
+          1630,
+          1630
+        ]
+      },
+      "against_sdk_reference": {
+        "white": {
+          "background": "white",
+          "foreground_px": 1008000,
+          "mae_rgb_0_255": 4.763881,
+          "mae_rgb_0_1": 0.01868189,
+          "max_single_channel_error_0_255": 124,
+          "pixels_over_16_fraction": 0.15197817,
+          "alpha_mae_0_255": 9.02153,
+          "alpha_mae_0_1": 0.03537855
+        },
+        "black": {
+          "background": "black",
+          "foreground_px": 1008000,
+          "mae_rgb_0_255": 7.110746,
+          "mae_rgb_0_1": 0.02788528,
+          "max_single_channel_error_0_255": 194,
+          "pixels_over_16_fraction": 0.15385813,
+          "alpha_mae_0_255": 9.02153,
+          "alpha_mae_0_1": 0.03537855
+        }
+      }
+    }
+  },
+  "gate_thresholds": {
+    "source_rgb_mae_0_255_max": 0.5,
+    "source_alpha_mae_0_255_max": 0.5,
+    "note": "thresholds are 0.5/255 expressed in 0..255 units; not relaxed"
+  },
+  "exit_conditions": {
+    "source_composition_gate": "PASS",
+    "failures": []
+  },
+  "clean_visual_gate": "NOT_REVIEWED",
+  "clean_visual_gate_note": "the clean variant differs from the PSD on purpose; the supervisor reviews shadow-cleanup-sheet.png and decides"
+}

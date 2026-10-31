@@ -1,0 +1,79 @@
+{
+  "schema": "core026-mcode-network-recovery/1",
+  "date_local": "2026-10-31 Asia/Shanghai",
+  "user_authorization": "继续，允许访问网络",
+  "sdk_version": "0.7.2",
+  "task_mode": "Existing scripts executed from an empty context directory; no repository file contents attached",
+  "permission": "smart",
+  "cli_exit_code": 0,
+  "completed_tool_calls": 1,
+  "tool": "bash",
+  "tool_exit_code": 0,
+  "producer_exit_code": 0,
+  "supervisor_exit_code": 0,
+  "results": {
+    "producer": {
+      "status": "VERIFIED",
+      "records": 62,
+      "multiply": 11,
+      "default_clips": 9,
+      "late_overlaps": [
+        28,
+        15,
+        2156,
+        1954
+      ],
+      "overall_M1": "NOT_ACCEPTED",
+      "runtime_receiver_compositor": "NOT_IMPLEMENTED"
+    },
+    "supervisor": {
+      "schema": "core026-m1c1-supervisor/1",
+      "status": "PASS_SOURCE_FACTS_AND_DESIGN_CONTRACT",
+      "constraints_sha256": "2aefaa9ae0829dfe4bfb0e3d1708e037f4ec98fcc52c44e0b88d86b64ddeb482",
+      "records": 62,
+      "source_facts_checked": 62,
+      "multiply_count": 11,
+      "default_clip_count": 9,
+      "late_overlap_counts": [
+        28,
+        15,
+        2156,
+        1954
+      ],
+      "problems": [],
+      "overall_M1": "NOT_ACCEPTED_BY_THIS_CHECK",
+      "runtime_compositor": "NOT_IMPLEMENTED",
+      "natural_3d_turn": "NOT_EVALUATED"
+    }
+  },
+  "metadata_scope": "Node request/TLS hooks only, not OS capture or historical-traffic proof",
+  "installed_policy": "authorized-first-party-and-public-cdn; object-storage-denied",
+  "connection_metadata": [
+    {
+      "decision": "allow",
+      "hostname": "account.minimax.cn",
+      "count": 1
+    },
+    {
+      "decision": "allow",
+      "hostname": "agent.minimaxi.com",
+      "count": 8
+    },
+    {
+      "decision": "allow",
+      "hostname": "agent.minimax.cn",
+      "count": 15
+    },
+    {
+      "decision": "allow",
+      "hostname": "filecdn.minimax.chat",
+      "count": 1
+    }
+  ],
+  "object_storage_connection_recorded": false,
+  "new_login_requested": false,
+  "sdk_file_edits_performed": false,
+  "raw_stream_or_credentials_published": false,
+  "implementation_authorship": "Existing M1C1 implementation remains Codex fallback; this report proves mcode execution/verification, not retroactive mcode authorship",
+  "guard_sha256": "efddd2c5f9c088fb5b228594abbfcbb880db6a6c5747fe763f5b927f59076a35"
+}

@@ -1,0 +1,97 @@
+name: CORE-022 Reference Factory deterministic structure
+
+on:
+  push:
+    branches: [feature/koma-25d-core-021]
+    paths:
+      - 'experiments/reference-factory/**'
+      - '.github/workflows/koma-reference-factory-022.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  structural-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: experiments/reference-factory
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned direct dependencies and Chromium
+        run: |
+          python -m pip install -r requirements.txt
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Run synthetic regression and offline decomposition probe (not the local imagegen candidates)
+        run: |
+          python -m unittest discover -s tests -v
+          python probe_decomposition.py --skip-network
+      - name: Acquire pinned original sources and prepare real Aka references
+        run: python prepare.py
+      - name: Export native PSD source layers (62 native RGBA leaves, no white-keying)
+        run: python native_layers.py
+      - name: CORE-025 M1 — rebuild native layered assembly (default pose)
+        run: python prepare_core025.py
+      - name: CORE-025 M2 — capture curved anchor frames
+        run: node capture_core025.mjs --anchors
+      - name: CORE-025 M2 — independent supervisor acceptance (numeric gate)
+        run: python verify_core025_supervisor.py
+      - name: CORE-025 M3 — capture turntable video
+        run: node capture_core025_video.mjs
+      - name: CORE-025 M3 — independent supervisor video acceptance (numeric gate)
+        run: python verify_core025_video.py
+      - name: Render twice in independent browser processes and validate maps/video
+        run: |
+          npm run render
+          cp out/structure/manifest.json out/baseline-manifest.json
+          npm run render
+          python qa.py --baseline out/baseline-manifest.json
+      - name: Publish text evidence only to Actions artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CORE022-text-evidence-${{ github.run_number }}
+          path: |
+            experiments/reference-factory/out/qa.json
+            experiments/reference-factory/out/source_freeze.json
+            experiments/reference-factory/out/native_topology_index.json
+            experiments/reference-factory/out/structure/manifest.json
+            experiments/reference-factory/out/core024/native-v2/native-export.json
+            experiments/reference-factory/out/core025/assembly/qa.json
+            experiments/reference-factory/out/core025/render/supervisor-qa.json
+            experiments/reference-factory/out/core025/render/manifest.json
+            experiments/reference-factory/out/core025/turntable/video-manifest.json
+            experiments/reference-factory/out/core025/turntable/video-qa.json
+          if-no-files-found: error
+      - name: Archive original sources and generated media in owner-only Draft Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_NUMBER: ${{ github.run_number }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,zipfile
+          with zipfile.ZipFile('CORE025-layered-turn-evidence.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(Path('out').rglob('*')):
+                  if p.is_file():z.write(p,p.as_posix())
+          p=Path('CORE025-layered-turn-evidence.zip')
+          Path('SHA256SUMS.txt').write_text(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n')
+          PY
+          gh release create "core025-layered-turn-${RUN_NUMBER}" \
+            CORE025-layered-turn-evidence.zip SHA256SUMS.txt \
+            --draft --target "$COMMIT_SHA" \
+            --title "CORE-025 layered turn evidence ${RUN_NUMBER}" \
+            --notes "CORE-025 layered turn prototype evidence, Actions run ${RUN_NUMBER}. Source art: Aka by seagetch, licensed CC-BY-4.0; the generic pixiv VRM structural reference is under its embedded VRM Public License 1.0 and is not an Aka model. This archive contains the pinned original sources, the 62 native RGBA part layers exported from the original PSD, the derived layered textures, the curved-surface check images, the 97-frame turntable, the H.264 encoded video and its decoded review frames, plus machine-readable JSON evidence. The turn prototype is an inferred OPEN shallow surface driven to plus or minus 15 degrees of head yaw; it is a prototype, not an artistically approved head turn. The CORE-025 art gate is FAILED: the motion still reads as a shallow-surface sway, the face stays too frontal and the facial silhouette perspective change is too weak, so no claim of a natural plus or minus 15 degree head turn is made. The numeric chain PASS (front-view MAE under 0.05 of 255, 62 non-planar geometries, UV and formula and matrix checks, 97-frame encode and decode) is a numeric and structural gate only and does NOT mean the artistic gate passed. The default-pose multiply to normal baking of the layered parts is a per-part approximation valid only in the default pose; baked occlusion and shadow correctness under new rotations is NOT guaranteed. The locally generated AI candidate C is NOT included in this CI package and is not an accepted asset. The original Inochi runtime, the full-front-view binding, bone skinning and IK, and real side, back and 360 degree views are NOT accepted and remain open work. New-view assets are still incomplete; this package is not a production-ready character and must not be described as production ready or as a complete asset set."

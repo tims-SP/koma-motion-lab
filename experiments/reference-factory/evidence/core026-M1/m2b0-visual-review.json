@@ -1,0 +1,27 @@
+{
+  "schema": "core026-m2b0-visual-review/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "reviewer": "Codex actual image inspection",
+  "default_rest_art": "PASS_REST_ART_ONLY",
+  "viewed": [
+    "review-sheet.png",
+    "visual-details.png",
+    "failed-eye-comparison.png (first archived failure)"
+  ],
+  "observations": [
+    "Source/clean default head and facial drawing match the old reference visually. Nose, eye/brow/hair overlap, ear/leaf and neck inspected.",
+    "Hard raw EyeWhite mask visibly amputates the lower iris; rejected counterexample preserved.",
+    "Live pupil offset visibly changes the left iris; other regions/reset remain stable.",
+    "Highlight29 is not coupled to pupil28 in this per-layer control demo; gaze animation quality is NOT_ACCEPTED.",
+    "Source shadow/neck-edge artifacts already present in the old source remain source facts, not newly fixed geometry."
+  ],
+  "inspected_images": {
+    "review-sheet.png": "1d41c414a5aec03069e9c47165c4dc5d290709581245a39b28eb3dd1625386eb",
+    "visual-details.png": "1fde02fd3edfeec50051b32d2bee588c990b6f3f4fc6450729f4550cc97cc853",
+    "source_white.png": "d33c81e1be3e948b3d9533f63c8e323c37358c7e1f942e4f045dd2d331cbbb33",
+    "clean_white.png": "b6ea0111cf273950073bbfc297194e02327670cacaafed6381ccc40e7e8fca62",
+    "source_pupilL_shift8.png": "9c49720c31c78526554680b3d3ee00430b37f32a4dcb93911e75a2be033765ab"
+  },
+  "full_M2B": "NOT_ACCEPTED",
+  "natural_turn": "NOT_ACCEPTED"
+}

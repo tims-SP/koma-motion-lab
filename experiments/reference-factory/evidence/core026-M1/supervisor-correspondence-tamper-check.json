@@ -1,0 +1,8 @@
+{
+  "case": "swap PSD-left ear to unsupported native UUID3424078890",
+  "expected": "reject",
+  "actual_exit": 11,
+  "stdout": "{\"status\": \"FAIL\", \"problem_count\": 1, \"problems\": [\"entry 1: VERIFIED uuid 3424078890 != independent 3453251657\"]}",
+  "passed": true,
+  "restored_exit": 0
+}

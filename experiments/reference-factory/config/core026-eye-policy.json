@@ -1,0 +1,19 @@
+{
+  "schema": "core026-eye-policy/1",
+  "selected_policy": "artist_override_source_paint_domain",
+  "runtime_mask_policy": "source_paint_domain",
+  "color_truth": "Pinned original PSD RGBA; unchanged CORE025 default CPU/browser references",
+  "domain": "Per-source-coordinate max alpha of the unshifted white, pupil and highlight; moved source alpha capped by this fixed domain",
+  "coupled_gaze_domain": "Horizontal max-alpha dilation of the original paint domain by 8 source pixels; a fixed alpha-derived envelope for the validated command range, preserving the moved iris lower contour",
+  "coupled_gaze_horizontal_radius": 8,
+  "manual_layer_domain": "Legacy unshifted source-paint cap unless the eye's coupled gaze envelope was explicitly activated; pose reports active envelopes separately from manual/coupled control state",
+  "native_clip_equivalence": "BLOCKED_NATIVE_COMPOSITE_MESH_UV_REGISTRATION_NOT_ACCEPTED",
+  "native_equation": "premultiplied RGBout=Cs*Ad+Cd*(1-As); Aout=Ad; not source-alpha multiplication plus Normal",
+  "artist_override_reason": "PSD iris extends below raw white alpha; white-only multiplication removes source artwork",
+  "control": {"axis": "horizontal_source_pixels", "integer_min": -8, "integer_max": 8, "continuous_motion": "NOT_ACCEPTED"},
+  "eyes": {
+    "left": {"white_order": 27, "pupil_order": 28, "highlight_order": 29, "native_composite_uuid": 977552066},
+    "right": {"white_order": 37, "pupil_order": 38, "highlight_order": 39, "native_composite_uuid": 200444691}
+  },
+  "depth_and_turn": "BLOCKED_PENDING_SPATIAL_RUNTIME_AND_COMPLETE_M2B"
+}
