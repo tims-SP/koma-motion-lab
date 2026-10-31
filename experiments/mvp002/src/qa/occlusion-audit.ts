@@ -59,9 +59,17 @@ export function auditLocalOcclusion(
  angle:number
 ):OcclusionRuleResult[]{
  const real=readPixels(renderer,scene,camera,objects,null);
- const needed=[...new Set(rules.flatMap(x=>[x.front,x.back]))];
+ const torsoArmRules=angle===0?[
+    {front:'leftArm',back:'torso',allow:['leftArm']},
+    {front:'rightArm',back:'torso',allow:['rightArm']}
+   ]:angle===180?[
+    {front:'torso',back:'leftArm',allow:['torso']},
+    {front:'torso',back:'rightArm',allow:['torso']}
+   ]:[];
+ const activeRules=angle===180?torsoArmRules:[...rules,...torsoArmRules];
+ const needed=[...new Set(activeRules.flatMap(x=>[x.front,x.back]))];
  const isolated=new Map(needed.map(id=>[id,readPixels(renderer,scene,camera,objects,id)]));
- return rules.map(rule=>{
+ return activeRules.map(rule=>{
    const front=isolated.get(rule.front)!,back=isolated.get(rule.back)!;
    const allowed=new Set(rule.allow.map(encoded));
    let overlap=0,wrong=0,matched=0;
@@ -73,7 +81,8 @@ export function auditLocalOcclusion(
      else if(id===encoded(rule.back))wrong++;
    }
    // Never grant PASS from zero overlap or mere intent-state.
-   const status=overlap<6?'UNTESTED':wrong>Math.max(2,overlap*.025)?'FAIL':'PASS';
+   const status=overlap<6?'UNTESTED':
+     wrong>Math.max(2,overlap*.025)?'FAIL':'PASS';
    return {angle,front:rule.front,back:rule.back,overlapPixels:overlap,
       incorrectlyBackPixels:wrong,matches:matched,status};
  });
