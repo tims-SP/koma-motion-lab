@@ -87,9 +87,17 @@ export function qa(yaw:number){
  let coverage=0;for(let i=3;i<beauty.length;i+=4)if(beauty[i]>0)coverage++;
  const parity=[delta(beauty,id,false),delta(beauty,depth,false),delta(beauty,alpha,false)];
  const maskFault=delta(beauty,faultMask,false),depthFault=delta(id,faultDepth,true);
- return {yaw,coveragePixels:coverage,opaqueCoverageMismatches:parity,
-  faultMaskCoverageMismatch:maskFault,faultDepthIdChangedPixels:depthFault,
-  result:coverage>10000&&parity.every(x=>x===0)&&maskFault>500&&depthFault>100?'PASS_ENGINEERING':'FAIL'};
+ // ID pixel counts are from the actual z-buffer, not from intended part visibility flags.
+ const visibleParts:Record<string,number>={};
+ for(let i=0;i<parts.length;i++)visibleParts[parts[i]!.id]=0;
+ for(let i=0;i<id.length;i+=4)if(id[i+3]>0){
+  const index=id[i]-1;
+  if(index>=0&&index<parts.length)visibleParts[parts[index]!.id]!++;
+ }
+ const actualSideAnatomy=yaw!==90||(['farEye','farEar','nose','mouth'] as const).every(name=>visibleParts[name]>80);
+ return {yaw,coveragePixels:coverage,visibleParts,opaqueCoverageMismatches:parity,
+  faultMaskCoverageMismatch:maskFault,faultDepthIdChangedPixels:depthFault,actualSideAnatomy,
+  result:coverage>10000&&parity.every(x=>x===0)&&maskFault>500&&depthFault>100&&actualSideAnatomy?'PASS_ENGINEERING':'FAIL'};
 }
 frame(0);
 declare global {interface Window {head009:{frame:typeof frame;qa:typeof qa}}}
