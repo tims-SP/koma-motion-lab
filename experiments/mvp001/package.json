@@ -1,0 +1,17 @@
+{
+  "name": "koma-mvp001",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "vite": "7.1.12"
+  }
+}
