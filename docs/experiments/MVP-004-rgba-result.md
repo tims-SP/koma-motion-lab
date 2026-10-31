@@ -51,3 +51,14 @@
 - [CI](../../.github/workflows/mvp003-six-modules.yml)
 
 **该项目研究阶段无需商业分发；如果未来以复杂游戏素材替换，必须核实使用和再分发条款，并避免第三方图像进入公有制品。**
+
+## R1 眼部透明遮罩修复与最终本轮验收
+
+- 旧镜头白色横条根因：\`eyes\` 画布图层被错误地整块填充不透明底色；虽然几何和 UV 正常，但错误的 Alpha 使两眼之间出现白色区域。修正后仅绘制真实眼白、虹膜与眼线，保持图层其余区域透明，并去掉整块外轮廓。
+- [修订后实际成功 Actions #41193779622](https://github.com/tims-SP/koma-motion-lab/actions/runs/41193779622)
+- [修订后 Draft Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-23fb286da4223fc7629f)
+- [修订后完整 6 秒视频](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-23fb286da4223fc7629f/integrated-6sec.mp4)，199,015 字节，144 帧。**本链接为当前首选预览，上一版本用于缺陷对照。**
+- [修订后 16 张源 PNG + 视频 + QA 文件 Actions Artifact #13039753564](https://github.com/tims-SP/koma-motion-lab/actions/runs/41193779622/artifacts/13039753564)
+- 实际抽取并检查 frame 12 / 87 / 114。此前白色宽横条**已去除**；眼睛目前过小、面部简单、侧脸线条和手臂衣袖仍显僵硬，**视觉质量继续 FAIL**。
+- 下一轮不再检查“是否还存在同一根已修复的白色横条”，应转换为真正的**高质量分视角人物原画**并确保 UV/遮挡匹配。不是增加一般性 CI 测试数量。
+
