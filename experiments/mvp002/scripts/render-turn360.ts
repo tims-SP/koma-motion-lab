@@ -1,4 +1,5 @@
 import {chromium} from 'playwright';
+import * as THREE from 'three';
 import {spawn,execFileSync} from 'node:child_process';
 import {mkdirSync,readFileSync,statSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -149,9 +150,36 @@ try{
  const parts=trace.flatMap(f=>f.parts);
  const nonFinite=parts.filter(p=>p.geometryVerticesXY.some(v=>v.some(x=>!Number.isFinite(x)))||
    p.textureUV.some(v=>v.some(x=>!Number.isFinite(x))));
- const warning=parts.filter(p=>p.warningCodes.some(w=>w!=='VIEW_270_MIRRORED_SOURCE'));
- gate('S03_ANCHOR_VDD_DECOMPOSITION','BLOCKED',
-  'Current worldAnchorXYZ is the projected part center; original local anchor, joint bind pose and independent projection audit are not yet exposed.');
+ const warning=parts.filter(p=>p.warningCodes.length>0);
+ // Independently rebuild anchor and camera projection from serialized bone,
+ // camera and local coordinates; never use the renderer's answer as a substitute.
+ let maxAnchorAudit=0,maxProjectionAudit=0,maxDeformationAudit=0;
+ for(const frame of trace){
+   const view=new THREE.Matrix4().fromArray(frame.cameraViewMatrix);
+   const proj=new THREE.Matrix4().fromArray(frame.cameraProjectionMatrix);
+   const toPixels=(pos:THREE.Vector3):[number,number]=>{
+     const h=new THREE.Vector4(pos.x,pos.y,pos.z,1).applyMatrix4(view).applyMatrix4(proj);
+     return [(h.x/h.w+1)*480,(1-h.y/h.w)*270];
+   };
+   for(const p of frame.parts){
+     const model=new THREE.Matrix4().fromArray(p.boneWorldMatrix);
+     const reconstructed=new THREE.Vector3(...p.boneLocalAnchorXYZ).applyMatrix4(model);
+     const actual=new THREE.Vector3(...p.worldAnchorXYZ);
+     maxAnchorAudit=Math.max(maxAnchorAudit,actual.distanceTo(reconstructed));
+     const projected=toPixels(reconstructed);
+     maxProjectionAudit=Math.max(maxProjectionAudit,
+       Math.hypot(projected[0]-p.anchorProjectionPixels[0],
+                  projected[1]-p.anchorProjectionPixels[1]));
+     const deformed=toPixels(reconstructed.add(new THREE.Vector3(...p.vddOffsetXY,0)));
+     maxDeformationAudit=Math.max(maxDeformationAudit,
+       Math.hypot(deformed[0]-p.deformedCenterPixels[0],
+                  deformed[1]-p.deformedCenterPixels[1]));
+   }
+ }
+ const s03ok=maxAnchorAudit<1e-5&&maxProjectionAudit<.05&&maxDeformationAudit<.05;
+ gate('S03_ANCHOR_VDD_DECOMPOSITION',s03ok?'PASS':'FAIL',
+  s03ok?undefined:'Real bone and projection audit discrepancies '+JSON.stringify({
+   maxAnchorAudit,maxProjectionAudit,maxDeformationAudit}));
  gate('S04_ARTMESH_UV_TOPOLOGY',nonFinite.length||warning.length?'FAIL':'PASS',
    warning.length?'Geometry issues: '+warning.slice(0,3).map(p=>p.id+':'+p.warningCodes.join(',')).join(' | '):undefined);
  const maxJump=Math.max(...trace.slice(1).map((frame,i)=>{
@@ -181,8 +209,15 @@ try{
  const actualFrameCounts=trace.filter(f=>f.actualVisiblePartIds.length>=4).length;
  gate('S06_OCCLUSION_ACTUAL_RENDER','BLOCKED',
    'ID pass is real and '+actualFrameCounts+'/192 frames have >=4 visible parts, but no verified occlusion constraint/mask table for crossing hair, face and arms.');
- gate('S07_ANATOMICAL_ASYMMETRY',sources.independent270?'PASS':'FAIL',
-   sources.independent270?undefined:'270° view geometry is automatically derived by mirroring 90° for '+sources.derivedPartIds.length+' parts.',sources.derivedPartIds);
+ const independentKeys=keyTraces.filter(f=>[90,270].includes(f.yawDegrees)).flatMap(f=>f.parts);
+ const all270=independentKeys.filter(p=>p.keyA.yawDegrees===270);
+ const keyProof=all270.length===12&&all270.every(p=>p.keyA.independentlyAuthored&&
+   independentKeys.some(other=>other.id===p.id&&other.keyA.yawDegrees===90&&
+   other.keyA.sourceHash!==p.keyA.sourceHash));
+ const s07ok=sources.independent270&&sources.derivedPartIds.length===0&&keyProof;
+ gate('S07_ANATOMICAL_ASYMMETRY',s07ok?'PASS':'FAIL',
+   s07ok?undefined:'Missing independent left 270° contour sources or distinct per-part authored hashes.',
+   sources.derivedPartIds);
  gate('S08_RENDER_FRAME_INTEGRITY',videoGood?'PASS':'FAIL',
   videoGood?undefined:'FFprobe frame/resolution mismatch or ID-pass model bounding box clipped/empty');
  const finalStatus=results.some(g=>g.status!=='PASS')?'FAIL_STRUCTURE':'PASS_STRUCTURE_PENDING_VISUAL';
@@ -195,7 +230,7 @@ try{
   coreStatus:finalStatus,highFidelityAnimeArtAccepted:false
  };
  const diagnostics={seamEqual,frameCount:P.videoFrames,boundaryImages:8,independentSampleAngles:25,
-   maxAnchorJump:maxJump,maxVertexJump,actualFrameCounts,sources,videoBytes:statSync(video).size,
+   maxAnchorJump:maxJump,maxVertexJump,maxAnchorAudit,maxProjectionAudit,maxDeformationAudit,actualFrameCounts,sources,videoBytes:statSync(video).size,
    partTracesCount:parts.length,screenBoundsOkay,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
  writeFileSync(join(output,'turn360-traces.json'),JSON.stringify({frames:trace,sampled:keyTraces},null,1));
  writeFileSync(join(output,'turn360-qa.json'),JSON.stringify({report,diagnostics},null,2)+'\n');
