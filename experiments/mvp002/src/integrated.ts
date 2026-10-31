@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 import {createRegisteredArt, artTextureProof, artTexturePNG} from './rgba-view-art';
+import {Turn360Recorder, qaPalette, idShader, countIdPixels} from './qa/turn360-runtime';
+import type {FrameTrace} from './qa/turn360-contract';
 
 /**
  * MVP-003: exactly one small 3-keyview, 12-part character driven by
@@ -24,6 +26,9 @@ declare global {interface Window {
   integratedInfo:{parts:number;views:number;method:string};
   integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
   exportArtPNG:(partId:PartId,angle:View)=>string;
+  renderTurn360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace};
+  captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string};
+  turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
 }}
 
 const screen=document.querySelector<HTMLCanvasElement>('#viewport');
@@ -38,6 +43,8 @@ const camera=new THREE.OrthographicCamera(-4.7,4.7,2.64,-2.64,.1,60);
 camera.position.set(0,1.95,15);camera.lookAt(0,1.95,0);camera.updateProjectionMatrix();
 const root=new THREE.Group();scene.add(root);
 const drawn:THREE.Object3D[]=[];
+const qaRecorder=new Turn360Recorder();
+const PART_IDS:PartId[]=['backHair','torso','skirt','face','fringe','eyes','scarf','emblem','leftArm','rightArm','leftLeg','rightLeg'];
 const V=(x:number,y:number,z=0)=>new THREE.Vector3(x,y,z);
 const lerp=(a:number,b:number,t:number)=>a+(b-a)*t;
 const smooth=(x:number)=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x);};
@@ -125,13 +132,14 @@ function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMat
   ].join('\n')
  });
 }
-function emitGeometry(vertices:THREE.Vector3[],uvs:XY[],indices:number[],material:THREE.Material):void {
+function emitGeometry(vertices:THREE.Vector3[],uvs:XY[],indices:number[],material:THREE.Material,partId?:PartId):void {
  const g=new THREE.BufferGeometry(),positions=new Float32Array(vertices.flatMap(p=>[p.x,p.y,p.z]));
  const u=new Float32Array(uvs.flatMap(p=>[p[0],p[1]]));
  g.setAttribute('position',new THREE.BufferAttribute(positions,3));
  g.setAttribute('uv',new THREE.BufferAttribute(u,2));g.setIndex(indices);
  g.computeVertexNormals();
  const mesh=new THREE.Mesh(g,material);
+ mesh.userData.partId=partId??null;
  root.add(mesh);drawn.push(mesh);
 }
 function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squashY=1):void {
@@ -150,23 +158,32 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squas
    uvs.push([(canonical[0]+1)/2,(canonical[1]+1)/2]);
  }
  const indices:number[]=[];for(let i=1;i<=n;i++)indices.push(0,i,i%n+1);
- emitGeometry(vertices,uvs,indices,registeredMaterial(part,yaw,amount));
+ emitGeometry(vertices,uvs,indices,registeredMaterial(part,yaw,amount),part.id);
+ if(qaRecorder.active){
+   const key=keyPair(yaw),angles:[View,View,View,View]=[0,90,180,270];
+   qaRecorder.record({
+     id:part.id,center,vddOffset:f.shift,vertices,uv:uvs,triangles:indices,
+     keyA:angles[key.indices[0]],keyB:angles[key.indices[1]],weight:key.t,
+     visible:amount,parent:part.role==='head'?'headBone':part.role==='body'?'pelvisBone':part.role,
+     sourceIsDerived:key.indices.includes(3)
+   });
+ }
 }
-function polygon(points:THREE.Vector3[],color:string,opacity=1):void {
+function polygon(points:THREE.Vector3[],color:string,opacity=1,partId?:PartId):void {
  const ctr=new THREE.Vector3();
  for(const p of points)ctr.add(p);ctr.multiplyScalar(1/points.length);
  const geo=[ctr,...points],uvs:XY[]=geo.map(p=>[(p.x+4)/8,(p.y+1)/5]),index:number[]=[];
  for(let i=1;i<=points.length;i++)index.push(0,i,i%points.length+1);
  emitGeometry(geo,uvs,index,new THREE.MeshBasicMaterial({color,side:THREE.DoubleSide,
-   transparent:opacity<.999,opacity,depthWrite:opacity===1,depthTest:true}));
+   transparent:opacity<.999,opacity,depthWrite:opacity===1,depthTest:true}),partId);
 }
-function limb(from:THREE.Vector3,to:THREE.Vector3,r:number,color:string):void{
+function limb(from:THREE.Vector3,to:THREE.Vector3,r:number,color:string,partId?:PartId):void{
  // 3D-joint-driven billboard with independently interpolated depth from
  // source and destination. Per-pixel depth test handles torso crossing.
  const tangent=to.clone().sub(from),flat=V(-tangent.y,tangent.x,0).normalize().multiplyScalar(r);
  if(flat.lengthSq()<.0001)flat.set(r,0,0);
  polygon([from.clone().add(flat),to.clone().add(flat),
-          to.clone().sub(flat),from.clone().sub(flat)],color);
+          to.clone().sub(flat),from.clone().sub(flat)],color,1,partId);
 }
 function transform(anchor:THREE.Vector3,rootYaw:number):THREE.Vector3 {
  const y=rootYaw*DEG;return V(anchor.x*Math.cos(y)+anchor.z*Math.sin(y),anchor.y,
@@ -200,15 +217,16 @@ function glint(t:number):void{
     i%3===0?'#ffd5df':'#9dcced',.7);
  }
 }
-export function evaluate(frame:number,total:number):FrameStats {
+export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  if(!Number.isInteger(frame)||frame<0||frame>total)throw Error('Invalid frame');
  cleanup();
- const t=frame/24;
+ const t=turnYaw===undefined?frame/24:0;
+ const isTurnOnly=turnYaw!==undefined;
  // First 2 seconds perform complete 0°→360° rotation. Next the same
  // character raises a hand across the torso from behind to in front.
- const yaw=t<=2?360*smooth(t/2):360;
+ const yaw=isTurnOnly?turnYaw!:t<=2?360*smooth(t/2):360;
  const reach=smooth((t-2)/1.4),fore=smooth((t-3.1)/1.1);
- const rootYaw=wrap(yaw),headLocalYaw=t>2?38*Math.sin((t-2)*.85):0;
+ const rootYaw=wrap(yaw),headLocalYaw=(!isTurnOnly&&t>2)?38*Math.sin((t-2)*.85):0;
  // Real close-up of the *same character in the same take* exposes eye, face and hair quality.
  const closeup=smooth((t-4.05)/1.08);
  const cameraScale=1-.67*closeup;
@@ -224,12 +242,12 @@ export function evaluate(frame:number,total:number):FrameStats {
  const lookHead=(p:THREE.Vector3)=>rootHead.clone().add(transform(p,headYaw));
  // Back hair and legs behind the body, based on actual 3D anchor.
  artMesh(defs[0],lookHead(defs[0].anchor),headYaw);
- const steps=Math.sin(t*5)*(t>2?.07:0);
+ const steps=!isTurnOnly&&t>2?Math.sin(t*5)*.07:0;
  for(const [i,id] of [[10,'leftLeg'],[11,'rightLeg']] as const){
   const x=i===10?-.22:.22,hip=transform(V(x,1.1,0),rootYaw);
   const knee=transform(V(x+steps*(i===10?1:-1),.62,.01),rootYaw);
   const foot=transform(V(x,.12,.18),rootYaw);
-  limb(hip,knee,.12,'#465c8a');limb(knee,foot,.108,'#dcbeb2');
+  limb(hip,knee,.12,'#465c8a',defs[i].id);limb(knee,foot,.108,'#dcbeb2',defs[i].id);
   artMesh(defs[i],V((hip.x+foot.x)/2,.47,(hip.z+foot.z)/2),rootYaw,.78,.65);
  }
  artMesh(defs[1],rootChest,rootYaw);
@@ -240,7 +258,7 @@ export function evaluate(frame:number,total:number):FrameStats {
  const leftShoulder=transform(defs[8].anchor,rootYaw),
  leftElbow=transform(V(-.57,1.75,.03),rootYaw),
  leftHand=transform(V(-.54,1.35,.09),rootYaw);
- limb(leftShoulder,leftElbow,.133,'#526f9d');limb(leftElbow,leftHand,.10,'#e4b9a6');
+ limb(leftShoulder,leftElbow,.133,'#526f9d','leftArm');limb(leftElbow,leftHand,.10,'#e4b9a6','leftArm');
  artMesh(defs[8],V(leftElbow.x,leftElbow.y,leftElbow.z),rootYaw,.85,.6);
  // Right arm uses full 3D IK. Its hand moves across the body *and* through
  // both sides of the torso depth plane.
@@ -252,8 +270,8 @@ export function evaluate(frame:number,total:number):FrameStats {
  const rig=solveIK(shoulder,target,.63,.63);
  const forearm=rig.hand.clone().sub(rig.elbow);
  const armLocalYaw=wrap(Math.atan2(forearm.x,forearm.z)/DEG);
- limb(shoulder,rig.elbow,.145,'#526f9d');
- limb(rig.elbow,rig.hand,.102,'#eec3ac');
+ limb(shoulder,rig.elbow,.145,'#526f9d','rightArm');
+ limb(rig.elbow,rig.hand,.102,'#eec3ac','rightArm');
  artMesh(defs[9],V((rig.elbow.x+rig.hand.x)/2,(rig.elbow.y+rig.hand.y)/2,
      (rig.elbow.z+rig.hand.z)/2),armLocalYaw,.90,.39);
  // Character neck and face use head-local view, *not* world body yaw.
@@ -276,10 +294,16 @@ export function evaluate(frame:number,total:number):FrameStats {
   polygon([V(x-.20,2.30,.52),V(x+.07,2.30,.52),
     V(x+.30,1.60,.52),V(x,1.60,.52)],'#273758',.17);
  }
- if(t>3.5)glint(t);
+ if(!isTurnOnly&&t>3.5)glint(t);
  // Floor/horizon is a scene effect, not a body part.
  polygon([V(-4.7,.03,-4),V(4.7,.03,-4),V(4.7,0,-4),V(-4.7,0,-4)],'#60718a');
  renderer.render(scene,camera);
+ if(isTurnOnly){
+   const bounds:[number,number,number,number]=[0,0,960,540]; // replaced by pixel readback bounds when available
+   qaRecorder.finish({
+     camera,timeSeconds:frame/24,yaw,bounds,rendererCommit:'runtime-main-qa-instrumented'
+   });
+ }
  const result:FrameStats={
    frame,time:t,yaw,headLocalYaw,partCount:defs.length,keyViewCount:4,
    artMeshCount:drawn.filter(o=>o instanceof THREE.Mesh).length,
@@ -290,6 +314,63 @@ export function evaluate(frame:number,total:number):FrameStats {
  return result;
 }
 window.renderIntegrated=evaluate;
+window.renderTurn360=(yaw,frameIndex)=>{
+ if(!Number.isFinite(yaw))throw Error('Invalid yaw');
+ qaRecorder.start(yaw,frameIndex);
+ const stats=evaluate(frameIndex,192,yaw);
+ if(!qaRecorder.lastFrame)throw Error('No real frame evidence');
+ return {stats,trace:qaRecorder.lastFrame};
+};
+window.turnSourceViews={angles:[0,90,180,270],independent270:false,derivedPartIds:PART_IDS};
+window.captureTurnPass=(pass,includeImage)=>{
+ if(!qaRecorder.lastFrame)throw Error('Must render a real turn frame first');
+ const width=includeImage?480:240,height=includeImage?270:135;
+ const target=new THREE.WebGLRenderTarget(width,height,{depthBuffer:true,stencilBuffer:false});
+ const color=pass==='mask'?[255,255,255] as const:undefined;
+ const restore:{mesh:THREE.Mesh;mat:THREE.Material;visible:boolean}[]=[];
+ for(const obj of drawn)if(obj instanceof THREE.Mesh){
+   const pid=obj.userData.partId as PartId|null;
+   if(Array.isArray(obj.material))continue;
+   const original=obj.material;
+   restore.push({mesh:obj,mat:original,visible:obj.visible});
+   if(pid&&PART_IDS.includes(pid)){
+     const rgb=color??qaPalette[PART_IDS.indexOf(pid)];
+     obj.material=idShader(original,rgb,pass==='depth');
+   }else obj.visible=false;
+ }
+ const oldColor=renderer.getClearColor(new THREE.Color()).clone();
+ const oldAlpha=renderer.getClearAlpha();
+ const pixels=new Uint8Array(width*height*4);
+ let result:{counts:Record<string,number>;dataUrl?:string};
+ try{
+   renderer.setRenderTarget(target);
+   renderer.setClearColor(0x000000,1);
+   renderer.render(scene,camera);
+   renderer.readRenderTargetPixels(target,0,0,width,height,pixels);
+   const counts=countIdPixels(pixels,PART_IDS,(960*540)/(width*height));
+   if(pass==='id')qaRecorder.updateVisible(counts);
+   result={counts:Object.fromEntries(counts)};
+   if(includeImage){
+     const cv=document.createElement('canvas');cv.width=width;cv.height=height;
+     const ctx=cv.getContext('2d');if(!ctx)throw Error('QA pass canvas unavailable');
+     const corrected=new Uint8ClampedArray(pixels.length);
+     for(let y=0;y<height;y++){
+       corrected.set(pixels.subarray((height-y-1)*width*4,(height-y)*width*4),y*width*4);
+     }
+     ctx.putImageData(new ImageData(corrected,width,height),0,0);
+     result.dataUrl=cv.toDataURL('image/png');
+   }
+ }finally{
+   renderer.setRenderTarget(null);renderer.setClearColor(oldColor,oldAlpha);
+   for(const saved of restore){
+     if(saved.mesh.material!==saved.mat){saved.mesh.material.dispose();}
+     saved.mesh.material=saved.mat;saved.mesh.visible=saved.visible;
+   }
+   target.dispose();
+   renderer.render(scene,camera);
+ }
+ return result;
+};
 window.integratedInfo={parts:defs.length,views:4,method:'4 registered transparent RGBA key images / part + fixed UV ArtMesh + VDD + 3D IK + occlusion + animated art shadow'};
 window.integratedArtProof=artTextureProof(defs[3]);
 window.exportArtPNG=(partId,angle)=>{
