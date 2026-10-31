@@ -51,16 +51,33 @@ try{
  for(const part of ['face','fringe','torso','skirt'] as const)
    for(const angle of [0,90,180,270] as const)artSources.push({part,angle});
  const artHashes:string[]=[];
+ const artCards:string[]=[];
  for(const src of artSources) {
   const uri=await page.evaluate(v=>window.exportArtPNG(v.part,v.angle),src);
   if(!uri.startsWith('data:image/png;base64,'))throw Error('Missing real PNG source: '+JSON.stringify(src));
   const buf=Buffer.from(uri.split(',')[1],'base64');
   if(buf.length<600)throw Error('Empty key art PNG');
+  artCards.push('<figure><figcaption>'+src.part+' / '+src.angle+'°</figcaption><img src="'+uri+'" width="218" height="218"></figure>');
   const f=join(out,'key-'+src.part+'-'+src.angle+'.png');
   writeFileSync(f,buf);
   artHashes.push(createHash('sha256').update(buf).digest('hex'));
  }
  if(new Set(artHashes).size<12)throw Error('Too many duplicate per-view RGBA source assets');
+ // An actual contact sheet of source pixels, not a conceptual infographic.
+ const artPage=await browser.newPage({viewport:{width:1020,height:1160},deviceScaleFactor:1});
+ await artPage.setContent('<!doctype html><html><head><style>'
+ +'body{background:#132039;color:#f5f8ff;font:15px system-ui;margin:14px}'
+ +'main{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}'
+ +'figure{margin:0;background:#283b5e;padding:8px;border-radius:8px}'
+ +'figcaption{margin:0 0 6px;text-align:center}'
+ +'img{display:block;width:218px;height:218px;object-fit:contain;background-color:#d2d7e2;'
+ +'background-image:linear-gradient(45deg,#bbc4d4 25%,transparent 25%),'
+ +'linear-gradient(-45deg,#bbc4d4 25%,transparent 25%),'
+ +'linear-gradient(45deg,transparent 75%,#bbc4d4 75%),'
+ +'linear-gradient(-45deg,transparent 75%,#bbc4d4 75%);background-size:24px 24px}'
+ +'</style></head><body><main>'+artCards.join('')+'</main></body></html>');
+ await artPage.screenshot({path:join(out,'key-art-contact.png'),fullPage:true});
+ await artPage.close();
  const meta:FrameStats[]=[];
  const sampleFrames=[0,8,16,24,32,40,48,56,68,80,88,100,112,128,143];
  const screenshots:string[]=[];
@@ -102,6 +119,7 @@ try{
    goal:'one continuous full-body 360 / 3D IK occlusion crossing / facial deformation and moving shadow',
    sourceArt:'original authored 4-view transparent RGBA per-part art textures, generated independently from TS vector art',
    sourceRGBAKeyPNGs:artSources.length,uniqueArtHashes:new Set(artHashes).size,
+   keyArtContact:'key-art-contact.png',
    registeredUV:true,perViewTextureInterpolation:true,alphaClipped:true,alphaProof:art,
    drawables:12,explicitSourceKeyViews:4,
    leftView:'independently rasterized 270-degree RGBA artwork with derivative side geometry; not a genuine extra hand-illustrated body model',
