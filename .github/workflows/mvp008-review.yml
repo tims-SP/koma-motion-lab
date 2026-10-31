@@ -1,4 +1,4 @@
-name: MVP-008 focused moving-pose occlusion and visual inspection
+name: MVP-008 final shadow-corrected motion video and pose occlusion QA
 on:
   workflow_dispatch:
   push:
@@ -38,7 +38,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p reviewed
-          gh run download 41202693389 --repo tims-SP/koma-motion-lab \
+          gh run download 41203392024 --repo tims-SP/koma-motion-lab \
             --name mvp008-dynamic360-evidence --dir reviewed
           test -s reviewed/dynamic360-8s.mp4
           test -s reviewed/dynamic-angle-board.png
@@ -83,4 +83,4 @@ jobs:
             experiments/mvp002/out/dynamic-occlusion/dynamic-occlusion-audit.json \
             --repo tims-SP/koma-motion-lab --target "$GITHUB_SHA" --draft \
             --title "MVP-008 dynamic 360° minimal technical review (NOT production-art acceptance)" \
-            --notes "Same simplified character, 8s/192 frames; nine automated engineering checks pass in Actions 41202693389. Pose-dependent occlusion is separately checked. Actual anime visual quality/foot IK not accepted."
+            --notes "Same simplified character, 8s/192 frames; ten automated dynamic engineering checks pass in Actions 41203392024, including synchronized face/shadow visibility. Pose-dependent occlusion is separately checked. Actual anime visual quality/foot IK not accepted."
