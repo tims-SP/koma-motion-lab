@@ -187,8 +187,35 @@ try{
  gate('S03_ANCHOR_VDD_DECOMPOSITION',s03ok?'PASS':'FAIL',
   s03ok?undefined:'Real bone and projection audit discrepancies '+JSON.stringify({
    maxAnchorAudit,maxProjectionAudit,maxDeformationAudit}));
- gate('S04_ARTMESH_UV_TOPOLOGY',nonFinite.length||warning.length?'FAIL':'PASS',
-   warning.length?'Geometry issues: '+warning.slice(0,3).map(p=>p.id+':'+p.warningCodes.join(',')).join(' | '):undefined);
+ // Geometric validity must also inspect *winding* and *projected area*.
+ // Previously all vertices were finite but 225° / 315° views collapsed
+ // because mirrored 270° landmarks reversed polygon winding.
+ const area=(p:PartTrace)=>{
+   const pts=p.geometryVerticesXY.slice(1);
+   return pts.reduce((sum,[x,y],i)=>{
+     const [nx,ny]=pts[(i+1)%pts.length];
+     return sum+(x*ny-nx*y);
+   },0)/2;
+ };
+ const references=new Map(trace[0].parts.map(p=>[p.id,area(p)]));
+ const flippedOrCollapsed:{partId:string;yaw:number;area:number;ratio:number}[]=[];
+ let minimumAreaRatio=Infinity;
+ for(const frame of trace)for(const part of frame.parts){
+   const original=references.get(part.id);
+   if(!original||Math.abs(original)<1e-7)continue;
+   const now=area(part),ratio=Math.abs(now/original);
+   minimumAreaRatio=Math.min(minimumAreaRatio,ratio);
+   if(original*now<=0||ratio<.18){
+     if(flippedOrCollapsed.length<30)
+       flippedOrCollapsed.push({partId:part.id,yaw:frame.yawDegrees,area:now,ratio});
+   }
+ }
+ const meshOk=!nonFinite.length&&!warning.length&&!flippedOrCollapsed.length;
+ gate('S04_ARTMESH_UV_TOPOLOGY',meshOk?'PASS':'FAIL',
+   meshOk?undefined:JSON.stringify({
+    meshWarnings:warning.slice(0,3).map(p=>p.id+':'+p.warningCodes.join(',')),
+    flippedOrCollapsed
+   }));
  const maxJump=Math.max(...trace.slice(1).map((frame,i)=>{
    const prev=trace[i];
    let jump=0;
@@ -255,7 +282,7 @@ try{
   coreStatus:finalStatus,highFidelityAnimeArtAccepted:false
  };
  const diagnostics={seamEqual,frameCount:P.videoFrames,boundaryImages:8,independentSampleAngles:25,
-   maxAnchorJump:maxJump,maxVertexJump,maxAnchorAudit,maxProjectionAudit,maxDeformationAudit,actualFrameCounts,sources,videoBytes:statSync(video).size,
+   maxAnchorJump:maxJump,maxVertexJump,minimumAreaRatio,flippedOrCollapsed,maxAnchorAudit,maxProjectionAudit,maxDeformationAudit,actualFrameCounts,sources,videoBytes:statSync(video).size,
    partTracesCount:parts.length,screenBoundsOkay,occlusionResults,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
  writeFileSync(join(output,'turn360-traces.json'),JSON.stringify({frames:trace,sampled:keyTraces},null,1));
  writeFileSync(join(output,'turn360-qa.json'),JSON.stringify({report,diagnostics},null,2)+'\n');
