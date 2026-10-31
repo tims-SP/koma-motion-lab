@@ -69,9 +69,9 @@ for(const op of proposal.painter_schedule){
   scene.add(mesh);meshes.push(mesh);textures.set(n,t);materials.set(n,m);
 }
 
-let cacheKey=null;
+let cacheKey=null,maskPolicy='source_paint_domain';
 function rebuild(version){
-  const key=version+JSON.stringify([...shifts]);if(key===cacheKey)return;
+  const key=maskPolicy+version+JSON.stringify([...shifts]);if(key===cacheKey)return;
   const dest=new Float64Array(N*N*4);clipAudits.length=0;
   for(const op of proposal.painter_schedule){
     const n=op.psd_order,r=raw.get(n),[dx,dy]=shifts.get(n)||[0,0],left=r.layer.bounds[0]+dx,top=r.layer.bounds[1]+dy;
@@ -79,7 +79,15 @@ function rebuild(version){
     for(let y=0;y<r.h;y++)for(let x=0;x<r.w;x++){
       const j=(y*r.w+x)*4,X=left+x,Y=top+y;let au=r.data[j+3];
       if(version==='clean'&&shadow.has(n))au=Math.round(au*alphaAt(shadow.get(n),X,Y)/255);
-      if(nativeClip.has(n)){const next=Math.round(au*alphaAt(nativeClip.get(n),X,Y)/255);if(next!==au)changedNative++;au=next;}
+      if(nativeClip.has(n)){
+        const base=nativeClip.get(n),white=alphaAt(base,X,Y);
+        // The PSD iris intentionally extends beyond its raw eye-white PNG.
+        // Preserve the original painted domain; native GPU clip parity remains
+        // explicitly BLOCKED, not redefined as a proven anatomical eye mask.
+        const domain=Math.max(white,alphaAt(base+1,X,Y),alphaAt(base+2,X,Y));
+        const next=maskPolicy==='eye_white_only'?Math.round(au*white/255):Math.min(au,domain);
+        if(next!==au)changedNative++;au=next;
+      }
       if(X<0||X>=N||Y<0||Y>=N)au=0;
       const A=au/255,i=(Y*N+X)*4,Ab=au?dest[i+3]:0;
       for(let c=0;c<3;c++){
@@ -108,7 +116,9 @@ const metadata={schema:'core026-live-compositor/1',source_count:62,receiver_coun
   painter_schedule:proposal.painter_schedule,logical_passes:proposal.proposed_passes,
   blend_implementation:'live original Normal/Multiply against preceding transparent artwork, quantized effective source RGB, then per-source GPU Normal draws',
   geometry:'19 shared receiver grids; unchanged unfitted CORE025 height profile, no per-layer Z offset',
-  depth_tested:false,local_eye_uv:'live source-pixel offset and native eye-white mask',
+  depth_tested:false,local_eye_uv:'live source-pixel offset with provisional source-painted eye support cap',
+  default_mask_policy:'source_paint_domain',native_clip_parity:'BLOCKED_RAW_EYE_WHITE_MASK_FAILS_SOURCE_ART_PARITY',
+  mask_note:'Source paint domain is max raw alpha of eye white/pupil/highlight; cap preserves rest art. Not a claim of native GPU ClipToLower equivalence.',
   physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED',natural_3d_turn:'NOT_ACCEPTED',supported_pose:'DEFAULT_ONLY',
   camera:cfg.camera,canvas:[N,N]};
 function render(p={}){
@@ -125,9 +135,11 @@ function render(p={}){
   }else{renderer.setClearColor(background==='white'?0xffffff:0,1);renderer.clear();renderer.render(scene,camera);artworkDraws=renderer.info.render.calls;}
   return {version,background,pass,size,camera_matrix:Array.from(camera.matrixWorld.elements),projection_matrix:Array.from(camera.projectionMatrix.elements),
     source_count:62,receiver_count:19,logical_pass_count:25,draw_count:renderer.info.render.calls,artwork_draw_count:artworkDraws,uv_offsets:[...shifts],native_clip_alpha_changes:clipAudits.map(x=>({...x})),
-    physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED'};
+    mask_policy:maskPolicy,native_clip_parity:'BLOCKED',physical_depth:'NOT_RECOVERED',dynamic_occlusion:'NOT_IMPLEMENTED'};
 }
 function setLayerUvOffset(order,xy){if(!raw.has(order)||!Array.isArray(xy)||xy.length!==2||!xy.every(Number.isInteger))throw Error('Expected layer and integer source-pixel offset');
   if(xy[0]===0&&xy[1]===0)shifts.delete(order);else shifts.set(order,[...xy]);cacheKey=null;}
-window.core026={render,metadata,setLayerUvOffset,reset(){shifts.clear();cacheKey=null;}};
+window.core026={render,metadata,setLayerUvOffset,setEyeMaskPolicy(value){
+  if(!['source_paint_domain','eye_white_only'].includes(value))throw Error('Unknown mask policy');maskPolicy=value;cacheKey=null;
+},reset(){shifts.clear();maskPolicy='source_paint_domain';cacheKey=null;}};
 render();window.core026Ready=true;

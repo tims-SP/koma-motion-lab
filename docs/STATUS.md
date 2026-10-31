@@ -4,7 +4,7 @@
 
 ## CORE026当前状态
 
-M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2A默认绘画顺序/接收面提案已通过：代码ff2fe1a的监督CI41169579730与旧回归41169579751均success，实际下载16份纯JSON产物并核对ZIP SHA；M2B运行时未开始，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
+M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2A默认绘画顺序/接收面提案已通过：代码ff2fe1a的监督CI41169579730与旧回归41169579751均success，实际下载16份纯JSON产物并核对ZIP SHA；M2B0已有真实运行时与截图，默认原画本地通过PASS_DEFAULT_ART_ONLY，待新CI；完整M2B眼组策略/空间合成未过，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
 
 - 源对应：62层均经原始UV/纹理/默认祖先变换选出唯一身份；58项可单靠像素，7/8/9/10四个重复图项经默认坐标区分。只使用单一全局平移；最大残差3.905124源像素，原始UV未改。
 - 原生参考：固定camera scale0.4、position[82,1773]、720×880全图和652×652头部ROI；raw yaw九姿态[-1..1]、pitch0。18张实际PNG的来源/恢复均已保存。新总门禁核对九张head SHA。
@@ -13,21 +13,23 @@ M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611
 - Codex实际查看九姿态全头、中央和两侧的原图/候选局部，并保存逐姿态状态叠加图。PNG只在ignored out/及owner-only Draft；git与Actions artifact保持文本。
 - 新增verify_core026_m1.py运行当前来源/保护/默认配准/M1C1/标点只读检查，再汇总有限参考。六个结构合法但不足以支持比较的用例全部BLOCKED；真实CLI缺默认鼻点返回12。标点17项检查（14种损坏拒绝）也通过。[本地验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-local-acceptance.json)。
 
-## 执行分工与当前阻塞
+## M2B0最新结果与执行分工
 
-最新授权：用户明确允许mcode项目操作（包括上传），已沿用官方登录态启动M2B。首轮实际完成14次工具调用后8分钟超时，无运行时文件，本次未观察到此前审批拒绝。改用Codex设计固定补丁、mcode应用/真实截图、Codex独立像素验收；尚无通过声明。[目标与距离](plans/CORE-026-goals-and-distance.md)、[精确M2B工单](plans/CORE-026-M2B-mcode-runtime-order.md)。以下SDK阻塞与兜底作者记录保留为历史。
+用户明确允许mcode项目操作包括上传。首轮官方SDK实际完成14次工具调用后8分钟超时，无运行时文件；固定工单随后由mcode真实bash应用Codex设计的三个运行时文件，JS语法exit0，截图因缺Chromium失败。mcode安装系统依赖遇Work容器uid/setgroups限制；浏览器-only调用又被平台自动审批以OSS目的地/实际载荷未明拒绝。没有因这项拒绝重新登录、换SDK渠道或继续重试。Codex单独下载公开Chromium后完成了成功截图与独立验收；不把这部分执行改归mcode。
 
-用户本轮要求官方链接登录，已完成；CLI实际返回Signed in with MiniMax、exit0。登录成功后，公开文字/无本地工具的mcode代码生成请求超时exit6，无产出；第二次缩小函数工单仍被自动审批以未验证Alibaba OSS传输内容/授权未明为由拒绝，无可接纳实现。此后停止调用，不换渠道重试，不把审批提示当作真实上传抓包，也不再次登录。
+已捕获10张候选图与12张独立监督图，核对62张原始PNG、19个共享接收几何、25逻辑pass/62实际GPU源绘制。运行时只读原始RGBA，实时源域Normal/Multiply，没有用旧烘焙层或整头图片作为候选颜色。[本地验收](../experiments/reference-factory/evidence/core026-M1/m2b0-local-acceptance.json)。
 
-按已授权M2工单的本地兜底条款，本轮M2A所有代码、数据和检查均为Codex，不计作mcode产物。M1同样保留真实归属。[本轮M2A验收与执行记录](research/CORE-026-M2A-source-schedule-acceptance.md)。
+第一版硬眼白裁剪真实失败：每张1219像素差>16，最大差182，失败代码/证据707cc6c7保留。修复后的原画兼容覆盖域默认图对旧浏览器最大差3，对CPU最大2，alpha最大差1；所有四张差>16为0。原RGB/alpha阈值未改。错误硬眼罩在现有反例分支仍须失败；伪造单个前景像素、同步更新SHA/repeat后仍被最大差门禁拒绝。
 
-M2A受控提案保持62项源身份/19独立面/43附着和完整1..62顺序，分为25个显式待验证pass。原生ClipToLower4项和派生阴影裁剪9项分列；11Multiply含60/61。Face13的13..43与58..61被头发44..57隔开，保留晚画与跨组Multiply背景依赖。108对跨组alpha支持相交、四项晚画交叠28/15/2156/1954由两种独立实现重算；不当作物理遮挡。11类损坏两验证器均exit11，重复build字节一致。新监督CI41169579730与旧回归41169579751均success，契约SHA与下载产物一致，M2B未开始。[M2A CI验收](../experiments/reference-factory/evidence/core026-M1/m2a-ci-acceptance.json)。[机器验收](../experiments/reference-factory/evidence/core026-M1/m2a-local-acceptance.json)。
+Codex已实际看默认鼻/眼/眉发/耳叶/颈部；默认还原可接受，单独瞳孔偏移时高光29未联动，不能算自然眼动。9681像素真实改变、复位恢复原SHA；改变在原画眼域内，533像素位于原始眼白单独支持外。旧“仅眼白域”假设继续BLOCKED，没有隐藏该失败。运行时depthTest=false、沿用未拟合CORE025高度剖面；源域CPU背景计算也不等于转头时screen-space背景，完整M2B与M3继续阻塞。[限制与反例](research/CORE-026-M2B0-default-art-and-eye-mask.md)。
+
+本轮只到默认原画还原通过，干净CI待提交。媒体仅ignored out/及owner-only Draft，SDK原始流不发布。登录态保留，OSS审批问题与登录成功分开记录。
 
 ## 下一工单
 
-M1有限参考门禁已获两套干净CI确认；M2A已获两套干净CI确认，按[M2精确工单](plans/CORE-026-M2-local-compositor-order.md)继续M2B真实0姿态渲染。先审计跨接收面的原画顺序和Multiply，尤其58/59眼皮与60/61眉的晚画覆盖；不能把全部Face绘画提前烘成一张图而丢失与头发的交叠。先过原画0姿态保真，再进入已放行的三个raw参考点。M2实现、M3深度方案、M4动态遮挡和M5最终视频尚未通过。
+按[M2B1空间合成与眼组工单](plans/CORE-026-M2B1-spatial-and-eye-policy-order.md)补完M2B：核实原生Composite/ClipToLower与PSD原画兼容策略，瞳孔/高光协调控制，接收面RGBA/UV及真实depth-test/场景背景混合。完成后才进M3深度方案、M4动态遮挡、M5连续视频。[目标与距离](plans/CORE-026-goals-and-distance.md)。当前尚有这四道主要门禁，不给虚构百分比或固定工期。
 
-前序监督CI41155423219与旧回归41155423100已经success，但只覆盖当时的零审阅初始表，不当作本次171格总验收。[前序CI](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。运行/登录/域名事件保留在[运行诊断](research/CORE-026-mcode-runtime-diagnostic.md)；这些历史不是重登或任意存储上传的理由。
+M2A代码ff2fe1a的监督CI41169579730及旧回归41169579751已success，覆盖顺序/alpha提案，不当作M2B运行时通过。M1仅raw -0.25/0/+0.25有限参考；全部360资产、绑骨/IK与背面模型均未验收。
 
 ## 确定性恢复顺序
 

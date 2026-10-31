@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 import numpy as np
-from PIL import Image,ImageDraw,ImageFilter
+from PIL import Image,ImageDraw,ImageFilter,ImageChops
 
 ROOT=Path(__file__).resolve().parent
 OUT=ROOT/'out/core026/runtime-supervisor'
@@ -39,11 +39,22 @@ def validate(report):
     need(set(manifest['requested_raw_pngs'])==expected_raw,'Candidate did not request exactly62 original source PNGs')
     for l in contract['layers']:
         need(sha(ROOT/l['raw_source_texture']['file'])==l['raw_source_texture']['sha256'],'Original PNG hash changed')
+    meta=manifest['metadata']
+    need(meta['source_count']==62 and meta['receiver_count']==19 and meta['logical_pass_count']==25,'Runtime source/receiver/pass accounting differs')
+    expected_inputs=[{'order':l['order'],'file':l['raw_source_texture']['file'],'sha256':l['raw_source_texture']['sha256']} for l in contract['layers']]
+    need(meta['source_color_inputs']==expected_inputs,'Runtime source color input metadata differs')
+    need(meta['depth_tested'] is False,'This partial gate does not validate spatial depth testing')
     captures={c['id']:c for c in manifest['captures']}
     expected_ids={v+'_'+b for v in ('source','clean') for b in ('white','black','alpha','part_id')}
-    expected_ids|={'source_pupilL_shift8','source_pupilL_reset'}
-    need(len(captures)==10 and set(captures)==expected_ids,'Independent10-capture plan differs')
+    expected_ids|={'source_pupilL_shift8','source_pupilL_reset','negative_hard_eye_white','source_mask_policy_reset'}
+    need(len(captures)==12 and set(captures)==expected_ids,'Independent12-capture plan differs')
     for c in captures.values():need(sha(OUT/c['file'])==c['sha256'],'Capture hash changed')
+    world=np.eye(4);world[2,3]=5
+    projection=np.eye(4);projection[2,2]=-2/(20-.1);projection[2,3]=-(20+.1)/(20-.1)
+    for c in captures.values():
+        pose=c['pose'];need(pose['artwork_draw_count']==62,'Not all62 source paint operations were GPU drawn')
+        need(np.allclose(np.asarray(pose['camera_matrix']).reshape(4,4,order='F'),world,rtol=0,atol=1e-12),'Fixed camera changed')
+        need(np.allclose(np.asarray(pose['projection_matrix']).reshape(4,4,order='F'),projection,rtol=0,atol=1e-12),'Fixed orthographic projection changed')
     metrics={};alpha_metrics={};review_images=[]
     report['metrics']=metrics;report['alpha_metrics']=alpha_metrics
     for version in ('source','clean'):
@@ -91,27 +102,51 @@ def validate(report):
     with Image.open(ROOT/eye['raw_source_texture']['file']) as im:
         mask=Image.new('L',(1630,1630));mask.paste(im.convert('RGBA').getchannel('A'),tuple(eye['bounds'][:2]))
     # One source-pixel filter support margin, fixed before examining candidate output.
-    allowed=np.asarray(mask.filter(ImageFilter.MaxFilter(3)))>0
+    white_allowed=np.asarray(mask.filter(ImageFilter.MaxFilter(3)))>0
+    outside_white=int(np.count_nonzero(delta&~white_allowed))
+    paint=mask.copy()
+    for n in [28,29]:
+        layer=contract['layers'][n-1]
+        with Image.open(ROOT/layer['raw_source_texture']['file']) as im:
+            part=Image.new('L',(1630,1630));part.paste(im.convert('RGBA').getchannel('A'),tuple(layer['bounds'][:2]))
+        paint=ImageChops.lighter(paint,part)
+    allowed=np.asarray(paint.filter(ImageFilter.MaxFilter(3)))>0
     outside=int(np.count_nonzero(delta&~allowed))
-    need(outside==0,'Local pupil control altered pixels outside left eye support')
+    need(outside==0,'Local pupil control altered pixels outside source-painted eye support')
+    negative=pixels(OUT/captures['negative_hard_eye_white']['file'])
+    source_cpu=pixels(ROOT/asm['comparisons']['source']['cpu_composite']['file'],'RGBA')
+    aa=source_cpu[...,3:4].astype(float)/255
+    source_reference=np.rint(source_cpu[...,:3]*aa+255*(1-aa)).astype(np.uint8)
+    negative_metric,_=compare(negative,source_reference,source_cpu[...,3]>0)
+    need(negative_metric['max_channel_error']>LIMITS['rgb_max'] and negative_metric['over16_pixels']>0,
+         'Known wrong hard eye-white mask was not rejected by original RGB limits')
+    need(captures['source_mask_policy_reset']['sha256']==base['sha256'],'Mask policy did not reset exactly')
     sheet=Image.new('RGB',(1040,1100),'#222222');draw=ImageDraw.Draw(sheet)
     for i,(label,array) in enumerate(review_images):
         im=Image.fromarray(array);im.thumbnail((520,520));x,y=(i%2)*520,(i//2)*550
         sheet.paste(im,(x,y));draw.text((x+8,y+525),label,fill='white')
     sheet.save(OUT/'review-sheet.png')
     passed=not report['failures']
-    report.update(status='PASS_DEFAULT_COMPOSITOR_ONLY' if passed else 'FAIL_DEFAULT_COMPOSITOR',
-        numeric_gate='PASS' if passed else 'FAIL',metrics=metrics,alpha_metrics=alpha_metrics,
-        capture_count=10,original_pngs_checked=62,all_capture_hashes_valid=True,
+    report.update(status='PASS_DEFAULT_ART_ONLY' if passed else 'FAIL_DEFAULT_COMPOSITOR',
+        numeric_gate='PASS_DEFAULT_ART_ONLY' if passed else 'FAIL',default_art_gate='PASS' if passed else 'FAIL',
+        full_runtime_gate='BLOCKED_NATIVE_CLIP_PARITY_AND_DEPTH_TESTING',metrics=metrics,alpha_metrics=alpha_metrics,
+        capture_count=12,original_pngs_checked=62,all_capture_hashes_valid=True,
         local_uv={'order':28,'offset_source_pixels':[8,0],'changed_pixels':int(delta.sum()),
-                  'changes_outside_eye_support_plus1px':outside,'reset_restores_sha256':True},
+                  'changes_outside_source_painted_eye_support_plus1px':outside,
+                  'changes_outside_eye_white_only_plus1px':outside_white,
+                  'eye_white_only_assumption':'BLOCKED_SOURCE_ART_ALREADY_OVERSHOOTS_RAW_WHITE_MASK',
+                  'reset_restores_sha256':True},
+        hard_eye_white_negative={'status':'REJECTED_BY_UNCHANGED_RGB_LIMITS','metric':negative_metric},
         capture_inputs=manifest['inputs'],metadata=manifest['metadata'],
         limitations={'visual_gate':'PENDING_CODEX_IMAGE_REVIEW','physical_depth':'NOT_RECOVERED',
+                     'native_clip_parity':'BLOCKED_RAW_EYE_WHITE_MASK_FAILS_SOURCE_ART',
+                     'source_paint_mask':'PROVISIONAL_ARTIST_DOMAIN_NOT_ANATOMICAL_OR_NATIVE_GPU_MASK',
+                     'M3_permission':'BLOCKED_PENDING_COMPLETE_M2B',
                      'dynamic_occlusion':'NOT_IMPLEMENTED','natural_3d_turn':'NOT_ACCEPTED'})
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
-    report={'schema':'core026-default-compositor-supervisor/1','author_executor':'Codex independent supervisor',
+    report={'schema':'core026-default-compositor-supervisor/2','author_executor':'Codex independent supervisor',
             'status':'FAIL_DEFAULT_COMPOSITOR','numeric_gate':'FAIL','limits':LIMITS,'failures':[],
             'validator_sha256':sha(Path(__file__))}
     try:
@@ -122,6 +157,6 @@ def main():
     except Exception as error:report['failures'].append(str(error))
     (OUT/'supervisor-qa.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print('CORE026_DEFAULT_SUPERVISOR',json.dumps({k:v for k,v in report.items() if k not in ('metadata','capture_inputs')}))
-    return 0 if report['numeric_gate']=='PASS' and not report['failures'] else 11
+    return 0 if report.get('default_art_gate')=='PASS' and not report['failures'] else 11
 
 if __name__=='__main__':sys.exit(main())

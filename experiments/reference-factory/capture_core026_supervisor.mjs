@@ -56,6 +56,10 @@ try{
   await capture('source_pupilL_shift8',{version:'source',background:'white',pass:'beauty',size:1630});
   await page.evaluate(()=>window.core026.setLayerUvOffset(28,[0,0]));
   await capture('source_pupilL_reset',{version:'source',background:'white',pass:'beauty',size:1630});
+  await page.evaluate(()=>window.core026.setEyeMaskPolicy('eye_white_only'));
+  await capture('negative_hard_eye_white',{version:'source',background:'white',pass:'beauty',size:1630});
+  await page.evaluate(()=>window.core026.setEyeMaskPolicy('source_paint_domain'));
+  await capture('source_mask_policy_reset',{version:'source',background:'white',pass:'beauty',size:1630});
   const expectedFiles=['core026.html','core026.js','capture_core026.mjs','config/core025-layer-contract.json',
                        'config/core026-compositor-contract.json','config/core025-render.json'];
   const inputs={};for(const file of expectedFiles)inputs[file]=sha(await readFile(path.join(ROOT,file)));

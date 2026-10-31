@@ -1,0 +1,1574 @@
+{
+  "schema": "core026-m2b0-local-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "status": "PASS_DEFAULT_ART_ONLY",
+  "ci": "PENDING",
+  "attribution": {
+    "design": "Codex",
+    "initial_patch_application": "mcode real bash call; syntax0, capture1 due to absent Chromium",
+    "browser_install_and_successful_captures": "Codex local fallback after apt failure and later mcode OSS automatic rejection",
+    "independent_browser_pixels_and_visual_acceptance": "Codex"
+  },
+  "supervisor": {
+    "schema": "core026-default-compositor-supervisor/2",
+    "author_executor": "Codex independent supervisor",
+    "status": "PASS_DEFAULT_ART_ONLY",
+    "numeric_gate": "PASS_DEFAULT_ART_ONLY",
+    "limits": {
+      "rgb_global_mae": 0.1,
+      "rgb_foreground_union_mae": 0.5,
+      "rgb_max": 4,
+      "rgb_over16_pixels": 0,
+      "alpha_global_mae": 0.5,
+      "alpha_max": 4
+    },
+    "failures": [],
+    "validator_sha256": "3dac47ae0c5169ae2c881c3b82242045058d247f7f5fe8bacaeece2ac221cbdd",
+    "metrics": {
+      "source_white": {
+        "old_browser": {
+          "global_mae": 0.01860978333145144,
+          "foreground_union_mae": 0.04905191798941799,
+          "max_channel_error": 3,
+          "over16_pixels": 0
+        },
+        "old_cpu": {
+          "global_mae": 0.0022375701004930556,
+          "foreground_union_mae": 0.00589781746031746,
+          "max_channel_error": 2,
+          "over16_pixels": 0
+        }
+      },
+      "source_black": {
+        "old_browser": {
+          "global_mae": 0.0186792878919041,
+          "foreground_union_mae": 0.04923511904761905,
+          "max_channel_error": 3,
+          "over16_pixels": 0
+        },
+        "old_cpu": {
+          "global_mae": 0.0022092162545322242,
+          "foreground_union_mae": 0.00582308201058201,
+          "max_channel_error": 1,
+          "over16_pixels": 0
+        }
+      },
+      "clean_white": {
+        "old_browser": {
+          "global_mae": 0.014730073895642792,
+          "foreground_union_mae": 0.04314459570843397,
+          "max_channel_error": 3,
+          "over16_pixels": 0
+        },
+        "old_cpu": {
+          "global_mae": 0.0024125860965787194,
+          "foreground_union_mae": 0.007066498952151754,
+          "max_channel_error": 1,
+          "over16_pixels": 0
+        }
+      },
+      "clean_black": {
+        "old_browser": {
+          "global_mae": 0.014736723248899092,
+          "foreground_union_mae": 0.043164071758588114,
+          "max_channel_error": 3,
+          "over16_pixels": 0
+        },
+        "old_cpu": {
+          "global_mae": 0.0024015456609833515,
+          "foreground_union_mae": 0.007034161359442999,
+          "max_channel_error": 2,
+          "over16_pixels": 0
+        }
+      }
+    },
+    "alpha_metrics": {
+      "source": {
+        "global_mae": 3.462682073092702e-05,
+        "max_abs": 1,
+        "reference_support_pixels": 1008000,
+        "actual_support_pixels": 1008000
+      },
+      "clean": {
+        "global_mae": 2.5217358575783807e-05,
+        "max_abs": 1,
+        "reference_support_pixels": 907097,
+        "actual_support_pixels": 907097
+      }
+    },
+    "default_art_gate": "PASS",
+    "full_runtime_gate": "BLOCKED_NATIVE_CLIP_PARITY_AND_DEPTH_TESTING",
+    "capture_count": 12,
+    "original_pngs_checked": 62,
+    "all_capture_hashes_valid": true,
+    "local_uv": {
+      "order": 28,
+      "offset_source_pixels": [
+        8,
+        0
+      ],
+      "changed_pixels": 9681,
+      "changes_outside_source_painted_eye_support_plus1px": 0,
+      "changes_outside_eye_white_only_plus1px": 533,
+      "eye_white_only_assumption": "BLOCKED_SOURCE_ART_ALREADY_OVERSHOOTS_RAW_WHITE_MASK",
+      "reset_restores_sha256": true
+    },
+    "hard_eye_white_negative": {
+      "status": "REJECTED_BY_UNCHANGED_RGB_LIMITS",
+      "metric": {
+        "global_mae": 0.027525436912692738,
+        "foreground_union_mae": 0.07255191798941799,
+        "max_channel_error": 182,
+        "over16_pixels": 1219
+      }
+    },
+    "capture_inputs": {
+      "core026.html": "96335b66039859b39735171fda70a5808349c801ea7a30eac60e6d4778990e35",
+      "core026.js": "fbec16167826295443e47ffd812e590b5d24cd9b6225ebe4d5a9083aec44c191",
+      "capture_core026.mjs": "7b046ecc6cc6b1936b2550c83acd7a2eaa48c53df29b92a86b8e7302224b1ace",
+      "config/core025-layer-contract.json": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d",
+      "config/core026-compositor-contract.json": "2e0a405b5f98d7ea326dedf5b58727b66dc3fd63cbf8594be6429787a1a6d77c",
+      "config/core025-render.json": "f0bae99f25d5afc95ad171554d4ba1d9003e57e6f6a852dd4d80dec8b2bdc6d3"
+    },
+    "metadata": {
+      "schema": "core026-live-compositor/1",
+      "source_count": 62,
+      "receiver_count": 19,
+      "logical_pass_count": 25,
+      "gpu_source_draws": 62,
+      "source_color_inputs": [
+        {
+          "order": 1,
+          "file": "out/core024/native-v2/layers/leaf-01-Fox__Ear_L.png",
+          "sha256": "ca01db3992731754ddc3cae58f58c0215485406d5971971e975d4496b8f513b1"
+        },
+        {
+          "order": 2,
+          "file": "out/core024/native-v2/layers/leaf-02-Fox__Ear_R.png",
+          "sha256": "7e4e016a50b2cb486f987dacb0a9fd97e6425fb9aa0aa8667b869b9b380376d1"
+        },
+        {
+          "order": 3,
+          "file": "out/core024/native-v2/layers/leaf-03-Back_Side_Hair_L2.png",
+          "sha256": "69525e19cc292b8546614a9ef7ab9f9fd5caa259508e85238cf62639690aea8f"
+        },
+        {
+          "order": 4,
+          "file": "out/core024/native-v2/layers/leaf-04-Back_Side_Hair_R2.png",
+          "sha256": "326611fde7a6fd882eed8d269b997b2029259b339d592830e379e5ce9907b925"
+        },
+        {
+          "order": 5,
+          "file": "out/core024/native-v2/layers/leaf-05-Back_Side_Hair.png",
+          "sha256": "646f7f09d79b4c33b5f0ec3f615ec1e4cbfb21712a74c1b970a39a3cee5bd2a5"
+        },
+        {
+          "order": 6,
+          "file": "out/core024/native-v2/layers/leaf-06-Back_Side_Hair_Shadow.png",
+          "sha256": "4bd3ea6d3f95a920b0fb1b4fc80640e017fa5febf124cf0adbfa1f80360fae0a"
+        },
+        {
+          "order": 7,
+          "file": "out/core024/native-v2/layers/leaf-07-Back_Side_Hair_L1.png",
+          "sha256": "251059ad7aedf4508610a0656c71c916c5769f399bb555b02ce2fa4a6cf5a165"
+        },
+        {
+          "order": 8,
+          "file": "out/core024/native-v2/layers/leaf-08-Back_Side_Hair_L3.png",
+          "sha256": "67ef8936d404d028948464f70f0d39422b4d68e5bb167f845b05012e2a2db2c4"
+        },
+        {
+          "order": 9,
+          "file": "out/core024/native-v2/layers/leaf-09-Back_Side_Hair_R1.png",
+          "sha256": "08c15c247251d4ee5ee49a6a09dcf8d4468cff0ec1792cb0cad61ec9133ddcd4"
+        },
+        {
+          "order": 10,
+          "file": "out/core024/native-v2/layers/leaf-10-Back_Side_Hair_R3.png",
+          "sha256": "0b5eebbfda3e88d98779d28da5177957fad688f0cac9fc6d37069dcb2f666d6b"
+        },
+        {
+          "order": 11,
+          "file": "out/core024/native-v2/layers/leaf-11-Neck.png",
+          "sha256": "ed43835b645c3fa0a2b8615ebdadaf0fba5ae7dfec75c02af0a8152419a7a52c"
+        },
+        {
+          "order": 12,
+          "file": "out/core024/native-v2/layers/leaf-12-Neck_Shadow.png",
+          "sha256": "d852eec81a9048c08e41ca316b1dda9dada2df8ccf533f164a3974f7a3e5e241"
+        },
+        {
+          "order": 13,
+          "file": "out/core024/native-v2/layers/leaf-13-Face.png",
+          "sha256": "f7eb372ccbf8d80204ad0526f008d3f8cebf0d3b0aa0d8efeae06d214f9bf669"
+        },
+        {
+          "order": 14,
+          "file": "out/core024/native-v2/layers/leaf-14-Side_Hair_L_Shadow.png",
+          "sha256": "b789150d2cfb55457eef144f8364d496d82fb9809ba7453a568e9b095e4ceaf7"
+        },
+        {
+          "order": 15,
+          "file": "out/core024/native-v2/layers/leaf-15-Side_Hair_R_Shadow.png",
+          "sha256": "a6e4771a4c4b0085809527ed365034b97becee8f61bd5a8db036b5b5e65ac2af"
+        },
+        {
+          "order": 16,
+          "file": "out/core024/native-v2/layers/leaf-16-Front_Hair_R2_Shadow.png",
+          "sha256": "5c7a555c22b0e09f1be82a8b37e69855371f57da340456df577df2bcb5b5341f"
+        },
+        {
+          "order": 17,
+          "file": "out/core024/native-v2/layers/leaf-17-Front_Hair_L2_Shadow.png",
+          "sha256": "c5f377b8c076e114178de8cbf44a561fa6925fb31510e518317cddf71aaddc8d"
+        },
+        {
+          "order": 18,
+          "file": "out/core024/native-v2/layers/leaf-18-Front_Hair_R1_Shadow.png",
+          "sha256": "eeeea678f29f8dd825cb2282d7849d7c6f20b74f69f6b564ddd81fbd7083b8ce"
+        },
+        {
+          "order": 19,
+          "file": "out/core024/native-v2/layers/leaf-19-Front_Hair_L1_Shadow.png",
+          "sha256": "5a51501ee61949271553782a40c7df1757a413328a36542249c25f3fc8a86f90"
+        },
+        {
+          "order": 20,
+          "file": "out/core024/native-v2/layers/leaf-20-Front_Hair_C_Shadow.png",
+          "sha256": "d8e520c88931ff8fc45390c0e6afc01804955aee84acf5e2880c9647eab97215"
+        },
+        {
+          "order": 21,
+          "file": "out/core024/native-v2/layers/leaf-21-Nose.png",
+          "sha256": "e0f158b07f180a91d72d62e6ba7bf71e1078099c0a207770305ea25073acb869"
+        },
+        {
+          "order": 22,
+          "file": "out/core024/native-v2/layers/leaf-22-Mouth_Inner.png",
+          "sha256": "c840c013609df7f71bc3d35221961efb752894b90258b684b07357db74679c39"
+        },
+        {
+          "order": 23,
+          "file": "out/core024/native-v2/layers/leaf-23-Lip.png",
+          "sha256": "747f0f1f3af70d3e86298bb866cb52a3c9445e9324e51c57bd5ad091545c9318"
+        },
+        {
+          "order": 24,
+          "file": "out/core024/native-v2/layers/leaf-24-Eye_L_Shadow_Lower.png",
+          "sha256": "42000d7b3b18e84152d2fd4d351a58e860b2d1eac6a9b1b8d54243fa1f6ead42"
+        },
+        {
+          "order": 25,
+          "file": "out/core024/native-v2/layers/leaf-25-Eye_L_Shadow_Upper.png",
+          "sha256": "35ea74e9a41eaccb94ec65cb273bbfe44779b528f035c99989c205fd96910d31"
+        },
+        {
+          "order": 26,
+          "file": "out/core024/native-v2/layers/leaf-26-Eye_L_Eyelid2_Shadow.png",
+          "sha256": "dbd369b23c1f534aee916a3e699caa1b7eb2780b95c3fc9e3352f5c42f20fbba"
+        },
+        {
+          "order": 27,
+          "file": "out/core024/native-v2/layers/leaf-27-Eye_L_White.png",
+          "sha256": "537509a3a72a6458078d3058ab48ed0313950274344b9839d8f72f9aa407e67a"
+        },
+        {
+          "order": 28,
+          "file": "out/core024/native-v2/layers/leaf-28-Eye_L_Eyeball.png",
+          "sha256": "7d941fd84775f8c132af752b79fa677721c79ac95af29b123ed068005c8d4d30"
+        },
+        {
+          "order": 29,
+          "file": "out/core024/native-v2/layers/leaf-29-Eye_L_Light.png",
+          "sha256": "1de1a2c93b0ff30a50fb80ae8919f1a8a55104fa2463e7a520a889dcd7ebe538"
+        },
+        {
+          "order": 30,
+          "file": "out/core024/native-v2/layers/leaf-30-Eye_L_Eyelash2.png",
+          "sha256": "bf233fe032150bb0904b8a1dfe75eb80a980522e144fa899ae8b48b478b31405"
+        },
+        {
+          "order": 31,
+          "file": "out/core024/native-v2/layers/leaf-31-Eye_L_Eyelid_Side.png",
+          "sha256": "c4bb19f5d57b445b7bd0f265fb51b7131a4c0f5096b4b929c1b06c0d3ce51e60"
+        },
+        {
+          "order": 32,
+          "file": "out/core024/native-v2/layers/leaf-32-Eye_L_Eyelash1.png",
+          "sha256": "283820e942d6d5955ab2b29572fe15685065852b37a283ece58dbcc8dadaf1f7"
+        },
+        {
+          "order": 33,
+          "file": "out/core024/native-v2/layers/leaf-33-Eye_L_Eyelid.png",
+          "sha256": "d52f72a7989c5b7a53962a04a1a860b939bcc56b4f2f2c4073e082fbf5b0fe3f"
+        },
+        {
+          "order": 34,
+          "file": "out/core024/native-v2/layers/leaf-34-Eye_R_Shadow_Lower.png",
+          "sha256": "db827980ce5d6726772dd5a546ded9b7a18ef7d0fbd9753ff2511b3f4afb6479"
+        },
+        {
+          "order": 35,
+          "file": "out/core024/native-v2/layers/leaf-35-Eye_R_Shadow_Upper.png",
+          "sha256": "68d33028f04110d81536a24b77074e34519210a8d2f08a110c27b5a550f9cce3"
+        },
+        {
+          "order": 36,
+          "file": "out/core024/native-v2/layers/leaf-36-Eye_R_Eyelid2_shadow.png",
+          "sha256": "b25a43f3a70ae8373caa3e43287400d6fb6a5598d5287ccd246bfa4c5e0557fa"
+        },
+        {
+          "order": 37,
+          "file": "out/core024/native-v2/layers/leaf-37-Eye_R_White.png",
+          "sha256": "819d50cffc96417d237e8f27b4d0550edfac1543bf5e45b20be2ff640b24800b"
+        },
+        {
+          "order": 38,
+          "file": "out/core024/native-v2/layers/leaf-38-Eye_R_Eyeball.png",
+          "sha256": "96533c3e51116cd665296c4dd4b880956610357c3710bcf6fc4547ed6c300fd6"
+        },
+        {
+          "order": 39,
+          "file": "out/core024/native-v2/layers/leaf-39-Eye_R_Light.png",
+          "sha256": "aa6868dbb7ffda583f6b8d42df8df8bb67ed2a244e2ada2dcaa50e46e2bd1c68"
+        },
+        {
+          "order": 40,
+          "file": "out/core024/native-v2/layers/leaf-40-Eye_R_Eyelash2.png",
+          "sha256": "5a332aa9413590ee70148be9ecf11a977f9195b5a4421d74d16c3220236c802c"
+        },
+        {
+          "order": 41,
+          "file": "out/core024/native-v2/layers/leaf-41-Eye_R_Eyelid_Side.png",
+          "sha256": "d30c8ddb8f996707972eadbc49a42cd3aecc4b84fd011828ff1fe53e72750c5d"
+        },
+        {
+          "order": 42,
+          "file": "out/core024/native-v2/layers/leaf-42-Eye_R_Eyelash1.png",
+          "sha256": "f1730928e65171c4eaa0d461aeb65c4dacc07e13206e708554cc207adf940430"
+        },
+        {
+          "order": 43,
+          "file": "out/core024/native-v2/layers/leaf-43-Eye_R_Eyelid1.png",
+          "sha256": "3c65c5d4420e08e98f07ba0593ee7c8235e5af6550191a55ee61a8e13704f6f0"
+        },
+        {
+          "order": 44,
+          "file": "out/core024/native-v2/layers/leaf-44-Side_Hair_L.png",
+          "sha256": "d106cae5a74dabdc5b1079251a5a7d04848cdfa91663141b06d0531baa2777ef"
+        },
+        {
+          "order": 45,
+          "file": "out/core024/native-v2/layers/leaf-45-Side_Hair_L_Light.png",
+          "sha256": "e948994afc8517be94175b313935d80f33faddbb221d1cd1b6105fe65814aa07"
+        },
+        {
+          "order": 46,
+          "file": "out/core024/native-v2/layers/leaf-46-Side_Hair_R.png",
+          "sha256": "db0f844dfa5a3ddfa5af8ec254641a0379ba55d7bba5d787d16f3825025c10be"
+        },
+        {
+          "order": 47,
+          "file": "out/core024/native-v2/layers/leaf-47-Side_Hair_R_Light.png",
+          "sha256": "88138ed618009014b6df14b2503bb1617b75abd17932d4a4accfc12a4c566bec"
+        },
+        {
+          "order": 48,
+          "file": "out/core024/native-v2/layers/leaf-48-Front_Hair_L2.png",
+          "sha256": "3dc2af0def887aa883fd7aa4918ab97a704955223f3ea873028fe7404a1e76cf"
+        },
+        {
+          "order": 49,
+          "file": "out/core024/native-v2/layers/leaf-49-Front_Hair_L2_Light.png",
+          "sha256": "0730bc4a1006d3b010099560d0a0e4b79f2bd2d4111e86429b3c6fe5cd7a4aa3"
+        },
+        {
+          "order": 50,
+          "file": "out/core024/native-v2/layers/leaf-50-Front_Hair_R2.png",
+          "sha256": "363c0b6acf80a64e801724c9837979948ea1b452edc019d70395aa53ba2914b3"
+        },
+        {
+          "order": 51,
+          "file": "out/core024/native-v2/layers/leaf-51-Front_Hair_R2_Light.png",
+          "sha256": "681bdb475adf8b42c12c72cb98b76e4c68bac08eef53886e1ba5470a4da184a3"
+        },
+        {
+          "order": 52,
+          "file": "out/core024/native-v2/layers/leaf-52-Front_Hair_L1.png",
+          "sha256": "45c382f15042ab3b08cb71fbcba23592f87729d67c2b8e665c6a20dec3a82f50"
+        },
+        {
+          "order": 53,
+          "file": "out/core024/native-v2/layers/leaf-53-Front_Hair_L1_Light.png",
+          "sha256": "9fe3a10cf4fdd586ad0ff5ce0cffa4fc616802b9e4db2028b6b799cfdf12fed4"
+        },
+        {
+          "order": 54,
+          "file": "out/core024/native-v2/layers/leaf-54-Front_Hair_R1.png",
+          "sha256": "9f2abd9f6738c5efb509776c14d3a0628d8d1c51b541f9700331406e7a2ee99b"
+        },
+        {
+          "order": 55,
+          "file": "out/core024/native-v2/layers/leaf-55-Front_Hair_R1_Ligth.png",
+          "sha256": "4b92420a8d516d795f4e1195c4085738042d0447a276f6919095a216c2400c1c"
+        },
+        {
+          "order": 56,
+          "file": "out/core024/native-v2/layers/leaf-56-Front_Hair_C.png",
+          "sha256": "988ea8c3ceb886f62966c6198c28bc41976ae1e71c0b90f88ee6269c9a3809cb"
+        },
+        {
+          "order": 57,
+          "file": "out/core024/native-v2/layers/leaf-57-Front_Hair_C_Light.png",
+          "sha256": "a55da8bf466fe488c0fa63ad8e24233bee424192276866b1d267669d77a2cdac"
+        },
+        {
+          "order": 58,
+          "file": "out/core024/native-v2/layers/leaf-58-Eye_L_Eyelid2.png",
+          "sha256": "7831e0b4a16ff220a0c3581ee8e8d3ec2700577ea670a7e4bdb39154fab80bee"
+        },
+        {
+          "order": 59,
+          "file": "out/core024/native-v2/layers/leaf-59-Eye_R_Eyelid2.png",
+          "sha256": "31d64895645ccf999fc9478a22a4e7d8f5b300a3187793a1acf59e643d63b629"
+        },
+        {
+          "order": 60,
+          "file": "out/core024/native-v2/layers/leaf-60-Eyebrow_L.png",
+          "sha256": "18517ce3ef4083c2cbd5abdf59e6c188fcb7aa0086c510920c9afaad50b0d170"
+        },
+        {
+          "order": 61,
+          "file": "out/core024/native-v2/layers/leaf-61-Eyebrow_R.png",
+          "sha256": "4b436ac3277f71506f8d85be73a07d99af45dba7ab08cee21a692c78e2b52c56"
+        },
+        {
+          "order": 62,
+          "file": "out/core024/native-v2/layers/leaf-62-Leaf.png",
+          "sha256": "542e3163bcc788dbfe7e50bbe884f10fb781c371e83764c193e0640649c05b96"
+        }
+      ],
+      "painter_schedule": [
+        {
+          "psd_order": 1,
+          "native_uuid": 3453251657,
+          "texture_sha256": "ca01db3992731754ddc3cae58f58c0215485406d5971971e975d4496b8f513b1",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 1,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 2,
+          "native_uuid": 3424078890,
+          "texture_sha256": "7e4e016a50b2cb486f987dacb0a9fd97e6425fb9aa0aa8667b869b9b380376d1",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 2,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 3,
+          "native_uuid": 3755828177,
+          "texture_sha256": "69525e19cc292b8546614a9ef7ab9f9fd5caa259508e85238cf62639690aea8f",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 3,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 4,
+          "native_uuid": 233054616,
+          "texture_sha256": "326611fde7a6fd882eed8d269b997b2029259b339d592830e379e5ce9907b925",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 4,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 5,
+          "native_uuid": 2432586950,
+          "texture_sha256": "646f7f09d79b4c33b5f0ec3f615ec1e4cbfb21712a74c1b970a39a3cee5bd2a5",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 5,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 6,
+          "native_uuid": 2937754650,
+          "texture_sha256": "4bd3ea6d3f95a920b0fb1b4fc80640e017fa5febf124cf0adbfa1f80360fae0a",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 5,
+          "ultimate_surface_order": 5,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 7,
+          "native_uuid": 1625707572,
+          "texture_sha256": "251059ad7aedf4508610a0656c71c916c5769f399bb555b02ce2fa4a6cf5a165",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 7,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 8,
+          "native_uuid": 4212602175,
+          "texture_sha256": "67ef8936d404d028948464f70f0d39422b4d68e5bb167f845b05012e2a2db2c4",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 8,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 9,
+          "native_uuid": 1096045651,
+          "texture_sha256": "08c15c247251d4ee5ee49a6a09dcf8d4468cff0ec1792cb0cad61ec9133ddcd4",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 9,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 10,
+          "native_uuid": 4217689816,
+          "texture_sha256": "0b5eebbfda3e88d98779d28da5177957fad688f0cac9fc6d37069dcb2f666d6b",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 10,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 11,
+          "native_uuid": 2611544751,
+          "texture_sha256": "ed43835b645c3fa0a2b8615ebdadaf0fba5ae7dfec75c02af0a8152419a7a52c",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 11,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 12,
+          "native_uuid": 118677514,
+          "texture_sha256": "d852eec81a9048c08e41ca316b1dda9dada2df8ccf533f164a3974f7a3e5e241",
+          "native_blend_mode": "Multiply",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 11,
+          "ultimate_surface_order": 11,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 13,
+          "native_uuid": 3736853925,
+          "texture_sha256": "f7eb372ccbf8d80204ad0526f008d3f8cebf0d3b0aa0d8efeae06d214f9bf669",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 14,
+          "native_uuid": 601961872,
+          "texture_sha256": "b789150d2cfb55457eef144f8364d496d82fb9809ba7453a568e9b095e4ceaf7",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 44,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 15,
+          "native_uuid": 2461262611,
+          "texture_sha256": "a6e4771a4c4b0085809527ed365034b97becee8f61bd5a8db036b5b5e65ac2af",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 46,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 16,
+          "native_uuid": 3855234658,
+          "texture_sha256": "5c7a555c22b0e09f1be82a8b37e69855371f57da340456df577df2bcb5b5341f",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 50,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 17,
+          "native_uuid": 2447618885,
+          "texture_sha256": "c5f377b8c076e114178de8cbf44a561fa6925fb31510e518317cddf71aaddc8d",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 48,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 18,
+          "native_uuid": 3543760606,
+          "texture_sha256": "eeeea678f29f8dd825cb2282d7849d7c6f20b74f69f6b564ddd81fbd7083b8ce",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 54,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 19,
+          "native_uuid": 3993230283,
+          "texture_sha256": "5a51501ee61949271553782a40c7df1757a413328a36542249c25f3fc8a86f90",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 52,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 20,
+          "native_uuid": 2385763375,
+          "texture_sha256": "d8e520c88931ff8fc45390c0e6afc01804955aee84acf5e2880c9647eab97215",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": 56,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 21,
+          "native_uuid": 2330281570,
+          "texture_sha256": "e0f158b07f180a91d72d62e6ba7bf71e1078099c0a207770305ea25073acb869",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 22,
+          "native_uuid": 3225607481,
+          "texture_sha256": "c840c013609df7f71bc3d35221961efb752894b90258b684b07357db74679c39",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 23,
+          "native_uuid": 1354775001,
+          "texture_sha256": "747f0f1f3af70d3e86298bb866cb52a3c9445e9324e51c57bd5ad091545c9318",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 24,
+          "native_uuid": 5525880,
+          "texture_sha256": "42000d7b3b18e84152d2fd4d351a58e860b2d1eac6a9b1b8d54243fa1f6ead42",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 25,
+          "native_uuid": 3967436499,
+          "texture_sha256": "35ea74e9a41eaccb94ec65cb273bbfe44779b528f035c99989c205fd96910d31",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 26,
+          "native_uuid": 3053982931,
+          "texture_sha256": "dbd369b23c1f534aee916a3e699caa1b7eb2780b95c3fc9e3352f5c42f20fbba",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 27,
+          "native_uuid": 2563763966,
+          "texture_sha256": "537509a3a72a6458078d3058ab48ed0313950274344b9839d8f72f9aa407e67a",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 28,
+          "native_uuid": 509331051,
+          "texture_sha256": "7d941fd84775f8c132af752b79fa677721c79ac95af29b123ed068005c8d4d30",
+          "native_blend_mode": "ClipToLower",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 27,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": true,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 29,
+          "native_uuid": 322026080,
+          "texture_sha256": "1de1a2c93b0ff30a50fb80ae8919f1a8a55104fa2463e7a520a889dcd7ebe538",
+          "native_blend_mode": "ClipToLower",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 27,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": true,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 30,
+          "native_uuid": 2415847828,
+          "texture_sha256": "bf233fe032150bb0904b8a1dfe75eb80a980522e144fa899ae8b48b478b31405",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 31,
+          "native_uuid": 3950626023,
+          "texture_sha256": "c4bb19f5d57b445b7bd0f265fb51b7131a4c0f5096b4b929c1b06c0d3ce51e60",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 32,
+          "native_uuid": 870544350,
+          "texture_sha256": "283820e942d6d5955ab2b29572fe15685065852b37a283ece58dbcc8dadaf1f7",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 33,
+          "native_uuid": 4267081328,
+          "texture_sha256": "d52f72a7989c5b7a53962a04a1a860b939bcc56b4f2f2c4073e082fbf5b0fe3f",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 34,
+          "native_uuid": 2610042602,
+          "texture_sha256": "db827980ce5d6726772dd5a546ded9b7a18ef7d0fbd9753ff2511b3f4afb6479",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 35,
+          "native_uuid": 2433360548,
+          "texture_sha256": "68d33028f04110d81536a24b77074e34519210a8d2f08a110c27b5a550f9cce3",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 36,
+          "native_uuid": 479575860,
+          "texture_sha256": "b25a43f3a70ae8373caa3e43287400d6fb6a5598d5287ccd246bfa4c5e0557fa",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 37,
+          "native_uuid": 2683271183,
+          "texture_sha256": "819d50cffc96417d237e8f27b4d0550edfac1543bf5e45b20be2ff640b24800b",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 38,
+          "native_uuid": 2464897030,
+          "texture_sha256": "96533c3e51116cd665296c4dd4b880956610357c3710bcf6fc4547ed6c300fd6",
+          "native_blend_mode": "ClipToLower",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 37,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": true,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 39,
+          "native_uuid": 2794830548,
+          "texture_sha256": "aa6868dbb7ffda583f6b8d42df8df8bb67ed2a244e2ada2dcaa50e46e2bd1c68",
+          "native_blend_mode": "ClipToLower",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 37,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": true,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 40,
+          "native_uuid": 519787041,
+          "texture_sha256": "5a332aa9413590ee70148be9ecf11a977f9195b5a4421d74d16c3220236c802c",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 41,
+          "native_uuid": 1838220672,
+          "texture_sha256": "d30c8ddb8f996707972eadbc49a42cd3aecc4b84fd011828ff1fe53e72750c5d",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 42,
+          "native_uuid": 8251770,
+          "texture_sha256": "f1730928e65171c4eaa0d461aeb65c4dacc07e13206e708554cc207adf940430",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 43,
+          "native_uuid": 2835231730,
+          "texture_sha256": "3c65c5d4420e08e98f07ba0593ee7c8235e5af6550191a55ee61a8e13704f6f0",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 44,
+          "native_uuid": 980585604,
+          "texture_sha256": "d106cae5a74dabdc5b1079251a5a7d04848cdfa91663141b06d0531baa2777ef",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 44,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 45,
+          "native_uuid": 2609038935,
+          "texture_sha256": "e948994afc8517be94175b313935d80f33faddbb221d1cd1b6105fe65814aa07",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 44,
+          "ultimate_surface_order": 44,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 46,
+          "native_uuid": 2548641512,
+          "texture_sha256": "db0f844dfa5a3ddfa5af8ec254641a0379ba55d7bba5d787d16f3825025c10be",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 46,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 47,
+          "native_uuid": 2094776,
+          "texture_sha256": "88138ed618009014b6df14b2503bb1617b75abd17932d4a4accfc12a4c566bec",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 46,
+          "ultimate_surface_order": 46,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 48,
+          "native_uuid": 1357173599,
+          "texture_sha256": "3dc2af0def887aa883fd7aa4918ab97a704955223f3ea873028fe7404a1e76cf",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 48,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 49,
+          "native_uuid": 965831079,
+          "texture_sha256": "0730bc4a1006d3b010099560d0a0e4b79f2bd2d4111e86429b3c6fe5cd7a4aa3",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 48,
+          "ultimate_surface_order": 48,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 50,
+          "native_uuid": 1552110117,
+          "texture_sha256": "363c0b6acf80a64e801724c9837979948ea1b452edc019d70395aa53ba2914b3",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 50,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 51,
+          "native_uuid": 2391743597,
+          "texture_sha256": "681bdb475adf8b42c12c72cb98b76e4c68bac08eef53886e1ba5470a4da184a3",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 50,
+          "ultimate_surface_order": 50,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 52,
+          "native_uuid": 540700913,
+          "texture_sha256": "45c382f15042ab3b08cb71fbcba23592f87729d67c2b8e665c6a20dec3a82f50",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 52,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 53,
+          "native_uuid": 476598408,
+          "texture_sha256": "9fe3a10cf4fdd586ad0ff5ce0cffa4fc616802b9e4db2028b6b799cfdf12fed4",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 52,
+          "ultimate_surface_order": 52,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 54,
+          "native_uuid": 834512232,
+          "texture_sha256": "9f2abd9f6738c5efb509776c14d3a0628d8d1c51b541f9700331406e7a2ee99b",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 54,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 55,
+          "native_uuid": 2437287170,
+          "texture_sha256": "4b92420a8d516d795f4e1195c4085738042d0447a276f6919095a216c2400c1c",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 54,
+          "ultimate_surface_order": 54,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 56,
+          "native_uuid": 1992218482,
+          "texture_sha256": "988ea8c3ceb886f62966c6198c28bc41976ae1e71c0b90f88ee6269c9a3809cb",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 56,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 57,
+          "native_uuid": 3664369009,
+          "texture_sha256": "a55da8bf466fe488c0fa63ad8e24233bee424192276866b1d267669d77a2cdac",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 56,
+          "ultimate_surface_order": 56,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 58,
+          "native_uuid": 3023088905,
+          "texture_sha256": "7831e0b4a16ff220a0c3581ee8e8d3ec2700577ea670a7e4bdb39154fab80bee",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 59,
+          "native_uuid": 163348813,
+          "texture_sha256": "31d64895645ccf999fc9478a22a4e7d8f5b300a3187793a1acf59e643d63b629",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 60,
+          "native_uuid": 4144177566,
+          "texture_sha256": "18517ce3ef4083c2cbd5abdf59e6c188fcb7aa0086c510920c9afaad50b0d170",
+          "native_blend_mode": "Multiply",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 61,
+          "native_uuid": 228585614,
+          "texture_sha256": "4b436ac3277f71506f8d85be73a07d99af45dba7ab08cee21a692c78e2b52c56",
+          "native_blend_mode": "Multiply",
+          "source_blend_mode": "BlendMode.MULTIPLY",
+          "receiver_order": 13,
+          "ultimate_surface_order": 13,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": true,
+          "physical_depth": "UNKNOWN"
+        },
+        {
+          "psd_order": 62,
+          "native_uuid": 2233235985,
+          "texture_sha256": "542e3163bcc788dbfe7e50bbe884f10fb781c371e83764c193e0640649c05b96",
+          "native_blend_mode": "Normal",
+          "source_blend_mode": "BlendMode.NORMAL",
+          "receiver_order": null,
+          "ultimate_surface_order": 62,
+          "shadow_caster_order": null,
+          "is_native_clip_to_lower": false,
+          "is_source_multiply": false,
+          "physical_depth": "UNKNOWN"
+        }
+      ],
+      "logical_passes": [
+        {
+          "pass_index": 1,
+          "orders": [
+            1
+          ],
+          "surface_order": 1,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 2,
+          "orders": [
+            2
+          ],
+          "surface_order": 2,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 3,
+          "orders": [
+            3
+          ],
+          "surface_order": 3,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 4,
+          "orders": [
+            4
+          ],
+          "surface_order": 4,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 5,
+          "orders": [
+            5
+          ],
+          "surface_order": 5,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 6,
+          "orders": [
+            6
+          ],
+          "surface_order": 5,
+          "blend_policy": "MULTIPLY_SCENE_BACKDROP_REQUIRED"
+        },
+        {
+          "pass_index": 7,
+          "orders": [
+            7
+          ],
+          "surface_order": 7,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 8,
+          "orders": [
+            8
+          ],
+          "surface_order": 8,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 9,
+          "orders": [
+            9
+          ],
+          "surface_order": 9,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 10,
+          "orders": [
+            10
+          ],
+          "surface_order": 10,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 11,
+          "orders": [
+            11
+          ],
+          "surface_order": 11,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 12,
+          "orders": [
+            12
+          ],
+          "surface_order": 11,
+          "blend_policy": "MULTIPLY_SCENE_BACKDROP_REQUIRED"
+        },
+        {
+          "pass_index": 13,
+          "orders": [
+            13
+          ],
+          "surface_order": 13,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 14,
+          "orders": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "surface_order": 13,
+          "blend_policy": "MULTIPLY_SCENE_BACKDROP_REQUIRED"
+        },
+        {
+          "pass_index": 15,
+          "orders": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
+          ],
+          "surface_order": 13,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 16,
+          "orders": [
+            44,
+            45
+          ],
+          "surface_order": 44,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 17,
+          "orders": [
+            46,
+            47
+          ],
+          "surface_order": 46,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 18,
+          "orders": [
+            48,
+            49
+          ],
+          "surface_order": 48,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 19,
+          "orders": [
+            50,
+            51
+          ],
+          "surface_order": 50,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 20,
+          "orders": [
+            52,
+            53
+          ],
+          "surface_order": 52,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 21,
+          "orders": [
+            54,
+            55
+          ],
+          "surface_order": 54,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 22,
+          "orders": [
+            56,
+            57
+          ],
+          "surface_order": 56,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 23,
+          "orders": [
+            58,
+            59
+          ],
+          "surface_order": 13,
+          "blend_policy": "NORMAL_LOCAL"
+        },
+        {
+          "pass_index": 24,
+          "orders": [
+            60,
+            61
+          ],
+          "surface_order": 13,
+          "blend_policy": "MULTIPLY_SCENE_BACKDROP_REQUIRED"
+        },
+        {
+          "pass_index": 25,
+          "orders": [
+            62
+          ],
+          "surface_order": 62,
+          "blend_policy": "NORMAL_LOCAL"
+        }
+      ],
+      "blend_implementation": "live original Normal/Multiply against preceding transparent artwork, quantized effective source RGB, then per-source GPU Normal draws",
+      "geometry": "19 shared receiver grids; unchanged unfitted CORE025 height profile, no per-layer Z offset",
+      "depth_tested": false,
+      "local_eye_uv": "live source-pixel offset with provisional source-painted eye support cap",
+      "default_mask_policy": "source_paint_domain",
+      "native_clip_parity": "BLOCKED_RAW_EYE_WHITE_MASK_FAILS_SOURCE_ART_PARITY",
+      "mask_note": "Source paint domain is max raw alpha of eye white/pupil/highlight; cap preserves rest art. Not a claim of native GPU ClipToLower equivalence.",
+      "physical_depth": "NOT_RECOVERED",
+      "dynamic_occlusion": "NOT_IMPLEMENTED",
+      "natural_3d_turn": "NOT_ACCEPTED",
+      "supported_pose": "DEFAULT_ONLY",
+      "camera": {
+        "left": -1,
+        "right": 1,
+        "top": 1,
+        "bottom": -1,
+        "near": 0.1,
+        "far": 20,
+        "position": [
+          0,
+          0,
+          5
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ]
+      },
+      "canvas": [
+        1630,
+        1630
+      ]
+    },
+    "limitations": {
+      "visual_gate": "PENDING_CODEX_IMAGE_REVIEW",
+      "physical_depth": "NOT_RECOVERED",
+      "native_clip_parity": "BLOCKED_RAW_EYE_WHITE_MASK_FAILS_SOURCE_ART",
+      "source_paint_mask": "PROVISIONAL_ARTIST_DOMAIN_NOT_ANATOMICAL_OR_NATIVE_GPU_MASK",
+      "M3_permission": "BLOCKED_PENDING_COMPLETE_M2B",
+      "dynamic_occlusion": "NOT_IMPLEMENTED",
+      "natural_3d_turn": "NOT_ACCEPTED"
+    }
+  },
+  "regressions": {
+    "schema": "core026-default-art-regressions/1",
+    "status": "PASS",
+    "known_hard_eye_white_mask_rejected_by_unchanged_rgb_limits": true,
+    "one_forged_foreground_pixel_rejected_despite_small_global_mae": true,
+    "forged_capture_hashes_and_repeats_updated_so_test_reaches_real_pixels": true,
+    "original_actual_captures_unchanged": true,
+    "default_art_pass_does_not_admit_M3": true,
+    "scope": "DEFAULT_ART_ONLY; full runtime/native clip/depth remain blocked"
+  },
+  "manual_visual_review": "m2b0-visual-review.json",
+  "initial_wrong_mask_failure": "m2b0-hard-eye-mask-failure.json at commit707cc6c7",
+  "execution_facts": {
+    "candidate_captures": 10,
+    "independent_captures": 12,
+    "raw_original_png_requests": 62,
+    "gpu_source_draws_per_art_frame": 62,
+    "receiver_geometries": 19,
+    "logical_painter_passes": 25,
+    "depth_tested": false,
+    "surface_profile": "shared unfitted CORE025 height profile, no per-layer Z offset",
+    "runtime_blend": "live source-space CPU backdrop resolution, then per-source GPU Normal blending; not screen-space dynamic3D compositing"
+  },
+  "full_M2B": "NOT_ACCEPTED",
+  "M3_permission": "BLOCKED_PENDING_COMPLETE_M2B",
+  "remaining": [
+    "Registered eye/native-clip strategy and pupil/highlight coordination",
+    "Spatial receiver framebuffer/depth integration and scene-dependent Multiply",
+    "M3 depth/attachment fitting",
+    "M4 motion occlusion/transparent edges",
+    "M5 continuous video acceptance"
+  ]
+}
