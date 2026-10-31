@@ -10,21 +10,56 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate single documentation index and selected implementation
+      - name: Validate project index, task evidence and stage dependencies
+        shell: bash
         run: |
           set -euo pipefail
           node - <<'NODE'
           const fs=require('fs'),cp=require('child_process');
-          const paths=cp.execFileSync('git',['ls-files'],{encoding:'utf8'}).trim().split('\n');
-          const md=paths.filter(x=>x.endsWith('.md')).sort();
-          if(JSON.stringify(md)!==JSON.stringify(['README.md','docs/MVP-009-plan.md'].sort()))
-            throw Error('Documentation tree should contain index and canonical plan: '+md.join(','));
-          const tasks=JSON.parse(fs.readFileSync('docs/MVP-009-tasks.json','utf8'));
-          if(tasks.parentPlan!=='docs/MVP-009-plan.md'||tasks.selectedImplementation!=='B')throw Error('Architecture mismatch');
-          const ids=new Set(tasks.tasks.map(t=>t.id));
-          for(const t of tasks.tasks)if(t.dependsOn.some(x=>!ids.has(x)))throw Error('Missing dependency in '+t.id);
-          for(const g of tasks.gates)if(!g.id||!g.status)throw Error('Missing gate data');
-          if(paths.filter(x=>x.startsWith('.github/workflows/')).some(x=>!x.startsWith('.github/workflows/mvp009-')))
-            throw Error('Unexpected workflow');
-          console.log('MVP009_PROJECT_INTEGRITY_PASS');
+          const files=cp.execFileSync('git',['ls-files'],{encoding:'utf8'}).trim().split('\n').filter(Boolean);
+          const md=files.filter(f=>f.endsWith('.md')).sort();
+          const expected=['README.md','docs/MVP-009-plan.md'].sort();
+          if(JSON.stringify(md)!==JSON.stringify(expected))throw Error('Documentation files: '+md.join(','));
+          const docs=files.filter(f=>f.startsWith('docs/')).sort();
+          if(JSON.stringify(docs)!==JSON.stringify(['docs/MVP-009-plan.md','docs/MVP-009-tasks.json'].sort()))throw Error('Additional docs: '+docs.join(','));
+          if(files.some(f=>/^(scripts|tests|experiments\/mvp00[1-8]|experiments\/godot-|docs\/archive)\//.test(f)))throw Error('Unexpected code or archive directory');
+          const flows=files.filter(f=>f.startsWith('.github/workflows/'));
+          if(flows.some(f=>!f.startsWith('.github/workflows/mvp009-')))throw Error('Unexpected workflow');
+          const index=fs.readFileSync('README.md','utf8');
+          if(!index.includes('(docs/MVP-009-plan.md)')||!index.includes('(docs/MVP-009-tasks.json)'))throw Error('Index references');
+          const plan=fs.readFileSync('docs/MVP-009-plan.md','utf8');
+          const data=JSON.parse(fs.readFileSync('docs/MVP-009-tasks.json','utf8'));
+          if(data.parentPlan!=='docs/MVP-009-plan.md'||data.selectedImplementation!=='B'||data.firstImplementation!=='B')
+            throw Error('Selected implementation');
+          if(data.phase==='PLANNED_NOT_IMPLEMENTED'&&data.tasks.some(t=>t.status!=='NOT_STARTED'))
+            throw Error('Planning phase and task status disagree');
+          const taskIds=data.tasks.map(t=>t.id);
+          const expectedIds=['T00','T01','T02','T03B','T04','T05','T06','T07'];
+          if(JSON.stringify(taskIds)!==JSON.stringify(expectedIds))throw Error('Task ID/order inconsistency');
+          const set=new Set(taskIds);
+          const byId=new Map(data.tasks.map(t=>[t.id,t]));
+          for(const task of data.tasks){
+            if(!Array.isArray(task.dependsOn)||task.dependsOn.some(id=>!set.has(id)))throw Error('Missing prerequisite '+task.id);
+            const seen=new Set();
+            const visit=id=>{
+              if(seen.has(id))throw Error('Circular dependency at '+id);
+              seen.add(id);
+              for(const dep of byId.get(id).dependsOn)visit(dep);
+              seen.delete(id);
+            };
+            visit(task.id);
+            const line=plan.split('\n').find(line=>line.startsWith('| '+task.id+' |'));
+            if(!line)throw Error('Missing plan row '+task.id);
+            const column=line.split('|')[3]||'';
+            const files=[...column.matchAll(/`([^`]+\.(?:json|png|mp4))`/g)].map(m=>m[1]);
+            if(JSON.stringify(files)!==JSON.stringify(task.evidence))
+              throw Error('Task evidence mismatch '+task.id+': '+files+' != '+task.evidence);
+          }
+          const ids=data.gates.map(x=>x.id);
+          if(JSON.stringify(ids)!==JSON.stringify(Array.from({length:9},(_,i)=>'S0'+i)))
+            throw Error('Gate set');
+          if(data.gates.some(g=>!g.status||!g.criterion))throw Error('Missing gate status/criterion');
+          if(data.phase==='PLANNED_NOT_IMPLEMENTED'&&data.gates.some(g=>g.status!=='NOT_RUN'))
+            throw Error('Gate status inconsistent with plan phase');
+          console.log('MVP009_PROJECT_INTEGRITY_PASS tasks='+data.tasks.length+' gates='+data.gates.length);
           NODE

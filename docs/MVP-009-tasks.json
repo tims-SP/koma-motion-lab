@@ -80,6 +80,7 @@
       "evidence": [
         "reference-manifest.json",
         "landmarks.json",
+        "layer-occlusion.json",
         "source-hashes.json"
       ],
       "priority": "BLOCKING",
@@ -94,10 +95,12 @@
       ],
       "action": "Render a single head at 0/15/30/45/60/75/90 with 3D anchors, view-dependent depth, semantic ArtMesh warp and shared coverage",
       "evidence": [
-        "B-angle-board.png",
-        "B-depth-board.png",
-        "B-id-board.png",
-        "B-qa.json"
+        "head90-angles.png",
+        "head90-beauty.png",
+        "head90-id.png",
+        "head90-depth.png",
+        "head90-alpha.png",
+        "head90-qa.json"
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "NOT_STARTED"
@@ -110,10 +113,8 @@
       ],
       "action": "Review true profile, held-out intermediate views, depth/ID agreement and authoring cost; decide expansion of the selected representation",
       "evidence": [
-        "B-angles.png",
-        "B-masks.png",
-        "B-visual-review.json",
-        "decision.md"
+        "head90-review.json",
+        "head90-decision.json"
       ],
       "priority": "BLOCKING",
       "status": "NOT_STARTED"
@@ -126,8 +127,9 @@
       ],
       "action": "Extend head views to 180 and 270 with independently authored rear/left profile and key-specific VDD",
       "evidence": [
-        "texture-qa.json",
-        "art-compare-board.png"
+        "head360-angles.png",
+        "head360-profile-strips.png",
+        "head360-qa.json"
       ],
       "priority": "BLOCKING",
       "status": "NOT_STARTED"
@@ -140,8 +142,8 @@
       ],
       "action": "Combine independent head yaw, calibrated pitch, blink, and local hair movement",
       "evidence": [
-        "dynamic-head.mp4",
-        "dynamic-head-qa.json"
+        "head-motion.mp4",
+        "head-motion-qa.json"
       ],
       "priority": "BLOCKING",
       "status": "NOT_STARTED"

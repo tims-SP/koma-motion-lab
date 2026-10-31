@@ -12,7 +12,7 @@
 
 技术栈：TypeScript strict、Three.js/WebGL2、Vite、Playwright、Chromium、FFmpeg。新实现位置：`experiments/head009/`。源码、manifest、验收 JSON 存入 Git；原画与视频存入 Actions Artifact 或经授权的存储。
 
-## 3. 最小资产，不先扩成完整角色
+## 第一阶段资产准备
 
 ### 第一阶段：0° → 90° 头部
 
@@ -21,13 +21,13 @@
 - 最小分层（数量按真实遮挡决定而非生硬限定）：rearHair, sideHair.L/R, ear.L/R, faceBase, noseProfile, mouth/chin, eye.L/R, brows, fringe/frontHair, neck。一个层若从前穿到后造成深度循环，必须拆成互相遮挡的多个子层。
 - 侧脸必须真实具有鼻梁/鼻尖、嘴唇/下巴、耳根/耳廓、眼眶与发际线的正确轮廓；同角色发型、肤色和左右耳不对称特征要一致。
 - 每个 key 的 **alpha RGBA、轮廓/mesh、2D 语义点、显示/隐藏、独立内侧发际线、前后层约束** 必须可验证。颜色风格可以很简单，但结构不可省略。
-- 资源输入可由自制矢量参考或同角色的真实分层合法资产提供。真实动漫风格素材升级在 B0 验收之后；不把第三方游戏原画提交公开仓库。AI 生图时先锁正面角色，按侧面/3/4 多视角参考做图并独立审查，而非无约束地生四张不同人物。
+- 资源输入可由自制矢量参考或同角色的真实分层合法资产提供。真实动漫风格素材升级在头部首阶段验收之后；不把第三方游戏原画提交公开仓库。AI 生图时先锁正面角色，按侧面/3/4 多视角参考做图并独立审查，而非无约束地生四张不同人物。
 
 ### 第二阶段：水平 360° 头部
 
 - 先有 180° 独立后脑/头发和 270° 独立左侧 profile，再补 135/225/315° 关键姿态。
 - **头部八个推荐关键角度** 0,45,90,135,180,225,270,315，按角度和部件设置可变 key count；身体可以 4~8 个，不强迫每个隐形部件全方向存在。
-- 通过 B0 的插值质量和补图成本决定是否必须八关键视角；否则每 15° 重画角色并非有效技术路线。
+- 通过头部首阶段的插值质量和补图成本决定是否必须八关键视角；否则每 15° 重画角色并非有效技术路线。
 
 ## 资产模型（TypeScript / JSON）
 
@@ -111,10 +111,10 @@ View-specific residual `Δ_{i,k}` accounts for intentional stylization in the ke
 |---|---|---|
 | T00 | 固定参考角色、源图 SHA、镜头标定与初始姿势 | `baseline.json`、`reference-hashes.json` |
 | T01 | Beauty / ID / Depth / Alpha 使用统一像素覆盖；注入错误深度与掩码 | `coverage-parity.json`、`fault-injection.json` |
-| T02 | 独立绘制 0°、45°、90° 分层头部；30°、60°、75° 独立留出；注册鼻、耳、发际线等语义点 | `reference-manifest.json`、`landmarks.json`、`layer-occlusion.json` |
-| T03B | 建立 3D 锚点、局部 ArtMesh、分区域空间深度和视角状态；输出 0°–90° 图板 | `head90-angles.png`、四通道诊断图、`head90-qa.json` |
+| T02 | 独立绘制 0°、45°、90° 分层头部；30°、60°、75° 独立留出；注册鼻、耳、发际线等语义点 | `reference-manifest.json`、`landmarks.json`、`layer-occlusion.json`、`source-hashes.json` |
+| T03B | 建立 3D 锚点、局部 ArtMesh、分区域空间深度和视角状态；输出 0°–90° 图板 | `head90-angles.png`、`head90-beauty.png`、`head90-id.png`、`head90-depth.png`、`head90-alpha.png`、`head90-qa.json` |
 | T04 | 比较 30°、60°、75° 留出参考及 90° 真正侧脸，测量补画与形变工作量 | `head90-review.json`、`head90-decision.json` |
-| T05 | 扩展左右侧和背面，并加入按部件设定的 VDD 修形 | 13 个检验角度、90°/270° 密集帧、`head360-qa.json` |
+| T05 | 扩展左右侧和背面，并加入按部件设定的 VDD 修形 | `head360-angles.png`、`head360-profile-strips.png`、`head360-qa.json` |
 | T06 | 引入独立头部转向、眨眼和发丝运动 | `head-motion.mp4`、`head-motion-qa.json` |
 | T07 | 整合全身骨骼、IK、动作视觉缩短与足部接地 | `fullbody-192.mp4`、`fullbody-qa.json` |
 
