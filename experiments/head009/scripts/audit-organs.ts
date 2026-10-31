@@ -21,7 +21,9 @@ try{
   // We also use actual render-target ID pixels, so this is not merely a synthetic math comparison.
   const visibility=await page.evaluate(y=>window.head009.qa(y).visibleParts,yaw);
   const organPixels=Object.fromEntries(Object.entries(reg.organParts).map(([semantic,part])=>[semantic,visibility[part]??0]));
-  result.push({...compare,organPixels,nosePositionFaultDetected:caughtFault});
+  const predictions=Object.fromEntries(Object.entries(compare.errors).filter(([_,v])=>v.errorPx>=0).map(([k,v])=>[k,v.predicted]));
+  const actualVisiblePartProbes=await page.evaluate(({yaw,predictions,organParts})=>window.head009.probeParts(yaw,predictions,organParts),{yaw,predictions,organParts:reg.organParts});
+  result.push({...compare,organPixels,actualVisiblePartProbes,nosePositionFaultDetected:caughtFault});
   const view=reg.views.find(v=>v.yaw===yaw)!;
   const png=await page.evaluate(async({yaw,view,compare})=>{
    window.head009.frame(yaw);
@@ -57,13 +59,14 @@ try{
  const visibleAnatomy=key.every(x=>['nose','mouth','face','farEye','farEar'].every(p=>Object.entries(x.organPixels).some(([k,v])=>reg.organParts[k]===p&&v>0)));
  const keyCoordinatePass=key.every(x=>(x.maxErrorPx??Infinity)<=8);
  const negativeControlsPass=result.every(x=>x.nosePositionFaultDetected);
+ const keyVisibleLandmarkPass=key.every(x=>Object.values(x.actualVisiblePartProbes).every(p=>p.within8px));
  const heldoutSummary=heldout.map(x=>({yaw:x.yaw,max:x.maxErrorPx,mean:x.meanErrorPx,byOrgan:Object.fromEntries(Object.entries(x.errors).map(([k,v])=>[k,v.errorPx]))}));
  const report={schema:'HEAD009-ORGAN-QA-V1',sourceSha:'see source-hashes.json',angles:yaws,results:result,
-  keyCoordinatePass,visibleAnatomy,negativeControlsPass,heldoutSummary,
-  status:keyCoordinatePass&&negativeControlsPass?'PASS_ORGAN_REFERENCE_ENGINEERING':'FAIL_ORGAN_REFERENCE_ENGINEERING',
+  keyCoordinatePass,visibleAnatomy,negativeControlsPass,keyVisibleLandmarkPass,heldoutSummary,
+  status:keyCoordinatePass&&negativeControlsPass&&keyVisibleLandmarkPass?'PASS_ORGAN_REFERENCE_ENGINEERING':'FAIL_ORGAN_REFERENCE_ENGINEERING',
   visualStatus:'PENDING_INDEPENDENT_REVIEW',scope:'2D landmark reprojection + actual visible Part-ID pixels; not proof of source landmark raster visibility nor anatomical quality'};
  await writeFile(join(out,'organ-qa.json'),JSON.stringify(report,null,2)+'\n');
- console.log('HEAD009_ORGAN_SUMMARY '+JSON.stringify({status:report.status,keyCoordinatePass,visibleAnatomy,negativeControlsPass,heldoutSummary}));
+ console.log('HEAD009_ORGAN_SUMMARY '+JSON.stringify({status:report.status,keyCoordinatePass,visibleAnatomy,negativeControlsPass,keyVisibleLandmarkPass,heldoutSummary}));
  if(report.status!=='PASS_ORGAN_REFERENCE_ENGINEERING')process.exitCode=1;
 }catch(err){console.error(err);process.exitCode=1;}
 finally{await browser.close();}

@@ -145,6 +145,25 @@ export function qa(yaw:number){
   faultMaskCoverageMismatch:maskFault,faultDepthIdChangedPixels:depthFault,actualSideAnatomy,
   result:coverage>10000&&parity.every(x=>x===0)&&maskFault>500&&depthFault>100&&actualSideAnatomy?'PASS_ENGINEERING':'FAIL'};
 }
+// Pixel-level check against the ACTUAL visible z-buffer part-ID raster.
+// readRenderTargetPixels is bottom-up, whereas source annotations use top-left origin.
+export function probeParts(yaw:number, points:Record<string,Point>, organParts:Record<string,string>){
+ const id=raw(yaw,1);
+ const out:Record<string,{part:string;nearestVisiblePx:number|null;within8px:boolean}>={};
+ for(const [semantic,[cx,cy]] of Object.entries(points)){
+  const target=parts.findIndex(p=>p.id===organParts[semantic]);
+  if(target<0)throw Error('unmapped part for '+semantic);
+  let near=Infinity;
+  for(let dy=-24;dy<=24;dy++)for(let dx=-24;dx<=24;dx++){
+   const x=Math.round(cx)+dx,y=Math.round(cy)+dy;
+   if(x<0||x>=size||y<0||y>=size)continue;
+   const p=((size-1-y)*size+x)*4;
+   if(id[p+3]>0 && id[p]===target+1)near=Math.min(near,Math.hypot(cx-x,cy-y));
+  }
+  out[semantic]={part:parts[target]!.id,nearestVisiblePx:Number.isFinite(near)?near:null,within8px:near<=8};
+ }
+ return out;
+}
 frame(0);
-declare global {interface Window {head009:{frame:typeof frame;qa:typeof qa}}}
-window.head009={frame,qa};
+declare global {interface Window {head009:{frame:typeof frame;qa:typeof qa;probeParts:typeof probeParts}}}
+window.head009={frame,qa,probeParts};
