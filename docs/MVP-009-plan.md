@@ -107,18 +107,18 @@ View-specific residual `Δ_{i,k}` accounts for intentional stylization in the ke
 
 ## 任务与阶段验收
 
-| ID | Goal | Hard evidence | Pass to next? |
-|---|---|---|---|
-| B01 | New shared coverage QA & fault injection | beauty/ID/depth/alpha parity PNGs; deliberately broken depth and stale mask each FAIL | 100% negative controls detect defect |
-| B02 | Three real 0/45/90 layered head keys + held-out 30/60/75 | source hashes, view-wise part sheet, landmark/occlusion graph + independent reference | Real side profile exists and approved in source |
-| B03 | 3D anchors from two-view correspondences | 3D anchor overlay, X/Z reprojection traces and error; different depth across view | Anchors influence both pixel position and depth |
-| B04 | View-dependent depth + visibility engine | per-angle ID/depth/mask/beauty, wrong-order injections | 0/45/75/90 overlapping face/ear/hair PASS (nonzero overlap) |
-| B05 | 0→90° art interpolation | 0,15,30,45,60,75,90 angle board; held-out refs | 90 true profile + intermediate visual pass, no split face/ghost line |
-| B06 | Extend LEFT and rear keyviews | 0…360 key art + 13-angle independent probes + 90/270 transition strips | Both side profiles, rear and 0/360 seam pass |
-| B07 | Local head yaw / blink / minor movement | one 4–8 s dynamic **head-only** clip + masks | Independently moving head doesn't break layer order |
-| B08 | Full-body and pose | after B07: torso/arms/legs + 3D joint IK, pose-aware key art, foot contact | 8 s /192 frames **full-body** visual pass |
+| 阶段 | 实施内容 | 验收证据 |
+|---|---|---|
+| T00 | 固定参考角色、源图 SHA、镜头标定与初始姿势 | `baseline.json`、`reference-hashes.json` |
+| T01 | Beauty / ID / Depth / Alpha 使用统一像素覆盖；注入错误深度与掩码 | `coverage-parity.json`、`fault-injection.json` |
+| T02 | 独立绘制 0°、45°、90° 分层头部；30°、60°、75° 独立留出；注册鼻、耳、发际线等语义点 | `reference-manifest.json`、`landmarks.json`、`layer-occlusion.json` |
+| T03B | 建立 3D 锚点、局部 ArtMesh、分区域空间深度和视角状态；输出 0°–90° 图板 | `head90-angles.png`、四通道诊断图、`head90-qa.json` |
+| T04 | 比较 30°、60°、75° 留出参考及 90° 真正侧脸，测量补画与形变工作量 | `head90-review.json`、`head90-decision.json` |
+| T05 | 扩展左右侧和背面，并加入按部件设定的 VDD 修形 | 13 个检验角度、90°/270° 密集帧、`head360-qa.json` |
+| T06 | 引入独立头部转向、眨眼和发丝运动 | `head-motion.mp4`、`head-motion-qa.json` |
+| T07 | 整合全身骨骼、IK、动作视觉缩短与足部接地 | `fullbody-192.mp4`、`fullbody-qa.json` |
 
-B01 → B05 MUST finish with visual approval before B06. If B05 FAILS, do not begin a full 360 movie.
+每一阶段通过对应的程序门禁及独立视觉检查后，才进入依赖它的下一阶段；当前任务及状态以 `docs/MVP-009-tasks.json` 为准。
 
 ## 机器与视觉验收
 
@@ -133,11 +133,9 @@ B01 → B05 MUST finish with visual approval before B06. If B05 FAILS, do not be
 
 ## 阶段决策与产物管理
 
-- If B02 cannot provide a true same-character 90° profile, **stop asset research**; do not attempt interpolation.
-- If B04 can't represent occlusion with 2D piecewise layers, split that part; if repeated split/merge still fails, compare a **limited local 3D depth patch/hybrid A** rather than the full head model. Do not silently switch project-wide architecture.
-- If B05 needs continuous hand-painted in-between images to avoid every ghost/jump, B has failed its efficiency premise; record why and compare A/hybrid. Repeated manual per-shot patches are not a viable generic workflow.
-- Stage goal is **visual 0–90°, then 360°, then dynamics**, not "192 encoded frames".
-- Stay in `tims-SP/koma-motion-lab` until B06+B07 independently accepted; production `tims-SP/koma-motion` remains untouched.
-- Commit code and text-only manifests per stage, keep large originals and MP4/PNG in Actions artifacts or private Draft Releases, status `PASS / FAIL / BLOCKED / NOT_TESTED` as evidence demands.
-
-**Immediate execution target:** B00+B01+B02, then B03–B05. Avoid authoring full-body or high-fidelity hair painting until the 0→90 profile works.
+- T04 根据真实侧脸、留出角度和补画工时决定继续扩展该头部，还是先对局部鼻、耳、脸发接缝进行同素材的三维补强对照。
+- 对于周期性增加关键原画或多次局部修正的部位，记录总图数、修正时长、遮挡错误数量和连续性指标，选择可复用成本最低且视觉通过的表示。
+- 在同一头部完成 0°–90°，继而覆盖水平 360°，最后增加头部运动和全身运动。
+- 每个阶段保存源代码 SHA、源图 SHA、截图、深度与 ID 诊断、独立检查结论和准确阶段状态。
+- 测试仓库 `tims-SP/koma-motion-lab` 承载实验与验收；经过独立验收的表示再迁入正式仓库 `tims-SP/koma-motion`。
+- 源码与文本证据保存到 Git；原画、视频和大型图像存储在 Actions Artifact 或经授权的存储。
