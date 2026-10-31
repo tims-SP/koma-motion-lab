@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "MVP009-HEAD360-PLAN-V1",
+  "date": "2026-11-01",
+  "phase": "PLANNED_NOT_IMPLEMENTED",
+  "labRepo": "tims-SP/koma-motion-lab",
+  "productionRepo": "tims-SP/koma-motion",
+  "parentPlan": "docs/experiments/MVP-009-head360-representation-plan.md",
+  "originalFailureCommit": "ba3d42bd4bb67c2b40d60a709bc4229cc35562d7",
+  "currentVisualStatus": "FAIL_VISUAL",
+  "candidateA": "volume_uv_view_corrected",
+  "candidateB": "multi_view_art_depth_billboards",
+  "firstImplementation": "A",
+  "anglesDeg": [
+    0,
+    45,
+    75,
+    90,
+    105,
+    135,
+    180,
+    225,
+    255,
+    270,
+    285,
+    315,
+    360
+  ],
+  "sideDenseChecksDeg": [
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274
+  ],
+  "cameraPolicy": "Fixed camera + rotated object and orbit camera + fixed object, same relative view and pose",
+  "hardRule": "No full-body 192 frame movie before head side-profile, depth and parity gates plus independent visual accept",
+  "tasks": [
+    {
+      "id": "T00",
+      "name": "freeze_baseline",
+      "dependsOn": [],
+      "action": "snapshot fixed source commit, prior frame crops, repeat visible FAIL",
+      "evidence": [
+        "baseline.json",
+        "baseline-angles"
+      ],
+      "priority": "PENDING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T01",
+      "name": "qa_shader_parity",
+      "dependsOn": [
+        "T00"
+      ],
+      "action": "same beauty/id/depth/alpha fragment discard; negative controls MUST fail",
+      "evidence": [
+        "parity-report.json",
+        "negative-controls.png"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T02",
+      "name": "reference_head_semantics",
+      "dependsOn": [
+        "T00"
+      ],
+      "action": "original independent side-facing nose, ear, hairline refs and stable IDs",
+      "evidence": [
+        "reference-manifest.json",
+        "landmarks.json",
+        "source-hashes.json"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T03A",
+      "name": "volumetric_head",
+      "dependsOn": [
+        "T01",
+        "T02"
+      ],
+      "action": "real world/camera-relative 3D face nose ears and hair volumes",
+      "evidence": [
+        "A-angle-board.png",
+        "A-depth-board.png",
+        "A-id-board.png",
+        "A-qa.json"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T03B",
+      "name": "layered_head",
+      "dependsOn": [
+        "T01",
+        "T02"
+      ],
+      "action": "Rivers/Kitamura-like explicit depth correspondences and 4 actual side views",
+      "evidence": [
+        "B-angle-board.png",
+        "B-depth-board.png",
+        "B-id-board.png",
+        "B-qa.json"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T04",
+      "name": "decision",
+      "dependsOn": [
+        "T03A",
+        "T03B"
+      ],
+      "action": "compare same references, geometry, semantic silhouettes and asset repair costs",
+      "evidence": [
+        "ab-comparison.png",
+        "decision.md"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T05",
+      "name": "original_art_uv_vdd",
+      "dependsOn": [
+        "T04"
+      ],
+      "action": "match art identity at key views before enabling VDD and intermediate turns",
+      "evidence": [
+        "texture-qa.json",
+        "art-compare-board.png"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T06",
+      "name": "head_motion",
+      "dependsOn": [
+        "T05"
+      ],
+      "action": "independent head yaw, pitch diagnostic, blink with hair/skin contacts",
+      "evidence": [
+        "dynamic-head.mp4",
+        "dynamic-head-qa.json"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "T07",
+      "name": "full_body",
+      "dependsOn": [
+        "T06"
+      ],
+      "action": "only after head visual pass, integrate articulated whole-body",
+      "evidence": [
+        "fullbody-192.mp4",
+        "fullbody-qa.json"
+      ],
+      "priority": "BLOCKING",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "gates": [
+    {
+      "id": "S00",
+      "name": "INDEPENDENT_REFERENCE",
+      "criterion": "pass only when reference comes from independently authored art and provenance/sha",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S01",
+      "name": "REAL_SIDE_PROFILE",
+      "criterion": "90 and 270 visible nasal tip, brow, chin, ear; pass machine+vision",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S02",
+      "name": "CORRECT_DEPTH_OCCLUSION",
+      "criterion": "front/side/back scalp/face/ear depth graph, sampled all 13 angles and negative controls",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S03",
+      "name": "PIXEL_COVERAGE_PARITY",
+      "criterion": "beauty/ID/depth/alpha same discard/clip; <=0.5 percent interior coverage mismatch, <=1px edge",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S04",
+      "name": "CAMERA_RELATIVE_ORBIT",
+      "criterion": "camera orbit vs model rotation equal at matching relative view with controlled lights",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S05",
+      "name": "SEAM_AND_CONTINUITY",
+      "criterion": "same-pose 0/360 same mask, 90/270 strips no floating islands",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S06",
+      "name": "ART_ANCHOR_FIDELITY",
+      "criterion": "authored cardinal reference silhouette IoU >=0.93 and landmarks <=2pct head height, plus visual",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S07",
+      "name": "INDEPENDENT_FULL_FRAME_VISUAL",
+      "criterion": "full-resolution angle board and contiguous side frame strips reviewed",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S08",
+      "name": "SCOPE_INTEGRITY",
+      "criterion": "head pass never implies fullbody/production pass",
+      "status": "NOT_RUN"
+    }
+  ],
+  "expectedExit": "PASS_HEAD360_VISUAL or FAIL_VISUAL with exact evidence"
+}
