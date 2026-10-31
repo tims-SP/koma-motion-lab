@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_ORGAN_VDD_SWEEP_REVIEW",
+  "phase": "HEAD90_ORGAN_VDD_ENGINEERING_SWEEP_PASS_VISUAL_REVIEW",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -109,8 +109,8 @@
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "IN_PROGRESS",
-      "visualStatus": "PENDING_CONTINUOUS_SWEEP_AND_FRESH_REFERENCE",
-      "pending": "Inspect 91-frame 0-90 turn, preserve cardinal art, then independently author new withheld views for final organ/depth validation.",
+      "visualStatus": "PARTIAL_VISUAL_REVIEW_EAR_ENTRY_PENDING",
+      "pending": "Author source-driven 78-90 degree ear emergence/occlusion keys and fresh independent 20/55/82 reference, then rerun visual gates.",
       "engineeringEvidence": "Actual SVG key views 0/45/90 silhouette IoU 0.9954/0.9958/0.9940; 60/75 farEar visible pixels reduced 2197->687 and 3034->660 with authored key pixels unchanged",
       "organSubtasks": [
         {
@@ -129,7 +129,7 @@
         {
           "id": "T03B-3",
           "name": "organ_view_deformation",
-          "status": "ENGINEERING_PASS_VISUAL_IN_PROGRESS",
+          "status": "PASS_ENGINEERING_SWEEP_VISUAL_REVIEW_IN_PROGRESS",
           "dependsOn": [
             "T03B-2"
           ],
@@ -149,7 +149,7 @@
             "Localized face jaw, nasal silhouette, nose line and mouth VDD controls preserve exact 0/45/90 source geometry",
             "Real WebGL 0/30/45/60/75/90 screenshot checks and independent source mapping"
           ],
-          "verifiedRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251317967",
+          "verifiedRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251837430",
           "developmentReferenceMetricsPx": {
             "30.face.chin": {
               "before": 39.818,
@@ -170,7 +170,49 @@
               "after": 6.22
             }
           },
-          "caveat": "60/75 eye IDs corrected, so old farEye error is not same-semantic baseline; 30/60/75 were consulted during development and require fresh heldout views for unbiased validation."
+          "caveat": "60/75 eye IDs corrected, so old farEye error is not same-semantic baseline; 30/60/75 were consulted during development and require fresh heldout views for unbiased validation.",
+          "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251837430/artifacts/13060994438",
+          "engineering": {
+            "keyViewIoU": {
+              "0": 0.9954382014920358,
+              "45": 0.9958196175050993,
+              "90": 0.9940460047829196
+            },
+            "developmentSilhouetteIoU": {
+              "30": 0.9313779745434422,
+              "60": 0.9211287390513965,
+              "75": 0.9068743796659906
+            },
+            "continuousYawFrames": 91,
+            "videoDurationSeconds": 3.033333,
+            "peakYaw": 60,
+            "medianFrameChangedFraction": 0.00560546875,
+            "peakFrameChangedFraction": 0.00959716796875,
+            "checks": "persistent eye / exiting eye / nose and mouth / coverage parity / source source-mask parity passed",
+            "sideHairContactCorrection": "Source mesh depth reconciled with side-hair stroke at 45-90 yaw"
+          },
+          "visualReview": {
+            "status": "PARTIAL",
+            "anglesReviewed": [
+              0,
+              30,
+              45,
+              60,
+              75,
+              90
+            ],
+            "accepted": [
+              "source-key reconstruction",
+              "consistent visible eye identity",
+              "nose mouth visibility",
+              "60 degree side hair ink contact after z correction"
+            ],
+            "blocking": [
+              "ear exterior grows abruptly between approximately 80 and 90 degrees",
+              "fresh reference views 20/55/82 not yet independently authored or checked",
+              "side profile art remains schematic and requires higher-fidelity production art"
+            ]
+          }
         }
       ]
     },
@@ -267,34 +309,34 @@
       "id": "S05",
       "name": "SEAM_AND_CONTINUITY",
       "criterion": "same-pose 0/360 same mask, 90/270 strips no floating islands",
-      "status": "NOT_RUN"
+      "status": "PARTIAL_HEAD90_YAW_SWEEP_ONLY"
     },
     {
       "id": "S06",
       "name": "ART_ANCHOR_FIDELITY",
       "criterion": "authored cardinal reference silhouette IoU >=0.93 and landmarks <=2pct head height, plus visual",
-      "status": "PASS_KEY_ORGAN_PIXELS_HELDOUT_DEVIATIONS"
+      "status": "PASS_CARDINAL_ENGINEERING_DEV_ART_ONLY"
     },
     {
       "id": "S07",
       "name": "INDEPENDENT_FULL_FRAME_VISUAL",
       "criterion": "full-resolution angle board and contiguous side frame strips reviewed",
-      "status": "FAIL_HELDOUT_ORGAN_VISUAL"
+      "status": "PARTIAL_VISUAL_EAR_ENTRY_PENDING"
     },
     {
       "id": "S08",
       "name": "SCOPE_INTEGRITY",
       "criterion": "head pass never implies fullbody/production pass",
-      "status": "NOT_RUN"
+      "status": "PASS_SCOPE_HEAD90_ONLY"
     }
   ],
   "expectedExit": "PASS_HEAD360_VISUAL or FAIL_VISUAL with exact evidence",
   "ownerSelectedPlan": "B",
   "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
   "selectedImplementation": "B",
-  "lastImplementationCommit": "cdb9532a02720f77c838846b7009f9a6a3d449c6",
-  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705",
-  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705/artifacts/13060844731",
+  "lastImplementationCommit": "79f8251afb80e4dca8adecd4a2896fb51b73d1b0",
+  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251837430",
+  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251837430/artifacts/13060994438",
   "validationPolicy": {
     "keyArtYaw": [
       0,

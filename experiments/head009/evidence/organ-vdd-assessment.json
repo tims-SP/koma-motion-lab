@@ -2,8 +2,8 @@
   "schema": "HEAD009-ORGAN-VDD-ASSESSMENT-V1",
   "parent": "experiments/head009/evidence/organ-qa-review.json",
   "architecture": "MVP-009 Plan B",
-  "commit": "031d49715eca26fe3a5291584722bbc1fe6b2f3a",
-  "engineeringRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251317967",
+  "commit": "79f8251afb80e4dca8adecd4a2896fb51b73d1b0",
+  "engineeringRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251837430",
   "implemented": {
     "persistentEye": "nearEye across 45/90",
     "disappearingEye": "farEye geometric contraction ends before 65",
@@ -50,11 +50,23 @@
     82
   ],
   "visualReview": {
-    "keyViews": "PASS_CARDINAL_RECONSTRUCTION",
-    "yaw30": "NEEDS_FACE_AND_HAIRLINE",
-    "yaw60": "NEEDS_SIDE_STRAND_AND_SCALP_CONTACT",
-    "yaw75": "NEEDS_SIDE_STRAND_AND_SCALP_CONTACT",
-    "sweep": "PENDING_CI_VIDEO"
+    "keyViews": "PASS_CARDINAL_SOURCE_RECONSTRUCTION",
+    "faceOrgans": "PASS_ENGINEERING_REGISTERED",
+    "sideHairContact": "VISUAL_IMPROVED_AT_60",
+    "earEmergence": "NEXT_BLOCKER_80_90",
+    "freshIndependentAngles": "REQUIRED_20_55_82",
+    "sweep": "PASS_91_FRAMES_ENGINEERING_REVIEW_PARTIAL"
   },
-  "status": "ENGINEERING_CORRECTIVES_PASS_VISUAL_IN_PROGRESS"
+  "status": "HEAD90_VDD_ENGINEERING_COMPLETE_VISUAL_APPROVAL_PENDING",
+  "videoArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251837430/artifacts/13060994438",
+  "sweep": {
+    "frames": 91,
+    "durationSeconds": 3.033333,
+    "format": "mp4/h264/yuv420p",
+    "medianChangedFraction": 0.00560546875,
+    "peakChangedFraction": 0.00959716796875,
+    "peakYaw": 60,
+    "bodyScope": "STATIC_HEAD_ONLY",
+    "status": "PASS_ENGINEERING_SWEEP"
+  }
 }
