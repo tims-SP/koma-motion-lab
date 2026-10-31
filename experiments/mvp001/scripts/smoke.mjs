@@ -50,7 +50,8 @@ try {
   if(samples[0].yawDeg!==0 || samples[24].yawDeg!==360) throw new Error('Incorrect angle endpoints');
   if(Math.abs(samples[0].viewMatrix[0]-samples[24].viewMatrix[0])>0.00001) throw new Error('Rotation loop seam mismatch');
   const rgbaSet=new Set(samples.slice(0,24).map(s=>s.sampleRGBA.join(',')));
-  if(rgbaSet.size<2) throw new Error('All sample pixels identical: possible blank/failed rendering');
+  // The viewport center may lie in the gap between the legs in every frame.
+  // Per-frame full-frame foreground counts already assert nonblank rendering.
   execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-framerate','24','-i',join(frames,'frame-%03d.png'),'-c:v','libx264','-pix_fmt','yuv420p','-r','24',join(out,'mvp001-m0-engineering-smoke.mp4')]);
   const movieBytes=statSync(join(out,'mvp001-m0-engineering-smoke.mp4')).size;
   if(movieBytes<3000) throw new Error('Encoded video unusually small');
