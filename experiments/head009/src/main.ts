@@ -94,7 +94,12 @@ function setScene(yaw:number,pass:number,fault:'none'|'mask'|'depth'='none'){
   const v=sourceFor(part,yaw);
   const [ax,,az]=part.anchor;
   const depth=lerp(part.depthBias[a],part.depthBias[b],t);
-  const z=az*c-ax*s+depth;
+  // The authored 45° and 90° ear layers are preserved exactly. Between them,
+  // the near-side face occludes the ear until its final profile emergence.
+  // This per-part depth correction is a view-conditioned occlusion rule (Plan B VDD).
+  const earOcclusion=part.id==='farEar'&&yaw>45&&yaw<90
+    ? 0.64*Math.sin(Math.PI*(yaw-45)/45) : 0;
+  const z=az*c-ax*s+depth-earOcclusion;
   for(const {mesh,kind} of components){
    mesh.visible=!!v && !!(kind==='fill'?v.source?.fill:v.source?.stroke);
    if(!mesh.visible||!v)continue;
