@@ -3,7 +3,7 @@ export type ViewRole='key'|'heldout';
 export interface OrganLandmarks {
  schema:string;units:'SVG512';keyAngles:number[];heldOutAngles:number[];
  organParts:Record<string,Id>;required:string[];
- views:{yaw:number;source:string;role:ViewRole;points:Record<string,Point>}[];
+ views:{yaw:number;source:string;role:ViewRole;points:Record<string,Point>;occludedLandmarks?:string[]}[];
 }
 export const svgToWorld=([x,y]:Point):Point=>[(x-256)*2.7/512,(256-y)*2.7/512];
 export const worldToCanvas=([x,y]:Point):Point=>[(x/2.7+.5)*640,(.5-y/2.7)*640];

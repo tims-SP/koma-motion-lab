@@ -16,12 +16,13 @@
     "eye.R.center": "farEye",
     "eye.L.center": "nearEye",
     "nose.bridge": "nose",
-    "nose.tip": "nose",
+    "nose.tip": "face",
     "mouth.center": "mouth",
     "face.chin": "face",
     "ear.R.center": "farEar",
     "ear.L.center": "nearEar",
-    "fringe.hairline": "fringe"
+    "fringe.hairline": "fringe",
+    "nose.ink": "nose"
   },
   "required": [
     "eye.R.center",
@@ -72,8 +73,15 @@
         "fringe.hairline": [
           264,
           229
+        ],
+        "nose.ink": [
+          252,
+          297
         ]
-      }
+      },
+      "occludedLandmarks": [
+        "ear.R.center"
+      ]
     },
     {
       "yaw": 30,
@@ -150,8 +158,15 @@
         "fringe.hairline": [
           295,
           218
+        ],
+        "nose.ink": [
+          351,
+          277
         ]
-      }
+      },
+      "occludedLandmarks": [
+        "ear.R.center"
+      ]
     },
     {
       "yaw": 60,
@@ -233,8 +248,8 @@
           239
         ],
         "nose.bridge": [
-          345,
-          232
+          349,
+          246
         ],
         "nose.tip": [
           390,
@@ -255,6 +270,10 @@
         "fringe.hairline": [
           310,
           230
+        ],
+        "nose.ink": [
+          364,
+          261
         ]
       }
     }

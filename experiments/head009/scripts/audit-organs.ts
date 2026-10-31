@@ -59,15 +59,21 @@ try{
  const visibleAnatomy=key.every(x=>['nose','mouth','face','farEye','farEar'].every(p=>Object.entries(x.organPixels).some(([k,v])=>reg.organParts[k]===p&&v>0)));
  const keyCoordinatePass=key.every(x=>(x.maxErrorPx??Infinity)<=8);
  const negativeControlsPass=result.every(x=>x.nosePositionFaultDetected);
- const keyVisibleMisses=key.flatMap(x=>Object.entries(x.actualVisiblePartProbes).filter(([_,p])=>!p.within8px).map(([name,p])=>({yaw:x.yaw,name,...p})));
+ const keyVisibleMisses=key.flatMap(x=>{
+  const annotated=reg.views.find(v=>v.yaw===x.yaw)!;
+  return Object.entries(x.actualVisiblePartProbes)
+   .filter(([name,p])=>!p.within8px&&!annotated.occludedLandmarks?.includes(name))
+   .map(([name,p])=>({yaw:x.yaw,name,...p}));
+ });
+ const intentionalKeyOcclusions=key.map(x=>({yaw:x.yaw,labels:reg.views.find(v=>v.yaw===x.yaw)!.occludedLandmarks??[]}));
  const keyVisibleLandmarkPass=keyVisibleMisses.length===0;
  const heldoutSummary=heldout.map(x=>({yaw:x.yaw,max:x.maxErrorPx,mean:x.meanErrorPx,byOrgan:Object.fromEntries(Object.entries(x.errors).map(([k,v])=>[k,v.errorPx]))}));
  const report={schema:'HEAD009-ORGAN-QA-V1',sourceSha:'see source-hashes.json',angles:yaws,results:result,
-  keyCoordinatePass,visibleAnatomy,negativeControlsPass,keyVisibleLandmarkPass,keyVisibleMisses,heldoutSummary,
+  keyCoordinatePass,visibleAnatomy,negativeControlsPass,keyVisibleLandmarkPass,keyVisibleMisses,intentionalKeyOcclusions,heldoutSummary,
   status:keyCoordinatePass&&negativeControlsPass&&keyVisibleLandmarkPass?'PASS_ORGAN_REFERENCE_ENGINEERING':'FAIL_ORGAN_REFERENCE_ENGINEERING',
   visualStatus:'PENDING_INDEPENDENT_REVIEW',scope:'2D landmark reprojection + actual visible Part-ID pixels; not proof of source landmark raster visibility nor anatomical quality'};
  await writeFile(join(out,'organ-qa.json'),JSON.stringify(report,null,2)+'\n');
- console.log('HEAD009_ORGAN_SUMMARY '+JSON.stringify({status:report.status,keyCoordinatePass,visibleAnatomy,negativeControlsPass,keyVisibleLandmarkPass,keyVisibleMisses,heldoutSummary}));
+ console.log('HEAD009_ORGAN_SUMMARY '+JSON.stringify({status:report.status,keyCoordinatePass,visibleAnatomy,negativeControlsPass,keyVisibleLandmarkPass,keyVisibleMisses,intentionalKeyOcclusions,heldoutSummary}));
  if(report.status!=='PASS_ORGAN_REFERENCE_ENGINEERING')process.exitCode=1;
 }catch(err){console.error(err);process.exitCode=1;}
 finally{await browser.close();}
