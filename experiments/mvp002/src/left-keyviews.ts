@@ -9,7 +9,15 @@
  * This does not mean the 270° illustration is production-quality art.
  */
 type XY = readonly [number,number];
-const xy=(values:number[][]):readonly XY[]=>values.map(([x,y])=>[x,y] as XY);
+// The left-profile art was authored in reverse silhouette winding.
+// Reindex the *same independently authored left points* to match the stable
+// CCW/CW semantic landmark order of front/right/back. This is NOT mirror(90).
+// Without this correspondence 180°→270° and 270°→360° interpolation folds.
+const CORRESPONDENCE=[3,2,1,0,10,9,8,7,6,5,4] as const;
+const xy=(values:number[][]):readonly XY[]=>{
+ if(values.length!==11)throw Error('Expected 11 left-profile semantic landmarks');
+ return CORRESPONDENCE.map(i=>[values[i][0],values[i][1]] as XY);
+};
 export const LEFT_CONTOURS:Record<string,readonly XY[]> = {
  backHair:xy([[.55,.76],[.30,.98],[-.24,1.03],[-.65,.77],[-.79,.35],[-.70,-.28],[-.34,-.86],[.07,-.99],[.48,-.82],[.78,-.33],[.81,.21]]),
  torso:xy([[.52,.73],[.24,.96],[-.27,.91],[-.57,.67],[-.63,.21],[-.87,-.05],[-.53,-.69],[-.09,-.96],[.33,-.76],[.63,-.34],[.62,.26]]),
