@@ -1,0 +1,62 @@
+name: MVP-003 six modules one-shot integration
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/mvp002/src/integrated.ts'
+      - 'experiments/mvp002/src/integrated-controls.ts'
+      - 'experiments/mvp002/integrated.html'
+      - 'experiments/mvp002/scripts/render-integrated.ts'
+      - 'experiments/mvp002/package.json'
+      - '.github/workflows/mvp003-six-modules.yml'
+concurrency:
+  group: mvp003-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  integrated:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Setup TypeScript and WebGL/FFmpeg
+        working-directory: experiments/mvp002
+        run: |
+          npm install --no-audit --no-fund
+          npm run typecheck
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb ffmpeg
+      - name: ONE scene 360 yaw, 3D IK, arm depth crossing, face ArtMesh and lighting
+        working-directory: experiments/mvp002
+        run: xvfb-run -a npm run render:integrated
+      - name: Upload actual frames and MP4
+        uses: actions/upload-artifact@v4
+        with:
+          name: mvp003-six-module-integration
+          retention-days: 20
+          path: |
+            experiments/mvp002/out/integrated/integrated-6sec.mp4
+            experiments/mvp002/out/integrated/integrated-contact.png
+            experiments/mvp002/out/integrated/integrated-report.json
+            experiments/mvp002/out/integrated/integrated-frame-stats.json
+          if-no-files-found: error
+      - name: Optional owner-only Draft Release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="mvp003-integrated-${GITHUB_RUN_ID}"
+          gh release create "$tag" \
+            experiments/mvp002/out/integrated/integrated-6sec.mp4 \
+            experiments/mvp002/out/integrated/integrated-contact.png \
+            experiments/mvp002/out/integrated/integrated-report.json \
+            experiments/mvp002/out/integrated/integrated-frame-stats.json \
+            --target "$GITHUB_SHA" --draft \
+            --title "MVP-003 integrated six-module minimal technical validation" \
+            --notes "One original 12-part, three-view 6s test clip. Engineering evidence only; no Japanese anime visual-quality claim."
