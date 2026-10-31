@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "PLANNED_NOT_IMPLEMENTED",
+  "phase": "HEAD90_IMPLEMENTATION_IN_PROGRESS",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -54,7 +54,8 @@
         "reference-hashes.json"
       ],
       "priority": "PENDING",
-      "status": "NOT_STARTED"
+      "status": "PASS_ENGINEERING",
+      "evidenceSource": "experiments/head009/evidence/baseline.json"
     },
     {
       "id": "T01",
@@ -68,7 +69,8 @@
         "fault-injection.json"
       ],
       "priority": "BLOCKING",
-      "status": "NOT_STARTED"
+      "status": "IN_PROGRESS",
+      "engineeringEvidence": "7 angles 0 mismatch, 7 deliberate clip/depth injection detections; RGBA alpha clip pending"
     },
     {
       "id": "T02",
@@ -84,7 +86,10 @@
         "source-hashes.json"
       ],
       "priority": "BLOCKING",
-      "status": "NOT_STARTED"
+      "status": "IN_PROGRESS",
+      "referenceCount": 6,
+      "sourceManifest": "experiments/head009/reference/manifest.json",
+      "pending": "part ID normalization and source image->runtime correspondence"
     },
     {
       "id": "T03B",
@@ -103,7 +108,9 @@
         "head90-qa.json"
       ],
       "priority": "BLOCKING_PRIMARY",
-      "status": "NOT_STARTED"
+      "status": "IN_PROGRESS",
+      "visualStatus": "FAIL_VISUAL",
+      "pending": "art-mesh registration with independent right profile and held-out views"
     },
     {
       "id": "T04",
@@ -168,25 +175,25 @@
       "id": "S00",
       "name": "INDEPENDENT_REFERENCE",
       "criterion": "pass only when reference comes from independently authored art and provenance/sha",
-      "status": "NOT_RUN"
+      "status": "PASS_SOURCE_INDEPENDENCE_PENDING_REGISTRATION"
     },
     {
       "id": "S01",
       "name": "REAL_SIDE_PROFILE",
       "criterion": "90 and 270 visible nasal tip, brow, chin, ear; pass machine+vision",
-      "status": "NOT_RUN"
+      "status": "FAIL_VISUAL"
     },
     {
       "id": "S02",
       "name": "CORRECT_DEPTH_OCCLUSION",
       "criterion": "front/side/back scalp/face/ear depth graph, sampled all 13 angles and negative controls",
-      "status": "NOT_RUN"
+      "status": "IN_PROGRESS"
     },
     {
       "id": "S03",
       "name": "PIXEL_COVERAGE_PARITY",
       "criterion": "beauty/ID/depth/alpha same discard/clip; <=0.5 percent interior coverage mismatch, <=1px edge",
-      "status": "NOT_RUN"
+      "status": "PASS_ENGINEERING_OPAQUE_ONLY"
     },
     {
       "id": "S04",
@@ -210,7 +217,7 @@
       "id": "S07",
       "name": "INDEPENDENT_FULL_FRAME_VISUAL",
       "criterion": "full-resolution angle board and contiguous side frame strips reviewed",
-      "status": "NOT_RUN"
+      "status": "FAIL_VISUAL"
     },
     {
       "id": "S08",
@@ -222,5 +229,8 @@
   "expectedExit": "PASS_HEAD360_VISUAL or FAIL_VISUAL with exact evidence",
   "ownerSelectedPlan": "B",
   "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
-  "selectedImplementation": "B"
+  "selectedImplementation": "B",
+  "lastImplementationCommit": "62c4129f39d83f8270bd963452d744898c1e0b04",
+  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902",
+  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902/artifacts/13052664086"
 }

@@ -1,0 +1,62 @@
+{
+  "schema": "HEAD009-VISUAL-REVIEW-V1",
+  "sourceCommit": "62c4129f39d83f8270bd963452d744898c1e0b04",
+  "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902",
+  "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902/artifacts/13052664086",
+  "angularSamples": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90
+  ],
+  "engineering": {
+    "result": "PASS_ENGINEERING_OPAQUE_ONLY",
+    "pixelCoverageMismatchesAllPasses": 0,
+    "deliberateClipFaultDetected": true,
+    "deliberateDepthFaultDetected": true,
+    "actualProfileSideFeaturesVisible": {
+      "eye": true,
+      "ear": true,
+      "nose": true,
+      "mouth": true
+    }
+  },
+  "sourceArt": {
+    "originalDrawings": 6,
+    "independentlyAuthoredKeys": [
+      0,
+      45,
+      90
+    ],
+    "heldout": [
+      30,
+      60,
+      75
+    ],
+    "manifest": "experiments/head009/reference/manifest.json",
+    "isRuntimeSourceRegistered": false
+  },
+  "visual": {
+    "status": "FAIL_VISUAL",
+    "reviewedRealFrameAngles": [
+      0,
+      45,
+      75,
+      90
+    ],
+    "observations": [
+      "90-degree face and head outer proportions differ visibly from the separately authored right profile reference",
+      "eye-to-nose-to-ear and hairline landmarks have not been registered against source art, and the interpolated 75-degree expression remains geometric proxy",
+      "current material uses opaque polygon fills rather than registered per-part alpha paintings; 0.5% coverage success does not yet validate real RGBA clipping"
+    ]
+  },
+  "nextBlockingWork": [
+    "unify anatomical part IDs between reference SVG and runtime contours",
+    "register 0,45,90 source landmarks and color/alpha per part to runtime meshes",
+    "measure and inspect held-out 30,60,75 references before T04 decision"
+  ],
+  "stagedDecision": "REMAIN_AT_T03B_HEAD90"
+}
