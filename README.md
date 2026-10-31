@@ -1,5 +1,13 @@
 # Koma Motion Lab
 
+## Current primary research track — MVP-001 V2 (2026-10-31)
+
+**[V2 master plan](docs/experiments/MVP-001-V2-master-plan.md)** · **[V2 task status](docs/experiments/MVP-001-V2-status.md)** · [Existing asset audit](docs/experiments/MVP-001-assets-research.md)
+
+New direction: existing anime character assets first (Reverse-1999 Spine/Live2D), TypeScript-only own code, keyed layered 2.5D art + bone/IK + view-dependent deformation + art-directed light/FX. Goal: one consistent character package for 360-degree full-body turn, full-body action, and high-fidelity anime closeup.
+
+M0 had a real **infrastructure-only** pass: [Actions 41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729). T00–T11 of V2 are **NOT IMPLEMENTED** as of the plan commit. The legacy Rive/Spine/Godot runs below remain historical evidence, *not* dependencies or acceptance for the new track.
+
 ## Current experimental preview — PROD-009 (2026-10-29)
 
 - [GitHub Actions run #2](https://github.com/tims-SP/koma-motion-lab/actions/runs/40778781058): **RENDERED, QUALITY GATE FAILED**.
