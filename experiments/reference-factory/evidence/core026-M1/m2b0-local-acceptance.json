@@ -2,7 +2,14 @@
   "schema": "core026-m2b0-local-acceptance/1",
   "date": "2026-10-31 Asia/Shanghai",
   "status": "PASS_DEFAULT_ART_ONLY",
-  "ci": "PENDING",
+  "ci": {
+    "status": "PASS_DEFAULT_ART_ONLY",
+    "code_commit": "edb696f71c49011c2757a070fd12db60d0e21940",
+    "supervisor_run": 41174418164,
+    "legacy_run": 41174418131,
+    "evidence": "m2b0-ci-acceptance.json",
+    "full_M2B": "NOT_ACCEPTED"
+  },
   "attribution": {
     "design": "Codex",
     "initial_patch_application": "mcode real bash call; syntax0, capture1 due to absent Chromium",

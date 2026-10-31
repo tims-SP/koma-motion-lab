@@ -1,10 +1,10 @@
 # 当前恢复入口
 
-更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；用户最新已明确允许项目操作包括上传，本轮官方CLI正常执行，不加载旧禁止上传guard。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
+更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；用户最新已明确允许项目操作包括上传，本轮官方CLI已有实际执行，后续部分请求仍被平台自动审批拒绝；不加载旧禁止上传guard。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
 
 ## CORE026当前状态
 
-M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2A默认绘画顺序/接收面提案已通过：代码ff2fe1a的监督CI41169579730与旧回归41169579751均success，实际下载16份纯JSON产物并核对ZIP SHA；M2B0已有真实运行时与截图，默认原画本地通过PASS_DEFAULT_ART_ONLY，待新CI；完整M2B眼组策略/空间合成未过，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
+M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2A默认绘画顺序/接收面提案已通过：代码ff2fe1a的监督CI41169579730与旧回归41169579751均success，实际下载16份纯JSON产物并核对ZIP SHA；M2B0已有真实运行时与截图，默认原画已通过PASS_DEFAULT_ART_ONLY：代码edb696f的监督CI41174418164及旧回归41174418131均success，已下载20份纯JSON产物并核对ZIP SHA；完整M2B眼组策略/空间合成未过，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
 
 - 源对应：62层均经原始UV/纹理/默认祖先变换选出唯一身份；58项可单靠像素，7/8/9/10四个重复图项经默认坐标区分。只使用单一全局平移；最大残差3.905124源像素，原始UV未改。
 - 原生参考：固定camera scale0.4、position[82,1773]、720×880全图和652×652头部ROI；raw yaw九姿态[-1..1]、pitch0。18张实际PNG的来源/恢复均已保存。新总门禁核对九张head SHA。
@@ -23,7 +23,7 @@ M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611
 
 Codex已实际看默认鼻/眼/眉发/耳叶/颈部；默认还原可接受，单独瞳孔偏移时高光29未联动，不能算自然眼动。9681像素真实改变、复位恢复原SHA；改变在原画眼域内，533像素位于原始眼白单独支持外。旧“仅眼白域”假设继续BLOCKED，没有隐藏该失败。运行时depthTest=false、沿用未拟合CORE025高度剖面；源域CPU背景计算也不等于转头时screen-space背景，完整M2B与M3继续阻塞。[限制与反例](research/CORE-026-M2B0-default-art-and-eye-mask.md)。
 
-本轮只到默认原画还原通过，干净CI待提交。媒体仅ignored out/及owner-only Draft，SDK原始流不发布。登录态保留，OSS审批问题与登录成功分开记录。
+本轮只到默认原画还原通过；监督CI41174418164及旧回归41174418131均success。实际下载20份纯JSON并核对ZIP SHA，CI截图SHA与已人工查看的本地图逐张一致。[CI验收与媒体Draft](../experiments/reference-factory/evidence/core026-M1/m2b0-ci-acceptance.json)。媒体仅ignored out/及owner-only Draft，SDK原始流不发布。登录态保留，OSS审批问题与登录成功分开记录。
 
 ## 下一工单
 

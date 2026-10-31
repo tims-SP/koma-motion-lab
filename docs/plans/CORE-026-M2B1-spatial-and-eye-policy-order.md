@@ -1,6 +1,6 @@
 # CORE026 M2B1：补完空间合成与眼组策略
 
-前置检查点：M2B0仅PASS_DEFAULT_ART_ONLY。默认四张颜色/透明度/复位已通过本地门禁，待对应CI；M2B整体与M3仍未放行。代码/截图必须可复现，不得将M2B0的depthTest=false说成深度测试已完成。
+前置检查点：M2B0仅PASS_DEFAULT_ART_ONLY。默认四张颜色/透明度/复位已通过本地门禁，监督CI41174418164及旧回归41174418131已全部success，实际产物已下载核对；M2B整体与M3仍未放行。代码/截图必须可复现，不得将M2B0的depthTest=false说成深度测试已完成。
 
 1. 先复现capture_core026.mjs、capture_core026_supervisor.mjs、verify_core026_compositor_supervisor.py、run_core026_default_art_regressions.py。要求默认RGB/alpha原阈值不变，错误hard-eye-white反例仍失败。旧0姿态基线只读；不能拿新候选当真值。
 2. 阅读锁定Inox2D源码d4dd9dd7的ClipToLower、Composite framebuffer及实际Aka眼组节点。核实RGB/alpha方程和绘制上下文，保留原生4clip/派生9阴影分列。资料见native-eye-primary-source-review.json；不能再把source-alpha乘法+Normal误称原生ClipToLower。

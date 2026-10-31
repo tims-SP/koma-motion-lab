@@ -1,6 +1,6 @@
 # CORE026 M2B0：真实默认画面与眼罩失败反例
 
-2026-10-31 Asia/Shanghai。本地状态PASS_DEFAULT_ART_ONLY，干净CI待本次提交。完整M2B未通过，M3仍阻塞，不能把本报告当作空间深度、动态遮挡或自然转头通过。
+2026-10-31 Asia/Shanghai。状态PASS_DEFAULT_ART_ONLY；代码edb696f经监督CI41174418164及旧回归41174418131全部success。下载20份纯JSON产物，ZIP SHA69647af42995086adad36cfdedcdfddb61acf983f7655dbd0fec908d599c7abb与job日志一致；CI截图SHA与已人工查看的本地图逐张相同。[CI验收](../../experiments/reference-factory/evidence/core026-M1/m2b0-ci-acceptance.json)。完整M2B未通过，M3仍阻塞，不能把本报告当作空间深度、动态遮挡或自然转头通过。
 
 ## 实际执行与分工
 
