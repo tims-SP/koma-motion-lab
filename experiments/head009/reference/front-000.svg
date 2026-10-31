@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="front head independently authored 0 degrees"><rect width="512" height="512" fill="#e9edf5"/><g stroke-linejoin="round" stroke-linecap="round">
+<path data-part-id="neck" d="M220 341 L291 341 L302 449 L211 449 Z" fill="#df9f90" stroke="#4b3546" stroke-width="4"/>
+<path data-part-id="rearHair" d="M150 219 Q139 93 258 76 Q374 78 381 213 L359 388 Q317 452 235 418 Q149 402 142 315 Z" fill="#2f4165" stroke="#172438" stroke-width="7"/>
+<path data-part-id="ear.far" d="M174 252 Q151 222 154 290 Q165 316 185 302" fill="#e9ad9b" stroke="#744e52" stroke-width="4"/>
+<path data-part-id="ear.near" d="M336 252 Q365 223 357 298 Q344 322 329 305" fill="#efb6a5" stroke="#744e52" stroke-width="4"/>
+<path data-part-id="face" d="M256 137 C310 133 348 180 344 268 Q346 338 301 379 Q256 403 212 375 Q162 333 168 265 C166 183 202 139 256 137 Z" fill="#f7bfad" stroke="#563d4b" stroke-width="5"/>
+<path data-part-id="eye.far" d="M195 254 Q216 236 237 255 Q214 273 195 254 Z" fill="#273956"/>
+<path data-part-id="eye.near" d="M275 255 Q302 236 324 255 Q300 273 275 255 Z" fill="#273956"/>
+<path data-part-id="nose" d="M256 266 l-6 33 15 5" stroke="#bc786e" stroke-width="4" fill="none"/>
+<path data-part-id="mouth" d="M237 343 Q257 354 278 343" stroke="#a75662" stroke-width="4" fill="none"/>
+<path data-part-id="fringe" d="M166 250 Q137 145 191 112 Q250 66 324 112 Q367 133 356 233 L329 203 Q319 222 308 232 L293 185 L264 232 L247 181 L218 239 L207 194 L175 259 Z" fill="#334b73" stroke="#162a46" stroke-width="6"/>
+<path data-part-id="sideHair" d="M168 204 Q146 271 168 394 L198 427 L194 313 L186 249" fill="#334b73" stroke="#172438" stroke-width="5"/>
+<path data-part-id="asym-hair-mark" d="M312 159 l15 10 -8 14 -15 -11 Z" fill="#e3bf61" stroke="#785d34" stroke-width="3"/>
+</g></svg>

@@ -1,0 +1,88 @@
+{
+  "schema": "HEAD009-REFERENCE-V1",
+  "style": "original simplified vector drawing; independent semantic keyviews",
+  "coordinateSystem": "SVG 512x512; yaw 0 front; positive yaw toward character right profile",
+  "keys": [
+    {
+      "yaw": 0,
+      "path": "front-000.svg"
+    },
+    {
+      "yaw": 45,
+      "path": "threequarter-045.svg"
+    },
+    {
+      "yaw": 90,
+      "path": "profile-right-090.svg"
+    }
+  ],
+  "heldOut": [
+    {
+      "yaw": 30,
+      "path": "heldout-030.svg"
+    },
+    {
+      "yaw": 60,
+      "path": "heldout-060.svg"
+    },
+    {
+      "yaw": 75,
+      "path": "heldout-075.svg"
+    }
+  ],
+  "status": "SOURCE_AUTHORED_NOT_YET_REGISTRATION_ACCEPTED",
+  "landmarks": {
+    "front": {
+      "nose.tip": [
+        265,
+        304
+      ],
+      "ear.near": [
+        346,
+        280
+      ],
+      "chin": [
+        256,
+        394
+      ]
+    },
+    "threequarter": {
+      "nose.tip": [
+        384,
+        284
+      ],
+      "ear.near": [
+        201,
+        279
+      ],
+      "chin": [
+        288,
+        391
+      ]
+    },
+    "profile": {
+      "nose.bridge": [
+        346,
+        232
+      ],
+      "nose.tip": [
+        391,
+        284
+      ],
+      "ear.near": [
+        229,
+        284
+      ],
+      "mouth": [
+        355,
+        323
+      ],
+      "chin": [
+        295,
+        390
+      ]
+    }
+  },
+  "license": "Original reference drawings created for the project; no third-party asset",
+  "note": "Heldout SVG files are separately authored and must never enter runtime interpolation. Key paths currently require pixel-to-world registration before source fidelity can PASS."
+}
