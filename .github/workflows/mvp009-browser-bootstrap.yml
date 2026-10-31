@@ -1,0 +1,34 @@
+name: Head009 isolated-browser bootstrap
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mvp009-browser-bootstrap.yml'
+  workflow_dispatch:
+jobs:
+  package_browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Acquire isolated Playwright Chromium headless shell
+        working-directory: experiments/head009
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install chromium-headless-shell
+      - name: Export portable Chromium binaries
+        run: |
+          set -euo pipefail
+          mkdir -p transfer
+          tar -czf transfer/head009-chromium-shell.tgz -C "$HOME/.cache/ms-playwright" .
+          sha256sum transfer/head009-chromium-shell.tgz > transfer/browser-sha256.txt
+          du -h transfer/head009-chromium-shell.tgz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head009-isolated-browser
+          path: transfer/
+          retention-days: 7
+          compression-level: 0
