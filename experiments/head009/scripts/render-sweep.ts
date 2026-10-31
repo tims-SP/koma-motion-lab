@@ -35,10 +35,31 @@ try{
   measures.push({yaw,...diff});
   await page.locator('canvas').screenshot({path:join(out,'sweep-'+String(yaw).padStart(3,'0')+'.png')});
   if(yaw%5===0){
+   // Keep a whole-sweep visual contact sheet in the exact same WebGL session.
+   await page.evaluate(y=>{
+    const host=window as unknown as {sweepBoard?:HTMLCanvasElement};
+    if(!host.sweepBoard){
+     host.sweepBoard=document.createElement('canvas');
+     host.sweepBoard.width=1280;host.sweepBoard.height=1024;
+    }
+    const board=host.sweepBoard,ctx=board.getContext('2d')!;
+    const n=y/5,col=n%5,row=Math.floor(n/5),px=col*256,py=row*256;
+    ctx.fillStyle='#293249';ctx.fillRect(px,py,256,256);
+    ctx.drawImage(document.querySelector<HTMLCanvasElement>('#stage')!,px,py,256,256);
+    ctx.fillStyle='#ffffff';ctx.fillRect(px,py,48,23);
+    ctx.fillStyle='#202534';ctx.font='bold 14px sans-serif';ctx.fillText(y+'°',px+6,py+16);
+   },yaw);
    const qa=await page.evaluate(y=>window.head009.qa(y),yaw);
    organVisibility.push({yaw,nearEye:qa.visibleParts.nearEye||0,farEye:qa.visibleParts.farEye||0,nose:qa.visibleParts.nose||0,mouth:qa.visibleParts.mouth||0,face:qa.visibleParts.face||0});
   }
  }
+ const boardData=await page.evaluate(()=>{
+  const board=(window as unknown as {sweepBoard?:HTMLCanvasElement}).sweepBoard;
+  if(!board)throw Error('sweep storyboard absent');
+  return board.toDataURL('image/jpeg',.76).split(',')[1];
+ });
+ await writeFile(join(out,'head90-sweep-board.jpg'),Buffer.from(boardData,'base64'));
+ console.log('HEAD009_SWEEP_BOARD '+boardData);
  const positive=measures.filter(x=>x.yaw>0).map(x=>x.changedFraction).sort((a,b)=>a-b);
  const median=positive[Math.floor(positive.length/2)]||0;
  const peak=measures.reduce((a,b)=>a.changedFraction>b.changedFraction?a:b,measures[0]!);
