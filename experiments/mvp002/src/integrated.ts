@@ -96,7 +96,7 @@ function keyPair(yaw:number):{t:number;indices:readonly [number,number]} {
   const a=wrap(yaw),segment=Math.min(3,Math.floor(a/90));
   return {t:smooth((a-segment*90)/90),indices:[segment,(segment+1)%4]};
 }
-function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;keyIndex:number} {
+function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;baseVisible:number;frontMask:number;keyIndex:number} {
  const {t,indices}=keyPair(yaw);
  const A=part.keys[indices[0]],B=part.keys[indices[1]];
  const s=part.keys[0].contour.map((_,i)=>{
@@ -114,10 +114,12 @@ function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;keyInd
    else if(observerYaw>250)frontVisibility=smooth((observerYaw-250)/20);
    else frontVisibility=0;
  }
+ const baseVisible=lerp(A.visible,B.visible,t);
  return {shape:s,shift:[lerp(A.shift[0],B.shift[0],t),lerp(A.shift[1],B.shift[1],t)],
-         visible:lerp(A.visible,B.visible,t)*frontVisibility,keyIndex:indices[0]};
+         visible:baseVisible*frontVisibility,baseVisible,frontMask:frontVisibility,
+         keyIndex:indices[0]};
 }
-function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMaterial {
+function registeredMaterial(part:Part,yaw:number,opacity:number,frontMask=1):THREE.ShaderMaterial {
  const pair=keyPair(yaw);
  const angles:[View,View,View,View]=[0,90,180,270];
  return new THREE.ShaderMaterial({
@@ -125,7 +127,10 @@ function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMat
    artA:{value:createRegisteredArt(part,angles[pair.indices[0]])},
    artB:{value:createRegisteredArt(part,angles[pair.indices[1]])},
    transition:{value:pair.t},
-   strength:{value:opacity}
+   strength:{value:opacity},
+   frontMask:{value:frontMask},
+   faceWipe:{value:['face','eyes','fringe'].includes(part.id)?1:0},
+   wipeDirection:{value:wrap(yaw)<180?1:-1}
   },
   // Face/eyes/fringe are an authored art-compositing stack, not generic 3D
   // transparent planes. Their visibility fades across rear-key transitions.
@@ -143,12 +148,17 @@ function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMat
    'uniform sampler2D artB;',
    'uniform float transition;',
    'uniform float strength;',
+   'uniform float frontMask, faceWipe, wipeDirection;',
    'varying vec2 registeredUV;',
    'void main(){',
    '  vec4 a=texture2D(artA,registeredUV);',
    '  vec4 b=texture2D(artB,registeredUV);',
    '  float coverage=mix(a.a,b.a,transition);',
    '  float alpha=coverage*strength;',
+   '  if(faceWipe>0.5 && frontMask<0.999){',
+   '    float side=wipeDirection>0.0?registeredUV.x:1.0-registeredUV.x;',
+   '    if(side<1.0-frontMask)discard;',
+   '  }',
    '  if(alpha < 0.08) discard;',
    '  vec3 premultiplied=mix(a.rgb*a.a,b.rgb*b.a,transition);',
    '  vec3 color=premultiplied/max(coverage,0.001);',
@@ -186,7 +196,12 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squas
    uvs.push([(canonical[0]+1)/2,(canonical[1]+1)/2]);
  }
  const indices:number[]=[];for(let i=1;i<=n;i++)indices.push(0,i,i%n+1);
- emitGeometry(vertices,uvs,indices,registeredMaterial(part,yaw,amount),part.id);
+ // An exiting face should be *occluded by a directional local mask*,
+ // not alpha-faded over the rear hair (which creates a gray ghost wedge).
+ const materialAlpha=['face','eyes','fringe'].includes(part.id)?
+   f.baseVisible*alpha:amount;
+ emitGeometry(vertices,uvs,indices,
+   registeredMaterial(part,yaw,materialAlpha,f.frontMask),part.id);
  if(qaRecorder.active){
    const key=keyPair(yaw),angles:[View,View,View,View]=[0,90,180,270];
    const binding=qaBindings.get(part.id);
@@ -346,7 +361,7 @@ export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=f
  artMesh(defs[3],lookHead(defs[3].anchor),headYaw);
  const face=lookHead(defs[3].anchor);
  const faceVisibility=sample(defs[3],headYaw).visible;
- const faceShadowOpacity=.27*faceVisibility;
+ const faceShadowOpacity=.27*Math.pow(faceVisibility,3);
  // Face paint, face-specific shadow and hair-cast shadow MUST share the
  // same view-visibility envelope. Otherwise a fading side face leaves a
  // full-opacity gray shadow "ghost" around ~80° while the head turns.
