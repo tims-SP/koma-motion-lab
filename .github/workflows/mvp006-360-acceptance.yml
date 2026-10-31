@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'experiments/mvp002/src/qa/**'
+      - 'experiments/mvp002/src/integrated.ts'
+      - 'experiments/mvp002/src/left-keyviews.ts'
       - 'experiments/mvp002/scripts/render-turn360.ts'
       - '.github/workflows/mvp006-360-acceptance.yml'
 concurrency:
