@@ -12,9 +12,16 @@ const sourceNames=['front-000.svg','threequarter-045.svg','profile-right-090.svg
 export async function loadReferenceArt():Promise<Sources>{
  const sources={} as Sources;
  for(let keyIndex=0;keyIndex<sourceNames.length;keyIndex++){
-  const resp=await fetch('/reference/'+sourceNames[keyIndex]);
-  if(!resp.ok)throw Error('cannot fetch authored source: '+sourceNames[keyIndex]);
-  const text=await resp.text(),doc=new DOMParser().parseFromString(text,'image/svg+xml');
+  const name=sourceNames[keyIndex];
+  const embedded=(window as Window & {__HEAD009_REFS?:Record<string,string>}).__HEAD009_REFS?.[name];
+  let text:string;
+  if(typeof embedded==='string')text=embedded;
+  else{
+   const resp=await fetch('/reference/'+name);
+   if(!resp.ok)throw Error('cannot fetch authored source: '+name);
+   text=await resp.text();
+  }
+  const doc=new DOMParser().parseFromString(text,'image/svg+xml');
   if(doc.querySelector('parsererror'))throw Error('invalid source SVG');
   const parsed=doc.documentElement;
   // SVG path geometry is sampled by the browser's actual path implementation.
