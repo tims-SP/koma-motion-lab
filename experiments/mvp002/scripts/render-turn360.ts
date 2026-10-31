@@ -6,11 +6,13 @@ import {createHash} from 'node:crypto';
 import {resolve,join} from 'node:path';
 import type {FrameTrace,GateId,GateResult,AcceptanceIssue,Turn360AcceptanceReport,PartTrace} from '../src/qa/turn360-contract';
 import {TURN360_PROFILE as P} from '../src/qa/turn360-contract';
+import type {OcclusionRuleResult} from '../src/qa/occlusion-audit';
 
 declare global {interface Window{
  renderTurn360:(yaw:number,frameIndex:number)=>{stats:{frame:number;time:number;yaw:number;headLocalYaw:number;partCount:number;keyViewCount:number;artMeshCount:number;ikError:number;handMinusTorsoDepth:number;armLocalYaw:number;lightAngle:number;shadowOffset:number;blink:number;targetX:number;handX:number};trace:FrameTrace};
  captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
  turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
+ auditTurnOcclusion:()=>OcclusionRuleResult[];
 }}
 const output=resolve('out/turn360');
 mkdirSync(output,{recursive:true});
@@ -81,10 +83,15 @@ try{
  await page.locator('#viewport').screenshot({path:seam360});
  const seamEqual=sha(seam0)===sha(seam360);
  const keyTraces:FrameTrace[]=[];
+ const occlusionResults:OcclusionRuleResult[]=[];
  for(let i=0;i<P.sampleDegrees.length;i++){
   const yaw=P.sampleDegrees[i];
   const data=await page.evaluate(v=>window.renderTurn360(v.yaw,v.f),{yaw,f:192+i});
   keyTraces.push(data.trace);
+  if([0,15,180,345].includes(yaw)){
+    const audit=await page.evaluate(()=>window.auditTurnOcclusion());
+    occlusionResults.push(...audit);
+  }
   const file='sample-'+String(i).padStart(3,'0')+'.png';
   await page.locator('#viewport').screenshot({path:join(output,file)});
   sampleFiles.push(file);
@@ -207,8 +214,13 @@ try{
    maxJump>=.22||maxVertexJump>=.25?
    'Large adjacent anchor/mesh vertex jumps: '+maxJump+' / '+maxVertexJump:undefined);
  const actualFrameCounts=trace.filter(f=>f.actualVisiblePartIds.length>=4).length;
- gate('S06_OCCLUSION_ACTUAL_RENDER','BLOCKED',
-   'ID pass is real and '+actualFrameCounts+'/192 frames have >=4 visible parts, but no verified occlusion constraint/mask table for crossing hair, face and arms.');
+ const occlusionWrong=occlusionResults.filter(x=>x.status==='FAIL');
+ const occlusionUntested=occlusionResults.filter(x=>x.status==='UNTESTED');
+ const occlusionOk=occlusionWrong.length===0&&occlusionUntested.length===0&&
+   occlusionResults.length>=13;
+ gate('S06_OCCLUSION_ACTUAL_RENDER',occlusionWrong.length?'FAIL':occlusionOk?'PASS':'BLOCKED',
+   occlusionOk?undefined:JSON.stringify({rules:occlusionResults.length,
+     wrong:occlusionWrong,untested:occlusionUntested,actualFrameCounts}));
  const independentKeys=keyTraces.filter(f=>[90,270].includes(f.yawDegrees)).flatMap(f=>f.parts);
  const all270=independentKeys.filter(p=>p.keyA.yawDegrees===270);
  const keyProof=all270.length===12&&all270.every(p=>p.keyA.independentlyAuthored&&
@@ -231,7 +243,7 @@ try{
  };
  const diagnostics={seamEqual,frameCount:P.videoFrames,boundaryImages:8,independentSampleAngles:25,
    maxAnchorJump:maxJump,maxVertexJump,maxAnchorAudit,maxProjectionAudit,maxDeformationAudit,actualFrameCounts,sources,videoBytes:statSync(video).size,
-   partTracesCount:parts.length,screenBoundsOkay,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
+   partTracesCount:parts.length,screenBoundsOkay,occlusionResults,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
  writeFileSync(join(output,'turn360-traces.json'),JSON.stringify({frames:trace,sampled:keyTraces},null,1));
  writeFileSync(join(output,'turn360-qa.json'),JSON.stringify({report,diagnostics},null,2)+'\n');
  console.log('QA360_RESULT '+JSON.stringify({status:finalStatus,diagnostics,
