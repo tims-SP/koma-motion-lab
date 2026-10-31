@@ -363,7 +363,7 @@ window.captureTurnPass=(pass,includeImage)=>{
  }finally{
    renderer.setRenderTarget(null);renderer.setClearColor(oldColor,oldAlpha);
    for(const saved of restore){
-     if(saved.mesh.material!==saved.mat){saved.mesh.material.dispose();}
+     if(saved.mesh.material!==saved.mat){const m=saved.mesh.material;if(Array.isArray(m))m.forEach(x=>x.dispose());else m.dispose();}
      saved.mesh.material=saved.mat;saved.mesh.visible=saved.visible;
    }
    target.dispose();
