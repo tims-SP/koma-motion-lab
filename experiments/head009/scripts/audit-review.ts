@@ -9,7 +9,13 @@ const source=await readFile(html,'utf8');
 const failures:string[]=[];
 if(/<script[^>]+\bsrc=|<link[^>]+href=/i.test(source))failures.push('external_asset_dependency');
 if(!source.includes('window.__HEAD009_REFS=')||!source.includes('window.__HEAD009_ORGAN='))failures.push('embedded_sources_missing');
-const browser=await chromium.launch({channel:process.env.HEAD009_CHROME_CHANNEL??'chrome',headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--disable-gpu-sandbox','--allow-file-access-from-files']});
+const isolatedBrowser=process.env.HEAD009_BROWSER_EXECUTABLE;
+const browser=await chromium.launch({
+ ...(isolatedBrowser?{executablePath:isolatedBrowser}:{channel:process.env.HEAD009_CHROME_CHANNEL??'chrome'}),
+ headless:true,
+ args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--disable-gpu-sandbox','--allow-file-access-from-files',...(isolatedBrowser?['--in-process-gpu']:[])],
+ ...(isolatedBrowser?{env:{PATH:'/usr/bin:/bin',HOME:'/tmp',EGL_PLATFORM:'surfaceless',LIBGL_ALWAYS_SOFTWARE:'1',MESA_LOADER_DRIVER_OVERRIDE:'llvmpipe'}}:{})
+});
 const page=await browser.newPage({viewport:{width:1366,height:900},deviceScaleFactor:1,acceptDownloads:true});
 const errors:string[]=[],external:string[]=[];
 page.on('pageerror',e=>errors.push(String(e)));

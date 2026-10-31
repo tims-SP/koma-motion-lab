@@ -29,7 +29,7 @@ input[type="checkbox"]{accent-color:var(--accent)}
 .checkrow{display:flex;align-items:center;gap:7px;color:var(--ink)}
 fieldset{border:1px solid var(--edge);border-radius:9px;margin:0;padding:10px}
 legend{font-size:13px;color:var(--muted);padding:0 5px}
-.metrics{max-height:280px;overflow:auto;font-size:12px}
+.review-control{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:9px 0;font-size:13px}.review-control select{font-size:12px;padding:6px 8px}.metrics{max-height:280px;overflow:auto;font-size:12px}
 .metrics table{border-collapse:collapse;width:100%}
 .metrics th,.metrics td{border-bottom:1px solid var(--edge);padding:7px;text-align:left;font-variant-numeric:tabular-nums}
 .metrics th:last-child,.metrics td:last-child{text-align:right}
@@ -62,6 +62,7 @@ legend{font-size:13px;color:var(--muted);padding:0 5px}
  </div>
  <div class="panel"><h2>定位与测量</h2><div class="kvs"><span>当前角度</span><strong id="angleCell">0°</strong><span>参考角度</span><strong id="refAngleCell">0°</strong><span>器官点位平均偏差</span><strong id="meanCell">—</strong><span>最大偏差</span><strong id="maxCell">—</strong></div><p class="hint" id="referenceNote"></p><div id="qaStatus" class="status">选择「执行当前角度 QA」获取像素检查</div></div>
  <div class="panel"><h2>器官偏差 · 对照参考角度</h2><div class="metrics" id="organTable" aria-live="polite"></div></div>
+ <div class="panel"><h2>人工器官验收</h2><div class="hint">逐项选择后使用「导出 QA JSON」保存审核结论。</div><div id="manualReview" aria-label="器官验收结论"></div></div>
  <div class="panel"><h2>验收说明</h2><div class="hint">黄色：渲染器预计的器官位置。青色：独立原画标注。仅在完全相同角度叠加目标点；对过渡角度不将相邻原画冒充准确目标。</div><p class="hint">快捷键：←/→ 微调角度，空格播放/暂停。页面自包含，无外部网络请求。</p><div id="log"></div></div>
  </section>
 </main>

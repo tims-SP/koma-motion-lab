@@ -16,6 +16,9 @@ const slider=byId<HTMLInputElement>('yaw'), output=byId<HTMLOutputElement>('angl
 const pass=byId<HTMLSelectElement>('pass'),play=byId<HTMLButtonElement>('play');
 const marks=byId<HTMLCanvasElement>('marks'),refMarks=byId<HTMLCanvasElement>('refMarks');
 const keys=[0,30,45,60,75,90], shortLabel=(s:string)=>s.replace(/\.center$/,'').replace('fringe.','hair.');
+const reviewKeys=['eyes','nose','mouth','jaw','ears','hair','occlusion','overall'] as const;
+type ReviewStatus='pending'|'pass'|'rework';
+const manualReview:Record<string,ReviewStatus>=Object.fromEntries(reviewKeys.map(k=>[k,'pending'])) as Record<string,ReviewStatus>;
 let yaw=0,playing=false,raf=0,previous=0,reviewData:unknown=null;
 const raw=(v:number)=>Math.max(0,Math.min(90,Math.round(v)));
 const sourceAt=(angle:number)=>register.views.find(x=>x.yaw===angle)!;
@@ -58,7 +61,7 @@ function draw(){
  for(const btn of Array.from(document.querySelectorAll<HTMLButtonElement>('#keyAngles button')))btn.classList.toggle('active',Number(btn.dataset.yaw)===yaw);
  updateReference();overlay();
 }
-function setYaw(next:number){yaw=raw(next);draw();byId('qaStatus').textContent='当前角度的 QA 尚未执行';}
+function setYaw(next:number){yaw=raw(next);draw();byId('qaStatus').textContent='当前角度的 QA 尚未执行';byId('log').textContent='';reviewData=null;}
 function stop(){playing=false;cancelAnimationFrame(raf);play.textContent='播放旋转';}
 function tick(now:number){
  if(!playing)return;
@@ -72,6 +75,15 @@ function save(name:string,data:string,type:string){
 }
 slider.addEventListener('input',()=>{stop();setYaw(Number(slider.value));});
 pass.addEventListener('change',draw);
+const manualContainer=byId('manualReview');
+for(const key of reviewKeys){
+ const label=document.createElement('label');label.className='review-control';
+ label.textContent=({eyes:'眼睛',nose:'鼻子',mouth:'嘴巴 / 口腔',jaw:'下巴 / 面颊',ears:'耳朵',hair:'头发',occlusion:'深度 / 遮挡',overall:'整体视觉质量'} as Record<string,string>)[key];
+ const select=document.createElement('select');select.dataset.organ=key;
+ for(const [value,text] of [['pending','待验收'],['pass','通过'],['rework','需修正']]){const option=document.createElement('option');option.value=value;option.textContent=text;select.append(option);}
+ select.addEventListener('change',()=>{manualReview[key]=select.value as ReviewStatus});
+ label.append(select);manualContainer.append(label);
+}
 byId('prev').addEventListener('click',()=>{stop();setYaw(yaw-1)});
 byId('next').addEventListener('click',()=>{stop();setYaw(yaw+1)});
 for(const btn of Array.from(document.querySelectorAll<HTMLButtonElement>('#keyAngles button')))btn.addEventListener('click',()=>{stop();setYaw(Number(btn.dataset.yaw))});
@@ -102,7 +114,7 @@ byId('saveReport').addEventListener('click',()=>{
  source:sourceAt(referenceAngle(yaw)).source,sourceAngle:referenceAngle(yaw),
  sourceReferenceRole:sourceAt(referenceAngle(yaw)).role,hasSameAngleReference:keys.includes(yaw),
  landmarkComparison:keys.includes(yaw)?compareViewLandmarks(register,yaw):null,
- realPixelQa:reviewData};
+ realPixelQa:reviewData,manualReview:{...manualReview},manualReviewComplete:Object.values(manualReview).every(v=>v!=='pending')};
  save('head009-'+String(yaw).padStart(3,'0')+'-review.json',JSON.stringify(payload,null,2),'application/json');
 });
 w.__HEAD009_READY=true;
