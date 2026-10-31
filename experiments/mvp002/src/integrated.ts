@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {LEFT_CONTOURS,LEFT_VDD_SHIFT} from './left-keyviews';
+import {auditLocalOcclusion} from './qa/occlusion-audit';
 import {createRegisteredArt, artTextureProof, artTexturePNG} from './rgba-view-art';
 import {Turn360Recorder, qaPalette, idShader, countIdPixels} from './qa/turn360-runtime';
 import type {FrameTrace} from './qa/turn360-contract';
@@ -30,6 +31,7 @@ declare global {interface Window {
   renderTurn360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace};
   captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
   turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
+  auditTurnOcclusion:()=>ReturnType<typeof auditLocalOcclusion>;
 }}
 
 const screen=document.querySelector<HTMLCanvasElement>('#viewport');
@@ -344,6 +346,7 @@ window.renderTurn360=(yaw,frameIndex)=>{
  if(!qaRecorder.lastFrame)throw Error('No real frame evidence');
  return {stats,trace:qaRecorder.lastFrame};
 };
+window.auditTurnOcclusion=()=>auditLocalOcclusion(renderer,scene,camera,drawn,qaRecorder.yaw);
 window.turnSourceViews={angles:[0,90,180,270],independent270:PART_IDS.every(id=>LEFT_CONTOURS[id]?.length===11),derivedPartIds:PART_IDS.filter(id=>!LEFT_CONTOURS[id])};
 window.captureTurnPass=(pass,includeImage)=>{
  if(!qaRecorder.lastFrame)throw Error('Must render a real turn frame first');
