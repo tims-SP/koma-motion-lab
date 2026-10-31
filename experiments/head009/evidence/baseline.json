@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "HEAD009-BASELINE-V1",
+  "baselineCommit": "ba3d42bd4bb67c2b40d60a709bc4229cc35562d7",
+  "visualReviewCommit": "7d320303fd613155e892921d814457c36bab91d4",
+  "baselineRunUrl": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41206130892",
+  "baselineStatus": "FAIL_VISUAL",
+  "defects": [
+    "planar triangles with uniform z per mesh",
+    "face side shape lacks genuine nose-bridge and ear profile",
+    "face fringe eyes fixed screen override disables depth test",
+    "diagnostic ID shader uses obsolete wipeBounds and differs from beauty matte"
+  ],
+  "scope": "HEAD90 independent experiment; no full-body or production acceptance"
+}
