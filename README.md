@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Latest verified result — MVP-006 formal 360 core acceptance (2026-10-31)
+
+**[Latest 8s/192-frame CI run #41197555224](https://github.com/tims-SP/koma-motion-lab/actions/runs/41197555224)** · **[Real video/25-angle board/ID+depth masks/trace/QA ZIP](https://github.com/tims-SP/koma-motion-lab/actions/runs/41197555224/artifacts/13041610450)** · **[S01—S08 results & next core fixes](docs/experiments/MVP-006-360-run-status.md)**
+
+**Pipeline success DOES NOT MEAN 360 core is solved.** Latest actual gate results: **5 PASS, 2 BLOCKED, 1 FAIL = FAIL_STRUCTURE**. Angle coverage, 0/360 seam, basic mesh/UV and temporal vertex numeric continuity, actual frame bounds/MP4 passed. **S07 FAIL**: 270° view still mirrors 90° geometry; **S03 BLOCKED**: independent 3D-anchor/bone/VDD audit missing; **S06 BLOCKED**: detailed occlusion/clip-mask constraints missing. Do not polish programmatic texture art or import complex game assets until these three core defects are fixed. Visual-model PASS is not granted before structural gates pass.
+
 ## Highest-priority gate — MVP-006 360° core acceptance (2026-10-31)
 
 **[Formal three-stage 360° acceptance specification](docs/experiments/MVP-006-360-acceptance-v1.md)** · **[TypeScript per-part trace and QA result contract](experiments/mvp002/src/qa/turn360-contract.ts)**
