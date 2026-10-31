@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "MVP008-VISUAL-QA-1",
+  "date": "2026-10-31",
+  "sourceVideoRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41204945911",
+  "sourceArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41204945911/artifacts/13043762442",
+  "modelReviewRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41205200317",
+  "modelReviewArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41205200317/artifacts/13044088259",
+  "draftPreview": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-c93b54c52c191b5454aa",
+  "automatedStatus": "PASS_STRUCTURE_PENDING_VISUAL",
+  "humanFullVideoAccepted": false,
+  "visualStatus": "FAIL_VISUAL",
+  "issues": [
+    {
+      "id": "MVP008-V01",
+      "severity": "P1",
+      "kind": "PROFILE_SILHOUETTE_EDGE",
+      "frames": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "parts": [
+        "face",
+        "fringe",
+        "backHair"
+      ],
+      "observation": "Side face has a conspicuous near-vertical hard boundary between cheek/forehead and hair, despite moving smoothly. Image evidence does not support a high-quality view-dependent silhouette.",
+      "rootCauseHypothesis": "Mask is now spatially continuous but remains a straight X wipe, independent of the authored face/hair contour correspondences.",
+      "requiredFix": "Replace X-axis wipe with a 2D semantic face/hair occlusion boundary referenced to registered contour landmarks and view-dependent visibility. Validate boundary continuity; do not use alpha blending as a substitute."
+    },
+    {
+      "id": "MVP008-V02",
+      "severity": "P1",
+      "kind": "FACE_EMERGENCE_SHAPE",
+      "frames": [
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "parts": [
+        "face",
+        "fringe",
+        "backHair"
+      ],
+      "observation": "Face reappears from the rear hair over a few frames, but expands as a rectangular/straight slice, especially in frames 131-133. Earlier detached island is gone; shape continuity is not acceptable yet.",
+      "rootCauseHypothesis": "Generic profile geometry and a single straight clipping plane do not encode facial contour/head volume as 270°→360° interpolates.",
+      "requiredFix": "Define face/fringe/hair contour correspondences for both side profiles, then compute local occlusion mask from the animated head silhouette; inspect transition strips."
+    },
+    {
+      "id": "MVP008-V03",
+      "severity": "P1",
+      "kind": "POSE_FORESHORTENING",
+      "frames": [
+        42,
+        144
+      ],
+      "parts": [
+        "leftArm",
+        "rightArm",
+        "torso"
+      ],
+      "observation": "Side arm joints and forearm shape have obvious rigid/paper cutout appearance. Passing IK endpoint and selected overlap rules does not validate silhouette under reaching/rotation.",
+      "requiredFix": "Use 3D joint direction to drive a pose-aware arm profile/mesh corrective and test hand/forearm visible shape at 45/90/135/225/270."
+    },
+    {
+      "id": "MVP008-V04",
+      "severity": "P2",
+      "kind": "FOOT_GROUND_CONTACT",
+      "parts": [
+        "leftLeg",
+        "rightLeg"
+      ],
+      "observation": "Only foot height was checked. Rotating leg/foot motion can slide in world XY; full planting cannot be claimed.",
+      "requiredFix": "Add world-space planted foot targets and two-bone leg IK, with per-frame foot velocity/ground contact traces."
+    }
+  ],
+  "measured": {
+    "staticFrames": 192,
+    "videoSeconds": 8,
+    "machineGatePasses": 10,
+    "temporalRatio": 2.2382245776747265,
+    "priorTemporalRatio": 2.9556234637613765,
+    "selectedOcclusionRules": {
+      "pass": 10,
+      "fail": 0,
+      "untested": 0
+    },
+    "modelReviewedFrames": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ]
+  },
+  "nextEngineeringPriority": [
+    "MVP008-V01",
+    "MVP008-V02",
+    "MVP008-V03",
+    "MVP008-V04"
+  ],
+  "stageDecision": "BLOCK FINAL DYNAMIC 360 ACCEPTANCE; do not rerun static baseline as substitute."
+}
