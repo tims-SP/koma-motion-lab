@@ -97,8 +97,19 @@ function sample(part:Part,yaw:number):{shape:XY[];shift:XY;visible:number;keyInd
    const a=A.contour[i],b=B.contour[i];
    return [lerp(a[0],b[0],t),lerp(a[1],b[1],t)] as XY;
  });
+ // Front-only facial drawings must disappear before reaching rear
+ // three-quarter angles; otherwise render-order compositing leaves a
+ // translucent gray "ghost face" over the back hair at 135°/225°.
+ // Smooth windows avoid the former one-frame z-order snap at 90°/270°.
+ let frontVisibility=1;
+ const observerYaw=wrap(yaw);
+ if(['face','eyes','fringe'].includes(part.id)&&observerYaw>90&&observerYaw<270){
+   if(observerYaw<110)frontVisibility=1-smooth((observerYaw-90)/20);
+   else if(observerYaw>250)frontVisibility=smooth((observerYaw-250)/20);
+   else frontVisibility=0;
+ }
  return {shape:s,shift:[lerp(A.shift[0],B.shift[0],t),lerp(A.shift[1],B.shift[1],t)],
-         visible:lerp(A.visible,B.visible,t),keyIndex:indices[0]};
+         visible:lerp(A.visible,B.visible,t)*frontVisibility,keyIndex:indices[0]};
 }
 function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMaterial {
  const pair=keyPair(yaw);
