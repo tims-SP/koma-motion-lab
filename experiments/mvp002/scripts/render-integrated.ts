@@ -15,7 +15,7 @@ declare global {interface Window {
  renderIntegrated:(frame:number,total:number)=>FrameStats;
  integratedInfo:{parts:number;views:number;method:string};
  integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
- exportArtPNG:(partId:'face'|'fringe'|'torso'|'skirt',angle:0|90|180|270)=>string;
+ exportArtPNG:(partId:'backHair'|'torso'|'skirt'|'face'|'fringe'|'eyes'|'scarf'|'emblem'|'leftArm'|'rightArm'|'leftLeg'|'rightLeg',angle:0|90|180|270)=>string;
 }}
 const out=resolve('out/integrated');
 mkdirSync(out,{recursive:true});
