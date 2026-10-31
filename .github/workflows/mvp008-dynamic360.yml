@@ -1,0 +1,61 @@
+name: MVP-008 dynamic 360° with arm IK and head VDD
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/mvp002/src/integrated.ts'
+      - 'experiments/mvp002/src/qa/turn360-runtime.ts'
+      - 'experiments/mvp002/scripts/render-dynamic360.ts'
+      - '.github/workflows/mvp008-dynamic360.yml'
+concurrency:
+  group: mvp008-dynamic360-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  dynamic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install and strict TS typecheck
+        working-directory: experiments/mvp002
+        run: |
+          npm install --no-audit --no-fund
+          npm run typecheck
+      - name: Install browser and encoder
+        working-directory: experiments/mvp002
+        run: |
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb ffmpeg
+      - name: Render true 192-frame turn WHILE acting; verify motion and structural traces
+        working-directory: experiments/mvp002
+        run: xvfb-run -a npm run render:dynamic360
+      - name: Preserve truthful video/visual/matrix evidence even when quality FAILS
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mvp008-dynamic360-evidence
+          retention-days: 20
+          if-no-files-found: warn
+          path: |
+            experiments/mvp002/out/dynamic360/dynamic360-8s.mp4
+            experiments/mvp002/out/dynamic360/dynamic-angle-board.png
+            experiments/mvp002/out/dynamic360/dynamic360-qa.json
+            experiments/mvp002/out/dynamic360/dynamic360-trace.json
+            experiments/mvp002/out/dynamic360/same-pose-*.png
+            experiments/mvp002/out/dynamic360/id-*.png
+            experiments/mvp002/out/dynamic360/depth-*.png
+            experiments/mvp002/out/dynamic360/mask-*.png
+      - name: Print final dynamic QA status
+        if: always()
+        working-directory: experiments/mvp002
+        run: |
+          if test -f out/dynamic360/dynamic360-qa.json; then
+            node -e 'const q=require("./out/dynamic360/dynamic360-qa.json");console.log(JSON.stringify({status:q.status,checks:q.checks,blocked:q.blocked},null,2));'
+          fi
