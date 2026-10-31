@@ -16,6 +16,9 @@ on:
       - 'experiments/reference-factory/prepare_core026_landmark_review.py'
       - 'experiments/reference-factory/run_core026_landmark_review_regressions.py'
       - 'experiments/reference-factory/config/core026-landmark-review.json'
+      - 'experiments/reference-factory/verify_core026_m1.py'
+      - 'experiments/reference-factory/run_core026_m1_regressions.py'
+      - 'experiments/reference-factory/render_core026_review.py'
   workflow_dispatch:
 permissions:
   actions: read
@@ -76,7 +79,13 @@ jobs:
         run: |
           python prepare_core026_landmark_review.py --verify
           python run_core026_landmark_review_regressions.py
+      - name: Aggregate finite M1 references and prove missing observations block admission
+        run: |
+          python verify_core026_m1.py
+          python run_core026_m1_regressions.py
+          python render_core026_review.py
       - name: Upload text-only numerical and diagnostic evidence
+        # M1 admission is finite reference support, not acceptance of depth or motion.
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -93,12 +102,15 @@ jobs:
             experiments/reference-factory/out/core026/landmarks/landmarks.json
             experiments/reference-factory/out/core026/reference/restore-evidence.json
             experiments/reference-factory/out/core026/landmark-review-regressions/report.json
+            experiments/reference-factory/out/core026/m1-acceptance.json
+            experiments/reference-factory/out/core026/m1-gate-regressions.json
+            experiments/reference-factory/out/core026/landmark-review/review-media-manifest.json
           if-no-files-found: warn
       - name: Archive generated media only in owner-only Draft Release
         run: |
-          python -m zipfile -c "$RUNNER_TEMP/CORE026-supervisor-QA.zip" out/core026/reference out/core026/landmarks
+          python -m zipfile -c "$RUNNER_TEMP/CORE026-supervisor-QA.zip" out/core026/reference out/core026/landmarks out/core026/landmark-review
           sha256sum "$RUNNER_TEMP/CORE026-supervisor-QA.zip" > "$RUNNER_TEMP/SHA256SUMS.txt"
           gh release create "core026-supervisor-$GITHUB_RUN_NUMBER" --draft --target "$GITHUB_SHA" \
             "$RUNNER_TEMP/CORE026-supervisor-QA.zip" "$RUNNER_TEMP/SHA256SUMS.txt" \
             --title "CORE026 source and reference diagnostics $GITHUB_RUN_NUMBER" \
-            --notes "Aka by seagetch, CC-BY-4.0. Actual native PNG recovery and source/coordinate checks. NCC outputs are candidate diagnostics, not visibility ground truth or fit acceptance. M1 overall and corrected natural 3D turn remain unaccepted. M2 compositor not implemented."
+            --notes "Aka by seagetch, CC-BY-4.0. Actual native PNG recovery and reviewed point overlays. M1 accepts only finite raw yaw -0.25,0,+0.25 image comparisons if the aggregate gate passes. NCC candidates are not fit truth. Physical depth and corrected natural 3D turn remain unaccepted; M2 compositor not implemented."

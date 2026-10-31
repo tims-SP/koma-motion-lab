@@ -1,0 +1,371 @@
+{
+  "schema": "core026-m1-complete-local-acceptance/1",
+  "date": "2026-10-31 Asia/Shanghai",
+  "author_executor": "Codex local fallback; mcode blocked by automatic approval",
+  "status": "PASS_REFERENCE_LIMITED_LOCAL_ONLY",
+  "ci": "PENDING",
+  "aggregate": {
+    "schema": "core026-m1-aggregate/1",
+    "author_executor": "Codex explicit local fallback",
+    "status": "PASS_REFERENCE_LIMITED",
+    "blockers": [],
+    "reviewed_cells": 171,
+    "usable_raw_yaws": [
+      -0.25,
+      0.0,
+      0.25
+    ],
+    "pose_coverage": [
+      {
+        "raw_yaw": -1.0,
+        "image_fiducials": [],
+        "lower_face_contour_observations": [],
+        "usable_for_limited_comparison": false
+      },
+      {
+        "raw_yaw": -0.75,
+        "image_fiducials": [],
+        "lower_face_contour_observations": [],
+        "usable_for_limited_comparison": false
+      },
+      {
+        "raw_yaw": -0.5,
+        "image_fiducials": [],
+        "lower_face_contour_observations": [
+          "chin"
+        ],
+        "usable_for_limited_comparison": false
+      },
+      {
+        "raw_yaw": -0.25,
+        "image_fiducials": [
+          "nose_tip",
+          "pupilL",
+          "pupilR"
+        ],
+        "lower_face_contour_observations": [
+          "chin"
+        ],
+        "usable_for_limited_comparison": true
+      },
+      {
+        "raw_yaw": 0.0,
+        "image_fiducials": [
+          "nose_tip",
+          "pupilL",
+          "pupilR"
+        ],
+        "lower_face_contour_observations": [
+          "chin"
+        ],
+        "usable_for_limited_comparison": true
+      },
+      {
+        "raw_yaw": 0.25,
+        "image_fiducials": [
+          "nose_tip",
+          "pupilL",
+          "pupilR"
+        ],
+        "lower_face_contour_observations": [
+          "chin"
+        ],
+        "usable_for_limited_comparison": true
+      },
+      {
+        "raw_yaw": 0.5,
+        "image_fiducials": [],
+        "lower_face_contour_observations": [
+          "chin"
+        ],
+        "usable_for_limited_comparison": false
+      },
+      {
+        "raw_yaw": 0.75,
+        "image_fiducials": [],
+        "lower_face_contour_observations": [],
+        "usable_for_limited_comparison": false
+      },
+      {
+        "raw_yaw": 1.0,
+        "image_fiducials": [],
+        "lower_face_contour_observations": [],
+        "usable_for_limited_comparison": false
+      }
+    ],
+    "state_counts": {
+      "UNKNOWN": 109,
+      "VERIFIED_IMAGE_FIDUCIAL": 9,
+      "NCC_CANDIDATE": 22,
+      "BOUNDARY_PROXY_ONLY": 31
+    },
+    "fit_eligible_image_features": 9,
+    "source_unknown_slots": [
+      "nose_root",
+      "mouth_cornerL",
+      "mouth_cornerR",
+      "ear_rootL",
+      "ear_rootR",
+      "neck_connection"
+    ],
+    "prerequisites": [
+      {
+        "command": [
+          "python",
+          "audit_core026.py",
+          "--verify-source"
+        ],
+        "exit_code": 0,
+        "stdout_tail": "{\"status\": \"SOURCE_ONLY_PASS\", \"problem_count\": 0, \"problems\": []}\n",
+        "stderr_tail": ""
+      },
+      {
+        "command": [
+          "python",
+          "verify_core026_supervisor.py"
+        ],
+        "exit_code": 0,
+        "stdout_tail": "{\"schema\": \"core026-supervisor-independent-source/1\", \"status\": \"SOURCE_PIXEL_CHECK_PASS\", \"overall_m1\": \"NOT_EVALUATED\", \"native_capture\": \"NOT_EVALUATED\", \"protected_files_checked\": 10, \"layer_pngs_checked\": 186, \"source_layers\": 62, \"native_textures\": 76, \"method\": \"Exact alpha after alpha>0 trim; rounded PSD RGB*alpha/255 vs INX RGB, max<=1. No mirror/resampling/names.\", \"unique_pixel_correspondences\": 58, \"ambiguous_pixel_orders\": [7, 8, 9, 10], \"mcode_verified_independently_supported\": [1, 2, 3, 4, 5, 6, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62], \"mcode_unresolved\": [7, 8, 9, 10]}\n",
+        "stderr_tail": ""
+      },
+      {
+        "command": [
+          "python",
+          "verify_core026_m1c1_supervisor.py"
+        ],
+        "exit_code": 0,
+        "stdout_tail": "CORE026_M1C1_SUPERVISOR {\"schema\": \"core026-m1c1-supervisor/1\", \"status\": \"PASS_SOURCE_FACTS_AND_DESIGN_CONTRACT\", \"constraints_sha256\": \"a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83\", \"records\": 62, \"source_facts_checked\": 62, \"multiply_count\": 11, \"default_clip_count\": 9, \"late_overlap_counts\": [28, 15, 2156, 1954], \"problems\": [], \"overall_M1\": \"NOT_ACCEPTED_BY_THIS_CHECK\", \"runtime_compositor\": \"NOT_IMPLEMENTED\", \"natural_3d_turn\": \"NOT_EVALUATED\"}\n",
+        "stderr_tail": ""
+      },
+      {
+        "command": [
+          "python",
+          "extract_core026_constraints.py",
+          "--verify"
+        ],
+        "exit_code": 0,
+        "stdout_tail": "CORE026_CONSTRAINTS {\"status\": \"VERIFIED\", \"records\": 62, \"multiply\": 11, \"default_clips\": 9, \"late_overlaps\": [28, 15, 2156, 1954], \"overall_M1\": \"NOT_ACCEPTED\", \"runtime_receiver_compositor\": \"NOT_IMPLEMENTED\"}\n",
+        "stderr_tail": ""
+      },
+      {
+        "command": [
+          "python",
+          "prepare_core026_landmark_review.py",
+          "--verify",
+          "--output",
+          "/workspace/scratch/9cd8ec77aca4/koma-motion-lab/experiments/reference-factory/config/core026-landmark-review.json"
+        ],
+        "exit_code": 0,
+        "stdout_tail": "CORE026_LANDMARK_REVIEW {\"status\": \"STRUCTURE_ONLY_PASS\", \"slots\": 19, \"poses\": 9, \"cells\": 171, \"reviewed\": 171, \"fit_eligible\": 9, \"hard_unknown_slots\": 6, \"overall_M1\": \"NOT_ACCEPTED_BY_STRUCTURE_CHECK\", \"runtime_depth_and_occlusion\": \"NOT_IMPLEMENTED\"}\n",
+        "stderr_tail": ""
+      }
+    ],
+    "inputs": {
+      "review_sha256": "1a76ef7d416fba455dcfc1755bb2fc69390eb3b605ea15b07304ed98c09b132c",
+      "constraints_sha256": "a6bdd38a84e15445f220b24a2362d5efc98981759ef35bc44480c11465c84d83",
+      "reference_manifest_sha256": "38fd17716db517edd5d9b24abda74c5d3ab801ec9b4e6bc9feee85b52fc80a66",
+      "source_inx_sha256": "dbf82ffb86d1c761bca883ad37ec1c47487a447f8104290b459ce60aaee81e0f",
+      "contract_sha256": "9f6d4190b597053027403575fa7b37d05bedf878e03d12c83efa46ae01fe9b6d"
+    },
+    "reference": {
+      "native_head_sha256": [
+        "3125cbee7bfe90fc18294369eab76da60532a02053e64019d407382141e48055",
+        "923e3646131d64b880fff5b789ba838db6e82e6c3380973589e58de120a42123",
+        "dcaffd67b74b56b75b98d6947966dab78af93327a9ab3f2672444ec1cdbc951c",
+        "1cd6e2e966d71f695ad257314eacd5b6b1c83ce6024b8e2ea5ac027fab15151a",
+        "6beee55133fad1aac33e1d4c3c4a4d463cc848fb94d0c22467e336259e884206",
+        "6744da09e49b11ad329c1dfd86f6fd30daabc1f18f8fb277cb779c598e4ef197",
+        "88a8ba82392cb584a1bbb448adfb0b078a693268adf41dbee2eaf8341a9ff790",
+        "4e8d5ea1b3595f66360c4cdd34a3450b667bdcd0b167ccdc4aa576fafc109f09",
+        "49d108096b4ce4b6ecd7f9583572b41a6c50366c2da3f0bd05cce880c050b41e"
+      ],
+      "camera_scale": 0.4,
+      "camera_position": [
+        82.0,
+        1773.0
+      ],
+      "head_roi": [
+        34,
+        114,
+        686,
+        766
+      ],
+      "raw_yaw_is_physical_degrees": false,
+      "per_pose_registration": "FORBIDDEN; same camera/ROI and source mapping for all poses"
+    },
+    "registration": {
+      "unique_texture_max_residual_source_px": 3.9051234807720783,
+      "unique_texture_median_residual_source_px": 0.7071309148651893,
+      "selected_unique_uuids": 62
+    },
+    "scope": {
+      "M1": "PASS_REFERENCE_LIMITED",
+      "M2_permission": "LOCAL_RECEIVER_COMPOSITOR_PROTOTYPE_ONLY",
+      "interpolation_and_extrapolation": "NOT_VALIDATED",
+      "physical_depth": "NOT_RECOVERED",
+      "physical_yaw_degrees": "UNKNOWN",
+      "anatomical_landmarks": "NOT_ESTABLISHED",
+      "contours_are_fixed_material_points": false,
+      "runtime_receiver_compositor": "NOT_IMPLEMENTED",
+      "corrected_natural_3d_turn": "NOT_ACCEPTED",
+      "360_degree_assets": "INCOMPLETE"
+    },
+    "M2_first_gate": "Preserve original 0-yaw art before any oblique comparison. No blind Z fitting or global depth inference."
+  },
+  "aggregate_regressions": {
+    "schema": "core026-m1-gate-regressions/1",
+    "status": "PASS",
+    "cases": [
+      {
+        "name": "negative_nose_not_fit_eligible",
+        "status": "BLOCKED_REFERENCE_FOR_DEPTH_FIT",
+        "blockers": [
+          "NEGATIVE_OBLIQUE_LACKS_REQUIRED_IMAGE_FEATURES_AND_CONTOUR"
+        ]
+      },
+      {
+        "name": "positive_nose_not_fit_eligible",
+        "status": "BLOCKED_REFERENCE_FOR_DEPTH_FIT",
+        "blockers": [
+          "POSITIVE_OBLIQUE_LACKS_REQUIRED_IMAGE_FEATURES_AND_CONTOUR"
+        ]
+      },
+      {
+        "name": "default_nose_not_fit_eligible",
+        "status": "BLOCKED_REFERENCE_FOR_DEPTH_FIT",
+        "blockers": [
+          "DEFAULT_POSE_LACKS_REQUIRED_IMAGE_FEATURES_AND_CONTOUR"
+        ]
+      },
+      {
+        "name": "negative_contours_not_credible",
+        "status": "BLOCKED_REFERENCE_FOR_DEPTH_FIT",
+        "blockers": [
+          "NEGATIVE_OBLIQUE_LACKS_REQUIRED_IMAGE_FEATURES_AND_CONTOUR"
+        ]
+      },
+      {
+        "name": "one_unknown_cell_unreviewed",
+        "status": "BLOCKED_REFERENCE_FOR_DEPTH_FIT",
+        "blockers": [
+          "NOT_ALL_171_CELLS_VISUALLY_REVIEWED"
+        ]
+      },
+      {
+        "name": "positive_eye_missing",
+        "status": "BLOCKED_REFERENCE_FOR_DEPTH_FIT",
+        "blockers": [
+          "POSITIVE_OBLIQUE_LACKS_REQUIRED_IMAGE_FEATURES_AND_CONTOUR"
+        ]
+      }
+    ],
+    "actual_cli_blocked_exit_code": 12,
+    "fixtures_structurally_valid": true,
+    "baseline_usable_raw_yaws": [
+      -0.25,
+      0.0,
+      0.25
+    ],
+    "scope": "AGGREGATE_REFERENCE_GATES_ONLY; visual decisions remain Codex observations"
+  },
+  "review_regressions": {
+    "status": "PASS",
+    "author": "Codex independent supervisor",
+    "scope": "STRUCTURE_AND_REJECTION_ONLY",
+    "synthetic_positive_case_is_not_review_evidence": true,
+    "checks": [
+      {
+        "case": "committed_table_verify",
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_native_png_hash",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "proxy_promoted_to_fit",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "hard_unknown_forged_point",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "unreviewed_candidate_promoted",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "missing_identity",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "missing_pose",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "candidate_coordinate_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "nan_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "bool_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "out_of_bounds_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "source_alpha_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "source_hash_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "overall_m1_claim_promoted",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "visual_evidence_missing",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "synthetic_visual_edit_allowed",
+        "exit_code": 0,
+        "input_unchanged": true
+      },
+      {
+        "case": "existing_review_not_overwritten",
+        "exit_code": 11,
+        "input_unchanged": true
+      }
+    ],
+    "original_config_sha256": "1a76ef7d416fba455dcfc1755bb2fc69390eb3b605ea15b07304ed98c09b132c",
+    "original_config_unchanged": true,
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
+  },
+  "visual_review": "complete-visual-review-local.json",
+  "M2": "NOT_STARTED; require clean CI then local receiver compositor prototype only",
+  "physical_depth": "NOT_RECOVERED",
+  "natural_3d_turn": "NOT_ACCEPTED"
+}

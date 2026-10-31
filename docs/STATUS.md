@@ -1,36 +1,29 @@
 # 当前恢复入口
 
-更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；本轮限定命令执行已恢复。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
+更新：2026-10-31（Asia/Shanghai）。仓库tims-SP/koma-motion-lab，分支feature/koma-25d-core-021。首选mcode执行、Codex监督；最新续跑被自动审批阻塞，按计划明确署名Codex本地兜底。M1C1原作者为Codex本地兜底；M1C2A补丁由Codex设计、mcode实际应用并运行，分别署名。每完成一段提交保存。生产仓库koma-motion未改。
 
 ## CORE026当前状态
 
-仍在M1，整体NOT_ACCEPTED；M2–M5未开始，自然3D转头未通过。不要把源审计、截图捕获或候选跟踪通过当作深度/动态遮挡已经修好。[完整证据与阻塞](research/CORE-026-M1-clean-reference-and-remaining-gates.md)。
+本轮M1本地总门禁为PASS_REFERENCE_LIMITED，干净CI待本次代码提交复现。M2尚未开始，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
 
-- 源审计a6226cc：62层中58个通过独立alpha/预乘像素对应；7/8/9/10是同图重复项，像素审计如实保持UNRESOLVED。
-- 默认坐标03ad67a：用原始UV、纹理尺寸和原生祖先变换区分这4项，62个selected_uuid全部唯一。只使用一个全局平移；唯一纹理最大残差3.905124源像素。没有改原始UV，也没有验收GPU动态或三维深度。
-- 清洁原生801d904：[原生CI41119224557](https://github.com/tims-SP/koma-motion-lab/actions/runs/41119224557)全部success。9姿态raw yaw=-1..+1、pitch0，固定720×880 framebuffer及652×652头部裁切；已关闭X11指针。参数未标定为物理角度。
-- [原生媒体Draft](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-2589bc212d17274d3503)真实归档；9原图和9裁切SHA全部独立核对。头部/耳尖顶部至少12像素余量。
-- 62条源祖先/模式/绑定已检查：11Multiply、9默认阴影裁剪；眼皮58/59与实体头发重叠28/15像素，眉60/61重叠2156/1954像素。这是默认美术叠画事实，不能直接当三维深度。
-- 19标点槽位：13源支持候选（含4眼白边界代理）、6未知。嘴角raw边界在合成中被Lip遮住，已拒绝。NCC只作诊断，所有点fit_eligible=false。
-- 监督恢复代码5f9aef8：[干净环境CI41126811519](https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811519)全部success。真实重建旧17图保护报告，复验源数据、坐标与叠画，恢复固定原生job的实际PNG并核对18张SHA，再复现候选数4/5/6/11/13/9/7/6/4。
-- 同代码的旧回归[CI41126811438](https://github.com/tims-SP/koma-motion-lab/actions/runs/41126811438)也已真实success；两套CI的通过范围保持区分。
-- [监督诊断媒体Draft](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-270a8f25943b4d8f5dd0)已归档；Actions artifact只JSON，媒体不进git或artifact。[机器可读验收](../experiments/reference-factory/evidence/core026-M1/supervisor-recovery-ci-acceptance.json)。
+- 源对应：62层均经原始UV/纹理/默认祖先变换选出唯一身份；58项可单靠像素，7/8/9/10四个重复图项经默认坐标区分。只使用单一全局平移；最大残差3.905124源像素，原始UV未改。
+- 原生参考：固定camera scale0.4、position[82,1773]、720×880全图和652×652头部ROI；raw yaw九姿态[-1..1]、pitch0。18张实际PNG的来源/恢复均已保存。新总门禁核对九张head SHA。
+- M1C1配置schema v2：62条源事实及未验证接收提案、11Multiply/9默认阴影裁剪、四项late paint与opaque hair重叠28/15/2156/1954。指纹锁定身份、原始mesh和验证程序，避免整份浮点诊断JSON字节差异。原始PNG/INX/UV与10个保护文件未改。
+- 19槽位×9姿态=171格均完成实际原生图审阅。9格VERIFIED_IMAGE_FIDUCIAL且可有限比较；31格BOUNDARY_PROXY_ONLY；22格NCC_CANDIDATE；109格UNKNOWN。轮廓不作为固定材料点，六项源未知不填坐标。
+- Codex实际查看九姿态全头、中央和两侧的原图/候选局部，并保存逐姿态状态叠加图。PNG只在ignored out/及owner-only Draft；git与Actions artifact保持文本。
+- 新增verify_core026_m1.py运行当前来源/保护/默认配准/M1C1/标点只读检查，再汇总有限参考。六个结构合法但不足以支持比较的用例全部BLOCKED；真实CLI缺默认鼻点返回12。标点17项检查（14种损坏拒绝）也通过。[本地验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-local-acceptance.json)。
 
-## 下一工单与实际阻塞
+## 执行分工与当前阻塞
 
-最新检查点：收窄到既有Session、bash-only显式配置、禁用persona/插件和拒绝uploads/prepare后，mcode续跑仍被自动审批以潜在OSS载荷未明为由拒绝；没有完成工具调用，没有重登，不继续重试。按M1C2计划本地兜底，Codex已实际应用中央三姿态57格决定并通过独立逐格比对、17项回归；受控表现为57格已审、9个图像标记可有限比较、其余114格未审。执行归属明确为Codex；[本地应用证据](../experiments/reference-factory/evidence/core026-M1/central-review-local-application.json)。历史pending工单已改为APPLIED_CODEX_FALLBACK，不得重复应用。继续余下六姿态审阅及M1总门禁；M2仍未开始。
+mcode此前确实执行过M1C2A应用补丁与prepare/verify。最新续跑收窄到既有Session、公开固定工单、bash-only配置、persona/插件关闭、uploads/prepare与对象存储拒绝后，仍被自动审批以潜在OSS用途/载荷未明为由拒绝，没有完成工具调用。该提示不是实际上传证据；未绕过、未重新登录，也未继续重试。
 
-M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。代码ba80ad2旧回归CI41154947789通过；监督CI41154947797在旧M1C1整份配准报告SHA比对失败，新标点步骤尚未运行。代码54d1c9f修复为显式v2身份/原始mesh/验证程序指纹，数值门禁不变；新监督CI41155423219与旧回归41155423100均success，已下载并核对11份JSON产物与ZIP SHA。完整报告仅5个未消费距离值差异，最大2.22e-16；[CI验收JSON](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。已实际完成raw0与±0.25的57格判断，9个图像标记可有限比较；后续mcode操作又被自动审批以潜在OSS载荷未知为由拒绝，尚未落盘，受控表仍0审阅/0可拟合。具体57格决定与逐步恢复指令已存[待执行工单](../experiments/reference-factory/evidence/core026-M1/central-review-pending-order.json)。不把该拒绝当实际上传证据，不绕过或重登。下一步仍是由mcode应用该工单，再做其余姿态与M1总门禁，未开始M2。
+按照M1C2计划允许的本地兜底，本轮中央57格应用、余下114格审阅、M1总门禁和验收由Codex明确署名完成，不算mcode产物。中央检查点e22a4f2已独立逐格核对57项决定，其他114格及来源字段不变。历史pending工单已改APPLIED_CODEX_FALLBACK，不得重复应用。[中央应用](../experiments/reference-factory/evidence/core026-M1/central-review-local-application.json)、[完整审阅](../experiments/reference-factory/evidence/core026-M1/complete-visual-review-local.json)。
 
-mcode限定执行确实恢复过：本轮M1C2A应用补丁及prepare/verify有真实工具exit0。随后中央三姿态工单再次被自动审批拒绝；当前不再调用、不重登。详见上方待执行工单。Node诊断不覆盖系统全部网络；未知对象存储仍拒绝，审批提示不能当作上传抓包。M1C1与v2修复作者仍是Codex，不能事后改归mcode。
+## 下一工单
 
-M1C1已由Codex本地实现并通过干净CI：[验收报告](research/CORE-026-M1C1-local-fallback-acceptance.md)。代码76d7f70的[监督CI41144806591](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806591)及[旧回归41144806561](https://github.com/tims-SP/koma-motion-lab/actions/runs/41144806561)均实际success。62条源事实/接收提案、9组双验证器exit11验拒、重复build一致、verify不改配置、10保护文件/186PNG、默认坐标与18张原生参考SHA均通过。M1C1通过范围仅为源事实和未验证设计契约。
+等待新监督CI与旧回归确认M1有限参考门禁，再执行M2局部接收面与附着层整理。先审计跨接收面的原画顺序和Multiply，尤其58/59眼皮与60/61眉的晚画覆盖；不能把全部Face绘画提前烘成一张图而丢失与头发的交叠。先过原画0姿态保真，再进入已放行的三个raw参考点。M2实现、M3深度方案、M4动态遮挡和M5最终视频尚未通过。
 
-下一步按[M1C2精确工单](plans/CORE-026-M1C2-landmark-and-reference-order.md)完成19槽位逐姿态可用范围/可见性复核和M1总验收。现有NCC候选仍非拟合真值；receiver均为未验证设计提案，三维深度和运动遮挡UNKNOWN。M1放行后才实施M2，不直接盲调Z。[M1C1执行归属](plans/CORE-026-M1C1-constraints-order.md)。
-
-Work已恢复且本地仓库已同步。源像素/10保护文件/186PNG、62默认坐标、11Multiply/9clip及18张原生参考哈希均重新实测通过。监工查看了实际9姿态标点接触图与默认652×652图；19槽位的13图像候选仍有语义限制，所有点仍不自动具备拟合资格。[本轮实际记录](../experiments/reference-factory/evidence/core026-M1/supervisor-resume-and-reference-review.json)。
-
-历史登录/网络/超时记录留在[运行诊断](research/CORE-026-mcode-runtime-diagnostic.md)、[域名授权后记录](../experiments/reference-factory/evidence/core026-M1/mcode-post-domain-approval.json)与[早期事件](../experiments/reference-factory/evidence/core026-M1/mcode-transport-incident.json)。这些不是当前重新登录的理由，也不能证明SDK真实上传过阿里云。
+前序监督CI41155423219与旧回归41155423100已经success，但只覆盖当时的零审阅初始表，不当作本次171格总验收。[前序CI](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。运行/登录/域名事件保留在[运行诊断](research/CORE-026-mcode-runtime-diagnostic.md)；这些历史不是重登或任意存储上传的理由。
 
 ## 确定性恢复顺序
 

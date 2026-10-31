@@ -34,8 +34,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -46,8 +46,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -58,8 +58,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -129,9 +129,9 @@
             362.173276,
             431.100223
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: nose paint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -147,9 +147,9 @@
             380.398311,
             431.292293
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: nose paint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -165,9 +165,9 @@
             399.153525,
             431.399655
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: nose paint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         }
       ]
@@ -189,8 +189,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -201,8 +201,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -213,8 +213,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -261,8 +261,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -273,8 +273,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -285,8 +285,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         }
       ]
@@ -311,8 +311,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -323,8 +323,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -340,9 +340,9 @@
             301.189149,
             524.725727
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: lowest jaw silhouette is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -358,9 +358,9 @@
             314.185471,
             523.780761
           ],
-          "confidence": "LOW",
+          "confidence": "MEDIUM",
           "review_method": "VISUAL_NATIVE",
-          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=-0.25, matching annotated_03 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point. Follow-up unmarked native inspection confirms the lowest jaw silhouette as a medium-confidence contour observation; material-point identity remains unsupported and fit eligibility stays false.",
           "eligible_for_fitting": false
         },
         {
@@ -376,9 +376,9 @@
             327.199999,
             522.800003
           ],
-          "confidence": "LOW",
+          "confidence": "MEDIUM",
           "review_method": "VISUAL_NATIVE",
-          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.0, matching annotated_04 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point. Follow-up unmarked native inspection confirms the lowest jaw silhouette as a medium-confidence contour observation; material-point identity remains unsupported and fit eligibility stays false.",
           "eligible_for_fitting": false
         },
         {
@@ -394,9 +394,9 @@
             340.507025,
             522.82916
           ],
-          "confidence": "LOW",
+          "confidence": "MEDIUM",
           "review_method": "VISUAL_NATIVE",
-          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point.",
+          "image_feature_evidence": "Codex actual review of native head raw_yaw=0.25, matching annotated_05 and unmarked face detail: lowest visible jaw silhouette is visible, but silhouette/painted boundary identity can slide under deformation. Kept only as a contour observation, never a fixed material fit point. Follow-up unmarked native inspection confirms the lowest jaw silhouette as a medium-confidence contour observation; material-point identity remains unsupported and fit eligibility stays false.",
           "eligible_for_fitting": false
         },
         {
@@ -412,9 +412,9 @@
             353.637869,
             522.783924
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "MEDIUM",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: lowest jaw silhouette is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -425,8 +425,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -437,8 +437,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -460,8 +460,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -472,8 +472,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -484,8 +484,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -532,8 +532,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -544,8 +544,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -556,8 +556,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         }
       ]
@@ -579,8 +579,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -591,8 +591,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -603,8 +603,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -651,8 +651,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -663,8 +663,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -675,8 +675,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         }
       ]
@@ -701,8 +701,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -713,8 +713,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -725,8 +725,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -782,8 +782,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -794,8 +794,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -806,8 +806,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -832,8 +832,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -844,8 +844,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -856,8 +856,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -922,14 +922,11 @@
             492.764759
           ],
           "candidate_method": "NCC_CANDIDATE",
-          "state": "BOUNDARY_PROXY_ONLY",
-          "xy": [
-            403.749661,
-            492.764759
-          ],
+          "state": "UNKNOWN",
+          "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: Marker is in the hair-adjacent cheek/jaw junction. The Face-alpha boundary cannot be separated confidently from painted hair; reject this correspondence.",
           "eligible_for_fitting": false
         },
         {
@@ -940,14 +937,11 @@
             495.721679
           ],
           "candidate_method": "NCC_CANDIDATE",
-          "state": "BOUNDARY_PROXY_ONLY",
-          "xy": [
-            409.695815,
-            495.721679
-          ],
+          "state": "UNKNOWN",
+          "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: Marker is in the hair-adjacent cheek/jaw junction. The Face-alpha boundary cannot be separated confidently from painted hair; reject this correspondence.",
           "eligible_for_fitting": false
         },
         {
@@ -958,8 +952,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -984,8 +978,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -996,8 +990,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1008,8 +1002,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1074,8 +1068,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1086,8 +1080,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1098,8 +1092,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -1129,9 +1123,9 @@
             204.672648,
             413.642718
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1147,9 +1141,9 @@
             211.276249,
             412.899679
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1165,9 +1159,9 @@
             217.997188,
             412.003636
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1226,8 +1220,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1238,8 +1232,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1250,8 +1244,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -1276,8 +1270,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1293,9 +1287,9 @@
             233.298397,
             404.528704
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1311,9 +1305,9 @@
             244.138547,
             404.006842
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1383,9 +1377,9 @@
             298.412418,
             402.0735
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1401,9 +1395,9 @@
             314.489555,
             401.931188
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1419,9 +1413,9 @@
             330.55346,
             401.776755
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         }
       ]
@@ -1446,8 +1440,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1458,8 +1452,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1470,8 +1464,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1541,9 +1535,9 @@
             383.318083,
             396.58822
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1559,9 +1553,9 @@
             394.302943,
             395.603497
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1577,9 +1571,9 @@
             405.286202,
             394.634873
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         }
       ]
@@ -1609,9 +1603,9 @@
             352.653215,
             399.213797
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1627,9 +1621,9 @@
             368.863677,
             400.622538
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1645,9 +1639,9 @@
             385.177848,
             402.220836
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1717,9 +1711,9 @@
             427.982949,
             403.023636
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1735,9 +1729,9 @@
             432.954682,
             401.446535
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: painted eye-white/eyelash extent is visible as a contour cue only. Sliding silhouette or paint boundary is not a fixed material point and is never fit-eligible.",
           "eligible_for_fitting": false
         },
         {
@@ -1748,8 +1742,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -1779,9 +1773,9 @@
             314.661805,
             396.351073
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1797,9 +1791,9 @@
             332.346082,
             397.990171
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1815,9 +1809,9 @@
             350.111342,
             399.680861
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: dark painted pupil is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -1882,8 +1876,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1894,8 +1888,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -1906,8 +1900,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -1929,8 +1923,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -1941,8 +1935,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -1953,8 +1947,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2001,8 +1995,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2013,8 +2007,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2025,8 +2019,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         }
       ]
@@ -2048,8 +2042,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2060,8 +2054,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2072,8 +2066,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2120,8 +2114,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2132,8 +2126,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2144,8 +2138,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         }
       ]
@@ -2175,9 +2169,9 @@
             282.475446,
             17.47168
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: thin ear endpoint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -2193,9 +2187,9 @@
             275.684964,
             17.845572
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: thin ear endpoint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -2211,9 +2205,9 @@
             268.879072,
             18.165787
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: thin ear endpoint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -2283,9 +2277,9 @@
             240.878992,
             18.165006
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: thin ear endpoint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -2301,9 +2295,9 @@
             233.685067,
             17.844683
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: thin ear endpoint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         },
         {
@@ -2319,9 +2313,9 @@
             226.475484,
             17.47153
           ],
-          "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "confidence": "LOW",
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: thin ear endpoint is visible near the marker, but oblique compression or a thin antialiased endpoint makes precise source-point identity uncertain. Candidate retained for diagnosis; outside the accepted central comparison set.",
           "eligible_for_fitting": false
         }
       ]
@@ -2346,8 +2340,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2358,8 +2352,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2370,8 +2364,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2424,8 +2418,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2436,8 +2430,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2448,8 +2442,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
@@ -2471,8 +2465,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2483,8 +2477,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2495,8 +2489,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2543,8 +2537,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2555,8 +2549,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         },
         {
@@ -2567,8 +2561,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: The source slot has no established visible image anchor. Do not substitute a lip/hair/choker silhouette or node origin for the missing source point.",
           "eligible_for_fitting": false
         }
       ]
@@ -2593,8 +2587,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_00.png; unmarked and marked outer face detail at raw_yaw=-1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2605,8 +2599,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_01.png; unmarked and marked outer face detail at raw_yaw=-0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2617,8 +2611,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_02.png; unmarked and marked outer face detail at raw_yaw=-0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2671,8 +2665,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_06.png; unmarked and marked outer face detail at raw_yaw=0.5: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2683,8 +2677,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_07.png; unmarked and marked outer face detail at raw_yaw=0.75: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         },
         {
@@ -2695,8 +2689,8 @@
           "state": "UNKNOWN",
           "xy": null,
           "confidence": "UNKNOWN",
-          "review_method": "UNREVIEWED",
-          "image_feature_evidence": null,
+          "review_method": "VISUAL_NATIVE",
+          "image_feature_evidence": "Codex inspected native nine-pose contact and full-size annotated_08.png; unmarked and marked outer face detail at raw_yaw=1.0: No source-identified candidate was established. Features can be visible while correspondence remains missing; no occlusion claim or guessed coordinate.",
           "eligible_for_fitting": false
         }
       ]
