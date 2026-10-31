@@ -75,6 +75,7 @@ for (const [name,y,w,h,color] of [
 
 const gl = renderer.getContext();
 const pixels = new Uint8Array(4);
+const framebuffer = new Uint8Array(640*360*4);
 const metadata = {
   testOnly: true, label: 'M0 engineering smoke, not fidelity proof',
   partNames: names,
@@ -94,8 +95,15 @@ window.renderFrame = function renderFrame(frameIndex) {
   head.rotation.z = 0.035*Math.sin(t*Math.PI*2);
   renderer.render(scene, camera);
   gl.readPixels(320, 180, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+  gl.readPixels(0, 0, 640, 360, gl.RGBA, gl.UNSIGNED_BYTE, framebuffer);
+  const bgR=framebuffer[0], bgG=framebuffer[1], bgB=framebuffer[2];
+  let nonBackgroundSamples=0;
+  for(let j=0;j<framebuffer.length;j+=4*8) {
+    const delta = Math.abs(framebuffer[j]-bgR)+Math.abs(framebuffer[j+1]-bgG)+Math.abs(framebuffer[j+2]-bgB);
+    if(delta>30) nonBackgroundSamples++;
+  }
   return {
-    frameIndex, yawDeg:360*t, partCount:names.length,
+    frameIndex, yawDeg:360*t, partCount:names.length, nonBackgroundSamples,
     sampleRGBA:Array.from(pixels),
     viewMatrix:Array.from(actor.matrixWorld.elements),
     glVersion:metadata.glVersion
