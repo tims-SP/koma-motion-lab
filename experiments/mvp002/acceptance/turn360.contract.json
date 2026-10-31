@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "protocol": "mvp006-turn360-v1",
   "status": "SPEC_ONLY_NOT_EXECUTED",
   "supersedes": "MVP-003~005 video-encoding-is-360-success inference",
@@ -229,5 +228,6 @@
       "ffmpeg/ffprobe",
       "visual_model_on_demand"
     ]
-  }
+  },
+  "contractFormat": "turn360-acceptance-json-config-v1"
 }
