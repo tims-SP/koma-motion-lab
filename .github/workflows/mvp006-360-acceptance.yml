@@ -1,0 +1,60 @@
+name: MVP-006 formal 360 core acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/mvp002/src/qa/**'
+      - 'experiments/mvp002/scripts/render-turn360.ts'
+      - '.github/workflows/mvp006-360-acceptance.yml'
+concurrency:
+  group: mvp006-360-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Dependencies and TS strict typecheck
+        working-directory: experiments/mvp002
+        run: |
+          npm install --no-audit --no-fund
+          npm run typecheck
+      - name: Browser and ffmpeg
+        working-directory: experiments/mvp002
+        run: |
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb ffmpeg
+      - name: Render real 8 sec / 192 frame full-body 360 and S01–S08
+        working-directory: experiments/mvp002
+        run: xvfb-run -a npm run render:turn360
+      - name: Upload video, 25 sampled directions, masks and hard-gate QA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mvp006-360-acceptance-evidence
+          retention-days: 20
+          if-no-files-found: warn
+          path: |
+            experiments/mvp002/out/turn360/turn360-8s.mp4
+            experiments/mvp002/out/turn360/turn360-qa.json
+            experiments/mvp002/out/turn360/turn360-traces.json
+            experiments/mvp002/out/turn360/angle-board.png
+            experiments/mvp002/out/turn360/detail-board.png
+            experiments/mvp002/out/turn360/seam-360.png
+            experiments/mvp002/out/turn360/pass-*.png
+            experiments/mvp002/out/turn360/boundary-*.png
+      - name: Print JSON QA summary
+        if: always()
+        working-directory: experiments/mvp002
+        run: |
+          if test -f out/turn360/turn360-qa.json; then
+            node -e 'const x=require("./out/turn360/turn360-qa.json"); console.log(JSON.stringify({status:x.report.coreStatus,gates:x.report.gateResults,diagnostics:x.diagnostics},null,2))'
+          fi
