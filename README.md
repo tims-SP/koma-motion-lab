@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Highest-priority gate — MVP-006 360° core acceptance (2026-10-31)
+
+**[Formal three-stage 360° acceptance specification](docs/experiments/MVP-006-360-acceptance-v1.md)** · **[TypeScript per-part trace and QA result contract](experiments/mvp002/src/qa/turn360-contract.ts)**
+
+Prior MVP-002—005 CI successes verified the WebGL/MP4/limited rig and layered texture pipeline only. **The actual continuous 360° character model has NOT PASSED**. Stop further procedural art polishing. Next implementation must render the *same* character for 8s/192 frames (static pose + fixed camera/light), expose real anchor/VDD/mesh/depth/part-ID-mask traces, run hard structural gates, and provide 24-angle contact sheets + full video/flagged temporal spans for model/human visual review. Neither a green CI nor a few pretty frames is sufficient. This specification is committed but no new acceptance implementation or PASS is claimed.
+
 ## Latest result — MVP-005 detailed four-view RGBA + face close-up (2026-10-31)
 
 **[Successful real render #41194923884](https://github.com/tims-SP/koma-motion-lab/actions/runs/41194923884)** · **[Actual 6-second MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-29dfef1130728dc814a9/integrated-6sec.mp4)** · **[16 transparent source-art tiles](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-29dfef1130728dc814a9/key-art-contact.png)** · **[MVP-005 engineering and honest visual QA](docs/experiments/MVP-005-detailed-art-and-closeup.md)**
