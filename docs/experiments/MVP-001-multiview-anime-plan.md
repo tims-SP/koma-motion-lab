@@ -2,6 +2,7 @@
 
 Status: M0 INFRASTRUCTURE SMOKE PASSED (2026-10-31); M1-M4 CHARACTER QUALITY NOT IMPLEMENTED / NOT VERIFIED
 
+> **2026-10-31 资产/语言修订（覆盖早期描述）**：M1 **从现有资产入手**，首选 `myssal/Reverse-1999-CN-Asset` 的 Spine + Live2D 同角色资源；以 Spine 4.2 TS runtime、Cubism Web TS 官方样例及 SIGGRAPH 2010 多视角 SVG 为对照。仅在核实原始角色缺少真正侧/背等关键视角时才进行定向补画/生成，不再从零创作人物作为先决条件。所有新增/维护的自有源码、Node 脚本、渲染器与测试统一 **TypeScript**；M0 旧 JS 迁移为 M1-00，迁移前保留回归。参见 [M1 修订执行计划](./MVP-001-M1-plan.md) 与 [现有资产调查](./MVP-001-assets-research.md)。本段优先于本文较早的旧任务描述。\n\n
 M0 verified: [Actions #41188109729](https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729) SUCCESS, Chromium WebGL 2.0, 25 original procedural parts, 24 frame-accurate PNG screenshots at 640x360, one MP4 (15,700 bytes), 0/360 transform seam check, and independent non-background pixel checks. Preview assets are retained in [DRAFT Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-0ce02cee0dc27dfc74db) (owner access). This proves WebGL export pipeline only; **DOES NOT** prove multi-view interpolation, 360° anime fidelity, IK, normals, SDF, or 1080p video quality. Earlier two FAIL runs identified edge-on blank output and invalid center-pixel QA; they were repaired in the latest run.
 
 ## 0. Decision
@@ -14,7 +15,7 @@ The previous **lightweight 3D surface + single continuous UV skin** approach is 
 
 ## 1. Deliverable contract
 
-- 1 original (or separately permissioned) anime-style character; identifiable costume / hairstyle / silhouette across all shots. No unlicensed commercial-game artwork.
+- 1 existing character sourced from a verifiable Spine/Live2D/layered asset (original replacement only if evidence proves required and approved); identifiable costume / hairstyle / silhouette across all shots. No unlicensed commercial-game artwork.
 - 1 versioned editable character manifest and actual layered transparent source art; output from the *same underlying character package*, not three independent flat videos.
 - A: 8 s / 192 frames / 24 fps / full-body actor rotates yaw 0..360 with fixed camera; loop seam 0/360; minimum 8 review directions at 45-degree increments, and all intermediate frames. No plane or whole-character-image card flip. Do not swap entire character sprites to fake this.
 - B: 6 s / 144 frames / 24 fps / full-body step, upper-body turn, arm reach and brief target contact, with both hand target and grounded feet. Root, head, upper/lower limbs must independently articulate. Hair/cloth secondary response.
@@ -33,7 +34,7 @@ General-purpose artist UI; generic arbitrary-character import; procedural full-3
 
 ## 3. Asset contract
 
-Start with an **original high-quality reference character sheet**, with locked palette, face design, costume and accessories. Produce source keyviews for yaw 0, 90, 180, 270; draft 45/135/225/315 as intermediate images, and **promote to edited keyviews** if interpolation cannot preserve silhouette and semantics. Do not assume that four views suffice for quality.
+Start with a **verified existing high-quality anime character asset**, using its original rig/textures and existing angle coverage as the locked art reference; document asset provenance and privately store licensed copies. First audit available real keyviews, then supplement only the missing yaw 0, 90, 180, 270 and draft 45/135/225/315 as intermediate images, and **promote to edited keyviews** if interpolation cannot preserve silhouette and semantics. Do not assume that four views suffice for quality.
 
 Minimum consistent semantic parts: face, eyes.l, eyes.r, brow.l, brow.r, mouth, front-hair, side-hair.l/r, back-hair, neck, torso, pelvis, upper/lower arms.l/r, hands.l/r, upper/lower legs.l/r, shoes.l/r; optional skirt/accessory chunks (approx. 25+). **A completely flat character sprite does not qualify**.
 
@@ -55,8 +56,8 @@ Source art can be produced by AI but must pass separate identity/geometry/occlus
 
 | Phase | Specific execution | Required evidence / gate |
 |---|---|---|
-| M0 — base & license | Create experiments/mvp001, schema, test harness, pinned dependencies; verify WebGL on GitHub Actions, deterministic seek, screenshot, mp4 pipeline. Select original character and record asset rights. | CI renders real layered geometries in Chromium; 3 reproducible screenshots; codec probe; input/reference links and SHA. No claims of anime fidelity. |
-| M1 — 360 body baseline | Create 4 cardinal keyviews and semantic part decomposition; rig base anchors, key mesh and mapping; add intermediate keyviews as needed; 8-direction review. | 8s 360 full body MP4 + 24 angle samples; 0/360 wrap check, visibility/occlusion logs, human visual review. |
+| M0 — base & license | M0 rendering infrastructure PASS; freeze baseline. For M1 use TS-only new code, migrate M0 JS/smoke to TS with parity, inventory existing character source and record provenance and rights. | CI renders real layered geometries in Chromium; 3 reproducible screenshots; codec probe; input/reference links and SHA. No claims of anime fidelity. |
+| M1 — 360 body baseline | Start with source Spines/Live2D rig and any existing genuine views; inspect original native reference; supplement missing cardinal views, build semantic part decomposition/correspondence and anchors, then add keyviews as necessary; 8-direction review. | 8s 360 full body MP4 + 24 angle samples; 0/360 wrap check, visibility/occlusion logs, human visual review. |
 | M2 — full-body articulation | Introduce bone hierarchy and part-local view transforms, arm IK and feet lock, action timeline; add action-specific art corrections. | 6s scene + pose contact sheet, 3D target/foot constraints and deformation diagnostics, human pose quality gate. |
 | M3 — anime facial FX | Animated face parts, mouth/eye/warp, face shadow mask/SDF, optional hair normal, lighting, rim and depth particles. | 4s scene + unlit vs lit comparison PNGs, visual QA for line/face sharpness and lighting. |
 | M4 — closed-loop QA | Fixed resolution export, deterministic frame sampling, generate 3 videos and contact sheets, independent QA, classify failures, make corrections. | Draft release containing A/B/C + full QA JSON; owner review. All three scenes must pass. |
@@ -107,4 +108,4 @@ No reuse of old scripts without re-evaluating their suitability. No previous exp
 
 ## 10. Immediate next action
 
-Implement **M0 only**: independent Three.js layered-part WebGL rendering under CI, explicit per-frame evaluator and MP4/frame sampling, then write truthful PASS/FAIL evidence to a new report and Draft Release. Do not start the final 360 quality claim before one real consistent multi-view character exists.
+M0 infrastructure has passed: https://github.com/tims-SP/koma-motion-lab/actions/runs/41188109729 . Next implement M1-00/01 as specified in M1 plan: migrate maintained M0 JS and smoke scripts to TypeScript with parity, inventory existing assets in TS, verify source 4.2 Spine/Cubism reference renderers, then establish real view coverage before supplementing missing views. Do not claim high-quality 360° prior to visual verification.
