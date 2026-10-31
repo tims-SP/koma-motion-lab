@@ -1,0 +1,52 @@
+{
+  "schema": "HEAD009-LOCAL-HTML-ACCEPTANCE-V1",
+  "repository": "tims-SP/koma-motion-lab",
+  "verifiedGitCommit": "bdd1193d9d5568475c32b6547085d323ec42ccc1",
+  "sourceSnapshotCommit": "61d9b88ed966ef996aead71ada14aa5bcdd42550",
+  "sourceConsistency": "review.html, src/review.ts, scripts/audit-review.ts, scripts/build-review.mjs matched current verified build",
+  "environment": {
+    "node": "22.16.0",
+    "chromium": "Playwright Chromium headless shell 156.0.8078.4",
+    "source": "Actions bootstrap artifacts installed in isolated container",
+    "mode": "file://, real WebGL"
+  },
+  "html": {
+    "file": "head009-review.html",
+    "sizeBytes": 546232,
+    "sha256": "c483291902d5d7d93639540acce478b2f478d67e2793015d92274eabba1af249"
+  },
+  "localChecks": {
+    "typescript": "PASS",
+    "artSource": "PASS",
+    "semanticOrgan": "PASS",
+    "vddControl": "PASS",
+    "fileUrlAndWebgl": "PASS",
+    "angle0_60_90": "PASS",
+    "pixelQa60": "PASS_ENGINEERING",
+    "pixelQa90": "PASS_ENGINEERING",
+    "fourPassSelection": "PASS",
+    "manualOrganVerdictExport": "PASS",
+    "jsonDownload": "PASS",
+    "animatedYawPlayback": "PASS",
+    "mobile390x844": "PASS",
+    "mobileHorizontalOverflowPx": 0,
+    "requestsToExternalServices": 0,
+    "uncaughtJsErrors": 0
+  },
+  "ciCrossCheck": {
+    "url": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41253856374",
+    "sha256Match": true
+  },
+  "artisticReview": {
+    "status": "IN_PROGRESS",
+    "blocking": [
+      "80-90 ear emergence",
+      "fresh independent 20/55/82 references"
+    ]
+  },
+  "reproducibility": {
+    "script": "experiments/head009/scripts/run-isolated-review.sh",
+    "bootstrap": "https://github.com/tims-SP/koma-motion-lab/actions/workflows/mvp009-container-bootstrap.yml",
+    "browser": "https://github.com/tims-SP/koma-motion-lab/actions/workflows/mvp009-browser-bootstrap.yml"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_HTML_INTERACTIVE_ACCEPTANCE_IN_PROGRESS",
+  "phase": "HEAD90_INTERACTIVE_HTML_CONTAINER_ACCEPTED_VISUAL_REVIEW",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -211,7 +211,8 @@
             ]
           }
         }
-      ]
+      ],
+      "htmlReviewStatus": "PASS_ENGINEERING_LOCAL"
     },
     {
       "id": "T04",
@@ -353,5 +354,32 @@
   },
   "outputFormat": "standalone_html",
   "qaExecution": "isolated_container_chromium_file_url",
-  "latestValidationWorkflow": ".github/workflows/mvp009-html-review.yml"
+  "latestValidationWorkflow": ".github/workflows/mvp009-html-review.yml",
+  "htmlAcceptance": {
+    "status": "PASS_LOCAL_CONTAINER_ENGINEERING",
+    "runMode": "isolated_local_chromium_file_url",
+    "sourceCommit": "bdd1193d9d5568475c32b6547085d323ec42ccc1",
+    "htmlFile": "out/head009/head009-review.html",
+    "htmlSizeBytes": 546232,
+    "htmlSha256": "c483291902d5d7d93639540acce478b2f478d67e2793015d92274eabba1af249",
+    "localQaFile": "out/head009/local-container-qa.json",
+    "localScript": "experiments/head009/scripts/run-isolated-review.sh",
+    "validations": [
+      "TypeScript strict",
+      "original SVG source inventory",
+      "organ annotation schema and negative controls",
+      "view-dependent deformation constraints",
+      "offline file URL load and WebGL2 render",
+      "0/60/90 angle selection",
+      "Part-ID channel and real pixel QA",
+      "manual organ review export",
+      "HTML playback",
+      "mobile 390 x 844 viewport"
+    ],
+    "externalRequests": 0,
+    "jsRuntimeErrors": 0,
+    "crossCheck": "HTML sha256 identical between local container build and GitHub Actions HTML CI #41253856374",
+    "uiVisualStatus": "PENDING_ARTISTIC_APPROVAL_80_90_EAR_TRANSITION"
+  },
+  "lastHtmlRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41253856374"
 }
