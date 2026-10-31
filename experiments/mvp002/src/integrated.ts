@@ -27,7 +27,7 @@ declare global {interface Window {
   integratedArtProof:{transparent:boolean;centerOpaque:boolean;allDistinct:boolean;views:number};
   exportArtPNG:(partId:PartId,angle:View)=>string;
   renderTurn360:(yaw:number,frameIndex:number)=>{stats:FrameStats;trace:FrameTrace};
-  captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string};
+  captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
   turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
 }}
 
@@ -341,7 +341,8 @@ window.captureTurnPass=(pass,includeImage)=>{
  const oldColor=renderer.getClearColor(new THREE.Color()).clone();
  const oldAlpha=renderer.getClearAlpha();
  const pixels=new Uint8Array(width*height*4);
- let result:{counts:Record<string,number>;dataUrl?:string};
+ let measuredBounds:readonly [number,number,number,number]|undefined;
+ let result:{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
  try{
    renderer.setRenderTarget(target);
    renderer.setClearColor(0x000000,1);
@@ -361,8 +362,9 @@ window.captureTurnPass=(pass,includeImage)=>{
        [x0*960/width,(height-1-y1)*540/height,
         (x1+1)*960/width,(height-y0)*540/height];
      qaRecorder.updateVisible(counts,bounds);
+     measuredBounds=bounds;
    }
-   result={counts:Object.fromEntries(counts)};
+   result={counts:Object.fromEntries(counts),bounds:measuredBounds};
    if(includeImage){
      const cv=document.createElement('canvas');cv.width=width;cv.height=height;
      const ctx=cv.getContext('2d');if(!ctx)throw Error('QA pass canvas unavailable');
