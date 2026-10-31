@@ -28,7 +28,11 @@ def visual(frame):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     before = digest(CONFIG)
-    data = json.loads(CONFIG.read_bytes())
+    baseline = OUT / 'unreviewed-baseline.json'
+    baseline.unlink(missing_ok=True)
+    prepared = command('--prepare', baseline)
+    assert prepared.returncode == 0, prepared.stderr
+    data = json.loads(baseline.read_bytes())
     checks = []
     result = command('--verify', CONFIG)
     assert result.returncode == 0, result.stderr

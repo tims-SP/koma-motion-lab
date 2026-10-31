@@ -18,6 +18,8 @@
 
 ## 下一工单与实际阻塞
 
+最新检查点：收窄到既有Session、bash-only显式配置、禁用persona/插件和拒绝uploads/prepare后，mcode续跑仍被自动审批以潜在OSS载荷未明为由拒绝；没有完成工具调用，没有重登，不继续重试。按M1C2计划本地兜底，Codex已实际应用中央三姿态57格决定并通过独立逐格比对、17项回归；受控表现为57格已审、9个图像标记可有限比较、其余114格未审。执行归属明确为Codex；[本地应用证据](../experiments/reference-factory/evidence/core026-M1/central-review-local-application.json)。历史pending工单已改为APPLIED_CODEX_FALLBACK，不得重复应用。继续余下六姿态审阅及M1总门禁；M2仍未开始。
+
 M1C2A已完成初始19×9审阅表和只读结构校验。mcode首次开放式实现超时exit6、无文件；随后按Codex补丁工单实际应用代码并执行prepare/verify，CLI/工具/两条命令均exit0。Codex独立17项检查通过，包括14种损坏均exit11、允许隔离的合法编辑、已有表禁止覆盖；原配置不变。171格均未审、可拟合数0。代码ba80ad2旧回归CI41154947789通过；监督CI41154947797在旧M1C1整份配准报告SHA比对失败，新标点步骤尚未运行。代码54d1c9f修复为显式v2身份/原始mesh/验证程序指纹，数值门禁不变；新监督CI41155423219与旧回归41155423100均success，已下载并核对11份JSON产物与ZIP SHA。完整报告仅5个未消费距离值差异，最大2.22e-16；[CI验收JSON](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。[验收范围与归属](research/CORE-026-M1C2A-review-preparation.md)。已实际完成raw0与±0.25的57格判断，9个图像标记可有限比较；后续mcode操作又被自动审批以潜在OSS载荷未知为由拒绝，尚未落盘，受控表仍0审阅/0可拟合。具体57格决定与逐步恢复指令已存[待执行工单](../experiments/reference-factory/evidence/core026-M1/central-review-pending-order.json)。不把该拒绝当实际上传证据，不绕过或重登。下一步仍是由mcode应用该工单，再做其余姿态与M1总门禁，未开始M2。
 
 mcode限定执行确实恢复过：本轮M1C2A应用补丁及prepare/verify有真实工具exit0。随后中央三姿态工单再次被自动审批拒绝；当前不再调用、不重登。详见上方待执行工单。Node诊断不覆盖系统全部网络；未知对象存储仍拒绝，审批提示不能当作上传抓包。M1C1与v2修复作者仍是Codex，不能事后改归mcode。

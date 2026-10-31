@@ -22,7 +22,9 @@ def require(ok, message):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apply', action='store_true', help='Apply exact published decisions and run both checks')
+    parser.add_argument('--executor', choices=['mcode','codex-fallback'])
     args = parser.parse_args()
+    require(not args.apply or args.executor is not None,'--apply requires explicit --executor attribution')
     original = CONFIG.read_bytes()
     order = json.loads(ORDER.read_bytes())
     require(order['status']=='PENDING_MCODE_APPLICATION','Order is not pending')
@@ -67,6 +69,7 @@ def main():
             raise
     print('CORE026_CENTRAL_ORDER',json.dumps({'status':'APPLIED_AND_CHECKED' if args.apply else 'DRY_RUN_ONLY',
           **counts,'remaining_unreviewed':114,'source_decisions':'Codex actual image review',
+          'executor':args.executor if args.apply else 'not executed',
           'overall_M1':'NOT_ACCEPTED','runtime_depth_and_occlusion':'NOT_IMPLEMENTED'}),flush=True)
 
 if __name__=='__main__':

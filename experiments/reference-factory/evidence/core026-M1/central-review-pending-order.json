@@ -1,6 +1,6 @@
 {
   "schema": "core026-central-review-pending-order/1",
-  "status": "PENDING_MCODE_APPLICATION",
+  "status": "APPLIED_CODEX_FALLBACK",
   "decision_author": "Codex actual image review",
   "executor_required": "mcode",
   "reason_not_applied": "Automatic approval review rejected follow-up CLI operation for potential unknown Alibaba OSS egress; no completed bash call or review mutation. Not evidence of an observed upload.",
@@ -1006,17 +1006,23 @@
       ]
     }
   ],
-  "next_execution_steps": [
+  "current_committed_state": {
+    "reviewed": 57,
+    "fit_eligible": 9,
+    "overall_M1": "NOT_ACCEPTED",
+    "M2": "NOT_STARTED"
+  },
+  "application_evidence": "central-review-local-application.json",
+  "historical_mcode_requirement": "Original executor preference was mcode; actual local fallback explicitly attributed under the repository M1C2 plan after automatic rejection.",
+  "original_execution_steps": [
     "Assert current config matches input_review_config_sha256; refuse mismatch.",
     "Apply only listed 57 cell decisions by id/raw_yaw; preserve immutable source and candidate fields.",
     "Update regression fixtures to prepare an isolated UNREVIEWED baseline, while independently verifying committed reviewed config.",
     "Run prepare_core026_landmark_review.py --verify and run_core026_landmark_review_regressions.py; report actual command and tool exit codes.",
     "Codex independently verifies exact 57 changes, unchanged original PNG/INX, counts57 reviewed/9 eligible/114 unreviewed, then commits."
   ],
-  "current_committed_state": {
-    "reviewed": 0,
-    "fit_eligible": 0,
-    "overall_M1": "NOT_ACCEPTED",
-    "M2": "NOT_STARTED"
-  }
+  "next_execution_steps": [
+    "Do not reapply this order. Original input SHA no longer matches.",
+    "Complete the remaining114 cells by actual native image review, then implement the M1 aggregate gate."
+  ]
 }

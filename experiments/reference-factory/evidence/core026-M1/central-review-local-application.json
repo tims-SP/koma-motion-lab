@@ -1,0 +1,117 @@
+{
+  "schema": "core026-central-review-application/1",
+  "status": "PASS_LOCAL_CENTRAL_REVIEW_ONLY",
+  "date": "2026-10-31 Asia/Shanghai",
+  "executor": "Codex local fallback under M1C2 repository plan",
+  "mcode_status": "BLOCKED_AUTOMATIC_APPROVAL; no completed tool call",
+  "mcode_cli_validation_attempt": "lightweight with existing Session rejected locally exit2; no login error",
+  "mcode_narrower_attempt": "existing session + command-only config + upload-preparation denial still rejected by automatic review for potential unknown OSS egress; no further SDK attempts",
+  "fallback_authority": "docs/plans/CORE-026-M1C2-landmark-and-reference-order.md permits explicitly attributed local fallback while mcode blocked",
+  "independent_comparison": {
+    "exact57_decisions_applied": true,
+    "other114_cells_unchanged": true,
+    "all_identity_source_candidate_fields_unchanged": true
+  },
+  "reviewed": 57,
+  "fit_eligible": 9,
+  "remaining_unreviewed": 114,
+  "config_sha256": "867a0abc0f46ac1ecc2c113936c82ac9c2acfd9cde245ecc9caaee06da12fee0",
+  "regressions": {
+    "status": "PASS",
+    "author": "Codex independent supervisor",
+    "scope": "STRUCTURE_AND_REJECTION_ONLY",
+    "synthetic_positive_case_is_not_review_evidence": true,
+    "checks": [
+      {
+        "case": "committed_table_verify",
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_native_png_hash",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "proxy_promoted_to_fit",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "hard_unknown_forged_point",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "unreviewed_candidate_promoted",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "missing_identity",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "missing_pose",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "candidate_coordinate_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "nan_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "bool_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "out_of_bounds_coordinate",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "source_alpha_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "source_hash_changed",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "overall_m1_claim_promoted",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "visual_evidence_missing",
+        "exit_code": 11,
+        "input_unchanged": true
+      },
+      {
+        "case": "synthetic_visual_edit_allowed",
+        "exit_code": 0,
+        "input_unchanged": true
+      },
+      {
+        "case": "existing_review_not_overwritten",
+        "exit_code": 11,
+        "input_unchanged": true
+      }
+    ],
+    "original_config_sha256": "867a0abc0f46ac1ecc2c113936c82ac9c2acfd9cde245ecc9caaee06da12fee0",
+    "original_config_unchanged": true,
+    "overall_M1": "NOT_ACCEPTED",
+    "runtime_depth_and_occlusion": "NOT_IMPLEMENTED"
+  },
+  "overall_M1": "NOT_ACCEPTED",
+  "M2": "NOT_STARTED"
+}
