@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.75D MVP · Six-module integrated proof</title>
+<style>
+:root{color-scheme:dark}body{font:14px system-ui,sans-serif;background:#101a30;color:#edf3ff;margin:0}
+main{max-width:1010px;margin:15px auto;padding:14px}h1{font-size:22px}
+canvas{display:block;width:960px;height:540px;max-width:100%;aspect-ratio:16/9}
+input{width:80%}p{color:#b3c4dc}output{font-variant-numeric:tabular-nums}
+</style></head>
+<body><main><h1>2.75D · Integrated MVP / Three Views, Twelve Parts</h1>
+<p>单场景一镜到底：360° 旋转 → 3D IK 抬手穿越前后遮挡 → 面部形变与光照。极简原创资产用于验证技术链路，并非商业动漫原画。</p>
+<canvas id="viewport" width="960" height="540"></canvas>
+<input id="scrub" type="range" min="0" max="144" value="0" step="1"/>
+<output id="status">0 / 144</output>
+<script type="module" src="/src/integrated.ts"></script>
+<script type="module" src="/src/integrated-controls.ts"></script>
+</main></body></html>
