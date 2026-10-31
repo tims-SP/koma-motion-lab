@@ -57,3 +57,16 @@
 - 镜头真正从远景转近景：已接入。
 - 真实独立多视角高画质人物原画：**未实现**。
 - 电影级高保真面部/身体动作：**未通过**。
+
+## 最终修订版验收（已完成）
+
+- [成功的最终 Actions #41194923884](https://github.com/tims-SP/koma-motion-lab/actions/runs/41194923884)
+- [最终 Draft Release](https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-29dfef1130728dc814a9)
+- [最终 6 秒视频](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-29dfef1130728dc814a9/integrated-6sec.mp4)；357,537 bytes；960×540 / 144 decoded frames。
+- [最终 16 图分视角 RGBA 原画对照板](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-29dfef1130728dc814a9/key-art-contact.png)
+- [包含真实透明 PNG、视频、4 张实际 QA 图、数值报告的 Artifact #13040540770](https://github.com/tims-SP/koma-motion-lab/actions/runs/41194923884/artifacts/13040540770)
+- 最新 \`src/integrated.ts\`：eyes mesh 区域增加到 0.37×0.155（模型半宽/半高）；view-crossfade shader 采用 alpha premultiplication/recovery，减少透明像素插值边缘错误。
+- 严格 TypeScript、原有 IK/深度/阴影校验、16 张 PNG 的真实 Alpha 和角度差异校验、FFprobe 全部通过。
+- 关键自动指标：IK max error ≈ 2.22e−16；手臂相对躯干前后深度 −0.343→+0.680；面部阴影偏移跨度 ≈ 0.353；眼睛形变及额外近景镜头正常执行。
+- 实际查看 frame 12 / 114 / 132：frame 132 两只眼较此前明显增大，睫毛/眼线更可辨；但依然缺少有质量的头部与服装真实多视角原画。仍为 **PASS_ENGINEERING / FAIL_VISUAL_ANIME_QUALITY**。
+- **下阶段禁止继续仅为程序化笔触做无限小修**。核心基础已能消费真正 RGBA 分层资产，应该转向独立真实高保真前/侧/背/左侧原画及 semantic part registration；只在当前镜头验证。
