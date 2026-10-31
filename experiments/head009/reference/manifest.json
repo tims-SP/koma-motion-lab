@@ -30,7 +30,7 @@
       "path": "heldout-075.svg"
     }
   ],
-  "status": "SOURCE_AUTHORED_NOT_YET_REGISTRATION_ACCEPTED",
+  "status": "CARDINAL_SOURCE_REGISTERED_PENDING_HELDOUT_REVIEW",
   "landmarks": {
     "front": {
       "nose.tip": [
@@ -84,5 +84,17 @@
     }
   },
   "license": "Original reference drawings created for the project; no third-party asset",
-  "note": "Heldout SVG files are separately authored and must never enter runtime interpolation. Key paths currently require pixel-to-world registration before source fidelity can PASS."
+  "note": "SVG key views are the actual source of runtime meshes and outline strokes. Held-out SVGs remain separate from runtime interpolation and provide independent comparison.",
+  "runtimeSource": "experiments/head009/src/reference-runtime.ts",
+  "keySilhouetteIoU": {
+    "0": 0.9954382014920358,
+    "45": 0.9958196175050993,
+    "90": 0.9940460047829196
+  },
+  "heldoutSilhouetteIoU": {
+    "30": 0.9278749474926042,
+    "60": 0.9211287390513965,
+    "75": 0.9068743796659906
+  },
+  "validationRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330"
 }

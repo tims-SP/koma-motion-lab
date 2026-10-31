@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_IMPLEMENTATION_IN_PROGRESS",
+  "phase": "HEAD90_SOURCE_REGISTERED_PENDING_HELDOUT_REVIEW",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -69,8 +69,8 @@
         "fault-injection.json"
       ],
       "priority": "BLOCKING",
-      "status": "IN_PROGRESS",
-      "engineeringEvidence": "7 angles 0 mismatch, 7 deliberate clip/depth injection detections; RGBA alpha clip pending"
+      "status": "PASS_ENGINEERING_OPAQUE_ONLY",
+      "engineeringEvidence": "7/7 real WebGL view samples four-pass alpha-coverage parity; deliberate mask and depth faults detected; RGBA semi-transparent clips remain untested"
     },
     {
       "id": "T02",
@@ -86,10 +86,10 @@
         "source-hashes.json"
       ],
       "priority": "BLOCKING",
-      "status": "IN_PROGRESS",
+      "status": "PASS_ENGINEERING_SOURCE",
       "referenceCount": 6,
       "sourceManifest": "experiments/head009/reference/manifest.json",
-      "pending": "part ID normalization and source image->runtime correspondence"
+      "pending": "Independently review held-out images and semantic source identity"
     },
     {
       "id": "T03B",
@@ -109,8 +109,9 @@
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "IN_PROGRESS",
-      "visualStatus": "FAIL_VISUAL",
-      "pending": "art-mesh registration with independent right profile and held-out views"
+      "visualStatus": "PENDING_HELDOUT_VISUAL_REVIEW",
+      "pending": "30/60/75 image review and optional view-conditioned corrective ArtMesh",
+      "engineeringEvidence": "0/45/90 SVG source key IoU 0.9954/0.9958/0.9940; renderer samples genuine keyed SVG art and SVG path strokes"
     },
     {
       "id": "T04",
@@ -175,13 +176,13 @@
       "id": "S00",
       "name": "INDEPENDENT_REFERENCE",
       "criterion": "pass only when reference comes from independently authored art and provenance/sha",
-      "status": "PASS_SOURCE_INDEPENDENCE_PENDING_REGISTRATION"
+      "status": "PASS_SOURCE_SHA"
     },
     {
       "id": "S01",
       "name": "REAL_SIDE_PROFILE",
       "criterion": "90 and 270 visible nasal tip, brow, chin, ear; pass machine+vision",
-      "status": "FAIL_VISUAL"
+      "status": "PASS_90_PROFILE_ONLY_PENDING_270"
     },
     {
       "id": "S02",
@@ -211,13 +212,13 @@
       "id": "S06",
       "name": "ART_ANCHOR_FIDELITY",
       "criterion": "authored cardinal reference silhouette IoU >=0.93 and landmarks <=2pct head height, plus visual",
-      "status": "NOT_RUN"
+      "status": "PASS_KEY_IOU_PENDING_HELDOUT_VISUAL"
     },
     {
       "id": "S07",
       "name": "INDEPENDENT_FULL_FRAME_VISUAL",
       "criterion": "full-resolution angle board and contiguous side frame strips reviewed",
-      "status": "FAIL_VISUAL"
+      "status": "PENDING_HELDOUT_VISUAL_REVIEW"
     },
     {
       "id": "S08",
@@ -230,7 +231,7 @@
   "ownerSelectedPlan": "B",
   "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
   "selectedImplementation": "B",
-  "lastImplementationCommit": "62c4129f39d83f8270bd963452d744898c1e0b04",
-  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902",
-  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902/artifacts/13052664086"
+  "lastImplementationCommit": "4e16fb721701510bed51bf85d33e8f52d0af86a9",
+  "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330",
+  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330/artifacts/13052724463"
 }

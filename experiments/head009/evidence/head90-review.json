@@ -1,8 +1,8 @@
 {
   "schema": "HEAD009-VISUAL-REVIEW-V1",
-  "sourceCommit": "62c4129f39d83f8270bd963452d744898c1e0b04",
-  "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902",
-  "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230438902/artifacts/13052664086",
+  "sourceCommit": "4e16fb721701510bed51bf85d33e8f52d0af86a9",
+  "run": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330",
+  "artifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41230925330/artifacts/13052724463",
   "angularSamples": [
     0,
     15,
@@ -13,7 +13,7 @@
     90
   ],
   "engineering": {
-    "result": "PASS_ENGINEERING_OPAQUE_ONLY",
+    "result": "PASS_ENGINEERING_KEY_RECONSTRUCTION",
     "pixelCoverageMismatchesAllPasses": 0,
     "deliberateClipFaultDetected": true,
     "deliberateDepthFaultDetected": true,
@@ -22,6 +22,16 @@
       "ear": true,
       "nose": true,
       "mouth": true
+    },
+    "cardinalSilhouetteIoU": {
+      "0": 0.9954382014920358,
+      "45": 0.9958196175050993,
+      "90": 0.9940460047829196
+    },
+    "heldoutSilhouetteIoU": {
+      "30": 0.9278749474926042,
+      "60": 0.9211287390513965,
+      "75": 0.9068743796659906
     }
   },
   "sourceArt": {
@@ -37,10 +47,10 @@
       75
     ],
     "manifest": "experiments/head009/reference/manifest.json",
-    "isRuntimeSourceRegistered": false
+    "isRuntimeSourceRegistered": true
   },
   "visual": {
-    "status": "FAIL_VISUAL",
+    "status": "PENDING_HELDOUT_VISUAL_REVIEW",
     "reviewedRealFrameAngles": [
       0,
       45,
@@ -48,15 +58,16 @@
       90
     ],
     "observations": [
-      "90-degree face and head outer proportions differ visibly from the separately authored right profile reference",
-      "eye-to-nose-to-ear and hairline landmarks have not been registered against source art, and the interpolated 75-degree expression remains geometric proxy",
-      "current material uses opaque polygon fills rather than registered per-part alpha paintings; 0.5% coverage success does not yet validate real RGBA clipping"
+      "0/45/90 drawn key profiles are reproduced from independent SVG source art with key silhouette IoU above 0.99",
+      "90-degree nose tip, eye, ear, jaw and hair outline have been visually inspected in real output; neck depth was corrected behind chin",
+      "held-out 30/60/75 references have measurable silhouette IoU 0.9279/0.9211/0.9069 and need source-versus-output visual assessment before advancing",
+      "current coverage renderer uses depth-tested vector silhouette geometry and shared opaque fragment coverage; translucent alpha compositing has not been accepted"
     ]
   },
   "nextBlockingWork": [
-    "unify anatomical part IDs between reference SVG and runtime contours",
-    "register 0,45,90 source landmarks and color/alpha per part to runtime meshes",
-    "measure and inspect held-out 30,60,75 references before T04 decision"
+    "inspect held-out 30,60,75 source-vs-render frames and semantic landmark offsets",
+    "correct only the misregistered part contours/occlusion with authored view-dependent keys",
+    "extend to independent left profile/rear only after T04 head90 decision"
   ],
   "stagedDecision": "REMAIN_AT_T03B_HEAD90"
 }
