@@ -28,14 +28,17 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
  const mask=()=>{ctx.beginPath();ctx.moveTo(points[0][0],points[0][1]);
    for(const [x,y] of points.slice(1))ctx.lineTo(x,y);ctx.closePath();};
  mask();ctx.clip();
- ctx.fillStyle=part.color;ctx.fillRect(-1.02,-1.02,2.04,2.04);
+ const isFeaturesOnly=part.id==='eyes';
+ if(!isFeaturesOnly) {
+   ctx.fillStyle=part.color;ctx.fillRect(-1.02,-1.02,2.04,2.04);
+   const gradient=ctx.createLinearGradient(-.9,.8,.95,-.8);
+   gradient.addColorStop(0,'rgba(255,252,244,.25)');
+   gradient.addColorStop(.42,'rgba(255,255,255,0)');
+   gradient.addColorStop(1,'rgba(27,36,78,.28)');
+   ctx.fillStyle=gradient;ctx.fillRect(-1,-1,2,2);
+ }
  const side=angle===90?1:angle===270?-1:0;
  const back=angle===180;
- const gradient=ctx.createLinearGradient(-.9,.8,.95,-.8);
- gradient.addColorStop(0,'rgba(255,252,244,.25)');
- gradient.addColorStop(.42,'rgba(255,255,255,0)');
- gradient.addColorStop(1,'rgba(27,36,78,.28)');
- ctx.fillStyle=gradient;ctx.fillRect(-1,-1,2,2);
  const path=(coords:XY[],line:string,width:number)=>{ctx.beginPath();
   ctx.moveTo(coords[0][0],coords[0][1]);for(const [x,y] of coords.slice(1))ctx.lineTo(x,y);
   ctx.strokeStyle=line;ctx.lineWidth=width;ctx.stroke();};
@@ -137,7 +140,7 @@ export function createRegisteredArt(part:ArtPart,angle:Angle):THREE.CanvasTextur
   break;
  }
  // This thin outline is in the *texture* with alpha, not a black opaque rect.
- mask();ctx.lineWidth=.027;ctx.strokeStyle='rgba(31,38,68,.76)';ctx.stroke();
+ if(!isFeaturesOnly){ mask();ctx.lineWidth=.027;ctx.strokeStyle='rgba(31,38,68,.76)';ctx.stroke(); }
  const texture=new THREE.CanvasTexture(canvas);
  texture.colorSpace=THREE.SRGBColorSpace;
  texture.wrapS=texture.wrapT=THREE.ClampToEdgeWrapping;
