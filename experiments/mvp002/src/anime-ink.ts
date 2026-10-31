@@ -16,7 +16,7 @@ function path(ctx:CanvasRenderingContext2D,xy:readonly XY[],color:string,width:n
  if(closed)ctx.closePath();
  ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();
 }
-function oval(ctx:CanvasRenderingContext2D,x:number,y:number,rx:number,ry:number,color:string):void{
+function oval(ctx:CanvasRenderingContext2D,x:number,y:number,rx:number,ry:number,color:string|CanvasGradient|CanvasPattern):void{
  ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,2*Math.PI);ctx.fillStyle=color;ctx.fill();
 }
 function ribbon(ctx:CanvasRenderingContext2D,vertices:readonly XY[],color:string):void{
