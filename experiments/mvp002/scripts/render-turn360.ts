@@ -8,12 +8,7 @@ import type {FrameTrace,GateId,GateResult,AcceptanceIssue,Turn360AcceptanceRepor
 import {TURN360_PROFILE as P} from '../src/qa/turn360-contract';
 import type {OcclusionRuleResult} from '../src/qa/occlusion-audit';
 
-declare global {interface Window{
- renderTurn360:(yaw:number,frameIndex:number)=>{stats:{frame:number;time:number;yaw:number;headLocalYaw:number;partCount:number;keyViewCount:number;artMeshCount:number;ikError:number;handMinusTorsoDepth:number;armLocalYaw:number;lightAngle:number;shadowOffset:number;blink:number;targetX:number;handX:number};trace:FrameTrace};
- captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
- turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[];authoredGeometry:{id:string;right:readonly (readonly [number,number])[];left:readonly (readonly [number,number])[];rightVDD:readonly [number,number];leftVDD:readonly [number,number]}[]};
- auditTurnOcclusion:()=>OcclusionRuleResult[];
-}}
+
 const output=resolve('out/turn360');
 mkdirSync(output,{recursive:true});
 const server=spawn(process.execPath,[resolve('node_modules/vite/bin/vite.js'),
