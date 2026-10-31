@@ -32,6 +32,14 @@ jobs:
         run: npm run audit
       - name: Audit independent eyes, nose, mouth, ears, jaw and hairline
         run: npm run audit:organs
+      - name: Generate continuous 0-90 degree head sweep and organ topology checks
+        run: npx tsx scripts/render-sweep.ts
+      - name: Encode head sweep MP4
+        if: always()
+        run: |
+          if ls out/head009/sweep-*.png >/dev/null 2>&1; then
+            ffmpeg -hide_banner -loglevel error -y -framerate 30 -i out/head009/sweep-%03d.png -c:v libx264 -preset medium -pix_fmt yuv420p out/head009/head90-sweep.mp4
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:

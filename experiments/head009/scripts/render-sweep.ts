@@ -1,0 +1,55 @@
+import {chromium} from 'playwright';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {join} from 'node:path';
+const out=process.env.HEAD009_OUT??'out/head009';
+await mkdir(out,{recursive:true});
+const browser=await chromium.launch({headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--disable-gpu-sandbox']});
+const page=await browser.newPage({viewport:{width:700,height:700},deviceScaleFactor:1});
+const measures:{yaw:number;changedFraction:number;affectedPixels:number}[]=[];
+const organVisibility:{yaw:number;nearEye:number;farEye:number;nose:number;mouth:number;face:number}[]=[];
+try{
+ await page.goto(process.env.HEAD009_URL??'http://127.0.0.1:4173/',{waitUntil:'networkidle'});
+ await page.waitForFunction(()=>typeof window.head009?.frame==='function');
+ for(let yaw=0;yaw<=90;y++){
+  const diff=await page.evaluate(y=>{
+   window.head009.frame(y);
+   const canvas=document.querySelector<HTMLCanvasElement>('#stage')!;
+   const rgba=canvas.getContext('2d')!.getImageData(0,0,canvas.width,canvas.height).data;
+   // page-only diagnostics; no animation information read from held-out art.
+   const host=window as unknown as {lastSweepRGBA?:Uint8ClampedArray};
+   const previous=host.lastSweepRGBA;
+   let changed=0,active=0;
+   if(previous)for(let i=0;i<rgba.length;i+=4){
+    const change=Math.max(Math.abs(previous[i]-rgba[i]),Math.abs(previous[i+1]-rgba[i+1]),Math.abs(previous[i+2]-rgba[i+2]));
+    if(change>25)changed++;
+    const nonBg=Math.max(Math.abs(rgba[i]-41),Math.abs(rgba[i+1]-50),Math.abs(rgba[i+2]-73))>28;
+    if(nonBg)active++;
+   }
+   host.lastSweepRGBA=new Uint8ClampedArray(rgba);
+   return {changedFraction:previous?changed/(canvas.width*canvas.height):0,affectedPixels:active};
+  },yaw);
+  measures.push({yaw,...diff});
+  await page.locator('canvas').screenshot({path:join(out,'sweep-'+String(yaw).padStart(3,'0')+'.png')});
+  if(yaw%5===0){
+   const qa=await page.evaluate(y=>window.head009.qa(y),yaw);
+   organVisibility.push({yaw,nearEye:qa.visibleParts.nearEye||0,farEye:qa.visibleParts.farEye||0,nose:qa.visibleParts.nose||0,mouth:qa.visibleParts.mouth||0,face:qa.visibleParts.face||0});
+  }
+ }
+ const positive=measures.filter(x=>x.yaw>0).map(x=>x.changedFraction).sort((a,b)=>a-b);
+ const median=positive[Math.floor(positive.length/2)]||0;
+ const peak=measures.reduce((a,b)=>a.changedFraction>b.changedFraction?a:b,measures[0]!);
+ const checks={
+   persistentEyeAlwaysVisible:organVisibility.every(x=>x.nearEye>75),
+   farEyeInvisibleAtProfile:organVisibility.find(x=>x.yaw===90)?.farEye===0,
+   farEyeDisappearsBy65:organVisibility.filter(x=>x.yaw>=65).every(x=>x.farEye===0),
+   noseAndMouthVisible:organVisibility.every(x=>x.nose>20&&x.mouth>20),
+   noSingleFrameHardJump:peak.changedFraction<.075
+ };
+ const report={schema:'HEAD009-TURN-SWEEP-V1',angleRange:[0,90],frames:measures.length,medianChangeFraction:median,
+  peak,checks,organVisibility,frameDiffs:measures,status:Object.values(checks).every(Boolean)?'PASS_ENGINEERING_SWEEP':'FAIL_ENGINEERING_SWEEP',
+  visualStatus:'PENDING_INDEPENDENT_VIDEO_REVIEW'};
+ await writeFile(join(out,'head90-sweep-qa.json'),JSON.stringify(report,null,2)+'\n');
+ console.log('HEAD009_SWEEP_SUMMARY '+JSON.stringify({frames:report.frames,median,peak,checks,status:report.status}));
+ if(report.status!=='PASS_ENGINEERING_SWEEP')process.exitCode=1;
+}catch(e){console.error(e);process.exitCode=1;}
+finally{await browser.close();}
