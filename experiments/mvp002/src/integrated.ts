@@ -110,7 +110,13 @@ function registeredMaterial(part:Part,yaw:number,opacity:number):THREE.ShaderMat
    transition:{value:pair.t},
    strength:{value:opacity}
   },
-  transparent:true,depthTest:true,depthWrite:true,side:THREE.DoubleSide,
+  // Face/eyes/fringe are an authored art-compositing stack, not generic 3D
+  // transparent planes. Their visibility fades across rear-key transitions.
+  // If these layers use z-test, a side-on equal-z tie flips a whole face in
+  // one frame at 90°/270°. This view-aware draw order is deliberate.
+  transparent:true,depthTest:!['face','eyes','fringe'].includes(part.id),
+  depthWrite:!['face','eyes','fringe'].includes(part.id),
+  side:THREE.DoubleSide,
   vertexShader:[
    'varying vec2 registeredUV;',
    'void main(){ registeredUV=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }'
@@ -144,6 +150,7 @@ function emitGeometry(vertices:THREE.Vector3[],uvs:XY[],indices:number[],materia
  g.computeVertexNormals();
  const mesh=new THREE.Mesh(g,material);
  mesh.userData.partId=partId??null;
+ mesh.renderOrder=partId==='face'?100:partId==='fringe'?110:partId==='eyes'?120:0;
  root.add(mesh);drawn.push(mesh);
 }
 function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squashY=1):void {
