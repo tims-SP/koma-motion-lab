@@ -32,7 +32,7 @@ jobs:
           npx playwright install --with-deps chromium
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends xvfb ffmpeg
-      - name: ONE scene 360 yaw, 3D IK, arm depth crossing, face ArtMesh and lighting
+      - name: ONE scene 360 yaw, 3D IK, arm depth crossing, RGBA ArtMesh and lighting
         working-directory: experiments/mvp002
         run: xvfb-run -a npm run render:integrated
       - name: Emit bounded visual QA thumbnails for direct inspection
@@ -56,6 +56,7 @@ jobs:
             experiments/mvp002/out/integrated/integrated-report.json
             experiments/mvp002/out/integrated/integrated-frame-stats.json
             experiments/mvp002/out/integrated/qa-*.jpg
+            experiments/mvp002/out/integrated/key-*.png
           if-no-files-found: error
       - name: Optional owner-only Draft Release
         continue-on-error: true
