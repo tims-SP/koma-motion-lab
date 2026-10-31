@@ -35,7 +35,23 @@ jobs:
       - name: Render actual 360, articulated action, face FX and inspect decoded frames
         working-directory: experiments/mvp002
         run: xvfb-run -a npm run render
+      - name: Upload original three-shot preview for direct inspection
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mvp002-three-shots-${{ github.run_id }}
+          path: |
+            experiments/mvp002/out/turn.mp4
+            experiments/mvp002/out/action.mp4
+            experiments/mvp002/out/fx.mp4
+            experiments/mvp002/out/turn-contact.png
+            experiments/mvp002/out/action-contact.png
+            experiments/mvp002/out/fx-contact.png
+            experiments/mvp002/out/report.json
+          retention-days: 14
+          if-no-files-found: error
       - name: Publish ORIGINAL vector-character preview in DRAFT Release
+        continue-on-error: true
         if: success()
         env:
           GH_TOKEN: ${{ github.token }}
