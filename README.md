@@ -1,5 +1,11 @@
 # Koma Motion Lab
 
+## Latest result — MVP-005 detailed four-view RGBA + face close-up (2026-10-31)
+
+**[Successful real render #41194923884](https://github.com/tims-SP/koma-motion-lab/actions/runs/41194923884)** · **[Actual 6-second MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-29dfef1130728dc814a9/integrated-6sec.mp4)** · **[16 transparent source-art tiles](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-29dfef1130728dc814a9/key-art-contact.png)** · **[MVP-005 engineering and honest visual QA](docs/experiments/MVP-005-detailed-art-and-closeup.md)**
+
+The same TypeScript/Three.js six-module character now has authored 512×512 RGBA per-angle layers, additional eye/face/hair/jacket/skirt details, proper premultiplied-alpha shader cross-view sampling, and a true close-up near the end of the original 6s / 144-frame action clip. **ENGINEERING PASS, ANIME-VISUAL QUALITY FAIL.** These are original programmatically authored Canvas art layers, *not* independent polished multi-view illustrations. The next stage must obtain actual professionally styled consistent keyview artwork instead of further polishing generic programmatic gradients/strokes.
+
 ## Current result — MVP-004 registered multi-view RGBA art (2026-10-31)
 
 **[Successful full video render #41193779622](https://github.com/tims-SP/koma-motion-lab/actions/runs/41193779622)** · **[Corrected 6s MP4](https://github.com/tims-SP/koma-motion-lab/releases/download/untagged-23fb286da4223fc7629f/integrated-6sec.mp4)** · **[16 transparent key-art PNGs and clip](https://github.com/tims-SP/koma-motion-lab/actions/runs/41193779622/artifacts/13039753564)** · **[Engineering and visual QA](docs/experiments/MVP-004-rgba-result.md)**
