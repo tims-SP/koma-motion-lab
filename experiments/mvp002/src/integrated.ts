@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {LEFT_CONTOURS,LEFT_VDD_SHIFT} from './left-keyviews';
 import {createRegisteredArt, artTextureProof, artTexturePNG} from './rgba-view-art';
 import {Turn360Recorder, qaPalette, idShader, countIdPixels} from './qa/turn360-runtime';
 import type {FrameTrace} from './qa/turn360-contract';
@@ -57,29 +58,29 @@ const rear=contour([[-.69,.70],[-.30,.93],[.25,.95],[.68,.72],[.82,.20],[.72,-.4
 const skirtFront=contour([[-.47,.92],[-.28,1],[.27,1],[.49,.90],[.92,-.60],[.67,-.82],[.22,-.74],[-.13,-.90],[-.54,-.76],[-.91,-.59],[-.72,.2]]);
 const skirtSide=contour([[-.37,.92],[-.20,1],[.22,1],[.42,.85],[.66,-.59],[.38,-.77],[.08,-.79],[-.23,-.86],[-.52,-.73],[-.69,-.55],[-.47,.12]]);
 const elong=contour([[-.67,.82],[-.38,.99],[.33,1],[.70,.76],[.85,.38],[.82,-.28],[.48,-.87],[0,-1],[-.49,-.85],[-.88,-.32],[-.87,.31]]);
-const patch=(front:readonly XY[],sideC:readonly XY[],back:readonly XY[],shifts:readonly XY[]=[[0,0],[0,0],[0,0]],vis:number[]=[1,1,1]):[KeyArt,KeyArt,KeyArt,KeyArt]=>{
- const left=sideC.map(([x,y])=>[-x-.025*(1-y*y),y+.012*(1-Math.abs(x))] as XY);
+const patch=(id:PartId,front:readonly XY[],sideC:readonly XY[],back:readonly XY[],shifts:readonly XY[]=[[0,0],[0,0],[0,0]],vis:number[]=[1,1,1]):[KeyArt,KeyArt,KeyArt,KeyArt]=>{
+ const left=LEFT_CONTOURS[id],vdd=LEFT_VDD_SHIFT[id];
+ if(!left||left.length!==front.length||!vdd)throw Error('Missing independent 270-degree key geometry: '+id);
  return [
   {yaw:0,contour:front,shift:shifts[0],visible:vis[0]},
   {yaw:90,contour:sideC,shift:shifts[1],visible:vis[1]},
   {yaw:180,contour:back,shift:shifts[2],visible:vis[2]},
-  {yaw:270,contour:left,shift:[-(shifts[1][0]),shifts[1][1]],visible:vis[1]}
+  {yaw:270,contour:left,shift:vdd,visible:vis[1]}
  ];
 };
-const simple=patch(base,side,rear);
 const defs:Part[]=[
- {id:'backHair',role:'head',anchor:V(0,.05,-.21),size:[.57,.69],color:'#303b65',keys:patch(base,side,elong,[[0,0],[.08,.015],[0,0]])},
- {id:'torso',role:'body',anchor:V(0,1.96,0),size:[.48,.57],color:'#6488ab',keys:patch(base,side,rear,[[0,0],[.09,0],[0,0]])},
- {id:'skirt',role:'body',anchor:V(0,1.29,0),size:[.53,.40],color:'#414a81',keys:patch(skirtFront,skirtSide,skirtFront)},
- {id:'face',role:'head',anchor:V(0,0,.13),size:[.42,.51],color:'#f8ceb5',keys:patch(base,side,rear,[[0,0],[.13,-.02],[0,-.01]],[1,1,0])},
- {id:'fringe',role:'head',anchor:V(0,.34,.28),size:[.49,.25],color:'#384369',keys:patch(skirtFront,skirtSide,skirtFront,[[0,0],[.11,.02],[0,0]],[1,.85,0])},
- {id:'eyes',role:'head',anchor:V(0,.04,.36),size:[.37,.155],color:'#e8f5fa',keys:patch(base,side,rear,[[0,0],[.10,0],[0,0]],[1,.5,0])},
- {id:'scarf',role:'body',anchor:V(0,2.38,.20),size:[.24,.18],color:'#d48b9a',keys:patch(skirtFront,skirtSide,skirtFront,[[0,0],[.05,0],[0,0]],[1,.75,.3])},
- {id:'emblem',role:'body',anchor:V(-.23,2.07,.30),size:[.105,.11],color:'#f7dca4',keys:patch(base,side,rear,[[0,0],[.015,0],[.0,0]],[1,.7,0])},
- {id:'leftArm',role:'arm',anchor:V(-.46,2.26,.08),size:[.17,.75],color:'#e9bba7',keys:simple},
- {id:'rightArm',role:'arm',anchor:V(.46,2.26,.08),size:[.17,.75],color:'#e9bba7',keys:simple},
- {id:'leftLeg',role:'leg',anchor:V(-.21,1.08,.02),size:[.20,.82],color:'#d8b6ab',keys:simple},
- {id:'rightLeg',role:'leg',anchor:V(.21,1.08,.02),size:[.20,.82],color:'#d8b6ab',keys:simple},
+ {id:'backHair',role:'head',anchor:V(0,.05,-.21),size:[.57,.69],color:'#303b65',keys:patch('backHair',base,side,elong,[[0,0],[.08,.015],[0,0]])},
+ {id:'torso',role:'body',anchor:V(0,1.96,0),size:[.48,.57],color:'#6488ab',keys:patch('torso',base,side,rear,[[0,0],[.09,0],[0,0]])},
+ {id:'skirt',role:'body',anchor:V(0,1.29,0),size:[.53,.40],color:'#414a81',keys:patch('skirt',skirtFront,skirtSide,skirtFront)},
+ {id:'face',role:'head',anchor:V(0,0,.13),size:[.42,.51],color:'#f8ceb5',keys:patch('face',base,side,rear,[[0,0],[.13,-.02],[0,-.01]],[1,1,0])},
+ {id:'fringe',role:'head',anchor:V(0,.34,.28),size:[.49,.25],color:'#384369',keys:patch('fringe',skirtFront,skirtSide,skirtFront,[[0,0],[.11,.02],[0,0]],[1,.85,0])},
+ {id:'eyes',role:'head',anchor:V(0,.04,.36),size:[.37,.155],color:'#e8f5fa',keys:patch('eyes',base,side,rear,[[0,0],[.10,0],[0,0]],[1,.5,0])},
+ {id:'scarf',role:'body',anchor:V(0,2.38,.20),size:[.24,.18],color:'#d48b9a',keys:patch('scarf',skirtFront,skirtSide,skirtFront,[[0,0],[.05,0],[0,0]],[1,.75,.3])},
+ {id:'emblem',role:'body',anchor:V(-.23,2.07,.30),size:[.105,.11],color:'#f7dca4',keys:patch('emblem',base,side,rear,[[0,0],[.015,0],[.0,0]],[1,.7,0])},
+ {id:'leftArm',role:'arm',anchor:V(-.46,2.26,.08),size:[.17,.75],color:'#e9bba7',keys:patch('leftArm',base,side,rear)},
+ {id:'rightArm',role:'arm',anchor:V(.46,2.26,.08),size:[.17,.75],color:'#e9bba7',keys:patch('rightArm',base,side,rear)},
+ {id:'leftLeg',role:'leg',anchor:V(-.21,1.08,.02),size:[.20,.82],color:'#d8b6ab',keys:patch('leftLeg',base,side,rear)},
+ {id:'rightLeg',role:'leg',anchor:V(.21,1.08,.02),size:[.20,.82],color:'#d8b6ab',keys:patch('rightLeg',base,side,rear)},
 ];
 if(defs.length!==12 || defs.some(x=>x.keys.some(k=>k.contour.length!==x.keys[0].contour.length)))throw Error('Incompatible key topology');
 function keyPair(yaw:number):{t:number;indices:readonly [number,number]} {
@@ -321,7 +322,7 @@ window.renderTurn360=(yaw,frameIndex)=>{
  if(!qaRecorder.lastFrame)throw Error('No real frame evidence');
  return {stats,trace:qaRecorder.lastFrame};
 };
-window.turnSourceViews={angles:[0,90,180,270],independent270:false,derivedPartIds:PART_IDS};
+window.turnSourceViews={angles:[0,90,180,270],independent270:PART_IDS.every(id=>LEFT_CONTOURS[id]?.length===11),derivedPartIds:PART_IDS.filter(id=>!LEFT_CONTOURS[id])};
 window.captureTurnPass=(pass,includeImage)=>{
  if(!qaRecorder.lastFrame)throw Error('Must render a real turn frame first');
  const width=includeImage?480:240,height=includeImage?270:135;
