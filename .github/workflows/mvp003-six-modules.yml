@@ -35,6 +35,16 @@ jobs:
       - name: ONE scene 360 yaw, 3D IK, arm depth crossing, face ArtMesh and lighting
         working-directory: experiments/mvp002
         run: xvfb-run -a npm run render:integrated
+      - name: Emit bounded visual QA thumbnails for direct inspection
+        working-directory: experiments/mvp002
+        run: |
+          for frame in 012 087 114; do
+            ffmpeg -hide_banner -loglevel error -y -i "out/integrated/frame-${frame}.png" \
+              -vf scale=480:270 -q:v 6 "out/integrated/qa-${frame}.jpg"
+            printf "QA_JPEG_%s_START\n" "$frame"
+            base64 -w0 "out/integrated/qa-${frame}.jpg"
+            printf "\nQA_JPEG_%s_END\n" "$frame"
+          done
       - name: Upload actual frames and MP4
         uses: actions/upload-artifact@v4
         with:
@@ -45,6 +55,7 @@ jobs:
             experiments/mvp002/out/integrated/integrated-contact.png
             experiments/mvp002/out/integrated/integrated-report.json
             experiments/mvp002/out/integrated/integrated-frame-stats.json
+            experiments/mvp002/out/integrated/qa-*.jpg
           if-no-files-found: error
       - name: Optional owner-only Draft Release
         continue-on-error: true
