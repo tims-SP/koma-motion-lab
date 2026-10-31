@@ -11,10 +11,10 @@ const script=html.match(/<script\s+type="module"[^>]*src="([^"]+)"[^>]*><\/scrip
 if(!script)throw Error('Vite did not emit a bundled review module');
 const js=await readFile(resolve(dist,script[1].replace(/^\.\//,'')),'utf8');
 if(/(?:^|\n)\s*import\s+(?!\()/m.test(js))throw Error('Remaining external JS imports');
-html=html.replace(script[0],'<script type="module">\n'+js.replace(/<\/script/gi,'<\\/script')+'\n</script>');
+html=html.replace(script[0],()=>'<script type="module">\n'+js.replace(/<\/script/gi,'<\\/script')+'\n</script>');
 for(const tag of html.matchAll(/<link\s+rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/g)){
  const css=await readFile(resolve(dist,tag[1].replace(/^\.\//,'')),'utf8');
- html=html.replace(tag[0],'<style>\n'+css+'\n</style>');
+ html=html.replace(tag[0],()=>'<style>\n'+css+'\n</style>');
 }
 const names=['front-000.svg','threequarter-045.svg','profile-right-090.svg','heldout-030.svg','heldout-060.svg','heldout-075.svg'];
 const refs=Object.fromEntries(await Promise.all(names.map(async name=>[name,await readFile(resolve(root,'reference',name),'utf8')])));
