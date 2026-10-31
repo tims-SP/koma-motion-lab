@@ -19,7 +19,7 @@ const rules=[
 ] as const;
 const ids=['backHair','torso','skirt','face','fringe','eyes','scarf','emblem','leftArm','rightArm','leftLeg','rightLeg'];
 function readPixels(renderer:THREE.WebGLRenderer,scene:THREE.Scene,camera:THREE.Camera,objects:THREE.Object3D[],part:string|null):Uint8Array{
- const w=240,h=135,target=new THREE.WebGLRenderTarget(w,h,{depthBuffer:true});
+ const w=480,h=270,target=new THREE.WebGLRenderTarget(w,h,{depthBuffer:true});
  const states:{mesh:THREE.Mesh;original:THREE.Material;visible:boolean}[]=[];
  const oldTarget=renderer.getRenderTarget();
  const oldColor=renderer.getClearColor(new THREE.Color()).clone(),oldAlpha=renderer.getClearAlpha();
