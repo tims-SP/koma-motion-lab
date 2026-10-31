@@ -1,6 +1,6 @@
 # CORE026 M2：局部接收面与0姿态保真工单
 
-前置已满足：M1代码05e8814的有限参考总门禁、监督CI41157121611及旧回归CI41157121472均成功，实际产物已下载核对；M2A本地已完成源顺序/接收面提案与11组损坏验拒，待新CI；M2B运行时未开始。M1只提供raw yaw=-0.25、0、+0.25的图像对照，不是物理角度或真实深度。mcode首选执行；自动审批继续阻塞时，按已授权计划由Codex明确署名本地兜底，不能把结果改称mcode产物。
+前置已满足：M1代码05e8814的有限参考总门禁、监督CI41157121611及旧回归CI41157121472均成功，实际产物已下载核对；M2A源顺序/接收面提案与11组损坏验拒已获代码ff2fe1a监督CI41169579730及旧回归41169579751成功确认；M2B运行时未开始。M1只提供raw yaw=-0.25、0、+0.25的图像对照，不是物理角度或真实深度。mcode首选执行；自动审批继续阻塞时，按已授权计划由Codex明确署名本地兜底，不能把结果改称mcode产物。
 
 ## M2A：先确认合成顺序能否保留原画
 
@@ -14,7 +14,7 @@
 
 ## M2B：真实渲染验证0姿态
 
-1. 新增`core026.html`、`core026.js`、`capture_core026.mjs`，使用现有固定three/Vite/Playwright依赖与原始UV/来源。不得修改受保护的CORE025代码、配置、旧报告或原始PNG/INX。
+1. 新增`core026.html`、`core026.js`、`capture_core026.mjs`，使用现有固定three/Vite/Playwright依赖与原始UV/来源。候选颜色输入仅使用raw_source_texture；out/core025/assembly中的已烘焙层只作旧基线，不得作为候选素材绕过运行时Normal/Multiply。不得修改受保护的CORE025代码、配置、旧报告或原始PNG/INX。
 2. 先仅实现source/clean的0姿态。按M2A schedule保留原始Normal/Multiply、局部alpha和late pass；每个receiver内绘画保持独立局部UV接口，不能永久烘死所有眼部图层。将冲突处理写入契约，数值未通过前不引入转头和新的Z拟合。
 3. 用真实浏览器分别捕获source/clean×白底/黑底及alpha/ID诊断。记录实际输入SHA、相机、画布、每次draw/pass的62源身份去向、输出PNG SHA和命令退出码。保护旧0姿态baseline，不能拿候选自身作真值。
 4. 独立`verify_core026_compositor_supervisor.py`逐像素比较旧已验收0姿态：全图RGB MAE≤0.10、前景并集MAE≤0.50、最大通道差≤4、差>16比例=0；source/clean及两种底色均需通过，同时报alpha及前景指标。鼻、双眼、刘海/眉、耳根、脸颈局部必须实际查看。失败保存差分和原因，禁止放宽阈值。

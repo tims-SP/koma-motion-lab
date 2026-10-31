@@ -4,7 +4,7 @@
 
 ## CORE026当前状态
 
-M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2A默认绘画顺序/接收面提案本地已通过，待新CI；M2B运行时未开始，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
+M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611与旧回归CI41157121472均success，实际下载14份纯JSON产物并核对ZIP SHA。[完整CI验收](../experiments/reference-factory/evidence/core026-M1/m1-complete-ci-acceptance.json)。M2A默认绘画顺序/接收面提案已通过：代码ff2fe1a的监督CI41169579730与旧回归41169579751均success，实际下载16份纯JSON产物并核对ZIP SHA；M2B运行时未开始，物理深度仍NOT_RECOVERED，自然3D转头仍NOT_ACCEPTED。只有原生raw yaw=-0.25、0、+0.25三个离散值具备鼻绘画/双眼图像标记及下颌轮廓对照；参数不是物理角度，插值、外推与更大角度未放行。
 
 - 源对应：62层均经原始UV/纹理/默认祖先变换选出唯一身份；58项可单靠像素，7/8/9/10四个重复图项经默认坐标区分。只使用单一全局平移；最大残差3.905124源像素，原始UV未改。
 - 原生参考：固定camera scale0.4、position[82,1773]、720×880全图和652×652头部ROI；raw yaw九姿态[-1..1]、pitch0。18张实际PNG的来源/恢复均已保存。新总门禁核对九张head SHA。
@@ -19,11 +19,11 @@ M1总门禁已通过PASS_REFERENCE_LIMITED：代码05e8814的监督CI41157121611
 
 按已授权M2工单的本地兜底条款，本轮M2A所有代码、数据和检查均为Codex，不计作mcode产物。M1同样保留真实归属。[本轮M2A验收与执行记录](research/CORE-026-M2A-source-schedule-acceptance.md)。
 
-M2A受控提案保持62项源身份/19独立面/43附着和完整1..62顺序，分为25个显式待验证pass。原生ClipToLower4项和派生阴影裁剪9项分列；11Multiply含60/61。Face13的13..43与58..61被头发44..57隔开，保留晚画与跨组Multiply背景依赖。108对跨组alpha支持相交、四项晚画交叠28/15/2156/1954由两种独立实现重算；不当作物理遮挡。11类损坏两验证器均exit11，重复build字节一致。新CI待本次提交，M2B未开始。[机器验收](../experiments/reference-factory/evidence/core026-M1/m2a-local-acceptance.json)。
+M2A受控提案保持62项源身份/19独立面/43附着和完整1..62顺序，分为25个显式待验证pass。原生ClipToLower4项和派生阴影裁剪9项分列；11Multiply含60/61。Face13的13..43与58..61被头发44..57隔开，保留晚画与跨组Multiply背景依赖。108对跨组alpha支持相交、四项晚画交叠28/15/2156/1954由两种独立实现重算；不当作物理遮挡。11类损坏两验证器均exit11，重复build字节一致。新监督CI41169579730与旧回归41169579751均success，契约SHA与下载产物一致，M2B未开始。[M2A CI验收](../experiments/reference-factory/evidence/core026-M1/m2a-ci-acceptance.json)。[机器验收](../experiments/reference-factory/evidence/core026-M1/m2a-local-acceptance.json)。
 
 ## 下一工单
 
-M1有限参考门禁已获两套干净CI确认；M2A本地完成，待本次干净CI确认后按[M2精确工单](plans/CORE-026-M2-local-compositor-order.md)继续M2B真实0姿态渲染。先审计跨接收面的原画顺序和Multiply，尤其58/59眼皮与60/61眉的晚画覆盖；不能把全部Face绘画提前烘成一张图而丢失与头发的交叠。先过原画0姿态保真，再进入已放行的三个raw参考点。M2实现、M3深度方案、M4动态遮挡和M5最终视频尚未通过。
+M1有限参考门禁已获两套干净CI确认；M2A已获两套干净CI确认，按[M2精确工单](plans/CORE-026-M2-local-compositor-order.md)继续M2B真实0姿态渲染。先审计跨接收面的原画顺序和Multiply，尤其58/59眼皮与60/61眉的晚画覆盖；不能把全部Face绘画提前烘成一张图而丢失与头发的交叠。先过原画0姿态保真，再进入已放行的三个raw参考点。M2实现、M3深度方案、M4动态遮挡和M5最终视频尚未通过。
 
 前序监督CI41155423219与旧回归41155423100已经success，但只覆盖当时的零审阅初始表，不当作本次171格总验收。[前序CI](../experiments/reference-factory/evidence/core026-M1/landmark-review-ci-acceptance.json)。运行/登录/域名事件保留在[运行诊断](research/CORE-026-mcode-runtime-diagnostic.md)；这些历史不是重登或任意存储上传的理由。
 

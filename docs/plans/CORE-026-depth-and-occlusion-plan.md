@@ -1,6 +1,6 @@
 # CORE-026：分部件深度、附着与遮挡校准
 
-日期：2026-10-31（Asia/Shanghai）。状态：IN_PROGRESS。M1A源对应、M1B清洁高清参考和M1C1源遮挡/接收提案均已通过对应检查；M1C1代码76d7f70的两套CI均success。M1C2已完成171格实际审阅及M1本地总门禁PASS_REFERENCE_LIMITED，仅raw -0.25/0/+0.25离散对照，监督CI41157121611及旧回归41157121472均success；M2–M5尚未通过。本轮M1C1因mcode审批阻塞由Codex本地兜底，不冒称mcode产物。
+日期：2026-10-31（Asia/Shanghai）。状态：IN_PROGRESS。M1A源对应、M1B清洁高清参考和M1C1源遮挡/接收提案均已通过对应检查；M1C1代码76d7f70的两套CI均success。M1C2已完成171格实际审阅及M1本地总门禁PASS_REFERENCE_LIMITED，仅raw -0.25/0/+0.25离散对照，监督CI41157121611及旧回归41157121472均success；M2A代码ff2fe1a已通过源顺序/接收提案门禁及两套干净CI；M2B运行时与M3–M5尚未通过。本轮M1C1因mcode审批阻塞由Codex本地兜底，不冒称mcode产物。
 
 执行者mcode；Codex下明确工单、独立验收、提交恢复检查点。仅在tims-SP/koma-motion-lab的feature/koma-25d-core-021工作。媒体只进入ignored out/与owner-only Draft Release；git只存代码、工单、报告和文本证据。每个阶段无论通过或失败均提交。
 

@@ -2,7 +2,13 @@
   "schema": "core026-m2a-local-acceptance/1",
   "date": "2026-10-31 Asia/Shanghai",
   "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL_LOCAL_ONLY",
-  "ci": "PENDING",
+  "ci": {
+    "status": "PASS_SOURCE_SCHEDULE_AND_PROPOSAL",
+    "code_commit": "ff2fe1a8386de7600738cc80941e9cf9a2606593",
+    "supervisor_run": 41169579730,
+    "legacy_run": 41169579751,
+    "evidence": "m2a-ci-acceptance.json"
+  },
   "author_executor": "Codex explicit local fallback",
   "mcode": {
     "login": "Official CN CLI returned Signed in with MiniMax and exit0 after user authorization",

@@ -1,6 +1,6 @@
 # CORE026 M2A：默认绘画顺序与接收面提案
 
-2026-10-31（Asia/Shanghai）。本地范围PASS_SOURCE_SCHEDULE_AND_PROPOSAL，干净CI待本次提交。实际作者、执行者和独立检查为Codex本地兜底，不计作mcode产物。
+2026-10-31（Asia/Shanghai）。范围PASS_SOURCE_SCHEDULE_AND_PROPOSAL；代码ff2fe1a的监督CI41169579730与旧回归41169579751均success。实际下载16份纯JSON产物，ZIP SHA1003658943529b2d5d412610fea5e3c756cfc0f3aa3a7c1806694ea0adfa41e9与job日志一致，契约SHA与本地一致。[CI机器验收](../../experiments/reference-factory/evidence/core026-M1/m2a-ci-acceptance.json)。实际作者、执行者和独立检查为Codex本地兜底，不计作mcode产物。
 
 ## 登录与执行归属
 
