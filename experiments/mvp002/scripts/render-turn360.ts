@@ -8,7 +8,7 @@ import {TURN360_PROFILE as P} from '../src/qa/turn360-contract';
 
 declare global {interface Window{
  renderTurn360:(yaw:number,frameIndex:number)=>{stats:{frame:number;time:number;yaw:number;headLocalYaw:number;partCount:number;keyViewCount:number;artMeshCount:number;ikError:number;handMinusTorsoDepth:number;armLocalYaw:number;lightAngle:number;shadowOffset:number;blink:number;targetX:number;handX:number};trace:FrameTrace};
- captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string};
+ captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string;bounds?:readonly [number,number,number,number]};
  turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
 }}
 const output=resolve('out/turn360');
@@ -63,6 +63,8 @@ try{
   const yaw=f*360/P.videoFrames;
   const frame=await page.evaluate(v=>window.renderTurn360(v.yaw,v.f),{yaw,f});
   const id=await page.evaluate(()=>window.captureTurnPass('id',false));
+  if(!id.bounds)throw Error('Missing actual ID-pass measured screen bbox');
+  frame.trace.characterBoundingBoxPixels=[...id.bounds];
   for(const p of frame.trace.parts)p.visiblePixelCountFromIdPass=id.counts[p.id]??0;
   frame.trace.actualVisiblePartIds=frame.trace.parts.filter(p=>p.visiblePixelCountFromIdPass>0).map(p=>p.id);
   trace.push(frame.trace);
@@ -161,8 +163,21 @@ try{
    }
    return jump;
  }));
- gate('S05_PART_TRAJECTORY_CONTINUITY',maxJump<.22?'PASS':'FAIL',
-   maxJump>=.22?'Large adjacent anchor jump '+maxJump:undefined);
+ const maxVertexJump=Math.max(...trace.slice(1).map((frame,i)=>{
+   let max=0;const prior=trace[i];
+   for(const p of frame.parts){
+     const prev=prior.parts.find(q=>q.id===p.id);
+     if(!prev||prev.geometryVerticesXY.length!==p.geometryVerticesXY.length)continue;
+     for(let k=0;k<p.geometryVerticesXY.length;k++){
+       max=Math.max(max,Math.hypot(p.geometryVerticesXY[k][0]-prev.geometryVerticesXY[k][0],
+         p.geometryVerticesXY[k][1]-prev.geometryVerticesXY[k][1]));
+     }
+   }
+   return max;
+ }));
+ gate('S05_PART_TRAJECTORY_CONTINUITY',maxJump<.22&&maxVertexJump<.25?'PASS':'FAIL',
+   maxJump>=.22||maxVertexJump>=.25?
+   'Large adjacent anchor/mesh vertex jumps: '+maxJump+' / '+maxVertexJump:undefined);
  const actualFrameCounts=trace.filter(f=>f.actualVisiblePartIds.length>=4).length;
  gate('S06_OCCLUSION_ACTUAL_RENDER','BLOCKED',
    'ID pass is real and '+actualFrameCounts+'/192 frames have >=4 visible parts, but no verified occlusion constraint/mask table for crossing hair, face and arms.');
@@ -180,7 +195,7 @@ try{
   coreStatus:finalStatus,highFidelityAnimeArtAccepted:false
  };
  const diagnostics={seamEqual,frameCount:P.videoFrames,boundaryImages:8,independentSampleAngles:25,
-   maxAnchorJump:maxJump,actualFrameCounts,sources,videoBytes:statSync(video).size,
+   maxAnchorJump:maxJump,maxVertexJump,actualFrameCounts,sources,videoBytes:statSync(video).size,
    partTracesCount:parts.length,screenBoundsOkay,blockedGates:results.filter(x=>x.status==='BLOCKED').map(x=>x.id)};
  writeFileSync(join(output,'turn360-traces.json'),JSON.stringify({frames:trace,sampled:keyTraces},null,1));
  writeFileSync(join(output,'turn360-qa.json'),JSON.stringify({report,diagnostics},null,2)+'\n');
