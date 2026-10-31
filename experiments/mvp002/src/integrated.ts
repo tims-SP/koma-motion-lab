@@ -22,6 +22,7 @@ interface FrameStats {
   partCount:number; keyViewCount:number; artMeshCount:number;
   ikError:number; handMinusTorsoDepth:number; armLocalYaw:number;
   lightAngle:number; shadowOffset:number; blink:number; targetX:number; handX:number;
+  faceVisibility:number;faceShadowOpacity:number;
 }
 declare global {interface Window {
   renderIntegrated:(frame:number,total:number)=>FrameStats;
@@ -344,11 +345,15 @@ export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=f
  // Character neck and face use head-local view, *not* world body yaw.
  artMesh(defs[3],lookHead(defs[3].anchor),headYaw);
  const face=lookHead(defs[3].anchor);
- if(sample(defs[3],headYaw).visible>.18){
-   canvasLight(face.x,face.y,face.z+.12,shadowShift,.27);
-   // Hair casts a second, stable, view-dependent art-directed shadow.
+ const faceVisibility=sample(defs[3],headYaw).visible;
+ const faceShadowOpacity=.27*faceVisibility;
+ // Face paint, face-specific shadow and hair-cast shadow MUST share the
+ // same view-visibility envelope. Otherwise a fading side face leaves a
+ // full-opacity gray shadow "ghost" around ~80° while the head turns.
+ if(faceVisibility>.001){
+   canvasLight(face.x,face.y,face.z+.12,shadowShift,faceShadowOpacity);
    polygon([V(face.x-.29,face.y+.29,face.z+.16),V(face.x+.22,face.y+.30,face.z+.16),
-      V(face.x+.13+shadowShift,face.y+.08,face.z+.16)],'#584968',.17);
+      V(face.x+.13+shadowShift,face.y+.08,face.z+.16)],'#584968',.17*faceVisibility);
  }
  const eyes=lookHead(defs[5].anchor);
  artMesh(defs[5],eyes,headYaw,1,1,1-.95*blink);
@@ -377,7 +382,7 @@ export function evaluate(frame:number,total:number,turnYaw?:number,dynamicMode=f
    artMeshCount:drawn.filter(o=>o instanceof THREE.Mesh).length,
    ikError:rig.error,handMinusTorsoDepth:rig.hand.z-rootChest.z,
    armLocalYaw,lightAngle,shadowOffset:shadowShift,blink,
-   targetX:target.x,handX:rig.hand.x
+   targetX:target.x,handX:rig.hand.x,faceVisibility,faceShadowOpacity
  };
  return result;
 }
