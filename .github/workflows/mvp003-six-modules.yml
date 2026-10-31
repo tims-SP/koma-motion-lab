@@ -1,17 +1,6 @@
 name: MVP-003 six modules one-shot integration
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'experiments/mvp002/src/integrated.ts'
-      - 'experiments/mvp002/src/rgba-view-art.ts'
-      - 'experiments/mvp002/src/anime-ink.ts'
-      - 'experiments/mvp002/src/integrated-controls.ts'
-      - 'experiments/mvp002/integrated.html'
-      - 'experiments/mvp002/scripts/render-integrated.ts'
-      - 'experiments/mvp002/package.json'
-      - '.github/workflows/mvp003-six-modules.yml'
 concurrency:
   group: mvp003-${{ github.ref }}
   cancel-in-progress: true
