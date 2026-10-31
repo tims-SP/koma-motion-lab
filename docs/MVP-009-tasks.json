@@ -1,7 +1,7 @@
 {
   "schemaVersion": "MVP009-HEAD360-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "HEAD90_ORGAN_REFERENCE_PASS_HELDOUT_ALIGNMENT_IN_PROGRESS",
+  "phase": "HEAD90_ORGAN_VDD_SWEEP_REVIEW",
   "labRepo": "tims-SP/koma-motion-lab",
   "productionRepo": "tims-SP/koma-motion",
   "parentPlan": "docs/MVP-009-plan.md",
@@ -109,8 +109,8 @@
       ],
       "priority": "BLOCKING_PRIMARY",
       "status": "IN_PROGRESS",
-      "visualStatus": "FAIL_HELDOUT_ORGAN_ALIGNMENT",
-      "pending": "Independent corrective multi-view organ art and fresh held-out references; preserve original reference separation. Correct all nose/eye/mouth/jaw layers rather than adjusting only hair.",
+      "visualStatus": "PENDING_CONTINUOUS_SWEEP_AND_FRESH_REFERENCE",
+      "pending": "Inspect 91-frame 0-90 turn, preserve cardinal art, then independently author new withheld views for final organ/depth validation.",
       "engineeringEvidence": "Actual SVG key views 0/45/90 silhouette IoU 0.9954/0.9958/0.9940; 60/75 farEar visible pixels reduced 2197->687 and 3034->660 with authored key pixels unchanged",
       "organSubtasks": [
         {
@@ -129,7 +129,7 @@
         {
           "id": "T03B-3",
           "name": "organ_view_deformation",
-          "status": "NOT_STARTED",
+          "status": "ENGINEERING_PASS_VISUAL_IN_PROGRESS",
           "dependsOn": [
             "T03B-2"
           ],
@@ -143,7 +143,34 @@
             "30.nose.tip": 32.39,
             "60.eye.R.center": 51.079,
             "75.eye.R.center": 30.171
-          }
+          },
+          "implemented": [
+            "Right-facing profile uses the persistent nearEye across 45/90; the former farEye contracts and becomes invisible by 65",
+            "Localized face jaw, nasal silhouette, nose line and mouth VDD controls preserve exact 0/45/90 source geometry",
+            "Real WebGL 0/30/45/60/75/90 screenshot checks and independent source mapping"
+          ],
+          "verifiedRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251317967",
+          "developmentReferenceMetricsPx": {
+            "30.face.chin": {
+              "before": 39.818,
+              "after": 19.44
+            },
+            "30.nose.tip": {
+              "before": 32.39,
+              "after": 16.9
+            },
+            "60.eye.L.center": {
+              "after": 5.86
+            },
+            "75.eye.L.center": {
+              "after": 4.19
+            },
+            "75.mouth.center": {
+              "before": 14.8,
+              "after": 6.22
+            }
+          },
+          "caveat": "60/75 eye IDs corrected, so old farEye error is not same-semantic baseline; 30/60/75 were consulted during development and require fresh heldout views for unbiased validation."
         }
       ]
     },
@@ -265,7 +292,25 @@
   "ownerSelectedPlan": "B",
   "architecture": "euclid_inspired_layered_art_3d_anchors_depth_vdd",
   "selectedImplementation": "B",
-  "lastImplementationCommit": "f2985406ffe237a549bb72c22aee104f1043ee89",
+  "lastImplementationCommit": "cdb9532a02720f77c838846b7009f9a6a3d449c6",
   "lastRendererRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705",
-  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705/artifacts/13060844731"
+  "latestArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41250758705/artifacts/13060844731",
+  "validationPolicy": {
+    "keyArtYaw": [
+      0,
+      45,
+      90
+    ],
+    "developmentDiagnosticYaw": [
+      30,
+      60,
+      75
+    ],
+    "freshIndependentYawRequired": [
+      20,
+      55,
+      82
+    ],
+    "acceptanceRequires": "Real screenshot and full turn video with independently authored new reference, organ-mask topology and source provenance"
+  }
 }

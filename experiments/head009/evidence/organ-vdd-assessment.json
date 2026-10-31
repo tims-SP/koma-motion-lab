@@ -1,0 +1,60 @@
+{
+  "schema": "HEAD009-ORGAN-VDD-ASSESSMENT-V1",
+  "parent": "experiments/head009/evidence/organ-qa-review.json",
+  "architecture": "MVP-009 Plan B",
+  "commit": "031d49715eca26fe3a5291584722bbc1fe6b2f3a",
+  "engineeringRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41251317967",
+  "implemented": {
+    "persistentEye": "nearEye across 45/90",
+    "disappearingEye": "farEye geometric contraction ends before 65",
+    "vdd": [
+      "face jaw/cheek",
+      "face nasal silhouette",
+      "nose ink",
+      "mouth contour"
+    ],
+    "cardinalKeysUntouched": [
+      0,
+      45,
+      90
+    ]
+  },
+  "cardinalSilhouetteIoU": {
+    "0": 0.9954382014920358,
+    "45": 0.9958196175050993,
+    "90": 0.9940460047829196
+  },
+  "developmentLandmarkPx": {
+    "30.face.chin": {
+      "before": 39.818073266853546,
+      "after": 19.439629389155275
+    },
+    "30.nose.tip": {
+      "before": 32.390097948199994,
+      "after": 16.904138482159002
+    },
+    "60.eye.L.center": {
+      "after": 5.8601373717800636
+    },
+    "75.eye.L.center": {
+      "after": 4.193272924224366
+    },
+    "75.mouth.center": {
+      "before": 14.79961582651567,
+      "after": 6.2222287014827975
+    }
+  },
+  "freshIndependentReferenceAnglesRequired": [
+    20,
+    55,
+    82
+  ],
+  "visualReview": {
+    "keyViews": "PASS_CARDINAL_RECONSTRUCTION",
+    "yaw30": "NEEDS_FACE_AND_HAIRLINE",
+    "yaw60": "NEEDS_SIDE_STRAND_AND_SCALP_CONTACT",
+    "yaw75": "NEEDS_SIDE_STRAND_AND_SCALP_CONTACT",
+    "sweep": "PENDING_CI_VIDEO"
+  },
+  "status": "ENGINEERING_CORRECTIVES_PASS_VISUAL_IN_PROGRESS"
+}
