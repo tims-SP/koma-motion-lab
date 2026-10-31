@@ -74,7 +74,7 @@ slider.addEventListener('input',()=>{stop();setYaw(Number(slider.value));});
 pass.addEventListener('change',draw);
 byId('prev').addEventListener('click',()=>{stop();setYaw(yaw-1)});
 byId('next').addEventListener('click',()=>{stop();setYaw(yaw+1)});
-for(const btn of document.querySelectorAll<HTMLButtonElement>('#keyAngles button'))btn.addEventListener('click',()=>{stop();setYaw(Number(btn.dataset.yaw))});
+for(const btn of Array.from(document.querySelectorAll<HTMLButtonElement>('#keyAngles button')))btn.addEventListener('click',()=>{stop();setYaw(Number(btn.dataset.yaw))});
 play.addEventListener('click',togglePlay);
 byId('landmarks').addEventListener('change',overlay);
 byId('showRef').addEventListener('change',()=>{byId('refPanel').style.display=byId<HTMLInputElement>('showRef').checked?'':'none'});
