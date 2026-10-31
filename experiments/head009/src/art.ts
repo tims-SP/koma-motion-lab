@@ -15,7 +15,7 @@ const P=(...coords:number[]):Point[]=>{
   return r;
 };
 export const parts:readonly Part[]=[
- {id:'neck',anchor:[0,-.66,-.12],color:[.81,.56,.45],depthBias:[0,0,0],visible:[true,true,true],keys:[
+ {id:'neck',anchor:[0,-.66,-.12],color:[.81,.56,.45],depthBias:[-.10,-.25,-.40],visible:[true,true,true],keys:[
  P(-.27,.15,.27,.15,.23,-.35,-.23,-.35),
  P(-.25,.15,.22,.15,.24,-.35,-.16,-.35),
  P(-.17,.14,.21,.14,.16,-.33,-.17,-.33)]},
