@@ -1,11 +1,9 @@
 name: MVP-008 geometry-space facial mask visual continuity and dynamic occlusion
 on:
+  workflow_run:
+    workflows: ["MVP-008 dynamic 360° with arm IK and head VDD"]
+    types: [completed]
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'experiments/mvp002/scripts/audit-dynamic-occlusion.ts'
-      - '.github/workflows/mvp008-review.yml'
 concurrency:
   group: mvp008-review-${{ github.ref }}
   cancel-in-progress: true
@@ -18,6 +16,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -32,16 +32,30 @@ jobs:
       - name: Real isolated Alpha versus final ID buffer at moving poses
         working-directory: experiments/mvp002
         run: xvfb-run -a npm run audit:dynamic360
-      - name: Retrieve existing real 192-frame video without re-rendering
+      - name: Download video only from matching source commit and verified workflow
         env:
           GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
           set -euo pipefail
           mkdir -p reviewed
-          gh run download 41204945911 --repo tims-SP/koma-motion-lab \
+          run_id="${SOURCE_RUN_ID}"
+          if test -z "$run_id"; then
+            run_id="$(gh run list --repo tims-SP/koma-motion-lab --workflow mvp008-dynamic360.yml --branch main --limit 10 --json databaseId,headSha,conclusion \
+              --jq '.[] | select(.headSha == env.GITHUB_SHA and .conclusion == "success") | .databaseId' | head -1)"
+          fi
+          test -n "$run_id" || { echo 'No matching 192-frame source run'; exit 1; }
+          run_sha="$(gh api "repos/tims-SP/koma-motion-lab/actions/runs/$run_id" --jq '.head_sha')"
+          test "$run_sha" = "$(git rev-parse HEAD)" || {
+            echo "Stale video refused: $run_sha does not match $(git rev-parse HEAD)"; exit 1;
+          }
+          gh run download "$run_id" --repo tims-SP/koma-motion-lab \
             --name mvp008-dynamic360-evidence --dir reviewed
           test -s reviewed/dynamic360-8s.mp4
           test -s reviewed/dynamic-angle-board.png
+          test -s reviewed/transition-038-045.png
+          test -s reviewed/transition-128-136.png
+          echo "$run_id" > reviewed/source-run-id.txt
       - name: Emit bounded JPEGs for model visual review from REAL MP4
         run: |
           set -euo pipefail
@@ -69,6 +83,8 @@ jobs:
           path: |
             experiments/mvp002/out/dynamic-occlusion/*
             reviewed/qa/*.jpg
+            reviewed/transition-*.png
+            reviewed/source-run-id.txt
       - name: Optional owner Draft Release for full actual video
         if: success()
         continue-on-error: true
@@ -83,4 +99,4 @@ jobs:
             experiments/mvp002/out/dynamic-occlusion/dynamic-occlusion-audit.json \
             --repo tims-SP/koma-motion-lab --target "$GITHUB_SHA" --draft \
             --title "MVP-008 dynamic 360° minimal technical review (NOT production-art acceptance)" \
-            --notes "Same simplified character, 8s/192 frames; ten dynamic engineering checks pass in Actions 41204945911; updated hair-adjacent UV mask reveal for 250-270°; real frames 130-134 independently inspected. Pose-dependent occlusion is separately checked. Actual anime visual quality/foot IK not accepted."
+            --notes "Video and frame strips are tied to exact source commit; automatic geometry checks alone do not establish visual acceptance. No anime-quality or planted-foot claim."
