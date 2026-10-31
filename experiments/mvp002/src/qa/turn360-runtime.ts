@@ -21,6 +21,8 @@ export class Turn360Recorder {
     id:string;center:THREE.Vector3;vddOffset:XY;vertices:THREE.Vector3[];
     uv:XY[];triangles:number[];keyA:number;keyB:number;weight:number;
     visible:number;parent:string;sourceIsDerived:boolean;
+    localAnchor:THREE.Vector3;boneWorld:THREE.Matrix4;camera:THREE.OrthographicCamera;
+    authoredKeys:readonly {yaw:number;contour:readonly XY[];shift:XY;visible:number}[];
   }):void{
     if(!this.active)return;
     const p=input,vals=p.vertices.map(x=>x.z);
@@ -39,20 +41,37 @@ export class Turn360Recorder {
       if(Math.abs(cross)<1e-7){warningCodes.push('DEGENERATE_TRIANGLE');break;}
     }
     if(p.vertices.length!==p.uv.length)warningCodes.push('UV_VERTEX_COUNT_MISMATCH');
-    const key=(n:number)=>({
-      yawDegrees:n,sourceHash:'UNVERIFIED-SOURCE-'+p.id+'-'+n,
-      independentlyAuthored:n!==270,
-      topologyId:'fan11-v1'
-    });
+    // FNV-1a records content identity, not an assertion of artistic quality.
+    const hash=(o:unknown)=>{let h=2166136261;for(const c of JSON.stringify(o)){
+      h=Math.imul(h^c.charCodeAt(0),16777619);
+    }return (h>>>0).toString(16).padStart(8,'0');};
+    const key=(n:number)=>{
+      const source=p.authoredKeys.find(k=>k.yaw===n);
+      if(!source)throw Error('No actual source key '+p.id+'/'+n);
+      return {yawDegrees:n,sourceHash:hash(source),independentlyAuthored:!p.sourceIsDerived,
+        topologyId:'fan'+source.contour.length+'-v1'};
+    };
+    p.camera.updateMatrixWorld();
+    const projection=(point:THREE.Vector3):XY=>{
+      const ndc=point.clone().project(p.camera);
+      return [(ndc.x+1)*480,(1-ndc.y)*270];
+    };
+    const originalWorld=p.localAnchor.clone().applyMatrix4(p.boneWorld);
+    const anchorPx=projection(originalWorld);
+    const centerPx=projection(p.vertices[0]);
     const trace:PartTrace={
-      id:p.id,parentBoneId:p.parent,worldAnchorXYZ:p.center.toArray() as XYZ,
+      id:p.id,parentBoneId:p.parent,
+      boneLocalAnchorXYZ:p.localAnchor.toArray() as XYZ,
+      boneWorldMatrix:p.boneWorld.toArray(),
+      worldAnchorXYZ:p.center.toArray() as XYZ,
       projectedAnchorXY:[p.center.x,p.center.y],vddOffsetXY:p.vddOffset,
+      anchorProjectionPixels:anchorPx,deformedCenterPixels:centerPx,
       keyA:key(p.keyA),keyB:key(p.keyB),keyWeight:p.weight,
       geometryVerticesXY:p.vertices.map(v=>[v.x,v.y]),
       textureUV:p.uv,triangleIndices:p.triangles,visibility:p.visible<.025?'absent':p.visible<.995?'crossfade':'visible',
       topologyTransition:'none',depthMin:Math.min(...vals),depthMax:Math.max(...vals),
       expectedOccluders:[],actualVisibleAreaPixels:0,visiblePixelCountFromIdPass:0,
-      sourceTextureHash:'UNVERIFIED-IMAGE-HASH-'+p.id,
+      sourceTextureHash:hash([p.id,p.keyA,p.keyB,p.weight]),
       warningCodes
     };
     this.traces.push(trace);
@@ -66,6 +85,8 @@ export class Turn360Recorder {
       frameIndex:this.frameIndex,timeSeconds:info.timeSeconds,
       yawDegrees:info.yaw,poseHash:'static-neutral-pose',
       cameraHash:[camera.left,camera.right,camera.top,camera.bottom,camera.position.toArray()].join('|'),
+      cameraViewMatrix:camera.matrixWorldInverse.toArray(),
+      cameraProjectionMatrix:camera.projectionMatrix.toArray(),
       lightHash:'neutral-fixed-qa-light',characterAssetHash:'mvp002-proxy-12-parts',
       rendererCommit:info.rendererCommit,parts:this.traces,
       actualVisiblePartIds:[],characterBoundingBoxPixels:info.bounds,
