@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5174",
     "typecheck": "tsc --noEmit",
-    "render": "tsx scripts/render.ts"
+    "render": "tsx scripts/render.ts",
+    "render:integrated": "tsx scripts/render-integrated.ts"
   },
   "dependencies": {
     "three": "0.180.0"
