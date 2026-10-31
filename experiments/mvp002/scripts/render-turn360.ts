@@ -7,7 +7,7 @@ import type {FrameTrace,GateId,GateResult,AcceptanceIssue,Turn360AcceptanceRepor
 import {TURN360_PROFILE as P} from '../src/qa/turn360-contract';
 
 declare global {interface Window{
- renderTurn360:(yaw:number,frameIndex:number)=>{stats:{yaw:number;partCount:number};trace:FrameTrace};
+ renderTurn360:(yaw:number,frameIndex:number)=>{stats:{frame:number;time:number;yaw:number;headLocalYaw:number;partCount:number;keyViewCount:number;artMeshCount:number;ikError:number;handMinusTorsoDepth:number;armLocalYaw:number;lightAngle:number;shadowOffset:number;blink:number;targetX:number;handX:number};trace:FrameTrace};
  captureTurnPass:(pass:'id'|'depth'|'mask',includeImage:boolean)=>{counts:Record<string,number>;dataUrl?:string};
  turnSourceViews:{angles:number[];independent270:boolean;derivedPartIds:string[]};
 }}
