@@ -77,13 +77,13 @@ export class Turn360Recorder {
     this.traces.push(trace);
   }
   public finish(info:{
-    camera:THREE.OrthographicCamera; timeSeconds:number; yaw:number;
+    camera:THREE.OrthographicCamera; timeSeconds:number; yaw:number;poseHash?:string;
     bounds:[number,number,number,number]; rendererCommit:string;
   }):FrameTrace{
     const camera=info.camera;
     this.lastFrame={
       frameIndex:this.frameIndex,timeSeconds:info.timeSeconds,
-      yawDegrees:info.yaw,poseHash:'static-neutral-pose',
+      yawDegrees:info.yaw,poseHash:info.poseHash??'static-neutral-pose',
       cameraHash:[camera.left,camera.right,camera.top,camera.bottom,camera.position.toArray()].join('|'),
       cameraViewMatrix:camera.matrixWorldInverse.toArray(),
       cameraProjectionMatrix:camera.projectionMatrix.toArray(),
