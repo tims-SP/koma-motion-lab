@@ -45,6 +45,7 @@ camera.position.set(0,1.95,15);camera.lookAt(0,1.95,0);camera.updateProjectionMa
 const root=new THREE.Group();scene.add(root);
 const drawn:THREE.Object3D[]=[];
 const qaRecorder=new Turn360Recorder();
+const qaBindings=new Map<PartId,{local:THREE.Vector3;world:THREE.Matrix4;boneId:string}>();
 const PART_IDS:PartId[]=['backHair','torso','skirt','face','fringe','eyes','scarf','emblem','leftArm','rightArm','leftLeg','rightLeg'];
 const V=(x:number,y:number,z=0)=>new THREE.Vector3(x,y,z);
 const lerp=(a:number,b:number,t:number)=>a+(b-a)*t;
@@ -162,11 +163,14 @@ function artMesh(part:Part,center:THREE.Vector3,yaw:number,alpha=1,scale=1,squas
  emitGeometry(vertices,uvs,indices,registeredMaterial(part,yaw,amount),part.id);
  if(qaRecorder.active){
    const key=keyPair(yaw),angles:[View,View,View,View]=[0,90,180,270];
+   const binding=qaBindings.get(part.id);
+   if(!binding)throw Error('Missing actual rig binding for '+part.id);
    qaRecorder.record({
      id:part.id,center,vddOffset:f.shift,vertices,uv:uvs,triangles:indices,
      keyA:angles[key.indices[0]],keyB:angles[key.indices[1]],weight:key.t,
-     visible:amount,parent:part.role==='head'?'headBone':part.role==='body'?'pelvisBone':part.role,
-     sourceIsDerived:key.indices.includes(3)
+     visible:amount,parent:binding.boneId,
+     sourceIsDerived:false,authoredKeys:part.keys,
+     localAnchor:binding.local,boneWorld:binding.world,camera
    });
  }
 }
@@ -241,6 +245,20 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  const blink=Math.exp(-Math.pow((t-4.83)*11,2));
  const rootChest=transform(V(0,1.96,0),rootYaw),rootHead=transform(V(0,3.02,.0),rootYaw);
  const lookHead=(p:THREE.Vector3)=>rootHead.clone().add(transform(p,headYaw));
+ // These are the matrices actually used for rigid head/root attachment.
+ // IK-generated forearm receives its own bone transform below.
+ const bodyMatrix=new THREE.Matrix4().makeRotationY(rootYaw*DEG);
+ const headMatrix=new THREE.Matrix4().makeTranslation(rootHead.x,rootHead.y,rootHead.z)
+   .multiply(new THREE.Matrix4().makeRotationY(headYaw*DEG));
+ qaBindings.clear();
+ for(const part of defs){
+   if(part.role==='body')qaBindings.set(part.id,{local:part.anchor,world:bodyMatrix,boneId:'pelvisBone'});
+   else if(part.role==='head')qaBindings.set(part.id,{local:part.anchor,world:headMatrix,boneId:'headBone'});
+ }
+ qaBindings.set('leftArm',{local:V(-.57,1.75,.03),world:bodyMatrix,boneId:'leftArmElbow'});
+ qaBindings.set('leftLeg',{local:V(-.21,.47,.10),world:bodyMatrix,boneId:'leftLegRoot'});
+ qaBindings.set('rightLeg',{local:V(.21,.47,.10),world:bodyMatrix,boneId:'rightLegRoot'});
+ camera.updateMatrixWorld();
  // Back hair and legs behind the body, based on actual 3D anchor.
  artMesh(defs[0],lookHead(defs[0].anchor),headYaw);
  const steps=!isTurnOnly&&t>2?Math.sin(t*5)*.07:0;
@@ -273,8 +291,12 @@ export function evaluate(frame:number,total:number,turnYaw?:number):FrameStats {
  const armLocalYaw=wrap(Math.atan2(forearm.x,forearm.z)/DEG);
  limb(shoulder,rig.elbow,.145,'#526f9d','rightArm');
  limb(rig.elbow,rig.hand,.102,'#eec3ac','rightArm');
- artMesh(defs[9],V((rig.elbow.x+rig.hand.x)/2,(rig.elbow.y+rig.hand.y)/2,
-     (rig.elbow.z+rig.hand.z)/2),armLocalYaw,.90,.39);
+ const forearmCenter=rig.elbow.clone().add(rig.hand).multiplyScalar(.5);
+ const forearmAxis=rig.hand.clone().sub(rig.elbow).normalize();
+ const forearmQuat=new THREE.Quaternion().setFromUnitVectors(V(0,-1,0),forearmAxis);
+ const forearmBone=new THREE.Matrix4().compose(forearmCenter,forearmQuat,V(1,1,1));
+ qaBindings.set('rightArm',{local:V(0,0,0),world:forearmBone,boneId:'rightForearmIK'});
+ artMesh(defs[9],forearmCenter,armLocalYaw,.90,.39);
  // Character neck and face use head-local view, *not* world body yaw.
  artMesh(defs[3],lookHead(defs[3].anchor),headYaw);
  const face=lookHead(defs[3].anchor);
