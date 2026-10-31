@@ -1,11 +1,11 @@
 {
-  "schemaVersion": "MVP008-VISUAL-QA-1",
+  "schemaVersion": "MVP008-VISUAL-QA-2",
   "date": "2026-10-31",
-  "sourceVideoRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41204945911",
-  "sourceArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41204945911/artifacts/13043762442",
-  "modelReviewRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41205200317",
-  "modelReviewArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41205200317/artifacts/13044088259",
-  "draftPreview": "https://github.com/tims-SP/koma-motion-lab/releases/tag/untagged-c93b54c52c191b5454aa",
+  "sourceVideoRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41206130892",
+  "sourceArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41206130892/artifacts/13044700423",
+  "modelReviewRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41206308861",
+  "modelReviewArtifact": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41206308861/artifacts/13044364166",
+  "draftPreview": "https://github.com/tims-SP/koma-motion-lab/releases/tag/mvp008-dynamic360-41206308861",
   "automatedStatus": "PASS_STRUCTURE_PENDING_VISUAL",
   "humanFullVideoAccepted": false,
   "visualStatus": "FAIL_VISUAL",
@@ -27,9 +27,9 @@
         "fringe",
         "backHair"
       ],
-      "observation": "Side face has a conspicuous near-vertical hard boundary between cheek/forehead and hair, despite moving smoothly. Image evidence does not support a high-quality view-dependent silhouette.",
+      "observation": "New VDD contour-derived curve reduced earlier protruding crop, but selected side profile frames (40,43) still show an unnatural abrupt face-to-hair edge and narrow face.",
       "rootCauseHypothesis": "Mask is now spatially continuous but remains a straight X wipe, independent of the authored face/hair contour correspondences.",
-      "requiredFix": "Replace X-axis wipe with a 2D semantic face/hair occlusion boundary referenced to registered contour landmarks and view-dependent visibility. Validate boundary continuity; do not use alpha blending as a substitute."
+      "requiredFix": "Author and register an INNER hair/skin seam (front/right/rear/left) with forehead, temple, cheek, jaw and chin control point correspondences. Drive both face occlusion and front/back hair coverage from that seam. An outer face silhouette alone is insufficient."
     },
     {
       "id": "MVP008-V02",
@@ -49,9 +49,9 @@
         "fringe",
         "backHair"
       ],
-      "observation": "Face reappears from the rear hair over a few frames, but expands as a rectangular/straight slice, especially in frames 131-133. Earlier detached island is gone; shape continuity is not acceptable yet.",
+      "observation": "Frame 132 has less of the old rectangular forehead protrusion, but facial reveal still has a near-vertical slice and unregistered fringe/hair intersection.",
       "rootCauseHypothesis": "Generic profile geometry and a single straight clipping plane do not encode facial contour/head volume as 270°→360° interpolates.",
-      "requiredFix": "Define face/fringe/hair contour correspondences for both side profiles, then compute local occlusion mask from the animated head silhouette; inspect transition strips."
+      "requiredFix": "Supply separate face/hair inner-outline control points and dynamically triangulate or compute an SDF for the actual hairline; compare local face/behind-hair masks at each head yaw. Do not substitute uniform alpha or temporal smoothness."
     },
     {
       "id": "MVP008-V03",
@@ -84,28 +84,20 @@
   "measured": {
     "staticFrames": 192,
     "videoSeconds": 8,
-    "machineGatePasses": 10,
-    "temporalRatio": 2.2382245776747265,
-    "priorTemporalRatio": 2.9556234637613765,
+    "machineGatePasses": 11,
+    "temporalRatio": 1.751519027822194,
+    "priorTemporalRatio": 2.2382245776747265,
     "selectedOcclusionRules": {
       "pass": 10,
       "fail": 0,
       "untested": 0
     },
     "modelReviewedFrames": [
-      39,
       40,
-      41,
-      42,
       43,
-      44,
-      129,
       130,
-      131,
       132,
-      133,
-      134,
-      135
+      134
     ]
   },
   "nextEngineeringPriority": [
@@ -114,5 +106,25 @@
     "MVP008-V03",
     "MVP008-V04"
   ],
-  "stageDecision": "BLOCK FINAL DYNAMIC 360 ACCEPTANCE; do not rerun static baseline as substitute."
+  "stageDecision": "BLOCK FINAL DYNAMIC 360 ACCEPTANCE. New curved proxy and 11/11 gates PASS; hairline seam still FAIL_VISUAL.",
+  "reviewBasis": {
+    "codeCommit": "2895f5f5f1d41bfbaa4d838ceb54bb926fd1553c",
+    "reviewWorkflowCommit": "3df961174339ff58f4bdf0068b23f6b4e0e21a1d",
+    "sameSourceCommitVerified": true,
+    "comparedOldReviewRun": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41205200317",
+    "viewedOldFrames": [
+      40,
+      132,
+      134
+    ],
+    "actualViewer": "model-vision JPEGs extracted from old/new real encoded MP4 logs",
+    "limitation": "five sampled new frames, three old comparison frames; NOT a full continuous video subjective approval"
+  },
+  "observedThisRound": [
+    "Frame 40: old side-view rectangular face/hair reveal reduces in size, but profile still narrow and hard-cut.",
+    "Frame 132: old protruding rectangular strip is reduced; face emergence still has an approximately vertical boundary and lacks a registered hairline.",
+    "Frame 134: silhouette is less blocky than previous, but face-to-hair contact lacks anatomical semantics.",
+    "Machine temporal ratio improves 2.238 to 1.752, but temporal score is not evidence of semantic silhouette correctness.",
+    "Distinct source forehead/temple/cheek/jaw/hairline seam pairs are not authored in current proxy assets."
+  ]
 }

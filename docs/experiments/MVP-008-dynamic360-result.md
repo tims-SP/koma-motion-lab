@@ -96,3 +96,8 @@
 4. 完成头部视角正确性后才开始局部手臂 pose-aware silhouette corrective、全身脚部接地 IK。暂不导入复杂游戏资产，暂不加工美术画风。
 
 **当前权威判断：MVP-007 固定姿势水平 360° 的指定原型结构通过；MVP-008 同一原型带头手动作的动态 360° 机器通过，但真实画面仍 FAIL_VISUAL。**
+
+
+## V05 · 2026-10-31 六高度曲线遮挡线实机复核
+
+代码已经推进至头部实时形变轮廓遮挡，源码提交 `2895f5f`；新 192 帧实机渲染 [#41206130892](https://github.com/tims-SP/koma-motion-lab/actions/runs/41206130892) 11/11 结构门禁通过，动态遮挡复核 [#41206308861](https://github.com/tims-SP/koma-motion-lab/actions/runs/41206308861) 10/10 通过。帧差峰/中位比 2.238→1.752，但实看新旧 40、132、134 帧仍有近垂直脸/发接缝，故 **FAIL_VISUAL**，并未完成内发际线语义配对。具体照片、缺陷、后续 V06 必须执行项参见 [V05 检查记录](MVP-008-V05-contour-review.md) 与 [机器可读列表](MVP-008-visual-review.json)。
