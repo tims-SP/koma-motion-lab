@@ -7,7 +7,8 @@
     "typecheck": "tsc --noEmit",
     "render": "tsx scripts/render.ts",
     "render:integrated": "tsx scripts/render-integrated.ts",
-    "render:turn360": "tsx scripts/render-turn360.ts"
+    "render:turn360": "tsx scripts/render-turn360.ts",
+    "render:dynamic360": "tsx scripts/render-dynamic360.ts"
   },
   "dependencies": {
     "three": "0.180.0"
