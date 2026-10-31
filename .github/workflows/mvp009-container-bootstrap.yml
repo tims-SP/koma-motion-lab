@@ -1,0 +1,30 @@
+name: Head009 isolated-container toolchain bootstrap
+on:
+  workflow_dispatch:
+jobs:
+  pack_toolchain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Acquire JavaScript build and runtime dependencies
+        working-directory: experiments/head009
+        run: npm install --no-audit --no-fund
+      - name: Export exact-source snapshot and dependencies
+        run: |
+          set -euo pipefail
+          mkdir -p transfer
+          tar -czf transfer/head009-source.tgz --exclude='node_modules' --exclude='out' experiments/head009
+          tar -czf transfer/head009-node-modules.tgz -C experiments/head009 node_modules
+          git rev-parse HEAD > transfer/source-commit.txt
+          sha256sum transfer/*.tgz > transfer/SHA256SUMS
+          ls -lh transfer
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head009-isolated-container-bootstrap
+          path: transfer/
+          retention-days: 7
+          compression-level: 0
