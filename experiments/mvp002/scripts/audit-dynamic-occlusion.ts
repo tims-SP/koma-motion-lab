@@ -24,18 +24,20 @@ try{
  const page=await browser.newPage({viewport:{width:1040,height:740},deviceScaleFactor:1});
  await page.goto('http://127.0.0.1:5183/integrated.html',{waitUntil:'networkidle'});
  await page.waitForFunction(()=>typeof window.auditTurnOcclusion==='function');
- const result:{yaw:number;frame:number;localDepth:number;rules:OcclusionRuleResult[]}[]=[];
+ const result:{yaw:number;frame:number;localDepth:number;rules:OcclusionRuleResult[];facePixels:number}[]=[];
  for(const scenario of cases){
   const state=await page.evaluate(s=>window.renderDynamic360(s.yaw,s.frame),scenario);
+  const readback=await page.evaluate(()=>window.captureTurnPass('id',false));
   const rules=await page.evaluate(()=>window.auditTurnOcclusion());
   const name='actual-pose-'+scenario.yaw+'-'+scenario.frame+'.png';
   await page.locator('#viewport').screenshot({path:join(out,name)});
   if(statSync(join(out,name)).size<4000)throw Error('Blank scenario '+name);
   result.push({yaw:scenario.yaw,frame:scenario.frame,
-    localDepth:state.pose.handTorsoLocalZ,rules});
+    localDepth:state.pose.handTorsoLocalZ,rules,facePixels:readback.counts.face??0});
  }
  const required=result.filter(r=>r.frame===150);
- const all=required.flatMap(x=>x.rules.map(y=>({...y,frame:x.frame})));
+ const all=required.filter(x=>x.yaw!==90).flatMap(x=>x.rules.map(y=>({...y,frame:x.frame})));
+ const backFaceInvisible=required.filter(x=>[90,180].includes(x.yaw)).every(x=>x.facePixels<3);
  const bad=all.filter(x=>x.status==='FAIL');
  const untested=all.filter(x=>x.status==='UNTESTED');
  const covered=all.filter(x=>x.status==='PASS');
@@ -48,7 +50,7 @@ try{
  // hand depth at 0° and 180°, not the opposite sign of raw world-z.
  const pass=bad.length===0&&untested.length===0&&covered.length>=9&&
    frontalArm.every(x=>x.status==='PASS')&&rearArm.every(x=>x.status==='PASS')&&
-   frontalArm.length===2&&rearArm.length===2&&crossing;
+   frontalArm.length===2&&rearArm.length===2&&crossing&&backFaceInvisible;
  const status=pass?'PASS_DYNAMIC_LOCAL_OCCLUSION':
    bad.length?'FAIL_DYNAMIC_LOCAL_OCCLUSION':'BLOCKED_DYNAMIC_LOCAL_OCCLUSION';
  const report={status,verifiedAtFrame:150,cases:result,
@@ -59,7 +61,7 @@ try{
      'Complete model/visual 360° acceptance still requires full video review.']};
  writeFileSync(join(out,'dynamic-occlusion-audit.json'),JSON.stringify(report,null,2)+'\n');
  console.log('DYNAMIC_OCCLUSION_RESULT '+JSON.stringify({status,counts:report.counts,
-   depthFront,depthRear,bad,untested}));
+   depthFront,depthRear,bad,untested,backFaceInvisible}));
 }finally{
  if(browser)await browser.close();
  server.kill('SIGTERM');
