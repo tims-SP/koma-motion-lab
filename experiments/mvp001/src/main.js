@@ -62,6 +62,17 @@ flat('eye.left', head, -0.15, 0.01, 0.17, 0.085, 0.11, 0x304264);
 flat('eye.right', head, 0.15, 0.01, 0.17, 0.085, 0.11, 0x304264);
 flat('mouth', head, 0, -0.23, 0.175, 0.11, 0.025, 0xa06a6c);
 
+// Orthogonal component views prove WebGL can render parts at side-on angles.
+// Still a primitive cross-view fixture, not interpolated high-fidelity art.
+for (const [name,y,w,h,color] of [
+  ['body.torso.side',1.60,0.43,1.07,0x556b92],
+  ['head.face.side',2.69,0.39,0.75,0xe8bba0],
+  ['hair.back.side',2.70,0.49,1.04,0x42354b]
+]) {
+  const sidePart = flat(name, actor, 0, y, 0, w, h, color);
+  sidePart.rotation.y = Math.PI / 2;
+}
+
 const gl = renderer.getContext();
 const pixels = new Uint8Array(4);
 const metadata = {
