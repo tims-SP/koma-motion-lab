@@ -54,7 +54,7 @@ try{
    }
    const video=join(out,shot+'.mp4');
    execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-framerate','24','-i',
-      join(frameDir,'frame-%03d.png'),'-c:v','libx264','-pix_fmt','yuv420p','-crf','20','-r','24',video],
+      join(frameDir,'frame-%03d.png'),'-vf','scale=960:540,setsar=1','-c:v','libx264','-pix_fmt','yuv420p','-crf','20','-r','24',video],
       {stdio:'pipe'});
    const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-count_frames','-select_streams','v:0',
      '-show_entries','stream=nb_read_frames,width,height,r_frame_rate','-of','json',video],{encoding:'utf8'}));
