@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C01_NATIVE_HTML_ENGINEERING_PASS",
+  "phase": "C02_NATIVE_DRAWABLE_CAPTURE_ENGINEERING_PASS",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -104,13 +104,14 @@
         "C01"
       ],
       "parallelEligible": false,
-      "status": "PENDING",
+      "status": "ENGINEERING_PASS",
       "evidence": {
-        "commit": null,
+        "commit": "abf60eba65dcd4c8cae4371743491e1b9bca7893",
+        "report": "experiments/r1999-cubism-vdd/evidence/drawable-qa.json",
+        "visualReview": "STRUCTURAL_DATA_VERIFIED; native frame screenshots are available in private QA storage",
         "workflowRun": null,
         "artifact": null,
-        "report": null,
-        "visualReview": null
+        "summary": "263 drawables, 7826 vertices, 9773 triangles, 21 masked drawables; 255 dynamic vertex meshes changed under motion; UV and triangle topology stable across sampled frames"
       },
       "deliverables": [
         "drawable-manifest.json",
@@ -380,5 +381,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "Official Cubism 5-r.4 native Sonetto HTML loaded and exercised in Chromium WebGL2 with 263 drawables, 180 parameters, real motion, expression, screenshot export, and mobile QA"
+  "lastExecutedMilestone": "C02 native Cubism Drawable and parameter runtime inspection passed in real Chromium WebGL2; next C03 Three.js fidelity replay"
 }
