@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C03_THREEJS_NATIVE_PARITY_ENGINEERING_PASS",
+  "phase": "C03_ENGINEERING_PASS_C04_SOURCE_COVERAGE_AUDITED",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -165,13 +165,13 @@
         "C00"
       ],
       "parallelEligible": true,
-      "status": "PENDING",
+      "status": "RUNNING",
       "evidence": {
-        "commit": null,
-        "workflowRun": null,
-        "artifact": null,
-        "report": null,
-        "visualReview": null
+        "commit": "847772dd98910ff71444ab2513efdfeb9f64a36c",
+        "report": "experiments/r1999-cubism-vdd/evidence/c04-view-source-audit.json",
+        "runtimeObserved": "Cubism native PARAM_ANGLE_X/Y/Z each -30..30; these are not calibrated camera yaw",
+        "artworkCoverage": "One authentic animated portrait and two texture atlases; no independently calibrated 45/90/180 and holdouts in same character directory",
+        "next": "Register authentic or authored semantic multi-view per-part RGBA keys with landmarks, source hashes, occlusion rules and independent heldouts"
       },
       "deliverables": [
         "view-source-manifest.json",
@@ -388,5 +388,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "C03 independent rebuild of Cubism Web 5-r.4 + Three.js 0.181.0 passed 5 same-frame pixel checks and mask/order/UV negative-control checks"
+  "lastExecutedMilestone": "C03 verified clean rebuild and 5-pose native-to-Three parity; C04 parameter ranges and authored-view asset gap audited in real browser"
 }
