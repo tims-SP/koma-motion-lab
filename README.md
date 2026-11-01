@@ -1,23 +1,39 @@
 # 2.75D Anime Studio · Koma Motion Lab
 
-**技术路线：** Euclid 式多视角原画、3D Anchor、ArtMesh/VDD 与相机空间遮挡。现阶段以头部 0°–90° 为首轮视觉验收目标。
+面向高质量二次元动画的 **Cubism 原生立绘 + 多视角分层原画 + 3D Anchor + ArtMesh/VDD + Three.js** 实验与验收仓库。
 
-- [MVP-009 技术方案与验收标准](docs/MVP-009-plan.md)
-- [MVP-009 任务与状态](docs/MVP-009-tasks.json)
-- [Live2D 制作与 Agent 器官数据契约](docs/MVP-009-face-authoring-contract.md)
+## 当前验证主线 · R1999 Cubism VDD HTML
 
-## 交互 HTML 验收
+使用 [Reverse-1999-CN-Asset](https://github.com/myssal/Reverse-1999-CN-Asset) 中十四行诗（`302301_shisihangshi`）的实际 Cubism 模型，首先还原原生立绘、表情和动作，再构建动态 ArtMesh 适配、独立视角原画、VDD 和视角依赖遮挡，最终在 HTML 浏览器中对比原生画面、2.75D 扩展、独立参考和逐像素诊断。
 
-本体项目使用 `experiments/head009/` 中的 Three.js 模型源码。验收产物为单文件 `head009-review.html`，包括真实 WebGL、连续 0°–90° 偏航、参考原画、四通道调试、器官语义标记、人工器官结论和 JSON/PNG 导出。
+- [完整技术架构、资产标准、HTML 验收设计](docs/R1999-cubism-vdd-html-plan.md)
+- [C00–C10 可追踪任务与验收门禁](docs/R1999-cubism-vdd-html-tasks.json)
+- [R1999 原生资产技术路线与候选研究](docs/R1999-native-asset-validation-plan.md)
 
-开发与真实验收在隔离容器中进行。GitHub 的 [源码与依赖打包工作流](.github/workflows/mvp009-container-bootstrap.yml) 和 [Chromium 工具链打包工作流](.github/workflows/mvp009-browser-bootstrap.yml) 为隔离容器提供可校验的依赖包。源码、依赖及浏览器完成解包后，在 `experiments/head009` 内执行：
+**当前状态：** 已核实 Cubism 目录、模型描述、22 组动作、6 个唯一表情文件、2 张主纹理，完成实施计划与可追踪任务登记。真实 Cubism Core 加载、适配器逐帧保真、0–90° 与水平 360° 视觉验收属于后续实测项目。
+
+预计新实验源码位置：`experiments/r1999-cubism-vdd/`。HTML 先采用本地静态服务的资源包（HTML/JS/CSS/已授权的本地依赖），离线运行；个人游戏原画及包含这些原画的截图、视频和 HTML 包保存在私有实验路径，Git 保存通用程序与文本证据。
+
+## 已建立的 Three.js 几何/诊断参考 · HEAD009
+
+`experiments/head009/` 包括 Three.js/WebGL 渲染、0–90° 头部 ArtMesh/VDD、Beauty/Part-ID/Depth/Alpha 四通道、故障注入、可交互单 HTML 与 Playwright/Chromium QA。新 Cubism 实验可以复用其渲染诊断方法和验收程序。
+
+- [HEAD009 几何与视觉验收方案](docs/MVP-009-plan.md)
+- [HEAD009 任务及证据](docs/MVP-009-tasks.json)
+- [Cubism / Agent 面部语义和层级契约](docs/MVP-009-face-authoring-contract.md)
+- [HTML 隔离环境打包](.github/workflows/mvp009-container-bootstrap.yml)
+- [Chromium 工具链打包](.github/workflows/mvp009-browser-bootstrap.yml)
+
+复现现有 HEAD009 浏览器验收：
 
 ```bash
+cd experiments/head009
 HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated-review.sh
 ```
 
-输出：`out/head009/head009-review.html`，以及 `out/head009/html-review-qa.json`、`out/head009/review-html-*.png`。可直接用浏览器打开 HTML，无需开发服务。
+生成 `out/head009/head009-review.html`、`out/head009/html-review-qa.json` 和截图。该 SVG 几何示例的 WebGL/交互验收结果见 [GitHub 同源构建校验](https://github.com/tims-SP/koma-motion-lab/actions/runs/41253856374)；R1999 的真实 Cubism 模型各项质量指标按新任务独立验收。
 
-本轮 HTML 的 SHA-256：`c483291902d5d7d93639540acce478b2f478d67e2793015d92274eabba1af249`，本地隔离容器 WebGL 测试通过，外部请求 0 次。与 [GitHub 同源构建校验](https://github.com/tims-SP/koma-motion-lab/actions/runs/41253856374) 一致。
+## 仓库职责
 
-**当前状态：** HTML 交互验收工程完成，T03B 的艺术视觉复核继续进行。重点为 80°–90° 耳部显露与 20°/55°/82° 新独立参考。T04 方案决策和头部 360° 尚未进入。
+- `tims-SP/koma-motion-lab`：单角色验证、对照实验、原画来源登记、结构化 QA、浏览器与视频证据。
+- `tims-SP/koma-motion`：接收经过正式技术与视觉验收的可复用渲染器、VDD 数据模型和测试工具。
