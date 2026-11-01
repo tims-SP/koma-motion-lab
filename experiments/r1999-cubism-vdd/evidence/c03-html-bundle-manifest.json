@@ -1,0 +1,39 @@
+{
+  "schema": "R1999-C03-HTML-BUNDLE-V1",
+  "artifact": "r1999-c03-html-bundle.tar.gz",
+  "storage": "private VPS; tar.gz contains authorized runtime files and game character artwork",
+  "location": "/root/koma-motion-r1999/output/r1999-c03-html-bundle.tar.gz",
+  "bytes": 3746791,
+  "sha256": "f2c4aba413690c7cbec804128a2321f2cc49479b3f6685ebd91525e779d8469a",
+  "files": 39,
+  "entrypoint": "index.html",
+  "serveMode": "local static HTTP server; bundled JS and data load from local relative paths",
+  "runtime": {
+    "cubismSamples": "5-r.4",
+    "cubismFramework": "5-r.4",
+    "three": "0.181.0",
+    "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df"
+  },
+  "validation": {
+    "browser": "Chromium headless WebGL2",
+    "qaStatus": "PASS_C03_ENGINEERING",
+    "states": [
+      "idle",
+      "nod",
+      "shake",
+      "happy",
+      "surprised"
+    ],
+    "faultInjection": [
+      "mask",
+      "order",
+      "uv"
+    ],
+    "externalRequests": 0,
+    "httpErrors": 0,
+    "javascriptErrors": 0,
+    "evidence": "experiments/r1999-cubism-vdd/evidence/c03-threejs-parity-qa.json"
+  },
+  "rights": "Private personal research copy. Public Git stores reusable code and numeric evidence only.",
+  "userReview": "PENDING_VISUAL_SIGNOFF"
+}
