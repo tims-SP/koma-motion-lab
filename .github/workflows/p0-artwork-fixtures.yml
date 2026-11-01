@@ -1,0 +1,38 @@
+name: P0 public artwork fixture transfer
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/p0-artwork-fixtures.yml'
+      - 'experiments/p0-assets/ci/fetch-fixtures.py'
+  workflow_dispatch:
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Acquire pinned public original-art and PSD fixture files
+        run: python experiments/p0-assets/ci/fetch-fixtures.py
+      - name: Package Python PSD analysis dependencies for local container
+        run: python -m pip download --only-binary=:all: -d transfer/wheels psd-tools
+      - name: Build integrity-checked offline transfer
+        run: |
+          set -euo pipefail
+          cd transfer
+          sha256sum $(find fixtures -type f) > SHA256SUMS
+          tar -czf p0-references.tgz fixtures p0-source-manifest.json SHA256SUMS
+          tar -czf p0-psd-wheels.tgz wheels
+          rm -rf fixtures wheels
+          ls -lh *.tgz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p0-original-artwork-fixtures
+          path: |
+            transfer/p0-references.tgz
+            transfer/p0-psd-wheels.tgz
+          compression-level: 0
+          retention-days: 14
