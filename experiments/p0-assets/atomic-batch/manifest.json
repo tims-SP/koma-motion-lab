@@ -1,0 +1,1328 @@
+{
+  "schema": "KOMA_P0_ATOMIC_BATCH_V1",
+  "identity": "p0_character_001",
+  "total_files": 134,
+  "source_note": "SVG extraction of existing mcode drawings plus individually authored vector design pieces; not equivalent to identity-verified AI-painted transparent layers",
+  "generated_files": [
+    {
+      "path": "views/front_000.svg",
+      "semantic_id": "view.front_000",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VECTOR_DRAFT",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/view_front.svg",
+      "semantic_id": "view-front",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/hair_back.svg",
+      "semantic_id": "hair-back",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/hood.svg",
+      "semantic_id": "hood",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/jacket.svg",
+      "semantic_id": "jacket",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/neck.svg",
+      "semantic_id": "neck",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/shirt.svg",
+      "semantic_id": "shirt",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/collar.svg",
+      "semantic_id": "collar",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/bowtie.svg",
+      "semantic_id": "bowtie",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/jacket_front.svg",
+      "semantic_id": "jacket-front",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/face.svg",
+      "semantic_id": "face",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/ears.svg",
+      "semantic_id": "ears",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/eyes.svg",
+      "semantic_id": "eyes",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/eye_anatomical_right.svg",
+      "semantic_id": "eye-anatomical-right",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/eye_anatomical_left.svg",
+      "semantic_id": "eye-anatomical-left",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/brows.svg",
+      "semantic_id": "brows",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/brow_anatomical_right.svg",
+      "semantic_id": "brow-anatomical-right",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/brow_anatomical_left.svg",
+      "semantic_id": "brow-anatomical-left",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/nose.svg",
+      "semantic_id": "nose",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/mouth.svg",
+      "semantic_id": "mouth",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/mouth_closed_front.svg",
+      "semantic_id": "mouth-closed-front",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/blush.svg",
+      "semantic_id": "blush",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/ahoge.svg",
+      "semantic_id": "ahoge",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/hair_front_bangs.svg",
+      "semantic_id": "hair-front-bangs",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/hair_side_locks.svg",
+      "semantic_id": "hair-side-locks",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/front_000/gold_hairpin_anatomical_left.svg",
+      "semantic_id": "gold-hairpin-anatomical-left",
+      "view": "front_000",
+      "source": "view_000_front.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "views/threequarter_045_design.svg",
+      "semantic_id": "view.threequarter_045_design",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VECTOR_DRAFT",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/view_045.svg",
+      "semantic_id": "view-045",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/hair_back.svg",
+      "semantic_id": "hair-back",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/hood.svg",
+      "semantic_id": "hood",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/jacket.svg",
+      "semantic_id": "jacket",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/neck.svg",
+      "semantic_id": "neck",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/shirt.svg",
+      "semantic_id": "shirt",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/collar.svg",
+      "semantic_id": "collar",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/bowtie.svg",
+      "semantic_id": "bowtie",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/jacket_front.svg",
+      "semantic_id": "jacket-front",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/face.svg",
+      "semantic_id": "face",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/ear_near.svg",
+      "semantic_id": "ear-near",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/eyes.svg",
+      "semantic_id": "eyes",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/eye_anatomical_right.svg",
+      "semantic_id": "eye-anatomical-right",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/eye_anatomical_left.svg",
+      "semantic_id": "eye-anatomical-left",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/brows.svg",
+      "semantic_id": "brows",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/brow_anatomical_right.svg",
+      "semantic_id": "brow-anatomical-right",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/brow_anatomical_left.svg",
+      "semantic_id": "brow-anatomical-left",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/nose.svg",
+      "semantic_id": "nose",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/mouth.svg",
+      "semantic_id": "mouth",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/mouth_closed_45.svg",
+      "semantic_id": "mouth-closed-45",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/blush.svg",
+      "semantic_id": "blush",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/ahoge.svg",
+      "semantic_id": "ahoge",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/hair_front_bangs.svg",
+      "semantic_id": "hair-front-bangs",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/hair_side_locks.svg",
+      "semantic_id": "hair-side-locks",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/threequarter_045_design/gold_hairpin_far_occluded.svg",
+      "semantic_id": "gold-hairpin-far-occluded",
+      "view": "threequarter_045_design",
+      "source": "view_045_three_quarter_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "views/profile_090_design.svg",
+      "semantic_id": "view.profile_090_design",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VECTOR_DRAFT",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/view_090.svg",
+      "semantic_id": "view-090",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/jacket.svg",
+      "semantic_id": "jacket",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/hood.svg",
+      "semantic_id": "hood",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/neck.svg",
+      "semantic_id": "neck",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/hair_back.svg",
+      "semantic_id": "hair-back",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/face_profile.svg",
+      "semantic_id": "face-profile",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/ear_profile.svg",
+      "semantic_id": "ear-profile",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/eye_profile.svg",
+      "semantic_id": "eye-profile",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/nose_profile.svg",
+      "semantic_id": "nose-profile",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/mouth_profile.svg",
+      "semantic_id": "mouth-profile",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/blush.svg",
+      "semantic_id": "blush",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/hair_front.svg",
+      "semantic_id": "hair-front",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/gold_hairpin_far_side_sliver.svg",
+      "semantic_id": "gold-hairpin-far-side-sliver",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/profile_090_design/ahoge.svg",
+      "semantic_id": "ahoge",
+      "view": "profile_090_design",
+      "source": "view_090_profile_right.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "views/back_180.svg",
+      "semantic_id": "view.back_180",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VECTOR_DRAFT",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/view_180.svg",
+      "semantic_id": "view-180",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/jacket_back.svg",
+      "semantic_id": "jacket-back",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/hood_back.svg",
+      "semantic_id": "hood-back",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/neck_back.svg",
+      "semantic_id": "neck-back",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/hair_back_head.svg",
+      "semantic_id": "hair-back-head",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/ahoge.svg",
+      "semantic_id": "ahoge",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "visible_layers/back_180/gold_hairpin_left_side.svg",
+      "semantic_id": "gold-hairpin-left-side",
+      "view": "back_180",
+      "source": "view_180_back.svg",
+      "format": "svg",
+      "stage": "SOURCE_VISIBLE_LAYER",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/atomic_v2_eye_anatomical_L.svg",
+      "semantic_id": "atomic_v2_eye_anatomical_L",
+      "view": "unspecified",
+      "source": "atomic_v2_eye_anatomical_L.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/atomic_v2_nose_profile.svg",
+      "semantic_id": "atomic_v2_nose_profile",
+      "view": "unspecified",
+      "source": "atomic_v2_nose_profile.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_ear_L.svg",
+      "semantic_id": "part_ear_L",
+      "view": "unspecified",
+      "source": "part_ear_L.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_ear_R.svg",
+      "semantic_id": "part_ear_R",
+      "view": "unspecified",
+      "source": "part_ear_R.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_eye_L.svg",
+      "semantic_id": "part_eye_L",
+      "view": "unspecified",
+      "source": "part_eye_L.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_eye_R.svg",
+      "semantic_id": "part_eye_R",
+      "view": "unspecified",
+      "source": "part_eye_R.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_hair_back.svg",
+      "semantic_id": "part_hair_back",
+      "view": "unspecified",
+      "source": "part_hair_back.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_hair_front.svg",
+      "semantic_id": "part_hair_front",
+      "view": "unspecified",
+      "source": "part_hair_front.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_hair_side_L.svg",
+      "semantic_id": "part_hair_side_L",
+      "view": "unspecified",
+      "source": "part_hair_side_L.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_mouth.svg",
+      "semantic_id": "part_mouth",
+      "view": "unspecified",
+      "source": "part_mouth.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_nose.svg",
+      "semantic_id": "part_nose",
+      "view": "unspecified",
+      "source": "part_nose.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "organ_studies/part_ahoge.svg",
+      "semantic_id": "part_ahoge",
+      "view": "unspecified",
+      "source": "part_ahoge.svg",
+      "format": "svg",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "source coordinate system"
+    },
+    {
+      "path": "mouth_states/mouth_closed.svg",
+      "semantic_id": "mouth_closed",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_smile.svg",
+      "semantic_id": "mouth_smile",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_half_open.svg",
+      "semantic_id": "mouth_half_open",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_open.svg",
+      "semantic_id": "mouth_open",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_interior.svg",
+      "semantic_id": "mouth_interior",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_tongue.svg",
+      "semantic_id": "mouth_tongue",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_teeth_upper.svg",
+      "semantic_id": "mouth_teeth_upper",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_teeth_lower.svg",
+      "semantic_id": "mouth_teeth_lower",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_phoneme_A.svg",
+      "semantic_id": "mouth_phoneme_A",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_phoneme_I.svg",
+      "semantic_id": "mouth_phoneme_I",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_phoneme_U.svg",
+      "semantic_id": "mouth_phoneme_U",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_phoneme_E.svg",
+      "semantic_id": "mouth_phoneme_E",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "mouth_states/mouth_phoneme_O.svg",
+      "semantic_id": "mouth_phoneme_O",
+      "view": "expression",
+      "source": "hand-authored P0 SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "200x220"
+    },
+    {
+      "path": "eyes/sclera_anatomical_L.svg",
+      "semantic_id": "eye.L.sclera",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/iris_anatomical_L.svg",
+      "semantic_id": "eye.L.iris",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/pupil_anatomical_L.svg",
+      "semantic_id": "eye.L.pupil",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/highlight_anatomical_L.svg",
+      "semantic_id": "eye.L.highlight",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/upper_lid_anatomical_L.svg",
+      "semantic_id": "eye.L.upper_lid",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/lower_lid_anatomical_L.svg",
+      "semantic_id": "eye.L.lower_lid",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/lashes_anatomical_L.svg",
+      "semantic_id": "eye.L.lashes",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/eyebrow_anatomical_L.svg",
+      "semantic_id": "eye.L.eyebrow",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/eye_closed_anatomical_L.svg",
+      "semantic_id": "eye.L.eye_closed",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/sclera_anatomical_R.svg",
+      "semantic_id": "eye.R.sclera",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/iris_anatomical_R.svg",
+      "semantic_id": "eye.R.iris",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/pupil_anatomical_R.svg",
+      "semantic_id": "eye.R.pupil",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/highlight_anatomical_R.svg",
+      "semantic_id": "eye.R.highlight",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/upper_lid_anatomical_R.svg",
+      "semantic_id": "eye.R.upper_lid",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/lower_lid_anatomical_R.svg",
+      "semantic_id": "eye.R.lower_lid",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/lashes_anatomical_R.svg",
+      "semantic_id": "eye.R.lashes",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/eyebrow_anatomical_R.svg",
+      "semantic_id": "eye.R.eyebrow",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "eyes/eye_closed_anatomical_R.svg",
+      "semantic_id": "eye.R.eye_closed",
+      "view": "front",
+      "source": "authored eye primitives",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220",
+      "note": "requires manual identity alignment"
+    },
+    {
+      "path": "additional/hairclip_cross_gold.svg",
+      "semantic_id": "hairclip_cross_gold",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/ear_anatomical_L.svg",
+      "semantic_id": "ear_anatomical_L",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/ear_anatomical_R.svg",
+      "semantic_id": "ear_anatomical_R",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/nose_front_ink.svg",
+      "semantic_id": "nose_front_ink",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/nose_45_ink.svg",
+      "semantic_id": "nose_45_ink",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/nose_profile_edge.svg",
+      "semantic_id": "nose_profile_edge",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/nose_profile_shading.svg",
+      "semantic_id": "nose_profile_shading",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/hair_ahoge.svg",
+      "semantic_id": "hair_ahoge",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/crest_gold.svg",
+      "semantic_id": "crest_gold",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/bow_burgundy.svg",
+      "semantic_id": "bow_burgundy",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/collar_white.svg",
+      "semantic_id": "collar_white",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/shirt_white.svg",
+      "semantic_id": "shirt_white",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/coat_gold_trim.svg",
+      "semantic_id": "coat_gold_trim",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/coat_front_navy.svg",
+      "semantic_id": "coat_front_navy",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/coat_back_navy.svg",
+      "semantic_id": "coat_back_navy",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    },
+    {
+      "path": "additional/neck_skin.svg",
+      "semantic_id": "neck_skin",
+      "view": "design_ref",
+      "source": "authored independent SVG",
+      "stage": "REFERENCE_VECTOR_DESIGN",
+      "alpha_background": "transparent",
+      "canvas": "210x220"
+    }
+  ],
+  "outstanding_source_requirements": [
+    "independent facing-left 45 drawing",
+    "independent rear-oblique left/right drawing",
+    "fully completed face skin under hidden eyes and hair per view",
+    "view registered hair sublayers with covered root art",
+    "artistic alignment to approved Hero",
+    "separate clothing deform layers mapped at each view"
+  ],
+  "production_approved": false
+}
