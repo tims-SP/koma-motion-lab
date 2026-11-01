@@ -1,0 +1,24 @@
+name: P0 artwork source delivery
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/p0-atomic-source-package.yml'
+  workflow_dispatch:
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare editable artwork source package
+        run: |
+          mkdir -p dist
+          zip -q -r -9 dist/p0-character-001-sources.zip experiments/p0-assets/atomic-batch
+          sha256sum dist/p0-character-001-sources.zip > dist/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p0-character-001-independent-artwork-sources
+          path: dist/
+          retention-days: 30
+          compression-level: 0
