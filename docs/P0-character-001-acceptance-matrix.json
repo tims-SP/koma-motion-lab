@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-11-01",
+  "character_id": "p0_character_001",
+  "plan": "docs/P0-character-001-acceptance-plan.md",
+  "acceptance_status": "PLANNED",
+  "run_states": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "REVIEW_REQUIRED"
+  ],
+  "hard_gate_rule": "all mandatory checks PASS including reviewer for visual hard gates",
+  "stages": [
+    {
+      "id": "G0",
+      "name": "identity_source",
+      "input": "identity_spec.json + hero_master.png",
+      "depends_on": [],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G0-SHA",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G0-RGBA",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G0-IDENTITY",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G0-BBOX",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g0-source.json",
+        "qa/identity-review.json"
+      ]
+    },
+    {
+      "id": "G1",
+      "name": "multi_view_art",
+      "input": "0/45/90/180 independent production views",
+      "depends_on": [
+        "G0"
+      ],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G1-VIEW-PROVENANCE",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G1-ALIGNMENT",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G1-HANDEDNESS",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G1-PROFILE-90",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G1-BACK-180",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g1-turnaround.json",
+        "qa/turnaround-board.png"
+      ]
+    },
+    {
+      "id": "G2",
+      "name": "independent_organ_layers",
+      "input": "per-view RGBA organ layers and hidden fills",
+      "depends_on": [
+        "G1"
+      ],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G2-LAYER-SEMANTICS",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G2-RGBA",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G2-ISOLATION",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G2-REVEAL",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G2-ALPHA-EDGE",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g2-layer-check.json",
+        "qa/parts-contact-sheet.png"
+      ]
+    },
+    {
+      "id": "G3",
+      "name": "psd_roundtrip",
+      "input": "source hero + PNG composite + saved/reloaded PSD",
+      "depends_on": [
+        "G2"
+      ],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G3-READBACK",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G3-PNG-RECOMPOSE",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G3-PSD-RECOMPOSE",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G3-LOCAL-ROI-DIFF",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g3-recompose.json",
+        "qa/psd-roundtrip.json",
+        "qa/reconstruction-diff.png"
+      ]
+    },
+    {
+      "id": "G4",
+      "name": "landmarks_occlusion",
+      "input": "per-view semantic points/identity/occlusion graph",
+      "depends_on": [
+        "G3"
+      ],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G4-SEMANTIC-IDS",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G4-VISIBILITY",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G4-ANCHOR-CHECK",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G4-DEPTH-GRAPH",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g4-semantics.json",
+        "qa/landmark-overlay.png"
+      ]
+    },
+    {
+      "id": "G5",
+      "name": "movement_stress",
+      "input": "layer hide/translate/warp; reveal authored hidden fills",
+      "depends_on": [
+        "G4"
+      ],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G5-EYE",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G5-EAR",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G5-HAIR-REVEAL",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G5-MOUTH",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g5-movement.json",
+        "qa/motion-contact-sheet.png"
+      ]
+    },
+    {
+      "id": "G6",
+      "name": "head009_render",
+      "input": "real Three.js / Chromium head yaw 0-90",
+      "depends_on": [
+        "G5"
+      ],
+      "status": "PLANNED",
+      "checks": [
+        {
+          "id": "G6-COVERAGE-PARITY",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G6-EAR-ENTRY",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G6-HELDOUT",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G6-SOURCE-MATCH",
+          "required": true,
+          "status": "PLANNED"
+        },
+        {
+          "id": "G6-VISUAL-REVIEW",
+          "required": true,
+          "status": "PLANNED"
+        }
+      ],
+      "evidence": [
+        "qa/g6-head90-visual.json",
+        "head009-review.html"
+      ]
+    }
+  ],
+  "calibration": {
+    "native_detail_not_equal_resized_canvas": true,
+    "png_recomposition": {
+      "target_visible_pixel_max_channel_delta": 0,
+      "applies_to": "exact_lossless_visible_pixel_partition_only",
+      "semantic_layer_approval_required": true
+    },
+    "psd_roundtrip": {
+      "opaque_pixel_share_at_abs_delta_lte_2_min": 0.999,
+      "alpha_structure_must_match": true,
+      "budget_type": "initial_color_calibrated_proposal"
+    },
+    "landmarks": {
+      "key_view_normalized_head_height_error_max": 0.02
+    },
+    "head009": {
+      "cardinal_silhouette_iou_min": 0.93,
+      "nonedge_opaque_coverage_mismatch_max": 0.005,
+      "edge_tolerance_px": 1
+    },
+    "visual_review": {
+      "mandatory_organs": [
+        "eye.L",
+        "eye.R",
+        "nose",
+        "mouth",
+        "ear.L",
+        "ear.R",
+        "fringe",
+        "sideHair.L",
+        "sideHair.R",
+        "rearHair",
+        "hairpin",
+        "face",
+        "neck"
+      ],
+      "reviewer_veto": true
+    },
+    "perturbation": {
+      "organ_translation_head_width_fraction": 0.05,
+      "fringe_lift_head_height_fraction": 0.1
+    },
+    "heldout_view_yaw_deg": [
+      20,
+      55,
+      82
+    ],
+    "negative_controls": [
+      "mirror_eye_or_hairpin",
+      "remove_ear_hidden_fill",
+      "misplace_nose_tip_landmark",
+      "invert_hair_occlusion",
+      "alter_psd_color",
+      "alter_alpha"
+    ]
+  },
+  "source_baseline": {
+    "front_extraction_layers": 19,
+    "front_png_pixel_recompose_max_delta": 0,
+    "psd_roundtrip_max_channel_delta": 239,
+    "psd_delta_gt_2_pixels": 47770
+  },
+  "documentation_sources": [
+    "docs/MVP-009-plan.md",
+    "docs/MVP-009-face-authoring-contract.md",
+    "docs/P0-character-001-front-layer-prototype.json"
+  ],
+  "binary_archive_policy": "separate release or artifact, SHA reference in text repo"
+}
