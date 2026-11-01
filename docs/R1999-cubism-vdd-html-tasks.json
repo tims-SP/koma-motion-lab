@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "PLANNED",
+  "phase": "C01_NATIVE_HTML_ENGINEERING_PASS",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -34,8 +34,12 @@
     "cdiPartRecords": 46,
     "physics": null,
     "readOnlyRuntimeData": true,
-    "assetBytesFetched": false,
-    "coreSdkInstalled": false
+    "assetBytesFetched": true,
+    "coreSdkInstalled": true,
+    "sourceBytesShaVerified": true,
+    "runtimeModelLoaded": true,
+    "nativeModelDrawableCount": 263,
+    "nativeModelParameterCount": 180
   },
   "verificationPrinciple": "Native Cubism first. Only independent original art may establish truth for side and back views; renderer-generated pictures are diagnostic only.",
   "tasks": [
@@ -44,13 +48,13 @@
       "name": "source_and_sdk_lock",
       "dependsOn": [],
       "parallelEligible": false,
-      "status": "PENDING",
+      "status": "ENGINEERING_PASS",
       "evidence": {
-        "commit": null,
+        "commit": "fb51984cebd65753c7b65bc6c24b4d4025e53ef8",
         "workflowRun": null,
         "artifact": null,
-        "report": null,
-        "visualReview": null
+        "report": "experiments/r1999-cubism-vdd/evidence/source-manifest.json",
+        "visualReview": "Asset binary integrity verified, 33 refs SHA-256 and image/moc/json checks; official SDK version fingerprint in screenshot evidence"
       },
       "deliverables": [
         "asset-manifest.json",
@@ -70,13 +74,16 @@
         "C00"
       ],
       "parallelEligible": false,
-      "status": "PENDING",
+      "status": "ENGINEERING_PASS",
       "evidence": {
-        "commit": null,
+        "commit": "8927e45ad10d2a7f6d3fccb3cd89a0ca010e24b5",
         "workflowRun": null,
         "artifact": null,
-        "report": null,
-        "visualReview": null
+        "report": "experiments/r1999-cubism-vdd/evidence/native-browser-qa.json",
+        "mobileReport": "experiments/r1999-cubism-vdd/evidence/native-mobile-qa.json",
+        "screenshotHashes": "experiments/r1999-cubism-vdd/evidence/native-screenshot-hashes.json",
+        "visualReview": "ASSISTANT_REVIEWED; USER_VISUAL_SIGNOFF_PENDING",
+        "technicalCaveat": "Full TypeScript check needs compatible official Cubism Core declaration file"
       },
       "deliverables": [
         "native.html",
@@ -371,5 +378,7 @@
     "git": "Code, docs, manifests, synthetic fixtures, text-only QA",
     "private": "R1999 asset bytes, screenshots/videos and HTML bundles containing artwork, proprietary Cubism Core",
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
-  }
+  },
+  "lastVerifiedAt": "2026-11-01",
+  "lastExecutedMilestone": "Official Cubism 5-r.4 native Sonetto HTML loaded and exercised in Chromium WebGL2 with 263 drawables, 180 parameters, real motion, expression, screenshot export, and mobile QA"
 }
