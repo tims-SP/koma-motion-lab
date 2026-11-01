@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
+  "date": "2026-11-01",
+  "phase": "PLANNED",
+  "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
+  "scope": {
+    "sourceRepo": "myssal/Reverse-1999-CN-Asset",
+    "sourceBranch": "master",
+    "observedSourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+    "character": "302301_shisihangshi",
+    "sourcePath": "live2d/roles/302301_shisihangshi",
+    "experimentRoot": "experiments/r1999-cubism-vdd",
+    "engine": "Three.js WebGL2 + Live2D Cubism Web SDK",
+    "html": "Local-first offline package",
+    "headFirstRangeDeg": [
+      0,
+      90
+    ],
+    "headFullRangeDeg": [
+      0,
+      360
+    ],
+    "spatialYawSemantics": "0 front;90 character right;180 back;270 character left;360 front loop"
+  },
+  "sourceInventory": {
+    "status": "VERIFIED_GITHUB_METADATA",
+    "model": "302301_shisihangshi.moc3",
+    "modelBytes": 1006080,
+    "textures": 2,
+    "motionFiles": 22,
+    "uniqueExpressionFiles": 6,
+    "expressionReferences": 12,
+    "cdiParameterRecords": 180,
+    "cdiPartRecords": 46,
+    "physics": null,
+    "readOnlyRuntimeData": true,
+    "assetBytesFetched": false,
+    "coreSdkInstalled": false
+  },
+  "verificationPrinciple": "Native Cubism first. Only independent original art may establish truth for side and back views; renderer-generated pictures are diagnostic only.",
+  "tasks": [
+    {
+      "id": "C00",
+      "name": "source_and_sdk_lock",
+      "dependsOn": [],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "asset-manifest.json",
+        "sdk-lock.json",
+        "asset-audit.json"
+      ],
+      "acceptance": [
+        "Freeze model commit and enumerate all references",
+        "Verify actual downloaded asset hashes and SDK Core license/version",
+        "Real moc3 load preflight"
+      ]
+    },
+    {
+      "id": "C01",
+      "name": "native_cubism_html",
+      "dependsOn": [
+        "C00"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "native.html",
+        "native-screenshots",
+        "native-motion-frames",
+        "native-qa.json"
+      ],
+      "acceptance": [
+        "Native model and texture load",
+        "Idle/diantou/yaotou + 2 expressions + blink/mouth witnessed visually",
+        "Playback deterministic and screenshots from real canvas"
+      ]
+    },
+    {
+      "id": "C02",
+      "name": "native_drawable_capture",
+      "dependsOn": [
+        "C01"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "drawable-manifest.json",
+        "parameter-ranges.json",
+        "pose-samples.json"
+      ],
+      "acceptance": [
+        "Enumerate drawable mesh UV indices and texture IDs",
+        "Record clipping/render order/opacities including dynamics",
+        "Freeze and replay two motion sample timestamps"
+      ]
+    },
+    {
+      "id": "C03",
+      "name": "cubism_threejs_fidelity",
+      "dependsOn": [
+        "C02"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "side-by-side.html",
+        "native-vs-adapter.json",
+        "beauty-id-depth-alpha-mask",
+        "fault-injection.json"
+      ],
+      "acceptance": [
+        "Same pose frame and camera for two implementations",
+        "Record per-pixel/alpha/coverage diffs including blended masks",
+        "Known UV/order/mask faults detected by tests and reviewer"
+      ]
+    },
+    {
+      "id": "C04",
+      "name": "view_source_registration",
+      "dependsOn": [
+        "C00"
+      ],
+      "parallelEligible": true,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "view-source-manifest.json",
+        "semantic-landmarks.json",
+        "part-occlusion.json",
+        "artwork-gap-report.json"
+      ],
+      "acceptance": [
+        "Record true independent 0/45/90 art status and 20/55/82 heldouts",
+        "Source key and heldout provenance/source hashes",
+        "Missing side/back parts explicitly measured and assigned creation cost"
+      ]
+    },
+    {
+      "id": "C05",
+      "name": "vdd_and_anchor_integration",
+      "dependsOn": [
+        "C03",
+        "C04"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "parts.json",
+        "anchors.json",
+        "vdd-profile.json",
+        "mask-qa.json"
+      ],
+      "acceptance": [
+        "Stable part identity across views",
+        "View-specific anchors/masks/depth tested in actual WebGL",
+        "VDD uses registered anatomy and topology states"
+      ]
+    },
+    {
+      "id": "C06",
+      "name": "head_90_visual_acceptance",
+      "dependsOn": [
+        "C05"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "head90.html",
+        "head90-frames",
+        "head90.mp4",
+        "head90-qa.json"
+      ],
+      "acceptance": [
+        "0/15/30/45/60/75/90 real frame screenshots and independent holdout review",
+        "No unacceptable ear/hair/eye/nose/mouth seams",
+        "Engineering and independent visual review both pass"
+      ]
+    },
+    {
+      "id": "C07",
+      "name": "head_360_visual_acceptance",
+      "dependsOn": [
+        "C06"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "head360.html",
+        "head360-frames",
+        "head360.mp4",
+        "head360-qa.json"
+      ],
+      "acceptance": [
+        "Independent side and back view artwork exists and is registered",
+        "0/90/180/270/360 validated; 0 and 360 same pose",
+        "Continuous 360 yaw sweep and true backside accepted visually"
+      ]
+    },
+    {
+      "id": "C08",
+      "name": "motion_expression_view_crossproduct",
+      "dependsOn": [
+        "C07"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "motion-matrix.json",
+        "motion-view.mp4",
+        "motion-view-qa.json"
+      ],
+      "acceptance": [
+        "Blend selected motions/expressions/mouth/eye with viewpoint",
+        "Crossproduct screenshot matrix and temporal QA",
+        "Occlusion and identity stable throughout time"
+      ]
+    },
+    {
+      "id": "C09",
+      "name": "html_offline_package_acceptance",
+      "dependsOn": [
+        "C08"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "review/index.html",
+        "browser-qa.json",
+        "pixel-qa.json",
+        "frame-export-manifest.json"
+      ],
+      "acceptance": [
+        "Chrome offline assets loaded without network",
+        "True user operations: slider/buttons/play/pause/pass/export",
+        "Desktop 1366x900 and mobile 390x844 screenshot acceptance",
+        "All output frames from identical renderer clock"
+      ]
+    },
+    {
+      "id": "C10",
+      "name": "engine_promotion",
+      "dependsOn": [
+        "C09"
+      ],
+      "parallelEligible": false,
+      "status": "PENDING",
+      "evidence": {
+        "commit": null,
+        "workflowRun": null,
+        "artifact": null,
+        "report": null,
+        "visualReview": null
+      },
+      "deliverables": [
+        "reusable-engine-patch",
+        "release-review.md",
+        "promotion-qa.json"
+      ],
+      "acceptance": [
+        "Portable engine code only in tims-SP/koma-motion",
+        "Source-agnostic regression fixtures and test scripts",
+        "Traceability from evidence and source SHA to promoted code"
+      ]
+    }
+  ],
+  "gates": {
+    "native": [
+      "C01",
+      "C03"
+    ],
+    "novelView": [
+      "C04",
+      "C05",
+      "C06",
+      "C07"
+    ],
+    "delivery": [
+      "C08",
+      "C09",
+      "C10"
+    ],
+    "statuses": [
+      "PENDING",
+      "RUNNING",
+      "ENGINEERING_PASS",
+      "VISUAL_PASS",
+      "BLOCKED",
+      "VISUAL_REWORK"
+    ],
+    "completion": "All tasks checked; C01/C03/C06/C07/C08/C09 must reach VISUAL_PASS with real screenshot and reviewer signoff"
+  },
+  "firstExecution": [
+    "C00",
+    "C01 and C04 in parallel",
+    "C02",
+    "C03",
+    "C05",
+    "C06"
+  ],
+  "storage": {
+    "git": "Code, docs, manifests, synthetic fixtures, text-only QA",
+    "private": "R1999 asset bytes, screenshots/videos and HTML bundles containing artwork, proprietary Cubism Core",
+    "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
+  }
+}
