@@ -1,0 +1,34 @@
+{
+  "schema": "P0_HEAD_LAYER_INTEGRITY_GATE_V1",
+  "width": 1254,
+  "height": 1254,
+  "psdWidth": 768,
+  "psdHeight": 768,
+  "layers": 18,
+  "faceGeneratedPx": 130816,
+  "faceSourceVisiblePx": 41418,
+  "faceGeneratedNotDirectlyOwnedPx": 89398,
+  "foreheadRoi": [
+    450,
+    178,
+    810,
+    440
+  ],
+  "foreheadTotalFacePx": 82778,
+  "foreheadHairLikePx": 67061,
+  "visualStatus": "HEAD_UNDERLAY_REPAIR_REQUIRED",
+  "roundTripMeans": "original pixel ownership preserved; not proof of anatomy",
+  "testedMotion": {
+    "frontHair": [
+      42,
+      -25
+    ]
+  },
+  "gates": {
+    "visiblePixelRoundTrip": "PASS",
+    "headUnderlay": "FAIL",
+    "backHairHiddenTopology": "REVIEW",
+    "frontHairIndependentMotion": "FAIL",
+    "productionArtmesh": "BLOCKED"
+  }
+}
