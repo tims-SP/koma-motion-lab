@@ -1,0 +1,24 @@
+name: P0 atomic artwork resource transfer
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/p0-atomic-transfer.yml'
+  workflow_dispatch:
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package atomic design sources
+        run: |
+          mkdir -p transfer
+          cp experiments/p0-assets/design-atomic-v2/* transfer/
+          ( cd transfer && sha256sum atomic_v2_* > SHA256SUMS )
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p0-character-001-atomic-v2-sources
+          path: transfer/
+          compression-level: 0
+          retention-days: 7
