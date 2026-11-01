@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<g id="atomic-v2-nose-profile" data-semantic-id="nose_anatomical_right_profile_90" data-view-yaw="90" data-facing="right" data-transparency="none">
+<g id="nose-outer-contour" transform="translate(24 145)">
+  <path id="nose-medial-cut-plane" d="M322 176 C340 250 372 320 430 372 C478 412 548 440 610 462 C646 474 662 496 656 514 C650 532 622 542 592 542 C566 542 545 538 528 530 C512 552 478 558 456 546 C438 536 438 512 452 498 C464 486 486 478 506 478 C470 470 440 470 400 474 L330 480 C318 380 318 260 322 176 Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="6" stroke-linejoin="round"/>
+</g>
+<g id="nose-inner-skin" transform="translate(24 145)">
+  <path id="skin-covering-layer" d="M352 196 C368 262 398 322 452 370 C496 406 558 432 618 456 C646 466 656 486 650 500 C642 516 616 524 590 522 C566 520 546 514 528 504 C514 524 486 530 468 520 C452 511 452 494 464 486 C474 478 494 474 508 478 C470 468 436 466 396 470 L346 472 C340 372 342 268 352 196 Z" fill="#FFF2ED"/>
+  <path id="skin-bridge-shade" d="M346 472 C336 380 340 272 352 196 C344 276 344 372 352 462 C356 500 356 516 350 534 Z" fill="#F6D3CB" opacity=".55"/>
+  <path id="skin-tip-underside-shadow" d="M528 504 C548 514 570 520 592 522 C620 524 644 514 650 498 C650 516 632 530 606 533 C576 536 548 528 534 512 Z" fill="#F6D3CB" opacity=".9"/>
+  <path id="skin-alar-shadow" d="M452 498 C464 486 486 478 506 478 C496 490 480 500 466 514 C456 524 448 528 444 522 C444 512 446 504 452 498 Z" fill="#F6D3CB" opacity=".85"/>
+  <path id="skin-columella-shadow" d="M506 478 C516 486 524 494 528 504 C520 498 508 490 496 484 Z" fill="#E8B7B4" opacity=".7"/>
+  <path id="nostril-opening" d="M498 498 C510 484 532 480 548 486 C560 490 564 500 558 508 C542 500 520 498 502 504 C494 506 492 502 498 498 Z" fill="#8C4A55" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round"/>
+  <path id="nostril-inner-depth" d="M508 498 C518 490 534 490 544 496 C534 500 520 502 510 502 Z" fill="#5A3A4E" opacity=".85"/>
+  <path id="alar-crease-line" d="M456 496 C470 486 488 480 504 480" fill="none" stroke="#D8A79C" stroke-width="4.5" stroke-linecap="round"/>
+  <path id="nose-base-line" d="M448 540 C462 548 484 550 500 544" fill="none" stroke="#D8A79C" stroke-width="4" stroke-linecap="round"/>
+  <path id="nose-tip-highlight" d="M596 452 C606 446 620 448 626 456 C630 462 626 468 616 470 C604 472 592 466 592 460 C592 456 593 453 596 452 Z" fill="#FFFFFF" opacity=".92"/>
+  <path id="nose-bridge-highlight" d="M368 232 C386 292 414 344 452 386" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" opacity=".72"/>
+  <path id="nose-wing-highlight" d="M470 490 C478 484 490 480 500 482" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+</g>
+</g>
+</svg>
+
+[executed on device: racknerd-cd91d33 (14f717ef-2473-48f7-b592-70729eb065b1)]

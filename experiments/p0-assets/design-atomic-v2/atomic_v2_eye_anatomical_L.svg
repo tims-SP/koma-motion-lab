@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<g id="atomic-v2-eye-anatomical-left" data-semantic-id="eye_anatomical_left" data-view-yaw="0" data-mirrored="false" data-transparency="none" transform="translate(-41 -19)">
+<defs>
+  <clipPath id="clipScleraV2"><path d="M322 640 C356 520 440 400 545 372 C636 350 712 396 742 470 C700 570 620 654 522 668 C430 680 358 672 322 640 Z"/></clipPath>
+</defs>
+<g id="eye-socket-skin">
+  <path d="M296 660 C300 500 400 330 546 300 C664 276 762 340 800 452 C760 600 660 712 526 722 C420 730 336 716 296 660 Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="6" stroke-linejoin="round"/>
+  <path id="socket-upper-shadow" d="M300 640 C312 486 404 336 546 306 C664 282 758 344 796 452 C782 402 720 322 596 306 C452 288 330 372 300 640 Z" fill="#F6D3CB" opacity=".7"/>
+  <path id="socket-lower-shadow" d="M296 660 C336 716 420 730 526 722 C660 712 760 600 800 452 C800 552 700 700 536 716 C432 726 336 706 296 660 Z" fill="#F6D3CB" opacity=".65"/>
+  <path id="lid-crease-double" d="M352 430 C420 336 560 292 664 328 C716 346 758 380 780 424" fill="none" stroke="#D8A79C" stroke-width="5.5" stroke-linecap="round"/>
+  <path id="lower-lid-crease" d="M330 706 C424 752 592 748 700 662" fill="none" stroke="#D8A79C" stroke-width="5" stroke-linecap="round"/>
+</g>
+<g id="eye-sclera">
+  <path d="M322 640 C356 520 440 400 545 372 C636 350 712 396 742 470 C700 570 620 654 522 668 C430 680 358 672 322 640 Z" fill="#FFFFFF" stroke="#5A3A4E" stroke-width="4" stroke-linejoin="round"/>
+  <g clip-path="url(#clipScleraV2)">
+    <g id="iris">
+      <ellipse id="iris-outer-dark-ring" cx="536" cy="500" rx="150" ry="184" fill="#7E3A61"/>
+      <ellipse id="iris-base" cx="536" cy="514" rx="132" ry="168" fill="#B65A8C"/>
+      <ellipse id="iris-lower-light" cx="536" cy="606" rx="116" ry="80" fill="#D981AE" opacity=".9"/>
+      <ellipse id="iris-upper-shadow" cx="536" cy="444" rx="132" ry="92" fill="#8C5574" opacity=".55"/>
+      <ellipse id="iris-mid-ring" cx="536" cy="514" rx="120" ry="154" fill="none" stroke="#8C5574" stroke-width="9" opacity=".65"/>
+      <path id="iris-lower-rim-light" d="M446 578 C468 626 556 646 610 596 C592 646 516 668 468 630 C452 616 444 598 446 578 Z" fill="#FBD6E6" opacity=".75"/>
+      <g id="pupil">
+        <ellipse cx="536" cy="520" rx="44" ry="100" fill="#3A2233"/>
+        <ellipse cx="536" cy="522" rx="23" ry="62" fill="#241526" opacity=".85"/>
+      </g>
+      <g id="iris-highlights">
+        <circle cx="462" cy="428" r="54" fill="#FFFFFF" opacity=".35"/>
+        <circle cx="462" cy="428" r="40" fill="#FFFFFF"/>
+        <circle cx="610" cy="600" r="21" fill="#FFFFFF" opacity=".95"/>
+        <circle cx="432" cy="556" r="13" fill="#FFFFFF" opacity=".75"/>
+        <circle cx="588" cy="468" r="9" fill="#FFFFFF" opacity=".6"/>
+      </g>
+    </g>
+    <path id="upper-lid-inner-shadow" d="M322 640 C356 520 440 400 545 372 C636 350 712 396 742 470 L742 438 C700 356 620 316 540 338 C440 366 366 478 336 606 Z" fill="#D8A79C" opacity=".45"/>
+    <path id="lower-lid-inner-shadow" d="M322 640 C356 672 430 680 522 668 C620 654 700 570 742 470 L742 500 C696 592 616 682 520 696 C424 710 350 698 322 668 Z" fill="#E8C6C2" opacity=".4"/>
+  </g>
+</g>
+<g id="upper-eyelid">
+  <path id="upper-lash-line" d="M316 652 C332 520 424 392 540 358 C640 330 722 382 752 462 L734 486 C708 418 634 372 540 390 C450 408 368 522 344 656 Z" fill="#3B2333" stroke="#3B2333" stroke-width="1.5" stroke-linejoin="round"/>
+  <path id="outer-lash-point" d="M744 456 C762 434 778 410 790 386 C786 418 770 448 750 472 Z" fill="#3B2333"/>
+  <path id="inner-lash-tick" d="M324 648 C320 668 318 682 320 694 C326 682 330 668 332 652 Z" fill="#3B2333"/>
+  <path id="lid-skin-highlight" d="M392 300 C462 246 604 232 692 272" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity=".5"/>
+</g>
+<g id="lower-eyelid">
+  <path id="lower-lid-soft-shadow" d="M322 646 C358 678 432 686 524 674 C622 660 704 576 746 474" fill="none" stroke="#F6D3CB" stroke-width="26" stroke-linecap="round" opacity=".7"/>
+  <path id="lower-lid-line" d="M322 646 C358 678 432 686 524 674 C622 660 704 576 746 474" fill="none" stroke="#3B2333" stroke-width="6.5" stroke-linecap="round"/>
+  <path id="lower-lash-accents" d="M362 682 L354 706 M410 690 L404 716 M462 692 L458 718" fill="none" stroke="#3B2333" stroke-width="4.5" stroke-linecap="round"/>
+  <path id="lower-lid-inner-corner" d="M322 640 C314 646 310 654 312 662 C316 670 326 668 330 658" fill="none" stroke="#D8A79C" stroke-width="4" stroke-linecap="round"/>
+</g>
+</g>
+</svg>
+
+[executed on device: racknerd-cd91d33 (14f717ef-2473-48f7-b592-70729eb065b1)]

@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "project": "KomaMotion",
+  "asset_stage": "P0-1B",
+  "character_id": "p0_character_001",
+  "manifest_id": "atomic_v2_manifest",
+  "identity_review_status": "PROVISIONAL_DESIGN",
+  "identity_review_note": "Approved Hero binary is not present on this machine. These atomic organ SVGs are original vector interpretations derived from identity_spec.json and the existing working design drafts (view_000_front.svg, view_045_three_quarter_right.svg, view_090_profile_right.svg). They MUST NOT be described as pixel-level identical to the approved Hero.",
+  "reference_version": {
+    "identity_spec": "identity_spec.json (schema_version 1.0.0)",
+    "design_draft_manifest": "design/manifest.json (schema_version 1.0.0, 14 files)",
+    "palette_source": "approved_identity_board_design_palette",
+    "working_hero_sha256_expected": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+    "working_hero_available_on_this_machine": false
+  },
+  "palette": {
+    "iris": "#B65A8C",
+    "iris_dark_ring": "#7E3A61",
+    "iris_shadow": "#8C5574",
+    "iris_lower_light": "#D981AE",
+    "pupil": "#3A2233",
+    "lash_line": "#3B2333",
+    "skin": "#FFE9E1",
+    "skin_shadow": "#F6D3CB",
+    "skin_inner_cover": "#FFF2ED",
+    "outline": "#5A3A4E",
+    "nostril_shadow": "#8C4A55"
+  },
+  "files": [
+    {
+      "filename": "atomic_v2_nose_profile.svg",
+      "path": "design/atomic_v2_nose_profile.svg",
+      "semantic_id": "nose_anatomical_right_profile_90",
+      "organ": "nose",
+      "anatomical_side": "right",
+      "view": "profile_right",
+      "view_yaw_degrees": 90,
+      "facing": "right",
+      "viewBox": "0 0 1024 1024",
+      "width": 1024,
+      "height": 1024,
+      "format": "svg_transparent_background",
+      "expected_alpha": {
+        "mode": "RGBA",
+        "background": "fully transparent",
+        "has_background_rect": false,
+        "opaque_pixels": "only organ strokes and fills",
+        "note": "SVG has no background layer; rasterization must preserve alpha outside drawn paths."
+      },
+      "layer_groups": [
+        "nose-outer-contour",
+        "nose-inner-skin",
+        "skin-covering-layer",
+        "nostril-opening",
+        "nose-tip-highlight"
+      ],
+      "content_notes": [
+        "outer visible contour with nose bridge, protruding tip, alar wing and flat medial cut plane",
+        "inner covering-skin layer inset within the outer contour",
+        "nostril opening and alar crease drawn as real shapes",
+        "no eyes, mouth, hair, text or background geometry present"
+      ],
+      "contains_other_organs": false,
+      "contains_text": false,
+      "mirrored": false,
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "validation_status": "not_yet_validated"
+    },
+    {
+      "filename": "atomic_v2_eye_anatomical_L.svg",
+      "path": "design/atomic_v2_eye_anatomical_L.svg",
+      "semantic_id": "eye_anatomical_left",
+      "organ": "eye",
+      "anatomical_side": "left",
+      "view": "front",
+      "view_yaw_degrees": 0,
+      "facing": "front",
+      "viewBox": "0 0 1024 1024",
+      "width": 1024,
+      "height": 1024,
+      "format": "svg_transparent_background",
+      "expected_alpha": {
+        "mode": "RGBA",
+        "background": "fully transparent",
+        "has_background_rect": false,
+        "opaque_pixels": "only eye socket skin, lids, sclera, iris, pupil and highlights",
+        "note": "SVG has no background layer; rasterization must preserve alpha outside drawn paths."
+      },
+      "layer_groups": [
+        "eye-socket-skin",
+        "eye-sclera",
+        "iris",
+        "iris-outer-dark-ring",
+        "iris-base",
+        "iris-lower-light",
+        "iris-upper-shadow",
+        "iris-mid-ring",
+        "pupil",
+        "iris-highlights",
+        "upper-eyelid",
+        "lower-eyelid"
+      ],
+      "content_notes": [
+        "complete upper eyelid with tapered lash line and outer lash point",
+        "complete lower eyelid with line, soft shadow and lash accents",
+        "sclera with inner-corner detail, iris with multi-layer dark shading, vertical pupil, layered highlights",
+        "iris base colour fixed to approved #B65A8C",
+        "no nose, mouth, ear, hair, text or background geometry present"
+      ],
+      "contains_other_organs": false,
+      "contains_text": false,
+      "mirrored": false,
+      "mirroring_note": "Drawn as anatomical left eye in frontal view (inner canthus toward screen-left); NOT a mirror of the anatomical right eye.",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "validation_status": "not_yet_validated"
+    }
+  ],
+  "file_count": 2,
+  "follow_up": {
+    "owner": "ChatGPT isolated container",
+    "tasks": [
+      "technical acceptance validation of both SVG files",
+      "transparent PNG second-pass rendering",
+      "alpha channel and 2.75D layer integrity checks"
+    ],
+    "performed_here": [
+      "vector authoring only",
+      "no quality test or image acceptance run",
+      "no git push",
+      "no external paid image-generation API call"
+    ]
+  }
+}
+
+[executed on device: racknerd-cd91d33 (14f717ef-2473-48f7-b592-70729eb065b1)]
