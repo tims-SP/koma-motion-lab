@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0.0",
+  "project": "KomaMotion",
+  "asset_stage": "P0-1B",
+  "character_id": "p0_character_001",
+  "identity_review_status": "PROVISIONAL_DESIGN",
+  "identity_review_note": "Approved Hero binary is not available on this machine; all files are original vector interpretations of identity_spec.json and must NOT be claimed as pixel-level identity match. Layered group ids are kept for later transparent PNG regeneration.",
+  "palette": {
+    "hair_base": "#C27A98",
+    "hair_shadow": "#8C5574",
+    "iris": "#B65A8C",
+    "skin": "#FFE9E1",
+    "jacket": "#3B3A51",
+    "shirt": "#FFFFFF",
+    "bow": "#8C3A54",
+    "hairpin_gold": "#D4AF37"
+  },
+  "asymmetry_rules": {
+    "gold_cross_hairpin": "anatomical LEFT only; front view screen RIGHT; never mirrored",
+    "ahoge": "single strand curving toward screen-left in the front view",
+    "bangs": "asymmetric swept parting, not mirrored"
+  },
+  "files": [
+    {
+      "path": "design/view_000_front.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "viewYaw": 0,
+      "parts_present": {
+        "eyes": true,
+        "nose": true,
+        "mouth": true,
+        "ears": true,
+        "hair": true
+      },
+      "has_eye": true,
+      "has_nose": true,
+      "has_mouth": true,
+      "has_ear": true,
+      "has_hair": true
+    },
+    {
+      "path": "design/view_045_three_quarter_right.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "viewYaw": 45,
+      "parts_present": {
+        "eyes": true,
+        "nose": true,
+        "mouth": true,
+        "ears": true,
+        "hair": true
+      },
+      "has_eye": true,
+      "has_nose": true,
+      "has_mouth": true,
+      "has_ear": true,
+      "has_hair": true
+    },
+    {
+      "path": "design/view_090_profile_right.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "viewYaw": 90,
+      "parts_present": {
+        "eyes": true,
+        "nose": true,
+        "mouth": true,
+        "ears": true,
+        "hair": true
+      },
+      "has_eye": true,
+      "has_nose": true,
+      "has_mouth": true,
+      "has_ear": true,
+      "has_hair": true
+    },
+    {
+      "path": "design/view_180_back.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "viewYaw": 180,
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": true
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": true
+    },
+    {
+      "path": "design/part_eye_L.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "eye_anatomical_left",
+      "parts_present": {
+        "eyes": true,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": false
+      },
+      "has_eye": true,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": false
+    },
+    {
+      "path": "design/part_eye_R.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "eye_anatomical_right",
+      "parts_present": {
+        "eyes": true,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": false
+      },
+      "has_eye": true,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": false
+    },
+    {
+      "path": "design/part_nose.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "nose",
+      "parts_present": {
+        "eyes": false,
+        "nose": true,
+        "mouth": false,
+        "ears": false,
+        "hair": false
+      },
+      "has_eye": false,
+      "has_nose": true,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": false
+    },
+    {
+      "path": "design/part_mouth.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "mouth",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": true,
+        "ears": false,
+        "hair": false
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": true,
+      "has_ear": false,
+      "has_hair": false
+    },
+    {
+      "path": "design/part_ear_L.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "ear_anatomical_left",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": true,
+        "hair": false
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": true,
+      "has_hair": false
+    },
+    {
+      "path": "design/part_ear_R.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "ear_anatomical_right",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": true,
+        "hair": false
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": true,
+      "has_hair": false
+    },
+    {
+      "path": "design/part_hair_front.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "hair_front_bangs",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": true
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": true
+    },
+    {
+      "path": "design/part_hair_back.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "hair_back",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": true
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": true
+    },
+    {
+      "path": "design/part_hair_side_L.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "hair_side_anatomical_left",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": true
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": true
+    },
+    {
+      "path": "design/part_ahoge.svg",
+      "exists": true,
+      "format": "svg_transparent_background",
+      "identity_review_status": "PROVISIONAL_DESIGN",
+      "partId": "ahoge",
+      "parts_present": {
+        "eyes": false,
+        "nose": false,
+        "mouth": false,
+        "ears": false,
+        "hair": true
+      },
+      "has_eye": false,
+      "has_nose": false,
+      "has_mouth": false,
+      "has_ear": false,
+      "has_hair": true
+    }
+  ],
+  "file_count": 14
+}

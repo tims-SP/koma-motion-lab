@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260">
+<g id="nose-design">
+  <g id="nose-front">
+    <path d="M120 20C132 34 136 60 132 84C129 100 118 112 104 116" fill="none" stroke="#D8A79C" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M126 26C136 42 140 66 136 88" fill="none" stroke="#F6D3CB" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+    <path d="M96 112C104 118 116 118 124 112" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="104" cy="74" rx="6" ry="4" fill="#FFFFFF" transform="rotate(-12 104 74)"/>
+    <path d="M92 122C104 128 122 128 134 120" fill="none" stroke="#F6D3CB" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <g id="nose-profile" transform="translate(250,0)">
+    <path d="M40 22C46 50 54 78 68 96C76 106 86 112 100 114C88 110 80 102 76 92C68 74 60 48 56 22Z" fill="#F6D3CB" opacity=".5"/>
+    <path d="M40 22C44 48 52 76 66 94C74 104 84 110 98 112" fill="none" stroke="#5A3A4E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 112C104 116 112 114 116 108" fill="none" stroke="#5A3A4E" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M92 104C98 106 106 104 110 98" fill="none" stroke="#5A3A4E" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="84" cy="88" rx="6" ry="4" fill="#FFFFFF" transform="rotate(34 84 88)"/>
+    <path d="M100 118C110 122 120 124 128 122" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260">
+<g id="mouth-design">
+  <g id="mouth-closed">
+<g id="closed-lips" transform="translate(120,90) scale(1.6)">
+  <path d="M-24 0C-14-6 14-6 24-2C16 7-8 8-24 0Z" fill="#E7A8A0" stroke="#A65A62" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M-22 0C-10 4 10 4 22-1" fill="none" stroke="#A65A62" stroke-width="2"/>
+  <path d="M-12 8C-4 12 6 12 12 8" fill="none" stroke="#F0C4BC" stroke-width="2.4" stroke-linecap="round"/>
+</g>
+    <path d="M62 150C88 162 152 162 178 150" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <g id="mouth-open" transform="translate(200,0)">
+<g id="open-mouth" transform="translate(110,92) scale(1.5)">
+  <path d="M-26-2C-16-9 16-9 26-2C24 14 14 26 0 26C-14 26-24 14-26-2Z" fill="#8C3A54" stroke="#5A3A4E" stroke-width="2.6"/>
+  <path d="M-22 0C-12-6 12-6 22 0C18 8 8 12 0 12C-8 12-18 8-22 0Z" fill="#C25A72" opacity=".95"/>
+  <path d="M-13 12C-6 22 8 22 13 12C6 16-6 16-13 12Z" fill="#E9A0AE" opacity=".9"/>
+  <path d="M-16-4C-10-9 10-9 16-4C8-1-8-1-16-4Z" fill="#FFFFFF"/>
+  <path d="M-26-2C-16-9 16-9 26-2" fill="none" stroke="#5A3A4E" stroke-width="2.6" stroke-linecap="round"/>
+</g>
+    <path d="M54 168C82 182 140 182 166 166" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
+  </g>
+</g>
+</svg>
