@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" width="320" height="360">
+<g id="hair-side-anatomical-left">
+  <path d="M226 30C166 24 122 62 110 122C100 174 106 236 122 282C130 306 150 314 160 304C170 294 164 276 156 262C144 240 140 206 144 170C148 130 158 96 178 78C196 62 214 54 230 52C246 50 258 42 256 30C250 22 238 24 226 30Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="3.4" stroke-linejoin="round" />
+  <path d="M232 56C198 60 168 84 154 122C144 150 140 184 142 214C136 180 142 140 158 110C176 74 204 56 232 56Z" fill="#DC9FB6" opacity=".85" />
+  <path d="M116 178C110 224 118 268 136 296C128 262 128 218 136 186Z" fill="#8C5574" opacity=".8" />
+  <path d="M158 108C176 82 202 64 228 60C204 70 180 88 166 112Z" fill="#8C5574" opacity=".8" />
+<g id="gold-hairpin-fixed" transform="translate(196,96) rotate(-24) scale(1.0)">
+  <rect x="-23" y="-4" width="46" height="8" rx="4" fill="#D4AF37" stroke="#9A7A20" stroke-width="1.4" transform="rotate(-34)" />
+  <rect x="-22" y="-4" width="46" height="8" rx="4" fill="#F0DB92" stroke="#9A7A20" stroke-width="1.4" transform="rotate(32)" />
+  <rect x="-19" y="-2.4" width="30" height="2.4" rx="1.2" fill="#F7E6A8" transform="rotate(-34)" />
+  <rect x="-17" y="-2.4" width="26" height="2.2" rx="1.1" fill="#FBF0C4" transform="rotate(32)" />
+</g>
+</g>
+</svg>

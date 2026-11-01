@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 300" width="220" height="300">
+<g id="ear-anatomical-right" transform="translate(110,150) scale(-1,1)">
+  <path d="M-40-56C-14-70 22-68 44-52C60-40 66-18 64 6C62 34 52 58 34 70C16 82-10 80-26 66C-42 52-48 22-48-6C-48-30-46-46-40-56Z" fill="#F6D3CB" opacity=".45" />
+  <path d="M-34-44C-12-56 18-54 36-38C52-24 58 2 56 26C54 52 42 76 22 88C6 96-12 90-22 76C-32 62-38 34-38 8C-38-14-38-34-34-44Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="3.4" stroke-linejoin="round" />
+  <path d="M-26-30C-8-40 16-36 28-22C40-8 42 14 36 34C30 54 18 70 4 76" fill="none" stroke="#D8A79C" stroke-width="2.8" stroke-linecap="round" />
+  <path d="M-14-16C0-24 14-18 20-6C26 8 22 26 12 38" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" opacity=".85" />
+  <path d="M-20-2C-8-12 8-10 14 2C20 14 14 30 2 38C-8 44-20 38-22 26C-24 16-24 6-20-2Z" fill="#F6D3CB" opacity=".85" />
+  <path d="M-30 6C-22 0-12 4-10 14C-8 24-16 32-26 30C-32 28-34 16-30 6Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="2.2" stroke-linejoin="round" />
+  <path d="M-4 66C6 74 18 70 24 58" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" opacity=".8" />
+  <path d="M-16 20C-8 26-2 38-4 50" fill="none" stroke="#D8A79C" stroke-width="2" stroke-linecap="round" opacity=".7" />
+</g>
+</svg>
