@@ -1,0 +1,57 @@
+{
+  "schema": "P0_EIGHT_ASSET_VERIFICATION_V1",
+  "character_id": "p0_character_001",
+  "source_types": {
+    "portraits": 4,
+    "eyes": 2,
+    "nose": 1,
+    "mouth": 1
+  },
+  "technical": {
+    "rgbaFilesPassed": 8,
+    "total": 8,
+    "portraitNativeMarginPassed": 0,
+    "organNativeMarginPassed": 4,
+    "browserInteractive": "PASS",
+    "networkRequests": 0
+  },
+  "views": {
+    "present": [
+      "front_000",
+      "facing_left_profile_090",
+      "facing_right_profile_090",
+      "back_180"
+    ],
+    "missingForFrontToSide": [
+      "threequarter_facing_left_045",
+      "threequarter_facing_right_045"
+    ],
+    "additionalForFull360": [
+      "rear_oblique_135",
+      "rear_oblique_225"
+    ]
+  },
+  "rgbaTransparentCorners": true,
+  "hairApproxMedian": {
+    "front": "#C57898",
+    "facingLeft": "#D484A7",
+    "facingRight": "#D080A8",
+    "back": "#C47095"
+  },
+  "riggingReadyLayers": 0,
+  "referenceCandidates": 6,
+  "organRemake": [
+    "profile_nose",
+    "smiling_mouth"
+  ],
+  "requiredProductionGate": [
+    "canonicalHeroIdentity",
+    "perViewLandmarks",
+    "semanticIndependentLayers",
+    "alphaEdges",
+    "sourceReconstruction",
+    "occlusion",
+    "visualApproval"
+  ],
+  "status": "SOURCE_AUTHORING_IN_PROGRESS"
+}
