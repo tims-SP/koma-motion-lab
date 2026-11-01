@@ -1,0 +1,17 @@
+name: P0 design asset transfer
+on:
+  push:
+    branches: [p0-design-agent-20261101]
+    paths: ['assets/p0_character_001/design/**', '.github/workflows/mvp009-p0-transfer.yml']
+  workflow_dispatch:
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p0-character-design-transfer
+          path: assets/p0_character_001/design/
+          retention-days: 7
+          if-no-files-found: error
