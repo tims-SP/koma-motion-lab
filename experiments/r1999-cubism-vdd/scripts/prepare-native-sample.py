@@ -95,7 +95,7 @@ def main() -> None:
     #r1999-panel select {width:100%;}
     #r1999-panel p {margin:7px 0;font-size:12px;}
     #r1999-runtime {color:#85dfbd;}
-    @media(max-width:650px){#r1999-panel {width:205px;padding:10px;top:6px;left:6px;font-size:11px;}}
+    @media(max-width:650px){#r1999-panel {width:calc(100vw - 12px);padding:8px;top:auto;bottom:6px;left:6px;font-size:11px;max-height:185px;overflow:auto;}\n    #r1999-panel h1 {display:none;} #r1999-panel p {margin:2px 0;}\n    #r1999-panel #r1999-motions {grid-template-columns:repeat(4,1fr);margin:5px 0;}\n    #r1999-panel button,#r1999-panel select {min-height:28px;padding:2px 4px;}}
   </style>
   <script src="/review-controls.js" defer></script>
 """
