@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="jacket-front">
+  <path d="M282 600C266 640 258 700 256 800L302 800C300 720 298 656 310 604Z" fill="#3B3A51" stroke="#5A3A4E" stroke-width="3" />
+  <path d="M388 600C404 640 412 700 414 800L368 800C370 720 372 656 360 604Z" fill="#4C4B66" stroke="#5A3A4E" stroke-width="3" />
+  <path d="M310 604C298 656 300 720 302 800" fill="none" stroke="#D4AF37" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M360 604C372 656 370 720 368 800" fill="none" stroke="#D4AF37" stroke-width="3.4" stroke-linecap="round" />
+</g>
+</svg>

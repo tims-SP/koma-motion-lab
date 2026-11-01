@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="hair-side-locks">
+  <path d="M240 296C228 328 224 366 228 402C231 430 240 450 252 454C261 456 264 447 258 438C249 422 246 400 248 378C250 348 258 320 268 300C260 292 248 291 240 296Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+  <path d="M234 330C230 362 230 398 240 432C232 404 234 366 244 334Z" fill="#8C5574" opacity=".8" />
+  <path d="M416 280C432 310 440 348 438 386C436 414 428 436 416 444C408 449 406 440 412 432C422 418 426 396 424 372C422 340 414 310 402 288C406 282 412 278 416 280Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+</g>
+</svg>

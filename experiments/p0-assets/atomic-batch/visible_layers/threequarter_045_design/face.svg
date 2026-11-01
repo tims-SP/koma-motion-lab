@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="face">
+  <path d="M330 234C288 238 258 288 254 342C250 400 266 452 292 484C304 502 316 514 330 514C346 514 364 500 376 478C392 448 400 404 400 352C400 290 372 228 330 234Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="3.2" stroke-linejoin="round" />
+  <path d="M254 342C250 400 266 452 292 484C304 502 316 514 330 514C310 508 298 494 292 472C280 430 278 380 284 336Z" fill="#F6D3CB" opacity=".5" />
+</g>
+</svg>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="mouth-closed-45" transform="translate(360,456) scale(0.92)">
+  <path d="M-24 0C-14-6 14-6 24-2C16 7-8 8-24 0Z" fill="#E7A8A0" stroke="#A65A62" stroke-width="2.4" stroke-linejoin="round" />
+  <path d="M-22 0C-10 4 10 4 22-1" fill="none" stroke="#A65A62" stroke-width="2" />
+  <path d="M-12 8C-4 12 6 12 12 8" fill="none" stroke="#F0C4BC" stroke-width="2.4" stroke-linecap="round" />
+</g>
+</svg>
