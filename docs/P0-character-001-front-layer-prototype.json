@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-11-01",
+  "character_id": "p0_character_001",
+  "phase": "P0-3_front_visible_pixel_decomposition",
+  "character_reference_sha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+  "source": {
+    "width": 1122,
+    "height": 1402,
+    "channels": "RGBA",
+    "yaw_degrees": 0
+  },
+  "result": {
+    "type": "visible_pixel_partition_prototype",
+    "source_layer_count": 19,
+    "psd_frame_count_including_composite": 20,
+    "full_canvas_png_count": 19,
+    "ora": true,
+    "psd": true,
+    "html_review": true
+  },
+  "qa": {
+    "input_source_pixels_preserved": true,
+    "visible_pixel_recomposition_max_delta": 0,
+    "unassigned_nonzero_alpha_pixels": 0,
+    "overlap_pixels": 0,
+    "original_fully_transparent_pixels_with_nonzero_rgb": 1520,
+    "psd_roundtrip_max_channel_delta": 239,
+    "psd_roundtrip_pixels_with_any_channel_delta_gt_2": 47770,
+    "psd_native_layer_readable": true,
+    "production_ready": false
+  },
+  "authoring": {
+    "semantic_boundary_quality": "provisional geometric/color masks",
+    "hidden_occlusion_regions": "not yet authored",
+    "independently_animatable_organs": "pending repaint and validation",
+    "multi_view_production": "0 of 4 complete",
+    "limitation": "Visible-pixel-only cutout cannot expose art hidden behind fringe, side hair, or eyes"
+  },
+  "storage": {
+    "binary_outputs": "conversation ZIP/PSD/ORA deliverables",
+    "repository": "text validation manifests and procedures",
+    "durable_release_asset_uri": null
+  },
+  "next_gate": {
+    "goal": "independently authored native-resolution 0/45/90/180 RGBA sources; clean true organ boundaries with occlusion fills; PSD composite visual QA",
+    "status": "blocked"
+  }
+}
