@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="jacket">
+  <path d="M320 566C246 566 186 596 146 638C114 672 96 730 88 800L552 800C544 730 526 672 494 638C454 596 394 566 320 566Z" fill="#3B3A51" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M470 620C496 646 516 690 524 742L548 800L500 800C494 730 486 664 460 632Z" fill="#2A293B" opacity=".85" />
+</g>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="ear-profile">
+  <path d="M318 300C344 292 368 304 372 330C376 356 368 394 352 420C340 438 322 438 314 420C306 400 306 344 312 314Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+  <path d="M330 318C344 312 356 320 358 336C360 352 354 376 344 396C336 412 324 412 320 398C316 380 318 332 330 318Z" fill="#F6D3CB" opacity=".75" />
+  <path d="M336 330C346 326 352 336 350 350C348 366 340 380 332 384C338 366 340 344 336 330Z" fill="#D8A79C" opacity=".8" />
+  <path d="M306 296C328 286 352 296 360 318C340 304 322 306 310 316Z" fill="#F6D3CB" opacity=".55" />
+</g>
+</svg>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="nose">
+  <path d="M322 398C320 410 318 418 320 424" fill="none" stroke="#D8A79C" stroke-width="3" stroke-linecap="round" />
+  <ellipse cx="326" cy="408" rx="4" ry="2.6" fill="#FFFFFF" />
+  <path d="M308 426C313 430 327 430 332 426" fill="none" stroke="#D8A79C" stroke-width="2.2" stroke-linecap="round" opacity=".8" />
+</g>
+</svg>

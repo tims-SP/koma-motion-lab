@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="eye-profile">
+  <path d="M424 352C432 336 452 328 468 334C478 338 482 348 478 356C470 366 446 372 430 366C424 363 421 357 424 352Z" fill="#FFFFFF" stroke="#5A3A4E" stroke-width="2.2" />
+  <ellipse cx="462" cy="349" rx="11" ry="14" fill="#B65A8C" />
+  <ellipse cx="462" cy="347" rx="11" ry="13" fill="#7E3A61" />
+  <ellipse cx="462" cy="351" rx="9.5" ry="11" fill="#B65A8C" />
+  <ellipse cx="462" cy="349" rx="3.6" ry="8" fill="#3A2233" />
+  <circle cx="458" cy="341" r="3.6" fill="#FFFFFF" />
+  <circle cx="466" cy="357" r="1.9" fill="#FFFFFF" opacity=".9" />
+  <path d="M420 348C428 332 450 324 468 330C480 334 486 344 482 356L477 356C478 346 472 338 462 336C446 332 432 340 426 352Z" fill="#3B2333" />
+  <path d="M478 352C486 350 494 344 500 338C494 348 486 356 479 358Z" fill="#3B2333" />
+  <path d="M428 368C440 376 458 378 472 372" fill="none" stroke="#3B2333" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M420 328C436 314 462 312 476 322" fill="none" stroke="#8C5574" stroke-width="4.2" stroke-linecap="round" />
+</g>
+</svg>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="ahoge" transform="translate(322,200) rotate(16) scale(0.92)">
+  <path d="M0 0C-4-24-20-42-42-50C-62-57-76-67-80-81C-82-89-74-93-68-87C-62-79-52-73-38-67C-14-57 2-41 8-19C11-7 8 0 0 0Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+  <path d="M-6-16C-18-30-32-38-46-43C-58-47-68-55-74-64C-68-52-56-46-42-40C-24-32-12-24-6-16Z" fill="#8C5574" opacity=".85" />
+</g>
+</svg>

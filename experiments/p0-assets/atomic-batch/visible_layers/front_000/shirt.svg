@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="shirt">
+  <path d="M290 596L350 596L372 800L268 800Z" fill="#FFFFFF" stroke="#5A3A4E" stroke-width="3" />
+  <path d="M350 596L372 800L352 800L336 596Z" fill="#E7E1E6" />
+  <circle cx="320" cy="712" r="4.5" fill="#E7E1E6" stroke="#5A3A4E" stroke-width="1.6" />
+</g>
+</svg>

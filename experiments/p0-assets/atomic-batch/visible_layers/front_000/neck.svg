@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="neck">
+  <path d="M286 458L284 542C284 568 356 568 356 542L354 458Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="3" />
+  <path d="M286 458C292 508 348 508 354 458C348 496 292 496 286 458Z" fill="#F6D3CB" />
+</g>
+</svg>
