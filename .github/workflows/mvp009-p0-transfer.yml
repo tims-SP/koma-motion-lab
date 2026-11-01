@@ -12,6 +12,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: p0-character-design-transfer
-          path: assets/p0_character_001/design/
+          path: assets/p0_character_001/
           retention-days: 7
           if-no-files-found: error
