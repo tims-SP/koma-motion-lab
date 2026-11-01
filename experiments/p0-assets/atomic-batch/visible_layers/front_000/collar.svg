@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="collar">
+  <path d="M284 586L320 610L296 656L266 616Z" fill="#FFFFFF" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+  <path d="M356 586L320 610L344 656L374 616Z" fill="#FFFFFF" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+  <path d="M356 586L320 610L344 656L374 616Z" fill="#E7E1E6" opacity=".55" />
+</g>
+</svg>

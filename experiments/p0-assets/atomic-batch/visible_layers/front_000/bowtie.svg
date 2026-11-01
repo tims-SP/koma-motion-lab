@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="bowtie">
+  <path d="M306 626C288 608 258 610 250 626C242 642 262 658 286 650C296 647 304 638 306 626Z" fill="#8C3A54" stroke="#5A3A4E" stroke-width="2.6" stroke-linejoin="round" />
+  <path d="M334 626C352 608 382 610 390 626C398 642 378 658 354 650C344 647 336 638 334 626Z" fill="#8C3A54" stroke="#5A3A4E" stroke-width="2.6" stroke-linejoin="round" />
+  <path d="M306 626C288 608 258 610 250 626C258 620 284 620 302 632Z" fill="#6B2A3E" opacity=".7" />
+  <path d="M310 620C320 614 332 614 340 620C336 632 336 642 340 652C330 658 312 658 300 652C306 642 306 632 310 620Z" fill="#8C3A54" stroke="#5A3A4E" stroke-width="2.6" />
+  <path d="M308 652C300 676 298 700 304 722C314 706 320 690 320 668Z" fill="#8C3A54" stroke="#5A3A4E" stroke-width="2.4" />
+  <path d="M332 652C342 674 344 696 338 716C328 702 324 686 324 668Z" fill="#6B2A3E" stroke="#5A3A4E" stroke-width="2.4" />
+</g>
+</svg>

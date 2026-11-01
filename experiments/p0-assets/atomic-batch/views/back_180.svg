@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800">
+<g id="view-180" data-yaw="180">
+<g id="jacket-back">
+  <path d="M320 566C246 566 184 598 142 640C108 676 92 732 84 800L556 800C548 732 532 676 498 640C456 598 394 566 320 566Z" fill="#3B3A51" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M142 640C168 616 204 596 246 586C206 604 174 626 156 654C138 682 128 720 124 756L96 756C102 716 116 670 142 640Z" fill="#2A293B" opacity=".8" />
+  <path d="M498 640C472 616 436 596 394 586C434 604 466 626 484 654C502 682 512 720 516 756L544 756C538 716 524 670 498 640Z" fill="#4C4B66" opacity=".55" />
+  <path d="M320 590C288 590 262 604 246 626C272 612 294 606 320 606C346 606 368 612 394 626C378 604 352 590 320 590Z" fill="#FFFFFF" stroke="#5A3A4E" stroke-width="3" />
+</g>
+<g id="hood-back">
+  <path d="M320 548C250 548 186 588 152 642C132 670 122 702 118 734L174 734C178 694 192 660 218 636C242 612 278 600 320 600C362 600 398 612 422 636C448 660 462 694 466 734L522 734C518 702 508 670 488 642C454 588 390 548 320 548Z" fill="#3B3A51" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M218 636C242 612 278 600 320 600C362 600 398 612 422 636" fill="none" stroke="#D4AF37" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M320 548C288 548 258 562 236 584C262 570 290 564 320 564C350 564 378 570 404 584C382 562 352 548 320 548Z" fill="#4C4B66" opacity=".65" />
+</g>
+<g id="neck-back">
+  <path d="M282 470L280 566C280 588 360 588 360 566L358 470Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="3" />
+  <path d="M282 470C292 506 348 506 358 470C350 496 290 494 282 470Z" fill="#F6D3CB" />
+</g>
+<g id="hair-back-head">
+  <path d="M320 110C230 110 176 180 174 276C172 348 180 424 192 486C200 528 220 560 248 572C266 580 280 566 274 548C266 524 256 496 254 462C252 408 258 336 270 296C284 250 300 226 320 222C340 226 356 250 370 296C382 336 388 408 386 462C384 496 374 524 366 548C360 566 374 580 392 572C420 560 440 528 448 486C460 424 468 348 466 276C464 180 410 110 320 110Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M196 410C204 476 222 540 252 566C262 572 270 564 266 552C252 516 244 476 244 440Z" fill="#8C5574" opacity=".9" />
+  <path d="M444 410C436 476 418 540 388 566C378 572 370 564 374 552C388 516 396 476 396 440Z" fill="#8C5574" opacity=".9" />
+  <path d="M242 262C266 214 316 190 362 196C324 202 290 224 272 254C262 272 246 272 242 262Z" fill="#DC9FB6" opacity=".85" />
+  <path d="M262 388C252 434 252 486 264 524C270 544 282 552 290 544C278 520 274 484 278 450C282 414 292 384 306 364C292 366 272 372 262 388Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="2.8" stroke-linejoin="round" />
+  <path d="M378 388C388 434 388 486 376 524C370 544 358 552 350 544C362 520 366 484 362 450C358 414 348 384 334 364C348 366 368 372 378 388Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="2.8" stroke-linejoin="round" />
+  <path d="M300 400C294 446 296 496 306 532C312 552 326 556 330 540C320 508 316 466 320 424C324 396 336 376 348 366C330 364 310 376 300 400Z" fill="#8C5574" stroke="#5A3A4E" stroke-width="2.8" stroke-linejoin="round" />
+</g>
+<g id="ahoge" transform="translate(334,196) rotate(22) scale(0.86)">
+  <path d="M0 0C-4-24-20-42-42-50C-62-57-76-67-80-81C-82-89-74-93-68-87C-62-79-52-73-38-67C-14-57 2-41 8-19C11-7 8 0 0 0Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="3" stroke-linejoin="round" />
+  <path d="M-6-16C-18-30-32-38-46-43C-58-47-68-55-74-64C-68-52-56-46-42-40C-24-32-12-24-6-16Z" fill="#8C5574" opacity=".85" />
+</g>
+<g id="gold-hairpin-left-side" transform="translate(238,268) rotate(-34) scale(0.6)">
+  <rect x="-23" y="-4" width="46" height="8" rx="4" fill="#D4AF37" stroke="#9A7A20" stroke-width="1.4" transform="rotate(-34)" />
+  <rect x="-22" y="-4" width="46" height="8" rx="4" fill="#F0DB92" stroke="#9A7A20" stroke-width="1.4" transform="rotate(32)" />
+  <rect x="-19" y="-2.4" width="30" height="2.4" rx="1.2" fill="#F7E6A8" transform="rotate(-34)" />
+  <rect x="-17" y="-2.4" width="26" height="2.2" rx="1.1" fill="#FBF0C4" transform="rotate(32)" />
+</g>
+  <path d="M236 240C224 264 222 292 228 320C236 292 244 268 252 252C248 244 242 238 236 240Z" fill="#C27A98" stroke="#5A3A4E" stroke-width="2.6" stroke-linejoin="round" />
+</g>
+</svg>

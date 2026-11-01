@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="ears">
+  <path d="M234 366C216 358 202 374 204 396C206 420 220 440 238 436Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="2.8" stroke-linejoin="round" />
+  <path d="M406 366C424 358 438 374 436 396C434 420 420 440 402 436Z" fill="#FFE9E1" stroke="#5A3A4E" stroke-width="2.8" stroke-linejoin="round" />
+  <path d="M228 380C218 378 212 388 214 400C216 414 226 424 234 424C226 408 222 392 228 380Z" fill="#F6D3CB" opacity=".7" />
+  <path d="M412 380C422 378 428 388 426 400C424 414 414 424 406 424C414 408 418 392 412 380Z" fill="#F6D3CB" opacity=".7" />
+</g>
+</svg>

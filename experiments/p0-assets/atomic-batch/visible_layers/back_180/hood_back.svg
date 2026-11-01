@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="hood-back">
+  <path d="M320 548C250 548 186 588 152 642C132 670 122 702 118 734L174 734C178 694 192 660 218 636C242 612 278 600 320 600C362 600 398 612 422 636C448 660 462 694 466 734L522 734C518 702 508 670 488 642C454 588 390 548 320 548Z" fill="#3B3A51" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M218 636C242 612 278 600 320 600C362 600 398 612 422 636" fill="none" stroke="#D4AF37" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M320 548C288 548 258 562 236 584C262 570 290 564 320 564C350 564 378 570 404 584C382 562 352 548 320 548Z" fill="#4C4B66" opacity=".65" />
+</g>
+</svg>
