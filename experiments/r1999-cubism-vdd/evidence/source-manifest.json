@@ -1,0 +1,260 @@
+{
+  "schema": "R1999-CUBISM-ASSET-AUDIT-V1",
+  "status": "PASS",
+  "source": {
+    "repo": "myssal/Reverse-1999-CN-Asset",
+    "commit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+    "prefix": "live2d/roles/302301_shisihangshi"
+  },
+  "model": "302301_shisihangshi.model3.json",
+  "fileCount": 33,
+  "motionGroups": 22,
+  "motionFileCount": 22,
+  "expressionReferences": 12,
+  "uniqueExpressions": 6,
+  "textureCount": 2,
+  "mocFile": "302301_shisihangshi.moc3",
+  "cubismRuntimeLoad": "NOT_RUN",
+  "files": [
+    {
+      "path": "302301_shisihangshi.cdi3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/302301_shisihangshi.cdi3.json",
+      "sizeBytes": 17241,
+      "sha256": "c61b21b3b6a7a1efab54dbd9c1f4cbfda33871297c9a17fe1848ad4458512aac",
+      "downloadVerified": true
+    },
+    {
+      "path": "302301_shisihangshi.moc3",
+      "sourcePath": "live2d/roles/302301_shisihangshi/302301_shisihangshi.moc3",
+      "sizeBytes": 1006080,
+      "sha256": "6589f85cc27514400ce39773788ee687ab6d3d899cc480f30201d95ddbd3558b",
+      "downloadVerified": true,
+      "mocSignature": "MOC3"
+    },
+    {
+      "path": "302301_shisihangshi.model3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/302301_shisihangshi.model3.json",
+      "sizeBytes": 4011,
+      "sha256": "6eaf1dbffc30ddda2fd0673ae15c1d287c3add0c0a1aa65335ef50b133b3d94a",
+      "downloadVerified": true
+    },
+    {
+      "path": "expressions/e_chijing.exp3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/expressions/e_chijing.exp3.json",
+      "sizeBytes": 12996,
+      "sha256": "a80081deb144fb492cae1baee52b2faa9bf59522b4714f2afb7c0fb4f99f868d",
+      "downloadVerified": true
+    },
+    {
+      "path": "expressions/e_haixiu.exp3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/expressions/e_haixiu.exp3.json",
+      "sizeBytes": 13175,
+      "sha256": "7cfa33c7afee9c896f580c27cfb9625e096089942cc85962e39bb07dcbf9aa02",
+      "downloadVerified": true
+    },
+    {
+      "path": "expressions/e_idle.exp3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/expressions/e_idle.exp3.json",
+      "sizeBytes": 14475,
+      "sha256": "de7d8192be7048fee1f20b7e95b3b87ee8ad213679552f068ce6aef2d72c15f5",
+      "downloadVerified": true
+    },
+    {
+      "path": "expressions/e_kaixin.exp3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/expressions/e_kaixin.exp3.json",
+      "sizeBytes": 13171,
+      "sha256": "29f97462ef49cc0f28e35d14b6577962ad78fd44bff230b2afd2fd3b0a3a8f76",
+      "downloadVerified": true
+    },
+    {
+      "path": "expressions/e_nanguo.exp3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/expressions/e_nanguo.exp3.json",
+      "sizeBytes": 13175,
+      "sha256": "74c62b2be7fffb7999a27f6c37d65b01f7984b1b58ab581bf746947ec7238f59",
+      "downloadVerified": true
+    },
+    {
+      "path": "expressions/e_shengqi.exp3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/expressions/e_shengqi.exp3.json",
+      "sizeBytes": 13182,
+      "sha256": "3cfcbe1393755801d7837e43f28d3f03cba034c569f9578c4271611929a5f1fe",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_diantou.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_diantou.motion3.json",
+      "sizeBytes": 73696,
+      "sha256": "bf75625ce4fa927b2969eec90bc6d495d3720a4be62326d8930f99366228689f",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_idle.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_idle.motion3.json",
+      "sizeBytes": 111318,
+      "sha256": "1fecbf68046cfd56163d00dd3c63a37f90481e59c215a139ea080013120da4c2",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_moxiaba.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_moxiaba.motion3.json",
+      "sizeBytes": 105948,
+      "sha256": "60e07f65cdaac72246147b679283ae258950204127fd0839f329f2545a2c6d1a",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_qidao.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_qidao.motion3.json",
+      "sizeBytes": 81440,
+      "sha256": "c49ea53b600a0a9fed362af8cb2af5c70cc3ee7c6e705b1b45a63b1ffbfbc20f",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_toukui1.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_toukui1.motion3.json",
+      "sizeBytes": 768,
+      "sha256": "085458f2ef3cbb82211233523869937cb6cca1afee21ef215a0da2a26b7a9afd",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_toukui2.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_toukui2.motion3.json",
+      "sizeBytes": 769,
+      "sha256": "9374b22fa5a866c9ea74e7167cb19f14ac1f0af3ec78f073ff07c714ff233c18",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_yangtou.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_yangtou.motion3.json",
+      "sizeBytes": 75507,
+      "sha256": "2c9a621909cc4f44d7754d8e58bc9a035a395437f15a6c13b8ca9308eb782f80",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_yaotou.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_yaotou.motion3.json",
+      "sizeBytes": 77695,
+      "sha256": "8d110418763c58ef450452ff5f05006c53b19207973bfe10a67146cd1cb1c698",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_yidali.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_yidali.motion3.json",
+      "sizeBytes": 102925,
+      "sha256": "68eec432fedd017e088a7f9fcb9c1d8e8aefdf9cbc15a165758a77a4492374ca",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/b_zhuanbi.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/b_zhuanbi.motion3.json",
+      "sizeBytes": 95928,
+      "sha256": "96dd223d6780c72d13aa9b1ef03bbff810265087f5b94db55e3ca4741149106c",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_bizui.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_bizui.motion3.json",
+      "sizeBytes": 8851,
+      "sha256": "1aa07ae5eaf0d2108c3c19a080957b7781aae4d142f563dbf83a3821d5a3c0d3",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_chijing.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_chijing.motion3.json",
+      "sizeBytes": 9183,
+      "sha256": "88074187853e277775bd71ec0e9c9a06cab3745051e13943ee0d534c652fbb4f",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_chijing_bizui.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_chijing_bizui.motion3.json",
+      "sizeBytes": 9048,
+      "sha256": "89de031683e38f2d74a88f09261164cee4fdb11a4401b1dc2ae97178d47f5b9a",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_haixiu.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_haixiu.motion3.json",
+      "sizeBytes": 9429,
+      "sha256": "08174f43352136d297a9190d4dad52444a10226c582b83cb34f090f4214e549f",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_haixiu_bizui.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_haixiu_bizui.motion3.json",
+      "sizeBytes": 9054,
+      "sha256": "e6c1decefe0980a66da837be922245083668ccb7d8f975617b4c8b67402138cb",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_idle.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_idle.motion3.json",
+      "sizeBytes": 9499,
+      "sha256": "dda1a26fab7817fbf0fa255e17a747f5186b662e752dd3d08d906e77969b28bc",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_kaixin.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_kaixin.motion3.json",
+      "sizeBytes": 9911,
+      "sha256": "dd838e59eaa09df66ab321f1971f9fee5b9dd9c231f14ceeabdaa5730114a1ba",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_kaixin_bizui.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_kaixin_bizui.motion3.json",
+      "sizeBytes": 9050,
+      "sha256": "115701e95913c529b37e948bfdd7da6122dc6f69e1e660808febfca3746a7e18",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_nanguo.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_nanguo.motion3.json",
+      "sizeBytes": 9429,
+      "sha256": "08174f43352136d297a9190d4dad52444a10226c582b83cb34f090f4214e549f",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_nanguo_bizui.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_nanguo_bizui.motion3.json",
+      "sizeBytes": 9054,
+      "sha256": "38772039ba13e13f31c532c09f1d891ffaddc41347268de6c52ae0b49ef17e48",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_shengqi.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_shengqi.motion3.json",
+      "sizeBytes": 9426,
+      "sha256": "52f4187b38acafafa1c5e3c985e903de9b43ac0c3e801c256647c1e34271c97a",
+      "downloadVerified": true
+    },
+    {
+      "path": "motions/t_shengqi_bizui.motion3.json",
+      "sourcePath": "live2d/roles/302301_shisihangshi/motions/t_shengqi_bizui.motion3.json",
+      "sizeBytes": 9048,
+      "sha256": "b47520849f2ccd5f81c623bb8ad4f63afc021bbbcf451a56355bae02c120c2b6",
+      "downloadVerified": true
+    },
+    {
+      "path": "textures/302301_shisihangshi_00.png",
+      "sourcePath": "live2d/roles/302301_shisihangshi/textures/302301_shisihangshi_00.png",
+      "sizeBytes": 1771055,
+      "sha256": "599783813866d34766a2231558c7bc62e33952a12a0192b57ab1771be9fc9621",
+      "downloadVerified": true,
+      "imageSize": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "path": "textures/302301_shisihangshi_01.png",
+      "sourcePath": "live2d/roles/302301_shisihangshi/textures/302301_shisihangshi_01.png",
+      "sizeBytes": 895625,
+      "sha256": "011ae814f5cae18db41f651f2fda3bb18e70cd383e42e9dcde4075a36c5ecc20",
+      "downloadVerified": true,
+      "imageSize": [
+        2048,
+        2048
+      ]
+    }
+  ]
+}
