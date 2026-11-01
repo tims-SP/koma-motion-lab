@@ -1,0 +1,34 @@
+{
+  "stat": {
+    "screen": [
+      390,
+      844
+    ],
+    "scroll": [
+      390,
+      844
+    ],
+    "canvas": [
+      390,
+      844
+    ],
+    "buttons": 6,
+    "state": {
+      "ready": true,
+      "drawableCount": 263,
+      "parameterCount": 180,
+      "modelCanvasSize": [
+        15.329999669708869,
+        15.329999669708869
+      ],
+      "paused": false,
+      "lastMotion": null,
+      "lastExpression": null,
+      "motionClicks": 0,
+      "expressionClicks": 0,
+      "screenshots": 0
+    }
+  },
+  "errors": [],
+  "bad": []
+}
