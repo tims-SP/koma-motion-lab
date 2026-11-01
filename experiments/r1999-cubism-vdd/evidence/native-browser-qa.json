@@ -1,0 +1,95 @@
+{
+  "schema": "R1999-NATIVE-CUBISM-BROWSER-QA-V1",
+  "status": "PASS_BROWSER_NATIVE_INTERACTION",
+  "url": "localhost-only",
+  "engine": "Official Cubism Web Samples + Cubism Core",
+  "environment": "Chromium headless WebGL2 SwiftShader 1366x900",
+  "initial": {
+    "ready": true,
+    "drawableCount": 263,
+    "parameterCount": 180,
+    "modelCanvasSize": [
+      15.329999669708869,
+      15.329999669708869
+    ],
+    "paused": false,
+    "lastMotion": null,
+    "lastExpression": null,
+    "motionClicks": 0,
+    "expressionClicks": 0,
+    "screenshots": 0
+  },
+  "nod": {
+    "ready": true,
+    "drawableCount": 263,
+    "parameterCount": 180,
+    "modelCanvasSize": [
+      15.329999669708869,
+      15.329999669708869
+    ],
+    "paused": false,
+    "lastMotion": "b_diantou",
+    "lastExpression": null,
+    "motionClicks": 1,
+    "expressionClicks": 0,
+    "screenshots": 0
+  },
+  "shake": {
+    "ready": true,
+    "drawableCount": 263,
+    "parameterCount": 180,
+    "modelCanvasSize": [
+      15.329999669708869,
+      15.329999669708869
+    ],
+    "paused": false,
+    "lastMotion": "b_yaotou",
+    "lastExpression": null,
+    "motionClicks": 2,
+    "expressionClicks": 0,
+    "screenshots": 0
+  },
+  "expression": {
+    "ready": true,
+    "drawableCount": 263,
+    "parameterCount": 180,
+    "modelCanvasSize": [
+      15.329999669708869,
+      15.329999669708869
+    ],
+    "paused": false,
+    "lastMotion": "b_yaotou",
+    "lastExpression": "e_kaixin",
+    "motionClicks": 2,
+    "expressionClicks": 1,
+    "screenshots": 0
+  },
+  "paused": {
+    "ready": true,
+    "drawableCount": 263,
+    "parameterCount": 180,
+    "modelCanvasSize": [
+      15.329999669708869,
+      15.329999669708869
+    ],
+    "paused": true,
+    "lastMotion": "b_yaotou",
+    "lastExpression": "e_kaixin",
+    "motionClicks": 2,
+    "expressionClicks": 1,
+    "screenshots": 0
+  },
+  "pixelInfo": {
+    "canvas": [
+      1366,
+      900
+    ],
+    "webgl": true,
+    "controlPanel": true
+  },
+  "pngBytes": 947839,
+  "errors": [],
+  "badResponses": [],
+  "external": [],
+  "failures": []
+}
