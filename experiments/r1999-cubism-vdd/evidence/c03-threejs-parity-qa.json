@@ -1,0 +1,159 @@
+{
+  "schema": "R1999-C03-REAL-PIXEL-QA-V1",
+  "engine": "Official Cubism Web 5-r.4 vs Three.js 0.181.0",
+  "canvas": [
+    640,
+    640
+  ],
+  "source": "private Sonetto asset pinned to 45e75248...",
+  "samples": {
+    "idle": {
+      "iou": 0.9997782814347654,
+      "sourcePixels": 40583,
+      "adapterPixels": 40592,
+      "rgbMae": 0.054583826041255716,
+      "changedPixels": 1,
+      "maxChannelMeanError": 26.333333333333332,
+      "alphaMismatches": 0,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "none"
+    },
+    "nod": {
+      "iou": 0.999801429706116,
+      "sourcePixels": 40283,
+      "adapterPixels": 40285,
+      "rgbMae": 0.0522074397670103,
+      "changedPixels": 2,
+      "maxChannelMeanError": 29.333333333333332,
+      "alphaMismatches": 3,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "none"
+    },
+    "shake": {
+      "iou": 0.9997741020556713,
+      "sourcePixels": 39837,
+      "adapterPixels": 39836,
+      "rgbMae": 0.05238322331266741,
+      "changedPixels": 2,
+      "maxChannelMeanError": 29,
+      "alphaMismatches": 3,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "none"
+    },
+    "happy": {
+      "iou": 0.9998037195151872,
+      "sourcePixels": 40752,
+      "adapterPixels": 40756,
+      "rgbMae": 0.044310319446488576,
+      "changedPixels": 3,
+      "maxChannelMeanError": 46.666666666666664,
+      "alphaMismatches": 1,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "none"
+    },
+    "surprised": {
+      "iou": 0.9997566021662407,
+      "sourcePixels": 41078,
+      "adapterPixels": 41082,
+      "rgbMae": 0.04448501075007063,
+      "changedPixels": 2,
+      "maxChannelMeanError": 32,
+      "alphaMismatches": 0,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "none"
+    }
+  },
+  "negative": {
+    "maskFault": {
+      "iou": 0.9993430976594813,
+      "sourcePixels": 41078,
+      "adapterPixels": 41099,
+      "rgbMae": 0.2525019058277824,
+      "changedPixels": 102,
+      "maxChannelMeanError": 228.66666666666666,
+      "alphaMismatches": 60,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "mask"
+    },
+    "orderFault": {
+      "iou": 0.9997322623828648,
+      "sourcePixels": 41078,
+      "adapterPixels": 41081,
+      "rgbMae": 9.855689424364122,
+      "changedPixels": 5101,
+      "maxChannelMeanError": 243,
+      "alphaMismatches": 0,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "order"
+    },
+    "uvFault": {
+      "iou": 0.6836317077074331,
+      "sourcePixels": 41078,
+      "adapterPixels": 32559,
+      "rgbMae": 87.78773883287244,
+      "changedPixels": 37584,
+      "maxChannelMeanError": 245.66666666666666,
+      "alphaMismatches": 19305,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "uv"
+    },
+    "recovered": {
+      "iou": 0.9997566021662407,
+      "sourcePixels": 41078,
+      "adapterPixels": 41082,
+      "rgbMae": 0.04448501075007063,
+      "changedPixels": 2,
+      "maxChannelMeanError": 32,
+      "alphaMismatches": 0,
+      "maskGroups": 4,
+      "drawableCount": 263,
+      "mode": "none"
+    }
+  },
+  "checks": {
+    "all5HighOverlap": true,
+    "all5LowRGBError": true,
+    "all5AlphaAligned": true,
+    "maskedDrawablesValidated": true,
+    "orderValidated": true,
+    "uvValidated": true,
+    "recovered": true,
+    "noConsoleErrors": true,
+    "noHttpErrors": true,
+    "noUnexpectedNetwork": true
+  },
+  "browserErrors": [],
+  "httpErrors": [],
+  "unexpectedRequests": [],
+  "screenshotHash": [
+    {
+      "filename": "comparison-happy.png",
+      "sha256": "b42a1c19fb87cbeb8df7d88168b79fcd9bdaca58b03827dab11c70fdbe3bbc8d"
+    },
+    {
+      "filename": "comparison-idle.png",
+      "sha256": "c6cd3046d4518348795ca3666d7c94e9cb217e25486274515ddb3b3cd2c92e67"
+    },
+    {
+      "filename": "comparison-nod.png",
+      "sha256": "92cef9b484a2f65bce1088007b335d33b358708009cce932166f45b4ac447e62"
+    },
+    {
+      "filename": "comparison-shake.png",
+      "sha256": "b189cc689f268c2434444d63146056f42e63c30c38162c07c13e478ef6281c5e"
+    },
+    {
+      "filename": "comparison-surprised.png",
+      "sha256": "71e87307e7fc2eb2db05ac3f6b76507e308372e74ef35de0e8e3168b1098a460"
+    }
+  ],
+  "status": "PASS_C03_ENGINEERING"
+}
