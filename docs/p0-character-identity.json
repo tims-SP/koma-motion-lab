@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1",
+  "character_id": "p0_char_001",
+  "asset_type": "approved_anime_character_identity",
+  "approved": true,
+  "canonical_reference": {
+    "sha256": "bbd8fe9e5067f0d71ee46ea130f9fe3ec54b80da2b7b297481ff43f48ef055d9",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "medium": "approved character design board",
+    "storage": "conversation asset bundle: p0_character_seed_v0.1.zip",
+    "source_role": "visual identity reference"
+  },
+  "style": "Japanese TV anime cel shading, clean line art, neutral even lighting",
+  "appearance": {
+    "hair": "Dusty rose neck-length bob, asymmetric sweeping fringe, single curved ahoge",
+    "ornaments": "Two crossed gold hairpins on image-right in the front view; preserve anatomical attachment side",
+    "eyes": "Magenta-violet large anime eyes with layered iris highlights",
+    "face": "Soft tapered oval, small nose, restrained closed-mouth smile",
+    "clothing": "Deep navy hooded school jacket with gold piping, white collared shirt, burgundy ribbon"
+  },
+  "color_targets": {
+    "hair": "#C27A98",
+    "eyes": "#B65A8C",
+    "skin": "#FFE9E1",
+    "source": "initial approved character board identity notes; sampling verification follows standalone art generation"
+  },
+  "view_angles_degrees": [
+    0,
+    45,
+    90,
+    180
+  ],
+  "coordinates": "image space; x increases right, y increases down",
+  "production_contract": {
+    "hero": "standalone high-resolution single-view raster art",
+    "images": "one view per source image; consistent framing, proportions and anatomy",
+    "alpha_layers": "independent aligned raster layers with verified alpha transparency",
+    "occlusion": "fill concealed skin, ear and hair regions needed during turning",
+    "landmarks": "image-space keypoints with stable semantic organ ids",
+    "deliverables": "four view PSD files, alpha PNG layers, mapping JSON and image reconstruction evidence"
+  },
+  "qa_gates": [
+    "human acceptance of single hero identity and proportions",
+    "per-view identity and asymmetry consistency",
+    "per-layer alpha, alignment and occlusion completeness",
+    "recomposite image error against each independent source",
+    "semantic organ/visibility consistency across views"
+  ],
+  "snapshot": {
+    "phase": "P0-1 reference registration",
+    "recorded": "2026-11-01",
+    "reference_crops": 5,
+    "identity_contract_registered": true,
+    "production_master_stage": "standalone master authoring",
+    "release_asset_publication": "pending"
+  }
+}
