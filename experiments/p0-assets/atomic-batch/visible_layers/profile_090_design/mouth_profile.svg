@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="mouth-profile">
+  <path d="M470 430C462 433 450 436 440 437C450 441 462 440 470 436Z" fill="#E7A8A0" stroke="#A65A62" stroke-width="2.2" stroke-linejoin="round" />
+  <path d="M466 433C458 436 448 438 441 437" fill="none" stroke="#A65A62" stroke-width="2" />  <path d="M452 444C458 446 464 445 468 442" fill="none" stroke="#F0C4BC" stroke-width="2.2" stroke-linecap="round" />
+</g>
+</svg>

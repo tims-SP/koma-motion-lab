@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="nose-profile">
+  <path d="M472 350C474 362 480 374 490 384" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" opacity=".8" />
+  <path d="M482 402C487 404 492 403 494 399" fill="none" stroke="#D8A79C" stroke-width="2.6" stroke-linecap="round" />
+  <path d="M484 396C489 396 492 393 493 389" fill="none" stroke="#D8A79C" stroke-width="2.4" stroke-linecap="round" />
+  <ellipse cx="488" cy="386" rx="4" ry="2.6" fill="#FFFFFF" transform="rotate(35 488 386)" />
+</g>
+</svg>

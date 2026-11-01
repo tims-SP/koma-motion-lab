@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800"><g id="jacket">
+  <path d="M300 566C226 566 168 598 130 640C100 674 84 730 76 800L566 800C558 730 540 676 506 644C470 606 404 566 356 560Z" fill="#3B3A51" stroke="#5A3A4E" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M470 612C504 640 524 688 532 742L556 800L500 800C494 728 486 660 456 626Z" fill="#2A293B" opacity=".85" />
+  <path d="M356 560C404 566 470 606 506 644C472 622 420 600 356 594Z" fill="#4C4B66" opacity=".6" />
+</g>
+</svg>
