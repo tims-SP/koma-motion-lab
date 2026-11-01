@@ -1,0 +1,38 @@
+{
+  "schema": "P0_HD_RELAYERS_V1",
+  "character_id": "p0_character_001",
+  "source": {
+    "file": "1000012009.png",
+    "sha256": "76a25ef6b1197462e99d9b517b8016c7502c6c2ff9ad8556f01b779b7aa99bfd",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "seeThrough": {
+    "file": "seethrough_output.psd",
+    "dimensions": [
+      768,
+      768
+    ],
+    "layers": 18
+  },
+  "sourcePartition": {
+    "alphaExact": true,
+    "visibleRgbExact": true,
+    "maxVisibleDifference": 0,
+    "weakAssignmentPixels": 1280,
+    "weakFraction": 0.00187,
+    "hairclipAssignmentPixels": 1740
+  },
+  "modelComparison": {
+    "psnr768": 24.6,
+    "alphaSilhouetteIoU": 0.98348
+  },
+  "gates": {
+    "visibleSourceReassembly": "PASS",
+    "semanticAssignment": "REVIEW",
+    "hiddenSurfaceAnimation": "REVIEW",
+    "productionBinding": "PENDING"
+  }
+}
