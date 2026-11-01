@@ -1,0 +1,73 @@
+{
+  "schema": "R1999-CUBISM-DRAWABLE-AUDIT-V1",
+  "environment": "Cubism Web 5-r.4 and browser WebGL2",
+  "sourceData": "private model, public aggregate only",
+  "frames": {
+    "baseline": {
+      "metadataHash": "10f76193f44e84613a59f1bc1a29242d5b32603ed973bf0052f61ac2fafba6f6",
+      "visibleCount": {
+        "true": 184,
+        "false": 79
+      }
+    },
+    "nod": {
+      "metadataHash": "53aa3442e48a0f97ba3db595eeb7db4784576657fc9b3707cb6615f04a6d6638",
+      "visibleCount": {
+        "true": 183,
+        "false": 80
+      }
+    },
+    "shake": {
+      "metadataHash": "e5a1e802bd536235a7c379fa826993da6f4910ca0d27d86eb54262027f172642",
+      "visibleCount": {
+        "true": 188,
+        "false": 75
+      }
+    }
+  },
+  "structure": {
+    "drawableCount": 263,
+    "parameterCount": 180,
+    "partCount": 46,
+    "totalVertices": 7826,
+    "totalTriangles": 9773,
+    "maskedDrawables": 21,
+    "textureCounts": {
+      "0": 249,
+      "1": 14
+    },
+    "blendModes": {
+      "0": 263
+    },
+    "invalidVertices": 0,
+    "invalidIndices": 0,
+    "invalidParams": 0,
+    "opacityErrors": 0,
+    "failures": []
+  },
+  "dynamics": {
+    "nodChangedVertexMeshes": 255,
+    "shakeChangedVertexMeshes": 255,
+    "nodChangedParameters": 111,
+    "shakeChangedParameters": 110,
+    "uvHashesStableAcrossFrames": true,
+    "triangleIndicesStableAcrossFrames": true,
+    "baselineVertexHashPreview": [
+      "f2e47d70ff5abd4a3db43a47eab4ac5d551d25277e8fa6a88e569acbc30ca827",
+      "07aa90a04e7be69f8bac374131dd156d40d2aa4c8cb73d7a33aa6568761fd8da",
+      "e364982fa5aa6430db9a60c664e9fd5830f6cb4b58827a724fab96441c49df63"
+    ]
+  },
+  "validation": {
+    "geometryLengthsValid": true,
+    "allIndicesAndCoordinatesValid": true,
+    "allParameterRangesValid": true,
+    "allOpacityValuesValid": true,
+    "meshChangesUnderMotion": true,
+    "stableTopology": true,
+    "maskReferencesExist": true,
+    "browserErrorsAbsent": true
+  },
+  "status": "PASS_DRAWABLE_ENGINEERING",
+  "browserErrors": []
+}
