@@ -18,7 +18,8 @@ jobs:
       - name: Acquire pinned public original-art and PSD fixture files
         run: python experiments/p0-assets/ci/fetch-fixtures.py
       - name: Package Python PSD analysis dependencies for local container
-        run: python -m pip download --only-binary=:all: -d transfer/wheels psd-tools
+        run: |
+          python -m pip download --only-binary=:all: -d transfer/wheels psd-tools
       - name: Build integrity-checked offline transfer
         run: |
           set -euo pipefail
