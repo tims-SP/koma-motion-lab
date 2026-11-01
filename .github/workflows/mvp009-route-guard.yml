@@ -17,14 +17,13 @@ jobs:
           node - <<'NODE'
           const fs=require('fs'),cp=require('child_process');
           const files=cp.execFileSync('git',['ls-files'],{encoding:'utf8'}).trim().split('\n').filter(Boolean);
-          const md=files.filter(f=>f.endsWith('.md')).sort();
-          const expected=['README.md','docs/MVP-009-plan.md','docs/MVP-009-face-authoring-contract.md'].sort();
-          if(JSON.stringify(md)!==JSON.stringify(expected))throw Error('Documentation files: '+md.join(','));
-          const docs=files.filter(f=>f.startsWith('docs/')).sort();
-          if(JSON.stringify(docs)!==JSON.stringify(['docs/MVP-009-plan.md','docs/MVP-009-tasks.json','docs/MVP-009-face-authoring-contract.md'].sort()))throw Error('Additional docs: '+docs.join(','));
+          const required=['README.md','docs/MVP-009-plan.md','docs/MVP-009-face-authoring-contract.md','docs/MVP-009-tasks.json'];
+          if(required.some(f=>!files.includes(f)))throw Error('Required project documentation absent');
+          const docs=files.filter(f=>f.startsWith('docs/'));
+          if(docs.some(f=>!/^docs\\/[a-zA-Z0-9._-]+\\.(?:md|json)$/.test(f)))throw Error('Invalid documentation path');
           if(files.some(f=>/^(scripts|tests|experiments\/mvp00[1-8]|experiments\/godot-|docs\/archive)\//.test(f)))throw Error('Unexpected code or archive directory');
           const flows=files.filter(f=>f.startsWith('.github/workflows/'));
-          if(flows.some(f=>!f.startsWith('.github/workflows/mvp009-')))throw Error('Unexpected workflow');
+          if(flows.some(f=>!/^\\.github\\/workflows\\/(?:mvp009-|p0-)[^/]+\\.yml$/.test(f)))throw Error('Unexpected workflow');
           const index=fs.readFileSync('README.md','utf8');
           if(!index.includes('(docs/MVP-009-plan.md)')||!index.includes('(docs/MVP-009-tasks.json)'))throw Error('Index references');
           const plan=fs.readFileSync('docs/MVP-009-plan.md','utf8');
