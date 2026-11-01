@@ -1,0 +1,79 @@
+{
+  "schema": "R1999-NATIVE-SCREENSHOT-EVIDENCE-V1",
+  "createdOn": "2026-11-01",
+  "evidenceStorage": "private VPS local filesystem; screenshot bytes retained privately",
+  "assetSourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+  "officialSDK": {
+    "samplesCommit": "435707a4676c19de754a8a557638450f889dcd2c",
+    "frameworkCommit": "8df84780f2aa1298f3b30965cdae143e049f3c8e",
+    "coreSha256": "25ae938cb4fe282ce189b357bcc97e603d1e1f7ec78bf04150d401c23cdc792f",
+    "coreApiVersion": 83951616,
+    "latestMocVersion": 5,
+    "coreMocVersionMethodArity": 2
+  },
+  "baseline": {
+    "runtime": "WebGL2 Cubism Core 5-r.4 official samples",
+    "mode": "Chromium Headless SwiftShader",
+    "desktop": [
+      1366,
+      900
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "screenshots": [
+    {
+      "name": "native-baseline.png",
+      "sha256": "73263cf8a788d1fbb0cba3f352cc4080c1edf0f6c82e8e2adbc4bf6261c5ccf5",
+      "view": "baseline"
+    },
+    {
+      "name": "native-nod.png",
+      "sha256": "3ddbaabfdd0c5de447e4a06de3b3986415649e0bbfdb93c149441319dfeb9216",
+      "view": "nod"
+    },
+    {
+      "name": "native-shake.png",
+      "sha256": "9592d1df14885e51328ae97b014b61bdc84c49dc898d6cbfe535e8a4f787f2b3",
+      "view": "shake"
+    },
+    {
+      "name": "native-happy.png",
+      "sha256": "0dbe4f276a1091ab774114b9995a77c9259fc2a3d287890d26814ee3d8a326a9",
+      "view": "expression"
+    },
+    {
+      "name": "native-mobile.png",
+      "sha256": "9862406fce51ce448d59f83c10c5089c873199e246f9d612dd65c16aa3406a3e",
+      "view": "390x844 mobile"
+    },
+    {
+      "name": "native-export.png",
+      "sha256": "0f8969f4bb27874d2a77755381d1db7298e15672c685a1f631edcdea421dcf0d",
+      "view": "browser export"
+    }
+  ],
+  "changedPixelsExcludingChrome": {
+    "threshold": 10,
+    "analysisCrop": {
+      "left": 300,
+      "top": 60,
+      "width": 820,
+      "height": 800
+    },
+    "baselineVsNod": 50641,
+    "baselineVsShake": 45064,
+    "baselineVsHappy": 33834,
+    "note": "Screen differences observed across animation times; not a controlled causal attribution to a single expression"
+  },
+  "tests": {
+    "desktop": "PASS_BROWSER_NATIVE_INTERACTION",
+    "mobile": "PASS_NO_ERRORS_NO_SCROLL",
+    "humanVisualInspection": "ASSISTANT_REVIEWED_SOURCE_IMAGES",
+    "userVisualSignoff": "PENDING"
+  },
+  "outputPackage": "private-only",
+  "typescriptCheck": "PENDING_OFFICIAL_CORE_DECLARATIONS"
+}
