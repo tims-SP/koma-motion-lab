@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C02_NATIVE_DRAWABLE_CAPTURE_ENGINEERING_PASS",
+  "phase": "C03_THREEJS_NATIVE_PARITY_ENGINEERING_PASS",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -131,13 +131,20 @@
         "C02"
       ],
       "parallelEligible": false,
-      "status": "PENDING",
+      "status": "ENGINEERING_PASS",
       "evidence": {
-        "commit": null,
+        "commit": "91c9f3071e899916ddef37d51d0b133fb5362cd6",
         "workflowRun": null,
         "artifact": null,
-        "report": null,
-        "visualReview": null
+        "report": "experiments/r1999-cubism-vdd/evidence/c03-threejs-parity-qa.json",
+        "code": "experiments/r1999-cubism-vdd/src/cubism-three-adapter.ts",
+        "scripts": [
+          "experiments/r1999-cubism-vdd/scripts/prepare-c03.py",
+          "experiments/r1999-cubism-vdd/scripts/qa-c03.cjs"
+        ],
+        "visualReview": "ASSISTANT_REVIEWED_SCREENSHOT; USER_VISUAL_SIGNOFF_PENDING",
+        "summary": "Five real Cubism/Three.js same-pose WebGL states min IoU 0.999756, max foreground MAE 0.05459/255 in clean rebuild; mask order UV injected faults detected; no browser errors",
+        "technicalCaveat": "Official hosted Core JS does not include .d.ts; official sample's tsc step awaits correct licensed declaration file; Vite browser build and real WebGL QA PASS"
       },
       "deliverables": [
         "side-by-side.html",
@@ -381,5 +388,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "C02 native Cubism Drawable and parameter runtime inspection passed in real Chromium WebGL2; next C03 Three.js fidelity replay"
+  "lastExecutedMilestone": "C03 independent rebuild of Cubism Web 5-r.4 + Three.js 0.181.0 passed 5 same-frame pixel checks and mask/order/UV negative-control checks"
 }
