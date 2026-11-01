@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "character_id": "p0_character_001",
+  "phase": "P0-2_reference_baseline",
+  "date": "2026-11-01",
+  "identity": {
+    "status": "approved",
+    "hairpin_anatomical_side": "left",
+    "front_screen_side": "right",
+    "style": "Japanese anime cel shading"
+  },
+  "source": {
+    "hero": {
+      "size_px": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "sha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
+    },
+    "reference_board": {
+      "size_px": [
+        1536,
+        1024
+      ],
+      "sha256": "67e3463cdc086b2aa98caa8e8eaa45846a6d6d98c4b4db1ec02fb03ea4157ebe"
+    }
+  },
+  "working_hero": {
+    "canvas_px": [
+      2048,
+      2560
+    ],
+    "source_detail_px": [
+      1122,
+      1402
+    ],
+    "method": "alpha-normalization+Lanczos",
+    "sha256": "7593b8304b21dd0e34745c15a02bf8795959253d8969227b8888c6144d0bcdf4",
+    "alpha_bbox_px": [
+      168,
+      233,
+      1877,
+      2560
+    ],
+    "safe_margins_px": {
+      "left": 168,
+      "top": 233,
+      "right": 171,
+      "bottom": 0
+    },
+    "production_native_detail_approved": false
+  },
+  "references": [
+    {
+      "yaw": 0,
+      "size_px": [
+        320,
+        416
+      ],
+      "kind": "board_crop_rgb"
+    },
+    {
+      "yaw": 45,
+      "size_px": [
+        277,
+        416
+      ],
+      "kind": "board_crop_rgb"
+    },
+    {
+      "yaw": 90,
+      "size_px": [
+        261,
+        416
+      ],
+      "kind": "board_crop_rgb"
+    },
+    {
+      "yaw": 180,
+      "size_px": [
+        284,
+        416
+      ],
+      "kind": "board_crop_rgb"
+    }
+  ],
+  "acceptance": {
+    "automated_checks": {
+      "passed": 19,
+      "failed": 7
+    },
+    "reference_package_ready": true,
+    "production_view_count": 0,
+    "production_view_target": 4,
+    "organ_layer_reconstruction": "pending",
+    "validation_semantics": "technical file checks; no independent visual production signoff"
+  },
+  "head009_integration": {
+    "rendering_qa_status_unchanged": true,
+    "fresh_heldout_angles_required": [
+      20,
+      55,
+      82
+    ],
+    "source_provenance_gate": "must_pass_before_source_integration"
+  },
+  "archive": {
+    "binary_storage_policy": "artifact_or_release",
+    "durable_asset_uri": null
+  }
+}
