@@ -36,7 +36,7 @@ const { chromium } = require(process.env.R1999_PLAYWRIGHT_MODULE || 'playwright'
       textureCounts[texture]=(textureCounts[texture]??0)+1;
       blendModes[blend]=(blendModes[blend]??0)+1;
       const opacity=model.getDrawableOpacity(i);
-      if(opacity<0||opacity>1||!Number.isFinite(opacity))opacityErrors++;
+      // Cubism uses float32: tolerate a single ULP at unit opacity (e.g. 1.000000119).\n      if(opacity< -1e-5 || opacity>1+1e-5 || !Number.isFinite(opacity))opacityErrors++;
       const nc=maskCounts[i];
       maskedDrawables+=nc>0?1:0;
       for(let j=0;j<nc;j++) if(masks[i][j]<0||masks[i][j]>=drawableCount)failures.push('bad_mask:'+i);
