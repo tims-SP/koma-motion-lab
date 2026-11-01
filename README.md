@@ -8,9 +8,14 @@
 
 - [完整技术架构、资产标准、HTML 验收设计](docs/R1999-cubism-vdd-html-plan.md)
 - [C00–C10 可追踪任务与验收门禁](docs/R1999-cubism-vdd-html-tasks.json)
+- [真实资源 SHA-256 清单](experiments/r1999-cubism-vdd/evidence/source-manifest.json)
+- [桌面 Chromium HTML 控件及画面测试](experiments/r1999-cubism-vdd/evidence/native-browser-qa.json)
+- [移动端浏览器测试](experiments/r1999-cubism-vdd/evidence/native-mobile-qa.json)
+- [ArtMesh/Mask/动态顶点结构化验收](experiments/r1999-cubism-vdd/evidence/drawable-qa.json)
+- [私有截图哈希与官方 SDK 指纹](experiments/r1999-cubism-vdd/evidence/native-screenshot-hashes.json)
 - [R1999 原生资产技术路线与候选研究](docs/R1999-native-asset-validation-plan.md)
 
-**当前状态：** 已核实 Cubism 目录、模型描述、22 组动作、6 个唯一表情文件、2 张主纹理，完成实施计划与可追踪任务登记。真实 Cubism Core 加载、适配器逐帧保真、0–90° 与水平 360° 视觉验收属于后续实测项目。
+**当前状态：** C00–C02 已通过实际工程验收：固定上游源提交并验证 33 个资源文件；官方 Cubism Web 5-r.4 在 Chromium WebGL2 成功渲染十四行诗、播放原生动作/表情并通过桌面与移动端 HTML 控件及 PNG 导出测试；枚举 263 Drawable、180 参数、7,826 顶点、9,773 三角形、21 个带蒙版 Drawable，真实动画顶点变化与结构完整性已验证。C03 开始 Three.js 同帧保真适配，0–90° 与水平 360° 视觉验收继续按计划执行。
 
 预计新实验源码位置：`experiments/r1999-cubism-vdd/`。HTML 先采用本地静态服务的资源包（HTML/JS/CSS/已授权的本地依赖），离线运行；个人游戏原画及包含这些原画的截图、视频和 HTML 包保存在私有实验路径，Git 保存通用程序与文本证据。
 
