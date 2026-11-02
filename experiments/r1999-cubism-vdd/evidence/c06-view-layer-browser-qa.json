@@ -1,0 +1,106 @@
+{
+  "schema": "R1999-VIEW-LAYER-HTML-QA-V1",
+  "mode": "SYNTHETIC_GEOMETRY_FIXTURE",
+  "visualGate": "AWAITING_AUTHORED_ART",
+  "checks": {
+    "initialEmpty": true,
+    "initialGateClosed": true,
+    "realNativePartRefLoaded": true,
+    "nativeSemanticPartSwitch": true,
+    "fixture16": true,
+    "fixtureGateClosed": true,
+    "allAnglesInteractive": true,
+    "interpolationChangesWithYaw": true,
+    "browserLocalFileImport": true,
+    "importGateClosed": true,
+    "exportTracksCandidate": true,
+    "noUnexpectedNetwork": true,
+    "noBrowserErrors": true,
+    "noFailedResources": true
+  },
+  "details": {
+    "angleMetrics": [
+      {
+        "angle": 45,
+        "total": 16793,
+        "redChecksum": 3325951
+      },
+      {
+        "angle": 50,
+        "total": 17377,
+        "redChecksum": 3358843
+      },
+      {
+        "angle": 55,
+        "total": 17398,
+        "redChecksum": 3337864
+      },
+      {
+        "angle": 60,
+        "total": 17463,
+        "redChecksum": 3309535
+      },
+      {
+        "angle": 67,
+        "total": 17430,
+        "redChecksum": 3283058
+      },
+      {
+        "angle": 75,
+        "total": 17378,
+        "redChecksum": 3290911
+      },
+      {
+        "angle": 82,
+        "total": 17365,
+        "redChecksum": 3330297
+      },
+      {
+        "angle": 90,
+        "total": 16617,
+        "redChecksum": 3293505
+      }
+    ],
+    "initial": {
+      "angle": 45,
+      "keys45": 0,
+      "keys90": 0,
+      "paired": 0,
+      "synthetic": 0,
+      "candidate": 0,
+      "requiredPairs": 8,
+      "visualAcceptance": "AWAITING_VALIDATED_INDEPENDENT_ART",
+      "renderer": "Canvas2D semantic-part triangulated warp"
+    },
+    "fixture": {
+      "angle": 45,
+      "keys45": 8,
+      "keys90": 8,
+      "paired": 8,
+      "synthetic": 16,
+      "candidate": 0,
+      "requiredPairs": 8,
+      "visualAcceptance": "AWAITING_VALIDATED_INDEPENDENT_ART",
+      "renderer": "Canvas2D semantic-part triangulated warp"
+    },
+    "afterImport": {
+      "angle": 90,
+      "keys45": 8,
+      "keys90": 8,
+      "paired": 8,
+      "synthetic": 15,
+      "candidate": 1,
+      "requiredPairs": 8,
+      "visualAcceptance": "AWAITING_VALIDATED_INDEPENDENT_ART",
+      "renderer": "Canvas2D semantic-part triangulated warp"
+    },
+    "registryRoles": {
+      "synthetic_fixture": 15,
+      "candidate_art": 1
+    }
+  },
+  "errors": [],
+  "bad": [],
+  "external": [],
+  "status": "PASS_VIEW_LAYER_HTML_ENGINEERING"
+}
