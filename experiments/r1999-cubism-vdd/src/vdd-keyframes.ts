@@ -38,7 +38,8 @@ export function interpolateViews(keys:readonly PartViewKey[],yawDeg:number):View
  const first=sorted[0],last=sorted.at(-1)!;
  if(yawDeg<first.yawDeg||yawDeg>last.yawDeg)throw Error('Yaw outside authored range');
  if(sorted.some((k,i)=>i&&k.yawDeg===sorted[i-1].yawDeg))throw Error('Duplicate view angles');
- const i=Math.min(sorted.length-2,Math.max(0,sorted.findIndex(k=>k.yawDeg>yawDeg)-1));
+ const upper=sorted.findIndex(k=>k.yawDeg>yawDeg);
+ const i=upper===-1?sorted.length-2:Math.max(0,upper-1);
  const a=sorted[i],b=sorted[i+1],t=smoothstep((yawDeg-a.yawDeg)/(b.yawDeg-a.yawDeg));
  if(a.semanticId!==b.semanticId||a.topologyId!==b.topologyId||
     a.vertexIds.length!==b.vertexIds.length||a.vertexIds.some((x,j)=>x!==b.vertexIds[j]))
