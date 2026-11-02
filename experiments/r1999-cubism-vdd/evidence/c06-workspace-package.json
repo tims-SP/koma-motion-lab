@@ -1,0 +1,44 @@
+{
+  "schema": "R1999-VIEW-LAYER-WORKSPACE-PACKAGE-V1",
+  "file": "r1999-view-layer-workspace.tar.gz",
+  "privatePath": "/root/koma-motion-r1999/output/r1999-view-layer-workspace.tar.gz",
+  "sha256": "607a19ec3ebfa8142117e37808e45a0423559cd7f586d7dd0911ddee3f3f6c54",
+  "bytes": 4272123,
+  "serve": {
+    "root": "private package root",
+    "nativeReview": "index.html",
+    "semanticViewEditor": "view-layer-lab.html",
+    "localVerificationUrl": "http://127.0.0.1:5183/view-layer-lab.html"
+  },
+  "contents": {
+    "character": "302301_shisihangshi",
+    "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+    "nativeCubismCore": "official hosted Core locked in prior sdk fingerprint",
+    "renderer": "Cubism Web 5-r.4 and Three.js 0.181.0 in native page",
+    "semanticPreview": "Canvas2D per-part triangulated warp with local transparency",
+    "nativeTransparentPartPNGs": 40,
+    "sourceArtwork45": 0,
+    "sourceArtwork90": 0,
+    "syntheticFixtureRequiresUserActivation": true
+  },
+  "validation": {
+    "sourceContractUnitTests": 7,
+    "sourceContractUnitStatus": "PASS",
+    "vddInterpolationUnitTests": 5,
+    "vddInterpolationStatus": "PASS",
+    "viewLayerChromiumChecks": 14,
+    "viewLayerChromiumStatus": "PASS_VIEW_LAYER_HTML_ENGINEERING",
+    "cubismRegressionChecks": 12,
+    "cubismRegressionStatus": "PASS_ANCHOR_PROXY_ENGINEERING",
+    "nativeCoverage": "263/263 Drawables",
+    "independentArtworkRequired": 16,
+    "independentArtworkAvailable": 0,
+    "viewVisualAcceptance": "PENDING_ARTWORK",
+    "reportPaths": [
+      "experiments/r1999-cubism-vdd/evidence/c06-view-layer-browser-qa.json",
+      "experiments/r1999-cubism-vdd/evidence/c06-cubism-regression-qa.json",
+      "experiments/r1999-cubism-vdd/evidence/c06-art-source-contract-qa.json"
+    ]
+  },
+  "storagePolicy": "Personal private research; game files and licensed Core remain outside public Git; SHA and source-text QA are committed"
+}
