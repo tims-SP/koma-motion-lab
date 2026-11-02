@@ -54,6 +54,28 @@ const {chromium} = require(process.env.R1999_PLAYWRIGHT_MODULE || 'playwright');
           [+((minX+maxX)/2).toFixed(5),+((minY+maxY)/2).toFixed(5),depthByFamily[semantic]]:null,
         depthProvenance:'heuristic_visual_proxy'});
     }
+    // Cubism may export drawables without a parent Part (index -1).
+    // Retain their source identities; the observed Sonetto subset is face artwork.
+    const rootDrawables=[];
+    for(let j=0;j<drawCount;j++) if(m.getDrawableParentPartIndex(j)===-1)
+      rootDrawables.push(j);
+    if(rootDrawables.length){
+      let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity,vertexSamples=0;
+      for(const j of rootDrawables){
+        const verts=m.getDrawableVertexPositions(j);
+        for(let k=0;k<verts.length;k+=2){
+          const x=verts[k],y=verts[k+1];if(!Number.isFinite(x)||!Number.isFinite(y))continue;
+          minX=Math.min(x,minX);maxX=Math.max(x,maxX);minY=Math.min(y,minY);maxY=Math.max(y,maxY);vertexSamples++;
+        }
+      }
+      const ids=rootDrawables.map(j=>m.getDrawableId(j).getString().s);
+      const semantics=ids.every(id=>id.toLowerCase().startsWith('face'))?'face':'unclassified';
+      arr.push({partIndex:-1,partId:'__UNPARENTED_DRAWABLES__',semantic:semantics,
+        drawables:rootDrawables,drawableIds:ids,vertexSamples,
+        bbox:[minX,minY,maxX,maxY].map(x=>+x.toFixed(5)),
+        anchorXYZ:[+((minX+maxX)/2).toFixed(5),+((minY+maxY)/2).toFixed(5),0],
+        depthProvenance:'heuristic_visual_proxy',relationship:'native_parentPartIndex_-1'});
+    }
     const mapped=arr.reduce((n,p)=>n+p.drawables.length,0);
     const seen=new Set(arr.flatMap(p=>p.drawables));
     const missing=Array.from({length:drawCount},(_,i)=>i).filter(i=>!seen.has(i));
