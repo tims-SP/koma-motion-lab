@@ -1,0 +1,78 @@
+{
+  "schema": "R1999-VIEW-ASSET-VALIDATION-V1",
+  "checkedAssets": 0,
+  "verifiedFiles": 0,
+  "geometryValidated": true,
+  "errors": [],
+  "missingIndependent": [
+    {
+      "yawDeg": 45,
+      "semanticId": "face.skin"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "eye.near"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "nose"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "mouth"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "ear.near"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "hair.front"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "hair.side"
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "hair.back"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "face.skin"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "eye.near"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "nose"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "mouth"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "ear.near"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "hair.front"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "hair.side"
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "hair.back"
+    }
+  ],
+  "coverage": 0,
+  "requiredCoverage": 16,
+  "readyForInterpolation": false,
+  "evidence": [],
+  "status": "AWAITING_AUTHORED_ART"
+}
