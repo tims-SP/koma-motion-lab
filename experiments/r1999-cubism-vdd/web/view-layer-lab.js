@@ -4,6 +4,46 @@ const PARTS=['hair.back','face.skin','ear.near','hair.side','eye.near','nose','m
 const DEPTH={ 'hair.back':-30,'face.skin':0,'ear.near':5,'hair.side':8,
  'eye.near':12,'nose':15,'mouth':16,'hair.front':30};
 const SIZE=640;
+const NATIVE_PARTS={
+ 'face.skin':'__UNPARENTED_DRAWABLES__',
+ 'eye.near':'PARTS_01_EYE_001',
+ 'nose':'PARTS_01_NOSE_001',
+ 'mouth':'PARTS_01_MOUTH_001',
+ 'ear.near':'PARTS_01_EAR_001',
+ 'hair.front':'PARTS_01_HAIR_FRONT_001',
+ 'hair.side':'PARTS_01_HAIR_SIDE_001',
+ 'hair.back':'PARTS_01_HAIR_BACK_001'
+};
+let nativeManifest=null;
+let nativeRefStatus='LOADING';
+async function refreshNative(){
+ const ctx=document.getElementById('nativeRef').getContext('2d');
+ ctx.clearRect(0,0,640,640);
+ const entry=nativeManifest?.entries?.find(e=>e.partId===NATIVE_PARTS[part.value]);
+ if(!entry){
+  document.getElementById('nativeHint').textContent=nativeRefStatus==='LOADING'?'读取私有图层中':'私有 Cubism 图层待接入';
+  return;
+ }
+ const image=new Image();
+ image.onload=()=>{
+  ctx.clearRect(0,0,640,640);ctx.drawImage(image,0,0);
+  document.getElementById('nativeHint').textContent=entry.partId+' · '+entry.drawableCount+' Drawables · SHA '+entry.sha256.slice(0,10);
+ };
+ image.onerror=()=>{
+  document.getElementById('nativeHint').textContent='原生参考图层读取失败';
+ };
+ image.src='./private-view-assets/'+encodeURIComponent(entry.filename);
+}
+async function loadNative(){
+ try{
+  const response=await fetch('./private-view-assets/front-layer-manifest.json');
+  if(!response.ok)throw Error('private assets missing');
+  nativeManifest=await response.json();
+  nativeRefStatus='AVAILABLE';
+ }catch(e){nativeRefStatus='UNAVAILABLE';}
+ await refreshNative();
+}
+
 const viewKeys=new Map([[45,new Map()],[90,new Map()]]);
 const $=id=>document.getElementById(id);
 const yaw=$('yaw'),yawLabel=$('yawLabel'),part=$('part'),view=$('view');
@@ -131,6 +171,7 @@ function downloadRegistry(){
  setTimeout(()=>URL.revokeObjectURL(url),300);
 }
 $('yaw').addEventListener('input',refresh);
+part.addEventListener('change',refreshNative);
 $('fixture').addEventListener('click',loadFixture);
 $('import').addEventListener('click',async()=>{
  try{
@@ -141,5 +182,5 @@ $('import').addEventListener('click',async()=>{
 });
 $('export').addEventListener('click',downloadRegistry);
 window.__R1999_LAYER_LAB={inspect,loadFixture,importFile,exportRegistry,renderAt:(angle)=>render('center',angle)};
-refresh();
+refresh();loadNative();
 })();
