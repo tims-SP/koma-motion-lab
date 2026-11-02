@@ -18,11 +18,22 @@
 - [C03 官方 Sample 适配构建脚本](experiments/r1999-cubism-vdd/scripts/prepare-c03.py)
 - [C03 Chromium 自动验收脚本](experiments/r1999-cubism-vdd/scripts/qa-c03.cjs)
 - [C04 Cubism 原生参数与独立视角资产覆盖审计](experiments/r1999-cubism-vdd/evidence/c04-view-source-audit.json)
+- [C04 原生 Part 身份与 Anchor 位置](experiments/r1999-cubism-vdd/evidence/c04-semantic-anchors.json)
+- [C04 独立视角资产登记与来源规则](experiments/r1999-cubism-vdd/evidence/c04-view-source-registry.json)
+- [C04 原生正面透明 PNG 分层清单（40 张）](experiments/r1999-cubism-vdd/evidence/c04-front-layer-manifest.json)
+- [C04 私有正面分层资源包校验](experiments/r1999-cubism-vdd/evidence/c04-front-layer-bundle.json)
+- [C05 Cubism Anchor / View Proxy HTML 代码](experiments/r1999-cubism-vdd/src/cubism-anchor-view.ts)
+- [C05 VDD 关键视角插值实现](experiments/r1999-cubism-vdd/src/vdd-keyframes.ts)
+- [C05 HTML 浏览器验收结果](experiments/r1999-cubism-vdd/evidence/c05-html-package-qa.json)
+- [C05 侧向视角可见面积检查](experiments/r1999-cubism-vdd/evidence/c05-visual-readiness.json)
+- [C05 私有 HTML 资源包校验](experiments/r1999-cubism-vdd/evidence/c05-html-bundle-manifest.json)
 - [R1999 原生资产技术路线与候选研究](docs/R1999-native-asset-validation-plan.md)
 
 **当前状态：** C00–C03 已通过真实工程验收。固定资产源 33 个文件；官方 Cubism 5-r.4 成功加载 263 Drawable、180 参数、7,826 顶点和 21 个带蒙版的 Drawable。C03 使用 Three.js 0.181.0 同帧重放原生网格、贴图、蒙版与动态绘制顺序，5 组真实 Chromium WebGL 状态的前景轮廓 IoU 均超过 0.99975，RGB MAE 均低于 0.055/255；蒙版、UV、绘制顺序故障注入检查通过。从官方干净 5-r.4 仓库按本仓库脚本重新构建后，重复验收通过。模型画面人工复核已完成；用户视觉签收待执行。
 
-**C04 当前进度：** 已核实原生 Cubism `PARAM_ANGLE_X/Y/Z` 范围均为 -30 到 +30，属于模型二维变形参数，不代表物理相机的 -30°～+30° 空间转向。该角色资产目录包含现有动画立绘和纹理图集，但缺少独立、经过相机角度校准的 45° 侧前视图、90° 侧脸、180° 背面与留出验证原画。下一步建立单独的分层视角源、器官身份对应和遮挡规则，再进入 VDD 核心验收。
+**C04 当前进度：** 从真实 Cubism Core 恢复了 46 个 Part 与 11 个根层面部 Drawable 的来源关联，263/263 Drawable 可追踪。实际导出 40 张每 Part 独立透明 PNG（其中 34 张在当前姿态可见），通过 alpha、身份、源 SHA 与浏览器错误检查，保留私有档案。`PARAM_ANGLE_X/Y/Z` 均为 -30～+30 的二维模型参数，不作为三维相机角度。45°、90° 和独立留出角原画登记门禁等待可信来源和语义透明图层。
+
+**C05 当前进度：** 3D Anchor 估算深度和 HTML 角度滑杆代理已在实际 Three.js WebGL 中运行；纯 VDD 视角键插值算法 5/5 单元测试通过，HTML 包装后 12/12 浏览器检查通过。0° 下保持与 Cubism 原生画面接近的逐帧保真；45°、90° 仍为几何重投影代理，90° 头部视觉验收待独立侧面原画。源码、QA 与私有 HTML 包哈希已登记。
 
 预计新实验源码位置：`experiments/r1999-cubism-vdd/`。HTML 先采用本地静态服务的资源包（HTML/JS/CSS/已授权的本地依赖），离线运行；个人游戏原画及包含这些原画的截图、视频和 HTML 包保存在私有实验路径，Git 保存通用程序与文本证据。
 
