@@ -50,6 +50,7 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
   await page.locator('#sourceId').fill('QA-browser-local-test');
   await page.locator('#artFile').setInputFiles({name:'nose.png',mimeType:'image/png',buffer:Buffer.from(png,'base64')});
   await page.locator('#import').click();
+  await page.waitForFunction(()=>window.__R1999_LAYER_LAB.inspect().candidate===1,null,{timeout:12000});
   const after=await page.evaluate(()=>window.__R1999_LAYER_LAB.inspect());
   checks.browserLocalFileImport=after.candidate===1&&after.synthetic===15;
   checks.importGateClosed=after.visualAcceptance==='AWAITING_VALIDATED_INDEPENDENT_ART';
