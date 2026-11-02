@@ -8,12 +8,17 @@ def main():
  p.add_argument("--samples",type=Path,required=True)
  p.add_argument("--html",type=Path,required=True)
  p.add_argument("--javascript",type=Path,required=True)
+ p.add_argument("--native-front",type=Path,help="Private PNG Part layer directory with front-layer-manifest.json")
  args=p.parse_args()
  demo=args.samples.resolve()/"Samples/TypeScript/Demo"
  public=demo/"public";public.mkdir(parents=True,exist_ok=True)
  for source,name in [(args.html,"view-layer-lab.html"),(args.javascript,"view-layer-lab.js")]:
   if not source.is_file():raise FileNotFoundError(source)
   shutil.copy2(source,public/name)
+ if args.native_front:
+  directory=args.native_front.resolve()
+  if not (directory/'front-layer-manifest.json').is_file():raise FileNotFoundError(directory/'front-layer-manifest.json')
+  shutil.copytree(directory,public/'private-view-assets',dirs_exist_ok=True)
  # Make the app discoverable from the existing Cubism HTML review panel.
  pth=demo/"index.html"
  content=pth.read_text()
