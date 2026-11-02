@@ -18,6 +18,17 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
   const initial=await page.evaluate(()=>window.__R1999_LAYER_LAB.inspect());
   checks.initialEmpty=initial.keys45===0&&initial.keys90===0&&initial.paired===0;
   checks.initialGateClosed=initial.visualAcceptance==='AWAITING_VALIDATED_INDEPENDENT_ART';
+  await page.waitForFunction(()=>document.getElementById('nativeHint').textContent.includes('PARTS_01_HAIR_BACK_001'),null,{timeout:12000});
+  const nativeAlpha=await page.evaluate(()=>{
+    const c=document.getElementById('nativeRef'),d=c.getContext('2d',{willReadFrequently:true}).getImageData(0,0,640,640).data;
+    let pixels=0;for(let i=3;i<d.length;i+=4)if(d[i]>0)pixels++;
+    return pixels;
+  });
+  checks.realNativePartRefLoaded=nativeAlpha>100;
+  await page.locator('#part').selectOption('nose');
+  await page.waitForFunction(()=>document.getElementById('nativeHint').textContent.includes('PARTS_01_NOSE_001'),null,{timeout:12000});
+  checks.nativeSemanticPartSwitch=await page.locator('#nativeHint').textContent().then(x=>x.includes('Drawables'));
+  await page.locator('#part').selectOption('hair.back');
   await page.locator('#fixture').click();
   const fixture=await page.evaluate(()=>window.__R1999_LAYER_LAB.inspect());
   checks.fixture16=fixture.keys45===8&&fixture.keys90===8&&fixture.synthetic===16&&fixture.paired===8;
@@ -66,7 +77,7 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
  const report={schema:'R1999-VIEW-LAYER-HTML-QA-V1',mode:'SYNTHETIC_GEOMETRY_FIXTURE',
   visualGate:'AWAITING_AUTHORED_ART',
   checks,details,errors,bad,external,
-  status:Object.keys(checks).length===12&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
+  status:Object.keys(checks).length===14&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
  fs.writeFileSync(path.join(dir,'view-layer-qa.json'),JSON.stringify(report,null,2)+'\n');
  console.log('VIEW_LAYER_HTML_QA',JSON.stringify({status:report.status,checks,exception:details.exception,errors,external}).slice(0,6500));
  if(report.status!=='PASS_VIEW_LAYER_HTML_ENGINEERING')process.exitCode=1;
