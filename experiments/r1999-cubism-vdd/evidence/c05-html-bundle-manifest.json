@@ -15,9 +15,11 @@
     "unitVddTests": 5,
     "c05ProxyQATests": 12,
     "packageQATestsPassed": true,
-    "sourceArtCoverage": [
-      0
-    ],
+    "sourceArtCoverage": {
+      "nativeUncalibratedPortrait": true,
+      "independentViewKeys": [],
+      "independentHeldoutKeys": []
+    },
     "source45Registered": false,
     "source90Registered": false,
     "evidence": "experiments/r1999-cubism-vdd/evidence/c05-anchor-proxy-qa.json",
