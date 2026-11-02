@@ -19,6 +19,7 @@ const objects: Source[] = [];
 let diagnosticFault: "none" | "mask" | "order" | "uv" = "none";
 let cameraYawDeg=0;
 let headPivot:readonly [number,number]=[0,0];
+let activePartFilter:Set<number>|null=null;
 function setYaw(value:number){if(!Number.isFinite(value)||value<0||value>90)throw Error('Yaw 0..90 required');cameraYawDeg=value;return cameraYawDeg;}
 let app: THREE.WebGLRenderer;
 let model: CubismModel;
@@ -112,6 +113,7 @@ function inspect(){
  return {ready:!!model,drawables:objects.length,masks:maskCache.size,diagnosticFault,
    cameraYawDeg,provenance:cameraYawDeg===0?'NATIVE_ART':'ESTIMATED_GEOMETRIC_PROXY',
    authored45:false,authored90:false,headPivot,
+   filteredPartIndices:activePartFilter?[...activePartFilter]:null,
    mvp:mvp?Array.from(mvp):null};
 }
 async function begin(){
@@ -186,7 +188,23 @@ async function begin(){
   target.texture.colorSpace=THREE.NoColorSpace;
   maskCache.set(source.key,{target,scene});
  }
- (window as any).__R1999_ADAPTER={inspect,getCanvases:()=>roots,renderOnce:render,setYaw,setFault:(mode: "none" | "mask" | "order" | "uv")=>{ diagnosticFault=mode;
+ (window as any).__R1999_ADAPTER={inspect,getCanvases:()=>roots,renderOnce:render,setYaw,
+  capturePart:(partIndex:number)=>{
+   if(!Number.isInteger(partIndex)||partIndex<-1||partIndex>=model.getPartCount())throw Error('Invalid Part index');
+   const previousYaw=cameraYawDeg,previousFilter=activePartFilter;
+   cameraYawDeg=0;activePartFilter=new Set([partIndex]);
+   try{
+    render();
+    const canvas=roots.adapter!;
+    const ctx=document.createElement('canvas');ctx.width=canvas.width;ctx.height=canvas.height;
+    const draw=ctx.getContext('2d',{willReadFrequently:true})!;draw.drawImage(canvas,0,0);
+    const rgba=draw.getImageData(0,0,canvas.width,canvas.height).data;
+    let nonzeroAlpha=0,opaquePixels=0,alphaMin=255,alphaMax=0;
+    for(let i=3;i<rgba.length;i+=4){const a=rgba[i];if(a>0){nonzeroAlpha++;alphaMin=Math.min(alphaMin,a);alphaMax=Math.max(alphaMax,a);if(a===255)opaquePixels++;}}
+    return {partIndex,nonzeroAlpha,opaquePixels,alphaMin:nonzeroAlpha?alphaMin:0,
+      alphaMax,dataUrl:canvas.toDataURL('image/png'),provenance:'CUBISM_NATIVE_FRONT_PART_SNAPSHOT'};
+   }finally{cameraYawDeg=previousYaw;activePartFilter=previousFilter;render();}
+  },setFault:(mode: "none" | "mask" | "order" | "uv")=>{ diagnosticFault=mode;
   textures.forEach(t=>{t.flipY=mode==="uv"?false:true;t.needsUpdate=true;}); }};
  createProxyControls(()=>cameraYawDeg,setYaw);
  requestAnimationFrame(tick);
@@ -226,6 +244,7 @@ function render(){
  // Render one at a time to preserve Cubism's dynamically evaluated ordering.
  for(const o of sorted){
   if(!o.mesh.visible)continue;
+  if(activePartFilter && !activePartFilter.has(model.getDrawableParentPartIndex(o.index)))continue;
   const group=maskCache.get(o.key);
   o.material.uniforms.uMask.value=group?.target.texture ?? null;
   app.render(o.mesh,unitCamera);
