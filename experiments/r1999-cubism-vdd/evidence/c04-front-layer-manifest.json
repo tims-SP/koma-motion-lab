@@ -1,0 +1,1184 @@
+{
+  "schema": "R1999-C04-FRONT-LAYER-EXPORT-V1",
+  "model": "302301_shisihangshi",
+  "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+  "sourceType": "native_Cubism_CubismWeb_5r4",
+  "role": "front_pose_not_new_camera_view",
+  "privateStorage": true,
+  "alphaRGBA": true,
+  "canvas": [
+    640,
+    640
+  ],
+  "totalParts": 46,
+  "unparentedGroups": 1,
+  "filesWritten": 40,
+  "emptyGroups": [
+    "Part13",
+    "PARTS_01_FROZEN",
+    "Cloak_1_Skinning",
+    "Cloak_1_1_Skinning",
+    "Part4",
+    "Part7",
+    "Part8"
+  ],
+  "visualQA": "Source artwork remains original pose; novel-view art coverage gate is separate.",
+  "validation": {
+    "nativeDrawableCoverage": true,
+    "noDuplicateDrawableOwnership": true,
+    "assetRoleTruthful": true,
+    "alphaBackgroundValid": true,
+    "nonzeroFace": true,
+    "nonzeroEyes": true,
+    "browserErrorsAbsent": true,
+    "badRequestsAbsent": true
+  },
+  "errors": [],
+  "badRequests": [],
+  "entries": [
+    {
+      "partIndex": -1,
+      "partId": "__UNPARENTED_DRAWABLES__",
+      "filename": "-1___UNPARENTED_DRAWABLES__.png",
+      "drawableCount": 11,
+      "drawableIndices": [
+        132,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211
+      ],
+      "semanticHint": "face.base",
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 2524,
+      "opaquePixels": 2052,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 16608,
+      "sha256": "1192611d67e134450df2e051a65abbcf62c8d8e203b158423775d72dcfff45cd"
+    },
+    {
+      "partIndex": 1,
+      "partId": "PARTS_01_BODY",
+      "filename": "01_PARTS_01_BODY.png",
+      "drawableCount": 11,
+      "drawableIndices": [
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        114,
+        198
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 14523,
+      "opaquePixels": 12580,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 49914,
+      "sha256": "a8f55cac23c69a52a6468e38b98e47d17259364007369afaee4969908639c500"
+    },
+    {
+      "partIndex": 2,
+      "partId": "Part",
+      "filename": "02_Part.png",
+      "drawableCount": 13,
+      "drawableIndices": [
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 0,
+      "opaquePixels": 0,
+      "alphaRange": [
+        0,
+        0
+      ],
+      "sizeBytes": 10589,
+      "sha256": "2ad318c9fa15e30007b47dee147e973896f4b704f399a11b3bbb16e7d2278322"
+    },
+    {
+      "partIndex": 3,
+      "partId": "Part2",
+      "filename": "03_Part2.png",
+      "drawableCount": 23,
+      "drawableIndices": [
+        128,
+        129,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 2271,
+      "opaquePixels": 1668,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 16985,
+      "sha256": "09d8bcde3a4306be75781963b0fcfd89de78fbd94f0152c49e2a8e388dff53df"
+    },
+    {
+      "partIndex": 4,
+      "partId": "Part9",
+      "filename": "04_Part9.png",
+      "drawableCount": 10,
+      "drawableIndices": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 11389,
+      "opaquePixels": 9464,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 38889,
+      "sha256": "3abc8632eb03092cbf28a926ed6fda53a181fa6c23dfd33b3773c3e893df92e3"
+    },
+    {
+      "partIndex": 5,
+      "partId": "PARTS_01_NECK",
+      "filename": "05_PARTS_01_NECK.png",
+      "drawableCount": 3,
+      "drawableIndices": [
+        0,
+        51,
+        115
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 633,
+      "opaquePixels": 335,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 13736,
+      "sha256": "e60c67b0943c62db80e440fc4d34f1287ce67db01c65b09308cadad6ec55e961"
+    },
+    {
+      "partIndex": 6,
+      "partId": "PARTS_01_HAIR_BACK_001",
+      "filename": "06_PARTS_01_HAIR_BACK_001.png",
+      "drawableCount": 12,
+      "drawableIndices": [
+        3,
+        4,
+        10,
+        45,
+        46,
+        47,
+        58,
+        59,
+        116,
+        122,
+        123,
+        125
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 4184,
+      "opaquePixels": 2174,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 26251,
+      "sha256": "cde0a9dd24a11ea7344b3ced037ca14224c4202e8928e65d389fea3fe93aa6d6"
+    },
+    {
+      "partIndex": 7,
+      "partId": "PARTS_01_HAIR_SIDE_001",
+      "filename": "07_PARTS_01_HAIR_SIDE_001.png",
+      "drawableCount": 7,
+      "drawableIndices": [
+        1,
+        9,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 2165,
+      "opaquePixels": 1090,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 19393,
+      "sha256": "296757200aaaa7876084f4355b74e356c39b5985c3ec4bc79bda442aa49070fc"
+    },
+    {
+      "partIndex": 8,
+      "partId": "PARTS_01_HAIR_FRONT_001",
+      "filename": "08_PARTS_01_HAIR_FRONT_001.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1453,
+      "opaquePixels": 823,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 16790,
+      "sha256": "dca824d293ccbb1f77fc78681d3c5d514cbdc0a7625835c21d68b18b92549285"
+    },
+    {
+      "partIndex": 9,
+      "partId": "PARTS_01_EAR_001",
+      "filename": "09_PARTS_01_EAR_001.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        11,
+        124
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 344,
+      "opaquePixels": 98,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 12610,
+      "sha256": "ed2fb9da8154bba1ad52ed70eb8a83b08518454b170a6b7f959b725d7356dd99"
+    },
+    {
+      "partIndex": 10,
+      "partId": "PARTS_01_NOSE_001",
+      "filename": "10_PARTS_01_NOSE_001.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        36,
+        37
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 84,
+      "opaquePixels": 7,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 11190,
+      "sha256": "9a658d57b1573d422d1830dbe89264268a99188736665e6b89efb5bff6c1b9a2"
+    },
+    {
+      "partIndex": 11,
+      "partId": "PARTS_01_MOUTH_001",
+      "filename": "11_PARTS_01_MOUTH_001.png",
+      "drawableCount": 8,
+      "drawableIndices": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        199
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 11,
+      "opaquePixels": 0,
+      "alphaRange": [
+        21,
+        189
+      ],
+      "sizeBytes": 10756,
+      "sha256": "ff09cd143910b4c93fcaf84c3b3b8970253feb58cf062a8fbe7f2f412ff8ebb9"
+    },
+    {
+      "partIndex": 12,
+      "partId": "PARTS_01_BROW_001",
+      "filename": "12_PARTS_01_BROW_001.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        14,
+        15
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 33,
+      "opaquePixels": 0,
+      "alphaRange": [
+        2,
+        159
+      ],
+      "sizeBytes": 11049,
+      "sha256": "717381b1a847b4a82658734e84bb7b2aa8edea0c6c107dbf38a3ee77675f0c32"
+    },
+    {
+      "partIndex": 13,
+      "partId": "PARTS_01_EYE_BALL_001",
+      "filename": "13_PARTS_01_EYE_BALL_001.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        200,
+        201
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 126,
+      "opaquePixels": 4,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 11523,
+      "sha256": "cd657126c1ee65daa5c8192867de359c19c5ef4777c67f332ae0ad19fa8ef8a8"
+    },
+    {
+      "partIndex": 14,
+      "partId": "PARTS_01_EYE_001",
+      "filename": "14_PARTS_01_EYE_001.png",
+      "drawableCount": 21,
+      "drawableIndices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        127
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 338,
+      "opaquePixels": 44,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 12688,
+      "sha256": "9bec1a9fbdb08b3cc6fedd33678d1425f29033a1882fd6865cbc948b1c6cebe8"
+    },
+    {
+      "partIndex": 15,
+      "partId": "PARTS_01_FACE_001",
+      "filename": "15_PARTS_01_FACE_001.png",
+      "drawableCount": 3,
+      "drawableIndices": [
+        12,
+        13,
+        126
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 0,
+      "opaquePixels": 0,
+      "alphaRange": [
+        0,
+        0
+      ],
+      "sizeBytes": 10589,
+      "sha256": "2ad318c9fa15e30007b47dee147e973896f4b704f399a11b3bbb16e7d2278322"
+    },
+    {
+      "partIndex": 17,
+      "partId": "Part10",
+      "filename": "17_Part10.png",
+      "drawableCount": 7,
+      "drawableIndices": [
+        214,
+        215,
+        216,
+        217,
+        218,
+        222,
+        223
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 0,
+      "opaquePixels": 0,
+      "alphaRange": [
+        0,
+        0
+      ],
+      "sizeBytes": 10589,
+      "sha256": "2ad318c9fa15e30007b47dee147e973896f4b704f399a11b3bbb16e7d2278322"
+    },
+    {
+      "partIndex": 18,
+      "partId": "Part12",
+      "filename": "18_Part12.png",
+      "drawableCount": 3,
+      "drawableIndices": [
+        219,
+        220,
+        225
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 0,
+      "opaquePixels": 0,
+      "alphaRange": [
+        0,
+        0
+      ],
+      "sizeBytes": 10589,
+      "sha256": "2ad318c9fa15e30007b47dee147e973896f4b704f399a11b3bbb16e7d2278322"
+    },
+    {
+      "partIndex": 21,
+      "partId": "Cloak_B_1_Skinning",
+      "filename": "21_Cloak_B_1_Skinning.png",
+      "drawableCount": 3,
+      "drawableIndices": [
+        164,
+        165,
+        166
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 2509,
+      "opaquePixels": 1825,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 20464,
+      "sha256": "77d832e98f7d747f40a1bee27f8551c88baac6370da7f629dd66273f770a58fa"
+    },
+    {
+      "partIndex": 22,
+      "partId": "Part6",
+      "filename": "22_Part6.png",
+      "drawableCount": 16,
+      "drawableIndices": [
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        100,
+        102
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 5967,
+      "opaquePixels": 4032,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 26787,
+      "sha256": "e67a2f4c78bdd762856261411f68ecaf45bf386112875ef44e29bf116c9e1e15"
+    },
+    {
+      "partIndex": 24,
+      "partId": "Part3",
+      "filename": "24_Part3.png",
+      "drawableCount": 22,
+      "drawableIndices": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        103,
+        226,
+        227,
+        228
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 0,
+      "opaquePixels": 0,
+      "alphaRange": [
+        0,
+        0
+      ],
+      "sizeBytes": 10589,
+      "sha256": "2ad318c9fa15e30007b47dee147e973896f4b704f399a11b3bbb16e7d2278322"
+    },
+    {
+      "partIndex": 25,
+      "partId": "Part5",
+      "filename": "25_Part5.png",
+      "drawableCount": 9,
+      "drawableIndices": [
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        99,
+        101
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 3595,
+      "opaquePixels": 2660,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 22909,
+      "sha256": "a10e7c3bb5b2632d1fa9698b5bc020e3f4f1a008d3bb54b6290e467eff7abd2f"
+    },
+    {
+      "partIndex": 28,
+      "partId": "Leg_L_Bow_3_Skinning",
+      "filename": "28_Leg_L_Bow_3_Skinning.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        133,
+        134
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 363,
+      "opaquePixels": 164,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 12321,
+      "sha256": "3964258c10cb5e2640ed88a89a8f8636c4ceda4ea5a887e0ed8391f730bd4b34"
+    },
+    {
+      "partIndex": 29,
+      "partId": "Leg_L_Bow_4_Skinning",
+      "filename": "29_Leg_L_Bow_4_Skinning.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        137,
+        138
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 285,
+      "opaquePixels": 49,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 11961,
+      "sha256": "06f096229748ede57d7c815f3a87bfff59d924df8ceb4dc18a8f350cc71aff09"
+    },
+    {
+      "partIndex": 30,
+      "partId": "Leg_L_Bow_5_Skinning",
+      "filename": "30_Leg_L_Bow_5_Skinning.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        139,
+        140
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 241,
+      "opaquePixels": 32,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 11976,
+      "sha256": "a4308a887b91807e99671d3fc9e96cb286201c9b4eb4c58a6304803a495f4890"
+    },
+    {
+      "partIndex": 31,
+      "partId": "Leg_R_4_Skinning",
+      "filename": "31_Leg_R_4_Skinning.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        130,
+        131
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1046,
+      "opaquePixels": 671,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 14386,
+      "sha256": "e5bbd2ab0546e342b2a79b43d4e6a8d7145b3ae49fcc88afc8380fffa6d8d277"
+    },
+    {
+      "partIndex": 32,
+      "partId": "Leg_L_Bow_2_Skinning",
+      "filename": "32_Leg_L_Bow_2_Skinning.png",
+      "drawableCount": 2,
+      "drawableIndices": [
+        135,
+        136
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 247,
+      "opaquePixels": 103,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 11854,
+      "sha256": "4a6b67c1f372dc49e3f4579ac404ff9e531169162a7d0a15a2d39494eb556818"
+    },
+    {
+      "partIndex": 33,
+      "partId": "Leg_R_piaodai_2_Skinning",
+      "filename": "33_Leg_R_piaodai_2_Skinning.png",
+      "drawableCount": 4,
+      "drawableIndices": [
+        146,
+        147,
+        148,
+        149
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 717,
+      "opaquePixels": 84,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 13824,
+      "sha256": "af30a2e2873c103c16375a36f1d7c9a80cfc0c89e66d30419dfe5b17c5ce5ca4"
+    },
+    {
+      "partIndex": 34,
+      "partId": "Leg_R_piaodai_1_Skinning",
+      "filename": "34_Leg_R_piaodai_1_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1878,
+      "opaquePixels": 400,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 18705,
+      "sha256": "baccd72ff884bead3f39d418999659d32ba6f5932e9dfe20e6a6b57260b94d40"
+    },
+    {
+      "partIndex": 35,
+      "partId": "Hair_M_1_Skinning",
+      "filename": "35_Hair_M_1_Skinning.png",
+      "drawableCount": 4,
+      "drawableIndices": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1311,
+      "opaquePixels": 445,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 16634,
+      "sha256": "e7fdeaabb90e1b738f8313e1b98319b66569d05cbe83ad091ad104c13cd7f6e7"
+    },
+    {
+      "partIndex": 36,
+      "partId": "Hair_B_2_2_Skinning",
+      "filename": "36_Hair_B_2_2_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 405,
+      "opaquePixels": 67,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 12963,
+      "sha256": "de0ade03e670af4cdf9b520a1d7d3e70143b4273394be6511f9e3278558046f1"
+    },
+    {
+      "partIndex": 37,
+      "partId": "Hair_B_2_Skinning",
+      "filename": "37_Hair_B_2_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1973,
+      "opaquePixels": 1258,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 17288,
+      "sha256": "01535e9af8577bb1f1e5e16009c9832349a95966e3ff09d31c07d07da2b1c80b"
+    },
+    {
+      "partIndex": 38,
+      "partId": "Hair_B_3_1_Skinning",
+      "filename": "38_Hair_B_3_1_Skinning.png",
+      "drawableCount": 3,
+      "drawableIndices": [
+        186,
+        187,
+        188
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1973,
+      "opaquePixels": 999,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 18721,
+      "sha256": "b62988156b731ca0a11fef2c787893537e399cef54957c781539ad02854e941c"
+    },
+    {
+      "partIndex": 39,
+      "partId": "Hair_B_3_3_Skinning",
+      "filename": "39_Hair_B_3_3_Skinning.png",
+      "drawableCount": 4,
+      "drawableIndices": [
+        194,
+        195,
+        196,
+        197
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 8205,
+      "opaquePixels": 6040,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 27782,
+      "sha256": "f11c4dd6d9954a8aca380679a5b622adbf6534c07c1f86ca59dc942e2f545c44"
+    },
+    {
+      "partIndex": 40,
+      "partId": "Hair_B_3_4_Skinning",
+      "filename": "40_Hair_B_3_4_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 1252,
+      "opaquePixels": 638,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 16045,
+      "sha256": "4dacc79bb9259b1cce0ba98d8ee0f1a55011194583538900eadb3f8077edb7b7"
+    },
+    {
+      "partIndex": 41,
+      "partId": "Hair_B_3_5_Skinning",
+      "filename": "41_Hair_B_3_5_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 438,
+      "opaquePixels": 168,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 12933,
+      "sha256": "d3fbb6e8bfff1260accf68e3be0c65778c1a1fd00fe25810f98b7b641233d7ca"
+    },
+    {
+      "partIndex": 42,
+      "partId": "Hair_B_3_6_Skinning",
+      "filename": "42_Hair_B_3_6_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        181,
+        182,
+        183,
+        184,
+        185
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 11280,
+      "opaquePixels": 9408,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 31393,
+      "sha256": "f8322cd00664e842df0a03297474ee18f51beff0b55d468896056c0106483656"
+    },
+    {
+      "partIndex": 43,
+      "partId": "Hair_B_4_Skinning",
+      "filename": "43_Hair_B_4_Skinning.png",
+      "drawableCount": 5,
+      "drawableIndices": [
+        189,
+        190,
+        191,
+        192,
+        193
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 2191,
+      "opaquePixels": 1390,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 17970,
+      "sha256": "756d9567a09f981e8168d4abf13dc0f6813358b7180b1237fe7a23b3af25e121"
+    },
+    {
+      "partIndex": 44,
+      "partId": "Hair_B_3_2_Skinning",
+      "filename": "44_Hair_B_3_2_Skinning.png",
+      "drawableCount": 4,
+      "drawableIndices": [
+        167,
+        168,
+        169,
+        170
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 348,
+      "opaquePixels": 104,
+      "alphaRange": [
+        1,
+        255
+      ],
+      "sizeBytes": 12481,
+      "sha256": "44b56cd60ac2949f6f6cbc02d5d91dddf8029e4f904b2fa8737ed4ccdb6fd2f4"
+    },
+    {
+      "partIndex": 45,
+      "partId": "Part11",
+      "filename": "45_Part11.png",
+      "drawableCount": 4,
+      "drawableIndices": [
+        212,
+        213,
+        221,
+        224
+      ],
+      "semanticHint": null,
+      "role": "native_runtime_part_snapshot",
+      "cameraYawCalibrated": false,
+      "width": 640,
+      "height": 640,
+      "hasAlpha": true,
+      "nonzeroAlphaPixels": 0,
+      "opaquePixels": 0,
+      "alphaRange": [
+        0,
+        0
+      ],
+      "sizeBytes": 10589,
+      "sha256": "2ad318c9fa15e30007b47dee147e973896f4b704f399a11b3bbb16e7d2278322"
+    }
+  ],
+  "status": "PASS_NATIVE_FRONT_LAYER_EXPORT"
+}
