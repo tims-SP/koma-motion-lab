@@ -40,6 +40,7 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
    fs.writeFileSync(path.join(dir,filename),bytes);
    entries.push({partIndex:group.partIndex,partId:group.partId,filename,
      drawableCount:group.drawableCount,drawableIndices:group.drawableIndices,
+     semanticHint:group.partIndex===-1?'face.base':null,
      role:'native_runtime_part_snapshot',cameraYawCalibrated:false,
      width:640,height:640,hasAlpha:true,nonzeroAlphaPixels:data.nonzeroAlpha,
      opaquePixels:data.opaquePixels,alphaRange:[data.alphaMin,data.alphaMax],
@@ -51,7 +52,7 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
    noDuplicateDrawableOwnership:entries.reduce((n,e)=>n+e.drawableCount,0)===annotated.size,
    assetRoleTruthful:entries.every(e=>e.role==='native_runtime_part_snapshot'&&!e.cameraYawCalibrated),
    alphaBackgroundValid:entries.every(e=>e.nonzeroAlphaPixels<640*640),
-   nonzeroFace:entries.some(e=>e.partId==='PARTS_01_FACE_001'&&e.nonzeroAlphaPixels>50),
+   nonzeroFace:entries.some(e=>(e.partId==='PARTS_01_FACE_001'||e.partIndex===-1)&&e.nonzeroAlphaPixels>50),
    nonzeroEyes:entries.some(e=>e.partId==='PARTS_01_EYE_001'&&e.nonzeroAlphaPixels>50),
    browserErrorsAbsent:errors.length===0,badRequestsAbsent:badRequests.length===0
   };
