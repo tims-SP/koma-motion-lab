@@ -1,0 +1,32 @@
+{
+  "schema": "R1999-INDEPENDENT-VIEW-LAYERS-V1",
+  "model": "302301_shisihangshi",
+  "nativeSourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+  "sourceView": "Cubism native portrait; orientation uncalibrated",
+  "coordinates": {
+    "canvas": [
+      640,
+      640
+    ],
+    "origin": "top-left",
+    "units": "pixel",
+    "yawConvention": "0 front target, 90 right profile target; native portrait not calibrated"
+  },
+  "requiredAngles": [
+    45,
+    90
+  ],
+  "requiredParts": [
+    "face.skin",
+    "eye.near",
+    "nose",
+    "mouth",
+    "ear.near",
+    "hair.front",
+    "hair.side",
+    "hair.back"
+  ],
+  "assets": [],
+  "keyStatus": "PENDING_INDEPENDENT_ART",
+  "notes": "Each asset is a separate RGBA PNG with one anatomical part; 45/90 are independently authored. Additional holdout views 20,55,82 are needed for visual acceptance; source images remain private."
+}
