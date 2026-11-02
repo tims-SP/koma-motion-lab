@@ -1,0 +1,56 @@
+{
+  "schema": "R1999-C05-VISUAL-READINESS-V1",
+  "region": {
+    "left": 245,
+    "top": 60,
+    "right": 465,
+    "bottom": 275
+  },
+  "regionNote": "Head ROI established from native Sonetto portrait in 640x640 comparison canvas",
+  "states": [
+    {
+      "yawDeg": 0,
+      "native": {
+        "coveredPixels": 22696,
+        "opaquePixels": 20953
+      },
+      "proxy": {
+        "coveredPixels": 22702,
+        "opaquePixels": 20952
+      },
+      "headCoverageRatio": 1.00026436376454,
+      "provenance": "NATIVE_ART"
+    },
+    {
+      "yawDeg": 45,
+      "native": {
+        "coveredPixels": 22155,
+        "opaquePixels": 20505
+      },
+      "proxy": {
+        "coveredPixels": 17918,
+        "opaquePixels": 16731
+      },
+      "headCoverageRatio": 0.8087564883773415,
+      "provenance": "ESTIMATED_GEOMETRIC_PROXY"
+    },
+    {
+      "yawDeg": 90,
+      "native": {
+        "coveredPixels": 22559,
+        "opaquePixels": 20892
+      },
+      "proxy": {
+        "coveredPixels": 12324,
+        "opaquePixels": 11653
+      },
+      "headCoverageRatio": 0.5463008112061705,
+      "provenance": "ESTIMATED_GEOMETRIC_PROXY"
+    }
+  ],
+  "independentArtReady": false,
+  "visualPass": false,
+  "finding": "High yaw is geometry-only: the side-face silhouette is not supported by independent art. The visual acceptance gate remains closed.",
+  "errors": [],
+  "status": "PASS_VISUAL_GATE_GUARDRAIL"
+}
