@@ -2,8 +2,8 @@
   "schema": "R1999-C05-HTML-BUNDLE-V1",
   "artifact": "r1999-c05-anchor-html.tar.gz",
   "privatePath": "/root/koma-motion-r1999/output/r1999-c05-anchor-html.tar.gz",
-  "sha256": "1e7608771eed41f648e5cd478091d8099f3228968652ca2aa017066d033952d6",
-  "bytes": 3748435,
+  "sha256": "e427a5f8bb0663781fd43d3a46cc4f511877e310f99f7fad1e8bd0b1954304ee",
+  "bytes": 3748879,
   "files": 39,
   "entry": "index.html",
   "service": "http://127.0.0.1:5181 (VPS localhost)",
@@ -23,7 +23,13 @@
     "source45Registered": false,
     "source90Registered": false,
     "evidence": "experiments/r1999-cubism-vdd/evidence/c05-anchor-proxy-qa.json",
-    "visualEvidence": "experiments/r1999-cubism-vdd/evidence/c05-visual-readiness.json"
+    "visualEvidence": "experiments/r1999-cubism-vdd/evidence/c05-visual-readiness.json",
+    "frontPartLayerExport": {
+      "files": 40,
+      "manifest": "experiments/r1999-cubism-vdd/evidence/c04-front-layer-manifest.json",
+      "enabled": true,
+      "alphaVerified": true
+    }
   },
   "notes": "Private test bundle contains rights-restricted game assets; code and structured diagnostic QA tracked in public Git."
 }
