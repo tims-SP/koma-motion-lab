@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C03_ENGINEERING_PASS_C04_SOURCE_COVERAGE_AUDITED",
+  "phase": "C04_VIEW_ASSET_COVERAGE_RECORDED_C05_ANCHOR_PROXY_VERIFIED",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -165,13 +165,26 @@
         "C00"
       ],
       "parallelEligible": true,
-      "status": "RUNNING",
+      "status": "BLOCKED",
       "evidence": {
-        "commit": "847772dd98910ff71444ab2513efdfeb9f64a36c",
+        "commit": "2d88e2a8a7ff92b0b407449c11cf22b4aa2bad9b",
         "report": "experiments/r1999-cubism-vdd/evidence/c04-view-source-audit.json",
         "runtimeObserved": "Cubism native PARAM_ANGLE_X/Y/Z each -30..30; these are not calibrated camera yaw",
         "artworkCoverage": "One authentic animated portrait and two texture atlases; no independently calibrated 45/90/180 and holdouts in same character directory",
-        "next": "Register authentic or authored semantic multi-view per-part RGBA keys with landmarks, source hashes, occlusion rules and independent heldouts"
+        "next": "Register authentic or authored semantic multi-view per-part RGBA keys with landmarks, source hashes, occlusion rules and independent heldouts",
+        "partGraph": "experiments/r1999-cubism-vdd/evidence/c04-semantic-anchors.json",
+        "partScan": "experiments/r1999-cubism-vdd/scripts/qa-semantic-anchors.cjs",
+        "viewKeys": "experiments/r1999-cubism-vdd/evidence/c04-view-source-registry.json",
+        "sourceGate": "experiments/r1999-cubism-vdd/evidence/c04-source-gate-qa.json",
+        "engineeringSubgates": {
+          "nativeSemanticIdentity": "PASS_263_OF_263_DRAWABLES",
+          "explicitSemanticClassification": "213_OF_263",
+          "sourceRegistry": "PASS",
+          "independentView45": "PENDING_AUTHORED_SOURCE",
+          "independentView90": "PENDING_AUTHORED_SOURCE",
+          "heldout20_55_82": "PENDING_AUTHORED_SOURCE"
+        },
+        "blocker": "Independent per-part RGBA character artwork with source hashes, landmark correspondence, and view-angle calibration is required for 45°/90° plus holdouts. A fan-made 3D model reference exists but requires authenticated download and its embedded license review; it is not an independent painted source."
       },
       "deliverables": [
         "view-source-manifest.json",
@@ -193,13 +206,32 @@
         "C04"
       ],
       "parallelEligible": false,
-      "status": "PENDING",
+      "status": "RUNNING",
       "evidence": {
-        "commit": null,
-        "workflowRun": null,
-        "artifact": null,
-        "report": null,
-        "visualReview": null
+        "commit": "60222e323086d7aec2a89eb97bc5d5dc3e238aee",
+        "code": [
+          "experiments/r1999-cubism-vdd/src/vdd-keyframes.ts",
+          "experiments/r1999-cubism-vdd/src/cubism-anchor-view.ts",
+          "experiments/r1999-cubism-vdd/src/view-proxy.ts"
+        ],
+        "scripts": [
+          "experiments/r1999-cubism-vdd/scripts/qa-c05.cjs",
+          "experiments/r1999-cubism-vdd/scripts/qa-c05-visual.cjs",
+          "experiments/r1999-cubism-vdd/tests/vdd-keyframes.test.mjs"
+        ],
+        "browserQA": "experiments/r1999-cubism-vdd/evidence/c05-anchor-proxy-qa.json",
+        "visualQA": "experiments/r1999-cubism-vdd/evidence/c05-visual-readiness.json",
+        "privateHtml": "experiments/r1999-cubism-vdd/evidence/c05-html-bundle-manifest.json",
+        "engineeringSubgates": {
+          "viewKeyInterpolation": "PASS_5_NODE_TESTS",
+          "runtimePartAnchor": "PASS_263_DRAWABLES",
+          "actualBrowserAngleSlider": "PASS_12_CHECKS",
+          "roundTripNativeYawZero": "PASS_IOU_0.99977",
+          "fullViewArtVDD": "PENDING_C04_TRUE_ART",
+          "novelViewVisual": "VISUAL_REWORK_HEAD_PROXY_SIDE_REQUIRES_ART"
+        },
+        "blocker": "The 90-degree projected head loses its true side-face silhouette. The proxy is a diagnostic placeholder; VDD key-art renderer validation requires independent alpha-layered view source images.",
+        "userVisualSignoff": "PENDING"
       },
       "deliverables": [
         "parts.json",
@@ -388,5 +420,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "C03 verified clean rebuild and 5-pose native-to-Three parity; C04 parameter ranges and authored-view asset gap audited in real browser"
+  "lastExecutedMilestone": "C04 native semantic map passed 263 of 263 Drawable coverage; C05 view-key interpolation unit tests 5/5 and HTML browser QA 12/12 passed; independent true 45/90 artwork remains the visual acceptance dependency"
 }
