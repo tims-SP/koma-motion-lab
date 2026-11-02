@@ -1,0 +1,14 @@
+{
+  "schema": "R1999-C04-FRONT-LAYER-BUNDLE-V1",
+  "file": "r1999-c04-native-front-layers.tar.gz",
+  "privatePath": "/root/koma-motion-r1999/output/r1999-c04-native-front-layers.tar.gz",
+  "sha256": "7fee0c041657ab1a40d983df18d7f9a0a7b625f885cef4a60e18cd246e5b06a5",
+  "sizeBytes": 516993,
+  "images": 40,
+  "nonzeroAlphaImages": 34,
+  "sourceKind": "CUBISM_NATIVE_FRONT_PART_SNAPSHOT",
+  "manifest": "experiments/r1999-cubism-vdd/evidence/c04-front-layer-manifest.json",
+  "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+  "usage": "Private input for view-by-view authored semantic layer matching; not a calibrated camera key.",
+  "rights": "Private research only; no game artwork distributed through public Git."
+}
