@@ -1,0 +1,33 @@
+{
+  "schema": "R1999-C04-SOURCE-GATE-QA-V1",
+  "registryPath": "experiments/r1999-cubism-vdd/evidence/c04-view-source-registry.json",
+  "errors": [],
+  "statuses": [
+    {
+      "yaw": 0,
+      "truth": false
+    },
+    {
+      "yaw": 45,
+      "truth": false
+    },
+    {
+      "yaw": 90,
+      "truth": false
+    }
+  ],
+  "registrationValid": true,
+  "readyForVddVisualAcceptance": false,
+  "missingAuthoredAngles": [
+    45,
+    90
+  ],
+  "missingHeldoutAngles": [
+    20,
+    55,
+    82
+  ],
+  "falseSourceDeclarationRejected": true,
+  "status": "PASS_SOURCE_REGISTRATION",
+  "nextAction": "Add genuine per-part RGBA 45 and 90 degree artwork with provenance, landmarks, masks, and independent heldouts."
+}
