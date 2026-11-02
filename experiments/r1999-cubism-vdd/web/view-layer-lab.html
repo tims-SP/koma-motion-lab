@@ -25,6 +25,9 @@ code{font-size:11px;overflow-wrap:anywhere}#gate{font-weight:bold;color:#f9ca83}
 <main>
 <aside>
 <h2>视角与部件登记</h2>
+<div><label>原生 Cubism 对应部件</label>
+<canvas id="nativeRef" width="640" height="640" style="max-width:238px;max-height:238px;margin:0 auto"></canvas>
+<p id="nativeHint" style="font-size:11px;color:#b1c5da">读取本地私有原生图层</p></div>
 <label for="yaw">镜头角度：<b id="yawLabel">45°</b></label><input id="yaw" type="range" min="45" max="90" value="45" step="1">
 <label for="part">语义部件</label>
 <select id="part"></select>
