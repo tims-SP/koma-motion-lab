@@ -1,0 +1,54 @@
+name: R1999 view artwork and VDD integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/r1999-cubism-vdd/**'
+      - '.github/workflows/r1999-view-layer-qa.yml'
+  pull_request:
+    paths:
+      - 'experiments/r1999-cubism-vdd/**'
+      - '.github/workflows/r1999-view-layer-qa.yml'
+  workflow_dispatch:
+jobs:
+  validate-view-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'Pillow==11.3.0'
+      - name: Validate synthetic positive and negative source cases
+        run: python experiments/r1999-cubism-vdd/tests/test-view-assets.py
+      - name: Verify current independent artwork coverage report
+        run: |
+          python experiments/r1999-cubism-vdd/scripts/validate-view-layers.py \
+            --manifest experiments/r1999-cubism-vdd/assets/view-key-contract.json \
+            --root experiments/r1999-cubism-vdd \
+            --output /tmp/r1999-source-contract-qa.json
+          python - <<'PY'
+          import json
+          r=json.load(open('/tmp/r1999-source-contract-qa.json'))
+          assert r['status']=='AWAITING_AUTHORED_ART'
+          assert r['requiredCoverage']==16
+          assert r['coverage']==0
+          assert not r['errors']
+          print('Independent-view registry matches the actual submitted sources.')
+          PY
+      - name: Check private binary artifact boundaries
+        run: |
+          if git ls-files experiments/r1999-cubism-vdd | grep -Ei '\.(png|moc3|zip|psd|blend|mp4|tar\.gz)$'; then
+            echo 'Binary game artwork in public source path' >&2
+            exit 1
+          fi
+  vdd-interpolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test experiments/r1999-cubism-vdd/tests/vdd-keyframes.test.mjs
