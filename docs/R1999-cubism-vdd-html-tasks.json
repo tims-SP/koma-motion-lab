@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C04_VIEW_ASSET_COVERAGE_RECORDED_C05_ANCHOR_PROXY_VERIFIED",
+  "phase": "C04_NATIVE_FRONT_LAYER_EXPORT_COMPLETE_C05_ANCHOR_PROXY_ENGINEERING_VERIFIED",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -182,9 +182,15 @@
           "sourceRegistry": "PASS",
           "independentView45": "PENDING_AUTHORED_SOURCE",
           "independentView90": "PENDING_AUTHORED_SOURCE",
-          "heldout20_55_82": "PENDING_AUTHORED_SOURCE"
+          "heldout20_55_82": "PENDING_AUTHORED_SOURCE",
+          "nativeFrontTransparentLayers": "PASS_40_FILES_34_VISIBLE_PIXEL_LAYERS",
+          "sourceAlphaValidation": "PASS_8_CHECKS"
         },
-        "blocker": "Independent per-part RGBA character artwork with source hashes, landmark correspondence, and view-angle calibration is required for 45°/90° plus holdouts. A fan-made 3D model reference exists but requires authenticated download and its embedded license review; it is not an independent painted source."
+        "blocker": "Independent per-part RGBA character artwork with source hashes, landmark correspondence, and view-angle calibration is required for 45°/90° plus holdouts. A fan-made 3D model reference exists but requires authenticated download and its embedded license review; it is not an independent painted source.",
+        "frontLayerManifest": "experiments/r1999-cubism-vdd/evidence/c04-front-layer-manifest.json",
+        "frontLayerArchive": "experiments/r1999-cubism-vdd/evidence/c04-front-layer-bundle.json",
+        "layerExportTool": "experiments/r1999-cubism-vdd/scripts/export-front-layers.cjs",
+        "summary": "Native 0-angle pose now exported as 40 individual transparent PNG Part layers with SHA-256, 263/263 drawable coverage; calibrated 45/90 independent view keys still required."
       },
       "deliverables": [
         "view-source-manifest.json",
@@ -228,10 +234,13 @@
           "actualBrowserAngleSlider": "PASS_12_CHECKS",
           "roundTripNativeYawZero": "PASS_IOU_0.99977",
           "fullViewArtVDD": "PENDING_C04_TRUE_ART",
-          "novelViewVisual": "VISUAL_REWORK_HEAD_PROXY_SIDE_REQUIRES_ART"
+          "novelViewVisual": "VISUAL_REWORK_HEAD_PROXY_SIDE_REQUIRES_ART",
+          "nativePartCapture": "PASS_40_TRANSPARENT_PART_IMAGES",
+          "c05HtmlPackageQA": "PASS_12_BROWSER_CHECKS"
         },
         "blocker": "The 90-degree projected head loses its true side-face silhouette. The proxy is a diagnostic placeholder; VDD key-art renderer validation requires independent alpha-layered view source images.",
-        "userVisualSignoff": "PENDING"
+        "userVisualSignoff": "PENDING",
+        "packageQA": "experiments/r1999-cubism-vdd/evidence/c05-html-package-qa.json"
       },
       "deliverables": [
         "parts.json",
@@ -420,5 +429,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "C04 native semantic map passed 263 of 263 Drawable coverage; C05 view-key interpolation unit tests 5/5 and HTML browser QA 12/12 passed; independent true 45/90 artwork remains the visual acceptance dependency"
+  "lastExecutedMilestone": "C04 real Cubism native Parts exported to 40 individual alpha PNGs, SHA-256 manifest; C05 built HTML angle/anchor proxy and 5 VDD key interpolation unit tests passed, 12 browser checks passed; independent side-view key art still gates VDD visual quality"
 }
