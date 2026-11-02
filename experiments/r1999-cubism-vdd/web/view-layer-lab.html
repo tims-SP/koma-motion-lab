@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R1999 · Multi-View Part Lab</title>
+<style>
+:root{font-family:system-ui,"Noto Sans CJK SC",sans-serif;color:#e9f1fc;background:#0f1828}
+*{box-sizing:border-box}body{margin:0}header{padding:14px 20px;background:#111e31;border-bottom:1px solid #35485c}
+h1{font-size:19px;margin:0 0 6px}small{color:#a1b2c7}
+main{padding:14px;display:grid;grid-template-columns:minmax(250px,320px) 1fr;gap:18px}
+aside,section{border:1px solid #3c5065;border-radius:12px;padding:14px;background:#152236}
+h2{font-size:15px;margin:4px 0 12px}
+label{display:block;font-size:13px;margin:9px 0 5px}
+input,select,button{font:inherit;background:#253953;color:#eff4ff;border:1px solid #536b83;border-radius:8px;min-height:34px;padding:5px 9px}
+input[type=range]{width:100%}input[type=file]{width:100%;font-size:12px}select{width:100%}
+button{cursor:pointer}button:hover{background:#325779}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#viewStatus{padding:9px;border-radius:6px;background:#243651;white-space:pre-line;font-size:12px}
+#viewport{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+figure{margin:0;min-width:0}canvas{width:100%;aspect-ratio:1;display:block;border:1px solid #50677d;border-radius:8px;background-color:#222e41;background-image:linear-gradient(45deg,#2a374a 25%,transparent 25%),linear-gradient(-45deg,#2a374a 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#2a374a 75%),linear-gradient(-45deg,transparent 75%,#2a374a 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+figcaption{text-align:center;margin:8px 0;color:#c1d0e4;font-size:13px}
+code{font-size:11px;overflow-wrap:anywhere}#gate{font-weight:bold;color:#f9ca83}
+@media(max-width:900px){main{display:block}aside{margin-bottom:14px}#viewport{grid-template-columns:1fr;max-width:600px}}
+</style></head><body>
+<header><h1>R1999 · 独立视角分层原画工作台</h1>
+<small>Cubism Part 身份基准 · 45° / 90° 图层登记 · 局部网格变形预览 · 真实原画验收</small></header>
+<main>
+<aside>
+<h2>视角与部件登记</h2>
+<label for="yaw">镜头角度：<b id="yawLabel">45°</b></label><input id="yaw" type="range" min="45" max="90" value="45" step="1">
+<label for="part">语义部件</label>
+<select id="part"></select>
+<label for="view">导入到视角</label>
+<select id="view"><option value="45">45° 三分之四侧面</option><option value="90">90° 正侧面</option></select>
+<label for="sourceId">素材来源 ID</label><input id="sourceId" placeholder="画师/模型产物哈希或本地资源标识" style="width:100%">
+<label for="artFile">透明 PNG（一个文件对应一个部件）</label><input id="artFile" type="file" accept="image/png">
+<div class="actions"><button id="import" type="button">导入部件</button><button id="fixture" type="button">加载几何测试素材</button><button id="export" type="button">导出登记清单</button></div>
+<p id="viewStatus" aria-live="polite">等待独立视角图层</p>
+<p>真实验收由图层哈希、角色身份、器官定位点、遮挡和独立角度参考共同决定。测试图仅验证渲染器。</p>
+<p id="gate">视觉门禁：等待可信 45° / 90° 分层原画</p>
+</aside>
+<section><h2>分部件局部变形与遮挡预览</h2>
+<div id="viewport">
+<figure><canvas id="left" width="640" height="640"></canvas><figcaption>45° 源图层</figcaption></figure>
+<figure><canvas id="center" width="640" height="640"></canvas><figcaption id="middleLabel">当前 45°</figcaption></figure>
+<figure><canvas id="right" width="640" height="640"></canvas><figcaption>90° 源图层</figcaption></figure>
+</div>
+<p>单个器官分别参与几何位置与透明度插值；按部件前后关系合成。几何夹具与真实画师原画分开计数。</p>
+<p><code id="summary"></code></p></section>
+</main>
+<script src="./view-layer-lab.js" defer></script>
+</body></html>
