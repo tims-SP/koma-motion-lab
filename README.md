@@ -27,13 +27,23 @@
 - [C05 HTML 浏览器验收结果](experiments/r1999-cubism-vdd/evidence/c05-html-package-qa.json)
 - [C05 侧向视角可见面积检查](experiments/r1999-cubism-vdd/evidence/c05-visual-readiness.json)
 - [C05 私有 HTML 资源包校验](experiments/r1999-cubism-vdd/evidence/c05-html-bundle-manifest.json)
+- [独立 45° / 90° 分层原画规范](experiments/r1999-cubism-vdd/docs/view-artwork-authoring.md)
+- [原画来源与语义部件输入合同](experiments/r1999-cubism-vdd/assets/view-key-contract.json)
+- [透明 PNG、来源哈希与定位点校验器](experiments/r1999-cubism-vdd/scripts/validate-view-layers.py)
+- [多视角语义部件 HTML 工作台](experiments/r1999-cubism-vdd/web/view-layer-lab.html)
+- [HTML 分部件插值及原生 Part 对照](experiments/r1999-cubism-vdd/web/view-layer-lab.js)
+- [HTML 实机 Chromium 测试证据](experiments/r1999-cubism-vdd/evidence/c06-view-layer-browser-qa.json)
+- [Cubism 原生渲染回归验证](experiments/r1999-cubism-vdd/evidence/c06-cubism-regression-qa.json)
+- [45° / 90° 原画合同实测状态](experiments/r1999-cubism-vdd/evidence/c06-art-source-contract-qa.json)
+- [私有 HTML 工作台资源包及哈希](experiments/r1999-cubism-vdd/evidence/c06-workspace-package.json)
+- [R1999 视角素材及 VDD 单元测试 CI](.github/workflows/r1999-view-layer-qa.yml)
 - [R1999 原生资产技术路线与候选研究](docs/R1999-native-asset-validation-plan.md)
 
 **当前状态：** C00–C03 已通过真实工程验收。固定资产源 33 个文件；官方 Cubism 5-r.4 成功加载 263 Drawable、180 参数、7,826 顶点和 21 个带蒙版的 Drawable。C03 使用 Three.js 0.181.0 同帧重放原生网格、贴图、蒙版与动态绘制顺序，5 组真实 Chromium WebGL 状态的前景轮廓 IoU 均超过 0.99975，RGB MAE 均低于 0.055/255；蒙版、UV、绘制顺序故障注入检查通过。从官方干净 5-r.4 仓库按本仓库脚本重新构建后，重复验收通过。模型画面人工复核已完成；用户视觉签收待执行。
 
-**C04 当前进度：** 从真实 Cubism Core 恢复了 46 个 Part 与 11 个根层面部 Drawable 的来源关联，263/263 Drawable 可追踪。实际导出 40 张每 Part 独立透明 PNG（其中 34 张在当前姿态可见），通过 alpha、身份、源 SHA 与浏览器错误检查，保留私有档案。`PARAM_ANGLE_X/Y/Z` 均为 -30～+30 的二维模型参数，不作为三维相机角度。45°、90° 和独立留出角原画登记门禁等待可信来源和语义透明图层。
+**C04 当前进度：** 已完成源模型 263/263 Drawable 身份追踪，导出 40 张原生透明 Part PNG（34 张当前姿态可见）。45° 与 90° 共 16 张独立部件原画采用 640×640 RGBA、来源哈希、相机角度和器官定位点合同；7 项正负例验证通过。当前可信独立视角原画覆盖 0/16，源图准入门禁待完成。公开的免费 Sonetto Blender 模型可作为结构参考候选，实际下载需要 BOOTH 登录与许可核查。
 
-**C05 当前进度：** 3D Anchor 估算深度和 HTML 角度滑杆代理已在实际 Three.js WebGL 中运行；纯 VDD 视角键插值算法 5/5 单元测试通过，HTML 包装后 12/12 浏览器检查通过。0° 下保持与 Cubism 原生画面接近的逐帧保真；45°、90° 仍为几何重投影代理，90° 头部视觉验收待独立侧面原画。源码、QA 与私有 HTML 包哈希已登记。
+**C05 当前进度：** 原生 Cubism / Three.js 基线、3D Anchor 和角度代理已运行。新增 HTML 视角分层工作台，可查看 40 张原生 Part 参考、逐器官导入 45°/90° PNG、计算 SHA-256、按局部三角形插值预览并导出素材登记清单。私有 HTML 资源包约 4.27 MB，14 项实际 Chromium 工作台检查、12 项 Cubism 原生回归均通过；VDD 插值核心 5 项单元测试通过。测试夹具与真实视角原画分别计数；45°、90° 真侧脸视觉门禁等待独立原画。
 
 预计新实验源码位置：`experiments/r1999-cubism-vdd/`。HTML 先采用本地静态服务的资源包（HTML/JS/CSS/已授权的本地依赖），离线运行；个人游戏原画及包含这些原画的截图、视频和 HTML 包保存在私有实验路径，Git 保存通用程序与文本证据。
 
