@@ -24,7 +24,8 @@ def main():
  content=pth.read_text()
  marker='<aside id="r1999-panel"'
  if content.count(marker)!=1:raise ValueError("Review panel missing")
- content=content.replace(marker,'<a href="./view-layer-lab.html" style="position:fixed;top:5px;right:10px;z-index:100;color:white;background:#315c79;border-radius:6px;padding:6px 10px;text-decoration:none;font:12px system-ui">视角分层工作台</a>\n  '+marker)
+ if 'href="./view-layer-lab.html"' not in content:
+  content=content.replace(marker,'<a href="./view-layer-lab.html" style="position:fixed;top:5px;right:10px;z-index:100;color:white;background:#315c79;border-radius:6px;padding:6px 10px;text-decoration:none;font:12px system-ui">视角分层工作台</a>\n  '+marker)
  pth.write_text(content)
  print("VIEW_LAYER_HTML_PREPARED",public)
 if __name__=="__main__":main()
