@@ -23,7 +23,7 @@ jobs:
           if(docs.some(f=>!f.startsWith('docs/')||(!f.endsWith('.md')&&!f.endsWith('.json'))))throw Error('Invalid documentation path');
           if(files.some(f=>/^(scripts|tests|experiments\/mvp00[1-8]|experiments\/godot-|docs\/archive)\//.test(f)))throw Error('Unexpected code or archive directory');
           const flows=files.filter(f=>f.startsWith('.github/workflows/'));
-          if(flows.some(f=>!f.startsWith('.github/workflows/mvp009-')&&!f.startsWith('.github/workflows/p0-')))throw Error('Unexpected workflow');
+          if(flows.some(f=>!f.startsWith('.github/workflows/mvp009-')&&!f.startsWith('.github/workflows/p0-')&&!f.startsWith('.github/workflows/r1999-')))throw Error('Unexpected workflow');
           const index=fs.readFileSync('README.md','utf8');
           if(!index.includes('(docs/MVP-009-plan.md)')||!index.includes('(docs/MVP-009-tasks.json)'))throw Error('Index references');
           const plan=fs.readFileSync('docs/MVP-009-plan.md','utf8');
