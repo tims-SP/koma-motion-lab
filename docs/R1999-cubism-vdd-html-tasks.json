@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C04_NATIVE_FRONT_LAYER_EXPORT_COMPLETE_C05_ANCHOR_PROXY_ENGINEERING_VERIFIED",
+  "phase": "C04_SOURCE_CONTRACT_AND_NATIVE_REF_EDITOR_READY_C05_PART_VDD_PIPELINE_VERIFIED",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -190,7 +190,15 @@
         "frontLayerManifest": "experiments/r1999-cubism-vdd/evidence/c04-front-layer-manifest.json",
         "frontLayerArchive": "experiments/r1999-cubism-vdd/evidence/c04-front-layer-bundle.json",
         "layerExportTool": "experiments/r1999-cubism-vdd/scripts/export-front-layers.cjs",
-        "summary": "Native 0-angle pose now exported as 40 individual transparent PNG Part layers with SHA-256, 263/263 drawable coverage; calibrated 45/90 independent view keys still required."
+        "summary": "Native 0-angle pose now exported as 40 individual transparent PNG Part layers with SHA-256, 263/263 drawable coverage; calibrated 45/90 independent view keys still required.",
+        "independentArtworkContract": "experiments/r1999-cubism-vdd/assets/view-key-contract.json",
+        "independentArtworkSpecification": "experiments/r1999-cubism-vdd/docs/view-artwork-authoring.md",
+        "sourceValidator": "experiments/r1999-cubism-vdd/scripts/validate-view-layers.py",
+        "sourceCoverage": "experiments/r1999-cubism-vdd/evidence/c06-art-source-contract-qa.json",
+        "acceptedIndependentArtLayers": 0,
+        "requiredIndependentArtLayers": 16,
+        "validatorTests": "7/7 passing",
+        "sourceCandidate": "WTHN_Ross Blender Sonetto 3D structural reference; BOOTH requires account login to download; independent painted art remains outstanding"
       },
       "deliverables": [
         "view-source-manifest.json",
@@ -236,11 +244,22 @@
           "fullViewArtVDD": "PENDING_C04_TRUE_ART",
           "novelViewVisual": "VISUAL_REWORK_HEAD_PROXY_SIDE_REQUIRES_ART",
           "nativePartCapture": "PASS_40_TRANSPARENT_PART_IMAGES",
-          "c05HtmlPackageQA": "PASS_12_BROWSER_CHECKS"
+          "c05HtmlPackageQA": "PASS_12_BROWSER_CHECKS",
+          "viewLayerHtml": "PASS_14_BROWSER_CHECKS",
+          "sourceValidation": "PASS_7_POSITIVE_NEGATIVE_TESTS",
+          "cubismRegression": "PASS_12_BROWSER_CHECKS",
+          "novelViewRealArtwork": "PENDING_16_SEMANTIC_IMAGES"
         },
         "blocker": "The 90-degree projected head loses its true side-face silhouette. The proxy is a diagnostic placeholder; VDD key-art renderer validation requires independent alpha-layered view source images.",
         "userVisualSignoff": "PENDING",
-        "packageQA": "experiments/r1999-cubism-vdd/evidence/c05-html-package-qa.json"
+        "packageQA": "experiments/r1999-cubism-vdd/evidence/c05-html-package-qa.json",
+        "layerPreviewHtml": "experiments/r1999-cubism-vdd/web/view-layer-lab.html",
+        "layerPreviewJS": "experiments/r1999-cubism-vdd/web/view-layer-lab.js",
+        "layerPreviewInstaller": "experiments/r1999-cubism-vdd/scripts/prepare-view-layer-lab.py",
+        "layerPreviewBrowserQA": "experiments/r1999-cubism-vdd/evidence/c06-view-layer-browser-qa.json",
+        "nativeRegression": "experiments/r1999-cubism-vdd/evidence/c06-cubism-regression-qa.json",
+        "workspace": "experiments/r1999-cubism-vdd/evidence/c06-workspace-package.json",
+        "provenance": "Native 40 transparent Cubism Part images available in the private HTML editor; 45/90 synthetic fixtures demonstrate per-part warp and remain visibly labeled; authored art awaits identity and source checks"
       },
       "deliverables": [
         "parts.json",
@@ -429,5 +448,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "C04 real Cubism native Parts exported to 40 individual alpha PNGs, SHA-256 manifest; C05 built HTML angle/anchor proxy and 5 VDD key interpolation unit tests passed, 12 browser checks passed; independent side-view key art still gates VDD visual quality"
+  "lastExecutedMilestone": "Private HTML editor imports per-part 45/90 RGBA PNG, performs semantic-part triangulated preview and accesses 40 actual native Cubism references; verified 7 asset-validator unit tests, 14 packaged browser checks, 12 native regression checks; real authored 45/90 view keys 0/16."
 }
