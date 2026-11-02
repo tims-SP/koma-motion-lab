@@ -1,0 +1,174 @@
+{
+  "schema": "R1999-C04-VIEW-SOURCE-REGISTRY-V1",
+  "model": "302301_shisihangshi",
+  "nativeSource": {
+    "repository": "myssal/Reverse-1999-CN-Asset",
+    "commit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+    "modelFile": "live2d/roles/302301_shisihangshi/302301_shisihangshi.moc3",
+    "type": "cubism_exported_runtime",
+    "nativeModelIsEditable": false
+  },
+  "cameraYawConvention": "0 frontal intent; 90 character right profile; 180 back; 270 left profile; 360 returns front. Source portrait art is uncalibrated.",
+  "keys": [
+    {
+      "yawDeg": 0,
+      "role": "runtime_sample",
+      "availability": "available",
+      "source": "native Cubism portrait",
+      "cameraCalibrated": false,
+      "independentVisualTruth": false,
+      "partLayers": "native_runtime_drawables"
+    },
+    {
+      "yawDeg": 45,
+      "role": "independent_art",
+      "availability": "missing",
+      "independentVisualTruth": false,
+      "requiredParts": [
+        "head.silhouette",
+        "face",
+        "eyes.left",
+        "eyes.right",
+        "nose",
+        "mouth",
+        "ears.left",
+        "ears.right",
+        "hair.front",
+        "hair.side",
+        "hair.back"
+      ],
+      "layerFormat": "PNG RGBA individual semantic part",
+      "provenanceFile": null
+    },
+    {
+      "yawDeg": 90,
+      "role": "independent_art",
+      "availability": "missing",
+      "independentVisualTruth": false,
+      "requiredParts": [
+        "head.silhouette",
+        "face",
+        "near_eye",
+        "nose",
+        "mouth",
+        "near_ear",
+        "hair.front",
+        "hair.side",
+        "hair.back"
+      ],
+      "layerFormat": "PNG RGBA individual semantic part",
+      "provenanceFile": null
+    }
+  ],
+  "holdoutAngles": [
+    {
+      "yawDeg": 20,
+      "role": "independent_art",
+      "availability": "missing",
+      "purpose": "held_out_interpolation_validation",
+      "independentVisualTruth": false
+    },
+    {
+      "yawDeg": 55,
+      "role": "independent_art",
+      "availability": "missing",
+      "purpose": "held_out_interpolation_validation",
+      "independentVisualTruth": false
+    },
+    {
+      "yawDeg": 82,
+      "role": "independent_art",
+      "availability": "missing",
+      "purpose": "held_out_interpolation_validation",
+      "independentVisualTruth": false
+    }
+  ],
+  "extra360Keys": [
+    {
+      "yawDeg": 135,
+      "availability": "missing",
+      "requiredFor": "head_360_core",
+      "independentVisualTruth": false
+    },
+    {
+      "yawDeg": 180,
+      "availability": "missing",
+      "requiredFor": "head_360_core",
+      "independentVisualTruth": false
+    },
+    {
+      "yawDeg": 225,
+      "availability": "missing",
+      "requiredFor": "head_360_core",
+      "independentVisualTruth": false
+    },
+    {
+      "yawDeg": 270,
+      "availability": "missing",
+      "requiredFor": "head_360_core",
+      "independentVisualTruth": false
+    },
+    {
+      "yawDeg": 315,
+      "availability": "missing",
+      "requiredFor": "head_360_core",
+      "independentVisualTruth": false
+    }
+  ],
+  "partIdentity": {
+    "report": "experiments/r1999-cubism-vdd/evidence/c04-semantic-anchors.json",
+    "source": "live Cubism Core, 46 Parts and 11 parentless face Drawables",
+    "verifiedLinkedDrawables": 263,
+    "explicitSemanticDrawables": 213,
+    "needsManualSemanticAssignment": 50,
+    "anchorXYZProvenance": "XY runtime mesh bbox, Z heuristic visualization only, not a recovered 3D depth map",
+    "geometryKeySource": "Cubism original front art; extended views require new assets"
+  },
+  "referenceCandidates": [
+    {
+      "id": "sonetto-ross-blender",
+      "url": "https://booth.pm/en/items/5601866",
+      "sourceType": "unofficial_fanmade_3d_reference",
+      "priceJPY": 0,
+      "advertisedFiles": "Sonetto_Basic_PDb1.1v.zip",
+      "accountSignInRequired": true,
+      "licenseReadmeReviewed": false,
+      "downloaded": false,
+      "intendedRole": "pose/silhouette/hair volume reference only",
+      "independentPaintedArt": false
+    }
+  ],
+  "gates": {
+    "sourceCoverage": "PENDING_INDEPENDENT_45_90_KEYS",
+    "landmarkCorrespondence": "PENDING_PART_LAYER_REGISTRATION",
+    "trustedHeldoutCoverage": "PENDING_20_55_82_KEYS",
+    "experimentalProxy": "allowed: diagnostic 3D anchor only; clearly labeled estimated",
+    "actualNovelViewAcceptance": "NOT_ELIGIBLE"
+  },
+  "nextArtworkRequirements": {
+    "outputs": [
+      {
+        "yawDeg": 45,
+        "partBoundaries": true
+      },
+      {
+        "yawDeg": 90,
+        "partBoundaries": true
+      }
+    ],
+    "sampling": "One semantic part per transparent PNG; preserve anatomical identity and occlusion references.",
+    "technicalMetadata": [
+      "semanticId",
+      "sourceUrlOrLocalHash",
+      "artworkRole",
+      "transparentAlpha",
+      "pixelBounds",
+      "landmarkIds",
+      "parentPartId",
+      "frontOfBehindGraph",
+      "cameraYawDeg",
+      "drawOrder"
+    ],
+    "visualCheck": "At 90° nose and lips must exhibit a new side contour; hair/ears require genuinely authored outside-face pixels"
+  }
+}
