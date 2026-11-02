@@ -65,7 +65,7 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
  const report={schema:'R1999-VIEW-LAYER-HTML-QA-V1',mode:'SYNTHETIC_GEOMETRY_FIXTURE',
   visualGate:'AWAITING_AUTHORED_ART',
   checks,details,errors,bad,external,
-  status:Object.keys(checks).length===11&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
+  status:Object.keys(checks).length===12&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
  fs.writeFileSync(path.join(dir,'view-layer-qa.json'),JSON.stringify(report,null,2)+'\n');
  console.log('VIEW_LAYER_HTML_QA',JSON.stringify({status:report.status,checks,exception:details.exception,errors,external}).slice(0,6500));
  if(report.status!=='PASS_VIEW_LAYER_HTML_ENGINEERING')process.exitCode=1;
