@@ -1,0 +1,74 @@
+name: R1999 Sonetto 360 structural reference
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/r1999-structural-reference.yml'
+      - 'experiments/r1999-cubism-vdd/scripts/fetch-sonetto-pmx-reference.py'
+      - 'experiments/r1999-cubism-vdd/scripts/render-sonetto-structural-views.py'
+      - 'experiments/r1999-cubism-vdd/scripts/qa-structural-views.py'
+
+permissions:
+  contents: read
+
+jobs:
+  render-sonetto-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install reproducible headless Blender and image validation tools
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender libegl1 libgl1-mesa-dri
+          python3 -m pip install --break-system-packages 'Pillow==11.3.0'
+          blender -b -noaudio --factory-startup --python-expr 'import bpy;print("BLENDER_READY",bpy.app.version_string)'
+
+      - name: Lock MMD PMX import extension
+        run: |
+          git clone --depth=1 --branch v4.0.0 https://github.com/MMD-Blender/blender_mmd_tools.git "$RUNNER_TEMP/blender_mmd_tools"
+
+      - name: Retrieve public Sonetto reference with creator license
+        run: |
+          python3 experiments/r1999-cubism-vdd/scripts/fetch-sonetto-pmx-reference.py \
+            --output-dir "$RUNNER_TEMP/sonetto-reference"
+          test -s "$RUNNER_TEMP/sonetto-reference/extracted/[Reverse1999]_Sonetto_Basic.pmx"
+          test -s "$RUNNER_TEMP/sonetto-reference/extracted/ReadMe/ReadMe_EN.txt"
+
+      - name: Render eight orthographic reference angles
+        run: |
+          blender -b -t 2 -noaudio --factory-startup \
+            --python experiments/r1999-cubism-vdd/scripts/render-sonetto-structural-views.py -- \
+            --model-file "$RUNNER_TEMP/sonetto-reference/extracted/[Reverse1999]_Sonetto_Basic.pmx" \
+            --mmd-tools-path "$RUNNER_TEMP/blender_mmd_tools" \
+            --output-dir "$RUNNER_TEMP/sonetto-reference-views"
+
+      - name: Validate actual rendered RGBA frames and credits
+        run: |
+          python3 experiments/r1999-cubism-vdd/scripts/qa-structural-views.py \
+            --input-dir "$RUNNER_TEMP/sonetto-reference-views"
+          python3 - "$RUNNER_TEMP/sonetto-reference-views" <<'PY'
+          import json, sys, pathlib
+          root=pathlib.Path(sys.argv[1])
+          qa=json.loads((root/'turnaround-qa.json').read_text())
+          assert qa['status']=='PASS_3D_REFERENCE_RENDER'
+          assert qa['renderedImageCount']==8
+          assert qa['independent2DArtworkCount']==0
+          image_files=list(root.glob('*.png'))
+          assert len(image_files)==9
+          assert not list(root.glob('*.pmx')) and not list(root.glob('*.zip'))
+          print('R1999_REFERENCE_RGBA_AND_LICENSE_GATE_PASS')
+          PY
+
+      - name: Upload rendered view previews for private evaluation
+        uses: actions/upload-artifact@v4
+        with:
+          name: r1999-sonetto-360-structural-views
+          path: |
+            ${{ runner.temp }}/sonetto-reference-views/*.png
+            ${{ runner.temp }}/sonetto-reference-views/turnaround-qa.json
+          if-no-files-found: error
+          retention-days: 30
