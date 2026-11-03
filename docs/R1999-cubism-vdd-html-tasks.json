@@ -1,7 +1,7 @@
 {
   "schemaVersion": "R1999-CUBISM-VDD-HTML-PLAN-V1",
   "date": "2026-11-01",
-  "phase": "C04_SOURCE_CONTRACT_AND_NATIVE_REF_EDITOR_READY_C05_PART_VDD_PIPELINE_VERIFIED",
+  "phase": "C04_EIGHT_VIEW_STRUCTURAL_REFERENCE_PASS_C05_VIEW_ARTWORK_HTML_VALIDATED",
   "goal": "Cubism native fidelity + multi-view artwork + 3D anchors + VDD + HTML offline visual acceptance",
   "scope": {
     "sourceRepo": "myssal/Reverse-1999-CN-Asset",
@@ -198,7 +198,23 @@
         "acceptedIndependentArtLayers": 0,
         "requiredIndependentArtLayers": 16,
         "validatorTests": "7/7 passing",
-        "sourceCandidate": "WTHN_Ross Blender Sonetto 3D structural reference; BOOTH requires account login to download; independent painted art remains outstanding"
+        "sourceCandidate": "WTHN_Ross Blender Sonetto 3D structural reference; BOOTH requires account login to download; independent painted art remains outstanding",
+        "referenceSource": "experiments/r1999-cubism-vdd/evidence/c06-pmx-source-audit.json",
+        "referenceQA": "experiments/r1999-cubism-vdd/evidence/c06-structural-view-qa.json",
+        "referenceDelivery": "experiments/r1999-cubism-vdd/evidence/c06-structural-reference-delivery.json",
+        "sourceCreator": "WTHN_Ross",
+        "sourceCopyright": "BLUEPOCH / Reverse: 1999",
+        "referenceMethod": "authorized BowlRoll Sonetto PMX render / Blender 4.0.2 / 8 yaw keys",
+        "sourceLicenseReview": "VERIFIED_PERSONAL_NONCOMMERCIAL_MODEL_RENDER",
+        "referenceKeys": 8,
+        "independent2DPaintedLayers": 0,
+        "requiredIndependent2DPaintedLayers": 16,
+        "sourceReferenceArtifact": {
+          "workflowRun": 41684378021,
+          "artifactId": 13254097564,
+          "artifactName": "r1999-sonetto-360-structural-views"
+        },
+        "nextAssetAction": "Author 45/90 semantic RGBA art using native Cubism parts and rendered shape guides, with 20/55/82 held-out visual references"
       },
       "deliverables": [
         "view-source-manifest.json",
@@ -248,7 +264,12 @@
           "viewLayerHtml": "PASS_14_BROWSER_CHECKS",
           "sourceValidation": "PASS_7_POSITIVE_NEGATIVE_TESTS",
           "cubismRegression": "PASS_12_BROWSER_CHECKS",
-          "novelViewRealArtwork": "PENDING_16_SEMANTIC_IMAGES"
+          "novelViewRealArtwork": "PENDING_16_SEMANTIC_IMAGES",
+          "eightYawStructuralReferences": "PASS_8_768x768_RGBA",
+          "structuralReferenceQARuntime": "PASS_BLENDER_CYCLES",
+          "semanticArtworkHtmlWith3DReference": "PASS_18_CHROMIUM_CHECKS",
+          "legacyCubismRuntimeRegression": "PASS_12_CHROMIUM_CHECKS",
+          "offlineReferenceViewer": "PASS_15_CHROMIUM_CHECKS"
         },
         "blocker": "The 90-degree projected head loses its true side-face silhouette. The proxy is a diagnostic placeholder; VDD key-art renderer validation requires independent alpha-layered view source images.",
         "userVisualSignoff": "PENDING",
@@ -259,7 +280,13 @@
         "layerPreviewBrowserQA": "experiments/r1999-cubism-vdd/evidence/c06-view-layer-browser-qa.json",
         "nativeRegression": "experiments/r1999-cubism-vdd/evidence/c06-cubism-regression-qa.json",
         "workspace": "experiments/r1999-cubism-vdd/evidence/c06-workspace-package.json",
-        "provenance": "Native 40 transparent Cubism Part images available in the private HTML editor; 45/90 synthetic fixtures demonstrate per-part warp and remain visibly labeled; authored art awaits identity and source checks"
+        "provenance": "Native 40 transparent Cubism Part images available in the private HTML editor; 45/90 synthetic fixtures demonstrate per-part warp and remain visibly labeled; authored art awaits identity and source checks",
+        "structuralRefHtmlQA": "experiments/r1999-cubism-vdd/evidence/c06-structural-html-qa.json",
+        "structuralCubismRegressionQA": "experiments/r1999-cubism-vdd/evidence/c06-structural-cubism-qa.json",
+        "offlineStructuralViewerQA": "experiments/r1999-cubism-vdd/evidence/c06-offline-structural-viewer-qa.json",
+        "structuralDelivery": "experiments/r1999-cubism-vdd/evidence/c06-structural-reference-delivery.json",
+        "viewEditorSource": "experiments/r1999-cubism-vdd/web/view-layer-lab.html",
+        "explicitViewGate": "Native Cubism front 2D + third-party 3D structural keys only; genuine independently authored 45/90 semantic layers remain required for VDD visual completion"
       },
       "deliverables": [
         "parts.json",
@@ -448,5 +475,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "Private HTML editor imports per-part 45/90 RGBA PNG, performs semantic-part triangulated preview and accesses 40 actual native Cubism references; verified 7 asset-validator unit tests, 14 packaged browser checks, 12 native regression checks; real authored 45/90 view keys 0/16."
+  "lastExecutedMilestone": "BowlRoll PMX licensed source downloaded and readme reviewed, Blender 4.0.2 eight yaw 768x768 RGBA structural screenshots passed and reproduced in GitHub Actions. HTML authoring studio shows actual Cubism parts and 45/90 structural reference, 18 Chromium checks, 12 native Cubism regression checks, 15 offline viewer checks passed. Independently authored 45/90 2D layered artwork remains 0/16."
 }
