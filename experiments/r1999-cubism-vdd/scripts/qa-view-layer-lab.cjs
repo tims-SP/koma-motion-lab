@@ -18,6 +18,17 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
   const initial=await page.evaluate(()=>window.__R1999_LAYER_LAB.inspect());
   checks.initialEmpty=initial.keys45===0&&initial.keys90===0&&initial.paired===0;
   checks.initialGateClosed=initial.visualAcceptance==='AWAITING_VALIDATED_INDEPENDENT_ART';
+  await page.waitForFunction(()=>document.getElementById('geometryHint').textContent.includes('45°'),null,{timeout:12000});
+  const captureGeometry=()=>page.evaluate(()=>{
+    const ctx=document.getElementById('geometryRef').getContext('2d',{willReadFrequently:true});
+    const rgba=ctx.getImageData(0,0,640,640).data;
+    let pixels=0,red=0;
+    for(let i=0;i<rgba.length;i+=4)if(rgba[i+3]>16){pixels++;red+=rgba[i];}
+    return {pixels,red,label:document.getElementById('geometryHint').textContent};
+  });
+  const geometry45=await captureGeometry();
+  checks.structural45ReferenceLoaded=geometry45.pixels>10000 && geometry45.label.includes('45°');
+  checks.creatorCreditVisible=await page.locator('aside').innerText().then(x=>x.includes('WTHN_Ross')&&x.includes('BLUEPOCH'));
   await page.waitForFunction(()=>document.getElementById('nativeHint').textContent.includes('PARTS_01_HAIR_BACK_001'),null,{timeout:12000});
   const nativeAlpha=await page.evaluate(()=>{
     const c=document.getElementById('nativeRef'),d=c.getContext('2d',{willReadFrequently:true}).getImageData(0,0,640,640).data;
@@ -48,6 +59,11 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
   checks.allAnglesInteractive=hashes.every(x=>x.angle>=45&&x.angle<=90&&x.total>1000);
   checks.interpolationChangesWithYaw=new Set(hashes.map(x=>x.redChecksum)).size>=5;
   details.angleMetrics=hashes;
+  const geometry90=await captureGeometry();
+  checks.structural90ReferenceLoaded=geometry90.pixels>10000 && geometry90.label.includes('90°');
+  checks.cameraViewReferenceChanges=Math.abs(geometry90.red-geometry45.red)>10000;
+  details.geometry45=geometry45;
+  details.geometry90=geometry90;
   await page.screenshot({path:path.join(dir,'view-layer-lab-fixture.png'),fullPage:true});
   // Import one PNG with RGBA and transparent margins through a true browser file input.
   const png=await page.evaluate(()=>{
@@ -77,7 +93,7 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
  const report={schema:'R1999-VIEW-LAYER-HTML-QA-V1',mode:'SYNTHETIC_GEOMETRY_FIXTURE',
   visualGate:'AWAITING_AUTHORED_ART',
   checks,details,errors,bad,external,
-  status:Object.keys(checks).length===14&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
+  status:Object.keys(checks).length===18&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
  fs.writeFileSync(path.join(dir,'view-layer-qa.json'),JSON.stringify(report,null,2)+'\n');
  console.log('VIEW_LAYER_HTML_QA',JSON.stringify({status:report.status,checks,exception:details.exception,errors,external}).slice(0,6500));
  if(report.status!=='PASS_VIEW_LAYER_HTML_ENGINEERING')process.exitCode=1;
