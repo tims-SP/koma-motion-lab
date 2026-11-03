@@ -42,9 +42,11 @@
 - [8 视角 PNG、透明度与来源 QA](experiments/r1999-cubism-vdd/evidence/c06-structural-view-qa.json)
 - [独立 HTML 结构参考浏览器生成器](experiments/r1999-cubism-vdd/scripts/build-structural-viewer.py)
 - [离线 HTML Chromium 验收 15 项](experiments/r1999-cubism-vdd/evidence/c06-offline-structural-viewer-qa.json)
+- [可重复生成单文件离线 HTML 的脚本](experiments/r1999-cubism-vdd/scripts/build-structural-viewer.py)
+- [GitHub Actions 一键获取八视角 PNG 与独立 HTML](.github/workflows/r1999-structural-reference.yml)
 - [带原生 Cubism 部件及 3D 侧脸参考的 HTML 验收 18 项](experiments/r1999-cubism-vdd/evidence/c06-structural-html-qa.json)
 - [本轮私有资源包与技术验收清单](experiments/r1999-cubism-vdd/evidence/c06-structural-reference-delivery.json)
-- [独立 GitHub Actions 三维参考渲染及产物](https://github.com/tims-SP/koma-motion-lab/actions/runs/41684378021)
+- [独立 GitHub Actions 三维参考渲染及产物](https://github.com/tims-SP/koma-motion-lab/actions/runs/41685596255)
 - [R1999 原生资产技术路线与候选研究](docs/R1999-native-asset-validation-plan.md)
 
 **当前状态：** C00–C03 已通过真实工程验收。固定资产源 33 个文件；官方 Cubism 5-r.4 成功加载 263 Drawable、180 参数、7,826 顶点和 21 个带蒙版的 Drawable。C03 使用 Three.js 0.181.0 同帧重放原生网格、贴图、蒙版与动态绘制顺序，5 组真实 Chromium WebGL 状态的前景轮廓 IoU 均超过 0.99975，RGB MAE 均低于 0.055/255；蒙版、UV、绘制顺序故障注入检查通过。从官方干净 5-r.4 仓库按本仓库脚本重新构建后，重复验收通过。模型画面人工复核已完成；用户视觉签收待执行。
