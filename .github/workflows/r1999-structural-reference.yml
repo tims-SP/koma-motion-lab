@@ -9,6 +9,8 @@ on:
       - 'experiments/r1999-cubism-vdd/scripts/fetch-sonetto-pmx-reference.py'
       - 'experiments/r1999-cubism-vdd/scripts/render-sonetto-structural-views.py'
       - 'experiments/r1999-cubism-vdd/scripts/qa-structural-views.py'
+      - 'experiments/r1999-cubism-vdd/scripts/build-structural-viewer.py'
+      - 'experiments/r1999-cubism-vdd/scripts/qa-structural-viewer.cjs'
 
 permissions:
   contents: read
@@ -63,6 +65,21 @@ jobs:
           print('R1999_REFERENCE_RGBA_AND_LICENSE_GATE_PASS')
           PY
 
+      - name: Build offline 360-degree structure viewer
+        run: |
+          python3 experiments/r1999-cubism-vdd/scripts/build-structural-viewer.py \
+            --views-dir "$RUNNER_TEMP/sonetto-reference-views" \
+            --output "$RUNNER_TEMP/sonetto-reference-views/sonetto-360-reference-viewer.html"
+          python3 - "$RUNNER_TEMP/sonetto-reference-views" <<'PY'
+          import pathlib,sys
+          root=pathlib.Path(sys.argv[1])
+          html=(root/'sonetto-360-reference-viewer.html').read_text()
+          assert html.count('data:image/png;base64,')==8
+          assert 'WTHN_Ross' in html and 'BLUEPOCH' in html
+          assert len(html)>4_000_000
+          print('R1999_OFFLINE_VIEWER_CONTENT_PASS')
+          PY
+
       - name: Upload rendered view previews for private evaluation
         uses: actions/upload-artifact@v4
         with:
@@ -70,5 +87,6 @@ jobs:
           path: |
             ${{ runner.temp }}/sonetto-reference-views/*.png
             ${{ runner.temp }}/sonetto-reference-views/turnaround-qa.json
+            ${{ runner.temp }}/sonetto-reference-views/sonetto-360-reference-viewer.html
           if-no-files-found: error
           retention-days: 30
