@@ -1,0 +1,187 @@
+{
+  "schema": "R1999-SONETTO-3D-TURNAROUND-QA-V1",
+  "status": "PASS_3D_REFERENCE_RENDER",
+  "sourceType": "WTHN_Ross_Sonetto_PMX_render",
+  "renderedViewAngles": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+  ],
+  "renderedImageCount": 8,
+  "sourceModelRestricted": true,
+  "releasePolicy": "rendered images with BLUEPOCH / Reverse:1999 and WTHN_Ross credit",
+  "independent2DArtworkCount": 0,
+  "viewKeySourceRole": "STRUCTURAL_REFERENCE_ONLY",
+  "renderedImages": [
+    {
+      "yawDeg": 0,
+      "filename": "yaw000_front.png",
+      "bytes": 517208,
+      "sha256": "37b472caee6f5307ac2138633d9847b168996edb8dddf38f99d7f8e2796a6ad4",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.425937,
+      "alphaBounds": [
+        0,
+        62,
+        768,
+        768
+      ],
+      "orangeHairPixels": 40540,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 45,
+      "filename": "yaw045_three_quarter.png",
+      "bytes": 508157,
+      "sha256": "04a5fe0737e68f1efefa27e9a20f13d73ccb39fbe19b63159ac25acf48703299",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.398405,
+      "alphaBounds": [
+        0,
+        62,
+        690,
+        768
+      ],
+      "orangeHairPixels": 50176,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 90,
+      "filename": "yaw090_profile.png",
+      "bytes": 429722,
+      "sha256": "2452484e83866d07e20f345c6604013c043fd3df4d64efe0304a266b9178cc63",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.280289,
+      "alphaBounds": [
+        201,
+        63,
+        568,
+        768
+      ],
+      "orangeHairPixels": 71808,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 135,
+      "filename": "yaw135_back_three_quarter.png",
+      "bytes": 482745,
+      "sha256": "e22f2388f1eceb38ba7d35a47b3e4c7451695557ac85f2ccc82766592151b3d5",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.396325,
+      "alphaBounds": [
+        0,
+        62,
+        690,
+        768
+      ],
+      "orangeHairPixels": 111091,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 180,
+      "filename": "yaw180_back.png",
+      "bytes": 486147,
+      "sha256": "6355e199a01ac9d3e8765b9dfaea290866ed911b0f31a072bd54b7e52a670370",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.425944,
+      "alphaBounds": [
+        0,
+        62,
+        768,
+        768
+      ],
+      "orangeHairPixels": 124184,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 225,
+      "filename": "yaw225_back_three_quarter.png",
+      "bytes": 483660,
+      "sha256": "bc1dc09043673800197062174c8812857aafcb676bbbbfbc7fce6aaa9b13dcae",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.398282,
+      "alphaBounds": [
+        77,
+        62,
+        768,
+        768
+      ],
+      "orangeHairPixels": 111548,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 270,
+      "filename": "yaw270_profile.png",
+      "bytes": 427167,
+      "sha256": "1e9828fda4fcb95e0ed3b10bf6e7e4f41125aca7e0421f2cc0c2c98a569589d9",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.280287,
+      "alphaBounds": [
+        201,
+        63,
+        568,
+        768
+      ],
+      "orangeHairPixels": 72502,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    },
+    {
+      "yawDeg": 315,
+      "filename": "yaw315_three_quarter.png",
+      "bytes": 504533,
+      "sha256": "e656e8ea8feec86a96fd0c49eb15c7432c2063d3ea752357758a4fdb1feef522",
+      "imageSize": [
+        768,
+        768
+      ],
+      "alphaCoverage": 0.396178,
+      "alphaBounds": [
+        77,
+        62,
+        768,
+        768
+      ],
+      "orangeHairPixels": 50139,
+      "provenance": "third_party_pmx_reference_render",
+      "independentPaintedArt": false
+    }
+  ],
+  "contactSheet": {
+    "filename": "turnaround-contact-sheet.png",
+    "sha256": "8e3ce295c3e0c6cf0c6d32c714131aca63eee44318e88f45b546a4f4b215e75d",
+    "bytes": 711852
+  }
+}
