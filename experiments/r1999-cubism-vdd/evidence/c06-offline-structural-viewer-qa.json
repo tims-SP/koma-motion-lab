@@ -1,0 +1,77 @@
+{
+  "schema": "R1999-STRUCTURAL-OFFLINE-HTML-QA-V1",
+  "source": "PMX Blender 4.0 structural renders",
+  "htmlFile": "sonetto-360-reference-viewer.html",
+  "checks": {
+    "eightEmbeddedViews": true,
+    "frontYaw": true,
+    "sideControl": true,
+    "sideSilhouette": true,
+    "sidePixelChange": true,
+    "backControl": true,
+    "fullRotation": true,
+    "circularIdentity": true,
+    "dissolveIsLabeled": true,
+    "exportValidPNG": true,
+    "animationChangesYaw": true,
+    "creatorCredit": true,
+    "sourceClassification": true,
+    "offline": true,
+    "browserErrorsAbsent": true
+  },
+  "states": {
+    "front": {
+      "ready": true,
+      "angle": 0,
+      "dissolve": false,
+      "playing": false,
+      "imageCount": 8,
+      "coverage": 251228,
+      "red": 51146705,
+      "alpha": 63470573
+    },
+    "side90": {
+      "ready": true,
+      "angle": 90,
+      "dissolve": false,
+      "playing": false,
+      "imageCount": 8,
+      "coverage": 165321,
+      "red": 37971651,
+      "alpha": 41696963
+    },
+    "back180": {
+      "ready": true,
+      "angle": 180,
+      "dissolve": false,
+      "playing": false,
+      "imageCount": 8,
+      "coverage": 251232,
+      "red": 56096062,
+      "alpha": 63470769
+    },
+    "wrap": {
+      "ready": true,
+      "angle": 360,
+      "dissolve": false,
+      "playing": false,
+      "imageCount": 8,
+      "coverage": 251228,
+      "red": 51146705,
+      "alpha": 63470573
+    },
+    "dissolve67": {
+      "ready": true,
+      "angle": 67,
+      "dissolve": true,
+      "playing": false,
+      "imageCount": 8,
+      "coverage": 243382,
+      "red": 53010398,
+      "alpha": 40788059
+    }
+  },
+  "errors": [],
+  "httpRequests": [],
+  "status": "PASS_OFFLINE_360_REFERENCE_VIEWER"
+}
