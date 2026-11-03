@@ -42,7 +42,9 @@
     "offlineViewer": "/root/koma-motion-r1999/output/sonetto-3d-turnaround/sonetto-360-reference-viewer.html",
     "offlineViewerBytes": 5129510,
     "offlineViewerSha256": "c3d94bada1f1a9d3bf1274fee2384d30fbd6c431392c00d077917062e97e9246",
-    "localPreview": "http://127.0.0.1:5184/view-layer-lab.html"
+    "localPreview": "http://127.0.0.1:5184/view-layer-lab.html",
+    "ciOfflineHtmlSha256": "667764f42914fab3319246f6ec616dd681923487481cb2a3c6c4a1842fe4fc56",
+    "ciOfflineHtmlBytes": 5129214
   },
   "results": {
     "sourceDownload": "PASS_CREATOR_LICENSE_README",
@@ -64,9 +66,17 @@
   },
   "github": {
     "sourceOnly": "experiments/r1999-cubism-vdd/scripts/",
-    "workflow": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41684378021",
+    "workflow": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41685596255",
     "workflowStatus": "SUCCESS",
-    "artifactId": 13254097564,
-    "artifact": "r1999-sonetto-360-structural-views"
+    "artifactId": 13255182170,
+    "artifact": "r1999-sonetto-360-structural-views",
+    "artifactIncludes": [
+      "8-angle PNG",
+      "contact sheet",
+      "turnaround-qa.json",
+      "standalone offline HTML"
+    ],
+    "artifactCompressedBytes": 8386239,
+    "artifactRetentionDays": 30
   }
 }
