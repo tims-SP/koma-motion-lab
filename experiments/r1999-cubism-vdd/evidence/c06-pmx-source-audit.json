@@ -1,0 +1,16 @@
+{
+  "schema": "R1999-SONETTO-PMX-SOURCE-V1",
+  "provider": "BowlRoll",
+  "sourcePage": "https://bowlroll.net/file/315881",
+  "creator": "WTHN_Ross",
+  "copyright": "BLUEPOCH / Reverse: 1999",
+  "distribution": "private_noncommercial_structural_reference",
+  "renderImagePublication": "permitted_with_creator_credit",
+  "modelRedistribution": "prohibited",
+  "assetPartsReuse": "prohibited",
+  "zipSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+  "bytes": 20023316,
+  "entryCount": 35,
+  "model": "[Reverse1999]_Sonetto_Basic.pmx",
+  "readmeReviewed": true
+}
