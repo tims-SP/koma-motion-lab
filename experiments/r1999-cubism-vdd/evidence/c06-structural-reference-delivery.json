@@ -1,0 +1,72 @@
+{
+  "schema": "R1999-C06-STRUCTURAL-REFERENCE-DELIVERY-V1",
+  "model": "Sonetto / 302301_shisihangshi",
+  "source": {
+    "creator": "WTHN_Ross",
+    "characterCopyright": "BLUEPOCH / Reverse: 1999",
+    "pmxProvider": "BowlRoll",
+    "sourcePage": "https://bowlroll.net/file/315881",
+    "archiveSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+    "sourceAudit": "experiments/r1999-cubism-vdd/evidence/c06-pmx-source-audit.json",
+    "license": "ReadMe_EN.txt reviewed; personal noncommercial edit/render permitted; creator attribution required; PMX and parts distribution restricted",
+    "archiveStorage": "VPS_PRIVATE"
+  },
+  "method": {
+    "renderer": "Blender 4.0.2 Cycles CPU",
+    "pmxImporter": "MMD-Blender/blender_mmd_tools v4.0.0",
+    "geometry": "imported full Sonetto PMX",
+    "material": "base-color texture render with coplanar hair-highlight shell excluded from the rendering copy",
+    "view": "orthographic",
+    "angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "resolution": [
+      768,
+      768
+    ],
+    "transparency": "RGBA",
+    "referenceType": "THIRD_PARTY_3D_STRUCTURAL_REFERENCE"
+  },
+  "privateFiles": {
+    "htmlBundle": "/root/koma-motion-r1999/output/r1999-c06-structural-review-html.tar.gz",
+    "htmlBundleBytes": 8094835,
+    "htmlBundleSha256": "005e404ae8fa8353fca872daf8e2bfc3e8938c2de60480658a0b5cddb42b739f",
+    "htmlEntrypoint": "view-layer-lab.html",
+    "offlineViewer": "/root/koma-motion-r1999/output/sonetto-3d-turnaround/sonetto-360-reference-viewer.html",
+    "offlineViewerBytes": 5129510,
+    "offlineViewerSha256": "c3d94bada1f1a9d3bf1274fee2384d30fbd6c431392c00d077917062e97e9246",
+    "localPreview": "http://127.0.0.1:5184/view-layer-lab.html"
+  },
+  "results": {
+    "sourceDownload": "PASS_CREATOR_LICENSE_README",
+    "blenderImport": "PASS_PMX",
+    "eightRenderedAngles": "PASS",
+    "renderedViewQA": "experiments/r1999-cubism-vdd/evidence/c06-structural-view-qa.json",
+    "offlineViewerQA": "experiments/r1999-cubism-vdd/evidence/c06-offline-structural-viewer-qa.json",
+    "layeredArtworkHtmlQA": "experiments/r1999-cubism-vdd/evidence/c06-structural-html-qa.json",
+    "nativeCubismRegressionQA": "experiments/r1999-cubism-vdd/evidence/c06-structural-cubism-qa.json",
+    "browserChecks": {
+      "offlineViewer": 15,
+      "layeredArtwork": 18,
+      "nativeCubism": 12
+    },
+    "independent2DArtLayers": 0,
+    "independent2DRequired": 16,
+    "viewGeometryReferenceCoverage": "8/8",
+    "authoredViewVisualGate": "PENDING_AUTHORED_45_90_RGBA_LAYERS"
+  },
+  "github": {
+    "sourceOnly": "experiments/r1999-cubism-vdd/scripts/",
+    "workflow": "https://github.com/tims-SP/koma-motion-lab/actions/runs/41684378021",
+    "workflowStatus": "SUCCESS",
+    "artifactId": 13254097564,
+    "artifact": "r1999-sonetto-360-structural-views"
+  }
+}
