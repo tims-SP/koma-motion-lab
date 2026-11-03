@@ -4,6 +4,40 @@ const PARTS=['hair.back','face.skin','ear.near','hair.side','eye.near','nose','m
 const DEPTH={ 'hair.back':-30,'face.skin':0,'ear.near':5,'hair.side':8,
  'eye.near':12,'nose':15,'mouth':16,'hair.front':30};
 const SIZE=640;
+const GEOMETRY_NAMES={
+ 45:'yaw045_three_quarter.png',
+ 90:'yaw090_profile.png'
+};
+const geometryImages=new Map();
+let geometryReferenceStatus='LOADING';
+async function loadGeometryReference(){
+ const loads=Object.entries(GEOMETRY_NAMES).map(([yaw,file])=>new Promise(resolve=>{
+  const img=new Image();
+  img.onload=()=>{geometryImages.set(Number(yaw),img);resolve(true);};
+  img.onerror=()=>resolve(false);
+  img.src='./private-geometry-view/'+encodeURIComponent(file);
+ }));
+ const ok=await Promise.all(loads);
+ geometryReferenceStatus=ok.every(Boolean)?'AVAILABLE':'PARTIAL';
+ refreshGeometryReference();
+}
+function refreshGeometryReference(){
+ const canvas=document.getElementById('geometryRef');
+ if(!canvas)return;
+ const ctx=canvas.getContext('2d');
+ ctx.clearRect(0,0,SIZE,SIZE);
+ const yaw=Number(document.getElementById('yaw').value);
+ const nearest=yaw<=67?45:90;
+ const img=geometryImages.get(nearest);
+ const label=document.getElementById('geometryHint');
+ if(img){
+  ctx.drawImage(img,0,0,SIZE,SIZE);
+  label.textContent='相机参考 '+nearest+'° · PMX 正交渲染 · '+img.width+'×'+img.height;
+ }else{
+  label.textContent='三维结构参考图片读取中 · '+geometryReferenceStatus;
+ }
+}
+
 const NATIVE_PARTS={
  'face.skin':'__UNPARENTED_DRAWABLES__',
  'eye.near':'PARTS_01_EYE_001',
@@ -170,7 +204,7 @@ function downloadRegistry(){
  const a=document.createElement('a');a.href=url;a.download='r1999-view-layer-register.json';a.click();
  setTimeout(()=>URL.revokeObjectURL(url),300);
 }
-$('yaw').addEventListener('input',refresh);
+$('yaw').addEventListener('input',()=>{refresh();refreshGeometryReference();});
 part.addEventListener('change',refreshNative);
 $('fixture').addEventListener('click',loadFixture);
 $('import').addEventListener('click',async()=>{
@@ -182,5 +216,5 @@ $('import').addEventListener('click',async()=>{
 });
 $('export').addEventListener('click',downloadRegistry);
 window.__R1999_LAYER_LAB={inspect,loadFixture,importFile,exportRegistry,renderAt:(angle)=>render('center',angle)};
-refresh();loadNative();
+refresh();loadNative();loadGeometryReference();
 })();
