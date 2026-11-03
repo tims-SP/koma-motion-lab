@@ -149,7 +149,8 @@ footer{padding:10px max(20px,4vw) 25px;color:#a4b6c9;font-size:12px;line-height:
     '\n结构来源：WTHN_Ross PMX\n图像规格：768 × 768 RGBA\n来源类别：三维结构参考\n独立二维原画：待登记';
  }
  function setYaw(angle){
-   slider.value=String((angle+360)%361);
+   const next=Math.round(angle);
+   slider.value=String(next===360?360:((next%360)+360)%360);
    render();
  }
  function playLoop(t){
