@@ -210,9 +210,11 @@
         "independent2DPaintedLayers": 0,
         "requiredIndependent2DPaintedLayers": 16,
         "sourceReferenceArtifact": {
-          "workflowRun": 41684378021,
-          "artifactId": 13254097564,
-          "artifactName": "r1999-sonetto-360-structural-views"
+          "workflowRun": 41685596255,
+          "artifactId": 13255182170,
+          "artifactName": "r1999-sonetto-360-structural-views",
+          "includesOfflineHtml": true,
+          "downloadsUntil": "2026-12-03"
         },
         "nextAssetAction": "Author 45/90 semantic RGBA art using native Cubism parts and rendered shape guides, with 20/55/82 held-out visual references"
       },
@@ -269,7 +271,8 @@
           "structuralReferenceQARuntime": "PASS_BLENDER_CYCLES",
           "semanticArtworkHtmlWith3DReference": "PASS_18_CHROMIUM_CHECKS",
           "legacyCubismRuntimeRegression": "PASS_12_CHROMIUM_CHECKS",
-          "offlineReferenceViewer": "PASS_15_CHROMIUM_CHECKS"
+          "offlineReferenceViewer": "PASS_15_CHROMIUM_CHECKS",
+          "standaloneOfflineHtmlArtifact": "PASS_GITHUB_ACTIONS_8_VIEW_IMAGES_AND_HTML"
         },
         "blocker": "The 90-degree projected head loses its true side-face silhouette. The proxy is a diagnostic placeholder; VDD key-art renderer validation requires independent alpha-layered view source images.",
         "userVisualSignoff": "PENDING",
@@ -286,7 +289,8 @@
         "offlineStructuralViewerQA": "experiments/r1999-cubism-vdd/evidence/c06-offline-structural-viewer-qa.json",
         "structuralDelivery": "experiments/r1999-cubism-vdd/evidence/c06-structural-reference-delivery.json",
         "viewEditorSource": "experiments/r1999-cubism-vdd/web/view-layer-lab.html",
-        "explicitViewGate": "Native Cubism front 2D + third-party 3D structural keys only; genuine independently authored 45/90 semantic layers remain required for VDD visual completion"
+        "explicitViewGate": "Native Cubism front 2D + third-party 3D structural keys only; genuine independently authored 45/90 semantic layers remain required for VDD visual completion",
+        "offlineViewerDelivery": "experiments/r1999-cubism-vdd/evidence/c06-structural-reference-delivery.json"
       },
       "deliverables": [
         "parts.json",
@@ -475,5 +479,5 @@
     "legal": "Reproduction or distribution permissions must be reviewed before public artifacts"
   },
   "lastVerifiedAt": "2026-11-01",
-  "lastExecutedMilestone": "BowlRoll PMX licensed source downloaded and readme reviewed, Blender 4.0.2 eight yaw 768x768 RGBA structural screenshots passed and reproduced in GitHub Actions. HTML authoring studio shows actual Cubism parts and 45/90 structural reference, 18 Chromium checks, 12 native Cubism regression checks, 15 offline viewer checks passed. Independently authored 45/90 2D layered artwork remains 0/16."
+  "lastExecutedMilestone": "WTHN_Ross PMX source licensed and downloaded, 8 orthographic views generated and reproduced by GitHub Actions run 41685596255. Standalone 360 structural HTML and 8 RGBA frames delivered via artifact 13255182170; offline HTML QA 15/15, enhanced layered-view HTML QA 18/18, Cubism regression 12/12. Independently painted semantic 45/90 images remain 0/16."
 }
