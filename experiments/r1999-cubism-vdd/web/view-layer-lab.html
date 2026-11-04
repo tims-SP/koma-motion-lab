@@ -39,7 +39,7 @@ code{font-size:11px;overflow-wrap:anywhere}#gate{font-weight:bold;color:#f9ca83}
 <select id="view"><option value="45">45° 三分之四侧面</option><option value="90">90° 正侧面</option></select>
 <label for="sourceId">素材来源 ID</label><input id="sourceId" placeholder="画师/模型产物哈希或本地资源标识" style="width:100%">
 <label for="artFile">透明 PNG（一个文件对应一个部件）</label><input id="artFile" type="file" accept="image/png">
-<div class="actions"><button id="import" type="button">导入部件</button><button id="fixture" type="button">加载几何测试素材</button><button id="export" type="button">导出登记清单</button></div>
+<div class="actions"><button id="import" type="button">导入部件</button><button id="fixture" type="button">加载几何测试素材</button><button id="proxy" type="button">加载 PMX 语义代理</button><button id="export" type="button">导出登记清单</button></div>
 <p id="viewStatus" aria-live="polite">等待独立视角图层</p>
 <p>真实验收由图层哈希、角色身份、器官定位点、遮挡和独立角度参考共同决定。测试图仅验证渲染器。</p>
 <p id="gate">视觉门禁：等待可信 45° / 90° 分层原画</p>
@@ -50,7 +50,7 @@ code{font-size:11px;overflow-wrap:anywhere}#gate{font-weight:bold;color:#f9ca83}
 <figure><canvas id="center" width="640" height="640"></canvas><figcaption id="middleLabel">当前 45°</figcaption></figure>
 <figure><canvas id="right" width="640" height="640"></canvas><figcaption>90° 源图层</figcaption></figure>
 </div>
-<p>单个器官分别参与几何位置与透明度插值；按部件前后关系合成。几何夹具与真实画师原画分开计数。</p>
+<p>源图层可来自原生 Cubism、独立绘制原画或经许可的 PMX 结构代理；预览按部件几何与遮挡层序合成，并分别统计来源。</p>
 <p><code id="summary"></code></p></section>
 </main>
 <script src="./view-layer-lab.js" defer></script>
