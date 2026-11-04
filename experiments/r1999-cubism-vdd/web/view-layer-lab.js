@@ -190,7 +190,7 @@ async function loadProxyLayers(){
   const angle=record.yawDeg, id=record.semanticId;
   if(![45,90].includes(angle) || !PARTS.includes(id) ||
      record.role!=='third_party_3d_proxy' ||
-     !/^yaw(?:045|090)_[a-z.]+\\.png$/.test(record.path) ||
+     !/^yaw(?:045|090)_[a-z.]+\.png$/.test(record.path) ||
      !/^[0-9a-f]{64}$/.test(record.sha256))throw Error('Proxy part identity invalid');
   if(staged.get(angle).has(id))throw Error('Duplicate semantic proxy');
   const resp=await fetch(root+encodeURIComponent(record.path));
