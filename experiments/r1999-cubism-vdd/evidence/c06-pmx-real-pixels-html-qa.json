@@ -1,0 +1,153 @@
+{
+  "schema": "R1999-VIEW-LAYER-HTML-QA-V1",
+  "mode": "PMX_RGB_SEMANTIC_PROXY_AND_SYNTHETIC_FIXTURE",
+  "visualGate": "AWAITING_AUTHORED_ART",
+  "checks": {
+    "initialEmpty": true,
+    "initialGateClosed": true,
+    "structural45ReferenceLoaded": true,
+    "creatorCreditVisible": true,
+    "realNativePartRefLoaded": true,
+    "nativeSemanticPartSwitch": true,
+    "fixture16": true,
+    "fixtureGateClosed": true,
+    "allAnglesInteractive": true,
+    "interpolationChangesWithYaw": true,
+    "structural90ReferenceLoaded": true,
+    "cameraViewReferenceChanges": true,
+    "browserLocalFileImport": true,
+    "importGateClosed": true,
+    "exportTracksCandidate": true,
+    "pmxProxy16": true,
+    "pmxSemanticPairs": true,
+    "pmxIndependentGateClosed": true,
+    "pmxShaAndProvenance": true,
+    "pmxActualRenderedPixels": true,
+    "pmxInterpolatedYawChanges": true,
+    "noUnexpectedNetwork": true,
+    "noBrowserErrors": true,
+    "noFailedResources": true
+  },
+  "details": {
+    "angleMetrics": [
+      {
+        "angle": 45,
+        "total": 16793,
+        "redChecksum": 3325951
+      },
+      {
+        "angle": 50,
+        "total": 17377,
+        "redChecksum": 3358843
+      },
+      {
+        "angle": 55,
+        "total": 17398,
+        "redChecksum": 3337864
+      },
+      {
+        "angle": 60,
+        "total": 17463,
+        "redChecksum": 3309535
+      },
+      {
+        "angle": 67,
+        "total": 17430,
+        "redChecksum": 3283058
+      },
+      {
+        "angle": 75,
+        "total": 17378,
+        "redChecksum": 3290911
+      },
+      {
+        "angle": 82,
+        "total": 17365,
+        "redChecksum": 3330297
+      },
+      {
+        "angle": 90,
+        "total": 16617,
+        "redChecksum": 3293505
+      }
+    ],
+    "geometry45": {
+      "pixels": 164515,
+      "red": 34367060,
+      "label": "相机参考 45° · PMX 正交渲染 · 768×768"
+    },
+    "geometry90": {
+      "pixels": 115952,
+      "red": 26622059,
+      "label": "相机参考 90° · PMX 正交渲染 · 768×768"
+    },
+    "pmxSemanticPreview": {
+      "role": "third_party_3d_proxy",
+      "independent2DArtCount": 0,
+      "angles": [
+        {
+          "yaw": 45,
+          "alphaPixels": 90852,
+          "redSum": 21603819,
+          "greenSum": 12816994
+        },
+        {
+          "yaw": 67,
+          "alphaPixels": 88646,
+          "redSum": 21404188,
+          "greenSum": 12662071
+        },
+        {
+          "yaw": 90,
+          "alphaPixels": 58044,
+          "redSum": 14232805,
+          "greenSum": 8661213
+        }
+      ]
+    },
+    "initial": {
+      "angle": 45,
+      "keys45": 0,
+      "keys90": 0,
+      "paired": 0,
+      "synthetic": 0,
+      "candidate": 0,
+      "proxy": 0,
+      "requiredPairs": 8,
+      "visualAcceptance": "AWAITING_VALIDATED_INDEPENDENT_ART",
+      "renderer": "Canvas2D semantic-part triangulated warp"
+    },
+    "fixture": {
+      "angle": 45,
+      "keys45": 8,
+      "keys90": 8,
+      "paired": 8,
+      "synthetic": 16,
+      "candidate": 0,
+      "proxy": 0,
+      "requiredPairs": 8,
+      "visualAcceptance": "AWAITING_VALIDATED_INDEPENDENT_ART",
+      "renderer": "Canvas2D semantic-part triangulated warp"
+    },
+    "afterImport": {
+      "angle": 90,
+      "keys45": 8,
+      "keys90": 8,
+      "paired": 8,
+      "synthetic": 15,
+      "candidate": 1,
+      "proxy": 0,
+      "requiredPairs": 8,
+      "visualAcceptance": "AWAITING_VALIDATED_INDEPENDENT_ART",
+      "renderer": "Canvas2D semantic-part triangulated warp"
+    },
+    "registryRoles": {
+      "synthetic_fixture": 15,
+      "candidate_art": 1
+    }
+  },
+  "errors": [],
+  "bad": [],
+  "external": [],
+  "status": "PASS_VIEW_LAYER_HTML_ENGINEERING"
+}
