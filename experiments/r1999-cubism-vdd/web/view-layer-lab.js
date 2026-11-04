@@ -147,10 +147,11 @@ function refresh(){
  const n45=viewKeys.get(45).size,n90=viewKeys.get(90).size;
  const synthetic=[...viewKeys.values()].flatMap(v=>[...v.values()]).filter(v=>v.role==='synthetic_fixture').length;
  const candidate=[...viewKeys.values()].flatMap(v=>[...v.values()]).filter(v=>v.role==='candidate_art').length;
- last={angle:value,keys45:n45,keys90:n90,paired:center.pairedSemanticParts,synthetic,candidate,
+ const proxy=[...viewKeys.values()].flatMap(v=>[...v.values()]).filter(v=>v.role==='third_party_3d_proxy').length;
+ last={angle:value,keys45:n45,keys90:n90,paired:center.pairedSemanticParts,synthetic,candidate,proxy,
   requiredPairs:PARTS.length,visualAcceptance:'AWAITING_VALIDATED_INDEPENDENT_ART',
   renderer:'Canvas2D semantic-part triangulated warp'};
- $('viewStatus').textContent='45° 图层：'+n45+'/8\n90° 图层：'+n90+'/8\n匹配器官：'+center.pairedSemanticParts+'/8\n测试素材：'+synthetic+'，导入候选：'+candidate;
+ $('viewStatus').textContent='45° 图层：'+n45+'/8\n90° 图层：'+n90+'/8\n匹配器官：'+center.pairedSemanticParts+'/8\n几何测试：'+synthetic+'，PMX 代理：'+proxy+'，导入候选：'+candidate;
  $('summary').textContent=JSON.stringify(last);
  return last;
 }
@@ -174,6 +175,49 @@ function loadFixture(){
  }
  refresh();return inspect();
 }
+
+async function loadProxyLayers(){
+ const root='./private-proxy-layers/';
+ const response=await fetch(root+'proxy-semantic-manifest.json');
+ if(!response.ok)throw Error('Proxy manifest unavailable');
+ const manifest=await response.json();
+ if(manifest.schema!=='R1999-PMX-SEMANTIC-PROXY-V1' ||
+    manifest.sourceRole!=='third_party_3d_proxy' ||
+    manifest.independentArtCoverage!==0 ||
+    manifest.layers?.length!==16)throw Error('Proxy provenance/coverage contract rejected');
+ const staged=new Map([[45,new Map()],[90,new Map()]]);
+ await Promise.all(manifest.layers.map(async record=>{
+  const angle=record.yawDeg, id=record.semanticId;
+  if(![45,90].includes(angle) || !PARTS.includes(id) ||
+     record.role!=='third_party_3d_proxy' ||
+     !/^yaw(?:045|090)_[a-z.]+\\.png$/.test(record.path) ||
+     !/^[0-9a-f]{64}$/.test(record.sha256))throw Error('Proxy part identity invalid');
+  if(staged.get(angle).has(id))throw Error('Duplicate semantic proxy');
+  const resp=await fetch(root+encodeURIComponent(record.path));
+  if(!resp.ok)throw Error('Missing semantic PNG: '+record.path);
+  const buffer=await resp.arrayBuffer();
+  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',buffer)))
+    .map(v=>v.toString(16).padStart(2,'0')).join('');
+  if(digest!==record.sha256)throw Error('Proxy checksum failed: '+record.path);
+  const image=await createImageBitmap(new Blob([buffer],{type:'image/png'}));
+  if(image.width!==SIZE || image.height!==SIZE)throw Error('Proxy canvas size invalid');
+  const bounds=bbox(image);
+  if(!bounds || bounds.pixels<25)throw Error('Empty proxy: '+record.path);
+  if(bounds.left<=0 || bounds.top<=0 || bounds.right>=SIZE || bounds.bottom>=SIZE)
+   throw Error('Proxy alpha touches canvas border');
+  staged.get(angle).set(id,{image,bbox:bounds,role:'third_party_3d_proxy',
+     sha256:digest,sourceId:record.sourceId});
+ }));
+ if(staged.get(45).size!==8 || staged.get(90).size!==8)
+   throw Error('Eight semantic IDs required per camera view');
+ for(const angle of [45,90]){
+  viewKeys.get(angle).clear();
+  for(const [id,layer] of staged.get(angle))viewKeys.get(angle).set(id,layer);
+ }
+ refresh();
+ return inspect();
+}
+
 async function importFile({angle,id,file,sourceId}){
  if(![45,90].includes(angle)||!PARTS.includes(id))throw Error('Invalid view or part');
  if(file.type!=='image/png')throw Error('Expected PNG image');
@@ -207,6 +251,10 @@ function downloadRegistry(){
 $('yaw').addEventListener('input',()=>{refresh();refreshGeometryReference();});
 part.addEventListener('change',refreshNative);
 $('fixture').addEventListener('click',loadFixture);
+$('proxy').addEventListener('click',async()=>{
+ try{await loadProxyLayers();}
+ catch(error){$('viewStatus').textContent='PMX 代理读取失败：'+String(error.message||error);}
+});
 $('import').addEventListener('click',async()=>{
  try{
   const file=$('artFile').files?.[0];
@@ -215,6 +263,6 @@ $('import').addEventListener('click',async()=>{
  }catch(e){$('viewStatus').textContent='导入检查：'+String(e.message||e);}
 });
 $('export').addEventListener('click',downloadRegistry);
-window.__R1999_LAYER_LAB={inspect,loadFixture,importFile,exportRegistry,renderAt:(angle)=>render('center',angle)};
+window.__R1999_LAYER_LAB={inspect,loadFixture,loadProxyLayers,importFile,exportRegistry,renderAt:(angle)=>render('center',angle)};
 refresh();loadNative();loadGeometryReference();
 })();
