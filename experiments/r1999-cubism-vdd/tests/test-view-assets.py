@@ -50,6 +50,21 @@ class TestArtworkGate(unittest.TestCase):
   pathlib.Path(self.root/b["path"]).write_bytes((self.root/a["path"]).read_bytes())
   b["sha256"]=a["sha256"]
   self.assertTrue(any(x.startswith("CROSS_VIEW_REUSE") for x in module.validate(self.manifest,self.root)["errors"]))
+ def test_third_party_pmx_proxy_does_not_satisfy_independent_art(self):
+  self.complete()
+  for item in self.manifest["assets"]:
+   item["role"]="third_party_3d_proxy"
+   item["sourceModelSha256"]="f"*64
+  result=module.validate(self.manifest,self.root)
+  self.assertFalse(result["readyForInterpolation"])
+  self.assertEqual(result["coverage"],0)
+  self.assertEqual(len(result["missingIndependent"]),16)
+  self.assertEqual(result["errors"],[])
+ def test_proxy_without_model_provenance_rejected(self):
+  self.complete()
+  self.manifest["assets"][0]["role"]="third_party_3d_proxy"
+  result=module.validate(self.manifest,self.root)
+  self.assertTrue(any(s.startswith("PROXY_PROVENANCE") for s in result["errors"]))
  def test_unsafe_paths_rejected(self):
   self.complete();self.manifest["assets"][0]["path"]="../private.png"
   self.assertTrue(any(x.startswith("UNSAFE_PATH") for x in module.validate(self.manifest,self.root)["errors"]))
