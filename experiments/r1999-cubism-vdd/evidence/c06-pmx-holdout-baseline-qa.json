@@ -1,0 +1,63 @@
+{
+  "schema": "R1999-PMX-VDD-HOLDOUT-QA-V1",
+  "method": "canvas_semantic_rect_warp",
+  "role": "THIRD_PARTY_3D_STRUCTURE_AND_RGB_PROXY",
+  "independentPaintedArtCoverage": 0,
+  "goal": "cartoon_shading_out_of_plane_yaw_with_anatomical_continuity",
+  "thresholds": {
+    "silhouetteIoUMin": 0.9,
+    "RGBMAEMax255": 20,
+    "predictionAreaRatioMin": 0.92,
+    "predictionAreaRatioMax": 1.08
+  },
+  "holdoutCount": 3,
+  "angles": [
+    {
+      "yawDeg": 55,
+      "predictionSha256": "1e9bc6e40c84a254f835edaf1f191508a5a952d85dcd7bca536af6bbad033625",
+      "holdoutSha256": "1571cb182916d6aa88bc8a4b9c83a2f1800d96d135a431e459b186a6065b34b3",
+      "silhouetteIoU": 0.866875,
+      "RGBMAE255": 28.763,
+      "predictionAlphaPixels": 87271,
+      "holdoutAlphaPixels": 84082,
+      "predictionAreaRatio": 1.037927,
+      "thresholdChecks": {
+        "silhouette": false,
+        "color": false,
+        "area": true
+      }
+    },
+    {
+      "yawDeg": 67,
+      "predictionSha256": "a909c7182ba5d3b89dacbcb319dbf7e8706a1e504257be12ff96dd181b5a2ea7",
+      "holdoutSha256": "b76639d8e2eb01ee8a4af850af1557fb2e6c0b01901c0febec79f8513e2fa011",
+      "silhouetteIoU": 0.819558,
+      "RGBMAE255": 37.8148,
+      "predictionAlphaPixels": 86261,
+      "holdoutAlphaPixels": 76473,
+      "predictionAreaRatio": 1.127993,
+      "thresholdChecks": {
+        "silhouette": false,
+        "color": false,
+        "area": false
+      }
+    },
+    {
+      "yawDeg": 82,
+      "predictionSha256": "52488bf2f9c4763f865a8e65a371b14039da7f9c9c8ac3bd5240489d2cc2a08e",
+      "holdoutSha256": "23edc9f3863567efa287d26bb135750eac54f7801973a8ed98ecf0fe75666c53",
+      "silhouetteIoU": 0.853299,
+      "RGBMAE255": 27.173,
+      "predictionAlphaPixels": 59819,
+      "holdoutAlphaPixels": 66222,
+      "predictionAreaRatio": 0.90331,
+      "thresholdChecks": {
+        "silhouette": false,
+        "color": false,
+        "area": false
+      }
+    }
+  ],
+  "visualGate": "NEEDS_VDD_REFINEMENT",
+  "engineeringGate": "PASS_MEASURED_PREDICTIONS_AND_HOLDOUTS"
+}
