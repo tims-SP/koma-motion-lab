@@ -1,0 +1,380 @@
+{
+  "schema": "R1999-PMX-SEMANTIC-PROXY-V1",
+  "source": "WTHN_Ross Sonetto PMX",
+  "sourceRole": "third_party_3d_proxy",
+  "independentArtCoverage": 0,
+  "renderer": "Blender Cycles CPU, material segmentation and planar pixel matching",
+  "canvas": [
+    640,
+    640
+  ],
+  "requiredAngles": [
+    45,
+    90
+  ],
+  "parts": [
+    "hair.back",
+    "face.skin",
+    "ear.near",
+    "hair.side",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front"
+  ],
+  "polygonCountByClass": {
+    "face.skin": 1577,
+    "nose": 176,
+    "ear.near": 195,
+    "eye.near": 1981,
+    "mouth": 486,
+    "hair.side": 3310,
+    "hair.front": 2080,
+    "hair.back": 15612,
+    "body.extra": 19149
+  },
+  "layers": [
+    {
+      "yawDeg": 45,
+      "semanticId": "hair.back",
+      "path": "yaw045_hair.back.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 70642,
+      "bbox": [
+        240,
+        75,
+        530,
+        566
+      ],
+      "sha256": "017d1b084f9913c8dd49fdaf8f8d3de69c35e691bb64178cb3707ea511a6b144",
+      "bytes": 115253
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "face.skin",
+      "path": "yaw045_face.skin.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 3652,
+      "bbox": [
+        229,
+        129,
+        336,
+        237
+      ],
+      "sha256": "d83d77559d08ff8af634d45b60f51babca3086666ec71541c92edd7b481eeb83",
+      "bytes": 10344
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "ear.near",
+      "path": "yaw045_ear.near.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 259,
+      "bbox": [
+        300,
+        172,
+        343,
+        203
+      ],
+      "sha256": "8d4851bde3e6e8d455404e3886192cbecc4e00283954b6ea288c6bcbd496373a",
+      "bytes": 2741
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "hair.side",
+      "path": "yaw045_hair.side.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 7475,
+      "bbox": [
+        207,
+        68,
+        372,
+        268
+      ],
+      "sha256": "4961dcfd3c28bac369af9ba753231666f2ec4d088207d2eb4455b0c97c1a5a15",
+      "bytes": 19368
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "eye.near",
+      "path": "yaw045_eye.near.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 821,
+      "bbox": [
+        229,
+        152,
+        341,
+        190
+      ],
+      "sha256": "dddfbf70a729964aebacb31947ea7edea2a0ecd8c021764503ee45deb6f677bb",
+      "bytes": 4909
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "nose",
+      "path": "yaw045_nose.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 514,
+      "bbox": [
+        240,
+        153,
+        265,
+        204
+      ],
+      "sha256": "80add578f60ca4c02d5d0a6dd47d30f89be17c29f84ea3d61d116c8246ade3a8",
+      "bytes": 2603
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "mouth",
+      "path": "yaw045_mouth.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 417,
+      "bbox": [
+        250,
+        209,
+        283,
+        225
+      ],
+      "sha256": "fc99cf461a8e4b4ad6130ff42f1c8696b6a799f3ce60a3ed95f7c2eb3c7694cc",
+      "bytes": 2551
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "hair.front",
+      "path": "yaw045_hair.front.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 7072,
+      "bbox": [
+        212,
+        75,
+        365,
+        234
+      ],
+      "sha256": "d439250b40a322bec06eaeeee5644c0c19ca21a03d56da922e648a370af0ae4b",
+      "bytes": 21872
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "hair.back",
+      "path": "yaw090_hair.back.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 46195,
+      "bbox": [
+        285,
+        71,
+        464,
+        566
+      ],
+      "sha256": "0482d46a9174d19abf0cd70ffc414c2b9233c0b66a0b38f004de76146df9178b",
+      "bytes": 71318
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "face.skin",
+      "path": "yaw090_face.skin.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 2165,
+      "bbox": [
+        212,
+        130,
+        285,
+        237
+      ],
+      "sha256": "d1eda4a0a59daa6430bac0e00b2f32c0d386b9e133b934f706d8ce882a3f33ed",
+      "bytes": 7523
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "ear.near",
+      "path": "yaw090_ear.near.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 65,
+      "bbox": [
+        276,
+        184,
+        283,
+        203
+      ],
+      "sha256": "651e2b4deb746300d53dd1f870f50aed12fac2b4887b1b36184c953fc3dc0600",
+      "bytes": 2016
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "hair.side",
+      "path": "yaw090_hair.side.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 6190,
+      "bbox": [
+        216,
+        69,
+        329,
+        268
+      ],
+      "sha256": "7bb01dea48d1256bde11bd2381c7d22ea450fd3ef964e7551dad98c0dcdb0549",
+      "bytes": 14091
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "eye.near",
+      "path": "yaw090_eye.near.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 250,
+      "bbox": [
+        218,
+        152,
+        246,
+        190
+      ],
+      "sha256": "f4d13dae95e839917564b52b520db923e57111259fd54443f334213ebd9dd023",
+      "bytes": 2781
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "nose",
+      "path": "yaw090_nose.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 215,
+      "bbox": [
+        210,
+        161,
+        225,
+        204
+      ],
+      "sha256": "8eef8635914a10a089877abeb0969e386897276150ede9afb0bdd3af71e6d702",
+      "bytes": 2401
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "mouth",
+      "path": "yaw090_mouth.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 400,
+      "bbox": [
+        224,
+        209,
+        256,
+        225
+      ],
+      "sha256": "671258c1a74caf12c80d4f5b6c00929cc7ba5595db38508e6c562fd404c6f8d3",
+      "bytes": 2667
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "hair.front",
+      "path": "yaw090_hair.front.png",
+      "role": "third_party_3d_proxy",
+      "sourceId": "WTHN_Ross_Sonetto_PMX_v1.1",
+      "sourceModelSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+      "license": "noncommercial_personal_reference; no model data redistributed",
+      "pixels": 2585,
+      "bbox": [
+        208,
+        74,
+        328,
+        234
+      ],
+      "sha256": "5102654141dcf943317889b58d5c076ad2b2ae068ed306d68b95d2327f62608b",
+      "bytes": 10590
+    }
+  ],
+  "featureBounds": {
+    "45": {
+      "nose": [
+        239.2,
+        150.7,
+        265.5,
+        204.4
+      ],
+      "ear.near": [
+        299.5,
+        139.9,
+        343.1,
+        202.9
+      ],
+      "mouth": [
+        248.9,
+        210.6,
+        283.2,
+        221.9
+      ],
+      "eye.near": [
+        227.8,
+        151.9,
+        308.6,
+        209.7
+      ]
+    },
+    "90": {
+      "nose": [
+        210.2,
+        150.7,
+        226.3,
+        204.4
+      ],
+      "ear.near": [
+        245.3,
+        139.9,
+        294.1,
+        202.9
+      ],
+      "mouth": [
+        223,
+        210.6,
+        256,
+        221.9
+      ],
+      "eye.near": [
+        218.1,
+        151.9,
+        258.9,
+        209.7
+      ]
+    }
+  }
+}
