@@ -1,0 +1,189 @@
+{
+  "schema": "R1999-SEMANTIC-PROXY-QA-V1",
+  "status": "PASS_3D_SEMANTIC_PROXY",
+  "independentPaintedArtwork": 0,
+  "semanticProxyCoverage": 16,
+  "requiredSemanticProxyCount": 16,
+  "sourceType": "THIRD_PARTY_PMX_GEOMETRY_AND_RENDERED_RGB",
+  "angles": [
+    45,
+    90
+  ],
+  "checks": {
+    "all_rgba_layers": true,
+    "visible_source": true,
+    "side_narrower": true,
+    "cross_view_unique_hashes": true
+  },
+  "compositeAlphaPixels": {
+    "45": 90852,
+    "90": 58044
+  },
+  "pixelCoverage": {
+    "45:hair.back": {
+      "visible": 70642,
+      "sha256": "017d1b084f9913c8dd49fdaf8f8d3de69c35e691bb64178cb3707ea511a6b144",
+      "bbox": [
+        240,
+        75,
+        530,
+        566
+      ]
+    },
+    "45:face.skin": {
+      "visible": 3652,
+      "sha256": "d83d77559d08ff8af634d45b60f51babca3086666ec71541c92edd7b481eeb83",
+      "bbox": [
+        229,
+        129,
+        336,
+        237
+      ]
+    },
+    "45:ear.near": {
+      "visible": 259,
+      "sha256": "8d4851bde3e6e8d455404e3886192cbecc4e00283954b6ea288c6bcbd496373a",
+      "bbox": [
+        300,
+        172,
+        343,
+        203
+      ]
+    },
+    "45:hair.side": {
+      "visible": 7475,
+      "sha256": "4961dcfd3c28bac369af9ba753231666f2ec4d088207d2eb4455b0c97c1a5a15",
+      "bbox": [
+        207,
+        68,
+        372,
+        268
+      ]
+    },
+    "45:eye.near": {
+      "visible": 821,
+      "sha256": "dddfbf70a729964aebacb31947ea7edea2a0ecd8c021764503ee45deb6f677bb",
+      "bbox": [
+        229,
+        152,
+        341,
+        190
+      ]
+    },
+    "45:nose": {
+      "visible": 514,
+      "sha256": "80add578f60ca4c02d5d0a6dd47d30f89be17c29f84ea3d61d116c8246ade3a8",
+      "bbox": [
+        240,
+        153,
+        265,
+        204
+      ]
+    },
+    "45:mouth": {
+      "visible": 417,
+      "sha256": "fc99cf461a8e4b4ad6130ff42f1c8696b6a799f3ce60a3ed95f7c2eb3c7694cc",
+      "bbox": [
+        250,
+        209,
+        283,
+        225
+      ]
+    },
+    "45:hair.front": {
+      "visible": 7072,
+      "sha256": "d439250b40a322bec06eaeeee5644c0c19ca21a03d56da922e648a370af0ae4b",
+      "bbox": [
+        212,
+        75,
+        365,
+        234
+      ]
+    },
+    "90:hair.back": {
+      "visible": 46195,
+      "sha256": "0482d46a9174d19abf0cd70ffc414c2b9233c0b66a0b38f004de76146df9178b",
+      "bbox": [
+        285,
+        71,
+        464,
+        566
+      ]
+    },
+    "90:face.skin": {
+      "visible": 2165,
+      "sha256": "d1eda4a0a59daa6430bac0e00b2f32c0d386b9e133b934f706d8ce882a3f33ed",
+      "bbox": [
+        212,
+        130,
+        285,
+        237
+      ]
+    },
+    "90:ear.near": {
+      "visible": 65,
+      "sha256": "651e2b4deb746300d53dd1f870f50aed12fac2b4887b1b36184c953fc3dc0600",
+      "bbox": [
+        276,
+        184,
+        283,
+        203
+      ]
+    },
+    "90:hair.side": {
+      "visible": 6190,
+      "sha256": "7bb01dea48d1256bde11bd2381c7d22ea450fd3ef964e7551dad98c0dcdb0549",
+      "bbox": [
+        216,
+        69,
+        329,
+        268
+      ]
+    },
+    "90:eye.near": {
+      "visible": 250,
+      "sha256": "f4d13dae95e839917564b52b520db923e57111259fd54443f334213ebd9dd023",
+      "bbox": [
+        218,
+        152,
+        246,
+        190
+      ]
+    },
+    "90:nose": {
+      "visible": 215,
+      "sha256": "8eef8635914a10a089877abeb0969e386897276150ede9afb0bdd3af71e6d702",
+      "bbox": [
+        210,
+        161,
+        225,
+        204
+      ]
+    },
+    "90:mouth": {
+      "visible": 400,
+      "sha256": "671258c1a74caf12c80d4f5b6c00929cc7ba5595db38508e6c562fd404c6f8d3",
+      "bbox": [
+        224,
+        209,
+        256,
+        225
+      ]
+    },
+    "90:hair.front": {
+      "visible": 2585,
+      "sha256": "5102654141dcf943317889b58d5c076ad2b2ae068ed306d68b95d2327f62608b",
+      "bbox": [
+        208,
+        74,
+        328,
+        234
+      ]
+    }
+  },
+  "contactSheet": {
+    "file": "semantic-contact-sheet.png",
+    "sha256": "4cc4c6f8e54e2a79baafebb6cc0e7183b7e624fcf92f43f866509c08636753d7"
+  },
+  "errors": []
+}
