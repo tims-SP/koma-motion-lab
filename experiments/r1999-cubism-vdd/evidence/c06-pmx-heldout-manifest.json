@@ -1,0 +1,38 @@
+{
+  "schema": "R1999-PMX-HOLDOUT-3D-V1",
+  "source": "WTHN_Ross Sonetto PMX",
+  "camera": "same orthographic geometry as 45 and 90 PMX semantic proxy",
+  "angles": [
+    55,
+    67,
+    82
+  ],
+  "modelSourceSha256": "47438b89335e0363b98f0bd80bd99607e69ee9eae72f15142fec93d77a81b863",
+  "independent2DArtCoverage": 0,
+  "holdoutViews": [
+    {
+      "yawDeg": 55,
+      "file": "holdout-yaw055-head.png",
+      "sha256": "1571cb182916d6aa88bc8a4b9c83a2f1800d96d135a431e459b186a6065b34b3",
+      "bytes": 153369,
+      "sourceRole": "third_party_3d_holdout",
+      "independent2DArt": false
+    },
+    {
+      "yawDeg": 67,
+      "file": "holdout-yaw067-head.png",
+      "sha256": "b76639d8e2eb01ee8a4af850af1557fb2e6c0b01901c0febec79f8513e2fa011",
+      "bytes": 136419,
+      "sourceRole": "third_party_3d_holdout",
+      "independent2DArt": false
+    },
+    {
+      "yawDeg": 82,
+      "file": "holdout-yaw082-head.png",
+      "sha256": "23edc9f3863567efa287d26bb135750eac54f7801973a8ed98ecf0fe75666c53",
+      "bytes": 113304,
+      "sourceRole": "third_party_3d_holdout",
+      "independent2DArt": false
+    }
+  ]
+}
