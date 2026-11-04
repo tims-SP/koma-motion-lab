@@ -38,6 +38,22 @@ for i,(name,rgb) in enumerate(zip(all_names,palettes)):
     semantic_mats.append(mat)
 
 original_materials=list(mesh.data.materials)
+# Isolate head/hair while keeping their internal geometry occlusions.
+# Clothing surfaces are rendered transparent so long hair remains complete
+# beneath the neck and cape, unlike a cropped whole-body screenshot.
+for original in original_materials:
+    if original and original.name.startswith('Body_') and original.name!='Body_Skin':
+        original.use_nodes=True
+        nodes=original.node_tree.nodes;nodes.clear()
+        output=nodes.new('ShaderNodeOutputMaterial')
+        transparent=nodes.new('ShaderNodeBsdfTransparent')
+        original.node_tree.links.new(transparent.outputs['BSDF'],output.inputs['Surface'])
+semantic_extra=semantic_mats[-1]
+semantic_extra.node_tree.nodes.clear()
+output=semantic_extra.node_tree.nodes.new('ShaderNodeOutputMaterial')
+transparent=semantic_extra.node_tree.nodes.new('ShaderNodeBsdfTransparent')
+semantic_extra.node_tree.links.new(transparent.outputs['BSDF'],output.inputs['Surface'])
+scene.cycles.transparent_max_bounces=64
 offset=len(original_materials)
 for mat in semantic_mats:
     mesh.data.materials.append(mat)
