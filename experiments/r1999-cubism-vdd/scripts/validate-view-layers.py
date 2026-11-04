@@ -9,7 +9,7 @@ import argparse, hashlib, json, math, pathlib, re, sys
 from PIL import Image
 
 EXPECTED_SCHEMA="R1999-INDEPENDENT-VIEW-LAYERS-V1"
-ALLOWED_ROLES={"independent_art","synthetic_fixture","runtime_sample"}
+ALLOWED_ROLES={"independent_art","synthetic_fixture","runtime_sample","third_party_3d_proxy"}
 HEX=re.compile(r"^[0-9a-f]{64}$")
 
 def validate(manifest,root):
@@ -38,6 +38,9 @@ def validate(manifest,root):
   blob=p.read_bytes();digest=hashlib.sha256(blob).hexdigest()
   if not HEX.fullmatch(a.get("sha256","")) or digest!=a["sha256"]:
    errors.append("HASH_"+tag)
+  if role=="third_party_3d_proxy":
+   if not a.get("sourceId") or not HEX.fullmatch(a.get("sourceModelSha256","")):
+    errors.append("PROXY_PROVENANCE_"+tag)
   if role=="independent_art":
    if not a.get("creator") or not a.get("sourceId") or not a.get("licenseReview"):
     errors.append("PROVENANCE_"+tag)
