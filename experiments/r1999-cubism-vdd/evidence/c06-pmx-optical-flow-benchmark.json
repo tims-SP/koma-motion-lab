@@ -1,0 +1,106 @@
+{
+  "schema": "R1999-PMX-OPTICAL-FLOW-BENCHMARK-V1",
+  "sourceRole": "licensed_3d_semantic_proxy",
+  "independent2DArtCount": 0,
+  "trainViews": [
+    45,
+    90
+  ],
+  "testViews": [
+    55,
+    67,
+    82
+  ],
+  "baselines": [
+    "OpenCV Farneback",
+    "OpenCV DIS"
+  ],
+  "paperRelated": "OpenCV two-frame motion estimation; 2.5D cartoon VDD research",
+  "thresholds": {
+    "IoU": 0.9,
+    "MAE": 20,
+    "minArea": 0.92,
+    "maxArea": 1.08
+  },
+  "candidates": [
+    {
+      "algorithm": "farneback",
+      "medianHoldoutCount": 3,
+      "meanIoU": 0.816386,
+      "meanRGBMAE255": 27.824,
+      "qualityGate": "NEEDS_REFINEMENT",
+      "holdouts": [
+        {
+          "yawDeg": 55,
+          "file": "flow-farneback-yaw055.png",
+          "sha256": "f640b75ba2dd5b14e585bdbe7163192b82d775c46aea994fd435791dbe7fa84f",
+          "IoU": 0.862968,
+          "RGBMAE255": 27.607,
+          "predictionAreaRatio": 1.080945,
+          "predictedForeground": 90888,
+          "referenceForeground": 84082
+        },
+        {
+          "yawDeg": 67,
+          "file": "flow-farneback-yaw067.png",
+          "sha256": "6543c83fbe36fb15b5c0e00d7c9f237a08bbd1456734f47ebc01c1bf911eb33f",
+          "IoU": 0.819653,
+          "RGBMAE255": 32.779,
+          "predictionAreaRatio": 1.133838,
+          "predictedForeground": 86708,
+          "referenceForeground": 76473
+        },
+        {
+          "yawDeg": 82,
+          "file": "flow-farneback-yaw082.png",
+          "sha256": "fce41a799ba5ca6e1204de66edd12b56d3874b8a4e073bc67392a512b3b66453",
+          "IoU": 0.766536,
+          "RGBMAE255": 23.086,
+          "predictionAreaRatio": 1.229018,
+          "predictedForeground": 81388,
+          "referenceForeground": 66222
+        }
+      ]
+    },
+    {
+      "algorithm": "dis",
+      "medianHoldoutCount": 3,
+      "meanIoU": 0.825633,
+      "meanRGBMAE255": 25.179,
+      "qualityGate": "NEEDS_REFINEMENT",
+      "holdouts": [
+        {
+          "yawDeg": 55,
+          "file": "flow-dis-yaw055.png",
+          "sha256": "b9ff32d14c8bd58a63cf59e3049e84a1e09ebf9898f0d639d7f542f82cb5873b",
+          "IoU": 0.844663,
+          "RGBMAE255": 25.488,
+          "predictionAreaRatio": 1.10001,
+          "predictedForeground": 92491,
+          "referenceForeground": 84082
+        },
+        {
+          "yawDeg": 67,
+          "file": "flow-dis-yaw067.png",
+          "sha256": "808dbf621139c1bbc68d953c2dc64d7df5affd05b9124d6f04b090626526b791",
+          "IoU": 0.832963,
+          "RGBMAE255": 29.207,
+          "predictionAreaRatio": 1.126868,
+          "predictedForeground": 86175,
+          "referenceForeground": 76473
+        },
+        {
+          "yawDeg": 82,
+          "file": "flow-dis-yaw082.png",
+          "sha256": "c5291a592017391ab505ca07175e0e56a280814cae8f68e7dad5f0300e9a28fe",
+          "IoU": 0.799273,
+          "RGBMAE255": 20.842,
+          "predictionAreaRatio": 1.174006,
+          "predictedForeground": 77745,
+          "referenceForeground": 66222
+        }
+      ]
+    }
+  ],
+  "bestMeasuredCandidate": "dis"
+}
