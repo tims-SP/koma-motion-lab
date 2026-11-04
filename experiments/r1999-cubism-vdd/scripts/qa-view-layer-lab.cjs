@@ -83,6 +83,39 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
   checks.importGateClosed=after.visualAcceptance==='AWAITING_VALIDATED_INDEPENDENT_ART';
   const registry=await page.evaluate(()=>window.__R1999_LAYER_LAB.exportRegistry());
   checks.exportTracksCandidate=registry.records.length===16&&registry.records.some(r=>r.sourceId==='QA-browser-local-test'&&r.sha256?.length===64);
+  // Real RGB/RGBA pixels from a licensed 3D PMX are a separate source role:
+  // rendered proxy keys may exercise interpolation, never independent-art gate.
+  await page.locator('#proxy').click();
+  await page.waitForFunction(()=>window.__R1999_LAYER_LAB.inspect().proxy===16,null,{timeout:25000});
+  const proxy=await page.evaluate(()=>window.__R1999_LAYER_LAB.inspect());
+  checks.pmxProxy16=proxy.proxy===16&&proxy.synthetic===0&&proxy.candidate===0;
+  checks.pmxSemanticPairs=proxy.paired===8&&proxy.keys45===8&&proxy.keys90===8;
+  checks.pmxIndependentGateClosed=proxy.visualAcceptance==='AWAITING_VALIDATED_INDEPENDENT_ART';
+  const proxyRecords=await page.evaluate(()=>window.__R1999_LAYER_LAB.exportRegistry());
+  checks.pmxShaAndProvenance=proxyRecords.records.length===16&&proxyRecords.records.every(
+    r=>r.role==='third_party_3d_proxy'&&r.sha256?.length===64&&r.sourceId==='WTHN_Ross_Sonetto_PMX_v1.1');
+  const realAngles=[];
+  for(const degree of [45,67,90]){
+   await page.locator('#yaw').evaluate((el,y)=>{
+    el.value=String(y);el.dispatchEvent(new Event('input',{bubbles:true}));
+   },degree);
+   await page.waitForTimeout(70);
+   realAngles.push(await page.evaluate(()=>{
+    const canvas=document.getElementById('center');
+    const data=canvas.getContext('2d',{willReadFrequently:true}).getImageData(0,0,640,640).data;
+    let alphaPixels=0,redSum=0,greenSum=0;
+    for(let i=0;i<data.length;i+=4){
+     if(data[i+3]>0){alphaPixels++;redSum+=data[i];greenSum+=data[i+1];}
+    }
+    return {yaw:window.__R1999_LAYER_LAB.inspect().angle,alphaPixels,redSum,greenSum};
+   }));
+   await page.screenshot({path:path.join(dir,'view-layer-lab-pmx-'+degree+'.png'),fullPage:true});
+  }
+  checks.pmxActualRenderedPixels=realAngles[0].alphaPixels>30000&&realAngles[2].alphaPixels>25000;
+  checks.pmxInterpolatedYawChanges=new Set(realAngles.map(x=>x.redSum)).size===3 &&
+   new Set(realAngles.map(x=>x.alphaPixels)).size===3;
+  details.pmxSemanticPreview={role:'third_party_3d_proxy',independent2DArtCount:0,angles:realAngles};
+
   checks.noUnexpectedNetwork=external.length===0;
   checks.noBrowserErrors=errors.length===0;
   checks.noFailedResources=bad.length===0;
@@ -90,10 +123,10 @@ const {chromium}=require(process.env.R1999_PLAYWRIGHT_MODULE||'playwright');
   details.registryRoles=registry.records.reduce((o,x)=>(o[x.role]=(o[x.role]||0)+1,o),{});
  }catch(e){details.exception=e.stack||String(e);}
  finally {await browser.close();}
- const report={schema:'R1999-VIEW-LAYER-HTML-QA-V1',mode:'SYNTHETIC_GEOMETRY_FIXTURE',
+ const report={schema:'R1999-VIEW-LAYER-HTML-QA-V1',mode:'PMX_RGB_SEMANTIC_PROXY_AND_SYNTHETIC_FIXTURE',
   visualGate:'AWAITING_AUTHORED_ART',
   checks,details,errors,bad,external,
-  status:Object.keys(checks).length===18&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
+  status:Object.keys(checks).length===24&&Object.values(checks).every(Boolean)&&!details.exception?'PASS_VIEW_LAYER_HTML_ENGINEERING':'FAIL'};
  fs.writeFileSync(path.join(dir,'view-layer-qa.json'),JSON.stringify(report,null,2)+'\n');
  console.log('VIEW_LAYER_HTML_QA',JSON.stringify({status:report.status,checks,exception:details.exception,errors,external}).slice(0,6500));
  if(report.status!=='PASS_VIEW_LAYER_HTML_ENGINEERING')process.exitCode=1;
