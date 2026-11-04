@@ -10,6 +10,7 @@ def main():
  p.add_argument("--javascript",type=Path,required=True)
  p.add_argument("--native-front",type=Path,help="Private PNG Part layer directory with front-layer-manifest.json")
  p.add_argument("--geometry-reference",type=Path,help="Private 3D-rendered geometry reference (8 orthographic PNG views)")
+ p.add_argument("--semantic-proxy",type=Path,help="Private 45/90 PMX semantic RGBA layer directory")
  args=p.parse_args()
  demo=args.samples.resolve()/"Samples/TypeScript/Demo"
  public=demo/"public";public.mkdir(parents=True,exist_ok=True)
@@ -35,6 +36,34 @@ def main():
    if not name.endswith('.png') or '/' in name or '\\' in name:raise ValueError('Unsafe reference file name')
    shutil.copy2(source/name,destination/name)
   shutil.copy2(qa_path,destination/'turnaround-qa.json')
+ if args.semantic_proxy:
+  import json
+  directory=args.semantic_proxy.resolve()
+  qa_path=directory/'semantic-proxy-qa.json'
+  if not qa_path.is_file():raise FileNotFoundError(qa_path)
+  report=json.loads(qa_path.read_text())
+  if report.get('status')!='PASS_3D_SEMANTIC_PROXY' or report.get('independentPaintedArtwork')!=0:
+   raise ValueError('PMX semantic layer QA not ready')
+  manifest_path=directory/'proxy-semantic-manifest.json'
+  manifest=json.loads(manifest_path.read_text())
+  if manifest.get('schema')!='R1999-PMX-SEMANTIC-PROXY-V1' or len(manifest.get('layers',[]))!=16:
+   raise ValueError('Proxy semantic manifest missing source coverage')
+  target=public/'private-proxy-layers'
+  target.mkdir(parents=True,exist_ok=True)
+  import hashlib
+  for layer in manifest['layers']:
+   name=layer['path']
+   if not name.endswith('.png') or '/' in name or '..' in name:
+    raise ValueError('Unsafe semantic image path')
+   raw=(directory/name).read_bytes()
+   if hashlib.sha256(raw).hexdigest()!=layer['sha256']:
+    raise ValueError('Proxy image SHA mismatch '+name)
+   (target/name).write_bytes(raw)
+  shutil.copy2(manifest_path,target/manifest_path.name)
+  shutil.copy2(qa_path,target/qa_path.name)
+  for view in (45,90):
+   preview=directory/f'preview-yaw{view:03d}-semantic-composite.png'
+   if preview.is_file():shutil.copy2(preview,target/preview.name)
  # Make the app discoverable from the existing Cubism HTML review panel.
  pth=demo/"index.html"
  content=pth.read_text()
