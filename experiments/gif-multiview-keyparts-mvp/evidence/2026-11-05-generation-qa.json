@@ -1,0 +1,109 @@
+{
+  "schema": "KOMA-GIF-MULTIVIEW-ASSET-REVIEW-V1",
+  "date": "2026-11-05",
+  "scope": "P0 original character, 8-view whole portrait and 3 semantic-component GIF groups",
+  "result": "GENERATION_VALID_LAYER_REGISTRATION_PENDING",
+  "input": {
+    "gifCount": 4,
+    "frameCount": 38,
+    "validGIF89a": 4,
+    "framesDecoded": 38,
+    "frameDisposalMethod": 2,
+    "transparentGIFs": 4,
+    "alphaPartialPixels": 0,
+    "files": [
+      {
+        "group": "whole",
+        "frames": 8,
+        "dimensions": [
+          443,
+          443
+        ],
+        "sha256": "94dbda85cd0ddace",
+        "shaType": "prefix16"
+      },
+      {
+        "group": "face",
+        "frames": 15,
+        "dimensions": [
+          313,
+          313
+        ],
+        "sha256": "2af520f157a6c557",
+        "shaType": "prefix16"
+      },
+      {
+        "group": "hair",
+        "frames": 9,
+        "dimensions": [
+          418,
+          418
+        ],
+        "sha256": "9b7d5608a850d858",
+        "shaType": "prefix16"
+      },
+      {
+        "group": "identity",
+        "frames": 6,
+        "dimensions": [
+          418,
+          627
+        ],
+        "sha256": "898bcc20aead8b9b",
+        "shaType": "prefix16"
+      }
+    ]
+  },
+  "checks": {
+    "frameCount": "PASS_8_15_9_6",
+    "transparentBackground": "PASS_BINARY_ALPHA",
+    "frameClearing": "PASS_DISPOSAL_2",
+    "wholeViewCoverage": "PASS_EIGHT_DIRECTION_REFERENCES",
+    "characterIdentity": "VISUALLY_RECOGNIZABLE_SOURCE_SHA_PENDING",
+    "targetCanvas": "NEEDS_1024x1024_GLOBAL_COORDINATES",
+    "semanticLayerExclusivity": "NEEDS_FACE_HAIR_ACCESSORY_SEPARATION",
+    "anatomicalEyeIdentity": "NEEDS_LEFT_RIGHT_MAPPING",
+    "crossGroupLayerRegistration": "NEEDS_GLOBAL_ALIGNMENT",
+    "productionAlpha": "NEEDS_NATIVE_RGBA_EDGE_QUALITY",
+    "VDDVisualAcceptance": "PENDING"
+  },
+  "findings": [
+    "face.skin includes ears while ear.near separately contains the same anatomy",
+    "hair.front contains ahoge and gold cross hair clip also generated in the identity GIF",
+    "eye.near frame contains two eyes in the 0-degree and 45-degree views",
+    "the identity-group clip occupies a different global location from the whole-view clip",
+    "the separately generated 90-degree clip is visible even though the far-side clip is occluded in the whole-head 90-degree view",
+    "the standalone 1254x1254 RGBA master image has stray edge islands and saturated fringe; cleanup required",
+    "GIF files were received with .png suffix despite internal GIF89a signatures"
+  ],
+  "headReconstruction": {
+    "method": "nearest-neighbor whole-canvas normalization then semantic back-to-front alpha composition, upper 75% mask",
+    "metric": "approximate silhouette IoU against full-view reference; not a formal VDD quality score",
+    "yaw000": {
+      "iou": 0.7211,
+      "relativeArea": 1.1775
+    },
+    "yaw045": {
+      "iou": 0.7438,
+      "relativeArea": 1.1251
+    },
+    "yaw090": {
+      "iou": 0.6936,
+      "relativeArea": 1.2058
+    }
+  },
+  "decision": {
+    "usableFor": [
+      "animated whole-character identity references",
+      "semantic-part generation feasibility",
+      "frame extraction and metadata QA"
+    ],
+    "admissionFor": [
+      "ArtMesh key art",
+      "VDD continuous turn visual acceptance"
+    ],
+    "admissionStatus": "PENDING_LAYER_SEPARATION_AND_REGISTRATION",
+    "recommendedNext": "bind all generated PNGs to the same validated 1024x1024 coordinate system, use mutually exclusive parts and native RGBA edge alpha, reconstruct 0/45/90 endpoints before VDD"
+  },
+  "storagePolicy": "GitHub text audit only; raw images, extracted frames, source hashes and montage remain in private conversation artifact bundle"
+}
