@@ -7,7 +7,7 @@
 - [MVP 制作与验收计划](docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md)
 - [T00–T05 任务状态与资产合同](experiments/gif-multiview-keyparts-mvp/tasks.json)
 
-本实验使用已给定的粉紫色短发原创少女为身份基准，依次验证八方向 GIF、关键部位一致性、语义透明原画和 HTML VDD 转头。
+本实验固定使用此前批准的 P0 原创角色 `p0_character_001`（批准身份参考板与 `hero/hero_master.png`），直接生成八方向整头 GIF 以及按角度和语义分组的透明部件 GIF；每帧严格对应一个关键部位，逐帧校验后进入 RGBA ArtMesh 和 HTML VDD。
 
 ## 当前验证主线 · R1999 Cubism VDD HTML
 
