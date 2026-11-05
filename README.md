@@ -2,6 +2,13 @@
 
 面向高质量二次元动画的 **Cubism 原生立绘 + 多视角分层原画 + 3D Anchor + ArtMesh/VDD + Three.js** 实验与验收仓库。
 
+## GIF 多视角一致性与关键部位资产验证
+
+- [MVP 制作与验收计划](docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md)
+- [T00–T05 任务状态与资产合同](experiments/gif-multiview-keyparts-mvp/tasks.json)
+
+本实验使用已给定的粉紫色短发原创少女为身份基准，依次验证八方向 GIF、关键部位一致性、语义透明原画和 HTML VDD 转头。
+
 ## 当前验证主线 · R1999 Cubism VDD HTML
 
 使用 [Reverse-1999-CN-Asset](https://github.com/myssal/Reverse-1999-CN-Asset) 中十四行诗（`302301_shisihangshi`）的实际 Cubism 模型，首先还原原生立绘、表情和动作，再构建动态 ArtMesh 适配、独立视角原画、VDD 和视角依赖遮挡，最终在 HTML 浏览器中对比原生画面、2.75D 扩展、独立参考和逐像素诊断。
