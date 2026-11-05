@@ -1,0 +1,181 @@
+{
+  "schema": "KOMA-GIF-MULTIVIEW-KEYPART-MVP-TASKS-V1",
+  "project": "2.75D Anime Studio",
+  "characterId": "pink_lilac_bob_gold_cross_clip_v1",
+  "scope": "one consistent reference character; 8-view identity sequence and 0/45/90 layered VDD proof",
+  "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
+  "status": "PLANNED",
+  "date": "2026-11-05",
+  "modelSource": {
+    "type": "user_reference_image",
+    "expected": "original anime girl, lilac pink bob, purple eyes, gold cross hair clip, ahoge",
+    "persistedSourceFile": false
+  },
+  "requiredViews": {
+    "overview": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "vddKeyArt": [
+      0,
+      45,
+      90
+    ],
+    "holdouts": [
+      22.5,
+      67.5
+    ],
+    "semanticParts": [
+      "face.skin",
+      "eye.near",
+      "nose",
+      "mouth",
+      "ear.near",
+      "hair.front",
+      "hair.side",
+      "hair.back",
+      "hair.ahoge",
+      "hair.clip.cross_gold"
+    ]
+  },
+  "outputTypes": [
+    "gif_multiview",
+    "gif_facial_geometry",
+    "gif_hair_volume",
+    "gif_identity_accessories",
+    "rgba_view_keyframes",
+    "rgba_semantic_parts",
+    "part_visibility_and_anchors",
+    "html_review",
+    "chromium_qa",
+    "holdout_visual_report"
+  ],
+  "tasks": [
+    {
+      "id": "T00",
+      "name": "Character identity master, orientation and landmarks",
+      "status": "PLANNED",
+      "dependsOn": [],
+      "gate": "REFERENCE_APPROVED",
+      "deliverables": [
+        "identity-master.png",
+        "identity-lock.json"
+      ]
+    },
+    {
+      "id": "T01",
+      "name": "Eight-angle whole-head GIF and source frames",
+      "status": "PLANNED",
+      "dependsOn": [
+        "T00"
+      ],
+      "gate": "EIGHT_VIEW_IDENTITY_PASS",
+      "deliverables": [
+        "head-turn-8view.gif",
+        "keyframes/yaw*.png",
+        "identity-qa.json"
+      ]
+    },
+    {
+      "id": "T02",
+      "name": "Consistent facial, hair and identity-accessory GIFs",
+      "status": "PLANNED",
+      "dependsOn": [
+        "T01"
+      ],
+      "gate": "THREE_REGION_GIFS_PASS",
+      "deliverables": [
+        "facial-geometry.gif",
+        "hair-volume.gif",
+        "identity-accessories.gif",
+        "region-qa.json"
+      ]
+    },
+    {
+      "id": "T03",
+      "name": "Transparent semantic part extraction and correspondence",
+      "status": "PLANNED",
+      "dependsOn": [
+        "T02"
+      ],
+      "gate": "PART_LAYER_ALPHA_IDENTITY_PASS",
+      "deliverables": [
+        "parts/",
+        "parts.json",
+        "layer-reconstruction.png",
+        "layer-qa.json"
+      ]
+    },
+    {
+      "id": "T04",
+      "name": "Cubism-compatible HTML VDD view interpolation and holdout QA",
+      "status": "PLANNED",
+      "dependsOn": [
+        "T03"
+      ],
+      "gate": "VDD_0_90_VISUAL_PASS",
+      "deliverables": [
+        "review/index.html",
+        "review/screenshots/",
+        "holdouts/",
+        "vdd-qa.json"
+      ]
+    },
+    {
+      "id": "T05",
+      "name": "Artifact packaging and evidence",
+      "status": "PLANNED",
+      "dependsOn": [
+        "T04"
+      ],
+      "gate": "DELIVERY_REPRODUCIBLE",
+      "deliverables": [
+        "asset-manifest.json",
+        "source-hashes.json",
+        "release-artifacts/"
+      ]
+    }
+  ],
+  "acceptance": {
+    "overviewGifUniqueViews": 8,
+    "regionGifCount": 3,
+    "semanticPartSlots": 30,
+    "keyYawDegrees": [
+      0,
+      45,
+      90
+    ],
+    "realtimeViewerRangeDegrees": [
+      0,
+      90
+    ],
+    "full360GeometryStatus": "SEPARATE_EXPANSION_AFTER_KEY_ART_GATE",
+    "htmlFunctionalChecks": [
+      "correct_semantic_identity",
+      "real_rgba_alpha",
+      "per_part_anchor_position",
+      "visibility_and_depth_order",
+      "no_double_eye",
+      "no_double_hair_silhouette",
+      "held_out_angle_render"
+    ],
+    "thresholds": {
+      "targetSilhouetteIoU": 0.9,
+      "maximumRelativeSilhouetteAreaError": 0.08
+    },
+    "sourceRoleRequired": "independent_2d_art"
+  },
+  "assetStorage": {
+    "sourceControl": "text scripts schemas manifests QA only",
+    "binaries": "private artifact storage or GitHub release attachment",
+    "requireSha256": true
+  },
+  "evidence": {},
+  "lastCompleted": null
+}
