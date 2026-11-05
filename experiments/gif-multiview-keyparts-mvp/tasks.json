@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P3_REAL_MOTION_ARTIFACT_TEXTURE_REFINEMENT",
+  "status": "P3_REFERENCE_GUIDED_RGBA_STUDY_DONE_ANGLE_ART_REFINEMENT",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P3_39_LAYERS_37_REAL_BROWSER_PNGS_72_FRAME_GIF_24_REGRESSION_TESTS",
+  "lastCompleted": "P3_39_ARTMESHS_37_BROWSER_FRAMES_72_FRAME_GIF_3_GENERATED_RGBA_29_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -366,6 +366,32 @@
       },
       "artisticAcceptance": "TEXTURE_CORRESPONDENCE_REQUIRES_REFINEMENT",
       "approvedP0HeroSHA": "PENDING_DIRECT_MASTER_VERIFICATION"
+    },
+    "p3GeneratedViews": {
+      "source": "real P0 0,45,90 recovered whole view references",
+      "imageModel": "MiniMax matrix img2img / JPEG background removal to RGBA",
+      "generatedRGBA": 3,
+      "angles": [
+        22.5,
+        67.5
+      ],
+      "sourceAngleFidelity": "GENERATED_VIEW_ANGLES_REQUIRE_POSE_CONSTRAINTS",
+      "headSilhouetteProgress": {
+        "22.5": 0.06256,
+        "67.5": 0.182852
+      },
+      "previewFiveViewGIFSHA256": "e00b0c3397a81bfa43ef9e5a8a8f51befdaf6552fd940047b7b760f534118ea1",
+      "reviews": [
+        "private-assets/p3-native-source-trial/qa.json",
+        "private-assets/p3-native-source-trial/iteration2/qa.json",
+        "private-assets/p3-native-source-trial/preview/yaw-progress-qa.json"
+      ],
+      "privatePackage": {
+        "bytes": 27528797,
+        "sha256": "10e17c51a0953f6c15c292fcf4127203a7f393c26adaae57dcf786584c9849e7",
+        "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-source-review-v4.zip"
+      },
+      "testSuite": "29/29 passed"
     }
   }
 }
