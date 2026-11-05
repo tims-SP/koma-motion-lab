@@ -51,7 +51,17 @@ function triangle(ctx,img,s,d){
  const dd=((p2[1]-p0[1])*(s1[0]-s0[0])-(p1[1]-p0[1])*(s2[0]-s0[0]))/det;
  const e=p0[0]-a*s0[0]-c*s0[1],f=p0[1]-b*s0[0]-dd*s0[1];
  ctx.save();
- ctx.beginPath();ctx.moveTo(...p0);ctx.lineTo(...p1);ctx.lineTo(...p2);ctx.closePath();ctx.clip();
+ // Canvas anti-aliased triangle clips can leave subpixel lines between
+ // independently rasterized triangles. Pad only their clip edges, never their
+ // destination affine coordinates, to conserve semantic geometry.
+ const centroid=[(p0[0]+p1[0]+p2[0])/3,(p0[1]+p1[1]+p2[1])/3];
+ const expand=p=>{
+  const dx=p[0]-centroid[0],dy=p[1]-centroid[1];
+  const length=Math.hypot(dx,dy)||1;
+  return [p[0]+dx/length*1.55,p[1]+dy/length*1.55];
+ };
+ const [q0,q1,q2]=[p0,p1,p2].map(expand);
+ ctx.beginPath();ctx.moveTo(...q0);ctx.lineTo(...q1);ctx.lineTo(...q2);ctx.closePath();ctx.clip();
  ctx.setTransform(a,b,c,dd,e,f);ctx.drawImage(img,0,0);ctx.restore();
 }
 function warped(ctx,source,target,opacity){
@@ -62,6 +72,42 @@ function warped(ctx,source,target,opacity){
  ctx.restore();
 }
 function viewPair(degree){if(degree<=45)return [0,45];return [45,90];}
+
+// P0 original-face contour and color sampled from original source GIF pixels.
+// Auxiliary underpaint remains beneath authored hair and facial ArtMeshes.
+const P0_SKIN=[250,221,214];
+const P0_FACE={
+ 0:[[189,159],[226,151],[261,159],[284,179],[297,212],[286,254],
+    [257,283],[227,294],[195,279],[169,246],[157,215],[161,189]],
+ 45:[[221,159],[250,158],[281,166],[309,180],[334,224],[325,248],
+     [291,283],[253,296],[224,279],[203,253],[193,225],[203,188]],
+ 90:[[278,160],[308,166],[331,180],[348,202],[364,219],[369,233],[354,247],
+     [348,261],[326,283],[298,282],[269,272],[243,248],[241,210],[256,178]]
+};
+function sampleOutline(poly,count=48){
+ const edge=poly.map((p,i)=>Math.hypot(poly[(i+1)%poly.length][0]-p[0],poly[(i+1)%poly.length][1]-p[1]));
+ const perimeter=edge.reduce((a,b)=>a+b,0),points=[];
+ for(let k=0;k<count;k++){
+  let dist=perimeter*k/count,index=0;
+  while(index<edge.length-1&&dist>=edge[index])dist-=edge[index++];
+  const t=dist/Math.max(1e-6,edge[index]);
+  points.push([blend(poly[index][0],poly[(index+1)%poly.length][0],t),
+               blend(poly[index][1],poly[(index+1)%poly.length][1],t)]);
+ }
+ return points;
+}
+const FACE_OUTLINES=Object.fromEntries(Object.entries(P0_FACE).map(([key,v])=>[key,sampleOutline(v)]));
+function renderSourceUnderpaint(ctx,deg){
+ if(endpoints.includes(deg))return;
+ const [a,b]=viewPair(deg),t=easing((deg-a)/(b-a));
+ const A=FACE_OUTLINES[a],B=FACE_OUTLINES[b];
+ ctx.save();ctx.beginPath();
+ A.forEach((p,i)=>{
+  const q=[blend(p[0],B[i][0],t)*SIZE/443,blend(p[1],B[i][1],t)*SIZE/443];
+  if(i)ctx.lineTo(...q);else ctx.moveTo(...q);
+ });
+ ctx.closePath();ctx.fillStyle='rgb('+P0_SKIN.join(',')+')';ctx.fill();ctx.restore();
+}
 function renderLayer(ctx,id,degree){
  const key=slot(degree,id);
  if(key){if(key.visibility==='visible'&&key.image)ctx.drawImage(key.image,0,0);return;}
@@ -93,7 +139,10 @@ function render(degree){
   return {id,depth:rec?.depthOrder??0};
  }).sort((x,y)=>x.depth-y.depth);
  const ctx=byId('result').getContext('2d');
- for(const item of parts)renderLayer(ctx,item.id,degree);
+ for(const item of parts){
+  if(item.id==='face.skin')renderSourceUnderpaint(ctx,degree);
+  renderLayer(ctx,item.id,degree);
+ }
  byId('resultLabel').textContent='ArtMesh VDD · '+degree+'°'+(exact!==null?'（原画关键帧）':'（插值检查帧）');
 }
 async function init(){

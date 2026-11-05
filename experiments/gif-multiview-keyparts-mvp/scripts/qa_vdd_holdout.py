@@ -60,6 +60,7 @@ def run(folder,out,threshold=0.005):
       "schema":"KOMA-P0-VDD-FACE-ALPHA-HOLDOUT-QA-V1",
       "characterId":"p0_character_001",
       "sourceRole":"real_39_part_RGBA_Canvas2D_Rendered",
+      "continuityUnderpaint":"P0 original cheek RGB with interpolated anatomical face contour",
       "sourceMethods":["P1 front 13 semantic layers","P2 quarter/profile 26 semantic layers"],
       "angles":list(ANGLES),"faceROIRule":"anatomically anchored elliptical interior samples",
       "thresholdMissingCoverageRatio":threshold,

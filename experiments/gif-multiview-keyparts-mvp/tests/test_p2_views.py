@@ -61,18 +61,35 @@ class P2ViewAssets(unittest.TestCase):
 
     def test_real_browser_canvas_5_frames_and_art_gate(self):
         report=json.loads((P2/"vdd-canvases/holdout-qa.json").read_text())
-        self.assertEqual(report["status"],"REQUIRES_VDD_BOUNDARY_REFINEMENT")
-        self.assertEqual(report["holdoutsFailed"],[22.5,67.5])
+        self.assertEqual(report["status"],"PASS_HOLDOUT_COVERAGE")
+        self.assertEqual(report["holdoutsFailed"],[])
         keys={x["angle"]:x for x in report["checks"]}
         for yaw in (0,45,90):
             self.assertEqual(keys[yaw]["missingCoveragePixels"],0)
         for yaw in (22.5,67.5):
-            self.assertGreater(keys[yaw]["missingCoverageRatio"],0.005)
+            self.assertLessEqual(keys[yaw]["missingCoverageRatio"],0.005)
         captures=json.loads((P2/"vdd-canvases/canvas-qa.json").read_text())
         self.assertEqual(captures["status"],"CAPTURED_FOR_ANATOMICAL_INSPECTION")
         self.assertEqual(len(captures["outputs"]),5)
         for item in captures["outputs"]:
             self.assertEqual(sha(item["path"]),item["sha256"])
+
+    def test_holdout_texture_art_acceptance(self):
+        texture=json.loads((P2/"vdd-canvases/texture-qa.json").read_text())
+        self.assertEqual(texture["status"],"REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE")
+        self.assertEqual(texture["failed"],2)
+        byangle={x["angle"]:x for x in texture["holdouts"]}
+        self.assertGreater(byangle[22.5]["edgeDensityRelativeToAdjacentMax"],5.0)
+        self.assertGreater(byangle[67.5]["edgeDensityRelativeToAdjacentMax"],2.0)
+
+    def test_37_frame_visual_motion_preview(self):
+        folder=P2/"turn-sequence"
+        manifest=json.loads((folder/"turn-gif-qa.json").read_text())
+        self.assertEqual(manifest["status"],"REAL_BROWSER_FRAMES_PACKAGED")
+        self.assertEqual(manifest["sourceFrameCount"],37)
+        self.assertEqual(manifest["GIFFrames"],72)
+        self.assertEqual(sha(manifest["GIFFile"]),manifest["GIFSHA256"])
+        self.assertEqual(len(list(folder.glob("yaw*.png"))),37)
 
     def test_private_bundle_integrity(self):
         package=P2/"review-package-qa.json"
@@ -86,7 +103,8 @@ class P2ViewAssets(unittest.TestCase):
             manifest=json.loads(z.read("package-manifest.json"))
             self.assertEqual(manifest["registeredSemanticParts"],39)
             self.assertEqual(manifest["holdoutVisualStatus"],
-                             "REQUIRES_VDD_BOUNDARY_REFINEMENT")
+                             "PASS_HOLDOUT_COVERAGE")
+            self.assertFalse(manifest["approvedHeroOriginalSHAverified"])
 
 if __name__=="__main__":
     unittest.main(verbosity=2)

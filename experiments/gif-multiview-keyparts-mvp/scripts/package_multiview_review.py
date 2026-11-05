@@ -32,6 +32,9 @@ def package(experiment,output):
       "private-assets/p2-views/browser/browser-qa.json",
       "private-assets/p2-views/vdd-canvases/canvas-qa.json",
       "private-assets/p2-views/vdd-canvases/holdout-qa.json",
+      "private-assets/p2-views/vdd-canvases/texture-qa.json",
+      "private-assets/p2-views/turn-sequence/turn-gif-qa.json",
+      "private-assets/p2-views/turn-sequence/p0-yaw000-yaw090-artmesh-review.gif",
       "private-assets/p2-audit/semantic-audit.json",
       "private-assets/p2-audit/p2-view-semantic-contact.jpg",
       "private-assets/p1-front/diagnostics/front-pair.png",
@@ -70,8 +73,17 @@ def package(experiment,output):
     for file in (original_archive/"asset-transport-manifest.json",):
         if file.is_file():files[str(file.relative_to(experiment))]=file
     qa=json.loads((source/"p2-views/vdd-canvases/holdout-qa.json").read_text())
+    texture=json.loads((source/"p2-views/vdd-canvases/texture-qa.json").read_text())
+    if texture["status"] not in ("REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+                                 "PASS_TEXTURE_EDGE_DIAGNOSTIC"):
+        raise ValueError("Texture art QA source missing")
+    sequence=json.loads((source/"p2-views/turn-sequence/turn-gif-qa.json").read_text())
+    if sequence["sourceFrameCount"]!=37 or sequence["GIFFrames"]!=72:
+        raise ValueError("Real 37-frame motion GIF missing")
+    if sha(source/"p2-views/turn-sequence/p0-yaw000-yaw090-artmesh-review.gif")!=sequence["GIFSHA256"]:
+        raise ValueError("Review GIF digest differs from source QA")
     engineering=json.loads((source/"p1-front/engineering-qa.json").read_text())
-    if qa["status"]!="REQUIRES_VDD_BOUNDARY_REFINEMENT":
+    if qa["status"] not in ("PASS_HOLDOUT_COVERAGE","REQUIRES_VDD_BOUNDARY_REFINEMENT"):
         raise ValueError("Current review requires explicit recorded holdout status")
     if engineering["status"]!="PASS_STRUCTURAL_ENGINEERING":
         raise ValueError("Front engineering source QA missing")
@@ -82,7 +94,14 @@ def package(experiment,output):
       "angles":[0,45,90],"holdoutAngles":[22.5,67.5],
       "registeredSemanticParts":39,
       "staticArtMeshStatus":"ENGINEERING_PASS_THREE_KEYS",
+      "underpaintStatus":"P0_source_palette_anatomical_contour_candidate",
       "holdoutVisualStatus":qa["status"],
+      "intermediateArtisticReview":"PENDING_TEXTURE_CORRESPONDENCE_REFINEMENT",
+      "textureEdgeStatus":texture["status"],
+      "textureHoldouts":[{"angle":p["angle"],"relativeEdgeDensity":p["edgeDensityRelativeToAdjacentMax"]}
+                         for p in texture["holdouts"]],
+      "sourceFrameCount":sequence["sourceFrameCount"],
+      "reviewGIFSHA256":sequence["GIFSHA256"],
       "approvedHeroOriginalSHAverified":False,
       "files":[{"path":name,"bytes":f.stat().st_size,"sha256":sha(f)}
                for name,f in sorted(files.items())]
@@ -103,18 +122,21 @@ Then open:
     http://localhost:5181/review/p1-front.html
 
 Review both original authored keyframes and independent parts in the 2D
-canvas. The 22.5 and 67.5 holdouts are rendered engineering diagnostics.
+canvas. The 22.5 and 67.5 holdouts are rendered coverage diagnostics. The\nface color underpaint is derived from genuine P0 cheek pigment and geometry.
 
 Quality evidence:
     private-assets/p1-front/engineering-qa.json
     private-assets/p2-views/reconstruction-qa.json
     private-assets/p2-views/vdd-canvases/holdout-qa.json
+    private-assets/p2-views/vdd-canvases/texture-qa.json
+    private-assets/p2-views/turn-sequence/p0-yaw000-yaw090-artmesh-review.gif
+    private-assets/p2-views/turn-sequence/turn-gif-qa.json
     private-assets/p2-views/browser/
     private-assets/p2-views/vdd-canvases/
 
 P0 identity and source SHA metadata are persisted as written, but the
 separate approved hero-master source file is still awaiting direct matching.
-The intermediate-turn facial geometry requires further VDD refinement and
+The edge-density texture gate quantifies the remaining interpolation seams.\nFace texture continuity in intermediate turns requires further VDD refinement and
 artistic review before this is a production animation asset.
 """
     output.parent.mkdir(exist_ok=True,parents=True)
@@ -134,6 +156,8 @@ artistic review before this is a production animation asset.
        "files":len(files)+2,"angles":[0,45,90],"parts":39,
        "internalHashesVerified":True,"staticEngineering":"PASS",
        "holdoutArtQuality":qa["status"],
+       "textureEdgeStatus":texture["status"],
+       "GIFSHA256":sequence["GIFSHA256"],
        "sourceApprovedHeroOriginalSHAverified":False}
     (source/"p2-views/review-package-qa.json").write_text(
         json.dumps(qa_record,ensure_ascii=False,indent=2)+"\n")

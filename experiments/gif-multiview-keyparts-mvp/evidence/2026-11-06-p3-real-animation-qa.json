@@ -1,0 +1,70 @@
+{
+  "schema": "KOMA-P0-P3-MULTIVIEW-TURN-EVIDENCE-20261106",
+  "characterId": "p0_character_001",
+  "sourceRole": "restored genuine P0 original GIF whole views plus independent-part GIF underpaint",
+  "sourceWholeGifSha256": "94dbda85cd0ddace05cf7820214c3a9318a0968ab9c5852e3dcddcbc236a904f",
+  "registeredAngles": [
+    0,
+    45,
+    90
+  ],
+  "registeredArtMeshSlots": 39,
+  "referenceSilhouetteIoU": 1,
+  "renderer": "HTML Canvas2D",
+  "correction": {
+    "triangleClipOverlapPx": 1.55,
+    "faceBase": "Original source reference skin color with animated anatomical contour; supplemental render underpaint"
+  },
+  "realCaptures": {
+    "frames": 37,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "angles": "0 to 90 in 2.5-degree steps"
+  },
+  "preview": {
+    "GIFFrames": 72,
+    "size": [
+      512,
+      512
+    ],
+    "sha256": "fc2cd971a2fd1f353a42da4d81d3466233aca61eea840c09d3b8ea2f2d943da8"
+  },
+  "tests": {
+    "regression": {
+      "passed": 24,
+      "failed": 0
+    },
+    "faceCoverage": {
+      "status": "PASS_HOLDOUT_COVERAGE",
+      "missingPixels": {
+        "0": 0,
+        "45": 0,
+        "90": 0,
+        "22.5": 0,
+        "67.5": 0
+      }
+    },
+    "textureArt": {
+      "status": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+      "thresholdRelativeEdgeDensity": 1.8,
+      "22.5": 8.9459,
+      "67.5": 3.1966
+    }
+  },
+  "privateReviewPackage": {
+    "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-artmesh-review-v3.zip",
+    "bytes": 23718156,
+    "files": 88,
+    "sha256": "fd95e40ab69ecab77bc87101b0ebd203b7bc79842fbab07d3be442e928dd6f9b",
+    "internalSHA256Verified": true
+  },
+  "approvedHeroOriginalMasterSHAverified": false,
+  "artisticAcceptance": "PENDING_ANATOMICAL_TEXTURE_CORRESPONDENCE",
+  "nextStep": "Regenerate complete per-view hair and facial RGBA artwork with identical physical ID, then build constrained VDD correspondence meshes",
+  "research": [
+    "https://doi.org/10.1109/MCG.2022.3174202",
+    "https://doi.org/10.20668/adada.23.2_16"
+  ]
+}

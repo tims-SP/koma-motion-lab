@@ -31,7 +31,10 @@ async function start(){
   const url='http://127.0.0.1:'+httpd.address().port+'/experiments/gif-multiview-keyparts-mvp/review/index.html?mode=candidate';
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.__KOMA_P0_VIEWER&&window.__KOMA_P0_VIEWER.inspect().ready,null,{timeout:18000});
-  for(const angle of [0,22.5,45,67.5,90]){
+  const angles=process.env.KOMA_P3_TURN_SEQUENCE==='1'
+    ? Array.from({length:37},(_,i)=>i*2.5)
+    : [0,22.5,45,67.5,90];
+  for(const angle of angles){
    await page.evaluate(v=>window.__KOMA_P0_VIEWER.renderAt(v),angle);
    const encoded=await page.evaluate(()=>document.getElementById('result').toDataURL('image/png').split(',')[1]);
    const p=path.join(dest,'yaw'+String(angle).replace('.','p')+'.png');
@@ -41,7 +44,9 @@ async function start(){
   const report={schema:'KOMA-P0-VDD-RAW-CANVAS-EVIDENCE-V1',characterId:'p0_character_001',
                 sourceRole:'recovered_original_39_part_RGBA_art',
                 rendering:'HTML Canvas2D piecewise ArtMesh vertices',
-                outputs,errors,status:errors.length?'BROWSER_RENDER_ERRORS':'CAPTURED_FOR_ANATOMICAL_INSPECTION'};
+                outputs,errors,angles,frameCount:outputs.length,
+                sequenceMode:process.env.KOMA_P3_TURN_SEQUENCE==='1',
+                status:errors.length?'BROWSER_RENDER_ERRORS':'CAPTURED_FOR_ANATOMICAL_INSPECTION'};
   fs.writeFileSync(path.join(dest,'canvas-qa.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({status:report.status,frames:outputs.length,errors,files:outputs.map(o=>o.path)},null,2));
   process.exitCode=errors.length?2:0;

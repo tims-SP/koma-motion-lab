@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P1_FRONT_STATIC_ENGINEERING_PASS_P2_ART_LAYER_REVIEW",
+  "status": "P3_REAL_MOTION_ARTIFACT_TEXTURE_REFINEMENT",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -138,7 +138,7 @@
     },
     {
       "id": "T02-A",
-      "status": "FRONT_0_ARTMESH_RECONSTRUCTION_ENGINEERING_PASS",
+      "status": "P1_FRONT_STATIC_ENGINEERING_PASS",
       "name": "Generate 0-degree five-frame direct transparent facial-part GIF",
       "dependsOn": [
         "T00"
@@ -152,7 +152,7 @@
     },
     {
       "id": "T02-B",
-      "status": "VIEW_45_90_SEMANTIC_ART_REVIEW",
+      "status": "P2_45_90_SEMANTIC_VIEW_REGISTRY_DONE",
       "name": "Complete direct transparent GIF key-part matrices at 0/45/90 degrees",
       "dependsOn": [
         "T01",
@@ -167,7 +167,7 @@
     },
     {
       "id": "T03",
-      "status": "P1_FRONT_13_RGBA_MESHES_REGISTERED_P2_VIEW_COORDINATES_PENDING",
+      "status": "THREE_VIEW_39_RGBA_SHA_VERIFIED",
       "name": "Extract, refine RGBA edge alpha, register semantic depth and anchor correspondence",
       "dependsOn": [
         "T02-B"
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P1_FRONT_HTML_BROWSER_TEST_PASS_MULTIVIEW_ART_REVIEW_PENDING",
+      "status": "P3_HTML_37_FRAMES_TEXTURE_REFINEMENT_PENDING",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "PRIVATE_P1_FRONT_REVIEW_ARCHIVE_SHA_VERIFIED",
+      "status": "PRIVATE_72_GIF_FRAME_ARTIFACT_SHA_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P1_FRONT_13_RGBA_LAYERS_150_QA_GATES_17_TESTS_3_BROWSER_CAPTURES",
+  "lastCompleted": "P3_39_LAYERS_37_REAL_BROWSER_PNGS_72_FRAME_GIF_24_REGRESSION_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -313,6 +313,59 @@
         "size": 6652749,
         "sha256": "15ca2d9c60d2c6963ee83b177b2363547a5ab16d65e60025e844f0eeaaff5fc5"
       }
+    },
+    "p2ThreeView": {
+      "semanticSlots": 39,
+      "yaw": [
+        0,
+        45,
+        90
+      ],
+      "canvas": [
+        1024,
+        1024
+      ],
+      "geometry": "49 vertices / 72 triangles per layer",
+      "staticSilhouetteIoU": 1,
+      "source": "P0 recovered original 4 GIF sources"
+    },
+    "p3Animation": {
+      "renderer": "HTML Canvas2D piecewise affine ArtMesh",
+      "triangleOverlapPx": 1.55,
+      "faceUnderpaint": "Original P0 face cheek pigment registered to angle-specific anatomical contours",
+      "faceCoreCoverage": {
+        "status": "PASS_HOLDOUT_COVERAGE",
+        "angles": [
+          0,
+          22.5,
+          45,
+          67.5,
+          90
+        ],
+        "holes": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "textureContinuity": {
+        "status": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+        "22.5EdgeDensityFactor": 8.9459,
+        "67.5EdgeDensityFactor": 3.1966
+      },
+      "inputRgbaFrames": 37,
+      "outputGifFrames": 72,
+      "gifPreviewSha256": "fc2cd971a2fd1f353a42da4d81d3466233aca61eea840c09d3b8ea2f2d943da8",
+      "regressionTests": "24/24",
+      "privatePackage": {
+        "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-artmesh-review-v3.zip",
+        "bytes": 23718156,
+        "sha256": "fd95e40ab69ecab77bc87101b0ebd203b7bc79842fbab07d3be442e928dd6f9b"
+      },
+      "artisticAcceptance": "TEXTURE_CORRESPONDENCE_REQUIRES_REFINEMENT",
+      "approvedP0HeroSHA": "PENDING_DIRECT_MASTER_VERIFICATION"
     }
   }
 }
