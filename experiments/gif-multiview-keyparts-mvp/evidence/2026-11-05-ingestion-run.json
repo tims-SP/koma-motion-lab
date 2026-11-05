@@ -47,7 +47,14 @@
     "javascriptSyntaxViewer": {
       "pass": true,
       "command": "node --check experiments/gif-multiview-keyparts-mvp/review/review.js"
-    }
+    },
+    "R1999NativeVDD": {
+      "passed": 5,
+      "total": 5,
+      "command": "node --test experiments/r1999-cubism-vdd/tests/vdd-keyframes.test.mjs",
+      "detail": "keyframe endpoints, continuous interpolation, topology rejection, true-view provenance, native-front identity"
+    },
+    "totalEngineeringRegressionTestsPassed": 14
   },
   "source": {
     "expectedHeroSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
