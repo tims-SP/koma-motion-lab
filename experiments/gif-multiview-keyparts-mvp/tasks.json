@@ -17,7 +17,7 @@
     "actualSha256": "TO_BE_VERIFIED_FROM_APPROVED_ASSET"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "PLANNED",
+  "status": "ASSET_GENERATION_REVIEWED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -30,7 +30,8 @@
     "alphaCheck": "transparent corners; no baked checkerboard, white backdrop, or frame carryover",
     "disposal": "clear previous semantic part before displaying next frame",
     "productionSource": "native RGBA frames where provided; otherwise GIF frames with edge-alpha refinement",
-    "decompositionToolRole": "conditional repair for missing/incomplete parts"
+    "decompositionToolRole": "conditional repair for missing/incomplete parts",
+    "deliveryMode": "single identity prompt, four logical GIF outputs: 8 + 15 + 9 + 6 frames"
   },
   "viewConvention": {
     "yaw0": "front",
@@ -87,9 +88,9 @@
   "expectedAssets": {
     "wholeViewGIF": 1,
     "wholeViewFrames": 8,
-    "transparentPartGIFs": 9,
+    "transparentPartGIFs": 3,
     "transparentPartGIFFrames": 30,
-    "gifTotal": 10,
+    "gifTotal": 4,
     "registeredPartSlots": 30,
     "initialSmokeTest": {
       "angle": 0,
@@ -112,7 +113,7 @@
   "tasks": [
     {
       "id": "T00",
-      "status": "PLANNED",
+      "status": "SOURCE_SHA_REQUIRED",
       "name": "Verify approved P0 identity asset SHA and coordinate frame",
       "dependsOn": [],
       "gate": "P0_IDENTITY_SOURCE_VERIFIED",
@@ -122,7 +123,7 @@
     },
     {
       "id": "T01",
-      "status": "PLANNED",
+      "status": "GENERATED_QA_PENDING",
       "name": "Generate consistent whole-head eight-view GIF",
       "dependsOn": [
         "T00"
@@ -136,7 +137,7 @@
     },
     {
       "id": "T02-A",
-      "status": "PLANNED",
+      "status": "GENERATED_QA_PENDING",
       "name": "Generate 0-degree five-frame direct transparent facial-part GIF",
       "dependsOn": [
         "T00"
@@ -150,7 +151,7 @@
     },
     {
       "id": "T02-B",
-      "status": "PLANNED",
+      "status": "GENERATED_QA_PENDING",
       "name": "Complete direct transparent GIF key-part matrices at 0/45/90 degrees",
       "dependsOn": [
         "T01",
@@ -165,7 +166,7 @@
     },
     {
       "id": "T03",
-      "status": "PLANNED",
+      "status": "IN_PROGRESS_QA_PENDING",
       "name": "Extract, refine RGBA edge alpha, register semantic depth and anchor correspondence",
       "dependsOn": [
         "T02-B"
@@ -202,7 +203,8 @@
       "deliverables": [
         "asset-manifest.json",
         "source-hashes.json",
-        "private-artifact-manifest.json"
+        "private-artifact-manifest.json",
+        "evidence/2026-11-05-generation-qa.json"
       ]
     }
   ],
@@ -235,6 +237,15 @@
     "sourceRepo": "text-only scripts/config/manifest/QA",
     "provenanceSha256": true
   },
-  "evidence": {},
-  "lastCompleted": null
+  "evidence": {
+    "generationQA": "experiments/gif-multiview-keyparts-mvp/evidence/2026-11-05-generation-qa.json",
+    "sourceGifCount": 4,
+    "sourceGifFrames": 38,
+    "frameDecode": "PASS",
+    "componentRegistry": "PENDING",
+    "canvasRegistration": "PENDING",
+    "layerReconstruction": "PENDING",
+    "approvedP0OriginalSourceSHA": "PENDING"
+  },
+  "lastCompleted": "GIF89A_4_FILES_38_FRAMES_DECODE_AND_SOURCE_AUDIT"
 }
