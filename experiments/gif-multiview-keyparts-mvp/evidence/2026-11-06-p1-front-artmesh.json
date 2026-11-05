@@ -1,0 +1,75 @@
+{
+  "schema": "KOMA-P0-P1-ARTMESH-QA-V1",
+  "characterId": "p0_character_001",
+  "date": "2026-11-06",
+  "source": {
+    "wholeGIFSha256": "94dbda85cd0ddace05cf7820214c3a9318a0968ab9c5852e3dcddcbc236a904f",
+    "originalApprovedHeroSha256Verified": false
+  },
+  "staticArtMesh": {
+    "semanticSlots": 13,
+    "canvas": [
+      1024,
+      1024
+    ],
+    "gridVerticesPerPart": 49,
+    "gridTrianglesPerPart": 72,
+    "skinUnderpainting": true,
+    "hairUnderpainting": true,
+    "physicalEyeAndEarSplit": true,
+    "clipAndAhogeSplit": true
+  },
+  "tests": {
+    "engineering": {
+      "passed": 150,
+      "failed": 0,
+      "status": "PASS_STRUCTURAL_ENGINEERING"
+    },
+    "integration": {
+      "passed": 17,
+      "failed": 0
+    },
+    "browser": {
+      "status": "PASS_P1_BROWSER_ENGINEERING",
+      "screenshots": 3,
+      "errors": 0
+    },
+    "visualMetrics": {
+      "silhouetteIoU": 1,
+      "channelMAE": 0.00618,
+      "changedPixels": 779,
+      "staticOpaqueHoles": 0,
+      "nearEyeTranslationPx": 10,
+      "nearEyeTransparentHoles": 0,
+      "farEyeCoreMaxDifference": 0
+    }
+  },
+  "captures": [
+    {
+      "name": "p1-front-default.png",
+      "sha256": "88cb9fc4ab6b72612154dc38ed8416be5ac3ea5c78c0ead327c3b51804f701e9"
+    },
+    {
+      "name": "p1-front-eye-near-10px.png",
+      "sha256": "15f1eb0450b469f763578f9e477d2360f9b17150d268667b8504d3dc8d581e0b"
+    },
+    {
+      "name": "p1-front-hair-parts.png",
+      "sha256": "74054da1e2fa92dd705621dbb0955a2681a0650f21cfc5cb48ea1e468becfdb8"
+    }
+  ],
+  "privateAsset": {
+    "archive": "private-assets/exports/p0-character-001-front-artmesh-review.zip",
+    "bytes": 6652749,
+    "sha256": "15ca2d9c60d2c6963ee83b177b2363547a5ab16d65e60025e844f0eeaaff5fc5",
+    "fileCount": 34,
+    "verifiedInternalHashes": true
+  },
+  "acceptance": {
+    "staticEngineering": "PASS",
+    "originalMasterIdentitySHA": "PENDING",
+    "independentEyeMotionArtwork": "PENDING",
+    "view45And90ArtMesh": "PENDING",
+    "multiviewVDDVisualQuality": "PENDING"
+  }
+}

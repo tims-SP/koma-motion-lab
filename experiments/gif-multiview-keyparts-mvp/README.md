@@ -83,3 +83,21 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 五角度抽检画面已检查。37 帧相邻 RGB 平均绝对差的中位数约为 5.42，20°→22.5° 与 65°→67.5° 的差异高于参考阈值，反映身份纹理跨源切换仍需要正式补绘及拓扑连续约束。诊断见 `evidence/candidate-temporal-qa.json`。
 
 本次完整私有审查包保存在 `experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review-v2.zip`，19,022,502 字节，SHA-256：`d0b68de1589ba65a5f2db49ad7a3604d2f9f36d2fd8fc65fccff34067ed43fac`，包含光流预览、时间一致性 QA、候选透明部件、来源 GIF 和实际浏览器截图。历史资产恢复与验收信息保留在仓库证据目录中。
+
+## P1 · 正面独立 ArtMesh 审查
+
+以 P0 的恢复原画和原有语义 GIF 为来源生成 13 个 1024×1024 RGBA 图层，保存各来源的 SHA-256、解剖身份和 7×7 可编辑网格。
+面部遮挡与发夹背后的纹理基于原画颜色和独立部件修复，后续动态效果需要继续做视觉验收。
+
+在测试仓库根目录执行（Python 环境包含 Pillow、OpenCV、NumPy）：
+
+    python experiments/gif-multiview-keyparts-mvp/scripts/p1_front_semantic.py --root experiments/gif-multiview-keyparts-mvp/private-assets
+    python experiments/gif-multiview-keyparts-mvp/scripts/qa_p1_front.py --root experiments/gif-multiview-keyparts-mvp/private-assets --output experiments/gif-multiview-keyparts-mvp/private-assets/p1-front/engineering-qa.json
+    python -m unittest discover -s experiments/gif-multiview-keyparts-mvp/tests -v
+    KOMA_PLAYWRIGHT_MODULE=/absolute/path/to/playwright node experiments/gif-multiview-keyparts-mvp/scripts/capture_p1_front.cjs
+    python experiments/gif-multiview-keyparts-mvp/scripts/package_p1_front.py --output experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-front-artmesh-review.zip
+
+运行 `python -m http.server 5181` 后打开 `http://127.0.0.1:5181/experiments/gif-multiview-keyparts-mvp/review/p1-front.html`，可逐层显示及移动眼睛、前发。
+
+本轮实机结果：150/150 个结构门禁通过，17/17 项工程测试通过，三个浏览器实机截图经 SHA-256 验证。正面重组轮廓 IoU 1.000，完全不透明源画区域的透明孔洞数为 0。独立动作美术验收与批准角色母图 SHA-256 验证仍需单独完成。
+大型原画及截图存于私有 `private-assets/`，其 SHA 和技术验收结果写入 `evidence/2026-11-06-p1-front-artmesh.json`。

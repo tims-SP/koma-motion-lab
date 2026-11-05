@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "GIF_SOURCE_RESTORED_VIEW_CANDIDATE_REGISTERED",
+  "status": "P1_FRONT_STATIC_ENGINEERING_PASS_P2_ART_LAYER_REVIEW",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -138,7 +138,7 @@
     },
     {
       "id": "T02-A",
-      "status": "FACE_GIF_15_FRAMES_RECOVERED_SEMANTIC_INSPECTION",
+      "status": "FRONT_0_ARTMESH_RECONSTRUCTION_ENGINEERING_PASS",
       "name": "Generate 0-degree five-frame direct transparent facial-part GIF",
       "dependsOn": [
         "T00"
@@ -152,7 +152,7 @@
     },
     {
       "id": "T02-B",
-      "status": "THIRTY_SOURCE_FRAMES_EXTRACTED_LAYER_ART_REVIEW",
+      "status": "VIEW_45_90_SEMANTIC_ART_REVIEW",
       "name": "Complete direct transparent GIF key-part matrices at 0/45/90 degrees",
       "dependsOn": [
         "T01",
@@ -167,7 +167,7 @@
     },
     {
       "id": "T03",
-      "status": "CANDIDATE_39_RGBA_LAYERS_THREE_ENDPOINT_PIXEL_PARITY",
+      "status": "P1_FRONT_13_RGBA_MESHES_REGISTERED_P2_VIEW_COORDINATES_PENDING",
       "name": "Extract, refine RGBA edge alpha, register semantic depth and anchor correspondence",
       "dependsOn": [
         "T02-B"
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "BROWSER_FIVE_ANGLE_VISUAL_QA_RECORDED",
+      "status": "P1_FRONT_HTML_BROWSER_TEST_PASS_MULTIVIEW_ART_REVIEW_PENDING",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "PRIVATE_REVIEW_PACKAGE_BUILT_SHA_VERIFIED",
+      "status": "PRIVATE_P1_FRONT_REVIEW_ARCHIVE_SHA_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "SOURCE38_RGBA39_KEYFRAME_PARITY3_CHROMIUM5_FLOW37_AND_TEMPORAL_QA",
+  "lastCompleted": "P1_FRONT_13_RGBA_LAYERS_150_QA_GATES_17_TESTS_3_BROWSER_CAPTURES",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -280,6 +280,39 @@
           67.5
         ]
       ]
+    },
+    "p1Front": {
+      "semanticSlots": 13,
+      "canvas": [
+        1024,
+        1024
+      ],
+      "gridVerticesPerLayer": 49,
+      "trianglesPerLayer": 72,
+      "engineering": {
+        "passed": 150,
+        "failed": 0,
+        "status": "PASS_STRUCTURAL_ENGINEERING",
+        "silhouetteIoU": 1,
+        "meanAbsoluteChannelDelta": 0.00618,
+        "changedPixels": 779,
+        "staticOpaqueHoles": 0,
+        "nearEyeMovePx": 10,
+        "nearEyeMotionHoles": 0,
+        "farEyeMotionPixelDelta": 0
+      },
+      "regressionSuite": "17/17 PASS",
+      "browser": {
+        "status": "PASS_P1_BROWSER_ENGINEERING",
+        "captures": 3
+      },
+      "approvedHeroSourceSHA": "PENDING_VERIFICATION",
+      "independentMotionVisualReview": "PENDING",
+      "privatePackage": {
+        "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-front-artmesh-review.zip",
+        "size": 6652749,
+        "sha256": "15ca2d9c60d2c6963ee83b177b2363547a5ab16d65e60025e844f0eeaaff5fc5"
+      }
     }
   }
 }
