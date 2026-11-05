@@ -35,6 +35,15 @@ def package(experiment,output):
       "private-assets/p2-views/vdd-canvases/texture-qa.json",
       "private-assets/p2-views/turn-sequence/turn-gif-qa.json",
       "private-assets/p2-views/turn-sequence/p0-yaw000-yaw090-artmesh-review.gif",
+      "private-assets/p3-native-source-trial/qa.json",
+      "private-assets/p3-native-source-trial/yaw0225_whole.png",
+      "private-assets/p3-native-source-trial/yaw0675_whole.png",
+      "private-assets/p3-native-source-trial/preview/qa.json",
+      "private-assets/p3-native-source-trial/preview/yaw-progress-qa.json",
+      "private-assets/p3-native-source-trial/preview/five-view-source-comparison.jpg",
+      "private-assets/p3-native-source-trial/preview/five-view-identity-storyboard.gif",
+      "private-assets/p3-native-source-trial/iteration2/qa.json",
+      "private-assets/p3-native-source-trial/iteration2/yaw0675_pose_guided.png",
       "private-assets/p2-audit/semantic-audit.json",
       "private-assets/p2-audit/p2-view-semantic-contact.jpg",
       "private-assets/p1-front/diagnostics/front-pair.png",
@@ -82,6 +91,16 @@ def package(experiment,output):
         raise ValueError("Real 37-frame motion GIF missing")
     if sha(source/"p2-views/turn-sequence/p0-yaw000-yaw090-artmesh-review.gif")!=sequence["GIFSHA256"]:
         raise ValueError("Review GIF digest differs from source QA")
+    trial=json.loads((source/"p3-native-source-trial/qa.json").read_text())
+    progress=json.loads((source/"p3-native-source-trial/preview/yaw-progress-qa.json").read_text())
+    poseQA=json.loads((source/"p3-native-source-trial/iteration2/qa.json").read_text())
+    if trial.get("characterId")!="p0_character_001" or progress.get("characterId")!="p0_character_001":
+        raise ValueError("Generated P0 trial identity mismatch")
+    if progress["status"]!="GENERATED_VIEW_ANGLES_REQUIRE_POSE_CONSTRAINTS":
+        raise ValueError("Angular view fidelity QA needs re-evaluation")
+    if poseQA["sourceGeneration"]["generatedOutputs"][0]["sha256"]!=sha(
+        source/"p3-native-source-trial/iteration2/yaw0675_pose_guided.png"):
+        raise ValueError("Pose-guided source SHA differs")
     engineering=json.loads((source/"p1-front/engineering-qa.json").read_text())
     if qa["status"] not in ("PASS_HOLDOUT_COVERAGE","REQUIRES_VDD_BOUNDARY_REFINEMENT"):
         raise ValueError("Current review requires explicit recorded holdout status")
@@ -102,6 +121,13 @@ def package(experiment,output):
                          for p in texture["holdouts"]],
       "sourceFrameCount":sequence["sourceFrameCount"],
       "reviewGIFSHA256":sequence["GIFSHA256"],
+      "generatedViewSources":{
+          "inputsFromOriginalGif":True,
+          "RGBAProcessing":"image_to_image_JPEG_and_background_removal",
+          "candidateAngles":[22.5,67.5],
+          "angleProgressQA":progress["status"],
+          "poseGuidedArtworkSHA256":poseQA["sourceGeneration"]["generatedOutputs"][0]["sha256"]
+      },
       "approvedHeroOriginalSHAverified":False,
       "files":[{"path":name,"bytes":f.stat().st_size,"sha256":sha(f)}
                for name,f in sorted(files.items())]
@@ -131,11 +157,18 @@ Quality evidence:
     private-assets/p2-views/vdd-canvases/texture-qa.json
     private-assets/p2-views/turn-sequence/p0-yaw000-yaw090-artmesh-review.gif
     private-assets/p2-views/turn-sequence/turn-gif-qa.json
+    private-assets/p3-native-source-trial/preview/five-view-identity-storyboard.gif
+    private-assets/p3-native-source-trial/preview/five-view-source-comparison.jpg
+    private-assets/p3-native-source-trial/preview/yaw-progress-qa.json
     private-assets/p2-views/browser/
     private-assets/p2-views/vdd-canvases/
 
 P0 identity and source SHA metadata are persisted as written, but the
 separate approved hero-master source file is still awaiting direct matching.
+The generated 22.5 and 67.5 pictures are separate source identity
+candidates made with image-to-image JPEG and background removal, and their
+pose angle requires additional geometric constraints. Their five-view
+storyboard is distinct from the original ArtMesh interpolation benchmark.
 The edge-density texture gate quantifies the remaining interpolation seams.\nFace texture continuity in intermediate turns requires further VDD refinement and
 artistic review before this is a production animation asset.
 """
@@ -158,6 +191,8 @@ artistic review before this is a production animation asset.
        "holdoutArtQuality":qa["status"],
        "textureEdgeStatus":texture["status"],
        "GIFSHA256":sequence["GIFSHA256"],
+       "generatedSourceQAStatus":progress["status"],
+       "generatedViewsRegisteredAsApprovedYaw":False,
        "sourceApprovedHeroOriginalSHAverified":False}
     (source/"p2-views/review-package-qa.json").write_text(
         json.dumps(qa_record,ensure_ascii=False,indent=2)+"\n")
