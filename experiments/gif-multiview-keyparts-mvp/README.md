@@ -72,3 +72,14 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
     /root/koma-motion-r1999/work/r1999-vision-venv/bin/python experiments/gif-multiview-keyparts-mvp/scripts/flow_render.py --root experiments/gif-multiview-keyparts-mvp/private-assets --out experiments/gif-multiview-keyparts-mvp/private-assets/flow-sharp --mode dis_sharp
 
 私有预览包路径为 `experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review.zip`，19,084,223 字节，SHA-256：`b62d060d908f10c6ade86bb2baa9fb18b9199324f7753583976406ab90b07002`。含原始 38 帧包、候选分层、HTML、实际浏览器截图与诊断 GIF。新生成的 22.5°、67.5° 原生 RGBA 原画和 `eye.far` 部件另见 `evidence/2026-11-05-native-rgba-views.json`。
+
+## 连续形变与时间一致性 QA
+
+`scripts/flow_render.py` 现提供 `dis_smooth_sharp` 作为统一形变场对照：在真实 0°、45°、90° 原画间计算 DIS 光流，并对光流坐标使用标准差为 12 像素的空间平滑，尽量维持面部与发丝锐度。输出 37 个角度候选画面及 GIF。
+
+    /root/koma-motion-r1999/work/r1999-vision-venv/bin/python experiments/gif-multiview-keyparts-mvp/scripts/flow_render.py --root experiments/gif-multiview-keyparts-mvp/private-assets --out experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth --mode dis_smooth_sharp
+    /root/koma-motion-r1999/work/r1999-vision-venv/bin/python experiments/gif-multiview-keyparts-mvp/scripts/qa_temporal.py --frames experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth --output experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/temporal-qa.json
+
+五角度抽检画面已检查。37 帧相邻 RGB 平均绝对差的中位数约为 5.42，20°→22.5° 与 65°→67.5° 的差异高于参考阈值，反映身份纹理跨源切换仍需要正式补绘及拓扑连续约束。诊断见 `evidence/candidate-temporal-qa.json`。
+
+本次完整私有审查包保存在 `experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review-v2.zip`，19,022,502 字节，SHA-256：`d0b68de1589ba65a5f2db49ad7a3604d2f9f36d2fd8fc65fccff34067ed43fac`，包含光流预览、时间一致性 QA、候选透明部件、来源 GIF 和实际浏览器截图。历史资产恢复与验收信息保留在仓库证据目录中。

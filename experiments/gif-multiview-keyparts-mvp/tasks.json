@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "RECOVERED_GIF38_CANDIDATE39_ENDPOINT_PARITY3_BROWSER5_QA13",
+  "lastCompleted": "SOURCE38_RGBA39_KEYFRAME_PARITY3_CHROMIUM5_FLOW37_AND_TEMPORAL_QA",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -261,9 +261,25 @@
     "originalHeroVerified": false,
     "independentArtMeshesAccepted": false,
     "privateReviewPackage": {
-      "sha256": "b62d060d908f10c6ade86bb2baa9fb18b9199324f7753583976406ab90b07002",
-      "bytes": 19084223
+      "sha256": "d0b68de1589ba65a5f2db49ad7a3604d2f9f36d2fd8fc65fccff34067ed43fac",
+      "bytes": 19022502,
+      "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review-v2.zip"
     },
-    "additionalNativeRGBA": "2 holdout views and 1 far eye; user review pending"
+    "additionalNativeRGBA": "2 holdout views and 1 far eye; user review pending",
+    "temporalContinuity": {
+      "sampledFrames": 37,
+      "medianDelta": 5.4211,
+      "maxDelta": 14.4204,
+      "transitionOutliers": [
+        [
+          20,
+          22.5
+        ],
+        [
+          65,
+          67.5
+        ]
+      ]
+    }
   }
 }

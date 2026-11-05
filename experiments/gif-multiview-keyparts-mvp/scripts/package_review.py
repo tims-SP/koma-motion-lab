@@ -28,7 +28,7 @@ def run(repo,origin,browser,out):
     pairs=[]
     for relative in ["review/index.html","review/review.js","README.md","contract.json",
                      "scripts/build_semantic_partition.py","scripts/flow_render.py",
-                     "scripts/capture_review.cjs"]:
+                     "scripts/qa_temporal.py","scripts/capture_review.cjs"]:
         pairs.append((lab/relative,Path("experiments/gif-multiview-keyparts-mvp")/relative))
     for source in sorted((private/"candidate-v2").rglob("*")):
         if source.is_file():
@@ -40,9 +40,10 @@ def run(repo,origin,browser,out):
     for source in sorted(browser.glob("*.png")):
         pairs.append((source,Path("screenshots")/source.name))
     pairs.append((browser/"browser-qa.json",Path("screenshots/browser-qa.json")))
-    pairs.append((private/"flow-sharp/yaw000-yaw090-flow-review.gif",
+    pairs.append((private/"flow-smooth/yaw000-yaw090-flow-review.gif",
                   Path("diagnostics/flow-review.gif")))
-    pairs.append((private/"flow-sharp/flow-qa.json",Path("diagnostics/flow-qa.json")))
+    pairs.append((private/"flow-smooth/flow-qa.json",Path("diagnostics/flow-qa.json")))
+    pairs.append((private/"flow-smooth/temporal-qa.json",Path("diagnostics/temporal-qa.json")))
     pairs.append((origin,Path("original-38-frames/gif_multiview_asset_review_2026-11-05.zip")))
     members=[]
     for source,rel in pairs:

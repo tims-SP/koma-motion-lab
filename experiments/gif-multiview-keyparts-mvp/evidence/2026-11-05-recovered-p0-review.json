@@ -94,8 +94,10 @@
   },
   "flowStudy": {
     "candidateFrames": 37,
-    "gifSha256": "cede61e73c92f05621a7ed2ac609b64dfbfb00ef2070d34950f3e3ec183fe28f",
-    "visualStatus": "REQUIRES_PER_PART_AND_HOLDOUT_REFINEMENT"
+    "method": "OpenCV DIS with spatial flow smoothing sigma=12 and single-source warp",
+    "gifSha256": "4f9421ca88ac7dd6dafea533108c50002dd6128ebd155d022c1f802724359da3",
+    "temporalContinuity": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+    "maximumAdjacentChangeOverMedian": 2.66
   },
   "nativeViews": [
     {
@@ -127,12 +129,27 @@
     "originalVddRegressionTests": 5,
     "candidateBrowserViews": 5,
     "visualEndpoints": "KEYFRAME_ORIGINAL_PIXEL_PARITY",
-    "visualHoldouts": "ARTMESH_DEFORMATION_NEEDS_REFINEMENT"
+    "visualHoldouts": "ARTMESH_DEFORMATION_NEEDS_REFINEMENT",
+    "temporalSampledFrames": 37,
+    "temporalOutliers": [
+      {
+        "fromYaw": 20,
+        "toYaw": 22.5,
+        "meanRGBAbsoluteDelta": 11.2824,
+        "relativeToMedian": 2.081
+      },
+      {
+        "fromYaw": 65,
+        "toYaw": 67.5,
+        "meanRGBAbsoluteDelta": 14.4204,
+        "relativeToMedian": 2.66
+      }
+    ]
   },
   "privateReviewPackage": {
-    "bytes": 19084223,
-    "sha256": "b62d060d908f10c6ade86bb2baa9fb18b9199324f7753583976406ab90b07002",
-    "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review.zip"
+    "sha256": "d0b68de1589ba65a5f2db49ad7a3604d2f9f36d2fd8fc65fccff34067ed43fac",
+    "bytes": 19022502,
+    "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review-v2.zip"
   },
   "acceptance": "REVIEW_CANDIDATE"
 }

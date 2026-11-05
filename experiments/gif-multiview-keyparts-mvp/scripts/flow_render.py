@@ -101,6 +101,9 @@ def run(root,out,mode):
     flow_metrics={}
     for a,b in [(0,45),(45,90)]:
         ab,ba=get_flow(refs[a],refs[b],mode)
+        if mode=="dis_smooth_sharp":
+            ab=cv2.GaussianBlur(ab,(0,0),12)
+            ba=cv2.GaussianBlur(ba,(0,0),12)
         flow[(a,b)]=(ab,ba)
         flow_metrics[str(a)+"-"+str(b)]={
             "fwdMeanPx":float(np.linalg.norm(ab,axis=2).mean()),
@@ -116,7 +119,7 @@ def run(root,out,mode):
         else:
             a,b=(0,45) if yaw<45 else (45,90)
             t=(yaw-a)/(b-a)
-            frame=morph(refs[a],refs[b],*flow[(a,b)],t,grid,single_source=(mode=="dis_sharp"))
+            frame=morph(refs[a],refs[b],*flow[(a,b)],t,grid,single_source=(mode in ("dis_sharp","dis_smooth_sharp")))
         frames[yaw]=frame
         outfile=out/("yaw%05.1f.png"%yaw).replace(".","p")
         # Restore a meaningful PNG extension.
@@ -132,7 +135,7 @@ def run(root,out,mode):
     animated[0].save(gif,save_all=True,append_images=animated[1:],duration=90,
                      disposal=2,loop=0,optimize=False,transparency=0)
     qa={"schema":"KOMA-P0-OPTICAL-FLOW-VIEW-STUDY-V1",
-        "characterId":"p0_character_001","renderMethod":mode,
+        "characterId":"p0_character_001","renderMethod":mode,"flowSmoothingSigma":12 if mode=="dis_smooth_sharp" else 0,
         "sourceRole":"verified_recovered_whole_view_GIF_pixels",
         "viewSourceSHA256":{str(yaw):sha(root/f"recovered-review/frames/head_8/yaw{yaw:03d}_whole.png") for yaw in refs},
         "flowMetrics":flow_metrics,
@@ -151,6 +154,6 @@ if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("--root",required=True)
     p.add_argument("--out",required=True)
-    p.add_argument("--mode",choices=["dis","farneback","dis_sharp"],default="dis")
+    p.add_argument("--mode",choices=["dis","farneback","dis_sharp","dis_smooth_sharp"],default="dis")
     args=p.parse_args()
     run(args.root,args.out,args.mode)
