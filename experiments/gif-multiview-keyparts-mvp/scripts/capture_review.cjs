@@ -9,6 +9,7 @@ const root=path.resolve(__dirname,'../../..');
 const experiment=path.resolve(__dirname,'..');
 const out=path.resolve(process.env.KOMA_QA_OUT||'/tmp/koma-gif-review');
 const browserModule=process.env.KOMA_PLAYWRIGHT_MODULE||'playwright';
+const candidateMode=process.env.KOMA_CANDIDATE_MODE==='1';
 const {chromium}=require(browserModule);
 function sha(pathname){return crypto.createHash('sha256').update(fs.readFileSync(pathname)).digest('hex');}
 const mime={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8',
@@ -31,7 +32,7 @@ const server=http.createServer((req,res)=>{
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const port=server.address().port;
  const url='http://127.0.0.1:'+port+
-   '/experiments/gif-multiview-keyparts-mvp/review/index.html';
+   '/experiments/gif-multiview-keyparts-mvp/review/index.html'+(candidateMode?'?mode=candidate':'');
  const errors=[],httpErrors=[],frames=[];
  let browser;
  try{
@@ -71,13 +72,13 @@ const server=http.createServer((req,res)=>{
   const changing=initial.ready&&frames.every(x=>x.pixels>1000)&&
    new Set(frames.map(x=>x.rgbaSum)).size>=4;
   const result={schema:'KOMA-P0-VDD-BROWSER-QA-V1',characterId:'p0_character_001',
-   status:initial.ready?(changing&&errors.length===0?'RENDER_ENGINEERING_PASS':'RENDER_CHECKS_FAIL'):status,
+   status:initial.ready?(changing&&errors.length===0?(candidateMode?'CANDIDATE_RENDER_ENGINEERING_PASS':'RENDER_ENGINEERING_PASS'):'RENDER_CHECKS_FAIL'):status,
    sourceReady:initial.ready,initial,frames,errors,httpErrors,
-   visualAcceptance:initial.ready?'HUMAN_SOURCE_AND_HOLDOUT_REVIEW_REQUIRED':'SOURCE_ASSET_BYTES_REQUIRED'};
+   visualAcceptance:initial.ready?(candidateMode?'CANDIDATE_ART_VISUAL_REVIEW_REQUIRED':'HUMAN_SOURCE_AND_HOLDOUT_REVIEW_REQUIRED'):'SOURCE_ASSET_BYTES_REQUIRED'};
   fs.writeFileSync(path.join(out,'browser-qa.json'),JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify({status:result.status,sourceReady:result.sourceReady,frames:frames.length,
     errors,gate:initial.problems},null,2));
-  process.exitCode=result.status==='RENDER_ENGINEERING_PASS'?0:2;
+  process.exitCode=['RENDER_ENGINEERING_PASS','CANDIDATE_RENDER_ENGINEERING_PASS'].includes(result.status)?0:2;
  }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

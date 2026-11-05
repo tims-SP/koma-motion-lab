@@ -1,9 +1,10 @@
 (() => {
 'use strict';
 const SIZE=1024;
+const candidateMode=new URLSearchParams(location.search).get('mode')==='candidate';
 const URL_BASE=new URL('../private-assets/',location.href);
 const byId=id=>document.getElementById(id);
-const expectedIds=['hair.back','face.skin','ear.far','ear.near','eye.far','eye.near',
+const expectedIds=['body.reference','hair.back','face.skin','ear.far','ear.near','eye.far','eye.near',
  'nose','mouth','hair.side','hair.front','hair.ahoge','hair.clip.cross_gold'];
 const validSHA=s=>typeof s==='string'&&/^[0-9a-f]{64}$/.test(s);
 const endpoints=[0,45,90];
@@ -99,7 +100,7 @@ async function init(){
  try{
   const manifest=await fetchJSON('parts.json');
   report=await fetchJSON('qa.json');
-  assert(report.status==='PASS_ENGINEERING_AND_VISUAL_GATES'&&report.failed===0,'QA admission gate is closed');
+  assert((report.status==='PASS_ENGINEERING_AND_VISUAL_GATES'&&report.failed===0) || (candidateMode&&report.status==='REVIEW_CANDIDATE'), 'QA admission gate is closed');
   assert(manifest.schema==='KOMA-P0-ARTMESH-MANIFEST-V1','manifest schema mismatch');
   assert(manifest.characterId==='p0_character_001','character identity mismatch');
   assert(JSON.stringify(manifest.canvas)===JSON.stringify([SIZE,SIZE]),'canvas mismatch');
@@ -135,7 +136,7 @@ async function init(){
   }
   assert(whole.size===3,'source reference PNGs at 0/45/90 required');
   ready=true;
-  byId('gate').textContent='已加载通过工程与视觉门禁的独立原画';
+  byId('gate').textContent=candidateMode?'已加载真实 GIF 修复候选 · 视觉验收待完成':'已加载通过工程与视觉门禁的独立原画';
   byId('info').textContent='角色：'+manifest.characterId+'\n校验图层：'+parts.length+'\n视角：0° / 45° / 90°\nRGBA 源图：已验证 SHA-256';
   render(angle);
  }catch(error){
@@ -151,6 +152,6 @@ for(const button of document.querySelectorAll('button[data-angle]')){
  button.addEventListener('click',()=>{byId('yaw').value=button.dataset.angle;render(Number(button.dataset.angle));});
 }
 window.__KOMA_P0_VIEWER={inspect:()=>({ready,angle,partCount:registry.size,
- qaStatus:report?.status||null,problems:[...problems]}),renderAt:render};
+ qaStatus:report?.status||null,candidateMode,problems:[...problems]}),renderAt:render};
 init();
 })();

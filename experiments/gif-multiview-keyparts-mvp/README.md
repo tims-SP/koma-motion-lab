@@ -55,3 +55,20 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
     KOMA_PLAYWRIGHT_MODULE=/absolute/path/to/playwright node experiments/gif-multiview-keyparts-mvp/scripts/capture_review.cjs
 
 输出默认写入 /tmp/koma-gif-review，包含 0° / 22.5° / 45° / 67.5° / 90° 实际浏览器截图、SHA-256 与 browser-qa.json。源素材验收未满足时输出本地准入页面截图及状态记录。截图不能代替对轮廓、五官和层次质量的人工或视觉模型审核。
+
+## 2026-11-05 · 原画来源恢复与预览
+
+已恢复 `gif_multiview_asset_review_2026-11-05.zip`（53 项、4 GIF、38 帧），SHA-256：`8ce3596f60a01b82df49926304c47041d8a8734689ae2a3126acada583666547`；分片恢复见 `private-assets/transport/asset-transport-manifest.json`。独立 GIF 实际画布为 443²、313²、418²、418×627。已批准 P0 hero 的历史 SHA 为 `e95a4b69…e54`，恢复包内生成主图 SHA 为 `7868cdc…e9b`，两者身份来源分开登记。
+
+源码 `scripts/build_semantic_partition.py` 将已生成的 0°、45°、90° 整头独立视角来源像素注册成 39 张互斥候选 RGBA PNG（30 个原有语义槽与 9 个补充槽）。三个原画端点合成像素差异均为 0。该像素登记用于验证身份、布局和合成引擎；隐藏几何及生产级独立 ArtMesh 原画另行验收。
+
+    /root/koma-motion-r1999/work/r1999-vision-venv/bin/python experiments/gif-multiview-keyparts-mvp/scripts/build_semantic_partition.py --root experiments/gif-multiview-keyparts-mvp/private-assets
+    KOMA_PLAYWRIGHT_MODULE=/root/koma-motion-r1999/work/browser/node_modules/playwright KOMA_CANDIDATE_MODE=1 KOMA_QA_OUT=/tmp/koma-p0-candidate-v2-browser node experiments/gif-multiview-keyparts-mvp/scripts/capture_review.cjs
+
+浏览器预览：`http://127.0.0.1:5181/experiments/gif-multiview-keyparts-mvp/review/index.html?mode=candidate`，须先从仓库根目录启动 `python3 -m http.server 5181`。真实 Chromium 已导出 0°、22.5°、45°、67.5°、90° 共 5 张截图并保存哈希。视角质量结果见 `evidence/2026-11-05-recovered-p0-review.json`；插值区域的裂缝与纹理误差仍需通过新的关键部件原画与形变拓扑修复。
+
+从已有真实视角计算的光流转向作为诊断对照，可运行：
+
+    /root/koma-motion-r1999/work/r1999-vision-venv/bin/python experiments/gif-multiview-keyparts-mvp/scripts/flow_render.py --root experiments/gif-multiview-keyparts-mvp/private-assets --out experiments/gif-multiview-keyparts-mvp/private-assets/flow-sharp --mode dis_sharp
+
+私有预览包路径为 `experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review.zip`，19,084,223 字节，SHA-256：`b62d060d908f10c6ade86bb2baa9fb18b9199324f7753583976406ab90b07002`。含原始 38 帧包、候选分层、HTML、实际浏览器截图与诊断 GIF。新生成的 22.5°、67.5° 原生 RGBA 原画和 `eye.far` 部件另见 `evidence/2026-11-05-native-rgba-views.json`。
