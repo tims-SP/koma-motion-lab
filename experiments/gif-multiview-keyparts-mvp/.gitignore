@@ -1,0 +1,4 @@
+private-assets/
+__pycache__/
+*.pyc
+out/

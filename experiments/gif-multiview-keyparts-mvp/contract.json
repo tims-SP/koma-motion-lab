@@ -115,6 +115,12 @@
       "yawDeg": 0,
       "semanticId": "ear.far",
       "requiredForFullReconstruction": false
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "eye.far",
+      "requiredForFullReconstruction": true,
+      "visibility": "hidden"
     }
   ],
   "sourceRoles": [
@@ -161,7 +167,15 @@
     "referenceHeadRoiAndSilhouetteIou": 0.9,
     "maxRelativeAreaError": 0.08,
     "humanImageReview": true,
-    "noSyntheticAssetAcceptance": true
+    "noSyntheticAssetAcceptance": true,
+    "visiblePartReviewPolicy": "image_original_review_by_human_or_vision_model_with_evidence",
+    "screenshotYaw": [
+      0,
+      22.5,
+      45,
+      67.5,
+      90
+    ]
   },
   "sourceReferences": [
     "experiments/r1999-cubism-vdd/src/vdd-keyframes.ts",

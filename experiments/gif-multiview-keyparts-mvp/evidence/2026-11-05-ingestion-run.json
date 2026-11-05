@@ -1,0 +1,65 @@
+{
+  "schema": "KOMA-GIF-MULTIVIEW-IMPLEMENTATION-QA-V1",
+  "recordedDate": "2026-11-05",
+  "characterId": "p0_character_001",
+  "branch": "feature/gif-multiview-p0-ingestion-20261105",
+  "tests": {
+    "PillowImageContractFixtures": {
+      "passed": 7,
+      "total": 7,
+      "command": "python3 -m unittest discover -s experiments/gif-multiview-keyparts-mvp/tests -v"
+    },
+    "browserJavascriptSyntax": {
+      "pass": true,
+      "command": "node --check experiments/gif-multiview-keyparts-mvp/review/review.js"
+    },
+    "realSourceIngestion": {
+      "status": "BLOCKED_SOURCE_ASSETS",
+      "checks": 63,
+      "passed": 0,
+      "failed": 63,
+      "referenceReconstructionCount": 0
+    }
+  },
+  "source": {
+    "expectedHeroSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+    "fourOriginalGIFsSeenInConversationLibrary": true,
+    "rawAssetBytesInAuthorizedRuntime": false,
+    "originalGIFFramesPreviouslyDecoded": 38,
+    "originalGIFCanvasSizes": [
+      [
+        443,
+        443
+      ],
+      [
+        313,
+        313
+      ],
+      [
+        418,
+        418
+      ],
+      [
+        418,
+        627
+      ]
+    ]
+  },
+  "plannedVisualScreenshots": [
+    0,
+    22.5,
+    45,
+    67.5,
+    90
+  ],
+  "engineeringArtifacts": [
+    "contract.json",
+    "scripts/verify_bundle.py",
+    "review/index.html",
+    "review/review.js",
+    "scripts/capture_review.cjs",
+    "tests/test_verify_bundle.py"
+  ],
+  "runtime": "Remote Desktop Commander racknerd-cd91d33",
+  "result": "CODE_AND_ENGINEERING_QA_COMPLETE_SOURCE_ASSET_ADMISSION_PENDING"
+}
