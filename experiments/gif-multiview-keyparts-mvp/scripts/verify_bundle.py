@@ -171,6 +171,34 @@ def run(root, output, contract_path=HERE / "contract.json"):
         if extra["requiredForFullReconstruction"]:
             key = part_key(extra["yawDeg"], extra["semanticId"])
             record("anatomical_" + key, key in registry)
+    # Source reference frames must be actual independent full-view PNGs.
+    reference_views = {}
+    for frame in manifest.get("wholeViews", []):
+        if not isinstance(frame, dict):
+            record("whole_reference_object", False)
+            continue
+        yaw, rel, expected = frame.get("yawDeg"), frame.get("path"), frame.get("sha256")
+        if not isinstance(yaw, int) or yaw not in contract["wholeAngles"]:
+            record("whole_view_yaw", False, yaw)
+            continue
+        if not isinstance(rel, str) or Path(rel).is_absolute() or ".." in Path(rel).parts:
+            record("whole_reference_path", False, rel)
+            continue
+        full = (root / rel).resolve()
+        if not full.is_relative_to(root) or not full.is_file():
+            record("whole_reference_png_" + str(yaw), False, rel)
+            continue
+        record("whole_reference_sha_" + str(yaw), sha256(full) == expected, rel)
+        try:
+            with Image.open(full) as img:
+                record("whole_reference_size_" + str(yaw),
+                       img.format == "PNG" and img.size == (1024, 1024), img.size)
+        except OSError as exc:
+            record("whole_reference_read_" + str(yaw), False, exc)
+        reference_views[yaw] = full
+    for yaw in contract["wholeAngles"]:
+        record("whole_view_" + str(yaw), yaw in reference_views)
+
     role_set = set(contract["sourceRoles"])
     for key, layer in registry.items():
         sid, angle = layer.get("semanticId"), layer.get("yawDeg")
@@ -192,11 +220,24 @@ def run(root, output, contract_path=HERE / "contract.json"):
             v = layer.get(field)
             record(field + "_" + key, isinstance(v, str) and len(v) == 64 and
                    all(c in "0123456789abcdef" for c in v or ""))
+        # Confirm each primary frame is in the correct angle-major semantic position.
+        for group in contract["groups"]:
+            if sid in group["ids"]:
+                expected_index = (contract["keyAngles"].index(angle) * len(group["ids"])
+                                  + group["ids"].index(sid))
+                record("group_" + key, layer.get("sourceGif") == group["path"],
+                       layer.get("sourceGif"))
+                record("frame_index_" + key, layer.get("frameIndex") == expected_index,
+                       layer.get("frameIndex"))
+                break
         sg = layer.get("sourceGif")
         if isinstance(sg, str) and sg in hashes:
             record("gif_hash_" + key, hashes[sg] == layer.get("sourceGifSha256"))
         else:
-            record("gif_hash_" + key, False, sg)
+            # Supplementary anatomical frames may be authored in another GIF.
+            extra = root / sg if isinstance(sg, str) and not Path(sg).is_absolute() and ".." not in Path(sg).parts else None
+            record("gif_hash_" + key, bool(extra and extra.is_file() and
+                   sha256(extra) == layer.get("sourceGifSha256")), sg)
         if not isinstance(layer.get("depthOrder"), (int, float)):
             record("depth_" + key, False)
         if not isinstance(layer.get("occludes"), list):
@@ -248,6 +289,62 @@ def run(root, output, contract_path=HERE / "contract.json"):
                     for a in contract["keyAngles"]]
         record("topology_" + sid, all(v is not None for v in topology)
                and len(set(topology)) == 1)
+    # Reference silhouette evaluation uses an explicit head ROI per authored key.
+    # This avoids counting the costume outside the ten-part head layer contract.
+    from PIL import ImageChops
+    reconstructions = {}
+    for yaw in contract["keyAngles"]:
+        roi = manifest.get("headRois", {}).get(str(yaw))
+        valid_roi = (isinstance(roi, list) and len(roi) == 4 and
+                     all(isinstance(v, int) for v in roi) and
+                     0 <= roi[0] < roi[2] <= 1024 and 0 <= roi[1] < roi[3] <= 1024)
+        record("head_roi_" + str(yaw), valid_roi, roi)
+        if not valid_roi or yaw not in reference_views:
+            continue
+        visible = [part for part in registry.values() if part.get("yawDeg") == yaw and
+                   part.get("visibility") == "visible"]
+        if not visible or any(not isinstance(x.get("path"), str) or
+                              not (root / x["path"]).is_file() for x in visible):
+            record("reconstruction_sources_" + str(yaw), False)
+            continue
+        composite = Image.new("RGBA", (1024, 1024), (0, 0, 0, 0))
+        try:
+            for part in sorted(visible, key=lambda x: x.get("depthOrder", 0)):
+                with Image.open(root / part["path"]) as overlay:
+                    composite.alpha_composite(overlay.convert("RGBA"))
+            with Image.open(reference_views[yaw]) as ref:
+                r = ref.convert("RGBA").crop(tuple(roi)).getchannel("A")
+            c = composite.crop(tuple(roi)).getchannel("A")
+            rb = r.point(lambda x: 255 if x >= 32 else 0)
+            cb = c.point(lambda x: 255 if x >= 32 else 0)
+            inter = ImageChops.multiply(rb, cb).histogram()[255]
+            mask_union = ImageChops.lighter(rb, cb).histogram()[255]
+            area_ref = rb.histogram()[255]
+            area_cmp = cb.histogram()[255]
+            iou = inter / mask_union if mask_union else 0
+            area_error = abs(area_cmp - area_ref) / area_ref if area_ref else 1
+            reconstructions[str(yaw)] = {"iou": iou, "relativeAreaError": area_error,
+                                         "referencePixels": area_ref, "reconstructionPixels": area_cmp}
+            record("silhouette_iou_" + str(yaw),
+                   iou >= contract["gates"]["referenceHeadRoiAndSilhouetteIou"], round(iou, 4))
+            record("silhouette_area_" + str(yaw),
+                   area_error <= contract["gates"]["maxRelativeAreaError"], round(area_error, 4))
+            # Images stay in the private workspace as visual diagnostic artifacts.
+            diagnostics = root / "diagnostics"
+            diagnostics.mkdir(exist_ok=True)
+            composite.save(diagnostics / ("yaw%03d.png" % yaw))
+        except (OSError, ValueError, TypeError) as exc:
+            record("reconstruction_" + str(yaw), False, exc)
+
+    for key, layer in registry.items():
+        if layer.get("visibility") != "visible":
+            continue
+        for occluded in layer.get("occludes", []) if isinstance(layer.get("occludes"), list) else []:
+            target = registry.get(part_key(layer.get("yawDeg"), occluded))
+            record("occlusion_" + key + "_over_" + str(occluded),
+                   bool(target) and isinstance(layer.get("depthOrder"), (int, float)) and
+                   isinstance(target.get("depthOrder"), (int, float)) and
+                   layer["depthOrder"] > target["depthOrder"])
     report = {
         "schema": "KOMA-P0-GIF-INGESTION-QA-V1",
         "characterId": contract["characterId"],
@@ -257,7 +354,7 @@ def run(root, output, contract_path=HERE / "contract.json"):
                    "FAIL_ASSET_ACCEPTANCE"),
         "checked": len(checks), "passed": sum(c["pass"] for c in checks),
         "failed": len(failures), "failures": failures, "checks": checks,
-        "sourceHashes": hashes, "layerStatistics": stats,
+        "sourceHashes": hashes, "layerStatistics": stats, "reconstructions": reconstructions,
         "visualReviewPolicy": "manual assessment of original drawn frames and endpoint/holdout screenshots is mandatory"
     }
     output = Path(output)
