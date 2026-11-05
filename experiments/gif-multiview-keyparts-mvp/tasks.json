@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P0_CONTRACT_SEMANTIC_FRAME_EXTRACTOR_SOURCE_GATES_AND_VIEWER",
+  "lastCompleted": "SOURCE_IDENTITY_CONTRACT_EXTRACTOR_AND_HTML_VIEWER_9_OF_9_UNIT_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "files": [
@@ -262,9 +262,11 @@
       "scripts/extract_keyparts.py"
     ],
     "tests": {
-      "pythonUnit": "9/9 PASS (expected; verify on device)",
+      "pythonUnit": "9/9 PASS",
       "javascriptSyntax": "PASS",
-      "realAssetGate": "BLOCKED_SOURCE_ASSETS"
+      "realAssetGate": "BLOCKED_SOURCE_ASSETS",
+      "browserHeadless": "PASS_ENGINEERING_SOURCE_GATE",
+      "realSourceIngestion": "BLOCKED_SOURCE_ASSETS_63_CHECKS"
     },
     "availableSourceEvidence": {
       "fourGifFrames": "8+15+9+6",

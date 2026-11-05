@@ -8,7 +8,7 @@
       "passed": 9,
       "total": 9,
       "command": "python3 -m unittest discover -s experiments/gif-multiview-keyparts-mvp/tests -v",
-      "verification": "pending rerun"
+      "verification": "passed_on_remote_device_2026-11-05"
     },
     "browserJavascriptSyntax": {
       "pass": true,
@@ -25,12 +25,28 @@
       "status": "BLOCKED_SOURCE_ASSETS",
       "javascriptErrors": 0,
       "sourceReady": false,
-      "pageLoad": true
+      "pageLoad": true,
+      "screenshotSha256": "2f11137ca963aa0bfdfd3cfdc77a3a01b78a8f497630165df36adad93d5912a5",
+      "sourceStatus": "awaiting private-assets/parts.json"
     },
     "browserScreenshot": {
       "privatePath": "/tmp/koma-p0-gif-review/asset-gate.png",
       "sha256": "2f11137ca963aa0bfdfd3cfdc77a3a01b78a8f497630165df36adad93d5912a5",
       "role": "source_access_gate_evidence"
+    },
+    "GIFFrameExtraction": {
+      "expectedFrames": 38,
+      "extractedFrames": 0,
+      "status": "SOURCE_FRAME_AUDIT_REQUIRED",
+      "sourceFilesMissing": 4
+    },
+    "javascriptSyntaxCaptureReview": {
+      "pass": true,
+      "command": "node --check experiments/gif-multiview-keyparts-mvp/scripts/capture_review.cjs"
+    },
+    "javascriptSyntaxViewer": {
+      "pass": true,
+      "command": "node --check experiments/gif-multiview-keyparts-mvp/review/review.js"
     }
   },
   "source": {
@@ -74,5 +90,6 @@
     "scripts/extract_keyparts.py"
   ],
   "runtime": "Remote Desktop Commander racknerd-cd91d33",
-  "result": "CODE_AND_ENGINEERING_QA_COMPLETE_SOURCE_ASSET_ADMISSION_PENDING"
+  "result": "CODE_AND_ENGINEERING_QA_COMPLETE_SOURCE_ASSET_ADMISSION_PENDING",
+  "verifiedGitBranchSha": "24d11c2fefc6c75558354829f7615a93569a6090"
 }
