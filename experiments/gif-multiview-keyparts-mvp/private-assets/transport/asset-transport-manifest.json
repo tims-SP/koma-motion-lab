@@ -1,0 +1,77 @@
+{
+  "schema": "KOMA-P0-GIF-ASSET-TRANSPORT-V1",
+  "asset": "P0 original character multi-view GIF review",
+  "archive": {
+    "filename": "gif_multiview_asset_review_2026-11-05.zip",
+    "bytes": 5129540,
+    "sha256": "8ce3596f60a01b82df49926304c47041d8a8734689ae2a3126acada583666547",
+    "zipEntries": 53,
+    "sourceGIFs": 4,
+    "extractedPNGFrames": 38
+  },
+  "parts": [
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part00",
+      "bytes": 450000,
+      "gitBlobSha": "0b55bbbb2162dbc5f24b1e06604ce7c609a00bd6"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part01",
+      "bytes": 450000,
+      "gitBlobSha": "59f50a61305f3baba3f7dfefd4b23e8488fb0e36"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part02",
+      "bytes": 450000,
+      "gitBlobSha": "1dfc45b08ea3f2e910219d3f2281f3a3cd16674e"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part03",
+      "bytes": 450000,
+      "gitBlobSha": "e52b31e63f400bedc3a7d2a8507fc35e3bd0ea49"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part04",
+      "bytes": 450000,
+      "gitBlobSha": "8ac56ccdc04a9062264d877cda5786ec49094ef1"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part05",
+      "bytes": 450000,
+      "gitBlobSha": "0ee1406e89f6e97cffeab71f19dd2f1ef3b4ee06"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part06",
+      "bytes": 450000,
+      "gitBlobSha": "84c2b284b4b37de20e148a63f663e209de15dfdd"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part07",
+      "bytes": 450000,
+      "gitBlobSha": "67fbcda7d7a3f48d29893143a0bbda3e1a84c784"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part08",
+      "bytes": 450000,
+      "gitBlobSha": "386ac1de0d8bc9647fd6c6c6cd7bc91f19b64188"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part09",
+      "bytes": 450000,
+      "gitBlobSha": "7dba7cab02656afe8116d1cda77ed5316c577160"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part10",
+      "bytes": 450000,
+      "gitBlobSha": "fd04f9cc3c555689ac65ba8c370ddc8ac4ac788f"
+    },
+    {
+      "filename": "gif_multiview_asset_review_2026-11-05.zip.part11",
+      "bytes": 179540,
+      "gitBlobSha": "d167a76a64698845fc9f4ccba15b65392c60fbcc"
+    }
+  ],
+  "storage": "PR #32 source branch; binary archive split into sequential Git blobs; exact reassembly verified by SHA-256",
+  "sourceQuality": "Generation QA retained in archive; independent 2D ArtMesh registration pending",
+  "rebuildCommand": "python3 experiments/gif-multiview-keyparts-mvp/scripts/rebuild-review-archive.py --output /tmp/gif_multiview_asset_review_2026-11-05.zip"
+}
