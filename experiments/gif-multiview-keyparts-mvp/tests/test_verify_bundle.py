@@ -81,5 +81,38 @@ class TestP0Ingestion(unittest.TestCase):
             self.assertFalse(gates["gif_canvas_face"]["pass"])
             self.assertNotEqual(report["status"],"PASS_ENGINEERING_AND_VISUAL_GATES")
 
+
+    def test_frame_order_and_physical_ids(self):
+        spec = importlib.util.spec_from_file_location(
+            "gif_extractor", Path(__file__).resolve().parents[1] / "scripts" / "extract_keyparts.py")
+        extract = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(extract)
+        contract = json.loads(
+            (Path(__file__).resolve().parents[1] / "contract.json").read_text())
+        self.assertEqual(extract.key_name("whole",4,contract),
+                         ("yaw180.png",180,"head.whole"))
+        self.assertEqual(extract.key_name("face",5,contract),
+                         ("yaw045/face.skin.png",45,"face.skin"))
+        self.assertEqual(extract.key_name("face",14,contract),
+                         ("yaw090/ear.near.png",90,"ear.near"))
+        self.assertEqual(extract.key_name("identity",5,contract),
+                         ("yaw090/hair.clip.cross_gold.png",90,"hair.clip.cross_gold"))
+        mapping=contract["identity"]["anatomicalSideMapping"]
+        self.assertEqual(mapping["yaw090"]["eye.near"],"right")
+        self.assertEqual(mapping["yaw090"]["hair.clip.cross_gold"],"left")
+
+    def test_extraction_audit_requires_raw_source(self):
+        spec = importlib.util.spec_from_file_location(
+            "gif_extractor", Path(__file__).resolve().parents[1] / "scripts" / "extract_keyparts.py")
+        extract = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(extract)
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            result=extract.extract(root,Path(__file__).resolve().parents[1] / "contract.json",
+                                   root/"extraction-qa.json")
+            self.assertEqual(result["status"],"SOURCE_FRAME_AUDIT_REQUIRED")
+            self.assertEqual(result["extractedFrames"],0)
+            self.assertEqual(len(result["sourceChecks"]),4)
+
 if __name__=="__main__":
     unittest.main(verbosity=2)

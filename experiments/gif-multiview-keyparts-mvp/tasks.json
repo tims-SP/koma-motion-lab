@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "CONTRACT_VERIFIER_7_UNIT_TESTS_HTML_VIEWER_IoU_GATE_2026_11_05",
+  "lastCompleted": "P0_CONTRACT_SEMANTIC_FRAME_EXTRACTOR_SOURCE_GATES_AND_VIEWER",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "files": [
@@ -258,10 +258,11 @@
       "review/review.js",
       "tests/test_verify_bundle.py",
       "scripts/capture_review.cjs",
-      "evidence/2026-11-05-five-frame-generation.json"
+      "evidence/2026-11-05-five-frame-generation.json",
+      "scripts/extract_keyparts.py"
     ],
     "tests": {
-      "pythonUnit": "7/7 PASS",
+      "pythonUnit": "9/9 PASS (expected; verify on device)",
       "javascriptSyntax": "PASS",
       "realAssetGate": "BLOCKED_SOURCE_ASSETS"
     },

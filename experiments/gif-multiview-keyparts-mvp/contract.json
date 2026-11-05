@@ -11,7 +11,31 @@
     ],
     "originalImageBytesVerified": false,
     "anatomicalLeftFrontScreenSide": "right",
-    "asymmetry": "gold cross clip on anatomical left; no horizontal mirroring"
+    "asymmetry": "gold cross clip on anatomical left; no horizontal mirroring",
+    "anatomicalSideMapping": {
+      "yaw000": {
+        "eye.near": "right",
+        "eye.far": "left",
+        "ear.near": "right",
+        "ear.far": "left",
+        "hair.clip.cross_gold": "left"
+      },
+      "yaw045": {
+        "eye.near": "right",
+        "eye.far": "left",
+        "ear.near": "right",
+        "ear.far": "left",
+        "hair.clip.cross_gold": "left"
+      },
+      "yaw090": {
+        "eye.near": "right",
+        "eye.far": "left",
+        "ear.near": "right",
+        "ear.far": "left",
+        "hair.clip.cross_gold": "left"
+      }
+    },
+    "anatomicalSideMappingPolicy": "camera yaw 0→90 rotates toward character physical right; near eye/ear are physical right and clip belongs to physical left"
   },
   "globalCanvas": {
     "width": 1024,

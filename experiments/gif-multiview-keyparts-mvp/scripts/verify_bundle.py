@@ -214,6 +214,12 @@ def run(root, output, contract_path=HERE / "contract.json"):
         if angle == 90 and sid == "hair.clip.cross_gold":
             record("side_clip_occlusion", visibility == "hidden")
         record("source_role_" + key, layer.get("sourceRole") in role_set, layer.get("sourceRole"))
+        anatomical_side = contract["identity"].get("anatomicalSideMapping", {}).get(
+            f"yaw{angle:03d}", {}).get(sid)
+        if anatomical_side:
+            record("anatomical_side_" + key,
+                   layer.get("anatomicalSide") == anatomical_side,
+                   layer.get("anatomicalSide"))
         record("semantic_review_" + key, layer.get("semanticReviewed") is True)
         record("visual_review_" + key, layer.get("visualReviewed") is True)
         for field in ("sourceGifSha256", "frameSha256"):

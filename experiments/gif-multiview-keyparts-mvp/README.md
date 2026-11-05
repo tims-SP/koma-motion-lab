@@ -39,3 +39,19 @@ parts.json 须声明 schema=KOMA-P0-ARTMESH-MANIFEST-V1、characterId、canvas=[
 HTML 仅在真实来源与质量报告均校验通过后加载正式素材。22.5°/67.5° 是中间视角视觉检查点，最终应按图像审查脸型、眼鼻、发夹、呆毛、头发遮挡和重影，并制作浏览器真实截图及视频。
 
 Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、截图和视频保存在私有目录或受控 Artifact/Release。private-assets 须排除于 Git 跟踪。
+
+## 原始 GIF 的逐帧审查
+
+原始四组 GIF 先通过以下工具解码，保留来源尺寸和帧在原始画布内的位置，生成 38 帧对照 PNG、每组可视接触板与完整 SHA-256。只有新一轮原生 RGBA 独立部件才能进入生产层：
+
+    python3 experiments/gif-multiview-keyparts-mvp/scripts/extract_keyparts.py --root experiments/gif-multiview-keyparts-mvp/private-assets --output experiments/gif-multiview-keyparts-mvp/private-assets/extracted/extraction-qa.json
+
+各组均按视角优先排列；face 的前五张属于 0°，第六张才是 45° 的 face.skin。0°→90° 朝角色解剖学右侧转动，近侧眼和近侧耳属于角色物理右侧，交叉发夹属于物理左侧。每帧的语义正确性需要对真实图像逐张审查，GIF 解码本身不证明语义排他。
+
+## 浏览器自动截图
+
+在存在经 SHA-256 验证的生产 PNG、parts.json、qa.json 后运行：
+
+    KOMA_PLAYWRIGHT_MODULE=/absolute/path/to/playwright node experiments/gif-multiview-keyparts-mvp/scripts/capture_review.cjs
+
+输出默认写入 /tmp/koma-gif-review，包含 0° / 22.5° / 45° / 67.5° / 90° 实际浏览器截图、SHA-256 与 browser-qa.json。源素材验收未满足时输出本地准入页面截图及状态记录。截图不能代替对轮廓、五官和层次质量的人工或视觉模型审核。

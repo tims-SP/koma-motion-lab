@@ -5,9 +5,10 @@
   "branch": "feature/gif-multiview-p0-ingestion-20261105",
   "tests": {
     "PillowImageContractFixtures": {
-      "passed": 7,
-      "total": 7,
-      "command": "python3 -m unittest discover -s experiments/gif-multiview-keyparts-mvp/tests -v"
+      "passed": 9,
+      "total": 9,
+      "command": "python3 -m unittest discover -s experiments/gif-multiview-keyparts-mvp/tests -v",
+      "verification": "pending rerun"
     },
     "browserJavascriptSyntax": {
       "pass": true,
@@ -19,6 +20,17 @@
       "passed": 0,
       "failed": 63,
       "referenceReconstructionCount": 0
+    },
+    "browserHeadless": {
+      "status": "BLOCKED_SOURCE_ASSETS",
+      "javascriptErrors": 0,
+      "sourceReady": false,
+      "pageLoad": true
+    },
+    "browserScreenshot": {
+      "privatePath": "/tmp/koma-p0-gif-review/asset-gate.png",
+      "sha256": "2f11137ca963aa0bfdfd3cfdc77a3a01b78a8f497630165df36adad93d5912a5",
+      "role": "source_access_gate_evidence"
     }
   },
   "source": {
@@ -58,7 +70,8 @@
     "review/index.html",
     "review/review.js",
     "scripts/capture_review.cjs",
-    "tests/test_verify_bundle.py"
+    "tests/test_verify_bundle.py",
+    "scripts/extract_keyparts.py"
   ],
   "runtime": "Remote Desktop Commander racknerd-cd91d33",
   "result": "CODE_AND_ENGINEERING_QA_COMPLETE_SOURCE_ASSET_ADMISSION_PENDING"
