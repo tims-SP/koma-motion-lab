@@ -101,3 +101,15 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 
 本轮实机结果：150/150 个结构门禁通过，17/17 项工程测试通过，三个浏览器实机截图经 SHA-256 验证。正面重组轮廓 IoU 1.000，完全不透明源画区域的透明孔洞数为 0。独立动作美术验收与批准角色母图 SHA-256 验证仍需单独完成。
 大型原画及截图存于私有 `private-assets/`，其 SHA 和技术验收结果写入 `evidence/2026-11-06-p1-front-artmesh.json`。
+
+### P3 · 参考图生图视角与 P0 身份保持验证
+
+使用真实 P0 0°、45°、90° 原画作为三图条件，生成 22.5° 和 67.5° RGBA 全画面候选，并用已有原画检查头部轮廓变化和视觉身份一致性。已生成可人工检查的五视角 Storyboard GIF 和源图 PNG。
+
+生成模型输出经 JPG→背景移除转换为 1024×1024 RGBA。文件源哈希、透明边缘、角度变形与原画来源均在 `private-assets/p3-native-source-trial/` 对应 QA 文档中登记。
+
+头部轮廓中点进度在两个目标角分别为 0.063、0.183（目标应接近 0.5），所以当前图片用于身份和透明度验证，完整角度标注仍需进一步姿势约束。另一次基于侧脸的姿势引导生成也已保留作对照。
+
+从测试仓库根目录执行 `scripts/build_p3_generated_view_review.py` 和 `scripts/qa_generated_yaw_progress.py`，验证图像哈希、合成对照和角度变化，再运行 `scripts/package_multiview_review.py` 构建私有审查包。29/29 项工程回归通过。
+
+审查包：`private-assets/exports/p0-character-001-multiview-source-review-v4.zip`，27,528,797 字节，SHA-256 `10e17c51a0953f6c15c292fcf4127203a7f393c26adaae57dcf786584c9849e7`。代码证据见 `evidence/2026-11-06-p3-reference-guided-source.json`。
