@@ -1,0 +1,78 @@
+{
+  "schema": "KOMA-P0-P2-SEMANTIC-EVIDENCE-V1",
+  "characterId": "p0_character_001",
+  "date": "2026-11-06",
+  "sourceWholeGifSHA256": "94dbda85cd0ddace05cf7820214c3a9318a0968ab9c5852e3dcddcbc236a904f",
+  "sourceFaceGifSHA256": "2af520f157a6c5576c106c81e09442baeef7e2de822046580676f9365a6be098",
+  "views": [
+    45,
+    90
+  ],
+  "semanticSlotsReviewed": 20,
+  "gates": {
+    "passed": 70,
+    "unresolved": 8
+  },
+  "status": "SOURCE_VIEW_REGISTRY_READY_ARTMESH_INTERIORS_PENDING",
+  "sourceEyeCounts": {
+    "45": [
+      {
+        "pixels": 2559,
+        "centroid": [
+          123.18,
+          164.85
+        ],
+        "bbox": [
+          71,
+          142,
+          90,
+          47
+        ]
+      },
+      {
+        "pixels": 1081,
+        "centroid": [
+          227.41,
+          165.59
+        ],
+        "bbox": [
+          211,
+          143,
+          39,
+          46
+        ]
+      }
+    ],
+    "90": [
+      {
+        "pixels": 1429,
+        "centroid": [
+          173.27,
+          162.46
+        ],
+        "bbox": [
+          141,
+          141,
+          57,
+          49
+        ]
+      }
+    ]
+  },
+  "registeredOcclusion": {
+    "45": "eye.near + eye.far visible, ear.far hidden, gold cross clip visible",
+    "90": "eye.near + ear.near visible; eye.far, ear.far and gold cross clip hidden"
+  },
+  "unresolvedIndependentArtMeshes": [
+    "face.skin",
+    "eye.near",
+    "hair.front",
+    "hair.back"
+  ],
+  "unresolvedEachAtAngles": [
+    45,
+    90
+  ],
+  "evidenceContactSha256": "6c1a7a74519b4fec04d117da90f1e8d20005144d548f618f75b1374f1eaab207",
+  "nextStep": "Author hidden geometry and cross-view VDD anchor correspondences for 45°/90°."
+}
