@@ -1,18 +1,43 @@
 {
-  "schema": "KOMA-GIF-MULTIVIEW-KEYPART-MVP-TASKS-V1",
+  "schema": "KOMA-GIF-DIRECT-TRANSPARENT-KEYPART-MVP-TASKS-V2",
   "project": "2.75D Anime Studio",
-  "characterId": "pink_lilac_bob_gold_cross_clip_v1",
-  "scope": "one consistent reference character; 8-view identity sequence and 0/45/90 layered VDD proof",
+  "characterId": "p0_character_001",
+  "identity": {
+    "approvedDesign": "P0 approved identity_reference_board",
+    "approvedHero": "hero/hero_master.png",
+    "contract": "identity_spec.json",
+    "features": {
+      "hair": "neck-length pink-lilac bob, angled bangs, one ahoge",
+      "clip": "gold cross hair clip on character physical left, front-image right",
+      "eyes": "purple-pink",
+      "outfit": "navy jacket with gold trim, white shirt, burgundy bow"
+    },
+    "identityReferenceVerifiedInThisRun": false,
+    "imageSourceRole": "approved_p0_character_identity",
+    "actualSha256": "TO_BE_VERIFIED_FROM_APPROVED_ASSET"
+  },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
   "status": "PLANNED",
   "date": "2026-11-05",
-  "modelSource": {
-    "type": "user_reference_image",
-    "expected": "original anime girl, lilac pink bob, purple eyes, gold cross hair clip, ahoge",
-    "persistedSourceFile": false
+  "sourceGeneration": {
+    "engineOutput": "animated GIF with transparent background",
+    "frameContract": "exactly one semantic part per frame, full-canvas registered coordinates",
+    "canvas": [
+      1024,
+      1024
+    ],
+    "gifTransparency": "GIF89a indexed 1-bit transparency",
+    "alphaCheck": "transparent corners; no baked checkerboard, white backdrop, or frame carryover",
+    "disposal": "clear previous semantic part before displaying next frame",
+    "productionSource": "native RGBA frames where provided; otherwise GIF frames with edge-alpha refinement",
+    "decompositionToolRole": "conditional repair for missing/incomplete parts"
   },
-  "requiredViews": {
-    "overview": [
+  "viewConvention": {
+    "yaw0": "front",
+    "yaw90": "character-right camera",
+    "yaw180": "back",
+    "yaw270": "character-left camera",
+    "wholeOverviewAngles": [
       0,
       45,
       90,
@@ -22,7 +47,7 @@
       270,
       315
     ],
-    "vddKeyArt": [
+    "componentKeyAngles": [
       0,
       45,
       90
@@ -30,151 +55,185 @@
     "holdouts": [
       22.5,
       67.5
-    ],
-    "semanticParts": [
-      "face.skin",
-      "eye.near",
-      "nose",
-      "mouth",
-      "ear.near",
-      "hair.front",
-      "hair.side",
-      "hair.back",
-      "hair.ahoge",
-      "hair.clip.cross_gold"
     ]
   },
-  "outputTypes": [
-    "gif_multiview",
-    "gif_facial_geometry",
-    "gif_hair_volume",
-    "gif_identity_accessories",
-    "rgba_view_keyframes",
-    "rgba_semantic_parts",
-    "part_visibility_and_anchors",
-    "html_review",
-    "chromium_qa",
-    "holdout_visual_report"
+  "semanticFrameGroups": [
+    {
+      "group": "face",
+      "frames": [
+        "face.skin",
+        "eye.near",
+        "nose",
+        "mouth",
+        "ear.near"
+      ]
+    },
+    {
+      "group": "hair",
+      "frames": [
+        "hair.front",
+        "hair.side",
+        "hair.back"
+      ]
+    },
+    {
+      "group": "identity",
+      "frames": [
+        "hair.ahoge",
+        "hair.clip.cross_gold"
+      ]
+    }
   ],
+  "expectedAssets": {
+    "wholeViewGIF": 1,
+    "wholeViewFrames": 8,
+    "transparentPartGIFs": 9,
+    "transparentPartGIFFrames": 30,
+    "gifTotal": 10,
+    "registeredPartSlots": 30,
+    "initialSmokeTest": {
+      "angle": 0,
+      "group": "face",
+      "expectedFrames": 5
+    },
+    "perPartMetadata": [
+      "yawDeg",
+      "semanticId",
+      "frameIndex",
+      "sourceGifSha256",
+      "frameSha256",
+      "visibility",
+      "bbox",
+      "anchors",
+      "depthOrder",
+      "alphaQuality"
+    ]
+  },
   "tasks": [
     {
       "id": "T00",
-      "name": "Character identity master, orientation and landmarks",
       "status": "PLANNED",
+      "name": "Verify approved P0 identity asset SHA and coordinate frame",
       "dependsOn": [],
-      "gate": "REFERENCE_APPROVED",
+      "gate": "P0_IDENTITY_SOURCE_VERIFIED",
       "deliverables": [
-        "identity-master.png",
         "identity-lock.json"
       ]
     },
     {
       "id": "T01",
-      "name": "Eight-angle whole-head GIF and source frames",
       "status": "PLANNED",
+      "name": "Generate consistent whole-head eight-view GIF",
       "dependsOn": [
         "T00"
       ],
       "gate": "EIGHT_VIEW_IDENTITY_PASS",
       "deliverables": [
         "head-turn-8view.gif",
-        "keyframes/yaw*.png",
-        "identity-qa.json"
+        "whole/",
+        "whole/frames.json"
       ]
     },
     {
-      "id": "T02",
-      "name": "Consistent facial, hair and identity-accessory GIFs",
+      "id": "T02-A",
       "status": "PLANNED",
+      "name": "Generate 0-degree five-frame direct transparent facial-part GIF",
       "dependsOn": [
-        "T01"
+        "T00"
       ],
-      "gate": "THREE_REGION_GIFS_PASS",
+      "gate": "DIRECT_TRANSPARENT_GIF_PARTS_PASS",
       "deliverables": [
-        "facial-geometry.gif",
-        "hair-volume.gif",
-        "identity-accessories.gif",
-        "region-qa.json"
+        "parts-gif/yaw000/face.gif",
+        "parts/yaw000/face.*.png",
+        "evidence/direct-gif-alpha-qa.json"
+      ]
+    },
+    {
+      "id": "T02-B",
+      "status": "PLANNED",
+      "name": "Complete direct transparent GIF key-part matrices at 0/45/90 degrees",
+      "dependsOn": [
+        "T01",
+        "T02-A"
+      ],
+      "gate": "THIRTY_SEMANTIC_FRAMES_PASS",
+      "deliverables": [
+        "parts-gif/",
+        "parts/",
+        "evidence/cross-view-identity-qa.json"
       ]
     },
     {
       "id": "T03",
-      "name": "Transparent semantic part extraction and correspondence",
       "status": "PLANNED",
+      "name": "Extract, refine RGBA edge alpha, register semantic depth and anchor correspondence",
       "dependsOn": [
-        "T02"
+        "T02-B"
       ],
-      "gate": "PART_LAYER_ALPHA_IDENTITY_PASS",
+      "gate": "RGBA_LAYER_REGISTRATION_PASS",
       "deliverables": [
-        "parts/",
         "parts.json",
         "layer-reconstruction.png",
-        "layer-qa.json"
+        "evidence/layer-qa.json"
       ]
     },
     {
       "id": "T04",
-      "name": "Cubism-compatible HTML VDD view interpolation and holdout QA",
       "status": "PLANNED",
+      "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
       ],
-      "gate": "VDD_0_90_VISUAL_PASS",
+      "gate": "VDD_VISUAL_HOLDOUT_PASS",
       "deliverables": [
         "review/index.html",
         "review/screenshots/",
-        "holdouts/",
-        "vdd-qa.json"
+        "evidence/vdd-qa.json"
       ]
     },
     {
       "id": "T05",
-      "name": "Artifact packaging and evidence",
       "status": "PLANNED",
+      "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
       ],
-      "gate": "DELIVERY_REPRODUCIBLE",
+      "gate": "ARTIFACTS_REPRODUCIBLE",
       "deliverables": [
         "asset-manifest.json",
         "source-hashes.json",
-        "release-artifacts/"
+        "private-artifact-manifest.json"
       ]
     }
   ],
   "acceptance": {
-    "overviewGifUniqueViews": 8,
-    "regionGifCount": 3,
-    "semanticPartSlots": 30,
-    "keyYawDegrees": [
+    "sourceRoleRequired": "approved_p0_character",
+    "directPartGenerationRequired": true,
+    "alphaBackgroundMustBeTransparent": true,
+    "gifFrameVisibilityClean": true,
+    "gifSinglePartPerFrame": true,
+    "originalCanvasPositionPreserved": true,
+    "semanticCoverageRequired": 30,
+    "wholeViewCount": 8,
+    "keyAngles": [
       0,
       45,
       90
     ],
-    "realtimeViewerRangeDegrees": [
-      0,
-      90
+    "firstSmokeFrames": 5,
+    "visualReconstruction": true,
+    "holdoutYaw": [
+      22.5,
+      67.5
     ],
-    "full360GeometryStatus": "SEPARATE_EXPANSION_AFTER_KEY_ART_GATE",
-    "htmlFunctionalChecks": [
-      "correct_semantic_identity",
-      "real_rgba_alpha",
-      "per_part_anchor_position",
-      "visibility_and_depth_order",
-      "no_double_eye",
-      "no_double_hair_silhouette",
-      "held_out_angle_render"
-    ],
-    "thresholds": {
-      "targetSilhouetteIoU": 0.9,
-      "maximumRelativeSilhouetteAreaError": 0.08
-    },
-    "sourceRoleRequired": "independent_2d_art"
+    "targetSilhouetteIoU": 0.9,
+    "maximumRelativeSilhouetteAreaError": 0.08,
+    "finalQualityRequired": "identity_and_occlusion_no_ghosting"
   },
-  "assetStorage": {
-    "sourceControl": "text scripts schemas manifests QA only",
-    "binaries": "private artifact storage or GitHub release attachment",
-    "requireSha256": true
+  "storage": {
+    "binaryArtifacts": "private workspace or controlled GitHub artifacts",
+    "sourceRepo": "text-only scripts/config/manifest/QA",
+    "provenanceSha256": true
   },
   "evidence": {},
   "lastCompleted": null
