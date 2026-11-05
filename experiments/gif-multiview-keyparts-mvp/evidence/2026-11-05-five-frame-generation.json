@@ -1,0 +1,32 @@
+{
+  "schema": "KOMA-P0-GENERATION-OBSERVATION-V1",
+  "characterId": "p0_character_001",
+  "date": "2026-11-05",
+  "source": "active-session five-frame generator output",
+  "sourceSha256": "a1c4a7aca3ac36427b444ad6a9ffae9c708f8121047bbabb1f5a8dbe27fcd0ae",
+  "fileSizeBytes": 539582,
+  "signature": "GIF89a",
+  "dimensions": [
+    512,
+    511
+  ],
+  "decodedFrames": 5,
+  "frameDisposalMethod": 2,
+  "transparentCorners": true,
+  "partialAlphaPixels": 0,
+  "perFrameVisiblePixels": [
+    145932,
+    148640,
+    150889,
+    150537,
+    146404
+  ],
+  "gates": {
+    "identity": false,
+    "semanticIsolation": false,
+    "globalCanvas": false,
+    "nativeRgba": false
+  },
+  "role": "generation_qa_only",
+  "observation": "Frames show full character yaw instead of isolated face, eye, nose, mouth and ear; character identity differs from approved P0."
+}
