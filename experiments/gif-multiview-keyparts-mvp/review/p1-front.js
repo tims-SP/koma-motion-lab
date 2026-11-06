@@ -1,6 +1,9 @@
 (() => {
 'use strict';
-const ROOT=new URL('../private-assets/p1-front/',location.href);
+const psdSource=new URLSearchParams(location.search).get('source')==='seethrough';
+const ROOT=new URL(psdSource
+ ?'../private-assets/p4-see-through/front/integrated/'
+ :'../private-assets/p1-front/',location.href);
 const size=1024;
 const state={loaded:false,parts:[],reference:null,sourceSHA:null,
   manifest:null,qa:null,values:{eyeNear:0,eyeFar:0,fringeX:0},shown:new Set(),error:null};
@@ -83,8 +86,8 @@ function choose(ids){
 }
 async function initialize(){
  try{
-  state.manifest=await getJSON('parts.json');
-  state.qa=await getJSON('engineering-qa.json');
+  state.manifest=await getJSON(psdSource?'integrated-parts.json':'parts.json');
+  state.qa=await getJSON(psdSource?'integration-qa.json':'engineering-qa.json');
   if(state.manifest.schema!=='KOMA-P0-ARTMESH-MANIFEST-V1'||
      state.manifest.characterId!=='p0_character_001'||state.manifest.yaw!==0)
     throw Error('P0 identity/manifests mismatch');
@@ -95,7 +98,8 @@ async function initialize(){
   const parts=state.manifest.parts;
   if(parts.length!==13)throw Error('expected 13 semantic slots');
   await Promise.all(parts.map(async p=>{
-   const {bitmap}=await loadPNG(p.path.replace(/^p1-front\//,''),p.frameSha256);
+   const rel=psdSource?p.path:p.path.replace(/^p1-front\//,'');
+   const {bitmap}=await loadPNG(rel,p.frameSha256);
    p.image=bitmap;
   }));
   state.parts=parts.sort((a,b)=>a.depthOrder-b.depthOrder);
@@ -112,7 +116,13 @@ async function initialize(){
   }
   clear('reference').drawImage(state.reference,0,0);
   state.loaded=true;
-  byId('status').textContent='独立 RGBA 图层 SHA-256 已核对 · P1 动作画质检查';
+  if(psdSource){
+   document.title='P0 · See-through PSD 补绘 ArtMesh 审查';
+   document.querySelector('header h1').textContent='p0_character_001 · See-through PSD 13 层动作审查';
+  }
+  byId('status').textContent=psdSource
+   ?'P0 PSD 真实 RGBA 图层 SHA-256 已核对 · 补绘视觉复核'
+   :'独立 RGBA 图层 SHA-256 已核对 · P1 动作画质检查';
   paint();
  }catch(e){
   state.error=String(e.message||e);
@@ -133,7 +143,8 @@ byId('eyes').addEventListener('click',()=>choose(['face.skin','eye.near','eye.fa
 byId('hair').addEventListener('click',()=>choose(state.parts.filter(p=>p.semanticId.startsWith('hair.')).map(p=>p.semanticId)));
 byId('all').addEventListener('click',()=>choose(state.parts.map(p=>p.semanticId)));
 window.__P1_VIEWER={inspect:()=>({ready:state.loaded,partCount:state.parts.length,
-  qaStatus:state.qa?.status,sourceSHA:state.sourceSHA,values:state.values,error:state.error}),
+  qaStatus:state.qa?.status,sourceSHA:state.sourceSHA,values:state.values,
+  source:psdSource?'seethrough':'original',error:state.error}),
   setEyeNear:v=>{byId('eyeNear').value=v;updateSlider('eyeNear',v);},
   reset:()=>byId('reset').click()};
 initialize();

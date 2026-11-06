@@ -7,7 +7,11 @@ const crypto=require('node:crypto');
 const http=require('node:http');
 const ROOT=path.resolve(__dirname,'../../..');
 const experiment=path.resolve(__dirname,'..');
-const output=path.resolve(process.env.KOMA_P1_QA_OUT||path.join(experiment,'private-assets/p1-front/browser'));
+const psdSource=process.env.KOMA_P1_SOURCE==='seethrough';
+const output=path.resolve(process.env.KOMA_P1_QA_OUT||
+  path.join(experiment,psdSource
+    ?'private-assets/p4-see-through/front/browser'
+    :'private-assets/p1-front/browser'));
 const {chromium}=require(process.env.KOMA_PLAYWRIGHT_MODULE||'playwright');
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8',
  '.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg'};
@@ -29,7 +33,8 @@ async function main(){
  fs.mkdirSync(output,{recursive:true});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const url='http://127.0.0.1:'+server.address().port+
-  '/experiments/gif-multiview-keyparts-mvp/review/p1-front.html';
+  '/experiments/gif-multiview-keyparts-mvp/review/p1-front.html'+
+  (psdSource?'?source=seethrough':'');
  const errors=[],failedRequests=[],screens=[];
  let browser;
  try{
@@ -51,24 +56,30 @@ async function main(){
    screens.push({name:label,file:target,sha256:sha(target),metricText:info});
   };
   if(initial.ready){
-   await capture('p1-front-default');
+   await capture(psdSource?'p4-psd-front-default':'p1-front-default');
    await page.evaluate(()=>window.__P1_VIEWER.setEyeNear(10));
-   await capture('p1-front-eye-near-10px');
+   await capture(psdSource?'p4-psd-eye-near-10px':'p1-front-eye-near-10px');
    await page.locator('#hair').click();
-   await capture('p1-front-hair-parts');
+   await capture(psdSource?'p4-psd-hair-parts':'p1-front-hair-parts');
    await page.evaluate(()=>window.__P1_VIEWER.reset());
    const final=await page.evaluate(()=>window.__P1_VIEWER.inspect());
    if(final.values.eyeNear!==0)errors.push('reset returned wrong eye position');
   }else{
-   await capture('p1-front-source-gate');
+   await capture(psdSource?'p4-psd-source-gate':'p1-front-source-gate');
   }
-  const sourceQA=JSON.parse(fs.readFileSync(path.join(experiment,
-    'private-assets/p1-front/engineering-qa.json'),'utf8'));
-  const status=initial.ready && sourceQA.status==='PASS_STRUCTURAL_ENGINEERING' &&
+  const qaFile=psdSource
+    ?'private-assets/p4-see-through/front/integrated/integration-qa.json'
+    :'private-assets/p1-front/engineering-qa.json';
+  const sourceQA=JSON.parse(fs.readFileSync(path.join(experiment,qaFile),'utf8'));
+  const expectedStatus=psdSource?'PASS_SEMANTIC_LAYER_REGISTRATION':'PASS_STRUCTURAL_ENGINEERING';
+  const status=initial.ready && initial.source===(psdSource?'seethrough':'original') &&
+    sourceQA.status===expectedStatus &&
     screens.length===3 && errors.length===0 && failedRequests.length===0 ?
-    'PASS_P1_BROWSER_ENGINEERING':'FAIL_P1_BROWSER_ENGINEERING';
-  const qa={schema:'KOMA-P0-P1-BROWSER-QA-V1',
+    (psdSource?'PASS_P4_PSD_BROWSER_ENGINEERING':'PASS_P1_BROWSER_ENGINEERING'):
+    (psdSource?'FAIL_P4_PSD_BROWSER_ENGINEERING':'FAIL_P1_BROWSER_ENGINEERING');
+  const qa={schema:psdSource?'KOMA-P0-P4-PSD-BROWSER-QA-V1':'KOMA-P0-P1-BROWSER-QA-V1',
     characterId:'p0_character_001',status,sourceReady:initial.ready,
+    sourceSelection:psdSource?'seethrough':'original',
     assetsSHAverified:initial.ready,renderer:'Chromium Playwright Canvas2D',
     initial,sourceQASummary:{status:sourceQA.status,
       passed:sourceQA.passed,failed:sourceQA.failed,measures:sourceQA.measures},

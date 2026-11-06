@@ -113,3 +113,15 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 从测试仓库根目录执行 `scripts/build_p3_generated_view_review.py` 和 `scripts/qa_generated_yaw_progress.py`，验证图像哈希、合成对照和角度变化，再运行 `scripts/package_multiview_review.py` 构建私有审查包。29/29 项工程回归通过。
 
 审查包：`private-assets/exports/p0-character-001-multiview-source-review-v4.zip`，27,528,797 字节，SHA-256 `10e17c51a0953f6c15c292fcf4127203a7f393c26adaae57dcf786584c9849e7`。代码证据见 `evidence/2026-11-06-p3-reference-guided-source.json`。
+
+### P4 · See-through PSD 原画分层与三视角 ArtMesh 审查
+
+使用真实 P0 正面原画，通过 See-through 生成 768×768 13 层 PSD，导出至 1024×1024 RGBA 注册空间。原画可见像素持续作为真值来源，新补绘用于前后发、面部、耳朵与五官被遮挡区域。
+
+静态轮廓 IoU=1；前发水平移动 16px 的不透明区域穿孔从 3169 降至 429。HTML 正面、单眼动作和发层检查均有真实浏览器截图。三视角 39 个 ArtMesh 语义槽保持独立来源和 SHA-256。
+
+浏览器打开：/review/p1-front.html?source=seethrough 以及 /review/index.html?mode=candidate&source=seethrough-front。GIF：private-assets/p4-see-through/mv-candidate/p0-psd-front-vdd-turn.gif。
+
+质量门禁：采样中间角面部透明度连续，跨角纹理对应仍待优化。本轮测试 37/37 通过，源码与证据分别保存在 scripts、tests 和 evidence/2026-11-07-p4-seethrough-artmesh-qa.json。
+
+私有审查包：private-assets/exports/p0-character-001-artmesh-psd-review-v5.zip。SHA-256：08761e4f7e2412d83deac685ed40b516dc917d4ea3abd1160c214cd89faf0cde。
