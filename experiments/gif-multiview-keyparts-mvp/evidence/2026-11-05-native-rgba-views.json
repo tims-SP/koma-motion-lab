@@ -1,0 +1,35 @@
+{
+  "schema": "KOMA-P0-NATIVE-RGBA-GENERATED-VIEWS-V1",
+  "date": "2026-11-05",
+  "characterId": "p0_character_001",
+  "imagePackage": "p0_character_001_rgba_candidates.zip",
+  "imagePackageSha256": "f966f99cfd2012028b57aba6bd18e6c5835996f7e315e9b21f90a67bff6ef269",
+  "sourceRole": "generator_authored_candidate",
+  "canvas": [
+    1024,
+    1024
+  ],
+  "images": [
+    {
+      "yawDeg": 22.5,
+      "semanticId": "head.whole",
+      "filename": "yaw022p5.png",
+      "sha256": "1d5dd7dfbabb043377e8b721bb6ae1501ed0bd0ec7f670cbbe4353f736d8ac4e"
+    },
+    {
+      "yawDeg": 67.5,
+      "semanticId": "head.whole",
+      "filename": "yaw067p5.png",
+      "sha256": "f1080252b3ce10b238bceb8df4f6cb886726d2a28c7e3b0bb6af9c720052416a"
+    },
+    {
+      "yawDeg": 0,
+      "semanticId": "eye.far",
+      "filename": "eye_far_yaw000.png",
+      "sha256": "b22b5ae0f3b249f230cc2d67dff70572ff2ea28281e81202fd140ebe69e17a25"
+    }
+  ],
+  "nativeRGBA": true,
+  "identitySourceShaVerified": false,
+  "artworkAcceptance": "PENDING_VISUAL_REGISTRATION"
+}

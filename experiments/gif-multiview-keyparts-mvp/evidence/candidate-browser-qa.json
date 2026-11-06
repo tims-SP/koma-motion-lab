@@ -1,0 +1,54 @@
+{
+  "schema": "KOMA-P0-VDD-BROWSER-QA-V1",
+  "characterId": "p0_character_001",
+  "status": "CANDIDATE_RENDER_ENGINEERING_PASS",
+  "sourceReady": true,
+  "initial": {
+    "ready": true,
+    "angle": 0,
+    "partCount": 39,
+    "qaStatus": "REVIEW_CANDIDATE",
+    "candidateMode": true,
+    "problems": []
+  },
+  "frames": [
+    {
+      "yawDeg": 0,
+      "screenshot": "yaw000.png",
+      "sha256": "6cdab9c12cfafc0d776e2fcd113da687d0dc65efab00c7ce1a800c610157a2d6",
+      "pixels": 486056,
+      "rgbaSum": 2090188785
+    },
+    {
+      "yawDeg": 22.5,
+      "screenshot": "yaw22p5.png",
+      "sha256": "bbac0e0a0ec75ef9c1d2e44e980480dbbf39f7dbfbc43eb83aee9c62c41c964c",
+      "pixels": 466034,
+      "rgbaSum": 1985194874
+    },
+    {
+      "yawDeg": 45,
+      "screenshot": "yaw045.png",
+      "sha256": "46f5048736d9a496e576d2a7b33d95d0e3f58f30c10f2b4c8fc6774b56928d8a",
+      "pixels": 486700,
+      "rgbaSum": 2101352807
+    },
+    {
+      "yawDeg": 67.5,
+      "screenshot": "yaw67p5.png",
+      "sha256": "bf0b4fe51228712a186a6ebde1acd05f338daf2884ff5261f081eb014272316a",
+      "pixels": 438443,
+      "rgbaSum": 1854252023
+    },
+    {
+      "yawDeg": 90,
+      "screenshot": "yaw090.png",
+      "sha256": "766bfe6e265bc9a45a324e97f46683a1c79d452e104172c440770724a63805c7",
+      "pixels": 418703,
+      "rgbaSum": 1823827491
+    }
+  ],
+  "errors": [],
+  "httpErrors": [],
+  "visualAcceptance": "CANDIDATE_ART_VISUAL_REVIEW_REQUIRED"
+}

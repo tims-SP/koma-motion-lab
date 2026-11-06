@@ -1,0 +1,219 @@
+{
+  "schema": "KOMA-P0-OPTICAL-FLOW-VIEW-STUDY-V1",
+  "characterId": "p0_character_001",
+  "renderMethod": "dis_smooth_sharp",
+  "flowSmoothingSigma": 12,
+  "sourceRole": "verified_recovered_whole_view_GIF_pixels",
+  "viewSourceSHA256": {
+    "0": "4ff6deb850498e307137e221cb0fe48357d9a9aa791467f7ffa54a8e149c7f64",
+    "45": "56312da0b651582b4360870e8a482738d141676a357ca11f6e9a4d98609bc6db",
+    "90": "0a7d1e3167215b7f1de8f73a8b109e65ca0655ca59d7d21e7d4906c3cb0463c2"
+  },
+  "flowMetrics": {
+    "0-45": {
+      "fwdMeanPx": 13.472783088684082,
+      "fwdMaxPx": 50.105594635009766,
+      "revMeanPx": 15.050105094909668
+    },
+    "45-90": {
+      "fwdMeanPx": 11.734862327575684,
+      "fwdMaxPx": 68.54985809326172,
+      "revMeanPx": 13.775931358337402
+    }
+  },
+  "referenceKeyframeCount": 3,
+  "candidateFrames": 37,
+  "contact": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/contact.png",
+  "gif": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw000-yaw090-flow-review.gif",
+  "gifSHA256": "4f9421ca88ac7dd6dafea533108c50002dd6128ebd155d022c1f802724359da3",
+  "frames": {
+    "0.0": {
+      "sha256": "82c6165f29f3e989de6a37300422bc2f66dd976a49dd61639338421f8ae93554",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw000_0.png",
+      "alphaPixels": 87532
+    },
+    "2.5": {
+      "sha256": "cfb84e9d3711fcf90e34cc0f51bb912f53e8048a6d30722fe46039479c1b6bd7",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw002_5.png",
+      "alphaPixels": 88950
+    },
+    "5.0": {
+      "sha256": "7e69242d35028716c1117096ef527e06e25079aaf20a6b0a07310ded4a7a4605",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw005_0.png",
+      "alphaPixels": 89005
+    },
+    "7.5": {
+      "sha256": "9f0d7d9f67887fa11abbc99e1ecffa939c78779ce1ec561dc584c4672041f860",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw007_5.png",
+      "alphaPixels": 89053
+    },
+    "10.0": {
+      "sha256": "d3a4c4b6d75e0d4e70ca98430b9a34d3563ab55134016863c0c7fce322c500b1",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw010_0.png",
+      "alphaPixels": 89021
+    },
+    "12.5": {
+      "sha256": "2e1b2eb8d36888203903ffea2af95eff77e3a2ab27e402d8b3ecfe252d68fcd0",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw012_5.png",
+      "alphaPixels": 89069
+    },
+    "15.0": {
+      "sha256": "e186bee81fd61bb33c55bbf19855c3c6e9d3b36acb55d0b72ec4234a1b9aeb59",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw015_0.png",
+      "alphaPixels": 88978
+    },
+    "17.5": {
+      "sha256": "d4b8dfd5ebf74addff726398ccd70d97e0f721b246df62fc7cee80bfd30dce50",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw017_5.png",
+      "alphaPixels": 88928
+    },
+    "20.0": {
+      "sha256": "84e6e5b1621b33f6f934ae3c565ad22342db258248d0dace30980b63bc5130bb",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw020_0.png",
+      "alphaPixels": 88910
+    },
+    "22.5": {
+      "sha256": "5dec941c66ee55ee006c19f99f38f5a1d8139895c2710ff2a07e832c2754d41e",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw022_5.png",
+      "alphaPixels": 87604
+    },
+    "25.0": {
+      "sha256": "fd41fddafec109d944445608410111e445d0aa6a7ec18512a8e99fd9f5669851",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw025_0.png",
+      "alphaPixels": 87834
+    },
+    "27.5": {
+      "sha256": "5cdd57d010255773490257df5d1e497a95238439bca858d022841c71c3bea915",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw027_5.png",
+      "alphaPixels": 88111
+    },
+    "30.0": {
+      "sha256": "cf80ca0ca9328e61291f73c51a04afd49e77d05124b6f6bbde535de0bb8c3adf",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw030_0.png",
+      "alphaPixels": 88265
+    },
+    "32.5": {
+      "sha256": "d767cd9d1f0ca5ff75956c6dee6d366370752858ea1ef71c86fbbd1accf414b5",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw032_5.png",
+      "alphaPixels": 88432
+    },
+    "35.0": {
+      "sha256": "23f4ab01fc054842799035d5e4cd91cb050e7aff18989368e31d88385115b297",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw035_0.png",
+      "alphaPixels": 88552
+    },
+    "37.5": {
+      "sha256": "1b846372c13823bc71183e1930315f15d708693fa1d311790835b4104482627a",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw037_5.png",
+      "alphaPixels": 88678
+    },
+    "40.0": {
+      "sha256": "74cc5d62747abd6776a444362be2fa68221efe6e85b9e0aa42e80347768b25fc",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw040_0.png",
+      "alphaPixels": 88772
+    },
+    "42.5": {
+      "sha256": "41328306be5a19028b1dfa73485b6f5214da436b3e8e0fc6ed6a1d511bdc2bb1",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw042_5.png",
+      "alphaPixels": 88851
+    },
+    "45.0": {
+      "sha256": "3444e05a6a5f62871c26cc51dca35ce6be579770ac5301d8f60cad69c24ad29b",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw045_0.png",
+      "alphaPixels": 87810
+    },
+    "47.5": {
+      "sha256": "748ea7b77dbd28a88ce728225a804cae65269f7a323a22090d44a6d45b29bc65",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw047_5.png",
+      "alphaPixels": 88852
+    },
+    "50.0": {
+      "sha256": "82af30db06b9b6af5bc044bfab3659c88176d30429f2ce73e2eba2d0a07053d1",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw050_0.png",
+      "alphaPixels": 88810
+    },
+    "52.5": {
+      "sha256": "3ce9b4a6ed02dfc71791f1bc64138fb912806e8fa6d91c80e5a67279a7e4b872",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw052_5.png",
+      "alphaPixels": 88711
+    },
+    "55.0": {
+      "sha256": "fa43cc3640c1f96e9337c8589c8a3d47e43b502f57f9d117d0c7b7cb2a3b9958",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw055_0.png",
+      "alphaPixels": 88643
+    },
+    "57.5": {
+      "sha256": "f180fbdb7d1988bec751f1804db71c7a6839f553fbd524472b9d6ddf729ecf3b",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw057_5.png",
+      "alphaPixels": 88441
+    },
+    "60.0": {
+      "sha256": "2715bcf9c6bfa76258c3e2d2fc9b88b1ece61b4c25034a375b3dfcbd4f160894",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw060_0.png",
+      "alphaPixels": 88334
+    },
+    "62.5": {
+      "sha256": "fb44270b8745cc5b09248fa579ed129a7a86b017bf384d440095454cdb100350",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw062_5.png",
+      "alphaPixels": 88189
+    },
+    "65.0": {
+      "sha256": "90274b3046f5ab523e0c6c4cd8450d944aaa5387b6cf1bc203362db759aeca76",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw065_0.png",
+      "alphaPixels": 87954
+    },
+    "67.5": {
+      "sha256": "a7acacadbd118df398ed3f649fa95f1485587c6f623b6976482dff49f67d254a",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw067_5.png",
+      "alphaPixels": 76471
+    },
+    "70.0": {
+      "sha256": "955c42a632e283cf08e78444a5ae82704724ecfadd9bfc12c3ba975daf6e3a58",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw070_0.png",
+      "alphaPixels": 76580
+    },
+    "72.5": {
+      "sha256": "1058e19bad432f5f258c01c2fa85773bade65e9e38a83e183d6ba405aaf6feaa",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw072_5.png",
+      "alphaPixels": 76749
+    },
+    "75.0": {
+      "sha256": "2ecd7d014f531f91a83306667e995bf43ba970798a26a6f10b331550a6c5340d",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw075_0.png",
+      "alphaPixels": 76742
+    },
+    "77.5": {
+      "sha256": "8b344bedac1914e7f49daf51595b18416a1daa1ad3d11e37adbd9bef5ba69b88",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw077_5.png",
+      "alphaPixels": 76777
+    },
+    "80.0": {
+      "sha256": "690b552e724119088d3c776a095b9503ceb36c6dac47781cf3d63ada35fe5a8f",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw080_0.png",
+      "alphaPixels": 76769
+    },
+    "82.5": {
+      "sha256": "130c13c3fc8959749efbc4bf4c593846fb127660ca80151fca224a4670f79837",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw082_5.png",
+      "alphaPixels": 76859
+    },
+    "85.0": {
+      "sha256": "95c81676498bfb9d9fef03ebc06e50e780a083875f2933b5ccc371fdd6897081",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw085_0.png",
+      "alphaPixels": 76782
+    },
+    "87.5": {
+      "sha256": "3ebaef87a2b6701735fe75f0f534ace91cfeb0b0a310f2de5237db54d11f981a",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw087_5.png",
+      "alphaPixels": 76834
+    },
+    "90.0": {
+      "sha256": "c247b2419dfbeedb696b791b238c76bf01e7dc848b73748422d68c2a20311aef",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/flow-smooth/yaw090_0.png",
+      "alphaPixels": 75477
+    }
+  },
+  "semanticArtMeshesProven": false,
+  "holdoutHumanVisualReviewed": false,
+  "status": "REVIEW_CANDIDATE"
+}

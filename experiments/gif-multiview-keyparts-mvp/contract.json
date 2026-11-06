@@ -1,0 +1,209 @@
+{
+  "schema": "KOMA-P0-MULTIVIEW-RGBA-ASSET-CONTRACT-V1",
+  "characterId": "p0_character_001",
+  "identity": {
+    "approvedReference": "identity_reference_board",
+    "approvedHero": "hero/hero_master.png",
+    "expectedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+    "expectedHeroSourceDimensions": [
+      1122,
+      1402
+    ],
+    "originalImageBytesVerified": false,
+    "anatomicalLeftFrontScreenSide": "right",
+    "asymmetry": "gold cross clip on anatomical left; no horizontal mirroring",
+    "anatomicalSideMapping": {
+      "yaw000": {
+        "eye.near": "right",
+        "eye.far": "left",
+        "ear.near": "right",
+        "ear.far": "left",
+        "hair.clip.cross_gold": "left"
+      },
+      "yaw045": {
+        "eye.near": "right",
+        "eye.far": "left",
+        "ear.near": "right",
+        "ear.far": "left",
+        "hair.clip.cross_gold": "left"
+      },
+      "yaw090": {
+        "eye.near": "right",
+        "eye.far": "left",
+        "ear.near": "right",
+        "ear.far": "left",
+        "hair.clip.cross_gold": "left"
+      }
+    },
+    "anatomicalSideMappingPolicy": "camera yaw 0→90 rotates toward character physical right; near eye/ear are physical right and clip belongs to physical left"
+  },
+  "globalCanvas": {
+    "width": 1024,
+    "height": 1024,
+    "origin": "top_left",
+    "coordinateSystem": "pixel",
+    "camera": "orthographic_eye_level_locked",
+    "pixelToCanvasTransform": "requires_approved_hero_measurement",
+    "frameToFrameAutocrop": false
+  },
+  "yawConvention": {
+    "0": "front",
+    "45": "camera_to_character_right_45",
+    "90": "camera_to_character_right_profile",
+    "135": "rear_quarter",
+    "180": "back",
+    "225": "rear_left_quarter",
+    "270": "left_profile",
+    "315": "front_left_quarter"
+  },
+  "wholeAngles": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+  ],
+  "keyAngles": [
+    0,
+    45,
+    90
+  ],
+  "holdoutAngles": [
+    22.5,
+    67.5
+  ],
+  "semanticIds": [
+    "face.skin",
+    "eye.near",
+    "nose",
+    "mouth",
+    "ear.near",
+    "hair.front",
+    "hair.side",
+    "hair.back",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "groups": [
+    {
+      "name": "face",
+      "ids": [
+        "face.skin",
+        "eye.near",
+        "nose",
+        "mouth",
+        "ear.near"
+      ],
+      "frames": 15,
+      "path": "gifs/face.gif"
+    },
+    {
+      "name": "hair",
+      "ids": [
+        "hair.front",
+        "hair.side",
+        "hair.back"
+      ],
+      "frames": 9,
+      "path": "gifs/hair.gif"
+    },
+    {
+      "name": "identity",
+      "ids": [
+        "hair.ahoge",
+        "hair.clip.cross_gold"
+      ],
+      "frames": 6,
+      "path": "gifs/identity.gif"
+    }
+  ],
+  "wholeGif": {
+    "path": "whole/head-turn-8view.gif",
+    "frames": 8
+  },
+  "extraAnatomicalKeys": [
+    {
+      "yawDeg": 0,
+      "semanticId": "eye.far",
+      "requiredForFullReconstruction": true
+    },
+    {
+      "yawDeg": 45,
+      "semanticId": "eye.far",
+      "requiredForFullReconstruction": true
+    },
+    {
+      "yawDeg": 0,
+      "semanticId": "ear.far",
+      "requiredForFullReconstruction": false
+    },
+    {
+      "yawDeg": 90,
+      "semanticId": "eye.far",
+      "requiredForFullReconstruction": true,
+      "visibility": "hidden"
+    }
+  ],
+  "sourceRoles": [
+    "independent_generated_rgba",
+    "independent_repaired_rgba"
+  ],
+  "invariants": {
+    "exclusiveSemanticPixels": true,
+    "face.skin": "skin contour and cheeks, no ear, eye, nose or mouth raster",
+    "eye.near": "one physical eye only; near camera for this yaw",
+    "hair.front": "front fringe; no ahoge, clip, side or back bundles",
+    "hair.clip.cross_gold": "one physical crossed gold hair clip on anatomical left",
+    "hair.ahoge": "one isolated crown strand",
+    "yaw090ClipVisibility": "hidden",
+    "rgbaRequired": true,
+    "partialAlphaEdgesRequired": true,
+    "frameDisposal": 2,
+    "onePartPerGifFrame": true,
+    "noCanvasRenormalizationPerGroup": true
+  },
+  "assetManifestSchema": "KOMA-P0-ARTMESH-MANIFEST-V1",
+  "requiredPartFields": [
+    "yawDeg",
+    "semanticId",
+    "path",
+    "frameIndex",
+    "sourceGif",
+    "sourceGifSha256",
+    "frameSha256",
+    "sourceRole",
+    "visibility",
+    "depthOrder",
+    "anchors",
+    "mesh",
+    "occludes",
+    "semanticReviewed",
+    "visualReviewed"
+  ],
+  "gates": {
+    "identityHeroShaVerified": true,
+    "allPrimarySlots": 30,
+    "fullFrontNeedsFarEye": true,
+    "fullyRegisteredRGBA": true,
+    "referenceHeadRoiAndSilhouetteIou": 0.9,
+    "maxRelativeAreaError": 0.08,
+    "humanImageReview": true,
+    "noSyntheticAssetAcceptance": true,
+    "visiblePartReviewPolicy": "image_original_review_by_human_or_vision_model_with_evidence",
+    "screenshotYaw": [
+      0,
+      22.5,
+      45,
+      67.5,
+      90
+    ]
+  },
+  "sourceReferences": [
+    "experiments/r1999-cubism-vdd/src/vdd-keyframes.ts",
+    "experiments/r1999-cubism-vdd/web/view-layer-lab.js",
+    "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md"
+  ]
+}

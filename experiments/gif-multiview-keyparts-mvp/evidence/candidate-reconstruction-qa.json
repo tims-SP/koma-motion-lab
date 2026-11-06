@@ -1,0 +1,54 @@
+{
+  "schema": "KOMA-P0-PARTITION-RECONSTRUCTION-QA-V1",
+  "status": "REVIEW_CANDIDATE",
+  "characterId": "p0_character_001",
+  "wholeSourcesRecovered": 8,
+  "wholeKeysRegistered": 3,
+  "registeredSlots": 39,
+  "sourceWholeGifSha256": "94dbda85cd0ddace05cf7820214c3a9318a0968ab9c5852e3dcddcbc236a904f",
+  "pixelParity": {
+    "0": {
+      "maxChannelDelta": 0,
+      "pixelsDifferent": 0,
+      "sourceSha256": "626f9105d4413477aed256d3bca340166c767a84821bd289d37144449bd67dd3",
+      "viewBbox": [
+        152,
+        13,
+        877,
+        1020
+      ],
+      "visibleLayerCount": 13
+    },
+    "45": {
+      "maxChannelDelta": 0,
+      "pixelsDifferent": 0,
+      "sourceSha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "viewBbox": [
+        158,
+        13,
+        856,
+        1020
+      ],
+      "visibleLayerCount": 12
+    },
+    "90": {
+      "maxChannelDelta": 0,
+      "pixelsDifferent": 0,
+      "sourceSha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "viewBbox": [
+        175,
+        11,
+        812,
+        1020
+      ],
+      "visibleLayerCount": 9
+    }
+  },
+  "provenance": "independent_generated_whole_view_GIF_partition_not_independent_parts",
+  "qualityGate": {
+    "sourceHeroShaVerified": false,
+    "generatedIndependentArtMeshes": false,
+    "occludedAnatomyComplete": false,
+    "vddHoldoutsReviewed": false
+  }
+}

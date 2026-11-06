@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 Character 001 · Multi-view ArtMesh Review</title>
+<style>
+:root{font:14px/1.5 system-ui,-apple-system,"Noto Sans CJK SC",sans-serif;color:#e6effb;background:#101723}
+*{box-sizing:border-box}body{margin:0}header{padding:18px 24px;border-bottom:1px solid #39495d;background:#172234}
+h1{font-size:21px;margin:0}small{color:#adc0d6}main{padding:18px;display:grid;grid-template-columns:280px 1fr;gap:18px}
+aside,section{border:1px solid #3b526a;border-radius:10px;background:#17263b;padding:15px}
+label{display:block;margin:12px 0 5px}input{width:100%}input[type=range]{accent-color:#81b4ee}
+strong,output{font-variant-numeric:tabular-nums}button{cursor:pointer;padding:6px 9px;border-radius:7px;background:#294362;color:#eff6ff;border:1px solid #58789d}
+button:focus-visible{outline:2px solid #81b4ee}#quick{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}
+#info{white-space:pre-wrap;overflow-wrap:anywhere;max-height:40vh;overflow:auto;font:12px/1.55 ui-monospace,SFMono-Regular,monospace;color:#d6e3f2}
+#views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+figure{margin:0;min-width:0}canvas{display:block;width:100%;aspect-ratio:1;border:1px solid #52677d;border-radius:8px;
+background:repeating-conic-gradient(#29384d 0% 25%,#384a5d 0% 50%) 50%/28px 28px}
+figcaption{padding:7px 0;color:#b9cce0}
+footer{padding:8px 22px;color:#9eb6cd}#gate{font-weight:650}
+@media(max-width:900px){main{grid-template-columns:1fr}#views{grid-template-columns:1fr}}
+</style>
+<script src="./review.js" defer></script>
+</head>
+<body>
+<header><h1>p0_character_001 · 多视角原画与 ArtMesh</h1>
+<small>源视角 0° / 45° / 90° · VDD 检查角 22.5° / 67.5° · 原生 RGBA 透明图层</small></header>
+<main>
+<aside>
+<h2>转头预览</h2>
+<label for="yaw">镜头水平角度：<output id="degree">0°</output></label>
+<input id="yaw" type="range" min="0" max="90" step="0.5" value="0" aria-label="yaw">
+<div id="quick"><button data-angle="0">0°</button><button data-angle="22.5">22.5°</button>
+<button data-angle="45">45°</button><button data-angle="67.5">67.5°</button><button data-angle="90">90°</button></div>
+<p id="gate" role="status">正在验证正式素材与来源哈希</p>
+<pre id="info" aria-live="polite"></pre>
+</aside>
+<section>
+<div id="views">
+<figure><canvas id="source" width="1024" height="1024"></canvas><figcaption id="sourceLabel">源独立视角原画</figcaption></figure>
+<figure><canvas id="result" width="1024" height="1024"></canvas><figcaption id="resultLabel">多部件 ArtMesh VDD</figcaption></figure>
+</div>
+<p>预览读取同一身份合同中的独立 RGBA 图层、固定锚点拓扑及遮挡层序。生成测试素材不参与正式画质验收。</p>
+</section>
+</main>
+<footer>身份校验、锚点对应和视觉验收状态由实际素材与 QA 文件决定。</footer>
+</body>
+</html>

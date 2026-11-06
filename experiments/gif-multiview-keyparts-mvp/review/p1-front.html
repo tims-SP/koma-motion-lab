@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 · 正面 ArtMesh 图层检查台</title>
+<style>
+:root{font:14px/1.55 system-ui,-apple-system,"Noto Sans SC",sans-serif;color:#eef3fc;background:#111a29}
+*{box-sizing:border-box}body{margin:0}header{padding:18px 25px;background:#18253a;border-bottom:1px solid #465c75}
+h1{font-size:22px;margin:0 0 5px}h2{font-size:16px;margin:0 0 12px}
+small{color:#abbcd0}main{display:grid;grid-template-columns:300px 1fr;gap:14px;padding:16px}
+aside,section{background:#19283d;border:1px solid #354d69;border-radius:9px;padding:16px}
+input[type=range]{width:100%;accent-color:#91bde6}label{display:block;margin:11px 0 2px}
+#views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+canvas{width:100%;aspect-ratio:1;background:repeating-conic-gradient(#394b61 0 25%,#293c52 0 50%) 0 0/28px 28px;border:1px solid #56718d;border-radius:8px}
+figure{margin:0;min-width:0}figcaption{color:#b5cadd;padding:6px 0}#status{font-weight:650;color:#dae9ff;margin:8px 0}
+#metrics{font:12px/1.65 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+#parts{display:grid;grid-template-columns:1fr 1fr;gap:6px 9px;margin-top:9px}
+#parts label{display:flex;align-items:center;gap:5px;margin:0;font-size:12px;white-space:nowrap}
+#parts input{accent-color:#91bde6}
+.buttons{display:flex;flex-wrap:wrap;gap:7px;padding-top:10px}
+button{border:1px solid #6e8eaa;background:#2d4b68;color:#fff;padding:7px 9px;border-radius:6px;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid #bddfff}
+footer{padding:13px 20px;color:#99adc3}
+@media(max-width:980px){main{grid-template-columns:1fr}#views{grid-template-columns:1fr}}
+</style><script src="./p1-front.js" defer></script>
+</head>
+<body>
+<header><h1>p0_character_001 · 正面 ArtMesh 图层检查台</h1>
+<small>基于已恢复的 0° 原始动漫原画 · 13 个物理/语义部件 · 1024×1024 RGBA</small></header>
+<main>
+<aside>
+<h2>独立部件动作</h2>
+<label for="eyeNear">近侧眼睛水平位移：<output id="eyeNearVal">0</output> px</label>
+<input id="eyeNear" type="range" min="-18" max="18" value="0" step="1">
+<label for="eyeFar">远侧眼睛水平位移：<output id="eyeFarVal">0</output> px</label>
+<input id="eyeFar" type="range" min="-18" max="18" value="0" step="1">
+<label for="fringeX">前发水平位移：<output id="fringeXVal">0</output> px</label>
+<input id="fringeX" type="range" min="-16" max="16" value="0" step="1">
+<div class="buttons">
+<button id="reset">重置为原始正面</button>
+<button id="eyes">双眼单独检查</button>
+<button id="hair">仅显示发层</button>
+<button id="all">显示全部</button>
+</div>
+<h2 style="margin-top:20px">语义部件显示</h2>
+<div id="parts"></div>
+<p id="status" role="status">正在校验来源 PNG</p>
+<pre id="metrics" aria-live="polite"></pre>
+</aside>
+<section>
+<div id="views">
+<figure><canvas id="reference" width="1024" height="1024"></canvas><figcaption>已恢复的 P0 原画 · 0°</figcaption></figure>
+<figure><canvas id="artmesh" width="1024" height="1024"></canvas><figcaption>独立 RGBA 部件合成与动作测试</figcaption></figure>
+</div>
+<p>本工作台用于核对原始分层、遮挡填补和单部件运动。独立运动画质、眼睑细节、隐藏结构仍须经过视觉验收后才可纳入正式动画资产。</p>
+</section>
+</main>
+<footer>溯源与 SHA-256、动作测试数据及工程审查结果由实际本地资产包提供。</footer>
+</body>
+</html>
