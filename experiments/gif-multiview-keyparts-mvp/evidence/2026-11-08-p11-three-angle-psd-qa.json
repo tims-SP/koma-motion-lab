@@ -1,0 +1,87 @@
+{
+  "schema": "KOMA-P0-P11-THREE-VIEW-EDITABLE-PSD-ASSET-QA-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "approvedP0OriginalKeyViews": [
+    0,
+    45,
+    90
+  ],
+  "availableLayeredPSDAssets": {
+    "0": {
+      "source": "See-through source-derived P0 PSD",
+      "path": "private-assets/p4-see-through/front/p0-character-001-see-through.psd",
+      "sha256": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04"
+    },
+    "45": {
+      "source": "See-through source-derived P0 PSD",
+      "path": "private-assets/p5-see-through/yaw045/p0-character-001-see-through.psd",
+      "sha256": "2527b97209c2bb912f260ba14179dcccacd45b39322077ec1fd92746ea8636fd"
+    },
+    "90": {
+      "source": "P0 approved 90-degree original semantic PNG ArtMesh registry",
+      "path": "private-assets/p11-profile-psd/yaw090/p0-character-001-registered-profile-yaw090.psd",
+      "sha256": "b23debe04dd6fc7d6820c3e9401a8838b47bb62ad6cc77d963c4ba853ddc01e8",
+      "bytes": 5561598,
+      "originalKeyframeSHA256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "reconstructedSourceRGBAIdentical": true,
+      "semanticLayerCount": 13
+    }
+  },
+  "original90Verification": {
+    "assetRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "nativeCanvas": [
+      1024,
+      1024
+    ],
+    "sourceAlphaMaxDifference": 0,
+    "visibleColorMaxDifference": 1,
+    "visibleColorMeanDifference": 0.0020882,
+    "layerNames": [
+      "body.reference",
+      "hair.back",
+      "face.skin",
+      "ear.far",
+      "ear.near",
+      "hair.side",
+      "eye.far",
+      "eye.near",
+      "nose",
+      "mouth",
+      "hair.front",
+      "hair.ahoge",
+      "hair.clip.cross_gold"
+    ],
+    "hiddenSemanticIDs": [
+      "ear.far",
+      "eye.far",
+      "hair.clip.cross_gold"
+    ],
+    "sourceOriginalExact": true,
+    "visualComparisonPNG": "private-assets/p11-profile-psd/yaw090/p0-90-psd-source-comparison.jpg",
+    "comparisonSHA256": "10ded8ee21e0cd783959b319358e0ca2d171c498642c3ba63cb116ffd13a2f03",
+    "visualQuality": "P0_ORIGINAL_SIDE_PROFILE_PRESERVED"
+  },
+  "assetPackage": {
+    "path": "private-assets/exports/p0-character-001-three-view-editable-psd-v12.zip",
+    "sha256": "ecf4ba09633218d3d67871e6ea27808a88dbaec152c097062d02bfb0d2cc8d69",
+    "bytes": 26455342,
+    "entryCount": 60,
+    "allHashesVerified": true
+  },
+  "regressions": {
+    "testsRun": 94,
+    "testsPassed": 94,
+    "testsFailed": 0,
+    "PSDLayerReadback": "psd-tools on isolated See-through environment",
+    "fullSourceVerification": "P0 90° source PNG exact compositing",
+    "runningEnvironment": "VPS isolated Python and psd-tools",
+    "githubActionsUsed": false
+  },
+  "motion": {
+    "adoptedBaseline": "P8 semantic-ArtMesh + dynamic occlusion",
+    "P10StrokeIdentity": "P0 conservative 24 candidates available for detail matching",
+    "next": "P12 precise hidden-surface source artwork and stroke identities for 45–90 degree continuous anime deformation",
+    "artisticAcceptance": "PENDING_VIEW_CONTINUITY"
+  }
+}

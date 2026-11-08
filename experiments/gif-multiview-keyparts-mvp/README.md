@@ -177,3 +177,9 @@ review/p7-motion.html 是实际可交互 HTML 审查工作台，可逐 2.5° 对
 交互工作台 review/p10-stroke.html 左右显示真实原画分层及 P8 中间角图片，可筛选跨视角线条身份和置信度；6 组 Chromium 截图通过来源校验。原 P8 37 帧动画仍为运动预览基线。对应数据可用于细化眼部、发束与遮挡边界的连续映射。
 
 完整原画复验包 private-assets/exports/p0-character-001-stroke-identity-review-v11.zip。SHA-256：e4488bbf47925a33cda820f1a9b6f7e6c1491d4aef33cba24c89cfc522f07f9a。质量证据 evidence/2026-11-08-p10-stroke-identity-qa.json；回归 87 项通过。
+
+### P11 · P0 三视角可编辑分层原画资产
+
+P0 0°、45° 已有独立 See-through PSD。本轮使用同一角色已核验的 90° 原始 PNG 和 13 个透明语义部件生成完整可编辑 PSD，层名、顺序、原始源图哈希均登记。从源 RGBA 逐层合成与批准的侧面原画像素完全相同，PSD 重新读取后，全部 Alpha 精确一致，可见颜色最大误差 1/255。
+
+三视角完整资产包 private-assets/exports/p0-character-001-three-view-editable-psd-v12.zip，SHA-256：bca12e592ff6952e2d814d27a4b5b999c6c946b110e98fc0c0312ef3c3212da5，含 39 个语义部件视角 PNG、三个 PSD、原始视角及转头 GIF。证据 evidence/2026-11-08-p11-three-angle-psd-qa.json。回归 94 项通过。
