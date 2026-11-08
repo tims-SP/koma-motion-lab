@@ -1,0 +1,289 @@
+{
+  "schema": "KOMA-P0-P13-SOURCE-DERIVED-INTERMEDIATE-ART-ASSETS-QA-V1",
+  "date": "2026-11-09",
+  "characterId": "p0_character_001",
+  "source": {
+    "authoritativeKeyAngles": [
+      0,
+      45,
+      90
+    ],
+    "authoritativeSemanticArtMeshViewSlots": 39,
+    "sourceEditablePSDAngles": [
+      0,
+      45,
+      90
+    ],
+    "source90PSD_SHA256": "b23debe04dd6fc7d6820c3e9401a8838b47bb62ad6cc77d963c4ba853ddc01e8",
+    "originalSemanticRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297"
+  },
+  "registeredIntermediate": {
+    "angles": [
+      67.5,
+      72.5
+    ],
+    "nativeCanvas": [
+      1024,
+      1024
+    ],
+    "sourceDerivedSemanticRGBA": 26,
+    "sourceDerivedMotionFrames": 37,
+    "roleIDs": [
+      "body.reference",
+      "hair.back",
+      "face.skin",
+      "ear.far",
+      "ear.near",
+      "hair.side",
+      "eye.far",
+      "eye.near",
+      "nose",
+      "mouth",
+      "hair.front",
+      "hair.ahoge",
+      "hair.clip.cross_gold"
+    ],
+    "allLayerCompositesPixelExact": true,
+    "assetContract": "private-assets/p13-source-priority/p13-paint-contract.json",
+    "assetContractSHA256": "479ef2264bb8198b5652b32f3096ec273363642d13bb0fd589663000843abfe1",
+    "sourceDerivedRGBA": "private-assets/p13-source-priority/source-feathered",
+    "independentPaintPriorityRoles": [
+      "eye.near",
+      "face.skin",
+      "hair.front",
+      "ear.near",
+      "nose",
+      "mouth",
+      "hair.back",
+      "body.reference",
+      "hair.side"
+    ],
+    "independentPaintPriorityCount": 18,
+    "sourceArtworkApproval": "PENDING"
+  },
+  "comparison": {
+    "P8": {
+      "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+      "textureRatios": {
+        "22.5": 1.281,
+        "67.5": 0.8371
+      },
+      "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+      "outliers": 0
+    },
+    "P13SourceDerived": {
+      "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+      "textureRatios": {
+        "22.5": 1.281,
+        "67.5": 1.2594
+      },
+      "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+      "outliers": 0,
+      "maxAdjacentRGBDelta": 6.0578
+    },
+    "sourceMotionBaseline": "P8_SEMANTIC_OCCLUSION",
+    "alternativeSourceSelection": {
+      "source-staggered": {
+        "textureStatus": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+        "edgeRatioByYaw": {
+          "22.5": 1.281,
+          "67.5": 2.0611
+        },
+        "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+        "temporalOutliers": 0,
+        "referenceContactSHA256": "3502d8d7d9a833eefe4f52fb6e92f8ea13b993a3766ff8e89de6312656f077c3"
+      },
+      "confidence-source": {
+        "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "edgeRatioByYaw": {
+          "22.5": 1.281,
+          "67.5": 1.5831
+        },
+        "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+        "temporalOutliers": 0,
+        "referenceContactSHA256": "7dfb14647fdebb7df4f76f0ff5ea480ef03f5f9bbe3d4a2c84477c3f88fced93"
+      }
+    },
+    "visualReferenceContact": {
+      "path": "p13-source-priority/p13-original-intermediate-comparison.jpg",
+      "sha256": "8d7e02d1a91e9e466cb44076ca3c82923d1f7c76e95f26c8f00b43aea3e12267"
+    },
+    "realBrowserHTML": "review/p13-intermediate.html",
+    "realBrowserQA": "PASS_REAL_ORIGINAL_P0_INTERMEDIATE_LAYER_REVIEW",
+    "realBrowserScreenshots": [
+      {
+        "yaw": 22.5,
+        "layerYaw": 67.5,
+        "semanticId": "hair.front",
+        "verifiedSHAImages": 5,
+        "alphaPixels": 127436,
+        "captures": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw22p5-layer67p5-hair-front-motion.png",
+            "sha256": "91aa4f124a382d55e3002ecc38e9840c34b74977583379cd433d1b4511110bb7",
+            "bytes": 364724
+          },
+          "parts": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw22p5-layer67p5-hair-front-parts.png",
+            "sha256": "94975d6c302100b12bc1f5c10e2a20c9171095dd590078525e463169511ff87b",
+            "bytes": 144142
+          }
+        }
+      },
+      {
+        "yaw": 67.5,
+        "layerYaw": 67.5,
+        "semanticId": "eye.near",
+        "verifiedSHAImages": 5,
+        "alphaPixels": 21327,
+        "captures": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw67p5-layer67p5-eye-near-motion.png",
+            "sha256": "0254bf5e3fd28e4c16c8655a868b2abc926fc6737c4adffa4e8493f7130a6ef7",
+            "bytes": 602628
+          },
+          "parts": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw67p5-layer67p5-eye-near-parts.png",
+            "sha256": "016de9e30498c14fcba8a392ce5c65563e004825f7eca71b4e2f100637fb6e1b",
+            "bytes": 49542
+          }
+        }
+      },
+      {
+        "yaw": 67.5,
+        "layerYaw": 67.5,
+        "semanticId": "hair.front",
+        "verifiedSHAImages": 5,
+        "alphaPixels": 127436,
+        "captures": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw67p5-layer67p5-hair-front-motion.png",
+            "sha256": "0254bf5e3fd28e4c16c8655a868b2abc926fc6737c4adffa4e8493f7130a6ef7",
+            "bytes": 602628
+          },
+          "parts": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw67p5-layer67p5-hair-front-parts.png",
+            "sha256": "94975d6c302100b12bc1f5c10e2a20c9171095dd590078525e463169511ff87b",
+            "bytes": 144142
+          }
+        }
+      },
+      {
+        "yaw": 72.5,
+        "layerYaw": 72.5,
+        "semanticId": "face.skin",
+        "verifiedSHAImages": 5,
+        "alphaPixels": 110808,
+        "captures": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw72p5-layer72p5-face-skin-motion.png",
+            "sha256": "c5b2cfe30b012e0dc086e921f1e6660a57a12eb6a55a82ebd0762739e6fdd065",
+            "bytes": 599810
+          },
+          "parts": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw72p5-layer72p5-face-skin-parts.png",
+            "sha256": "de2296d124f3ce007fbe3e6761d9e4918ca4d45b7a4513874c95e6d89dff184d",
+            "bytes": 75535
+          }
+        }
+      },
+      {
+        "yaw": 72.5,
+        "layerYaw": 72.5,
+        "semanticId": "hair.clip.cross_gold",
+        "verifiedSHAImages": 5,
+        "alphaPixels": 0,
+        "captures": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw72p5-layer72p5-hair-clip-cross_gold-motion.png",
+            "sha256": "c5b2cfe30b012e0dc086e921f1e6660a57a12eb6a55a82ebd0762739e6fdd065",
+            "bytes": 599810
+          },
+          "parts": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw72p5-layer72p5-hair-clip-cross_gold-parts.png",
+            "sha256": "2c2894290eaa7901aa606c43d7ceac36ab081188afbed9978d34e52cc3be1108",
+            "bytes": 22373
+          }
+        }
+      },
+      {
+        "yaw": 90,
+        "layerYaw": 72.5,
+        "semanticId": "hair.back",
+        "verifiedSHAImages": 5,
+        "alphaPixels": 133943,
+        "captures": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw90-layer72p5-hair-back-motion.png",
+            "sha256": "f04198e319516ba4609a5f77a6ba0166608fdf38989de3632aaa9b708a7255eb",
+            "bytes": 294489
+          },
+          "parts": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p13-source-priority/browser/yaw90-layer72p5-hair-back-parts.png",
+            "sha256": "00e9a9dc3f1456ea5dad20af70c05306160cfae254a255d49d741995ecdc01ae",
+            "bytes": 207258
+          }
+        }
+      }
+    ],
+    "realBrowserErrors": [],
+    "realBrowserFailedRequests": [],
+    "motionGIF": {
+      "path": "private-assets/p13-source-priority/p0-character-001-intermediate-turn.gif",
+      "frames": 72,
+      "resolution": [
+        512,
+        512
+      ],
+      "sha256": "9c125928ce83729fb7c4ce0a1b3a0f81f945f56d2773ec286d7885cf319a09fc"
+    }
+  },
+  "package": {
+    "path": "private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip",
+    "bytes": 83757782,
+    "entryCount": 200,
+    "sha256": "5b4a45962a64f99296e6e320a904f8742c8746ed80e8b188f516dc76cf43f8d7",
+    "allInternalFilesVerified": true
+  },
+  "validation": {
+    "testsRun": 114,
+    "testsPassed": 114,
+    "testsFailed": 0,
+    "structuralP0Acceptance": 150,
+    "actualBrowserSourceSHA256Screenshots": 12,
+    "testRuntime": "isolated VPS Python and Chromium",
+    "GitHubActionsUsed": false,
+    "artisticApproval": "PENDING"
+  },
+  "next": {
+    "stage": "P14_NATIVE_INTERMEDIATE_SOURCE_PAINTING",
+    "originalSourceReferenceAngles": [
+      45,
+      90
+    ],
+    "targetIntermediateAngles": [
+      67.5,
+      72.5
+    ],
+    "artPriority": [
+      "eye.near",
+      "face.skin",
+      "hair.front",
+      "ear.near",
+      "nose",
+      "mouth",
+      "hair.back",
+      "body.reference",
+      "hair.side"
+    ],
+    "minimumPaintedSemanticViewSlots": 18,
+    "qualityGates": [
+      "single approved P0 identity reference",
+      "independently drawn 67.5/72.5 facial contours and front-hair strands",
+      "single near eye and original violet-pink iris",
+      "source correct gold clip and far-eye occlusion",
+      "26 native RGBA component slots in same full-canvas coordinate system",
+      "37-frame source-based VDD temporal and artistic review"
+    ]
+  }
+}

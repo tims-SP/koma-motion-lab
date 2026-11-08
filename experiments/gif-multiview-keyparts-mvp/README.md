@@ -193,3 +193,11 @@ P12 对 45°→90° 的 13 类语义部件实施源覆盖分析，统计经几�
 新审查页面 review/p12-inspection.html 可对照 P8 与四种试验的22.5°、67.5°、72.5° 原画渲染，并逐部件检查 45°/90°像素对应。六组真实 Chromium 浏览器抽样共获得 12 张来源哈希已核验的画布截图。完整隔离回归 103 项通过。
 
 私有审查包 private-assets/exports/p0-character-001-view-correspondence-review-v13.zip。SHA-256：3cc06280b043b53f96171e9b2edd8b3c14d7d62edc094b626ce93312973fc959。验收记录 evidence/2026-11-09-p12-source-correspondence-qa.json。
+
+### P13 · 中间角原画来源部件与透明分层
+
+保持 p0_character_001 原始 0°、45°、90° RGBA 与三个视角 PSD。从原画 45°/90° 逐部件 VDD 建立 67.5°、72.5° 的 26 张可追溯 1024×1024 透明 PNG；每个中间角 13 个固定语义 ID，保存视角、原始图层 SHA-256、遮挡关系、几何锚点及源层。每张候选整图可由对应 13 个 PNG 逐像素精确合成。
+
+P13 提供完整 37 帧连续转头及往返 72 帧 GIF，浏览器交互页面为 review/p13-intermediate.html，可以对照 P8 原画动画和中间角部件。真实 Chromium 取得 12 张截图，校验来源图像哈希。高质量独立原画的绘制目标已登记为每个中间角 9 个重点部件，共 18 个重点视角槽。P8 仍为当前动画运动参考。
+
+生产原画合同 private-assets/p13-source-priority/p13-paint-contract.json。审查包 private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip。SHA-256: 5b4a45962a64f99296e6e320a904f8742c8746ed80e8b188f516dc76cf43f8d7。结构化证据 evidence/2026-11-09-p13-intermediate-assets-qa.json；回归 114 项通过。

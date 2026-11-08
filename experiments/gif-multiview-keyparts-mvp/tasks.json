@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P12_SOURCE_OCCLUSION_CORRESPONDENCE_AUDITED",
+  "status": "P13_SOURCE_DERIVED_INTERMEDIATE_RGBA_REGISTERED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P12_P0_13_SEMANTIC_GAP_PARTS_5_REAL_RENDER_METHODS_12_BROWSER_CAPTURE_103_TESTS",
+  "lastCompleted": "P13_P0_26_RGBA_PARTS_37_MOTION_FRAMES_12_BROWSER_CAPTURES_114_REGRESSIONS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -763,6 +763,42 @@
       },
       "regressionTestsPassed": 103,
       "artisticQualityAcceptance": "PENDING_FINE_VIEW_TEXEL_ALIGNMENT"
+    },
+    "p13IntermediateSemanticAssets": {
+      "sourceOriginalViews": [
+        0,
+        45,
+        90
+      ],
+      "intermediateAngles": [
+        67.5,
+        72.5
+      ],
+      "semanticViewSlots": 39,
+      "intermediateSemanticParts": 26,
+      "globalCanvas": [
+        1024,
+        1024
+      ],
+      "pixelExactLayerRecomposition": true,
+      "sourceDerivedMotionFrames": 37,
+      "sourceDerivedGIFFrames": 72,
+      "sourceGIFSHA256": "9c125928ce83729fb7c4ce0a1b3a0f81f945f56d2773ec286d7885cf319a09fc",
+      "sourceP0ArtContract": "private-assets/p13-source-priority/p13-paint-contract.json",
+      "sourceP0ArtContractSHA256": "479ef2264bb8198b5652b32f3096ec273363642d13bb0fd589663000843abfe1",
+      "independentPaintPriorityCount": 18,
+      "realBrowserScreenshots": 12,
+      "realBrowserHTML": "review/p13-intermediate.html",
+      "renderingMotionBaseline": "P8_SEMANTIC_OCCLUSION",
+      "originalArtVisualAcceptance": "PENDING",
+      "reviewArchive": {
+        "path": "private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip",
+        "bytes": 83757782,
+        "entryCount": 200,
+        "sha256": "5b4a45962a64f99296e6e320a904f8742c8746ed80e8b188f516dc76cf43f8d7",
+        "allInternalFilesVerified": true
+      },
+      "fullRegressionsPassed": 114
     }
   }
 }
