@@ -28,7 +28,9 @@ async function start(){
   browser=await chromium.launch({headless:true,args:['--no-sandbox','--use-angle=swiftshader']});
   const page=await browser.newPage({viewport:{width:1450,height:900}});
   page.on('pageerror',err=>errors.push(String(err)));
-  const source=process.env.KOMA_P3_SOURCE==='seethrough-front'?'&source=seethrough-front':'';
+  const input=process.env.KOMA_P3_SOURCE;
+  const source=['seethrough-front','seethrough-paired'].includes(input)
+    ?'&source='+input:'';
   const url='http://127.0.0.1:'+httpd.address().port+'/experiments/gif-multiview-keyparts-mvp/review/index.html?mode=candidate'+source;
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.__KOMA_P0_VIEWER&&window.__KOMA_P0_VIEWER.inspect().ready,null,{timeout:18000});
@@ -45,7 +47,7 @@ async function start(){
   const report={schema:'KOMA-P0-VDD-RAW-CANVAS-EVIDENCE-V1',characterId:'p0_character_001',
                 sourceRole:'recovered_original_39_part_RGBA_art',
                 rendering:'HTML Canvas2D piecewise ArtMesh vertices',
-                source:process.env.KOMA_P3_SOURCE==='seethrough-front'?'seethrough-front':'original',
+                source:['seethrough-front','seethrough-paired'].includes(input)?input:'original',
                 outputs,errors,angles,frameCount:outputs.length,
                 sequenceMode:process.env.KOMA_P3_TURN_SEQUENCE==='1',
                 status:errors.length?'BROWSER_RENDER_ERRORS':'CAPTURED_FOR_ANATOMICAL_INSPECTION'};

@@ -53,7 +53,7 @@ def merge(layers,canvas):
         out.alpha_composite(im)
     return out
 
-def build(psd_file,source_file,out):
+def build(psd_file,source_file,out,yaw=0):
     psd_file=Path(psd_file).resolve();source_file=Path(source_file).resolve()
     out=Path(out).resolve();out.mkdir(exist_ok=True,parents=True)
     psd=PSDImage.open(psd_file)
@@ -80,7 +80,7 @@ def build(psd_file,source_file,out):
         records.append({
             "psdLayerIndex":i,"psdLayerName":layer.name,
             "semanticCandidateId":semantic,
-            "viewYawDeg":0,"originalLayerBBox":list(layer.bbox),
+            "viewYawDeg":yaw,"originalLayerBBox":list(layer.bbox),
             "visiblePixelsAt768":int((alpha>12).sum()),
             "softAlphaPixelsAt768":int(((alpha>0)&(alpha<255)).sum()),
             "actualPixelBBoxAt768":bounds,
@@ -127,6 +127,7 @@ def build(psd_file,source_file,out):
     qa={
         "schema":"KOMA-P0-SEETHROUGH-PSD-LAYER-QA-V1",
         "characterId":"p0_character_001",
+        "viewYawDeg":yaw,
         "psdSHA256":sha(psd_file),
         "sourceOriginalSHA256":sha(source_file),
         "model":"See-through v3 hosted ZeroGPU, 768 resolution",
@@ -134,7 +135,7 @@ def build(psd_file,source_file,out):
         "totalLayers":len(records),
         "semanticItemsToPhysicallySplit":[x["semanticCandidateId"] for x in records
                                           if x["semanticCandidateId"].endswith(".pair")],
-        "sourceRGBA_1024":"recovered P0 original front reference",
+        "sourceRGBA_1024":"recovered P0 original "+str(yaw)+" degree reference",
         "exportCanvas":[1024,1024],
         "modelCanvas":[768,768],
         "metrics":{
@@ -161,5 +162,6 @@ if __name__=="__main__":
     p.add_argument("--psd",required=True)
     p.add_argument("--source",required=True)
     p.add_argument("--out",required=True)
+    p.add_argument("--yaw",type=int,choices=[0,45,90],default=0)
     args=p.parse_args()
-    build(args.psd,args.source,args.out)
+    build(args.psd,args.source,args.out,args.yaw)

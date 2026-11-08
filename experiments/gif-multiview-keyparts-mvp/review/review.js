@@ -3,6 +3,7 @@
 const SIZE=1024;
 const candidateMode=new URLSearchParams(location.search).get('mode')==='candidate';
 const seethroughFront=new URLSearchParams(location.search).get('source')==='seethrough-front';
+const seethroughPaired=new URLSearchParams(location.search).get('source')==='seethrough-paired';
 const URL_BASE=new URL('../private-assets/',location.href);
 const byId=id=>document.getElementById(id);
 const expectedIds=['body.reference','hair.back','face.skin','ear.far','ear.near','eye.far','eye.near',
@@ -148,7 +149,7 @@ function render(degree){
 }
 async function init(){
  try{
-  const registrySource=seethroughFront?'p4-see-through/mv-candidate/':'';
+  const registrySource=seethroughPaired?'p5-see-through/mv-candidate/':(seethroughFront?'p4-see-through/mv-candidate/':'');
   const manifest=await fetchJSON(registrySource+'parts.json');
   report=await fetchJSON(registrySource+'qa.json');
   assert((report.status==='PASS_ENGINEERING_AND_VISUAL_GATES'&&report.failed===0) || (candidateMode&&report.status==='REVIEW_CANDIDATE'), 'QA admission gate is closed');
@@ -187,9 +188,11 @@ async function init(){
   }
   assert(whole.size===3,'source reference PNGs at 0/45/90 required');
   ready=true;
-  byId('gate').textContent=seethroughFront
+  byId('gate').textContent=seethroughPaired
+    ?'已加载 P0 0°/45° PSD 语义补绘与 90° 原画候选 · 视觉检查'
+    :(seethroughFront
     ?'已加载 P0 正面 PSD 遮挡补绘 + 45°/90° 原画候选 · 视觉检查'
-    :(candidateMode?'已加载真实 GIF 修复候选 · 视觉验收待完成':'已加载通过工程与视觉门禁的独立原画');
+    :(candidateMode?'已加载真实 GIF 修复候选 · 视觉验收待完成':'已加载通过工程与视觉门禁的独立原画'));
   byId('info').textContent='角色：'+manifest.characterId+'\n校验图层：'+parts.length+'\n视角：0° / 45° / 90°\nRGBA 源图：已验证 SHA-256';
   render(angle);
  }catch(error){
@@ -206,7 +209,7 @@ for(const button of document.querySelectorAll('button[data-angle]')){
 }
 window.__KOMA_P0_VIEWER={inspect:()=>({ready,angle,partCount:registry.size,
  qaStatus:report?.status||null,candidateMode,
- source:seethroughFront?'seethrough-front':'original',
+ source:seethroughPaired?'seethrough-paired':(seethroughFront?'seethrough-front':'original'),
  problems:[...problems]}),renderAt:render};
 init();
 })();

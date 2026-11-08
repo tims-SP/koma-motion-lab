@@ -125,3 +125,13 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 质量门禁：采样中间角面部透明度连续，跨角纹理对应仍待优化。本轮测试 37/37 通过，源码与证据分别保存在 scripts、tests 和 evidence/2026-11-07-p4-seethrough-artmesh-qa.json。
 
 私有审查包：private-assets/exports/p0-character-001-artmesh-psd-review-v5.zip。SHA-256：08761e4f7e2412d83deac685ed40b516dc917d4ea3abd1160c214cd89faf0cde。
+
+### P5 · 0°/45° 语义 PSD 与物理锚点对应
+
+使用已经批准的 P0 原始 0° 和 45° 原画分别生成独立 See-through 13 层 PSD。将两组原生 PSD 语义层归一化为 1024×1024 RGBA，并保留 P0 90° 的原画部件作为第三个姿态端点。共登记 39 个 ArtMesh 槽，统一语义 ID 与网格拓扑。
+
+45° 新增 260870 个隐藏补绘像素；原画静态轮廓 IoU 1.000，差异像素 50，不透明穿孔 0。13 条可追溯物理地标跨 0°、45°、90° 登记，其中 0° 与 45° 双眼虹膜中心由真实 PSD 图层像素分量提取。
+
+三视角 HTML 为 /review/index.html?mode=candidate&source=seethrough-paired 。私有预览 GIF 为 private-assets/p5-see-through/mv-candidate/p0-psd-paired-vdd-turn.gif。由真实 Chromium 输出 37 张 RGBA 后生成 72 帧往返动画，中间角的跨视角纹理验收需要进一步几何对应约束。
+
+来源与完整 QA 见 evidence/2026-11-08-p5-two-psd-view-correspondence.json。回归测试 46/46 通过。私有审查包为 private-assets/exports/p0-character-001-two-psd-artmesh-review-v6.zip，SHA-256 3e8d97b676511d382d8cab1efcc47c0e3058ca3a8929634646c95d53b2799482。
