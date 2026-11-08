@@ -169,3 +169,11 @@ review/p7-motion.html 是实际可交互 HTML 审查工作台，可逐 2.5° 对
 浏览器页面 review/p9-correspondence.html 可按角度、语义部件和匹配误差阈值查看对应图谱。Chromium 抽检 6 组部件，交互画面均来自真实原画 PNG，校验原始来源。当前动态渲染继续采用 P8 已验证的物理锚点与动态遮挡，后续按单根发束和面部线条确定更精确的同位关系。
 
 可复现私有审查包 private-assets/exports/p0-character-001-color-region-correspondence-v10.zip。SHA-256：bf46bd5a9ad2bee9d53424906c066d8c1723425591ce4b7a935cf6600ee86af4。证据 evidence/2026-11-08-p9-color-region-correspondence-qa.json，回归测试 79 项通过。
+
+### P10 · 原画线条身份与跨视角审查
+
+基于批准的 P0 原始 0°、45°、90° 原画以及真实分层 RGBA，采用墨线连通区域、颜色、方向、物理锚点位移及歧义过滤，提取 184 个原画线条组件，并登记 22 组语义视角关系中的 24 个高置信候选对应。所有输入均保存 SHA-256。
+
+交互工作台 review/p10-stroke.html 左右显示真实原画分层及 P8 中间角图片，可筛选跨视角线条身份和置信度；6 组 Chromium 截图通过来源校验。原 P8 37 帧动画仍为运动预览基线。对应数据可用于细化眼部、发束与遮挡边界的连续映射。
+
+完整原画复验包 private-assets/exports/p0-character-001-stroke-identity-review-v11.zip。SHA-256：e4488bbf47925a33cda820f1a9b6f7e6c1491d4aef33cba24c89cfc522f07f9a。质量证据 evidence/2026-11-08-p10-stroke-identity-qa.json；回归 87 项通过。

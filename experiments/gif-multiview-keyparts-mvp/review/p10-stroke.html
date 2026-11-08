@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 · 线条身份与动态遮挡检查</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Noto Sans CJK SC",sans-serif;background:#121b2a;color:#f3f7fd}
+*{box-sizing:border-box}body{max-width:1600px;margin:auto;padding:18px}
+h1{font-size:21px;margin:0 0 8px}p{color:#b7c7d9;line-height:1.5}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border:1px solid #475b77;background:#1e2e43;padding:13px;border-radius:10px;margin:15px 0}
+label{color:#d2dce9;font-size:13px}
+button,select,input{padding:9px;color:#f3f7fd;background:#2d425e;border:1px solid #58708c;border-radius:7px}
+input[type=range]{accent-color:#6bd8c4;min-width:135px}
+canvas{width:100%;height:auto;display:block;background:#33485e;border-radius:9px;border:1px solid #496080}
+#status{font-size:13px;color:#b9e8d3}
+details{margin-top:12px;border:1px solid #496080;border-radius:8px;padding:11px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#ccdaea;font-size:12px}
+@media(max-width:620px){body{padding:9px}}
+</style></head>
+<body>
+<h1>p0_character_001 · 线条身份对应与遮挡</h1>
+<p>显示实际 0°/45°/90° 原画的语义部件，以及同一角度区间内已经验证的 P8 中间角画面。连接线只代表自动提取的候选身份；匹配置信度可筛选。</p>
+<div class="controls">
+<label for="pair">原画视角</label>
+<select id="pair"><option value="0-45">0°→45°</option><option value="45-90">45°→90°</option></select>
+<label for="part">ArtMesh 部件</label><select id="part"></select>
+<label for="confidence">置信度</label><input id="confidence" type="range" min="0" max="1" step="0.05" value="0.45">
+<output id="score">0.45</output>
+<label for="yaw">中间角度</label><select id="yaw"></select>
+</div>
+<p id="status" role="status">正在验证 P0 原始图像…</p>
+<canvas id="panel" width="1536" height="575" aria-label="P0 原始部件线条匹配与实际中间角动画"></canvas>
+<details><summary>物理锚点、候选线条身份、遮挡及来源 SHA-256</summary><pre id="details">载入中</pre></details>
+<script src="./p10-stroke.js" defer></script>
+</body></html>
