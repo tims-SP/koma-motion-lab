@@ -1,0 +1,179 @@
+{
+  "schema": "KOMA-P0-P9-COLOR-REGION-CORRESPONDENCE-QA-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "reference": {
+    "originalKeyViews": [
+      0,
+      45,
+      90
+    ],
+    "independentPSDKeyViews": [
+      0,
+      45
+    ],
+    "semanticSourceViews": 39,
+    "sourceRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "physicalLandmarksSHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "approvedHeroMasterOriginalSHAverified": false
+  },
+  "correspondences": {
+    "algorithm": "shared-Lab color clustering; connected color pieces; source-physical-guided region matching",
+    "registeredSemanticPairs": 22,
+    "sourceColorRegionMatches": 155,
+    "registeredRegionPixels": 133282,
+    "workingCanvas": [
+      443,
+      443
+    ],
+    "sourceCanvas": [
+      1024,
+      1024
+    ],
+    "QA_JSON": "private-assets/p9-region-correspondence/qa.json",
+    "QA_SHA256": "a29a9a7a6d44e8cdd09f1b1c82a329be2a8481752ec16c0a8284e95dba674fd9",
+    "regionOverlayContact": {
+      "path": "p9-region-correspondence/region-pair-grid.jpg",
+      "sha256": "b6dc33804332552614d0f19d471d55096e21be09cfde1adf72b0059d44e6da78"
+    },
+    "realSourceQualityContact": {
+      "path": "p9-region-correspondence/region-quality-comparison.jpg",
+      "sha256": "36a0d3c6b56e63f1a1e98957494009d82bc02a87aaadf47a8362f8f1598e4552"
+    }
+  },
+  "renderingComparison": {
+    "adoptedGeometry": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+    "methodEdgeRatios": {
+      "P8 · 物理锚点遮挡": {
+        "22.5": 1.281,
+        "67.5": 0.8371
+      },
+      "P9 · 面部颜色区域": {
+        "22.5": 1.3027,
+        "67.5": 0.9939
+      },
+      "P9 · 面部与发束区域": {
+        "22.5": 1.3622,
+        "67.5": 1.573
+      }
+    },
+    "independentFullMotionP8": {
+      "zipSHA256": "ce3a36fe9ea44384f3a26bfaf1385c79846223f7ae1fa4ff6b5bdf3edb8a8cd7",
+      "browserFrameCount": 37,
+      "artisticAcceptance": "PENDING_ORIGINAL_MULTIVIEW_TEXTURE_MATCH"
+    },
+    "P9RegionCatalog": "DIAGNOSTIC_FOR_CONFIDENT_STROKE_MATCHING"
+  },
+  "browser": {
+    "html": "review/p9-correspondence.html",
+    "status": "PASS_REAL_P0_REGION_CORRESPONDENCE_VIEW",
+    "sourceVerification": "Original P0 semantic PNG SHA-256 on every selection",
+    "sampledReferences": [
+      {
+        "pair": "0-45",
+        "semanticId": "face.skin",
+        "threshold": 47,
+        "registeredRegionMatches": 1,
+        "originalLayerHashes": [
+          "e79b712735d77cadfa9f14d30477acd28b4e909d0cc57635d927676cc10d1c79",
+          "9bdb945a26d33351602cd424ef683f5de57d79b05f2d246efe627a942c2bc5c3"
+        ],
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p9-region-correspondence/browser/region-0-45-face-skin.png",
+        "sha256": "b8c354771690ededc51a90cf348cac0d8f025aecabe9c095777b99567cd0a00b",
+        "bytes": 93097
+      },
+      {
+        "pair": "0-45",
+        "semanticId": "hair.front",
+        "threshold": 47,
+        "registeredRegionMatches": 10,
+        "originalLayerHashes": [
+          "90c272094d8401571562e19102038b0f41fbaaf067171007f13661631d64fb44",
+          "bfa6223060975873da9a5335f09cc424ffc5e1224c1fadab5923c11eaa50a6de"
+        ],
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p9-region-correspondence/browser/region-0-45-hair-front.png",
+        "sha256": "96e334f9533284d2d80d22c3a2c4264e7c5b0449947cc103998a667b46619c49",
+        "bytes": 174860
+      },
+      {
+        "pair": "0-45",
+        "semanticId": "eye.near",
+        "threshold": 47,
+        "registeredRegionMatches": 5,
+        "originalLayerHashes": [
+          "50681bc8c1f9f82e536eb918a5d03ae03718e5c2cac6fc48d63ccab90be91938",
+          "28c985c102668e2448e26064b2eb36586c9f15755d8ea655944967912a6af0fe"
+        ],
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p9-region-correspondence/browser/region-0-45-eye-near.png",
+        "sha256": "4dbe1677bc139ce39d7c1187899bfd5aadba41dfbc43b579b1990d540104df74",
+        "bytes": 48412
+      },
+      {
+        "pair": "45-90",
+        "semanticId": "face.skin",
+        "threshold": 47,
+        "registeredRegionMatches": 3,
+        "originalLayerHashes": [
+          "9bdb945a26d33351602cd424ef683f5de57d79b05f2d246efe627a942c2bc5c3",
+          "e084fc4904b182a1eae02aae523d342c86dd18651ab9f651d744efacf795af31"
+        ],
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p9-region-correspondence/browser/region-45-90-face-skin.png",
+        "sha256": "fd27599356099523452a1c8e23a9a4831a91e1b3e184a995f2eb1ff116b54be9",
+        "bytes": 71202
+      },
+      {
+        "pair": "45-90",
+        "semanticId": "eye.near",
+        "threshold": 47,
+        "registeredRegionMatches": 4,
+        "originalLayerHashes": [
+          "28c985c102668e2448e26064b2eb36586c9f15755d8ea655944967912a6af0fe",
+          "56ed2cb3d17fa2f3bff20582dd4771848e27ed13b11f3f8dfa62303b1ddc4352"
+        ],
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p9-region-correspondence/browser/region-45-90-eye-near.png",
+        "sha256": "e4ea6a5c25e5ed41d2b0d1d1ce8b1e1b52f7eed0954cbb82047fc341f3bcad80",
+        "bytes": 49536
+      },
+      {
+        "pair": "45-90",
+        "semanticId": "hair.front",
+        "threshold": 47,
+        "registeredRegionMatches": 9,
+        "originalLayerHashes": [
+          "bfa6223060975873da9a5335f09cc424ffc5e1224c1fadab5923c11eaa50a6de",
+          "59a765ee05d3219f6cc1d59cc101dde27696ffcd84a1eda56c1aa6c9a13ecf2f"
+        ],
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p9-region-correspondence/browser/region-45-90-hair-front.png",
+        "sha256": "25b7b4d3d8da22f6fe084b6f9635a593076bf47af4bfe65de27714d7d87c268e",
+        "bytes": 170260
+      }
+    ],
+    "javascriptErrors": [],
+    "failedRequests": [],
+    "screenshots": 6
+  },
+  "artifact": {
+    "path": "private-assets/exports/p0-character-001-color-region-correspondence-v10.zip",
+    "bytes": 11115089,
+    "sha256": "bf46bd5a9ad2bee9d53424906c066d8c1723425591ce4b7a935cf6600ee86af4",
+    "entryCount": 80,
+    "internalHashesVerified": true
+  },
+  "regression": {
+    "testsRun": 79,
+    "testsPassed": 79,
+    "testsFailed": 0,
+    "environment": "isolated VPS venv plus Chromium"
+  },
+  "research": {
+    "AnimeInterp": "https://github.com/lisiyao21/AnimeInterp",
+    "LayerInbetween": "https://github.com/MarkMoHR/LayerInbetween",
+    "basis": "shared Lab color pieces, semantic ownership and physical landmark prior",
+    "next": "per-stroke identity assignment and visibility-aware correspondence over 45-90-degree pose transition"
+  },
+  "qualityGate": {
+    "sourceRGBAProvenance": "PASS",
+    "regionMatchSourceEngineering": "PASS",
+    "artisticViewAcceptance": "PENDING"
+  }
+}

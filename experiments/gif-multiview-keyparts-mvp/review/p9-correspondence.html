@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 · 动漫原画颜色区域对应研究</title>
+<style>
+:root{font-family:system-ui,sans-serif;color-scheme:dark;background:#101a27;color:#eef4fb}
+*{box-sizing:border-box}
+body{max-width:1480px;margin:auto;padding:22px}
+h1{font-size:22px;margin:0 0 12px}
+p{color:#b5c6d8;line-height:1.5}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:15px;background:#203047;border-radius:10px;margin:15px 0}
+label{font-size:13px;color:#d1e1f0}
+select,input,button{padding:9px;background:#2b3c56;border:1px solid #5a6e87;border-radius:8px;color:#f5f9fc}
+button{cursor:pointer}
+canvas{display:block;width:100%;height:auto;border:1px solid #506178;border-radius:9px;background:#35475f}
+#status{color:#bde5d8}
+#detail{white-space:pre-wrap;overflow-wrap:anywhere;color:#c3d5e8;font-size:12px}
+details{margin-top:15px;border:1px solid #506178;border-radius:10px;padding:13px}
+@media(max-width:650px){body{padding:10px}}
+</style>
+</head>
+<body>
+<h1>p0_character_001 · 颜色区域与物理锚点对应</h1>
+<p>真实 P0 0°、45°、90° 分层原画。颜色区域匹配来源于原始 RGBA 部件和已登记的解剖锚点，用于观察不同角度的同一语义部件。</p>
+<div class="controls">
+<label for="pair">参考角度</label>
+<select id="pair" aria-label="选择相邻 P0 原画角度"><option value="0-45">0° → 45°</option><option value="45-90">45° → 90°</option></select>
+<label for="semantic">部件</label><select id="semantic" aria-label="选择独立语义部件"></select>
+<label for="cost">匹配上限</label><input id="cost" type="range" min="0" max="145" step="1" value="47">
+<output id="costValue">47</output>
+</div>
+<p id="status" role="status">读取原画来源与 SHA-256…</p>
+<canvas id="viewer" width="1280" height="660" aria-label="P0 原始图层以及颜色区域匹配对应"></canvas>
+<details><summary>对应数据与质量指标</summary><pre id="detail"></pre></details>
+<script src="./p9-correspondence.js" defer></script>
+</body>
+</html>

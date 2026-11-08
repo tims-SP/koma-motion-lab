@@ -161,3 +161,11 @@ review/p7-motion.html 是实际可交互 HTML 审查工作台，可逐 2.5° 对
 三种方案在交互式 review/p8-motion.html 并排检查。P8 实际输出 37 张 1024×1024 RGBA，组成 72 帧转头 GIF；Chromium 在 6 个视角验证 18 张画布及其 SHA-256。22.5° 与 67.5° 的纹理边缘诊断分别为 1.281、0.8371，37 帧时间连续性检查通过。面部、发束与领口中间角继续以原始 P0 画质为验收基线。
 
 私有审查包：private-assets/exports/p0-character-001-semantic-occlusion-review-v9.zip。SHA-256：ce3a36fe9ea44384f3a26bfaf1385c79846223f7ae1fa4ff6b5bdf3edb8a8cd7。程序及来源验收：evidence/2026-11-08-p8-semantic-occlusion-qa.json。回归测试 72 项全部通过。
+
+### P9 · P0 原画颜色区域与解剖对应图谱
+
+基于 P0 原始 0°、45°、90° 的真实 RGBA 分层图，结合 AnimeInterp 的区域引导思想与既有 13 类物理锚点，建立跨 22 个语义视角对的 155 组候选颜色区域匹配，记录颜色标签、面积、位置、原始部件 SHA-256 与参考运动残差。
+
+浏览器页面 review/p9-correspondence.html 可按角度、语义部件和匹配误差阈值查看对应图谱。Chromium 抽检 6 组部件，交互画面均来自真实原画 PNG，校验原始来源。当前动态渲染继续采用 P8 已验证的物理锚点与动态遮挡，后续按单根发束和面部线条确定更精确的同位关系。
+
+可复现私有审查包 private-assets/exports/p0-character-001-color-region-correspondence-v10.zip。SHA-256：bf46bd5a9ad2bee9d53424906c066d8c1723425591ce4b7a935cf6600ee86af4。证据 evidence/2026-11-08-p9-color-region-correspondence-qa.json，回归测试 79 项通过。
