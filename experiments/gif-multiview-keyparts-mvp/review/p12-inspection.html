@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>p0_character_001 · 原画对应与遮挡分析</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Noto Sans CJK SC",sans-serif;background:#131c2a;color:#f0f5fb}
+*{box-sizing:border-box}body{max-width:1450px;margin:auto;padding:20px}
+h1{font-size:21px;font-weight:650}h2{font-size:16px}
+p{color:#b7cadf;line-height:1.52}
+fieldset{display:flex;flex-wrap:wrap;gap:12px;align-items:center;border:1px solid #425a75;background:#22324a;padding:14px;border-radius:10px}
+label{font-size:13px;color:#d7e3f0}
+select{padding:8px 10px;border-radius:7px;background:#2d435e;color:#f4f7fd;border:1px solid #71859b}
+canvas{display:block;width:100%;height:auto;background:#38495f;border:1px solid #496078;border-radius:8px}
+#status{font-size:13px;color:#c9eddb}
+#detail{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:#bacadd}
+details{border:1px solid #496078;padding:11px;border-radius:8px;margin-top:14px}
+@media(max-width:640px){body{padding:9px}}
+</style></head>
+<body>
+<h1>P0 · 视角对应与原画遮挡评估</h1>
+<p>左：P8 已登记的真实 ArtMesh 转头。右：P12 局部解剖/线条约束试验。下方显示原始 45° 和 90° 的语义图层，以及透明度对应区域。所有图像在浏览器内校验来源 SHA-256。</p>
+<fieldset>
+<label for="angle">中间角度</label><select id="angle">
+<option value="22.5">22.5°</option><option value="67.5" selected>67.5°</option><option value="72.5">72.5°</option>
+</select>
+<label for="variant">算法试验</label><select id="variant">
+<option value="anatomy">物理五官锚点</option><option value="anatomy-strokes" selected>物理锚点与可靠发束</option><option value="stroke-wide">线条身份扩展</option><option value="affine-face">面部仿射变形</option>
+</select>
+<label for="part">部件遮挡差异</label><select id="part">
+<option value="hair.front" selected>hair.front</option>
+<option value="face.skin">face.skin</option>
+<option value="eye.near">eye.near</option>
+<option value="ear.near">ear.near</option>
+<option value="nose">nose</option>
+<option value="mouth">mouth</option>
+<option value="hair.back">hair.back</option>
+<option value="body.reference">body.reference</option>
+</select>
+</fieldset>
+<p id="status" role="status">正在验证真实 P0 图像来源…</p>
+<h2>实际 RGBA 转头对比</h2>
+<canvas id="motion" width="1024" height="545" aria-label="P8 与 P12 原始 P0 资产的动作画面对照"></canvas>
+<h2>45°→90° 图层对应诊断</h2>
+<canvas id="occlusion" width="1329" height="487" aria-label="P0 原画部件可见像素与光流遮挡差异"></canvas>
+<details><summary>来源、误差与资产登记</summary><pre id="detail"></pre></details>
+<script src="./p12-inspection.js" defer></script>
+</body></html>

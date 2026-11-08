@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P11_THREE_VIEW_P0_EDITABLE_PSD_VERIFIED",
+  "status": "P12_SOURCE_OCCLUSION_CORRESPONDENCE_AUDITED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P11_SOURCE_P0_90_PROFILE_13_LAYER_PSD_PIXEL_EXACT_94_REGRESSIONS",
+  "lastCompleted": "P12_P0_13_SEMANTIC_GAP_PARTS_5_REAL_RENDER_METHODS_12_BROWSER_CAPTURE_103_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -699,6 +699,70 @@
       },
       "regressionTestsPassed": 94,
       "animationVisualAcceptance": "PENDING"
+    },
+    "p12AnatomicalCorrespondence": {
+      "sourceP0Views": [
+        0,
+        45,
+        90
+      ],
+      "sourceP0PSDViews": [
+        0,
+        45,
+        90
+      ],
+      "sourceSemanticViewSlots": 39,
+      "sourceGapParts": 13,
+      "highestPriorityGapParts": [
+        {
+          "id": "ear.near",
+          "fraction": 0.674
+        },
+        {
+          "id": "mouth",
+          "fraction": 0.6278
+        },
+        {
+          "id": "nose",
+          "fraction": 0.49618
+        },
+        {
+          "id": "body.reference",
+          "fraction": 0.32481
+        },
+        {
+          "id": "hair.back",
+          "fraction": 0.29355
+        },
+        {
+          "id": "hair.front",
+          "fraction": 0.15256
+        }
+      ],
+      "anatomicalRenderVariants": 4,
+      "adoptedVDDMotion": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+      "fullMotionP8Frames": 37,
+      "P12HoldoutFrameAngles": [
+        0,
+        22.5,
+        45,
+        67.5,
+        72.5,
+        90
+      ],
+      "P12BrowserScreenshots": 12,
+      "P12HTML": "review/p12-inspection.html",
+      "comparisonEvidenceSHA256": "7f3693da4882929b23d24bf5d13a92596fb04474a53bd464956235ed846d472d",
+      "sourceGapQASHA256": "e6eb9275a87e8a7d686eae71a0e5b1972b1ad029adbea806baac7444b7176f43",
+      "reviewArchive": {
+        "path": "private-assets/exports/p0-character-001-view-correspondence-review-v13.zip",
+        "bytes": 74272775,
+        "sha256": "3cc06280b043b53f96171e9b2edd8b3c14d7d62edc094b626ce93312973fc959",
+        "entryCount": 166,
+        "contentSHA256AndCRCVerified": true
+      },
+      "regressionTestsPassed": 103,
+      "artisticQualityAcceptance": "PENDING_FINE_VIEW_TEXEL_ALIGNMENT"
     }
   }
 }

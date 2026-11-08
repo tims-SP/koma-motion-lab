@@ -183,3 +183,13 @@ review/p7-motion.html 是实际可交互 HTML 审查工作台，可逐 2.5° 对
 P0 0°、45° 已有独立 See-through PSD。本轮使用同一角色已核验的 90° 原始 PNG 和 13 个透明语义部件生成完整可编辑 PSD，层名、顺序、原始源图哈希均登记。从源 RGBA 逐层合成与批准的侧面原画像素完全相同，PSD 重新读取后，全部 Alpha 精确一致，可见颜色最大误差 1/255。
 
 三视角完整资产包 private-assets/exports/p0-character-001-three-view-editable-psd-v12.zip，SHA-256：bca12e592ff6952e2d814d27a4b5b999c6c946b110e98fc0c0312ef3c3212da5，含 39 个语义部件视角 PNG、三个 PSD、原始视角及转头 GIF。证据 evidence/2026-11-08-p11-three-angle-psd-qa.json。回归 94 项通过。
+
+### P12 · P0 多视角解剖对应与原画遮挡图谱
+
+基于已批准的 P0 原创角色 0°、45°、90° RGBA、39 个语义 ArtMesh 视角槽、P10 墨线对应及 P11 侧面 PSD，实际生成四种局部解剖/线条形变对照，保留 P8 的连续转头作为生产审查基线。原画 0°、45°、90° 关键帧经逐像素一致性检查。
+
+P12 对 45°→90° 的 13 类语义部件实施源覆盖分析，统计经几何配准后的目标角度可见像素缺口，以真实原画图层与遮挡差异图定位耳、五官、前后发及服装的绘制/对应工作量。这些数值包含潜在配准误差，作为修复顺序依据。
+
+新审查页面 review/p12-inspection.html 可对照 P8 与四种试验的22.5°、67.5°、72.5° 原画渲染，并逐部件检查 45°/90°像素对应。六组真实 Chromium 浏览器抽样共获得 12 张来源哈希已核验的画布截图。完整隔离回归 103 项通过。
+
+私有审查包 private-assets/exports/p0-character-001-view-correspondence-review-v13.zip。SHA-256：3cc06280b043b53f96171e9b2edd8b3c14d7d62edc094b626ce93312973fc959。验收记录 evidence/2026-11-09-p12-source-correspondence-qa.json。
