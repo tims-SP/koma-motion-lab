@@ -33,6 +33,8 @@ class P13IntermediateOriginalSourceArt(unittest.TestCase):
  def test_single_P0_identity_and_sources(self):
   for d in (self.contract,self.qa,self.browser,self.compare,self.gif,self.baseline):
    self.assertEqual(d["characterId"],"p0_character_001")
+  self.assertEqual(sha(ROOT/"metadata/p13-paint-contract.json"),
+                   sha(P/"p13-paint-contract.json"))
   self.assertEqual(self.contract["sourceApprovedCharacterViews"],[0,45,90])
   self.assertEqual(self.contract["imageContract"]["canvas"],[1024,1024])
   self.assertEqual(self.contract["sourceP11Editable90PSD_SHA256"],

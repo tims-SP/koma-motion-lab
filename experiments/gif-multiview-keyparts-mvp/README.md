@@ -200,4 +200,4 @@ P12 对 45°→90° 的 13 类语义部件实施源覆盖分析，统计经几�
 
 P13 提供完整 37 帧连续转头及往返 72 帧 GIF，浏览器交互页面为 review/p13-intermediate.html，可以对照 P8 原画动画和中间角部件。真实 Chromium 取得 12 张截图，校验来源图像哈希。高质量独立原画的绘制目标已登记为每个中间角 9 个重点部件，共 18 个重点视角槽。P8 仍为当前动画运动参考。
 
-生产原画合同 private-assets/p13-source-priority/p13-paint-contract.json。审查包 private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip。SHA-256: 5b4a45962a64f99296e6e320a904f8742c8746ed80e8b188f516dc76cf43f8d7。结构化证据 evidence/2026-11-09-p13-intermediate-assets-qa.json；回归 114 项通过。
+公开绘制合同 metadata/p13-paint-contract.json；生产原画合同 private-assets/p13-source-priority/p13-paint-contract.json。审查包 private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip。SHA-256: f1e31f61e7b094badbfc0eb6adc082c21134708450ae846eecda94d4448783aa。结构化证据 evidence/2026-11-09-p13-intermediate-assets-qa.json；回归 114 项通过。

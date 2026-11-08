@@ -793,12 +793,13 @@
       "originalArtVisualAcceptance": "PENDING",
       "reviewArchive": {
         "path": "private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip",
-        "bytes": 83757782,
-        "entryCount": 200,
-        "sha256": "5b4a45962a64f99296e6e320a904f8742c8746ed80e8b188f516dc76cf43f8d7",
+        "bytes": 83766339,
+        "entryCount": 201,
+        "sha256": "f1e31f61e7b094badbfc0eb6adc082c21134708450ae846eecda94d4448783aa",
         "allInternalFilesVerified": true
       },
-      "fullRegressionsPassed": 114
+      "fullRegressionsPassed": 114,
+      "publicArtContract": "metadata/p13-paint-contract.json"
     }
   }
 }

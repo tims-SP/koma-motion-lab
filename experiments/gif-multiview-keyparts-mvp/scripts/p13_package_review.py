@@ -31,6 +31,8 @@ def package(experiment,out):
   raise ValueError("Actual Chromium source artwork verification missing")
  if len(browser["screens"])!=6 or browser["screenshotCount"]!=12:
   raise ValueError("Actual P0 source view/screenshots incomplete")
+ if sha(exp/"metadata/p13-paint-contract.json")!=sha(p/"p13-paint-contract.json"):
+  raise ValueError("GitHub P0 painting contract SHA differs from actual asset source")
  if len(art["intermediateViews"])!=2 or art["imageContract"]["componentCountPerView"]!=13:
   raise ValueError("ArtMesh source identities at both angles required")
  if sha(a/psd["psdPath"])!=psd["psdSHA256"]:
@@ -95,6 +97,7 @@ def package(experiment,out):
   add(a/f"p13-source-priority/{mode}/temporal-qa.json")
   add(a/f"p13-source-priority/{mode}/p13-source-priority-contact.jpg")
  for rel in (
+  "metadata/p13-paint-contract.json",
   "review/p13-intermediate.html",
   "review/p13-intermediate.js",
   "scripts/capture_p13_intermediate.cjs",

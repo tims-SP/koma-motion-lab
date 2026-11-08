@@ -1,0 +1,1000 @@
+{
+  "schema": "KOMA-P0-P13-INTERMEDIATE-ANGLE-PAINT-CONTRACT-V1",
+  "characterId": "p0_character_001",
+  "sourceApprovedCharacterViews": [
+    0,
+    45,
+    90
+  ],
+  "sourceMotherPortraitIdentity": "p0_character_001",
+  "reference45": {
+    "path": "p2-views/whole/yaw045.png",
+    "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40"
+  },
+  "reference90": {
+    "path": "p2-views/whole/yaw090.png",
+    "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16"
+  },
+  "sourceP11Editable90PSD_SHA256": "b23debe04dd6fc7d6820c3e9401a8838b47bb62ad6cc77d963c4ba853ddc01e8",
+  "sourceP12GapQA_SHA256": "e6eb9275a87e8a7d686eae71a0e5b1972b1ad029adbea806baac7444b7176f43",
+  "candidateP13Engine": "source-feathered",
+  "imageContract": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "alpha": "native 8-bit RGBA transparency, 256 transparency levels",
+    "oneFrameOneSemanticComponent": true,
+    "camera": "P0 frozen orthographic bust framing, yaw to visual right",
+    "characterReference": "same P0 short pink-purple bob, single ahoge, crossed gold clip, purple-pink eyes, navy school jacket, burgundy ribbon",
+    "viewList": [
+      67.5,
+      72.5
+    ],
+    "componentIDs": [
+      "body.reference",
+      "hair.back",
+      "face.skin",
+      "ear.far",
+      "ear.near",
+      "hair.side",
+      "eye.far",
+      "eye.near",
+      "nose",
+      "mouth",
+      "hair.front",
+      "hair.ahoge",
+      "hair.clip.cross_gold"
+    ],
+    "componentCountPerView": 13,
+    "componentDepthOrderPreserved": true,
+    "sourcePaintingApproval": "PENDING_GENERATIVE_OR_MANUAL_AUTHORING"
+  },
+  "intermediateViews": [
+    {
+      "viewAngle": 67.5,
+      "generatedAssetType": "SOURCE_DERIVED_REGISTERED_INTERMEDIATE_PREVIEW",
+      "registeredArtMeshSemanticSlots": 13,
+      "sourceDerivedFrame": {
+        "path": "p13-source-priority/source-feathered/yaw67p5.png",
+        "sha256": "fd39def58f7ef1c7d35ae6cc91761da9e489cbb0c1b1e4bb577370b7136f0231"
+      },
+      "reconstructionPixelExact": true,
+      "predictedReferenceAnchors": [
+        {
+          "name": "face.chin",
+          "45": [
+            616.5,
+            664.0
+          ],
+          "90": [
+            643.5,
+            657.0
+          ],
+          "referenceXY": [
+            630.0,
+            660.5
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "face.jaw.near",
+          "45": [
+            482.2,
+            552.56
+          ],
+          "90": [
+            545.92,
+            546.4
+          ],
+          "referenceXY": [
+            514.06,
+            549.48
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "eye.near.iris",
+          "45": [
+            544.27,
+            467.11
+          ],
+          "90": [
+            677.0,
+            452.5
+          ],
+          "referenceXY": [
+            610.63,
+            459.81
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "ear.near",
+          "45": [
+            417.63,
+            518.82
+          ],
+          "90": [
+            538.0,
+            513.5
+          ],
+          "referenceXY": [
+            477.81,
+            516.16
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "nose",
+          "45": [
+            662.91,
+            532.96
+          ],
+          "90": [
+            764.5,
+            539.0
+          ],
+          "referenceXY": [
+            713.7,
+            535.98
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "mouth",
+          "45": [
+            635.0,
+            592.36
+          ],
+          "90": [
+            735.5,
+            602.5
+          ],
+          "referenceXY": [
+            685.25,
+            597.43
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.ahoge.root",
+          "45": [
+            524.0,
+            148.0
+          ],
+          "90": [
+            536.5,
+            148.0
+          ],
+          "referenceXY": [
+            530.25,
+            148.0
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.front",
+          "45": [
+            623.5,
+            340.5
+          ],
+          "90": [
+            602.5,
+            340.5
+          ],
+          "referenceXY": [
+            613.0,
+            340.5
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.side",
+          "45": [
+            353.0,
+            578.5
+          ],
+          "90": [
+            390.0,
+            562.5
+          ],
+          "referenceXY": [
+            371.5,
+            570.5
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.back",
+          "45": [
+            507.0,
+            516.5
+          ],
+          "90": [
+            493.5,
+            515.5
+          ],
+          "referenceXY": [
+            500.25,
+            516.0
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        }
+      ],
+      "parts": [
+        {
+          "semanticId": "body.reference",
+          "assetId": "p0_character_001/yaw67p5/body.reference",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 0,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 171626,
+            "partialAlphaPixelCount": 16186,
+            "boundingBox": [
+              207,
+              577,
+              865,
+              1024
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/body.reference.png",
+            "sha256": "8097f37ffa4b6a81d94f7eb90e35464408c06e0a8d4267868cc30e21179c52b1"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/body.reference.png",
+            "sha256": "aea2222388ea9db1976491c1f5dbf5ff6af2771526165a4e11e739f8880a1e5f"
+          },
+          "sourceRegistrationGapFraction": 0.32481,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/body.reference.png",
+            "sha256": "512119acda0c7ff1bd3b63ff56d32322ec7bd8065084bf57833555f9e5750803"
+          },
+          "contentRequirement": "Only torso, jacket, collar, bow and clothing gold trim. Preserve original ribbon knot and tailored lines; do not include face or hair.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "hair.back",
+          "assetId": "p0_character_001/yaw67p5/hair.back",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 1,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 139011,
+            "partialAlphaPixelCount": 58778,
+            "boundingBox": [
+              205,
+              0,
+              828,
+              1024
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/hair.back.png",
+            "sha256": "47adcbb5de5912537f0023d9daa2f6302a7746d7e6813139d63772f3c899e36e"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/hair.back.png",
+            "sha256": "db583154f9b10734deafcc1c94100180ce331e39b420b622bdd260b082dd00af"
+          },
+          "sourceRegistrationGapFraction": 0.29355,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/hair.back.png",
+            "sha256": "99bc189731c392b9f26d0efb57bad441427c78e1bc70a691ec359966099e3b23"
+          },
+          "contentRequirement": "Back hair mass and rear nape layers; match 90° flowing bob silhouette and the 45° source color design, excluding frontal bangs and single ahoge.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "face.skin",
+          "assetId": "p0_character_001/yaw67p5/face.skin",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 2,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 113846,
+            "partialAlphaPixelCount": 32042,
+            "boundingBox": [
+              443,
+              240,
+              824,
+              667
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/face.skin.png",
+            "sha256": "9bdb945a26d33351602cd424ef683f5de57d79b05f2d246efe627a942c2bc5c3"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/face.skin.png",
+            "sha256": "e084fc4904b182a1eae02aae523d342c86dd18651ab9f651d744efacf795af31"
+          },
+          "sourceRegistrationGapFraction": 0.00997,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/face.skin.png",
+            "sha256": "70b2f199dafcfed32bb5191c6618b79b3b339d768da68fa0190e0c7302cb31e0"
+          },
+          "contentRequirement": "Skin/jaw/cheek only. Correct continuous 67.5/72.5 oblique jaw, nose bridge occlusion boundary and under-eye contour without embedded eyes, mouth or ears.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "ear.far",
+          "assetId": "p0_character_001/yaw67p5/ear.far",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 3,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 0,
+            "partialAlphaPixelCount": 0,
+            "boundingBox": null,
+            "maxAlpha": 0
+          },
+          "referenceVisibility45": "hidden",
+          "referenceVisibility90": "hidden",
+          "estimatedVisibilityWeight": 0.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/ear.far.png",
+            "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/ear.far.png",
+            "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+          },
+          "sourceRegistrationGapFraction": 0.0,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/ear.far.png",
+            "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+          },
+          "contentRequirement": "Registered far ear: fully occluded in this angle range. Native transparent layer and stable physical ID.",
+          "artisticSourceStatus": "CANONICAL_SOURCE_VERIFICATION_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "ear.near",
+          "assetId": "p0_character_001/yaw67p5/ear.near",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 4,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 13907,
+            "partialAlphaPixelCount": 13544,
+            "boundingBox": [
+              426,
+              429,
+              549,
+              620
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/ear.near.png",
+            "sha256": "94f221fe1b606c9baaf0bfe7d4ebe68d448c33d5e506a9447c4cb7e6d1213b78"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/ear.near.png",
+            "sha256": "0339cd4783451cba6946149402f51a7c52db9b2e956249b39a94daeb4175bbd9"
+          },
+          "sourceRegistrationGapFraction": 0.674,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/ear.near.png",
+            "sha256": "d0db1f34655d76c8702f410997cd882067722f1948319f824eb06794387679f3"
+          },
+          "contentRequirement": "Only the visible near ear, aligned to its 45°/90° ear anatomical anchors; match side-facing cartilage and hair overlap.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "hair.side",
+          "assetId": "p0_character_001/yaw67p5/hair.side",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 5,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 108128,
+            "partialAlphaPixelCount": 27931,
+            "boundingBox": [
+              170,
+              351,
+              579,
+              780
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/hair.side.png",
+            "sha256": "46cda21bac8f4624bc14f30980ba52a80d077c1bad5431dab180daa1fc048095"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/hair.side.png",
+            "sha256": "65c60af5a0b28068a29a37d85fbce95eb3b7c6d2c1924aa7522f149bca8a7edf"
+          },
+          "sourceRegistrationGapFraction": 0.09262,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/hair.side.png",
+            "sha256": "e75150e7e81df1b2743260b9db01597c4a9faad086143bfb41977f74adfe9eb7"
+          },
+          "contentRequirement": "Side locks framing the ear and cheek, with continuous single hair-strand contours and no frontal bang or rear mass duplicates.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "eye.far",
+          "assetId": "p0_character_001/yaw67p5/eye.far",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 6,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 17886,
+            "partialAlphaPixelCount": 17886,
+            "boundingBox": [
+              637,
+              385,
+              801,
+              524
+            ],
+            "maxAlpha": 64
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "hidden",
+          "estimatedVisibilityWeight": 0.24965,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/eye.far.png",
+            "sha256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/eye.far.png",
+            "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+          },
+          "sourceRegistrationGapFraction": 0.0,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/eye.far.png",
+            "sha256": "a524d723deca557d0cbb2be4eca5c985076f908bd9ea24b5cc64062c7009e4fc"
+          },
+          "contentRequirement": "Far eye is progressively occluded by nose bridge/hair; only visible source-backed portion belongs here, decreasing toward 90°.",
+          "artisticSourceStatus": "CANONICAL_SOURCE_VERIFICATION_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "eye.near",
+          "assetId": "p0_character_001/yaw67p5/eye.near",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 7,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 21327,
+            "partialAlphaPixelCount": 4486,
+            "boundingBox": [
+              505,
+              374,
+              692,
+              521
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/eye.near.png",
+            "sha256": "28c985c102668e2448e26064b2eb36586c9f15755d8ea655944967912a6af0fe"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/eye.near.png",
+            "sha256": "56ed2cb3d17fa2f3bff20582dd4771848e27ed13b11f3f8dfa62303b1ddc4352"
+          },
+          "sourceRegistrationGapFraction": 0.0831,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/eye.near.png",
+            "sha256": "9bc4ba2754be2bc4ae0022950251c9bb683e73b8ea58f515396370537c12805e"
+          },
+          "contentRequirement": "One near eye only, including iris, lids, lashes and highlights. Match original purple-pink iris identity and a natural side-facing ellipse.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "nose",
+          "assetId": "p0_character_001/yaw67p5/nose",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 8,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 2105,
+            "partialAlphaPixelCount": 1139,
+            "boundingBox": [
+              672,
+              517,
+              711,
+              591
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/nose.png",
+            "sha256": "af71c8ed7b022d763d7d357971488c69f60f31ea37bdc0e14b1d140f71fb79f5"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/nose.png",
+            "sha256": "535de1060b84a89a6d8a5a7f90b23f1b8b642bf40edee9b87f572536546b5efc"
+          },
+          "sourceRegistrationGapFraction": 0.49618,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/nose.png",
+            "sha256": "f94a7c938753d02170f4f4b8ec8fddc141176d3276cf2ae5ff09523b77bb7591"
+          },
+          "contentRequirement": "One oblique side-profile nose with correct contour and bridge, no full-face duplicate or unrelated facial skin.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "mouth",
+          "assetId": "p0_character_001/yaw67p5/mouth",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 9,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 2755,
+            "partialAlphaPixelCount": 1460,
+            "boundingBox": [
+              635,
+              584,
+              706,
+              637
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/mouth.png",
+            "sha256": "b783bbb31681155ca68ad56f5d18c91c7e913be5a398e928f06ce6517ec7ceb4"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/mouth.png",
+            "sha256": "87c4fb5627e5868114dd197adcfa77572636709348c09c2574d067b0998e9b7c"
+          },
+          "sourceRegistrationGapFraction": 0.6278,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/mouth.png",
+            "sha256": "edf7f3a81bfd77d466df12252ad92b046cfb20c84b784c7839e0f2a777607489"
+          },
+          "contentRequirement": "Single mouth and lip stroke at side-facing perspective, preserving the approved subtle expression.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "hair.front",
+          "assetId": "p0_character_001/yaw67p5/hair.front",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 10,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 127436,
+            "partialAlphaPixelCount": 22576,
+            "boundingBox": [
+              403,
+              80,
+              815,
+              595
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/hair.front.png",
+            "sha256": "bfa6223060975873da9a5335f09cc424ffc5e1224c1fadab5923c11eaa50a6de"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/hair.front.png",
+            "sha256": "59a765ee05d3219f6cc1d59cc101dde27696ffcd84a1eda56c1aa6c9a13ecf2f"
+          },
+          "sourceRegistrationGapFraction": 0.15256,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/hair.front.png",
+            "sha256": "3308c72e4c325d12f4a4a7d3587d33a0807b671c2132878e70a303a0d11ebb8f"
+          },
+          "contentRequirement": "Only frontal fringe and its visible single-strand edges, preserving the original short asymmetrical bangs and correct near-eye occlusion.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "hair.ahoge",
+          "assetId": "p0_character_001/yaw67p5/hair.ahoge",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 11,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 13541,
+            "partialAlphaPixelCount": 9489,
+            "boundingBox": [
+              416,
+              10,
+              646,
+              152
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/hair.ahoge.png",
+            "sha256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/hair.ahoge.png",
+            "sha256": "66ec1659cb0f55c3be458a96a7616022a27aca0f920e15566e6d70a889fc4687"
+          },
+          "sourceRegistrationGapFraction": 0.04921,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/hair.ahoge.png",
+            "sha256": "9411e9df8dc71f3ac5b0308f36efde092706bd5dff6659e58a1c791acfeb4f5b"
+          },
+          "contentRequirement": "One original single hair antenna sprout, based on 45/90 root anchor and original pink-purple strand shape.",
+          "artisticSourceStatus": "CANONICAL_SOURCE_VERIFICATION_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "hair.clip.cross_gold",
+          "assetId": "p0_character_001/yaw67p5/hair.clip.cross_gold",
+          "viewAngle": 67.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 12,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 3819,
+            "partialAlphaPixelCount": 3819,
+            "boundingBox": [
+              732,
+              281,
+              800,
+              371
+            ],
+            "maxAlpha": 9
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "hidden",
+          "estimatedVisibilityWeight": 0.0358,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/hair.clip.cross_gold.png",
+            "sha256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/hair.clip.cross_gold.png",
+            "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+          },
+          "sourceRegistrationGapFraction": 0.0,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw67p5/hair.clip.cross_gold.png",
+            "sha256": "69ab3944fea81f716a722889a24b5eb86c22a824cff6487d557eba7954ca53a3"
+          },
+          "contentRequirement": "Original gold crossed hair clip. Progressive visibility is linked to its occlusion by 67.5° and hidden by 72.5°.",
+          "artisticSourceStatus": "CANONICAL_SOURCE_VERIFICATION_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        }
+      ]
+    },
+    {
+      "viewAngle": 72.5,
+      "generatedAssetType": "SOURCE_DERIVED_REGISTERED_INTERMEDIATE_PREVIEW",
+      "registeredArtMeshSemanticSlots": 13,
+      "sourceDerivedFrame": {
+        "path": "p13-source-priority/source-feathered/yaw72p5.png",
+        "sha256": "cf393270ce7ef6f90d89c3dc97d66f7f310eac5815b087b9f869983b56d660bc"
+      },
+      "reconstructionPixelExact": true,
+      "predictedReferenceAnchors": [
+        {
+          "name": "face.chin",
+          "45": [
+            616.5,
+            664.0
+          ],
+          "90": [
+            643.5,
+            657.0
+          ],
+          "referenceXY": [
+            633.0,
+            659.72
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "face.jaw.near",
+          "45": [
+            482.2,
+            552.56
+          ],
+          "90": [
+            545.92,
+            546.4
+          ],
+          "referenceXY": [
+            521.14,
+            548.8
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "eye.near.iris",
+          "45": [
+            544.27,
+            467.11
+          ],
+          "90": [
+            677.0,
+            452.5
+          ],
+          "referenceXY": [
+            625.38,
+            458.18
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "ear.near",
+          "45": [
+            417.63,
+            518.82
+          ],
+          "90": [
+            538.0,
+            513.5
+          ],
+          "referenceXY": [
+            491.19,
+            515.57
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "nose",
+          "45": [
+            662.91,
+            532.96
+          ],
+          "90": [
+            764.5,
+            539.0
+          ],
+          "referenceXY": [
+            724.99,
+            536.65
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "mouth",
+          "45": [
+            635.0,
+            592.36
+          ],
+          "90": [
+            735.5,
+            602.5
+          ],
+          "referenceXY": [
+            696.42,
+            598.56
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.ahoge.root",
+          "45": [
+            524.0,
+            148.0
+          ],
+          "90": [
+            536.5,
+            148.0
+          ],
+          "referenceXY": [
+            531.64,
+            148.0
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.front",
+          "45": [
+            623.5,
+            340.5
+          ],
+          "90": [
+            602.5,
+            340.5
+          ],
+          "referenceXY": [
+            610.67,
+            340.5
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.side",
+          "45": [
+            353.0,
+            578.5
+          ],
+          "90": [
+            390.0,
+            562.5
+          ],
+          "referenceXY": [
+            375.61,
+            568.72
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        },
+        {
+          "name": "hair.back",
+          "45": [
+            507.0,
+            516.5
+          ],
+          "90": [
+            493.5,
+            515.5
+          ],
+          "referenceXY": [
+            498.75,
+            515.89
+          ],
+          "coordRole": "LINEAR_REFERENCE_NOT_MEASURED_INTERMEDIATE_ART"
+        }
+      ],
+      "parts": [
+        {
+          "semanticId": "body.reference",
+          "assetId": "p0_character_001/yaw72p5/body.reference",
+          "viewAngle": 72.5,
+          "globalCanvas": [
+            1024,
+            1024
+          ],
+          "imageEncoding": "PNG RGBA8",
+          "sourceAlpha": "ANTIALIASED",
+          "semanticDepthOrder": 0,
+          "alphaVisibility": {
+            "opaqueOrTranslucentPixelCount": 175409,
+            "partialAlphaPixelCount": 73796,
+            "boundingBox": [
+              216,
+              580,
+              866,
+              1024
+            ],
+            "maxAlpha": 255
+          },
+          "referenceVisibility45": "visible",
+          "referenceVisibility90": "visible",
+          "estimatedVisibilityWeight": 1.0,
+          "source45": {
+            "path": "p5-see-through/yaw045/integrated/parts/body.reference.png",
+            "sha256": "8097f37ffa4b6a81d94f7eb90e35464408c06e0a8d4267868cc30e21179c52b1"
+          },
+          "source90": {
+            "path": "p2-views/parts/yaw090/body.reference.png",
+            "sha256": "aea2222388ea9db1976491c1f5dbf5ff6af2771526165a4e11e739f8880a1e5f"
+          },
+          "sourceRegistrationGapFraction": 0.32481,
+          "sourceGapInterpretation": "P0 90-degree mapped-alpha coverage relative to 45-degree source",
+          "sourceDerivedCandidate": {
+            "path": "p13-source-priority/source-feathered/layers/yaw72p5/body.reference.png",
+            "sha256": "8ec087eb1f4abbf9f36e0596b984cf01b48891ca0a23c686f867a14c6720d193"
+          },
+          "contentRequirement": "Only torso, jacket, collar, bow and clothing gold trim. Preserve original ribbon knot and tailored lines; do not include face or hair.",
+          "artisticSourceStatus": "INDEPENDENT_AUTHORING_REQUIRED",
+          "sourceArtworkAcceptance": "PENDING"
+        },
+        {
+          "semanticId": "hair.back",
+          "assetId": "p0_character_001/yaw72p5/hair.back",
+          "viewAngle": 72.5,
