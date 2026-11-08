@@ -785,7 +785,7 @@
       "sourceDerivedGIFFrames": 72,
       "sourceGIFSHA256": "9c125928ce83729fb7c4ce0a1b3a0f81f945f56d2773ec286d7885cf319a09fc",
       "sourceP0ArtContract": "private-assets/p13-source-priority/p13-paint-contract.json",
-      "sourceP0ArtContractSHA256": "479ef2264bb8198b5652b32f3096ec273363642d13bb0fd589663000843abfe1",
+      "sourceP0ArtContractSHA256": "1d71cd746d3b87a784917238fe07df97f63757b9fd5503231c882f5392783835",
       "independentPaintPriorityCount": 18,
       "realBrowserScreenshots": 12,
       "realBrowserHTML": "review/p13-intermediate.html",
@@ -793,9 +793,9 @@
       "originalArtVisualAcceptance": "PENDING",
       "reviewArchive": {
         "path": "private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip",
-        "bytes": 83766339,
+        "bytes": 83764253,
         "entryCount": 201,
-        "sha256": "f1e31f61e7b094badbfc0eb6adc082c21134708450ae846eecda94d4448783aa",
+        "sha256": "098a7384324e6e92f68721cb10c9d66ce3ee3a0c783e985316f4c044bf9ed8e7",
         "allInternalFilesVerified": true
       },
       "fullRegressionsPassed": 114,

@@ -45,7 +45,7 @@
     ],
     "allLayerCompositesPixelExact": true,
     "assetContract": "private-assets/p13-source-priority/p13-paint-contract.json",
-    "assetContractSHA256": "479ef2264bb8198b5652b32f3096ec273363642d13bb0fd589663000843abfe1",
+    "assetContractSHA256": "1d71cd746d3b87a784917238fe07df97f63757b9fd5503231c882f5392783835",
     "sourceDerivedRGBA": "private-assets/p13-source-priority/source-feathered",
     "independentPaintPriorityRoles": [
       "eye.near",
@@ -241,9 +241,9 @@
   },
   "package": {
     "path": "private-assets/exports/p0-character-001-intermediate-source-assets-v14.zip",
-    "bytes": 83766339,
+    "bytes": 83764253,
     "entryCount": 201,
-    "sha256": "f1e31f61e7b094badbfc0eb6adc082c21134708450ae846eecda94d4448783aa",
+    "sha256": "098a7384324e6e92f68721cb10c9d66ce3ee3a0c783e985316f4c044bf9ed8e7",
     "allInternalFilesVerified": true
   },
   "validation": {

@@ -198,7 +198,7 @@ def run(root,out,method="source-feathered"):
   "status":"SOURCE_DERIVED_LAYER_REGISTRY_AND_ART_AUTHORING_CONTRACT_READY"
  }
  target=out/"p13-paint-contract.json"
- target.write_text(json.dumps(contract,ensure_ascii=False,indent=2)+chr(10),encoding="utf8")
+ target.write_text(json.dumps(contract,ensure_ascii=False,separators=(",",":"))+chr(10),encoding="utf8")
  public=Path(__file__).resolve().parents[1]/"metadata/p13-paint-contract.json"
  public.parent.mkdir(exist_ok=True,parents=True)
  public.write_bytes(target.read_bytes())
