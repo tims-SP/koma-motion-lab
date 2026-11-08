@@ -17,13 +17,14 @@ def sha(file):
             h.update(block)
     return h.hexdigest()
 
-def create(frames_root,output,qa_output=None):
+def create(frames_root,output,qa_output=None,source_kind='browser'):
     frames_root=Path(frames_root).resolve()
     report=json.loads((frames_root/"canvas-qa.json").read_text())
     angles=[i*2.5 for i in range(37)]
-    if report.get("status")!="CAPTURED_FOR_ANATOMICAL_INSPECTION" or \
-       report.get("frameCount")!=37:
-        raise ValueError("37 real browser frames are required")
+    expected_status=("CAPTURED_FOR_ANATOMICAL_INSPECTION" if source_kind=="browser"
+                     else "SOURCE_DERIVED_RGBA_FRAMES_CAPTURED")
+    if report.get("status")!=expected_status or report.get("frameCount")!=37:
+        raise ValueError("37 audited P0 RGBA frames are required")
     records={item["yaw"]:item for item in report["outputs"]}
     if sorted(records)!=angles:
         raise ValueError("Frame angles are incomplete")
@@ -59,14 +60,17 @@ def create(frames_root,output,qa_output=None):
         if gif.n_frames!=len(sequence):
             raise ValueError("GIF frame count mismatch")
     qa={"schema":"KOMA-P0-ARTMESH-MOTION-REVIEW-GIF-QA-V1",
-        "characterId":"p0_character_001","status":"REAL_BROWSER_FRAMES_PACKAGED",
+         "characterId":"p0_character_001",
+        "status":"REAL_BROWSER_FRAMES_PACKAGED" if source_kind=="browser" else "SOURCE_DERIVED_RGBA_FRAMES_PACKAGED",
         "sourceRole":"39 distinct original-P0-view-derived RGBA semantic layers",
         "sourceFrameCount":len(images),"GIFFrames":len(sequence),
         "resolution":[512,512],"sourcePNGResolution":[1024,1024],
         "GIFFile":str(output),"GIFBytes":output.stat().st_size,
-        "GIFSHA256":sha(output),"previewSource":"real HTML browser Canvas2D",
+         "GIFSHA256":sha(output),
+        "previewSource":"real HTML browser Canvas2D" if source_kind=="browser"
+                 else "original-P0-image-derived per-semantic optical flow",
         "transparentSourceIncludedSeparately":True,
-        "artisticQuality":"REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+         "artisticQuality":"REQUIRES_INDEPENDENT_VISUAL_REVIEW",
         "framesSHA256":[{"angle":a,"sha256":records[a]["sha256"]} for a in angles]}
     outfile=Path(qa_output).resolve() if qa_output else output.parent/"turn-gif-qa.json"
     outfile.parent.mkdir(parents=True,exist_ok=True)
@@ -82,5 +86,6 @@ if __name__=="__main__":
     p.add_argument("--frames",required=True)
     p.add_argument("--output",required=True)
     p.add_argument("--qa-output")
+    p.add_argument("--source-kind",choices=["browser","semantic-dense"],default="browser")
     args=p.parse_args()
-    create(args.frames,args.output,args.qa_output)
+    create(args.frames,args.output,args.qa_output,args.source_kind)

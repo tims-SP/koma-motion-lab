@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P6_SOURCE_GUIDED_ARTMESH_GEOMETRY_VISUAL_REVIEW",
+  "status": "P7_SEMANTIC_DENSE_RGBA_TEXTURE_HTML_REVIEW",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P6_IMAGE_FLOW_2548_CONTROLS_3_ANIMATED_REVIEWS_53_TESTS",
+  "lastCompleted": "P7_RGBA_111_FRAMES_BROWSER_6_ANGLES_62_REGRESSIONS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -485,6 +485,50 @@
         "entries": 218
       },
       "automatedRegressions": "53/53 PASS"
+    },
+    "p7SemanticTexture": {
+      "sourceAngles": [
+        0,
+        45,
+        90
+      ],
+      "independentPSDViewAngles": [
+        0,
+        45
+      ],
+      "semanticViewSlots": 39,
+      "sourceRGBAFrames": 111,
+      "interactiveHTML": "review/p7-motion.html",
+      "browserSamples": 6,
+      "browserCanvasCaptures": 18,
+      "textureEdgeStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+      "holdoutEdgeRatios": {
+        "22.5": 1.2486,
+        "67.5": 0.8674
+      },
+      "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+      "temporalOutliers": 0,
+      "sourceGIFs": {
+        "dense": {
+          "path": "private-assets/p7-semantic-dense/p0-semantic-dense-turn.gif",
+          "sha256": "9356186ff627d7676760636afc35315ba4b50a073b3bd5c79e8fc5756dd41c14",
+          "bytes": 5768557
+        },
+        "guided": {
+          "path": "private-assets/p7-semantic-dense/p0-semantic-guided-turn.gif",
+          "sha256": "403acda09b51e9e27d260bdbff14683166327507d4a3f3542ba84461fd5a8ee2",
+          "bytes": 5799227
+        }
+      },
+      "reviewArchive": {
+        "path": "private-assets/exports/p0-character-001-semantic-texture-review-v8.zip",
+        "bytes": 143279074,
+        "sha256": "e75fda2afa6b46d009650cfd65f518028e9ea925301acaadc76ad7fc170d4e6a",
+        "entries": 265
+      },
+      "regressionTestsPassed": 62,
+      "artisticApproval": "PENDING_MULTIVIEW_ANATOMICAL_TEXEL_ALIGNMENT",
+      "PSD90": "HOSTED_GPU_QUOTA"
     }
   }
 }

@@ -1,0 +1,157 @@
+{
+  "schema": "KOMA-P0-P7-SEMANTIC-TEXTURE-REVIEW-EVIDENCE-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "source": {
+    "approvedIdentity": "p0_character_001",
+    "originalViews": [
+      0,
+      45,
+      90
+    ],
+    "semanticPSDViews": [
+      0,
+      45
+    ],
+    "authoritative90": "P0 original RGBAs",
+    "heroMasterOriginalSHAverified": false,
+    "semanticPSD0SHA256": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04",
+    "semanticPSD45SHA256": "2527b97209c2bb912f260ba14179dcccacd45b39322077ec1fd92746ea8636fd",
+    "profile90SourceGeneration": "HOSTED_GPU_QUOTA"
+  },
+  "implementation": {
+    "method": "OpenCV DIS independent semantic dense flow + premultiplied RGBA texture remapping",
+    "registeredArtMeshSlots": 39,
+    "semanticRolesPerSourceAngle": 13,
+    "registeredViewSources": 3,
+    "denseFlowCanvas": [
+      443,
+      443
+    ],
+    "RGBAReviewCanvas": [
+      1024,
+      1024
+    ],
+    "registeredRGBAFrames": 111,
+    "sourceKeyframePixelsKeptExactly": true,
+    "methods": {
+      "p6-mesh": {
+        "source": "P6 physical-flow mesh, Canvas2D",
+        "registeredFrames": 37,
+        "textureGate": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "edgeRatios": {
+          "22.5": 0.6054,
+          "67.5": 1.7779
+        },
+        "temporalGate": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+        "temporalOutliers": 2,
+        "maxAdjacentRGBDifference": 17.1892
+      },
+      "p7-dense": {
+        "source": "P7 original-source per-part RGBA dense flow with source selection",
+        "registeredFrames": 37,
+        "textureGate": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "edgeRatios": {
+          "22.5": 1.2486,
+          "67.5": 0.8674
+        },
+        "temporalGate": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+        "temporalOutliers": 1,
+        "maxAdjacentRGBDifference": 12.0973
+      },
+      "p7-guided": {
+        "source": "P7 original-source per-part RGBA dense flow with guided transition",
+        "registeredFrames": 37,
+        "textureGate": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "edgeRatios": {
+          "22.5": 1.2486,
+          "67.5": 0.8674
+        },
+        "temporalGate": "PASS_TEMPORAL_CONTINUITY",
+        "temporalOutliers": 0,
+        "maxAdjacentRGBDifference": 5.9146
+      }
+    }
+  },
+  "browser": {
+    "html": "review/p7-motion.html",
+    "interactiveRangeDegrees": [
+      0,
+      90
+    ],
+    "stepDegrees": 2.5,
+    "capturedAngles": [
+      0,
+      22.5,
+      45,
+      67.5,
+      72.5,
+      90
+    ],
+    "capturedRealScreenshots": 6,
+    "verifiedCanvases": 18,
+    "errors": [],
+    "failedRequests": [],
+    "qaStatus": "PASS_REAL_BROWSER_TEXTURE_PREVIEW",
+    "manifestSHA256": "c9a4b60eed9713e5d4e6e73a1af6b8281de60c4c8eb2304de9b85d2b206dfd9f"
+  },
+  "review": {
+    "observations": [
+      "Face and fringe pixels visibly overlap around the 22.5-degree turn",
+      "Fine hair and eyes require more reliable per-texel correspondence at 67.5 degrees",
+      "The 70–75 degree source transition produces double facial details and collar strokes",
+      "Original 90-degree profile keyframe has stable P0 silhouette"
+    ],
+    "timeContinuityGate": "PASS_TEMPORAL_CONTINUITY",
+    "textureEdgeGate": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+    "faceCoreAlphaGate": "PASS_HOLDOUT_COVERAGE",
+    "productionArtAcceptance": "PENDING_MULTIVIEW_ANATOMICAL_TEXEL_ALIGNMENT",
+    "nextActions": [
+      "Acquire source-consistent 90-degree independent semantic PSD when hosted GPU capacity is available",
+      "Apply visibility-aware physical landmark texture correspondence",
+      "Review full dynamic motion at every angle using real original-source RGBAs"
+    ]
+  },
+  "deliverables": {
+    "motionGIFs": {
+      "dense": {
+        "path": "private-assets/p7-semantic-dense/p0-semantic-dense-turn.gif",
+        "sha256": "9356186ff627d7676760636afc35315ba4b50a073b3bd5c79e8fc5756dd41c14",
+        "bytes": 5768557
+      },
+      "guided": {
+        "path": "private-assets/p7-semantic-dense/p0-semantic-guided-turn.gif",
+        "sha256": "403acda09b51e9e27d260bdbff14683166327507d4a3f3542ba84461fd5a8ee2",
+        "bytes": 5799227
+      }
+    },
+    "privateZipPath": "private-assets/exports/p0-character-001-semantic-texture-review-v8.zip",
+    "privateZipBytes": 143279074,
+    "privateZipSHA256": "e75fda2afa6b46d009650cfd65f518028e9ea925301acaadc76ad7fc170d4e6a",
+    "privateZipEntries": 265,
+    "allArchiveHashesVerified": true,
+    "regressionTestsPassed": 62
+  },
+  "externalResearch": [
+    {
+      "name": "See-through",
+      "url": "https://github.com/shitagaki-lab/see-through",
+      "role": "implemented source layered PSD"
+    },
+    {
+      "name": "AnimeInterp",
+      "url": "https://github.com/lisiyao21/AnimeInterp",
+      "role": "segment-guided optical flow research"
+    },
+    {
+      "name": "RIFE",
+      "url": "https://github.com/hzwer/ECCV2022-RIFE",
+      "role": "deep image interpolation benchmark"
+    },
+    {
+      "name": "LayerInbetween",
+      "url": "https://github.com/MarkMoHR/LayerInbetween",
+      "role": "occlusion-aware stroke correspondence study"
+    }
+  ]
+}

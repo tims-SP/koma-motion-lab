@@ -145,3 +145,11 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 交互 HTML：review/index.html?mode=candidate&source=seethrough-paired&warp=flow。对照过渡：增加 &blend=window。原生 1024 PNG、两份 See-through PSD、三份 72 帧 GIF、所有结构化 QA 与哈希均随隔离审查包交付。
 
 私有 ZIP：private-assets/exports/p0-character-001-flow-correspondence-review-v7.zip。SHA-256 325fb28989a1b26820f43c7581335cfa5ec70b13c0e22f852a48e84b30d48326。证据：evidence/2026-11-08-p6-flow-artmesh-visual-qa.json。本轮整体回归 53/53 通过。
+
+### P7 · 多视角语义纹理与交互式转头审查
+
+沿用批准的 P0 角色及原始 0°、45°、90° 原画，使用已获得的 0°/45° See-through PSD 图层，对 13 类语义部件实施独立稠密 DIS 双向光流映射。保留原始关键帧像素、固定 ArtMesh ID、1024×1024 RGBA 及各文件 SHA-256。生成三种来源一致的 37 帧画面，共 111 张原始分辨率 PNG。
+
+review/p7-motion.html 是实际可交互 HTML 审查工作台，可逐 2.5° 对比P6 物理锚点 ArtMesh、P7 语义稠密光流和 P7 连续纹理过渡。实际 Chromium 验证 6 个关键角、18 个画布，无脚本或资源错误。全段时间连续性和中间角的纹理密度诊断通过，手工视觉观察仍要求进一步修正脸型、发束与领口的跨视角纹理关系。
+
+归档 private-assets/exports/p0-character-001-semantic-texture-review-v8.zip，SHA-256 e75fda2afa6b46d009650cfd65f518028e9ea925301acaadc76ad7fc170d4e6a。GIF 见 private-assets/p7-semantic-dense/ 下两份 72 帧预览。证据见 evidence/2026-11-08-p7-semantic-texture-review.json。本轮回归测试 62 项通过。
