@@ -153,3 +153,11 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 review/p7-motion.html 是实际可交互 HTML 审查工作台，可逐 2.5° 对比P6 物理锚点 ArtMesh、P7 语义稠密光流和 P7 连续纹理过渡。实际 Chromium 验证 6 个关键角、18 个画布，无脚本或资源错误。全段时间连续性和中间角的纹理密度诊断通过，手工视觉观察仍要求进一步修正脸型、发束与领口的跨视角纹理关系。
 
 归档 private-assets/exports/p0-character-001-semantic-texture-review-v8.zip，SHA-256 e75fda2afa6b46d009650cfd65f518028e9ea925301acaadc76ad7fc170d4e6a。GIF 见 private-assets/p7-semantic-dense/ 下两份 72 帧预览。证据见 evidence/2026-11-08-p7-semantic-texture-review.json。本轮回归测试 62 项通过。
+
+### P8 · 物理锚点与动态语义遮挡
+
+沿用 p0_character_001 的 0°、45°、90° 原始关键视角与 0°/45° 的真实分层 PSD。在 39 个语义 ArtMesh 视角槽上实施独立稠密 DIS 光流与物理锚点约束，并为远耳、远眼与金色交叉发夹登记动态显隐窗口。
+
+三种方案在交互式 review/p8-motion.html 并排检查。P8 实际输出 37 张 1024×1024 RGBA，组成 72 帧转头 GIF；Chromium 在 6 个视角验证 18 张画布及其 SHA-256。22.5° 与 67.5° 的纹理边缘诊断分别为 1.281、0.8371，37 帧时间连续性检查通过。面部、发束与领口中间角继续以原始 P0 画质为验收基线。
+
+私有审查包：private-assets/exports/p0-character-001-semantic-occlusion-review-v9.zip。SHA-256：ce3a36fe9ea44384f3a26bfaf1385c79846223f7ae1fa4ff6b5bdf3edb8a8cd7。程序及来源验收：evidence/2026-11-08-p8-semantic-occlusion-qa.json。回归测试 72 项全部通过。
