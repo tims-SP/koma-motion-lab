@@ -31,7 +31,9 @@ async function start(){
   const input=process.env.KOMA_P3_SOURCE;
   const source=['seethrough-front','seethrough-paired'].includes(input)
     ?'&source='+input:'';
-  const url='http://127.0.0.1:'+httpd.address().port+'/experiments/gif-multiview-keyparts-mvp/review/index.html?mode=candidate'+source;
+  const warp=process.env.KOMA_P3_WARP==='flow'?'&warp=flow':'';
+  const blend=process.env.KOMA_P3_BLEND==='window'?'&blend=window':'';
+  const url='http://127.0.0.1:'+httpd.address().port+'/experiments/gif-multiview-keyparts-mvp/review/index.html?mode=candidate'+source+warp+blend;
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.__KOMA_P0_VIEWER&&window.__KOMA_P0_VIEWER.inspect().ready,null,{timeout:18000});
   const angles=process.env.KOMA_P3_TURN_SEQUENCE==='1'
@@ -48,6 +50,8 @@ async function start(){
                 sourceRole:'recovered_original_39_part_RGBA_art',
                 rendering:'HTML Canvas2D piecewise ArtMesh vertices',
                 source:['seethrough-front','seethrough-paired'].includes(input)?input:'original',
+                geometryWarp:process.env.KOMA_P3_WARP==='flow'?'physical-flow':'mesh-bbox',
+                transition:process.env.KOMA_P3_BLEND==='window'?'source-window-blend':'source-keyframe-select',
                 outputs,errors,angles,frameCount:outputs.length,
                 sequenceMode:process.env.KOMA_P3_TURN_SEQUENCE==='1',
                 status:errors.length?'BROWSER_RENDER_ERRORS':'CAPTURED_FOR_ANATOMICAL_INSPECTION'};

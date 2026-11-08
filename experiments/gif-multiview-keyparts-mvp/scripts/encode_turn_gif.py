@@ -17,7 +17,7 @@ def sha(file):
             h.update(block)
     return h.hexdigest()
 
-def create(frames_root,output):
+def create(frames_root,output,qa_output=None):
     frames_root=Path(frames_root).resolve()
     report=json.loads((frames_root/"canvas-qa.json").read_text())
     angles=[i*2.5 for i in range(37)]
@@ -68,7 +68,8 @@ def create(frames_root,output):
         "transparentSourceIncludedSeparately":True,
         "artisticQuality":"REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
         "framesSHA256":[{"angle":a,"sha256":records[a]["sha256"]} for a in angles]}
-    outfile=output.parent/"turn-gif-qa.json"
+    outfile=Path(qa_output).resolve() if qa_output else output.parent/"turn-gif-qa.json"
+    outfile.parent.mkdir(parents=True,exist_ok=True)
     outfile.write_text(json.dumps(qa,indent=2,ensure_ascii=False)+"\n")
     print(json.dumps({k:qa[k] for k in
            ("status","sourceFrameCount","GIFFrames","resolution",
@@ -80,5 +81,6 @@ if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("--frames",required=True)
     p.add_argument("--output",required=True)
+    p.add_argument("--qa-output")
     args=p.parse_args()
-    create(args.frames,args.output)
+    create(args.frames,args.output,args.qa_output)

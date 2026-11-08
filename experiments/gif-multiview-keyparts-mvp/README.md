@@ -135,3 +135,13 @@ Git 保留计划、脚本、合同、QA 与来源哈希；大 GIF、PNG、PSD、
 三视角 HTML 为 /review/index.html?mode=candidate&source=seethrough-paired 。私有预览 GIF 为 private-assets/p5-see-through/mv-candidate/p0-psd-paired-vdd-turn.gif。由真实 Chromium 输出 37 张 RGBA 后生成 72 帧往返动画，中间角的跨视角纹理验收需要进一步几何对应约束。
 
 来源与完整 QA 见 evidence/2026-11-08-p5-two-psd-view-correspondence.json。回归测试 46/46 通过。私有审查包为 private-assets/exports/p0-character-001-two-psd-artmesh-review-v6.zip，SHA-256 3e8d97b676511d382d8cab1efcc47c0e3058ca3a8929634646c95d53b2799482。
+
+### P6 · 原画物理锚点流场驱动的 ArtMesh
+
+从已登记 P0 原画 0°、45°、90° 与 0°、45° 独立 See-through PSD 生成的语义部件，提取 13 条物理解剖轨迹和 2548 个带原始来源哈希的 ArtMesh 流场顶点位移。三个参考关键角与固定 ArtMesh 身份保持一致。
+
+22.5°、67.5° 的面部纹理边缘密度比值：原矩形网格 8.96、3.20；物理锚点流场 0.61、1.78。全 37 帧 temporal QA 对比：原矩形网格两处跳变、物理流场两处跳变、源窗口过渡 0 处跳变。源窗口过渡画面有跨原画重影，仍作为时间连续性研究对照。实际脸部、发束与服装的独立视觉质量验收继续以原画为准。
+
+交互 HTML：review/index.html?mode=candidate&source=seethrough-paired&warp=flow。对照过渡：增加 &blend=window。原生 1024 PNG、两份 See-through PSD、三份 72 帧 GIF、所有结构化 QA 与哈希均随隔离审查包交付。
+
+私有 ZIP：private-assets/exports/p0-character-001-flow-correspondence-review-v7.zip。SHA-256 325fb28989a1b26820f43c7581335cfa5ec70b13c0e22f852a48e84b30d48326。证据：evidence/2026-11-08-p6-flow-artmesh-visual-qa.json。本轮整体回归 53/53 通过。

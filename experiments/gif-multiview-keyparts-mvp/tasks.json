@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P5_TWO_PSD_0_45_ARTMESH_CORRESPONDENCE_REGISTERED",
+  "status": "P6_SOURCE_GUIDED_ARTMESH_GEOMETRY_VISUAL_REVIEW",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -248,7 +248,7 @@
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING"
   },
-  "lastCompleted": "P5_PSD_0_45_13_LAYERS_EACH_39_PARTS_13_LANDMARKS_46_TESTS",
+  "lastCompleted": "P6_IMAGE_FLOW_2548_CONTROLS_3_ANIMATED_REVIEWS_53_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -454,6 +454,37 @@
       "90PSDUnderpaint": "PENDING_HOSTED_CAPACITY",
       "testCountPassed": 46,
       "artisticAcceptance": "PENDING"
+    },
+    "p6PhysicalFlowArtMesh": {
+      "originalAngles": [
+        0,
+        45,
+        90
+      ],
+      "independentPSDViews": [
+        0,
+        45
+      ],
+      "registeredArtMeshSlots": 39,
+      "physicalLandmarkTracks": 13,
+      "flowControlVertices": 2548,
+      "flowSourceSHA256": "88db58b4048920744a2dbf0e0610ddec16a0e1d1a3729bfa8148148f67d0fb19",
+      "holdoutTextureSharp": {
+        "22.5": 0.6054,
+        "67.5": 1.7779
+      },
+      "temporalSharp": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+      "temporalBlend": "PASS_TEMPORAL_CONTINUITY",
+      "artisticAcceptance": "PENDING_VIEW_DEPENDENT_TEXEL_CORRESPONDENCE",
+      "90PSDSource": "HOSTED_GPU_CAPACITY_REQUIRED",
+      "P0HeroMasterSHAverified": false,
+      "reviewPackage": {
+        "path": "private-assets/exports/p0-character-001-flow-correspondence-review-v7.zip",
+        "bytes": 117174660,
+        "sha256": "325fb28989a1b26820f43c7581335cfa5ec70b13c0e22f852a48e84b30d48326",
+        "entries": 218
+      },
+      "automatedRegressions": "53/53 PASS"
     }
   }
 }

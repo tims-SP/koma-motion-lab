@@ -4,13 +4,15 @@ const SIZE=1024;
 const candidateMode=new URLSearchParams(location.search).get('mode')==='candidate';
 const seethroughFront=new URLSearchParams(location.search).get('source')==='seethrough-front';
 const seethroughPaired=new URLSearchParams(location.search).get('source')==='seethrough-paired';
+const flowWarpEnabled=new URLSearchParams(location.search).get('warp')==='flow';
+const smoothFlowTransition=flowWarpEnabled&&new URLSearchParams(location.search).get('blend')==='window';
 const URL_BASE=new URL('../private-assets/',location.href);
 const byId=id=>document.getElementById(id);
 const expectedIds=['body.reference','hair.back','face.skin','ear.far','ear.near','eye.far','eye.near',
  'nose','mouth','hair.side','hair.front','hair.ahoge','hair.clip.cross_gold'];
 const validSHA=s=>typeof s==='string'&&/^[0-9a-f]{64}$/.test(s);
 const endpoints=[0,45,90];
-let registry=new Map(),whole=new Map(),report=null,ready=false,problems=[],angle=0;
+let registry=new Map(),whole=new Map(),report=null,ready=false,problems=[],angle=0,flowVectors=null;
 function assert(condition,message){if(!condition)throw Error(message);}
 function slot(a,id){return registry.get(String(a)+'/'+id);}
 function blend(a,b,t){return a+(b-a)*t;}
@@ -121,10 +123,32 @@ function renderLayer(ctx,id,degree){
  if(onA&&onB)assert(sameTopology(A,B),'topology differs: '+id+' '+a+'/'+b);
  const src=t<0.5? (onA?A:B) : (onB?B:A);
  if(!src.image)return;
- const vertices=onA&&onB?
+ if(smoothFlowTransition&&flowVectors&&onA&&onB&&t>=0.35&&t<=0.65){
+  const flowPair=flowVectors.pairs[String(a)+'-'+String(b)];
+  const pA=flowPair[String(a)]?.[id],pB=flowPair[String(b)]?.[id];
+  assert(pA&&pB&&pA.length===A.mesh.vertices.length&&pB.length===B.mesh.vertices.length,
+   'paired flow vectors missing '+id);
+  const ma=A.mesh.vertices.map((p,i)=>[p[0]+t*pA[i][0],p[1]+t*pA[i][1]]);
+  const mb=B.mesh.vertices.map((p,i)=>[p[0]+(1-t)*pB[i][0],
+                                     p[1]+(1-t)*pB[i][1]]);
+  const weight=easing((t-0.35)/0.30);
+  warped(ctx,A,ma,1-weight);
+  warped(ctx,B,mb,weight);
+  return;
+ }
+ let vertices=onA&&onB?
   A.mesh.vertices.map((v,i)=>[blend(v[0],B.mesh.vertices[i][0],t),
                               blend(v[1],B.mesh.vertices[i][1],t)]):
   src.mesh.vertices;
+ if(flowWarpEnabled&&flowVectors&&onA&&onB){
+  const sourceYaw=(src===A)?a:b;
+  const directions=flowVectors.pairs[String(a)+'-'+String(b)]?.[String(sourceYaw)]?.[id];
+  assert(directions&&directions.length===src.mesh.vertices.length,
+   'physical-flow vertex correspondence missing '+sourceYaw+'/'+id);
+  const progress=sourceYaw===a?t:1-t;
+  vertices=src.mesh.vertices.map((v,i)=>
+    [v[0]+progress*directions[i][0],v[1]+progress*directions[i][1]]);
+ }
  const opacity=(onA&&onB)?1:(onA?1-t:t);
  warped(ctx,src,vertices,opacity);
 }
@@ -178,6 +202,15 @@ async function init(){
      assert(sameTopology(A,B),'ArtMesh cross-view topology mismatch '+id);
    }
   }
+  if(flowWarpEnabled){
+   assert(seethroughPaired,'P0 registered source required for flow-constrained ArtMesh');
+   flowVectors=await fetchJSON('p5-see-through/mv-candidate/flow-vertex-correspondence.json');
+   assert(flowVectors.schema==='KOMA-P0-P6-FLOW-CONSTRAINED-ARTMESH-MOTION-V1',
+          'source-derived flow manifest mismatch');
+   assert(flowVectors.characterId===manifest.characterId,
+          'flow source character mismatch');
+   assert(flowVectors.qa.trackedSemanticSlots===39,'flow control slots mismatch');
+  }
   await Promise.all(parts.filter(x=>x.visibility==='visible').map(async rec=>{
    rec.image=await loadPNG(rec.path,rec.frameSha256);
   }));
@@ -188,11 +221,13 @@ async function init(){
   }
   assert(whole.size===3,'source reference PNGs at 0/45/90 required');
   ready=true;
-  byId('gate').textContent=seethroughPaired
+  byId('gate').textContent=flowWarpEnabled
+    ?'已加载 P0 原画 + PSD 语义层 + 真实图像光流物理锚点几何候选'
+    :(seethroughPaired
     ?'已加载 P0 0°/45° PSD 语义补绘与 90° 原画候选 · 视觉检查'
     :(seethroughFront
     ?'已加载 P0 正面 PSD 遮挡补绘 + 45°/90° 原画候选 · 视觉检查'
-    :(candidateMode?'已加载真实 GIF 修复候选 · 视觉验收待完成':'已加载通过工程与视觉门禁的独立原画'));
+    :(candidateMode?'已加载真实 GIF 修复候选 · 视觉验收待完成':'已加载通过工程与视觉门禁的独立原画')));
   byId('info').textContent='角色：'+manifest.characterId+'\n校验图层：'+parts.length+'\n视角：0° / 45° / 90°\nRGBA 源图：已验证 SHA-256';
   render(angle);
  }catch(error){
@@ -210,6 +245,8 @@ for(const button of document.querySelectorAll('button[data-angle]')){
 window.__KOMA_P0_VIEWER={inspect:()=>({ready,angle,partCount:registry.size,
  qaStatus:report?.status||null,candidateMode,
  source:seethroughPaired?'seethrough-paired':(seethroughFront?'seethrough-front':'original'),
+ geometryWarp:flowWarpEnabled?'physical-flow':'mesh-bbox',
+ transition:smoothFlowTransition?'source-window-blend':'source-keyframe-select',
  problems:[...problems]}),renderAt:render};
 init();
 })();
