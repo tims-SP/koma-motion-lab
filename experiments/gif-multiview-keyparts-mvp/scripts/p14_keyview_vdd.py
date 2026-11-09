@@ -74,14 +74,22 @@ def register(root):
  assert set(keys)=={0,45,67.5,72.5,90}
  return keys,layer,roleorder,source_keys,baseline
 
-def interpolate_alpha(sourceRGBA,flow,weight,grid):
+def interpolate_alpha(sourceRGBA,flow,weight,grid,max_distance_px=None):
  full=np.asarray(sourceRGBA,dtype=np.float32)/255
  full[:,:,:3]*=full[:,:,3:4]
  dx=cv2.resize(flow[:,:,0],(W,W),interpolation=cv2.INTER_LINEAR)*(W/G)
  dy=cv2.resize(flow[:,:,1],(W,W),interpolation=cv2.INTER_LINEAR)*(W/G)
  xx,yy=grid
- mx=xx-weight*dx
- my=yy-weight*dy
+ move_x=weight*dx
+ move_y=weight*dy
+ if max_distance_px is not None:
+  if max_distance_px < 0:raise ValueError("Flow displacement limit must be nonnegative")
+  magnitude=np.hypot(move_x,move_y)
+  scale=np.minimum(1.0,float(max_distance_px)/np.maximum(magnitude,1e-5))
+  move_x=move_x*scale
+  move_y=move_y*scale
+ mx=xx-move_x
+ my=yy-move_y
  warp=cv2.remap(full,mx,my,cv2.INTER_LINEAR,borderMode=cv2.BORDER_CONSTANT)
  return warp
 
@@ -94,7 +102,7 @@ def choose_overlay(wa,wb,t,method):
   return wa*(1-f)+wb*f
  raise ValueError("P14 rendering method invalid: "+method)
 
-def render(root,out,angles,method):
+def render(root,out,angles,method,flow_limit_px_per_degree=0.0):
  root=Path(root).resolve();out=Path(out).resolve();out.mkdir(parents=True,exist_ok=True)
  keys,layers,roles,sourceRole,baseline=register(root)
  xx,yy=np.meshgrid(np.arange(W,dtype=np.float32),np.arange(W,dtype=np.float32))
@@ -150,8 +158,10 @@ def render(root,out,angles,method):
      else:
       rgba=np.zeros_like(sourceA)
     else:
-     wa=interpolate_alpha(sourceA,maps[0],t,grid)
-     wb=interpolate_alpha(sourceB,maps[1],1-t,grid)
+     cap_a=flow_limit_px_per_degree*(angle-a) if flow_limit_px_per_degree>0 else None
+     cap_b=flow_limit_px_per_degree*(b-angle) if flow_limit_px_per_degree>0 else None
+     wa=interpolate_alpha(sourceA,maps[0],t,grid,cap_a)
+     wb=interpolate_alpha(sourceB,maps[1],1-t,grid,cap_b)
      merged=choose_overlay(wa,wb,t,method)
      rgba=native_to_rgba(merged)
     output.alpha_composite(Image.fromarray(rgba,"RGBA"))
@@ -188,6 +198,7 @@ def render(root,out,angles,method):
   "nativeRGBA":[1024,1024],
   "bidirectionalFlowCanvas":[443,443],
   "method":method,
+  "flowLimitPixelsPerDegree":flow_limit_px_per_degree,
   "frameCount":len(rows),"frames":rows,
   "contactPath":str(contact_file.relative_to(root)),
   "contactSHA256":sha(contact_file),
@@ -208,5 +219,8 @@ if __name__=="__main__":
  ap.add_argument("--out",required=True)
  ap.add_argument("--method",choices=["source-coherent","smooth-ink"],default="smooth-ink")
  ap.add_argument("--angles",default=",".join(str(i*2.5) for i in range(37)))
+ ap.add_argument("--flow-limit-px-per-degree",type=float,default=0.0,
+                 help="Maximum source displacement per angular degree; zero preserves original DIS flow")
  x=ap.parse_args()
- render(x.root,x.out,[float(v) for v in x.angles.split(",")],x.method)
+ if x.flow_limit_px_per_degree<0:ap.error("Flow limit must be nonnegative")
+ render(x.root,x.out,[float(v) for v in x.angles.split(",")],x.method,x.flow_limit_px_per_degree)

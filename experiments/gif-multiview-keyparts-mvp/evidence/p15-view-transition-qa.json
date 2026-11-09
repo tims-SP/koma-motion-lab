@@ -1,0 +1,231 @@
+{
+  "schema": "KOMA-P0-P15-STROKE-OCCLUSION-TRANSITION-QA-V1",
+  "characterId": "p0_character_001",
+  "originalAngles": [
+    0,
+    45,
+    90
+  ],
+  "generatedReferenceAngles": [
+    67.5,
+    72.5
+  ],
+  "angleSamples": [
+    65.0,
+    67.5,
+    72.5,
+    77.5
+  ],
+  "methods": [
+    "P8",
+    "P14",
+    "coherent",
+    "bounded"
+  ],
+  "source": "SHA-verified P0 ArtMesh and independently generated intermediate-source candidates",
+  "frameComparison": [
+    {
+      "yaw": 65.0,
+      "methods": {
+        "P8": {
+          "frameSHA256": "47cb28559b1370ae36882fdfc487f3056d9fd8910fca0cf61a542a54957762d7",
+          "alphaGapPixels": 1576
+        },
+        "P14": {
+          "frameSHA256": "ad3387f6921ae8a27e3eb3d9779be14e0d5c780206e51046f2f299ccc6afb90a",
+          "alphaGapPixels": 4988
+        },
+        "coherent": {
+          "frameSHA256": "ad3387f6921ae8a27e3eb3d9779be14e0d5c780206e51046f2f299ccc6afb90a",
+          "alphaGapPixels": 4988
+        },
+        "bounded": {
+          "frameSHA256": "1e01e373be80ca87f6b52bfdf64ba1b47a69683c6f3c35d85f7eb2aed042a7be",
+          "alphaGapPixels": 4987
+        }
+      }
+    },
+    {
+      "yaw": 67.5,
+      "methods": {
+        "P8": {
+          "frameSHA256": "8a204140b12fb0d8d5a7a064d61060b5a08c11f81ebb63870a4d03436c7e7954",
+          "alphaGapPixels": 1694
+        },
+        "P14": {
+          "frameSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+          "alphaGapPixels": 1449
+        },
+        "coherent": {
+          "frameSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+          "alphaGapPixels": 1449
+        },
+        "bounded": {
+          "frameSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+          "alphaGapPixels": 1449
+        }
+      }
+    },
+    {
+      "yaw": 72.5,
+      "methods": {
+        "P8": {
+          "frameSHA256": "9290dafcf300524295a563683e3e1b7746b97b856b2de345f57c280985abc4de",
+          "alphaGapPixels": 1486
+        },
+        "P14": {
+          "frameSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+          "alphaGapPixels": 1401
+        },
+        "coherent": {
+          "frameSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+          "alphaGapPixels": 1401
+        },
+        "bounded": {
+          "frameSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+          "alphaGapPixels": 1401
+        }
+      }
+    },
+    {
+      "yaw": 77.5,
+      "methods": {
+        "P8": {
+          "frameSHA256": "78fb254d8cdaa2e83009e0e8d76df231ab20bba548b7d891040a3c5f1bf13af0",
+          "alphaGapPixels": 1988
+        },
+        "P14": {
+          "frameSHA256": "9ab94755e952473daaf155c1bddab08275f277b0560305d12af59ae1cb1bc749",
+          "alphaGapPixels": 5666
+        },
+        "coherent": {
+          "frameSHA256": "9ab94755e952473daaf155c1bddab08275f277b0560305d12af59ae1cb1bc749",
+          "alphaGapPixels": 5666
+        },
+        "bounded": {
+          "frameSHA256": "0a5dc92a8649c97f4291c9a7c68657a1f73eb66fd8d167d171e3f059a8dd5ea3",
+          "alphaGapPixels": 5341
+        }
+      }
+    }
+  ],
+  "semanticStrokeDensity": {
+    "hair.back": {
+      "original90": {
+        "interiorPixels": 66603,
+        "edgePixels": 4819,
+        "edgeDensity": 0.0723541
+      },
+      "67.5": {
+        "interiorPixels": 25756,
+        "edgePixels": 269,
+        "edgeDensity": 0.0104442
+      },
+      "72.5": {
+        "interiorPixels": 24247,
+        "edgePixels": 313,
+        "edgeDensity": 0.0129088
+      }
+    },
+    "hair.side": {
+      "original90": {
+        "interiorPixels": 92236,
+        "edgePixels": 9939,
+        "edgeDensity": 0.1077562
+      },
+      "67.5": {
+        "interiorPixels": 61668,
+        "edgePixels": 3653,
+        "edgeDensity": 0.0592366
+      },
+      "72.5": {
+        "interiorPixels": 69249,
+        "edgePixels": 3672,
+        "edgeDensity": 0.053026
+      }
+    },
+    "hair.front": {
+      "original90": {
+        "interiorPixels": 103979,
+        "edgePixels": 8309,
+        "edgeDensity": 0.0799104
+      },
+      "67.5": {
+        "interiorPixels": 90685,
+        "edgePixels": 3645,
+        "edgeDensity": 0.0401941
+      },
+      "72.5": {
+        "interiorPixels": 101354,
+        "edgePixels": 3631,
+        "edgeDensity": 0.0358249
+      }
+    },
+    "eye.near": {
+      "original90": {
+        "interiorPixels": 17122,
+        "edgePixels": 2381,
+        "edgeDensity": 0.1390609
+      },
+      "67.5": {
+        "interiorPixels": 15057,
+        "edgePixels": 1364,
+        "edgeDensity": 0.0905891
+      },
+      "72.5": {
+        "interiorPixels": 14939,
+        "edgePixels": 1257,
+        "edgeDensity": 0.0841422
+      }
+    },
+    "mouth": {
+      "original90": {
+        "interiorPixels": 679,
+        "edgePixels": 15,
+        "edgeDensity": 0.0220913
+      },
+      "67.5": {
+        "interiorPixels": 768,
+        "edgePixels": 41,
+        "edgeDensity": 0.0533854
+      },
+      "72.5": {
+        "interiorPixels": 1110,
+        "edgePixels": 44,
+        "edgeDensity": 0.0396396
+      }
+    },
+    "nose": {
+      "original90": {
+        "interiorPixels": 1383,
+        "edgePixels": 7,
+        "edgeDensity": 0.0050615
+      },
+      "67.5": {
+        "interiorPixels": 2538,
+        "edgePixels": 0,
+        "edgeDensity": 0.0
+      },
+      "72.5": {
+        "interiorPixels": 3032,
+        "edgePixels": 0,
+        "edgeDensity": 0.0
+      }
+    }
+  },
+  "preview": {
+    "sourcePath": "p15-flow-cap4/p15-stroke-occlusion-contact.jpg",
+    "sha256": "f0ae27259cd0ca1c0b95273dd9819230fc8c1636b851d3a8c03b44292f37cc1a",
+    "private": true
+  },
+  "diagnosis": {
+    "boundedFlowImprovementPixelsAt77p5": 325,
+    "boundedFlowImprovementPixelsAt65": 1,
+    "sourceCoherentSameGapAt65And77p5": true,
+    "metricRole": "alpha-gap and inner-stroke proxies; source identity and anime line quality require direct review",
+    "primaryDevelopmentPriority": "cross-view anatomical stroke correspondence and view-dependent masks"
+  },
+  "adoptedEngineeringBaseline": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+  "candidateArtisticAcceptance": "PENDING_ANATOMICAL_STROKE_REVIEW",
+  "status": "P15_TRANSITION_SOURCE_DIAGNOSTIC_VERIFIED"
+}

@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P14_PAINTED_KEYVIEW_ENGINEERING_VERIFIED",
+  "status": "P15_VIEW_STROKE_CORRESPONDENCE_ENGINEERING_DIAGNOSIS_REGISTERED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P14_HTML_ENGINEERING_VERIFIED_VISUAL_ACCEPTANCE_PENDING",
+      "status": "P15_VIEW_DEPENDENT_STROKE_CORRESPONDENCE_IN_PROGRESS",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -247,9 +247,10 @@
     "canvasRegistration": "PENDING",
     "layerReconstruction": "PENDING",
     "approvedP0OriginalSourceSHA": "PENDING",
-    "p14PublicQA": "experiments/gif-multiview-keyparts-mvp/evidence/p14-painted-view-qa.json"
+    "p14PublicQA": "experiments/gif-multiview-keyparts-mvp/evidence/p14-painted-view-qa.json",
+    "p15TransitionQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-view-transition-qa.json"
   },
-  "lastCompleted": "P14_26_RGBA_PARTS_37_MOTION_FRAMES_12_CHROMIUM_CAPTURES_VERIFIED",
+  "lastCompleted": "P15_4_ANGLE_4_METHOD_SHA_AND_ALPHA_GAP_AUDIT",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -849,6 +850,130 @@
       "candidateArtisticAcceptance": "ARTISTIC_ACCEPTANCE_PENDING",
       "publicQA": "evidence/p14-painted-view-qa.json",
       "plan": "docs/plans/2026-11-09-p14-painted-view-review.md"
+    },
+    "p15StrokeCorrespondence": {
+      "sourceAngles": [
+        0,
+        45,
+        90
+      ],
+      "candidateAngles": [
+        67.5,
+        72.5
+      ],
+      "diagnosticAngles": [
+        65.0,
+        67.5,
+        72.5,
+        77.5
+      ],
+      "transitionMethods": [
+        "P8",
+        "P14",
+        "coherent",
+        "bounded"
+      ],
+      "alphaGapComparisons": [
+        {
+          "yaw": 65.0,
+          "methods": {
+            "P8": {
+              "frameSHA256": "47cb28559b1370ae36882fdfc487f3056d9fd8910fca0cf61a542a54957762d7",
+              "alphaGapPixels": 1576
+            },
+            "P14": {
+              "frameSHA256": "ad3387f6921ae8a27e3eb3d9779be14e0d5c780206e51046f2f299ccc6afb90a",
+              "alphaGapPixels": 4988
+            },
+            "coherent": {
+              "frameSHA256": "ad3387f6921ae8a27e3eb3d9779be14e0d5c780206e51046f2f299ccc6afb90a",
+              "alphaGapPixels": 4988
+            },
+            "bounded": {
+              "frameSHA256": "1e01e373be80ca87f6b52bfdf64ba1b47a69683c6f3c35d85f7eb2aed042a7be",
+              "alphaGapPixels": 4987
+            }
+          }
+        },
+        {
+          "yaw": 67.5,
+          "methods": {
+            "P8": {
+              "frameSHA256": "8a204140b12fb0d8d5a7a064d61060b5a08c11f81ebb63870a4d03436c7e7954",
+              "alphaGapPixels": 1694
+            },
+            "P14": {
+              "frameSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+              "alphaGapPixels": 1449
+            },
+            "coherent": {
+              "frameSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+              "alphaGapPixels": 1449
+            },
+            "bounded": {
+              "frameSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+              "alphaGapPixels": 1449
+            }
+          }
+        },
+        {
+          "yaw": 72.5,
+          "methods": {
+            "P8": {
+              "frameSHA256": "9290dafcf300524295a563683e3e1b7746b97b856b2de345f57c280985abc4de",
+              "alphaGapPixels": 1486
+            },
+            "P14": {
+              "frameSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+              "alphaGapPixels": 1401
+            },
+            "coherent": {
+              "frameSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+              "alphaGapPixels": 1401
+            },
+            "bounded": {
+              "frameSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+              "alphaGapPixels": 1401
+            }
+          }
+        },
+        {
+          "yaw": 77.5,
+          "methods": {
+            "P8": {
+              "frameSHA256": "78fb254d8cdaa2e83009e0e8d76df231ab20bba548b7d891040a3c5f1bf13af0",
+              "alphaGapPixels": 1988
+            },
+            "P14": {
+              "frameSHA256": "9ab94755e952473daaf155c1bddab08275f277b0560305d12af59ae1cb1bc749",
+              "alphaGapPixels": 5666
+            },
+            "coherent": {
+              "frameSHA256": "9ab94755e952473daaf155c1bddab08275f277b0560305d12af59ae1cb1bc749",
+              "alphaGapPixels": 5666
+            },
+            "bounded": {
+              "frameSHA256": "0a5dc92a8649c97f4291c9a7c68657a1f73eb66fd8d167d171e3f059a8dd5ea3",
+              "alphaGapPixels": 5341
+            }
+          }
+        }
+      ],
+      "semanticStrokeRoles": [
+        "hair.back",
+        "hair.side",
+        "hair.front",
+        "eye.near",
+        "mouth",
+        "nose"
+      ],
+      "boundedDisplacementPixelsPerDegree": 4,
+      "diagnosticStatus": "P15_TRANSITION_SOURCE_DIAGNOSTIC_VERIFIED",
+      "technicalReference": "https://github.com/MarkMoHR/LayerInbetween",
+      "baselineRenderer": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+      "artisticAcceptance": "PENDING_ANATOMICAL_STROKE_REVIEW",
+      "publicQA": "evidence/p15-view-transition-qa.json",
+      "plan": "docs/plans/2026-11-09-p15-stroke-occlusion.md"
     }
   }
 }
