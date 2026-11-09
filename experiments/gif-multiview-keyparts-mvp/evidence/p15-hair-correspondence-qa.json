@@ -1,0 +1,1316 @@
+{
+  "schema": "KOMA-P0-P15-05-HAIR-INK-OCCLUSION-CORRESPONDENCE-V1",
+  "characterId": "p0_character_001",
+  "originalAngles": [
+    45,
+    90
+  ],
+  "generatedIntermediateAngles": [
+    67.5,
+    72.5
+  ],
+  "semanticRoles": [
+    "hair.back",
+    "hair.side",
+    "hair.front",
+    "hair.ahoge"
+  ],
+  "nativeCanvas": [
+    1024,
+    1024
+  ],
+  "workingStrokeCanvas": [
+    443,
+    443
+  ],
+  "sourceViewSlotsVerified": 28,
+  "sourceSHA256UniqueCount": 28,
+  "semanticStrokeViewPairs": 12,
+  "candidateStrokeMatches": 23,
+  "sourceMetadataSHA256": {
+    "P5ArtMesh": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "P5Landmarks": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "P9Palette": "a29a9a7a6d44e8cdd09f1b1c82a329be2a8481752ec16c0a8284e95dba674fd9",
+    "P10StrokeBaseline": "b510d61f2ef89b5fc0b5aaaa95b20bf7cc43ab7fc9b281a0c082ca9d7f8d633e"
+  },
+  "strandPairCorrespondence": {
+    "45-67.5/hair.back": {
+      "semanticId": "hair.back",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/hair.back.png",
+          "sha256": "47adcbb5de5912537f0023d9daa2f6302a7746d7e6813139d63772f3c899e36e"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.back.png",
+          "sha256": "f34b5978048f573fb3302cad54c7d8c47dc146b43837f22f40e10191a1b30cce"
+        }
+      },
+      "observedCentroidShift443": [
+        -34.204,
+        -18.654
+      ],
+      "P5ProjectedAnchors": {
+        "hair.back": {
+          "from": [
+            507.0,
+            516.5
+          ],
+          "to": [
+            500.25,
+            516.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "hair.ahoge.root": {
+          "from": [
+            524.0,
+            148.0
+          ],
+          "to": [
+            530.25,
+            148.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 21,
+      "targetStrokeCount": 2,
+      "matchedStrokeCount": 2,
+      "accepted": [
+        {
+          "sourceId": "hair.back.yaw450.stroke.017",
+          "targetId": "hair.back.yaw675.stroke.001",
+          "sourceXY": [
+            268.3,
+            317.7
+          ],
+          "targetXY": [
+            241.08,
+            312.92
+          ],
+          "sourceArea": 23,
+          "targetArea": 13,
+          "cost": 41.44,
+          "physicalResidual": 15.53,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.5755,
+          "sourcePalette": 4,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.back.yaw450.stroke.015",
+          "targetId": "hair.back.yaw675.stroke.000",
+          "sourceXY": [
+            146.22,
+            170.58
+          ],
+          "targetXY": [
+            104.93,
+            170.8
+          ],
+          "sourceArea": 45,
+          "targetArea": 15,
+          "cost": 54.67,
+          "physicalResidual": 20.16,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.4824,
+          "sourcePalette": 0,
+          "targetPalette": 1,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 19,
+      "unmatchedTo": 0,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "67.5-72.5/hair.back": {
+      "semanticId": "hair.back",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.back.png",
+          "sha256": "f34b5978048f573fb3302cad54c7d8c47dc146b43837f22f40e10191a1b30cce"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.back.png",
+          "sha256": "b21b0a5efff13b8391b3b14583204c9d922df6675b783a10b58d55be6a66bb23"
+        }
+      },
+      "observedCentroidShift443": [
+        -0.01,
+        0.397
+      ],
+      "P5ProjectedAnchors": {
+        "hair.back": {
+          "from": [
+            500.25,
+            516.0
+          ],
+          "to": [
+            498.75,
+            515.889
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "hair.ahoge.root": {
+          "from": [
+            530.25,
+            148.0
+          ],
+          "to": [
+            531.639,
+            148.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 2,
+      "targetStrokeCount": 6,
+      "matchedStrokeCount": 1,
+      "accepted": [
+        {
+          "sourceId": "hair.back.yaw675.stroke.000",
+          "targetId": "hair.back.yaw725.stroke.004",
+          "sourceXY": [
+            104.93,
+            170.8
+          ],
+          "targetXY": [
+            89.18,
+            161.55
+          ],
+          "sourceArea": 15,
+          "targetArea": 11,
+          "cost": 26.84,
+          "physicalResidual": 18.46,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6992,
+          "sourcePalette": 1,
+          "targetPalette": 1,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 1,
+      "unmatchedTo": 5,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "72.5-90/hair.back": {
+      "semanticId": "hair.back",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.back.png",
+          "sha256": "b21b0a5efff13b8391b3b14583204c9d922df6675b783a10b58d55be6a66bb23"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/hair.back.png",
+          "sha256": "db583154f9b10734deafcc1c94100180ce331e39b420b622bdd260b082dd00af"
+        }
+      },
+      "observedCentroidShift443": [
+        27.739,
+        23.942
+      ],
+      "P5ProjectedAnchors": {
+        "hair.back": {
+          "from": [
+            498.75,
+            515.889
+          ],
+          "to": [
+            493.5,
+            515.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "hair.ahoge.root": {
+          "from": [
+            531.639,
+            148.0
+          ],
+          "to": [
+            536.5,
+            148.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 6,
+      "targetStrokeCount": 15,
+      "matchedStrokeCount": 3,
+      "accepted": [
+        {
+          "sourceId": "hair.back.yaw725.stroke.001",
+          "targetId": "hair.back.yaw900.stroke.012",
+          "sourceXY": [
+            132.29,
+            73.92
+          ],
+          "targetXY": [
+            149.81,
+            95.24
+          ],
+          "sourceArea": 24,
+          "targetArea": 21,
+          "cost": 16.24,
+          "physicalResidual": 10.55,
+          "ambiguityMargin": 38.07,
+          "confidence": 0.8053,
+          "sourcePalette": 3,
+          "targetPalette": 3,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.back.yaw725.stroke.004",
+          "targetId": "hair.back.yaw900.stroke.013",
+          "sourceXY": [
+            89.18,
+            161.55
+          ],
+          "targetXY": [
+            113.69,
+            173.38
+          ],
+          "sourceArea": 11,
+          "targetArea": 16,
+          "cost": 19.65,
+          "physicalResidual": 12.54,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.7695,
+          "sourcePalette": 1,
+          "targetPalette": 1,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.back.yaw725.stroke.000",
+          "targetId": "hair.back.yaw900.stroke.004",
+          "sourceXY": [
+            108.7,
+            107.15
+          ],
+          "targetXY": [
+            124.77,
+            145.47
+          ],
+          "sourceArea": 54,
+          "targetArea": 166,
+          "cost": 32.22,
+          "physicalResidual": 18.52,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6508,
+          "sourcePalette": 1,
+          "targetPalette": 1,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 3,
+      "unmatchedTo": 12,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "45-67.5/hair.side": {
+      "semanticId": "hair.side",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/hair.side.png",
+          "sha256": "46cda21bac8f4624bc14f30980ba52a80d077c1bad5431dab180daa1fc048095"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.side.png",
+          "sha256": "2ca146c484324bac3e31c1220c3f7dfac04b4d80a483fca64d654d4c0b134a50"
+        }
+      },
+      "observedCentroidShift443": [
+        -5.578,
+        1.701
+      ],
+      "P5ProjectedAnchors": {
+        "hair.side": {
+          "from": [
+            353.0,
+            578.5
+          ],
+          "to": [
+            371.5,
+            570.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "ear.near": {
+          "from": [
+            417.63,
+            518.82
+          ],
+          "to": [
+            477.815,
+            516.16
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 11,
+      "targetStrokeCount": 3,
+      "matchedStrokeCount": 1,
+      "accepted": [
+        {
+          "sourceId": "hair.side.yaw450.stroke.005",
+          "targetId": "hair.side.yaw675.stroke.002",
+          "sourceXY": [
+            150.48,
+            294.91
+          ],
+          "targetXY": [
+            124.05,
+            269.2
+          ],
+          "sourceArea": 23,
+          "targetArea": 20,
+          "cost": 41.64,
+          "physicalResidual": 34.44,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.5739,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 10,
+      "unmatchedTo": 2,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "67.5-72.5/hair.side": {
+      "semanticId": "hair.side",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.side.png",
+          "sha256": "2ca146c484324bac3e31c1220c3f7dfac04b4d80a483fca64d654d4c0b134a50"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.side.png",
+          "sha256": "e76b9ee5336fc3665a96b3a9df97b05d4b48f71ae8cd9357391ee6b0a040e74d"
+        }
+      },
+      "observedCentroidShift443": [
+        -1.718,
+        1.086
+      ],
+      "P5ProjectedAnchors": {
+        "hair.side": {
+          "from": [
+            371.5,
+            570.5
+          ],
+          "to": [
+            375.611,
+            568.722
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "ear.near": {
+          "from": [
+            477.815,
+            516.16
+          ],
+          "to": [
+            491.189,
+            515.569
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 3,
+      "targetStrokeCount": 7,
+      "matchedStrokeCount": 2,
+      "accepted": [
+        {
+          "sourceId": "hair.side.yaw675.stroke.000",
+          "targetId": "hair.side.yaw725.stroke.000",
+          "sourceXY": [
+            173.48,
+            257.69
+          ],
+          "targetXY": [
+            163.98,
+            255.11
+          ],
+          "sourceArea": 1100,
+          "targetArea": 1584,
+          "cost": 28.84,
+          "physicalResidual": 8.6,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6808,
+          "sourcePalette": 1,
+          "targetPalette": 2,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.side.yaw675.stroke.001",
+          "targetId": "hair.side.yaw725.stroke.001",
+          "sourceXY": [
+            110.58,
+            232.46
+          ],
+          "targetXY": [
+            106.03,
+            246.63
+          ],
+          "sourceArea": 670,
+          "targetArea": 624,
+          "cost": 29.09,
+          "physicalResidual": 13.39,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6785,
+          "sourcePalette": 1,
+          "targetPalette": 2,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 1,
+      "unmatchedTo": 5,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "72.5-90/hair.side": {
+      "semanticId": "hair.side",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.side.png",
+          "sha256": "e76b9ee5336fc3665a96b3a9df97b05d4b48f71ae8cd9357391ee6b0a040e74d"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/hair.side.png",
+          "sha256": "65c60af5a0b28068a29a37d85fbce95eb3b7c6d2c1924aa7522f149bca8a7edf"
+        }
+      },
+      "observedCentroidShift443": [
+        14.138,
+        -1.284
+      ],
+      "P5ProjectedAnchors": {
+        "hair.side": {
+          "from": [
+            375.611,
+            568.722
+          ],
+          "to": [
+            390.0,
+            562.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "ear.near": {
+          "from": [
+            491.189,
+            515.569
+          ],
+          "to": [
+            538.0,
+            513.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 7,
+      "targetStrokeCount": 12,
+      "matchedStrokeCount": 3,
+      "accepted": [
+        {
+          "sourceId": "hair.side.yaw725.stroke.004",
+          "targetId": "hair.side.yaw900.stroke.006",
+          "sourceXY": [
+            134.17,
+            292.5
+          ],
+          "targetXY": [
+            142.88,
+            284.88
+          ],
+          "sourceArea": 12,
+          "targetArea": 17,
+          "cost": 16.32,
+          "physicalResidual": 8.34,
+          "ambiguityMargin": 18.95,
+          "confidence": 0.6929,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.side.yaw725.stroke.002",
+          "targetId": "hair.side.yaw900.stroke.000",
+          "sourceXY": [
+            90.65,
+            197.16
+          ],
+          "targetXY": [
+            115.46,
+            196.84
+          ],
+          "sourceArea": 144,
+          "targetArea": 399,
+          "cost": 40.03,
+          "physicalResidual": 10.72,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.5864,
+          "sourcePalette": 2,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.side.yaw725.stroke.003",
+          "targetId": "hair.side.yaw900.stroke.001",
+          "sourceXY": [
+            172.93,
+            271.66
+          ],
+          "targetXY": [
+            172.85,
+            288.37
+          ],
+          "sourceArea": 58,
+          "targetArea": 150,
+          "cost": 51.4,
+          "physicalResidual": 22.93,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.5039,
+          "sourcePalette": 1,
+          "targetPalette": 3,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 4,
+      "unmatchedTo": 9,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "45-67.5/hair.front": {
+      "semanticId": "hair.front",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/hair.front.png",
+          "sha256": "bfa6223060975873da9a5335f09cc424ffc5e1224c1fadab5923c11eaa50a6de"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.front.png",
+          "sha256": "2eb6e271e99bb8c37cbbc64f3db4209be53345f9de80fc1e7c6fe25d10e75ef6"
+        }
+      },
+      "observedCentroidShift443": [
+        -13.024,
+        -6.894
+      ],
+      "P5ProjectedAnchors": {
+        "hair.front": {
+          "from": [
+            623.5,
+            340.5
+          ],
+          "to": [
+            613.0,
+            340.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "eye.near.iris": {
+          "from": [
+            544.27,
+            467.11
+          ],
+          "to": [
+            610.635,
+            459.805
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 15,
+      "targetStrokeCount": 12,
+      "matchedStrokeCount": 1,
+      "accepted": [
+        {
+          "sourceId": "hair.front.yaw450.stroke.008",
+          "targetId": "hair.front.yaw675.stroke.003",
+          "sourceXY": [
+            191.01,
+            166.83
+          ],
+          "targetXY": [
+            169.38,
+            152.61
+          ],
+          "sourceArea": 70,
+          "targetArea": 64,
+          "cost": 15.3,
+          "physicalResidual": 11.3,
+          "ambiguityMargin": 40.38,
+          "confidence": 0.8154,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 14,
+      "unmatchedTo": 11,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "67.5-72.5/hair.front": {
+      "semanticId": "hair.front",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.front.png",
+          "sha256": "2eb6e271e99bb8c37cbbc64f3db4209be53345f9de80fc1e7c6fe25d10e75ef6"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.front.png",
+          "sha256": "75272764b025f0044c37f73e2294802cafeb29a3139bcddcbbaa9d3cd3f0bddc"
+        }
+      },
+      "observedCentroidShift443": [
+        -1.04,
+        0.132
+      ],
+      "P5ProjectedAnchors": {
+        "hair.front": {
+          "from": [
+            613.0,
+            340.5
+          ],
+          "to": [
+            610.667,
+            340.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "eye.near.iris": {
+          "from": [
+            610.635,
+            459.805
+          ],
+          "to": [
+            625.383,
+            458.182
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 12,
+      "targetStrokeCount": 11,
+      "matchedStrokeCount": 5,
+      "accepted": [
+        {
+          "sourceId": "hair.front.yaw675.stroke.009",
+          "targetId": "hair.front.yaw725.stroke.009",
+          "sourceXY": [
+            293.0,
+            76.96
+          ],
+          "targetXY": [
+            289.85,
+            70.3
+          ],
+          "sourceArea": 23,
+          "targetArea": 20,
+          "cost": 10.31,
+          "physicalResidual": 7.11,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.8716,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw675.stroke.003",
+          "targetId": "hair.front.yaw725.stroke.002",
+          "sourceXY": [
+            169.38,
+            152.61
+          ],
+          "targetXY": [
+            166.44,
+            148.63
+          ],
+          "sourceArea": 64,
+          "targetArea": 131,
+          "cost": 16.09,
+          "physicalResidual": 4.53,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.807,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw675.stroke.004",
+          "targetId": "hair.front.yaw725.stroke.006",
+          "sourceXY": [
+            281.46,
+            140.68
+          ],
+          "targetXY": [
+            282.92,
+            142.02
+          ],
+          "sourceArea": 56,
+          "targetArea": 50,
+          "cost": 19.19,
+          "physicalResidual": 2.78,
+          "ambiguityMargin": 27.45,
+          "confidence": 0.7743,
+          "sourcePalette": 1,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw675.stroke.001",
+          "targetId": "hair.front.yaw725.stroke.001",
+          "sourceXY": [
+            306.62,
+            148.4
+          ],
+          "targetXY": [
+            304.49,
+            153.32
+          ],
+          "sourceArea": 232,
+          "targetArea": 374,
+          "cost": 24.9,
+          "physicalResidual": 4.91,
+          "ambiguityMargin": 17.73,
+          "confidence": 0.5781,
+          "sourcePalette": 1,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw675.stroke.000",
+          "targetId": "hair.front.yaw725.stroke.000",
+          "sourceXY": [
+            233.29,
+            104.29
+          ],
+          "targetXY": [
+            228.24,
+            115.08
+          ],
+          "sourceArea": 963,
+          "targetArea": 1504,
+          "cost": 32.82,
+          "physicalResidual": 11.39,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6455,
+          "sourcePalette": 3,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 7,
+      "unmatchedTo": 6,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "72.5-90/hair.front": {
+      "semanticId": "hair.front",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.front.png",
+          "sha256": "75272764b025f0044c37f73e2294802cafeb29a3139bcddcbbaa9d3cd3f0bddc"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/hair.front.png",
+          "sha256": "59a765ee05d3219f6cc1d59cc101dde27696ffcd84a1eda56c1aa6c9a13ecf2f"
+        }
+      },
+      "observedCentroidShift443": [
+        10.343,
+        9.539
+      ],
+      "P5ProjectedAnchors": {
+        "hair.front": {
+          "from": [
+            610.667,
+            340.5
+          ],
+          "to": [
+            602.5,
+            340.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        },
+        "eye.near.iris": {
+          "from": [
+            625.383,
+            458.182
+          ],
+          "to": [
+            677.0,
+            452.5
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 11,
+      "targetStrokeCount": 9,
+      "matchedStrokeCount": 5,
+      "accepted": [
+        {
+          "sourceId": "hair.front.yaw725.stroke.000",
+          "targetId": "hair.front.yaw900.stroke.000",
+          "sourceXY": [
+            228.24,
+            115.08
+          ],
+          "targetXY": [
+            255.76,
+            122.55
+          ],
+          "sourceArea": 1504,
+          "targetArea": 2766,
+          "cost": 31.91,
+          "physicalResidual": 17.3,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6535,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw725.stroke.002",
+          "targetId": "hair.front.yaw900.stroke.006",
+          "sourceXY": [
+            166.44,
+            148.63
+          ],
+          "targetXY": [
+            181.26,
+            144.63
+          ],
+          "sourceArea": 131,
+          "targetArea": 35,
+          "cost": 34.36,
+          "physicalResidual": 14.26,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6325,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw725.stroke.001",
+          "targetId": "hair.front.yaw900.stroke.001",
+          "sourceXY": [
+            304.49,
+            153.32
+          ],
+          "targetXY": [
+            324.45,
+            139.66
+          ],
+          "sourceArea": 374,
+          "targetArea": 834,
+          "cost": 34.95,
+          "physicalResidual": 25.11,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6275,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw725.stroke.006",
+          "targetId": "hair.front.yaw900.stroke.005",
+          "sourceXY": [
+            282.92,
+            142.02
+          ],
+          "targetXY": [
+            261.92,
+            162.92
+          ],
+          "sourceArea": 50,
+          "targetArea": 59,
+          "cost": 36.23,
+          "physicalResidual": 33.34,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.6169,
+          "sourcePalette": 0,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "hair.front.yaw725.stroke.010",
+          "targetId": "hair.front.yaw900.stroke.007",
+          "sourceXY": [
+            194.89,
+            176.89
+          ],
+          "targetXY": [
+            221.2,
+            188.8
+          ],
+          "sourceArea": 9,
+          "targetArea": 30,
+          "cost": 55.42,
+          "physicalResidual": 16.14,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.4776,
+          "sourcePalette": 4,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedFrom": 6,
+      "unmatchedTo": 4,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "45-67.5/hair.ahoge": {
+      "semanticId": "hair.ahoge",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/hair.ahoge.png",
+          "sha256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.ahoge.png",
+          "sha256": "b4868df004823284b33ff3e9d05594f47bb6fb7891119f4028bd544562de44c7"
+        }
+      },
+      "observedCentroidShift443": [
+        2.355,
+        -5.277
+      ],
+      "P5ProjectedAnchors": {
+        "hair.ahoge.root": {
+          "from": [
+            524.0,
+            148.0
+          ],
+          "to": [
+            530.25,
+            148.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 3,
+      "targetStrokeCount": 0,
+      "matchedStrokeCount": 0,
+      "accepted": [],
+      "unmatchedFrom": 3,
+      "unmatchedTo": 0,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "67.5-72.5/hair.ahoge": {
+      "semanticId": "hair.ahoge",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/hair.ahoge.png",
+          "sha256": "b4868df004823284b33ff3e9d05594f47bb6fb7891119f4028bd544562de44c7"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.ahoge.png",
+          "sha256": "91408de76082fc5a20acc3d9370740efaec5d8489f9c62bee9685e5220aa9298"
+        }
+      },
+      "observedCentroidShift443": [
+        -1.317,
+        2.155
+      ],
+      "P5ProjectedAnchors": {
+        "hair.ahoge.root": {
+          "from": [
+            530.25,
+            148.0
+          ],
+          "to": [
+            531.639,
+            148.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 0,
+      "targetStrokeCount": 0,
+      "matchedStrokeCount": 0,
+      "accepted": [],
+      "unmatchedFrom": 0,
+      "unmatchedTo": 0,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    },
+    "72.5-90/hair.ahoge": {
+      "semanticId": "hair.ahoge",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.ahoge.png",
+          "sha256": "91408de76082fc5a20acc3d9370740efaec5d8489f9c62bee9685e5220aa9298"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/hair.ahoge.png",
+          "sha256": "66ec1659cb0f55c3be458a96a7616022a27aca0f920e15566e6d70a889fc4687"
+        }
+      },
+      "observedCentroidShift443": [
+        3.695,
+        3.477
+      ],
+      "P5ProjectedAnchors": {
+        "hair.ahoge.root": {
+          "from": [
+            531.639,
+            148.0
+          ],
+          "to": [
+            536.5,
+            148.0
+          ],
+          "sourceRole": "P5_LINEAR_REFERENCE"
+        }
+      },
+      "sourceStrokeCount": 0,
+      "targetStrokeCount": 4,
+      "matchedStrokeCount": 0,
+      "accepted": [],
+      "unmatchedFrom": 0,
+      "unmatchedTo": 4,
+      "artisticStatus": "SOURCE_BACKED_STROKE_CANDIDATES"
+    }
+  },
+  "depthOcclusion": {
+    "45": {
+      "hair.front>eye.near": {
+        "frontSemanticId": "hair.front",
+        "backSemanticId": "eye.near",
+        "frontDepthOrder": 10,
+        "backDepthOrder": 7,
+        "frontVisiblePixels": 108417,
+        "backVisiblePixels": 20827,
+        "overlapPixels": 625,
+        "backAlphaCoveredFraction": 0.030009,
+        "singleVisibleBoundaryPixels": 127994
+      },
+      "hair.side>ear.near": {
+        "frontSemanticId": "hair.side",
+        "backSemanticId": "ear.near",
+        "frontDepthOrder": 5,
+        "backDepthOrder": 4,
+        "frontVisiblePixels": 80687,
+        "backVisiblePixels": 10374,
+        "overlapPixels": 5037,
+        "backAlphaCoveredFraction": 0.485541,
+        "singleVisibleBoundaryPixels": 80987
+      },
+      "face.skin>hair.back": {
+        "frontSemanticId": "face.skin",
+        "backSemanticId": "hair.back",
+        "frontDepthOrder": 2,
+        "backDepthOrder": 1,
+        "frontVisiblePixels": 122536,
+        "backVisiblePixels": 297767,
+        "overlapPixels": 122536,
+        "backAlphaCoveredFraction": 0.411516,
+        "singleVisibleBoundaryPixels": 175231
+      },
+      "hair.ahoge>hair.front": {
+        "frontSemanticId": "hair.ahoge",
+        "backSemanticId": "hair.front",
+        "frontDepthOrder": 11,
+        "backDepthOrder": 10,
+        "frontVisiblePixels": 10959,
+        "backVisiblePixels": 108417,
+        "overlapPixels": 3005,
+        "backAlphaCoveredFraction": 0.027717,
+        "singleVisibleBoundaryPixels": 113366
+      }
+    },
+    "67.5": {
+      "hair.front>eye.near": {
+        "frontSemanticId": "hair.front",
+        "backSemanticId": "eye.near",
+        "frontDepthOrder": 10,
+        "backDepthOrder": 7,
+        "frontVisiblePixels": 99906,
+        "backVisiblePixels": 17418,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 117324
+      },
+      "hair.side>ear.near": {
+        "frontSemanticId": "hair.side",
+        "backSemanticId": "ear.near",
+        "frontDepthOrder": 5,
+        "backDepthOrder": 4,
+        "frontVisiblePixels": 69188,
+        "backVisiblePixels": 6681,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 75869
+      },
+      "face.skin>hair.back": {
+        "frontSemanticId": "face.skin",
+        "backSemanticId": "hair.back",
+        "frontDepthOrder": 2,
+        "backDepthOrder": 1,
+        "frontVisiblePixels": 52270,
+        "backVisiblePixels": 32130,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 84400
+      },
+      "hair.ahoge>hair.front": {
+        "frontSemanticId": "hair.ahoge",
+        "backSemanticId": "hair.front",
+        "frontDepthOrder": 11,
+        "backDepthOrder": 10,
+        "frontVisiblePixels": 4491,
+        "backVisiblePixels": 99906,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 104397
+      }
+    },
+    "72.5": {
+      "hair.front>eye.near": {
+        "frontSemanticId": "hair.front",
+        "backSemanticId": "eye.near",
+        "frontDepthOrder": 10,
+        "backDepthOrder": 7,
+        "frontVisiblePixels": 111101,
+        "backVisiblePixels": 17148,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 128249
+      },
+      "hair.side>ear.near": {
+        "frontSemanticId": "hair.side",
+        "backSemanticId": "ear.near",
+        "frontDepthOrder": 5,
+        "backDepthOrder": 4,
+        "frontVisiblePixels": 78460,
+        "backVisiblePixels": 6995,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 85455
+      },
+      "face.skin>hair.back": {
+        "frontSemanticId": "face.skin",
+        "backSemanticId": "hair.back",
+        "frontDepthOrder": 2,
+        "backDepthOrder": 1,
+        "frontVisiblePixels": 53837,
+        "backVisiblePixels": 32268,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 86105
+      },
+      "hair.ahoge>hair.front": {
+        "frontSemanticId": "hair.ahoge",
+        "backSemanticId": "hair.front",
+        "frontDepthOrder": 11,
+        "backDepthOrder": 10,
+        "frontVisiblePixels": 7947,
+        "backVisiblePixels": 111101,
+        "overlapPixels": 2784,
+        "backAlphaCoveredFraction": 0.025058,
+        "singleVisibleBoundaryPixels": 113480
+      }
+    },
+    "90": {
+      "hair.front>eye.near": {
+        "frontSemanticId": "hair.front",
+        "backSemanticId": "eye.near",
+        "frontDepthOrder": 10,
+        "backDepthOrder": 7,
+        "frontVisiblePixels": 113533,
+        "backVisiblePixels": 19053,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 132586
+      },
+      "hair.side>ear.near": {
+        "frontSemanticId": "hair.side",
+        "backSemanticId": "ear.near",
+        "frontDepthOrder": 5,
+        "backDepthOrder": 4,
+        "frontVisiblePixels": 105896,
+        "backVisiblePixels": 5479,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 111375
+      },
+      "face.skin>hair.back": {
+        "frontSemanticId": "face.skin",
+        "backSemanticId": "hair.back",
+        "frontDepthOrder": 2,
+        "backDepthOrder": 1,
+        "frontVisiblePixels": 82295,
+        "backVisiblePixels": 79556,
+        "overlapPixels": 15821,
+        "backAlphaCoveredFraction": 0.198866,
+        "singleVisibleBoundaryPixels": 130209
+      },
+      "hair.ahoge>hair.front": {
+        "frontSemanticId": "hair.ahoge",
+        "backSemanticId": "hair.front",
+        "frontDepthOrder": 11,
+        "backDepthOrder": 10,
+        "frontVisiblePixels": 9302,
+        "backVisiblePixels": 113533,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 122835
+      }
+    }
+  },
+  "occlusionPairCount": 16,
+  "occlusionMethod": "SOURCE_RGBA_ALPHA_OVERLAP_AND_DECLARED_SEMANTIC_DEPTH",
+  "preview": {
+    "privateRelativePath": "p15-hair-occlusion/hair-strands-contact.jpg",
+    "sha256": "6e5a6b71c01737c98064b0308bd6983c72a46e96a134393a983ad4e349859648"
+  },
+  "renderBaseline": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+  "artisticAcceptance": "PENDING_ORIGINAL_STRAND_IDENTITY_REVIEW",
+  "status": "P15_05_HAIR_SOURCE_CORRESPONDENCE_REGISTERED"
+}
