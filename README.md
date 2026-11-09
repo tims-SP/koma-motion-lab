@@ -10,6 +10,8 @@
 - [P14 实际源文件、37 帧与 Chromium 验收证据](experiments/gif-multiview-keyparts-mvp/evidence/p14-painted-view-qa.json)
 - [P15 语义笔触对应与视角遮挡研究](docs/plans/2026-11-09-p15-stroke-occlusion.md)
 - [P15 四角度、多方法、原画笔触诊断 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-view-transition-qa.json)
+- [P15-04 五官笔触与物理锚点 HTML 审查](experiments/gif-multiview-keyparts-mvp/review/p15-facial-strokes.html)
+- [P15-04 来源、Chromium 与验收证据](experiments/gif-multiview-keyparts-mvp/evidence/p15-04-acceptance.json)
 
 本实验固定使用此前批准的 P0 原创角色 `p0_character_001`（批准身份参考板与 `hero/hero_master.png`），直接生成八方向整头 GIF 以及按角度和语义分组的透明部件 GIF；每帧严格对应一个关键部位，逐帧校验后进入 RGBA ArtMesh 和 HTML VDD。
 

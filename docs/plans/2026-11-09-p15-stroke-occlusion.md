@@ -38,9 +38,32 @@
 - [x] P15-01：注册 65°/77.5° 源对照与逐层透明缺口诊断
 - [x] P15-02：实现有界形变实验参数，使用来源哈希及单元测试验证
 - [x] P15-03：建立原始 90° 与新中间角的语义内部纹理/笔触密度报告
-- [ ] P15-04：对 face.skin、nose、mouth、eye.near 建立局部可追溯锚点和逐笔触跨视角匹配
+- [x] P15-04：对 face.skin、nose、mouth、eye.near 建立局部可追溯锚点和逐笔触跨视角匹配，完成工程审查
 - [ ] P15-05：对 hair.front、hair.side、hair.back、hair.ahoge 建立分束对应与可见性/遮挡边界校验
 - [ ] P15-06：生成独立的 65°、77.5° 解剖原画留出参考，验证身份、轮廓和笔触的真实一致性
 - [ ] P15-07：补齐动图审查，在逐帧无可见重影、连续性及源身份验收后升级 0°–90° 艺术门禁
 
 原始 P0 Hero 身份母图 SHA-256 核验仍单独作为 T00；模型候选的重新绘制不能代替原始身份基准的核验。
+
+
+## P15-04 · 原创五官图层与笔触来源登记
+
+P5 物理解剖锚点以原始 45°/90° 坐标为来源，67.5°/72.5° 采用线性投影参考，并以真实中间视角 RGBA 蒙版检查投影位置附近的源像素支持。投影与蒙版质心均标记为辅助约束，不当作新绘制原画的真实解剖标注。
+
+- 四个角色语义部件：face.skin、eye.near、nose、mouth。
+- 三段相邻关键视角：45→67.5、67.5→72.5、72.5→90，共 12 组。
+- 复用 P10 内部笔触提取、颜色分组、逐笔触匹配和一对一歧义拒绝规则。实际保留 3 条高置信对应候选：脸部皮肤 2 条、嘴部 1 条。
+- 16 张原始/候选透明 PNG 全部验证源 SHA-256；Chromium HTML 四个部件视图截图 4 张，累计验证 16 次图像来源，浏览器 JS 错误与失败请求均为 0。
+- 五项锚点、语义 ID、像素支持和匹配退化回归测试通过，可通过单脚本重放。
+- 原画检查显示，中间视角的鼻、嘴笔触主要体现为色面，眼周部件包含发束区域。后续进行可追溯的独立细线原画校正与部件边界校准。
+- 工程验收：PASS_SOURCE_STROKE_AND_CHROMIUM_REVIEW。艺术签收：PENDING_INDEPENDENT_ARTISTIC_REVIEW，当前正式动画采用 P8 ArtMesh 遮挡基线。
+
+公开证据：
+- experiments/gif-multiview-keyparts-mvp/evidence/p15-facial-correspondence-qa.json
+- experiments/gif-multiview-keyparts-mvp/evidence/p15-04-acceptance.json
+
+HTML 入口：experiments/gif-multiview-keyparts-mvp/review/p15-facial-strokes.html。
+真实图层与截图：private-assets/p15-facial-strokes/。
+复现：在实验目录内，使用指定的隔离 Python 视觉环境、Node.js 和 Chromium Playwright 运行 scripts/run-p15-facial-correspondence.sh。
+
+P15-05 扩展头发前/侧/后/呆毛的语义线条对应与物理遮挡注册。
