@@ -1,0 +1,59 @@
+{
+  "schema": "KOMA-P0-P15-06-HOLDOUT-SOURCE-PREFLIGHT-V1",
+  "characterId": "p0_character_001",
+  "originalKeyViewCount": 3,
+  "originalKeyViewHashesVerified": true,
+  "originalP5AnchorsSHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+  "approvedIdentityExpectedSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+  "approvedHeroDirectSourceSHA256Verified": false,
+  "approvedHeroCandidateInventory": [
+    {
+      "assetRole": "HERO",
+      "path": "/root/koma-p0-designs/hero/hero_master.png",
+      "exists": false,
+      "sha256": null,
+      "matchesApprovedHeroSHA256": false,
+      "geometry": null
+    },
+    {
+      "assetRole": "REFERENCE_CANDIDATE",
+      "path": "/root/koma-p0-designs/hero_master.png",
+      "exists": false,
+      "sha256": null,
+      "matchesApprovedHeroSHA256": false,
+      "geometry": null
+    },
+    {
+      "assetRole": "REFERENCE_CANDIDATE",
+      "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/recovered-review/sources/generated-master.png",
+      "exists": true,
+      "sha256": "7868cdcde95ac5bf605c26be05af9525d1e0e51c329c1ddb65c108198c779e9b",
+      "matchesApprovedHeroSHA256": false,
+      "geometry": [
+        1254,
+        1254,
+        "RGBA"
+      ]
+    }
+  ],
+  "registeredInputAngles": [
+    0,
+    45,
+    90
+  ],
+  "generatedPaintedReferenceAngles": [
+    67.5,
+    72.5
+  ],
+  "requestedIndependentHoldoutAngles": [
+    65.0,
+    77.5
+  ],
+  "plannedIndependentSemanticAssets": 26,
+  "independentlyPaintedHoldoutAssetsAccepted": 0,
+  "readiness": "INPUT_KEYFRAMES_VERIFIED_IDENTITY_SOURCE_RECONCILIATION_REQUIRED",
+  "contractPath": "metadata/p15-holdout-generation-contract.json",
+  "contractSHA256": "203a0eb2bee711c8416c927400b6c953bfa837b3c27cc39a5f8e921bb246b3dc",
+  "sourceArtworkAcceptance": "PENDING_INDEPENDENT_HOLDOUT_ART",
+  "baselineRenderer": "P8_SEMANTIC_OCCLUSION_ARTMESH"
+}

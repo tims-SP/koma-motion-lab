@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_05_HAIR_STRAND_DEPTH_ENGINEERING_VERIFIED",
+  "status": "P15_06_SOURCE_AND_ARTMESH_IMPORTER_ENGINEERING_VERIFIED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_05_HAIR_AND_FACE_ENGINEERING_VERIFIED_ARTISTIC_REVIEW_PENDING",
+      "status": "P15_06_SOURCE_AND_IMPORTER_VERIFIED_INDEPENDENT_ART_PENDING",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -252,9 +252,11 @@
     "p15FacialQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-facial-correspondence-qa.json",
     "p15FacialAcceptance": "experiments/gif-multiview-keyparts-mvp/evidence/p15-04-acceptance.json",
     "p15HairQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-hair-correspondence-qa.json",
-    "p15HairAcceptance": "experiments/gif-multiview-keyparts-mvp/evidence/p15-05-acceptance.json"
+    "p15HairAcceptance": "experiments/gif-multiview-keyparts-mvp/evidence/p15-05-acceptance.json",
+    "p15HoldoutReadiness": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-source-readiness.json",
+    "p15HoldoutStageQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-stage-qa.json"
   },
-  "lastCompleted": "P15_05_28_SOURCE_LAYERS_23_STROKES_16_OCCLUSION_PAIRS_4_BROWSER_CAPTURES",
+  "lastCompleted": "P15_06_2_REAL_ART_FIXTURES_26_RGBA_PARTS_PIXEL_EXACT",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1041,6 +1043,35 @@
       "HTML": "review/p15-hair-strands.html",
       "plan": "docs/plans/2026-11-09-p15-hair-occlusion.md",
       "next": "P15-06 independently authored anatomical holdouts and P0 visual signoff"
+    },
+    "p15IndependentArtwork": {
+      "targetAngles": [
+        65.0,
+        77.5
+      ],
+      "sourceAngles": [
+        0,
+        45,
+        90
+      ],
+      "requiredRGBA": 26,
+      "authoredHoldoutAssetsAccepted": 0,
+      "realFixtureAngles": [
+        67.5,
+        72.5
+      ],
+      "verifiedFixtureLayers": 26,
+      "pixelExactRecompositions": 2,
+      "sourceIdentityHeroExpected": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+      "sourceHeroVerified": false,
+      "artisticAcceptance": "PENDING",
+      "engineerStatus": "P15_06_SOURCE_AND_ARTMESH_IMPORTER_VERIFIED",
+      "contract": "metadata/p15-holdout-generation-contract.json",
+      "readiness": "evidence/p15-06-source-readiness.json",
+      "ingestion": "scripts/p15_holdout_import.py",
+      "replay": "scripts/run-p15-holdout-import-smoke.sh",
+      "publicQA": "evidence/p15-06-stage-qa.json",
+      "plan": "docs/plans/2026-11-09-p15-06-independent-holdout-artwork.md"
     }
   }
 }

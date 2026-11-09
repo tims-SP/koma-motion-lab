@@ -1,0 +1,111 @@
+{
+  "schema": "KOMA-P0-P15-06-INDEPENDENT-HOLDOUT-ARTWORK-CONTRACT-V1",
+  "characterId": "p0_character_001",
+  "sourceOriginalViews": [
+    {
+      "yaw": 0,
+      "sourceRole": "ORIGINAL_P0_VIEW",
+      "path": "p1-front/diagnostics/front-reference.png",
+      "sha256": "626f9105d4413477aed256d3bca340166c767a84821bd289d37144449bd67dd3",
+      "geometry": [
+        1024,
+        1024,
+        "RGBA"
+      ]
+    },
+    {
+      "yaw": 45,
+      "sourceRole": "ORIGINAL_P0_VIEW",
+      "path": "p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "geometry": [
+        1024,
+        1024,
+        "RGBA"
+      ]
+    },
+    {
+      "yaw": 90,
+      "sourceRole": "ORIGINAL_P0_VIEW",
+      "path": "p2-views/whole/yaw090.png",
+      "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "geometry": [
+        1024,
+        1024,
+        "RGBA"
+      ]
+    }
+  ],
+  "sourceGeneratedArtReferences": [
+    {
+      "yaw": 67.5,
+      "sha256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+      "path": "p14-authored-candidates/yaw067p5-artmesh/yaw067p5-painted-semantic-composite.png",
+      "sourceRole": "GENERATED_PAINTED_REFERENCE"
+    },
+    {
+      "yaw": 72.5,
+      "sha256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+      "path": "p14-authored-candidates/yaw072p5-artmesh/yaw072p5-p0-source-mapped-artmesh.png",
+      "sourceRole": "GENERATED_PAINTED_REFERENCE"
+    }
+  ],
+  "physicalAnchorSourceSHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+  "originalHeroExpectedSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+  "originalHeroDimensions": [
+    1122,
+    1402
+  ],
+  "originalHeroSourceAvailable": false,
+  "holdingYawAngles": [
+    65.0,
+    77.5
+  ],
+  "assetsPerView": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "assetsPerViewCount": 13,
+  "canvas": [
+    1024,
+    1024
+  ],
+  "renderRequirements": {
+    "sourceRole": "INDEPENDENT_AUTHORED_2D_KEYFRAME",
+    "referenceMode": "approved original character identity with registered source key poses",
+    "style": "Japanese TV anime, consistent thin-line ink and restrained cel shading",
+    "alpha": "RGBA8 antialiased transparent native PNG",
+    "partIsolation": "one semantic part per native full-canvas PNG",
+    "headYawConvention": "0 front, 90 camera at character right, consistent orthographic bust",
+    "viewSemantics": "65 and 77.5 target yaw are independently drawn anatomical references, not reused VDD output",
+    "visibility": "view-dependent near/far eye, ear and golden hair clip occlusion",
+    "strandCorrespondence": "original hair bangs, back hair and one ahoge must be recognizable across angle",
+    "filenames": "parts/yaw065/<semantic-id>.png and parts/yaw077p5/<semantic-id>.png"
+  },
+  "comparison": {
+    "renderEngine": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+    "testAngles": [
+      65.0,
+      77.5
+    ],
+    "targetSilhouetteIoU": 0.9,
+    "maxRelativeSilhouetteAreaError": 0.08,
+    "manualCriteria": "face, near eye, ear, hair strand, nose and mouth exact visual identity; no ghosting"
+  },
+  "admission": {
+    "sourceIdentityGate": "P0_HERO_SHA256_VERIFIED",
+    "sourceArtworkGate": "INDEPENDENT_PAINTED_SEMANTIC_PARTS_AND_SHA256",
+    "visualAcceptanceGate": "INDEPENDENT_ART_AND_VDD_COMPARISON"
+  }
+}
