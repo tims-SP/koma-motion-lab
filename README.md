@@ -6,6 +6,8 @@
 
 - [MVP 制作与验收计划](docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md)
 - [T00–T05 任务状态与资产合同](experiments/gif-multiview-keyparts-mvp/tasks.json)
+- [P14 五视角原画及 ArtMesh 审查计划](docs/plans/2026-11-09-p14-painted-view-review.md)
+- [P14 实际源文件、37 帧与 Chromium 验收证据](experiments/gif-multiview-keyparts-mvp/evidence/p14-painted-view-qa.json)
 
 本实验固定使用此前批准的 P0 原创角色 `p0_character_001`（批准身份参考板与 `hero/hero_master.png`），直接生成八方向整头 GIF 以及按角度和语义分组的透明部件 GIF；每帧严格对应一个关键部位，逐帧校验后进入 RGBA ArtMesh 和 HTML VDD。
 

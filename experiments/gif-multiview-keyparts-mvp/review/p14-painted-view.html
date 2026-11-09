@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 原画 · 五视角 ArtMesh 转头审查</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Noto Sans CJK SC",sans-serif;
+ background:#111a27;color:#f4f8ff}*{box-sizing:border-box}
+body{max-width:1550px;margin:auto;padding:18px}
+h1{font-size:21px;margin:0 0 9px}h2{font-size:16px;margin:20px 0 8px}
+p{color:#bbccdf;line-height:1.55}label{font-size:13px;color:#d1e1ef}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:11px;
+ border:1px solid #4d6882;padding:14px;background:#203149;border-radius:10px}
+select,input{background:#2a405d;border:1px solid #6d859f;color:#e7f5fd;
+ padding:9px;border-radius:7px}input[type=range]{width:min(340px,60vw);accent-color:#77d3c8}
+canvas{display:block;width:100%;height:auto;background:#2c4057;border:1px solid #526f8b;border-radius:9px}
+#status{color:#bbebda;font-size:13px;margin:14px 0}
+details{margin-top:12px;border:1px solid #526f8b;border-radius:7px;padding:10px}
+pre{white-space:pre-wrap;word-break:break-word;font-size:12px;color:#c1d6e9}
+@media(max-width:650px){body{padding:8px}}
+</style></head>
+<body>
+<h1>p0_character_001 · 五视角 ArtMesh 转头</h1>
+<p>P0 原始 0°/45°/90° 图层与 67.5°/72.5° 独立绘制候选联合驱动。左侧为 P8 参考，右侧为 P14 视角相关形变。按部件查看源图像和透明图层，所有图像在浏览器内执行 SHA-256 校验。</p>
+<div class="controls">
+<label for="angle">转头角度</label><input id="angle" type="range" min="0" max="90" step="2.5" value="67.5">
+<output id="angleLabel">67.5°</output>
+<label for="artView">部件原画</label><select id="artView"><option value="67.5">67.5°</option><option value="72.5">72.5°</option></select>
+<label for="part">语义部件</label><select id="part"></select>
+</div>
+<p id="status">正在核验原画与运动帧来源…</p>
+<h2>37 帧连续转头 · P8 与 P14</h2>
+<canvas id="motion" width="1024" height="552" aria-label="P0 原画 P8 与 P14 真正图层渲染对比"></canvas>
+<h2>45° 原画 / 独立绘制候选 / 90° 原画</h2>
+<canvas id="semantic" width="1536" height="552" aria-label="原画语义部件透明叠合来源"></canvas>
+<details><summary>来源哈希、原画锚点和部件显隐</summary><pre id="detail"></pre></details>
+<script src="./p14-painted-view.js" defer></script></body></html>
