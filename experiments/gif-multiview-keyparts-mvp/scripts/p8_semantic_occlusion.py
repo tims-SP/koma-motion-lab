@@ -239,7 +239,7 @@ def render(root,out,angles,mode="confidence",publish_layers=False):
     rendered=native_to_rgba(merged)
     whole=alpha_over(whole,rendered)
     sourceLayerCount+=1
-    if publish_layers and angle in (22.5,67.5,72.5):
+    if publish_layers:
      dest=out/"layers"/str(angle).replace(".","p")
      dest.mkdir(parents=True,exist_ok=True)
      Image.fromarray(rendered,"RGBA").save(dest/(sid+".png"))

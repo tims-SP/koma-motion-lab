@@ -543,6 +543,40 @@
       "reviewArchive": "private-assets/exports/p15-20-canonical-source-views.zip",
       "supersedes": "P15-16 extracted 768px role files for source completeness; historical P15-16 report retained unchanged",
       "next": "Map canonical 0/45/90 sources to intermediate 55-77.5 and validate independently authored part coverage before VDD"
+    },
+    "p15IntermediateLayeredSourceDerived": {
+      "characterId": "p0_character_001",
+      "status": "LAYER_EXPORT_PASS_INDEPENDENT_ART_PENDING",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "roleSlots": 65,
+      "nonemptyRoleSlots": 60,
+      "nativeResolution": [
+        443,
+        443
+      ],
+      "editableResolution": [
+        1024,
+        1024
+      ],
+      "nativeRoundtripMaxPixelDelta": 0,
+      "baselineFrameSHAUnchanged": true,
+      "independentlyPaintedLayers": 0,
+      "hiddenUnderpaintApproved": false,
+      "unitTestsPassed": 8,
+      "chromiumImageLoads": 140,
+      "chromiumInteractions": 6,
+      "chromiumErrors": 0,
+      "qa": "evidence/p15-21-intermediate-components-qa.json",
+      "browserQa": "evidence/p15-21-browser-qa.json",
+      "reviewZip": "private-assets/exports/p15-21-layered-review.zip",
+      "plan": "docs/plans/2026-11-10-p15-21-layered-intermediate-artmesh.md",
+      "next": "Independent middle-angle original paintings and underpaint quality acceptance"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
