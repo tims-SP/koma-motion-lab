@@ -1109,6 +1109,12 @@
       "HTML": "review/p15-06-keyview-art.html",
       "reviewRunner": "scripts/run-p15-06-generated-review.sh",
       "plan": "docs/plans/2026-11-09-p15-06-independent-holdout-artwork.md",
+      "viewGeometryQA": "evidence/p15-06-view-geometry-qa.json",
+      "holdoutSilhouetteIoU": {
+        "65": 0.730488,
+        "77.5": 0.855089
+      },
+      "visualAssessment": "REWORK_REQUIRED",
       "next": "P15-06-E6 semantic art boundary, anatomical angle and strand acceptance"
     }
   }

@@ -101,3 +101,4 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-06 角色来源与 ArtMesh 导入 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-06-stage-qa.json)
 - [P15-06 独立多视角原画与部件 HTML 审查](experiments/gif-multiview-keyparts-mvp/review/p15-06-keyview-art.html)
 - [P15-06 新原画、26 张 RGBA 与隐藏补绘 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-06-generated-keyviews-qa.json)
+- [P15-06 中间视角轮廓、画布对齐与 P8 对照](experiments/gif-multiview-keyparts-mvp/evidence/p15-06-view-geometry-qa.json)
