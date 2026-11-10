@@ -117,3 +117,9 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-09 P5 20 锚点原画几何 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-09-anchor-pose-qa.json)
 - [P15-09 连续转头和画面连续性 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-09-midarc-qa.json)
 - [P15-09 离线 HTML 审查资源验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-09-delivery.json)
+
+- [P15-10 ArtMesh 语义分层与遮挡验收](docs/plans/2026-11-10-p15-10-semantic-view-transition.md)
+- [P15-10 55°–65° 部件交互 HTML](experiments/gif-multiview-keyparts-mvp/review/p15-10-semantic.html)
+- [P15-10 13 部件 RGBA 来源校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-source-qa.json)
+- [P15-10 语义转头连续性 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-arc-qa.json)
+- [P15-10 离线审查资源校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-10-delivery.json)

@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_09_ANATOMICAL_POSE_REFERENCE_ENGINEERING_VERIFIED",
+  "status": "P15_10_SEMANTIC_ARTMESH_ENGINEERING_VERIFIED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_09_ANCHOR_GEOMETRY_ENGINEERING_PASS_PAINTED_CORRESPONDENCE_IN_PROGRESS",
+      "status": "P15_10_ROLE_LOCAL_RENDER_COMPLETE_ART_CORRESPONDENCE_IN_PROGRESS",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_09_PRIVATE_ARTIFACT_REPRODUCIBILITY_VERIFIED",
+      "status": "P15_10_PRIVATE_HTML_PACKAGE_SHA_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -262,9 +262,12 @@
     "p15PoseSourceDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-08-delivery.json",
     "p15AnchorGeometry": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-anchor-pose-qa.json",
     "p15AnchorMotion": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-midarc-qa.json",
-    "p15AnchorDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-delivery.json"
+    "p15AnchorDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-delivery.json",
+    "p15SemanticSource": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-source-qa.json",
+    "p15SemanticArc": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-arc-qa.json",
+    "p15SemanticDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-delivery.json"
   },
-  "lastCompleted": "P15_09_P5_ANCHORS_9_DYNAMIC_FRAMES_6_BROWSER_CAPTURES_6_UNIT_TESTS",
+  "lastCompleted": "P15_10_THIRTEEN_55_RGBA_FIVE_ANGLES_8_CHROMIUM_CAPTURES_7_UNIT_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1251,6 +1254,37 @@
         "verifiedEntries": 41
       },
       "next": "P15-10 independently painted double-eye yaw55 with semantic occlusion, source side and new hidden-angle acceptance"
+    },
+    "p15SemanticArtMesh": {
+      "sourceOriginal45SHA": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "P5Geometry55SHA": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+      "painted65SHA": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "semanticRoleCount": 13,
+      "geometryOwnerRGBAExact": true,
+      "source55FarEyePixels": 14963,
+      "source55GoldClipPixels": 3527,
+      "renderedFrames": 5,
+      "browserCaptures": 8,
+      "browserImageLoads": 32,
+      "testsPassed": 7,
+      "adjacentAlphaIoU": [
+        0.93669,
+        0.78654,
+        0.93416,
+        0.93313
+      ],
+      "artisticStatus": "INDEPENDENT_PAINTED_INBETWEENS_AND_HIDDEN_UNDERPAINT_PENDING",
+      "originalHeroSourceVerified": false,
+      "plan": "docs/plans/2026-11-10-p15-10-semantic-view-transition.md",
+      "html": "review/p15-10-semantic.html",
+      "runner": "scripts/run-p15-10-review.sh",
+      "reviewArtifact": {
+        "path": "private-assets/exports/p15-10-artmesh-correspondence-review.zip",
+        "sha256": "de5094eb956ea6c857827131d4e4e820473fdaf3855e64a5d1e71cbf319a1892",
+        "bytes": 20956043,
+        "entriesVerified": 124
+      },
+      "next": "P15-11 independently authored 57.5/60 views, semantic visible/hidden stroke correspondence and held-out art QA"
     }
   }
 }

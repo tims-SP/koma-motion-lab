@@ -1,0 +1,170 @@
+{
+  "schema": "KOMA-P15-10-ROLE-LOCAL-CORRESPONDENCE-V1",
+  "characterId": "p0_character_001",
+  "roleCount": 13,
+  "roles": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "source55SHA256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+  "source65SHA256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+  "frames": [
+    {
+      "yaw": 55.0,
+      "path": "p15-10-semantic-pose/arc/yaw55.png",
+      "sha256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+      "parts": {
+        "body.reference": 159565,
+        "hair.back": 57468,
+        "face.skin": 22118,
+        "ear.far": 0,
+        "ear.near": 4527,
+        "hair.side": 76822,
+        "eye.far": 14963,
+        "eye.near": 18158,
+        "nose": 2282,
+        "mouth": 2354,
+        "hair.front": 97444,
+        "hair.ahoge": 10944,
+        "hair.clip.cross_gold": 3491
+      },
+      "partDirectory": "p15-10-semantic-pose/arc/yaw55/parts",
+      "wholeSource": "P5 55 geometric key"
+    },
+    {
+      "yaw": 57.5,
+      "path": "p15-10-semantic-pose/arc/yaw57p5.png",
+      "sha256": "864368bc8b1cfcbe74460df0da060b82d3fc184e202cb370dc2124981f5c0c76",
+      "parts": {
+        "body.reference": 156717,
+        "hair.back": 58457,
+        "face.skin": 20235,
+        "ear.far": 0,
+        "ear.near": 5037,
+        "hair.side": 79504,
+        "eye.far": 13990,
+        "eye.near": 19215,
+        "nose": 1689,
+        "mouth": 1978,
+        "hair.front": 96157,
+        "hair.ahoge": 11641,
+        "hair.clip.cross_gold": 2995
+      },
+      "partDirectory": "p15-10-semantic-pose/arc/yaw57p5/parts",
+      "wholeSource": "ArtMesh role-local correspondence"
+    },
+    {
+      "yaw": 60.0,
+      "path": "p15-10-semantic-pose/arc/yaw60.png",
+      "sha256": "a2585664102aee7deb92af80f05e0c12e9e01e8480e4c43a329cabd4d3f4c31f",
+      "parts": {
+        "body.reference": 100653,
+        "hair.back": 33108,
+        "face.skin": 29330,
+        "ear.far": 0,
+        "ear.near": 2150,
+        "hair.side": 91654,
+        "eye.far": 0,
+        "eye.near": 10565,
+        "nose": 7039,
+        "mouth": 5379,
+        "hair.front": 119574,
+        "hair.ahoge": 8966,
+        "hair.clip.cross_gold": 0
+      },
+      "partDirectory": "p15-10-semantic-pose/arc/yaw60/parts",
+      "wholeSource": "ArtMesh role-local correspondence"
+    },
+    {
+      "yaw": 62.5,
+      "path": "p15-10-semantic-pose/arc/yaw62p5.png",
+      "sha256": "f6a74609d65fb623d2de26f1aae2b041a92aa8af519d3b7d99c9b8ea4f411ccb",
+      "parts": {
+        "body.reference": 98028,
+        "hair.back": 33468,
+        "face.skin": 26485,
+        "ear.far": 0,
+        "ear.near": 1587,
+        "hair.side": 92657,
+        "eye.far": 0,
+        "eye.near": 9688,
+        "nose": 5888,
+        "mouth": 4046,
+        "hair.front": 121452,
+        "hair.ahoge": 9095,
+        "hair.clip.cross_gold": 0
+      },
+      "partDirectory": "p15-10-semantic-pose/arc/yaw62p5/parts",
+      "wholeSource": "ArtMesh role-local correspondence"
+    },
+    {
+      "yaw": 65.0,
+      "path": "p15-10-semantic-pose/arc/yaw65.png",
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "parts": {
+        "body.reference": 95613,
+        "hair.back": 34443,
+        "face.skin": 23962,
+        "ear.far": 0,
+        "ear.near": 1204,
+        "hair.side": 94236,
+        "eye.far": 0,
+        "eye.near": 9254,
+        "nose": 4184,
+        "mouth": 2574,
+        "hair.front": 121524,
+        "hair.ahoge": 9185,
+        "hair.clip.cross_gold": 0
+      },
+      "partDirectory": "p15-10-semantic-pose/arc/yaw65/parts",
+      "wholeSource": "registered 65 source"
+    }
+  ],
+  "transition": [
+    {
+      "start": 55.0,
+      "end": 57.5,
+      "semanticAlphaIoU": 0.93669,
+      "P15_09AlphaIoU": 0.89519
+    },
+    {
+      "start": 57.5,
+      "end": 60.0,
+      "semanticAlphaIoU": 0.78654,
+      "P15_09AlphaIoU": 0.9087
+    },
+    {
+      "start": 60.0,
+      "end": 62.5,
+      "semanticAlphaIoU": 0.93416,
+      "P15_09AlphaIoU": 0.90896
+    },
+    {
+      "start": 62.5,
+      "end": 65.0,
+      "semanticAlphaIoU": 0.93313,
+      "P15_09AlphaIoU": 0.90784
+    }
+  ],
+  "contact": {
+    "path": "p15-10-semantic-pose/arc/p15-10-semantic-arc-contact.jpg",
+    "sha256": "5e54cad11f5a06cba6c7e45ba4e1bc202e9f90c149df98d7cf89173677b83668"
+  },
+  "source55FarEyeVisible": true,
+  "source65FarEyeHidden": true,
+  "source65HairclipHidden": true,
+  "renderStatus": "ROLE_LOCAL_ARTMESH_FRAMES_REGISTERED",
+  "artisticStatus": "INDEPENDENT_PAINTED_INBETWEENS_AND_HIDDEN_UNDERPAINT_PENDING",
+  "sourceClaim": "55 derived key geometry; 65 independently generated source with semantic raster partitions"
+}

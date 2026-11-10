@@ -1,0 +1,12 @@
+{
+  "schema": "KOMA-P15-10-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-10-artmesh-correspondence-review.zip",
+  "sha256": "de5094eb956ea6c857827131d4e4e820473fdaf3855e64a5d1e71cbf319a1892",
+  "sizeBytes": 20956043,
+  "entriesVerified": 124,
+  "html": "review/p15-10-semantic.html",
+  "semanticRoles": 13,
+  "capturedScreenshots": 8,
+  "artisticStatus": "INDEPENDENT_PAINTED_INBETWEENS_AND_HIDDEN_UNDERPAINT_PENDING"
+}

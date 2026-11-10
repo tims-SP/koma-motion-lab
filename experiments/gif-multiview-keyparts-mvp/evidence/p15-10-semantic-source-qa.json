@@ -1,0 +1,133 @@
+{
+  "schema": "KOMA-P15-10-GEOMETRY-OWNERSHIP-V1",
+  "characterId": "p0_character_001",
+  "angle": 55.0,
+  "source45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "P5Pose55SHA256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+  "semanticLayerCount": 13,
+  "semanticLayers": [
+    {
+      "semanticId": "body.reference",
+      "depthOrder": 0,
+      "outputPath": "p15-10-semantic-pose/yaw055/body.reference.png",
+      "sha256": "d287103d4d8cb0e1a363ca97d9faa30502396f4b9e489b5e2d0fd3ed93aaf16f",
+      "visiblePixels": 164598,
+      "source45SHA256": "8097f37ffa4b6a81d94f7eb90e35464408c06e0a8d4267868cc30e21179c52b1",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "hair.back",
+      "depthOrder": 1,
+      "outputPath": "p15-10-semantic-pose/yaw055/hair.back.png",
+      "sha256": "3dd454327dd2de48c65059f03cec74d4203f250ce8fb0db42bfbca3bbb6ad1f5",
+      "visiblePixels": 70809,
+      "source45SHA256": "47adcbb5de5912537f0023d9daa2f6302a7746d7e6813139d63772f3c899e36e",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "face.skin",
+      "depthOrder": 2,
+      "outputPath": "p15-10-semantic-pose/yaw055/face.skin.png",
+      "sha256": "f6dd3059c2c18c125a9dc24d00c7c3a8f4205088402ea839d86f35f7d1f6bc23",
+      "visiblePixels": 22118,
+      "source45SHA256": "9bdb945a26d33351602cd424ef683f5de57d79b05f2d246efe627a942c2bc5c3",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "ear.far",
+      "depthOrder": 3,
+      "outputPath": "p15-10-semantic-pose/yaw055/ear.far.png",
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+      "visiblePixels": 0,
+      "source45SHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "ear.near",
+      "depthOrder": 4,
+      "outputPath": "p15-10-semantic-pose/yaw055/ear.near.png",
+      "sha256": "2f85d4ab7ef937ebb25a0edfde834a496187392bf91514e334465eac17657125",
+      "visiblePixels": 4527,
+      "source45SHA256": "94f221fe1b606c9baaf0bfe7d4ebe68d448c33d5e506a9447c4cb7e6d1213b78",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "hair.side",
+      "depthOrder": 5,
+      "outputPath": "p15-10-semantic-pose/yaw055/hair.side.png",
+      "sha256": "b67d5570869170fcbf8c2bb6de40158d5801da1f6574c2d49e617fd1de762852",
+      "visiblePixels": 77521,
+      "source45SHA256": "46cda21bac8f4624bc14f30980ba52a80d077c1bad5431dab180daa1fc048095",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "eye.far",
+      "depthOrder": 6,
+      "outputPath": "p15-10-semantic-pose/yaw055/eye.far.png",
+      "sha256": "508680655ffea940c6991124f31e44d4eaf2c3d9893f3b89ebcb039ea10f3e30",
+      "visiblePixels": 14963,
+      "source45SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "eye.near",
+      "depthOrder": 7,
+      "outputPath": "p15-10-semantic-pose/yaw055/eye.near.png",
+      "sha256": "d4ac153ca20157aac0e92c34a4930c38dc711ba41ef888f18aed658c59980ab6",
+      "visiblePixels": 18158,
+      "source45SHA256": "28c985c102668e2448e26064b2eb36586c9f15755d8ea655944967912a6af0fe",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "nose",
+      "depthOrder": 8,
+      "outputPath": "p15-10-semantic-pose/yaw055/nose.png",
+      "sha256": "eb3b30f9bb1fe757d81ed4053d75a1be87969ada40ebb89d000802e5e8a23b16",
+      "visiblePixels": 2282,
+      "source45SHA256": "af71c8ed7b022d763d7d357971488c69f60f31ea37bdc0e14b1d140f71fb79f5",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "mouth",
+      "depthOrder": 9,
+      "outputPath": "p15-10-semantic-pose/yaw055/mouth.png",
+      "sha256": "80379639f80027538ea761fffcce013d1949837cf5be1d02bff51902215f2078",
+      "visiblePixels": 2354,
+      "source45SHA256": "b783bbb31681155ca68ad56f5d18c91c7e913be5a398e928f06ce6517ec7ceb4",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "hair.front",
+      "depthOrder": 10,
+      "outputPath": "p15-10-semantic-pose/yaw055/hair.front.png",
+      "sha256": "fbd6a3fae0fbfb6ae812d37b69e922ac43bca5198981860123ab3899e93925be",
+      "visiblePixels": 98183,
+      "source45SHA256": "bfa6223060975873da9a5335f09cc424ffc5e1224c1fadab5923c11eaa50a6de",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "hair.ahoge",
+      "depthOrder": 11,
+      "outputPath": "p15-10-semantic-pose/yaw055/hair.ahoge.png",
+      "sha256": "bd00723e22814936cc8cfdf46ed2989807d2623857586b0711c4d735713640b0",
+      "visiblePixels": 11303,
+      "source45SHA256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201",
+      "artRole": "P5 derived visible-raster ownership"
+    },
+    {
+      "semanticId": "hair.clip.cross_gold",
+      "depthOrder": 12,
+      "outputPath": "p15-10-semantic-pose/yaw055/hair.clip.cross_gold.png",
+      "sha256": "e95976e1db5ad54cc22fc21be7e5570001550543018e0428d4dafc1f2f7a2b63",
+      "visiblePixels": 3527,
+      "source45SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+      "artRole": "P5 derived visible-raster ownership"
+    }
+  ],
+  "visibleUnownedFallbackPixels": 6172,
+  "pixelExactComposite": true,
+  "farEyePixels": 14963,
+  "hairclipPixels": 3527,
+  "representation": "P5-anchored ownership labels with source texture",
+  "sourceApproval": "INDEPENDENT_55_PAINTING_AND_HIDDEN_UNDERPAINT_REQUIRED"
+}
