@@ -128,3 +128,9 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-11 57.5°/60° 原画交互审查 HTML](experiments/gif-multiview-keyparts-mvp/review/p15-11-keyview-art.html)
 - [P15-11 生成原画来源与身份校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-11-source-candidate-qa.json)
 - [P15-11 离线画面与透明图层归档校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-11-delivery.json)
+
+- [P15-12 相机姿态标定与原画质量验收](docs/plans/2026-11-10-p15-12-camera-pose-calibration.md)
+- [P15-12 相机约束交互 HTML](experiments/gif-multiview-keyparts-mvp/review/p15-12-pose-calibration.html)
+- [P15-12 角色锚点校准记录](experiments/gif-multiview-keyparts-mvp/evidence/p15-12-camera-proxy-qa.json)
+- [P15-12 独立原画绘制候选验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-12-guided-candidate-qa.json)
+- [P15-12 离线 HTML 交付哈希](experiments/gif-multiview-keyparts-mvp/evidence/p15-12-delivery.json)

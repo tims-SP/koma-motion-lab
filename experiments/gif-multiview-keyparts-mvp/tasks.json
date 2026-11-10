@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_11_SOURCE_GENERATION_AND_ARTWORK_AUDIT_COMPLETE",
+  "status": "P15_12_CAMERA_PROXY_AND_HTML_ENGINEERING_VERIFIED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_11_PAINTED_VIEW_SOURCE_AUDIT_COMPLETE_ANGLE_CALIBRATION_NEXT",
+      "status": "P15_12_CAMERA_POSE_GUIDES_VALIDATED_ART_SOURCE_CORRESPONDENCE_NEXT",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_11_PRIVATE_ARTWORK_HTML_AND_MATTE_PACKAGE_SHA_VERIFIED",
+      "status": "P15_12_PRIVATE_HTML_REVIEW_PACKAGE_SHA_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -267,9 +267,12 @@
     "p15SemanticArc": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-arc-qa.json",
     "p15SemanticDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-delivery.json",
     "p15IndependentPaintingAudit": "experiments/gif-multiview-keyparts-mvp/evidence/p15-11-source-candidate-qa.json",
-    "p15IndependentPaintingDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-11-delivery.json"
+    "p15IndependentPaintingDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-11-delivery.json",
+    "p15CameraProxy": "experiments/gif-multiview-keyparts-mvp/evidence/p15-12-camera-proxy-qa.json",
+    "p15CameraGuidedArtwork": "experiments/gif-multiview-keyparts-mvp/evidence/p15-12-guided-candidate-qa.json",
+    "p15CameraDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-12-delivery.json"
   },
-  "lastCompleted": "P15_11_FOUR_GENERATED_PAINTINGS_FOUR_RGBA_2_BROWSER_6_TESTS_22_ARCHIVE_FILES",
+  "lastCompleted": "P15_12_12_ANCHORS_7_ANGLES_2_GUIDED_SOURCES_4_BROWSER_7_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1315,6 +1318,40 @@
         "entries": 22
       },
       "next": "P15-12 establish canonical 3D anchor pose calibration, regenerate view-consistent source and independently painted 13 semantic parts"
+    },
+    "p15CameraPoseConstraints": {
+      "characterId": "p0_character_001",
+      "sourceLandmarksSHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+      "sourcePartRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+      "anchors": 12,
+      "calibrationAngles": [
+        45.0,
+        55.0,
+        57.5,
+        60.0,
+        62.5,
+        65.0,
+        90.0
+      ],
+      "guidedNewPaintingCandidates": 2,
+      "acceptedIndependentKeyPaintings": 0,
+      "acceptedNewArtMeshLayers": 0,
+      "cameraGuides": 5,
+      "chromiumScreenshots": 4,
+      "chromiumImagesLoaded": 12,
+      "unitTestsPassed": 7,
+      "artisticStatus": "GEOMETRY_GUIDES_VALID_ARTWORK_POSE_REVIEW",
+      "originalHeroSourceVerified": false,
+      "plan": "docs/plans/2026-11-10-p15-12-camera-pose-calibration.md",
+      "html": "review/p15-12-pose-calibration.html",
+      "runner": "scripts/run-p15-12-review.sh",
+      "privateReviewArtifact": {
+        "path": "private-assets/exports/p15-12-camera-pose-review.zip",
+        "sha256": "7ce26d0379f80b94c9250befd00828655015a4dce174ab7af480b129b2b1aeb6",
+        "bytes": 8252034,
+        "entries": 20
+      },
+      "next": "P15-13 structurally conditioned painting with fixed camera anchors and source-aware facial layer occlusion"
     }
   }
 }
