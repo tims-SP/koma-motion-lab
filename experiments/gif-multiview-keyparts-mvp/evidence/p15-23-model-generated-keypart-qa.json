@@ -1,0 +1,169 @@
+{
+  "schema": "KOMA-P15-23-GENERATED-PART-CUTOUT-QA-V1",
+  "characterId": "p0_character_001",
+  "sourceGeneration": "Connected Hugging Face Qwen-Image-Fast, four independently invoked model outputs",
+  "modelGeneratedSourceCount": 4,
+  "sourceCompliance": "FULL_HEAD_OR_FACE_GENERATED_DESPITE_ISOLATION_PROMPT",
+  "isolatedNativeSemanticSourcesCount": 0,
+  "extractMethod": "PALETTE_AND_SPATIAL_MASK_FROM_NEW_MODEL_IMAGE_NO_VDD_ALPHA_REUSE",
+  "targetAngle": 60,
+  "sourceVddQaSHA256": "c3cc1362f949fb04af03b8a6bedacfe75a6853d456628ff04a4a8ad1d6c0d7d9",
+  "parts": [
+    {
+      "role": "hair.ahoge",
+      "model": "Qwen-Image-Fast",
+      "seed": 602302,
+      "account": "wfswhytrjutrj",
+      "source": "p15-23-hf-independent-parts/ahoge-yaw060-raw.webp",
+      "sourceSHA256": "6d78fdb94cf719191a6ce03b1591ffd6327fba886f0d5e4c8857fe791754c45e",
+      "sourceImageCanvas": [
+        1024,
+        1024
+      ],
+      "sourceBBox": [
+        259,
+        26,
+        762,
+        268
+      ],
+      "registeredTargetBBox": [
+        413,
+        11,
+        644,
+        149
+      ],
+      "isolated": "p15-23-cutout-candidates/hair.ahoge.isolated.png",
+      "isolatedSHA256": "6f8fa14553203a6dad86f4aab5c29a1d73ca03c3ac389ca110afbeb52a9f9761",
+      "registered": "p15-23-cutout-candidates/hair.ahoge.registered.png",
+      "registeredSHA256": "69d81ceb831a94f9b7e69e6c88937d8217a934eaa45abf45d7dc7557ead60e0a",
+      "originalModelSilhouetteRetained": true,
+      "reusedOldVddAlpha": false,
+      "nontransparentPixels": 11970,
+      "alphaIoUWithVDD": 0.33319,
+      "registeredNontransparentOutsideTargetBBox": 0,
+      "generatedSourceWasIsolated": false,
+      "identityAccepted": false,
+      "artisticAcceptance": false
+    },
+    {
+      "role": "hair.side",
+      "model": "Qwen-Image-Fast",
+      "seed": 602304,
+      "account": "kkdcgtx",
+      "source": "p15-23-hf-independent-parts/side-hair-yaw060-raw.webp",
+      "sourceSHA256": "8a3d7acee86c6a0f8dffd630aea9097bfcec292a238dd699fbd6af9e55c85df3",
+      "sourceImageCanvas": [
+        1024,
+        1024
+      ],
+      "sourceBBox": [
+        390,
+        237,
+        913,
+        917
+      ],
+      "registeredTargetBBox": [
+        161,
+        346,
+        561,
+        779
+      ],
+      "isolated": "p15-23-cutout-candidates/hair.side.isolated.png",
+      "isolatedSHA256": "28a65ed3cc821e4350f70976e753f9ef64dcc43adae43b51798c94d4e82a4eda",
+      "registered": "p15-23-cutout-candidates/hair.side.registered.png",
+      "registeredSHA256": "641c5ae3670d1095a5a45bd507fa7a989e6b91101861ff0361910c2efb0bca19",
+      "originalModelSilhouetteRetained": true,
+      "reusedOldVddAlpha": false,
+      "nontransparentPixels": 114559,
+      "alphaIoUWithVDD": 0.58047,
+      "registeredNontransparentOutsideTargetBBox": 0,
+      "generatedSourceWasIsolated": false,
+      "identityAccepted": false,
+      "artisticAcceptance": false
+    },
+    {
+      "role": "eye.far",
+      "model": "Qwen-Image-Fast",
+      "seed": 602303,
+      "account": "dfvswegwseg",
+      "source": "p15-23-hf-independent-parts/far-eye-yaw060-raw.webp",
+      "sourceSHA256": "2c6a910c7830be50ed172d5467467e37e96f9afa25e92e9b6f3c0c7671c066ac",
+      "sourceImageCanvas": [
+        1024,
+        1024
+      ],
+      "sourceBBox": [
+        228,
+        339,
+        862,
+        821
+      ],
+      "registeredTargetBBox": [
+        637,
+        386,
+        799,
+        523
+      ],
+      "isolated": "p15-23-cutout-candidates/eye.far.isolated.png",
+      "isolatedSHA256": "731218912d1f863d643ed984e97346de58f4b12004e6620105ca713323b7cdef",
+      "registered": "p15-23-cutout-candidates/eye.far.registered.png",
+      "registeredSHA256": "77a5150817d182183e93abd7fa8090444eca7921333412b766dde3f440151bd0",
+      "originalModelSilhouetteRetained": true,
+      "reusedOldVddAlpha": false,
+      "nontransparentPixels": 7383,
+      "alphaIoUWithVDD": 0.38283,
+      "registeredNontransparentOutsideTargetBBox": 0,
+      "generatedSourceWasIsolated": false,
+      "identityAccepted": false,
+      "artisticAcceptance": false
+    },
+    {
+      "role": "hair.clip.cross_gold",
+      "model": "Qwen-Image-Fast",
+      "seed": 602301,
+      "account": "kkdcgtx",
+      "source": "p15-23-hf-independent-parts/clip-yaw060-raw.webp",
+      "sourceSHA256": "c7206a24d6c0aef2b9d6302dfd9a1870cc0ed46ece47dc6f297580ff5ad05ad7",
+      "sourceImageCanvas": [
+        1024,
+        1024
+      ],
+      "sourceBBox": [
+        318,
+        330,
+        745,
+        676
+      ],
+      "registeredTargetBBox": [
+        732,
+        282,
+        799,
+        371
+      ],
+      "isolated": "p15-23-cutout-candidates/hair.clip.cross_gold.isolated.png",
+      "isolatedSHA256": "85bf1158ba7d21034429cb6fe6a235676af82760d36de2e902aa3e38a7eaaf84",
+      "registered": "p15-23-cutout-candidates/hair.clip.cross_gold.registered.png",
+      "registeredSHA256": "85cdd5779612413cb986576aa89a79085590d92fc0ff9b44e99f26a9b8593a1d",
+      "originalModelSilhouetteRetained": true,
+      "reusedOldVddAlpha": false,
+      "nontransparentPixels": 1473,
+      "alphaIoUWithVDD": 0.22865,
+      "registeredNontransparentOutsideTargetBBox": 0,
+      "generatedSourceWasIsolated": false,
+      "identityAccepted": false,
+      "artisticAcceptance": false
+    }
+  ],
+  "candidateCount": 4,
+  "diagnosticComposite": "p15-23-cutout-candidates/yaw060-four-keyparts-diagnostic-composite.png",
+  "diagnosticCompositeSHA256": "64b37407b73b75b23982e617d3e101bf22a36a94eaa69364333b9979130c3c1f",
+  "approvedIndependentSemanticPaintingCount": 0,
+  "hiddenUnderpaintApproval": false,
+  "formalArtGate": "FAIL_GENERATED_SOURCE_CONTAINS_WHOLE_HEAD_AND_COMPONENT_MASK_HEURISTIC",
+  "next": "Isolated transparent part-specific model generation/paint correction and artist inspection required before VDD production",
+  "candidateCompositeVsBaseline": {
+    "alphaIoU": 0.93605,
+    "rgbChangedPixels": 172993,
+    "comparisonIsFormalArtApproval": false
+  }
+}

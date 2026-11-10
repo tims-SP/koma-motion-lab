@@ -620,6 +620,41 @@
       "reviewArchive": "private-assets/exports/p15-22-painted-rgb-review.zip",
       "plan": "docs/plans/2026-11-10-p15-22-independent-paint-rgb-role-trial.md",
       "next": "Recover GPU account inference quota, independently paint source-aligned role silhouettes and underpaint; do not promote existing RGB+derived-alpha candidates"
+    },
+    "p15NewImageModelKeypartExtraction": {
+      "characterId": "p0_character_001",
+      "status": "AUTHENTICATED_GENERATION_SUCCEEDED_ART_GATE_FAILED",
+      "nominalAngle": 60,
+      "generatedSourceImages": 5,
+      "modelSpaces": [
+        "mcp-tools/Qwen-Image-Fast",
+        "evalstate/flux1_schnell"
+      ],
+      "sourcePromptIsolationCompliance": "FAILED_ALL_FIVE_FULL_OR_PARTIAL_HEADS",
+      "sourceCutoutRgbaCandidates": 4,
+      "sourceCutoutsAreIndependentlyPainted": false,
+      "maskPixelsComeFromModelImage": true,
+      "reusedVddAlpha": false,
+      "sourceApprovedIndependentSemanticParts": 0,
+      "hiddenUnderpaintApproved": false,
+      "alphaIoUWithVdd": {
+        "hair.ahoge": 0.33319,
+        "hair.side": 0.58047,
+        "eye.far": 0.38283,
+        "hair.clip.cross_gold": 0.22865
+      },
+      "compositeAlphaIoUWithVdd": 0.93605,
+      "compositeRgbChangedPixels": 172993,
+      "unitTestsPassed": 7,
+      "chromiumRoleViewportChecks": 8,
+      "browserLoadedImages": 40,
+      "browserErrors": 0,
+      "sourceRegistry": "evidence/p15-23-model-source-registry.json",
+      "qa": "evidence/p15-23-model-generated-keypart-qa.json",
+      "browserQa": "evidence/p15-23-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-23-model-keyparts-review.zip",
+      "plan": "docs/plans/2026-11-10-p15-23-new-keypart-generation-extraction.md",
+      "next": "Reference-condition actual P0 source and generate isolated true transparent art with hidden underpaint; accept only visual identity-consistent parts"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
