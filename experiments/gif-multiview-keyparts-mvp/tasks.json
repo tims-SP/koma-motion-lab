@@ -776,6 +776,49 @@
       "browserQa": "evidence/p15-26-browser-qa.json",
       "reviewZip": "private-assets/exports/p15-26-local-repair-review.zip",
       "next": "Independent high-quality source paintings and physically correct far-eye/side-hair occlusion after accepting P0 identity; do not use P15-25 wholesale panels"
+    },
+    "p15FiveAngleSemanticOcclusionDecomposition": {
+      "characterId": "p0_character_001",
+      "status": "PIXEL_OCCLUSION_AUDIT_PASS_VISUAL_ART_GATE_FAILED",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "sourceArt": "P15-21 original source-derived anatomical ArtMesh",
+      "farEyeVisibleAlphaFraction": [
+        0.91649,
+        0.90618,
+        0.89996,
+        0.89375,
+        0.84505
+      ],
+      "goldClipHairUnionAlphaOverlapFraction": [
+        0.95733,
+        0.95978,
+        0.96225,
+        0.9652,
+        0.96695
+      ],
+      "correctsPriorClaim": "clip did not overlap side hair, but does overlap front/side hair union",
+      "farEyeOcclusionMode": "WHOLE_LAYER_ALPHA_FADING_DOMINATES_NOT_PHYSICAL_OCCLUSION",
+      "eyeUnderpaintPreserved": true,
+      "newIndependentUnderpaintCreated": false,
+      "separateTransparentDiagnosticLayers": 35,
+      "sourcePaintingModified": false,
+      "productionVddModified": false,
+      "formalArtAcceptance": false,
+      "unitTestsPassed": 7,
+      "browserAngleViewportChecks": 10,
+      "browserImagesLoaded": 80,
+      "browserErrors": 0,
+      "qa": "evidence/p15-27-occlusion-audit.json",
+      "browserQa": "evidence/p15-27-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-27-occlusion-review.zip",
+      "plan": "docs/plans/2026-11-10-p15-27-semantic-occlusion-audit.md",
+      "next": "Build and visually inspect P0 aligned nose/near-bang cutout occlusion geometry; clip physical hair-lock placement; then independent underpaint"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",

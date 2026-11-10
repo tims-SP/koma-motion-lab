@@ -1,0 +1,284 @@
+{
+  "schema": "KOMA-P15-27-SEMANTIC-PIXEL-OCCLUSION-AUDIT-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    55,
+    57.5,
+    60,
+    62.5,
+    65
+  ],
+  "frames": [
+    {
+      "yaw": 55,
+      "paths": {
+        "eye-visible": {
+          "path": "p15-27-occlusion/yaw55/eye-visible.png",
+          "sha256": "4574cef84b0faa296d255d471dd8e0a48fba099ba235591d4dbd4e4109ee3c83"
+        },
+        "eye-hidden-paint": {
+          "path": "p15-27-occlusion/yaw55/eye-hidden-paint.png",
+          "sha256": "19f30d2b73845b9fb59f78eced6f0d5cab71d2b48cd2a9e1c7ca10f60645b8e4"
+        },
+        "eye-underpaint-original": {
+          "path": "p15-27-occlusion/yaw55/eye-underpaint-original.png",
+          "sha256": "93121c643122acdb031ac3fb4e0618e52f209c749b66a9e332eb337c560be1da"
+        },
+        "eye-occluder-bangs": {
+          "path": "p15-27-occlusion/yaw55/eye-occluder-bangs.png",
+          "sha256": "40074a21325913ce5b15dc0507f89dae791ad9bee1c15767be5fa8c1bec99d64"
+        },
+        "eye-occluder-nose": {
+          "path": "p15-27-occlusion/yaw55/eye-occluder-nose.png",
+          "sha256": "cec50f2fe830f6e19d652953df37d4e8c9b8b59c35966fe7dc8575962ce922f4"
+        },
+        "clip-over-hair": {
+          "path": "p15-27-occlusion/yaw55/clip-over-hair.png",
+          "sha256": "228c3307fd57412a2d74adf125a0bbbb961b64a5c58ec28b75cd850998f8c174"
+        },
+        "clip-unmounted": {
+          "path": "p15-27-occlusion/yaw55/clip-unmounted.png",
+          "sha256": "9d056b25ae4659699491498d8220f1027a36e75a4031b6c4ad3526080b9d48d9"
+        }
+      },
+      "metrics": {
+        "eyeSourceAlphaMass": 15813.65,
+        "bangOccludedEyeAlphaMass": 1277.06,
+        "noseOccludedEyeAlphaMass": 43.58,
+        "visibleEyeAlphaMass": 14493.01,
+        "hiddenEyeAlphaMass": 1320.64,
+        "visibleEyeFraction": 0.91649,
+        "clipSourceAlphaMass": 2492.89,
+        "clipOverHairAlphaMass": 2386.53,
+        "clipWithoutHairAlphaMass": 106.36,
+        "clipMountCoverageFraction": 0.95733,
+        "maxEyeDecompositionError": 1.1102230246251565e-16
+      },
+      "sourceSHA256": {
+        "eye.far": "93121c643122acdb031ac3fb4e0618e52f209c749b66a9e332eb337c560be1da",
+        "hair.front": "ee44a94083a35878d0bc6cd5892f3cc67b873a1842e10b0c0d67b7c9edf4c9da",
+        "nose": "dc0648509a252e680f90d2e620337f62ca44a396ccc0c8aa8fd541162e949f56",
+        "hair.side": "e636f334687af610218e02208c227c181550e6cbedc6c402ab611da837481812",
+        "hair.clip.cross_gold": "fcede835a6eb284d2dfa453953c656aa385a37fae1f3241da420ac6ce868f2a3"
+      }
+    },
+    {
+      "yaw": 57.5,
+      "paths": {
+        "eye-visible": {
+          "path": "p15-27-occlusion/yaw57p5/eye-visible.png",
+          "sha256": "758a70757552d22a0bc4fce6f3e4123c21665a46cccaad6f11fd16efc03d0841"
+        },
+        "eye-hidden-paint": {
+          "path": "p15-27-occlusion/yaw57p5/eye-hidden-paint.png",
+          "sha256": "093a63a119f96cb6feda43004480cc07f2aee7073a3b7fa9b68439ea9ebffbf9"
+        },
+        "eye-underpaint-original": {
+          "path": "p15-27-occlusion/yaw57p5/eye-underpaint-original.png",
+          "sha256": "0baa59eda0109980fd0038981b8514bef5ce044833c89cd9525cf5cddd0c1fe8"
+        },
+        "eye-occluder-bangs": {
+          "path": "p15-27-occlusion/yaw57p5/eye-occluder-bangs.png",
+          "sha256": "50b0e510dd2a4e447ae9485fbb78585ff1168c13d52a7405cc4d5c6018de2fed"
+        },
+        "eye-occluder-nose": {
+          "path": "p15-27-occlusion/yaw57p5/eye-occluder-nose.png",
+          "sha256": "cd953968eff862cc32adf28f4d63ba2ada2c6d1905cad80a63137c1ce01358ad"
+        },
+        "clip-over-hair": {
+          "path": "p15-27-occlusion/yaw57p5/clip-over-hair.png",
+          "sha256": "2de9c027d5a09e92ec0b64c95c672f5d87ff7168f9ef6ddb2665b38264ca7e2c"
+        },
+        "clip-unmounted": {
+          "path": "p15-27-occlusion/yaw57p5/clip-unmounted.png",
+          "sha256": "de8eb0ba652cf98aa0cf91c1c519028cdbfa77c9ff7c54f6626fa59ac36ab13d"
+        }
+      },
+      "metrics": {
+        "eyeSourceAlphaMass": 14193.96,
+        "bangOccludedEyeAlphaMass": 1292.02,
+        "noseOccludedEyeAlphaMass": 39.67,
+        "visibleEyeAlphaMass": 12862.26,
+        "hiddenEyeAlphaMass": 1331.7,
+        "visibleEyeFraction": 0.90618,
+        "clipSourceAlphaMass": 1967.45,
+        "clipOverHairAlphaMass": 1888.33,
+        "clipWithoutHairAlphaMass": 79.13,
+        "clipMountCoverageFraction": 0.95978,
+        "maxEyeDecompositionError": 1.1102230246251565e-16
+      },
+      "sourceSHA256": {
+        "eye.far": "0baa59eda0109980fd0038981b8514bef5ce044833c89cd9525cf5cddd0c1fe8",
+        "hair.front": "c42d8b0a218e90aeee1eb0ee9aa3c0f05cee5566285fa748b2900e7f6e34e3cf",
+        "nose": "85804ab68c51f5f38bac9db181bad85ecfef13e4d0370216660908aa05919cfa",
+        "hair.side": "416fc5523eef70a5feb50724b44fc224169923dfb267f02d6e67b0eb71540eb3",
+        "hair.clip.cross_gold": "990c580c078cfb7870b3f9b9c615dff7dcfe65ce6a49cdcb9981e91182a3768b"
+      }
+    },
+    {
+      "yaw": 60,
+      "paths": {
+        "eye-visible": {
+          "path": "p15-27-occlusion/yaw60/eye-visible.png",
+          "sha256": "bba470ca4bbbe83c1d34ee92d74d627e9948a066da3fc752134939bb076b9f3d"
+        },
+        "eye-hidden-paint": {
+          "path": "p15-27-occlusion/yaw60/eye-hidden-paint.png",
+          "sha256": "bc9e4b96cdd5d4f5e81e16948056e9732e8ee9d5f2ae0332249bd4f076abca99"
+        },
+        "eye-underpaint-original": {
+          "path": "p15-27-occlusion/yaw60/eye-underpaint-original.png",
+          "sha256": "bfafd02848cf7345843e7ee6d35dab2980094ca7669b9140535824841b290a1d"
+        },
+        "eye-occluder-bangs": {
+          "path": "p15-27-occlusion/yaw60/eye-occluder-bangs.png",
+          "sha256": "e7a502cb270f263fcd0a7fa409e4f6ad6fb0c172ba292084cb220226ca1c1eb1"
+        },
+        "eye-occluder-nose": {
+          "path": "p15-27-occlusion/yaw60/eye-occluder-nose.png",
+          "sha256": "954b887021c5ac7f41380f8babc836e797ec6ffb8f412fb23786275340484d62"
+        },
+        "clip-over-hair": {
+          "path": "p15-27-occlusion/yaw60/clip-over-hair.png",
+          "sha256": "0ee1b06b3589129c24a4c3f7c354e662d0928e192b44c15cddef8ee8de2309cc"
+        },
+        "clip-unmounted": {
+          "path": "p15-27-occlusion/yaw60/clip-unmounted.png",
+          "sha256": "e94531f5db3ddbbe2e541378db0bea8a5dcf3f8c996de343f256c694b2badfee"
+        }
+      },
+      "metrics": {
+        "eyeSourceAlphaMass": 11979.05,
+        "bangOccludedEyeAlphaMass": 1165.6,
+        "noseOccludedEyeAlphaMass": 32.75,
+        "visibleEyeAlphaMass": 10780.69,
+        "hiddenEyeAlphaMass": 1198.36,
+        "visibleEyeFraction": 0.89996,
+        "clipSourceAlphaMass": 1414.42,
+        "clipOverHairAlphaMass": 1361.03,
+        "clipWithoutHairAlphaMass": 53.39,
+        "clipMountCoverageFraction": 0.96225,
+        "maxEyeDecompositionError": 1.1102230246251565e-16
+      },
+      "sourceSHA256": {
+        "eye.far": "bfafd02848cf7345843e7ee6d35dab2980094ca7669b9140535824841b290a1d",
+        "hair.front": "894abfb82e79da44b64e9bc7d8249e7e1afd714982bcbae4a852aece09b9b546",
+        "nose": "a0b7f63ab339438216dda880266f190df11a5954c47bcc181260636e4a9a6888",
+        "hair.side": "8eddcbc1c28501115d398d0e45dfe487ed024772645a8700622e1e151cd7c615",
+        "hair.clip.cross_gold": "9f82bbc2e93b5cd44d2e1108e082cb1c8f21405ea442a5cf300efe1f0bcc88ff"
+      }
+    },
+    {
+      "yaw": 62.5,
+      "paths": {
+        "eye-visible": {
+          "path": "p15-27-occlusion/yaw62p5/eye-visible.png",
+          "sha256": "747b0639a0cad13b74d7cdff3520e47d357b08301ed7fe36be0bac7f15a40a68"
+        },
+        "eye-hidden-paint": {
+          "path": "p15-27-occlusion/yaw62p5/eye-hidden-paint.png",
+          "sha256": "0d779fa2863a3ba708562f43021b3124ae6c12fef7fac0605131285ee951a1b6"
+        },
+        "eye-underpaint-original": {
+          "path": "p15-27-occlusion/yaw62p5/eye-underpaint-original.png",
+          "sha256": "8c9366951d16e1a3ffaaa1733e23042fa060aba93cf09ef7f47028081726933f"
+        },
+        "eye-occluder-bangs": {
+          "path": "p15-27-occlusion/yaw62p5/eye-occluder-bangs.png",
+          "sha256": "5923abe0806473e4d3250fe32bd81211caf07f8b2c908b7514e39836459508ff"
+        },
+        "eye-occluder-nose": {
+          "path": "p15-27-occlusion/yaw62p5/eye-occluder-nose.png",
+          "sha256": "b1a1ce5b20be47ac56934bcc211157e925f304bc3ef68d24d275925fd23bfb6c"
+        },
+        "clip-over-hair": {
+          "path": "p15-27-occlusion/yaw62p5/clip-over-hair.png",
+          "sha256": "4c56e655f269e522d90ec72a35b3eb589fc9ccc2bd9d9bf77b1b184710699a75"
+        },
+        "clip-unmounted": {
+          "path": "p15-27-occlusion/yaw62p5/clip-unmounted.png",
+          "sha256": "0ca2b7cfb223ba6e343721038b5e064962f5b6261325b5882a7e577092442fb7"
+        }
+      },
+      "metrics": {
+        "eyeSourceAlphaMass": 9375.46,
+        "bangOccludedEyeAlphaMass": 972.22,
+        "noseOccludedEyeAlphaMass": 23.94,
+        "visibleEyeAlphaMass": 8379.3,
+        "hiddenEyeAlphaMass": 996.16,
+        "visibleEyeFraction": 0.89375,
+        "clipSourceAlphaMass": 885.72,
+        "clipOverHairAlphaMass": 854.9,
+        "clipWithoutHairAlphaMass": 30.82,
+        "clipMountCoverageFraction": 0.9652,
+        "maxEyeDecompositionError": 1.1102230246251565e-16
+      },
+      "sourceSHA256": {
+        "eye.far": "8c9366951d16e1a3ffaaa1733e23042fa060aba93cf09ef7f47028081726933f",
+        "hair.front": "c52d7d186ef17b415bfb40cfbaf67a9ce57426645fb139f72ea024b3699c845d",
+        "nose": "471afe3de4a308856bbac4c73d91c1b464c62723f8e877fef9be401c19187fde",
+        "hair.side": "9aada1ebdf798437e6ea895ca594ca130cf4ce3b9f15fd6f6c9e35151e99f54b",
+        "hair.clip.cross_gold": "55e374c8f8c42391332b00b911129ea708e7e45b4c2d7fa0b8abb6f497c70124"
+      }
+    },
+    {
+      "yaw": 65,
+      "paths": {
+        "eye-visible": {
+          "path": "p15-27-occlusion/yaw65/eye-visible.png",
+          "sha256": "56728aa3b044af55da2cd0d960d1b5dc53effe02dc2450ec9648d145bf6ed7f6"
+        },
+        "eye-hidden-paint": {
+          "path": "p15-27-occlusion/yaw65/eye-hidden-paint.png",
+          "sha256": "cd646e1f370272a41be500c3eec9b7c1d145e465a76ca89ce55432823c0391f3"
+        },
+        "eye-underpaint-original": {
+          "path": "p15-27-occlusion/yaw65/eye-underpaint-original.png",
+          "sha256": "2f54b47b61e0059504f4e0090e42e6ebf9331fb37e75a7a91a60a140b7cea7d7"
+        },
+        "eye-occluder-bangs": {
+          "path": "p15-27-occlusion/yaw65/eye-occluder-bangs.png",
+          "sha256": "eefbc1ea2ab0d65d0b0cd8cd19d703e83c3ba0c241913c5a7ff7445478c196d0"
+        },
+        "eye-occluder-nose": {
+          "path": "p15-27-occlusion/yaw65/eye-occluder-nose.png",
+          "sha256": "1e148ed24a0b6dffd02b147e56bb0111d455090bc19e6ce82370f120f52d312c"
+        },
+        "clip-over-hair": {
+          "path": "p15-27-occlusion/yaw65/clip-over-hair.png",
+          "sha256": "d32a89e4bb82322c136ac59643153e536522d2fa98abbe95b296cf089ab86464"
+        },
+        "clip-unmounted": {
+          "path": "p15-27-occlusion/yaw65/clip-unmounted.png",
+          "sha256": "2743e5615bd2729d3727b73638eff47a7e04ec6205c64e7f9d38075489f39d82"
+        }
+      },
+      "metrics": {
+        "eyeSourceAlphaMass": 6704.69,
+        "bangOccludedEyeAlphaMass": 832.54,
+        "noseOccludedEyeAlphaMass": 206.35,
+        "visibleEyeAlphaMass": 5665.8,
+        "hiddenEyeAlphaMass": 1038.89,
+        "visibleEyeFraction": 0.84505,
+        "clipSourceAlphaMass": 435.39,
+        "clipOverHairAlphaMass": 421.0,
+        "clipWithoutHairAlphaMass": 14.39,
+        "clipMountCoverageFraction": 0.96695,
+        "maxEyeDecompositionError": 5.551115123125783e-17
+      },
+      "sourceSHA256": {
+        "eye.far": "2f54b47b61e0059504f4e0090e42e6ebf9331fb37e75a7a91a60a140b7cea7d7",
+        "hair.front": "877ec476cd098c83c8f6ac997be3b42141a5836920225319762aba9fde2245bb",
+        "nose": "a7ed2166ada4599af088e77d23d7f30be683acc4b6f6b7d906e7aec3f3b95b1c",
+        "hair.side": "66a18f6b2dfaa2d02376b456c07ea8769002699f57ca71bae87044824451a856",
+        "hair.clip.cross_gold": "954bcad3aca320f6ff308714b7f978d5d00688816b1b99c2466e83dd3c67ef0a"
+      }
+    }
+  ],
+  "method": "EXACT_ALPHA_COVERAGE_HAIR_FRONT_AND_NOSE_DEPTH_ORDER_WITH_EYE_UNDERPAINT_RETAINED",
+  "newOriginalPaintingCreated": false,
+  "productionVddModified": false,
+  "formalArtisticAcceptance": false,
+  "visualGate": "FAIL_SOURCE_FAR_EYE_VISIBILITY_HIGH_AND_CLIP_MOUNT_COVERAGE_LOW",
+  "next": "Require keyframe-specific pose-aware eye occlusion and clip-on-hair mounting; manually sign off visible original painting before production"
+}
