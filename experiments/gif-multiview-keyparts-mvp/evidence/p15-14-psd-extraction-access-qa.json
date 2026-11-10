@@ -1,0 +1,24 @@
+{
+  "schema": "KOMA-P15-14-SEE-THROUGH-ACCESS-PREFLIGHT-V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 45,
+  "sourceSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "officialProject": "https://github.com/shitagaki-lab/see-through",
+  "space": "24yearsold/see-through-demo",
+  "runtime": "RUNNING",
+  "hardware": "zero-a10g",
+  "api": "/inference",
+  "submittedParameters": {
+    "resolution": 768,
+    "seed": 42,
+    "tblr_split": true
+  },
+  "invocationJobId": "def627ed-2d29-4462-9294-251775a8ef62",
+  "inferenceResult": "ZERO_GPU_AUTHENTICATED_QUOTA_REQUIRED",
+  "requestedZeroGpuSeconds": 180,
+  "availableAnonymousZeroGpuSecondsAtInvocation": 115,
+  "sourcePSDExtracted": false,
+  "actualIndependentSemanticLayersReceived": 0,
+  "retryScript": "scripts/p15_14_see_through_trial.py",
+  "next": "Execute with a valid authenticated HF compute quota and verify PSD/gallery layers against the P0 13-role identity contract."
+}

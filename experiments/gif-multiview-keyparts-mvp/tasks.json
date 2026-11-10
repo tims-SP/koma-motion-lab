@@ -273,7 +273,8 @@
     "p15CameraDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-12-delivery.json",
     "p15StructuralConditions": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-structural-qa.json",
     "p15LocalEyeAlignment": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-local-alignment-qa.json",
-    "p15StructuralDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-delivery.json"
+    "p15StructuralDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-delivery.json",
+    "p15LayeredPsdAccess": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-psd-extraction-access-qa.json"
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
   "implementation": {
@@ -1399,6 +1400,18 @@
         "entries": 55
       },
       "next": "P15-14 native structural-control painting and independent face, hair and occluded-ink art verification"
+    },
+    "p15PsdExtractionPreflight": {
+      "sourceImageSha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "zeroGpuSpace": "24yearsold/see-through-demo",
+      "inferenceApi": "/inference",
+      "requestedSeconds": 180,
+      "availableAtInvocation": 115,
+      "artifactReady": false,
+      "actualOriginalSemanticLayers": 0,
+      "evidence": "evidence/p15-14-psd-extraction-access-qa.json",
+      "runner": "scripts/p15_14_see_through_trial.py",
+      "status": "AWAITING_AUTHENTICATED_ZEROGPU_ALLOCATION"
     }
   }
 }
