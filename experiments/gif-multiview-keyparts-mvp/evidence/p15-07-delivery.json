@@ -1,0 +1,12 @@
+{
+  "schema": "KOMA-P15-07-LOCAL-HTML-ARTIFACT-V1",
+  "characterId": "p0_character_001",
+  "relativeArchivePath": "private-assets/exports/p15-07-view-correspondence-review.zip",
+  "size": 80777226,
+  "sha256": "7405c6293599744fa63c7aef0e14ef3812e233ef701aa0ee0e3c58b34e9386dc",
+  "verifiedEntries": 128,
+  "includedImageFrames": 111,
+  "htmlEntry": "review/p15-07-view.html",
+  "deliveryRole": "private source-linked engineering and artistic review",
+  "artisticAcceptance": "PENDING_VISUAL_REVIEW"
+}
