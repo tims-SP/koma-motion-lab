@@ -134,3 +134,9 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-12 角色锚点校准记录](experiments/gif-multiview-keyparts-mvp/evidence/p15-12-camera-proxy-qa.json)
 - [P15-12 独立原画绘制候选验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-12-guided-candidate-qa.json)
 - [P15-12 离线 HTML 交付哈希](experiments/gif-multiview-keyparts-mvp/evidence/p15-12-delivery.json)
+
+- [P15-13 相机空间条件与 ArtMesh 原画验收](docs/plans/2026-11-10-p15-13-structural-anatomy-control.md)
+- [P15-13 57.5° / 60° 交互式 HTML 比较](experiments/gif-multiview-keyparts-mvp/review/p15-13-structure.html)
+- [P15-13 语义结构化条件图与定位验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-13-structural-qa.json)
+- [P15-13 面部局部像素对齐](experiments/gif-multiview-keyparts-mvp/evidence/p15-13-local-alignment-qa.json)
+- [P15-13 可重放 HTML 审查资源](experiments/gif-multiview-keyparts-mvp/evidence/p15-13-delivery.json)

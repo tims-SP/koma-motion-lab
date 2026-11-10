@@ -1,0 +1,110 @@
+{
+  "schema": "KOMA-P15-13-LOCAL-ANATOMICAL-ALIGNMENT-V1",
+  "characterId": "p0_character_001",
+  "sourceConditionSHA256": "a2bcfa76f39efcc1613e48e5cecc58350085b151ae057b4cad343ccaf3b2a926",
+  "frames": [
+    {
+      "yaw": 57.5,
+      "sourceGeneratedPaintingSHA256": "3247fe9717dc5e180308ca6db4864d97b24f092222745bfef79c63c4873e973c",
+      "targetAnchorOrigin": "P5 projection with original color-component calibration",
+      "originalErrorsPixels": [
+        36.587,
+        48.346
+      ],
+      "registeredErrorsPixels": [
+        2.633,
+        1.785
+      ],
+      "aggregateErrorReductionFraction": 0.94798,
+      "maximumPixelRemap": 51.699,
+      "detectedIrisComponents": [
+        {
+          "center": [
+            575.017,
+            457.177
+          ],
+          "area": 3013,
+          "bounds": [
+            539,
+            433,
+            75,
+            58
+          ]
+        },
+        {
+          "center": [
+            734.274,
+            463.512
+          ],
+          "area": 1223,
+          "bounds": [
+            717,
+            441,
+            35,
+            53
+          ]
+        }
+      ],
+      "output": {
+        "path": "p15-13-structural/yaw57p5/iris-registered-candidate.png",
+        "sha256": "4adcab50e53fbdbad60583f4a0461ace81648c09a29f19678ca3d9c1bc3f33a6"
+      },
+      "sourceOwnership": "same painting, locally retargeted pixels",
+      "artisticStatus": "DERIVED_ALIGNMENT_REQUIRES_KEYFRAME_PAINTING"
+    },
+    {
+      "yaw": 60.0,
+      "sourceGeneratedPaintingSHA256": "c562335b6d1e1e250c3b28f9cb87614389d343447449d24605a581979ccaac36",
+      "targetAnchorOrigin": "P5 projection with original color-component calibration",
+      "originalErrorsPixels": [
+        53.42,
+        53.581
+      ],
+      "registeredErrorsPixels": [
+        5.538,
+        1.767
+      ],
+      "aggregateErrorReductionFraction": 0.93173,
+      "maximumPixelRemap": 63.413,
+      "detectedIrisComponents": [
+        {
+          "center": [
+            579.756,
+            456.907
+          ],
+          "area": 3330,
+          "bounds": [
+            541,
+            433,
+            80,
+            57
+          ]
+        },
+        {
+          "center": [
+            738.604,
+            463.551
+          ],
+          "area": 1096,
+          "bounds": [
+            723,
+            442,
+            31,
+            49
+          ]
+        }
+      ],
+      "output": {
+        "path": "p15-13-structural/yaw60/iris-registered-candidate.png",
+        "sha256": "70895912474b6dffb1e535bfde4b9737b219648ecc5b55685c5c29572d530f7e"
+      },
+      "sourceOwnership": "same painting, locally retargeted pixels",
+      "artisticStatus": "DERIVED_ALIGNMENT_REQUIRES_KEYFRAME_PAINTING"
+    }
+  ],
+  "calibratedSourcePreserved": true,
+  "separateEyeCoordinatesVerified": true,
+  "independentPaintingsApproved": 0,
+  "role": "controlled source-pixel deformation before independent painted layers",
+  "status": "SOURCE_PIXEL_ANATOMY_ALIGNMENT_VERIFIED"
+}

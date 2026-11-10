@@ -1,0 +1,17 @@
+{
+  "schema": "KOMA-P15-13-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-13-structural-portrait-review.zip",
+  "sha256": "2d3270a2983322001bcb124e14afc7109dd6c1632bd97fc23c4abb2f25e045f8",
+  "bytes": 12534867,
+  "entries": 55,
+  "angles": [
+    57.5,
+    60.0
+  ],
+  "semanticRoleCount": 13,
+  "chromiumScreenshots": 10,
+  "chromiumSourceImagesLoaded": 40,
+  "htmlEntry": "review/p15-13-structure.html",
+  "artisticStatus": "INDEPENDENT_KEYART_AND_OCCLUDED_INK_PENDING"
+}
