@@ -69,3 +69,35 @@
     KOMA_P14_PYTHON=/path/to/vision-venv/bin/python bash scripts/run-p15-holdout-import-smoke.sh
 
 独立 65° 与 77.5° 的 26 张原画由同一导入器验证，正式验收需要完整原图和 13 张独立部件的来源与视觉对应证据。
+
+
+## P15-06 · 独立原画与语义 ArtMesh 候选实测
+
+已从同一批准的 P0 原画来源生成 65°、77.5° 两个独立绘制的 RGB 候选。生成使用 Hugging Face Qwen-Image-Edit-2511 的 Multiple-Angles 模型配置；65° 基于原始 45° 输入，随机种子 65022；77.5° 基于原始 90° 输入，种子 77522。源照片 SHA、模型、视角及随机种子均保存在私有资源中的 provenance.json，并由公开 QA 对应到源 SHA。
+
+使用 rembg isnet-anime 提取原生 1024×1024 RGBA，再结合 P0 原始 90° ArtMesh 的语义图层所有权、DIS 光流和独立视角面部 ROI，生成 26 张 PNG（每角度 13 张独立文件），保留眼、鼻、嘴、耳、刘海、侧发、后发、呆毛和制服等固定语义角色。所有部件在原始深度序列按 alpha 重建后，与对应的独立原画完全一致：alpha 与可见 RGB 的最大差异均为零。
+
+采用 SIGGRAPH 2026 See-through 分层技术（https://github.com/shitagaki-lab/see-through；论文 https://arxiv.org/abs/2602.03749）处理 77.5° 原画，得到 768 分辨率分层 PSD，来源 See-through Hugging Face demo。由 PSD 的 back hair、face 等带补绘的层，在 P0 1024×1024 ArtMesh 中注入 81,594 个严格被上层完全遮住的额外像素。可见原画保持逐像素不变，补绘资产保留原始 PSD SHA，适合继续做视角相关遮挡和变形验证。
+
+浏览器独立源验收：HTML 工作台 review/p15-06-keyview-art.html，8 张真实 Chromium 截图、32 次 SHA-256 PNG 源校验，通过，无 JavaScript 或请求失败。
+
+本阶段工程验收重点：
+- [x] P15-06-E1：65°、77.5° 两张独立绘制的完整角色视角、原始来源哈希登记
+- [x] P15-06-E2：两视角原生 RGBA 透明抠图、26 张一图一语义部件 PNG
+- [x] P15-06-E3：13 层深度叠合、原画逐像素重建、正式 importer 双角度接收
+- [x] P15-06-E4：77.5° See-through PSD 提取及被遮挡区域可追溯补绘
+- [x] P15-06-E5：HTML 逐部件审查、Chromium 8 个画面和来源完整性验证
+- [ ] P15-06-E6：逐部件绘制边界、眼鼻口、发束笔触、实际 65°/77.5° 视角精度的艺术验收
+- [ ] P15-06-E7：批准 Hero 源 SHA 对照与 0°–90° 连续动画视觉签收
+
+绘制候选保留原生整图及独立 PNG，但当前 ArtMesh 图层的可见像素来自算法语义分配。对于高质量 VDD 生产，需继续校准刘海/头顶、脸部细线、眼耳分界，并增补 65° 隐藏区域补绘。每个关键图层必须通过独立视觉审查，不以逐像素重建通过作为最终质量判定。
+
+固定可重放命令（需 Vision Python、psd-tools、Playwright 和现存私有源图）：
+
+    KOMA_P14_PYTHON=/path/to/vision-venv/bin/python \
+    KOMA_PLAYWRIGHT_MODULE=/path/to/node_modules/playwright \
+    bash scripts/run-p15-06-generated-review.sh
+
+See-through 独立 PSD 生成脚本：scripts/p15_seethrough_demo.py，基于原画 PNG 及 upstream demo 接口执行；生成结果和浏览器截图均保留 private-assets。
+
+公开证据：evidence/p15-06-generated-keyviews-qa.json；真实绘制像素、 PSD 和逐部件图保持在 private-assets/p15-independent-candidates/。

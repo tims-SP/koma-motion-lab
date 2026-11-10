@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_06_SOURCE_AND_ARTMESH_IMPORTER_ENGINEERING_VERIFIED",
+  "status": "P15_06_GENERATED_KEYVIEWS_ARTMESH_ENGINEERING_VERIFIED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_06_SOURCE_AND_IMPORTER_VERIFIED_INDEPENDENT_ART_PENDING",
+      "status": "P15_06_AUTHORED_SOURCE_ARTMESH_VERIFIED_VISUAL_ACCEPTANCE_IN_PROGRESS",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P14_PRIVATE_ARTIFACTS_AND_PUBLIC_QA_REGISTERED",
+      "status": "P15_06_PRIVATE_ASSET_BUNDLE_READY_AND_SOURCE_EVIDENCE_REGISTERED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -254,9 +254,10 @@
     "p15HairQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-hair-correspondence-qa.json",
     "p15HairAcceptance": "experiments/gif-multiview-keyparts-mvp/evidence/p15-05-acceptance.json",
     "p15HoldoutReadiness": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-source-readiness.json",
-    "p15HoldoutStageQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-stage-qa.json"
+    "p15HoldoutStageQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-stage-qa.json",
+    "p15GeneratedKeyviews": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-generated-keyviews-qa.json"
   },
-  "lastCompleted": "P15_06_2_REAL_ART_FIXTURES_26_RGBA_PARTS_PIXEL_EXACT",
+  "lastCompleted": "P15_06_TWO_AUTHORED_VIEWS_26_RGBA_81594_OCCLUDED_PIXELS_8_BROWSER_CAPTURES",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1072,6 +1073,43 @@
       "replay": "scripts/run-p15-holdout-import-smoke.sh",
       "publicQA": "evidence/p15-06-stage-qa.json",
       "plan": "docs/plans/2026-11-09-p15-06-independent-holdout-artwork.md"
+    },
+    "p15GeneratedKeyviews": {
+      "sourceCharacterId": "p0_character_001",
+      "sourceReferenceAngles": [
+        0,
+        45,
+        90
+      ],
+      "independentCandidateAngles": [
+        65.0,
+        77.5
+      ],
+      "model": "Qwen-Image-Edit-2511",
+      "LoraAdapter": "Multiple-Angles",
+      "seeds": [
+        65022,
+        77522
+      ],
+      "nativeRGBA": [
+        1024,
+        1024
+      ],
+      "semanticParts": 26,
+      "sourceExactRecompositions": 2,
+      "PSDInpaintedAngle": 77.5,
+      "SeeThroughPSD_SHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+      "hiddenInpaintedPixels": 81594,
+      "browserScreenshots": 8,
+      "browserSourceImagesHashVerified": 32,
+      "engineeringStatus": "P15_06_INDEPENDENT_ART_AND_SEMANTIC_ENGINEERING_VERIFIED",
+      "artisticApprovalCount": 0,
+      "approvedHeroSHA256Verified": false,
+      "sourceRegistry": "evidence/p15-06-generated-keyviews-qa.json",
+      "HTML": "review/p15-06-keyview-art.html",
+      "reviewRunner": "scripts/run-p15-06-generated-review.sh",
+      "plan": "docs/plans/2026-11-09-p15-06-independent-holdout-artwork.md",
+      "next": "P15-06-E6 semantic art boundary, anatomical angle and strand acceptance"
     }
   }
 }

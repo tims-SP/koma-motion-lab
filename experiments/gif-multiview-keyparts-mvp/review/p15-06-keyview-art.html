@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 · 独立关键视角原画和语义 ArtMesh 审查</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Noto Sans CJK SC",sans-serif;background:#172233;color:#ebf4fc}
+body{max-width:1680px;margin:auto;padding:20px}
+h1{font-size:24px;margin:4px 0 12px}p{line-height:1.5;color:#bfd1e5}
+select,input{background:#263a50;border:1px solid #718aa2;color:white;padding:9px;border-radius:6px}
+label{margin-right:20px;display:inline-flex;align-items:center;gap:8px}
+canvas{display:block;width:100%;height:auto;border:1px solid #6a8093;border-radius:8px;background:#304257}
+#status{color:#a7f0cb;margin:14px 0}pre{white-space:pre-wrap;word-break:break-word}
+details{border:1px solid #60778d;padding:10px;margin-top:12px;border-radius:8px}
+</style></head>
+<body><h1>p0_character_001 · P15 独立视角原画与部件</h1>
+<p>65°、77.5° 来自相同 P0 原始关键视角的独立绘制候选。显示原始参照、透明原画、ArtMesh 重建及独立部件；所有图像在浏览器内校验 SHA-256。语义分层与笔触仍按艺术标准审查。</p>
+<label>视角 <select id="yaw"><option value="65">65°</option><option value="77.5">77.5°</option></select></label>
+<label>部件 <select id="role"><option value="hair.back">后发</option><option value="face.skin">面部</option>
+<option value="hair.side">侧发</option><option value="ear.near">近耳</option>
+<option value="eye.near">近眼</option><option value="nose">鼻</option><option value="mouth">口</option>
+<option value="hair.front">刘海</option><option value="hair.ahoge">呆毛</option>
+<option value="body.reference">躯干/制服</option><option value="hair.clip.cross_gold">发夹</option>
+<option value="ear.far">远耳</option><option value="eye.far">远眼</option></select></label>
+<label><input id="underpaint" type="checkbox">显示补绘部件（77.5°）</label>
+<p id="status">加载 P0 参考图和 SHA 校验中…</p>
+<canvas id="review" width="1600" height="440" aria-label="四张带源 SHA 的 P0 动漫部件对照"></canvas>
+<details><summary>原画来源、部件显隐与来源 SHA-256</summary><pre id="detail"></pre></details>
+<script defer src="./p15-06-keyview-art.js"></script></body></html>
