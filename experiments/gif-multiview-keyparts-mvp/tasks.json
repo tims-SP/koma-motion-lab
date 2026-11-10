@@ -507,6 +507,42 @@
       "browserQa": "evidence/p15-19-browser-qa.json",
       "reviewArchive": "private-assets/exports/p15-19-quality-review.zip",
       "next": "Compare original 55-65 paint against P0 identity and author independent side hair, ahoge, clip, eye underpaint; gated visual approval before VDD promotion"
+    },
+    "p15CanonicalSourceLayerRecovery": {
+      "characterId": "p0_character_001",
+      "status": "SOURCE_RECOVERY_COMPLETE_ART_GATE_PENDING",
+      "views": [
+        0,
+        45,
+        90
+      ],
+      "semanticPartsPerView": 13,
+      "recoveredParts": 39,
+      "sourceManifests": [
+        "private-assets/p1-front/parts.json",
+        "private-assets/p2-views/parts.json"
+      ],
+      "byteExactCopy": true,
+      "geometricTransformations": false,
+      "newPaintingsCreated": false,
+      "frontHairSidePixels": 100588,
+      "frontAhogePixels": 6862,
+      "frontGoldClipPixels": 4856,
+      "yaw45HairSidePixels": 77087,
+      "yaw45AhogePixels": 10984,
+      "yaw45GoldClipPixels": 3277,
+      "yaw90FarEyePixels": 0,
+      "yaw90FarEarPixels": 0,
+      "yaw90GoldClipPixels": 0,
+      "yaw90HiddenSlotsManifestConfirmed": true,
+      "unitTestsPassed": 6,
+      "browserImageLoads": 78,
+      "browserErrors": 0,
+      "qa": "private-assets/p15-20-canonical-source-views/qa.json",
+      "browserQa": "evidence/p15-20-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-20-canonical-source-views.zip",
+      "supersedes": "P15-16 extracted 768px role files for source completeness; historical P15-16 report retained unchanged",
+      "next": "Map canonical 0/45/90 sources to intermediate 55-77.5 and validate independently authored part coverage before VDD"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
