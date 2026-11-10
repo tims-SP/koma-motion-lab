@@ -35,7 +35,8 @@ def frame_layers(records, source_path):
     out = {}
     for row in records:
         f = ASSETS / row[source_path]
-        if sha(f) != row["sha256"]:
+        expected = row.get("sha256", row.get("sourceSHA256"))
+        if sha(f) != expected:
             raise ValueError(f"ArtMesh source SHA mismatch: {row['semanticId']}")
         out[row["semanticId"]] = image_rgba(f)
     return out
