@@ -274,7 +274,31 @@
     "p15StructuralConditions": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-structural-qa.json",
     "p15LocalEyeAlignment": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-local-alignment-qa.json",
     "p15StructuralDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-13-delivery.json",
-    "p15LayeredPsdAccess": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-psd-extraction-access-qa.json"
+    "p15LayeredPsdAccess": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-psd-extraction-access-qa.json",
+    "p15ExistingPsdAudit": {
+      "characterId": "p0_character_001",
+      "sourcePsdCount": 3,
+      "exportedNativeLayers": 39,
+      "angles": [
+        0,
+        45,
+        77.5
+      ],
+      "fullyCoveredPixelInstances": [
+        190043,
+        195182,
+        216911
+      ],
+      "acceptedIndependentArtMeshRoles": 0,
+      "underpaintQualityVerified": false,
+      "mappingStatus": "EXTRACTED_SPLIT_AND_ART_REVIEW_REQUIRED",
+      "newSeeThroughZeroGpuTrial": "BLOCKED_180S_REQUIRED_115S_AVAILABLE",
+      "evidence": "evidence/p15-14-existing-psd-mapping-qa.json",
+      "runner": "scripts/p15_14_existing_psd_audit.py",
+      "test": "scripts/test_p15_14_existing_psd_audit.py",
+      "plan": "docs/plans/2026-11-10-p15-14-existing-psd-audit.md",
+      "next": "Split 13 PSD semantic groups into stable 13 ArtMesh role identities, validate hidden-paint against source and angle"
+    }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
   "implementation": {
