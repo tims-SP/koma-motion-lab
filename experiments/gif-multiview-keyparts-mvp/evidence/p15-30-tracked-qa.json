@@ -1,0 +1,335 @@
+{
+  "schema": "KOMA-P15-30-P0-CAMERA-TRACKED-CANDIDATES-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    55.0,
+    57.5,
+    60.0,
+    62.5,
+    65.0
+  ],
+  "source": "P15-29 restored P0 eye and gold clip",
+  "eyeRegistration": "RELATIVE_IRIS_ANCHOR_DELTA_55_REFERENCE_NOT_ALPHA_CENTER",
+  "clipRegistration": "ABSOLUTE_GOLD_CLIP_ALPHA_CENTROID_TO_CAMERA_ANCHOR",
+  "bridgeMaskStatus": "P15-29_2D_PROXY_NOT_REAL_3D_HEAD_OCCLUSION",
+  "originalIndependentPaint": false,
+  "formalArtAccepted": false,
+  "productionVddModified": false,
+  "frames": [
+    {
+      "yaw": 55.0,
+      "anchorEye": [
+        712.147,
+        469.04
+      ],
+      "anchorNose": [
+        690.852,
+        534.302
+      ],
+      "anchorClip": [
+        776.579,
+        320.1
+      ],
+      "eyeShift": [
+        0.0,
+        0.0
+      ],
+      "eyeSourceCentroid": [
+        717.625,
+        454.044
+      ],
+      "eyeTrackedCentroid": [
+        717.625,
+        454.044
+      ],
+      "eyeRelativeMotionErrorPx": 0.0,
+      "clipShift": [
+        12.1079,
+        -4.4592
+      ],
+      "clipSourceCentroid": [
+        764.471,
+        324.559
+      ],
+      "clipRegisteredCentroid": [
+        776.565,
+        320.091
+      ],
+      "clipCentroidErrorBefore": 12.9029,
+      "clipCentroidErrorAfter": 0.0169,
+      "eyeRetainedAlphaFraction": 1.0,
+      "clipRetainedAlphaFraction": 0.999949,
+      "wholeFrameAlphaIoUToP15_21": 0.998389,
+      "images": {
+        "eye-tracked": "626f9a654f3656e0f2ef232fdfc9c49b01811ba5e01f6c92814ae67404c6e4c7",
+        "clip-tracked": "e807afc882d35b02fafc23707067d9b1f900c34b71f030a4660b37cb8134ec72",
+        "eye-tracked-bridge-proxy": "3b0616585ac328eb54ccaae8c595d3d58ce9705f3a59ead234b49ae2ab4ec8bd",
+        "whole-tracked": "45c6d79f5d7ef56d3dc8aecce919f28a517411d0c52ec369aaa9a7b5d4e9a9fb",
+        "eye-only": "fb9b5875fce1a4d7620ff1838174e686363b329c64a5522e0de2861b7df8db17",
+        "clip-only": "42a15328040abeda46db4905be017e6459599d0b0a29c1e4ca232002af73c221"
+      }
+    },
+    {
+      "yaw": 57.5,
+      "anchorEye": [
+        716.453,
+        469.04
+      ],
+      "anchorNose": [
+        697.486,
+        534.638
+      ],
+      "anchorClip": [
+        779.921,
+        320.1
+      ],
+      "eyeShift": [
+        4.306,
+        0.0
+      ],
+      "eyeSourceCentroid": [
+        717.626,
+        454.045
+      ],
+      "eyeTrackedCentroid": [
+        721.938,
+        454.045
+      ],
+      "eyeRelativeMotionErrorPx": 0.0056,
+      "clipShift": [
+        15.4444,
+        -4.4602
+      ],
+      "clipSourceCentroid": [
+        764.477,
+        324.56
+      ],
+      "clipRegisteredCentroid": [
+        779.912,
+        320.092
+      ],
+      "clipCentroidErrorBefore": 16.0756,
+      "clipCentroidErrorAfter": 0.0119,
+      "eyeRetainedAlphaFraction": 1.000004,
+      "clipRetainedAlphaFraction": 1.000035,
+      "wholeFrameAlphaIoUToP15_21": 0.997887,
+      "images": {
+        "eye-tracked": "3fe0bb234fc506b63874e7e7a83c278b39e6631bbbed9d1d81ab6648d2b94844",
+        "clip-tracked": "8ecad88fe893ee814fd7b8ab41ff0efbb2faf6258a4d0ed936545e9c908e784a",
+        "eye-tracked-bridge-proxy": "fbb5a73c0c363ce5e88a51dffb5bc7f5ffd011cbe6f36b3e1ec19f0d67425bf2",
+        "whole-tracked": "e64cdb0dab90230186b32712ad3fb9b37a420d7b15ccdc03901bfb0d7efc6d52",
+        "eye-only": "8ab55b4b6355c01e365a0d45d0a824be4573f38ae7b0f8822a2b05a631fe9821",
+        "clip-only": "c05d2644882ebfbd04e8d4af9b93b604bf343212dd594a13996db0f2d7324db5"
+      }
+    },
+    {
+      "yaw": 60.0,
+      "anchorEye": [
+        720.76,
+        469.04
+      ],
+      "anchorNose": [
+        703.953,
+        534.973
+      ],
+      "anchorClip": [
+        783.263,
+        320.1
+      ],
+      "eyeShift": [
+        8.613,
+        0.0
+      ],
+      "eyeSourceCentroid": [
+        717.627,
+        454.044
+      ],
+      "eyeTrackedCentroid": [
+        726.252,
+        454.044
+      ],
+      "eyeRelativeMotionErrorPx": 0.0128,
+      "clipShift": [
+        18.7889,
+        -4.4541
+      ],
+      "clipSourceCentroid": [
+        764.474,
+        324.554
+      ],
+      "clipRegisteredCentroid": [
+        783.256,
+        320.086
+      ],
+      "clipCentroidErrorBefore": 19.3096,
+      "clipCentroidErrorAfter": 0.016,
+      "eyeRetainedAlphaFraction": 1.00004,
+      "clipRetainedAlphaFraction": 1.0,
+      "wholeFrameAlphaIoUToP15_21": 0.997434,
+      "images": {
+        "eye-tracked": "dc13d04cc72942dba663c072814ebd5f776d59d9f66bfa089c907fe6bc08791c",
+        "clip-tracked": "2d1eb194795ccb34795e00fbd5c01edab77de70867c7965994085d1cd3371297",
+        "eye-tracked-bridge-proxy": "b23f3b730d253e1833b99d8c59f1b5541ad2234214cc5ab0ae4bd73a5fb7f45c",
+        "whole-tracked": "a08d8eac8101c2b2b862fe4eb2ef419e642bc809af54315922f7621fe1327179",
+        "eye-only": "1894bc8ebdb27a7c110dbb4d86dca43f661a9eabdd8538e333baa560e4685c87",
+        "clip-only": "ffac1c4d65d83f54a28d9f0f954d03dc800bf84a05f4ea08fc8a6bcd95d94d0c"
+      }
+    },
+    {
+      "yaw": 62.5,
+      "anchorEye": [
+        725.067,
+        469.04
+      ],
+      "anchorNose": [
+        710.243,
+        535.309
+      ],
+      "anchorClip": [
+        786.606,
+        320.1
+      ],
+      "eyeShift": [
+        12.92,
+        0.0
+      ],
+      "eyeSourceCentroid": [
+        717.625,
+        454.046
+      ],
+      "eyeTrackedCentroid": [
+        730.532,
+        454.045
+      ],
+      "eyeRelativeMotionErrorPx": 0.0128,
+      "clipShift": [
+        22.1384,
+        -4.4689
+      ],
+      "clipSourceCentroid": [
+        764.468,
+        324.569
+      ],
+      "clipRegisteredCentroid": [
+        786.592,
+        320.1
+      ],
+      "clipCentroidErrorBefore": 22.5849,
+      "clipCentroidErrorAfter": 0.0139,
+      "eyeRetainedAlphaFraction": 1.000014,
+      "clipRetainedAlphaFraction": 1.000112,
+      "wholeFrameAlphaIoUToP15_21": 0.99702,
+      "images": {
+        "eye-tracked": "633daf269256b42ffbc80a8966331e3c3485a4670ff34519ff6ec1f2ca52f824",
+        "clip-tracked": "2e3fa695f89adbfba42227f85266cef4887da119e25640f0ed1072cb0a614316",
+        "eye-tracked-bridge-proxy": "d2ed5b87e6cf22ad0b0d725f111c18c411ae855df400b2b32a08b42381a5b941",
+        "whole-tracked": "87497e5cde15b92b9945687a736617c80bff20a7ddfcfc3eb29f6af5ed00cc37",
+        "eye-only": "1ba9f641fe8e62d82c5c286fd25774d15ddf8a9ba3aaefe7fba09030d0465a33",
+        "clip-only": "0e597dd370d50e7e2bfa58c013df40efa34ed12d371a303ab030e519c82d282c"
+      }
+    },
+    {
+      "yaw": 65.0,
+      "anchorEye": [
+        729.373,
+        469.04
+      ],
+      "anchorNose": [
+        716.341,
+        535.644
+      ],
+      "anchorClip": [
+        789.948,
+        320.1
+      ],
+      "eyeShift": [
+        17.226,
+        0.0
+      ],
+      "eyeSourceCentroid": [
+        717.626,
+        454.04
+      ],
+      "eyeTrackedCentroid": [
+        734.844,
+        454.04
+      ],
+      "eyeRelativeMotionErrorPx": 0.0085,
+      "clipShift": [
+        25.4893,
+        -4.4588
+      ],
+      "clipSourceCentroid": [
+        764.459,
+        324.559
+      ],
+      "clipRegisteredCentroid": [
+        789.959,
+        320.089
+      ],
+      "clipCentroidErrorBefore": 25.8764,
+      "clipCentroidErrorAfter": 0.0153,
+      "eyeRetainedAlphaFraction": 1.0,
+      "clipRetainedAlphaFraction": 1.000079,
+      "wholeFrameAlphaIoUToP15_21": 0.996657,
+      "images": {
+        "eye-tracked": "08db1dc50751f18d8cd25915ea99014076e6a89a2207bb8f21df5472afc98daa",
+        "clip-tracked": "8e177cab1c4eaaa916f48795d752365235b9c9650dae45dc3289eb972901ce51",
+        "eye-tracked-bridge-proxy": "caf311410bd5141201e6f65612fae1ca19ad73d24688e07e97af121d7396abd8",
+        "whole-tracked": "bf1c3f27f9c85dbaa3ecea5624dce72333dcd0ae0c25e6d85cb4bb2a3bc723e9",
+        "eye-only": "14caaf5d3438ebaa8c0391262e5af097ad2f4ccfc496e00d09c8c4add8ca574c",
+        "clip-only": "09b70b326cc5bb25ee61dbac6ebeb053f4be45b53f07fbdbe7f3868f8d1132b0"
+      }
+    }
+  ],
+  "next": "Verify continuous interpolation with real part anchors and visually approve clip physical mounting and far-eye occlusion",
+  "continuityDiagnostics": {
+    "frameCount": 9,
+    "interpolatedFrames": 4,
+    "interpolation": "LINEAR_FULL_RGBA_FRAME_BLEND_NOT_VDD",
+    "adjacentFrameDiff": [
+      {
+        "toYaw": 56.25,
+        "changedPixels": 257855,
+        "meanAbsoluteChannelDelta": 2.84592
+      },
+      {
+        "toYaw": 57.5,
+        "changedPixels": 257924,
+        "meanAbsoluteChannelDelta": 2.84671
+      },
+      {
+        "toYaw": 58.75,
+        "changedPixels": 262113,
+        "meanAbsoluteChannelDelta": 2.87168
+      },
+      {
+        "toYaw": 60.0,
+        "changedPixels": 261910,
+        "meanAbsoluteChannelDelta": 2.87236
+      },
+      {
+        "toYaw": 61.25,
+        "changedPixels": 264316,
+        "meanAbsoluteChannelDelta": 2.89446
+      },
+      {
+        "toYaw": 62.5,
+        "changedPixels": 264270,
+        "meanAbsoluteChannelDelta": 2.89436
+      },
+      {
+        "toYaw": 63.75,
+        "changedPixels": 286932,
+        "meanAbsoluteChannelDelta": 3.5409
+      },
+      {
+        "toYaw": 65.0,
+        "changedPixels": 286991,
+        "meanAbsoluteChannelDelta": 3.54022
+      }
+    ],
+    "formalContinuousArtAcceptance": false
+  },
+  "visualAcceptanceStatus": "ANCHOR_TRACKING_PASS_ART_AND_TRUE_VDD_PENDING"
+}

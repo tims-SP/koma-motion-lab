@@ -929,6 +929,52 @@
       "reviewArchive": "private-assets/exports/p15-29-defade-geometry-review.zip",
       "plan": "docs/plans/2026-11-11-p15-29-defade-eye-clip-geometry.md",
       "next": "Align far eye and hairclip to measured P0 camera anchors under true surface depth; validate 55–65 visual continuity and hairpin physical side before promotion"
+    },
+    "p15CameraTrackedEyeClipContinuousReview": {
+      "characterId": "p0_character_001",
+      "status": "CAMERA_ANCHOR_TRACKING_PASS_ART_AND_3D_OCCLUSION_PENDING",
+      "views": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "clipCentroidErrorBeforePx": [
+        12.9029,
+        16.0756,
+        19.3096,
+        22.5849,
+        25.8764
+      ],
+      "clipCentroidErrorAfterPx": [
+        0.0169,
+        0.0119,
+        0.016,
+        0.0139,
+        0.0153
+      ],
+      "farEyeRelativeMotionErrorPx": [
+        0.0,
+        0.0056,
+        0.0128,
+        0.0128,
+        0.0085
+      ],
+      "nineFrameContinuityPreview": true,
+      "fourIntermediateFramesAreTrueVDD": false,
+      "formalArtAcceptance": false,
+      "productionVddModified": false,
+      "unitTestsPassed": 9,
+      "chromiumAngleViewportChecks": 10,
+      "chromiumDiagnosticTimelineChecks": 18,
+      "chromiumImageLoads": 78,
+      "chromiumErrors": 0,
+      "qa": "evidence/p15-30-tracked-qa.json",
+      "browserQa": "evidence/p15-30-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-30-tracked-review.zip",
+      "plan": "docs/plans/2026-11-11-p15-30-camera-registration.md",
+      "next": "Actual per-role VDD, P0 physical clip hair mounting and nasal bridge occlusion"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",

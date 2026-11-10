@@ -1,0 +1,147 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "angleIndex": 0,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 1,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 2,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 3,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 4,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 0,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 1,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 2,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 3,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 4,
+      "loaded": 6
+    }
+  ],
+  "frames": [
+    {
+      "viewport": 1440,
+      "index": 0,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 1,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 2,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 3,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 4,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 5,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 6,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 7,
+      "loaded": 1
+    },
+    {
+      "viewport": 1440,
+      "index": 8,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 0,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 1,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 2,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 3,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 4,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 5,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 6,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 7,
+      "loaded": 1
+    },
+    {
+      "viewport": 390,
+      "index": 8,
+      "loaded": 1
+    }
+  ],
+  "errors": []
+}
