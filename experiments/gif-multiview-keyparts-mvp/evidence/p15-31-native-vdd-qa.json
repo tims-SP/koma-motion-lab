@@ -1,0 +1,922 @@
+{
+  "schema": "KOMA-P15-31-NATIVE-ARTMESH-VDD-V1",
+  "characterId": "p0_character_001",
+  "roleCount": 13,
+  "frames": [
+    {
+      "yaw": 55.0,
+      "lower": 55.0,
+      "upper": 55.0,
+      "factor": 0.0,
+      "kind": "tracked-keyframe",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw55/body.reference.png",
+          "sha256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw55/hair.back.png",
+          "sha256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw55/face.skin.png",
+          "sha256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw55/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw55/ear.near.png",
+          "sha256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw55/hair.side.png",
+          "sha256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw55/eye.far.png",
+          "sha256": "daf851c7caf58a3f2951551794bf02bf398573d59d1dbb68b2408d2b4dbcd869"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw55/eye.near.png",
+          "sha256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw55/nose.png",
+          "sha256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw55/mouth.png",
+          "sha256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw55/hair.front.png",
+          "sha256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw55/hair.ahoge.png",
+          "sha256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw55/hair.clip.cross_gold.png",
+          "sha256": "1ae7694f501eaee188e7e8f0b950fcc8d608a5fe8e906fe4c0b104e28c847d64"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw55/composite.png",
+      "compositeSHA256": "45c6d79f5d7ef56d3dc8aecce919f28a517411d0c52ec369aaa9a7b5d4e9a9fb",
+      "keyframePixelError": 0,
+      "clipCentroidNative": [
+        335.6857,
+        138.1987
+      ],
+      "eyeVisibleMassNative": 2159.227,
+      "fullFrameAlphaMass": 469846.341
+    },
+    {
+      "yaw": 56.25,
+      "lower": 55.0,
+      "upper": 57.5,
+      "factor": 0.5,
+      "kind": "true-native-per-role-vdd",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw56p25/body.reference.png",
+          "sha256": "58a32f3c495d9c47e7700390728db04f6dde574e6511079625df03afaa0a4bfc"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw56p25/hair.back.png",
+          "sha256": "642f24ea38bffdc3bd836ee0d182be65d8959f665b1c2477957ed3e44577f06a"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw56p25/face.skin.png",
+          "sha256": "f767178ac4ce537918ff8ae700ea4523c56a9937e7dc9743c32483a8018397f8"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw56p25/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw56p25/ear.near.png",
+          "sha256": "0554b8462b58a419da358d32fd714ac3b9da7a3008188a4d7855454327045d86"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw56p25/hair.side.png",
+          "sha256": "0509816e16b0ecd49d8188e601f5091cb77f95e9fe3b75b0f04076e5206ba27a"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw56p25/eye.far.png",
+          "sha256": "7746a8328a916fc567a0dcfde0f3368e04faff9182706d0d741df40b92457ee5"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw56p25/eye.near.png",
+          "sha256": "bc1a3f779749fc30c360c336d646e9bd180e1312bdcc43145033ef43cdfde306"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw56p25/nose.png",
+          "sha256": "a0244f4658fa308d5cfa3e77ff83c30eb86d82aa03de208b00b257c0f87c514d"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw56p25/mouth.png",
+          "sha256": "dabf7e69cca8cdabfb1d8ef3802af050230f61ae2e711098e95cf1fb0bc55a79"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw56p25/hair.front.png",
+          "sha256": "f0055b5903b5ccf1f67ff85daac4258eb2d289eb8f6b7a901da098a06ef685f9"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw56p25/hair.ahoge.png",
+          "sha256": "4ec1bd249a7f03dc378cf738e0da9cc3b068ab065c6c03688818c3e216830f28"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw56p25/hair.clip.cross_gold.png",
+          "sha256": "e278c57b7d3f4cee2eedee74f3daaa0db55d00977679e21956b46f6debb82f4c"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw56p25/composite.png",
+      "compositeSHA256": "339e1dcd39a2e65b3655eff05c97b10d288d30f3087af9f21b2765828cfcaf12",
+      "keyframePixelError": null,
+      "clipCentroidNative": [
+        336.3956,
+        138.1994
+      ],
+      "eyeVisibleMassNative": 2104.455,
+      "fullFrameAlphaMass": 468252.294,
+      "previousAlphaIoU": 0.989924,
+      "previousMeanAbsChannelDelta": 3.10418
+    },
+    {
+      "yaw": 57.5,
+      "lower": 57.5,
+      "upper": 57.5,
+      "factor": 0.0,
+      "kind": "tracked-keyframe",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw57p5/body.reference.png",
+          "sha256": "1db301655cf76c6614c4ae6f88ef929b017450d45641c26ac4e26583a6ea2a4d"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw57p5/hair.back.png",
+          "sha256": "6a8ddf3a6c253810ccf1149582be88b9efd9d6db07f9b1998e0e22efc01f7b71"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw57p5/face.skin.png",
+          "sha256": "a225e35faf55735d200c876b2c6bafd09619d864e28f7e282116b16215abe8d3"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw57p5/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw57p5/ear.near.png",
+          "sha256": "52c728d1920623cdda44b524b788b87a0c3b0754b6ff48b792636008a35daf24"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw57p5/hair.side.png",
+          "sha256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw57p5/eye.far.png",
+          "sha256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw57p5/eye.near.png",
+          "sha256": "cdd09b5ba5126655e53d1212494518826bd5618b3f46b7fe32db1bd9a93b5155"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw57p5/nose.png",
+          "sha256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw57p5/mouth.png",
+          "sha256": "06ef82d365167932e5dc73b6f7f8d4c7dd1e06d476b34dd8d394817d91e1db54"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw57p5/hair.front.png",
+          "sha256": "1f4703c72d819ae8a08fbcf247732da005afc86ca16864bc243835809e8c19af"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw57p5/hair.ahoge.png",
+          "sha256": "5abf914c5bd01728e26c64a37ca17b617b7389411d19b8693af9a422bb22c4f5"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw57p5/hair.clip.cross_gold.png",
+          "sha256": "66e36ef4391d08fd76ed446b90ab3f72e3b3b466ea4a51aca0ad1b9961c4803f"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw57p5/composite.png",
+      "compositeSHA256": "e64cdb0dab90230186b32712ad3fb9b37a420d7b15ccdc03901bfb0d7efc6d52",
+      "keyframePixelError": 0,
+      "clipCentroidNative": [
+        337.1061,
+        138.1988
+      ],
+      "eyeVisibleMassNative": 2049.533,
+      "fullFrameAlphaMass": 466716.969,
+      "previousAlphaIoU": 0.984617,
+      "previousMeanAbsChannelDelta": 3.20934
+    },
+    {
+      "yaw": 58.75,
+      "lower": 57.5,
+      "upper": 60.0,
+      "factor": 0.5,
+      "kind": "true-native-per-role-vdd",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw58p75/body.reference.png",
+          "sha256": "6e60712dbe2efcb6c41805bd9a9752255712f366d9af0e73c3e2a76b7be5ff74"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw58p75/hair.back.png",
+          "sha256": "6068798a7aaa9cc5f91249bd72d11b751f790c1346c3c380c3f0c41c5393dbcc"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw58p75/face.skin.png",
+          "sha256": "16e267265ef76f0b6ced63d9024fd3aa1ed8c695f66e4bb59c8c85bd573dc1a0"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw58p75/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw58p75/ear.near.png",
+          "sha256": "00a18ace6f65f68c26ade7836cac4190f021b8f80be98ddc85570af7488e9199"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw58p75/hair.side.png",
+          "sha256": "8a5b3a95d81d58b00038f95dac6ec1eeaa7d929b34c33d72b0c92dfdda7e8a2f"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw58p75/eye.far.png",
+          "sha256": "54788377b4f4b8ac49dc7a7e2b399fefff0066a19db332243b4ba09a4ce9e903"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw58p75/eye.near.png",
+          "sha256": "1e2f8230bb7295524826417ffdcc134f296c86f2c2de103991077d0cc4654e16"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw58p75/nose.png",
+          "sha256": "41361cbb31a041a23c1eaf6d854a45a58b10a976966415f35bdea76e8d59294d"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw58p75/mouth.png",
+          "sha256": "c8eaf71086b7e7f7ebc8b7e7a57c9df874f1f1a51b12de0c703cd58ad55e9908"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw58p75/hair.front.png",
+          "sha256": "a36166eec8ace151ad56111534e0bee2a4e81c5c12c5b6fb5d9da4db98686584"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw58p75/hair.ahoge.png",
+          "sha256": "35c21858783625d52b86f46c6c8da9dae28ef6b0d80af58fb70a729c44780330"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw58p75/hair.clip.cross_gold.png",
+          "sha256": "fa980d4ae980e6b92a0e82e2ac624ae69ee517667ed3bd0cb20c88d8187ade4d"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw58p75/composite.png",
+      "compositeSHA256": "b6c99f9c071fcc9cc309fd24db61906b3e3f3fbbecd46097eca12940cde2a817",
+      "keyframePixelError": null,
+      "clipCentroidNative": [
+        337.8435,
+        138.1978
+      ],
+      "eyeVisibleMassNative": 2002.537,
+      "fullFrameAlphaMass": 465267.353,
+      "previousAlphaIoU": 0.98897,
+      "previousMeanAbsChannelDelta": 3.12505
+    },
+    {
+      "yaw": 60.0,
+      "lower": 60.0,
+      "upper": 60.0,
+      "factor": 0.0,
+      "kind": "tracked-keyframe",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw60/body.reference.png",
+          "sha256": "212dfefdffcbe58695d0b236a015d4d0c294430c1daeb81dfb84052d4385a180"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw60/hair.back.png",
+          "sha256": "a3990b1db2847237246b757b66dc4a932a8a277be1ff7f28b43534494c8e716d"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw60/face.skin.png",
+          "sha256": "d63470eb4abd566b6bbccab70b285aeed934477071e6991529fd2b81077f4748"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw60/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw60/ear.near.png",
+          "sha256": "28757f55b38cf31789e50d6be697d789b6c1e1ff183fb773421e206dd9f9251f"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw60/hair.side.png",
+          "sha256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw60/eye.far.png",
+          "sha256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw60/eye.near.png",
+          "sha256": "f3a97f8b3cf2d5e5ef3cf17667573d11ea70e8d1692e58f8f53455c2bd900d51"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw60/nose.png",
+          "sha256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw60/mouth.png",
+          "sha256": "12d443200ef864e4be2756cc5cb875f8d598320ac758881b197cd6a9aeb993ae"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw60/hair.front.png",
+          "sha256": "393975293e5641efe2c2917868151826a1ecaae22eb7a38f6d34606064f79b3f"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw60/hair.ahoge.png",
+          "sha256": "bddb08de8074e8025e5ce82f240a90cd61758478011425ae5baf1239da89ed4e"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw60/hair.clip.cross_gold.png",
+          "sha256": "33277d15b485092fdcc959cbc07270cd50adfebf31c6f4f94f7ab87d7eeba129"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw60/composite.png",
+      "compositeSHA256": "a08d8eac8101c2b2b862fe4eb2ef419e642bc809af54315922f7621fe1327179",
+      "keyframePixelError": 0,
+      "clipCentroidNative": [
+        338.5802,
+        138.1975
+      ],
+      "eyeVisibleMassNative": 1955.439,
+      "fullFrameAlphaMass": 463873.831,
+      "previousAlphaIoU": 0.984474,
+      "previousMeanAbsChannelDelta": 3.23319
+    },
+    {
+      "yaw": 61.25,
+      "lower": 60.0,
+      "upper": 62.5,
+      "factor": 0.5,
+      "kind": "true-native-per-role-vdd",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw61p25/body.reference.png",
+          "sha256": "495649f78e2055ec9cb5c065d60089db41d45655496a13e2c55c0a5ab93850cb"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw61p25/hair.back.png",
+          "sha256": "a0db3b42f707c816546d29c2af65b24e854fee95bd97edd513ebb6a2982c85f6"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw61p25/face.skin.png",
+          "sha256": "8177163d240d1a68fba34a436ea6267e7199976953cc71d3772048fd48ea0176"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw61p25/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw61p25/ear.near.png",
+          "sha256": "0386900405a4ded5fb6274d484e8677694d32a2aac2fa2e73eba993cfa722e89"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw61p25/hair.side.png",
+          "sha256": "8c4cd776667c1bdad3c3f09d6fa17a19ddbb55cda7999cea1c3d5a0484db27c6"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw61p25/eye.far.png",
+          "sha256": "edd4f0b5c981cd9b06d82354a1cec767210c124f74b59e6d4546fd2c525e1903"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw61p25/eye.near.png",
+          "sha256": "51e895e3fbfb668b9dc4853f5da5b90c863d8dd460032ae2bcc39a44e995ec20"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw61p25/nose.png",
+          "sha256": "02c7e90afc567c0dc5e7826c70a99cca806abc9acccf54cc255852ef81df6f78"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw61p25/mouth.png",
+          "sha256": "620b57314f9e1191d23b9f5ab733e42e4441cf6c3fd14386a6bae38b9c5fa315"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw61p25/hair.front.png",
+          "sha256": "0406dbe39278c9a5aaaf02aebedb8eadad8fec12203a6d0309b562df4c43aa9e"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw61p25/hair.ahoge.png",
+          "sha256": "dfb194a233eef0844297f50807473b535da04866d52f0dcc3d1316caaf5c91bd"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw61p25/hair.clip.cross_gold.png",
+          "sha256": "e481313a1de973cbcc42b6aded45f6403034679a46fd17a991018a97c1604f9d"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw61p25/composite.png",
+      "compositeSHA256": "66cdb7b76da4a4a8185c5d65b0799f41be6ce4e8c6e2aebe1da1ad4369ad3802",
+      "keyframePixelError": null,
+      "clipCentroidNative": [
+        339.2883,
+        138.1998
+      ],
+      "eyeVisibleMassNative": 1915.678,
+      "fullFrameAlphaMass": 462335.231,
+      "previousAlphaIoU": 0.988813,
+      "previousMeanAbsChannelDelta": 3.15385
+    },
+    {
+      "yaw": 62.5,
+      "lower": 62.5,
+      "upper": 62.5,
+      "factor": 0.0,
+      "kind": "tracked-keyframe",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw62p5/body.reference.png",
+          "sha256": "e3e7c040f66df10f079c7761a1af5acbad0e623402beaa905c56afe0a0b83ea7"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw62p5/hair.back.png",
+          "sha256": "e8a5f0dfca6b0bb0c60aa50067a57f875c86f60830a74d2827d9aa97abc1b84b"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw62p5/face.skin.png",
+          "sha256": "766978ce1be500fe5db32ad7b7c21afb8f145f2620da82f0a4f22db123d7d0fc"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw62p5/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw62p5/ear.near.png",
+          "sha256": "3c2861f8f996e08694f87058d34257da84af7538a7ba99bc6d273f620581be25"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw62p5/hair.side.png",
+          "sha256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw62p5/eye.far.png",
+          "sha256": "384d92b9498cee71794cbfdc3dc2bb6f64cfb49d0260ee8a21b4a2eef170682b"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw62p5/eye.near.png",
+          "sha256": "10b211e08ac811de395e217cc11fb1f104a9f32e57716b101a8ddfe073d2b5c5"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw62p5/nose.png",
+          "sha256": "2618dc19459f2bb5eb1d071c98cdaefd71888708269fd8a00e74d9f7a3f54f94"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw62p5/mouth.png",
+          "sha256": "057e143a185da7db5b19b30f5765e060daf474c76b0ce6581fa36f0cadeb84a6"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw62p5/hair.front.png",
+          "sha256": "59a6601da236b0997c91b097f01f7569fbb4d2f6619e37c2e30f7a5daf8760be"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw62p5/hair.ahoge.png",
+          "sha256": "cb6552bb31d7f0c810995de49c90b24cc2725db9a58a95b8fedc735be61241da"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw62p5/hair.clip.cross_gold.png",
+          "sha256": "e22a091c84e76ce4f96e2062ede4342dea6c2713022f0ab6befe3df1158a7fd7"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw62p5/composite.png",
+      "compositeSHA256": "87497e5cde15b92b9945687a736617c80bff20a7ddfcfc3eb29f6af5ed00cc37",
+      "keyframePixelError": 0,
+      "clipCentroidNative": [
+        339.9936,
+        138.2011
+      ],
+      "eyeVisibleMassNative": 1875.859,
+      "fullFrameAlphaMass": 460862.706,
+      "previousAlphaIoU": 0.983772,
+      "previousMeanAbsChannelDelta": 3.24994
+    },
+    {
+      "yaw": 63.75,
+      "lower": 62.5,
+      "upper": 65.0,
+      "factor": 0.5,
+      "kind": "true-native-per-role-vdd",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw63p75/body.reference.png",
+          "sha256": "d0d76d3d657976f77aacbe2a7785c11a384837f1b361956e356c81ac70c589bc"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw63p75/hair.back.png",
+          "sha256": "91d20152d659b99f1f9b05266973bfbc758975038e26f6ebe4f6038972c98cdb"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw63p75/face.skin.png",
+          "sha256": "f240d1124f0ec71535ccc5e44fe7dfcef074774292b50d2ed48a593d05b611a4"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw63p75/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw63p75/ear.near.png",
+          "sha256": "c612d447bd35c658cfea58ddd36d11af702e05e5c5ae1e1405e5074278a8e598"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw63p75/hair.side.png",
+          "sha256": "270eaa91ecff3b8cbc58ced9643d5861f390bea109d07f6ba5dd3523be7c6592"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw63p75/eye.far.png",
+          "sha256": "8764e97af95501b0491feae8f8faeb6ec40ebe9cf0841e311ce71bb8255d6c33"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw63p75/eye.near.png",
+          "sha256": "233d620677bfee0c9af041b0cfb00eaa9e2000b4b077e6a82b5754975f028281"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw63p75/nose.png",
+          "sha256": "7d7e98aa3060bad354833dad78961fa36dd5116a5bf44d1243a7ad22e1086652"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw63p75/mouth.png",
+          "sha256": "54a2934305159c5285f76c06b7bb1beb881b480ee50ff7dae4f9c165fb5cbaf2"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw63p75/hair.front.png",
+          "sha256": "358eccdd7c2f71f46846d07b54bbb7d23ae5bbece1a04a49fb8c348fdd2eaebb"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw63p75/hair.ahoge.png",
+          "sha256": "4c8b2b919d01da77619c6a8e41b5f4df8a53f7ced1ef7d9c7956c4c67abe7dbc"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw63p75/hair.clip.cross_gold.png",
+          "sha256": "497b0fcaa329b6558d1c5e857987b339bf404b00aa34666ee4f6ef3fefa9bcfe"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw63p75/composite.png",
+      "compositeSHA256": "1aedb56dab4fbfd00879923a0052e39e4d1f0c980051d839a24f3a14f904e722",
+      "keyframePixelError": null,
+      "clipCentroidNative": [
+        340.7343,
+        138.1993
+      ],
+      "eyeVisibleMassNative": 1843.949,
+      "fullFrameAlphaMass": 464360.4,
+      "previousAlphaIoU": 0.975401,
+      "previousMeanAbsChannelDelta": 4.20709
+    },
+    {
+      "yaw": 65.0,
+      "lower": 65.0,
+      "upper": 65.0,
+      "factor": 0.0,
+      "kind": "tracked-keyframe",
+      "partCount": 13,
+      "parts": [
+        {
+          "role": "body.reference",
+          "depthOrder": 0,
+          "path": "p15-31-per-role-vdd/yaw65/body.reference.png",
+          "sha256": "322818b599339d54dca0bc627f0d1de51f79be7ad973fa7bb3005b137dfed6cc"
+        },
+        {
+          "role": "hair.back",
+          "depthOrder": 1,
+          "path": "p15-31-per-role-vdd/yaw65/hair.back.png",
+          "sha256": "f72e8288dca1e25ad7928092f7e7206982ccd53782181ed51ba952558ab76c5d"
+        },
+        {
+          "role": "face.skin",
+          "depthOrder": 2,
+          "path": "p15-31-per-role-vdd/yaw65/face.skin.png",
+          "sha256": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d"
+        },
+        {
+          "role": "ear.far",
+          "depthOrder": 3,
+          "path": "p15-31-per-role-vdd/yaw65/ear.far.png",
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e"
+        },
+        {
+          "role": "ear.near",
+          "depthOrder": 4,
+          "path": "p15-31-per-role-vdd/yaw65/ear.near.png",
+          "sha256": "7843caa0a88251d54e829862207d8d2de85939468ebfa94b17587e27bcd580b2"
+        },
+        {
+          "role": "hair.side",
+          "depthOrder": 5,
+          "path": "p15-31-per-role-vdd/yaw65/hair.side.png",
+          "sha256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84"
+        },
+        {
+          "role": "eye.far",
+          "depthOrder": 6,
+          "path": "p15-31-per-role-vdd/yaw65/eye.far.png",
+          "sha256": "7407b43e73c49c3e4961778da3e87465e3f4337abf11eea1fffefe64c4639a04"
+        },
+        {
+          "role": "eye.near",
+          "depthOrder": 7,
+          "path": "p15-31-per-role-vdd/yaw65/eye.near.png",
+          "sha256": "587c40c435c8515d2eb1f3f867dbc29b1238f04cc669960e8d05ad523e5b41d9"
+        },
+        {
+          "role": "nose",
+          "depthOrder": 8,
+          "path": "p15-31-per-role-vdd/yaw65/nose.png",
+          "sha256": "4499954095f75911c6b55c474b90cdf56ce009fc27a61e198bed7ed337a1a60f"
+        },
+        {
+          "role": "mouth",
+          "depthOrder": 9,
+          "path": "p15-31-per-role-vdd/yaw65/mouth.png",
+          "sha256": "b91ef19ad44d1df36fd839e5c28020ccce4d30f148d9bb06aa63c025797aeee7"
+        },
+        {
+          "role": "hair.front",
+          "depthOrder": 10,
+          "path": "p15-31-per-role-vdd/yaw65/hair.front.png",
+          "sha256": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6"
+        },
+        {
+          "role": "hair.ahoge",
+          "depthOrder": 11,
+          "path": "p15-31-per-role-vdd/yaw65/hair.ahoge.png",
+          "sha256": "b28e3447b6c9d28f89009df4c008d87653c1a546262f166608912740f14f0bba"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "depthOrder": 12,
+          "path": "p15-31-per-role-vdd/yaw65/hair.clip.cross_gold.png",
+          "sha256": "5c37ff0f661325d7dfe2e5c25b001e3bfbffc8f168dce72d44f64e83e26b78c4"
+        }
+      ],
+      "composite": "p15-31-per-role-vdd/yaw65/composite.png",
+      "compositeSHA256": "bf1c3f27f9c85dbaa3ecea5624dce72333dcd0ae0c25e6d85cb4bb2a3bc723e9",
+      "keyframePixelError": 0,
+      "clipCentroidNative": [
+        341.4758,
+        138.1987
+      ],
+      "eyeVisibleMassNative": 1812.075,
+      "fullFrameAlphaMass": 467984.22,
+      "previousAlphaIoU": 0.98708,
+      "previousMeanAbsChannelDelta": 3.45877
+    }
+  ],
+  "interpolation": "PER_ROLE_PREMULTIPLIED_RGBA_LINEAR_ON_443_NATIVE",
+  "fullFrameCrossfadeUsed": false,
+  "actualIndependentRoleFramesGenerated": true,
+  "newIndependentPaintings": 0,
+  "physicalDepthFromP15_21LayerOrder": true,
+  "nasalBridgeMaskIsOnlyP15_29Proxy": true,
+  "goldClipSideArtApproved": false,
+  "artisticallyAccepted": false,
+  "productionVddModified": false,
+  "next": "Verify optical continuity, replace per-role linear blending with geometry-based VDD where needed; source art and true nasal bridge/clip occlusion gate remain",
+  "comparisonWithLegacyFullFrameCrossfade": {
+    "midpointAngle": [
+      56.25,
+      58.75,
+      61.25,
+      63.75
+    ],
+    "changedPixels": [
+      57877,
+      58451,
+      59751,
+      76500
+    ],
+    "comparisonIsArtisticallyAccepted": false
+  },
+  "visualGate": "NO_MESH_VERTEX_VDD_AND_NO_APPROVED_INDEPENDENT_ART_OR_REAL_3D_OCCLUSION"
+}

@@ -975,6 +975,59 @@
       "reviewArchive": "private-assets/exports/p15-30-tracked-review.zip",
       "plan": "docs/plans/2026-11-11-p15-30-camera-registration.md",
       "next": "Actual per-role VDD, P0 physical clip hair mounting and nasal bridge occlusion"
+    },
+    "p15NativeArtMeshRoleInterpolation": {
+      "characterId": "p0_character_001",
+      "status": "NATIVE_PER_ROLE_RGBA_INTERPOLATION_PASS_MESH_VDD_AND_VISUAL_ART_GATE_PENDING",
+      "angles": [
+        55.0,
+        56.25,
+        57.5,
+        58.75,
+        60.0,
+        61.25,
+        62.5,
+        63.75,
+        65.0
+      ],
+      "keyframeCount": 5,
+      "newMidpointCount": 4,
+      "independentNativeRgbaParts": 117,
+      "roleCountPerFrame": 13,
+      "nativeResolution": [
+        443,
+        443
+      ],
+      "outputResolution": [
+        1024,
+        1024
+      ],
+      "method": "PREMULTIPLIED_LINEAR_RGBA_INTERPOLATION_PER_ROLE_FOLLOWED_BY_DEPTH_SORTED_NATIVE_COMPOSITION",
+      "newFullFrameCrossfades": 0,
+      "referenceFullFrameCrossfadeComparisonOnly": true,
+      "keyframeExactPixelDifference": 0,
+      "midpointPixelsDifferingFromLegacyCrossfade": [
+        57877,
+        58451,
+        59751,
+        76500
+      ],
+      "minimumAdjacentAlphaIoU": 0.975401,
+      "maximumAdjacentMeanAbsoluteChannelDelta": 4.20709,
+      "genuineVertexMeshDeformationImplemented": false,
+      "approvedIndependentP0ArtworkProduced": false,
+      "physicalFaceOcclusionValidated": false,
+      "productionVddModified": false,
+      "formalArtisticAcceptance": false,
+      "unitTestsPassed": 8,
+      "chromiumFrameViewportChecks": 18,
+      "chromiumImageLoads": 144,
+      "chromiumErrors": 0,
+      "qa": "evidence/p15-31-native-vdd-qa.json",
+      "browserQa": "evidence/p15-31-browser-qa.json",
+      "archive": "private-assets/exports/p15-31-native-artmesh-review.zip",
+      "plan": "docs/plans/2026-11-11-p15-31-native-artmesh-interpolation.md",
+      "next": "Implement vertex/mesh-aware per-part VDD from approved angle-specific original artwork and validate physical nose/eye and clip/hair occlusion"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
