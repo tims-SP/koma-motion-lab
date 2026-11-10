@@ -1,0 +1,346 @@
+{
+  "schema": "KOMA-P15-09-P5-ANCHOR-PROJECTED-55-V1",
+  "characterId": "p0_character_001",
+  "targetAngle": 55.0,
+  "sourceAngle": 45.0,
+  "sourceArtworkSha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "sourceLandmarksSha256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+  "anchorCount": 20,
+  "controlPoints": [
+    {
+      "semantic": "face.chin",
+      "source": [
+        616.5,
+        664.0
+      ],
+      "target": [
+        622.98,
+        662.32
+      ],
+      "vector": [
+        6.480000000000018,
+        -1.67999999999995
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "face.jaw.near",
+      "source": [
+        482.2,
+        552.56
+      ],
+      "target": [
+        497.4928,
+        551.0816
+      ],
+      "vector": [
+        15.2928,
+        -1.478399999999965
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "eye.near.iris",
+      "source": [
+        544.27,
+        467.11
+      ],
+      "target": [
+        578.7798,
+        463.3114
+      ],
+      "vector": [
+        34.50980000000004,
+        -3.7986000000000217
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "nose",
+      "source": [
+        662.91,
+        532.96
+      ],
+      "target": [
+        687.2916,
+        534.4096000000001
+      ],
+      "vector": [
+        24.38160000000005,
+        1.4496000000000322
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "mouth",
+      "source": [
+        635.0,
+        592.36
+      ],
+      "target": [
+        659.12,
+        594.7936
+      ],
+      "vector": [
+        24.120000000000005,
+        2.433599999999956
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "ear.near",
+      "source": [
+        417.63,
+        518.82
+      ],
+      "target": [
+        447.72249999999997,
+        517.49
+      ],
+      "vector": [
+        30.092499999999973,
+        -1.330000000000041
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "hair.ahoge.root",
+      "source": [
+        524.0,
+        148.0
+      ],
+      "target": [
+        526.25,
+        148.0
+      ],
+      "vector": [
+        2.25,
+        0.0
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "hair.clip.center",
+      "source": [
+        763.21,
+        320.1
+      ],
+      "target": [
+        768.21,
+        320.1
+      ],
+      "vector": [
+        5.0,
+        0.0
+      ],
+      "physicalRole": "registered P5 landmark"
+    },
+    {
+      "semantic": "eye.far.iris",
+      "source": [
+        694.92,
+        469.04
+      ],
+      "target": [
+        688.92,
+        467.04
+      ],
+      "vector": [
+        -6.0,
+        -2.0
+      ],
+      "physicalRole": "partially-visible far eye"
+    },
+    {
+      "semantic": "boundary.0",
+      "source": [
+        0,
+        0
+      ],
+      "target": [
+        0.0,
+        0.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.1",
+      "source": [
+        1023,
+        0
+      ],
+      "target": [
+        1023.0,
+        0.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.2",
+      "source": [
+        0,
+        1023
+      ],
+      "target": [
+        0.0,
+        1023.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.3",
+      "source": [
+        1023,
+        1023
+      ],
+      "target": [
+        1023.0,
+        1023.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.4",
+      "source": [
+        100,
+        380
+      ],
+      "target": [
+        100.0,
+        380.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.5",
+      "source": [
+        900,
+        430
+      ],
+      "target": [
+        900.0,
+        430.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.6",
+      "source": [
+        240,
+        860
+      ],
+      "target": [
+        240.0,
+        860.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.7",
+      "source": [
+        770,
+        920
+      ],
+      "target": [
+        770.0,
+        920.0
+      ],
+      "vector": [
+        0,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.8",
+      "source": [
+        280,
+        310
+      ],
+      "target": [
+        284.0,
+        310.0
+      ],
+      "vector": [
+        4,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.9",
+      "source": [
+        340,
+        640
+      ],
+      "target": [
+        346.0,
+        641.0
+      ],
+      "vector": [
+        6,
+        1
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    },
+    {
+      "semantic": "boundary.10",
+      "source": [
+        760,
+        220
+      ],
+      "target": [
+        764.0,
+        220.0
+      ],
+      "vector": [
+        4,
+        0
+      ],
+      "physicalRole": "canvas and silhouette boundary"
+    }
+  ],
+  "flowMaxPixelMagnitude": 39.6689,
+  "flowMeanPixelMagnitude": 7.2448,
+  "sourceImageShape": [
+    1024,
+    1024,
+    4
+  ],
+  "generatedImageSha256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+  "generatedImagePath": "p15-09-anchor-pose/yaw055-p5-anchor-reference.png",
+  "contactPath": "p15-09-anchor-pose/p15-09-pose-contact.jpg",
+  "contactSha256": "de65c7231e540d77a20653228a88e2bebf3a2ec8a836f7d962e1fa4f98dda8e9",
+  "geometryRole": "physically-constrained three-quarter pose study",
+  "artisticStatus": "POSE_REFERENCE_REQUIRES_VISUAL_APPROVAL",
+  "originalHeroSha256Verified": false,
+  "requiredNextStage": "register independent painted parts and occlusion correspondences"
+}

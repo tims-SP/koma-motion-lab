@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_08_POSE_SOURCE_AND_ALPHA_ENGINEERING_VERIFIED",
+  "status": "P15_09_ANATOMICAL_POSE_REFERENCE_ENGINEERING_VERIFIED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_08_POSE_SOURCE_QA_COMPLETE_ART_CORRESPONDENCE_IN_PROGRESS",
+      "status": "P15_09_ANCHOR_GEOMETRY_ENGINEERING_PASS_PAINTED_CORRESPONDENCE_IN_PROGRESS",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_08_PRIVATE_SOURCE_REVIEW_PACKAGE_SHA_VERIFIED",
+      "status": "P15_09_PRIVATE_ARTIFACT_REPRODUCIBILITY_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -259,9 +259,12 @@
     "p15ViewQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-07-renderer-qa.json",
     "p15ViewDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-07-delivery.json",
     "p15PoseSourceCandidateQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-08-source-candidate-qa.json",
-    "p15PoseSourceDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-08-delivery.json"
+    "p15PoseSourceDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-08-delivery.json",
+    "p15AnchorGeometry": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-anchor-pose-qa.json",
+    "p15AnchorMotion": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-midarc-qa.json",
+    "p15AnchorDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-delivery.json"
   },
-  "lastCompleted": "P15_08_TWO_GENERATED_PAINTINGS_TWO_RGBA_2_CHROMIUM_CAPTURES_5_UNIT_TESTS",
+  "lastCompleted": "P15_09_P5_ANCHORS_9_DYNAMIC_FRAMES_6_BROWSER_CAPTURES_6_UNIT_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1209,6 +1212,45 @@
       "reviewHtml": "review/p15-08-mid-angle.html",
       "plan": "docs/plans/2026-11-10-p15-08-pose-calibration.md",
       "next": "P15-08 validate actual yaw and physical-side landmarks, author pose-controlled 55-degree independent key art and 13 semantic RGBA layers"
+    },
+    "p15AnatomicalCorrespondence": {
+      "sourceOriginal45SHA": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "sourcePainted65SHA": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "P5AnchorCount": 20,
+      "nominalReferenceAngle": 55,
+      "derivedPoseRole": "P5_PHYSICAL_ANCHOR_GEOMETRY",
+      "sourceOriginalKeyframePixelExact": true,
+      "renderedFrameCount": 9,
+      "comparisonFrameCount": 9,
+      "chromiumScreenshotCount": 6,
+      "chromiumImageLoads": 18,
+      "unitTestsPassed": 6,
+      "adjacentAnchor45to55IoU": [
+        0.98778,
+        0.98723,
+        0.98674,
+        0.98615
+      ],
+      "adjacentAnchor55to65IoU": [
+        0.89519,
+        0.9087,
+        0.90896,
+        0.90784
+      ],
+      "artisticStatus": "INDEPENDENT_POSE_AND_OCCLUSION_ART_REQUIRED",
+      "heroSourceVerified": false,
+      "geometryQA": "evidence/p15-09-anchor-pose-qa.json",
+      "motionQA": "evidence/p15-09-midarc-qa.json",
+      "html": "review/p15-09-midarc.html",
+      "runner": "scripts/run-p15-09-review.sh",
+      "plan": "docs/plans/2026-11-10-p15-09-anchor-correspondence.md",
+      "archive": {
+        "path": "private-assets/exports/p15-09-anchor-midarc-review.zip",
+        "sha256": "281e28d2f861683dfe8726e74730bd0eb744afed25d50faf2deb379d3aaa13ee",
+        "bytes": 22237508,
+        "verifiedEntries": 41
+      },
+      "next": "P15-10 independently painted double-eye yaw55 with semantic occlusion, source side and new hidden-angle acceptance"
     }
   }
 }

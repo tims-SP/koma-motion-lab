@@ -111,3 +111,9 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-08 两组生成候选、Alpha、发夹侧别 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-08-source-candidate-qa.json)
 - [P15-08 私有审查包校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-08-delivery.json)
 - [P15-06 中间视角轮廓、画布对齐与 P8 对照](experiments/gif-multiview-keyparts-mvp/evidence/p15-06-view-geometry-qa.json)
+
+- [P15-09 P5 解剖锚点与视角形变方案](docs/plans/2026-11-10-p15-09-anchor-correspondence.md)
+- [P15-09 45°–65° 交互 HTML 画面对照](experiments/gif-multiview-keyparts-mvp/review/p15-09-midarc.html)
+- [P15-09 P5 20 锚点原画几何 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-09-anchor-pose-qa.json)
+- [P15-09 连续转头和画面连续性 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-09-midarc-qa.json)
+- [P15-09 离线 HTML 审查资源验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-09-delivery.json)
