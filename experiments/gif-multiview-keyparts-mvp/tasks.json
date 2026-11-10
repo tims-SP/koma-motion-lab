@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_10_SEMANTIC_ARTMESH_ENGINEERING_VERIFIED",
+  "status": "P15_11_SOURCE_GENERATION_AND_ARTWORK_AUDIT_COMPLETE",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_10_ROLE_LOCAL_RENDER_COMPLETE_ART_CORRESPONDENCE_IN_PROGRESS",
+      "status": "P15_11_PAINTED_VIEW_SOURCE_AUDIT_COMPLETE_ANGLE_CALIBRATION_NEXT",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_10_PRIVATE_HTML_PACKAGE_SHA_VERIFIED",
+      "status": "P15_11_PRIVATE_ARTWORK_HTML_AND_MATTE_PACKAGE_SHA_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -265,9 +265,11 @@
     "p15AnchorDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-09-delivery.json",
     "p15SemanticSource": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-source-qa.json",
     "p15SemanticArc": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-semantic-arc-qa.json",
-    "p15SemanticDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-delivery.json"
+    "p15SemanticDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-10-delivery.json",
+    "p15IndependentPaintingAudit": "experiments/gif-multiview-keyparts-mvp/evidence/p15-11-source-candidate-qa.json",
+    "p15IndependentPaintingDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-11-delivery.json"
   },
-  "lastCompleted": "P15_10_THIRTEEN_55_RGBA_FIVE_ANGLES_8_CHROMIUM_CAPTURES_7_UNIT_TESTS",
+  "lastCompleted": "P15_11_FOUR_GENERATED_PAINTINGS_FOUR_RGBA_2_BROWSER_6_TESTS_22_ARCHIVE_FILES",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1285,6 +1287,34 @@
         "entriesVerified": 124
       },
       "next": "P15-11 independently authored 57.5/60 views, semantic visible/hidden stroke correspondence and held-out art QA"
+    },
+    "p15IndependentPaintingAudit": {
+      "requestedAngles": [
+        57.5,
+        60
+      ],
+      "source45SHA": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "source65SHA": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "newIndependentPaintingCandidates": 4,
+      "independentPaintingAdmitted": 0,
+      "RGBAForegroundMatteGenerated": 4,
+      "semanticPaintedPartsAdmitted": 0,
+      "realChromiumScreenshots": 2,
+      "browserSourceLoads": 12,
+      "regressionTests": 6,
+      "formalArtGate": "P15_11_IDENTITY_AND_POSE_REVIEW_REQUIRED",
+      "referenceSourceVerified": true,
+      "originalHeroSourceSHA256Verified": false,
+      "plan": "docs/plans/2026-11-10-p15-11-artwork-source-admission.md",
+      "html": "review/p15-11-keyview-art.html",
+      "runner": "scripts/run-p15-11-review.sh",
+      "delivery": {
+        "archivePath": "private-assets/exports/p15-11-source-keyview-review.zip",
+        "sha256": "4fef95688b6cd2e33c37d245babb671c8f2aa3cca6ca32e1b74cb3093f57991a",
+        "bytes": 7825816,
+        "entries": 22
+      },
+      "next": "P15-12 establish canonical 3D anchor pose calibration, regenerate view-consistent source and independently painted 13 semantic parts"
     }
   }
 }

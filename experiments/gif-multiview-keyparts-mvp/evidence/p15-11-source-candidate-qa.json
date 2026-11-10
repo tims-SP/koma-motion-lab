@@ -1,0 +1,155 @@
+{
+  "schema": "KOMA-P15-11-SOURCE-CANDIDATE-QA-V1",
+  "characterId": "p0_character_001",
+  "requestedAngles": [
+    57.5,
+    60.0
+  ],
+  "source45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "source65SHA256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+  "generatedCandidateCount": 4,
+  "sourceRecords": [
+    {
+      "requestedYaw": 57.5,
+      "file": "p15-11-generation/yaw057p5-multi-reference-profile.png",
+      "sha256": "f345c495eed853cbae698b2fd2999fd80434ced0e466de8b2d0b880d5743cfc5",
+      "sourceBlobSHA": "891175e6c76a4163dd279beb3061bff9f34fcb9d",
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "seed": 57511,
+      "referenceAngles": [
+        45,
+        65
+      ],
+      "goldClipComponent": {
+        "present": true,
+        "pixels": 1727,
+        "center": [
+          467.31,
+          297.44
+        ]
+      },
+      "foregroundApproxPixels": 237925,
+      "foregroundApproxBounds": [
+        182,
+        27,
+        734,
+        1016
+      ],
+      "manualVisualObservations": [
+        "profile-like pose rather than intermediate two-eye view",
+        "far eye absent",
+        "gold cross hairclip shifts onto left side of canvas"
+      ],
+      "poseAdmission": "REWORK_REQUIRED",
+      "canBeUsedAsRendererKeyframe": false
+    },
+    {
+      "requestedYaw": 57.5,
+      "file": "p15-11-generation/yaw057p5-dual-reversed.png",
+      "sha256": "0a292d963c4c86977c0e6ee0b767d6b7ef38de9d810a55e29296490a5e29f60b",
+      "sourceBlobSHA": "c6b91fffda41497f61adba750b900a94eba6ff30",
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "seed": 57511,
+      "referenceAngles": [
+        45,
+        65
+      ],
+      "goldClipComponent": {
+        "present": true,
+        "pixels": 2065,
+        "center": [
+          420.51,
+          305.27
+        ]
+      },
+      "foregroundApproxPixels": 313378,
+      "foregroundApproxBounds": [
+        250,
+        36,
+        871,
+        1016
+      ],
+      "manualVisualObservations": [
+        "head faces opposite side of registered 45-degree original",
+        "far eye absent",
+        "hairclip physical-side identity altered"
+      ],
+      "poseAdmission": "REWORK_REQUIRED",
+      "canBeUsedAsRendererKeyframe": false
+    },
+    {
+      "requestedYaw": 57.5,
+      "file": "p15-11-generation/yaw057p5-single-source-profile.png",
+      "sha256": "6d330f0c619e9283e90254fc5df49e6ef562f2485b9a61b46dfc4c7ea7b64ddc",
+      "sourceBlobSHA": "e1b6260ca4c089da3021f14e6d75923ccb89e01b",
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Fal-Multiple-Angles",
+      "seed": 57519,
+      "referenceAngles": [
+        45
+      ],
+      "goldClipComponent": {
+        "present": true,
+        "pixels": 382,
+        "center": [
+          746.64,
+          331.13
+        ]
+      },
+      "foregroundApproxPixels": 215902,
+      "foregroundApproxBounds": [
+        201,
+        17,
+        758,
+        1016
+      ],
+      "manualVisualObservations": [
+        "rightward rotation preserved",
+        "nearly full profile with distant eye absent",
+        "crossed clip mostly edge-on rather than the original clearly crossed emblem"
+      ],
+      "poseAdmission": "REWORK_REQUIRED",
+      "canBeUsedAsRendererKeyframe": false
+    },
+    {
+      "requestedYaw": 60,
+      "file": "p15-11-generation/yaw060-near-source-eye-detail.png",
+      "sha256": "ad222866528c00d2a0e6815a15c851eeaf7893ad6ddc5bfc29e3b0ffcda1eef3",
+      "sourceBlobSHA": "f980f788f0729438cee6ba88a72c2dfc97dec30a",
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Fal-Multiple-Angles",
+      "seed": 60051,
+      "referenceAngles": [
+        65
+      ],
+      "goldClipComponent": {
+        "present": false,
+        "pixels": 0,
+        "center": null
+      },
+      "foregroundApproxPixels": 286056,
+      "foregroundApproxBounds": [
+        226,
+        14,
+        818,
+        1016
+      ],
+      "manualVisualObservations": [
+        "pose drift toward near-frontal rather than 60-degree intermediate",
+        "visible eye has missing iris and sclera texture",
+        "face/bangs occlusion no longer follows registered 65 view"
+      ],
+      "poseAdmission": "REWORK_REQUIRED",
+      "canBeUsedAsRendererKeyframe": false
+    }
+  ],
+  "candidateContactPath": "p15-11-generation/p15-11-candidate-grid.jpg",
+  "candidateContactSHA256": "8dbab25699769a1048b2bcb1dd2d6ac71173410eb929cd6f9d33c36295495c7c",
+  "independentPaintingAccepted": 0,
+  "semanticPaintedLayersAccepted": 0,
+  "originalHeroSHA256Verified": false,
+  "formalArtGate": "P15_11_IDENTITY_AND_POSE_REVIEW_REQUIRED",
+  "next": "Create anatomically correct 57.5/60 source paintings and separately painted semantic ArtMesh/underpaint; evaluate on distinct heldout angles."
+}

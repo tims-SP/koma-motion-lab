@@ -1,0 +1,13 @@
+{
+  "schema": "KOMA-P15-11-SOURCE-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-11-source-keyview-review.zip",
+  "sha256": "4fef95688b6cd2e33c37d245babb671c8f2aa3cca6ca32e1b74cb3093f57991a",
+  "bytes": 7825816,
+  "entries": 22,
+  "inputCandidateCount": 4,
+  "transparentCandidateCount": 4,
+  "browserCaptures": 2,
+  "artisticStatus": "P15_11_IDENTITY_AND_POSE_REVIEW_REQUIRED",
+  "htmlEntry": "review/p15-11-keyview-art.html"
+}
