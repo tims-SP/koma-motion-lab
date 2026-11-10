@@ -1501,9 +1501,9 @@
       "evidence": "evidence/p15-14-psd-extraction-access-qa.json",
       "runner": "scripts/p15_14_see_through_trial.py",
       "status": "HF_PLUGIN_ACCOUNT_COMPUTE_CAPABILITY_AUDITED",
-      "accountCapabilityEvidence": "evidence/p15-14-hf-account-capability-qa.json",
+      "accountCapabilityEvidence": "evidence/p15-14-hf-account-compute-qa.json",
       "connectedAccountsChecked": 4,
-      "executionConstraint": "VPS_AUTHENTICATED_GRADIO_CALL_REQUIRED",
+      "executionConstraint": "HUGGING_FACE_PLUGIN_DIRECT_SPACE_MCP_ENDPOINT_REQUIRED",
       "connectedAccountsTested": 4,
       "executionLocation": "Hugging Face plugin",
       "accountExecutionAudit": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-hf-account-compute-qa.json",
@@ -1511,7 +1511,7 @@
       "sandboxStatus": "HTTP_402_PAYMENT_REQUIRED_FOR_ALL_FOUR",
       "directSeeThroughMcpStatus": "HTTP_404_UNAVAILABLE_FOR_ALL_FOUR",
       "zeroGpuAccountQuotaStatus": "NOT_DETERMINED",
-      "next": "Enable account-authorized See-through remote inference with sufficient compute access, then validate P0 source PSD and 13 semantic ArtMesh roles"
+      "next": "Run P0 source PSD inference on a remotely accessible See-through Space with authenticated inference allocation, then audit 13 semantic layers"
     }
   }
 }
