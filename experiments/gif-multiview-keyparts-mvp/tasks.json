@@ -819,6 +819,47 @@
       "reviewArchive": "private-assets/exports/p15-27-occlusion-review.zip",
       "plan": "docs/plans/2026-11-10-p15-27-semantic-occlusion-audit.md",
       "next": "Build and visually inspect P0 aligned nose/near-bang cutout occlusion geometry; clip physical hair-lock placement; then independent underpaint"
+    },
+    "p15PhysicalFarEyeAlphaOcclusion": {
+      "characterId": "p0_character_001",
+      "status": "ENGINEERING_COMPOSITE_PASS_VISUAL_OCCLUSION_FAIL",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "method": "SOURCE_FAR_EYE_ALPHA_CLIPPED_BY_EXISTING_FRONT_HAIR_AND_NOSE_ALPHA",
+      "eyeVisibleAlphaFraction": [
+        0.91837,
+        0.908382,
+        0.901973,
+        0.895746,
+        0.84625
+      ],
+      "changedCompositePixels443": [
+        363,
+        350,
+        348,
+        332,
+        341
+      ],
+      "hiddenUnderpaintRetained": true,
+      "extraGlobalOpacityFadeApplied": false,
+      "sourceMayInheritP8HideWindowFade": true,
+      "independentFaceOcclusionGeometryCreated": false,
+      "sourceArtModified": false,
+      "productionVddModified": false,
+      "unitTestsPassed": 7,
+      "browserAngleViewportChecks": 10,
+      "browserImagesLoaded": 70,
+      "browserErrors": 0,
+      "qa": "evidence/p15-28-physical-occlusion-qa.json",
+      "browserQa": "evidence/p15-28-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-28-physical-occlusion-review.zip",
+      "plan": "docs/plans/2026-11-11-p15-28-physical-alpha-occlusion.md",
+      "next": "Recover pre-fade original P0 eye layer and derive face-surface visibility boundary from registered camera/3D anchors or independently approved painted views; no invented mask"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
