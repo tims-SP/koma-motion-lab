@@ -1,0 +1,750 @@
+{
+  "schema": "KOMA-P15-19-QUALITY-REGION-AUDIT-V1",
+  "characterId": "p0_character_001",
+  "sourceP15_18SHA256": "f2eee57e6777c49022f6452c4ab90bca77596799ea01903280d140bd6ea154a0",
+  "sourceCameraSHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+  "angles": [
+    55,
+    57.5,
+    60,
+    62.5,
+    65
+  ],
+  "roiInterpretation": "P5 camera-projected square crops. P15-10 visibility counts are from separate earlier renderer and NOT P12 visibility measurements.",
+  "views": [
+    {
+      "yaw": 55,
+      "baseSHA256": "f70c4d7c2c29788aa98bb2ef0905b5cbea8f0cf321ede687b4dd1bce1a664641",
+      "wideSHA256": "433b70260b149533f98b7a8ec0dd4d5f079704675ae1e6d9a4caae62d328a941",
+      "globalDifference": {
+        "changedRgbPixels": 50780,
+        "changedRgbPercentOfOverlappingAlpha": 10.431,
+        "meanAbsoluteRgbDelta": 0.9145,
+        "edgeDisagreementPercent": 22.673,
+        "bothAlphaPixels": 486807
+      },
+      "rois": [
+        {
+          "roi": "near_eye",
+          "center": [
+            574.264,
+            463.863
+          ],
+          "radius": 52,
+          "files": {
+            "anatomy": "yaw55-near_eye-anatomy.png",
+            "stroke-wide": "yaw55-near_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw55-near_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 2157,
+            "changedRgbPercentOfOverlappingAlpha": 19.943,
+            "meanAbsoluteRgbDelta": 3.4623,
+            "edgeDisagreementPercent": 39.442,
+            "bothAlphaPixels": 10816
+          },
+          "sourceP15_10PartVisiblePixels": 18158,
+          "sourceP15_10MaskSHA256": "d4ac153ca20157aac0e92c34a4930c38dc711ba41ef888f18aed658c59980ab6"
+        },
+        {
+          "roi": "far_eye",
+          "center": [
+            712.147,
+            469.04
+          ],
+          "radius": 46,
+          "files": {
+            "anatomy": "yaw55-far_eye-anatomy.png",
+            "stroke-wide": "yaw55-far_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw55-far_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 389,
+            "changedRgbPercentOfOverlappingAlpha": 4.596,
+            "meanAbsoluteRgbDelta": 0.3526,
+            "edgeDisagreementPercent": 6.042,
+            "bothAlphaPixels": 8464
+          },
+          "sourceP15_10PartVisiblePixels": 14963,
+          "sourceP15_10MaskSHA256": "508680655ffea940c6991124f31e44d4eaf2c3d9893f3b89ebcb039ea10f3e30"
+        },
+        {
+          "roi": "nose_bridge",
+          "center": [
+            690.852,
+            534.302
+          ],
+          "radius": 65,
+          "files": {
+            "anatomy": "yaw55-nose_bridge-anatomy.png",
+            "stroke-wide": "yaw55-nose_bridge-stroke-wide.png",
+            "rgb-delta-x4": "yaw55-nose_bridge-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1357,
+            "changedRgbPercentOfOverlappingAlpha": 8.03,
+            "meanAbsoluteRgbDelta": 0.5179,
+            "edgeDisagreementPercent": 15.431,
+            "bothAlphaPixels": 16900
+          },
+          "sourceP15_10PartVisiblePixels": 2282,
+          "sourceP15_10MaskSHA256": "eb3b30f9bb1fe757d81ed4053d75a1be87969ada40ebb89d000802e5e8a23b16"
+        },
+        {
+          "roi": "front_hair",
+          "center": [
+            625.655,
+            340.5
+          ],
+          "radius": 100,
+          "files": {
+            "anatomy": "yaw55-front_hair-anatomy.png",
+            "stroke-wide": "yaw55-front_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw55-front_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 12684,
+            "changedRgbPercentOfOverlappingAlpha": 31.71,
+            "meanAbsoluteRgbDelta": 2.0267,
+            "edgeDisagreementPercent": 41.918,
+            "bothAlphaPixels": 40000
+          },
+          "sourceP15_10PartVisiblePixels": 98105,
+          "sourceP15_10MaskSHA256": "fbd6a3fae0fbfb6ae812d37b69e922ac43bca5198981860123ab3899e93925be"
+        },
+        {
+          "roi": "side_hair",
+          "center": [
+            342.57,
+            574.944
+          ],
+          "radius": 115,
+          "files": {
+            "anatomy": "yaw55-side_hair-anatomy.png",
+            "stroke-wide": "yaw55-side_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw55-side_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 0,
+            "changedRgbPercentOfOverlappingAlpha": 0.0,
+            "meanAbsoluteRgbDelta": 0.0,
+            "edgeDisagreementPercent": 0.0,
+            "bothAlphaPixels": 51186
+          },
+          "sourceP15_10PartVisiblePixels": 77441,
+          "sourceP15_10MaskSHA256": "b67d5570869170fcbf8c2bb6de40158d5801da1f6574c2d49e617fd1de762852"
+        },
+        {
+          "roi": "gold_clip",
+          "center": [
+            776.579,
+            320.1
+          ],
+          "radius": 48,
+          "files": {
+            "anatomy": "yaw55-gold_clip-anatomy.png",
+            "stroke-wide": "yaw55-gold_clip-stroke-wide.png",
+            "rgb-delta-x4": "yaw55-gold_clip-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1863,
+            "changedRgbPercentOfOverlappingAlpha": 30.352,
+            "meanAbsoluteRgbDelta": 1.9866,
+            "edgeDisagreementPercent": 20.46,
+            "bothAlphaPixels": 6138
+          },
+          "sourceP15_10PartVisiblePixels": 3521,
+          "sourceP15_10MaskSHA256": "e95976e1db5ad54cc22fc21be7e5570001550543018e0428d4dafc1f2f7a2b63"
+        }
+      ]
+    },
+    {
+      "yaw": 57.5,
+      "baseSHA256": "b7cdaf145835ff013ad7a7746735c05c6ac3014e568795eb78646d44d17a75b3",
+      "wideSHA256": "4223df0703e471d8a22ee95f9655f036220b83506620e043326deca45592dc0a",
+      "globalDifference": {
+        "changedRgbPixels": 56224,
+        "changedRgbPercentOfOverlappingAlpha": 11.626,
+        "meanAbsoluteRgbDelta": 1.0549,
+        "edgeDisagreementPercent": 24.2,
+        "bothAlphaPixels": 483591
+      },
+      "rois": [
+        {
+          "roi": "near_eye",
+          "center": [
+            581.874,
+            463.052
+          ],
+          "radius": 52,
+          "files": {
+            "anatomy": "yaw57p5-near_eye-anatomy.png",
+            "stroke-wide": "yaw57p5-near_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw57p5-near_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1953,
+            "changedRgbPercentOfOverlappingAlpha": 18.057,
+            "meanAbsoluteRgbDelta": 3.1915,
+            "edgeDisagreementPercent": 36.826,
+            "bothAlphaPixels": 10816
+          },
+          "sourceP15_10PartVisiblePixels": 19490,
+          "sourceP15_10MaskSHA256": "47865e221c304212b6cf01aadaabd24ea6e0b5ecbfa21073511d02139272684f"
+        },
+        {
+          "roi": "far_eye",
+          "center": [
+            716.453,
+            469.04
+          ],
+          "radius": 46,
+          "files": {
+            "anatomy": "yaw57p5-far_eye-anatomy.png",
+            "stroke-wide": "yaw57p5-far_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw57p5-far_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 362,
+            "changedRgbPercentOfOverlappingAlpha": 4.277,
+            "meanAbsoluteRgbDelta": 0.3134,
+            "edgeDisagreementPercent": 6.468,
+            "bothAlphaPixels": 8464
+          },
+          "sourceP15_10PartVisiblePixels": 14362,
+          "sourceP15_10MaskSHA256": "75b5a7c10f60f9c11aeae1b4e65e72ecb9084edf0740df06fef2f59d540d3e80"
+        },
+        {
+          "roi": "nose_bridge",
+          "center": [
+            697.486,
+            534.638
+          ],
+          "radius": 65,
+          "files": {
+            "anatomy": "yaw57p5-nose_bridge-anatomy.png",
+            "stroke-wide": "yaw57p5-nose_bridge-stroke-wide.png",
+            "rgb-delta-x4": "yaw57p5-nose_bridge-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1494,
+            "changedRgbPercentOfOverlappingAlpha": 8.84,
+            "meanAbsoluteRgbDelta": 0.5419,
+            "edgeDisagreementPercent": 18.023,
+            "bothAlphaPixels": 16900
+          },
+          "sourceP15_10PartVisiblePixels": 1770,
+          "sourceP15_10MaskSHA256": "a1ec5c322e9a39800bb6741f5789fb7f58cce9d4a4bd405f3a1d840e866356f6"
+        },
+        {
+          "roi": "front_hair",
+          "center": [
+            625.572,
+            340.5
+          ],
+          "radius": 100,
+          "files": {
+            "anatomy": "yaw57p5-front_hair-anatomy.png",
+            "stroke-wide": "yaw57p5-front_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw57p5-front_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 14662,
+            "changedRgbPercentOfOverlappingAlpha": 36.655,
+            "meanAbsoluteRgbDelta": 2.4148,
+            "edgeDisagreementPercent": 47.485,
+            "bothAlphaPixels": 40000
+          },
+          "sourceP15_10PartVisiblePixels": 98125,
+          "sourceP15_10MaskSHA256": "cb09159e1bf95bffe7af52f8bdcf00879151d14ff930c8c11bb2021410f0915d"
+        },
+        {
+          "roi": "side_hair",
+          "center": [
+            341.64,
+            574.056
+          ],
+          "radius": 115,
+          "files": {
+            "anatomy": "yaw57p5-side_hair-anatomy.png",
+            "stroke-wide": "yaw57p5-side_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw57p5-side_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 0,
+            "changedRgbPercentOfOverlappingAlpha": 0.0,
+            "meanAbsoluteRgbDelta": 0.0,
+            "edgeDisagreementPercent": 0.0,
+            "bothAlphaPixels": 50697
+          },
+          "sourceP15_10PartVisiblePixels": 81932,
+          "sourceP15_10MaskSHA256": "34dc9ed3facca304a66ec964904230ac15b12ea54584cd9a6332d41b3af5428e"
+        },
+        {
+          "roi": "gold_clip",
+          "center": [
+            779.921,
+            320.1
+          ],
+          "radius": 48,
+          "files": {
+            "anatomy": "yaw57p5-gold_clip-anatomy.png",
+            "stroke-wide": "yaw57p5-gold_clip-stroke-wide.png",
+            "rgb-delta-x4": "yaw57p5-gold_clip-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 2371,
+            "changedRgbPercentOfOverlappingAlpha": 40.412,
+            "meanAbsoluteRgbDelta": 2.6472,
+            "edgeDisagreementPercent": 30.588,
+            "bothAlphaPixels": 5867
+          },
+          "sourceP15_10PartVisiblePixels": 3267,
+          "sourceP15_10MaskSHA256": "e356bcd12045440c521879d20926c9de3b521a780728dcea844e4f2c47bb7a40"
+        }
+      ]
+    },
+    {
+      "yaw": 60,
+      "baseSHA256": "59188154eabddff30c30e8767511e0d3cdf20ebe504d7d4f8dd8b3750269e4bc",
+      "wideSHA256": "8df2d8ab782762b68851ee0a8526c8725149784a5ba1619ab46c61ccb2e0f388",
+      "globalDifference": {
+        "changedRgbPixels": 59552,
+        "changedRgbPercentOfOverlappingAlpha": 12.382,
+        "meanAbsoluteRgbDelta": 1.1597,
+        "edgeDisagreementPercent": 23.999,
+        "bothAlphaPixels": 480941
+      },
+      "rois": [
+        {
+          "roi": "near_eye",
+          "center": [
+            589.499,
+            462.24
+          ],
+          "radius": 52,
+          "files": {
+            "anatomy": "yaw60-near_eye-anatomy.png",
+            "stroke-wide": "yaw60-near_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw60-near_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1587,
+            "changedRgbPercentOfOverlappingAlpha": 14.673,
+            "meanAbsoluteRgbDelta": 2.5001,
+            "edgeDisagreementPercent": 27.437,
+            "bothAlphaPixels": 10816
+          },
+          "sourceP15_10PartVisiblePixels": 11116,
+          "sourceP15_10MaskSHA256": "8e0e8246797048a503f4d69c2f4cdf9867a420feb18646dc9e1b34bba59c6fab"
+        },
+        {
+          "roi": "far_eye",
+          "center": [
+            720.76,
+            469.04
+          ],
+          "radius": 46,
+          "files": {
+            "anatomy": "yaw60-far_eye-anatomy.png",
+            "stroke-wide": "yaw60-far_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw60-far_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 490,
+            "changedRgbPercentOfOverlappingAlpha": 5.789,
+            "meanAbsoluteRgbDelta": 0.4099,
+            "edgeDisagreementPercent": 8.047,
+            "bothAlphaPixels": 8464
+          },
+          "sourceP15_10PartVisiblePixels": 0,
+          "sourceP15_10MaskSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+        },
+        {
+          "roi": "nose_bridge",
+          "center": [
+            703.953,
+            534.973
+          ],
+          "radius": 65,
+          "files": {
+            "anatomy": "yaw60-nose_bridge-anatomy.png",
+            "stroke-wide": "yaw60-nose_bridge-stroke-wide.png",
+            "rgb-delta-x4": "yaw60-nose_bridge-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1945,
+            "changedRgbPercentOfOverlappingAlpha": 11.509,
+            "meanAbsoluteRgbDelta": 0.6659,
+            "edgeDisagreementPercent": 20.113,
+            "bothAlphaPixels": 16900
+          },
+          "sourceP15_10PartVisiblePixels": 7362,
+          "sourceP15_10MaskSHA256": "844292c5a98f2ca85f13ac4380a5ec18aa24a9500db0c16fe2bdf5aee86973fd"
+        },
+        {
+          "roi": "front_hair",
+          "center": [
+            625.239,
+            340.5
+          ],
+          "radius": 100,
+          "files": {
+            "anatomy": "yaw60-front_hair-anatomy.png",
+            "stroke-wide": "yaw60-front_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw60-front_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 15738,
+            "changedRgbPercentOfOverlappingAlpha": 39.345,
+            "meanAbsoluteRgbDelta": 2.7844,
+            "edgeDisagreementPercent": 48.89,
+            "bothAlphaPixels": 40000
+          },
+          "sourceP15_10PartVisiblePixels": 122584,
+          "sourceP15_10MaskSHA256": "fcfbdcf29cc4c613309ca7d23ae03e68833a46cb0a9726f33c70ce65b7bb6b6e"
+        },
+        {
+          "roi": "side_hair",
+          "center": [
+            341.387,
+            573.167
+          ],
+          "radius": 115,
+          "files": {
+            "anatomy": "yaw60-side_hair-anatomy.png",
+            "stroke-wide": "yaw60-side_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw60-side_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 0,
+            "changedRgbPercentOfOverlappingAlpha": 0.0,
+            "meanAbsoluteRgbDelta": 0.0,
+            "edgeDisagreementPercent": 0.0,
+            "bothAlphaPixels": 50117
+          },
+          "sourceP15_10PartVisiblePixels": 94698,
+          "sourceP15_10MaskSHA256": "468a0fe4f7075ec0f09a19d192f10a423555db126e608bce53275ca28bbdb2c9"
+        },
+        {
+          "roi": "gold_clip",
+          "center": [
+            783.263,
+            320.1
+          ],
+          "radius": 48,
+          "files": {
+            "anatomy": "yaw60-gold_clip-anatomy.png",
+            "stroke-wide": "yaw60-gold_clip-stroke-wide.png",
+            "rgb-delta-x4": "yaw60-gold_clip-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 2783,
+            "changedRgbPercentOfOverlappingAlpha": 50.0,
+            "meanAbsoluteRgbDelta": 3.4248,
+            "edgeDisagreementPercent": 43.652,
+            "bothAlphaPixels": 5566
+          },
+          "sourceP15_10PartVisiblePixels": 0,
+          "sourceP15_10MaskSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+        }
+      ]
+    },
+    {
+      "yaw": 62.5,
+      "baseSHA256": "a248e0bb6b76cee8d90a7d0a19bf9e985eb0ce1e8c026d517b08a0296882c4fd",
+      "wideSHA256": "0b3b51e2adfef7a142bdfad24c4618fd8b719c212d677978892c7ff780af8f6a",
+      "globalDifference": {
+        "changedRgbPixels": 62039,
+        "changedRgbPercentOfOverlappingAlpha": 12.98,
+        "meanAbsoluteRgbDelta": 1.2388,
+        "edgeDisagreementPercent": 25.314,
+        "bothAlphaPixels": 477974
+      },
+      "rois": [
+        {
+          "roi": "near_eye",
+          "center": [
+            597.126,
+            461.428
+          ],
+          "radius": 52,
+          "files": {
+            "anatomy": "yaw62p5-near_eye-anatomy.png",
+            "stroke-wide": "yaw62p5-near_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw62p5-near_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 1770,
+            "changedRgbPercentOfOverlappingAlpha": 16.365,
+            "meanAbsoluteRgbDelta": 2.32,
+            "edgeDisagreementPercent": 32.179,
+            "bothAlphaPixels": 10816
+          },
+          "sourceP15_10PartVisiblePixels": 10321,
+          "sourceP15_10MaskSHA256": "7c01120a46776e3d42f69720e842325bbf110a27a697ce47856df982a456a733"
+        },
+        {
+          "roi": "far_eye",
+          "center": [
+            725.067,
+            469.04
+          ],
+          "radius": 46,
+          "files": {
+            "anatomy": "yaw62p5-far_eye-anatomy.png",
+            "stroke-wide": "yaw62p5-far_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw62p5-far_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 559,
+            "changedRgbPercentOfOverlappingAlpha": 6.604,
+            "meanAbsoluteRgbDelta": 0.5032,
+            "edgeDisagreementPercent": 18.942,
+            "bothAlphaPixels": 8464
+          },
+          "sourceP15_10PartVisiblePixels": 0,
+          "sourceP15_10MaskSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+        },
+        {
+          "roi": "nose_bridge",
+          "center": [
+            710.243,
+            535.309
+          ],
+          "radius": 65,
+          "files": {
+            "anatomy": "yaw62p5-nose_bridge-anatomy.png",
+            "stroke-wide": "yaw62p5-nose_bridge-stroke-wide.png",
+            "rgb-delta-x4": "yaw62p5-nose_bridge-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 2166,
+            "changedRgbPercentOfOverlappingAlpha": 12.817,
+            "meanAbsoluteRgbDelta": 0.7613,
+            "edgeDisagreementPercent": 26.593,
+            "bothAlphaPixels": 16900
+          },
+          "sourceP15_10PartVisiblePixels": 6260,
+          "sourceP15_10MaskSHA256": "0af6c851127ccd0e784a8e6b8e702ec567da39547f5fb658fe0714d50cee1ab9"
+        },
+        {
+          "roi": "front_hair",
+          "center": [
+            624.658,
+            340.5
+          ],
+          "radius": 100,
+          "files": {
+            "anatomy": "yaw62p5-front_hair-anatomy.png",
+            "stroke-wide": "yaw62p5-front_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw62p5-front_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 16627,
+            "changedRgbPercentOfOverlappingAlpha": 41.568,
+            "meanAbsoluteRgbDelta": 3.1126,
+            "edgeDisagreementPercent": 56.519,
+            "bothAlphaPixels": 40000
+          },
+          "sourceP15_10PartVisiblePixels": 124336,
+          "sourceP15_10MaskSHA256": "6982411f1545123c342bf4c2521ed3e0b1dedd69f8fcc9c38cb98102076837a1"
+        },
+        {
+          "roi": "side_hair",
+          "center": [
+            341.81,
+            572.278
+          ],
+          "radius": 115,
+          "files": {
+            "anatomy": "yaw62p5-side_hair-anatomy.png",
+            "stroke-wide": "yaw62p5-side_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw62p5-side_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 0,
+            "changedRgbPercentOfOverlappingAlpha": 0.0,
+            "meanAbsoluteRgbDelta": 0.0,
+            "edgeDisagreementPercent": 0.0,
+            "bothAlphaPixels": 49892
+          },
+          "sourceP15_10PartVisiblePixels": 95593,
+          "sourceP15_10MaskSHA256": "bbae60427bb7790aefd67173ccb592166e3ce9d8ee5c24c05e05e633389439a1"
+        },
+        {
+          "roi": "gold_clip",
+          "center": [
+            786.606,
+            320.1
+          ],
+          "radius": 48,
+          "files": {
+            "anatomy": "yaw62p5-gold_clip-anatomy.png",
+            "stroke-wide": "yaw62p5-gold_clip-stroke-wide.png",
+            "rgb-delta-x4": "yaw62p5-gold_clip-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 2948,
+            "changedRgbPercentOfOverlappingAlpha": 56.791,
+            "meanAbsoluteRgbDelta": 4.3202,
+            "edgeDisagreementPercent": 58.484,
+            "bothAlphaPixels": 5191
+          },
+          "sourceP15_10PartVisiblePixels": 0,
+          "sourceP15_10MaskSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+        }
+      ]
+    },
+    {
+      "yaw": 65,
+      "baseSHA256": "73d95f5de0ea12d512ad793c8cc02b75a4eb53361678739d578cfa3889e98d60",
+      "wideSHA256": "ad8c8f013ac67fe18bb9795fefaa5657b95948f8057b4caca9bd87109686c9a1",
+      "globalDifference": {
+        "changedRgbPixels": 77133,
+        "changedRgbPercentOfOverlappingAlpha": 15.947,
+        "meanAbsoluteRgbDelta": 1.6519,
+        "edgeDisagreementPercent": 30.771,
+        "bothAlphaPixels": 483669
+      },
+      "rois": [
+        {
+          "roi": "near_eye",
+          "center": [
+            604.739,
+            460.617
+          ],
+          "radius": 52,
+          "files": {
+            "anatomy": "yaw65-near_eye-anatomy.png",
+            "stroke-wide": "yaw65-near_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw65-near_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 4617,
+            "changedRgbPercentOfOverlappingAlpha": 42.687,
+            "meanAbsoluteRgbDelta": 5.2937,
+            "edgeDisagreementPercent": 55.372,
+            "bothAlphaPixels": 10816
+          },
+          "sourceP15_10PartVisiblePixels": 9529,
+          "sourceP15_10MaskSHA256": "d4a0752741828c0f6e32b90b5a6889482e75af8fa2685c599b38b5e923c6671d"
+        },
+        {
+          "roi": "far_eye",
+          "center": [
+            729.373,
+            469.04
+          ],
+          "radius": 46,
+          "files": {
+            "anatomy": "yaw65-far_eye-anatomy.png",
+            "stroke-wide": "yaw65-far_eye-stroke-wide.png",
+            "rgb-delta-x4": "yaw65-far_eye-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 811,
+            "changedRgbPercentOfOverlappingAlpha": 9.582,
+            "meanAbsoluteRgbDelta": 0.7738,
+            "edgeDisagreementPercent": 21.034,
+            "bothAlphaPixels": 8464
+          },
+          "sourceP15_10PartVisiblePixels": 0,
+          "sourceP15_10MaskSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+        },
+        {
+          "roi": "nose_bridge",
+          "center": [
+            716.341,
+            535.644
+          ],
+          "radius": 65,
+          "files": {
+            "anatomy": "yaw65-nose_bridge-anatomy.png",
+            "stroke-wide": "yaw65-nose_bridge-stroke-wide.png",
+            "rgb-delta-x4": "yaw65-nose_bridge-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 2511,
+            "changedRgbPercentOfOverlappingAlpha": 14.858,
+            "meanAbsoluteRgbDelta": 0.9788,
+            "edgeDisagreementPercent": 32.057,
+            "bothAlphaPixels": 16900
+          },
+          "sourceP15_10PartVisiblePixels": 4372,
+          "sourceP15_10MaskSHA256": "bc212dffbeda1365351d45f95a4ed6e911112015f89bbd5f86d5164188464a98"
+        },
+        {
+          "roi": "front_hair",
+          "center": [
+            623.829,
+            340.5
+          ],
+          "radius": 100,
+          "files": {
+            "anatomy": "yaw65-front_hair-anatomy.png",
+            "stroke-wide": "yaw65-front_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw65-front_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 19585,
+            "changedRgbPercentOfOverlappingAlpha": 48.962,
+            "meanAbsoluteRgbDelta": 3.9156,
+            "edgeDisagreementPercent": 66.026,
+            "bothAlphaPixels": 40000
+          },
+          "sourceP15_10PartVisiblePixels": 122182,
+          "sourceP15_10MaskSHA256": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6"
+        },
+        {
+          "roi": "side_hair",
+          "center": [
+            342.909,
+            571.389
+          ],
+          "radius": 115,
+          "files": {
+            "anatomy": "yaw65-side_hair-anatomy.png",
+            "stroke-wide": "yaw65-side_hair-stroke-wide.png",
+            "rgb-delta-x4": "yaw65-side_hair-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 0,
+            "changedRgbPercentOfOverlappingAlpha": 0.0,
+            "meanAbsoluteRgbDelta": 0.0,
+            "edgeDisagreementPercent": 0.0,
+            "bothAlphaPixels": 51991
+          },
+          "sourceP15_10PartVisiblePixels": 95900,
+          "sourceP15_10MaskSHA256": "9f98cb0cf3ad76b37a5977b0ff82686e9f3223359b1cad3836b4bf9a8f99a59e"
+        },
+        {
+          "roi": "gold_clip",
+          "center": [
+            789.948,
+            320.1
+          ],
+          "radius": 48,
+          "files": {
+            "anatomy": "yaw65-gold_clip-anatomy.png",
+            "stroke-wide": "yaw65-gold_clip-stroke-wide.png",
+            "rgb-delta-x4": "yaw65-gold_clip-rgb-delta-x4.png"
+          },
+          "difference": {
+            "changedRgbPixels": 3021,
+            "changedRgbPercentOfOverlappingAlpha": 61.64,
+            "meanAbsoluteRgbDelta": 5.1998,
+            "edgeDisagreementPercent": 69.231,
+            "bothAlphaPixels": 4901
+          },
+          "sourceP15_10PartVisiblePixels": 0,
+          "sourceP15_10MaskSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+        }
+      ]
+    }
+  ],
+  "artisticAcceptance": false,
+  "independentPaintingApproved": 0,
+  "hiddenUnderpaintApproved": 0,
+  "status": "LOCAL_PIXEL_DIAGNOSTIC_ONLY_REVIEW_REQUIRED"
+}

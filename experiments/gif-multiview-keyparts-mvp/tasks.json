@@ -458,6 +458,55 @@
       "browserQa": "evidence/p15-18-browser-qa.json",
       "reviewZip": "private-assets/exports/p15-18-mode-comparison.zip",
       "next": "Inspect stroke-wide hair/clip RGB and topology in visual review; keep anatomy baseline until artistic QA"
+    },
+    "p15RoiQualityDiagnostics": {
+      "characterId": "p0_character_001",
+      "status": "REGION_QA_COMPLETE_ART_QUALITY_BLOCKED",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "roiLabels": [
+        "near_eye",
+        "far_eye",
+        "nose_bridge",
+        "front_hair",
+        "side_hair",
+        "gold_clip"
+      ],
+      "localCrops": 90,
+      "testedViewerImageLoads": 180,
+      "browserErrors": 0,
+      "unitTestsPassed": 6,
+      "frontHairEdgeDisagreementPercentAt57p5_60_65": [
+        47.485,
+        48.89,
+        66.026
+      ],
+      "clipEdgeDisagreementPercentAt57p5_60_65": [
+        30.588,
+        43.652,
+        69.231
+      ],
+      "sideHairChangedRgbPixels": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oldP15_10FarEyeAndClipVisibleFrom60": false,
+      "oldSourceVisibilityNotEquivalentToP12Renderer": true,
+      "acceptedIndependentArt": 0,
+      "hiddenUnderpaintApproved": 0,
+      "strokeWideProductionEnabled": false,
+      "qualityQa": "evidence/p15-19-quality-region-qa.json",
+      "browserQa": "evidence/p15-19-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-19-quality-review.zip",
+      "next": "Compare original 55-65 paint against P0 identity and author independent side hair, ahoge, clip, eye underpaint; gated visual approval before VDD promotion"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
