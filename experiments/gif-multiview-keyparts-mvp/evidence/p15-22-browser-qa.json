@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "angleIndex": 0,
+      "loaded": 16
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 1,
+      "loaded": 16
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 0,
+      "loaded": 16
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 1,
+      "loaded": 16
+    }
+  ],
+  "errors": []
+}
