@@ -1028,6 +1028,58 @@
       "archive": "private-assets/exports/p15-31-native-artmesh-review.zip",
       "plan": "docs/plans/2026-11-11-p15-31-native-artmesh-interpolation.md",
       "next": "Implement vertex/mesh-aware per-part VDD from approved angle-specific original artwork and validate physical nose/eye and clip/hair occlusion"
+    },
+    "p15_32OpticalFlowMeshVddPilot": {
+      "characterId": "p0_character_001",
+      "status": "2D_PIECEWISE_AFFINE_MESH_ENGINEERING_PASS_SEMANTIC_CONSTRAINTS_AND_ART_GATES_PENDING",
+      "angles": [
+        55.0,
+        56.25,
+        57.5,
+        58.75,
+        60.0,
+        61.25,
+        62.5,
+        63.75,
+        65.0
+      ],
+      "midpointCount": 4,
+      "meshRoles": [
+        "eye.far",
+        "hair.clip.cross_gold",
+        "hair.side"
+      ],
+      "meshGrid": [
+        7,
+        7
+      ],
+      "trianglesPerRole": 72,
+      "meshMethod": "FARNEBACK_OPTICAL_FLOW_SAMPLED_ON_7X7_GRID_PIECEWISE_AFFINE_TRIANGLE_WARP",
+      "meshIsPhysical3D": false,
+      "keyframesByteIdentical": true,
+      "nonMeshRolesPixelIdenticalToP15_31": true,
+      "triangleFlips": 0,
+      "minimumTriangleAreaRatio": 0.72154,
+      "maximumVertexDisplacementPx": 6.9903,
+      "midpointChangedPixelsVsP15_31": [
+        117372,
+        119107,
+        120022,
+        133537
+      ],
+      "unitTestsPassed": 7,
+      "chromiumChecks": 18,
+      "chromiumImageLoads": 108,
+      "chromiumErrors": 0,
+      "nasalBridgePhysicalOcclusion": false,
+      "clipHairLockAttachment": false,
+      "independentOriginalArtAdded": false,
+      "productionVddModified": false,
+      "qa": "evidence/p15-32-mesh-vdd-qa.json",
+      "browserQa": "evidence/p15-32-browser-qa.json",
+      "archive": "private-assets/exports/p15-32-mesh-vdd-review.zip",
+      "plan": "docs/plans/2026-11-11-p15-32-piecewise-affine-mesh-vdd.md",
+      "next": "P15-33 replace generic optical flow with explicit semantic anchors and constrained per-role mesh deformation"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",

@@ -1,0 +1,491 @@
+{
+  "schema": "KOMA-P15-32-PIECEWISE-AFFINE-MESH-VDD-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    {
+      "yaw": 55.0,
+      "kind": "exact-keyframe",
+      "parts": 13,
+      "meshRoles": []
+    },
+    {
+      "yaw": 56.25,
+      "kind": "mesh-deformed-midpoint",
+      "from": [
+        55.0,
+        57.5
+      ],
+      "parts": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "bbox": [
+            289,
+            159,
+            355,
+            233
+          ],
+          "forward": {
+            "meanPx": 1.1017,
+            "maxPx": 1.9999,
+            "covered": 4861,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90264
+          },
+          "backward": {
+            "meanPx": 1.1043,
+            "maxPx": 1.9536,
+            "covered": 4972,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.83343
+          },
+          "iouLeft": 0.93747,
+          "iouRight": 0.91817,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.clip.cross_gold": {
+          "bbox": [
+            314,
+            111,
+            360,
+            166
+          ],
+          "forward": {
+            "meanPx": 0.6739,
+            "maxPx": 0.7356,
+            "covered": 2514,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90425
+          },
+          "backward": {
+            "meanPx": 0.6783,
+            "maxPx": 0.7333,
+            "covered": 2567,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.92975
+          },
+          "iouLeft": 0.91299,
+          "iouRight": 0.91645,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.side": {
+          "bbox": [
+            61,
+            142,
+            248,
+            344
+          ],
+          "forward": {
+            "meanPx": 0.4352,
+            "maxPx": 1.4914,
+            "covered": 38142,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.95241
+          },
+          "backward": {
+            "meanPx": 0.4323,
+            "maxPx": 1.5488,
+            "covered": 38049,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.96417
+          },
+          "iouLeft": 0.94015,
+          "iouRight": 0.93678,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        }
+      }
+    },
+    {
+      "yaw": 57.5,
+      "kind": "exact-keyframe",
+      "parts": 13,
+      "meshRoles": []
+    },
+    {
+      "yaw": 58.75,
+      "kind": "mesh-deformed-midpoint",
+      "from": [
+        57.5,
+        60.0
+      ],
+      "parts": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "bbox": [
+            292,
+            159,
+            357,
+            233
+          ],
+          "forward": {
+            "meanPx": 1.0563,
+            "maxPx": 1.8265,
+            "covered": 4779,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90015
+          },
+          "backward": {
+            "meanPx": 1.0394,
+            "maxPx": 1.8317,
+            "covered": 4911,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.82236
+          },
+          "iouLeft": 0.94188,
+          "iouRight": 0.91853,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.clip.cross_gold": {
+          "bbox": [
+            315,
+            111,
+            361,
+            166
+          ],
+          "forward": {
+            "meanPx": 0.68,
+            "maxPx": 0.7511,
+            "covered": 2503,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90355
+          },
+          "backward": {
+            "meanPx": 0.6871,
+            "maxPx": 0.7429,
+            "covered": 2554,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.9134
+          },
+          "iouLeft": 0.89737,
+          "iouRight": 0.89655,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.side": {
+          "bbox": [
+            61,
+            142,
+            250,
+            344
+          ],
+          "forward": {
+            "meanPx": 0.4478,
+            "maxPx": 1.4631,
+            "covered": 38495,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.95394
+          },
+          "backward": {
+            "meanPx": 0.4463,
+            "maxPx": 1.5399,
+            "covered": 38375,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.96027
+          },
+          "iouLeft": 0.93957,
+          "iouRight": 0.93617,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        }
+      }
+    },
+    {
+      "yaw": 60.0,
+      "kind": "exact-keyframe",
+      "parts": 13,
+      "meshRoles": []
+    },
+    {
+      "yaw": 61.25,
+      "kind": "mesh-deformed-midpoint",
+      "from": [
+        60.0,
+        62.5
+      ],
+      "parts": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "bbox": [
+            296,
+            159,
+            359,
+            233
+          ],
+          "forward": {
+            "meanPx": 1.0043,
+            "maxPx": 1.6812,
+            "covered": 4621,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90803
+          },
+          "backward": {
+            "meanPx": 1.0056,
+            "maxPx": 1.6781,
+            "covered": 4769,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.84171
+          },
+          "iouLeft": 0.93813,
+          "iouRight": 0.92506,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.clip.cross_gold": {
+          "bbox": [
+            316,
+            111,
+            363,
+            166
+          ],
+          "forward": {
+            "meanPx": 0.6676,
+            "maxPx": 0.7354,
+            "covered": 2576,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90613
+          },
+          "backward": {
+            "meanPx": 0.6693,
+            "maxPx": 0.7283,
+            "covered": 2590,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.91378
+          },
+          "iouLeft": 0.91744,
+          "iouRight": 0.92256,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.side": {
+          "bbox": [
+            62,
+            142,
+            251,
+            345
+          ],
+          "forward": {
+            "meanPx": 0.4274,
+            "maxPx": 1.3413,
+            "covered": 38676,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.95771
+          },
+          "backward": {
+            "meanPx": 0.4447,
+            "maxPx": 1.3656,
+            "covered": 38573,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.96121
+          },
+          "iouLeft": 0.94032,
+          "iouRight": 0.93618,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        }
+      }
+    },
+    {
+      "yaw": 62.5,
+      "kind": "exact-keyframe",
+      "parts": 13,
+      "meshRoles": []
+    },
+    {
+      "yaw": 63.75,
+      "kind": "mesh-deformed-midpoint",
+      "from": [
+        62.5,
+        65.0
+      ],
+      "parts": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "bbox": [
+            299,
+            159,
+            360,
+            233
+          ],
+          "forward": {
+            "meanPx": 0.9897,
+            "maxPx": 1.6658,
+            "covered": 4454,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90989
+          },
+          "backward": {
+            "meanPx": 0.986,
+            "maxPx": 1.5347,
+            "covered": 4619,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.84842
+          },
+          "iouLeft": 0.93741,
+          "iouRight": 0.9233,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.clip.cross_gold": {
+          "bbox": [
+            318,
+            111,
+            364,
+            166
+          ],
+          "forward": {
+            "meanPx": 0.6852,
+            "maxPx": 0.7447,
+            "covered": 2537,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.90517
+          },
+          "backward": {
+            "meanPx": 0.6918,
+            "maxPx": 0.7589,
+            "covered": 2519,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.91183
+          },
+          "iouLeft": 0.90413,
+          "iouRight": 0.89239,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        },
+        "hair.side": {
+          "bbox": [
+            62,
+            142,
+            253,
+            345
+          ],
+          "forward": {
+            "meanPx": 1.5774,
+            "maxPx": 6.9903,
+            "covered": 39151,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.72154
+          },
+          "backward": {
+            "meanPx": 1.6965,
+            "maxPx": 8.5286,
+            "covered": 38484,
+            "triangleFlipCount": 0,
+            "minTriangleAreaRatio": 0.59509
+          },
+          "iouLeft": 0.82493,
+          "iouRight": 0.91685,
+          "grid": [
+            7,
+            7
+          ],
+          "triangles": 72,
+          "flowClampPx": 42,
+          "method": "FARNEBACK_7X7_PIECEWISE_AFFINE"
+        }
+      }
+    },
+    {
+      "yaw": 65.0,
+      "kind": "exact-keyframe",
+      "parts": 13,
+      "meshRoles": []
+    }
+  ],
+  "meshRoles": [
+    "eye.far",
+    "hair.clip.cross_gold",
+    "hair.side"
+  ],
+  "meshGrid": [
+    7,
+    7
+  ],
+  "trianglesPerRole": 72,
+  "meshMethod": "FARNEBACK_OPTICAL_FLOW_SAMPLED_ON_7X7_GRID_PIECEWISE_AFFINE_TRIANGLE_WARP",
+  "meshRolesAreImageDerived2DNotPhysical3D": true,
+  "nonMeshRolesContinueP15_31PerRoleRGBA": true,
+  "keyframesRemainP15_31ExactSource": true,
+  "physicalNasalBridgeValidated": false,
+  "physicalClipHairAttachmentValidated": false,
+  "independentOriginalArtAdded": false,
+  "artisticallyAccepted": false,
+  "productionVddModified": false,
+  "acceptance": {
+    "engineeringPilot": "PASS",
+    "keyframesExact": true,
+    "nonMeshRolesUnchanged": true,
+    "triangleFlips": 0,
+    "minimumTriangleAreaRatio": 0.72154,
+    "maximumVertexDisplacementPx": 6.9903,
+    "midpointChangedPixelsVsP15_31": [
+      117372,
+      119107,
+      120022,
+      133537
+    ],
+    "unitTestsPassed": 7,
+    "chromiumViewportFrameChecks": 18,
+    "chromiumImageLoads": 108,
+    "chromiumErrors": 0,
+    "formalArtisticAcceptance": false,
+    "physical3DValidation": false
+  }
+}
