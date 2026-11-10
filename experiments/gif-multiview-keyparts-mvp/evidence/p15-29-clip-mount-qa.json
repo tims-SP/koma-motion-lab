@@ -1,0 +1,138 @@
+{
+  "schema": "KOMA-P15-29-CLIP-INVERSE-FADE-MOUNT-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    55,
+    57.5,
+    60,
+    62.5,
+    65
+  ],
+  "frames": [
+    {
+      "angle": 55,
+      "scheduleFactor": 0.760706,
+      "sourceP0_45_SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+      "legacyMass": 2492.89,
+      "recoveredMass": 3257.89,
+      "clipAttachedMassFraction": 0.957238,
+      "clipCenter": [
+        764.471,
+        324.559
+      ],
+      "registeredAnchor": [
+        776.579,
+        320.1
+      ],
+      "centerToAnchorPixels": 12.903,
+      "sourceClipSHA256": "fcede835a6eb284d2dfa453953c656aa385a37fae1f3241da420ac6ce868f2a3",
+      "images": {
+        "clip-legacy": "fcede835a6eb284d2dfa453953c656aa385a37fae1f3241da420ac6ce868f2a3",
+        "clip-recovered": "d71355c960f3e1a2df6fcb688c11cda8c90fa752b401e69f2d6a251eaaec8175",
+        "clip-hair-attached": "7e9ff775dec15154b864eb96b291284dc7e8f3aa3ced4660e6f629354a28b5ab",
+        "clip-off-hair": "e0f77227017929b954f5f9de88d08f646b805694289e1063a7e3d07b5621e620"
+      }
+    },
+    {
+      "angle": 57.5,
+      "scheduleFactor": 0.601639,
+      "sourceP0_45_SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+      "legacyMass": 1967.45,
+      "recoveredMass": 3250.58,
+      "clipAttachedMassFraction": 0.959639,
+      "clipCenter": [
+        764.477,
+        324.56
+      ],
+      "registeredAnchor": [
+        779.921,
+        320.1
+      ],
+      "centerToAnchorPixels": 16.075,
+      "sourceClipSHA256": "990c580c078cfb7870b3f9b9c615dff7dcfe65ce6a49cdcb9981e91182a3768b",
+      "images": {
+        "clip-legacy": "990c580c078cfb7870b3f9b9c615dff7dcfe65ce6a49cdcb9981e91182a3768b",
+        "clip-recovered": "9aef6fb5f913bee457614c27b511a311d64495db9261d0a62927271669b499ab",
+        "clip-hair-attached": "1e9755c872d74e22b4a1b7a21dd6d965f7db83ea65dab6f4b6a2d3c2db0330a0",
+        "clip-off-hair": "604fac376a053e91a1167556460ea162f2964d50abd6dbde5603c7cbcfa838ce"
+      }
+    },
+    {
+      "angle": 60,
+      "scheduleFactor": 0.432006,
+      "sourceP0_45_SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+      "legacyMass": 1414.42,
+      "recoveredMass": 3257.79,
+      "clipAttachedMassFraction": 0.962198,
+      "clipCenter": [
+        764.474,
+        324.554
+      ],
+      "registeredAnchor": [
+        783.263,
+        320.1
+      ],
+      "centerToAnchorPixels": 19.31,
+      "sourceClipSHA256": "9f82bbc2e93b5cd44d2e1108e082cb1c8f21405ea442a5cf300efe1f0bcc88ff",
+      "images": {
+        "clip-legacy": "9f82bbc2e93b5cd44d2e1108e082cb1c8f21405ea442a5cf300efe1f0bcc88ff",
+        "clip-recovered": "2b2c93c3df5dbf7985c2b78f6730d83eb62a94bade3404ab42f3ac0237ac9ff7",
+        "clip-hair-attached": "1350bea1e3f90ce9f525dc48f845d314c8c61a6e820927e13363c3662543567b",
+        "clip-off-hair": "f6745fd82d5ea0988737da8b0f1ee533908df33d8755b4884213878844ada2f3"
+      }
+    },
+    {
+      "angle": 62.5,
+      "scheduleFactor": 0.269417,
+      "sourceP0_45_SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+      "legacyMass": 885.72,
+      "recoveredMass": 3258.46,
+      "clipAttachedMassFraction": 0.965,
+      "clipCenter": [
+        764.468,
+        324.569
+      ],
+      "registeredAnchor": [
+        786.606,
+        320.1
+      ],
+      "centerToAnchorPixels": 22.585,
+      "sourceClipSHA256": "55e374c8f8c42391332b00b911129ea708e7e45b4c2d7fa0b8abb6f497c70124",
+      "images": {
+        "clip-legacy": "55e374c8f8c42391332b00b911129ea708e7e45b4c2d7fa0b8abb6f497c70124",
+        "clip-recovered": "3a464c98a2d2a516db8dd2261cba5dedd1beee302e965df45892c0a66f6daf21",
+        "clip-hair-attached": "156bd8e583274a5ea25b6015bf674bd450293a19c48fac399d9e59df195e5ac3",
+        "clip-off-hair": "6c1baaa49fa1e0057975d8548afa806eeee175512fe2fd04a3c17434de6734ab"
+      }
+    },
+    {
+      "angle": 65,
+      "scheduleFactor": 0.13148,
+      "sourceP0_45_SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+      "legacyMass": 435.39,
+      "recoveredMass": 3260.18,
+      "clipAttachedMassFraction": 0.966618,
+      "clipCenter": [
+        764.459,
+        324.559
+      ],
+      "registeredAnchor": [
+        789.948,
+        320.1
+      ],
+      "centerToAnchorPixels": 25.876,
+      "sourceClipSHA256": "954bcad3aca320f6ff308714b7f978d5d00688816b1b99c2466e83dd3c67ef0a",
+      "images": {
+        "clip-legacy": "954bcad3aca320f6ff308714b7f978d5d00688816b1b99c2466e83dd3c67ef0a",
+        "clip-recovered": "928d35b433ea227ff1459ec071034d34170a705f8c16faed553f6bda6a541bd4",
+        "clip-hair-attached": "45c6b9342257db591874684290f1b74aa7780e8361c0adb0f704c70ecde57c33",
+        "clip-off-hair": "9291536c26c1869a0d54a92cf133a0096dcf5a90f943097d34b8b9327d79431e"
+      }
+    }
+  ],
+  "model": "P8_HIDDEN_WINDOWS_CLIP_48_TO_70_ALPHA_INVERSE_WITH_SOURCE_HAIR_UNION",
+  "hairMountingGeometricallyVerified3D": false,
+  "artAccepted": false,
+  "productionVddModified": false,
+  "next": "Verify clip physically correct side across face turn, not just hair-overlap and camera-anchor stability"
+}

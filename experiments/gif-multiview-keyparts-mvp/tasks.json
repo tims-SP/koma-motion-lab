@@ -860,6 +860,75 @@
       "reviewArchive": "private-assets/exports/p15-28-physical-occlusion-review.zip",
       "plan": "docs/plans/2026-11-11-p15-28-physical-alpha-occlusion.md",
       "next": "Recover pre-fade original P0 eye layer and derive face-surface visibility boundary from registered camera/3D anchors or independently approved painted views; no invented mask"
+    },
+    "p15InverseFadeP0EyeAndClipCameraBridge": {
+      "characterId": "p0_character_001",
+      "status": "SOURCE_ALPHAS_RECOVERED_ENGINEERING_PASS_PHYSICAL_ART_GATE_PENDING",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "registeredOriginalP0_45_eye_sha256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "sourceEyeAlphaRecoveryByInvertingP8Window": [
+        16571.78,
+        16571.23,
+        16572.09,
+        16571.99,
+        16572.1
+      ],
+      "eyeFadeFactors": [
+        0.953399,
+        0.855798,
+        0.721213,
+        0.565053,
+        0.402729
+      ],
+      "eyeBridgeProxyVisibleFraction": [
+        0.6961,
+        0.62681,
+        0.56152,
+        0.50133,
+        0.44629
+      ],
+      "originalSourceEyeAlphaSimilarityIoUApprox": 0.964,
+      "clipAlphaRecoveryByInvertingP8Window": [
+        3257.89,
+        3250.58,
+        3257.79,
+        3258.46,
+        3260.18
+      ],
+      "clipHairUnionOverlapFraction": [
+        0.957238,
+        0.959639,
+        0.962198,
+        0.965,
+        0.966618
+      ],
+      "clipCameraAnchorDistancePx": [
+        12.903,
+        16.075,
+        19.31,
+        22.585,
+        25.876
+      ],
+      "realHeadSurface3DOcclusionVerified": false,
+      "newIndependentArtCreated": false,
+      "productionVddModified": false,
+      "artisticallyApproved": false,
+      "unitTestsPassed": 9,
+      "chromiumViewportAngleChecks": 10,
+      "browserImagesLoaded": 120,
+      "browserErrors": 0,
+      "qaEye": "evidence/p15-29-defade-bridge-qa.json",
+      "qaClip": "evidence/p15-29-clip-mount-qa.json",
+      "qaBrowser": "evidence/p15-29-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-29-defade-geometry-review.zip",
+      "plan": "docs/plans/2026-11-11-p15-29-defade-eye-clip-geometry.md",
+      "next": "Align far eye and hairclip to measured P0 camera anchors under true surface depth; validate 55–65 visual continuity and hairpin physical side before promotion"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
