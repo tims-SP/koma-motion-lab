@@ -98,17 +98,20 @@ def build():
                 wb = warp(b, flow65, 1 - t, (xx, yy))
                 if role == "eye.far":
                     # P0 55 shows both eyes; P15 65 hides the far eye.
-                    pixels = wa * (1 - smoothstep(angle, 57.5, 62.5))
+                    pixels = wa * (1 - smoothstep(angle, 55.5, 60))
                 elif role == "hair.clip.cross_gold":
-                    # Physical-side ornament goes behind the near hair.
-                    pixels = wa * (1 - smoothstep(angle, 56, 63))
-                elif not np.any(a[:, :, 3]) or not np.any(b[:, :, 3]):
-                    w = smoothstep(angle, 55, 65)
-                    pixels = (1 - w) * wa + w * wb
+                    # The original physical-side ornament becomes occluded.
+                    pixels = wa * (1 - smoothstep(angle, 55.5, 60))
+                elif not np.any(a[:, :, 3]) and not np.any(b[:, :, 3]):
+                    pixels = np.zeros_like(wa)
+                elif not np.any(a[:, :, 3]):
+                    pixels = wb * smoothstep(angle, 55, 62.5)
+                elif not np.any(b[:, :, 3]):
+                    pixels = wa * (1 - smoothstep(angle, 57.5, 65))
                 else:
-                    # Layer-local color transfer, not whole-portrait ownership.
-                    w = smoothstep(t, .15, .85)
-                    pixels = (1 - w) * wa + w * wb
+                    # One image source per role per frame retains clean ink.
+                    # Change source at 60 degrees; visibility is separate.
+                    pixels = wa if angle < 60 else wb
                 rgba = premult_to_rgba(pixels)
             f = partdir / (role + ".png")
             Image.fromarray(rgba, "RGBA").save(f)
