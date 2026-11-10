@@ -362,6 +362,40 @@
       "script": "scripts/p15_16_physical_identity.py",
       "review": "private-assets/exports/p15-16-physical-eye-review/index.html",
       "next": "Independent painting and occluded face/hair/clip underpaint for 57.5-60, then strict VDD visual QA"
+    },
+    "p15Anatomical55To65OriginalArtMesh": {
+      "characterId": "p0_character_001",
+      "status": "ENGINEERING_CONTINUITY_PASS_ART_REVIEW_PENDING",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "sourceRGBAArtMeshes": 39,
+      "registeredValidPairs": 22,
+      "profilePSDVerified": true,
+      "renderer": "P12 anatomy / P8 original RGBA / P5 anchors / P11 profile PSD",
+      "old57p5To60AlphaIoU": 0.79097,
+      "new57p5To60AlphaIoU": 0.97407,
+      "adjacentAlphaIoU": [
+        0.97511,
+        0.97407,
+        0.97323,
+        0.96316
+      ],
+      "unitTestsPassed": 5,
+      "browserImagesLoaded": 10,
+      "browserErrors": 0,
+      "approvedIndependentPaintings": 0,
+      "approvedHiddenUnderpainting": 0,
+      "visualAcceptance": "PENDING",
+      "qa": "private-assets/exports/p15-17-anatomical-review/qa.json",
+      "browserQa": "evidence/p15-17-browser-qa.json",
+      "runner": "scripts/p12_anatomical_vdd.py",
+      "reviewBuilder": "scripts/p15_17_anatomical_review.py",
+      "next": "Verify physical eye/clip visibility and source RGB quality on all five frames; author actual missing underpaint/independent side views; do not promote geometry-only continuity"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
