@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P15-12 · 相机标定与角色原画审查</title>
+<style>
+:root{color-scheme:dark;background:#171d28;color:#f5f8fc;font:15px/1.55 system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}body{margin:0;padding:24px}main{max-width:1380px;margin:auto}
+h1{font-size:24px;margin:0 0 6px}p{color:#c7d3e1;margin:5px 0 14px}
+.controls{background:#273247;border:1px solid #43536b;border-radius:12px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px}
+button{color:inherit;background:#3c4e67;border:1px solid #677e9d;border-radius:9px;padding:9px 12px;font:inherit}
+button[aria-pressed=true]{background:#416588}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px;margin-top:15px}
+article{background:#293548;border:1px solid #3f516b;border-radius:12px;overflow:hidden}
+header{font-weight:600;padding:10px 12px}
+.frame{background:repeating-conic-gradient(#d5dbe3 0% 25%,#f5f7fa 0% 50%) 50%/24px 24px}
+img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+small{display:block;padding:10px 12px;color:#c8d6e7}
+#state{color:#c9d9ed;margin-top:15px}
+</style>
+</head>
+<body><main>
+<h1>P15-12 · 相机标定与独立原画审查</h1>
+<p>对比相同目标角度下的既有 ArtMesh、P5 相机近似与新绘制候选。锚点标注可切换显示；图像生成结果需独立通过姿态和人物身份检查。</p>
+<div class="controls">
+<button id="a57" type="button" aria-pressed="true">57.5°</button>
+<button id="a60" type="button" aria-pressed="false">60°</button>
+<button id="toggle" type="button" aria-pressed="false">显示解剖锚点</button>
+<strong id="angle">57.5°</strong>
+</div>
+<div class="gallery">
+<article><header>P15-10 · 语义 ArtMesh 基线</header><div class="frame"><img id="baseline" alt="P15-10 渲染基线"></div><small>已有 13 个语义部件的视角过渡结果</small></article>
+<article><header>P15-12 · 相机标定姿态</header><div class="frame"><img id="guide" alt="P5 锚点相机几何引导图"></div><small>依据 P5 原画锚点构建的 2.5D 姿态参考</small></article>
+<article><header>P15-12 · 图像编辑候选</header><div class="frame"><img id="candidate" alt="Qwen 图像编辑绘制候选"></div><small>使用目标姿态与 P0 身份参考生成，画质需单独验收</small></article>
+</div>
+<div id="state" role="status">图像验收加载中。</div>
+</main>
+<script>
+"use strict";
+(()=>{
+ let serial=0;
+ const status={angle:57.5,markers:false,ready:false,errors:[],images:[]};
+ const $=id=>document.getElementById(id);
+ const id=angle=>"yaw"+String(angle).replace(".","p");
+ const src="../private-assets/";
+ function snapshot(){return{angle:status.angle,markers:status.markers,ready:status.ready,images:[...status.images],errors:[...status.errors]}}
+ async function select(angle,markers=status.markers){
+  if(angle!==57.5&&angle!==60)throw Error("P15-12 accepted guide angles are 57.5/60");
+  const seq=++serial;
+  status.angle=angle;status.markers=Boolean(markers);status.ready=false;
+  status.errors=[];status.images=[];
+  $("a57").setAttribute("aria-pressed",String(angle===57.5));
+  $("a60").setAttribute("aria-pressed",String(angle===60));
+  $("toggle").setAttribute("aria-pressed",String(status.markers));
+  $("angle").textContent=angle+"°";
+  const frame=id(angle);
+  const paths={
+    baseline:src+"p15-10-semantic-pose/arc/"+frame+".png",
+    guide:src+"p15-12-camera-proxy/"+(markers?"annotated/"+frame+"-anchor.png":"conditioning/"+frame+"-pose.jpg"),
+    candidate:src+"p15-12-camera-proxy/generated/"+frame+"-identity-guided.png"
+  };
+  const responses=await Promise.allSettled(Object.entries(paths).map(async([key,url])=>{
+   const image=$(key);image.src=url;await image.decode();
+   if(image.naturalWidth!==1024||image.naturalHeight!==1024)throw Error("Missing 1024 image "+key);
+   return{key,path:url,width:image.naturalWidth,height:image.naturalHeight}
+  }));
+  if(seq!==serial)return snapshot();
+  for(const x of responses){if(x.status==="fulfilled")status.images.push(x.value);else status.errors.push(String(x.reason))}
+  status.ready=status.images.length===3&&status.errors.length===0;
+  $("state").textContent=status.ready?"来源与画面载入成功；独立画质验收继续进行。":"原画来源或尺寸校验异常";
+  return snapshot();
+ }
+ $("a57").addEventListener("click",()=>void select(57.5));
+ $("a60").addEventListener("click",()=>void select(60));
+ $("toggle").addEventListener("click",()=>void select(status.angle,!status.markers));
+ window.__KOMA_P15_12={select,snapshot};
+ void select(57.5);
+})();
+</script>
+</body></html>
