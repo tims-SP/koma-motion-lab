@@ -330,7 +330,39 @@
       "privateReviewZip": "private-assets/exports/p15-15-artmesh-review.zip",
       "next": "Review underpaint in 0/45/77.5 PSD, resolve missing hair and far eye/clip semantic art and test VDD at 57.5/60"
     },
-    "p15HfAccountCapability": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-hf-account-capability-qa.json"
+    "p15HfAccountCapability": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-hf-account-capability-qa.json",
+    "p15PhysicalIdentityRepair": {
+      "characterId": "p0_character_001",
+      "sourceArtMeshRoleSlots": 39,
+      "routedRoleSlots": 39,
+      "physicalVerifiedAngles": [
+        45
+      ],
+      "otherAnglesPending": [
+        0,
+        77.5
+      ],
+      "physicalAnchor": "P5 near eye and ear at image-left at 45deg",
+      "preservedNearFarRgbaSets": true,
+      "unitTestsPassed": 3,
+      "artisticAcceptance": false,
+      "newIndependentPaintedLayers": 0,
+      "underpaintArtApproved": false,
+      "vddAlphaIoU": {
+        "55_to_57p5": 0.93808,
+        "57p5_to_60": 0.79097,
+        "60_to_62p5": 0.94006,
+        "62p5_to_65": 0.93804
+      },
+      "htmlScreenshots": 2,
+      "chromiumImagesLoaded": 18,
+      "chromiumErrors": 0,
+      "qa": "evidence/p15-16-physical-identity-qa.json",
+      "browserQa": "evidence/p15-16-browser-qa.json",
+      "script": "scripts/p15_16_physical_identity.py",
+      "review": "private-assets/exports/p15-16-physical-eye-review/index.html",
+      "next": "Independent painting and occluded face/hair/clip underpaint for 57.5-60, then strict VDD visual QA"
+    }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
   "implementation": {

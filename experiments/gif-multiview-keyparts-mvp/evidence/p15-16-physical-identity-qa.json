@@ -1,0 +1,392 @@
+{
+  "schema": "KOMA-P15-16-PHYSICAL-ROLE-REGISTRATION-V1",
+  "characterId": "p0_character_001",
+  "sourceP15RoleRoutingSHA256": "c9349ab9dcda66131937fde5616d03425a6e90449a0bdc03ab7e90ad1cecea0d",
+  "cameraSourceSHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+  "physicalNearEyeLeftOfFarEyeAt45": true,
+  "artisticAcceptance": false,
+  "underpaintArtAcceptance": false,
+  "approvedIndependentPaintedLayers": 0,
+  "views": [
+    {
+      "view": "yaw000",
+      "physicalSideConfidence": "CONTINUITY_HEURISTIC_NOT_ANCHOR_VERIFIED",
+      "nearEyeAnchorX768": null,
+      "farEyeAnchorX768": null,
+      "nearEarAnchorX768": null,
+      "conservesNearFarPixelSets": {
+        "eye": true,
+        "ear": true
+      },
+      "roles": [
+        {
+          "role": "body.reference",
+          "path": "p15-16-physical-identity/yaw000/body.reference.png",
+          "sha256": "29c1abda5efc7a425c03e5ab4cb97f8e073cae2750aa69a04217273a10e11e52",
+          "pixels": 112034,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.back",
+          "path": "p15-16-physical-identity/yaw000/hair.back.png",
+          "sha256": "7068998ace37516df47f76cb162a1d743aaa8ca4bea01209d37e3d7e916fd8fa",
+          "pixels": 166823,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "face.skin",
+          "path": "p15-16-physical-identity/yaw000/face.skin.png",
+          "sha256": "4c1fd0148b5db57c370d006d46a3291179fa209ac4c282f20d4aa9dc51800822",
+          "pixels": 72423,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "ear.far",
+          "path": "p15-16-physical-identity/yaw000/ear.far.png",
+          "sha256": "cdda71bbcb6666e88bfd0bb24cafc1d06778e421821a9200efe37154153c3926",
+          "pixels": 3241,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "ear.near",
+          "path": "p15-16-physical-identity/yaw000/ear.near.png",
+          "sha256": "ff57693e0b4f81bf280f5c3d71a61046edaf49ada4e9b1a393bb756481469764",
+          "pixels": 3149,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.side",
+          "path": "p15-16-physical-identity/yaw000/hair.side.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-16-physical-identity/yaw000/eye.far.png",
+          "sha256": "f65b25dfaa4fae63e216e32fa55b0fb87cf4e20d8e1a4733fb1b00eacd7fad12",
+          "pixels": 4022,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "eye.near",
+          "path": "p15-16-physical-identity/yaw000/eye.near.png",
+          "sha256": "ecb9857c86af462de73def612203d68a65983e0e92549c54e39534fc678fee08",
+          "pixels": 3985,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "nose",
+          "path": "p15-16-physical-identity/yaw000/nose.png",
+          "sha256": "92e58e7909590df64849d8000759f6c4a7cf472203f1f2b3eee4f8996a583221",
+          "pixels": 523,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "mouth",
+          "path": "p15-16-physical-identity/yaw000/mouth.png",
+          "sha256": "a787c785412df333b721e9066b9ce83a6879a0d6d20064d495fe5958e582349d",
+          "pixels": 1784,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.front",
+          "path": "p15-16-physical-identity/yaw000/hair.front.png",
+          "sha256": "17f2676a6961ded979e8681c5109f13ef441dffc869dbeb23fb9e5b750203438",
+          "pixels": 81582,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-16-physical-identity/yaw000/hair.ahoge.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "path": "p15-16-physical-identity/yaw000/hair.clip.cross_gold.png",
+          "sha256": "64da7c184574e6341141308cdac3a96281d21f94daa9a2c554a6dc0831b3afd9",
+          "pixels": 1948,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        }
+      ],
+      "acceptedNewPainting": 0
+    },
+    {
+      "view": "yaw045",
+      "physicalSideConfidence": "P5_ANCHOR_SUPPORTED",
+      "nearEyeAnchorX768": 408.2,
+      "farEyeAnchorX768": 521.19,
+      "nearEarAnchorX768": 313.22,
+      "conservesNearFarPixelSets": {
+        "eye": true,
+        "ear": true
+      },
+      "roles": [
+        {
+          "role": "body.reference",
+          "path": "p15-16-physical-identity/yaw045/body.reference.png",
+          "sha256": "5af60b644a0d2a2d23bbd7e14f3345abfcac625258cd43ab1b257e5af4e28f50",
+          "pixels": 106097,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.back",
+          "path": "p15-16-physical-identity/yaw045/hair.back.png",
+          "sha256": "08106c1c99f7e2e28a94d9ddde4b68804f6dbeef30c15347bc4a6b902fd18e2c",
+          "pixels": 175813,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "face.skin",
+          "path": "p15-16-physical-identity/yaw045/face.skin.png",
+          "sha256": "1cfecae55d2ed189fc358b5a4d6b600013412640d5cc48dc872e2ef0bd15cd51",
+          "pixels": 66399,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "ear.far",
+          "path": "p15-16-physical-identity/yaw045/ear.far.png",
+          "sha256": "4b78454e575ca484ac7b162e09b88a295619eebfc3577b959f207503001f39fc",
+          "pixels": 2980,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "P5_ANCHOR_VERIFIED_SIDE"
+        },
+        {
+          "role": "ear.near",
+          "path": "p15-16-physical-identity/yaw045/ear.near.png",
+          "sha256": "315ab81c48dd400dec75abce432e581296d0bf2dec441d7d62c0c1da615d93a1",
+          "pixels": 3484,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "P5_ANCHOR_VERIFIED_SIDE"
+        },
+        {
+          "role": "hair.side",
+          "path": "p15-16-physical-identity/yaw045/hair.side.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-16-physical-identity/yaw045/eye.far.png",
+          "sha256": "adb2d24896078a6115cd1987d3e09a2b2540339d847b9bcbb42712865da4f68a",
+          "pixels": 3075,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "P5_ANCHOR_VERIFIED_SIDE"
+        },
+        {
+          "role": "eye.near",
+          "path": "p15-16-physical-identity/yaw045/eye.near.png",
+          "sha256": "71e1e264d7089277c49ba02dcb3312862742c22369c6833f851f2bd7bf27e653",
+          "pixels": 4414,
+          "reassignedComparedToP15": true,
+          "roleIdentityStatus": "P5_ANCHOR_VERIFIED_SIDE"
+        },
+        {
+          "role": "nose",
+          "path": "p15-16-physical-identity/yaw045/nose.png",
+          "sha256": "b38cc7ae44bf5f89de9831ac12633073adfb12b1efee6fffabea18d12482828e",
+          "pixels": 239,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "mouth",
+          "path": "p15-16-physical-identity/yaw045/mouth.png",
+          "sha256": "578234e57810f60a09421804726585a0a1685d21fb5fc4220f422c11916ef55b",
+          "pixels": 624,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.front",
+          "path": "p15-16-physical-identity/yaw045/hair.front.png",
+          "sha256": "3aed31b1c97baaa19a3b1aa2c9a3d731e1d289b6a26da465cf8b2b3d91cbc0df",
+          "pixels": 93830,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-16-physical-identity/yaw045/hair.ahoge.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "path": "p15-16-physical-identity/yaw045/hair.clip.cross_gold.png",
+          "sha256": "9c25f846eeef0f70f986fe6c6b07bd1221b67c3bfb7653b28950e8fd0dc926bb",
+          "pixels": 1549,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        }
+      ],
+      "acceptedNewPainting": 0
+    },
+    {
+      "view": "yaw077p5",
+      "physicalSideConfidence": "SINGLE_EYE_UNRESOLVED",
+      "nearEyeAnchorX768": null,
+      "farEyeAnchorX768": null,
+      "nearEarAnchorX768": null,
+      "conservesNearFarPixelSets": {
+        "eye": true,
+        "ear": true
+      },
+      "roles": [
+        {
+          "role": "body.reference",
+          "path": "p15-16-physical-identity/yaw077p5/body.reference.png",
+          "sha256": "761d91220930956378219b5fcac785bbcdaabe386a3cf190380c5ea6cbd96924",
+          "pixels": 76284,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.back",
+          "path": "p15-16-physical-identity/yaw077p5/hair.back.png",
+          "sha256": "6a8e5f9cf77bc5c254b58884a25f448fec3a2955ad824007f9861e3367940305",
+          "pixels": 150759,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "face.skin",
+          "path": "p15-16-physical-identity/yaw077p5/face.skin.png",
+          "sha256": "0378acf4a53ce1c119a0688d0cb49e6f85d2b7a6c67af093da375ed13be4875e",
+          "pixels": 50582,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "ear.far",
+          "path": "p15-16-physical-identity/yaw077p5/ear.far.png",
+          "sha256": "30f3e5c2cba46d2cfcdf1a4583621efd3ad68e79d88a2dc349cd100b0c96323a",
+          "pixels": 2343,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "ear.near",
+          "path": "p15-16-physical-identity/yaw077p5/ear.near.png",
+          "sha256": "f5753c3e5332c40dc894b7c16bb43478aa03be7574f7953375d02ec77750cea6",
+          "pixels": 2372,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.side",
+          "path": "p15-16-physical-identity/yaw077p5/hair.side.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-16-physical-identity/yaw077p5/eye.far.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "eye.near",
+          "path": "p15-16-physical-identity/yaw077p5/eye.near.png",
+          "sha256": "0fdd4aeeee5f455749cd20442222acd3f888ab5f5e156bbd4f8e2aca103a5cc6",
+          "pixels": 3349,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "nose",
+          "path": "p15-16-physical-identity/yaw077p5/nose.png",
+          "sha256": "c7922546a4ac7b13c9995a64c0ed4a4287c257e28b7df7e8c3c309b75b0c3ba5",
+          "pixels": 52485,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "mouth",
+          "path": "p15-16-physical-identity/yaw077p5/mouth.png",
+          "sha256": "eca0a08ce8b17166fd046c04827207b2560a36d293dc06405844434fc543cb8a",
+          "pixels": 39,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.front",
+          "path": "p15-16-physical-identity/yaw077p5/hair.front.png",
+          "sha256": "4df48ff2ea7cb2b8fd90f2e6202b883b1ebc167182b3349be192f0761c511177",
+          "pixels": 80099,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-16-physical-identity/yaw077p5/hair.ahoge.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "path": "p15-16-physical-identity/yaw077p5/hair.clip.cross_gold.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "pixels": 0,
+          "reassignedComparedToP15": false,
+          "roleIdentityStatus": "REVIEW_REQUIRED"
+        }
+      ],
+      "acceptedNewPainting": 0
+    }
+  ],
+  "next": "Verify physical eye/ear side for front and 77.5, paint missing sidehair/ahoge and clip, test hidden underpaint",
+  "vddExistingDiagnostic": {
+    "method": "source P15-10 original alpha IoU, no renderer promotion",
+    "pairs": [
+      {
+        "from": "yaw55",
+        "to": "yaw57p5",
+        "alphaIoU": 0.93808
+      },
+      {
+        "from": "yaw57p5",
+        "to": "yaw60",
+        "alphaIoU": 0.79097
+      },
+      {
+        "from": "yaw60",
+        "to": "yaw62p5",
+        "alphaIoU": 0.94006
+      },
+      {
+        "from": "yaw62p5",
+        "to": "yaw65",
+        "alphaIoU": 0.93804
+      }
+    ]
+  }
+}
