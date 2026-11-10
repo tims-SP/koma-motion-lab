@@ -397,6 +397,67 @@
       "runner": "scripts/p12_anatomical_vdd.py",
       "reviewBuilder": "scripts/p15_17_anatomical_review.py",
       "next": "Verify physical eye/clip visibility and source RGB quality on all five frames; author actual missing underpaint/independent side views; do not promote geometry-only continuity"
+    },
+    "p15StrokeModeComparison": {
+      "characterId": "p0_character_001",
+      "status": "THREE_MODE_ENGINEERING_COMPARISON_VISUAL_ART_GATE_PENDING",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "sourceArtMeshes": 39,
+      "registeredPairs": 22,
+      "modes": {
+        "anatomy": {
+          "alphaIoU": [
+            0.97511,
+            0.97407,
+            0.97323,
+            0.96316
+          ],
+          "strokeAnchorsUsed": 0
+        },
+        "anatomy-strokes": {
+          "alphaIoU": [
+            0.97511,
+            0.97407,
+            0.97323,
+            0.96316
+          ],
+          "strokeAnchorsUsed": 9,
+          "rgbChangedPixels": 0,
+          "decision": "NO_OP"
+        },
+        "stroke-wide": {
+          "alphaIoU": [
+            0.97451,
+            0.97339,
+            0.97253,
+            0.95997
+          ],
+          "strokeAnchorsUsed": 12,
+          "rgbChangedPixels": [
+            55255,
+            60792,
+            64106,
+            66469,
+            80478
+          ],
+          "decision": "VISUAL_CANDIDATE_ONLY"
+        }
+      },
+      "testsPassed": 6,
+      "browserImagesLoaded": 30,
+      "browserErrors": 0,
+      "approvedIndependentPaintings": 0,
+      "approvedHiddenUnderpainting": 0,
+      "qa": "private-assets/exports/p15-18-mode-comparison/qa.json",
+      "browserQa": "evidence/p15-18-browser-qa.json",
+      "reviewZip": "private-assets/exports/p15-18-mode-comparison.zip",
+      "next": "Inspect stroke-wide hair/clip RGB and topology in visual review; keep anatomy baseline until artistic QA"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",

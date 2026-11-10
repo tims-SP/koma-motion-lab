@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "imageCount": 15,
+      "loaded": 15
+    },
+    {
+      "viewport": 390,
+      "imageCount": 15,
+      "loaded": 15
+    }
+  ],
+  "errors": []
+}
