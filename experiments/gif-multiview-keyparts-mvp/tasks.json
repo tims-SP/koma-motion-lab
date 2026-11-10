@@ -655,6 +655,46 @@
       "reviewArchive": "private-assets/exports/p15-23-model-keyparts-review.zip",
       "plan": "docs/plans/2026-11-10-p15-23-new-keypart-generation-extraction.md",
       "next": "Reference-condition actual P0 source and generate isolated true transparent art with hidden underpaint; accept only visual identity-consistent parts"
+    },
+    "p15ReferenceConditionedClipVectorCandidate": {
+      "characterId": "p0_character_001",
+      "status": "NEW_CLIP_VECTOR_CANDIDATE_ENGINEERING_PASS_ART_ACCEPTANCE_PENDING",
+      "referenceImageEditingAttempt": "QWEN_IMAGE_EDIT_2511_ZERO_GPU_QUOTA_EXCEEDED",
+      "referenceSource": "P15-20 original 45-degree cross-gold clip",
+      "generatedMethod": "INDEPENDENT_PROGRAMMATIC_VECTOR_STROKES",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "sourceReferenceAlignedRoles": [
+        "hair.clip.cross_gold"
+      ],
+      "newIndependentTransparentRgbaCandidates": 5,
+      "clipAlphaIoUWithPriorVdd": [
+        0.5957,
+        0.60459,
+        0.61393,
+        0.62493,
+        0.6582
+      ],
+      "newClipAlphaCopiedFromOldVdd": false,
+      "native443BaselineRoundtripPixelError": 0,
+      "original13LayerSourcePreserved": true,
+      "productionVddChanged": false,
+      "formalArtApprovedParts": 0,
+      "hiddenUnderpaintingApproved": 0,
+      "unitTestsPassed": 7,
+      "chromiumAngleViewportChecks": 10,
+      "chromiumLoadedImages": 50,
+      "chromiumErrors": 0,
+      "qa": "evidence/p15-24-vector-cross-clip-qa.json",
+      "browserQa": "evidence/p15-24-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-24-cross-clip-review.zip",
+      "plan": "docs/plans/2026-11-10-p15-24-p0-guided-vector-clip.md",
+      "next": "Reference-conditioned independently painted side-hair/far-eye/ahoge and hidden underpaint, then P0 55-65 visual approval"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
