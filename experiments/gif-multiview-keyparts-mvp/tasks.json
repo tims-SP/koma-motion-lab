@@ -298,6 +298,37 @@
       "test": "scripts/test_p15_14_existing_psd_audit.py",
       "plan": "docs/plans/2026-11-10-p15-14-existing-psd-audit.md",
       "next": "Split 13 PSD semantic groups into stable 13 ArtMesh role identities, validate hidden-paint against source and angle"
+    },
+    "p15PsdRoleRouting": {
+      "characterId": "p0_character_001",
+      "status": "GEOMETRY_ROUTING_VERIFIED_ART_APPROVAL_PENDING",
+      "sourcePsdAngles": [
+        0,
+        45,
+        77.5
+      ],
+      "sourceNativeLayers": 39,
+      "generatedRoleSlots": 39,
+      "mappedSourceSegments": 50,
+      "acceptedIndependentArtMeshLayers": 0,
+      "roleGroupsIncomplete": [
+        "hair.side",
+        "hair.ahoge",
+        "eye.far@77.5",
+        "hair.clip.cross_gold@77.5"
+      ],
+      "reversibleSplitVerified": true,
+      "hiddenUnderpaintArtVerified": false,
+      "unitTestsPassed": 5,
+      "browserViews": 6,
+      "browserImageLoads": 78,
+      "browserErrors": 0,
+      "qa": "evidence/p15-15-role-routing-qa.json",
+      "browserQa": "evidence/p15-15-browser-qa.json",
+      "runner": "scripts/p15_15_role_route.py",
+      "html": "private-assets/exports/p15-15-artmesh-review/index.html",
+      "privateReviewZip": "private-assets/exports/p15-15-artmesh-review.zip",
+      "next": "Review underpaint in 0/45/77.5 PSD, resolve missing hair and far eye/clip semantic art and test VDD at 57.5/60"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",

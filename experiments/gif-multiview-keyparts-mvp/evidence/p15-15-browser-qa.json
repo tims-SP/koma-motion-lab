@@ -1,0 +1,47 @@
+{
+  "pages": [
+    {
+      "viewport": 1280,
+      "index": 0,
+      "loaded": 13,
+      "errors": 0,
+      "missingLabel": "未验收独立部件：hair.side、hair.ahoge"
+    },
+    {
+      "viewport": 1280,
+      "index": 1,
+      "loaded": 13,
+      "errors": 0,
+      "missingLabel": "未验收独立部件：hair.side、hair.ahoge"
+    },
+    {
+      "viewport": 1280,
+      "index": 2,
+      "loaded": 13,
+      "errors": 0,
+      "missingLabel": "未验收独立部件：hair.side、eye.far、hair.ahoge、hair.clip.cross_gold"
+    },
+    {
+      "viewport": 390,
+      "index": 0,
+      "loaded": 13,
+      "errors": 0,
+      "missingLabel": "未验收独立部件：hair.side、hair.ahoge"
+    },
+    {
+      "viewport": 390,
+      "index": 1,
+      "loaded": 13,
+      "errors": 0,
+      "missingLabel": "未验收独立部件：hair.side、hair.ahoge"
+    },
+    {
+      "viewport": 390,
+      "index": 2,
+      "loaded": 13,
+      "errors": 0,
+      "missingLabel": "未验收独立部件：hair.side、eye.far、hair.ahoge、hair.clip.cross_gold"
+    }
+  ],
+  "errors": []
+}

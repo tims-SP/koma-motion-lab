@@ -1,0 +1,868 @@
+{
+  "schema": "KOMA-P15-15-PSD-ROLE-ROUTING-V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "0a47e5698e0aa5394975eed0fe1029a3dd95ef9791b4c635bf7326f6c4fb214e",
+  "roleCount": 13,
+  "angles": [
+    "yaw000",
+    "yaw045",
+    "yaw077p5"
+  ],
+  "views": [
+    {
+      "yaw": "yaw000",
+      "irisXBoundary": 358,
+      "earXBoundary": 303,
+      "mappingMethod": "REVERSIBLE_HEURISTIC_NO_ART_APPROVAL",
+      "nativeComponents": [
+        {
+          "nativeLayer": "back hair",
+          "index": 0,
+          "role": "hair.back",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 166823,
+          "file": "p15-15-psd-role-routing/yaw000/native-00-hair_back.png",
+          "sha256": "4c82ac1e4a98191f7a31b3fab78a2e8bfdd95fcac441b576e9a45daae4d4d68e"
+        },
+        {
+          "nativeLayer": "neck",
+          "index": 1,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 15550,
+          "file": "p15-15-psd-role-routing/yaw000/native-01-body_reference.png",
+          "sha256": "24da6601f101746aed492523cd3706a0eecdd12421fdd5a987401d178736912f"
+        },
+        {
+          "nativeLayer": "topwear",
+          "index": 2,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 103863,
+          "file": "p15-15-psd-role-routing/yaw000/native-02-body_reference.png",
+          "sha256": "c8e742b286334084da402c543d69406052a563f4763ea6ac2b4b62a15613dcac"
+        },
+        {
+          "nativeLayer": "ears",
+          "index": 3,
+          "role": "ear.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 3149,
+          "file": "p15-15-psd-role-routing/yaw000/native-03-ear_far.png",
+          "sha256": "6bac5f87e30f9d110a6d69b8310e198db7e93040b3faba5ff1b80359a0bbb6d7"
+        },
+        {
+          "nativeLayer": "ears",
+          "index": 3,
+          "role": "ear.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 3241,
+          "file": "p15-15-psd-role-routing/yaw000/native-03-ear_near.png",
+          "sha256": "a5fb752c229ae603a1592b25f6d578e420782ca3308c0ccf090f7e4a95d39966"
+        },
+        {
+          "nativeLayer": "face",
+          "index": 4,
+          "role": "face.skin",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 72423,
+          "file": "p15-15-psd-role-routing/yaw000/native-04-face_skin.png",
+          "sha256": "66fcdba7e1082d9e33c8a6bf1f4a765079006fc8ab138f3cee9f06628837c940"
+        },
+        {
+          "nativeLayer": "nose",
+          "index": 5,
+          "role": "nose",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 523,
+          "file": "p15-15-psd-role-routing/yaw000/native-05-nose.png",
+          "sha256": "8a171bdaf4b4a34867d0b74af83b5b3cbdf7742e15fe0ea8dcbd09f06977f7aa"
+        },
+        {
+          "nativeLayer": "mouth",
+          "index": 6,
+          "role": "mouth",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 1784,
+          "file": "p15-15-psd-role-routing/yaw000/native-06-mouth.png",
+          "sha256": "ea85ef8400da0881038e6f695511f715e7dc5d4d8dd46089cc2a1a114ddb35ab"
+        },
+        {
+          "nativeLayer": "eyewhite",
+          "index": 7,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 2718,
+          "file": "p15-15-psd-role-routing/yaw000/native-07-eye_far.png",
+          "sha256": "ddea727f7ed11b9d122e655d7d3ff9e2f1f87a6e9ef986ad1272ca2f357ce1fa"
+        },
+        {
+          "nativeLayer": "eyewhite",
+          "index": 7,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 2720,
+          "file": "p15-15-psd-role-routing/yaw000/native-07-eye_near.png",
+          "sha256": "ce775bad15074a64ba30e28fea4010b118a608aa5f73a7caa31209fda9194fb0"
+        },
+        {
+          "nativeLayer": "irides",
+          "index": 8,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1911,
+          "file": "p15-15-psd-role-routing/yaw000/native-08-eye_far.png",
+          "sha256": "7b9ad04edc917068271d0e5624c478042ce2b41fc340110734d3bb380201df31"
+        },
+        {
+          "nativeLayer": "irides",
+          "index": 8,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1919,
+          "file": "p15-15-psd-role-routing/yaw000/native-08-eye_near.png",
+          "sha256": "59e3cfc4427cd13e69101b261b01c480e96455a422fbc98077e5d308d5a62811"
+        },
+        {
+          "nativeLayer": "eyebrow",
+          "index": 9,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 298,
+          "file": "p15-15-psd-role-routing/yaw000/native-09-eye_far.png",
+          "sha256": "1cba2446097752dfeec5435b7e37182833cb507598d5bea8d42babf57a4eae6f"
+        },
+        {
+          "nativeLayer": "eyebrow",
+          "index": 9,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 307,
+          "file": "p15-15-psd-role-routing/yaw000/native-09-eye_near.png",
+          "sha256": "d0ec7a02495cbb415e927131fc4bdbace244d98b597c7b04f7386e573d31d912"
+        },
+        {
+          "nativeLayer": "eyelash",
+          "index": 10,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1330,
+          "file": "p15-15-psd-role-routing/yaw000/native-10-eye_far.png",
+          "sha256": "e6b0c46377db70388bb638c203f10724cc749b99f079c5a0eda4121b25528042"
+        },
+        {
+          "nativeLayer": "eyelash",
+          "index": 10,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1371,
+          "file": "p15-15-psd-role-routing/yaw000/native-10-eye_near.png",
+          "sha256": "33dff80db8453354717e14c5f8094edc76ae4e01c5008c3b9812bf9ad96f69d2"
+        },
+        {
+          "nativeLayer": "front hair",
+          "index": 11,
+          "role": "hair.front",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 81582,
+          "file": "p15-15-psd-role-routing/yaw000/native-11-hair_front.png",
+          "sha256": "d7b76effb08687021ed9056ec9d2d7b4ec258a832fcb18f6a337de29fa79770f"
+        },
+        {
+          "nativeLayer": "headwear",
+          "index": 12,
+          "role": "hair.clip.cross_gold",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 1948,
+          "file": "p15-15-psd-role-routing/yaw000/native-12-hair_clip_cross_gold.png",
+          "sha256": "3390fe41204e1193398b406b166cf1c9403d46d3ec2372710c8315ae9f26db37"
+        }
+      ],
+      "roles": [
+        {
+          "role": "body.reference",
+          "sourceLayerCount": 2,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/body.reference.png",
+          "sha256": "29c1abda5efc7a425c03e5ab4cb97f8e073cae2750aa69a04217273a10e11e52",
+          "visiblePixels": 112034
+        },
+        {
+          "role": "hair.back",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/hair.back.png",
+          "sha256": "7068998ace37516df47f76cb162a1d743aaa8ca4bea01209d37e3d7e916fd8fa",
+          "visiblePixels": 166823
+        },
+        {
+          "role": "face.skin",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/face.skin.png",
+          "sha256": "4c1fd0148b5db57c370d006d46a3291179fa209ac4c282f20d4aa9dc51800822",
+          "visiblePixels": 72423
+        },
+        {
+          "role": "ear.far",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/ear.far.png",
+          "sha256": "ff57693e0b4f81bf280f5c3d71a61046edaf49ada4e9b1a393bb756481469764",
+          "visiblePixels": 3149
+        },
+        {
+          "role": "ear.near",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/ear.near.png",
+          "sha256": "cdda71bbcb6666e88bfd0bb24cafc1d06778e421821a9200efe37154153c3926",
+          "visiblePixels": 3241
+        },
+        {
+          "role": "hair.side",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw000/hair.side.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "eye.far",
+          "sourceLayerCount": 4,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/eye.far.png",
+          "sha256": "ecb9857c86af462de73def612203d68a65983e0e92549c54e39534fc678fee08",
+          "visiblePixels": 3985
+        },
+        {
+          "role": "eye.near",
+          "sourceLayerCount": 4,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/eye.near.png",
+          "sha256": "f65b25dfaa4fae63e216e32fa55b0fb87cf4e20d8e1a4733fb1b00eacd7fad12",
+          "visiblePixels": 4022
+        },
+        {
+          "role": "nose",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/nose.png",
+          "sha256": "92e58e7909590df64849d8000759f6c4a7cf472203f1f2b3eee4f8996a583221",
+          "visiblePixels": 523
+        },
+        {
+          "role": "mouth",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/mouth.png",
+          "sha256": "a787c785412df333b721e9066b9ce83a6879a0d6d20064d495fe5958e582349d",
+          "visiblePixels": 1784
+        },
+        {
+          "role": "hair.front",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/hair.front.png",
+          "sha256": "17f2676a6961ded979e8681c5109f13ef441dffc869dbeb23fb9e5b750203438",
+          "visiblePixels": 81582
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw000/hair.ahoge.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw000/hair.clip.cross_gold.png",
+          "sha256": "64da7c184574e6341141308cdac3a96281d21f94daa9a2c554a6dc0831b3afd9",
+          "visiblePixels": 1948
+        }
+      ],
+      "unroutedNativeLayers": [],
+      "missingOrNonIndependentRoles": [
+        "hair.side",
+        "hair.ahoge"
+      ],
+      "acceptedIndependentArtMeshLayers": 0
+    },
+    {
+      "yaw": "yaw045",
+      "irisXBoundary": 437,
+      "earXBoundary": 353,
+      "mappingMethod": "REVERSIBLE_HEURISTIC_NO_ART_APPROVAL",
+      "nativeComponents": [
+        {
+          "nativeLayer": "back hair",
+          "index": 0,
+          "role": "hair.back",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 175813,
+          "file": "p15-15-psd-role-routing/yaw045/native-00-hair_back.png",
+          "sha256": "9108f0f42188686fb72f1da0f84591639bf1af468abc6d9868cde90d7daecb13"
+        },
+        {
+          "nativeLayer": "neck",
+          "index": 1,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 15488,
+          "file": "p15-15-psd-role-routing/yaw045/native-01-body_reference.png",
+          "sha256": "31e867683687dd2774e5316388c86fd6eeb343189ae5150459e0e5e71e837b94"
+        },
+        {
+          "nativeLayer": "topwear",
+          "index": 2,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 97653,
+          "file": "p15-15-psd-role-routing/yaw045/native-02-body_reference.png",
+          "sha256": "1f765ab73847cdb6aa759f1745f0c27aa6bd507d59d7fd7f635c84bc32c113c4"
+        },
+        {
+          "nativeLayer": "ears",
+          "index": 3,
+          "role": "ear.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 3484,
+          "file": "p15-15-psd-role-routing/yaw045/native-03-ear_far.png",
+          "sha256": "60fe38c0d17ad1c4110f1ad6b39d07fda2e5918e3153a5ac3238f07b3cd0aeb4"
+        },
+        {
+          "nativeLayer": "ears",
+          "index": 3,
+          "role": "ear.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 2980,
+          "file": "p15-15-psd-role-routing/yaw045/native-03-ear_near.png",
+          "sha256": "5e68dfbef9cfb9097330f34681f1aca2af9ad5e217a47c2e40f869e85730db84"
+        },
+        {
+          "nativeLayer": "face",
+          "index": 4,
+          "role": "face.skin",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 66399,
+          "file": "p15-15-psd-role-routing/yaw045/native-04-face_skin.png",
+          "sha256": "04ed1f14ec301a4818749814b13d176c5012ea8bf252124ef7909546507fe178"
+        },
+        {
+          "nativeLayer": "nose",
+          "index": 5,
+          "role": "nose",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 239,
+          "file": "p15-15-psd-role-routing/yaw045/native-05-nose.png",
+          "sha256": "11e0c8f7e0f69f2c484177610f9b0db55e305f8104d83404ec5fc54f289e920f"
+        },
+        {
+          "nativeLayer": "mouth",
+          "index": 6,
+          "role": "mouth",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 624,
+          "file": "p15-15-psd-role-routing/yaw045/native-06-mouth.png",
+          "sha256": "f167fc113446ef9d49121be98f878e15a92a075cb7bd9ab52283bbe09c4b767b"
+        },
+        {
+          "nativeLayer": "eyewhite",
+          "index": 7,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 2973,
+          "file": "p15-15-psd-role-routing/yaw045/native-07-eye_far.png",
+          "sha256": "f2648cc0154611196c82a1649ce8d63a263c0bdc4901e8b91b12db35ce8ee58d"
+        },
+        {
+          "nativeLayer": "eyewhite",
+          "index": 7,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1795,
+          "file": "p15-15-psd-role-routing/yaw045/native-07-eye_near.png",
+          "sha256": "21c1b8cb8e4405180d69ee13799182d1fdc1149f87274be1351e5314fca3d821"
+        },
+        {
+          "nativeLayer": "irides",
+          "index": 8,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1859,
+          "file": "p15-15-psd-role-routing/yaw045/native-08-eye_far.png",
+          "sha256": "1e0f1b4a66747a1c30ce671c1019691af8afa6881d7ed3796895005d3d2e0202"
+        },
+        {
+          "nativeLayer": "irides",
+          "index": 8,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1261,
+          "file": "p15-15-psd-role-routing/yaw045/native-08-eye_near.png",
+          "sha256": "f3d729ce1fa21e4b883b85374fd8eb51542aa1a62542abf61e9de95c5f2b212d"
+        },
+        {
+          "nativeLayer": "eyelash",
+          "index": 9,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1704,
+          "file": "p15-15-psd-role-routing/yaw045/native-09-eye_far.png",
+          "sha256": "daff11154fd9df3d85a87c03c84d519657351738d48f7ecdf6840fe0a3657865"
+        },
+        {
+          "nativeLayer": "eyelash",
+          "index": 9,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 1358,
+          "file": "p15-15-psd-role-routing/yaw045/native-09-eye_near.png",
+          "sha256": "5f9414bedbc8fa7976396bc8d01468c41f8b36f12a7c375360a327ffef538f26"
+        },
+        {
+          "nativeLayer": "eyebrow",
+          "index": 10,
+          "role": "eye.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 367,
+          "file": "p15-15-psd-role-routing/yaw045/native-10-eye_far.png",
+          "sha256": "9ef50ba5a853b1c1c14c01700e33dc3c26405782ceadd57a117bc92413f2e014"
+        },
+        {
+          "nativeLayer": "eyebrow",
+          "index": 10,
+          "role": "eye.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 243,
+          "file": "p15-15-psd-role-routing/yaw045/native-10-eye_near.png",
+          "sha256": "6579c7f0bf1f4fe48a600f1838ebda566447ccc8f252ed9dd011c89f6de0e6d0"
+        },
+        {
+          "nativeLayer": "front hair",
+          "index": 11,
+          "role": "hair.front",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 93830,
+          "file": "p15-15-psd-role-routing/yaw045/native-11-hair_front.png",
+          "sha256": "e767dea551a079d707f307faa301f9b7d37705054533b26fd34f9ff979bf574b"
+        },
+        {
+          "nativeLayer": "headwear",
+          "index": 12,
+          "role": "hair.clip.cross_gold",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 1549,
+          "file": "p15-15-psd-role-routing/yaw045/native-12-hair_clip_cross_gold.png",
+          "sha256": "e2015ac6e929cbd03e747439893cbe6a221a41225efdea2a1f773fec09028c95"
+        }
+      ],
+      "roles": [
+        {
+          "role": "body.reference",
+          "sourceLayerCount": 2,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/body.reference.png",
+          "sha256": "5af60b644a0d2a2d23bbd7e14f3345abfcac625258cd43ab1b257e5af4e28f50",
+          "visiblePixels": 106097
+        },
+        {
+          "role": "hair.back",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/hair.back.png",
+          "sha256": "08106c1c99f7e2e28a94d9ddde4b68804f6dbeef30c15347bc4a6b902fd18e2c",
+          "visiblePixels": 175813
+        },
+        {
+          "role": "face.skin",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/face.skin.png",
+          "sha256": "1cfecae55d2ed189fc358b5a4d6b600013412640d5cc48dc872e2ef0bd15cd51",
+          "visiblePixels": 66399
+        },
+        {
+          "role": "ear.far",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/ear.far.png",
+          "sha256": "315ab81c48dd400dec75abce432e581296d0bf2dec441d7d62c0c1da615d93a1",
+          "visiblePixels": 3484
+        },
+        {
+          "role": "ear.near",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/ear.near.png",
+          "sha256": "4b78454e575ca484ac7b162e09b88a295619eebfc3577b959f207503001f39fc",
+          "visiblePixels": 2980
+        },
+        {
+          "role": "hair.side",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw045/hair.side.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "eye.far",
+          "sourceLayerCount": 4,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/eye.far.png",
+          "sha256": "71e1e264d7089277c49ba02dcb3312862742c22369c6833f851f2bd7bf27e653",
+          "visiblePixels": 4414
+        },
+        {
+          "role": "eye.near",
+          "sourceLayerCount": 4,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/eye.near.png",
+          "sha256": "adb2d24896078a6115cd1987d3e09a2b2540339d847b9bcbb42712865da4f68a",
+          "visiblePixels": 3075
+        },
+        {
+          "role": "nose",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/nose.png",
+          "sha256": "b38cc7ae44bf5f89de9831ac12633073adfb12b1efee6fffabea18d12482828e",
+          "visiblePixels": 239
+        },
+        {
+          "role": "mouth",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/mouth.png",
+          "sha256": "578234e57810f60a09421804726585a0a1685d21fb5fc4220f422c11916ef55b",
+          "visiblePixels": 624
+        },
+        {
+          "role": "hair.front",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/hair.front.png",
+          "sha256": "3aed31b1c97baaa19a3b1aa2c9a3d731e1d289b6a26da465cf8b2b3d91cbc0df",
+          "visiblePixels": 93830
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw045/hair.ahoge.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw045/hair.clip.cross_gold.png",
+          "sha256": "9c25f846eeef0f70f986fe6c6b07bd1221b67c3bfb7653b28950e8fd0dc926bb",
+          "visiblePixels": 1549
+        }
+      ],
+      "unroutedNativeLayers": [],
+      "missingOrNonIndependentRoles": [
+        "hair.side",
+        "hair.ahoge"
+      ],
+      "acceptedIndependentArtMeshLayers": 0
+    },
+    {
+      "yaw": "yaw077p5",
+      "irisXBoundary": null,
+      "earXBoundary": 374,
+      "mappingMethod": "REVERSIBLE_HEURISTIC_NO_ART_APPROVAL",
+      "nativeComponents": [
+        {
+          "nativeLayer": "neck",
+          "index": 0,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 15833,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-00-body_reference.png",
+          "sha256": "8864731ce9b13487e13815e92653e1029b841763a34e1693f556bdcf12bc091a"
+        },
+        {
+          "nativeLayer": "topwear",
+          "index": 1,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 64668,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-01-body_reference.png",
+          "sha256": "67ab0942a41ec2b8c261ee8eb1e7dcdcf4fddde1ec8315dcb0b772013d66b1eb"
+        },
+        {
+          "nativeLayer": "handwear",
+          "index": 2,
+          "role": "body.reference",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 22103,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-02-body_reference.png",
+          "sha256": "47cac60894d515a890c795f81ad5c5f653dd080eec2e4648722bde3a1f634ba9"
+        },
+        {
+          "nativeLayer": "ears",
+          "index": 3,
+          "role": "ear.far",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 2343,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-03-ear_far.png",
+          "sha256": "ff777439e5618dbe0492b26c686766874411ecce74ee295d61b3c5da8958d64b"
+        },
+        {
+          "nativeLayer": "ears",
+          "index": 3,
+          "role": "ear.near",
+          "splitStatus": "HEURISTIC_X_SPLIT",
+          "visiblePixels": 2372,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-03-ear_near.png",
+          "sha256": "e625f3c4e7c5b3d1e4d6cacf5f58515160cc2b7677a82b167be531c0134bc8bd"
+        },
+        {
+          "nativeLayer": "back hair",
+          "index": 4,
+          "role": "hair.back",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 150759,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-04-hair_back.png",
+          "sha256": "04f62ba30248abc1bf65d30401af7e67a4c2f8d083031d8cb2c8ab5e84eb90f7"
+        },
+        {
+          "nativeLayer": "face",
+          "index": 5,
+          "role": "face.skin",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 50582,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-05-face_skin.png",
+          "sha256": "3f06922385c420dae6da26475136219d709b2ad928d9861972b72a8905a2684d"
+        },
+        {
+          "nativeLayer": "nose",
+          "index": 6,
+          "role": "nose",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 52485,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-06-nose.png",
+          "sha256": "c7429cba17c88e59b5ae26d512b6f6ba159bc64d4276b9322115e4ba8ab34a03"
+        },
+        {
+          "nativeLayer": "mouth",
+          "index": 7,
+          "role": "mouth",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 39,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-07-mouth.png",
+          "sha256": "2beea4c5845939bdcce1bd468f11b03c8b40e09a25a9c7a292a65646ef695dd8"
+        },
+        {
+          "nativeLayer": "eyewhite",
+          "index": 8,
+          "role": "eye.near",
+          "splitStatus": "UNRESOLVED_SINGLE_SIDE",
+          "visiblePixels": 1904,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-08-eye_near.png",
+          "sha256": "2b85d8876cd32c3cb0e8b0bd39384247371532e51fd2fda19199aa82089f58c6"
+        },
+        {
+          "nativeLayer": "irides",
+          "index": 9,
+          "role": "eye.near",
+          "splitStatus": "UNRESOLVED_SINGLE_SIDE",
+          "visiblePixels": 730,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-09-eye_near.png",
+          "sha256": "7e63b4ae20b6cf0bf115c2874567bdab881cd7a7bd0db1adc95b37e357c32359"
+        },
+        {
+          "nativeLayer": "eyelash",
+          "index": 10,
+          "role": "eye.near",
+          "splitStatus": "UNRESOLVED_SINGLE_SIDE",
+          "visiblePixels": 1354,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-10-eye_near.png",
+          "sha256": "7d41ecccc927f83908dc74a92bd39e4f7e545e5694926f3f1f412a83ab8b82d0"
+        },
+        {
+          "nativeLayer": "eyebrow",
+          "index": 11,
+          "role": "eye.near",
+          "splitStatus": "UNRESOLVED_SINGLE_SIDE",
+          "visiblePixels": 377,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-11-eye_near.png",
+          "sha256": "96a78050025f72b810e781a9c44c7efb5647e68d452b5b56746a79a380aade7d"
+        },
+        {
+          "nativeLayer": "front hair",
+          "index": 12,
+          "role": "hair.front",
+          "splitStatus": "GROUPED_ROLE_UNVERIFIED",
+          "visiblePixels": 80099,
+          "file": "p15-15-psd-role-routing/yaw077p5/native-12-hair_front.png",
+          "sha256": "1e4f4c4f52182a157fd7e5ab82619c6cd9b4792b260f2a74da4d1de526688d90"
+        }
+      ],
+      "roles": [
+        {
+          "role": "body.reference",
+          "sourceLayerCount": 3,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/body.reference.png",
+          "sha256": "761d91220930956378219b5fcac785bbcdaabe386a3cf190380c5ea6cbd96924",
+          "visiblePixels": 76284
+        },
+        {
+          "role": "hair.back",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/hair.back.png",
+          "sha256": "6a8e5f9cf77bc5c254b58884a25f448fec3a2955ad824007f9861e3367940305",
+          "visiblePixels": 150759
+        },
+        {
+          "role": "face.skin",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/face.skin.png",
+          "sha256": "0378acf4a53ce1c119a0688d0cb49e6f85d2b7a6c67af093da375ed13be4875e",
+          "visiblePixels": 50582
+        },
+        {
+          "role": "ear.far",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/ear.far.png",
+          "sha256": "30f3e5c2cba46d2cfcdf1a4583621efd3ad68e79d88a2dc349cd100b0c96323a",
+          "visiblePixels": 2343
+        },
+        {
+          "role": "ear.near",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/ear.near.png",
+          "sha256": "f5753c3e5332c40dc894b7c16bb43478aa03be7574f7953375d02ec77750cea6",
+          "visiblePixels": 2372
+        },
+        {
+          "role": "hair.side",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw077p5/hair.side.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "eye.far",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw077p5/eye.far.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "eye.near",
+          "sourceLayerCount": 4,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/eye.near.png",
+          "sha256": "0fdd4aeeee5f455749cd20442222acd3f888ab5f5e156bbd4f8e2aca103a5cc6",
+          "visiblePixels": 3349
+        },
+        {
+          "role": "nose",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/nose.png",
+          "sha256": "c7922546a4ac7b13c9995a64c0ed4a4287c257e28b7df7e8c3c309b75b0c3ba5",
+          "visiblePixels": 52485
+        },
+        {
+          "role": "mouth",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/mouth.png",
+          "sha256": "eca0a08ce8b17166fd046c04827207b2560a36d293dc06405844434fc543cb8a",
+          "visiblePixels": 39
+        },
+        {
+          "role": "hair.front",
+          "sourceLayerCount": 1,
+          "derived": true,
+          "missingIndependentArt": false,
+          "path": "p15-15-psd-role-routing/yaw077p5/hair.front.png",
+          "sha256": "4df48ff2ea7cb2b8fd90f2e6202b883b1ebc167182b3349be192f0761c511177",
+          "visiblePixels": 80099
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw077p5/hair.ahoge.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        },
+        {
+          "role": "hair.clip.cross_gold",
+          "sourceLayerCount": 0,
+          "derived": true,
+          "missingIndependentArt": true,
+          "path": "p15-15-psd-role-routing/yaw077p5/hair.clip.cross_gold.png",
+          "sha256": "4969b58a1b0895fca393e36f8a9b5a86562d236dccb936df7d4082012485123b",
+          "visiblePixels": 0
+        }
+      ],
+      "unroutedNativeLayers": [],
+      "missingOrNonIndependentRoles": [
+        "hair.side",
+        "eye.far",
+        "hair.ahoge",
+        "hair.clip.cross_gold"
+      ],
+      "acceptedIndependentArtMeshLayers": 0
+    }
+  ],
+  "artisticAcceptance": false,
+  "validUnderpaintAccepted": false,
+  "acceptedIndependentArtMeshLayers": 0,
+  "status": "REVERSIBLE_ROLE_ROUTING_ONLY_NEEDS_ART_REVIEW"
+}
