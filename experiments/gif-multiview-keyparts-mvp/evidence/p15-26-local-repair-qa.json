@@ -1,0 +1,254 @@
+{
+  "schema": "KOMA-P15-26-LOCAL-SOURCE-PRESERVING-RETOUCH-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    55,
+    57.5,
+    60,
+    62.5,
+    65
+  ],
+  "roles": [
+    "hair.side",
+    "hair.ahoge",
+    "eye.far"
+  ],
+  "sourceReference": "P15-21 approved engineering ArtMesh layout, not artist approved intermediate views",
+  "method": "LOCAL_TINT_AND_ALPHA_REFINEMENT_OF_SOURCE_VDD_TEXTURE",
+  "independentPaintingProduced": false,
+  "formalArtAccepted": false,
+  "sourcePixelProvenancePreserved": true,
+  "productionVddChanged": false,
+  "visualIssueFromP15_25": "FAILED_FULL_REPLACEMENT_HARD_SIDE_HAIR_LARGE_FAR_EYE_LOOP_AHOGE",
+  "frames": [
+    {
+      "angle": 55,
+      "roles": [
+        {
+          "role": "hair.side",
+          "sourceSHA256": "e636f334687af610218e02208c227c181550e6cbedc6c402ab611da837481812",
+          "sha256": "9b12bfcfb707e38dc2a881f610ca04220dfd0cc1dfa608241e7f32c89b468367",
+          "path": "p15-26-localized-repair/yaw55/hair.side.png",
+          "rgbChangedPixels": 583,
+          "alphaChangedPixels": 0,
+          "alphaIoU": 1.0,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceSHA256": "161df0516dade2fd95e49d147800c04ea8d823c6ca0549a266281d1de0323022",
+          "sha256": "8dd0d5f251e3a29e06435b9779485daf9fe51935ecbce6f41fbad60992bf0dbd",
+          "path": "p15-26-localized-repair/yaw55/hair.ahoge.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 6868,
+          "alphaIoU": 0.993564,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "eye.far",
+          "sourceSHA256": "93121c643122acdb031ac3fb4e0618e52f209c749b66a9e332eb337c560be1da",
+          "sha256": "dab422ab3d069ede83be77f96c8431e23fcefd6ae7c111883868588472817c98",
+          "path": "p15-26-localized-repair/yaw55/eye.far.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 8062,
+          "alphaIoU": 0.999826,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        }
+      ],
+      "diagnostic": "p15-26-localized-repair/yaw55/diagnostic-local-repair.png",
+      "diagnosticSHA256": "3fa6e913ee82443ec28938268928095d23e74ff64d4c41a47c84c5c91ff41deb",
+      "baselineRoundtripExact": true,
+      "compositeAlphaIoU": 0.99853,
+      "rgbChangedPixelsVsBaseline": 30605
+    },
+    {
+      "angle": 57.5,
+      "roles": [
+        {
+          "role": "hair.side",
+          "sourceSHA256": "416fc5523eef70a5feb50724b44fc224169923dfb267f02d6e67b0eb71540eb3",
+          "sha256": "7d165b0c730f717b4c8754c83962142f2c97c1d06f6be515ae9951ea1be8fa53",
+          "path": "p15-26-localized-repair/yaw57p5/hair.side.png",
+          "rgbChangedPixels": 612,
+          "alphaChangedPixels": 0,
+          "alphaIoU": 1.0,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceSHA256": "cd5907ca9c985cb7d3fa7b5e777e4de02976a487268fb958ac8f981b96e14a5e",
+          "sha256": "0c932190f9cf5b2f1cac500113f6851682e7344afc1d3910e1050c67132265a1",
+          "path": "p15-26-localized-repair/yaw57p5/hair.ahoge.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 6937,
+          "alphaIoU": 0.99441,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "eye.far",
+          "sourceSHA256": "0baa59eda0109980fd0038981b8514bef5ce044833c89cd9525cf5cddd0c1fe8",
+          "sha256": "379ed5ba67e5130800e50d0e9f212467e60d23dd74d330bca9be11bbab8f70c5",
+          "path": "p15-26-localized-repair/yaw57p5/eye.far.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 8220,
+          "alphaIoU": 0.999594,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        }
+      ],
+      "diagnostic": "p15-26-localized-repair/yaw57p5/diagnostic-local-repair.png",
+      "diagnosticSHA256": "ea903d4a91c5a3a37882ca60b1ab316e2dfd92960bf7cecc43299c765a1706c0",
+      "baselineRoundtripExact": true,
+      "compositeAlphaIoU": 0.998555,
+      "rgbChangedPixelsVsBaseline": 31739
+    },
+    {
+      "angle": 60,
+      "roles": [
+        {
+          "role": "hair.side",
+          "sourceSHA256": "8eddcbc1c28501115d398d0e45dfe487ed024772645a8700622e1e151cd7c615",
+          "sha256": "862f8a574b684c46d06951ff91463ea0184424ae6db4a12ca86bdbdd7fd81013",
+          "path": "p15-26-localized-repair/yaw60/hair.side.png",
+          "rgbChangedPixels": 593,
+          "alphaChangedPixels": 0,
+          "alphaIoU": 1.0,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceSHA256": "abf09a3cce18ad752a7dbed9d27cd9389dc280bcb89f556171f4a3d2eb698329",
+          "sha256": "ef8f98c5b3738f4d6b7d0c6c3cfbad6c48f6d9572c9debc740477b833cf2225d",
+          "path": "p15-26-localized-repair/yaw60/hair.ahoge.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 6938,
+          "alphaIoU": 0.994227,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "eye.far",
+          "sourceSHA256": "bfafd02848cf7345843e7ee6d35dab2980094ca7669b9140535824841b290a1d",
+          "sha256": "811ce9c31240251fb566ab03d62ff26f2b3ed8c47cc98d08faff4d531624000c",
+          "path": "p15-26-localized-repair/yaw60/eye.far.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 8359,
+          "alphaIoU": 0.999651,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        }
+      ],
+      "diagnostic": "p15-26-localized-repair/yaw60/diagnostic-local-repair.png",
+      "diagnosticSHA256": "579fece1e6b35039220ba0c244a2943ae16008354d85ea3f17247f8d67096a9a",
+      "baselineRoundtripExact": true,
+      "compositeAlphaIoU": 0.998554,
+      "rgbChangedPixelsVsBaseline": 32433
+    },
+    {
+      "angle": 62.5,
+      "roles": [
+        {
+          "role": "hair.side",
+          "sourceSHA256": "9aada1ebdf798437e6ea895ca594ca130cf4ce3b9f15fd6f6c9e35151e99f54b",
+          "sha256": "b1bae95f0e73e5ba8aa51db4ef135784555d590cc96506645d9a74bf6d68a06d",
+          "path": "p15-26-localized-repair/yaw62p5/hair.side.png",
+          "rgbChangedPixels": 600,
+          "alphaChangedPixels": 0,
+          "alphaIoU": 1.0,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceSHA256": "4917c7ca8af35c5ce32d5da1a6935724de0ad26ca21130018872d9f26a238c68",
+          "sha256": "27fdaf4999edf5c02c8e015cb5ac9f00bc197f5a198a367e8fb912f6da7f2567",
+          "path": "p15-26-localized-repair/yaw62p5/hair.ahoge.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 7005,
+          "alphaIoU": 0.99428,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "eye.far",
+          "sourceSHA256": "8c9366951d16e1a3ffaaa1733e23042fa060aba93cf09ef7f47028081726933f",
+          "sha256": "730a9802a791342395c1e55d1a2ae44bbe7a4c9a0191e701fdbebf77803c5bc1",
+          "path": "p15-26-localized-repair/yaw62p5/eye.far.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 8357,
+          "alphaIoU": 0.999533,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        }
+      ],
+      "diagnostic": "p15-26-localized-repair/yaw62p5/diagnostic-local-repair.png",
+      "diagnosticSHA256": "241a8ed24e609f5003454bc8c1b096d0e59a22414cd8ba374fd3cea7fed840bd",
+      "baselineRoundtripExact": true,
+      "compositeAlphaIoU": 0.998539,
+      "rgbChangedPixelsVsBaseline": 32059
+    },
+    {
+      "angle": 65,
+      "roles": [
+        {
+          "role": "hair.side",
+          "sourceSHA256": "66a18f6b2dfaa2d02376b456c07ea8769002699f57ca71bae87044824451a856",
+          "sha256": "57e128cc160c6ecbc2dc9a40f5d89ea294e3fac740727b110ba422e03309a88e",
+          "path": "p15-26-localized-repair/yaw65/hair.side.png",
+          "rgbChangedPixels": 665,
+          "alphaChangedPixels": 0,
+          "alphaIoU": 1.0,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "hair.ahoge",
+          "sourceSHA256": "06eccb08c1696255f03d1ef57d4e3661b0663b6fbf88280c1c5b1ed04f6fba7f",
+          "sha256": "de00b78aa47893ebd367632c9721df7e4c82edcfc022d678d5b03cfc21e36184",
+          "path": "p15-26-localized-repair/yaw65/hair.ahoge.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 7031,
+          "alphaIoU": 0.995465,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        },
+        {
+          "role": "eye.far",
+          "sourceSHA256": "2f54b47b61e0059504f4e0090e42e6ebf9331fb37e75a7a91a60a140b7cea7d7",
+          "sha256": "ed61324ea0a931bb48e1645d5fa9f4de97f85905e83443c3670e59ad639e8d45",
+          "path": "p15-26-localized-repair/yaw65/eye.far.png",
+          "rgbChangedPixels": 0,
+          "alphaChangedPixels": 8221,
+          "alphaIoU": 0.998947,
+          "sourcePreserved": true,
+          "newIndependentArt": false
+        }
+      ],
+      "diagnostic": "p15-26-localized-repair/yaw65/diagnostic-local-repair.png",
+      "diagnosticSHA256": "99fed1ea27a814427663191b803806b01cbeb8c9276bcb72e52c9625b6111b41",
+      "baselineRoundtripExact": true,
+      "compositeAlphaIoU": 0.999616,
+      "rgbChangedPixelsVsBaseline": 29663
+    }
+  ],
+  "next": "review close-up identity, anatomy and true hidden underpaint; seek approved standalone keypart paintings",
+  "visualReview": {
+    "inspection": "Actual three-way 60deg raster (P15-21 / failed P15-25 / new P15-26)",
+    "result": "P15_25_BLOCKING_VISUAL_DEFECTS_AVOIDED_NO_FORMAL_ART_APPROVAL",
+    "observations": [
+      "Side hair returns to approved P0-derived pink bob contours; former large angular panel removed",
+      "Displaced oversized far-eye from P15-25 is absent; original source-derived eye shape retained with subtle alpha attenuation",
+      "Loop-like thick procedural ahoge was rejected; original P15-21 geometry retained with minor edge adjustment"
+    ],
+    "limits": "Source-derived texture remains; not newly independently painted keyframe; hidden underpaint and 360 artistic acceptance unverified",
+    "productionUseApproved": false,
+    "preview": "private-assets/p15-26-localized-repair/three-way-preview-small.jpg"
+  },
+  "artAdmissionGate": "SOURCE_IDENTITY_PRESERVATION_PASS_INDEPENDENT_ART_PENDING"
+}

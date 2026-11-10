@@ -737,6 +737,45 @@
       "browserQa": "evidence/p15-25-browser-qa.json",
       "reviewArchive": "private-assets/exports/p15-25-four-role-review.zip",
       "next": "Fix P0-specific three component appearance with genuine reference image edit or hand-painted art, avoid entire-role procedural replacement; verify far-eye occlusion and side hair strand boundaries"
+    },
+    "p15LocalizedTextureRetouchAfterVisualFail": {
+      "characterId": "p0_character_001",
+      "status": "SOURCE_PRESERVATION_PASS_ART_APPROVAL_PENDING",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "sourceRolesRetouched": [
+        "hair.side",
+        "hair.ahoge",
+        "eye.far"
+      ],
+      "retouchedRolesTotal": 15,
+      "method": "LOCAL_P0_SOURCE_RGB_TINT_AND_ALPHA_SOFT_REFINEMENT_NO_WHOLE_PART_REPLACEMENT",
+      "compositeAlphaIoUWithP15_21": [
+        0.99853,
+        0.998555,
+        0.998554,
+        0.998539,
+        0.999616
+      ],
+      "baselinePixelRoundtripError": 0,
+      "oldP15_25BlockHairAndLargeFarEyeRemoved": true,
+      "newIndependentPaintingsCreated": 0,
+      "hiddenUnderpaintArtApproved": false,
+      "formalArtApproval": false,
+      "productionVddChanged": false,
+      "unitTestsPassed": 7,
+      "browserViewAngleChecks": 10,
+      "browserImageLoads": 60,
+      "browserErrors": 0,
+      "qa": "evidence/p15-26-local-repair-qa.json",
+      "browserQa": "evidence/p15-26-browser-qa.json",
+      "reviewZip": "private-assets/exports/p15-26-local-repair-review.zip",
+      "next": "Independent high-quality source paintings and physically correct far-eye/side-hair occlusion after accepting P0 identity; do not use P15-25 wholesale panels"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
