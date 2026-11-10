@@ -106,4 +106,8 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-07 来源保真、Chromium 与艺术审核](experiments/gif-multiview-keyparts-mvp/evidence/p15-07-renderer-qa.json)
 - [P15-07 私有审查包 SHA 与内容校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-07-delivery.json)
 - [P15-08 55° 独立原画与 13 部件生成合同](experiments/gif-multiview-keyparts-mvp/metadata/p15-08-yaw055-generation-contract.json)
+- [P15-08 原画姿态与身份侧别校准记录](docs/plans/2026-11-10-p15-08-pose-calibration.md)
+- [P15-08 55° 原画五图并排 HTML 审查](experiments/gif-multiview-keyparts-mvp/review/p15-08-mid-angle.html)
+- [P15-08 两组生成候选、Alpha、发夹侧别 QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-08-source-candidate-qa.json)
+- [P15-08 私有审查包校验](experiments/gif-multiview-keyparts-mvp/evidence/p15-08-delivery.json)
 - [P15-06 中间视角轮廓、画布对齐与 P8 对照](experiments/gif-multiview-keyparts-mvp/evidence/p15-06-view-geometry-qa.json)

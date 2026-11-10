@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_07_VIEW_CORRESPONDENCE_ENGINEERING_VERIFIED",
+  "status": "P15_08_POSE_SOURCE_AND_ALPHA_ENGINEERING_VERIFIED",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_07_INTERMEDIATE_VDD_ENGINEERING_VERIFIED_ART_REVIEW_REQUIRED",
+      "status": "P15_08_POSE_SOURCE_QA_COMPLETE_ART_CORRESPONDENCE_IN_PROGRESS",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_07_PRIVATE_HTML_ARTIFACT_SHA_VERIFIED",
+      "status": "P15_08_PRIVATE_SOURCE_REVIEW_PACKAGE_SHA_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -257,9 +257,11 @@
     "p15HoldoutStageQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-stage-qa.json",
     "p15GeneratedKeyviews": "experiments/gif-multiview-keyparts-mvp/evidence/p15-06-generated-keyviews-qa.json",
     "p15ViewQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-07-renderer-qa.json",
-    "p15ViewDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-07-delivery.json"
+    "p15ViewDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-07-delivery.json",
+    "p15PoseSourceCandidateQA": "experiments/gif-multiview-keyparts-mvp/evidence/p15-08-source-candidate-qa.json",
+    "p15PoseSourceDelivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-08-delivery.json"
   },
-  "lastCompleted": "P15_07_74_RENDER_FRAMES_8_CHROMIUM_SCREENS_128_VERIFIED_ARTIFACT_ENTRIES",
+  "lastCompleted": "P15_08_TWO_GENERATED_PAINTINGS_TWO_RGBA_2_CHROMIUM_CAPTURES_5_UNIT_TESTS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -1165,6 +1167,48 @@
       },
       "next": "P15-08 authored 55-degree 13 semantic RGBA parts and anatomically anchored 45-to-65 transition",
       "nextContract": "metadata/p15-08-yaw055-generation-contract.json"
+    },
+    "p15PoseCalibration": {
+      "characterId": "p0_character_001",
+      "sourceAngles": [
+        45.0,
+        65.0,
+        90.0
+      ],
+      "targetYaw": 55.0,
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "sourceSeeds": [
+        55022,
+        55045
+      ],
+      "generatedPortraitRGB": 2,
+      "nativeMatteRGBA": 2,
+      "independentSemanticLayersAccepted": 0,
+      "sourceSHA256": [
+        "e7cc32ae68df6780ff581a8cf7464aa863dff831b6b12f915376451a828a8dff",
+        "8c088378641c9a0f020a9d5657bb14ac8e45961394cd76811cc60f1a8ca5b3bf"
+      ],
+      "physicalGoldClipOriginal45CenterX": 764.4,
+      "physicalGoldClipCandidatesCenterX": [
+        441.99,
+        422.9
+      ],
+      "poseGeometryAdmission": "REWORK_REQUIRED",
+      "HeroOriginalSHA256Verified": false,
+      "ChromiumScreenshots": 2,
+      "ChromiumImagesLoaded": 10,
+      "unitTestsPassed": 5,
+      "sourceCandidateQA": "evidence/p15-08-source-candidate-qa.json",
+      "privateArtifact": {
+        "path": "private-assets/exports/p15-08-pose-source-review.zip",
+        "sha256": "c7cec0056902aa3b251980149bf2cdf80fefa2569dca25dd734e69d9f0d4a6c7",
+        "bytes": 5589502,
+        "verifiedEntries": 16
+      },
+      "reviewHtml": "review/p15-08-mid-angle.html",
+      "plan": "docs/plans/2026-11-10-p15-08-pose-calibration.md",
+      "next": "P15-08 validate actual yaw and physical-side landmarks, author pose-controlled 55-degree independent key art and 13 semantic RGBA layers"
     }
   }
 }

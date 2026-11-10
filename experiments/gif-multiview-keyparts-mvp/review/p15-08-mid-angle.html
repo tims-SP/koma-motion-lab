@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P15-08 · 55° 原画视角校准审查</title>
+<style>
+:root{font:15px/1.45 system-ui,-apple-system,sans-serif;color-scheme:dark;background:#191e27;color:#f2f4fb}
+*{box-sizing:border-box}body{margin:0;padding:22px}main{max-width:1680px;margin:0 auto}
+h1{font-size:23px;margin:0 0 8px}p{color:#c5cfdf;margin:4px 0 20px}
+.controls{background:#252d39;border-radius:12px;padding:12px 18px;margin-bottom:16px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.controls label{display:flex;gap:7px;align-items:center}
+.controls input{accent-color:#a4d3ff}
+.gallery{display:grid;grid-template-columns:repeat(5,minmax(170px,1fr));gap:11px}
+.card{background:#252d39;border:1px solid #3b4555;border-radius:12px;overflow:hidden}
+.card h2{font-size:15px;margin:0;padding:12px}
+.view{background:repeating-conic-gradient(#c9ced8 0% 25%,#f1f2f5 0% 50%) 50%/22px 22px}
+.card img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+.info{font-size:12px;color:#c3cfde;margin:0;padding:9px 12px;min-height:70px}
+figure{margin:0}
+.record{margin-top:16px;color:#b6c0d0;font-size:13px}
+@media(max-width:1050px){.gallery{grid-template-columns:repeat(3,minmax(160px,1fr))}}
+@media(max-width:620px){.gallery{grid-template-columns:repeat(2,minmax(140px,1fr))}}
+</style>
+</head>
+<body>
+<main>
+<h1>P15-08 · 55° 原画视角校准审查</h1>
+<p>对照 P0 原始关键原画与两组 55° 生成候选。观察双眼显隐、头部朝向、金色交叉发夹的物理侧别和发束轮廓。</p>
+<div class="controls">
+ <label><input type="checkbox" id="alpha" checked>使用 RGBA 透明分层候选</label>
+ <span>原始身份参考：45° 与 90°｜中间参考：65°｜生成候选：55°</span>
+</div>
+<div class="gallery" id="gallery">
+ <figure class="card"><h2>原始 45°</h2><div class="view"><img id="img45" alt="已登记原始 45 度角色图"></div><figcaption class="info">参考图：双眼可见，金色发夹位于画面右侧，x≈764。</figcaption></figure>
+ <figure class="card"><h2>55° 候选 A · 55022</h2><div class="view"><img id="imgv1" alt="55 度生成候选 A"></div><figcaption class="info">两张参考图输入；发夹位于画面左半区 x≈442，远侧眼缺失。</figcaption></figure>
+ <figure class="card"><h2>55° 候选 B · 55045</h2><div class="view"><img id="imgv2" alt="55 度生成候选 B"></div><figcaption class="info">以原始 45° 单图输入；线稿更整齐，但侧别与角度仍需调整，发夹 x≈423。</figcaption></figure>
+ <figure class="card"><h2>已登记 65°</h2><div class="view"><img id="img65" alt="已登记 65 度参考"></div><figcaption class="info">已接近单眼侧脸；发夹在物理旋转后被遮挡。</figcaption></figure>
+ <figure class="card"><h2>原始 90°</h2><div class="view"><img id="img90" alt="已登记原始 90 度侧脸"></div><figcaption class="info">侧脸姿态端点，用于检查头部解剖和方向。</figcaption></figure>
+</div>
+<p class="record">数据记录：evidence/p15-08-source-candidate-qa.json｜验收目标：55° 的姿态处于原始 45° 与 65° 之间，角色发夹维持物理侧别，13 个透明部件独立绘制并逐层重组。</p>
+</main>
+<script src="./p15-08-mid-angle.js"></script>
+</body>
+</html>

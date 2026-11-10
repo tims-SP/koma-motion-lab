@@ -1,0 +1,152 @@
+{
+  "schema": "KOMA-P0-P15-08-55DEG-SOURCE-CANDIDATE-QA-V1",
+  "characterId": "p0_character_001",
+  "status": "P15_08_CANDIDATE_SOURCE_REGISTERED_POSE_REWORK",
+  "originAngles": [
+    45.0,
+    65.0,
+    90.0
+  ],
+  "targetAngle": 55.0,
+  "registeredSourceViews": {
+    "original45": {
+      "path": "p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "mode": "RGBA",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "goldClip": {
+        "present": true,
+        "pixels": 1669,
+        "center": [
+          764.4,
+          321.2
+        ]
+      }
+    },
+    "source65": {
+      "path": "p15-independent-candidates/yaw065-source-rgba.png",
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "mode": "RGBA",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "goldClip": {
+        "present": false,
+        "pixels": 0,
+        "center": null
+      }
+    },
+    "original90": {
+      "path": "p2-views/whole/yaw090.png",
+      "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "mode": "RGBA",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "goldClip": {
+        "present": false,
+        "pixels": 0,
+        "center": null
+      }
+    }
+  },
+  "candidateRecords": {
+    "generated55v1": {
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "seed": 55022,
+      "sourceReferenceRoles": [
+        "original45",
+        "source65"
+      ],
+      "inputImageSHA256": [
+        "1b5953ef9a22eb0e4356b677883143d073e03bd3c980eb8543a640353ad0b941",
+        "390ba6e25d8afff96201c3e881b4c389db78be4423b80ac97b707f082fda9333"
+      ],
+      "painting": {
+        "path": "p15-08-yaw055/yaw055-qwen2511-v1.png",
+        "sha256": "e7cc32ae68df6780ff581a8cf7464aa863dff831b6b12f915376451a828a8dff",
+        "mode": "RGB",
+        "canvas": [
+          1024,
+          1024
+        ],
+        "goldClip": {
+          "present": true,
+          "pixels": 2090,
+          "center": [
+            441.99,
+            319.68
+          ]
+        }
+      },
+      "mattePath": "p15-08-yaw055/yaw055-rgba-v1.png",
+      "matteSHA256": "987917dda46fd414a4aa2e04406de61556105a2f4fa80ab5ff87ec8c2f8b18bb",
+      "matteForegroundPixels": 394403,
+      "mattePartialAlphaPixels": 18817,
+      "physicalHairclipCheck": "REWORK_REQUIRED",
+      "independentMidYawEyeCheck": "ONE_VISIBLE_EYE_MANUAL_REVIEW",
+      "viewPoseAdmissibility": "REWORK_REQUIRED"
+    },
+    "generated55v2": {
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "seed": 55045,
+      "sourceReferenceRoles": [
+        "original45"
+      ],
+      "inputImageSHA256": [
+        "1b5953ef9a22eb0e4356b677883143d073e03bd3c980eb8543a640353ad0b941"
+      ],
+      "painting": {
+        "path": "p15-08-yaw055/yaw055-qwen2511-v2.png",
+        "sha256": "8c088378641c9a0f020a9d5657bb14ac8e45961394cd76811cc60f1a8ca5b3bf",
+        "mode": "RGB",
+        "canvas": [
+          1024,
+          1024
+        ],
+        "goldClip": {
+          "present": true,
+          "pixels": 2776,
+          "center": [
+            422.9,
+            304.05
+          ]
+        }
+      },
+      "mattePath": "p15-08-yaw055/yaw055-rgba-v2.png",
+      "matteSHA256": "dd1a6d1cf388bb436304e9e010bd3d8af1347a31d362ade3cd16aa4daebf4f8a",
+      "matteForegroundPixels": 389385,
+      "mattePartialAlphaPixels": 15889,
+      "physicalHairclipCheck": "REWORK_REQUIRED",
+      "independentMidYawEyeCheck": "ONE_VISIBLE_EYE_MANUAL_REVIEW",
+      "viewPoseAdmissibility": "REWORK_REQUIRED"
+    }
+  },
+  "hairclipValidation": {
+    "method": "HSV gold connected components within hair ROI y200–425",
+    "original45ClipCenter": [
+      764.4,
+      321.2
+    ],
+    "sideProfile65ClipVisible": false,
+    "expectedTransition": "hairpin stays on physical-left or becomes occluded as head turns"
+  },
+  "artifact": {
+    "path": "p15-08-yaw055/yaw055-candidate-pose-contact.jpg",
+    "sha256": "e689b4958b61885bbfd898a5eaaf2bb467bb3a08d14f58094e615b25e890bde9",
+    "bytes": 93084,
+    "visibility": "private"
+  },
+  "sourceImageProduction": "Hugging Face connected Qwen-Image-Edit-2511 Multiple-Angles",
+  "originalHeroSourceVerified": false,
+  "semanticIndependent55LayersAccepted": 0,
+  "formalArtAcceptance": "PENDING_ANATOMICAL_VIEW_CORRESPONDENCE",
+  "nextAction": "Calibrate actual pose yaw against P0 original 45/90; generate genuine 55-degree 2-eye 3/4 portrait with physical left hairpin provenance before 13 directly painted layers"
+}
