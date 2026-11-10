@@ -1,0 +1,61 @@
+{
+  "schema": "KOMA-P15-14-HF-CONNECTOR-ACCOUNT-CAPABILITY-V1",
+  "characterId": "p0_character_001",
+  "sourceImage": "private-assets/p2-views/whole/yaw045.png",
+  "sourceSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "targetSpace": "24yearsold/see-through-demo",
+  "targetGradioAPI": "/inference",
+  "requestedInference": {
+    "resolution": 768,
+    "seed": 42,
+    "tblr_split": true
+  },
+  "accounts": [
+    {
+      "alias": "Primary",
+      "username": "wcev",
+      "plan": "Free",
+      "connectorAuth": "authenticated",
+      "jobsTest": "HTTP_402_PAYMENT_REQUIRED",
+      "spaceMcpParameterLookup": "HTTP_404_MCP_ENDPOINT_UNAVAILABLE"
+    },
+    {
+      "alias": "HF-2",
+      "username": "kkdcgtx",
+      "plan": "Free",
+      "connectorAuth": "authenticated",
+      "jobsTest": "HTTP_402_PAYMENT_REQUIRED",
+      "spaceMcpParameterLookup": "HTTP_404_MCP_ENDPOINT_UNAVAILABLE"
+    },
+    {
+      "alias": "HF-3",
+      "username": "wfswhytrjutrj",
+      "plan": "Free",
+      "connectorAuth": "authenticated",
+      "jobsTest": "PLATFORM_SAFETY_REVIEW_BLOCKED",
+      "spaceMcpParameterLookup": "HTTP_404_MCP_ENDPOINT_UNAVAILABLE"
+    },
+    {
+      "alias": "HF-4",
+      "username": "dfvswegwseg",
+      "plan": "Free",
+      "connectorAuth": "authenticated",
+      "jobsTest": "HTTP_402_PAYMENT_REQUIRED",
+      "spaceMcpParameterLookup": "HTTP_404_MCP_ENDPOINT_UNAVAILABLE"
+    }
+  ],
+  "vpsAnonymousInference": {
+    "attempted": true,
+    "requestedZeroGpuSeconds": 180,
+    "quotaAvailableOnAttemptSeconds": 115,
+    "result": "QUOTA_INSUFFICIENT"
+  },
+  "actualPsdProduced": false,
+  "actualSeparatedLayersReceived": 0,
+  "findings": [
+    "Hugging Face Jobs billing and a third-party ZeroGPU Space are separate compute allocations",
+    "OAuth plugin connection does not expose a VPS usable authentication token",
+    "The Gradio API was inspected and accepts image,resolution,seed,tblr_split but the Space has no usable MCP endpoint through the plugin"
+  ],
+  "nextExecution": "Authenticate the Gradio client on the target execution host with a supported Hugging Face account and then rerun scripts/p15_14_see_through_trial.py"
+}

@@ -329,7 +329,8 @@
       "html": "private-assets/exports/p15-15-artmesh-review/index.html",
       "privateReviewZip": "private-assets/exports/p15-15-artmesh-review.zip",
       "next": "Review underpaint in 0/45/77.5 PSD, resolve missing hair and far eye/clip semantic art and test VDD at 57.5/60"
-    }
+    },
+    "p15HfAccountCapability": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-hf-account-capability-qa.json"
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
   "implementation": {
@@ -1466,7 +1467,10 @@
       "actualOriginalSemanticLayers": 0,
       "evidence": "evidence/p15-14-psd-extraction-access-qa.json",
       "runner": "scripts/p15_14_see_through_trial.py",
-      "status": "AWAITING_AUTHENTICATED_ZEROGPU_ALLOCATION"
+      "status": "AWAITING_AUTHENTICATED_ZEROGPU_ALLOCATION",
+      "accountCapabilityEvidence": "evidence/p15-14-hf-account-capability-qa.json",
+      "connectedAccountsChecked": 4,
+      "executionConstraint": "VPS_AUTHENTICATED_GRADIO_CALL_REQUIRED"
     }
   }
 }
