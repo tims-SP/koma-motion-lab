@@ -1,0 +1,116 @@
+{
+  "schema": "KOMA-P15-14-HF-CONNECTOR-ACCOUNT-CAPABILITY-V1",
+  "characterId": "p0_character_001",
+  "sourceRegistry": {
+    "originalYaw": 45,
+    "sourceSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "apiTransfer": "white-composited downsampled JPEG data URI generated from registered P0 view; model decoding awaits inference"
+  },
+  "topology": {
+    "execution": "Hugging Face connected plugin; GPU inference hosted by HF",
+    "vpsUsage": "only registered source JPEG preparation and upstream task metadata; no GPU inference"
+  },
+  "accounts": [
+    {
+      "name": "wcev",
+      "plan": "Free",
+      "authenticated": true,
+      "seeThroughMcp": "HTTP_404",
+      "jobs": "HTTP_402",
+      "sandbox": "HTTP_402",
+      "stableLayers": {
+        "status": "ZEROGPU_QUOTA",
+        "requestedSeconds": 298,
+        "reportedSecondsLeft": 72
+      },
+      "qwenImageLayered": {
+        "status": "ZEROGPU_QUOTA",
+        "requestedSeconds": 300,
+        "reportedSecondsLeft": 71
+      }
+    },
+    {
+      "name": "kkdcgtx",
+      "plan": "Free",
+      "authenticated": true,
+      "seeThroughMcp": "HTTP_404",
+      "jobs": "HTTP_402",
+      "sandbox": "HTTP_402",
+      "stableLayers": {
+        "status": "ZEROGPU_QUOTA",
+        "requestedSeconds": 298,
+        "reportedSecondsLeft": -34
+      },
+      "qwenImageLayered": {
+        "status": "ZEROGPU_QUOTA",
+        "requestedSeconds": 300,
+        "reportedSecondsLeft": -35
+      }
+    },
+    {
+      "name": "wfswhytrjutrj",
+      "plan": "Free",
+      "authenticated": true,
+      "seeThroughMcp": "HTTP_404",
+      "jobs": "HTTP_402",
+      "sandbox": "HTTP_402",
+      "stableLayers": {
+        "status": "ZEROGPU_RUN_LIMIT"
+      },
+      "qwenImageLayered": {
+        "status": "ZEROGPU_RUN_LIMIT"
+      }
+    },
+    {
+      "name": "dfvswegwseg",
+      "plan": "Free",
+      "authenticated": true,
+      "seeThroughMcp": "HTTP_404",
+      "jobs": "HTTP_402",
+      "sandbox": "HTTP_402",
+      "stableLayers": {
+        "status": "ZEROGPU_QUOTA",
+        "requestedSeconds": 298,
+        "reportedSecondsLeft": 39
+      },
+      "qwenImageLayered": {
+        "status": "ZEROGPU_QUOTA",
+        "requestedSeconds": 300,
+        "reportedSecondsLeft": 38
+      }
+    }
+  ],
+  "selectedSpaces": [
+    {
+      "space": "24yearsold/see-through-demo",
+      "interface": "/inference is normal Gradio; connector MCP endpoint returns 404",
+      "nativePSD": true,
+      "remoteSpaceLink": "https://huggingface.co/spaces/24yearsold/see-through-demo"
+    },
+    {
+      "space": "hugging-apps/stable-layers",
+      "tool": "stable_layers_decompose",
+      "nativeMCP": true,
+      "requestedZeroGpuSeconds": 298,
+      "remoteSpaceLink": "https://huggingface.co/spaces/hugging-apps/stable-layers"
+    },
+    {
+      "space": "snapplv/Qwen-Image-Layered",
+      "tool": "Qwen_Image_Layered_infer",
+      "nativeMCP": true,
+      "requestedZeroGpuSeconds": 300,
+      "remoteSpaceLink": "https://huggingface.co/spaces/snapplv/Qwen-Image-Layered"
+    }
+  ],
+  "testResult": {
+    "pluginAccountsVerified": 4,
+    "authenticated": 4,
+    "spaceInferenceAttempts": 12,
+    "hfJobsAttempts": 4,
+    "hfSandboxAttempts": 4,
+    "psdFilesGenerated": 0,
+    "rgbaLayersGenerated": 0,
+    "actualModelImageDecodeVerified": false
+  },
+  "recommendedNext": "Retry native layer generation when a linked account has enough ZeroGPU allocation, or use an appropriately authorized GPU provider with a matching image-input API. Then validate each layer's canvas, alpha, semantic identity and hidden underpaint against the P0 source."
+}
