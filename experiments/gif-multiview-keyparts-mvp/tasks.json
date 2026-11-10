@@ -695,6 +695,48 @@
       "reviewArchive": "private-assets/exports/p15-24-cross-clip-review.zip",
       "plan": "docs/plans/2026-11-10-p15-24-p0-guided-vector-clip.md",
       "next": "Reference-conditioned independently painted side-hair/far-eye/ahoge and hidden underpaint, then P0 55-65 visual approval"
+    },
+    "p15ThreeNewPaintedKeypartsAndFourRoleComposition": {
+      "characterId": "p0_character_001",
+      "status": "REAL_IMAGE_CANDIDATES_RENDERED_VISUAL_GATE_FAIL",
+      "angles": [
+        55,
+        57.5,
+        60,
+        62.5,
+        65
+      ],
+      "paintedNewRoles": [
+        "hair.side",
+        "hair.ahoge",
+        "eye.far"
+      ],
+      "newProceduralRgbaParts": 15,
+      "newReferenceBrushClipRolesFromP15_24": 5,
+      "fourRoleCandidateComposites": 5,
+      "method": "NEW_PROGRAMMATIC_BRUSH_GEOMETRY_P0_PALETTE_AND_P15_21_POSITION_REFERENCES",
+      "actualModelGeneratedThisStage": false,
+      "baselineOriginal13PartsReconstruction": "EXACT_0_PIXEL_DELTA",
+      "candidateAlphaIoUToBaseline": [
+        0.93495,
+        0.93298,
+        0.93091,
+        0.92916,
+        0.93545
+      ],
+      "visualAcceptance": "FAIL",
+      "reason": "SIDE_HAIR_TOO_BLOCKY_FAR_EYE_TOO_LARGE_AHOGE_SHAPE_DRIFT",
+      "sourceArtReplacedInProduction": false,
+      "newArtisticallyApprovedRoles": 0,
+      "hiddenUnderpaintApproval": false,
+      "unitTestsPassed": 6,
+      "browserChecks": 10,
+      "browserLoadedImages": 60,
+      "browserErrors": 0,
+      "qa": "evidence/p15-25-original-keypart-paint-qa.json",
+      "browserQa": "evidence/p15-25-browser-qa.json",
+      "reviewArchive": "private-assets/exports/p15-25-four-role-review.zip",
+      "next": "Fix P0-specific three component appearance with genuine reference image edit or hand-painted art, avoid entire-role procedural replacement; verify far-eye occlusion and side hair strand boundaries"
     }
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",

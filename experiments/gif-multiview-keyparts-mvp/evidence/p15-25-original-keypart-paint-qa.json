@@ -1,0 +1,328 @@
+{
+  "schema": "KOMA-P15-25-NEW-PAINTED-PROCEDURAL-KEYPARTS-V1",
+  "characterId": "p0_character_001",
+  "roles": [
+    "hair.side",
+    "hair.ahoge",
+    "eye.far"
+  ],
+  "angles": [
+    55,
+    57.5,
+    60,
+    62.5,
+    65
+  ],
+  "sourceMethod": "NEW_PROCEDURAL_VECTOR_STROKES_P0_PALETTE_VDD_BBOX_GUIDES",
+  "independentPaintedGeometry": true,
+  "actualAIModelPainting": false,
+  "inheritedVddAlpha": false,
+  "hiddenFarEyeIrisPixelsDrawn": true,
+  "hiddenFarEyeOcclusionCorrectnessVerified": false,
+  "productionVddModified": false,
+  "artisticAcceptance": false,
+  "independentPartsArtisticallyApproved": 0,
+  "frames": [
+    {
+      "angle": 55,
+      "parts": [
+        {
+          "role": "hair.side",
+          "path": "p15-25-procedural-paint/yaw55/hair.side.png",
+          "sha256": "158717c3c0baee0a89a82ffa0042de4181ac250c033e44a207524cfc8c2e76a4",
+          "visiblePixels": 120612,
+          "alphaIoU": 0.64745,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            154,
+            342,
+            558,
+            784
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-25-procedural-paint/yaw55/hair.ahoge.png",
+          "sha256": "bc1f09117070d0e277e8044f11dfde724a2de8fd81fedaa34c25ca31ee518317",
+          "visiblePixels": 12374,
+          "alphaIoU": 0.20764,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            406,
+            6,
+            648,
+            155
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-25-procedural-paint/yaw55/eye.far.png",
+          "sha256": "705d4aee57d1005f36bb33c1d0ac72b74f9bcbc6a379544d8ee5245441162f23",
+          "visiblePixels": 13796,
+          "alphaIoU": 0.69208,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            633,
+            381,
+            805,
+            528
+          ],
+          "artApproved": false
+        }
+      ],
+      "diagnostic": "p15-25-procedural-paint/yaw55/diagnostic-three-part-composite.png",
+      "diagnosticSHA256": "572bde09a26a9ae6a3441024d832c5f98222b700072830239a67b0c216cc853f",
+      "baselineExact": true,
+      "compositeAlphaIoU": 0.9351
+    },
+    {
+      "angle": 57.5,
+      "parts": [
+        {
+          "role": "hair.side",
+          "path": "p15-25-procedural-paint/yaw57p5/hair.side.png",
+          "sha256": "db74e4a6d216661fe30a434863ff930b1a3221452c607de3410ee1265c1bcf5b",
+          "visiblePixels": 121239,
+          "alphaIoU": 0.65029,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            156,
+            342,
+            562,
+            784
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-25-procedural-paint/yaw57p5/hair.ahoge.png",
+          "sha256": "d9dcb45e574ea63825092ca890c1c86248969d6e2b1061136ed6b94a146daf77",
+          "visiblePixels": 12425,
+          "alphaIoU": 0.20501,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            407,
+            6,
+            648,
+            155
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-25-procedural-paint/yaw57p5/eye.far.png",
+          "sha256": "7ffd1973051fdbbc5bf0daa74ae8a64ec29975f0e36fefe357a5579f3fc02851",
+          "visiblePixels": 13757,
+          "alphaIoU": 0.69136,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            633,
+            381,
+            805,
+            528
+          ],
+          "artApproved": false
+        }
+      ],
+      "diagnostic": "p15-25-procedural-paint/yaw57p5/diagnostic-three-part-composite.png",
+      "diagnosticSHA256": "38f6feb0c4bac12ea3a5457610fa1ca431790d4dd2e6e172a5d2f0500f484924",
+      "baselineExact": true,
+      "compositeAlphaIoU": 0.93313
+    },
+    {
+      "angle": 60,
+      "parts": [
+        {
+          "role": "hair.side",
+          "path": "p15-25-procedural-paint/yaw60/hair.side.png",
+          "sha256": "1555d8abf35916defdff5a132975d92cf601e29faca723cc2faccad212e64372",
+          "visiblePixels": 122757,
+          "alphaIoU": 0.65031,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            156,
+            342,
+            567,
+            784
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-25-procedural-paint/yaw60/hair.ahoge.png",
+          "sha256": "1bcc686524c24f3bf422a71f016c3178c6e2ba4f60e7be9a54e36a07b594b0bd",
+          "visiblePixels": 12439,
+          "alphaIoU": 0.20164,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            408,
+            6,
+            647,
+            155
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-25-procedural-paint/yaw60/eye.far.png",
+          "sha256": "de0fca7c10adee6e1cede98beee2853195819964039660e01e84a57e999105a1",
+          "visiblePixels": 13737,
+          "alphaIoU": 0.69129,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            633,
+            381,
+            805,
+            528
+          ],
+          "artApproved": false
+        }
+      ],
+      "diagnostic": "p15-25-procedural-paint/yaw60/diagnostic-three-part-composite.png",
+      "diagnosticSHA256": "44ebb0b86883359649b2176c0c5e8d2b6b0852a97d9019de8dc69d7aa9f9e983",
+      "baselineExact": true,
+      "compositeAlphaIoU": 0.93106
+    },
+    {
+      "angle": 62.5,
+      "parts": [
+        {
+          "role": "hair.side",
+          "path": "p15-25-procedural-paint/yaw62p5/hair.side.png",
+          "sha256": "6afa6d9aaa80710632cc5f602499a94efaf192ee0be653fa519463e5cef2edd6",
+          "visiblePixels": 123630,
+          "alphaIoU": 0.64709,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            157,
+            342,
+            569,
+            786
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-25-procedural-paint/yaw62p5/hair.ahoge.png",
+          "sha256": "94287331a02b455cdffdb8c476f328a26fe6ab3122c568a36bc378d06456c450",
+          "visiblePixels": 12638,
+          "alphaIoU": 0.20146,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            409,
+            6,
+            650,
+            155
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-25-procedural-paint/yaw62p5/eye.far.png",
+          "sha256": "9b49a2d1d71c05071256d31c393b10f7379886b6c4b9341616b163707eb6948e",
+          "visiblePixels": 13750,
+          "alphaIoU": 0.69112,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            633,
+            381,
+            805,
+            528
+          ],
+          "artApproved": false
+        }
+      ],
+      "diagnostic": "p15-25-procedural-paint/yaw62p5/diagnostic-three-part-composite.png",
+      "diagnosticSHA256": "e765856977f0d979cb40650ea6d2d938b87bfdfb9a34e5cf08378912588eafb7",
+      "baselineExact": true,
+      "compositeAlphaIoU": 0.92923
+    },
+    {
+      "angle": 65,
+      "parts": [
+        {
+          "role": "hair.side",
+          "path": "p15-25-procedural-paint/yaw65/hair.side.png",
+          "sha256": "8af55298f55ba65e3e060b2a983bcbc95eceaf9cc18152091ebe47447c7e3dad",
+          "visiblePixels": 124479,
+          "alphaIoU": 0.70447,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            159,
+            342,
+            574,
+            786
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "hair.ahoge",
+          "path": "p15-25-procedural-paint/yaw65/hair.ahoge.png",
+          "sha256": "c0ae83b4e73163799beff51294711686621933f4e5091e054488067bcc802efd",
+          "visiblePixels": 12642,
+          "alphaIoU": 0.19883,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            411,
+            6,
+            650,
+            155
+          ],
+          "artApproved": false
+        },
+        {
+          "role": "eye.far",
+          "path": "p15-25-procedural-paint/yaw65/eye.far.png",
+          "sha256": "a68d5d69b5ef07432bc65c45c8accecd3d6c62391bd099b88fb84b61de643123",
+          "visiblePixels": 13656,
+          "alphaIoU": 0.69035,
+          "alphaFromVDD": false,
+          "registeredBBox": [
+            633,
+            381,
+            805,
+            527
+          ],
+          "artApproved": false
+        }
+      ],
+      "diagnostic": "p15-25-procedural-paint/yaw65/diagnostic-three-part-composite.png",
+      "diagnosticSHA256": "985ce27959eb2176673be3c626c1a61760b3504f5cd7584e2b27d3dc961ea662",
+      "baselineExact": true,
+      "compositeAlphaIoU": 0.93549
+    }
+  ],
+  "next": "Human-grade art and depth/occlusion approval needed before promotion",
+  "visualReview": {
+    "inspectionSource": "Actual rendered 60deg baseline and four-role diagnostic side-by-side at 200px plus full HTML",
+    "result": "FAIL",
+    "issues": [
+      {
+        "role": "hair.side",
+        "finding": "Large angular hard-edged curtain covers side of face and shoulder; visibly different from original P0 bob strands",
+        "severity": "blocking"
+      },
+      {
+        "role": "eye.far",
+        "finding": "Overlarge brightly outlined displaced far eye on screen right; violates 60-degree eye foreshortening and physical occlusion",
+        "severity": "blocking"
+      },
+      {
+        "role": "hair.ahoge",
+        "finding": "Large thick ringlike top lock instead of one thin ahoge; alters hair identity",
+        "severity": "blocking"
+      },
+      {
+        "role": "hair.clip.cross_gold",
+        "finding": "P15-24 independent accessory candidate only; hair-side occlusion still not signed off",
+        "severity": "pending"
+      }
+    ],
+    "approved": false,
+    "productionUseAllowed": false,
+    "reviewScreenshot": "private-assets/p15-25-procedural-paint/compare-yaw60-tiny.jpg"
+  },
+  "admissionGate": "FAIL_VISUAL_IDENTITY_AND_PART_ANATOMY"
+}

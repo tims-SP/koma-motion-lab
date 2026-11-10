@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "angleIndex": 0,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 1,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 2,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 3,
+      "loaded": 6
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 4,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 0,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 1,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 2,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 3,
+      "loaded": 6
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 4,
+      "loaded": 6
+    }
+  ],
+  "errors": []
+}
