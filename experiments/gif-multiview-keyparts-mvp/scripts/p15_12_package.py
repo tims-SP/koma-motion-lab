@@ -31,7 +31,8 @@ def main():
   if "guide" not in frame or frame["yaw"] not in [57.5,60]:continue
   paths.update("private-assets/"+frame["guide"][field+"Path"]
     for field in ("conditioning","annotated"))
-  angle=str(frame["yaw"]).replace(".","p")
+  value=float(frame["yaw"])
+  angle=str(int(value)) if value.is_integer() else str(value).replace(".","p")
   paths.add("private-assets/p15-10-semantic-pose/arc/yaw"+angle+".png")
  for item in art["generated"]:paths.add("private-assets/"+item["sourcePath"])
  for shot in browser["captures"]:paths.add(shot["relativePath"])
