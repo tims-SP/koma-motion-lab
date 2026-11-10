@@ -57,17 +57,19 @@ def run():
                                  "sourceSHA256": item["frameSha256"]})
     if not np.array_equal(np.asarray(origin_composite), original):
         raise AssertionError("Original P0 45-degree source layers differ from original image")
-    fallback = (ownership < 0) & (pose[:, :, 3] > 0)
+    # Preserve even RGB encoded below alpha=1: those bytes belong to the
+    # same full-canvas source and are harmless after alpha compositing.
+    fallback = (ownership < 0) & np.any(pose != 0, axis=2)
     ownership[fallback] = 0
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    layers, assembled = [], Image.new("RGBA", (1024, 1024))
+    layers, assembled = [], np.zeros_like(pose, dtype=np.uint16)
     for role in roles:
         color = np.zeros_like(pose)
         selected = ownership == role["depthOrder"]
         color[selected] = pose[selected]
         dest = OUTPUT / (role["semanticId"] + ".png")
         Image.fromarray(color, "RGBA").save(dest)
-        assembled.alpha_composite(Image.fromarray(color, "RGBA"))
+        assembled += color.astype(np.uint16)
         layers.append({"semanticId": role["semanticId"],
                        "depthOrder": role["depthOrder"],
                        "outputPath": str(dest.relative_to(ASSETS)),
@@ -75,7 +77,7 @@ def run():
                        "visiblePixels": int(np.count_nonzero(color[:, :, 3])),
                        "source45SHA256": role["frameSha256"],
                        "artRole": "P5 derived visible-raster ownership"})
-    dst = np.asarray(assembled)
+    dst = assembled.astype(np.uint8)
     if not np.array_equal(dst, pose):
         raise AssertionError("P15-10 role ownership did not recompose exactly")
     report = {
