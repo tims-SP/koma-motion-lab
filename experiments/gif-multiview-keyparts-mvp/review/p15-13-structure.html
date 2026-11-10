@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P15-13 · 原画几何与 ArtMesh 结构化约束</title>
+<style>
+:root{color-scheme:dark;background:#151c27;color:#f0f4fa;font:14px/1.5 system-ui,sans-serif}
+*{box-sizing:border-box}body{padding:20px;margin:0}main{max-width:1600px;margin:auto}
+h1{font-size:23px;margin:0 0 8px}p{color:#c2cede;margin:5px 0 15px}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:14px;background:#273348;border:1px solid #46556c;padding:12px;border-radius:12px}
+button,select{font:inherit;background:#35455e;color:white;border:1px solid #647893;padding:8px 13px;border-radius:9px}
+button[aria-pressed=true]{background:#5577a1}b{font-size:20px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+article{background:#263348;border:1px solid #3c4d63;overflow:hidden;border-radius:11px}
+header{font-weight:650;padding:10px}
+.frame{background:repeating-conic-gradient(#d4dbe2 0% 25%,#f4f6f8 0% 50%) 50%/24px 24px}
+img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+small{display:block;padding:10px 12px;color:#ccd8e6}
+footer{margin-top:16px;color:#c5d4e5}
+</style></head><body><main>
+<h1>P15-13 · 57.5° / 60° 结构化原画约束</h1>
+<p>独立比较图像编辑的原始笔触、P5 解剖坐标的局部重映射，以及 13 层 ArtMesh 的原画结构。几何改正并不代表新绘画已达到最终动漫画质。</p>
+<nav>
+<button id="a57" aria-pressed="true" type="button">57.5°</button>
+<button id="a60" aria-pressed="false" type="button">60°</button>
+<label for="hint">结构通道</label>
+<select id="hint">
+<option value="preview">融合结构</option>
+<option value="heatmap">锚点热图</option>
+<option value="lineart">线稿边缘</option>
+<option value="owner">13 部件归属 ID</option>
+</select>
+<b id="angle">57.5°</b>
+</nav>
+<div class="gallery">
+<article><header>原画候选 · AI 绘制</header><div class="frame"><img id="source" alt="原始绘制候选"></div><small>单一原画图像来源，检验五官和角色身份</small></article>
+<article><header>P5 约束 · 局部几何</header><div class="frame"><img id="aligned" alt="关键点几何对齐"></div><small>沿原画笔触局部变形，改变眼部坐标的诊断参考</small></article>
+<article><header>P15-10 · 语义 ArtMesh</header><div class="frame"><img id="artmesh" alt="13 语义部件遮挡基线"></div><small>原有 13 部件的层次及隐现关系</small></article>
+<article><header>条件图 · 结构通道</header><div class="frame"><img id="condition" alt="结构化锚点及线稿条件图"></div><small>可按用途切换稠密图像条件，保留 PNG 与来源 SHA</small></article>
+</div>
+<footer id="status" role="status">图像来源加载中</footer>
+</main>
+<script>
+"use strict";
+(()=>{
+ const $=id=>document.getElementById(id);
+ let serial=0;
+ const state={angle:57.5,channel:"preview",ready:false,errors:[],images:[]};
+ const tag=x=>"yaw"+(Number.isInteger(x)?String(x):String(x).replace(".","p"));
+ const report=()=>({...state,errors:[...state.errors],images:[...state.images]});
+ async function select(angle,channel=state.channel){
+  if(![57.5,60].includes(angle))throw Error("P15-13 calibrated grid 57.5/60");
+  if(!["preview","heatmap","lineart","owner"].includes(channel))throw Error("Unknown structural channel");
+  const request=++serial;
+  state.angle=angle;state.channel=channel;state.ready=false;state.errors=[];state.images=[];
+  $("a57").setAttribute("aria-pressed",String(angle===57.5));
+  $("a60").setAttribute("aria-pressed",String(angle===60));
+  $("hint").value=channel;$("angle").textContent=angle+"°";
+  const k=tag(angle),p="../private-assets/";
+  const paths={
+   source:p+"p15-12-camera-proxy/generated/"+k+"-identity-guided.png",
+   aligned:p+"p15-13-structural/"+k+"/iris-registered-candidate.png",
+   artmesh:p+"p15-10-semantic-pose/arc/"+k+".png",
+   condition:p+"p15-13-structural/"+k+"/"+channel+".png"
+  };
+  const done=await Promise.allSettled(Object.entries(paths).map(async([role,path])=>{
+   const image=$(role);image.src=path;await image.decode();
+   if(image.naturalWidth!==1024||image.naturalHeight!==1024)throw Error("Missing image: "+role);
+   return{role,path,width:image.naturalWidth,height:image.naturalHeight};
+  }));
+  if(request!==serial)return report();
+  for(const item of done){
+   if(item.status==="fulfilled")state.images.push(item.value);
+   else state.errors.push(String(item.reason));
+  }
+  state.ready=state.images.length===4&&state.errors.length===0;
+  $("status").textContent=state.ready?"全部来源已加载；人物姿态及细节需独立画质验收。":"结构源或图像校验失败";
+  return report();
+ }
+ $("a57").addEventListener("click",()=>void select(57.5));
+ $("a60").addEventListener("click",()=>void select(60));
+ $("hint").addEventListener("change",()=>void select(state.angle,$("hint").value));
+ window.__KOMA_P15_13={select,report};
+ void select(57.5);
+})();
+</script></body></html>
