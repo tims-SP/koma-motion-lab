@@ -362,7 +362,8 @@
       "script": "scripts/p15_16_physical_identity.py",
       "review": "private-assets/exports/p15-16-physical-eye-review/index.html",
       "next": "Independent painting and occluded face/hair/clip underpaint for 57.5-60, then strict VDD visual QA"
-    }
+    },
+    "p15HfConnectedAccountCapabilities": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-hf-account-compute-qa.json"
   },
   "lastCompleted": "P15_13_12_ANCHORS_13_ARTMESH_ROLES_2_ANGLES_10_BROWSER_CAPTURES_8_TESTS",
   "implementation": {
@@ -522,7 +523,7 @@
         0
       ],
       "occludedPixelsAdded": 376671,
-      "frontSourceIoU": 1.0,
+      "frontSourceIoU": 1,
       "fringeHoleReductionPercent": 86.46,
       "HTMLBrowserStatus": "PASS_P4_PSD_BROWSER_ENGINEERING",
       "VDDAlphaCoverage": "PASS_HOLDOUT_COVERAGE",
@@ -551,7 +552,7 @@
       "semanticViewSlots": 39,
       "physicalLandmarkTracks": 13,
       "underpaint45Pixels": 260870,
-      "45SourceIoU": 1.0,
+      "45SourceIoU": 1,
       "45ChangedPixels": 50,
       "45OpaqueSourceHoles": 0,
       "realBrowserFrames": 37,
@@ -976,7 +977,7 @@
         72.5
       ],
       "diagnosticAngles": [
-        65.0,
+        65,
         67.5,
         72.5,
         77.5
@@ -989,7 +990,7 @@
       ],
       "alphaGapComparisons": [
         {
-          "yaw": 65.0,
+          "yaw": 65,
           "methods": {
             "P8": {
               "frameSHA256": "47cb28559b1370ae36882fdfc487f3056d9fd8910fca0cf61a542a54957762d7",
@@ -1154,7 +1155,7 @@
     },
     "p15IndependentArtwork": {
       "targetAngles": [
-        65.0,
+        65,
         77.5
       ],
       "sourceAngles": [
@@ -1189,7 +1190,7 @@
         90
       ],
       "independentCandidateAngles": [
-        65.0,
+        65,
         77.5
       ],
       "model": "Qwen-Image-Edit-2511",
@@ -1231,7 +1232,7 @@
         90
       ],
       "additionalPaintedKeyviews": [
-        65.0,
+        65,
         77.5
       ],
       "keySourceRole": "P15 independent painted inputs to semantic short-arc renderer",
@@ -1243,7 +1244,7 @@
         90
       ],
       "geometryHoldoutEvaluationAngles": [
-        65.0,
+        65,
         77.5
       ],
       "geometrySourceOwnerSilhouetteIoU": {
@@ -1274,11 +1275,11 @@
     "p15PoseCalibration": {
       "characterId": "p0_character_001",
       "sourceAngles": [
-        45.0,
-        65.0,
-        90.0
+        45,
+        65,
+        90
       ],
-      "targetYaw": 55.0,
+      "targetYaw": 55,
       "model": "Qwen-Image-Edit-2511",
       "adapter": "Multiple-Angles",
       "sourceSeeds": [
@@ -1417,13 +1418,13 @@
       "sourcePartRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
       "anchors": 12,
       "calibrationAngles": [
-        45.0,
-        55.0,
+        45,
+        55,
         57.5,
-        60.0,
+        60,
         62.5,
-        65.0,
-        90.0
+        65,
+        90
       ],
       "guidedNewPaintingCandidates": 2,
       "acceptedIndependentKeyPaintings": 0,
@@ -1451,7 +1452,7 @@
       "sourceSemanticArcSHA256": "717230d19ccef4e0382d523215a9e16f6675940446776eb3914aadfd33f77805",
       "targetAngles": [
         57.5,
-        60.0
+        60
       ],
       "semanticRoleCount": 13,
       "conditionImageChannels": [
@@ -1499,10 +1500,18 @@
       "actualOriginalSemanticLayers": 0,
       "evidence": "evidence/p15-14-psd-extraction-access-qa.json",
       "runner": "scripts/p15_14_see_through_trial.py",
-      "status": "AWAITING_AUTHENTICATED_ZEROGPU_ALLOCATION",
+      "status": "HF_PLUGIN_ACCOUNT_COMPUTE_CAPABILITY_AUDITED",
       "accountCapabilityEvidence": "evidence/p15-14-hf-account-capability-qa.json",
       "connectedAccountsChecked": 4,
-      "executionConstraint": "VPS_AUTHENTICATED_GRADIO_CALL_REQUIRED"
+      "executionConstraint": "VPS_AUTHENTICATED_GRADIO_CALL_REQUIRED",
+      "connectedAccountsTested": 4,
+      "executionLocation": "Hugging Face plugin",
+      "accountExecutionAudit": "experiments/gif-multiview-keyparts-mvp/evidence/p15-14-hf-account-compute-qa.json",
+      "remoteJobsStatus": "HTTP_402_PAYMENT_REQUIRED_FOR_ALL_FOUR",
+      "sandboxStatus": "HTTP_402_PAYMENT_REQUIRED_FOR_ALL_FOUR",
+      "directSeeThroughMcpStatus": "HTTP_404_UNAVAILABLE_FOR_ALL_FOUR",
+      "zeroGpuAccountQuotaStatus": "NOT_DETERMINED",
+      "next": "Enable account-authorized See-through remote inference with sufficient compute access, then validate P0 source PSD and 13 semantic ArtMesh roles"
     }
   }
 }
