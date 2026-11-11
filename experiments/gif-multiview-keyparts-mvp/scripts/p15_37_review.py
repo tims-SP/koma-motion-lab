@@ -27,7 +27,7 @@ def run():
  records=[]
  for f in src["frames"]:
   yaw=f["yaw"];tag=slug(yaw);d=OUT/tag;d.mkdir(parents=True,exist_ok=True)
-  donor=57.5 if yaw<=58.75 else60.
+  donor=57.5 if yaw<=58.75 else 60.
   paintref=P/"p15-36-painting-candidates/generated"/("yaw057p5-dual-source-qwen.png"
      if donor==57.5 else "yaw060-pose-retouch-qwen.png")
   sources={
