@@ -3095,6 +3095,43 @@
       "plan": "docs/plans/2026-11-11-p15-59-camera-identifiability.md",
       "review": "private-assets/exports/p15-59-camera-identifiability/index.html",
       "next": "P15-60 distinguish VDD parameterized yaw from physical camera yaw; prioritize visual identity acceptance"
+    },
+    "p15_60VisualContinuityGate": {
+      "status": "NOMINAL_45_TO_65_FULLFRAME_CROSSFADE_VISUAL_FAIL_DOUBLE_EYE_AND_FACE_CONTOURS",
+      "characterId": "p0_character_001",
+      "source45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "relative20CandidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "vddParameterNotPhysicalYaw": true,
+      "framesGenerated": 9,
+      "nominalYawParameters": [
+        45.0,
+        47.5,
+        50.0,
+        52.5,
+        55.0,
+        57.5,
+        60.0,
+        62.5,
+        65.0
+      ],
+      "midpointVisualGate": "FAIL_DOUBLE_FEATURE_EXPOSURE_MIDPOINT",
+      "maskSupportIoU": 0.882312,
+      "eyeRegionMeanRGBDelta": 49.49,
+      "wholeFrameCrossfadeProductionEligible": false,
+      "trueViewDependentDeformationImplemented": false,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "unitTestsPass": 12,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 10,
+      "interactiveSliderChecks": 2,
+      "evidence": [
+        "evidence/p15-60-transition-visual-qa.json",
+        "evidence/p15-60-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-60-visual-transition.md",
+      "review": "private-assets/exports/p15-60-transition-visual/index.html",
+      "next": "P15-61 test semantic part extraction/matching for new 65deg candidate; real view-dependent deformation and occlusion, no whole-frame crossfade"
     }
   }
 }
