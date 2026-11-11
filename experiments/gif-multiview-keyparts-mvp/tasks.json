@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_34_SOURCE_INK_MESH_ENGINEERING_VERIFIED_ART_REVIEW_PENDING",
+  "status": "P15_35_FACE_DEPTH_HAIR_UV_ENGINEERING_VERIFIED_ARTWORK_REFINEMENT_NEXT",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_34_SOURCE_GROUNDED_INK_MESH_ENGINEERING_PASS_ART_KEYFRAMES_PENDING",
+      "status": "P15_35_DEPTH_AND_HAIR_UV_ENGINEERING_COMPLETE_P0_ART_REFINEMENT_NEXT",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_34_REPRODUCIBLE_HTML_AND_PRIVATE_ARTIFACT_SHA_VERIFIED",
+      "status": "P15_35_OFFLINE_BROWSER_AND_ARCHIVE_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -1138,11 +1138,11 @@
         65
       ],
       "sourceInkObservationAngles": [
-        55.0,
+        55,
         57.5,
-        60.0,
+        60,
         62.5,
-        65.0
+        65
       ],
       "featureRoles": {
         "eye.far": 3,
@@ -1186,9 +1186,14 @@
         "entries": 75
       },
       "next": "P15-35 role-specific nose/eye depth masking, physical hairclip mount coordinates and independent painted feature approval"
+    },
+    "p15_35FaceDepthHairUV": {
+      "qa": "experiments/gif-multiview-keyparts-mvp/evidence/p15-35-occlusion-mount-qa.json",
+      "browser": "experiments/gif-multiview-keyparts-mvp/evidence/p15-35-browser-qa.json",
+      "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-35-delivery.json"
     }
   },
-  "lastCompleted": "P15_34_11_SOURCE_INK_FEATURES_9_FRAMES_3_MESH_ROLES_18_BROWSER_CHECKS_8_TESTS",
+  "lastCompleted": "P15_35_9_FRAMES_13_ROLES_9_TESTS_18_CHROMIUM_CHECKS_110_ARCHIVE_ITEMS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -2375,11 +2380,11 @@
         65
       ],
       "sourceInkObservationAngles": [
-        55.0,
+        55,
         57.5,
-        60.0,
+        60,
         62.5,
-        65.0
+        65
       ],
       "featureRoles": {
         "eye.far": 3,
@@ -2423,6 +2428,116 @@
         "entries": 75
       },
       "next": "P15-35 role-specific nose/eye depth masking, physical hairclip mount coordinates and independent painted feature approval"
+    },
+    "p15_35FaceDepthHairUV": {
+      "status": "P15_35_FACE_DEPTH_AND_HAIR_UV_ENGINEERING_VERIFIED",
+      "characterId": "p0_character_001",
+      "cameraAngles": [
+        55,
+        56.25,
+        57.5,
+        58.75,
+        60,
+        61.25,
+        62.5,
+        63.75,
+        65
+      ],
+      "roles": 13,
+      "model": "P0 face.skin local surface-depth occlusion + hair.front UV-mounted clip",
+      "eyeVisibleFractions": [
+        0.833381,
+        0.761854,
+        0.640954,
+        0.467678,
+        0.29613,
+        0.147374,
+        0.072791,
+        0.055559,
+        0.055638
+      ],
+      "clipHairContactBefore": [
+        0.725712,
+        0.697313,
+        0.670404,
+        0.645377,
+        0.616594,
+        0.592547,
+        0.565427,
+        0.540842,
+        0.508691
+      ],
+      "clipHairContactAfter": [
+        0.911628,
+        0.896819,
+        0.862013,
+        0.844463,
+        0.817679,
+        0.778092,
+        0.744479,
+        0.718759,
+        0.685118
+      ],
+      "clipTranslations": [
+        [
+          -4,
+          1
+        ],
+        [
+          -4,
+          2
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -4,
+          2
+        ],
+        [
+          -4,
+          2
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -4,
+          1
+        ]
+      ],
+      "completeEyeRGBUnderpaintRetained": true,
+      "p15_34SourceSHA256": "23a78294f04271185dd9fdc7bfb8de8bceff1bd087134b866769349d26293174",
+      "sourceP0OriginalSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "automaticTestsPassed": 9,
+      "chromiumViewportFrames": 18,
+      "imageLoads": 198,
+      "chromiumScreenshots": 6,
+      "browserErrorCount": 0,
+      "geometry3DApproved": false,
+      "clipPhysicalHairMountApproved": false,
+      "independentPaintingsAccepted": 0,
+      "artisticAcceptance": false,
+      "productionRendererModified": false,
+      "plan": "docs/plans/2026-11-11-p15-35-face-depth-hair-uv.md",
+      "runner": "scripts/run-p15-35-review.sh",
+      "archive": {
+        "path": "private-assets/exports/p15-35-face-depth-hair-review.zip",
+        "sha256": "c4d7fb56141407788a6546289e67a8ec9edeafee4639445392b03f234c2c175b",
+        "bytes": 17664275,
+        "entriesVerified": 110
+      },
+      "next": "P15-36 produce 55°–65° original anime facial and hair occlusion underpaint and approve independent 13-role artwork"
     }
   }
 }
