@@ -1,0 +1,58 @@
+{
+  "schema": "KOMA-P15-52-TRANSPARENCY-GEOMETRY-V1",
+  "characterId": "p0_character_001",
+  "sourceAngleLoRA": {
+    "referenceYaw": 45,
+    "commandedRelativeCameraRotate": 20,
+    "absoluteYawCalibrated": false,
+    "sourcePath": "private-assets/exports/p15-51-qwen-angle-plus20deg.webp",
+    "sourceSHA256": "c3151c9a2defd7fa61bd71fa80107b1c6dd2948174ef66e5d8e14464ed917127",
+    "controlSeed": 65451,
+    "model": "Qwen Image Edit 2509 + Multiple Angles LoRA"
+  },
+  "blackKey": {
+    "thresholdMaxRGB": 12,
+    "enclosedHairLoopSeed": [
+      520,
+      80
+    ],
+    "method": "exterior-connected black flood fill + 0.8px edge feather",
+    "opaquePixels": 443902,
+    "fullyTransparentPixels": 590583,
+    "partialAlphaPixels": 14091,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "preservesInteriorDarkFeatures": true
+  },
+  "output": {
+    "path": "private-assets/exports/p15-52-transparency-geometry/camera-plus20-transparent.png",
+    "sha256": "6b17cdd4f5a3d5bf309f8c6ce958ea38085be37493188976d16cb1ffb50d6323",
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "cameraProxy": {
+    "path": "evidence/p15-12-camera-proxy-qa.json",
+    "sha256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+    "annotatedAnchorCount": 8,
+    "anchorCoordinatesAreExpectedNotMeasured": true,
+    "absoluteYaw65Verified": false
+  },
+  "visualFindings": {
+    "facingDirection": "right-facing three-quarter/profile candidate",
+    "nearEye": "visible and dominant",
+    "farEye": "narrow and partly occluded",
+    "noseBridge": "visible profile shift",
+    "hairAndAhoge": "pink-lavender bob and single ahoge retained",
+    "goldCrossHairClip": "FAIL: gold clip at far-right silhouette has collapsed toward a narrow partly hidden mark; full crossed geometry is not preserved",
+    "darkUniformEdge": "requires visual halo assessment on white/blue/pink backgrounds",
+    "geometry": "camera anchor overlay is a reference comparison, not independently detected landmarks or absolute yaw proof"
+  },
+  "formalKeyframeAccepted": false,
+  "artMeshModified": false,
+  "next": "Correct gold crossed hair-clip perspective, verify silhouette halo and exact pose landmarks before accepting as formal keyframe"
+}

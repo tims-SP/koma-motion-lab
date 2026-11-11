@@ -2858,6 +2858,29 @@
       "review": "private-assets/exports/p15-51-camera-angle-review/index.html",
       "plan": "docs/plans/2026-11-11-p15-51-camera-angle-lora.md",
       "next": "Extract transparent background with edge preservation; calibrate absolute yaw and facial anchors before formal ArtMesh admission"
+    },
+    "p15_52TransparencyGeometryQA": {
+      "status": "RGBA_TRANSPARENCY_VERIFIED_FORMAL_KEYFRAME_REJECTED_CLIP_AND_YAW",
+      "characterId": "p0_character_001",
+      "targetYawDegrees": 65,
+      "candidateSourceSHA256": "c3151c9a2defd7fa61bd71fa80107b1c6dd2948174ef66e5d8e14464ed917127",
+      "transparentCandidateSHA256": "6b17cdd4f5a3d5bf309f8c6ce958ea38085be37493188976d16cb1ffb50d6323",
+      "fullyTransparentPixels": 590583,
+      "partiallyTransparentPixels": 14091,
+      "opaquePixels": 443902,
+      "goldClipIdentityCheck": "FAIL_COLLAPSED_PARTIAL_CROSS_AT_RIGHT_EDGE",
+      "absoluteYawVerified": false,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "unitTestsPass": 9,
+      "browserChecksPass": 2,
+      "evidence": [
+        "evidence/p15-52-transparency-geometry-qa.json",
+        "evidence/p15-52-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-52-transparency-geometry.md",
+      "review": "private-assets/exports/p15-52-transparency-geometry/index.html",
+      "next": "P15-53 repair hairclip as a separate transparent piece from P0 identity asset; verify edges and exact pose without redrawing whole character"
     }
   }
 }
