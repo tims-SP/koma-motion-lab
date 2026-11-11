@@ -4199,6 +4199,43 @@
       ],
       "review": "private-assets/exports/p15-88-painted-hidden-edge/index.html",
       "next": "P15-89 use a genuine local masked inpaint with a spatially constrained editable mask or hand-drawn source layer; do not integrate full-crop Qwen output"
+    },
+    "p15_89SpatialMaskModelTrial": {
+      "status": "EXPLICIT_MASK_INPUT_SUBMITTED_NO_FORMAL_ART_ADMISSION",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e287d4a8dd6e8bf9733befa9e5705daa2a045d298afa1e0f87ec395dae7622bd",
+      "maskSHA256": "dab526be92bfe4232d5ce85783a6742220d313dfc7b56aa8df1117fa09d22ac8",
+      "maskBBox": [
+        499,
+        424,
+        553,
+        479
+      ],
+      "maskActivePixels": 2259,
+      "qwenBackend": "hugging-apps/Qwen-Image-2.1-ControlNet-Union-Demo",
+      "qwenEventId": "a39fd57826b84ea0b3fcb33e5243009c",
+      "qwenStatus": "INFERENCE_FAILED",
+      "sdBackend": "pg56714/Inpaint-Anything /get_fill_img_with_sd",
+      "sdEventId": "18e64851829e4e1ea031aaf436cba3a8",
+      "sdStatus": "QUEUE_TIMEOUT_NO_MODEL_RESULT",
+      "actualExplicitMaskInput": true,
+      "modelOutputAvailable": false,
+      "visualGate": "BLOCKED_NO_MODEL_OUTPUT",
+      "candidateAccepted": false,
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 18,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 14,
+      "evidence": [
+        "evidence/p15-89-masked-inference-qa.json",
+        "evidence/p15-89-sd-masked-qa.json",
+        "evidence/p15-89-final-qa.json",
+        "evidence/p15-89-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-89-masked-local-art/index.html",
+      "plan": "docs/plans/2026-11-11-p15-89-masked-spatial-inference.md",
+      "next": "P15-90 obtain a usable actual masked model output or artist authored true hidden contour, then render exact 0/9/18px and inspect appearance"
     }
   }
 }

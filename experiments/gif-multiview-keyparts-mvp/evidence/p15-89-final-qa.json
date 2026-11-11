@@ -1,0 +1,23 @@
+{
+  "schema": "KOMA-P15-89-SPATIAL_MASK_ADMISSION_V1",
+  "qwenStatus": "INFERENCE_FAILED",
+  "sdStatus": "QUEUE_TIMEOUT_NO_MODEL_RESULT",
+  "qwenMaskInputAccepted": true,
+  "sdMaskInputAccepted": true,
+  "maskSHA256": "dab526be92bfe4232d5ce85783a6742220d313dfc7b56aa8df1117fa09d22ac8",
+  "sourceSHA256": "e287d4a8dd6e8bf9733befa9e5705daa2a045d298afa1e0f87ec395dae7622bd",
+  "maskBBox": [
+    499,
+    424,
+    553,
+    479
+  ],
+  "maskActivePixels": 2259,
+  "sourceZeroPoseReferenceSHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+  "newModelOutputAvailable": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "candidateAccepted": false,
+  "visualGate": "BLOCKED_NO_MODEL_OUTPUT",
+  "newDynamicRenderAccepted": false
+}
