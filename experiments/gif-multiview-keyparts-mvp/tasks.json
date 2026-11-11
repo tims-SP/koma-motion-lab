@@ -2794,6 +2794,27 @@
       "evidence": "evidence/p15-48-inference-qa.json",
       "reviewBaseline": "evidence/p15-47-face-local-qa.json",
       "nextRequiredCapability": "Authenticated GPU inference with lineart and inpainting controls, or ZeroGPU quota reset; then inspect actual output"
+    },
+    "p15_49InferenceAccessAudit": {
+      "status": "BLOCKED_AUTHENTICATED_CONTROLNET_QUOTA_OR_ENDPOINT",
+      "characterId": "p0_character_001",
+      "targetYawDegrees": 65,
+      "sourceBenchmark": "P15-45 seed 65445",
+      "newImageGenerated": false,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "hfSpacesQueried": 135,
+      "hfSpacesRunning": 8,
+      "primaryBackend": "hugging-apps/qwen-image-2-1-controlnet-union-demo",
+      "primaryBackendAccess": "ZeroGPU anonymous quota exhausted",
+      "alternativeBackendFindings": {
+        "multimodalart/FLUX.1-dev-ControlNet-Union-Pro-zerogpu": "RUNNING; no named API endpoint exposed",
+        "jiuface/flux-controlnet-inpainting": "RUNNING; /gradio_api/info HTTP 404",
+        "Catherine57533/alimama-creative-FLUX.1-dev-Controlnet-Inpainting-Beta": "RUNNING; only login check named endpoint"
+      },
+      "requiresExternalAction": "Add original Qwen ControlNet Space to HF MCP settings as authenticated tool, or authorize quota-enabled GPU execution",
+      "plan": "docs/plans/2026-11-11-p15-49-inference-access.md",
+      "stopCondition": "Do not repeat anonymous requests until authenticated quota or usable endpoint exists"
     }
   }
 }
