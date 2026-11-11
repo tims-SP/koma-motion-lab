@@ -3461,6 +3461,37 @@
       "plan": "docs/plans/2026-11-11-p15-70-forehead-seam-review.md",
       "review": "private-assets/exports/p15-70-seam-repair/index.html",
       "next": "P15-71 get genuine front-hair semantic RGBA and remove forehead line/eyelash contamination; no repeated forehead inpainting"
+    },
+    "p15_71SemanticHairSourceGate": {
+      "status": "TRUE_SAME_VIEW_FRONT_HAIR_MISSING_SAM2_API_ATTEMPTS_FAILED",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "comparisonSourceSHA256s": {
+        "yaw045": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+        "yaw090": "59a765ee05d3219f6cc1d59cc101dde27696ffcd84a1eda56c1aa6c9a13ecf2f",
+        "prior41": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6"
+      },
+      "sameViewSemanticHairAvailable": false,
+      "sam2APIStatus": {
+        "on_image_select": "FAILED",
+        "segment_everything": "FAILED"
+      },
+      "sam2ModelOutputExists": false,
+      "visualGate": "FAIL_NO_SAME_VIEW_SEMANTIC_HAIR_SOURCE_SAM2_COMPUTE_BLOCKED",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "newTestsPass": 13,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 18,
+      "evidence": [
+        "evidence/p15-71-source-gate-qa.json",
+        "evidence/p15-71-sam-probe.json",
+        "evidence/p15-71-sam-everything.json",
+        "evidence/p15-71-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-71-sam-semantic/index.html",
+      "plan": "docs/plans/2026-11-11-p15-71-sam-source-gate.md",
+      "next": "P15-72 obtain same-view semantic front-hair RGBA via a usable segmentation/painting service; validate overlay at 0/9/18px"
     }
   }
 }
