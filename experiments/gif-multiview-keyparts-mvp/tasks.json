@@ -2881,6 +2881,35 @@
       "plan": "docs/plans/2026-11-11-p15-52-transparency-geometry.md",
       "review": "private-assets/exports/p15-52-transparency-geometry/index.html",
       "next": "P15-53 repair hairclip as a separate transparent piece from P0 identity asset; verify edges and exact pose without redrawing whole character"
+    },
+    "p15_53GoldClipPartRepair": {
+      "status": "CLIP_CROSS_RESTORED_AS_INDEPENDENT_RGBA_LAYER_VISUAL_EDGE_QA_PENDING",
+      "characterId": "p0_character_001",
+      "sourceClipSHA256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+      "independentClipSHA256": "baf4b451a153f49485e2ea541f07a379c55f1c936d9b013594bb1f524a13dd52",
+      "candidateSHA256": "e012fb3bd1625f81bfc72887f45c083f9f21df6e707611415a94b8dce13115fc",
+      "registeredClipBBox": [
+        719,
+        279,
+        788,
+        370
+      ],
+      "oldGoldPixelsReplaced": 1201,
+      "oldSilhouetteTuftPixelsRemoved": 352,
+      "fullCrossVisible": true,
+      "edgeHaloApproved": false,
+      "absoluteYaw65Approved": false,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "unitTestsPass": 12,
+      "browserChecksPass": 2,
+      "evidence": [
+        "evidence/p15-53-gold-clip-qa.json",
+        "evidence/p15-53-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-53-gold-clip-part.md",
+      "review": "private-assets/exports/p15-53-gold-clip-repair/index.html",
+      "next": "P15-54 remove clip edge artifacts and independently measure landmarks for 65-degree review"
     }
   }
 }
