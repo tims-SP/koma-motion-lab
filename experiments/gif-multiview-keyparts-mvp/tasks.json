@@ -3686,6 +3686,42 @@
       "plan": "docs/plans/2026-11-11-p15-76-hidden-skin-local-source-repair.md",
       "review": "private-assets/exports/p15-76-seam-source/index.html",
       "next": "P15-77 obtain independently drawn same-source eyebrow/lash/bang layers; stop expanding matte patch count"
+    },
+    "p15_77SameSourceUpperLashSplit": {
+      "status": "SOURCE_MATCHED_LASH_SUBLAYER_CREATED_DYNAMIC_DEPTH_CONTROLLED_VISUAL_FAIL",
+      "characterId": "p0_character_001",
+      "originalSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "eyeSourceSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+      "upperLashSHA256": "f9bf9dd196ee171ae9ebe614b95f8458481a682626bddd3a8565593aae10b449",
+      "irisLowerSHA256": "0b758265e428275408cf12718155fc6736985d6f7af54707921904b41922e0c1",
+      "upperLashPixels": 1848,
+      "irisLowerPixels": 4513,
+      "originalEyeRecompositeExact": true,
+      "actualZeroPoseSourceExact": true,
+      "dynamicChangedEyeROIPixels": [
+        0,
+        48,
+        143
+      ],
+      "movementOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "oldYaw45AndFrontDonorsRejected": true,
+      "visualGate": "SOURCE_CONSISTENT_EYE_LASH_SPLIT_PASS_DYNAMIC_VISUAL_FAIL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 16,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 18,
+      "evidence": [
+        "evidence/p15-77-layer-qa.json",
+        "evidence/p15-77-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-77-same-source-lash-layer.md",
+      "review": "private-assets/exports/p15-77-art-layer/index.html",
+      "next": "P15-78 clean geometry split edge of same-source upper lash and resolve real brow bang occlusion"
     }
   }
 }

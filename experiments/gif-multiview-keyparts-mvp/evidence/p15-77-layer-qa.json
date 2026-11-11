@@ -1,0 +1,57 @@
+{
+  "schema": "KOMA-P15-77-SOURCE_LASH_GEOMETRIC_SPLIT_V1",
+  "characterId": "p0_character_001",
+  "sourcesSHA256": {
+    "source": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+    "eye": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+    "base": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+    "clip": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5"
+  },
+  "lashLayerSHA256": "f9bf9dd196ee171ae9ebe614b95f8458481a682626bddd3a8565593aae10b449",
+  "irisLayerSHA256": "0b758265e428275408cf12718155fc6736985d6f7af54707921904b41922e0c1",
+  "maskSHA256": "0437fa0a8152d76edffd4d9f4154807410458f4497950b5a9e96ffdc717b9a72",
+  "maskBBox": [
+    523,
+    422,
+    648,
+    458
+  ],
+  "upperLashVisiblePixels": 1848,
+  "lowerEyeVisiblePixels": 4513,
+  "sameEyeAlphaAfterSplit": true,
+  "eyeRecompositeDiffBBox": null,
+  "eyeVisibleRGBDiffPixels": 0,
+  "method": "MANUALLY_GEO_BOUND_SPLIT_CURRENT_P15_65_EYE_ART_NOT_TRUE_SEMANTIC_TRACING",
+  "olderYaw45DonorsAccepted": false,
+  "olderFrontDonorsAccepted": false,
+  "newSourceConsistentEyeUpperLashLayerExists": true,
+  "currentFullHairSemanticApproved": false,
+  "dynamicVisualGatePassed": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "SOURCE_CONSISTENT_EYE_LASH_SPLIT_PASS_DYNAMIC_VISUAL_FAIL",
+  "next": "P15-78 refine upper-lash strand boundary to eliminate hard polygon, then test moving eye-under-lash against actual front hair at 9/18 with 0px source identity preserved",
+  "movingLayerProof": [
+    {
+      "dx": 0,
+      "oldCompositeMismatchPixels": 0,
+      "zOrderChangedPixelsEyeROI": 0,
+      "depthSHA256": "22ae4a488901a29f2051025a4a432df1a50247bdc21ba4d8b4c70712cc273e99"
+    },
+    {
+      "dx": 9,
+      "oldCompositeMismatchPixels": 0,
+      "zOrderChangedPixelsEyeROI": 48,
+      "depthSHA256": "a16a9b12d31954a82daa9057423316d808c7ba6dcd37814353bfd797a05e06a5"
+    },
+    {
+      "dx": 18,
+      "oldCompositeMismatchPixels": 0,
+      "zOrderChangedPixelsEyeROI": 143,
+      "depthSHA256": "2e435848cf41712c5350e980fb323eee9aaa2ce6525eb48884471740ba4faf3b"
+    }
+  ],
+  "zOrderVariant": "skin -> iris/lower eye -> front bangs -> upper lash -> clip",
+  "zeroPoseFullSourceExact": true,
+  "motionVisualAssessment": "Separate-source upper lash can render above the bangs without changing the approved 0px source. At 9/18px the z-order difference is limited; hard geometric split is visibly jagged and the brow/lash/skin artifact remains. This is a testable source-consistent layered candidate, not final painted quality."
+}
