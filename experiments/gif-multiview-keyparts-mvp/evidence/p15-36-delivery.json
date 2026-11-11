@@ -1,0 +1,20 @@
+{
+  "schema": "KOMA-P15-36-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-36-original-keypart-review.zip",
+  "sha256": "b63bf91ff005982b89b8658405e63c32a9528b16e28bf3a0a5e7b3205ee94256",
+  "bytes": 9081546,
+  "entriesVerified": 73,
+  "htmlEntry": "index.html",
+  "angles": [
+    57.5,
+    60.0
+  ],
+  "semanticRoleCount": 13,
+  "completeRoleSetFiles": 26,
+  "newModelPaintedRolesPerAngle": 3,
+  "chromiumScreenshots": 8,
+  "chromiumImageLoads": 48,
+  "independentFullOriginalArtworkAccepted": false,
+  "artisticReviewStatus": "P0_IDENTITY_AND_ANATOMICAL_KEYVIEW_REVIEW_REQUIRED"
+}

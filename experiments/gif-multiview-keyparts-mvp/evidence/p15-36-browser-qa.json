@@ -1,0 +1,455 @@
+{
+  "schema": "KOMA-P15-36-KEYPART-CHROMIUM-V1",
+  "characterId": "p0_character_001",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "yaw": 57.5,
+      "mode": "compare",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "original-p15-35.png",
+          "path": "yaw57p5/original-p15-35.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "new-original-keyparts.png",
+          "path": "yaw57p5/new-original-keyparts.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "full-qwen-paint-source.png",
+          "path": "yaw57p5/full-qwen-paint-source.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "difference-x4.png",
+          "path": "yaw57p5/difference-x4.png",
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 57.5,
+      "mode": "parts",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-rgba.png",
+          "path": "yaw57p5/eye-far-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-skin-rgba.png",
+          "path": "yaw57p5/face-skin-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "hair-fringe-rgba.png",
+          "path": "yaw57p5/hair-fringe-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "gold-cross-rgba.png",
+          "path": "yaw57p5/gold-cross-rgba.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 57.5,
+      "mode": "hidden",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-local-paint.png",
+          "path": "yaw57p5/eye-far-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-local-paint.png",
+          "path": "yaw57p5/face-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-original.png",
+          "path": "yaw57p5/eye-far-original.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-hidden.png",
+          "path": "yaw57p5/eye-far-hidden.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 60,
+      "mode": "compare",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "original-p15-35.png",
+          "path": "yaw60/original-p15-35.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "new-original-keyparts.png",
+          "path": "yaw60/new-original-keyparts.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "full-qwen-paint-source.png",
+          "path": "yaw60/full-qwen-paint-source.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "difference-x4.png",
+          "path": "yaw60/difference-x4.png",
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 60,
+      "mode": "parts",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-rgba.png",
+          "path": "yaw60/eye-far-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-skin-rgba.png",
+          "path": "yaw60/face-skin-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "hair-fringe-rgba.png",
+          "path": "yaw60/hair-fringe-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "gold-cross-rgba.png",
+          "path": "yaw60/gold-cross-rgba.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 60,
+      "mode": "hidden",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-local-paint.png",
+          "path": "yaw60/eye-far-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-local-paint.png",
+          "path": "yaw60/face-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-original.png",
+          "path": "yaw60/eye-far-original.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-hidden.png",
+          "path": "yaw60/eye-far-hidden.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 57.5,
+      "mode": "compare",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "original-p15-35.png",
+          "path": "yaw57p5/original-p15-35.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "new-original-keyparts.png",
+          "path": "yaw57p5/new-original-keyparts.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "full-qwen-paint-source.png",
+          "path": "yaw57p5/full-qwen-paint-source.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "difference-x4.png",
+          "path": "yaw57p5/difference-x4.png",
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 57.5,
+      "mode": "parts",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-rgba.png",
+          "path": "yaw57p5/eye-far-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-skin-rgba.png",
+          "path": "yaw57p5/face-skin-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "hair-fringe-rgba.png",
+          "path": "yaw57p5/hair-fringe-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "gold-cross-rgba.png",
+          "path": "yaw57p5/gold-cross-rgba.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 57.5,
+      "mode": "hidden",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-local-paint.png",
+          "path": "yaw57p5/eye-far-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-local-paint.png",
+          "path": "yaw57p5/face-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-original.png",
+          "path": "yaw57p5/eye-far-original.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-hidden.png",
+          "path": "yaw57p5/eye-far-hidden.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 60,
+      "mode": "compare",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "original-p15-35.png",
+          "path": "yaw60/original-p15-35.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "new-original-keyparts.png",
+          "path": "yaw60/new-original-keyparts.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "full-qwen-paint-source.png",
+          "path": "yaw60/full-qwen-paint-source.png",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "role": "difference-x4.png",
+          "path": "yaw60/difference-x4.png",
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 60,
+      "mode": "parts",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-rgba.png",
+          "path": "yaw60/eye-far-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-skin-rgba.png",
+          "path": "yaw60/face-skin-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "hair-fringe-rgba.png",
+          "path": "yaw60/hair-fringe-rgba.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "gold-cross-rgba.png",
+          "path": "yaw60/gold-cross-rgba.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 60,
+      "mode": "hidden",
+      "imageCount": 4,
+      "sources": [
+        {
+          "role": "eye-far-local-paint.png",
+          "path": "yaw60/eye-far-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "face-local-paint.png",
+          "path": "yaw60/face-local-paint.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-original.png",
+          "path": "yaw60/eye-far-original.png",
+          "width": 443,
+          "height": 443
+        },
+        {
+          "role": "eye-far-hidden.png",
+          "path": "yaw60/eye-far-hidden.png",
+          "width": 443,
+          "height": 443
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "viewport": "desktop",
+      "yaw": 57.5,
+      "mode": "compare",
+      "file": "desktop-yaw57p5-compare.png",
+      "sha256": "29e6085b0550cbe98f71b1eccb14768666dfee60bfe7b76f179960f1f45ac55b"
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 57.5,
+      "mode": "parts",
+      "file": "desktop-yaw57p5-parts.png",
+      "sha256": "2db439374c638f47274782615639f127832f9b0092f5d150ee3ca04f1111bccd"
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 57.5,
+      "mode": "hidden",
+      "file": "desktop-yaw57p5-hidden.png",
+      "sha256": "26d283cc6c48f6be6760e5832801450440b8620427e10d7a35ba7ccdf3cfeb45"
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 60,
+      "mode": "compare",
+      "file": "desktop-yaw60-compare.png",
+      "sha256": "11f9ecdbad39d4baeea9eb12afde6df07a28d740b57ec251aeccc19f253ea991"
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 60,
+      "mode": "parts",
+      "file": "desktop-yaw60-parts.png",
+      "sha256": "bd032e946c5fcfcb66010623562f5d1021f94665993509745663c5e1d6ae42c4"
+    },
+    {
+      "viewport": "desktop",
+      "yaw": 60,
+      "mode": "hidden",
+      "file": "desktop-yaw60-hidden.png",
+      "sha256": "c7e6edf0746239af86f335f858d605b1522a484f8029e02c4542dc2718841af9"
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 57.5,
+      "mode": "compare",
+      "file": "mobile-yaw57p5-compare.png",
+      "sha256": "18a6a47921e0e82ce53af40ecfb2ae5fb257e974e7e79c19ca6891a570cbe86e"
+    },
+    {
+      "viewport": "mobile",
+      "yaw": 60,
+      "mode": "compare",
+      "file": "mobile-yaw60-compare.png",
+      "sha256": "19c5f9149c5cacf2ac2ea4c99758c61cbea7ca4e54bf4f3671ab10a1ca2c0dab"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "newlyPaintedCompleteKeyviewsAccepted": 0,
+  "status": "P15_36_KEYPART_SOURCE_HTML_VERIFIED",
+  "viewportChecks": 12,
+  "imageLoads": 48,
+  "screenshotCount": 8
+}

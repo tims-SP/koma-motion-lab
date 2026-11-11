@@ -1,0 +1,167 @@
+{
+  "schema": "KOMA-P15-36-LOCAL-QWEN-PAINT-REPAIR-V1",
+  "characterId": "p0_character_001",
+  "sourceP15_35QA_SHA256": "6dba4a97b9a7d31fecaec6bc94ed2062f967e5b7cd0fc9ccada37817e839b96a",
+  "angles": [
+    57.5,
+    60.0
+  ],
+  "frames": [
+    {
+      "yaw": 57.5,
+      "donor": "p15-36-painting-candidates/generated/yaw057p5-dual-source-qwen.png",
+      "donorSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+      "donorAngleSourceAcceptedAsKeyview": false,
+      "donorFarIris": [
+        697.4,
+        487.8
+      ],
+      "expectedP5FarIris": [
+        716.4530029296875,
+        469.0400085449219
+      ],
+      "registrationOffset": [
+        19.053,
+        -18.76
+      ],
+      "patchCenter1024": [
+        716.4530029296875,
+        469.0400085449219
+      ],
+      "patchRadii": [
+        68,
+        69
+      ],
+      "newPaintedRGBSourcePixels": 21019,
+      "roleCount": 13,
+      "newPaintedSemanticRoles": [
+        "eye.far",
+        "face.skin",
+        "hair.front"
+      ],
+      "partDetails": {
+        "eye.far": {
+          "sourceMethod": "QWEN_NEW_RGB_REGISTERED_ROI",
+          "sourceFullGeneratedSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+          "donorPaintPath": "p15-36-qwen-local-paint/yaw57p5/eye.far.donor-paint.png",
+          "donorPaintSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+          "visibleDonorAlphaPixels": 956,
+          "targetOutputSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+          "sourceRoleSHA256": "63eb8f0fc83a167ba22ba5d3fd73fc9c4b8099f0f989c89abeacc0c233b4e15d",
+          "changedPixels": 2823,
+          "hiddenUnderpaintIndependentlyPainted": false
+        },
+        "face.skin": {
+          "sourceMethod": "QWEN_NEW_RGB_REGISTERED_ROI",
+          "sourceFullGeneratedSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+          "donorPaintPath": "p15-36-qwen-local-paint/yaw57p5/face.skin.donor-paint.png",
+          "donorPaintSHA256": "cf0a2141a707b0880864ba18c36dc337bb04ff4195a5b64afdd7f4dd985f1149",
+          "visibleDonorAlphaPixels": 3022,
+          "targetOutputSHA256": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+          "sourceRoleSHA256": "a225e35faf55735d200c876b2c6bafd09619d864e28f7e282116b16215abe8d3",
+          "changedPixels": 4644,
+          "hiddenUnderpaintIndependentlyPainted": false
+        },
+        "hair.front": {
+          "sourceMethod": "QWEN_NEW_RGB_REGISTERED_ROI",
+          "sourceFullGeneratedSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+          "donorPaintPath": "p15-36-qwen-local-paint/yaw57p5/hair.front.donor-paint.png",
+          "donorPaintSHA256": "75eeabc10fff6ee0ed7e95608759d5fde963a7d32643ef2cbd12d4bf7d9fd325",
+          "visibleDonorAlphaPixels": 666,
+          "targetOutputSHA256": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+          "sourceRoleSHA256": "1f4703c72d819ae8a08fbcf247732da005afc86ca16864bc243835809e8c19af",
+          "changedPixels": 2088,
+          "hiddenUnderpaintIndependentlyPainted": false
+        }
+      },
+      "oldCompositeSHA256": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+      "compositeSHA256": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+      "changedCompositePixels": 24801,
+      "artisticallyAccepted": false
+    },
+    {
+      "yaw": 60.0,
+      "donor": "p15-36-painting-candidates/generated/yaw060-pose-retouch-qwen.png",
+      "donorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "donorAngleSourceAcceptedAsKeyview": false,
+      "donorFarIris": [
+        714.9,
+        478.4
+      ],
+      "expectedP5FarIris": [
+        720.760009765625,
+        469.0400085449219
+      ],
+      "registrationOffset": [
+        5.86,
+        -9.36
+      ],
+      "patchCenter1024": [
+        720.760009765625,
+        469.0400085449219
+      ],
+      "patchRadii": [
+        68,
+        69
+      ],
+      "newPaintedRGBSourcePixels": 21008,
+      "roleCount": 13,
+      "newPaintedSemanticRoles": [
+        "eye.far",
+        "face.skin",
+        "hair.front"
+      ],
+      "partDetails": {
+        "eye.far": {
+          "sourceMethod": "QWEN_NEW_RGB_REGISTERED_ROI",
+          "sourceFullGeneratedSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+          "donorPaintPath": "p15-36-qwen-local-paint/yaw60/eye.far.donor-paint.png",
+          "donorPaintSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+          "visibleDonorAlphaPixels": 959,
+          "targetOutputSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+          "sourceRoleSHA256": "eab4c1b88e60669ce00da4a1a007697e45a27b0306fda92cdf8c773ed9dff96f",
+          "changedPixels": 2772,
+          "hiddenUnderpaintIndependentlyPainted": false
+        },
+        "face.skin": {
+          "sourceMethod": "QWEN_NEW_RGB_REGISTERED_ROI",
+          "sourceFullGeneratedSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+          "donorPaintPath": "p15-36-qwen-local-paint/yaw60/face.skin.donor-paint.png",
+          "donorPaintSHA256": "667d15bcb79fbec5cbd62928e845a8c43cf420c95d44f521b15b4acbfed46abe",
+          "visibleDonorAlphaPixels": 2392,
+          "targetOutputSHA256": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+          "sourceRoleSHA256": "d63470eb4abd566b6bbccab70b285aeed934477071e6991529fd2b81077f4748",
+          "changedPixels": 3730,
+          "hiddenUnderpaintIndependentlyPainted": false
+        },
+        "hair.front": {
+          "sourceMethod": "QWEN_NEW_RGB_REGISTERED_ROI",
+          "sourceFullGeneratedSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+          "donorPaintPath": "p15-36-qwen-local-paint/yaw60/hair.front.donor-paint.png",
+          "donorPaintSHA256": "dedbd10294310dfcebdf0ffc8b988d80c4d9074750409e5b9295f48871984b80",
+          "visibleDonorAlphaPixels": 1455,
+          "targetOutputSHA256": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+          "sourceRoleSHA256": "393975293e5641efe2c2917868151826a1ecaae22eb7a38f6d34606064f79b3f",
+          "changedPixels": 2921,
+          "hiddenUnderpaintIndependentlyPainted": false
+        }
+      },
+      "oldCompositeSHA256": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+      "compositeSHA256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "changedCompositePixels": 26211,
+      "artisticallyAccepted": false
+    }
+  ],
+  "semanticRoleCount": 13,
+  "newModelPaintedROIRoles": [
+    "eye.far",
+    "face.skin",
+    "hair.front"
+  ],
+  "independentlyPaintedHiddenUnderpaintCount": 0,
+  "modelFullImagePoseApproved": false,
+  "fullKeyviewArtAccepted": false,
+  "sourceP0HeroIdentityHashVerified": false,
+  "productionVddModified": false,
+  "status": "TWO_NEW_LOCAL_MODEL_PAINTINGS_SEMANTICALLY_PARTITIONED_FOR_REVIEW"
+}
