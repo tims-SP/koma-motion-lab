@@ -1,0 +1,105 @@
+{
+  "schema": "KOMA-P15-86-LASH_BANG_OWNERSHIP_V1",
+  "baselineGit": "ede2b4e24b86988e875ff6dc233b6c322de6b103",
+  "inputSHA256": {
+    "source": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+    "oldUnderpaint": "064a081960dbed71279251f00aac0c2d90276f42c61a22770d1c13415e6259aa",
+    "cleanSameViewUnderpaint": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+    "oldSAM3Hair": "5857c2a67bfc2d4bf545f24d707fd945830ce3d8cccfc47d86e59d42770dc128",
+    "sourceEye": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+    "oldSourceBangMask": "720b158408f8d53fc2be2fdedc3ddbc240222da9c14069b853107f75bd763715",
+    "oldSourceEyeMask": "5ac67c24bb12f9af1541ce0ace7c49d0901eef445eea4c358b8529254f2a800e",
+    "oldSourceFaceMask": "764a1d64577de57478cdc1dab1b61afc0b9118595eeb14da07db3b083b5e600a",
+    "oldSourceClipMask": "061a98d7f38a5743e7964c2790158c4d1af93157faed635d01e7e576ef18b160",
+    "sourceClip": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4",
+    "priorInpaintMask": "1030af587279028427d93b7c6ba86dd41db9e49021c176a586038604ca51ca14"
+  },
+  "correctionPolygon": [
+    [
+      514,
+      441
+    ],
+    [
+      520,
+      439
+    ],
+    [
+      531,
+      440
+    ],
+    [
+      536,
+      445
+    ],
+    [
+      536,
+      457
+    ],
+    [
+      530,
+      462
+    ],
+    [
+      517,
+      459
+    ],
+    [
+      511,
+      453
+    ]
+  ],
+  "hardMaskSHA256": "f2b079b7130e1fb785054a0f5c2047fe064f5c91da540ec6f5331593a590a0f2",
+  "softMaskSHA256": "f618ec387a3f987f26b683af745d2dae0681d4410871aae54834f88fc1da74b7",
+  "hardMaskPixels": 474,
+  "transferredBangToEyePixels": 391,
+  "originalEyeOwnerPixelCount": 7503,
+  "newEyeOwnerPixelCount": 7894,
+  "underpaintSHA256": "41c68813cb9c5324bcd7b6b2d2fafeef4dc86ef3bcf5fb74ba6de720fdc72ade",
+  "newHairSHA256": "90fb8ede50eeaab06d8d2d97b26bfa8cc9628779c4993563818a7a6451cbb23e",
+  "sourcePartSHA256": {
+    "face": "329915ed79b7202c033702ce3cd6b9c9ed6640d39c0f7dd82ff17f9542afef64",
+    "eye": "e81f127a84559120bb53be80aa6cb194f722a6bca5f2c87cdce2a69e7a2c2e9b",
+    "bangs": "ec3196fa929b707bb1d7c4c69d25cddeed795401dad1455d02e8b29aa992246b",
+    "clip": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4"
+  },
+  "sourceMaskSHA256": {
+    "face": "764a1d64577de57478cdc1dab1b61afc0b9118595eeb14da07db3b083b5e600a",
+    "eye": "89a241794c78e3b289d40968f4a471e258925df0a69bfd08d30fb1dcf9dfa94c",
+    "bangs": "a3273119fde22edad9d33eeb60f60841edb4a1d0e3a9f89963681b753c8419dc",
+    "clip": "061a98d7f38a5743e7964c2790158c4d1af93157faed635d01e7e576ef18b160"
+  },
+  "underpaintChangedVsP1584": 355,
+  "hairVisibleChangedVsP1584": 588,
+  "restVisiblePixelDiff": 0,
+  "restAlphaPixelDiff": 0,
+  "restRawRGBAEqual": false,
+  "stationaryDarkPixelsBefore": 8,
+  "stationaryDarkPixelsAfter": 0,
+  "frameQA": {
+    "0": {
+      "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+      "visibleChangedFromP1584": 0,
+      "rgbaChangedFromP1584": 0,
+      "faceHoles": 0
+    },
+    "9": {
+      "sha256": "cf3164300e337f83be3b8ff491d47c4f2f296a5251f2c2d28def5cc391ea5b00",
+      "visibleChangedFromP1584": 336,
+      "rgbaChangedFromP1584": 336,
+      "faceHoles": 0
+    },
+    "18": {
+      "sha256": "3f8bf3643ec3a8d43dacd70f1699057d40eb27fde4209b0e091d0e729d8c663b",
+      "visibleChangedFromP1584": 336,
+      "rgbaChangedFromP1584": 336,
+      "faceHoles": 0
+    }
+  },
+  "newModelCalls": 0,
+  "newCloneOperations": 0,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "STATIC_LASH_REMOVED_NEW_VERTICAL_HAIR_FACE_SEAM_FAIL",
+  "visualAssessment": "The stationary upper-lash fragment is removed from both underpaint and the SAM3 bangs, and transferred to the source-eye owner at rest. Zero pose remains source-identical. But 9/18px reveal an abrupt vertical left hair/skin seam near the outer eye; the source SAM3 segmentation lacks a continuously painted hidden hair/face edge. The independent corrective mask is not enough for formal ArtMesh.",
+  "candidateAccepted": false
+}

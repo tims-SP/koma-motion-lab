@@ -4060,6 +4060,55 @@
       "review": "private-assets/exports/p15-85-outer-eye-seam/index.html",
       "plan": "docs/plans/2026-11-11-p15-85-outer-eye-semantic-ownership.md",
       "next": "P15-86 correct original eyelash/bangs semantic ownership; do not tune local skin clone or model patch"
+    },
+    "p15_86ReassignedEyeLashFromSAM3Bangs": {
+      "status": "TRUE_OWNER_REASSIGN_391_FIXED_LASH_REMOVED_DYNAMIC_VERTICAL_EDGE_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "p1570CleanSameViewSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+      "p1584UnderpaintSHA256": "064a081960dbed71279251f00aac0c2d90276f42c61a22770d1c13415e6259aa",
+      "newEyeOwnerTransferredPixels": 391,
+      "sourcePartSHA256": {
+        "face": "329915ed79b7202c033702ce3cd6b9c9ed6640d39c0f7dd82ff17f9542afef64",
+        "eye": "e81f127a84559120bb53be80aa6cb194f722a6bca5f2c87cdce2a69e7a2c2e9b",
+        "bangs": "ec3196fa929b707bb1d7c4c69d25cddeed795401dad1455d02e8b29aa992246b",
+        "clip": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4"
+      },
+      "correctionMaskSHA256": "f618ec387a3f987f26b683af745d2dae0681d4410871aae54834f88fc1da74b7",
+      "correctedHiddenFaceSHA256": "41c68813cb9c5324bcd7b6b2d2fafeef4dc86ef3bcf5fb74ba6de720fdc72ade",
+      "correctedHairSHA256": "90fb8ede50eeaab06d8d2d97b26bfa8cc9628779c4993563818a7a6451cbb23e",
+      "restVisiblePixelDiff": 0,
+      "restAlphaPixelDiff": 0,
+      "stationaryDarkPixelsBefore": 8,
+      "stationaryDarkPixelsAfter": 0,
+      "movingOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "frameSHA256": {
+        "0": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+        "9": "cf3164300e337f83be3b8ff491d47c4f2f296a5251f2c2d28def5cc391ea5b00",
+        "18": "3f8bf3643ec3a8d43dacd70f1699057d40eb27fde4209b0e091d0e729d8c663b"
+      },
+      "dynamicNewTransparentHoles": 0,
+      "dynamicVisibleChangedPixelsAt9And18": 336,
+      "newModelCalls": 0,
+      "newCloneOperations": 0,
+      "visualGate": "STATIC_LASH_REMOVED_NEW_VERTICAL_HAIR_FACE_SEAM_FAIL",
+      "candidateAccepted": false,
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 20,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 30,
+      "evidence": [
+        "evidence/p15-86-qa.json",
+        "evidence/p15-86-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-86-semantic-ownership/index.html",
+      "plan": "docs/plans/2026-11-11-p15-86-lash-bang-semantic-ownership.md",
+      "next": "P15-87 obtain continuous hidden hair-face occlusion edge without vertical seam, preserve source zero pose and fixed eyelash removal"
     }
   }
 }

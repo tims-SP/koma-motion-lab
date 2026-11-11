@@ -1,0 +1,14 @@
+from pathlib import Path
+D=Path(__file__).resolve().parents[1]/'private-assets/exports/p15-86-semantic-ownership'
+css='''body{background:#182839;color:#eff5fa;max-width:1460px;margin:18px auto;padding:0 16px;font:15px/1.55 system-ui}h1{font-size:24px}h2{font-size:18px}p{color:#d3dfeb}.ok{color:#b8e9cd}.warn{color:#ffd09e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}figure,.panel{background:#2a4053;padding:12px;border-radius:8px;margin:0}img{width:100%;max-height:590px;object-fit:contain;background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 50%/24px 24px}figcaption{font-weight:600;margin-top:6px}input{width:100%}'''
+h='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P15-86 眼睫毛和刘海所有权重分配</title><style>'+css+'</style></head><body><h1>P15-86 · 眼睫毛和刘海的语义所有权修正</h1>'
+h+='<p class="ok">已实际将 391 个源图像素从 SAM3 固定前发重分配给独立近眼，静止 0px 仍由四张源像素 RGBA 文件真实重组，全部可见 RGBA 与原画像素完全一致，整张 Alpha 也无差异。</p>'
+h+='<p class="ok">隐藏底图仅引用 P15-70 已有的同视角干净像素；未重复生成模型、未使用肤色克隆。静止睫毛深色残线计数由 8 下降至 0。</p>'
+h+='<p class="warn"><b>正式 ArtMesh 视觉门禁 FAIL：</b>9/18px 不再有固定的眼睫毛短线，但改正所有权后外侧脸部与前发出现竖直分界。缺少与原画吻合的隐蔽发丝/皮肤边缘；未将新候选替换正式 VDD。</p>'
+h+='<div class="panel"><h2 id="pose">眼睛位移 9px</h2><input id="shift" type="range" min="0" max="18" step="9" value="9" aria-label="近眼位移"><div class="grid"><figure><img id="whole" src="frame-reassigned-09.png"><figcaption>完整 1024×1024</figcaption></figure><figure><img id="face" src="face-reassigned-09.png"><figcaption>面部动态</figcaption></figure><figure><img id="detail" src="detail-reassigned-09.png"><figcaption>眼尾放大：注意左侧竖向接缝</figcaption></figure></div></div><h2>原始残线、图层与所有权对照</h2><div class="grid">'
+items=[('old-stationary-no-eye.png','P15-84 固定残影：不带眼睛时仍存在'),('new-stationary-no-eye.png','P15-86 固定眼睫毛已删除'),('compare-p1570.png','P15-70 原先存在的干净隐藏像素'),('compare-p1584.png','P15-84 遗留睫毛线'),('owner-correction-binary-mask.png','限定重分配范围'),('owner-eye.png','原画近眼新所有权 Mask'),('owner-bangs.png','SAM3 前发新所有权 Mask'),('part-eye.png','同源独立近眼所有权图层'),('part-bangs.png','同源独立前发所有权图层'),('rest-from-reassigned-ownership.png','四张独立图层重新合成 0px 原画'),('new-underpaint-only.png','修正后不含眼睛的隐藏底图'),('detail-reassigned-18.png','18px 后仍有竖向接缝')]
+for f,label in items:
+ assert (D/f).exists(),f
+ h+=f'<figure><img src="{f}" alt="{label}"><figcaption>{label}</figcaption></figure>'
+h+='</div><script>document.getElementById("shift").addEventListener("input",e=>{let n=String(+e.target.value).padStart(2,"0");for(const [id,prefix] of [["whole","frame"],["face","face"],["detail","detail"]])document.getElementById(id).src=prefix+"-reassigned-"+n+".png";document.getElementById("pose").textContent="眼睛位移 "+Number(e.target.value)+"px";});</script></body></html>'
+(D/'index.html').write_text(h,encoding='utf8')
