@@ -1,0 +1,95 @@
+{
+  "schema": "KOMA-P15-63-MASKED-LAMA-V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "inputCrop": [
+    385,
+    290,
+    897,
+    802
+  ],
+  "cropInputSHA256": "998b3e26799e6b2c317aac8c679eb73c1465d5b6e19c6847a4e48f2e833ab6ce",
+  "maskSHA256": "e6512e2ee4143fde0538d2bac6108bebd4cb41adf65a19014d111476a23e9af0",
+  "maskPolygon": [
+    [
+      521,
+      450
+    ],
+    [
+      527,
+      436
+    ],
+    [
+      541,
+      427
+    ],
+    [
+      568,
+      417
+    ],
+    [
+      602,
+      416
+    ],
+    [
+      627,
+      423
+    ],
+    [
+      651,
+      438
+    ],
+    [
+      660,
+      454
+    ],
+    [
+      657,
+      471
+    ],
+    [
+      653,
+      489
+    ],
+    [
+      638,
+      508
+    ],
+    [
+      614,
+      520
+    ],
+    [
+      574,
+      519
+    ],
+    [
+      547,
+      506
+    ],
+    [
+      526,
+      482
+    ]
+  ],
+  "provider": "pg56714/Inpaint-Anything",
+  "providerModel": "LaMa neural image inpainting CPU, via Gradio6",
+  "modelStatus": "SUCCESS",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "queueJoinResponse": "{\"event_id\":\"87bea997332745909e171ff7935fac5f\"}",
+  "failure": "model failed {'msg': 'process_completed', 'event_id': '87bea997332745909e171ff7935fac5f', 'output': {'error': \"'You have exceeded your ZeroGPU quota (90s requested vs. 65s left). Try again in 17:38:59. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens'\"}, 'success': False}",
+  "modelSHA256": "d35ef64b576237b9a0693ceed242d8ee8f34bd0ac0ddd4c377766cc6831cbd77",
+  "underpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+  "eyeCutoutSHA256": "3aff3cb0b2e6325315a53d047a11d6f2126e159f9c80cf2fe08cc75554cbc209",
+  "eyeShiftSHA256": "b98d5162ea5c2c8438558f4104867bf3efc7f0c3858224d85292a5fcef9127ba",
+  "outsideMaskChangedPixels": 0,
+  "insideMaskChangedPixels": 11423,
+  "shift18TransparentHolePixels": 0,
+  "fixedMaskOutOfScopePixelChange": true,
+  "visualGate": "FAIL_EYE_CUTOUT_CONTAINS_HAIR_SKIN_EDGE_ARTIFACTS",
+  "independentNearEyePurityValidated": false,
+  "note": "Neural model made genuine new hidden skin content. Eye ROI is still a polygon containing surrounding skin/hair, not a clean ArtMesh semantic cutout.",
+  "visualEvidence": "Neural inpaint produces smooth hidden skin without the polygon clone patch, but displaced eye ROI carries an opaque left fringe/skin island and white eyelash outline seam. Distinct near-eye semantic mask and layered front hair are still required.",
+  "originalAssetPreserved": true,
+  "acceptUnderpaintCandidateForFurtherRefinement": true
+}

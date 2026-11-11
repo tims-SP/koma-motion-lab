@@ -3191,6 +3191,30 @@
       "review": "private-assets/exports/p15-62-near-eye-underpaint/index.html",
       "plan": "docs/plans/2026-11-11-p15-62-near-eye-underpaint.md",
       "next": "P15-63 true masked generative inpainting for hidden near-eye skin; enforce unchanged pixels outside mask"
+    },
+    "p15_63MaskedNeuralInpaint": {
+      "status": "NEURAL_UNDERPAINT_SUCCESS_BUT_CUTOUT_SEMANTIC_EDGE_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "provider": "pg56714/Inpaint-Anything",
+      "model": "LaMa CPU neural inpainting",
+      "modelOutputSHA256": "d35ef64b576237b9a0693ceed242d8ee8f34bd0ac0ddd4c377766cc6831cbd77",
+      "maskSHA256": "e6512e2ee4143fde0538d2bac6108bebd4cb41adf65a19014d111476a23e9af0",
+      "editedInsideMaskPixels": 11423,
+      "outsideMaskChangedRGBApixels": 0,
+      "eyeMovedPx": 18,
+      "shiftedEyeTransparentHoles": 0,
+      "visualGate": "FAIL_EYE_CUTOUT_CONTAINS_HAIR_SKIN_EDGE_ARTIFACTS",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 11,
+      "evidence": [
+        "evidence/p15-63-masked-lama-qa.json",
+        "evidence/p15-63-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-63-masked-lama/index.html",
+      "plan": "docs/plans/2026-11-11-p15-63-masked-neural-inpaint.md",
+      "next": "P15-64 refine near-eye semantic segmentation and front-hair occlusion without regenerating successful hidden skin"
     }
   }
 }
