@@ -1,0 +1,44 @@
+{
+  "schema": "KOMA-P15-70-FOREHEAD-SEAM-REPAIR-V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "oldBaseSHA256": "1c1ba685a80d0682a5999eb99a882b52c6ff05d4b3cbda8bc54c4e567cc3a117",
+  "referenceSHA256": "47edf106e3057da96f8c88e73214b235d2d1087cee3df43f728b28b45db4d8e2",
+  "hairSHA256": "d2ccd0886f0436a85a28a751d295572635a1d882609ac22dc84de33ec6bd349b",
+  "eyeSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "clipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+  "newBaseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+  "repairMaskSHA256": "4ce266c07ce5ac70c59b39393ebcd8751d304cf0a266b036608ebd5c519e1376",
+  "method": "FEATHERED_REFERENCE_RESTORE_FOREHEAD_ONLY_WITH_EYE_REGION_EXCLUDED",
+  "referenceSource": "P15-55 known hair and skin underlay; not a generated independent face",
+  "changedRGBApixels": 20456,
+  "outsideMaskChangedPixels": 0,
+  "frames": [
+    {
+      "dx": 0,
+      "file": "eye-shift-00-seam-repaired.png",
+      "sha256": "6c78bd0e66fbd89313323b8fc66a19bc604b1130defacf37ac87ae143a7e1a37"
+    },
+    {
+      "dx": 9,
+      "file": "eye-shift-09-seam-repaired.png",
+      "sha256": "1fa665f17d090fc8629c87513bbcbcc16c08d9d34813845f27989299a9cfb982"
+    },
+    {
+      "dx": 18,
+      "file": "eye-shift-18-seam-repaired.png",
+      "sha256": "d30122434e5f11492bb24e7c62f5e7eb7476833efbba2fb578b18b0c0de969f3"
+    }
+  ],
+  "transparentHolesByOffset": {
+    "0": 0,
+    "9": 0,
+    "18": 0
+  },
+  "visualGate": "FOREHEAD_PATCH_IMPROVED_FULL_FRONT_HAIR_UNAPPROVED",
+  "visualAssessment": "Pink triangular forehead fill from P15-68 reduced by constrained P15-55 reference restoration. The horizontal grey-purple stripe and lash/hair boundary remain because they are embedded in the nonsemantic P15-67 hair candidate.",
+  "fullFrontHairSemanticApproved": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "next": "P15-71 fix front-bang source semantics and eyebrow-lash contamination; do not rerun LaMa or pursue further mask-only forehead fixes."
+}
