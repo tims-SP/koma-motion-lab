@@ -2715,6 +2715,20 @@
         "entries": 136
       },
       "next": "P15-39 verify original painted eye and nose occlusion, Hero identity and hidden stroke underpaint; only then extend visual approved 65-90 keyframes"
+    },
+    "p15_44ExplicitConditions": {
+      "status": "P15_44_CONTROL_IMAGES_VERIFIED_MODEL_GENERATION_BLOCKED",
+      "characterId": "p0_character_001",
+      "yaw": 65,
+      "controlImages": 5,
+      "cameraAnchorCount": 6,
+      "testCount": 8,
+      "generatedModelImage": false,
+      "formalArtAccepted": false,
+      "script": "scripts/p15_44_control_inputs.py",
+      "evidence": "evidence/p15-44-control-conditions-qa.json",
+      "plan": "docs/plans/2026-11-11-p15-44-explicit-control-conditions.md",
+      "next": "Find operational lineart/mask conditioning backend with identity reference; generate privately and visually validate"
     }
   }
 }
