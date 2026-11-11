@@ -1,0 +1,33 @@
+{
+  "schema": "KOMA-P15-47-REAL-INFERENCE-V1",
+  "timeUTC": "2026-11-11T05:59:23.344025+00:00",
+  "space": "https://hugging-apps-qwen-image-2-1-controlnet-union-demo.hf.space",
+  "api": "/gradio_api/call/generate",
+  "inputs": [
+    {
+      "name": "facial-geometry-guide-65.png",
+      "sha256": "2efdd77e0b62d8ecb1ae50ff104719ffee0642c4e8e6c614063abf7bd4ecb64f",
+      "bytes": 48882
+    },
+    {
+      "name": "composite.png",
+      "sha256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "bytes": 790808
+    },
+    {
+      "name": "face-mask-narrow-65.png",
+      "sha256": "bb628be5bdc75c4d5e34e2405045336cbc265f0aa5d130a7f32b2c434fbbe126",
+      "bytes": 8927
+    }
+  ],
+  "seed": 65445,
+  "steps": 24,
+  "scale": 1.0,
+  "target": "right-facing yaw65",
+  "status": "INFERENCE_REJECTED_OR_FAILED",
+  "eventId": "674290b8b6494a9e93c4f6628c8ad54d",
+  "events": [
+    "error"
+  ],
+  "error": "event: error\ndata: {\"error\": \"You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens\", \"duration\": 10, \"visible\": true, \"title\": \"ZeroGPU quota exceeded\"}\n\n"
+}

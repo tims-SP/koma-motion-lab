@@ -2758,6 +2758,30 @@
       "tests": 5,
       "modelInferenceAttempted": false,
       "next": "Retry A/B inference after ZeroGPU quota reset or add this Space as dedicated HF MCP tool"
+    },
+    "p15_47MaskLocalControlQA": {
+      "status": "P15_47_MASK_LOCAL_ENGINEERING_VERIFIED_NEW_INFERENCE_BLOCKED_BY_ZEROGPU_QUOTA",
+      "characterId": "p0_character_001",
+      "yaw": 65,
+      "attemptedSeed": 65445,
+      "inference": "ZERO_GPU_QUOTA_EXCEEDED",
+      "sourceCandidateSHA256": "118a1b044756d7ca4cd55c175e2a143001d2067dc347112d289b65ce0aa86d0e",
+      "outsideMaskChangeRatioBefore": 0.689306,
+      "alphaChangedPixelsBefore": 647309,
+      "localCompositeSHA256": "4180bd028d3741329572cdeefd8a994747ba4cd9c2cfd7a773a1ab9d405c941a",
+      "outsideMaskChangesAfter": 0,
+      "alphaChangesAfter": 0,
+      "unitTestsPass": 30,
+      "browserChecksPass": 2,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "evidence": [
+        "evidence/p15-47-inference-qa.json",
+        "evidence/p15-47-face-local-qa.json",
+        "evidence/p15-47-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-47-mask-local-qa.md",
+      "next": "Restore authenticated ControlNet inference quota and perform same-seed P15-46 A/B"
     }
   }
 }
