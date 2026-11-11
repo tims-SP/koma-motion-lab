@@ -3873,6 +3873,53 @@
       "review": "private-assets/exports/p15-81-image-layered/index.html",
       "plan": "docs/plans/2026-11-11-p15-81-auth-sam3-front-hair.md",
       "next": "P15-82 obtain true hidden under-bangs forehead/eyelash layers, pass real 0px before ArtMesh"
+    },
+    "p15_82IndependentBangSourceAndUnderpaint": {
+      "status": "SOURCE_OWNED_FOUR_LAYER_VISIBLE_ZERO_PASS_DYNAMIC_VISUAL_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "sam3AlphaSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+      "partHashes": {
+        "clip": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4",
+        "bangs": "12b565e89e0e9df3f1f4c7688aed630688add296fb94fb298a1270b25150d566",
+        "eye": "08df78373fd36867ba18f5e837d59fca1673ba0387b5671abf34311a508ab1a2",
+        "face": "329915ed79b7202c033702ce3cd6b9c9ed6640d39c0f7dd82ff17f9542afef64"
+      },
+      "visibleZeroPoseExact": true,
+      "fullRawRGBAZeroPoseExact": false,
+      "invisibleRGBDifferences": 19603,
+      "p1581FullRGBAChangedPixels": 9113,
+      "p1581FullRGBABBox": [
+        526,
+        272,
+        776,
+        714
+      ],
+      "underpaintCandidateSHA256": "eface3c73049625a84203251c92badec5924f8ac038d1a9afde4cd14a165bb3f",
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "motionFrameHashes": {
+        "0": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+        "9": "74d818b5c24aa63a7b71352b7ef095abea5cf69409e57980b6c4650baffc57e5",
+        "18": "abe504d3d43b720be271f346750c65edc15fe0519106379b8b04cc6ab95dbbd9"
+      },
+      "transparentHolesROI": 0,
+      "visualGate": "ZERO_POSE_VISIBLE_EXACT_DYNAMIC_EDGE_SEAMS_REMAIN",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 17,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 28,
+      "evidence": [
+        "evidence/p15-82-source-decomposition-qa.json",
+        "evidence/p15-82-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-82-rest-underpaint/index.html",
+      "plan": "docs/plans/2026-11-11-p15-82-independent-underpaint.md",
+      "next": "P15-83 remove authentic brow-lash/bang ghost contours using true hidden artwork; require dynamic quality"
     }
   }
 }

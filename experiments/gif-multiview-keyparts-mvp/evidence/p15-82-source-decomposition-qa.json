@@ -1,0 +1,97 @@
+{
+  "schema": "KOMA-P15-82-INDEPENDENT_SOURCE_PARTS_AND_HIDDEN_EYE_UNDERPAINT_V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "priorFaceSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+  "priorEyeSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "sam3AlphaSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+  "priorClipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+  "sourceOwnedLayers": {
+    "clip": {
+      "maskSHA256": "061a98d7f38a5743e7964c2790158c4d1af93157faed635d01e7e576ef18b160",
+      "layerSHA256": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4",
+      "nonzeroPixels": 3081
+    },
+    "bangs": {
+      "maskSHA256": "720b158408f8d53fc2be2fdedc3ddbc240222da9c14069b853107f75bd763715",
+      "layerSHA256": "12b565e89e0e9df3f1f4c7688aed630688add296fb94fb298a1270b25150d566",
+      "nonzeroPixels": 82401
+    },
+    "eye": {
+      "maskSHA256": "5ac67c24bb12f9af1541ce0ace7c49d0901eef445eea4c358b8529254f2a800e",
+      "layerSHA256": "08df78373fd36867ba18f5e837d59fca1673ba0387b5671abf34311a508ab1a2",
+      "nonzeroPixels": 7503
+    },
+    "face": {
+      "maskSHA256": "764a1d64577de57478cdc1dab1b61afc0b9118595eeb14da07db3b083b5e600a",
+      "layerSHA256": "329915ed79b7202c033702ce3cd6b9c9ed6640d39c0f7dd82ff17f9542afef64",
+      "nonzeroPixels": 364255
+    }
+  },
+  "ownerPriority": [
+    "clip",
+    "bangs",
+    "eye",
+    "face"
+  ],
+  "eyeSourceMaskExpansionPx": 3,
+  "underpaintSHA256": "eface3c73049625a84203251c92badec5924f8ac038d1a9afde4cd14a165bb3f",
+  "underpaintMethod": "P15-70 authentic local clean skin/forehead in source eye-owned region; outside source pixels retained",
+  "actualIndependentPartRestExactRGBA": false,
+  "actualIndependentPartRestVisuallyExact": true,
+  "actualIndependentPartRestAlphaExact": true,
+  "transparentRGBOnlyDifferences": 19603,
+  "zeroPoseGeneratedByCompositingIndependentParts": true,
+  "frameQA": {
+    "0": {
+      "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+      "transparentHolesROI": 0,
+      "changedPixelsVsP1576": 26706
+    },
+    "9": {
+      "sha256": "870e2586453625b7a458c36284406f01fd5a6aab13dbfc4b0195a54add63462a",
+      "transparentHolesROI": 0,
+      "changedPixelsVsP1576": 27886
+    },
+    "18": {
+      "sha256": "b43c07aaab0a1a82380ea9ceb670dd64e118adf0e763be4dfc208869e4c96bee",
+      "transparentHolesROI": 0,
+      "changedPixelsVsP1576": 27906
+    }
+  },
+  "dynamicVisualGate": "ZERO_POSE_VISIBLE_EXACT_DYNAMIC_EDGE_SEAMS_REMAIN",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "selectedDynamicCandidate": "P15-70 forehead underpaint + P15-74 independently moving eye + SAM3-027 source-owned bangs + source-owned clip",
+  "selectedFrameQA": {
+    "0": {
+      "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+      "faceHoles": 0,
+      "pixelDiffVsSourceIfRestElseP1576": 19603,
+      "visiblePixelDiffVsSourceIfRest": 0
+    },
+    "9": {
+      "sha256": "74d818b5c24aa63a7b71352b7ef095abea5cf69409e57980b6c4650baffc57e5",
+      "faceHoles": 0,
+      "pixelDiffVsSourceIfRestElseP1576": 24354,
+      "visiblePixelDiffVsSourceIfRest": null
+    },
+    "18": {
+      "sha256": "abe504d3d43b720be271f346750c65edc15fe0519106379b8b04cc6ab95dbbd9",
+      "faceHoles": 0,
+      "pixelDiffVsSourceIfRestElseP1576": 24618,
+      "visiblePixelDiffVsSourceIfRest": null
+    }
+  },
+  "finalZeroPoseVisuallyExact": true,
+  "finalZeroPoseRawRGBAExact": false,
+  "sourceInvisibleRGBDifferences": 19603,
+  "motionFaceHoles": 0,
+  "dynamicVisualAssessment": "Original eye move with clean P15-70 base reduces the large jagged white crescent seen when shifting rigid source-owned eye pixels. However eyebrow/eyelash thin ghost contours remain and the SAM3 mask is still a binary mask with coarse antialiasing; dynamic animation quality is not formally approved.",
+  "priorP1581FullPixelDifferenceCount": 9113,
+  "priorP1581FullPixelDifferenceBBox": [
+    526,
+    272,
+    776,
+    714
+  ]
+}
