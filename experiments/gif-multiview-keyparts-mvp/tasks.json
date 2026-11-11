@@ -3163,6 +3163,34 @@
       "review": "private-assets/exports/p15-61-semantic-feasibility/index.html",
       "plan": "docs/plans/2026-11-11-p15-61-semantic-feasibility.md",
       "next": "P15-62 create and test near-eye independent art with hidden skin underpaint; verify eye moves 18px without holes"
+    },
+    "p15_62NearEyeUnderpaint": {
+      "status": "ENGINEERING_ZERO_HOLE_BUT_VISUAL_FAIL_TEXTURE_CLONE_SEAM",
+      "characterId": "p0_character_001",
+      "candidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "eyeMovePx": [
+        18,
+        0
+      ],
+      "transparentHolePixels": 0,
+      "opaqueCoverageMissingPixels": 0,
+      "outsideMaskChangedPixels": 0,
+      "underpaintMethod": "LOCAL_CHEEK_TEXTURE_CLONE_COLOR_MATCHED_AND_FEATHERED_NOT_AI_INPAINT",
+      "hiddenSkinAuthenticallyReconstructed": false,
+      "qwenEditStatus": "BLOCKED_ZERO_GPU_QUOTA_EXCEEDED",
+      "visualGate": "FAIL_LOCAL_TEXTURE_CLONE_VISIBLE_SEAM",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 11,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 10,
+      "evidence": [
+        "evidence/p15-62-near-eye-underpaint-qa.json",
+        "evidence/p15-62-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-62-near-eye-underpaint/index.html",
+      "plan": "docs/plans/2026-11-11-p15-62-near-eye-underpaint.md",
+      "next": "P15-63 true masked generative inpainting for hidden near-eye skin; enforce unchanged pixels outside mask"
     }
   }
 }
