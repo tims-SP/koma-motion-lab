@@ -1,0 +1,148 @@
+{
+  "schema": "KOMA-P15-59-CAMERA-IDENTIFIABILITY-V1",
+  "characterId": "p0_character_001",
+  "sourceCameraProxySHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+  "underlyingLandmarkRegistrySHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+  "sampleObservationOrigins": [
+    {
+      "yaw": 0,
+      "visible": true,
+      "xy": [
+        438.4,
+        468.35
+      ],
+      "source": "PSD_ALPHA_CONNECTED_COMPONENT",
+      "sourceEvidencePixels": 3181
+    },
+    {
+      "yaw": 45,
+      "visible": true,
+      "xy": [
+        544.27,
+        467.11
+      ],
+      "source": "PSD_ALPHA_CONNECTED_COMPONENT",
+      "sourceEvidencePixels": 3098
+    },
+    {
+      "yaw": 90,
+      "visible": true,
+      "xy": [
+        677.0,
+        452.5
+      ],
+      "source": "P0_GIF_ARTMESH_SOURCE_ANCHOR",
+      "sourceEvidencePixels": null
+    }
+  ],
+  "fittedUsingNominalAnglesNotCalibratedCameras": true,
+  "sourceManualLandmarksSHA256": "2879149b411acd677fe505cc2f9e6bf8be3f4ed21203e14eae600fe1e898495f",
+  "candidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "orthographicModel": "screen x=c+X*cos(yaw)+Z*sin(yaw); y from registered 45-to-90 views",
+  "proxySourceAngles": [
+    0,
+    45,
+    90
+  ],
+  "modelCounts": {
+    "three_view_orthographic_proxy": 10,
+    "two_view_linear_extrapolation": 2
+  },
+  "threeViewProxyKeys": [
+    "ear.near",
+    "eye.near.iris",
+    "face.chin",
+    "face.jaw.near",
+    "hair.ahoge.root",
+    "hair.back",
+    "hair.front",
+    "hair.side",
+    "mouth",
+    "nose"
+  ],
+  "linearlyExtrapolatedKeys": [
+    "eye.far.iris",
+    "hair.clip.center"
+  ],
+  "cameraIntrinsicsAvailable": false,
+  "independentMeasuredWorldPointsAvailable": false,
+  "physicalDepthScaleCalibrated": false,
+  "independentAbsoluteCameraReferenceAvailable": false,
+  "gaugeSymmetryExperiment": [
+    {
+      "gaugeRotationDeg": -30,
+      "maxProjectionDifferencePx": 0.0
+    },
+    {
+      "gaugeRotationDeg": -20,
+      "maxProjectionDifferencePx": 0.0
+    },
+    {
+      "gaugeRotationDeg": 0,
+      "maxProjectionDifferencePx": 0.0
+    },
+    {
+      "gaugeRotationDeg": 20,
+      "maxProjectionDifferencePx": 0.0
+    },
+    {
+      "gaugeRotationDeg": 30,
+      "maxProjectionDifferencePx": 0.0
+    }
+  ],
+  "gaugeInterpretation": "A +20deg global relabeling of camera yaw and equivalent rotation of unknown reconstructed X/Z proxy points leaves every projection exactly unchanged. The reconstruction contains no world-fixed orientation reference, so absolute yaw is not identifiable.",
+  "landmarkDiagnostics": [
+    {
+      "semantic": "eye.near.iris",
+      "pointSource": "manual_visual_estimate",
+      "model": "three_view_orthographic_proxy",
+      "distanceFromProxyPx": 1.78,
+      "independentlyDetected": false
+    },
+    {
+      "semantic": "eye.far.iris",
+      "pointSource": "manual_visual_estimate",
+      "model": "two_view_linear_extrapolation",
+      "distanceFromProxyPx": 0.63,
+      "independentlyDetected": false
+    },
+    {
+      "semantic": "nose",
+      "pointSource": "manual_visual_estimate",
+      "model": "three_view_orthographic_proxy",
+      "distanceFromProxyPx": 0.49,
+      "independentlyDetected": false
+    },
+    {
+      "semantic": "mouth",
+      "pointSource": "manual_visual_estimate",
+      "model": "three_view_orthographic_proxy",
+      "distanceFromProxyPx": 1.11,
+      "independentlyDetected": false
+    },
+    {
+      "semantic": "face.chin",
+      "pointSource": "manual_visual_estimate",
+      "model": "three_view_orthographic_proxy",
+      "distanceFromProxyPx": 0.23,
+      "independentlyDetected": false
+    },
+    {
+      "semantic": "hair.clip.center",
+      "pointSource": "manual_visual_estimate",
+      "model": "two_view_linear_extrapolation",
+      "distanceFromProxyPx": 37.06,
+      "independentlyDetected": false
+    }
+  ],
+  "landmarkWarning": "P15-54 manual estimates were visually chosen near P15-12 proxies and are not independent annotations. Small reprojection residuals are circular validation, not physical yaw measurements.",
+  "relativeCommandDeg": 20,
+  "relativeCommandVerifiedAsPhysicalRotation": false,
+  "absoluteYaw65Identifiable": false,
+  "absoluteYaw65Verified": false,
+  "candidateStatus": "RIGHT_FACING_RELATIVE_CAMERA_EDIT_ONLY",
+  "formalArtMeshModified": false,
+  "formalKeyframeAccepted": false,
+  "minimumMissingEvidence": "A world-fixed 3D landmark reference with known depth/orientation plus independently marked corresponding 2D features and camera projection convention, or validated external camera-pose ground truth.",
+  "next": "Prioritize acquiring/calibrating real 3D reference constraints; do not count proxy reprojection, LoRA command or 2D interpolation as independent yaw evidence."
+}

@@ -3062,6 +3062,39 @@
       "plan": "docs/plans/2026-11-11-p15-58-provenance-pose.md",
       "review": "private-assets/exports/p15-58-provenance-pose/index.html",
       "next": "P15-59 independently calibrate camera yaw using real geometry or documented multi-view landmarks"
+    },
+    "p15_59CameraIdentifiability": {
+      "status": "PROXY_GAUGE_NONIDENTIFIABILITY_PROVED_PHYSICAL_YAW_UNVERIFIED",
+      "characterId": "p0_character_001",
+      "proxyAnchors": 12,
+      "threeViewOrthographicProxyAnchors": 10,
+      "linearExtrapolatedAnchors": 2,
+      "sourceCameraProxySHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+      "sourceLandmarkRegistrySHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+      "candidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "gaugeOffsetsTestedDeg": [
+        -30,
+        -20,
+        0,
+        20,
+        30
+      ],
+      "maxGaugeProjectionDifferencePx": 0,
+      "worldFixed3DLandmarksAvailable": false,
+      "absoluteYaw65Verified": false,
+      "identityApproved": false,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "unitTestsPass": 13,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 6,
+      "evidence": [
+        "evidence/p15-59-camera-identifiability-qa.json",
+        "evidence/p15-59-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-59-camera-identifiability.md",
+      "review": "private-assets/exports/p15-59-camera-identifiability/index.html",
+      "next": "P15-60 distinguish VDD parameterized yaw from physical camera yaw; prioritize visual identity acceptance"
     }
   }
 }
