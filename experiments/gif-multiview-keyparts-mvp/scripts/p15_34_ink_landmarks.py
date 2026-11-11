@@ -41,11 +41,11 @@ def _features_eye(a,primary):
  top=int(np.percentile(ys,53))
  ink=(a[:,:,3]>75)&(darkness>135)
  ink[:ymin]=False;ink[top+1:]=False
- pts=np.column_stack(np.where(ink)[:,::-1]).astype(np.float32)
+ pts=np.column_stack(np.where(ink)[::-1]).astype(np.float32)
  if len(pts)<40:
   ink=(a[:,:,3]>65)&(darkness>90)
   ink[top+1:]=False
-  pts=np.column_stack(np.where(ink)[:,::-1]).astype(np.float32)
+  pts=np.column_stack(np.where(ink)[::-1]).astype(np.float32)
  if len(pts)<20:raise ValueError("Eye ink insufficient for corner candidates")
  a1=_choose(pts,[1,0],"low")
  a2=_choose(pts,[1,0],"high")
@@ -130,7 +130,6 @@ def make():
    a=read(path)
    pts,ids,extra=measured(a,role,anchors[role])
    if len(pts)!=len(ids):raise ValueError("Named point count differs")
-   image=Image.fromarray(a,"RGBA").convert("RGB")
    # White composition makes transparent images readable without adding ink.
    canvas=Image.new("RGBA",(N,N),"white")
    canvas.alpha_composite(Image.fromarray(a,"RGBA"))
