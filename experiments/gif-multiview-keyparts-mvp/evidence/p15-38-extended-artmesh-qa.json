@@ -1,0 +1,1426 @@
+{
+  "schema": "KOMA-P15-38-ORIGINAL-P0-EXTENDED-ARTMESH-V1",
+  "characterId": "p0_character_001",
+  "sourceOriginal45": {
+    "registeredRoleCount": 13,
+    "alphaIoUWithApprovedOriginal": 1.0,
+    "meanRGBDeltaOnSharedOpaquePixels": 0.001362,
+    "sourceP0SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40"
+  },
+  "sourceP15_37QA_SHA256": "d4d509e96421161303b7f7b44dd2e37cf18892567723be33d6b0a13cdc122e65",
+  "sourceP0HeroSHA256Verified": false,
+  "angles": [
+    45.0,
+    47.5,
+    50.0,
+    52.5,
+    55.0,
+    56.25,
+    57.5,
+    58.75,
+    60.0,
+    61.25,
+    62.5,
+    63.75,
+    65.0
+  ],
+  "sourceKeyAngles": [
+    45.0,
+    55.0,
+    57.5,
+    60.0,
+    65.0
+  ],
+  "interpolatedNewAngles": [
+    47.5,
+    50.0,
+    52.5
+  ],
+  "roleCount": 13,
+  "frames": [
+    {
+      "yaw": 45.0,
+      "kind": "registered-art-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "a2a9efc8fea9f8dc59224afc6ae25e60986306d4899a9deac75d602b00ec233b",
+          "source45SHA256": "330aec2bae4831a645a0a2dbe0d77afa5126026c119a3287a5ccc67127a80e5b",
+          "source55SHA256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.back": {
+          "sha256": "717777f09382cfe69d816ccb9ff6f8598c0ffe64de5ce76534b97e21f603130e",
+          "source45SHA256": "4e8ef275c260d4b3e00e06b769bc3903609a4b4254e9d0ffa1f41e8824ca64bb",
+          "source55SHA256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "face.skin": {
+          "sha256": "d44155e5be4cc16ffc05cb7b7d7135a8f385fef87ba15bb91bb59af81603f78c",
+          "source45SHA256": "586db8498ece985267864b4b3b67f55455f7aace8f40bb9eadddc0ac5d3c32fb",
+          "source55SHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "source45SHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "source55SHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.near": {
+          "sha256": "98e595b20dd84d0f984e89927c1d1e5f1e2750c01a596fdb24f30ef2c9ff87fd",
+          "source45SHA256": "caaf647795033669d88093e3b4340717f06fb6c9e4cbf1e013c97f8406dfbee4",
+          "source55SHA256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.side": {
+          "sha256": "2bb3b1449076e8edf872914ca6e1a147438d11a740cb538a78da2eea804f5616",
+          "source45SHA256": "4e2bffd258a8431f481902616efaa7633e631df86b2d547280bbca23a73ef2c6",
+          "source55SHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.far": {
+          "sha256": "dbd24f45046613ba541c038df03eaa6c40854909779644b8c7dc9b3b92258353",
+          "source45SHA256": "779868a8f71b1c535608be172368b2b4cbb5c0292317c893c247ead658ca7793",
+          "source55SHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.near": {
+          "sha256": "71a074a1f0b2dee11536984177d284d3367665ee7b78662d7f484d17ea9f26b1",
+          "source45SHA256": "e68eeb351c5b077328bdb523fcf0ca576cef7a6547d4ddf5de474ef409d310d6",
+          "source55SHA256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "nose": {
+          "sha256": "f9e48dd6c176a0b4522c6e722b5ca6dd09f34d12a14e155c303fb2b79a10112a",
+          "source45SHA256": "0d723120ca7682d2010e478b49300147a09819e5b43f2dd9a576ba7d2a713a6c",
+          "source55SHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "mouth": {
+          "sha256": "8d1cc930468a2c73f5fd03ea6058ebd597cc0e47e335104377ade7da6a2a610b",
+          "source45SHA256": "be89f773e134751ce96aa658389c2ceeb7aa7a7c95554fe519bf0c1e9404bcaa",
+          "source55SHA256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.front": {
+          "sha256": "17c91c67343f2c03f7c83062d9ce9f2080f6d7894e194bfcf2b02db30bd99452",
+          "source45SHA256": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+          "source55SHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.ahoge": {
+          "sha256": "4f426af10c48f4b893f0247a3adbc4df130f26087df970c63913d1dd7e2a2a12",
+          "source45SHA256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201",
+          "source55SHA256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "ed0cd65cc65444bf47ec58b44640d49960829f81f48e9758f3703b1dbf2fc420",
+          "source45SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+          "source55SHA256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "method": "P0-canonical-source-normalized-native-443",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        }
+      },
+      "compositeSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "P0SourceOriginalByteExact": true,
+      "originalP15_37RoleByteExact": false,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 47.5,
+      "kind": "cross-view-role-inbetween",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "a1bd0c4f63dae46461b6ef655843f15baf8308e73b33a48087bffa45dcaadf1e",
+          "source45SHA256": "330aec2bae4831a645a0a2dbe0d77afa5126026c119a3287a5ccc67127a80e5b",
+          "source55SHA256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.back": {
+          "sha256": "0edc707095b681872b72c1dd5c3696735ff90320babb58931cb741367c8d9e16",
+          "source45SHA256": "4e8ef275c260d4b3e00e06b769bc3903609a4b4254e9d0ffa1f41e8824ca64bb",
+          "source55SHA256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "face.skin": {
+          "sha256": "7753d3fb848a16b03a71343c8be630b17f4b8e7b09f33af9c03c05faba2a1e05",
+          "source45SHA256": "586db8498ece985267864b4b3b67f55455f7aace8f40bb9eadddc0ac5d3c32fb",
+          "source55SHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "source45SHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "source55SHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "partial-visibility-alpha-role",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.near": {
+          "sha256": "1cfa690ca92fe6acc1ff6e43874a27dcf5441483511a42581fc12b0d6a813063",
+          "source45SHA256": "caaf647795033669d88093e3b4340717f06fb6c9e4cbf1e013c97f8406dfbee4",
+          "source55SHA256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.side": {
+          "sha256": "202ea04535d39025280e58d2dbf329622b885b871c2fff8e355304c2629e4da5",
+          "source45SHA256": "4e2bffd258a8431f481902616efaa7633e631df86b2d547280bbca23a73ef2c6",
+          "source55SHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.far": {
+          "sha256": "15ed247a7599c403efc01c5196b390c0c74ff239c332692daadd4bc6f38a4bd3",
+          "source45SHA256": "779868a8f71b1c535608be172368b2b4cbb5c0292317c893c247ead658ca7793",
+          "source55SHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.near": {
+          "sha256": "7fb00b26a2a166d959a808fad018413b5f1ba532fb636f9f7d0cff2daf7d112b",
+          "source45SHA256": "e68eeb351c5b077328bdb523fcf0ca576cef7a6547d4ddf5de474ef409d310d6",
+          "source55SHA256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "nose": {
+          "sha256": "5d2d5a7d411c84cd553cffd7651ae57e17f4df4e62d9d2994ac9b60e06713d70",
+          "source45SHA256": "0d723120ca7682d2010e478b49300147a09819e5b43f2dd9a576ba7d2a713a6c",
+          "source55SHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "mouth": {
+          "sha256": "e8aa64bbae5bc8cb8f7f55c82038ddbf5770f3564232859eff8d1c91d541d25b",
+          "source45SHA256": "be89f773e134751ce96aa658389c2ceeb7aa7a7c95554fe519bf0c1e9404bcaa",
+          "source55SHA256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.front": {
+          "sha256": "ba5fd62c61af9bc8bbb9fca0d8376737599d3aae5e139f1b1f2ff9772cdadfcf",
+          "source45SHA256": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+          "source55SHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.ahoge": {
+          "sha256": "ee452c8ba2ee1b0c8846cbc7f8f89b77b19a3c76d264282d1c93d224bb21452a",
+          "source45SHA256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201",
+          "source55SHA256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "cafc8439cdf19b43a5f6e1153f14beba0fa3a8a30fd75f6968f87fcaa45c81db",
+          "source45SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+          "source55SHA256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        }
+      },
+      "compositeSHA256": "b69c04a0a3977f5932f54d1229dd7be20e17e07b33485947a7026ceb1cae60b9",
+      "P0SourceOriginalByteExact": false,
+      "originalP15_37RoleByteExact": false,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 50.0,
+      "kind": "cross-view-role-inbetween",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "18bf926ca7d12ed701ee038c15f471051701804f7c82b3ab396e0a853c66f221",
+          "source45SHA256": "330aec2bae4831a645a0a2dbe0d77afa5126026c119a3287a5ccc67127a80e5b",
+          "source55SHA256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.back": {
+          "sha256": "245ff110459cc0ddb51269c806b1352785d0756cde226fad1f793d47872404b7",
+          "source45SHA256": "4e8ef275c260d4b3e00e06b769bc3903609a4b4254e9d0ffa1f41e8824ca64bb",
+          "source55SHA256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "face.skin": {
+          "sha256": "cf41f5a7bbb2147a8c21bfb103587301f49ea22001d5038b01e5d034a170aa66",
+          "source45SHA256": "586db8498ece985267864b4b3b67f55455f7aace8f40bb9eadddc0ac5d3c32fb",
+          "source55SHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "source45SHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "source55SHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "partial-visibility-alpha-role",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.near": {
+          "sha256": "2fae982855921f5fb13fcdbad3fcfa650a82f442e851bc453ecf536412bd992a",
+          "source45SHA256": "caaf647795033669d88093e3b4340717f06fb6c9e4cbf1e013c97f8406dfbee4",
+          "source55SHA256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.side": {
+          "sha256": "e8da6d5d86c92bacae472d19c5a342bc0007d0a9699ff9d47f6be3707bd5e022",
+          "source45SHA256": "4e2bffd258a8431f481902616efaa7633e631df86b2d547280bbca23a73ef2c6",
+          "source55SHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.far": {
+          "sha256": "f8fdeb1ea66c151aa4eb3d4e44e5dc780755d4a9e8c30f0ebf978672da0ebe34",
+          "source45SHA256": "779868a8f71b1c535608be172368b2b4cbb5c0292317c893c247ead658ca7793",
+          "source55SHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.near": {
+          "sha256": "1fcdca99624a14ed995588d6659e8c39e46b4f2b0de12c538d62def082a73e2c",
+          "source45SHA256": "e68eeb351c5b077328bdb523fcf0ca576cef7a6547d4ddf5de474ef409d310d6",
+          "source55SHA256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "nose": {
+          "sha256": "e7e0e3a44d5dde73faa053b49fffb3bf3177446a5cd4fee1e05429cc60938b75",
+          "source45SHA256": "0d723120ca7682d2010e478b49300147a09819e5b43f2dd9a576ba7d2a713a6c",
+          "source55SHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "mouth": {
+          "sha256": "7617a59b7134d22be0d7dcd347ddbc8be42b76a76423082be57eeca01819e75a",
+          "source45SHA256": "be89f773e134751ce96aa658389c2ceeb7aa7a7c95554fe519bf0c1e9404bcaa",
+          "source55SHA256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.front": {
+          "sha256": "b60b8e62ed1d4fdb0090e2eebe0f994def7c0aaf105834d855502a35608fcc15",
+          "source45SHA256": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+          "source55SHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.ahoge": {
+          "sha256": "7c5552b7e05fbb76d7fc836f679f086e411d5d79bef5acdab6c9a63898980861",
+          "source45SHA256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201",
+          "source55SHA256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "1a4a6e9b0106b52d24a9cd2744d8b42f9f5d4d181ccf48cb40f349339a076370",
+          "source45SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+          "source55SHA256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        }
+      },
+      "compositeSHA256": "b04c39e977b687639df14df305d7f8611849b47a15a5922ab7e7936d3ce1cc4c",
+      "P0SourceOriginalByteExact": false,
+      "originalP15_37RoleByteExact": false,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 52.5,
+      "kind": "cross-view-role-inbetween",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "a59005014c90679df332da264d97bf7aa20f42555c5c6fbf49cfb8d80d1f36d4",
+          "source45SHA256": "330aec2bae4831a645a0a2dbe0d77afa5126026c119a3287a5ccc67127a80e5b",
+          "source55SHA256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.back": {
+          "sha256": "54094296ff3197b13ec0da49b3c57187a4a7f8ab809883ef0bf054ce82bd19ac",
+          "source45SHA256": "4e8ef275c260d4b3e00e06b769bc3903609a4b4254e9d0ffa1f41e8824ca64bb",
+          "source55SHA256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "face.skin": {
+          "sha256": "7b376c51fcead4cab8efb328a882c5601b59d66c58a594b15b4e7195458d7a43",
+          "source45SHA256": "586db8498ece985267864b4b3b67f55455f7aace8f40bb9eadddc0ac5d3c32fb",
+          "source55SHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "source45SHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "source55SHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "partial-visibility-alpha-role",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.near": {
+          "sha256": "8461bfcfda3a28fd5736819b8272342087ace51da4d92d09b18bc9698a253eeb",
+          "source45SHA256": "caaf647795033669d88093e3b4340717f06fb6c9e4cbf1e013c97f8406dfbee4",
+          "source55SHA256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.side": {
+          "sha256": "5e4229cd88b71daeceb679a23fba0b490d82b14cffb65a948267801ab471d38b",
+          "source45SHA256": "4e2bffd258a8431f481902616efaa7633e631df86b2d547280bbca23a73ef2c6",
+          "source55SHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.far": {
+          "sha256": "7ff33710507249012f2b5b026ebbd71122493e2a2ab6258f3e4a9fcc68eea2b7",
+          "source45SHA256": "779868a8f71b1c535608be172368b2b4cbb5c0292317c893c247ead658ca7793",
+          "source55SHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.near": {
+          "sha256": "a686d2492ce3566b945787bb2a7cf89ed45255e6074f92bbd92677af0bfb2914",
+          "source45SHA256": "e68eeb351c5b077328bdb523fcf0ca576cef7a6547d4ddf5de474ef409d310d6",
+          "source55SHA256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "nose": {
+          "sha256": "cc678408344bc835e40d0343972e2e125ebc1d3f378b6c83f404fbaa647be79c",
+          "source45SHA256": "0d723120ca7682d2010e478b49300147a09819e5b43f2dd9a576ba7d2a713a6c",
+          "source55SHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "mouth": {
+          "sha256": "4710aabcdc8ddee091ab87a3ca29bb891be16dd73820263e5edc7a1bc3cce6a6",
+          "source45SHA256": "be89f773e134751ce96aa658389c2ceeb7aa7a7c95554fe519bf0c1e9404bcaa",
+          "source55SHA256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.front": {
+          "sha256": "7d563bb953d338097540a4370f429243e1c75c15c5594c15b6a9244814aac815",
+          "source45SHA256": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+          "source55SHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.ahoge": {
+          "sha256": "cd14d4a40692db69e03fa10b96ac7be222b01ca1347b026331eaaed56d9426e4",
+          "source45SHA256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201",
+          "source55SHA256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "5795a81a3a0c5c272f0410ebe49ff78fa1804adbbdd51d118a2e0daf51220f2b",
+          "source45SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+          "source55SHA256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "method": "bidirectional-flow-premultiplied-artmesh",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        }
+      },
+      "compositeSHA256": "3861bbb645ff3df8242b740e18c76b67167d9dd88c0901c6361eef27eb3886de",
+      "P0SourceOriginalByteExact": false,
+      "originalP15_37RoleByteExact": false,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 55.0,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "source45SHA256": "330aec2bae4831a645a0a2dbe0d77afa5126026c119a3287a5ccc67127a80e5b",
+          "source55SHA256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.back": {
+          "sha256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "source45SHA256": "4e8ef275c260d4b3e00e06b769bc3903609a4b4254e9d0ffa1f41e8824ca64bb",
+          "source55SHA256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "face.skin": {
+          "sha256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "source45SHA256": "586db8498ece985267864b4b3b67f55455f7aace8f40bb9eadddc0ac5d3c32fb",
+          "source55SHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "source45SHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "source55SHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "ear.near": {
+          "sha256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "source45SHA256": "caaf647795033669d88093e3b4340717f06fb6c9e4cbf1e013c97f8406dfbee4",
+          "source55SHA256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.side": {
+          "sha256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "source45SHA256": "4e2bffd258a8431f481902616efaa7633e631df86b2d547280bbca23a73ef2c6",
+          "source55SHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.far": {
+          "sha256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "source45SHA256": "779868a8f71b1c535608be172368b2b4cbb5c0292317c893c247ead658ca7793",
+          "source55SHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "eye.near": {
+          "sha256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "source45SHA256": "e68eeb351c5b077328bdb523fcf0ca576cef7a6547d4ddf5de474ef409d310d6",
+          "source55SHA256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "nose": {
+          "sha256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "source45SHA256": "0d723120ca7682d2010e478b49300147a09819e5b43f2dd9a576ba7d2a713a6c",
+          "source55SHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "mouth": {
+          "sha256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "source45SHA256": "be89f773e134751ce96aa658389c2ceeb7aa7a7c95554fe519bf0c1e9404bcaa",
+          "source55SHA256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.front": {
+          "sha256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "source45SHA256": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+          "source55SHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.ahoge": {
+          "sha256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "source45SHA256": "e72d588f135aabe60029bf7fabf8b3290a1f5dc64a5db6d99b51dc06e7dc0201",
+          "source55SHA256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "source45SHA256": "97c2fdeeba85916915bf549e6b9a0324ebb936fbc1fb533dac2a3f27d882cfa9",
+          "source55SHA256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "method": "P15-37-registered-source-byte-exact",
+          "sourceOwner": "P0 canonical 45 then P15-37 55",
+          "independentNewKeyframe": false
+        }
+      },
+      "compositeSHA256": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+      "P0SourceOriginalByteExact": false,
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 56.25,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "58a32f3c495d9c47e7700390728db04f6dde574e6511079625df03afaa0a4bfc",
+          "sourceSHA256": "58a32f3c495d9c47e7700390728db04f6dde574e6511079625df03afaa0a4bfc",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "642f24ea38bffdc3bd836ee0d182be65d8959f665b1c2477957ed3e44577f06a",
+          "sourceSHA256": "642f24ea38bffdc3bd836ee0d182be65d8959f665b1c2477957ed3e44577f06a",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "8971cec5c02a7112fe0c7a19e805485a100bacad8096f96bf9296e8bb88dde73",
+          "sourceSHA256": "8971cec5c02a7112fe0c7a19e805485a100bacad8096f96bf9296e8bb88dde73",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "0554b8462b58a419da358d32fd714ac3b9da7a3008188a4d7855454327045d86",
+          "sourceSHA256": "0554b8462b58a419da358d32fd714ac3b9da7a3008188a4d7855454327045d86",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "721a902f07f9138631687f1a1884d75fa660e10bd88b439c513317c882097189",
+          "sourceSHA256": "721a902f07f9138631687f1a1884d75fa660e10bd88b439c513317c882097189",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "acb892c7f00807469975dce786a3b53b2201ff584546df9b8559867a71c87458",
+          "sourceSHA256": "acb892c7f00807469975dce786a3b53b2201ff584546df9b8559867a71c87458",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "bc1a3f779749fc30c360c336d646e9bd180e1312bdcc43145033ef43cdfde306",
+          "sourceSHA256": "bc1a3f779749fc30c360c336d646e9bd180e1312bdcc43145033ef43cdfde306",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "a0244f4658fa308d5cfa3e77ff83c30eb86d82aa03de208b00b257c0f87c514d",
+          "sourceSHA256": "a0244f4658fa308d5cfa3e77ff83c30eb86d82aa03de208b00b257c0f87c514d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "dabf7e69cca8cdabfb1d8ef3802af050230f61ae2e711098e95cf1fb0bc55a79",
+          "sourceSHA256": "dabf7e69cca8cdabfb1d8ef3802af050230f61ae2e711098e95cf1fb0bc55a79",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "cd72ada1a8e4e6c7459b36650b25945a3e66beb54dd5c4da1e23d651bc5f594d",
+          "sourceSHA256": "cd72ada1a8e4e6c7459b36650b25945a3e66beb54dd5c4da1e23d651bc5f594d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "4ec1bd249a7f03dc378cf738e0da9cc3b068ab065c6c03688818c3e216830f28",
+          "sourceSHA256": "4ec1bd249a7f03dc378cf738e0da9cc3b068ab065c6c03688818c3e216830f28",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "124d0e4cda2958395c806ac2b084e5469f6a847702133efb40c94d56a53fd963",
+          "sourceSHA256": "124d0e4cda2958395c806ac2b084e5469f6a847702133efb40c94d56a53fd963",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "412c92da1d7608829041834d57b82ea66429ac1030cb96b799d2bb74e14bd543",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 57.5,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "1db301655cf76c6614c4ae6f88ef929b017450d45641c26ac4e26583a6ea2a4d",
+          "sourceSHA256": "1db301655cf76c6614c4ae6f88ef929b017450d45641c26ac4e26583a6ea2a4d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "6a8ddf3a6c253810ccf1149582be88b9efd9d6db07f9b1998e0e22efc01f7b71",
+          "sourceSHA256": "6a8ddf3a6c253810ccf1149582be88b9efd9d6db07f9b1998e0e22efc01f7b71",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+          "sourceSHA256": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "52c728d1920623cdda44b524b788b87a0c3b0754b6ff48b792636008a35daf24",
+          "sourceSHA256": "52c728d1920623cdda44b524b788b87a0c3b0754b6ff48b792636008a35daf24",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "sourceSHA256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+          "sourceSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "cdd09b5ba5126655e53d1212494518826bd5618b3f46b7fe32db1bd9a93b5155",
+          "sourceSHA256": "cdd09b5ba5126655e53d1212494518826bd5618b3f46b7fe32db1bd9a93b5155",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063",
+          "sourceSHA256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "06ef82d365167932e5dc73b6f7f8d4c7dd1e06d476b34dd8d394817d91e1db54",
+          "sourceSHA256": "06ef82d365167932e5dc73b6f7f8d4c7dd1e06d476b34dd8d394817d91e1db54",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+          "sourceSHA256": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "5abf914c5bd01728e26c64a37ca17b617b7389411d19b8693af9a422bb22c4f5",
+          "sourceSHA256": "5abf914c5bd01728e26c64a37ca17b617b7389411d19b8693af9a422bb22c4f5",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "5858a0448e51c70a7812911ffeacd85aa1fcd6e080a3e8e24a081db95724e58c",
+          "sourceSHA256": "5858a0448e51c70a7812911ffeacd85aa1fcd6e080a3e8e24a081db95724e58c",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 58.75,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "6e60712dbe2efcb6c41805bd9a9752255712f366d9af0e73c3e2a76b7be5ff74",
+          "sourceSHA256": "6e60712dbe2efcb6c41805bd9a9752255712f366d9af0e73c3e2a76b7be5ff74",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "6068798a7aaa9cc5f91249bd72d11b751f790c1346c3c380c3f0c41c5393dbcc",
+          "sourceSHA256": "6068798a7aaa9cc5f91249bd72d11b751f790c1346c3c380c3f0c41c5393dbcc",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "3474eb7b6699075a7d8c546003fa83370a22943639e1ab3f666ef1bf0370c485",
+          "sourceSHA256": "3474eb7b6699075a7d8c546003fa83370a22943639e1ab3f666ef1bf0370c485",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "00a18ace6f65f68c26ade7836cac4190f021b8f80be98ddc85570af7488e9199",
+          "sourceSHA256": "00a18ace6f65f68c26ade7836cac4190f021b8f80be98ddc85570af7488e9199",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "26742fdc4eb0bbf80a6f00a9357ee996e348ce623ab8f59e8248085d9154c57f",
+          "sourceSHA256": "26742fdc4eb0bbf80a6f00a9357ee996e348ce623ab8f59e8248085d9154c57f",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "7491b4e3c64997e88002c43faa0a314d0e1c14bea2462b6b6acce45b9749beff",
+          "sourceSHA256": "7491b4e3c64997e88002c43faa0a314d0e1c14bea2462b6b6acce45b9749beff",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "1e2f8230bb7295524826417ffdcc134f296c86f2c2de103991077d0cc4654e16",
+          "sourceSHA256": "1e2f8230bb7295524826417ffdcc134f296c86f2c2de103991077d0cc4654e16",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "41361cbb31a041a23c1eaf6d854a45a58b10a976966415f35bdea76e8d59294d",
+          "sourceSHA256": "41361cbb31a041a23c1eaf6d854a45a58b10a976966415f35bdea76e8d59294d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "c8eaf71086b7e7f7ebc8b7e7a57c9df874f1f1a51b12de0c703cd58ad55e9908",
+          "sourceSHA256": "c8eaf71086b7e7f7ebc8b7e7a57c9df874f1f1a51b12de0c703cd58ad55e9908",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "8d5c9cb61e14b50559e84a3f1812159f5ba72ec5ce66e36455b15e4dbf5f049e",
+          "sourceSHA256": "8d5c9cb61e14b50559e84a3f1812159f5ba72ec5ce66e36455b15e4dbf5f049e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "35c21858783625d52b86f46c6c8da9dae28ef6b0d80af58fb70a729c44780330",
+          "sourceSHA256": "35c21858783625d52b86f46c6c8da9dae28ef6b0d80af58fb70a729c44780330",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "7cff1542ef5a4db99d376b240bae7edabe413a6d1dc5355fd90ea1ec522eb71f",
+          "sourceSHA256": "7cff1542ef5a4db99d376b240bae7edabe413a6d1dc5355fd90ea1ec522eb71f",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "8cf2c23e007ceca6272e6f15c9a2ae64c61bbd741d1040d7cc6ff6a2053692c4",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 60.0,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "212dfefdffcbe58695d0b236a015d4d0c294430c1daeb81dfb84052d4385a180",
+          "sourceSHA256": "212dfefdffcbe58695d0b236a015d4d0c294430c1daeb81dfb84052d4385a180",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "a3990b1db2847237246b757b66dc4a932a8a277be1ff7f28b43534494c8e716d",
+          "sourceSHA256": "a3990b1db2847237246b757b66dc4a932a8a277be1ff7f28b43534494c8e716d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+          "sourceSHA256": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "28757f55b38cf31789e50d6be697d789b6c1e1ff183fb773421e206dd9f9251f",
+          "sourceSHA256": "28757f55b38cf31789e50d6be697d789b6c1e1ff183fb773421e206dd9f9251f",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "sourceSHA256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+          "sourceSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "f3a97f8b3cf2d5e5ef3cf17667573d11ea70e8d1692e58f8f53455c2bd900d51",
+          "sourceSHA256": "f3a97f8b3cf2d5e5ef3cf17667573d11ea70e8d1692e58f8f53455c2bd900d51",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6",
+          "sourceSHA256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "12d443200ef864e4be2756cc5cb875f8d598320ac758881b197cd6a9aeb993ae",
+          "sourceSHA256": "12d443200ef864e4be2756cc5cb875f8d598320ac758881b197cd6a9aeb993ae",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+          "sourceSHA256": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "bddb08de8074e8025e5ce82f240a90cd61758478011425ae5baf1239da89ed4e",
+          "sourceSHA256": "bddb08de8074e8025e5ce82f240a90cd61758478011425ae5baf1239da89ed4e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "39e72f7f7bd405b39451f8c685a1530230ddfea94b5cb412044886936bbcc972",
+          "sourceSHA256": "39e72f7f7bd405b39451f8c685a1530230ddfea94b5cb412044886936bbcc972",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 61.25,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "495649f78e2055ec9cb5c065d60089db41d45655496a13e2c55c0a5ab93850cb",
+          "sourceSHA256": "495649f78e2055ec9cb5c065d60089db41d45655496a13e2c55c0a5ab93850cb",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "a0db3b42f707c816546d29c2af65b24e854fee95bd97edd513ebb6a2982c85f6",
+          "sourceSHA256": "a0db3b42f707c816546d29c2af65b24e854fee95bd97edd513ebb6a2982c85f6",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "07f436112ff22f7e5b33701cfec84a268bedf864babc66ae2be561e20a8370ce",
+          "sourceSHA256": "07f436112ff22f7e5b33701cfec84a268bedf864babc66ae2be561e20a8370ce",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "0386900405a4ded5fb6274d484e8677694d32a2aac2fa2e73eba993cfa722e89",
+          "sourceSHA256": "0386900405a4ded5fb6274d484e8677694d32a2aac2fa2e73eba993cfa722e89",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "d44d370e623913ea627a676e43e70a29dc949829a5a9a6a3df58d76944c85268",
+          "sourceSHA256": "d44d370e623913ea627a676e43e70a29dc949829a5a9a6a3df58d76944c85268",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "fcb3d53b98b6b61d097cf7204140af02b1b8355ea85aad4b2bd5f06e145b3b1d",
+          "sourceSHA256": "fcb3d53b98b6b61d097cf7204140af02b1b8355ea85aad4b2bd5f06e145b3b1d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "51e895e3fbfb668b9dc4853f5da5b90c863d8dd460032ae2bcc39a44e995ec20",
+          "sourceSHA256": "51e895e3fbfb668b9dc4853f5da5b90c863d8dd460032ae2bcc39a44e995ec20",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "02c7e90afc567c0dc5e7826c70a99cca806abc9acccf54cc255852ef81df6f78",
+          "sourceSHA256": "02c7e90afc567c0dc5e7826c70a99cca806abc9acccf54cc255852ef81df6f78",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "620b57314f9e1191d23b9f5ab733e42e4441cf6c3fd14386a6bae38b9c5fa315",
+          "sourceSHA256": "620b57314f9e1191d23b9f5ab733e42e4441cf6c3fd14386a6bae38b9c5fa315",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "bc51de6fb7b66c928ee5876ae995387d26950543ff2775216048557b5d357bd0",
+          "sourceSHA256": "bc51de6fb7b66c928ee5876ae995387d26950543ff2775216048557b5d357bd0",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "dfb194a233eef0844297f50807473b535da04866d52f0dcc3d1316caaf5c91bd",
+          "sourceSHA256": "dfb194a233eef0844297f50807473b535da04866d52f0dcc3d1316caaf5c91bd",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "1bdc651a29a1bfd90363cff76b0a715099508b0ec0335172fd85c9ec01161396",
+          "sourceSHA256": "1bdc651a29a1bfd90363cff76b0a715099508b0ec0335172fd85c9ec01161396",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "572ac49841a6ea11effd8aef5eb64416a38133ea506588681d3fd002074855f4",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 62.5,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "e3e7c040f66df10f079c7761a1af5acbad0e623402beaa905c56afe0a0b83ea7",
+          "sourceSHA256": "e3e7c040f66df10f079c7761a1af5acbad0e623402beaa905c56afe0a0b83ea7",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "e8a5f0dfca6b0bb0c60aa50067a57f875c86f60830a74d2827d9aa97abc1b84b",
+          "sourceSHA256": "e8a5f0dfca6b0bb0c60aa50067a57f875c86f60830a74d2827d9aa97abc1b84b",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "ff26c04d9adff8dae45eb466490e832774a89f2746352a81449f28ea0a48ee94",
+          "sourceSHA256": "ff26c04d9adff8dae45eb466490e832774a89f2746352a81449f28ea0a48ee94",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "3c2861f8f996e08694f87058d34257da84af7538a7ba99bc6d273f620581be25",
+          "sourceSHA256": "3c2861f8f996e08694f87058d34257da84af7538a7ba99bc6d273f620581be25",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "sourceSHA256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "37f15e1f876f51b09c755099b62984e83dbbd7e60ed6791ea289c2739cacf82a",
+          "sourceSHA256": "37f15e1f876f51b09c755099b62984e83dbbd7e60ed6791ea289c2739cacf82a",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "10b211e08ac811de395e217cc11fb1f104a9f32e57716b101a8ddfe073d2b5c5",
+          "sourceSHA256": "10b211e08ac811de395e217cc11fb1f104a9f32e57716b101a8ddfe073d2b5c5",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "2618dc19459f2bb5eb1d071c98cdaefd71888708269fd8a00e74d9f7a3f54f94",
+          "sourceSHA256": "2618dc19459f2bb5eb1d071c98cdaefd71888708269fd8a00e74d9f7a3f54f94",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "057e143a185da7db5b19b30f5765e060daf474c76b0ce6581fa36f0cadeb84a6",
+          "sourceSHA256": "057e143a185da7db5b19b30f5765e060daf474c76b0ce6581fa36f0cadeb84a6",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "70adddd59c424c24e84c49771aa050ce23ee59e1b0f17ccd2e04dd894da6b589",
+          "sourceSHA256": "70adddd59c424c24e84c49771aa050ce23ee59e1b0f17ccd2e04dd894da6b589",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "cb6552bb31d7f0c810995de49c90b24cc2725db9a58a95b8fedc735be61241da",
+          "sourceSHA256": "cb6552bb31d7f0c810995de49c90b24cc2725db9a58a95b8fedc735be61241da",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "01e42846d79cd456911490af876a2fdc49cee6d9208ee503b35f289e7a5def91",
+          "sourceSHA256": "01e42846d79cd456911490af876a2fdc49cee6d9208ee503b35f289e7a5def91",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "ab746b0a72f12ec175efe63e9e688ff3272dda25e35268ff30e176b3092c505f",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 63.75,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "d0d76d3d657976f77aacbe2a7785c11a384837f1b361956e356c81ac70c589bc",
+          "sourceSHA256": "d0d76d3d657976f77aacbe2a7785c11a384837f1b361956e356c81ac70c589bc",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "91d20152d659b99f1f9b05266973bfbc758975038e26f6ebe4f6038972c98cdb",
+          "sourceSHA256": "91d20152d659b99f1f9b05266973bfbc758975038e26f6ebe4f6038972c98cdb",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "4f82e814139c9f975db70475b31e420849ca4c5632f1f26f5f5391e971d42fd2",
+          "sourceSHA256": "4f82e814139c9f975db70475b31e420849ca4c5632f1f26f5f5391e971d42fd2",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "c612d447bd35c658cfea58ddd36d11af702e05e5c5ae1e1405e5074278a8e598",
+          "sourceSHA256": "c612d447bd35c658cfea58ddd36d11af702e05e5c5ae1e1405e5074278a8e598",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "df8b58058e9fd60b8c50ba38e11cd74b426e9109f36d0b410c73ad9022a1c8e2",
+          "sourceSHA256": "df8b58058e9fd60b8c50ba38e11cd74b426e9109f36d0b410c73ad9022a1c8e2",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "e9c2fc9997e1862c0e56019497ba3ad53d80ccb3d7dabeae47661e06061b60e8",
+          "sourceSHA256": "e9c2fc9997e1862c0e56019497ba3ad53d80ccb3d7dabeae47661e06061b60e8",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "233d620677bfee0c9af041b0cfb00eaa9e2000b4b077e6a82b5754975f028281",
+          "sourceSHA256": "233d620677bfee0c9af041b0cfb00eaa9e2000b4b077e6a82b5754975f028281",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "7d7e98aa3060bad354833dad78961fa36dd5116a5bf44d1243a7ad22e1086652",
+          "sourceSHA256": "7d7e98aa3060bad354833dad78961fa36dd5116a5bf44d1243a7ad22e1086652",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "54a2934305159c5285f76c06b7bb1beb881b480ee50ff7dae4f9c165fb5cbaf2",
+          "sourceSHA256": "54a2934305159c5285f76c06b7bb1beb881b480ee50ff7dae4f9c165fb5cbaf2",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "0cf268a1341e2bd1491b43b4e231de3f7539a3f34a7d63cc6cf9d989582f7485",
+          "sourceSHA256": "0cf268a1341e2bd1491b43b4e231de3f7539a3f34a7d63cc6cf9d989582f7485",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "4c8b2b919d01da77619c6a8e41b5f4df8a53f7ced1ef7d9c7956c4c67abe7dbc",
+          "sourceSHA256": "4c8b2b919d01da77619c6a8e41b5f4df8a53f7ced1ef7d9c7956c4c67abe7dbc",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "b2a9b9a6dfd5419d748c8e3ddee07a1a5c4ecb29e9ce585b20b639da9b04b49f",
+          "sourceSHA256": "b2a9b9a6dfd5419d748c8e3ddee07a1a5c4ecb29e9ce585b20b639da9b04b49f",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "1a8b2b3f8c7e0b1919877544d70b51b01401c55fa51373491606f23925e0ae55",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    },
+    {
+      "yaw": 65.0,
+      "kind": "registered-vdd-source",
+      "roleCount": 13,
+      "roles": {
+        "body.reference": {
+          "sha256": "322818b599339d54dca0bc627f0d1de51f79be7ad973fa7bb3005b137dfed6cc",
+          "sourceSHA256": "322818b599339d54dca0bc627f0d1de51f79be7ad973fa7bb3005b137dfed6cc",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.back": {
+          "sha256": "f72e8288dca1e25ad7928092f7e7206982ccd53782181ed51ba952558ab76c5d",
+          "sourceSHA256": "f72e8288dca1e25ad7928092f7e7206982ccd53782181ed51ba952558ab76c5d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "face.skin": {
+          "sha256": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d",
+          "sourceSHA256": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "ear.near": {
+          "sha256": "7843caa0a88251d54e829862207d8d2de85939468ebfa94b17587e27bcd580b2",
+          "sourceSHA256": "7843caa0a88251d54e829862207d8d2de85939468ebfa94b17587e27bcd580b2",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.side": {
+          "sha256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84",
+          "sourceSHA256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.far": {
+          "sha256": "a7ae70c115c945916e14d887427fd8c5f7be407b1a6f97bf7756a428641193e0",
+          "sourceSHA256": "a7ae70c115c945916e14d887427fd8c5f7be407b1a6f97bf7756a428641193e0",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "eye.near": {
+          "sha256": "587c40c435c8515d2eb1f3f867dbc29b1238f04cc669960e8d05ad523e5b41d9",
+          "sourceSHA256": "587c40c435c8515d2eb1f3f867dbc29b1238f04cc669960e8d05ad523e5b41d9",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "nose": {
+          "sha256": "4499954095f75911c6b55c474b90cdf56ce009fc27a61e198bed7ed337a1a60f",
+          "sourceSHA256": "4499954095f75911c6b55c474b90cdf56ce009fc27a61e198bed7ed337a1a60f",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "mouth": {
+          "sha256": "b91ef19ad44d1df36fd839e5c28020ccce4d30f148d9bb06aa63c025797aeee7",
+          "sourceSHA256": "b91ef19ad44d1df36fd839e5c28020ccce4d30f148d9bb06aa63c025797aeee7",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.front": {
+          "sha256": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6",
+          "sourceSHA256": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.ahoge": {
+          "sha256": "b28e3447b6c9d28f89009df4c008d87653c1a546262f166608912740f14f0bba",
+          "sourceSHA256": "b28e3447b6c9d28f89009df4c008d87653c1a546262f166608912740f14f0bba",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+          "sourceSHA256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+          "sourceOwner": "P15-37 registered view",
+          "method": "registered-source-byte-exact"
+        }
+      },
+      "compositeSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "originalP15_37RoleByteExact": true,
+      "independentlyPaintedArtApproved": false
+    }
+  ],
+  "adjacentMetrics": [
+    {
+      "interval": [
+        45.0,
+        47.5
+      ],
+      "alphaIoU": 0.973803,
+      "sharedVisibleRGBDelta": 9.847566
+    },
+    {
+      "interval": [
+        47.5,
+        50.0
+      ],
+      "alphaIoU": 0.98262,
+      "sharedVisibleRGBDelta": 7.923095
+    },
+    {
+      "interval": [
+        50.0,
+        52.5
+      ],
+      "alphaIoU": 0.981496,
+      "sharedVisibleRGBDelta": 7.447589
+    },
+    {
+      "interval": [
+        52.5,
+        55.0
+      ],
+      "alphaIoU": 0.979492,
+      "sharedVisibleRGBDelta": 7.877327
+    },
+    {
+      "interval": [
+        55.0,
+        56.25
+      ],
+      "alphaIoU": 0.986328,
+      "sharedVisibleRGBDelta": 5.412586
+    },
+    {
+      "interval": [
+        56.25,
+        57.5
+      ],
+      "alphaIoU": 0.980655,
+      "sharedVisibleRGBDelta": 5.332357
+    },
+    {
+      "interval": [
+        57.5,
+        58.75
+      ],
+      "alphaIoU": 0.985923,
+      "sharedVisibleRGBDelta": 4.908319
+    },
+    {
+      "interval": [
+        58.75,
+        60.0
+      ],
+      "alphaIoU": 0.980035,
+      "sharedVisibleRGBDelta": 5.043272
+    },
+    {
+      "interval": [
+        60.0,
+        61.25
+      ],
+      "alphaIoU": 0.983549,
+      "sharedVisibleRGBDelta": 4.99233
+    },
+    {
+      "interval": [
+        61.25,
+        62.5
+      ],
+      "alphaIoU": 0.979787,
+      "sharedVisibleRGBDelta": 5.077384
+    },
+    {
+      "interval": [
+        62.5,
+        63.75
+      ],
+      "alphaIoU": 0.969249,
+      "sharedVisibleRGBDelta": 7.525259
+    },
+    {
+      "interval": [
+        63.75,
+        65.0
+      ],
+      "alphaIoU": 0.975775,
+      "sharedVisibleRGBDelta": 7.365989
+    }
+  ],
+  "registeredFull45DegreeOriginalPreserved": true,
+  "registeredP15_37NineFramesPreserved": true,
+  "fullIndependentArtAdmission": 0,
+  "independentHiddenUnderpaintAdmission": 0,
+  "physical3DTopologyApproved": false,
+  "productionRendererModified": false,
+  "status": "REGISTERED_45_TO65_ARTMESH_ENGINEERING_CANDIDATE"
+}

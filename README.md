@@ -159,3 +159,8 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-37 可交互原画验收及图层来源](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-visual-review-qa.json)
 - [P15-37 Chromium 审查与画面加载结果](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-browser-qa.json)
 - [P15-37 离线 HTML 审查包哈希](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-delivery.json)
+- [P15-38 P0 45°–65° 原画 ArtMesh 连续性报告](docs/plans/2026-11-11-p15-38-p0-original-artmesh-arc.md)
+- [P15-38 十三角度语义原画与来源验证](experiments/gif-multiview-keyparts-mvp/evidence/p15-38-extended-artmesh-qa.json)
+- [P15-38 画面对照和 HTML 资源](experiments/gif-multiview-keyparts-mvp/evidence/p15-38-visual-review-qa.json)
+- [P15-38 Chromium 实际检查](experiments/gif-multiview-keyparts-mvp/evidence/p15-38-browser-qa.json)
+- [P15-38 原画审查包 SHA-256](experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json)

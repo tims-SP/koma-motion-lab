@@ -1,0 +1,567 @@
+{
+  "schema": "KOMA-P15-38-45_TO65_CHROMIUM-V1",
+  "characterId": "p0_character_001",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "angle": 45,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 45,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 45,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 47.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 47.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 47.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 50,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 50,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 50,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 52.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 52.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 52.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 61.25,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 61.25,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 61.25,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 62.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 62.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 62.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 63.75,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 63.75,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 63.75,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 45,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 45,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 45,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 47.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 47.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 47.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 50,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 50,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 50,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 52.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 52.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 52.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 58.75,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 58.75,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 58.75,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 61.25,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 61.25,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 61.25,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 62.5,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 62.5,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 62.5,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 63.75,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 63.75,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 63.75,
+      "mode": "hair",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "compare",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "face",
+      "loadedImages": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "hair",
+      "loadedImages": 4
+    }
+  ],
+  "screenshots": [
+    {
+      "viewport": "desktop",
+      "angle": 45,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw45-compare.png",
+      "sha256": "38682d89b9a54f084923766ce6c077afdcf241d54e2a38150412c9a083ebeefc"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 50,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw50-compare.png",
+      "sha256": "15ab92eb10c4631ece0262094b1bb5868144f44f724e7f8ed22adbad5f30e6e0"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 50,
+      "mode": "face",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw50-face.png",
+      "sha256": "3ee2dc8e58e1ded9774619db0b76dfc8ca92de321539f30e4e986ef756ddd7c0"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 50,
+      "mode": "hair",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw50-hair.png",
+      "sha256": "c2a476b7b275180c39559ef611f1f4e757fb9f4464e2bf51d55f43833077c4d8"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw55-compare.png",
+      "sha256": "3ebc8628a1c8f72053be988582163c1bba7a50f58a22b8d35de1f07c3d353f25"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw57p5-compare.png",
+      "sha256": "6e26f6217bcf0179f484478c2c5521a16b358115af05a20b2ca2f03d93c84353"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw60-compare.png",
+      "sha256": "17c46749f6494c5332e21dc7c4ac43906269f348dcda612031895332f0e5dada"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/desktop-yaw65-compare.png",
+      "sha256": "021f324aadf65b7aa25cbf69e9fd5a8e7f93d7d743fce5ba6dfa509cd4ed506e"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 50,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/mobile-yaw50-compare.png",
+      "sha256": "69ba246d9163760cf58917932b95bb1ae97382763294bd6528a7dac0c1776538"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/mobile-yaw55-compare.png",
+      "sha256": "effcd9cb9c6764fa1ee61d0be57f950371539641feaf66b626d02a786817199c"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/mobile-yaw60-compare.png",
+      "sha256": "61f1262fa5e7f1cb3db38ab660b3508a21cfcf493c941e17647624fbda70c60e"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-38-original-p0-arc-review/browser/mobile-yaw65-compare.png",
+      "sha256": "5465089a11f26fbd41b771c594ffe955e10c7a4233482c4dbbaf9efc7d75e70f"
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "artisticAdmission": "INDEPENDENT_ORIGINAL_REVIEW",
+  "status": "P15_38_ORIGINAL_P0_EXTENDED_ARTMESH_HTML_VERIFIED",
+  "viewportChecks": 78,
+  "imageLoads": 312,
+  "screenshotCount": 12
+}
