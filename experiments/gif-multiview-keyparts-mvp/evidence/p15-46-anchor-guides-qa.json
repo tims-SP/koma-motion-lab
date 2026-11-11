@@ -1,0 +1,73 @@
+{
+  "schema": "KOMA-P15-46-ANCHOR-GUIDES-V1",
+  "yaw": 65,
+  "sourceCameraSHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+  "anchors": {
+    "eye.near.iris": {
+      "xy": [
+        604.739,
+        460.617
+      ],
+      "visibility": 1.0,
+      "model": "three_view_orthographic_proxy"
+    },
+    "eye.far.iris": {
+      "xy": [
+        729.373,
+        469.04
+      ],
+      "visibility": 0.76604,
+      "model": "two_view_linear_extrapolation"
+    },
+    "nose": {
+      "xy": [
+        716.341,
+        535.644
+      ],
+      "visibility": 1.0,
+      "model": "three_view_orthographic_proxy"
+    },
+    "mouth": {
+      "xy": [
+        684.097,
+        596.867
+      ],
+      "visibility": 1.0,
+      "model": "three_view_orthographic_proxy"
+    },
+    "face.jaw.near": {
+      "xy": [
+        515.937,
+        549.822
+      ],
+      "visibility": 1.0,
+      "model": "three_view_orthographic_proxy"
+    },
+    "face.chin": {
+      "xy": [
+        637.199,
+        660.889
+      ],
+      "visibility": 1.0,
+      "model": "three_view_orthographic_proxy"
+    },
+    "hair.clip.center": {
+      "xy": [
+        789.948,
+        320.1
+      ],
+      "visibility": 0.76604,
+      "model": "two_view_linear_extrapolation"
+    }
+  },
+  "guide": {
+    "path": "facial-geometry-guide-65.png",
+    "sha256": "2efdd77e0b62d8ecb1ae50ff104719ffee0642c4e8e6c614063abf7bd4ecb64f"
+  },
+  "mask": {
+    "path": "face-mask-narrow-65.png",
+    "sha256": "bb628be5bdc75c4d5e34e2405045336cbc265f0aa5d130a7f32b2c434fbbe126"
+  },
+  "modelInferenceAttempted": false,
+  "reason": "ZeroGPU quota exceeded after first successful P15-45 generation"
+}

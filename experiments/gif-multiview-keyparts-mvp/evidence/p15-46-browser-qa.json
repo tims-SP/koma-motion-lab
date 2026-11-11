@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "desktop",
+    "mobile"
+  ],
+  "screenshots": [
+    {
+      "file": "browser-desktop.png",
+      "sha256": "069103b67aa0cd5e0fb532b214b1d1caf96082ba5d3e3043e625fedfb1b4526a"
+    },
+    {
+      "file": "browser-mobile.png",
+      "sha256": "82c38e52585d2d321d11365a3f6299476273fcdb9d512ba4767ba8d3ddc56d52"
+    }
+  ],
+  "errors": [],
+  "status": "P15_46_ANCHOR_GUIDES_BROWSER_VERIFIED"
+}

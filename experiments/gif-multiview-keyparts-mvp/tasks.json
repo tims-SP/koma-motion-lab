@@ -2748,6 +2748,16 @@
       "evidence": "evidence/p15-45-qwen21-controlnet-qa.json",
       "plan": "docs/plans/2026-11-11-p15-45-qwen21-controlnet-inference.md",
       "next": "P15-46 strengthen anchor-aligned lineart guides and narrow face inpaint mask; retry A/B when ZeroGPU quota available"
+    },
+    "p15_46AnchorGuidedLineart": {
+      "status": "P15_46_CONTROL_GUIDES_PREPARED_INFERENCE_BLOCKED_BY_ZEROGPU_QUOTA",
+      "guide": "private-assets/exports/p15-46-anchor-guides/facial-geometry-guide-65.png",
+      "mask": "private-assets/exports/p15-46-anchor-guides/face-mask-narrow-65.png",
+      "evidence": "evidence/p15-46-anchor-guides-qa.json",
+      "plan": "docs/plans/2026-11-11-p15-46-anchor-guided-lineart.md",
+      "tests": 5,
+      "modelInferenceAttempted": false,
+      "next": "Retry A/B inference after ZeroGPU quota reset or add this Space as dedicated HF MCP tool"
     }
   }
 }
