@@ -119,6 +119,7 @@ def run():
   "artisticApproval":False,
   "underpaintFromExistingSource":True,"newModelPaintedSemanticRolesPerAngle":3}
  (OUT/"qa.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
+ QA.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps({"status":"P15_36_INTERACTIVE_HTML_CREATED","frames":len(frames),
    "sourceAssetsPerAngle":len(files),"modes":report["modes"],
    "newPaintedRolesPerAngle":3}))
