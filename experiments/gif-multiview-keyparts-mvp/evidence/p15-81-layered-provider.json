@@ -1,0 +1,22 @@
+{
+  "schema": "KOMA-P15-81-OFFICIAL-QWEN-LAYERED-V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "inputSHA256": "488dd3cad3225bbcbb21bb1a3a507ffdda0a55665485b7539017d64e73888d4d",
+  "sourceCropBox": [
+    150,
+    45,
+    850,
+    745
+  ],
+  "inputSize": [
+    640,
+    640
+  ],
+  "provider": "Qwen/Qwen-Image-Layered",
+  "modelOutputs": [],
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "status": "FAILED",
+  "eventId": "9dab46f401334ab2abf20eca75c707c5",
+  "error": "RuntimeError('null')"
+}

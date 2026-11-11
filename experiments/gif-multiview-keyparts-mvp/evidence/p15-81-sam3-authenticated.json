@@ -1,0 +1,39 @@
+{
+  "schema": "KOMA-P15-81-SAM3-AUTHENTICATED-V1",
+  "provider": "prithivMLmods/SAM3-Demo",
+  "prompt": "front bangs hair fringe on forehead",
+  "confidenceThreshold": 0.25,
+  "inferenceAuthenticated": true,
+  "outputs": [
+    {
+      "name": "sam3-overlay.webp",
+      "sha256": "bf37529fd831eb5332b6336d23b284a71df22d1267f4785ac2caae25989ac8dd",
+      "mode": "RGB",
+      "size": [
+        640,
+        640
+      ]
+    },
+    {
+      "name": "sam3-mask-027.png",
+      "sha256": "97646f71fd8132003ea3cb4036e7a43360a22833eefbbca086b72c42a05879fb",
+      "mode": "RGBA",
+      "size": [
+        640,
+        640
+      ]
+    },
+    {
+      "name": "sam3-mask-083.png",
+      "sha256": "5fce13fc61199cd0cd1c116ae8d626bae23908c4c586c07434ce1045dca78d94",
+      "mode": "RGBA",
+      "size": [
+        640,
+        640
+      ]
+    }
+  ],
+  "status": "MODEL_RETURNED",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false
+}

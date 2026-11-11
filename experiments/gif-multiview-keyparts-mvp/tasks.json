@@ -3833,6 +3833,46 @@
       "plan": "docs/plans/2026-11-11-p15-80-front-bangs-semantic-gate.md",
       "review": "private-assets/exports/p15-80-front-hair/index.html",
       "next": "P15-81 obtain original same-view clean bang and hidden skin RGBA rather than extra threshold/morphological patches"
+    },
+    "p15_81AuthenticatedSam3FrontBangs": {
+      "status": "SAM3_AUTHENTICATED_TEXT_MASK_RETURNED_PROVISIONAL_FRONT_HAIR_REST_AND_DYNAMIC_FAIL",
+      "characterId": "p0_character_001",
+      "originalSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "inputSHA256": "488dd3cad3225bbcbb21bb1a3a507ffdda0a55665485b7539017d64e73888d4d",
+      "qwenImageLayered": "UPLOAD_SUCCEEDED_INFERENCE_FAILED",
+      "sam3Authenticated": true,
+      "provider": "prithivMLmods/SAM3-Demo",
+      "narrowMaskSHA256": "97646f71fd8132003ea3cb4036e7a43360a22833eefbbca086b72c42a05879fb",
+      "narrowFrontHairSHA256": "5857c2a67bfc2d4bf545f24d707fd945830ce3d8cccfc47d86e59d42770dc128",
+      "wideMaskSHA256": "5fce13fc61199cd0cd1c116ae8d626bae23908c4c586c07434ce1045dca78d94",
+      "narrowFrontHairAlphaPixels": 88740,
+      "actualZeroPoseDiffPixelsNarrow": 8409,
+      "actualZeroPoseExact": false,
+      "motionOffsetsRenderedPx": [
+        9,
+        18
+      ],
+      "motionHolesNarrow": {
+        "9": 0,
+        "18": 0
+      },
+      "newHiddenSkinLayerGenerated": false,
+      "visualGate": "SAM3_IMPROVED_BANGS_MASK_BUT_ACTUAL_REST_AND_DYNAMIC_VISUAL_FAIL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 16,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 22,
+      "evidence": [
+        "evidence/p15-81-layered-provider.json",
+        "evidence/p15-81-sam3-provider.json",
+        "evidence/p15-81-sam3-authenticated.json",
+        "evidence/p15-81-sam3-qa.json",
+        "evidence/p15-81-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-81-image-layered/index.html",
+      "plan": "docs/plans/2026-11-11-p15-81-auth-sam3-front-hair.md",
+      "next": "P15-82 obtain true hidden under-bangs forehead/eyelash layers, pass real 0px before ArtMesh"
     }
   }
 }
