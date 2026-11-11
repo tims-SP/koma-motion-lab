@@ -3791,6 +3791,48 @@
       "plan": "docs/plans/2026-11-11-p15-79-same-view-brow-split.md",
       "review": "private-assets/exports/p15-79-brow-split/index.html",
       "next": "P15-80 fix semantic alpha fragmentation of front bangs around brow and outer eye; retain source exactness and brow anchored to head"
+    },
+    "p15_80FrontBangsSemanticGate": {
+      "status": "MORPHOLOGICAL_REFINEMENT_REJECTED_SAM_BANG_SEMANTICS_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+      "roi": [
+        605,
+        370,
+        740,
+        470
+      ],
+      "variantChangedAlphaPixels": {
+        "median3": 375,
+        "opening3": 735,
+        "closing3": 586
+      },
+      "formalNativeAssetReplacement": false,
+      "zeroPoseSourceExact": true,
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "dynamicFaceHoles": {
+        "0": 0,
+        "9": 0,
+        "18": 0
+      },
+      "visualGate": "FAIL_UNRESOLVED_FRONT_HAIR_SEMANTIC_LAYER",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 13,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 16,
+      "evidence": [
+        "evidence/p15-80-mask-probe.json",
+        "evidence/p15-80-mask-qa.json",
+        "evidence/p15-80-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-80-front-bangs-semantic-gate.md",
+      "review": "private-assets/exports/p15-80-front-hair/index.html",
+      "next": "P15-81 obtain original same-view clean bang and hidden skin RGBA rather than extra threshold/morphological patches"
     }
   }
 }
