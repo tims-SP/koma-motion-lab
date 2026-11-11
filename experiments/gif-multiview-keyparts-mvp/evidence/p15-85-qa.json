@@ -1,0 +1,87 @@
+{
+  "schema": "KOMA-P15-85-SOURCE-EYELASH-SEMANTIC-EXCLUSION-V1",
+  "sourceUnderpaintSHA256": "064a081960dbed71279251f00aac0c2d90276f42c61a22770d1c13415e6259aa",
+  "oldMaskSHA256": "1030af587279028427d93b7c6ba86dd41db9e49021c176a586038604ca51ca14",
+  "samMaskSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+  "inputSHA256": "9892ae7e358caaac9d46fc6f43bfc588bb4919a964fc6bf3db69f02a3a873985",
+  "maskSHA256": "5228f5f730861282be755089124d1add9965140b69ceff2ed0b03ec6acbf4b6b",
+  "maskPixelCount": 198,
+  "rawResidualPolygon": [
+    [
+      516,
+      445
+    ],
+    [
+      522,
+      442
+    ],
+    [
+      528,
+      442
+    ],
+    [
+      533,
+      445
+    ],
+    [
+      532,
+      455
+    ],
+    [
+      519,
+      456
+    ],
+    [
+      515,
+      452
+    ]
+  ],
+  "maskBBox": [
+    515,
+    442,
+    534,
+    457
+  ],
+  "oldMaskOverlapPixels": 0,
+  "method": "LaMa correction only of false hair-owned stationary original eyelash, against P15-84 generated clean hidden face",
+  "status": "MODEL_RETURNED",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "eventId": "e59787e9697c430ba934535b10b53aeb",
+  "modelSHA256": "a263f59cd8218d2371cf6a6a620aeff27d5d2381516dc9bde75026de38f6c620",
+  "modelBytes": 15650,
+  "revisedUnderpaintSHA256": "88cc3d4490436ae74f2cbedfc7f0c02df3d4216dfb9e3663f5ed2b535c59b43a",
+  "changedInsideMaskPixels": 196,
+  "changedOutsideMaskPixels": 0,
+  "frames": {
+    "0": {
+      "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+      "changedAgainstP1584": 0,
+      "newTransparentHolesROI": 0
+    },
+    "9": {
+      "sha256": "555401397702fd9fe932454d2c459fbdc3a2ec66e3c35ed9cb5f2530a9d843d7",
+      "changedAgainstP1584": 19634,
+      "newTransparentHolesROI": 0
+    },
+    "18": {
+      "sha256": "0ad785bd1d9466e475a21ba865f242f742d9b7e7fde6818531d4a0769c45b557",
+      "changedAgainstP1584": 19634,
+      "newTransparentHolesROI": 0
+    }
+  },
+  "zeroPoseUsesIndependentSourceLayers": true,
+  "visualGate": "FAIL_RESIDUAL_LASH_NOT_REMOVED_MODEL_DARK_STROKE_INCREASED",
+  "visibleChangedPixelsMotion": {
+    "9": 31,
+    "18": 31
+  },
+  "invisibleRGBAChangedPixelsMotion": {
+    "9": 19603,
+    "18": 19603
+  },
+  "baselineDarkPixelsInResidualROI": 2,
+  "trialDarkPixelsInResidualROI": 10,
+  "candidateAccepted": false,
+  "visualAssessment": "Two-stage layer isolation proves the floating line already exists in clean-hidden-face without eye and SAM3 bangs. P15-84 had incorrectly excluded the original eyelash fragment due to overlapping SAM3 hair ownership. A true 198px LaMa retry changes 196 pixels only, but makes the stationary dark residue stronger. Do not adopt; require true semantic source partition and an underlay depicting covered hair/skin, not more local cloning."
+}

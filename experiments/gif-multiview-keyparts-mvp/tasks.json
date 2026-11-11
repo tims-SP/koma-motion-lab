@@ -4016,6 +4016,50 @@
       "review": "private-assets/exports/p15-84-clean-brow-inpaint/index.html",
       "plan": "docs/plans/2026-11-11-p15-84-real-hidden-brow-inpaint.md",
       "next": "P15-85 identify and remove only 9px outer eye/hair seam residue without widening the inpaint mask or altering visible hair"
+    },
+    "p15_85OuterLashOwnershipDiagnostic": {
+      "status": "STATIC_LASH_RESIDUE_SOURCE_LOCALIZED_LAMA_REPAIR_REJECTED",
+      "characterId": "p0_character_001",
+      "baselineGitSHA": "831bf1dc784a82a0b4f2951055f07c0aa3fd959e",
+      "sourceUnderpaintSHA256": "064a081960dbed71279251f00aac0c2d90276f42c61a22770d1c13415e6259aa",
+      "sam3HairMaskSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+      "maskSHA256": "5228f5f730861282be755089124d1add9965140b69ceff2ed0b03ec6acbf4b6b",
+      "maskPixels": 198,
+      "priorMaskOverlapPixels": 0,
+      "model": "pg56714/Inpaint-Anything / LaMa CPU",
+      "modelEventId": "e59787e9697c430ba934535b10b53aeb",
+      "modelSHA256": "a263f59cd8218d2371cf6a6a620aeff27d5d2381516dc9bde75026de38f6c620",
+      "modelBytes": 15650,
+      "changedInsideMaskPixels": 196,
+      "changedOutsideMaskPixels": 0,
+      "revisedUnderpaintSHA256": "88cc3d4490436ae74f2cbedfc7f0c02df3d4216dfb9e3663f5ed2b535c59b43a",
+      "frameSHA256": {
+        "0": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+        "9": "555401397702fd9fe932454d2c459fbdc3a2ec66e3c35ed9cb5f2530a9d843d7",
+        "18": "0ad785bd1d9466e475a21ba865f242f742d9b7e7fde6818531d4a0769c45b557"
+      },
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "motionNewTransparentHoles": 0,
+      "changedVisiblePixelsAt9And18": 31,
+      "changedInvisibleRGBPixelsAt9And18": 19603,
+      "candidateAccepted": false,
+      "visualGate": "FAIL_RESIDUAL_LASH_NOT_REMOVED_MODEL_DARK_STROKE_INCREASED",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 19,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 26,
+      "evidence": [
+        "evidence/p15-85-qa.json",
+        "evidence/p15-85-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-85-outer-eye-seam/index.html",
+      "plan": "docs/plans/2026-11-11-p15-85-outer-eye-semantic-ownership.md",
+      "next": "P15-86 correct original eyelash/bangs semantic ownership; do not tune local skin clone or model patch"
     }
   }
 }
