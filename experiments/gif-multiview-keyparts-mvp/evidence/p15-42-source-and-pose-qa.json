@@ -1,0 +1,126 @@
+{
+  "schema": "KOMA-P15-42-NEW-65-SOURCE-REVIEW-V1",
+  "characterId": "p0_character_001",
+  "frames": [
+    {
+      "name": "source-45.png",
+      "sourcePath": "private-assets/p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "name": "source-60.png",
+      "sourcePath": "private-assets/p15-38-p0-registered-arc/yaw60/composite.png",
+      "sha256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "name": "source-65.png",
+      "sourcePath": "private-assets/p15-38-p0-registered-arc/yaw65/composite.png",
+      "sha256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "name": "candidate-1.png",
+      "sourcePath": "private-assets/p15-42-65-original-candidates/yaw065-hf-account-2.png",
+      "sha256": "79b3a46b63c0bbf809240b9cb7dc3f798008c014cbb3fa9931c4c9731e3e390c",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "name": "candidate-2.png",
+      "sourcePath": "private-assets/p15-42-65-original-candidates/yaw065-dualref-65422.png",
+      "sha256": "74ad08cd9f5206111fd21154edf797b13b3f5c626d084d94303858bc309bab8f",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "name": "candidate-3.png",
+      "sourcePath": "private-assets/p15-42-65-original-candidates/yaw065-incremental-65423.png",
+      "sha256": "93e85adb6c80cc061fdb20f8a9f49462495f96a0c8d57bc0cb9e4be993d66d97",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "name": "profile-reference.png",
+      "sourcePath": "private-assets/p15-independent-candidates/yaw065-source-rgba.png",
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "newModelPaintings": 3,
+  "source45Verified": true,
+  "observations": [
+    {
+      "candidate": "candidate-1.png",
+      "cameraFacing": "right",
+      "angleFit": "approximately strict right-side profile rather than target 65",
+      "nearEye": "present",
+      "farEye": "not visible",
+      "goldClip": "edge-on",
+      "requested65PoseAccepted": false,
+      "characterDesignAccepted": false
+    },
+    {
+      "candidate": "candidate-2.png",
+      "cameraFacing": "left",
+      "angleFit": "opposite image-facing direction",
+      "nearEye": "present",
+      "farEye": "not visible",
+      "goldClip": "on image-left",
+      "hairIdentity": "extra ponytail",
+      "requested65PoseAccepted": false,
+      "characterDesignAccepted": false
+    },
+    {
+      "candidate": "candidate-3.png",
+      "cameraFacing": "right",
+      "angleFit": "near strict side profile",
+      "nearEye": "present",
+      "farEye": "not visible",
+      "goldClip": "shifted to image-left hair region",
+      "requested65PoseAccepted": false,
+      "characterDesignAccepted": false
+    }
+  ],
+  "newP0HeroSHA256Verified": false,
+  "registeredArtMesh65Replaced": false,
+  "newKeyframeAdmitted": false,
+  "browserVerified": true,
+  "visualApproval": false,
+  "nextCriticalTask": "Produce right-facing 65-degree 2-visible-eyes key pose with consistent P0 character and transparent hidden layers",
+  "browserChecks": 4,
+  "browserImageLoads": 14,
+  "browserScreenshots": 4,
+  "archive": {
+    "path": "private-assets/exports/p15-42-65-keyart-review.zip",
+    "sha256": "1ec772b78b49a3ab8d651e8d3c6bd7ace0d5deb5b28f77cfe316102f081a2822",
+    "files": 12,
+    "bytes": 7376581
+  }
+}

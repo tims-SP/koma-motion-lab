@@ -1,0 +1,45 @@
+{
+  "schema": "KOMA-P15-42-BROWSER-V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "mode": "angle",
+      "images": 4
+    },
+    {
+      "viewport": "desktop",
+      "mode": "identity",
+      "images": 3
+    },
+    {
+      "viewport": "mobile",
+      "mode": "angle",
+      "images": 4
+    },
+    {
+      "viewport": "mobile",
+      "mode": "identity",
+      "images": 3
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "browser-desktop-angle.png",
+      "sha256": "183469c5bfb85039ea8bf47be98312874180e62a927150a42d65c359ce81a30c"
+    },
+    {
+      "file": "browser-desktop-identity.png",
+      "sha256": "4b95c67896b45dbf889f5acffa02358f10bd15b030c6ba26b3c00ca172a608b9"
+    },
+    {
+      "file": "browser-mobile-angle.png",
+      "sha256": "b99ab91abd1cd388ab4e98a5a01e20cdb1230ab011f9998a68d57eea393b0630"
+    },
+    {
+      "file": "browser-mobile-identity.png",
+      "sha256": "77a2ca35600a4a5da2768b28337059a05477b319ab24b4812172f731a468448c"
+    }
+  ],
+  "errors": [],
+  "status": "P15_42_SOURCE_IMAGES_BROWSER_REVIEW_VERIFIED"
+}

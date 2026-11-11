@@ -1,0 +1,48 @@
+{
+  "schema": "KOMA-P15-42-REMOTE-INFERENCE-REGISTRY-V1",
+  "space": "akhaliq/Qwen-Image-Edit-2511-LoRAs-Fast",
+  "model": "Qwen-Image-Edit-2511",
+  "characterId": "p0_character_001",
+  "sourceRoot": "private-assets",
+  "generationCount": 3,
+  "records": [
+    {
+      "output": "yaw065-hf-account-2.png",
+      "seed": 65421,
+      "adapter": "Multiple-Angles",
+      "inputs": [
+        "p15-08-yaw055/input-yaw045.jpg"
+      ],
+      "condition": "right-facing 65-degree three-quarter, two visible eyes, same P0 outfit and gold hairclip",
+      "outputSHA256": "79b3a46b63c0bbf809240b9cb7dc3f798008c014cbb3fa9931c4c9731e3e390c",
+      "registeredNominalYaw": 65,
+      "artAdmission": false
+    },
+    {
+      "output": "yaw065-dualref-65422.png",
+      "seed": 65422,
+      "adapter": "Multiple-Angles",
+      "inputs": [
+        "p15-08-yaw055/input-yaw045.jpg",
+        "p15-independent-candidates/yaw065-source-rgba.png"
+      ],
+      "condition": "intermediate between source 45-degree and profile drawing, right-facing 65-degree",
+      "outputSHA256": "74ad08cd9f5206111fd21154edf797b13b3f5c626d084d94303858bc309bab8f",
+      "registeredNominalYaw": 65,
+      "artAdmission": false
+    },
+    {
+      "output": "yaw065-incremental-65423.png",
+      "seed": 65423,
+      "adapter": "Fal-Multiple-Angles",
+      "inputs": [
+        "p15-08-yaw055/input-yaw045.jpg"
+      ],
+      "condition": "incremental 10-degree turn to right from source; retain both visible eyes",
+      "outputSHA256": "93e85adb6c80cc061fdb20f8a9f49462495f96a0c8d57bc0cb9e4be993d66d97",
+      "registeredNominalYaw": 65,
+      "artAdmission": false
+    }
+  ],
+  "artApproved": false
+}

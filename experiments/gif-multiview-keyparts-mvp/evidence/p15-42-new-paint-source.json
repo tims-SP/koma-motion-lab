@@ -1,0 +1,18 @@
+{
+  "schema": "KOMA-P15-42-NEW-65-PAINTED-SOURCE-V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 45,
+  "nominalYaw": 65,
+  "provider": "Hugging Face connected Space",
+  "space": "akhaliq/Qwen-Image-Edit-2511-LoRAs-Fast",
+  "adapter": "Multiple-Angles",
+  "seed": 65421,
+  "steps": 4,
+  "sourceReference": "private-assets/p15-08-yaw055/input-yaw045.jpg",
+  "sourceSHA256": "1b5953ef9a22eb0e4356b677883143d073e03bd3c980eb8543a640353ad0b941",
+  "output": "private-assets/p15-42-65-original-candidates/yaw065-hf-account-2.png",
+  "outputSHA256": "79b3a46b63c0bbf809240b9cb7dc3f798008c014cbb3fa9931c4c9731e3e390c",
+  "identityVerified": false,
+  "poseVerified": false,
+  "artisticallyApproved": false
+}
