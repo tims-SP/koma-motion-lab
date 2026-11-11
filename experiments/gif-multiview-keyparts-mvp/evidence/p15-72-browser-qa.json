@@ -1,0 +1,29 @@
+{
+  "schema": "KOMA-P15-72-BROWSER-V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "imagesLoaded": 4,
+      "sliderOffsets": [
+        0,
+        9,
+        18
+      ],
+      "screenshot": "browser-desktop.png",
+      "sha256": "72e6f99459e26868aa2320ae44e22d5d83cb5f7285dced944468c4b398ed226f"
+    },
+    {
+      "viewport": "mobile",
+      "imagesLoaded": 4,
+      "sliderOffsets": [
+        0,
+        9,
+        18
+      ],
+      "screenshot": null,
+      "sha256": null
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

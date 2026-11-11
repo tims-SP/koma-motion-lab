@@ -3492,6 +3492,37 @@
       "review": "private-assets/exports/p15-71-sam-semantic/index.html",
       "plan": "docs/plans/2026-11-11-p15-71-sam-source-gate.md",
       "next": "P15-72 obtain same-view semantic front-hair RGBA via a usable segmentation/painting service; validate overlay at 0/9/18px"
+    },
+    "p15_72GroundedSamSemanticHair": {
+      "status": "ACTUAL_CPU_MODEL_RETURNED_TWO_OUTPUTS_BOTH_FACE_CONTAMINATED",
+      "characterId": "p0_character_001",
+      "inputSourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "provider": "Volkopat/SegmentAnythingxGroundingDINO",
+      "providerModel": "GroundingDINO + SAM (CPU Space)",
+      "providerCalls": 2,
+      "modelOutputSHA256s": [
+        "2bebeb3b4d29c9a46b1680350ae0b2e4e851615b37ee685861e8932b95ddb3b9",
+        "1fc8e95b72abce263de9a8cf837240e098a7c97ddfeac03558dab952496e4410"
+      ],
+      "hairMaskIncludesEye": true,
+      "hairMaskIncludesCheek": true,
+      "cleanIndependentFrontHairAvailable": false,
+      "modelOutputsApproved": false,
+      "visualGate": "FAIL_MODEL_SEGMENTATION_INCLUDES_EYES_AND_CHEEK",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 11,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 8,
+      "evidence": [
+        "evidence/p15-72-semantic-provider-qa.json",
+        "evidence/p15-72-semantic-provider-fringe-qa.json",
+        "evidence/p15-72-semantic-qa.json",
+        "evidence/p15-72-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-72-semantic-hair/index.html",
+      "plan": "docs/plans/2026-11-11-p15-72-semantic-model-qa.md",
+      "next": "P15-73 seek interactive foreground/background anime hair segmentation or same-view layered artwork, certify at 0px before moving eye"
     }
   }
 }

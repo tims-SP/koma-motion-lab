@@ -1,0 +1,10 @@
+{
+  "schema": "KOMA-P15-72-CPU-SEMANTIC-V1",
+  "sourceSHA256": "602dc4ca6e4c1e4678a3dad16d321a77d826d24acebc36f1c7988956a3e8ff09",
+  "provider": "Volkopat/SegmentAnythingxGroundingDINO",
+  "prompt": "pink anime bangs hair",
+  "status": "MODEL_RETURNED",
+  "formalArtMeshAccepted": false,
+  "outputBytes": 12632,
+  "outputSHA256": "2bebeb3b4d29c9a46b1680350ae0b2e4e851615b37ee685861e8932b95ddb3b9"
+}
