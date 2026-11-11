@@ -150,3 +150,7 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-35 远眼遮挡与发夹接触逐帧证据](experiments/gif-multiview-keyparts-mvp/evidence/p15-35-occlusion-mount-qa.json)
 - [P15-35 Chromium 桌面与手机验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-35-browser-qa.json)
 - [P15-35 HTML 审查包哈希与复现信息](experiments/gif-multiview-keyparts-mvp/evidence/p15-35-delivery.json)
+- [P15-36 P0 57.5° / 60° 局部原画与语义 ArtMesh](docs/plans/2026-11-11-p15-36-p0-painted-keyparts.md)
+- [P15-36 新绘画分部件来源和 Alpha QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-36-qwen-local-repair-qa.json)
+- [P15-36 Chromium 交互式验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-36-browser-qa.json)
+- [P15-36 13 部件透明原画归档 SHA](experiments/gif-multiview-keyparts-mvp/evidence/p15-36-delivery.json)
