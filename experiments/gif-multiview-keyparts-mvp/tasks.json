@@ -3722,6 +3722,36 @@
       "plan": "docs/plans/2026-11-11-p15-77-same-source-lash-layer.md",
       "review": "private-assets/exports/p15-77-art-layer/index.html",
       "next": "P15-78 clean geometry split edge of same-source upper lash and resolve real brow bang occlusion"
+    },
+    "p15_78SoftUpperLashBoundary": {
+      "status": "SOFT_EDGE_REFINED_EXACT_EYE_RECOMPOSITE_ZERO_POSE_EXACT_BROW_BANG_VISUAL_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "sourceEyeSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+      "upperLashSHA256": "8a608b044caa67c5e12dcffceea90f397dd163693d9e8eb9866423fd1f0fff03",
+      "lowerEyeSHA256": "d81f032e4e07fc84e60d79c45eddcb978af823f9aee6c02e94e9ffc30c3b417d",
+      "maskSHA256": "a7a08f75b0cf670e6572f766dec4f902a61f310592867cc7e7b33081014f820e",
+      "maskBlurRadiusPx": 1.0,
+      "eyeReconstructionExact": true,
+      "zeroPoseSourceExact": true,
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "visualGate": "SOFT_EDGE_REDUCES_PIXEL_STAIRCASE_BUT_BROW_BANG_OCCLUSION_STILL_REQUIRES_REVIEW",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 14,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 10,
+      "evidence": [
+        "evidence/p15-78-qa.json",
+        "evidence/p15-78-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-78-soft-lash-boundary.md",
+      "review": "private-assets/exports/p15-78-soft-lash/index.html",
+      "next": "P15-79 solve same-view eyebrow, forehead underpaint and bangs occlusion; no more lash mask iterations"
     }
   }
 }

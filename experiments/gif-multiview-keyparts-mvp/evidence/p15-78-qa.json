@@ -1,0 +1,34 @@
+{
+  "schema": "KOMA-P15-78-SOFT_LASH_BOUNDARY_V1",
+  "sourceEyeSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "maskSHA256": "a7a08f75b0cf670e6572f766dec4f902a61f310592867cc7e7b33081014f820e",
+  "upperLashSHA256": "8a608b044caa67c5e12dcffceea90f397dd163693d9e8eb9866423fd1f0fff03",
+  "lowerEyeSHA256": "d81f032e4e07fc84e60d79c45eddcb978af823f9aee6c02e94e9ffc30c3b417d",
+  "maskBlurRadius": 1.0,
+  "eyeReconstructionExact": true,
+  "eyeReconstructionDiffBBox": null,
+  "zeroPoseSourceExact": true,
+  "motionOffsets": [
+    0,
+    9,
+    18
+  ],
+  "frames": [
+    {
+      "dx": 0,
+      "sha256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed"
+    },
+    {
+      "dx": 9,
+      "sha256": "027501026783cb992ca86c9fcef94e86bfdd60a3d964d096c2df6335a173add3"
+    },
+    {
+      "dx": 18,
+      "sha256": "5dde1f1f8b670b4f3e7d30e8fa024da1bd18bb01c5092de04f58bd6f9db1d191"
+    }
+  ],
+  "visualGate": "SOFT_EDGE_REDUCES_PIXEL_STAIRCASE_BUT_BROW_BANG_OCCLUSION_STILL_REQUIRES_REVIEW",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false
+}
