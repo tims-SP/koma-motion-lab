@@ -3245,6 +3245,45 @@
       "plan": "docs/plans/2026-11-11-p15-64-semantic-eye.md",
       "review": "private-assets/exports/p15-64-semantic-eye/index.html",
       "next": "P15-65 refine lower eyelid fringe and validate front-hair overlap without regenerating LaMa skin"
+    },
+    "p15_65LowerLidAndHairReview": {
+      "status": "LOWER_LID_MATTE_IMPROVED_FRONT_HAIR_OCCLUSION_REJECTED",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "reusedLaMaUnderpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+      "selectedEyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+      "selectedMaskSHA256": "038f1577047d2d315353ba6fe30ad7ef4bd475b7b0eb7357f5ce472f9638147f",
+      "previousVisibleEyePixels": 6995,
+      "currentVisibleEyePixels": 6361,
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "transparentHolesByShift": {
+        "0": 0,
+        "9": 0,
+        "18": 0
+      },
+      "hairOcclusionVariantsRejected": [
+        "hairA",
+        "hairB",
+        "hairC"
+      ],
+      "selectedHairOverlay": null,
+      "visualGate": "IMPROVED_EYELID_NOT_APPROVED_FOREGROUND_HAIR_UNRESOLVED",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 13,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 28,
+      "evidence": [
+        "evidence/p15-65-eyelid-qa.json",
+        "evidence/p15-65-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-65-eyelid-and-hair-review.md",
+      "review": "private-assets/exports/p15-65-eyelid-refinement/index.html",
+      "next": "P15-66 extract clean front-hair semantic RGBA and ensure valid dynamic eye occlusion without polygon seams"
     }
   }
 }
