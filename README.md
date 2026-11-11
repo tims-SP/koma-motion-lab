@@ -146,3 +146,7 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-34 五关键帧四中间帧 Mesh 验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-feature-mesh-qa.json)
 - [P15-34 Chromium 审查截图和图像加载](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-browser-qa.json)
 - [P15-34 私有 HTML ZIP 资源 SHA](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-delivery.json)
+- [P15-35 面部局部深度与发夹前发 UV 绑定](docs/plans/2026-11-11-p15-35-face-depth-hair-uv.md)
+- [P15-35 远眼遮挡与发夹接触逐帧证据](experiments/gif-multiview-keyparts-mvp/evidence/p15-35-occlusion-mount-qa.json)
+- [P15-35 Chromium 桌面与手机验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-35-browser-qa.json)
+- [P15-35 HTML 审查包哈希与复现信息](experiments/gif-multiview-keyparts-mvp/evidence/p15-35-delivery.json)
