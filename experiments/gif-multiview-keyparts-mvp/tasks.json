@@ -2830,6 +2830,34 @@
       "script": "scripts/p15_47_controlnet_inference.py",
       "plan": "docs/plans/2026-11-11-p15-50-authenticated-zerogpu.md",
       "next": "Set quota-enabled HF_TOKEN in VPS environment; run p15-51 inference; visually review resulting candidate"
+    },
+    "p15_51CameraAngleLoRACandidate": {
+      "status": "PROMISING_RIGHT_FACING_CAMERA_CONTROL_CANDIDATE_NOT_FORMAL_65_KEYFRAME",
+      "characterId": "p0_character_001",
+      "sourceYawDegrees": 45,
+      "relativeCameraRotationDegrees": 20,
+      "model": "mcp-tools/Qwen-Image-Edit-Angles / Qwen-Edit-2509-Multiple-angles LoRA",
+      "seed": 65451,
+      "steps": 4,
+      "resolution": "1024x1024",
+      "sourceSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "outputSHA256": "c3151c9a2defd7fa61bd71fa80107b1c6dd2948174ef66e5d8e14464ed917127",
+      "negativeControlSeed": 65450,
+      "negativeControlRotationDegrees": -20,
+      "negativeControlRejected": true,
+      "positiveCandidateVisual": "near eye dominant; far eye narrow/partly occluded; nose profile shifted; gold clip, lavender bob, ahoge, uniform and bow retained",
+      "outputAlpha": "opaque RGB; black background",
+      "unitTestsPass": 6,
+      "browserChecksPass": 2,
+      "formalAbsoluteYaw65Accepted": false,
+      "formalArtMeshModified": false,
+      "evidence": [
+        "evidence/p15-51-camera-angle-qa.json",
+        "evidence/p15-51-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-51-camera-angle-review/index.html",
+      "plan": "docs/plans/2026-11-11-p15-51-camera-angle-lora.md",
+      "next": "Extract transparent background with edge preservation; calibrate absolute yaw and facial anchors before formal ArtMesh admission"
     }
   }
 }

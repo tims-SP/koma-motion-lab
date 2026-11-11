@@ -1,0 +1,42 @@
+{
+  "schema": "KOMA-P15-51-CAMERA-ANGLE-REVIEW-V1",
+  "characterId": "p0_character_001",
+  "source": {
+    "file": "private-assets/exports/p15-38-original-p0-arc-review/p0-yaw45-original.png",
+    "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": "preserved source has alpha"
+  },
+  "negative20": {
+    "file": "private-assets/exports/p15-51-qwen-angle-20deg.webp",
+    "sha256": "2aefb34254280f8bfb19ce195ead5cc0962bf7b09e6b8b77db6df26976143dd8",
+    "seed": 65450,
+    "rotate_deg": -20,
+    "tool": "mcp-tools/Qwen-Image-Edit-Angles",
+    "model": "Qwen Image Edit 2509 + Qwen-Edit-2509-Multiple-angles LoRA",
+    "interpretation": "Camera rotated right 20 degrees; visually closer to frontal; reject for target yaw65"
+  },
+  "positive20": {
+    "file": "private-assets/exports/p15-51-qwen-angle-plus20deg.webp",
+    "sha256": "c3151c9a2defd7fa61bd71fa80107b1c6dd2948174ef66e5d8e14464ed917127",
+    "seed": 65451,
+    "rotate_deg": 20,
+    "tool": "mcp-tools/Qwen-Image-Edit-Angles",
+    "model": "Qwen Image Edit 2509 + Qwen-Edit-2509-Multiple-angles LoRA",
+    "prompt": "Rotate the camera 20 degrees to the left",
+    "visualAssessment": "More profile than source 45; one eye dominant, far eye narrow/partially occluded, nose bridge shifts to profile, right-side gold clip retained, same pink-lavender bob and ahoge.",
+    "candidateStatus": "PROMISING_VISUAL_CANDIDATE_NOT_FORMAL_KEYFRAME"
+  },
+  "positive20Output": {
+    "mode": "RGB",
+    "alpha": "OPAQUE_NO_ALPHA_CHANNEL",
+    "background": "black"
+  },
+  "formalArtMeshModified": false,
+  "formal65Accepted": false,
+  "reason": "Camera LoRA provides explicit relative camera rotation and a convincing more-profile candidate, but no calibrated absolute yaw measurement; output is opaque RGB and not a layered/transparent ArtMesh asset.",
+  "next": "Perform background extraction with edge preservation, compare geometry against 65-degree anchors, and only then decide formal keyframe admission."
+}
