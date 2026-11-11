@@ -3641,6 +3641,51 @@
       "plan": "docs/plans/2026-11-11-p15-75-eyebrow-lash-occlusion.md",
       "review": "private-assets/exports/p15-75-eyebrow-seam/index.html",
       "next": "P15-76 obtain source-consistent independent eyebrow/lash and bang-overlap artwork instead of more matte guards"
+    },
+    "p15_76SourceDerivedHiddenSkinRepair": {
+      "status": "HIDDEN_SKIN_GREY_LINE_IMPROVED_ZERO_POSE_EXACT_SEMANTIC_BROW_LASH_UNAPPROVED",
+      "characterId": "p0_character_001",
+      "originalSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "sourceUnderpaintSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+      "skinRepairMaskSHA256": "8201d1cfee218ecceb4533ddc4b0696ee6118a5527643ea6d6c3940e37dceac2",
+      "cleanUnderpaintCandidateSHA256": "215fc3662b6b9183617ea53dfe2532b58e668afda737aa2dda7dd8a13df5173f",
+      "guardBBox": [
+        528,
+        414,
+        586,
+        484
+      ],
+      "maskNonzeroPixels": 2310,
+      "sourceSamplingOffsetPx": [
+        0,
+        25
+      ],
+      "animatedZeroPoseExact": true,
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "transparentHoleCounts": {
+        "0": 0,
+        "9": 0,
+        "18": 0
+      },
+      "changedFullFramePixels18": 1444,
+      "fullSemanticHairLayerApproved": false,
+      "visualGate": "LOCAL_HIDDEN_SKIN_SEAM_IMPROVED_SEMANTIC_BROW_HAIR_FAIL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 16,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 22,
+      "evidence": [
+        "evidence/p15-76-qa.json",
+        "evidence/p15-76-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-76-hidden-skin-local-source-repair.md",
+      "review": "private-assets/exports/p15-76-seam-source/index.html",
+      "next": "P15-77 obtain independently drawn same-source eyebrow/lash/bang layers; stop expanding matte patch count"
     }
   }
 }

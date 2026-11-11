@@ -1,0 +1,89 @@
+{
+  "schema": "KOMA-P15-76-SOURCE_DERIVED_UNDERPAINT_V1",
+  "characterId": "p0_character_001",
+  "sourceHashes": {
+    "source": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+    "base": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+    "eye": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+    "hair0": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+    "clip": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5"
+  },
+  "guardSHA256": "8201d1cfee218ecceb4533ddc4b0696ee6118a5527643ea6d6c3940e37dceac2",
+  "candidateUnderpaintSHA256": "215fc3662b6b9183617ea53dfe2532b58e668afda737aa2dda7dd8a13df5173f",
+  "guardBBox": [
+    528,
+    414,
+    586,
+    484
+  ],
+  "guardNonzeroPixels": 2310,
+  "paintSource": "P15-70 authentic face underpaint shifted 25px to sample unblemished adjacent skin",
+  "sourceSampleDisplacementPx": [
+    0,
+    25
+  ],
+  "localRepairPolygon": [
+    [
+      535,
+      460
+    ],
+    [
+      547,
+      442
+    ],
+    [
+      565,
+      424
+    ],
+    [
+      578,
+      421
+    ],
+    [
+      563,
+      454
+    ],
+    [
+      543,
+      477
+    ]
+  ],
+  "featherPx": 3,
+  "method": "SOURCE_PIXEL_CLONE_WITH_POSE_WEIGHTED_FEATHER_NOT_NEW_AI_PAINTING",
+  "sourceUnchanged": true,
+  "zeroPosePixelExact": true,
+  "motionOffsets": [
+    0,
+    9,
+    18
+  ],
+  "frameHashes": [
+    {
+      "dx": 0,
+      "frameSHA256": "22ae4a488901a29f2051025a4a432df1a50247bdc21ba4d8b4c70712cc273e99",
+      "underpaintSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd"
+    },
+    {
+      "dx": 9,
+      "frameSHA256": "a29b93db239be418925b539c626b5ab514c55c0be6fac07d0ef8019a8f4be906",
+      "underpaintSHA256": "9b20fcdfcbe3bd87bf9532e6a13bc8e7cf28f778c443c03f6c23b496d3c1536c"
+    },
+    {
+      "dx": 18,
+      "frameSHA256": "b85a71edd815e4fd5fcd5cfae672c0ef90e6e42f9c0b1d6eff5062056a6e4e24",
+      "underpaintSHA256": "215fc3662b6b9183617ea53dfe2532b58e668afda737aa2dda7dd8a13df5173f"
+    }
+  ],
+  "holeCounts": {
+    "0": 0,
+    "9": 0,
+    "18": 0
+  },
+  "changedFullFramePixels18": 1444,
+  "visualAssessment": "Source-derived skin clone removes much of the thin grey diagonal behind the moving upper eyelid at 18px. Residual brow texture and some inner hair/eyelash discontinuities remain. This is local underpaint restoration, not independently painted brow/lash/front-hair semantic RGBA.",
+  "fullSemanticHairLayerAccepted": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "LOCAL_HIDDEN_SKIN_SEAM_IMPROVED_SEMANTIC_BROW_HAIR_FAIL",
+  "next": "P15-77 obtain truly isolated eyebrow/lash/front-bang edge artwork; inspect 0/9/18 and do not expand feather masks as replacement for original layers."
+}
