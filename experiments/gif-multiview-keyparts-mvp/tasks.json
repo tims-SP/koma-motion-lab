@@ -2729,6 +2729,25 @@
       "evidence": "evidence/p15-44-control-conditions-qa.json",
       "plan": "docs/plans/2026-11-11-p15-44-explicit-control-conditions.md",
       "next": "Find operational lineart/mask conditioning backend with identity reference; generate privately and visually validate"
+    },
+    "p15_45Qwen21ControlNet": {
+      "status": "P15_45_REAL_CONTROLLED_INPAINT_GENERATED_VISUAL_REVIEW_REQUIRED",
+      "characterId": "p0_character_001",
+      "yaw": 65,
+      "backend": "hugging-apps/qwen-image-2-1-controlnet-union-demo",
+      "seed": 65445,
+      "steps": 24,
+      "resolution": 1024,
+      "controlContextScale": 1.0,
+      "generatedCandidate": "private-assets/exports/p15-45-qwen21-controlnet-candidate.png",
+      "outputSHA256": "118a1b044756d7ca4cd55c175e2a143001d2067dc347112d289b65ce0aa86d0e",
+      "secondSeed": "65446",
+      "secondSeedStatus": "ZERO_GPU_QUOTA_EXCEEDED",
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "evidence": "evidence/p15-45-qwen21-controlnet-qa.json",
+      "plan": "docs/plans/2026-11-11-p15-45-qwen21-controlnet-inference.md",
+      "next": "P15-46 strengthen anchor-aligned lineart guides and narrow face inpaint mask; retry A/B when ZeroGPU quota available"
     }
   }
 }

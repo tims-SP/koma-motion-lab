@@ -1,0 +1,87 @@
+{
+  "schema": "KOMA-P15-45-QWEN21-CONTROLNET-REVIEW-V1",
+  "characterId": "p0_character_001",
+  "targetYaw": 65,
+  "backend": "hugging-apps/qwen-image-2-1-controlnet-union-demo",
+  "runtime": "ZeroGPU A10G",
+  "endpoint": "/gradio_api/call/generate",
+  "preprocessor": "None (already a control map; precomputed Lineart fed as control_image)",
+  "controlContextScale": 1.0,
+  "resolution": 1024,
+  "steps": 24,
+  "seed": 65445,
+  "guidanceScale": 1.0,
+  "inpaintSourceSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+  "lineartSHA256": "029f173e4eaad50ac3f44a86f6929ffab52361707cb21da53cf3cd7d8f3d4a6c",
+  "maskSHA256": "37d12bb930a6baf64f1b2b8a96e24779f12796b71490ed65476f9955da38b8b8",
+  "outputSHA256": "118a1b044756d7ca4cd55c175e2a143001d2067dc347112d289b65ce0aa86d0e",
+  "outputSize": [
+    1024,
+    1024
+  ],
+  "visualObservations": {
+    "cameraDirection": "appears right-facing; no obvious mirror reversal",
+    "eyes": "both eyes visible after face inpainting; far eye is smaller than near eye",
+    "hairClip": "gold crossed clip remains on image-right",
+    "hair": "dusty rose/lavender bob and single ahoge retained",
+    "identity": "visually consistent with P0 traits, but no formal Hero reference match or identity embedding test",
+    "yaw": "exact 65-degree pose not independently established; face appears less profile-like than registered source",
+    "artQuality": "cleaner face than source registration; small linework/edge artifacts remain outside face in original composite"
+  },
+  "secondSeedAttempt": {
+    "seed": 65446,
+    "status": "BLOCKED_ZERO_GPU_QUOTA_EXCEEDED"
+  },
+  "candidateAcceptedAsFormalKeyframe": false,
+  "identityAccepted": false,
+  "exactYawAccepted": false,
+  "artMeshModified": false,
+  "images": {
+    "registered-65.png": {
+      "sha256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "bytes": 790808,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "identity-45.png": {
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "bytes": 751830,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "candidate.png": {
+      "sha256": "118a1b044756d7ca4cd55c175e2a143001d2067dc347112d289b65ce0aa86d0e",
+      "bytes": 925234,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "control-fed.png": {
+      "sha256": "fb97d6615ff41165ae56cd823cab6d25655268e9870d2437bc7fbcb7df7e64bf",
+      "bytes": 82178,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    "candidate-anchor-overlay.png": {
+      "sha256": "0f7ad3fc5ca894af17c89f589661abade4a4c84b659d340d9906789884abffe5",
+      "bytes": 807282,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  },
+  "status": "ONE_REAL_CONTROLLED_INPAINT_GENERATION_COMPLETE_VISUAL_REVIEW_REQUIRED"
+}

@@ -39,9 +39,9 @@ anchor_image.save(D/'facial-anchors-65.png')
 # Only face landmarks region gets a mask; avoid accidentally controlling entire scene.
 mask=Image.new('L',art.size,0)
 md=ImageDraw.Draw(mask)
-pts=[tuple(frame['anchors'][k]['xy']) for k in ('eye.near.iris','eye.far.iris','nose','mouth','face.chin')]
-md.polygon(pts,fill=255)
-mask=mask.filter(ImageFilter.MaxFilter(11)).filter(ImageFilter.GaussianBlur(8))
+# Face-region ellipse covers both eyes, nose, mouth and jaw while excluding the hair clip.
+md.ellipse((495,405,758,695),fill=255)
+mask=mask.filter(ImageFilter.GaussianBlur(8))
 mask.save(D/'face-mask-65.png')
 # Visual review includes a source sample and the only current identity reference; no inference here.
 (D/'registered-65.png').write_bytes(src.read_bytes())
