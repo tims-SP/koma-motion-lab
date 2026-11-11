@@ -3752,6 +3752,45 @@
       "plan": "docs/plans/2026-11-11-p15-78-soft-lash-boundary.md",
       "review": "private-assets/exports/p15-78-soft-lash/index.html",
       "next": "P15-79 solve same-view eyebrow, forehead underpaint and bangs occlusion; no more lash mask iterations"
+    },
+    "p15_79SameViewBrowSplit": {
+      "status": "BROW_LAYER_EXTRACTED_EXACT_BASE_RECONSTRUCTION_DYNAMIC_VISUAL_BANG_MATTE_FAIL",
+      "characterId": "p0_character_001",
+      "baseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+      "eyebrowSHA256": "d72cd4d59e6b837d00b903f102263757f0e05669a896cfc1353714f14d08d8f3",
+      "underpaintSHA256": "bb1c279bf91d0dfc963001db25c6fca2a5c7c58b5582c38ebbf995211a6f8c7a",
+      "maskSHA256": "9a347b081bc4f256d072f4a964ece36d015b6d5a913af97965cbcdcb68505382",
+      "eyebrowPixels": 500,
+      "baseReconstructionExact": true,
+      "zeroPoseSourceExact": true,
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "referenceCompositeDiffPixels": [
+        6951,
+        0,
+        0
+      ],
+      "transparentHolesInFaceROI": {
+        "0": 0,
+        "9": 0,
+        "18": 0
+      },
+      "visualGate": "BROW_LAYER_EXTRACTED_EXACT_RECONSTRUCTION_BANG_SEMANTIC_MATTE_FAIL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 16,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 12,
+      "evidence": [
+        "evidence/p15-79-qa.json",
+        "evidence/p15-79-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-79-same-view-brow-split.md",
+      "review": "private-assets/exports/p15-79-brow-split/index.html",
+      "next": "P15-80 fix semantic alpha fragmentation of front bangs around brow and outer eye; retain source exactness and brow anchored to head"
     }
   }
 }

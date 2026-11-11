@@ -1,0 +1,48 @@
+{
+  "schema": "KOMA-P15-79-SAME_VIEW_BROW_SPLIT_V1",
+  "characterId": "p0_character_001",
+  "baseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+  "eyebrowSHA256": "d72cd4d59e6b837d00b903f102263757f0e05669a896cfc1353714f14d08d8f3",
+  "underpaintSHA256": "bb1c279bf91d0dfc963001db25c6fca2a5c7c58b5582c38ebbf995211a6f8c7a",
+  "maskSHA256": "9a347b081bc4f256d072f4a964ece36d015b6d5a913af97965cbcdcb68505382",
+  "eyebrowNonzeroPixels": 500,
+  "baseReconstructionExact": true,
+  "zeroPoseSourceExact": true,
+  "frames": [
+    {
+      "dx": 0,
+      "sha256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "previousCompositeDiffPixels": 6951,
+      "referenceSHA256": "22ae4a488901a29f2051025a4a432df1a50247bdc21ba4d8b4c70712cc273e99"
+    },
+    {
+      "dx": 9,
+      "sha256": "b3ba88376bcce841b97c0ca2ac7f674f52993cedb457f627d9d1b8848638b049",
+      "previousCompositeDiffPixels": 0,
+      "referenceSHA256": "b3ba88376bcce841b97c0ca2ac7f674f52993cedb457f627d9d1b8848638b049"
+    },
+    {
+      "dx": 18,
+      "sha256": "9c8f19dc9c81c8eef00740f772ec44afd3ce8af2be2479fbdf4060cbe91e1fd3",
+      "previousCompositeDiffPixels": 0,
+      "referenceSHA256": "9c8f19dc9c81c8eef00740f772ec44afd3ce8af2be2479fbdf4060cbe91e1fd3"
+    }
+  ],
+  "motionOffsets": [
+    0,
+    9,
+    18
+  ],
+  "transparentPixelCountsInFaceROI": {
+    "0": 0,
+    "9": 0,
+    "18": 0
+  },
+  "method": "SAME_VIEW_SOURCE_PIXEL_ALPHA_COMPLEMENT_SPLIT_NO_GENERATED_BROW_ART",
+  "browAnchoredToHead": true,
+  "bangsRemainAboveBrow": true,
+  "visualAssessment": "The existing same-view painted eyebrow is now an independently addressable RGBA layer. Its complementary forehead layer reconstructs the original base exactly. Existing front-bang alpha still contains the unresolved dashed/fragmented contour around the brow and eye; no new semantic bang matte was created.",
+  "visualGate": "BROW_LAYER_EXTRACTED_EXACT_RECONSTRUCTION_BANG_SEMANTIC_MATTE_FAIL",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false
+}
