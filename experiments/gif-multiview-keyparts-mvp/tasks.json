@@ -2939,6 +2939,35 @@
       "plan": "docs/plans/2026-11-11-p15-54-edge-landmark-review.md",
       "review": "private-assets/exports/p15-54-edge-landmark-review/index.html",
       "next": "P15-55 correct hairclip canvas registration and occlusion; do not align against extrapolated proxy anchor alone"
+    },
+    "p15_55ClipRegistration": {
+      "status": "HAIR_CONTOUR_REGISTERED_CANDIDATE_VISUAL_EDGE_REVIEW_PENDING",
+      "characterId": "p0_character_001",
+      "targetYaw": 65,
+      "referenceCandidateSHA256": "6b17cdd4f5a3d5bf309f8c6ce958ea38085be37493188976d16cb1ffb50d6323",
+      "independentClipSHA256": "baf4b451a153f49485e2ea541f07a379c55f1c936d9b013594bb1f524a13dd52",
+      "selectedClipOffsetFromP1553Px": -28,
+      "selectedClipBBox": [
+        691,
+        279,
+        760,
+        370
+      ],
+      "selectedCompositeSHA256": "d37ceeed32f8a0f32f9c0fcb027c2dd72903f9ff2724b4e1bdfe308d22973f32",
+      "visualAssessment": "Cross clip lies farther inside hair; former floating edge substantially reduced. Small dark jagged edge and hair texture clone differences remain at 4x zoom.",
+      "absoluteYawVerified": false,
+      "identityApproved": false,
+      "formalKeyframeAccepted": false,
+      "formalArtMeshModified": false,
+      "unitTestsPass": 11,
+      "browserChecksPass": 2,
+      "evidence": [
+        "evidence/p15-55-registration-qa.json",
+        "evidence/p15-55-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-55-clip-registration.md",
+      "review": "private-assets/exports/p15-55-registration/index.html",
+      "next": "P15-56 local hairline paint cleanup, identity and yaw visual signoff"
     }
   }
 }
