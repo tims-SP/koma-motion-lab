@@ -3609,6 +3609,38 @@
       "plan": "docs/plans/2026-11-11-p15-74-zero-pose-and-eye-alpha.md",
       "review": "private-assets/exports/p15-74-bangs-repair/index.html",
       "next": "P15-75 fix eyebrow/lash/front-bang semantic seams, retain exact zero pose before VDD admission"
+    },
+    "p15_75EyebrowLashMovingOcclusion": {
+      "status": "MOVING_EYE_HAIR_CONTAMINATION_REDUCED_ZERO_POSE_EXACT_VISUAL_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "sourceBangsSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+      "motionSuppressionMaskSHA256": "a6452dd2920031996efa045131c674503fbd007f48a3a5699b2bbd46968823c9",
+      "actualAnimationZeroPoseExact": true,
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "transparentHoleCounts": {
+        "0": 0,
+        "9": 0,
+        "18": 0
+      },
+      "changedPixelsIn18pxEyeDetail": 1130,
+      "visualGate": "LOCAL_MOVING_ARTIFACT_REDUCED_BUT_SEMANTIC_HAIR_VISUAL_FAIL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 14,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 22,
+      "evidence": [
+        "evidence/p15-75-qa.json",
+        "evidence/p15-75-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-75-eyebrow-lash-occlusion.md",
+      "review": "private-assets/exports/p15-75-eyebrow-seam/index.html",
+      "next": "P15-76 obtain source-consistent independent eyebrow/lash and bang-overlap artwork instead of more matte guards"
     }
   }
 }
