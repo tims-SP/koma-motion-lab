@@ -1,0 +1,117 @@
+{
+  "schema": "KOMA-P15-61-SEMANTIC-FEASIBILITY-V1",
+  "characterId": "p0_character_001",
+  "candidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "canonical45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "realIndependentClipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+  "realClipReconstructionExact": true,
+  "visibleROIroles": [
+    {
+      "role": "hair.ahoge",
+      "cutoutSHA256": "ce0590efdc62db703345a2be11271383a9303f66f4ffffab552c92dfaa8a2fe3",
+      "alphaBBox": [
+        439,
+        27,
+        638,
+        158
+      ],
+      "pixelsVisible": 6708,
+      "source45Available": true,
+      "trueSemanticPurityVerified": false,
+      "hiddenUnderpaintAvailable": false,
+      "cutoutIncludesBackgroundFeatures": true
+    },
+    {
+      "role": "eye.far",
+      "cutoutSHA256": "736bbba94a0ffe86cb3712c16ff4031c4746571c7788927bd0e7f0465e783772",
+      "alphaBBox": [
+        691,
+        424,
+        750,
+        518
+      ],
+      "pixelsVisible": 4200,
+      "source45Available": true,
+      "trueSemanticPurityVerified": false,
+      "hiddenUnderpaintAvailable": false,
+      "cutoutIncludesBackgroundFeatures": true
+    },
+    {
+      "role": "eye.near",
+      "cutoutSHA256": "ac2965d277d012d4c32e574e455fb4096947339f30db022cd88454bbf574b970",
+      "alphaBBox": [
+        532,
+        411,
+        662,
+        526
+      ],
+      "pixelsVisible": 11962,
+      "source45Available": true,
+      "trueSemanticPurityVerified": false,
+      "hiddenUnderpaintAvailable": false,
+      "cutoutIncludesBackgroundFeatures": true
+    },
+    {
+      "role": "nose",
+      "cutoutSHA256": "16b9fb69b9d1659650118492bcb1c1da2376f7c60b2b504b028a2c5407f80334",
+      "alphaBBox": [
+        685,
+        503,
+        740,
+        563
+      ],
+      "pixelsVisible": 2189,
+      "source45Available": true,
+      "trueSemanticPurityVerified": false,
+      "hiddenUnderpaintAvailable": false,
+      "cutoutIncludesBackgroundFeatures": true
+    },
+    {
+      "role": "mouth",
+      "cutoutSHA256": "f59891984127769bab9431de60a5fd1dd07ee3e479b4f508a3e33abab6e9026f",
+      "alphaBBox": [
+        643,
+        567,
+        723,
+        615
+      ],
+      "pixelsVisible": 2750,
+      "source45Available": true,
+      "trueSemanticPurityVerified": false,
+      "hiddenUnderpaintAvailable": false,
+      "cutoutIncludesBackgroundFeatures": true
+    }
+  ],
+  "roiLayerCount": 5,
+  "desiredRoleCount": 13,
+  "remainingFusedRoles": [
+    "hair.back",
+    "hair.front",
+    "hair.side",
+    "face.skin",
+    "ear.near",
+    "ear.far",
+    "body.reference"
+  ],
+  "reconstruction": {
+    "sha256": "136870af36066fef7e7253f918de792927085c89cc162ce269f0a196617a807e",
+    "pixelExact": true,
+    "meaning": "Only re-partitions currently visible pixels; exact reassembly does not imply independent ArtMesh"
+  },
+  "movingEye": {
+    "offsetPx": [
+      18,
+      0
+    ],
+    "transparentHolePixelsInNearEyeROI": 1885,
+    "previewSHA256": "93d4c759c62d0ee91622b91685a74b35403e5fdb58945d795ac09bb34c2b9de8",
+    "finding": "Moving a visible ROI uncovers absent hidden skin and produces texture double edges"
+  },
+  "clipSeparableFromPriorWork": true,
+  "independentUnderpaintForEyesAndFace": false,
+  "semanticSeparationGate": "FAIL_VISIBLE_ROI_NOT_INDEPENDENT_PAINT",
+  "viewDependentVDDGate": "FAIL_MISSING_UNDERPAINT_AND_ROLE_BOUNDARIES",
+  "formalKeyframeAccepted": false,
+  "formalArtMeshModified": false,
+  "next": "Generate or paint hidden face and hair underlayers for the new relative +20-degree candidate and obtain clean eye/nose/mouth semantic masks before VDD warping."
+}
