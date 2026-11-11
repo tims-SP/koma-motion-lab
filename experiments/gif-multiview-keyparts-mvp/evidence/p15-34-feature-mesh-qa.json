@@ -1,0 +1,1475 @@
+{
+  "schema": "KOMA-P15-34-INK-OBSERVED-CONSTRAINED-MESH-V1",
+  "characterId": "p0_character_001",
+  "sourceP15_33RoleKeyframesUnchanged": true,
+  "sourceFeatureEvidenceSHA256": "2eaec233f01a6a4f336df7664be38961594c51460b1b0d80fc5fc24963d5098b",
+  "sourceP0OriginalSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "angles": [
+    55.0,
+    56.25,
+    57.5,
+    58.75,
+    60.0,
+    61.25,
+    62.5,
+    63.75,
+    65.0
+  ],
+  "frames": [
+    {
+      "yaw": 55.0,
+      "kind": "exact-source-keyframe",
+      "roles": 13,
+      "sha256": "45c6d79f5d7ef56d3dc8aecce919f28a517411d0c52ec369aaa9a7b5d4e9a9fb",
+      "keyframeExact": true
+    },
+    {
+      "yaw": 56.25,
+      "kind": "ink-observed-constrained-mesh",
+      "interval": [
+        55.0,
+        57.5
+      ],
+      "sha256": "1c72ca083a6d2616f16575d28c46db710b4d0d71ac0aab2577ab6b6b3d7e4aad",
+      "roleCount": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              309.01800537109375,
+              202.9149932861328
+            ],
+            [
+              302.0,
+              190.5
+            ],
+            [
+              325.0,
+              176.0
+            ]
+          ],
+          "sourceLeftSHA256": "daf851c7caf58a3f2951551794bf02bf398573d59d1dbb68b2408d2b4dbcd869",
+          "sourceRightSHA256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 6.59151,
+            "maxConstraintResidualPx": 0.14727,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.824993,
+            "coveredPixels": 4431,
+            "featureTargets": [
+              [
+                309.01800537109375,
+                202.9149932861328
+              ],
+              [
+                302.0,
+                190.5
+              ],
+              [
+                325.0,
+                176.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                309.0329895019531,
+                202.9969940185547
+              ],
+              [
+                301.9679870605469,
+                190.5780029296875
+              ],
+              [
+                325.0039978027344,
+                175.85299682617188
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 7.52352,
+            "maxConstraintResidualPx": 0.22947,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.795466,
+            "coveredPixels": 5268,
+            "featureTargets": [
+              [
+                309.01800537109375,
+                202.9149932861328
+              ],
+              [
+                302.0,
+                190.5
+              ],
+              [
+                325.0,
+                176.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                309.0,
+                202.8560028076172
+              ],
+              [
+                302.0409851074219,
+                190.38499450683594
+              ],
+              [
+                324.99700927734375,
+                176.22900390625
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 2992,
+          "sha256": "954be25a302aaff5681b57a5f591402025890edfef7a47e82a6ca547eefbcf79"
+        },
+        "hair.clip.cross_gold": {
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "featureCount": 5,
+          "target443": [
+            [
+              336.6839904785156,
+              138.4810028076172
+            ],
+            [
+              325.5,
+              126.5
+            ],
+            [
+              348.5,
+              143.5
+            ],
+            [
+              332.0,
+              152.5
+            ],
+            [
+              340.0,
+              122.0
+            ]
+          ],
+          "sourceLeftSHA256": "1ae7694f501eaee188e7e8f0b950fcc8d608a5fe8e906fe4c0b104e28c847d64",
+          "sourceRightSHA256": "66e36ef4391d08fd76ed446b90ab3f72e3b3b466ea4a51aca0ad1b9961c4803f",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 3.20472,
+            "maxConstraintResidualPx": 0.12035,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.835145,
+            "coveredPixels": 2633,
+            "featureTargets": [
+              [
+                336.6839904785156,
+                138.4810028076172
+              ],
+              [
+                325.5,
+                126.5
+              ],
+              [
+                348.5,
+                143.5
+              ],
+              [
+                332.0,
+                152.5
+              ],
+              [
+                340.0,
+                122.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                336.6830139160156,
+                138.4969940185547
+              ],
+              [
+                325.614013671875,
+                126.46199798583984
+              ],
+              [
+                348.5220031738281,
+                143.5800018310547
+              ],
+              [
+                331.9840087890625,
+                152.52000427246094
+              ],
+              [
+                339.9639892578125,
+                122.0009994506836
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 2.82074,
+            "maxConstraintResidualPx": 0.09888,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.894002,
+            "coveredPixels": 2440,
+            "featureTargets": [
+              [
+                336.6839904785156,
+                138.4810028076172
+              ],
+              [
+                325.5,
+                126.5
+              ],
+              [
+                348.5,
+                143.5
+              ],
+              [
+                332.0,
+                152.5
+              ],
+              [
+                340.0,
+                122.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                336.6830139160156,
+                138.46200561523438
+              ],
+              [
+                325.42999267578125,
+                126.5270004272461
+              ],
+              [
+                348.48199462890625,
+                143.4029998779297
+              ],
+              [
+                332.0060119628906,
+                152.4720001220703
+              ],
+              [
+                340.0480041503906,
+                121.9990005493164
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 1117,
+          "sha256": "2b7fca38e01f448118ab90d6a708f87ff4e7ddd732211801cd1ee418fa5cac06"
+        },
+        "hair.side": {
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              148.0,
+              248.53900146484375
+            ],
+            [
+              181.0,
+              221.0
+            ],
+            [
+              154.5,
+              333.5
+            ]
+          ],
+          "sourceLeftSHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "sourceRightSHA256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 2.92265,
+            "maxConstraintResidualPx": 0.06263,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.964091,
+            "coveredPixels": 38098,
+            "featureTargets": [
+              [
+                148.0,
+                248.53900146484375
+              ],
+              [
+                181.0,
+                221.0
+              ],
+              [
+                154.5,
+                333.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                148.03500366210938,
+                248.48699951171875
+              ],
+              [
+                181.03399658203125,
+                221.04400634765625
+              ],
+              [
+                154.47999572753906,
+                333.4949951171875
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 2.8776,
+            "maxConstraintResidualPx": 0.06138,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.955615,
+            "coveredPixels": 37467,
+            "featureTargets": [
+              [
+                148.0,
+                248.53900146484375
+              ],
+              [
+                181.0,
+                221.0
+              ],
+              [
+                154.5,
+                333.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.96600341796875,
+                248.58999633789062
+              ],
+              [
+                180.9720001220703,
+                220.9600067138672
+              ],
+              [
+                154.52000427246094,
+                333.5050048828125
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 19778,
+          "sha256": "721a902f07f9138631687f1a1884d75fa660e10bd88b439c513317c882097189"
+        }
+      },
+      "changedCompositePixelsVsP15_33": 123849
+    },
+    {
+      "yaw": 57.5,
+      "kind": "exact-source-keyframe",
+      "roles": 13,
+      "sha256": "e64cdb0dab90230186b32712ad3fb9b37a420d7b15ccdc03901bfb0d7efc6d52",
+      "keyframeExact": true
+    },
+    {
+      "yaw": 58.75,
+      "kind": "ink-observed-constrained-mesh",
+      "interval": [
+        57.5,
+        60.0
+      ],
+      "sha256": "4bae64ac16c6515c5a18922883341564a2ac451b8b2ff1e736f6264a2f2da272",
+      "roleCount": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              310.8819885253906,
+              202.9149932861328
+            ],
+            [
+              305.5,
+              191.0
+            ],
+            [
+              327.0,
+              176.0
+            ]
+          ],
+          "sourceLeftSHA256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+          "sourceRightSHA256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 7.71236,
+            "maxConstraintResidualPx": 0.16264,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.818725,
+            "coveredPixels": 4919,
+            "featureTargets": [
+              [
+                310.8819885253906,
+                202.9149932861328
+              ],
+              [
+                305.5,
+                191.0
+              ],
+              [
+                327.0,
+                176.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                310.8940124511719,
+                202.8179931640625
+              ],
+              [
+                305.4859924316406,
+                190.91900634765625
+              ],
+              [
+                326.99700927734375,
+                176.16299438476562
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 7.08413,
+            "maxConstraintResidualPx": 0.19561,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.882943,
+            "coveredPixels": 4645,
+            "featureTargets": [
+              [
+                310.8819885253906,
+                202.9149932861328
+              ],
+              [
+                305.5,
+                191.0
+              ],
+              [
+                327.0,
+                176.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                310.87200927734375,
+                203.02000427246094
+              ],
+              [
+                305.5260009765625,
+                191.17999267578125
+              ],
+              [
+                326.99700927734375,
+                175.8040008544922
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 2912,
+          "sha256": "2435e6375ac886273444d7b305f4177c98b8d190bcc606ee7c2d90da90abd955"
+        },
+        "hair.clip.cross_gold": {
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "featureCount": 5,
+          "target443": [
+            [
+              338.1300048828125,
+              138.4810028076172
+            ],
+            [
+              327.0,
+              126.5
+            ],
+            [
+              349.0,
+              144.5
+            ],
+            [
+              333.0,
+              152.5
+            ],
+            [
+              343.0,
+              123.5
+            ]
+          ],
+          "sourceLeftSHA256": "66e36ef4391d08fd76ed446b90ab3f72e3b3b466ea4a51aca0ad1b9961c4803f",
+          "sourceRightSHA256": "33277d15b485092fdcc959cbc07270cd50adfebf31c6f4f94f7ab87d7eeba129",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 3.15285,
+            "maxConstraintResidualPx": 0.09991,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.875484,
+            "coveredPixels": 2407,
+            "featureTargets": [
+              [
+                338.1300048828125,
+                138.4810028076172
+              ],
+              [
+                327.0,
+                126.5
+              ],
+              [
+                349.0,
+                144.5
+              ],
+              [
+                333.0,
+                152.5
+              ],
+              [
+                343.0,
+                123.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                338.11199951171875,
+                138.48500061035156
+              ],
+              [
+                326.9389953613281,
+                126.55500030517578
+              ],
+              [
+                349.06201171875,
+                144.42100524902344
+              ],
+              [
+                333.0159912109375,
+                152.51800537109375
+              ],
+              [
+                342.9540100097656,
+                123.4739990234375
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 3.4928,
+            "maxConstraintResidualPx": 0.10251,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.915164,
+            "coveredPixels": 2647,
+            "featureTargets": [
+              [
+                338.1300048828125,
+                138.4810028076172
+              ],
+              [
+                327.0,
+                126.5
+              ],
+              [
+                349.0,
+                144.5
+              ],
+              [
+                333.0,
+                152.5
+              ],
+              [
+                343.0,
+                123.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                338.1449890136719,
+                138.47999572753906
+              ],
+              [
+                327.0799865722656,
+                126.43499755859375
+              ],
+              [
+                348.9549865722656,
+                144.56199645996094
+              ],
+              [
+                332.9809875488281,
+                152.47900390625
+              ],
+              [
+                343.0570068359375,
+                123.50700378417969
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 1115,
+          "sha256": "54d1c12ba7b079f9ef7c687deb295c15dc76d261200c8c4e37e1b4cd61af0ee1"
+        },
+        "hair.side": {
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              147.74400329589844,
+              248.15499877929688
+            ],
+            [
+              181.5,
+              219.0
+            ],
+            [
+              155.5,
+              333.0
+            ]
+          ],
+          "sourceLeftSHA256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "sourceRightSHA256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 1.15442,
+            "maxConstraintResidualPx": 0.04411,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.954945,
+            "coveredPixels": 38458,
+            "featureTargets": [
+              [
+                147.74400329589844,
+                248.15499877929688
+              ],
+              [
+                181.5,
+                219.0
+              ],
+              [
+                155.5,
+                333.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.78900146484375,
+                248.15699768066406
+              ],
+              [
+                181.51600646972656,
+                218.9980010986328
+              ],
+              [
+                155.48500061035156,
+                333.0010070800781
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 1.14366,
+            "maxConstraintResidualPx": 0.04193,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.954763,
+            "coveredPixels": 38045,
+            "featureTargets": [
+              [
+                147.74400329589844,
+                248.15499877929688
+              ],
+              [
+                181.5,
+                219.0
+              ],
+              [
+                155.5,
+                333.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.7030029296875,
+                248.15199279785156
+              ],
+              [
+                181.48399353027344,
+                219.0030059814453
+              ],
+              [
+                155.51600646972656,
+                332.9989929199219
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 18378,
+          "sha256": "26742fdc4eb0bbf80a6f00a9357ee996e348ce623ab8f59e8248085d9154c57f"
+        }
+      },
+      "changedCompositePixelsVsP15_33": 118607
+    },
+    {
+      "yaw": 60.0,
+      "kind": "exact-source-keyframe",
+      "roles": 13,
+      "sha256": "a08d8eac8101c2b2b862fe4eb2ef419e642bc809af54315922f7621fe1327179",
+      "keyframeExact": true
+    },
+    {
+      "yaw": 61.25,
+      "kind": "ink-observed-constrained-mesh",
+      "interval": [
+        60.0,
+        62.5
+      ],
+      "sha256": "ab7a5a332d740aeb4d079bba7aadc56e736328f08f3e8e7e84309dd44474553e",
+      "roleCount": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              312.7439880371094,
+              202.9149932861328
+            ],
+            [
+              308.5,
+              192.0
+            ],
+            [
+              329.0,
+              173.5
+            ]
+          ],
+          "sourceLeftSHA256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+          "sourceRightSHA256": "384d92b9498cee71794cbfdc3dc2bb6f64cfb49d0260ee8a21b4a2eef170682b",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 3.94259,
+            "maxConstraintResidualPx": 0.05616,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.879542,
+            "coveredPixels": 4368,
+            "featureTargets": [
+              [
+                312.7439880371094,
+                202.9149932861328
+              ],
+              [
+                308.5,
+                192.0
+              ],
+              [
+                329.0,
+                173.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                312.7539978027344,
+                202.96200561523438
+              ],
+              [
+                308.4750061035156,
+                192.0500030517578
+              ],
+              [
+                328.99700927734375,
+                173.4510040283203
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 4.27038,
+            "maxConstraintResidualPx": 0.12988,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.825408,
+            "coveredPixels": 4919,
+            "featureTargets": [
+              [
+                312.7439880371094,
+                202.9149932861328
+              ],
+              [
+                308.5,
+                192.0
+              ],
+              [
+                329.0,
+                173.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                312.7359924316406,
+                202.86500549316406
+              ],
+              [
+                308.531005859375,
+                191.93600463867188
+              ],
+              [
+                329.010986328125,
+                173.62899780273438
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 2675,
+          "sha256": "63b34df4079b0f7cf5891c120ad9b9b87f03c640af19b60e7a334241952b745f"
+        },
+        "hair.clip.cross_gold": {
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "featureCount": 5,
+          "target443": [
+            [
+              339.57598876953125,
+              138.4810028076172
+            ],
+            [
+              329.0,
+              126.0
+            ],
+            [
+              350.0,
+              145.0
+            ],
+            [
+              335.0,
+              153.0
+            ],
+            [
+              343.0,
+              122.5
+            ]
+          ],
+          "sourceLeftSHA256": "33277d15b485092fdcc959cbc07270cd50adfebf31c6f4f94f7ab87d7eeba129",
+          "sourceRightSHA256": "e22a091c84e76ce4f96e2062ede4342dea6c2713022f0ab6befe3df1158a7fd7",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 3.29946,
+            "maxConstraintResidualPx": 0.15151,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.914779,
+            "coveredPixels": 2635,
+            "featureTargets": [
+              [
+                339.57598876953125,
+                138.4810028076172
+              ],
+              [
+                329.0,
+                126.0
+              ],
+              [
+                350.0,
+                145.0
+              ],
+              [
+                335.0,
+                153.0
+              ],
+              [
+                343.0,
+                122.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                339.5889892578125,
+                138.47300720214844
+              ],
+              [
+                329.0429992675781,
+                125.93599700927734
+              ],
+              [
+                349.96099853515625,
+                145.01300048828125
+              ],
+              [
+                334.9469909667969,
+                152.9600067138672
+              ],
+              [
+                343.1310119628906,
+                122.57599639892578
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 3.22569,
+            "maxConstraintResidualPx": 0.09289,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.878752,
+            "coveredPixels": 2491,
+            "featureTargets": [
+              [
+                339.57598876953125,
+                138.4810028076172
+              ],
+              [
+                329.0,
+                126.0
+              ],
+              [
+                350.0,
+                145.0
+              ],
+              [
+                335.0,
+                153.0
+              ],
+              [
+                343.0,
+                122.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                339.5570068359375,
+                138.4720001220703
+              ],
+              [
+                328.96600341796875,
+                126.05999755859375
+              ],
+              [
+                350.0610046386719,
+                144.96299743652344
+              ],
+              [
+                335.0369873046875,
+                153.0469970703125
+              ],
+              [
+                342.9280090332031,
+                122.44100189208984
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 1111,
+          "sha256": "590c831ed08f7a440fc310821a02d7ade3d27367aaa8229080b1987562eca25e"
+        },
+        "hair.side": {
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              147.78199768066406,
+              247.77000427246094
+            ],
+            [
+              183.0,
+              219.5
+            ],
+            [
+              156.0,
+              333.5
+            ]
+          ],
+          "sourceLeftSHA256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "sourceRightSHA256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 1.43345,
+            "maxConstraintResidualPx": 0.04674,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.959595,
+            "coveredPixels": 38706,
+            "featureTargets": [
+              [
+                147.78199768066406,
+                247.77000427246094
+              ],
+              [
+                183.0,
+                219.5
+              ],
+              [
+                156.0,
+                333.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.8179931640625,
+                247.7989959716797
+              ],
+              [
+                182.99400329589844,
+                219.49200439453125
+              ],
+              [
+                156.00399780273438,
+                333.4909973144531
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 1.43496,
+            "maxConstraintResidualPx": 0.0445,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.949941,
+            "coveredPixels": 38018,
+            "featureTargets": [
+              [
+                147.78199768066406,
+                247.77000427246094
+              ],
+              [
+                183.0,
+                219.5
+              ],
+              [
+                156.0,
+                333.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.7469940185547,
+                247.74099731445312
+              ],
+              [
+                183.00399780273438,
+                219.50599670410156
+              ],
+              [
+                155.9969940185547,
+                333.5090026855469
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 19314,
+          "sha256": "d44d370e623913ea627a676e43e70a29dc949829a5a9a6a3df58d76944c85268"
+        }
+      },
+      "changedCompositePixelsVsP15_33": 122586
+    },
+    {
+      "yaw": 62.5,
+      "kind": "exact-source-keyframe",
+      "roles": 13,
+      "sha256": "87497e5cde15b92b9945687a736617c80bff20a7ddfcfc3eb29f6af5ed00cc37",
+      "keyframeExact": true
+    },
+    {
+      "yaw": 63.75,
+      "kind": "ink-observed-constrained-mesh",
+      "interval": [
+        62.5,
+        65.0
+      ],
+      "sha256": "5eed006f144cb02ecdca5bc96ae11a9966b9fe1d12df5a638d6b9d61b2ed0765",
+      "roleCount": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              314.60699462890625,
+              202.9149932861328
+            ],
+            [
+              311.5,
+              189.0
+            ],
+            [
+              331.0,
+              183.5
+            ]
+          ],
+          "sourceLeftSHA256": "384d92b9498cee71794cbfdc3dc2bb6f64cfb49d0260ee8a21b4a2eef170682b",
+          "sourceRightSHA256": "7407b43e73c49c3e4961778da3e87465e3f4337abf11eea1fffefe64c4639a04",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 8.03387,
+            "maxConstraintResidualPx": 0.26065,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.788696,
+            "coveredPixels": 4413,
+            "featureTargets": [
+              [
+                314.60699462890625,
+                202.9149932861328
+              ],
+              [
+                311.5,
+                189.0
+              ],
+              [
+                331.0,
+                183.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                314.61700439453125,
+                202.99000549316406
+              ],
+              [
+                311.4729919433594,
+                189.25900268554688
+              ],
+              [
+                330.9830017089844,
+                183.35000610351562
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 8.00457,
+            "maxConstraintResidualPx": 0.54734,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.760849,
+            "coveredPixels": 4420,
+            "featureTargets": [
+              [
+                314.60699462890625,
+                202.9149932861328
+              ],
+              [
+                311.5,
+                189.0
+              ],
+              [
+                331.0,
+                183.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                314.5950012207031,
+                202.88999938964844
+              ],
+              [
+                311.510986328125,
+                188.81199645996094
+              ],
+              [
+                331.0039978027344,
+                184.0469970703125
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 2800,
+          "sha256": "db3a42b3fded7653c66b243b534af78eb1993b81ea92f6452dd37ac13fbd35f0"
+        },
+        "hair.clip.cross_gold": {
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "featureCount": 5,
+          "target443": [
+            [
+              341.0220031738281,
+              138.4810028076172
+            ],
+            [
+              329.0,
+              127.5
+            ],
+            [
+              351.0,
+              145.5
+            ],
+            [
+              336.5,
+              153.0
+            ],
+            [
+              343.5,
+              121.5
+            ]
+          ],
+          "sourceLeftSHA256": "e22a091c84e76ce4f96e2062ede4342dea6c2713022f0ab6befe3df1158a7fd7",
+          "sourceRightSHA256": "5c37ff0f661325d7dfe2e5c25b001e3bfbffc8f168dce72d44f64e83e26b78c4",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 4.67647,
+            "maxConstraintResidualPx": 0.09638,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.844405,
+            "coveredPixels": 2464,
+            "featureTargets": [
+              [
+                341.0220031738281,
+                138.4810028076172
+              ],
+              [
+                329.0,
+                127.5
+              ],
+              [
+                351.0,
+                145.5
+              ],
+              [
+                336.5,
+                153.0
+              ],
+              [
+                343.5,
+                121.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                340.9739990234375,
+                138.51100158691406
+              ],
+              [
+                328.9989929199219,
+                127.48400115966797
+              ],
+              [
+                351.0379943847656,
+                145.42799377441406
+              ],
+              [
+                336.4750061035156,
+                153.09300231933594
+              ],
+              [
+                343.4410095214844,
+                121.51100158691406
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 5.11421,
+            "maxConstraintResidualPx": 0.11764,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.906203,
+            "coveredPixels": 2574,
+            "featureTargets": [
+              [
+                341.0220031738281,
+                138.4810028076172
+              ],
+              [
+                329.0,
+                127.5
+              ],
+              [
+                351.0,
+                145.5
+              ],
+              [
+                336.5,
+                153.0
+              ],
+              [
+                343.5,
+                121.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                341.0639953613281,
+                138.45199584960938
+              ],
+              [
+                328.9989929199219,
+                127.50499725341797
+              ],
+              [
+                350.9800109863281,
+                145.54100036621094
+              ],
+              [
+                336.5119934082031,
+                152.88900756835938
+              ],
+              [
+                343.6109924316406,
+                121.46099853515625
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 1097,
+          "sha256": "29298757ccbc82873ff1f5abdc6c07a485a2d2885ee5a89ebb661ca951a8cada"
+        },
+        "hair.side": {
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "featureCount": 3,
+          "target443": [
+            [
+              148.11000061035156,
+              247.38499450683594
+            ],
+            [
+              188.0,
+              218.0
+            ],
+            [
+              156.5,
+              333.5
+            ]
+          ],
+          "sourceLeftSHA256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "sourceRightSHA256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84",
+          "sourceLocationAuthority": "visible source pigment/contour candidates",
+          "artistApproved": false,
+          "left": {
+            "maxCorrectionPx": 4.73301,
+            "maxConstraintResidualPx": 0.09805,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.752921,
+            "coveredPixels": 39701,
+            "featureTargets": [
+              [
+                148.11000061035156,
+                247.38499450683594
+              ],
+              [
+                188.0,
+                218.0
+              ],
+              [
+                156.5,
+                333.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                148.12100219726562,
+                247.3350067138672
+              ],
+              [
+                187.91000366210938,
+                218.0399932861328
+              ],
+              [
+                156.52000427246094,
+                333.4989929199219
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 4.28133,
+            "maxConstraintResidualPx": 0.075,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.560092,
+            "coveredPixels": 37466,
+            "featureTargets": [
+              [
+                148.11000061035156,
+                247.38499450683594
+              ],
+              [
+                188.0,
+                218.0
+              ],
+              [
+                156.5,
+                333.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                148.07699584960938,
+                247.36399841308594
+              ],
+              [
+                188.0679931640625,
+                217.96800231933594
+              ],
+              [
+                156.4770050048828,
+                333.51300048828125
+              ]
+            ]
+          },
+          "changedPixelsVsP15_33": 23621,
+          "sha256": "df8b58058e9fd60b8c50ba38e11cd74b426e9109f36d0b410c73ad9022a1c8e2"
+        }
+      },
+      "changedCompositePixelsVsP15_33": 139757
+    },
+    {
+      "yaw": 65.0,
+      "kind": "exact-source-keyframe",
+      "roles": 13,
+      "sha256": "bf1c3f27f9c85dbaa3ecea5624dce72333dcd0ae0c25e6d85cb4bb2a3bc723e9",
+      "keyframeExact": true
+    }
+  ],
+  "roleCount": 13,
+  "meshRoles": [
+    "eye.far",
+    "hair.clip.cross_gold",
+    "hair.side"
+  ],
+  "grid": [
+    7,
+    7
+  ],
+  "trianglesPerMeshRole": 72,
+  "unmodifiedRoles": 10,
+  "keyframes": 5,
+  "midpoints": 4,
+  "maximumTrackingResidualPx": 0.54734,
+  "minimumTriangleAreaRatio": 0.560092,
+  "triangleFlips": 0,
+  "physicalFarEyeNoseOcclusionVerified": false,
+  "clipPhysicalHairLockMountVerified": false,
+  "artistLandmarksApproved": false,
+  "newIndependentKeyframePainting": false,
+  "productionRendererChanged": false,
+  "formalArtisticAcceptance": false,
+  "status": "SOURCE_PAINTED_INK_MESH_ENGINEERING_CANDIDATE"
+}

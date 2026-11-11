@@ -1,0 +1,160 @@
+{
+  "schema": "KOMA-P15-34-CHROMIUM-V1",
+  "characterId": "p0_character_001",
+  "checks": [
+    {
+      "viewport": 1440,
+      "frame": 0,
+      "angle": 55,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 1,
+      "angle": 56.25,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 2,
+      "angle": 57.5,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 3,
+      "angle": 58.75,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 4,
+      "angle": 60,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 5,
+      "angle": 61.25,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 6,
+      "angle": 62.5,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 7,
+      "angle": 63.75,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 1440,
+      "frame": 8,
+      "angle": 65,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 0,
+      "angle": 55,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 1,
+      "angle": 56.25,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 2,
+      "angle": 57.5,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 3,
+      "angle": 58.75,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 4,
+      "angle": 60,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 5,
+      "angle": 61.25,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 6,
+      "angle": 62.5,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 7,
+      "angle": 63.75,
+      "sourceCount": 7
+    },
+    {
+      "viewport": 390,
+      "frame": 8,
+      "angle": 65,
+      "sourceCount": 7
+    }
+  ],
+  "screenshots": [
+    {
+      "viewport": 1440,
+      "angle": 57.5,
+      "path": "chromium-1440-57p5.png",
+      "sha256": "baea4052ff5f28e33e31f6ba3d8f4225a931dbc7fb8fc3f5ec9c2d320b74d51b"
+    },
+    {
+      "viewport": 1440,
+      "angle": 60,
+      "path": "chromium-1440-60.png",
+      "sha256": "aa8f77d615bf98b65496631a3034512dad77f17c02c129166195a4c9699fb72e"
+    },
+    {
+      "viewport": 1440,
+      "angle": 62.5,
+      "path": "chromium-1440-62p5.png",
+      "sha256": "725a9928f7183b16ef9b3d9b34f6bcb315db42bb7d112d4b23308e951516be72"
+    },
+    {
+      "viewport": 390,
+      "angle": 57.5,
+      "path": "chromium-390-57p5.png",
+      "sha256": "4abb5b94a883b8a5df188c85fcc54bf483c9220b40fafbcee573f47c1ca6ba77"
+    },
+    {
+      "viewport": 390,
+      "angle": 60,
+      "path": "chromium-390-60.png",
+      "sha256": "2979bc69f00ba9cf9865cdf032190c54e5aa936345a6cf5bab3a692f024664f1"
+    },
+    {
+      "viewport": 390,
+      "angle": 62.5,
+      "path": "chromium-390-62p5.png",
+      "sha256": "f0bf6ce5b56806284471f4c2f5a624d3376aa4309df79c1ab288f17a6f7f9beb"
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "productionRendererChanged": false,
+  "artisticallyAccepted": false,
+  "status": "NINE_FRAME_ROLE_MESH_REVIEW_VERIFIED",
+  "viewportChecks": 18,
+  "imageLoads": 126,
+  "screenshotCount": 6
+}

@@ -1,0 +1,571 @@
+{
+  "schema": "KOMA-P15-34-PAINTED-INK-CANDIDATES-V1",
+  "characterId": "p0_character_001",
+  "source45P0SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "angleKeys": [
+    55.0,
+    57.5,
+    60.0,
+    62.5,
+    65.0
+  ],
+  "meshRoleCount": 3,
+  "frames": [
+    {
+      "yaw": 55.0,
+      "features": {
+        "eye.far": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw55/eye.far.png",
+          "sourceSHA256": "daf851c7caf58a3f2951551794bf02bf398573d59d1dbb68b2408d2b4dbcd869",
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "points443": [
+            [
+              308.0870056152344,
+              202.9149932861328
+            ],
+            [
+              300.0,
+              191.0
+            ],
+            [
+              324.0,
+              170.0
+            ]
+          ],
+          "evidence": {
+            "supportInkPixels": 342,
+            "sourceExtent": [
+              297,
+              167,
+              345,
+              225
+            ]
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw55/eye.far.png",
+          "annotationSHA256": "b23a3255e2fce10218a18452988dd9a05199f39ea59791981fa8071bfadafcd7",
+          "artistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw55/hair.clip.cross_gold.png",
+          "sourceSHA256": "1ae7694f501eaee188e7e8f0b950fcc8d608a5fe8e906fe4c0b104e28c847d64",
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "points443": [
+            [
+              335.96099853515625,
+              138.4810028076172
+            ],
+            [
+              326.0,
+              125.0
+            ],
+            [
+              347.0,
+              144.0
+            ],
+            [
+              331.0,
+              152.0
+            ],
+            [
+              338.0,
+              121.0
+            ]
+          ],
+          "evidence": {
+            "supportGoldPixels": 408,
+            "goldColorMaskUsed": true
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw55/hair.clip.cross_gold.png",
+          "annotationSHA256": "09de1c172c925374970ad1a2885d0b36fb5651f5db74bcbd65f952e047696ea7",
+          "artistApproved": false
+        },
+        "hair.side": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw55/hair.side.png",
+          "sourceSHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "points443": [
+            [
+              148.20199584960938,
+              248.7310028076172
+            ],
+            [
+              181.0,
+              223.0
+            ],
+            [
+              154.0,
+              334.0
+            ]
+          ],
+          "evidence": {
+            "supportBoundaryPixels": 2074,
+            "sourceAlphaMass": 17082
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw55/hair.side.png",
+          "annotationSHA256": "c8165b3dfdea0844d6b325eb025285b7c9ea9f7ccb538cbfbcd742f126109730",
+          "artistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 57.5,
+      "features": {
+        "eye.far": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw57p5/eye.far.png",
+          "sourceSHA256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "points443": [
+            [
+              309.95001220703125,
+              202.9149932861328
+            ],
+            [
+              304.0,
+              190.0
+            ],
+            [
+              326.0,
+              182.0
+            ]
+          ],
+          "evidence": {
+            "supportInkPixels": 310,
+            "sourceExtent": [
+              301,
+              167,
+              347,
+              225
+            ]
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw57p5/eye.far.png",
+          "annotationSHA256": "c52801f72bea0f22d011b336bf3e2ff1133c96a1d13110e234a873fd821f10b3",
+          "artistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw57p5/hair.clip.cross_gold.png",
+          "sourceSHA256": "66e36ef4391d08fd76ed446b90ab3f72e3b3b466ea4a51aca0ad1b9961c4803f",
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "points443": [
+            [
+              337.4070129394531,
+              138.4810028076172
+            ],
+            [
+              325.0,
+              128.0
+            ],
+            [
+              350.0,
+              143.0
+            ],
+            [
+              333.0,
+              153.0
+            ],
+            [
+              342.0,
+              123.0
+            ]
+          ],
+          "evidence": {
+            "supportGoldPixels": 416,
+            "goldColorMaskUsed": true
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw57p5/hair.clip.cross_gold.png",
+          "annotationSHA256": "acd36df916d9af3c2fc6ad477a2f499ada45e3fc6a557a0a2af5d278869c3fd7",
+          "artistApproved": false
+        },
+        "hair.side": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw57p5/hair.side.png",
+          "sourceSHA256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "points443": [
+            [
+              147.7989959716797,
+              248.3470001220703
+            ],
+            [
+              181.0,
+              219.0
+            ],
+            [
+              155.0,
+              333.0
+            ]
+          ],
+          "evidence": {
+            "supportBoundaryPixels": 2043,
+            "sourceAlphaMass": 17267
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw57p5/hair.side.png",
+          "annotationSHA256": "7deb58464e6a1f947335456add3f15cce9b864dd740154a1adac643fd7fe4d68",
+          "artistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 60.0,
+      "features": {
+        "eye.far": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw60/eye.far.png",
+          "sourceSHA256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "points443": [
+            [
+              311.81298828125,
+              202.9149932861328
+            ],
+            [
+              307.0,
+              192.0
+            ],
+            [
+              328.0,
+              170.0
+            ]
+          ],
+          "evidence": {
+            "supportInkPixels": 302,
+            "sourceExtent": [
+              304,
+              167,
+              348,
+              225
+            ]
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw60/eye.far.png",
+          "annotationSHA256": "0cae0be3c4a1ce1579aeb96a38de631dac493be6bce2fa94dd0974c00fabfc5b",
+          "artistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw60/hair.clip.cross_gold.png",
+          "sourceSHA256": "33277d15b485092fdcc959cbc07270cd50adfebf31c6f4f94f7ab87d7eeba129",
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "points443": [
+            [
+              338.8529968261719,
+              138.4810028076172
+            ],
+            [
+              329.0,
+              125.0
+            ],
+            [
+              348.0,
+              146.0
+            ],
+            [
+              333.0,
+              152.0
+            ],
+            [
+              344.0,
+              124.0
+            ]
+          ],
+          "evidence": {
+            "supportGoldPixels": 406,
+            "goldColorMaskUsed": true
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw60/hair.clip.cross_gold.png",
+          "annotationSHA256": "f7354d0f76a2a5ef5f38b16dda3175957e82b71a1c523ad155c0362978dcf387",
+          "artistApproved": false
+        },
+        "hair.side": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw60/hair.side.png",
+          "sourceSHA256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "points443": [
+            [
+              147.69000244140625,
+              247.96200561523438
+            ],
+            [
+              182.0,
+              219.0
+            ],
+            [
+              156.0,
+              333.0
+            ]
+          ],
+          "evidence": {
+            "supportBoundaryPixels": 2119,
+            "sourceAlphaMass": 17543
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw60/hair.side.png",
+          "annotationSHA256": "1919e6d7f738130b842090913280596a74e9150ca83263215ee802dfc40f8f89",
+          "artistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 62.5,
+      "features": {
+        "eye.far": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw62p5/eye.far.png",
+          "sourceSHA256": "384d92b9498cee71794cbfdc3dc2bb6f64cfb49d0260ee8a21b4a2eef170682b",
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "points443": [
+            [
+              313.6759948730469,
+              202.9149932861328
+            ],
+            [
+              310.0,
+              192.0
+            ],
+            [
+              330.0,
+              177.0
+            ]
+          ],
+          "evidence": {
+            "supportInkPixels": 280,
+            "sourceExtent": [
+              308,
+              167,
+              350,
+              225
+            ]
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw62p5/eye.far.png",
+          "annotationSHA256": "fef2c2f162bf4305b977b3e17ee13ae62217768ac23ddb8d7f30cc266452aef7",
+          "artistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw62p5/hair.clip.cross_gold.png",
+          "sourceSHA256": "e22a091c84e76ce4f96e2062ede4342dea6c2713022f0ab6befe3df1158a7fd7",
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "points443": [
+            [
+              340.29901123046875,
+              138.4810028076172
+            ],
+            [
+              329.0,
+              127.0
+            ],
+            [
+              352.0,
+              144.0
+            ],
+            [
+              337.0,
+              154.0
+            ],
+            [
+              342.0,
+              121.0
+            ]
+          ],
+          "evidence": {
+            "supportGoldPixels": 422,
+            "goldColorMaskUsed": true
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw62p5/hair.clip.cross_gold.png",
+          "annotationSHA256": "5b768cfe6f064b67e1b8ffa2432baac723e594a9f3b974958ee93ba61ae8c9f8",
+          "artistApproved": false
+        },
+        "hair.side": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw62p5/hair.side.png",
+          "sourceSHA256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "points443": [
+            [
+              147.8730010986328,
+              247.57699584960938
+            ],
+            [
+              184.0,
+              220.0
+            ],
+            [
+              156.0,
+              334.0
+            ]
+          ],
+          "evidence": {
+            "supportBoundaryPixels": 2097,
+            "sourceAlphaMass": 17651
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw62p5/hair.side.png",
+          "annotationSHA256": "58f5cf67abec477cfedd1724d4e80a1ab31bbed3969836cc8e63ceb735c8ea3a",
+          "artistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 65.0,
+      "features": {
+        "eye.far": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw65/eye.far.png",
+          "sourceSHA256": "7407b43e73c49c3e4961778da3e87465e3f4337abf11eea1fffefe64c4639a04",
+          "featureNames": [
+            "iris.camera",
+            "eyelid.left.ink.candidate",
+            "eyelid.right.ink.candidate"
+          ],
+          "points443": [
+            [
+              315.53900146484375,
+              202.9149932861328
+            ],
+            [
+              313.0,
+              186.0
+            ],
+            [
+              332.0,
+              190.0
+            ]
+          ],
+          "evidence": {
+            "supportInkPixels": 267,
+            "sourceExtent": [
+              311,
+              167,
+              352,
+              225
+            ]
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw65/eye.far.png",
+          "annotationSHA256": "f3e8cb1a7807fc976fe8ea83945612d35564c672d4b043ab51442ff10bead2fa",
+          "artistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw65/hair.clip.cross_gold.png",
+          "sourceSHA256": "5c37ff0f661325d7dfe2e5c25b001e3bfbffc8f168dce72d44f64e83e26b78c4",
+          "featureNames": [
+            "clip.center.camera",
+            "clip.diagonal_plus.end_a.ink.candidate",
+            "clip.diagonal_plus.end_b.ink.candidate",
+            "clip.diagonal_minus.end_a.ink.candidate",
+            "clip.diagonal_minus.end_b.ink.candidate"
+          ],
+          "points443": [
+            [
+              341.7449951171875,
+              138.4810028076172
+            ],
+            [
+              329.0,
+              128.0
+            ],
+            [
+              350.0,
+              147.0
+            ],
+            [
+              336.0,
+              152.0
+            ],
+            [
+              345.0,
+              122.0
+            ]
+          ],
+          "evidence": {
+            "supportGoldPixels": 408,
+            "goldColorMaskUsed": true
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw65/hair.clip.cross_gold.png",
+          "annotationSHA256": "90afa74e77c4bd7ba1ef8adc0d63ce8ac7fbd401d174b91e2d148e4b2b4c11d1",
+          "artistApproved": false
+        },
+        "hair.side": {
+          "sourceRGBA": "p15-31-per-role-vdd/yaw65/hair.side.png",
+          "sourceSHA256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84",
+          "featureNames": [
+            "hair.side.camera",
+            "hair.side.root.contour.candidate",
+            "hair.side.tip.contour.candidate"
+          ],
+          "points443": [
+            [
+              148.34800720214844,
+              247.1929931640625
+            ],
+            [
+              192.0,
+              216.0
+            ],
+            [
+              157.0,
+              333.0
+            ]
+          ],
+          "evidence": {
+            "supportBoundaryPixels": 1489,
+            "sourceAlphaMass": 20900
+          },
+          "annotationPath": "p15-34-ink-landmarks/yaw65/hair.side.png",
+          "annotationSHA256": "456e65f86c6ec513b218bfa0a0724726d82662083ece93a10ae7f648c1429f9c",
+          "artistApproved": false
+        }
+      }
+    }
+  ],
+  "featureAuthority": "ink/contour observations from P0-derived source-keyframe RGBA",
+  "verifiedIndependentArtistLandmarks": 0,
+  "physicalClipMountVerified": false,
+  "true3DFacialOcclusionVerified": false,
+  "formalArtApproval": false,
+  "status": "IMAGE_GROUNDED_FEATURE_CANDIDATES_REGISTERED"
+}

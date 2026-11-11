@@ -140,3 +140,9 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-13 语义结构化条件图与定位验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-13-structural-qa.json)
 - [P15-13 面部局部像素对齐](experiments/gif-multiview-keyparts-mvp/evidence/p15-13-local-alignment-qa.json)
 - [P15-13 可重放 HTML 审查资源](experiments/gif-multiview-keyparts-mvp/evidence/p15-13-delivery.json)
+
+- [P15-34 源原画笔触与语义 Mesh 形变验收](docs/plans/2026-11-11-p15-34-ink-observed-mesh-vdd.md)
+- [P15-34 墨线采样与来源 SHA 验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-ink-landmarks-qa.json)
+- [P15-34 五关键帧四中间帧 Mesh 验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-feature-mesh-qa.json)
+- [P15-34 Chromium 审查截图和图像加载](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-browser-qa.json)
+- [P15-34 私有 HTML ZIP 资源 SHA](experiments/gif-multiview-keyparts-mvp/evidence/p15-34-delivery.json)

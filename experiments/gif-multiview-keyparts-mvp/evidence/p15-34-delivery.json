@@ -1,0 +1,13 @@
+{
+  "schema": "KOMA-P15-34-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "zipPath": "private-assets/exports/p15-34-ink-mesh-review.zip",
+  "sha256": "ed10fffa8684784f9e68b8f0d1305417bcc344a50b08ba1b23fdcd895f2c6c83",
+  "bytes": 24531555,
+  "entriesVerified": 75,
+  "htmlEntry": "index.html",
+  "reviewFrames": 9,
+  "chromiumScreenshots": 6,
+  "imagesLoaded": 126,
+  "artisticallyApproved": false
+}
