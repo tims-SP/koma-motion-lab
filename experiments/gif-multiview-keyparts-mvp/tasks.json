@@ -3973,6 +3973,49 @@
       "review": "private-assets/exports/p15-83-eye-seam/index.html",
       "plan": "docs/plans/2026-11-11-p15-83-dynamic-brow-seam-gate.md",
       "next": "P15-84 genuine clean hidden brow/eyelash artwork matched to existing source; stop clone-mask tuning"
+    },
+    "p15_84RealHiddenBrowEyeInpaint": {
+      "status": "REAL_LAMA_INPAINT_SUCCESS_DYNAMIC_CANDIDATE_MINOR_EDGE_REMAINS",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "eyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+      "browLayerSHA256": "d72cd4d59e6b837d00b903f102263757f0e05669a896cfc1353714f14d08d8f3",
+      "hairMaskSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+      "inputSHA256": "b2cc5ab64fd71bcb5aca1d250ed2d052f3384b219ffe65b68ac218a5435eee5d",
+      "maskSHA256": "470806c77206b0c831f8ec87d210c5499164b1290027b27031a86bbeb2c369f8",
+      "maskPixels": 9019,
+      "model": "pg56714/Inpaint-Anything / LaMa CPU",
+      "modelEventId": "f5ff08c7c97846b78029f94a994c6862",
+      "modelSHA256": "a764685e8f7fb0ae6fdd2acbd94f6ad930451266f92f4f24f6843d1d8e5c1663",
+      "modelBytes": 15638,
+      "modelChangedInsideMaskPixels": 8972,
+      "modelChangedOutsideMaskPixels": 0,
+      "underpaintSHA256": "064a081960dbed71279251f00aac0c2d90276f42c61a22770d1c13415e6259aa",
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "motionFrameHashes": {
+        "0": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+        "9": "fab5dc46c9cf2c2bb021796474640d430d2542b65bcc271b5aadd25eae0ef2bf",
+        "18": "c15a7f877b78e704b5935afc01b20d2bf59ab79084d1ca3b08640b7fbe6e4a75"
+      },
+      "newTransparentHoles": 0,
+      "visualGate": "PROMISING_BROW_REMOVAL_MINOR_OUTER_LASH_HAIR_SEAM_REMAINS",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 17,
+      "relatedRegressionTestsPass": 66,
+      "browserChecksPass": 2,
+      "browserImagesLoadedPerViewport": 12,
+      "evidence": [
+        "evidence/p15-84-qa.json",
+        "evidence/p15-84-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-84-clean-brow-inpaint/index.html",
+      "plan": "docs/plans/2026-11-11-p15-84-real-hidden-brow-inpaint.md",
+      "next": "P15-85 identify and remove only 9px outer eye/hair seam residue without widening the inpaint mask or altering visible hair"
     }
   }
 }
