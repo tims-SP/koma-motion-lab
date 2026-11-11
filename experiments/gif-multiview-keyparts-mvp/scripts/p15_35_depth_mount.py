@@ -106,21 +106,20 @@ def mount_clip(yaw,clip,hair,observations):
  before=coverage(clip,hair)
  picked=clip
  best=(0,0);best_score=-1e20
- if not keyframe:
-  for dy in range(-4,5):
-   for dx in range(-4,5):
-    candidate=translate_rgba(clip,dx,dy)
-    contact=coverage(candidate,hair)
-    c=alpha_center(candidate)
-    residual=float(np.linalg.norm(c-target))
-    # Bias toward the same UV mount location and minimum deform amplitude.
-    score=contact-.008*(abs(dx)+abs(dy))-.002*residual*residual
-    if score>best_score:
-     best_score=score;best=(dx,dy);picked=candidate
+ for dy in range(-4,5):
+  for dx in range(-4,5):
+   candidate=translate_rgba(clip,dx,dy)
+   contact=coverage(candidate,hair)
+   c=alpha_center(candidate)
+   residual=float(np.linalg.norm(c-target))
+   # Hold local hair UV constant and choose stable small translations
+   # for the entire nine-frame sequence, including source keyframes.
+   score=contact-.008*(abs(dx)+abs(dy))-.002*residual*residual
+   if score>best_score:
+    best_score=score;best=(dx,dy);picked=candidate
  after=coverage(picked,hair)
  updated=alpha_center(picked)
  err=float(np.linalg.norm(uv_of(updated,box)-target_uv))
- if keyframe and not np.array_equal(picked,clip):raise AssertionError("Keyframe gold clip changed")
  if np.linalg.norm(updated-center)>6:raise AssertionError("Clip translation exceeded mount range")
  return picked,{"parentRole":"hair.front","mountModel":"front-hair visible alpha bounding box UV",
   "parentBounds443":np.round(box,3).tolist(),
@@ -132,7 +131,8 @@ def mount_clip(yaw,clip,hair,observations):
   "centerAfter443":np.round(updated,3).tolist(),
   "sourceContactCoverage":round(before,6),
   "attachedContactCoverage":round(after,6),
-  "sourceKeyframeUnmodified":keyframe,
+  "sourceKeyframeOriginalPreservedInP15_34":keyframe,
+  "candidateClipOffsetAppliedAtKeyframe":bool(keyframe and best!=(0,0)),
   "physicallyApprovedMount":False}
 
 def run():
@@ -215,6 +215,7 @@ def run():
    "artistApprovedOcclusion":False,"artistApprovedHairLock":False,
    "underpaintRecoveredFromOriginalRGB":True,"newIndependentPaintings":0,
    "sourceArtModified":False,"productionRendererChanged":False,
+   "candidateKeyframeClipPixelsMayShift":True,
    "formalArtisticAcceptance":False,
    "status":"P15_35_EXPLICIT_LOCAL_Z_OCCLUSION_AND_HAIR_UV_ENGINEERING_CANDIDATE"}
  QA.write_text(json.dumps(qa,ensure_ascii=False,indent=2)+"\n")
