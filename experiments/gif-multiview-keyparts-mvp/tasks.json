@@ -3366,6 +3366,36 @@
       "plan": "docs/plans/2026-11-11-p15-67-full-front-hair-feasibility.md",
       "review": "private-assets/exports/p15-67-front-hair/index.html",
       "next": "P15-68 obtain semantically clean full front-hair alpha plus hidden forehead/root underpaint, not additional color-threshold-only refinement"
+    },
+    "p15_68NeuralForeheadUnderpaint": {
+      "status": "ACTUAL_LAMA_FOREHEAD_GENERATED_BUT_FRONT_HAIR_VISUAL_FAIL",
+      "characterId": "p0_character_001",
+      "originalSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "maskSHA256": "e4f03f5c1dbaf5d18297ace445b5a4f369a0973aca16cbcb9b41595140a587a2",
+      "modelSHA256": "715757d3e030f54603eb7320d249dd3b8b999e62cd7848921988e8fede56bf7c",
+      "generatedUnderpaintSHA256": "ec82d147ed15cb36a9749b5b6b2d4a609ceb9d306db8fad649353ca3a6f86e91",
+      "modifiedInsideMaskPixels": 30612,
+      "modifiedOutsideMaskPixels": 0,
+      "eyeOffsetsRenderedPx": [
+        0,
+        9,
+        18
+      ],
+      "frontHairSemanticAccepted": false,
+      "completeHiddenForeheadAccepted": false,
+      "visualGate": "FAIL_HAIR_CLIP_GHOST_AND_FOREHEAD_TONE_SEAM",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 11,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 20,
+      "evidence": [
+        "evidence/p15-68-forehead-qa.json",
+        "evidence/p15-68-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-68-forehead/index.html",
+      "plan": "docs/plans/2026-11-11-p15-68-forehead-underpaint.md",
+      "next": "P15-69 isolate gold clip without ghosting and acquire genuine front-strand semantic alpha"
     }
   }
 }

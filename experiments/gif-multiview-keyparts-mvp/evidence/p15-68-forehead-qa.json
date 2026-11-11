@@ -1,0 +1,35 @@
+{
+  "schema": "KOMA-P15-68-FOREHEAD-UNDERPAINT-V1",
+  "inputSourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "imageCropBox": [
+    350,
+    125,
+    862,
+    637
+  ],
+  "inputSHA256": "535c4e2cf9740e0cf4f7a4b053f07d74254700056c4a08229bdc94ac01834d95",
+  "maskSHA256": "e4f03f5c1dbaf5d18297ace445b5a4f369a0973aca16cbcb9b41595140a587a2",
+  "maskScope": "visible/front fringe over forehead, excludes eyes; incomplete full hair underpaint",
+  "provider": "pg56714/Inpaint-Anything",
+  "model": "LaMa neural inpainting CPU",
+  "modelStatus": "SUCCESS",
+  "visualGate": "FAIL_HAIR_CLIP_GHOST_AND_FOREHEAD_TONE_SEAM",
+  "formalArtMeshAccepted": false,
+  "modelSHA256": "715757d3e030f54603eb7320d249dd3b8b999e62cd7848921988e8fede56bf7c",
+  "underpaintSHA256": "ec82d147ed15cb36a9749b5b6b2d4a609ceb9d306db8fad649353ca3a6f86e91",
+  "hairCandidateSHA256": "42eb6774a7dfcdbb10cde4b4aed116165b14df967877e5e593f08dab9c68f50f",
+  "eyeSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "changedInsideMaskPixels": 30612,
+  "changedOutsideMaskPixels": 0,
+  "reconstructionCompleteness": "PARTIAL_ONLY_FRONT_FRINGE_REGION",
+  "fullHiddenForeheadApproved": false,
+  "hairMattingPassed": false,
+  "finalArtMeshAccepted": false,
+  "frameSHA256s": {
+    "0": "d6a2fa5f53a3428c6009ed3756a6931084201d40a7ab6ad43514174146e66eb3",
+    "9": "e5f35b1ac16ff2955b2569c68f6228083a59d0e7f65bf9608b17e0ef192baa97",
+    "18": "bb36e29a99b44737a3bba7a8ca70c62ac96ee20b2f8842d7396a10f0e9bcceb0"
+  },
+  "visualEvidence": "Real output shows a ghost-like yellow clip outline and pink angular forehead patch when the P15-67 nonsemantic hair layer is overlaid. The moving-eye 18px frame still has lash duplication. Full front hair boundaries and covered skin not correct.",
+  "formalKeyframeAccepted": false
+}
