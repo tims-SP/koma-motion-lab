@@ -3284,6 +3284,52 @@
       "plan": "docs/plans/2026-11-11-p15-65-eyelid-and-hair-review.md",
       "review": "private-assets/exports/p15-65-eyelid-refinement/index.html",
       "next": "P15-66 extract clean front-hair semantic RGBA and ensure valid dynamic eye occlusion without polygon seams"
+    },
+    "p15_66FrontBangLocalOcclusion": {
+      "status": "LOCAL_FRONT_BANG_OCCLUSION_WORKS_FULL_INDEPENDENT_HAIR_NOT_AVAILABLE",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "reusedLaMaUnderpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+      "reusedEyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+      "oldCandidateHairLayerSHA256": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6",
+      "oldCandidateHairLayerReusable": false,
+      "localBangLayerSHA256": "92aeb0cfb87c587e38ef0f7c7788206070042b6d757ddcee1ec028d24f18d13b",
+      "localBangAlphaBBox": [
+        641,
+        432,
+        658,
+        456
+      ],
+      "localBangAlphaPixels": 164,
+      "frameOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "frameChangedPixels": [
+        158,
+        158,
+        148
+      ],
+      "transparentHolePixels": [
+        0,
+        0,
+        0
+      ],
+      "fullIndependentFrontHairAvailable": false,
+      "visualGate": "LOCAL_OCCLUSION_DIAGNOSTIC_PASS_FULL_HAIR_ARTMESH_FAIL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 14,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 18,
+      "evidence": [
+        "evidence/p15-66-front-bang-qa.json",
+        "evidence/p15-66-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-66-front-bang-occlusion.md",
+      "review": "private-assets/exports/p15-66-front-bang/index.html",
+      "next": "P15-67 obtain complete same-view front-hair RGBA and hidden forehead underpaint; stop treating local alpha masks as entire independent hair."
     }
   }
 }
