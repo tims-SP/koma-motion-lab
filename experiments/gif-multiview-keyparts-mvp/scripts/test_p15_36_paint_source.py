@@ -46,7 +46,13 @@ class P15_36_KeypartPainting(unittest.TestCase):
      self.assertEqual(img.mode,"RGBA")
      self.assertEqual(img.size,(443,443))
      alpha=np.asarray(img.getchannel("A"))
-     self.assertGreater(int(alpha.sum()),0,(role,frame["yaw"]))
+     # A registered semantic role may be fully occluded at this yaw.
+     # The independent RGBA file still exists and its source is preserved.
+     if role in self.paint["newModelPaintedROIRoles"]:
+      self.assertGreater(int(alpha.sum()),0,(role,frame["yaw"]))
+     else:
+      with Image.open(painter.SRC/painter.slug(frame["yaw"])/(role+".png")) as original:
+       self.assertEqual(int(alpha.sum()),int(np.asarray(original.getchannel("A")).sum()))
      self.assertLess(int(alpha.max()),256)
    with Image.open(folder/"composite.png") as img:
     self.assertEqual(img.mode,"RGBA");self.assertEqual(img.size,(1024,1024))
