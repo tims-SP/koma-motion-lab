@@ -6,6 +6,7 @@ import json
 import os
 import re
 import urllib.request
+from urllib.parse import urlsplit
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -29,7 +30,12 @@ def digest(path):
 
 def request(url, *, obj=None, data=None, content_type=None, timeout=90):
     payload = json.dumps(obj).encode() if obj is not None else data
-    headers = {"User-Agent": "koma-p15-47-review/1"}
+    headers = {"User-Agent": "koma-p15-controlled-inference/2"}
+    # HF ZeroGPU uses account-bound quota only when the API request is authenticated.
+    # Do not forward bearer tokens to external hosts via output file URLs.
+    token = os.environ.get("HF_TOKEN", "").strip()
+    if token and urlsplit(url).hostname == urlsplit(SPACE).hostname:
+        headers["Authorization"] = "Bearer " + token
     if obj is not None:
         headers["Content-Type"] = "application/json"
     if content_type:
@@ -43,9 +49,25 @@ def main():
     parser.add_argument("--seed", type=int, default=65445)
     parser.add_argument("--steps", type=int, default=24)
     parser.add_argument("--evidence-stage", default="p15-47")
+    parser.add_argument("--allow-anonymous", action="store_true", help="Explicitly allow limited anonymous ZeroGPU quota")
     args = parser.parse_args()
     assert 0 <= args.seed < 2147483647
     assert re.fullmatch(r"p15-\d{2}", args.evidence_stage), "invalid stage"
+    qpath = R / ("evidence/" + args.evidence_stage + "-inference-qa.json")
+    if not os.environ.get("HF_TOKEN", "").strip() and not args.allow_anonymous:
+        evidence = {
+            "schema": "KOMA-P15-CONTROLNET-AUTH-PREFLIGHT-V1",
+            "status": "BLOCKED_HF_TOKEN_NOT_CONFIGURED",
+            "space": SPACE,
+            "seed": args.seed,
+            "steps": args.steps,
+            "tokenPresent": False,
+            "newImageGenerated": False,
+            "artMeshModified": False,
+        }
+        qpath.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n")
+        print(json.dumps({"status": evidence["status"], "stage": args.evidence_stage}), flush=True)
+        return 3
     control = P / "exports/p15-46-anchor-guides/facial-geometry-guide-65.png"
     mask = P / "exports/p15-46-anchor-guides/face-mask-narrow-65.png"
     src = P / "p15-38-p0-registered-arc/yaw65/composite.png"
@@ -79,9 +101,8 @@ def main():
         ],
         "seed": args.seed, "steps": args.steps, "scale": 1.0,
         "target": "right-facing yaw65",
-        "status": "SUBMITTED",
+        "status": "SUBMITTED", "authentication": "HF_TOKEN" if os.environ.get("HF_TOKEN", "").strip() else "ANONYMOUS",
     }
-    qpath = R / ("evidence/" + args.evidence_stage + "-inference-qa.json")
     def save(): qpath.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n")
     save()
     start = request(SPACE + "/gradio_api/call/generate", obj={"data": values}, timeout=120)

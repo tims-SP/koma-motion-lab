@@ -2815,6 +2815,21 @@
       "requiresExternalAction": "Add original Qwen ControlNet Space to HF MCP settings as authenticated tool, or authorize quota-enabled GPU execution",
       "plan": "docs/plans/2026-11-11-p15-49-inference-access.md",
       "stopCondition": "Do not repeat anonymous requests until authenticated quota or usable endpoint exists"
+    },
+    "p15_50AuthenticatedZeroGPU": {
+      "status": "AUTHENTICATION_SUPPORT_IMPLEMENTED_REAL_GENERATION_BLOCKED_MISSING_HF_TOKEN",
+      "characterId": "p0_character_001",
+      "targetYawDegrees": 65,
+      "newImageGenerated": false,
+      "formalKeyframeAccepted": false,
+      "artMeshModified": false,
+      "authHeaderOnSpaceOriginOnly": true,
+      "anonymousBlockedByDefault": true,
+      "nonSecretEvidence": "evidence/p15-50-inference-qa.json",
+      "unitTestsPass": 34,
+      "script": "scripts/p15_47_controlnet_inference.py",
+      "plan": "docs/plans/2026-11-11-p15-50-authenticated-zerogpu.md",
+      "next": "Set quota-enabled HF_TOKEN in VPS environment; run p15-51 inference; visually review resulting candidate"
     }
   }
 }
