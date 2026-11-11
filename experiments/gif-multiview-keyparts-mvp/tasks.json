@@ -3215,6 +3215,36 @@
       "review": "private-assets/exports/p15-63-masked-lama/index.html",
       "plan": "docs/plans/2026-11-11-p15-63-masked-neural-inpaint.md",
       "next": "P15-64 refine near-eye semantic segmentation and front-hair occlusion without regenerating successful hidden skin"
+    },
+    "p15_64SemanticEyeBoundary": {
+      "status": "NEAR_EYE_CUTOUT_IMPROVED_NO_HOLES_VISUAL_APPROVAL_PENDING",
+      "characterId": "p0_character_001",
+      "canonicalCandidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "reusedLaMaUnderpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+      "nearEyeLayerSHA256": "395971ea7fd559483095bbc2d77684127bbf2406e34de38b8bd96675d0e495f7",
+      "maskSHA256": "50abd96f1befad56d0d98e24be8e4f9dea6fcf5fdae36a7f2569c3d3ce9d8396",
+      "previousEyeCutoutPixels": 11457,
+      "currentEyeCutoutPixels": 6995,
+      "removedNonEyeRoiPixels": 4462,
+      "eyeMovementPx": [
+        0,
+        9,
+        18
+      ],
+      "transparentHolePixels": 0,
+      "artMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "visualGate": "IMPROVED_NOT_APPROVED_REMAINING_LOWER_LID_FRINGE",
+      "unitTestsPass": 13,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 14,
+      "evidence": [
+        "evidence/p15-64-semantic-eye-qa.json",
+        "evidence/p15-64-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-64-semantic-eye.md",
+      "review": "private-assets/exports/p15-64-semantic-eye/index.html",
+      "next": "P15-65 refine lower eyelid fringe and validate front-hair overlap without regenerating LaMa skin"
     }
   }
 }

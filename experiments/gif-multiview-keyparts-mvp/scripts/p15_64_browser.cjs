@@ -1,0 +1,20 @@
+const {chromium}=require('/root/koma-motion-r1999/work/browser/node_modules/playwright');
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.resolve(__dirname,'..'),dir=path.join(root,'private-assets/exports/p15-64-semantic-eye');
+(async()=>{const browser=await chromium.launch({headless:true,args:['--no-sandbox']});const qa={schema:'KOMA-P15-64-BROWSER-V1',checks:[],errors:[]};
+try{for(const view of [{name:'desktop',width:1440,height:900},{name:'mobile',width:390,height:844}]){
+ const page=await browser.newPage({viewport:view});
+ page.on('pageerror',e=>qa.errors.push(String(e)));
+ page.on('requestfailed',e=>qa.errors.push(e.url()));
+ await page.goto('file://'+path.join(dir,'index.html'));
+ const loaded=await page.locator('img').evaluateAll(xs=>xs.length===7&&xs.every(x=>x.complete&&x.naturalWidth>0));
+ if(!loaded)throw Error('image load failed '+view.name);
+ await page.locator('#shift').fill('0');
+ if(!(await page.locator('#angle').innerText()).includes('0px'))throw Error('slider 0 failed');
+ await page.locator('#shift').fill('18');
+ await page.waitForFunction(()=>document.querySelector('#whole').getAttribute('src')==='near-eye-shift-18.png' && document.querySelector('#whole').complete);
+ const file=view.name==='desktop'?'browser-desktop.png':null;
+ if(file)await page.screenshot({path:path.join(dir,file),fullPage:false,timeout:25000});
+ qa.checks.push({viewport:view.name,initialImages:7,sliderVerified:true,screenshot:file,sha256:file?crypto.createHash('sha256').update(fs.readFileSync(path.join(dir,file))).digest('hex'):null});
+ await page.close();
+}if(qa.errors.length)throw Error(qa.errors.join(';'));qa.status='PASS';fs.writeFileSync(path.join(root,'evidence/p15-64-browser-qa.json'),JSON.stringify(qa,null,2)+'\n');console.log(JSON.stringify({checks:2,images:14,errors:0}));}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

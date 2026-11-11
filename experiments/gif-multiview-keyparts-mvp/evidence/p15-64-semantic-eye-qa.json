@@ -1,0 +1,39 @@
+{
+  "schema": "KOMA-P15-64-NEAR-EYE-TIGHT-MATTE-V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "originalLaMaUnderpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+  "originalP1563CutoutSHA256": "3aff3cb0b2e6325315a53d047a11d6f2126e159f9c80cf2fe08cc75554cbc209",
+  "maskSHA256": "50abd96f1befad56d0d98e24be8e4f9dea6fcf5fdae36a7f2569c3d3ce9d8396",
+  "eyeLayerSHA256": "395971ea7fd559483095bbc2d77684127bbf2406e34de38b8bd96675d0e495f7",
+  "oldVisibleCutoutPixels": 11457,
+  "newVisibleCutoutPixels": 6995,
+  "reducedVisibleCutoutPixels": 4462,
+  "semanticBoundaryMethod": "HAND_TIGHT_EYE_CONTOUR_WITH_1P5PX_FEATHER",
+  "foregroundHairHandling": "HAIR_REMAINS_IN_UNDERPAINT_NO_RECTANGULAR_HAIR_OVERLAY",
+  "eyeShiftFrames": [
+    {
+      "dx": 0,
+      "image": "near-eye-shift-00.png",
+      "sha256": "d46bbac944a641eb94143f70cc548c6f320a80f2aca3d5fe057bb7bc0ec081c9"
+    },
+    {
+      "dx": 9,
+      "image": "near-eye-shift-09.png",
+      "sha256": "d73b1bb3695cddf0302ff9fcfe743631464459c20a0e575e04ea7839f22b2565"
+    },
+    {
+      "dx": 18,
+      "image": "near-eye-shift-18.png",
+      "sha256": "de7be210d3a4e8a07201a83c44fe765111fc2c117924c27458ec75250f2fcd23"
+    }
+  ],
+  "shift18TransparentHolePixels": 0,
+  "visualAssessment": "Significantly reduces polygon skin/hair island and eyelid box outline compared with P15-63. At 3x enlarged preview, small lower-lid grey halo and eyebrow/eyelash alignment remain, so no final anime art admission.",
+  "semanticIdentityApproved": false,
+  "independentlyPaintedEye": false,
+  "visualGate": "IMPROVED_NOT_APPROVED_REMAINING_LOWER_LID_FRINGE",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "next": "P15-65 use high quality manually refined eyelid alpha/semantic eye artwork, then verify multi-direction deformation and front-hair occlusion"
+}
