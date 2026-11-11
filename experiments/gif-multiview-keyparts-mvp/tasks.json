@@ -3523,6 +3523,53 @@
       "review": "private-assets/exports/p15-72-semantic-hair/index.html",
       "plan": "docs/plans/2026-11-11-p15-72-semantic-model-qa.md",
       "next": "P15-73 seek interactive foreground/background anime hair segmentation or same-view layered artwork, certify at 0px before moving eye"
+    },
+    "p15_73SamFrontBangsCandidate": {
+      "status": "REAL_CPU_SAM_INSTANCE_CANDIDATE_CREATED_NOT_FORMALLY_ACCEPTED",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "provider": "basimbashir/segment_anything_webui",
+      "model": "SAM ViT-B CPU",
+      "maskMethod": "SAM automatic instance segmentation; select instance by positive anchor coordinate, then verify negative anchor coordinates. This is not a point-conditioned mask.",
+      "samLabelSHA256": "614cab9a572e07d5c33a2a7a65579bd6a9b243dde958639f8b41388990fe65c9",
+      "frontBangsLayerSHA256": "2ad8ea97da2070d711e014f435255b6d751eba9b0fcd98611b3e262c4146f533",
+      "largestConnectedComponentPixels": 65374,
+      "visibleRGBApixels": 63270,
+      "bbox": [
+        450,
+        141,
+        776,
+        558
+      ],
+      "sourceDecompositionZeroPoseExact": true,
+      "animationCompositeZeroPoseExact": false,
+      "animationCompositeZeroPoseDifferenceBBox": [
+        759,
+        288,
+        776,
+        373
+      ],
+      "motionOffsetsRenderedPx": [
+        0,
+        9,
+        18
+      ],
+      "motionHoleFree": true,
+      "interactivePointConditionedMaskPassed": false,
+      "visualGate": "PROVISIONAL_SAM_FRONT_BANGS_ALPHA_NEEDS_EDGE_REPAIR_AND_ZERO_POSE_ADMISSION",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 13,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 20,
+      "evidence": [
+        "evidence/p15-73-interactive-sam-qa.json",
+        "evidence/p15-73-mask-extraction-qa.json",
+        "evidence/p15-73-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-73-interactive-sam/index.html",
+      "plan": "docs/plans/2026-11-11-p15-73-sam-bangs-candidate.md",
+      "next": "P15-74 clean strand islands, clip/lash overlap and pass actual animation zero-pose gate"
     }
   }
 }

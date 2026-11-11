@@ -1,0 +1,98 @@
+{
+  "schema": "KOMA-P15-73-SAM-FRONT-BANGS-CANDIDATE-V1",
+  "characterId": "p0_character_001",
+  "source": "P15-56 same-view candidate-erode-2.png",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "samProvider": "basimbashir/segment_anything_webui",
+  "samModel": "SAM ViT-B CPU",
+  "usedMaskMethod": "SAM automatic instance segmentation; select instance by positive anchor coordinate, then verify negative anchor coordinates. This is not a point-conditioned mask.",
+  "selectedLabelRGB": [
+    227,
+    148,
+    102
+  ],
+  "samLabelSHA256": "614cab9a572e07d5c33a2a7a65579bd6a9b243dde958639f8b41388990fe65c9",
+  "rawMaskPixels": 68384,
+  "rawConnectedComponents8": 189,
+  "largestComponentPixels": 65374,
+  "largestComponentBBox": [
+    100,
+    16,
+    448,
+    433
+  ],
+  "positiveAnchorPointsInMask": true,
+  "negativeVerificationPointsOutsideMask": true,
+  "eyeAndCheekAnchorsOutside": true,
+  "goldHairpinAnchorOutside": true,
+  "hairLayerSHA256": "2ad8ea97da2070d711e014f435255b6d751eba9b0fcd98611b3e262c4146f533",
+  "hairLayerAlphaBBox": [
+    450,
+    141,
+    776,
+    558
+  ],
+  "hairLayerAlphaPixels": 63270,
+  "sourceReconstructionDiffBBox": null,
+  "sourceReconstructionExact": true,
+  "p15_70CompositeDiffBBox": [
+    441,
+    105,
+    783,
+    453
+  ],
+  "p15_56CompositeDiffBBox": [
+    759,
+    288,
+    776,
+    373
+  ],
+  "motionFrames": {
+    "0": {
+      "alphaHoleBBox": null,
+      "alphaBBox": [
+        169,
+        10,
+        805,
+        1024
+      ],
+      "sha256": "dc8cd27ad127771f68543095e674c744157dff1c7aee0306b05f5d36b87117c8"
+    },
+    "9": {
+      "alphaHoleBBox": null,
+      "alphaBBox": [
+        169,
+        10,
+        805,
+        1024
+      ],
+      "sha256": "0e2e5a0b0691ee49cbd0945218935bd948069211e78240e00b82c366116d8e89"
+    },
+    "18": {
+      "alphaHoleBBox": null,
+      "alphaBBox": [
+        169,
+        10,
+        805,
+        1024
+      ],
+      "sha256": "6e5223403a1aea3a96fe76466110bab67b8056e04a2744848b630c0e1ef46283"
+    }
+  },
+  "uiPointPromptAttempt": "FAILED_OVERSEGMENTED_HEAD_MASK",
+  "uiPointPromptMaskColors": 2,
+  "uiPointPromptMaskForegroundPixels": 205227,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "status": "PROVISIONAL_CANDIDATE_ENGINEERING_PASS_VISUAL_GATE_PENDING",
+  "limitations": [
+    "SAM automatic instance selection rather than true multi-point conditioned mask",
+    "interactive UI point-prompt run returned a full-head mask and was rejected",
+    "0px composite discrepancy remains localized to independent gold hairpin region",
+    "small mask-edge speckles and source-alpha edge require final cleanup before formal ArtMesh"
+  ],
+  "next": "P15-74 integrate this provisional front-bangs RGBA into the native VDD/ArtMesh prototype, test eye movement and head yaw, and refine the hairpin-localized 0px discrepancy without changing approved P0 identity",
+  "visualGate": "PROVISIONAL_SAM_FRONT_BANGS_ALPHA_NEEDS_EDGE_REPAIR_AND_ZERO_POSE_ADMISSION",
+  "zeroPoseSourceDecompositionExact": true,
+  "zeroPoseAnimationCompositeExact": false
+}
