@@ -4173,6 +4173,32 @@
       "review": "private-assets/exports/p15-87-hair-face-seam/index.html",
       "plan": "docs/plans/2026-11-11-p15-87-hidden-hair-face-edge.md",
       "next": "P15-88 obtain genuine painted same-view concealed hair/face-contour layer, no more donor Mask tuning"
+    },
+    "p15_88QwenPaintedHiddenHairEdge": {
+      "status": "REAL_QWEN_EDIT_PAINT_GENERATED_BUT_GEOMETRY_DRIFT_AND_EDGE_NOT_FIXED",
+      "characterId": "p0_character_001",
+      "model": "Qwen-Image-Edit-2511",
+      "space": "akhaliq/Qwen-Image-Edit-2511-LoRAs-Fast",
+      "adapter": "Anime-V2",
+      "seed": 887004,
+      "account": "dfvswegwseg",
+      "output": "private-assets/exports/p15-88-painted-hidden-edge/qwen-edit-887004.png",
+      "outputSHA256": "a3373b3d4ce96ed62bb6cbaee8ef998d09e97f048d38b9ee30d79a6fa76824d0",
+      "inputTargetSHA256": "b84da06401b026c7f4aed13559934da34ed592a37d8c029d6436e3b66591d347",
+      "identityRefSHA256": "e55f89b99d399a7a50b6d5eb74df3cfcb41846662e7b944fd0b2cc6bb255cc4a",
+      "visualGate": "FAIL_GEOMETRY_DRIFT_AND_STRAIGHT_EDGE_REMAINS",
+      "candidateAccepted": false,
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 16,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 18,
+      "evidence": [
+        "evidence/p15-88-browser-qa.json",
+        "private-assets/exports/p15-88-painted-hidden-edge/provenance.json"
+      ],
+      "review": "private-assets/exports/p15-88-painted-hidden-edge/index.html",
+      "next": "P15-89 use a genuine local masked inpaint with a spatially constrained editable mask or hand-drawn source layer; do not integrate full-crop Qwen output"
     }
   }
 }
