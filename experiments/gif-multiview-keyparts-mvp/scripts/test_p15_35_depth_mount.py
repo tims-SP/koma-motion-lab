@@ -54,7 +54,7 @@ class P15_35_DepthAndMount(unittest.TestCase):
    self.assertGreater(parts["hiddenByFace"],0)
    self.assertGreater(parts["hiddenByBangs"],0)
    self.assertFalse(f["wholeLayerEyeFadeApplied"])
-   self.assertTrue(f["sourceEyeRGBKept"])
+   self.assertTrue(f["eyeSourceRGBKept"])
    fractions.append(parts["eyeVisible"])
   self.assertGreater(fractions[0],.75)
   self.assertLess(fractions[-1],.10)
