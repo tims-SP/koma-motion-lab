@@ -4109,6 +4109,70 @@
       "review": "private-assets/exports/p15-86-semantic-ownership/index.html",
       "plan": "docs/plans/2026-11-11-p15-86-lash-bang-semantic-ownership.md",
       "next": "P15-87 obtain continuous hidden hair-face occlusion edge without vertical seam, preserve source zero pose and fixed eyelash removal"
+    },
+    "p15_87HiddenHairFaceEdgeProbe": {
+      "status": "SIX_SOURCE_DONOR_EDGE_CANDIDATES_REJECTED_TRUE_CONCEALED_HAIR_ART_MISSING",
+      "characterId": "p0_character_001",
+      "baselineGitSHA": "fc8269f83b880cfce55a19c3e5115c0da6e9236b",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "underpaintSHA256": "41c68813cb9c5324bcd7b6b2d2fafeef4dc86ef3bcf5fb74ba6de720fdc72ade",
+      "sameViewDonorSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+      "independentHairSHA256": "90fb8ede50eeaab06d8d2d97b26bfa8cc9628779c4993563818a7a6451cbb23e",
+      "independentClipSHA256": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4",
+      "variants": 6,
+      "candidateFrameHashes": {
+        "canonical-left-blur07": {
+          "9": "45953f9879a001c15f319bdb9b9e8731c01f101bbbe0b34bc0b9e9e2459fedd6",
+          "18": "b04b1eb2f0dd48bc7760f08eea35b372ecdf401539c096a389bd55e9db1670ae"
+        },
+        "canonical-left-blur17": {
+          "9": "ae5f0464be6193d0d8c01d9b8bdc9b8452ebad22b36fba3ee83eb88334e730c4",
+          "18": "411ecf1082e0fcd0aad305808fdb99208beaee5b78dba4fe11b2cc3e9e7f261b"
+        },
+        "wide-left-blur07": {
+          "9": "3134b9f0b3e8e3ba0cce40fedfd114ac7d9fd066a2506a1ab6532113a3019996",
+          "18": "83a499db230e27b9bc768fe6738050c975415984ef549069dad20217468f0500"
+        },
+        "wide-left-blur17": {
+          "9": "bef1cdb496ac2246e6885faf868f80cf9fa94f4a9e0af89b75319d9de086dc5e",
+          "18": "79b733f7807bd11aa047869ea737ffb6e664ec892159a8f8a60e5cac2bd8e79f"
+        },
+        "edge-taper-blur07": {
+          "9": "14817baa95b2cc65cb3a23a445f9e4f06c1af3f344a0d35ea5e4ce469b51b076",
+          "18": "84359d14d8b63c768dce1c129847a7909722a05e3ec43ab3738b3e444f6e783c"
+        },
+        "edge-taper-blur17": {
+          "9": "e572d42a98ec214e7eb8abdaa9aa5ea256a2537744e1124d04a916b0724317a6",
+          "18": "66a5b93ee53e80a62b422386af6f7deb7775ef894460913528d8ac0dcfddee71"
+        }
+      },
+      "sourceZeroVisiblePixelDiff": 0,
+      "sourceZeroAlphaDiff": 0,
+      "darkDanglingBaseline": {
+        "9": 15,
+        "18": 14
+      },
+      "darkDanglingAfterAllVariants": "UNCHANGED",
+      "motionOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "newTransparentHoles": 0,
+      "visualGate": "FAIL_SAME_VIEW_DONOR_EDGE_CANNOT_REPLACE_TRUE_HIDDEN_HAIR_ART",
+      "candidateAccepted": false,
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 17,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 20,
+      "evidence": [
+        "evidence/p15-87-qa.json",
+        "evidence/p15-87-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-87-hair-face-seam/index.html",
+      "plan": "docs/plans/2026-11-11-p15-87-hidden-hair-face-edge.md",
+      "next": "P15-88 obtain genuine painted same-view concealed hair/face-contour layer, no more donor Mask tuning"
     }
   }
 }

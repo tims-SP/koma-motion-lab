@@ -1,0 +1,409 @@
+{
+  "schema": "KOMA-P15-87-REAL_SAME_VIEW_OCCLUSION_EDGE_PROBE_V1",
+  "baselineGit": "fc8269f83b880cfce55a19c3e5115c0da6e9236b",
+  "inputSHA256": {
+    "source": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+    "underpaint": "41c68813cb9c5324bcd7b6b2d2fafeef4dc86ef3bcf5fb74ba6de720fdc72ade",
+    "donor": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+    "hair": "90fb8ede50eeaab06d8d2d97b26bfa8cc9628779c4993563818a7a6451cbb23e",
+    "clip": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4"
+  },
+  "sourcePose": "same-view P15-56",
+  "proposals": {
+    "canonical-left-blur07": {
+      "radiusPx": 0.7,
+      "polygon": [
+        [
+          514,
+          438
+        ],
+        [
+          531,
+          435
+        ],
+        [
+          536,
+          440
+        ],
+        [
+          536,
+          464
+        ],
+        [
+          526,
+          467
+        ],
+        [
+          512,
+          458
+        ]
+      ],
+      "maskSHA256": "6e3ca3760f86c28ab6b94368a37778c2048b18de10639ee9e3ee5c78c5e887fb",
+      "underpaintSHA256": "b45e6b3790fd5dbf35f3b1910fb699b8c23794674aaf68a25754d897620c5fd8",
+      "maskBBox": [
+        510,
+        433,
+        539,
+        470
+      ],
+      "changedUnderpaintPixels": 251,
+      "frames": {
+        "9": {
+          "sha256": "45953f9879a001c15f319bdb9b9e8731c01f101bbbe0b34bc0b9e9e2459fedd6",
+          "visibleChanged": 139,
+          "faceHoles": 0,
+          "darkDangling": 15,
+          "edgeJump": [
+            15665,
+            201
+          ]
+        },
+        "18": {
+          "sha256": "b04b1eb2f0dd48bc7760f08eea35b372ecdf401539c096a389bd55e9db1670ae",
+          "visibleChanged": 140,
+          "faceHoles": 0,
+          "darkDangling": 14,
+          "edgeJump": [
+            16253,
+            201
+          ]
+        }
+      }
+    },
+    "canonical-left-blur17": {
+      "radiusPx": 1.7,
+      "polygon": [
+        [
+          514,
+          438
+        ],
+        [
+          531,
+          435
+        ],
+        [
+          536,
+          440
+        ],
+        [
+          536,
+          464
+        ],
+        [
+          526,
+          467
+        ],
+        [
+          512,
+          458
+        ]
+      ],
+      "maskSHA256": "e41af258988aff66a3b7b126858cbd8b8d8bb9f18401a9400cf32ba24cbb54be",
+      "underpaintSHA256": "be5e7c393cc56d592b8e114d32cae7ba139100b669be76f4ec4d56be191f59a4",
+      "maskBBox": [
+        508,
+        431,
+        541,
+        472
+      ],
+      "changedUnderpaintPixels": 353,
+      "frames": {
+        "9": {
+          "sha256": "ae5f0464be6193d0d8c01d9b8bdc9b8452ebad22b36fba3ee83eb88334e730c4",
+          "visibleChanged": 206,
+          "faceHoles": 0,
+          "darkDangling": 15,
+          "edgeJump": [
+            15135,
+            205
+          ]
+        },
+        "18": {
+          "sha256": "411ecf1082e0fcd0aad305808fdb99208beaee5b78dba4fe11b2cc3e9e7f261b",
+          "visibleChanged": 206,
+          "faceHoles": 0,
+          "darkDangling": 14,
+          "edgeJump": [
+            15867,
+            205
+          ]
+        }
+      }
+    },
+    "wide-left-blur07": {
+      "radiusPx": 0.7,
+      "polygon": [
+        [
+          507,
+          434
+        ],
+        [
+          534,
+          429
+        ],
+        [
+          538,
+          440
+        ],
+        [
+          538,
+          469
+        ],
+        [
+          524,
+          471
+        ],
+        [
+          506,
+          456
+        ]
+      ],
+      "maskSHA256": "890d84fb1da4624b7556d7d7dc5295ba1b125a22a752a00a5bb20874750df7c4",
+      "underpaintSHA256": "b78e7a4ded5a38275f2e3717aa439bf8bcb33be5d437346c58bfa5cb477a0ebf",
+      "maskBBox": [
+        504,
+        427,
+        541,
+        474
+      ],
+      "changedUnderpaintPixels": 427,
+      "frames": {
+        "9": {
+          "sha256": "3134b9f0b3e8e3ba0cce40fedfd114ac7d9fd066a2506a1ab6532113a3019996",
+          "visibleChanged": 228,
+          "faceHoles": 0,
+          "darkDangling": 15,
+          "edgeJump": [
+            17713,
+            221
+          ]
+        },
+        "18": {
+          "sha256": "83a499db230e27b9bc768fe6738050c975415984ef549069dad20217468f0500",
+          "visibleChanged": 228,
+          "faceHoles": 0,
+          "darkDangling": 14,
+          "edgeJump": [
+            18671,
+            221
+          ]
+        }
+      }
+    },
+    "wide-left-blur17": {
+      "radiusPx": 1.7,
+      "polygon": [
+        [
+          507,
+          434
+        ],
+        [
+          534,
+          429
+        ],
+        [
+          538,
+          440
+        ],
+        [
+          538,
+          469
+        ],
+        [
+          524,
+          471
+        ],
+        [
+          506,
+          456
+        ]
+      ],
+      "maskSHA256": "a64320edde20bc2bf3362161e00588c9bb4d89716a47a9afcc3dbfbdd4d6f1ff",
+      "underpaintSHA256": "7a651dc83ab92c96c7fd473723bdc95dfa33b8d7f34578da5428e443ffd3886b",
+      "maskBBox": [
+        502,
+        425,
+        543,
+        476
+      ],
+      "changedUnderpaintPixels": 538,
+      "frames": {
+        "9": {
+          "sha256": "bef1cdb496ac2246e6885faf868f80cf9fa94f4a9e0af89b75319d9de086dc5e",
+          "visibleChanged": 303,
+          "faceHoles": 0,
+          "darkDangling": 15,
+          "edgeJump": [
+            15006,
+            188
+          ]
+        },
+        "18": {
+          "sha256": "79b733f7807bd11aa047869ea737ffb6e664ec892159a8f8a60e5cac2bd8e79f",
+          "visibleChanged": 307,
+          "faceHoles": 0,
+          "darkDangling": 14,
+          "edgeJump": [
+            15670,
+            188
+          ]
+        }
+      }
+    },
+    "edge-taper-blur07": {
+      "radiusPx": 0.7,
+      "polygon": [
+        [
+          514,
+          438
+        ],
+        [
+          528,
+          434
+        ],
+        [
+          532,
+          439
+        ],
+        [
+          537,
+          450
+        ],
+        [
+          533,
+          458
+        ],
+        [
+          532,
+          464
+        ],
+        [
+          513,
+          465
+        ]
+      ],
+      "maskSHA256": "f3ac374aa8b8cb75e5483cb30400e8f9a29eab48d5e213e01c8bfb9a4e12cba1",
+      "underpaintSHA256": "4db464f415ed2bb214c7af8658c1acd03f2afcc7f55e7c726ecb0255d136ad93",
+      "maskBBox": [
+        511,
+        432,
+        540,
+        468
+      ],
+      "changedUnderpaintPixels": 163,
+      "frames": {
+        "9": {
+          "sha256": "14817baa95b2cc65cb3a23a445f9e4f06c1af3f344a0d35ea5e4ce469b51b076",
+          "visibleChanged": 90,
+          "faceHoles": 0,
+          "darkDangling": 15,
+          "edgeJump": [
+            15322,
+            201
+          ]
+        },
+        "18": {
+          "sha256": "84359d14d8b63c768dce1c129847a7909722a05e3ec43ab3738b3e444f6e783c",
+          "visibleChanged": 91,
+          "faceHoles": 0,
+          "darkDangling": 14,
+          "edgeJump": [
+            15990,
+            201
+          ]
+        }
+      }
+    },
+    "edge-taper-blur17": {
+      "radiusPx": 1.7,
+      "polygon": [
+        [
+          514,
+          438
+        ],
+        [
+          528,
+          434
+        ],
+        [
+          532,
+          439
+        ],
+        [
+          537,
+          450
+        ],
+        [
+          533,
+          458
+        ],
+        [
+          532,
+          464
+        ],
+        [
+          513,
+          465
+        ]
+      ],
+      "maskSHA256": "a4013da972bd60c2ed0a055dc07c778b9171e0a5ee61c86679e98a3a760c2f82",
+      "underpaintSHA256": "3c04c3936df7886dbc46c6bd752445a0e14397dab7a7e991b677de0a4bcee62d",
+      "maskBBox": [
+        509,
+        430,
+        542,
+        470
+      ],
+      "changedUnderpaintPixels": 250,
+      "frames": {
+        "9": {
+          "sha256": "e572d42a98ec214e7eb8abdaa9aa5ea256a2537744e1124d04a916b0724317a6",
+          "visibleChanged": 143,
+          "faceHoles": 0,
+          "darkDangling": 15,
+          "edgeJump": [
+            15050,
+            201
+          ]
+        },
+        "18": {
+          "sha256": "66a5b93ee53e80a62b422386af6f7deb7775ef894460913528d8ac0dcfddee71",
+          "visibleChanged": 144,
+          "faceHoles": 0,
+          "darkDangling": 14,
+          "edgeJump": [
+            15750,
+            201
+          ]
+        }
+      }
+    }
+  },
+  "candidateAccepted": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "baseline": {
+    "9": {
+      "sha256": "cf3164300e337f83be3b8ff491d47c4f2f296a5251f2c2d28def5cc391ea5b00",
+      "darkDangling": 15,
+      "edgeJump": [
+        15123,
+        201
+      ]
+    },
+    "18": {
+      "sha256": "3f8bf3643ec3a8d43dacd70f1699057d40eb27fde4209b0e091d0e729d8c663b",
+      "darkDangling": 14,
+      "edgeJump": [
+        15685,
+        201
+      ]
+    }
+  },
+  "restSHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+  "restVisiblePixelDiff": 0,
+  "restAlphaPixelDiff": 0,
+  "visualGate": "FAIL_SAME_VIEW_DONOR_EDGE_CANNOT_REPLACE_TRUE_HIDDEN_HAIR_ART",
+  "visualAssessment": "All six same-view donor edge variants retain a detached dark hair/skin stalk or produce conspicuous straight edge/flat patch. Numerical mask, alpha-hole, zero-pose checks pass but do not establish hair-strand geometry continuity. The genuine concealed hair/skin edge has not been drawn or reconstructed.",
+  "next": "P15-88 create actual transparent concealed side-fringe/skin contour source rather than further copy/feather variants; only promote after 0/9/18 manual/art image inspection."
+}
