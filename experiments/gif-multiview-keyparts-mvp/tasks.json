@@ -3396,6 +3396,36 @@
       "review": "private-assets/exports/p15-68-forehead/index.html",
       "plan": "docs/plans/2026-11-11-p15-68-forehead-underpaint.md",
       "next": "P15-69 isolate gold clip without ghosting and acquire genuine front-strand semantic alpha"
+    },
+    "p15_69ClipSingleDrawAndEyeBackground": {
+      "status": "GOLD_CLIP_GHOST_REMOVED_AND_STATIC_EYE_CLEARED_FULL_BANG_NOT_APPROVED",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "cleanedBackgroundSHA256": "1c1ba685a80d0682a5999eb99a882b52c6ff05d4b3cbda8bc54c4e567cc3a117",
+      "cleanedFrontHairSHA256": "d2ccd0886f0436a85a28a751d295572635a1d882609ac22dc84de33ec6bd349b",
+      "independentClipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+      "goldContaminationPixelsBefore": 1179,
+      "goldContaminationPixelsAfter": 0,
+      "eyeBackgroundCleanupMaskPixels": 11457,
+      "eyeMovementOffsetsPx": [
+        0,
+        9,
+        18
+      ],
+      "visualGate": "CLIP_GHOST_RESOLVED_FULL_FRONT_HAIR_STILL_FAIL",
+      "fullFrontHairSemanticAccepted": false,
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 14,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 22,
+      "evidence": [
+        "evidence/p15-69-clip-qa.json",
+        "evidence/p15-69-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-69-clip-and-eye-layer-fix.md",
+      "review": "private-assets/exports/p15-69-clip-separation/index.html",
+      "next": "P15-70 repair triangular forehead seam and get true front-bang semantic art before formal VDD acceptance"
     }
   }
 }

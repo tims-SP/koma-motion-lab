@@ -1,0 +1,47 @@
+{
+  "schema": "KOMA-P15-69-CLIP_SINGLE_DRAW_V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "foreheadBaseSHA256": "ec82d147ed15cb36a9749b5b6b2d4a609ceb9d306db8fad649353ca3a6f86e91",
+  "cleanClipUnderlaySHA256": "47edf106e3057da96f8c88e73214b235d2d1087cee3df43f728b28b45db4d8e2",
+  "neuralEyeUnderpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+  "nearEyeMaskSHA256": "a6f1df092bd3634dc33956381a5af3adaa3e57efa97db78657eb31862c27a1a1",
+  "rawHairSHA256": "42eb6774a7dfcdbb10cde4b4aed116165b14df967877e5e593f08dab9c68f50f",
+  "independentClipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+  "eyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "clipGuardSHA256": "0f1df6d34ca7a160c79d239a757ca48c7d226800bf693e35a0b3635a8b994ccf",
+  "cleanedBackgroundSHA256": "1c1ba685a80d0682a5999eb99a882b52c6ff05d4b3cbda8bc54c4e567cc3a117",
+  "cleanedHairSHA256": "d2ccd0886f0436a85a28a751d295572635a1d882609ac22dc84de33ec6bd349b",
+  "hairYellowPixelsBefore": 1179,
+  "hairYellowPixelsAfter": 0,
+  "eyeCleanupMaskPixels": 11457,
+  "zOrder": [
+    "forehead_neural_base_with_clip_removed_and_eyeless_skin",
+    "moving_near_eye",
+    "color_derived_front_hair_clip_excluded",
+    "independent_gold_clip_once"
+  ],
+  "frames": [
+    {
+      "dx": 0,
+      "file": "eye-shift-00-clip-once.png",
+      "sha256": "9849bd034fcae50710abf9f85a93cad449ab3f043aff6e6096a3b225680d342c"
+    },
+    {
+      "dx": 9,
+      "file": "eye-shift-09-clip-once.png",
+      "sha256": "7004618d8d7f2731caf31b2806c4eca5245d799d81eb8e012828cfa147e210bc"
+    },
+    {
+      "dx": 18,
+      "file": "eye-shift-18-clip-once.png",
+      "sha256": "c3602bce64a5cea0427f28645d1981352fcdb448cfc023b04785d6f6b197bb38"
+    }
+  ],
+  "fullHairSemanticIdentityVerified": false,
+  "originalHeadPaintingChanged": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "CLIP_GHOST_RESOLVED_FULL_FRONT_HAIR_STILL_FAIL",
+  "visualAssessment": "Gold clip is independently composited once, removing old grey X-shaped ghost; fixed eye is removed from the base. Remaining triangular forehead patch and eyelash seam mean full clean front-bang ArtMesh is not certified."
+}
