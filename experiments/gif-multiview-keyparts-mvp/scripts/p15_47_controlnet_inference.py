@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import urllib.request
 import uuid
 from datetime import datetime, timezone
@@ -41,8 +42,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed", type=int, default=65445)
     parser.add_argument("--steps", type=int, default=24)
+    parser.add_argument("--evidence-stage", default="p15-47")
     args = parser.parse_args()
     assert 0 <= args.seed < 2147483647
+    assert re.fullmatch(r"p15-\d{2}", args.evidence_stage), "invalid stage"
     control = P / "exports/p15-46-anchor-guides/facial-geometry-guide-65.png"
     mask = P / "exports/p15-46-anchor-guides/face-mask-narrow-65.png"
     src = P / "p15-38-p0-registered-arc/yaw65/composite.png"
@@ -78,7 +81,7 @@ def main():
         "target": "right-facing yaw65",
         "status": "SUBMITTED",
     }
-    qpath = R / "evidence/p15-47-inference-qa.json"
+    qpath = R / ("evidence/" + args.evidence_stage + "-inference-qa.json")
     def save(): qpath.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n")
     save()
     start = request(SPACE + "/gradio_api/call/generate", obj={"data": values}, timeout=120)
@@ -87,7 +90,7 @@ def main():
     print("submitted", event_id, flush=True)
     save()
     stream = request(SPACE + "/gradio_api/call/generate/" + event_id, timeout=360).decode("utf-8", "replace")
-    (R / "evidence/p15-47-raw-sse.txt").write_text(stream)
+    (R / ("evidence/" + args.evidence_stage + "-raw-sse.txt")).write_text(stream)
     events = [line.removeprefix("event: ") for line in stream.splitlines() if line.startswith("event: ")]
     evidence["events"] = events
     if "error" in events or "complete" not in events:
@@ -98,9 +101,9 @@ def main():
         return 2
     arr = json.loads([line[6:] for line in stream.splitlines() if line.startswith("data: ")][-1])
     assert isinstance(arr, list) and len(arr) >= 3 and arr[2] == args.seed
-    out = P / f"exports/p15-47-qwen21-controlled-seed-{args.seed}.png"
+    out = P / f"exports/{args.evidence_stage}-qwen21-controlled-seed-{args.seed}.png"
     out.write_bytes(request(arr[0]["url"], timeout=120))
-    preview = P / f"exports/p15-47-control-preview-seed-{args.seed}.webp"
+    preview = P / f"exports/{args.evidence_stage}-control-preview-seed-{args.seed}.webp"
     preview.write_bytes(request(arr[1]["url"], timeout=120))
     evidence.update({
         "status": "REAL_GENERATION_RETURNED",

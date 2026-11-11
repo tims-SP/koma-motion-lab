@@ -2782,6 +2782,18 @@
       ],
       "plan": "docs/plans/2026-11-11-p15-47-mask-local-qa.md",
       "next": "Restore authenticated ControlNet inference quota and perform same-seed P15-46 A/B"
+    },
+    "p15_48ControlledInferenceRetry": {
+      "status": "P15_48_REAL_REQUEST_REJECTED_QUOTA_COMPUTE_ALTERNATIVES_UNAVAILABLE",
+      "targetYawDegrees": 65,
+      "characterId": "p0_character_001",
+      "requestEventId": "22418fb2785b4891acb2dfa534467358",
+      "outputGenerated": false,
+      "lastApprovedKeyframeUpdated": false,
+      "artMeshModified": false,
+      "evidence": "evidence/p15-48-inference-qa.json",
+      "reviewBaseline": "evidence/p15-47-face-local-qa.json",
+      "nextRequiredCapability": "Authenticated GPU inference with lineart and inpainting controls, or ZeroGPU quota reset; then inspect actual output"
     }
   }
 }
