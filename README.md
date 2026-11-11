@@ -154,3 +154,8 @@ HEAD009_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell ./scripts/run-isolated
 - [P15-36 新绘画分部件来源和 Alpha QA](experiments/gif-multiview-keyparts-mvp/evidence/p15-36-qwen-local-repair-qa.json)
 - [P15-36 Chromium 交互式验收](experiments/gif-multiview-keyparts-mvp/evidence/p15-36-browser-qa.json)
 - [P15-36 13 部件透明原画归档 SHA](experiments/gif-multiview-keyparts-mvp/evidence/p15-36-delivery.json)
+- [P15-37 原画 ArtMesh 连续转头技术报告](docs/plans/2026-11-11-p15-37-painted-artmesh-continuity.md)
+- [P15-37 13 图层九帧连续性证据](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-temporal-artmesh-qa.json)
+- [P15-37 可交互原画验收及图层来源](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-visual-review-qa.json)
+- [P15-37 Chromium 审查与画面加载结果](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-browser-qa.json)
+- [P15-37 离线 HTML 审查包哈希](experiments/gif-multiview-keyparts-mvp/evidence/p15-37-delivery.json)

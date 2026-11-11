@@ -1,0 +1,1255 @@
+{
+  "schema": "KOMA-P15-37-ARTMESH-TEMPORAL-PAINT-V1",
+  "characterId": "p0_character_001",
+  "sourceP15_35SHA256": "6dba4a97b9a7d31fecaec6bc94ed2062f967e5b7cd0fc9ccada37817e839b96a",
+  "sourceP15_36SHA256": "90ebe3a48ed78e9287d6a741c53dad37416867ded7d9f0df40f664bf2f30e735",
+  "sourceP15_12CameraSHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+  "sourceP0Original45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "roles": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "paintedRoles": [
+    "eye.far",
+    "face.skin",
+    "hair.front"
+  ],
+  "angles": [
+    55.0,
+    56.25,
+    57.5,
+    58.75,
+    60.0,
+    61.25,
+    62.5,
+    63.75,
+    65.0
+  ],
+  "frames": [
+    {
+      "yaw": 55.0,
+      "kind": "source-endpoint",
+      "paintWeight": 0.0,
+      "paintSources": [
+        {
+          "angle": 57.5,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+      "outputCompositeSHA256": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+      "changedCompositePixels": 0,
+      "eyeDisplayedAlphaMass": 1998.0824,
+      "hiddenEyeSourceAlphaMass": 161.1451,
+      "clipHairContactCoverage": 0.911628,
+      "roles": {
+        "body.reference": {
+          "sha256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "sourceSHA256": "5774d847b38d67be9e0688f5b3904561a9d65a48d8fa63758960dd68f224d878",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "sourceSHA256": "592823fa77cf6745dccd5b656101c6f8fdacc764898d02d552ca3c0ddf5e3ddd",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "sourceSHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "sourceSHA256": "f6e626e5b1ecf0506f35d2752c5a5bf98dfd495d8a903d8d97908c92e7a0ea7d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "sourceSHA256": "85a8597ed78585e6ebe4f8b175e6e7548df32d4b53fdc692717d829e867f3798",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "sourceSHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.near": {
+          "sha256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "sourceSHA256": "f9922442e1e93650b4483447884d7c11c12cbe4ebcff3ce447ec807c4d69979a",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "sourceSHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "sourceSHA256": "f5ef5556fa85e609ea06d6d14d2368f734d126dc0e9b2cd476823682c64aef92",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "sourceSHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.ahoge": {
+          "sha256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "sourceSHA256": "5d982051e0ab275a3ba91dce2adddcf24884b50c02f41debc5bc11735e51eac7",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "sourceSHA256": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "daf851c7caf58a3f2951551794bf02bf398573d59d1dbb68b2408d2b4dbcd869",
+      "hiddenEyeUnderpaintSHA256": "4194c4f892986d3825ed2b8add45ef9de694826626d79e06463ae334a1abb4e8",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 56.25,
+      "kind": "paint-inbetween",
+      "paintWeight": 0.5,
+      "paintSources": [
+        {
+          "angle": 57.5,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "7d1dfceaa08d1fbf61f618d8d35bc2f9d22355cb402859606b23f181c7b543f1",
+      "outputCompositeSHA256": "412c92da1d7608829041834d57b82ea66429ac1030cb96b799d2bb74e14bd543",
+      "changedCompositePixels": 24993,
+      "eyeDisplayedAlphaMass": 1271.5411,
+      "hiddenEyeSourceAlphaMass": 201.5569,
+      "clipHairContactCoverage": 0.896819,
+      "roles": {
+        "body.reference": {
+          "sha256": "58a32f3c495d9c47e7700390728db04f6dde574e6511079625df03afaa0a4bfc",
+          "sourceSHA256": "58a32f3c495d9c47e7700390728db04f6dde574e6511079625df03afaa0a4bfc",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "642f24ea38bffdc3bd836ee0d182be65d8959f665b1c2477957ed3e44577f06a",
+          "sourceSHA256": "642f24ea38bffdc3bd836ee0d182be65d8959f665b1c2477957ed3e44577f06a",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "8971cec5c02a7112fe0c7a19e805485a100bacad8096f96bf9296e8bb88dde73",
+          "sourceSHA256": "f767178ac4ce537918ff8ae700ea4523c56a9937e7dc9743c32483a8018397f8",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "weight": 1.0,
+              "sourceSHA256": "cf0a2141a707b0880864ba18c36dc337bb04ff4195a5b64afdd7f4dd985f1149",
+              "cameraDisplacement443": [
+                -0.93142,
+                0.0
+              ]
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "0554b8462b58a419da358d32fd714ac3b9da7a3008188a4d7855454327045d86",
+          "sourceSHA256": "0554b8462b58a419da358d32fd714ac3b9da7a3008188a4d7855454327045d86",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "721a902f07f9138631687f1a1884d75fa660e10bd88b439c513317c882097189",
+          "sourceSHA256": "721a902f07f9138631687f1a1884d75fa660e10bd88b439c513317c882097189",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "acb892c7f00807469975dce786a3b53b2201ff584546df9b8559867a71c87458",
+          "sourceSHA256": "d39ca9a599a8857880556ca515f995676e075caac8e8db12e0ba38d9c8cad441",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "weight": 1.0,
+              "sourceSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+              "cameraDisplacement443": [
+                -0.93142,
+                0.0
+              ]
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "bc1a3f779749fc30c360c336d646e9bd180e1312bdcc43145033ef43cdfde306",
+          "sourceSHA256": "bc1a3f779749fc30c360c336d646e9bd180e1312bdcc43145033ef43cdfde306",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "a0244f4658fa308d5cfa3e77ff83c30eb86d82aa03de208b00b257c0f87c514d",
+          "sourceSHA256": "a0244f4658fa308d5cfa3e77ff83c30eb86d82aa03de208b00b257c0f87c514d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "dabf7e69cca8cdabfb1d8ef3802af050230f61ae2e711098e95cf1fb0bc55a79",
+          "sourceSHA256": "dabf7e69cca8cdabfb1d8ef3802af050230f61ae2e711098e95cf1fb0bc55a79",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "cd72ada1a8e4e6c7459b36650b25945a3e66beb54dd5c4da1e23d651bc5f594d",
+          "sourceSHA256": "f0055b5903b5ccf1f67ff85daac4258eb2d289eb8f6b7a901da098a06ef685f9",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "weight": 1.0,
+              "sourceSHA256": "75eeabc10fff6ee0ed7e95608759d5fde963a7d32643ef2cbd12d4bf7d9fd325",
+              "cameraDisplacement443": [
+                -0.93142,
+                0.0
+              ]
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "4ec1bd249a7f03dc378cf738e0da9cc3b068ab065c6c03688818c3e216830f28",
+          "sourceSHA256": "4ec1bd249a7f03dc378cf738e0da9cc3b068ab065c6c03688818c3e216830f28",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "124d0e4cda2958395c806ac2b084e5469f6a847702133efb40c94d56a53fd963",
+          "sourceSHA256": "124d0e4cda2958395c806ac2b084e5469f6a847702133efb40c94d56a53fd963",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "954be25a302aaff5681b57a5f591402025890edfef7a47e82a6ca547eefbcf79",
+      "hiddenEyeUnderpaintSHA256": "8fe8344b46ea0ac5f1cdab596a520ce447df35d0dbbaedc8174e04f14d44e5e4",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 57.5,
+      "kind": "painted-keyframe",
+      "paintWeight": 1.0,
+      "paintSources": [
+        {
+          "angle": 57.5,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+      "outputCompositeSHA256": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+      "changedCompositePixels": 24801,
+      "eyeDisplayedAlphaMass": 640.5412,
+      "hiddenEyeSourceAlphaMass": 455.6863,
+      "clipHairContactCoverage": 0.862013,
+      "roles": {
+        "body.reference": {
+          "sha256": "1db301655cf76c6614c4ae6f88ef929b017450d45641c26ac4e26583a6ea2a4d",
+          "sourceSHA256": "1db301655cf76c6614c4ae6f88ef929b017450d45641c26ac4e26583a6ea2a4d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "6a8ddf3a6c253810ccf1149582be88b9efd9d6db07f9b1998e0e22efc01f7b71",
+          "sourceSHA256": "6a8ddf3a6c253810ccf1149582be88b9efd9d6db07f9b1998e0e22efc01f7b71",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+          "sourceSHA256": "a225e35faf55735d200c876b2c6bafd09619d864e28f7e282116b16215abe8d3",
+          "method": "registered-painted-keypart-byte-exact",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "sourceSHA256": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+              "weight": 1
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "52c728d1920623cdda44b524b788b87a0c3b0754b6ff48b792636008a35daf24",
+          "sourceSHA256": "52c728d1920623cdda44b524b788b87a0c3b0754b6ff48b792636008a35daf24",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "sourceSHA256": "169e1994ed391931cf3f2ad211d8bcea9c53d4d6d89b979c2845c90a705ceac3",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+          "sourceSHA256": "63eb8f0fc83a167ba22ba5d3fd73fc9c4b8099f0f989c89abeacc0c233b4e15d",
+          "method": "registered-painted-keypart-byte-exact",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "sourceSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+              "weight": 1
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "cdd09b5ba5126655e53d1212494518826bd5618b3f46b7fe32db1bd9a93b5155",
+          "sourceSHA256": "cdd09b5ba5126655e53d1212494518826bd5618b3f46b7fe32db1bd9a93b5155",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063",
+          "sourceSHA256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "06ef82d365167932e5dc73b6f7f8d4c7dd1e06d476b34dd8d394817d91e1db54",
+          "sourceSHA256": "06ef82d365167932e5dc73b6f7f8d4c7dd1e06d476b34dd8d394817d91e1db54",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+          "sourceSHA256": "1f4703c72d819ae8a08fbcf247732da005afc86ca16864bc243835809e8c19af",
+          "method": "registered-painted-keypart-byte-exact",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "sourceSHA256": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+              "weight": 1
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "5abf914c5bd01728e26c64a37ca17b617b7389411d19b8693af9a422bb22c4f5",
+          "sourceSHA256": "5abf914c5bd01728e26c64a37ca17b617b7389411d19b8693af9a422bb22c4f5",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "5858a0448e51c70a7812911ffeacd85aa1fcd6e080a3e8e24a081db95724e58c",
+          "sourceSHA256": "5858a0448e51c70a7812911ffeacd85aa1fcd6e080a3e8e24a081db95724e58c",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+      "hiddenEyeUnderpaintSHA256": "d043cea4afc1378295724caef8269f94d1171c260f6ffa8244c3d2bc8a5fac3d",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 58.75,
+      "kind": "paint-inbetween",
+      "paintWeight": 1.0,
+      "paintSources": [
+        {
+          "angle": 57.5,
+          "weight": 0.5
+        },
+        {
+          "angle": 60.0,
+          "weight": 0.5
+        }
+      ],
+      "sourceCompositeSHA256": "5a828e728171954489f8355a8e4c368a6eecee080225eab6ef793f5160419242",
+      "outputCompositeSHA256": "8cf2c23e007ceca6272e6f15c9a2ae64c61bbd741d1040d7cc6ff6a2053692c4",
+      "changedCompositePixels": 27133,
+      "eyeDisplayedAlphaMass": 641.0549,
+      "hiddenEyeSourceAlphaMass": 736.7294,
+      "clipHairContactCoverage": 0.844463,
+      "roles": {
+        "body.reference": {
+          "sha256": "6e60712dbe2efcb6c41805bd9a9752255712f366d9af0e73c3e2a76b7be5ff74",
+          "sourceSHA256": "6e60712dbe2efcb6c41805bd9a9752255712f366d9af0e73c3e2a76b7be5ff74",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "6068798a7aaa9cc5f91249bd72d11b751f790c1346c3c380c3f0c41c5393dbcc",
+          "sourceSHA256": "6068798a7aaa9cc5f91249bd72d11b751f790c1346c3c380c3f0c41c5393dbcc",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "3474eb7b6699075a7d8c546003fa83370a22943639e1ab3f666ef1bf0370c485",
+          "sourceSHA256": "16e267265ef76f0b6ced63d9024fd3aa1ed8c695f66e4bb59c8c85bd573dc1a0",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "weight": 0.5,
+              "sourceSHA256": "cf0a2141a707b0880864ba18c36dc337bb04ff4195a5b64afdd7f4dd985f1149",
+              "cameraDisplacement443": [
+                0.93164,
+                0.0
+              ]
+            },
+            {
+              "yaw": 60.0,
+              "weight": 0.5,
+              "sourceSHA256": "667d15bcb79fbec5cbd62928e845a8c43cf420c95d44f521b15b4acbfed46abe",
+              "cameraDisplacement443": [
+                -0.93164,
+                0.0
+              ]
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "00a18ace6f65f68c26ade7836cac4190f021b8f80be98ddc85570af7488e9199",
+          "sourceSHA256": "00a18ace6f65f68c26ade7836cac4190f021b8f80be98ddc85570af7488e9199",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "26742fdc4eb0bbf80a6f00a9357ee996e348ce623ab8f59e8248085d9154c57f",
+          "sourceSHA256": "26742fdc4eb0bbf80a6f00a9357ee996e348ce623ab8f59e8248085d9154c57f",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "7491b4e3c64997e88002c43faa0a314d0e1c14bea2462b6b6acce45b9749beff",
+          "sourceSHA256": "051692ae3bbfe96d8485a541cad05a8b57acabf68feda2575582307804789ca7",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "weight": 0.5,
+              "sourceSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+              "cameraDisplacement443": [
+                0.93164,
+                0.0
+              ]
+            },
+            {
+              "yaw": 60.0,
+              "weight": 0.5,
+              "sourceSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+              "cameraDisplacement443": [
+                -0.93164,
+                0.0
+              ]
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "1e2f8230bb7295524826417ffdcc134f296c86f2c2de103991077d0cc4654e16",
+          "sourceSHA256": "1e2f8230bb7295524826417ffdcc134f296c86f2c2de103991077d0cc4654e16",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "41361cbb31a041a23c1eaf6d854a45a58b10a976966415f35bdea76e8d59294d",
+          "sourceSHA256": "41361cbb31a041a23c1eaf6d854a45a58b10a976966415f35bdea76e8d59294d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "c8eaf71086b7e7f7ebc8b7e7a57c9df874f1f1a51b12de0c703cd58ad55e9908",
+          "sourceSHA256": "c8eaf71086b7e7f7ebc8b7e7a57c9df874f1f1a51b12de0c703cd58ad55e9908",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "8d5c9cb61e14b50559e84a3f1812159f5ba72ec5ce66e36455b15e4dbf5f049e",
+          "sourceSHA256": "a36166eec8ace151ad56111534e0bee2a4e81c5c12c5b6fb5d9da4db98686584",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 57.5,
+              "weight": 0.5,
+              "sourceSHA256": "75eeabc10fff6ee0ed7e95608759d5fde963a7d32643ef2cbd12d4bf7d9fd325",
+              "cameraDisplacement443": [
+                0.93164,
+                0.0
+              ]
+            },
+            {
+              "yaw": 60.0,
+              "weight": 0.5,
+              "sourceSHA256": "dedbd10294310dfcebdf0ffc8b988d80c4d9074750409e5b9295f48871984b80",
+              "cameraDisplacement443": [
+                -0.93164,
+                0.0
+              ]
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "35c21858783625d52b86f46c6c8da9dae28ef6b0d80af58fb70a729c44780330",
+          "sourceSHA256": "35c21858783625d52b86f46c6c8da9dae28ef6b0d80af58fb70a729c44780330",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "7cff1542ef5a4db99d376b240bae7edabe413a6d1dc5355fd90ea1ec522eb71f",
+          "sourceSHA256": "7cff1542ef5a4db99d376b240bae7edabe413a6d1dc5355fd90ea1ec522eb71f",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "2435e6375ac886273444d7b305f4177c98b8d190bcc606ee7c2d90da90abd955",
+      "hiddenEyeUnderpaintSHA256": "62babc755f5233ee4a325b8fdad9c98586b270bd1c82521128156637bf7dd00c",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 60.0,
+      "kind": "painted-keyframe",
+      "paintWeight": 1.0,
+      "paintSources": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+      "outputCompositeSHA256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "changedCompositePixels": 26211,
+      "eyeDisplayedAlphaMass": 640.7255,
+      "hiddenEyeSourceAlphaMass": 1081.8823,
+      "clipHairContactCoverage": 0.817678,
+      "roles": {
+        "body.reference": {
+          "sha256": "212dfefdffcbe58695d0b236a015d4d0c294430c1daeb81dfb84052d4385a180",
+          "sourceSHA256": "212dfefdffcbe58695d0b236a015d4d0c294430c1daeb81dfb84052d4385a180",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "a3990b1db2847237246b757b66dc4a932a8a277be1ff7f28b43534494c8e716d",
+          "sourceSHA256": "a3990b1db2847237246b757b66dc4a932a8a277be1ff7f28b43534494c8e716d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+          "sourceSHA256": "d63470eb4abd566b6bbccab70b285aeed934477071e6991529fd2b81077f4748",
+          "method": "registered-painted-keypart-byte-exact",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "sourceSHA256": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+              "weight": 1
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "28757f55b38cf31789e50d6be697d789b6c1e1ff183fb773421e206dd9f9251f",
+          "sourceSHA256": "28757f55b38cf31789e50d6be697d789b6c1e1ff183fb773421e206dd9f9251f",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "sourceSHA256": "5a02967d59212a3a1ca503d56fa8945130ad9f30ef45eb7b2a539ec890e109e7",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+          "sourceSHA256": "eab4c1b88e60669ce00da4a1a007697e45a27b0306fda92cdf8c773ed9dff96f",
+          "method": "registered-painted-keypart-byte-exact",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "sourceSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+              "weight": 1
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "f3a97f8b3cf2d5e5ef3cf17667573d11ea70e8d1692e58f8f53455c2bd900d51",
+          "sourceSHA256": "f3a97f8b3cf2d5e5ef3cf17667573d11ea70e8d1692e58f8f53455c2bd900d51",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6",
+          "sourceSHA256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "12d443200ef864e4be2756cc5cb875f8d598320ac758881b197cd6a9aeb993ae",
+          "sourceSHA256": "12d443200ef864e4be2756cc5cb875f8d598320ac758881b197cd6a9aeb993ae",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+          "sourceSHA256": "393975293e5641efe2c2917868151826a1ecaae22eb7a38f6d34606064f79b3f",
+          "method": "registered-painted-keypart-byte-exact",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "sourceSHA256": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+              "weight": 1
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "bddb08de8074e8025e5ce82f240a90cd61758478011425ae5baf1239da89ed4e",
+          "sourceSHA256": "bddb08de8074e8025e5ce82f240a90cd61758478011425ae5baf1239da89ed4e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "39e72f7f7bd405b39451f8c685a1530230ddfea94b5cb412044886936bbcc972",
+          "sourceSHA256": "39e72f7f7bd405b39451f8c685a1530230ddfea94b5cb412044886936bbcc972",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+      "hiddenEyeUnderpaintSHA256": "05f7fb83713dd44faa7e2c94b353b4d6bc2c308ec77e643778545bec54b69c01",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 61.25,
+      "kind": "paint-inbetween",
+      "paintWeight": 0.84375,
+      "paintSources": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "a5a1377cc549a6e5407c5eafb1a6fa4b157f98c96382d777223b545378682c87",
+      "outputCompositeSHA256": "572ac49841a6ea11effd8aef5eb64416a38133ea506588681d3fd002074855f4",
+      "changedCompositePixels": 26581,
+      "eyeDisplayedAlphaMass": 626.1765,
+      "hiddenEyeSourceAlphaMass": 1370.6274,
+      "clipHairContactCoverage": 0.778092,
+      "roles": {
+        "body.reference": {
+          "sha256": "495649f78e2055ec9cb5c065d60089db41d45655496a13e2c55c0a5ab93850cb",
+          "sourceSHA256": "495649f78e2055ec9cb5c065d60089db41d45655496a13e2c55c0a5ab93850cb",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "a0db3b42f707c816546d29c2af65b24e854fee95bd97edd513ebb6a2982c85f6",
+          "sourceSHA256": "a0db3b42f707c816546d29c2af65b24e854fee95bd97edd513ebb6a2982c85f6",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "07f436112ff22f7e5b33701cfec84a268bedf864babc66ae2be561e20a8370ce",
+          "sourceSHA256": "8177163d240d1a68fba34a436ea6267e7199976953cc71d3772048fd48ea0176",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "667d15bcb79fbec5cbd62928e845a8c43cf420c95d44f521b15b4acbfed46abe",
+              "cameraDisplacement443": [
+                0.93164,
+                0.0
+              ]
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "0386900405a4ded5fb6274d484e8677694d32a2aac2fa2e73eba993cfa722e89",
+          "sourceSHA256": "0386900405a4ded5fb6274d484e8677694d32a2aac2fa2e73eba993cfa722e89",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "d44d370e623913ea627a676e43e70a29dc949829a5a9a6a3df58d76944c85268",
+          "sourceSHA256": "d44d370e623913ea627a676e43e70a29dc949829a5a9a6a3df58d76944c85268",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "fcb3d53b98b6b61d097cf7204140af02b1b8355ea85aad4b2bd5f06e145b3b1d",
+          "sourceSHA256": "c3070f83d562e54c9ac916b8b6a27c672c405ce77a1e2f2c4b29775065a89254",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+              "cameraDisplacement443": [
+                0.93164,
+                0.0
+              ]
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "51e895e3fbfb668b9dc4853f5da5b90c863d8dd460032ae2bcc39a44e995ec20",
+          "sourceSHA256": "51e895e3fbfb668b9dc4853f5da5b90c863d8dd460032ae2bcc39a44e995ec20",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "02c7e90afc567c0dc5e7826c70a99cca806abc9acccf54cc255852ef81df6f78",
+          "sourceSHA256": "02c7e90afc567c0dc5e7826c70a99cca806abc9acccf54cc255852ef81df6f78",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "620b57314f9e1191d23b9f5ab733e42e4441cf6c3fd14386a6bae38b9c5fa315",
+          "sourceSHA256": "620b57314f9e1191d23b9f5ab733e42e4441cf6c3fd14386a6bae38b9c5fa315",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "bc51de6fb7b66c928ee5876ae995387d26950543ff2775216048557b5d357bd0",
+          "sourceSHA256": "0406dbe39278c9a5aaaf02aebedb8eadad8fec12203a6d0309b562df4c43aa9e",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "dedbd10294310dfcebdf0ffc8b988d80c4d9074750409e5b9295f48871984b80",
+              "cameraDisplacement443": [
+                0.93164,
+                0.0
+              ]
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "dfb194a233eef0844297f50807473b535da04866d52f0dcc3d1316caaf5c91bd",
+          "sourceSHA256": "dfb194a233eef0844297f50807473b535da04866d52f0dcc3d1316caaf5c91bd",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "1bdc651a29a1bfd90363cff76b0a715099508b0ec0335172fd85c9ec01161396",
+          "sourceSHA256": "1bdc651a29a1bfd90363cff76b0a715099508b0ec0335172fd85c9ec01161396",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "63b34df4079b0f7cf5891c120ad9b9b87f03c640af19b60e7a334241952b745f",
+      "hiddenEyeUnderpaintSHA256": "5a3df81268c817f7b56fcbdb4c2ca82cfc788ea477c2c6c86dafca4599ee251e",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 62.5,
+      "kind": "paint-inbetween",
+      "paintWeight": 0.5,
+      "paintSources": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "1c3c77eac8a1a8b64db217fd544caddd783cc17000b770143515b82986c34214",
+      "outputCompositeSHA256": "ab746b0a72f12ec175efe63e9e688ff3272dda25e35268ff30e176b3092c505f",
+      "changedCompositePixels": 25151,
+      "eyeDisplayedAlphaMass": 466.4785,
+      "hiddenEyeSourceAlphaMass": 1584.451,
+      "clipHairContactCoverage": 0.744479,
+      "roles": {
+        "body.reference": {
+          "sha256": "e3e7c040f66df10f079c7761a1af5acbad0e623402beaa905c56afe0a0b83ea7",
+          "sourceSHA256": "e3e7c040f66df10f079c7761a1af5acbad0e623402beaa905c56afe0a0b83ea7",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "e8a5f0dfca6b0bb0c60aa50067a57f875c86f60830a74d2827d9aa97abc1b84b",
+          "sourceSHA256": "e8a5f0dfca6b0bb0c60aa50067a57f875c86f60830a74d2827d9aa97abc1b84b",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "ff26c04d9adff8dae45eb466490e832774a89f2746352a81449f28ea0a48ee94",
+          "sourceSHA256": "766978ce1be500fe5db32ad7b7c21afb8f145f2620da82f0a4f22db123d7d0fc",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "667d15bcb79fbec5cbd62928e845a8c43cf420c95d44f521b15b4acbfed46abe",
+              "cameraDisplacement443": [
+                1.86328,
+                0.0
+              ]
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "3c2861f8f996e08694f87058d34257da84af7538a7ba99bc6d273f620581be25",
+          "sourceSHA256": "3c2861f8f996e08694f87058d34257da84af7538a7ba99bc6d273f620581be25",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "sourceSHA256": "4ef01a54c352292e2f85cfe85f1420ce6c893c0c5a54dc120185d468fe8047f0",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "37f15e1f876f51b09c755099b62984e83dbbd7e60ed6791ea289c2739cacf82a",
+          "sourceSHA256": "f6ffacc12138bc3e5452019e6a5ef963093ac2aa6889ade78c98b8539a9f91d9",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+              "cameraDisplacement443": [
+                1.86328,
+                0.0
+              ]
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "10b211e08ac811de395e217cc11fb1f104a9f32e57716b101a8ddfe073d2b5c5",
+          "sourceSHA256": "10b211e08ac811de395e217cc11fb1f104a9f32e57716b101a8ddfe073d2b5c5",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "2618dc19459f2bb5eb1d071c98cdaefd71888708269fd8a00e74d9f7a3f54f94",
+          "sourceSHA256": "2618dc19459f2bb5eb1d071c98cdaefd71888708269fd8a00e74d9f7a3f54f94",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "057e143a185da7db5b19b30f5765e060daf474c76b0ce6581fa36f0cadeb84a6",
+          "sourceSHA256": "057e143a185da7db5b19b30f5765e060daf474c76b0ce6581fa36f0cadeb84a6",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "70adddd59c424c24e84c49771aa050ce23ee59e1b0f17ccd2e04dd894da6b589",
+          "sourceSHA256": "59a6601da236b0997c91b097f01f7569fbb4d2f6619e37c2e30f7a5daf8760be",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "dedbd10294310dfcebdf0ffc8b988d80c4d9074750409e5b9295f48871984b80",
+              "cameraDisplacement443": [
+                1.86328,
+                0.0
+              ]
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "cb6552bb31d7f0c810995de49c90b24cc2725db9a58a95b8fedc735be61241da",
+          "sourceSHA256": "cb6552bb31d7f0c810995de49c90b24cc2725db9a58a95b8fedc735be61241da",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "01e42846d79cd456911490af876a2fdc49cee6d9208ee503b35f289e7a5def91",
+          "sourceSHA256": "01e42846d79cd456911490af876a2fdc49cee6d9208ee503b35f289e7a5def91",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "384d92b9498cee71794cbfdc3dc2bb6f64cfb49d0260ee8a21b4a2eef170682b",
+      "hiddenEyeUnderpaintSHA256": "886636e8e029fa830e958e7f101b825420c461b8bafe90a0edb902d83f991a4b",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 63.75,
+      "kind": "paint-inbetween",
+      "paintWeight": 0.15625,
+      "paintSources": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "44f448f72bcf87095b4250e8eee1be604b40bde609f60e3cd2565df4fe5e414a",
+      "outputCompositeSHA256": "1a8b2b3f8c7e0b1919877544d70b51b01401c55fa51373491606f23925e0ae55",
+      "changedCompositePixels": 23561,
+      "eyeDisplayedAlphaMass": 274.1176,
+      "hiddenEyeSourceAlphaMass": 1602.9531,
+      "clipHairContactCoverage": 0.718759,
+      "roles": {
+        "body.reference": {
+          "sha256": "d0d76d3d657976f77aacbe2a7785c11a384837f1b361956e356c81ac70c589bc",
+          "sourceSHA256": "d0d76d3d657976f77aacbe2a7785c11a384837f1b361956e356c81ac70c589bc",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "91d20152d659b99f1f9b05266973bfbc758975038e26f6ebe4f6038972c98cdb",
+          "sourceSHA256": "91d20152d659b99f1f9b05266973bfbc758975038e26f6ebe4f6038972c98cdb",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "4f82e814139c9f975db70475b31e420849ca4c5632f1f26f5f5391e971d42fd2",
+          "sourceSHA256": "f240d1124f0ec71535ccc5e44fe7dfcef074774292b50d2ed48a593d05b611a4",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "667d15bcb79fbec5cbd62928e845a8c43cf420c95d44f521b15b4acbfed46abe",
+              "cameraDisplacement443": [
+                2.79471,
+                0.0
+              ]
+            }
+          ]
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "c612d447bd35c658cfea58ddd36d11af702e05e5c5ae1e1405e5074278a8e598",
+          "sourceSHA256": "c612d447bd35c658cfea58ddd36d11af702e05e5c5ae1e1405e5074278a8e598",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "df8b58058e9fd60b8c50ba38e11cd74b426e9109f36d0b410c73ad9022a1c8e2",
+          "sourceSHA256": "df8b58058e9fd60b8c50ba38e11cd74b426e9109f36d0b410c73ad9022a1c8e2",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "e9c2fc9997e1862c0e56019497ba3ad53d80ccb3d7dabeae47661e06061b60e8",
+          "sourceSHA256": "f1544e75f5b7ad74fe12099d1b7a072baabc55d39f8d699939db8307c3b5e75d",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+              "cameraDisplacement443": [
+                2.79471,
+                0.0
+              ]
+            }
+          ]
+        },
+        "eye.near": {
+          "sha256": "233d620677bfee0c9af041b0cfb00eaa9e2000b4b077e6a82b5754975f028281",
+          "sourceSHA256": "233d620677bfee0c9af041b0cfb00eaa9e2000b4b077e6a82b5754975f028281",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "7d7e98aa3060bad354833dad78961fa36dd5116a5bf44d1243a7ad22e1086652",
+          "sourceSHA256": "7d7e98aa3060bad354833dad78961fa36dd5116a5bf44d1243a7ad22e1086652",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "54a2934305159c5285f76c06b7bb1beb881b480ee50ff7dae4f9c165fb5cbaf2",
+          "sourceSHA256": "54a2934305159c5285f76c06b7bb1beb881b480ee50ff7dae4f9c165fb5cbaf2",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "0cf268a1341e2bd1491b43b4e231de3f7539a3f34a7d63cc6cf9d989582f7485",
+          "sourceSHA256": "358eccdd7c2f71f46846d07b54bbb7d23ae5bbece1a04a49fb8c348fdd2eaebb",
+          "method": "p5-registered-painted-local-interpolation",
+          "paintSources": [
+            {
+              "yaw": 60.0,
+              "weight": 1.0,
+              "sourceSHA256": "dedbd10294310dfcebdf0ffc8b988d80c4d9074750409e5b9295f48871984b80",
+              "cameraDisplacement443": [
+                2.79471,
+                0.0
+              ]
+            }
+          ]
+        },
+        "hair.ahoge": {
+          "sha256": "4c8b2b919d01da77619c6a8e41b5f4df8a53f7ced1ef7d9c7956c4c67abe7dbc",
+          "sourceSHA256": "4c8b2b919d01da77619c6a8e41b5f4df8a53f7ced1ef7d9c7956c4c67abe7dbc",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "b2a9b9a6dfd5419d748c8e3ddee07a1a5c4ecb29e9ce585b20b639da9b04b49f",
+          "sourceSHA256": "b2a9b9a6dfd5419d748c8e3ddee07a1a5c4ecb29e9ce585b20b639da9b04b49f",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "db3a42b3fded7653c66b243b534af78eb1993b81ea92f6452dd37ac13fbd35f0",
+      "hiddenEyeUnderpaintSHA256": "ecb80de48260f5ffdd3169bbbe2c1624efbcbb406d0ca5c8a0e238a413d2c9bf",
+      "artisticAdmission": false
+    },
+    {
+      "yaw": 65.0,
+      "kind": "source-endpoint",
+      "paintWeight": 0.0,
+      "paintSources": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sourceCompositeSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "outputCompositeSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "changedCompositePixels": 0,
+      "eyeDisplayedAlphaMass": 218.4824,
+      "hiddenEyeSourceAlphaMass": 1593.592,
+      "clipHairContactCoverage": 0.685118,
+      "roles": {
+        "body.reference": {
+          "sha256": "322818b599339d54dca0bc627f0d1de51f79be7ad973fa7bb3005b137dfed6cc",
+          "sourceSHA256": "322818b599339d54dca0bc627f0d1de51f79be7ad973fa7bb3005b137dfed6cc",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.back": {
+          "sha256": "f72e8288dca1e25ad7928092f7e7206982ccd53782181ed51ba952558ab76c5d",
+          "sourceSHA256": "f72e8288dca1e25ad7928092f7e7206982ccd53782181ed51ba952558ab76c5d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "face.skin": {
+          "sha256": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d",
+          "sourceSHA256": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.far": {
+          "sha256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "sourceSHA256": "82641e85c93a745c1af364f7c5697a66e57fb3d9afbe78e56e7d7f0c8e09ef1e",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "ear.near": {
+          "sha256": "7843caa0a88251d54e829862207d8d2de85939468ebfa94b17587e27bcd580b2",
+          "sourceSHA256": "7843caa0a88251d54e829862207d8d2de85939468ebfa94b17587e27bcd580b2",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.side": {
+          "sha256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84",
+          "sourceSHA256": "cf44c228f498adfc5e4c49ec32c5b7ac3b1e4551a7ef3dd6f461492e82956f84",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.far": {
+          "sha256": "a7ae70c115c945916e14d887427fd8c5f7be407b1a6f97bf7756a428641193e0",
+          "sourceSHA256": "a7ae70c115c945916e14d887427fd8c5f7be407b1a6f97bf7756a428641193e0",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "eye.near": {
+          "sha256": "587c40c435c8515d2eb1f3f867dbc29b1238f04cc669960e8d05ad523e5b41d9",
+          "sourceSHA256": "587c40c435c8515d2eb1f3f867dbc29b1238f04cc669960e8d05ad523e5b41d9",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "nose": {
+          "sha256": "4499954095f75911c6b55c474b90cdf56ce009fc27a61e198bed7ed337a1a60f",
+          "sourceSHA256": "4499954095f75911c6b55c474b90cdf56ce009fc27a61e198bed7ed337a1a60f",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "mouth": {
+          "sha256": "b91ef19ad44d1df36fd839e5c28020ccce4d30f148d9bb06aa63c025797aeee7",
+          "sourceSHA256": "b91ef19ad44d1df36fd839e5c28020ccce4d30f148d9bb06aa63c025797aeee7",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.front": {
+          "sha256": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6",
+          "sourceSHA256": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.ahoge": {
+          "sha256": "b28e3447b6c9d28f89009df4c008d87653c1a546262f166608912740f14f0bba",
+          "sourceSHA256": "b28e3447b6c9d28f89009df4c008d87653c1a546262f166608912740f14f0bba",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        },
+        "hair.clip.cross_gold": {
+          "sha256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+          "sourceSHA256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+          "method": "registered-source-byte-exact",
+          "paintSources": []
+        }
+      },
+      "sourceEyeUnderpaintSHA256": "7407b43e73c49c3e4961778da3e87465e3f4337abf11eea1fffefe64c4639a04",
+      "hiddenEyeUnderpaintSHA256": "e2873be3170438692ac361f92d045771e11357c354a4004bea318fffa8d4d49b",
+      "artisticAdmission": false
+    }
+  ],
+  "adjacentMetrics": [
+    {
+      "interval": [
+        55.0,
+        56.25
+      ],
+      "localRGBJump": 7.29742,
+      "sourceLocalRGBJump": 6.272918,
+      "eyeMassDifference": 726.5413,
+      "clipContactDifference": 0.014809
+    },
+    {
+      "interval": [
+        56.25,
+        57.5
+      ],
+      "localRGBJump": 6.440287,
+      "sourceLocalRGBJump": 6.272545,
+      "eyeMassDifference": 630.9999,
+      "clipContactDifference": 0.034806
+    },
+    {
+      "interval": [
+        57.5,
+        58.75
+      ],
+      "localRGBJump": 5.90615,
+      "sourceLocalRGBJump": 6.658179,
+      "eyeMassDifference": 0.5137,
+      "clipContactDifference": 0.01755
+    },
+    {
+      "interval": [
+        58.75,
+        60.0
+      ],
+      "localRGBJump": 5.969162,
+      "sourceLocalRGBJump": 6.47772,
+      "eyeMassDifference": 0.3294,
+      "clipContactDifference": 0.026785
+    },
+    {
+      "interval": [
+        60.0,
+        61.25
+      ],
+      "localRGBJump": 5.998796,
+      "sourceLocalRGBJump": 5.847929,
+      "eyeMassDifference": 14.549,
+      "clipContactDifference": 0.039586
+    },
+    {
+      "interval": [
+        61.25,
+        62.5
+      ],
+      "localRGBJump": 5.985936,
+      "sourceLocalRGBJump": 5.023828,
+      "eyeMassDifference": 159.698,
+      "clipContactDifference": 0.033613
+    },
+    {
+      "interval": [
+        62.5,
+        63.75
+      ],
+      "localRGBJump": 7.721907,
+      "sourceLocalRGBJump": 6.811756,
+      "eyeMassDifference": 192.3609,
+      "clipContactDifference": 0.02572
+    },
+    {
+      "interval": [
+        63.75,
+        65.0
+      ],
+      "localRGBJump": 6.521391,
+      "sourceLocalRGBJump": 6.05871,
+      "eyeMassDifference": 55.6352,
+      "clipContactDifference": 0.033641
+    }
+  ],
+  "sourceEndpointsExact": [
+    55.0,
+    65.0
+  ],
+  "modelPaintedKeysExact": [
+    57.5,
+    60.0
+  ],
+  "fullKeyViewsArtApproved": 0,
+  "independentHiddenUnderpaintApproved": 0,
+  "P0HeroApprovedSourceSHA256Verified": false,
+  "productionVddModified": false,
+  "independentFull345DegreeCoverage": false,
+  "occludedInkAnatomyApproved": false,
+  "status": "REGISTERED_PAINT_KEYPARTS_NINE_FRAME_TEMPORAL_CANDIDATE"
+}

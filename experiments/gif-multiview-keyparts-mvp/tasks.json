@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_36_NEW_PAINTED_KEYPART_RGBA_ENGINEERING_VERIFIED_ART_REVIEW_NEXT",
+  "status": "P15_37_ARTMESH_TEMPORAL_ENGINEERING_VERIFIED_PAINTING_VISUAL_REVIEW_NEXT",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -181,7 +181,7 @@
     },
     {
       "id": "T04",
-      "status": "P15_36_NEW_MODEL_PAINT_SOURCE_LOCAL_ARTMESH_VERIFIED_COMPLETE_KEYART_ART_REVIEW_NEXT",
+      "status": "P15_37_PAINTED_KEYPARTS_55_TO65_ARTMESH_ENGINEERING_PASS_FULL_ART_REVIEW_NEXT",
       "name": "Run HTML VDD yaw 0 to 90 with independently generated semantic parts",
       "dependsOn": [
         "T03"
@@ -195,7 +195,7 @@
     },
     {
       "id": "T05",
-      "status": "P15_36_HTML_RGBA_AND_SHA256_ARCHIVE_VERIFIED",
+      "status": "P15_37_HTML_BROWSER_AND_SHA_MANIFEST_VERIFIED",
       "name": "Package verified GIF, PNG, HTML and source checks",
       "dependsOn": [
         "T04"
@@ -1198,9 +1198,15 @@
       "visual": "experiments/gif-multiview-keyparts-mvp/evidence/p15-36-visual-review-qa.json",
       "browser": "experiments/gif-multiview-keyparts-mvp/evidence/p15-36-browser-qa.json",
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-36-delivery.json"
+    },
+    "p15_37PaintedArtMeshContinuity": {
+      "source": "experiments/gif-multiview-keyparts-mvp/evidence/p15-37-temporal-artmesh-qa.json",
+      "visual": "experiments/gif-multiview-keyparts-mvp/evidence/p15-37-visual-review-qa.json",
+      "browser": "experiments/gif-multiview-keyparts-mvp/evidence/p15-37-browser-qa.json",
+      "artifact": "experiments/gif-multiview-keyparts-mvp/evidence/p15-37-delivery.json"
     }
   },
-  "lastCompleted": "P15_36_TWO_ANGLE_13_ROLE_RGBA_11_TESTS_12_BROWSER_CHECKS_73_ARCHIVE_ENTRIES",
+  "lastCompleted": "P15_37_NINE_FRAMES_THIRTEEN_ROLES_TWELVE_TESTS_54_BROWSER_CHECKS_107_ARCHIVE_ITEMS",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -2587,6 +2593,62 @@
         "entriesVerified": 73
       },
       "next": "P15-37 approve complete angle-true key drawings with P0 Hero source, then independent hidden underpainting and ArtMesh source ownership"
+    },
+    "p15_37PaintedArtMeshContinuity": {
+      "characterId": "p0_character_001",
+      "status": "REGISTERED_PAINTED_ARTMESH_CONTINUITY_ENGINEERING_VERIFIED",
+      "approvedSourceP0Original45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "approvedHeroIdentitySHA256Verified": false,
+      "comparisonOriginal45Reference": true,
+      "frames": 9,
+      "continuousYawRange": [
+        55,
+        65
+      ],
+      "paintedNewModelKeyangles": [
+        57.5,
+        60.0
+      ],
+      "reconciledIntermediateAngles": [
+        56.25,
+        58.75,
+        61.25,
+        62.5,
+        63.75
+      ],
+      "nativeRgbaSemanticRoles": 13,
+      "newPaintedRgbaRoleNames": [
+        "eye.far",
+        "face.skin",
+        "hair.front"
+      ],
+      "unchangedRgbaRolesPerFrame": 10,
+      "P15_35SourceQA_SHA256": "6dba4a97b9a7d31fecaec6bc94ed2062f967e5b7cd0fc9ccada37817e839b96a",
+      "P15_36SourceQA_SHA256": "90ebe3a48ed78e9287d6a741c53dad37416867ded7d9f0df40f664bf2f30e735",
+      "cameraCalibrationSHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+      "originalFrameRoleSHA256Verified": true,
+      "originalOccludedEyePixelsPreserved": true,
+      "independentKeyViewArtApproved": 0,
+      "independentHiddenUnderpaintApproved": 0,
+      "productionVddModified": false,
+      "unitTestsPassed": 12,
+      "chromiumChecks": 54,
+      "chromiumImageLoads": 216,
+      "chromiumScreenshots": 10,
+      "chromiumErrors": 0,
+      "temporalJumpProxyMeanNew": 6.480131,
+      "temporalJumpProxyMeanBaseline": 6.177948,
+      "temporalJumpProxyMaxRatio": 1.191509,
+      "plan": "docs/plans/2026-11-11-p15-37-painted-artmesh-continuity.md",
+      "runner": "scripts/run-p15-37-review.sh",
+      "review": "private-assets/exports/p15-37-temporal-art-review/index.html",
+      "artifact": {
+        "path": "private-assets/exports/p15-37-temporal-art-review.zip",
+        "sha256": "c8f54bf7113645403e48313c9ac31ec97346e0e84b4b483eaa4c7fea09b747b8",
+        "bytes": 25623457,
+        "entries": 107
+      },
+      "next": "P15-38 source-register 45-55 part topology and independently verify full 45-65 eye/nose/hair/clip painted geometry"
     }
   }
 }
