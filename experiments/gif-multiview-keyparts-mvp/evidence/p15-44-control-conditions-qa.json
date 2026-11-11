@@ -6,37 +6,25 @@
   "sourceRegisteredSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
   "sourceIdentitySHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
   "artifacts": {
-    "browser-desktop.png": {
-      "sha256": "ea746822ba1e3bd702abf05932ee1e530fa627d259eabb8d2b1d30f54f4a5bae",
-      "bytes": 202433
-    },
-    "browser-mobile.png": {
-      "sha256": "40144dcc5443f4b7d8e8d89e3a57c672906fb66e313e855be382a869ed8e7c00",
-      "bytes": 290533
-    },
-    "face-mask-65.png": {
-      "sha256": "37d12bb930a6baf64f1b2b8a96e24779f12796b71490ed65476f9955da38b8b8",
-      "bytes": 14152
-    },
-    "facial-anchors-65.png": {
-      "sha256": "c118f1dd8865019b37c81c960f8754777d6902727818584fe2b40b441ab306ee",
-      "bytes": 3754
+    "registered-65.png": {
+      "sha256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "bytes": 790808
     },
     "identity-45.png": {
       "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
       "bytes": 751830
     },
-    "index.html": {
-      "sha256": "e308c417e89b8e9cd5a8c4302f0849f18a4188214e26635b8d6e7ee8ba2e0271",
-      "bytes": 1371
-    },
     "lineart-65.png": {
       "sha256": "029f173e4eaad50ac3f44a86f6929ffab52361707cb21da53cf3cd7d8f3d4a6c",
       "bytes": 47872
     },
-    "registered-65.png": {
-      "sha256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
-      "bytes": 790808
+    "facial-anchors-65.png": {
+      "sha256": "c118f1dd8865019b37c81c960f8754777d6902727818584fe2b40b441ab306ee",
+      "bytes": 3754
+    },
+    "face-mask-65.png": {
+      "sha256": "37d12bb930a6baf64f1b2b8a96e24779f12796b71490ed65476f9955da38b8b8",
+      "bytes": 14152
     }
   },
   "anchors": {
