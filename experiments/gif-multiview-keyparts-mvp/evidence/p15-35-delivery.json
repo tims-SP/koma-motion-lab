@@ -1,0 +1,14 @@
+{
+  "schema": "KOMA-P15-35-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "zipPath": "private-assets/exports/p15-35-face-depth-hair-review.zip",
+  "sha256": "c4d7fb56141407788a6546289e67a8ec9edeafee4639445392b03f234c2c175b",
+  "bytes": 17664275,
+  "entriesVerified": 110,
+  "htmlEntry": "index.html",
+  "reviewFrames": 9,
+  "chromiumScreenshots": 6,
+  "imagesLoaded": 198,
+  "physical3DVerified": false,
+  "artisticallyApproved": false
+}
