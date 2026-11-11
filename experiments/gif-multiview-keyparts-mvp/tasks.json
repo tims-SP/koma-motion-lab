@@ -3037,6 +3037,31 @@
       "plan": "docs/plans/2026-11-11-p15-57-multiview-identity-audit.md",
       "review": "private-assets/exports/p15-57-multiview-audit/index.html",
       "next": "P15-58 verify canonical P0 provenance, re-evaluate relative +20-degree view and absolute yaw calibration"
+    },
+    "p15_58ProvenancePoseAudit": {
+      "status": "P0_45_CANONICAL_ENGINEERING_SOURCE_VERIFIED_HERO_AND_ABSOLUTE_YAW_UNVERIFIED",
+      "characterId": "p0_character_001",
+      "canonical45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "identicalEngineeringCopies": 5,
+      "recoveryArchiveSHA256Match": true,
+      "approvedHeroSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+      "approvedHeroBytesValidated": false,
+      "sourceHeroExactMatchesIn5785LocalImages": 0,
+      "relativeCameraControlDeg": 20,
+      "selectedCandidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "absoluteYaw65Verified": false,
+      "identityContinuityApproved": false,
+      "formalArtMeshModified": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 12,
+      "browserChecksPass": 2,
+      "evidence": [
+        "evidence/p15-58-provenance-pose-qa.json",
+        "evidence/p15-58-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-58-provenance-pose.md",
+      "review": "private-assets/exports/p15-58-provenance-pose/index.html",
+      "next": "P15-59 independently calibrate camera yaw using real geometry or documented multi-view landmarks"
     }
   }
 }
