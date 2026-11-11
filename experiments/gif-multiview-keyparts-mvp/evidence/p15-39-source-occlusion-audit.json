@@ -1,0 +1,365 @@
+{
+  "schema": "KOMA-P15-39-SOURCE-OCCLUSION-AUDIT-V1",
+  "characterId": "p0_character_001",
+  "expectedApprovedHeroSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+  "heroCandidates": [],
+  "approvedHeroBytesVerified": false,
+  "frameCount": 13,
+  "frames": [
+    {
+      "angle": "yaw45",
+      "compositeSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 0,
+        "firstOpaquePixels": 3428,
+        "secondOpaquePixels": 559,
+        "overlapFractionOfFirst": 0.0
+      },
+      "farEyeFace": {
+        "overlapPixels": 3423,
+        "firstOpaquePixels": 3428,
+        "secondOpaquePixels": 19842,
+        "overlapFractionOfFirst": 0.998541
+      },
+      "clipFrontHair": {
+        "overlapPixels": 798,
+        "firstOpaquePixels": 831,
+        "secondOpaquePixels": 21796,
+        "overlapFractionOfFirst": 0.960289
+      },
+      "clipAlphaCentroidXY": [
+        330.472,
+        140.167
+      ]
+    },
+    {
+      "angle": "yaw47p5",
+      "compositeSHA256": "b69c04a0a3977f5932f54d1229dd7be20e17e07b33485947a7026ceb1cae60b9",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 60,
+        "firstOpaquePixels": 3525,
+        "secondOpaquePixels": 745,
+        "overlapFractionOfFirst": 0.017021
+      },
+      "farEyeFace": {
+        "overlapPixels": 3525,
+        "firstOpaquePixels": 3525,
+        "secondOpaquePixels": 21347,
+        "overlapFractionOfFirst": 1.0
+      },
+      "clipFrontHair": {
+        "overlapPixels": 933,
+        "firstOpaquePixels": 948,
+        "secondOpaquePixels": 24010,
+        "overlapFractionOfFirst": 0.984177
+      },
+      "clipAlphaCentroidXY": [
+        330.778,
+        139.928
+      ]
+    },
+    {
+      "angle": "yaw50",
+      "compositeSHA256": "b04c39e977b687639df14df305d7f8611849b47a15a5922ab7e7936d3ce1cc4c",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 62,
+        "firstOpaquePixels": 3441,
+        "secondOpaquePixels": 708,
+        "overlapFractionOfFirst": 0.018018
+      },
+      "farEyeFace": {
+        "overlapPixels": 3441,
+        "firstOpaquePixels": 3441,
+        "secondOpaquePixels": 21827,
+        "overlapFractionOfFirst": 1.0
+      },
+      "clipFrontHair": {
+        "overlapPixels": 922,
+        "firstOpaquePixels": 958,
+        "secondOpaquePixels": 23505,
+        "overlapFractionOfFirst": 0.962422
+      },
+      "clipAlphaCentroidXY": [
+        331.081,
+        139.681
+      ]
+    },
+    {
+      "angle": "yaw52p5",
+      "compositeSHA256": "3861bbb645ff3df8242b740e18c76b67167d9dd88c0901c6361eef27eb3886de",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 72,
+        "firstOpaquePixels": 3433,
+        "secondOpaquePixels": 702,
+        "overlapFractionOfFirst": 0.020973
+      },
+      "farEyeFace": {
+        "overlapPixels": 3433,
+        "firstOpaquePixels": 3433,
+        "secondOpaquePixels": 22406,
+        "overlapFractionOfFirst": 1.0
+      },
+      "clipFrontHair": {
+        "overlapPixels": 953,
+        "firstOpaquePixels": 1008,
+        "secondOpaquePixels": 23377,
+        "overlapFractionOfFirst": 0.945437
+      },
+      "clipAlphaCentroidXY": [
+        331.38,
+        139.438
+      ]
+    },
+    {
+      "angle": "yaw55",
+      "compositeSHA256": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 31,
+        "firstOpaquePixels": 2527,
+        "secondOpaquePixels": 599,
+        "overlapFractionOfFirst": 0.012268
+      },
+      "farEyeFace": {
+        "overlapPixels": 2513,
+        "firstOpaquePixels": 2527,
+        "secondOpaquePixels": 22631,
+        "overlapFractionOfFirst": 0.99446
+      },
+      "clipFrontHair": {
+        "overlapPixels": 845,
+        "firstOpaquePixels": 901,
+        "secondOpaquePixels": 22008,
+        "overlapFractionOfFirst": 0.937847
+      },
+      "clipAlphaCentroidXY": [
+        331.686,
+        139.199
+      ]
+    },
+    {
+      "angle": "yaw56p25",
+      "compositeSHA256": "412c92da1d7608829041834d57b82ea66429ac1030cb96b799d2bb74e14bd543",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 57,
+        "firstOpaquePixels": 2996,
+        "secondOpaquePixels": 699,
+        "overlapFractionOfFirst": 0.019025
+      },
+      "farEyeFace": {
+        "overlapPixels": 2982,
+        "firstOpaquePixels": 2996,
+        "secondOpaquePixels": 22771,
+        "overlapFractionOfFirst": 0.995327
+      },
+      "clipFrontHair": {
+        "overlapPixels": 941,
+        "firstOpaquePixels": 1038,
+        "secondOpaquePixels": 22872,
+        "overlapFractionOfFirst": 0.906551
+      },
+      "clipAlphaCentroidXY": [
+        332.38,
+        140.164
+      ]
+    },
+    {
+      "angle": "yaw57p5",
+      "compositeSHA256": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 20,
+        "firstOpaquePixels": 1305,
+        "secondOpaquePixels": 570,
+        "overlapFractionOfFirst": 0.015326
+      },
+      "farEyeFace": {
+        "overlapPixels": 1305,
+        "firstOpaquePixels": 1305,
+        "secondOpaquePixels": 22361,
+        "overlapFractionOfFirst": 1.0
+      },
+      "clipFrontHair": {
+        "overlapPixels": 796,
+        "firstOpaquePixels": 901,
+        "secondOpaquePixels": 22463,
+        "overlapFractionOfFirst": 0.883463
+      },
+      "clipAlphaCentroidXY": [
+        333.106,
+        139.199
+      ]
+    },
+    {
+      "angle": "yaw58p75",
+      "compositeSHA256": "8cf2c23e007ceca6272e6f15c9a2ae64c61bbd741d1040d7cc6ff6a2053692c4",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 30,
+        "firstOpaquePixels": 1294,
+        "secondOpaquePixels": 670,
+        "overlapFractionOfFirst": 0.023184
+      },
+      "farEyeFace": {
+        "overlapPixels": 1294,
+        "firstOpaquePixels": 1294,
+        "secondOpaquePixels": 22561,
+        "overlapFractionOfFirst": 1.0
+      },
+      "clipFrontHair": {
+        "overlapPixels": 871,
+        "firstOpaquePixels": 1027,
+        "secondOpaquePixels": 23250,
+        "overlapFractionOfFirst": 0.848101
+      },
+      "clipAlphaCentroidXY": [
+        333.886,
+        140.169
+      ]
+    },
+    {
+      "angle": "yaw60",
+      "compositeSHA256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 18,
+        "firstOpaquePixels": 1304,
+        "secondOpaquePixels": 583,
+        "overlapFractionOfFirst": 0.013804
+      },
+      "farEyeFace": {
+        "overlapPixels": 1304,
+        "firstOpaquePixels": 1304,
+        "secondOpaquePixels": 22192,
+        "overlapFractionOfFirst": 1.0
+      },
+      "clipFrontHair": {
+        "overlapPixels": 779,
+        "firstOpaquePixels": 916,
+        "secondOpaquePixels": 22738,
+        "overlapFractionOfFirst": 0.850437
+      },
+      "clipAlphaCentroidXY": [
+        334.58,
+        140.197
+      ]
+    },
+    {
+      "angle": "yaw61p25",
+      "compositeSHA256": "572ac49841a6ea11effd8aef5eb64416a38133ea506588681d3fd002074855f4",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 32,
+        "firstOpaquePixels": 2262,
+        "secondOpaquePixels": 698,
+        "overlapFractionOfFirst": 0.014147
+      },
+      "farEyeFace": {
+        "overlapPixels": 2254,
+        "firstOpaquePixels": 2262,
+        "secondOpaquePixels": 22354,
+        "overlapFractionOfFirst": 0.996463
+      },
+      "clipFrontHair": {
+        "overlapPixels": 817,
+        "firstOpaquePixels": 1023,
+        "secondOpaquePixels": 23096,
+        "overlapFractionOfFirst": 0.798631
+      },
+      "clipAlphaCentroidXY": [
+        335.322,
+        139.208
+      ]
+    },
+    {
+      "angle": "yaw62p5",
+      "compositeSHA256": "ab746b0a72f12ec175efe63e9e688ff3272dda25e35268ff30e176b3092c505f",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 20,
+        "firstOpaquePixels": 1978,
+        "secondOpaquePixels": 565,
+        "overlapFractionOfFirst": 0.010111
+      },
+      "farEyeFace": {
+        "overlapPixels": 1950,
+        "firstOpaquePixels": 1978,
+        "secondOpaquePixels": 21901,
+        "overlapFractionOfFirst": 0.985844
+      },
+      "clipFrontHair": {
+        "overlapPixels": 689,
+        "firstOpaquePixels": 883,
+        "secondOpaquePixels": 22539,
+        "overlapFractionOfFirst": 0.780294
+      },
+      "clipAlphaCentroidXY": [
+        335.994,
+        139.201
+      ]
+    },
+    {
+      "angle": "yaw63p75",
+      "compositeSHA256": "1a8b2b3f8c7e0b1919877544d70b51b01401c55fa51373491606f23925e0ae55",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 31,
+        "firstOpaquePixels": 2349,
+        "secondOpaquePixels": 797,
+        "overlapFractionOfFirst": 0.013197
+      },
+      "farEyeFace": {
+        "overlapPixels": 2227,
+        "firstOpaquePixels": 2349,
+        "secondOpaquePixels": 22058,
+        "overlapFractionOfFirst": 0.948063
+      },
+      "clipFrontHair": {
+        "overlapPixels": 758,
+        "firstOpaquePixels": 1005,
+        "secondOpaquePixels": 26931,
+        "overlapFractionOfFirst": 0.754229
+      },
+      "clipAlphaCentroidXY": [
+        336.731,
+        139.076
+      ]
+    },
+    {
+      "angle": "yaw65",
+      "compositeSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "layersRGBA": true,
+      "farEyeNose": {
+        "overlapPixels": 3,
+        "firstOpaquePixels": 956,
+        "secondOpaquePixels": 758,
+        "overlapFractionOfFirst": 0.003138
+      },
+      "farEyeFace": {
+        "overlapPixels": 830,
+        "firstOpaquePixels": 956,
+        "secondOpaquePixels": 21535,
+        "overlapFractionOfFirst": 0.868201
+      },
+      "clipFrontHair": {
+        "overlapPixels": 642,
+        "firstOpaquePixels": 885,
+        "secondOpaquePixels": 25941,
+        "overlapFractionOfFirst": 0.725424
+      },
+      "clipAlphaCentroidXY": [
+        337.476,
+        139.199
+      ]
+    }
+  ],
+  "contactSheet": "private-assets/exports/p15-39-45-to65-contact.png",
+  "contactSHA256": "750bd8ba9a0914fb9652639b8493db2ad5113b22916a4ebc5d0a8ac406e5ba46",
+  "artisticApproval": false,
+  "notes": "Pixel intersections are diagnostic only; no hidden-paint or anatomical-depth certification."
+}
