@@ -1,0 +1,77 @@
+{
+  "schema": "KOMA-P15-83-BROW_LASH_UNDERPAINT_VARIANTS_V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "baseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+  "hairSHA256": "12b565e89e0e9df3f1f4c7688aed630688add296fb94fb298a1270b25150d566",
+  "clipSHA256": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4",
+  "independentZeroPoseSHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+  "variants": {
+    "slender": {
+      "maskSHA256": "83372a9ea5fab3e880254094b691fab5f3dc86e5bfb875db514005edb4847329",
+      "underpaintSHA256": "7910eb649255020a1b07e4e45cd04463d81a75d1245f9cbf5104e0bca451b4a9",
+      "browMaskOverlapPixels": 255,
+      "frames": {
+        "9": {
+          "sha256": "445bea93af0eaa6fe31413bd9b4df22c1976d530e7db31080e218bc8b549da2e",
+          "changedPixelsVsP1582": 1796,
+          "newTransparentHolesROI": 0
+        },
+        "18": {
+          "sha256": "b534f6ded0cd3e5ee86e71593189e0052128c011a62e3e7b35a1e67bc2cad076",
+          "changedPixelsVsP1582": 1794,
+          "newTransparentHolesROI": 0
+        }
+      }
+    },
+    "upper": {
+      "maskSHA256": "ff3f70bdfc9b5b4e293ee815d3ec7b9733f97c79579bc34089191ae23f374cf9",
+      "underpaintSHA256": "da90fd0478dbf1158ea1c7738c921374c9b51531d85ad78713187c39d7155279",
+      "browMaskOverlapPixels": 500,
+      "frames": {
+        "9": {
+          "sha256": "2ee9103b922908b8e9339afbb2bea58f71da601a31af4064cb391136ff42ddc8",
+          "changedPixelsVsP1582": 2813,
+          "newTransparentHolesROI": 0
+        },
+        "18": {
+          "sha256": "e9b4ae6ca6f9500ba5b7c4d321da16aceebc0ddcf27ce3468004b42f15ee352d",
+          "changedPixelsVsP1582": 2900,
+          "newTransparentHolesROI": 0
+        }
+      }
+    },
+    "localized": {
+      "maskSHA256": "8394953254591df5d4d5b4ca0cfae37c04430bedc4f1d9a98eb6f9419a29e0f7",
+      "underpaintSHA256": "b97bba1fca3cc4dfc7f42a1fb574b20c2e0cb55ccb483790646e0074b2667d51",
+      "browMaskOverlapPixels": 30,
+      "frames": {
+        "9": {
+          "sha256": "d65c8bf3e8b022733a7e5801acdc4b2928ee74da40047917b780aaba882e9cf1",
+          "changedPixelsVsP1582": 1551,
+          "newTransparentHolesROI": 0
+        },
+        "18": {
+          "sha256": "370c0f308a6fe1bb7e00eb7023c8a1635fab75f81cbb9dcf83ad7f4410fd64ef",
+          "changedPixelsVsP1582": 1608,
+          "newTransparentHolesROI": 0
+        }
+      }
+    }
+  },
+  "offsets": [
+    0,
+    9,
+    18
+  ],
+  "visualAssessment": {
+    "slender": "Preserves much of the eyebrow but diagonal grey duplicate remains over lashes",
+    "upper": "Reduces eyebrow ghost but erases actual eyebrow and leaves a visible mismatched forehead patch",
+    "localized": "Preserves more shape but keeps duplicate eyebrow contour near the upper lash"
+  },
+  "selectedForFormalPipeline": null,
+  "zeroPoseVisibleSourceExact": true,
+  "visualGate": "ALL_LOCAL_UNDERPAINT_CLONES_FAIL_BROW_AND_BANG_VISUAL",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "next": "P15-84 acquire a genuine clean hidden-face paint of the affected brow/lash seam; disallow additional clone-mask tuning"
+}

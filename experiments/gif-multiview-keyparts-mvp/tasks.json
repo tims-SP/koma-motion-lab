@@ -3920,6 +3920,59 @@
       "review": "private-assets/exports/p15-82-rest-underpaint/index.html",
       "plan": "docs/plans/2026-11-11-p15-82-independent-underpaint.md",
       "next": "P15-83 remove authentic brow-lash/bang ghost contours using true hidden artwork; require dynamic quality"
+    },
+    "p15_83BrowLashDynamicUnderpaintGate": {
+      "status": "THREE_SOURCE_CLONE_REPAIRS_TESTED_ALL_REJECTED_DYNAMIC_VISUAL_FAIL",
+      "characterId": "p0_character_001",
+      "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "baseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+      "bangsSHA256": "12b565e89e0e9df3f1f4c7688aed630688add296fb94fb298a1270b25150d566",
+      "clipSHA256": "1797223fa4bd6e4b285936c5960cdc38dd249fddd5f05ac367860b79c3aee0c4",
+      "variants": {
+        "slender": {
+          "maskSHA256": "83372a9ea5fab3e880254094b691fab5f3dc86e5bfb875db514005edb4847329",
+          "browOverlapPixels": 255,
+          "motionFrames": {
+            "9": "445bea93af0eaa6fe31413bd9b4df22c1976d530e7db31080e218bc8b549da2e",
+            "18": "b534f6ded0cd3e5ee86e71593189e0052128c011a62e3e7b35a1e67bc2cad076"
+          }
+        },
+        "upper": {
+          "maskSHA256": "ff3f70bdfc9b5b4e293ee815d3ec7b9733f97c79579bc34089191ae23f374cf9",
+          "browOverlapPixels": 500,
+          "motionFrames": {
+            "9": "2ee9103b922908b8e9339afbb2bea58f71da601a31af4064cb391136ff42ddc8",
+            "18": "e9b4ae6ca6f9500ba5b7c4d321da16aceebc0ddcf27ce3468004b42f15ee352d"
+          }
+        },
+        "localized": {
+          "maskSHA256": "8394953254591df5d4d5b4ca0cfae37c04430bedc4f1d9a98eb6f9419a29e0f7",
+          "browOverlapPixels": 30,
+          "motionFrames": {
+            "9": "d65c8bf3e8b022733a7e5801acdc4b2928ee74da40047917b780aaba882e9cf1",
+            "18": "370c0f308a6fe1bb7e00eb7023c8a1635fab75f81cbb9dcf83ad7f4410fd64ef"
+          }
+        }
+      },
+      "zeroPoseVisuallyExact": true,
+      "movementOffsetsPx": [
+        9,
+        18
+      ],
+      "newTransparencyHoles": 0,
+      "visualGate": "ALL_LOCAL_UNDERPAINT_CLONES_FAIL_BROW_AND_BANG_VISUAL",
+      "formalArtMeshAccepted": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 16,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 20,
+      "evidence": [
+        "evidence/p15-83-qa.json",
+        "evidence/p15-83-browser-qa.json"
+      ],
+      "review": "private-assets/exports/p15-83-eye-seam/index.html",
+      "plan": "docs/plans/2026-11-11-p15-83-dynamic-brow-seam-gate.md",
+      "next": "P15-84 genuine clean hidden brow/eyelash artwork matched to existing source; stop clone-mask tuning"
     }
   }
 }
