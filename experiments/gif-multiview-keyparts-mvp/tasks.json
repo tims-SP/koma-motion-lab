@@ -2998,6 +2998,45 @@
       "plan": "docs/plans/2026-11-11-p15-56-alpha-matte-refinement.md",
       "review": "private-assets/exports/p15-56-edge-matting/index.html",
       "next": "P15-57 multiview continuity and independent absolute yaw verification"
+    },
+    "p15_57MultiviewIdentityAudit": {
+      "status": "ARC_AUDITED_NOT_ARTISTICALLY_APPROVED_HIGH_ANGLE_COMPOSITES_REJECTED_AS_IDENTITY_TRUTH",
+      "characterId": "p0_character_001",
+      "anglesAudited": [
+        45.0,
+        47.5,
+        50.0,
+        52.5,
+        55.0,
+        56.25,
+        57.5,
+        58.75,
+        60.0,
+        61.25,
+        62.5,
+        63.75,
+        65.0
+      ],
+      "registeredArcFrames": 13,
+      "roleCount": 13,
+      "fullArcArtistAcceptance": false,
+      "independentlyPaintedKeyframesApproved": 0,
+      "interpolationAlphaIoUOnly": true,
+      "sourceP0HeroSHA256Verified": false,
+      "canonical45SourceSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "absoluteYaw65Verified": false,
+      "identityContinuityApproved": false,
+      "formalKeyframeAccepted": false,
+      "unitTestsPass": 11,
+      "browserChecksPass": 2,
+      "browserImagesLoaded": 16,
+      "evidence": [
+        "evidence/p15-57-multiview-audit.json",
+        "evidence/p15-57-browser-qa.json"
+      ],
+      "plan": "docs/plans/2026-11-11-p15-57-multiview-identity-audit.md",
+      "review": "private-assets/exports/p15-57-multiview-audit/index.html",
+      "next": "P15-58 verify canonical P0 provenance, re-evaluate relative +20-degree view and absolute yaw calibration"
     }
   }
 }

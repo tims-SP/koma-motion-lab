@@ -1,0 +1,309 @@
+{
+  "schema": "KOMA-P15-57-MULTIVIEW-CONTINUITY-AUDIT-V1",
+  "characterId": "p0_character_001",
+  "sourceArcAngles": [
+    45.0,
+    47.5,
+    50.0,
+    52.5,
+    55.0,
+    56.25,
+    57.5,
+    58.75,
+    60.0,
+    61.25,
+    62.5,
+    63.75,
+    65.0
+  ],
+  "registeredArcFrames": 13,
+  "roleCount": 13,
+  "fullArcArtistAcceptance": false,
+  "independentlyPaintedKeyframesApproved": 0,
+  "sourceP0HeroSHA256Verified": false,
+  "registeredFull45DegreeOriginalPreserved": true,
+  "independentArtAdmission": 0,
+  "physical3DTopologyApproved": false,
+  "adjacentMetrics": [
+    {
+      "interval": [
+        45.0,
+        47.5
+      ],
+      "alphaIoU": 0.973803,
+      "sharedVisibleRGBDelta": 9.847566
+    },
+    {
+      "interval": [
+        47.5,
+        50.0
+      ],
+      "alphaIoU": 0.98262,
+      "sharedVisibleRGBDelta": 7.923095
+    },
+    {
+      "interval": [
+        50.0,
+        52.5
+      ],
+      "alphaIoU": 0.981496,
+      "sharedVisibleRGBDelta": 7.447589
+    },
+    {
+      "interval": [
+        52.5,
+        55.0
+      ],
+      "alphaIoU": 0.979492,
+      "sharedVisibleRGBDelta": 7.877327
+    },
+    {
+      "interval": [
+        55.0,
+        56.25
+      ],
+      "alphaIoU": 0.986328,
+      "sharedVisibleRGBDelta": 5.412586
+    },
+    {
+      "interval": [
+        56.25,
+        57.5
+      ],
+      "alphaIoU": 0.980655,
+      "sharedVisibleRGBDelta": 5.332357
+    },
+    {
+      "interval": [
+        57.5,
+        58.75
+      ],
+      "alphaIoU": 0.985923,
+      "sharedVisibleRGBDelta": 4.908319
+    },
+    {
+      "interval": [
+        58.75,
+        60.0
+      ],
+      "alphaIoU": 0.980035,
+      "sharedVisibleRGBDelta": 5.043272
+    },
+    {
+      "interval": [
+        60.0,
+        61.25
+      ],
+      "alphaIoU": 0.983549,
+      "sharedVisibleRGBDelta": 4.99233
+    },
+    {
+      "interval": [
+        61.25,
+        62.5
+      ],
+      "alphaIoU": 0.979787,
+      "sharedVisibleRGBDelta": 5.077384
+    },
+    {
+      "interval": [
+        62.5,
+        63.75
+      ],
+      "alphaIoU": 0.969249,
+      "sharedVisibleRGBDelta": 7.525259
+    },
+    {
+      "interval": [
+        63.75,
+        65.0
+      ],
+      "alphaIoU": 0.975775,
+      "sharedVisibleRGBDelta": 7.365989
+    }
+  ],
+  "frames": [
+    {
+      "yaw": 45.0,
+      "kind": "registered-art-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        316,
+        120,
+        348,
+        163
+      ],
+      "sourceImageSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "preview": "arc-yaw-45p0.png"
+    },
+    {
+      "yaw": 47.5,
+      "kind": "cross-view-role-inbetween",
+      "alphaIoU": 0.978656,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        315,
+        119,
+        349,
+        163
+      ],
+      "sourceImageSHA256": "528c799ff5a6586af4c6c236fb47686af4c36bdd5f8257414bb48d2f46434e3e"
+    },
+    {
+      "yaw": 50.0,
+      "kind": "cross-view-role-inbetween",
+      "alphaIoU": 0.978256,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        315,
+        119,
+        349,
+        163
+      ],
+      "sourceImageSHA256": "fb7adf02a46a6cbd629fff0668caf0c24a0f8e42bfd940ce49033c23ea71bf70"
+    },
+    {
+      "yaw": 52.5,
+      "kind": "cross-view-role-inbetween",
+      "alphaIoU": 0.981141,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        315,
+        118,
+        350,
+        163
+      ],
+      "sourceImageSHA256": "a7ca667efe300eba028c5e17decdfc343189699a98df55b6e0a598601598c8b0"
+    },
+    {
+      "yaw": 55.0,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        315,
+        118,
+        350,
+        162
+      ],
+      "sourceImageSHA256": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+      "preview": "arc-yaw-55p0.png"
+    },
+    {
+      "yaw": 56.25,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        314,
+        119,
+        350,
+        164
+      ],
+      "sourceImageSHA256": "412c92da1d7608829041834d57b82ea66429ac1030cb96b799d2bb74e14bd543"
+    },
+    {
+      "yaw": 57.5,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        317,
+        118,
+        351,
+        162
+      ],
+      "sourceImageSHA256": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+      "preview": "arc-yaw-57p5.png"
+    },
+    {
+      "yaw": 58.75,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        316,
+        119,
+        353,
+        163
+      ],
+      "sourceImageSHA256": "8cf2c23e007ceca6272e6f15c9a2ae64c61bbd741d1040d7cc6ff6a2053692c4"
+    },
+    {
+      "yaw": 60.0,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        318,
+        119,
+        353,
+        163
+      ],
+      "sourceImageSHA256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "preview": "arc-yaw-60p0.png"
+    },
+    {
+      "yaw": 61.25,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        319,
+        117,
+        354,
+        163
+      ],
+      "sourceImageSHA256": "572ac49841a6ea11effd8aef5eb64416a38133ea506588681d3fd002074855f4",
+      "preview": "arc-yaw-61p25.png"
+    },
+    {
+      "yaw": 62.5,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        320,
+        118,
+        354,
+        162
+      ],
+      "sourceImageSHA256": "ab746b0a72f12ec175efe63e9e688ff3272dda25e35268ff30e176b3092c505f"
+    },
+    {
+      "yaw": 63.75,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        319,
+        118,
+        356,
+        163
+      ],
+      "sourceImageSHA256": "1a8b2b3f8c7e0b1919877544d70b51b01401c55fa51373491606f23925e0ae55",
+      "preview": "arc-yaw-63p75.png"
+    },
+    {
+      "yaw": 65.0,
+      "kind": "registered-vdd-source",
+      "alphaIoU": 1.0,
+      "artisticallyAccepted": false,
+      "clipBBox443": [
+        321,
+        118,
+        355,
+        162
+      ],
+      "sourceImageSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "preview": "arc-yaw-65p0.png"
+    }
+  ],
+  "P1556CandidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "assessment": "The 13-angle registered arc is an engineering candidate, not an artistically approved multi-view identity set. All per-angle visual-review artisticallyAccepted flags are false; interpolated 47.5/50/52.5 frames have alpha IoU about 0.978-0.981 but this measures silhouette overlap, not facial identity or artistic quality. The 57.5-65 whole-view previews show visible face/eye/skin compositing artifacts. The 45-degree canonical P0 reference remains the identity source; the 65-degree AI candidate is a separate promising profile candidate, not calibrated yaw.",
+  "absoluteYaw65Verified": false,
+  "identityContinuityApproved": false,
+  "formalKeyframeAccepted": false,
+  "next": "Do not use the 57.5-65 registered full-view composites as identity truth. Create an independent artistically coherent right-facing 65-degree view from canonical P0 45 with explicit angle conditioning, then measure camera yaw and compare facial landmarks."
+}
