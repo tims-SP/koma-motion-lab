@@ -1,0 +1,45 @@
+{
+  "schema": "KOMA-P15-90-SEMANTIC_UNDERPAINT_QA_V1",
+  "sourcePSD": "private-assets/p15-90-seethrough/p0-character-001-see-through.psd",
+  "sourcePSDSHA256": "9b975acc89fcef8ddb1eed3b2e3857c00b2f62cd4fb75f3e5bf27cc8c528e159",
+  "sourceImageSHA256": "e287d4a8dd6e8bf9733befa9e5705daa2a045d298afa1e0f87ec395dae7622bd",
+  "maskSHA256": "2b52894feadbc92d9e5c262208c446d0767134d5401c23c761e567e018c5ea01",
+  "transferMaskPixels": 2456,
+  "transferMaskBBox": [
+    497,
+    423,
+    555,
+    480
+  ],
+  "sourceOwnedRestPose": true,
+  "frames": {
+    "0": {
+      "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+      "changedPixels": 0,
+      "changesOutsideMask": 0,
+      "holes": 0,
+      "darkDanglingBefore": 14,
+      "darkDanglingAfter": 14
+    },
+    "9": {
+      "sha256": "7b26d26afa4786dc8f79936c3d6964429c9e3ff34a90bc2dec459ed99e411535",
+      "changedPixels": 1076,
+      "changesOutsideMask": 0,
+      "holes": 0,
+      "darkDanglingBefore": 2,
+      "darkDanglingAfter": 0
+    },
+    "18": {
+      "sha256": "6c753e34319dfb2e3beee5258f146eed6190b75cc3f8d38c6296248cc73273e1",
+      "changedPixels": 1092,
+      "changesOutsideMask": 0,
+      "holes": 0,
+      "darkDanglingBefore": 2,
+      "darkDanglingAfter": 0
+    }
+  },
+  "candidateAccepted": false,
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_INSPECTION",
+  "contact": "private-assets/exports/p15-90-semantic-underpaint/dynamic-contact.jpg"
+}

@@ -4237,5 +4237,35 @@
       "plan": "docs/plans/2026-11-11-p15-89-masked-spatial-inference.md",
       "next": "P15-90 obtain a usable actual masked model output or artist authored true hidden contour, then render exact 0/9/18px and inspect appearance"
     }
+  },
+  "p15_90ModelAssistedContourRepair": {
+    "status": "REAL_PSD_AND_MASKED_GENERATION_WITH_LOCAL_VISUAL_REVIEW",
+    "characterId": "p0_character_001",
+    "seeThroughPSDsha256": "9b975acc89fcef8ddb1eed3b2e3857c00b2f62cd4fb75f3e5bf27cc8c528e159",
+    "maskedModelOutputSHA256": "c92731b4391488a4e02d50cd9372372864b05babeb716984cab7191e138c2f25",
+    "precisionMaskVariant": "r4",
+    "restSourceSHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+    "movementPixels": [
+      0,
+      9,
+      18
+    ],
+    "changedPixelsAt9And18": 85,
+    "outsideMaskChangedPixels": 0,
+    "darkIsolatedPixelsBefore": 2,
+    "darkIsolatedPixelsAfter": 0,
+    "candidateAccepted": false,
+    "formalArtMeshAccepted": false,
+    "formalKeyframeAccepted": false,
+    "visualGate": "FINE_EDGE_CANDIDATE_REQUIRES_FINAL_VISUAL_APPROVAL",
+    "unitTestsPass": 12,
+    "browserPoseChecksPass": 6,
+    "evidence": [
+      "evidence/p15-90-see-through-qa.json",
+      "evidence/p15-90-qwen-masked-inference-qa.json",
+      "evidence/p15-90-precision-mask-qa.json",
+      "evidence/p15-90-browser-qa.json"
+    ],
+    "review": "private-assets/exports/p15-90-precision-mask/index.html"
   }
 }
