@@ -1,0 +1,149 @@
+{
+  "schema": "KOMA-P15-91-SMOOTH_REVEAL_QA_V1",
+  "frameCount": 19,
+  "zeroPoseExact": true,
+  "nativeKeyframeRecompositions": 3,
+  "blendWindow": 9,
+  "adjacentLocalMae": [
+    6.3638,
+    3.1783,
+    3.1509,
+    3.1157,
+    3.0578,
+    3.0109,
+    2.9637,
+    2.8699,
+    2.7855,
+    2.7265,
+    2.6357,
+    2.5577,
+    2.4988,
+    2.4176,
+    2.3169,
+    2.2038,
+    2.1255,
+    1.996
+  ],
+  "firstTransitionRatioVsOtherMedian": 2.3341,
+  "maxAdjacentLocalMae": 6.3638,
+  "meanAdjacentLocalMae": 2.8875,
+  "frames": {
+    "0": {
+      "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+      "patchWeight": 0.0,
+      "textureKeyframe": true,
+      "exactSourceSHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730"
+    },
+    "1": {
+      "sha256": "0821b79aa1a576d05b61cf54f239da18ec59cdfeaf341eba395fca552f6f8145",
+      "patchWeight": 0.034294,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 6.3638
+    },
+    "2": {
+      "sha256": "779d46293004fd790d32e9848ef35c04d16047d69d4448c77ec40670708e3ad3",
+      "patchWeight": 0.1262,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 3.1783
+    },
+    "3": {
+      "sha256": "6c7d5f71462bbc32eea1577d4126b29616edb68ea5799623e96c09e0eb80a9bc",
+      "patchWeight": 0.259259,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 3.1509
+    },
+    "4": {
+      "sha256": "61602ec3176ed900e34ffaaa502dd375a390872f2921765b3522042db59cc75d",
+      "patchWeight": 0.41701,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 3.1157
+    },
+    "5": {
+      "sha256": "305c4a3dfca7fcd05fb89e9c54fe56ea4cdc962e3b72110aa48f55c783d21652",
+      "patchWeight": 0.58299,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 3.0578
+    },
+    "6": {
+      "sha256": "3d8254f807c577e297f370f03c2fc9f78f7b031160405d169a9c501e27a59bd6",
+      "patchWeight": 0.740741,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 3.0109
+    },
+    "7": {
+      "sha256": "f38e6db99b7abe6e2020c291fe141406ed579e224b850f86b8b7c385fd0dc058",
+      "patchWeight": 0.8738,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.9637
+    },
+    "8": {
+      "sha256": "607e5c58df0681b3c5e8cc9edd64c239548e6c2fb609920c5ec7b006d9ec1e14",
+      "patchWeight": 0.965706,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.8699
+    },
+    "9": {
+      "sha256": "9686fbdf4dbc13d8131c6d785692b1c9f080c6182007a97bb86ccbe41b2d14e5",
+      "patchWeight": 1.0,
+      "textureKeyframe": true,
+      "adjacentLocalRGBMAE": 2.7855
+    },
+    "10": {
+      "sha256": "77c92dc5e278a6df5d929befca0ff9b51fdcc6f20334e8174f8b50e9bf4991b4",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.7265
+    },
+    "11": {
+      "sha256": "d2e12c79c206955c32e0687e6ed84ba1fcf10387230f4a885d4a797f3b9924ca",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.6357
+    },
+    "12": {
+      "sha256": "54dc886812f157b1654a2b93412819bf792625f4347ee3975b148b7ee478671d",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.5577
+    },
+    "13": {
+      "sha256": "9237cf4f6ae12bcb0e3d13d03c351f181e9501691ad1f510832f7dc0d89ea78e",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.4988
+    },
+    "14": {
+      "sha256": "1a183ebcab49cf5c784650c58d1f55aee2053e2ea621ec8838ee686b2fe313b9",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.4176
+    },
+    "15": {
+      "sha256": "772cd14e9b9a6f15d65b0929d6d9288da56e56cfbc1ae618fd1bc2e34f4c0060",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.3169
+    },
+    "16": {
+      "sha256": "83aa6130589f251f94440bac7dee0bfd4f3e2393e8f7d59847fbe413310eba8a",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.2038
+    },
+    "17": {
+      "sha256": "0379ab4e026f96fa006293776840a9bf7ecbde896baa00a3805cc95416677d64",
+      "patchWeight": 1,
+      "textureKeyframe": false,
+      "adjacentLocalRGBMAE": 2.1255
+    },
+    "18": {
+      "sha256": "5749c6206993c0e7ceede9542c996e8791335ea6fbcbbf6d499ef6a28285dbc0",
+      "patchWeight": 1,
+      "textureKeyframe": true,
+      "adjacentLocalRGBMAE": 1.996
+    }
+  },
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_CONTINUOUS_MOTION_REVIEW",
+  "gifSHA256": "5e16bef1b723cdb584a9fe855625d7777abc47251fb64ce7b6e69b4ccff1eef7"
+}
