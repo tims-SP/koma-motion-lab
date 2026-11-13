@@ -8110,5 +8110,45 @@
     ],
     "review": "private-assets/exports/p15-151-double-root-gate/index.html",
     "next": "Source-paint both 90-degree roots under the correct hair crown. Check 112.5/135 root contours and hidden scalp, then perform whole-head motion and occlusion validation."
+  },
+  "p15_152NativeRootPatchQA": {
+    "status": "SOURCE_ROOT_PATCH_GENERATED_AND_ALPHA_DOMAIN_RENDER_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 90.0,
+    "asset": "private-assets/p15-152-root-paint/root-patch-native.png",
+    "nativeImageSHA256": "401bf03df4f622d5080fc1533dc053d3ab9982aecca05ae7460b2f1fd4d492fa",
+    "nativeCanvas": [
+      1254,
+      1254
+    ],
+    "nativeZeroAlphaOutsideExpectedROI": false,
+    "nativeAlphaLeakPixels": 70932,
+    "boundedAlphaDomainRestored": true,
+    "sourceRegistration": {
+      "shiftXY": [
+        32,
+        16
+      ],
+      "jacketExcludedCrownIoU": 0.36142
+    },
+    "maxAdjacentRGBMAE": {
+      "original": 12.0984,
+      "root_patch_025": 12.1083,
+      "root_patch_050": 12.1642,
+      "root_patch_075": 12.6948,
+      "bounded_clean_025": 12.0639,
+      "bounded_clean_050": 12.1006
+    },
+    "bestDiagnostic": "bounded_clean_025",
+    "visualFindings": "Native generated root patch contains broad near-transparent grey-white haze beyond target crown. Cropping it to a bounded alpha domain prevents global background pollution and gives a slight motion metric improvement, but extra ink and misregistered root connection remain visible. Source-painted physical scalp continuity is not established.",
+    "productionArtMeshAccepted": false,
+    "artistApprovedDoubleRoots": false,
+    "sourceArtworkPreserved": true,
+    "fullRotationVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-152-root-paint-qa.json"
+    ],
+    "review": "private-assets/exports/p15-152-root-paint/index.html",
+    "next": "Generate or paint source-matched ahoge double-root attachment and scalp underpaint with strict alpha and exact geometry; require close-up keyview quality before whole-head yaw tests."
   }
 }
