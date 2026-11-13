@@ -16,6 +16,8 @@ ANGLES=[90+i*11.25 for i in range(9)]
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def load():return {a:np.array(Image.open(P/f'extracted/whole/yaw{a:03}.png').convert('RGBA')) for a in KEYS}
 def blend(a,b,t):
+    if t<=0:return a.copy()
+    if t>=1:return b.copy()
     aa=a.astype(np.float32)/255;bb=b.astype(np.float32)/255
     pa=aa[...,:3]*aa[...,3:4];pb=bb[...,:3]*bb[...,3:4]
     alpha=aa[...,3:4]*(1-t)+bb[...,3:4]*t
