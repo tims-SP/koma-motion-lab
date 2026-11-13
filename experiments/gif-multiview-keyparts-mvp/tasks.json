@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_113_CANONICAL_TOPOLOGY_VERIFIED_COLLAR_SOURCE_CORRESPONDENCE_PENDING",
+  "status": "P15_114_COLLAR_SOURCE_CORRESPONDENCE_VERIFIED_FULL_ART_YAW_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-113 source-anchored three-view shared ArtMesh with single garment drawing, material IoU validation, and full-character yaw evidence",
+  "lastCompleted": "P15-114 matching original collar texture and folds in three source views, mask/line geometry validation, and 9-frame browser preview",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -6142,5 +6142,111 @@
       "evidence/p15-113-browser-qa.json"
     ],
     "next": "Reauthor two source-view collar outline/fold artworks with canonical stroke and UV identities; verify shape IoU with actual native source and nine-frame visual quality, then introduce matching torso trim geometry"
+  },
+  "p15_114CollarSourceCorrespondence": {
+    "status": "SOURCE_OWNED_THREE_VIEW_COLLAR_ART_AND_SEAM_GEOMETRY_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      67.5,
+      75
+    ],
+    "canonicalSourceAngle": 67.5,
+    "canonicalSourceSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+    "registeredNativeSourceCollarViews": {
+      "60": {
+        "mappedMaskIoU": 0.86799,
+        "collarArtwork": "private-assets/exports/p15-114-collar-art/yaw60-canonical-collar.png",
+        "nativeMaskConstrainedArtwork": "private-assets/exports/p15-114-collar-art/yaw60-native-silhouette-collar.png",
+        "seamCorrespondence": {
+          "collar.left_inner_edge": {
+            "meanSourceLineDriftPx": 3.887,
+            "maxSourceLineDriftPx": 5.481
+          },
+          "collar.right_inner_edge": {
+            "meanSourceLineDriftPx": 1.876,
+            "maxSourceLineDriftPx": 3.685
+          }
+        }
+      },
+      "67.5": {
+        "mappedMaskIoU": 1.0,
+        "collarArtwork": "private-assets/exports/p15-114-collar-art/yaw67p5-canonical-collar.png",
+        "nativeMaskConstrainedArtwork": "private-assets/exports/p15-114-collar-art/yaw67p5-native-silhouette-collar.png",
+        "seamCorrespondence": {
+          "collar.left_inner_edge": {
+            "meanSourceLineDriftPx": 0.0,
+            "maxSourceLineDriftPx": 0.0
+          },
+          "collar.right_inner_edge": {
+            "meanSourceLineDriftPx": 0.0,
+            "maxSourceLineDriftPx": 0.0
+          }
+        }
+      },
+      "75": {
+        "mappedMaskIoU": 0.83129,
+        "collarArtwork": "private-assets/exports/p15-114-collar-art/yaw75-canonical-collar.png",
+        "nativeMaskConstrainedArtwork": "private-assets/exports/p15-114-collar-art/yaw75-native-silhouette-collar.png",
+        "seamCorrespondence": {
+          "collar.left_inner_edge": {
+            "meanSourceLineDriftPx": 3.655,
+            "maxSourceLineDriftPx": 5.899
+          },
+          "collar.right_inner_edge": {
+            "meanSourceLineDriftPx": 3.121,
+            "maxSourceLineDriftPx": 4.702
+          }
+        }
+      }
+    },
+    "meshShapeBenchmarkIoU": {
+      "60": 0.26131,
+      "75": 0.41019
+    },
+    "sourceOwnedInkSharedAcrossViews": true,
+    "originalThreeIndependentNativeViewsRetained": true,
+    "renderedCandidateFrames": 18,
+    "referenceFrames": 27,
+    "regionalMaxAdjacentRGBMAE": {
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "P15-114-continuous": 11.4209,
+        "P15-114-silhouette": 11.7807
+      },
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "P15-114-continuous": 18.7631,
+        "P15-114-silhouette": 19.0149
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "P15-114-continuous": 14.5937,
+        "P15-114-silhouette": 14.3692
+      }
+    },
+    "engineeringGeometryVerified": true,
+    "fullYawVisualAccepted": false,
+    "unitTestsPass": 19,
+    "browserChecksPass": 90,
+    "selectedOverallVisualBenchmark": "P15-101 head_alpha_blend",
+    "selectedNativeGarmentBenchmark": "P15-107 companion_direct_native_keys",
+    "review": "private-assets/exports/p15-114-collar-render/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-114-collar-source-correspondence.zip",
+      "sha256": "fec9893380eadcd23f72fdfc0b131300ece4bf4a0c1c0569dede362f4d8ec723",
+      "bytes": 39930579,
+      "entries": 85
+    },
+    "evidence": [
+      "evidence/p15-114-source-qa.json",
+      "evidence/p15-114-render-qa.json",
+      "evidence/p15-114-review-qa.json",
+      "evidence/p15-114-browser-qa.json"
+    ],
+    "next": "Apply source-space registration and stable per-part visibility to jacket gold trim and bow, then compare full P0 yaw loop quality; prioritize artwork correspondence before further solver complexity"
   }
 }

@@ -1,0 +1,160 @@
+{
+  "schema": "KOMA_P15_114_SOURCE_COLLAR_REGISTRATION_V1",
+  "characterId": "p0_character_001",
+  "canonicalAngle": 67.5,
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "canonicalRGBA": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collarWhite.png",
+  "canonicalSourceSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+  "geometryMode": "inverse affine ECC on original 512-mask, source-owned 1024 RGBA texture",
+  "sourceColorsAndInk": "single native 67.5-degree collar drawing at all output angles",
+  "nativeTargetMasksUsedOnlyForGeometricAlignmentAndSeparateSilhouetteVariant": true,
+  "originalSourcePreserved": true,
+  "views": {
+    "60": {
+      "sourceTarget": "private-assets/exports/p15-108-stroke-identity/yaw60/collarWhite.png",
+      "sourceTargetSHA256": "b67345418af4be50d0fddf9899e07e6176a654392edd15d7bdc1d625ff9f16fd",
+      "inverseMap512": [
+        [
+          1.0743958950042725,
+          -0.06225612387061119,
+          7.315685272216797
+        ],
+        [
+          0.0013718563131988049,
+          1.032344102859497,
+          -14.823749542236328
+        ]
+      ],
+      "inverseMap1024": [
+        [
+          1.0743958950042725,
+          -0.06225612387061119,
+          14.631370544433594
+        ],
+        [
+          0.0013718563131988049,
+          1.032344102859497,
+          -29.647499084472656
+        ]
+      ],
+      "determinant": 1.10923171043396,
+      "maskECC": 0.9936507920399895,
+      "mappedNativeTargetIoU": 0.86799,
+      "canonicalCollarPath": "private-assets/exports/p15-114-collar-art/yaw60-canonical-collar.png",
+      "canonicalCollarSHA256": "169b8b1786811c0115f022139ececfb8399c65b17bd862b76055126c1af74a22",
+      "nativeSilhouetteCollarPath": "private-assets/exports/p15-114-collar-art/yaw60-native-silhouette-collar.png",
+      "nativeSilhouetteSHA256": "3e991e24ec313e501664d5585534ff9d6d6773838b6bd2e94d10897d4827cfe1",
+      "targetCollarMaskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/collarWhite-mask.png",
+      "sourceOwnedCanonRGBA": true,
+      "nativeObservedSeamDrift": {
+        "collar.left_inner_edge": {
+          "meanSourceLineDriftPx": 3.887,
+          "maxSourceLineDriftPx": 5.481
+        },
+        "collar.right_inner_edge": {
+          "meanSourceLineDriftPx": 1.876,
+          "maxSourceLineDriftPx": 3.685
+        }
+      }
+    },
+    "67.5": {
+      "sourceTarget": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collarWhite.png",
+      "sourceTargetSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+      "inverseMap512": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "inverseMap1024": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "determinant": 1.0,
+      "maskECC": 1.0,
+      "mappedNativeTargetIoU": 1.0,
+      "canonicalCollarPath": "private-assets/exports/p15-114-collar-art/yaw67p5-canonical-collar.png",
+      "canonicalCollarSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+      "nativeSilhouetteCollarPath": "private-assets/exports/p15-114-collar-art/yaw67p5-native-silhouette-collar.png",
+      "nativeSilhouetteSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+      "targetCollarMaskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collarWhite-mask.png",
+      "sourceOwnedCanonRGBA": true,
+      "nativeObservedSeamDrift": {
+        "collar.left_inner_edge": {
+          "meanSourceLineDriftPx": 0.0,
+          "maxSourceLineDriftPx": 0.0
+        },
+        "collar.right_inner_edge": {
+          "meanSourceLineDriftPx": 0.0,
+          "maxSourceLineDriftPx": 0.0
+        }
+      }
+    },
+    "75": {
+      "sourceTarget": "private-assets/exports/p15-108-stroke-identity/yaw75/collarWhite.png",
+      "sourceTargetSHA256": "f0786156131a8c4004eb95872240a1b6a6b562637913f972397ca1d96317dc60",
+      "inverseMap512": [
+        [
+          1.1086885929107666,
+          -0.22938591241836548,
+          49.26961898803711
+        ],
+        [
+          0.004787904676049948,
+          0.9760567545890808,
+          7.429161071777344
+        ]
+      ],
+      "inverseMap1024": [
+        [
+          1.1086885929107666,
+          -0.22938591241836548,
+          98.53923797607422
+        ],
+        [
+          0.004787904676049948,
+          0.9760567545890808,
+          14.858322143554688
+        ]
+      ],
+      "determinant": 1.0832412242889404,
+      "maskECC": 0.9847685902307195,
+      "mappedNativeTargetIoU": 0.83129,
+      "canonicalCollarPath": "private-assets/exports/p15-114-collar-art/yaw75-canonical-collar.png",
+      "canonicalCollarSHA256": "ca3869c9d6f120cab6dd2e9426d78c0f51a7f1d28d746d9a16dc9c235f2503a4",
+      "nativeSilhouetteCollarPath": "private-assets/exports/p15-114-collar-art/yaw75-native-silhouette-collar.png",
+      "nativeSilhouetteSHA256": "9e58405b565dced589734edb30bbacd4f6c7dc10e01b449ca17193b9805b1216",
+      "targetCollarMaskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/collarWhite-mask.png",
+      "sourceOwnedCanonRGBA": true,
+      "nativeObservedSeamDrift": {
+        "collar.left_inner_edge": {
+          "meanSourceLineDriftPx": 3.655,
+          "maxSourceLineDriftPx": 5.899
+        },
+        "collar.right_inner_edge": {
+          "meanSourceLineDriftPx": 3.121,
+          "maxSourceLineDriftPx": 4.702
+        }
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-114-collar-art/collar-registration-contact.jpg"
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "KOMA_P15_114_COLLAR_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "P15-113-unified": {
+      "60": "../p15-113-canonical-topology/canonical_full-yaw60.png",
+      "61.875": "../p15-113-canonical-topology/canonical_full-yaw61p875.png",
+      "63.75": "../p15-113-canonical-topology/canonical_full-yaw63p75.png",
+      "65.625": "../p15-113-canonical-topology/canonical_full-yaw65p625.png",
+      "67.5": "../p15-113-canonical-topology/canonical_full-yaw67p5.png",
+      "69.375": "../p15-113-canonical-topology/canonical_full-yaw69p375.png",
+      "71.25": "../p15-113-canonical-topology/canonical_full-yaw71p25.png",
+      "73.125": "../p15-113-canonical-topology/canonical_full-yaw73p125.png",
+      "75": "../p15-113-canonical-topology/canonical_full-yaw75.png"
+    },
+    "source_collar_continuous": {
+      "60": "source_collar_continuous-yaw60.png",
+      "61.875": "source_collar_continuous-yaw61p875.png",
+      "63.75": "source_collar_continuous-yaw63p75.png",
+      "65.625": "source_collar_continuous-yaw65p625.png",
+      "67.5": "source_collar_continuous-yaw67p5.png",
+      "69.375": "source_collar_continuous-yaw69p375.png",
+      "71.25": "source_collar_continuous-yaw71p25.png",
+      "73.125": "source_collar_continuous-yaw73p125.png",
+      "75": "source_collar_continuous-yaw75.png"
+    },
+    "source_collar_silhouette": {
+      "60": "source_collar_silhouette-yaw60.png",
+      "61.875": "source_collar_silhouette-yaw61p875.png",
+      "63.75": "source_collar_silhouette-yaw63p75.png",
+      "65.625": "source_collar_silhouette-yaw65p625.png",
+      "67.5": "source_collar_silhouette-yaw67p5.png",
+      "69.375": "source_collar_silhouette-yaw69p375.png",
+      "71.25": "source_collar_silhouette-yaw71p25.png",
+      "73.125": "source_collar_silhouette-yaw73p125.png",
+      "75": "source_collar_silhouette-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-114-collar-render/P15-101-original-loop.gif",
+      "sha256": "56c83a4a9158fb76d16139c2d2184a7e6fad2744cfc9932650d4a8a4a6990c42"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-114-collar-render/P15-107-native-loop.gif",
+      "sha256": "3b80c1f76ef580a2fb906fe2b0ac5275c4a56a31e52719a6b10441bea324da8c"
+    },
+    "P15-113-unified": {
+      "path": "private-assets/exports/p15-114-collar-render/P15-113-unified-loop.gif",
+      "sha256": "733b46a1a5c9789266cfed2b7d353a3f0ef2f8612929248add6abb0774883c59"
+    },
+    "source_collar_continuous": {
+      "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-loop.gif",
+      "sha256": "3e052557018a243bf54252e5c40d209f9b21d079c13257d809c05e257f3f4fac"
+    },
+    "source_collar_silhouette": {
+      "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-loop.gif",
+      "sha256": "138c0d9893216cfa5176b5356459f3304736f5017ee4a2cff61da55a301e045f"
+    }
+  },
+  "sourceQASHA256": "1cd3841358934fe8d5b81efc6e1613b6b00d3a248b5ccb9498318d122466a2c2",
+  "entry": "private-assets/exports/p15-114-collar-render/index.html",
+  "artistVisualApproved": false
+}
