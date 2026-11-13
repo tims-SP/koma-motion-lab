@@ -8489,5 +8489,152 @@
     ],
     "review": "private-assets/exports/p15-157-three-view-loop-vdd/index.html",
     "next": "Register the same loop root and tip across all three source views with a painted hidden crown, then validate intermediate frame topology."
+  },
+  "p15_158AnchorAlignedLoopCorrespondence": {
+    "status": "THREE_VIEW_ANCHOR_LOOP_CORRESPONDENCE_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceAnchorProposals": {
+      "90": [
+        [
+          205.0,
+          65.0
+        ],
+        [
+          233.0,
+          5.0
+        ]
+      ],
+      "112.5": [
+        [
+          294.0,
+          72.0
+        ],
+        [
+          288.0,
+          21.0
+        ]
+      ],
+      "135": [
+        [
+          264.0,
+          67.0
+        ],
+        [
+          258.0,
+          8.0
+        ]
+      ]
+    },
+    "methods": {
+      "mask_1": {
+        "maxAdjacentRGBMAE": 11.9448,
+        "topConnectedComponents": [
+          1,
+          3,
+          1,
+          3,
+          1
+        ],
+        "midframeLoopPixelCounts": {
+          "101.25": 192,
+          "123.75": 909
+        }
+      },
+      "mask_3": {
+        "maxAdjacentRGBMAE": 11.9455,
+        "topConnectedComponents": [
+          1,
+          3,
+          1,
+          3,
+          1
+        ],
+        "midframeLoopPixelCounts": {
+          "101.25": 194,
+          "123.75": 911
+        }
+      },
+      "mask_5": {
+        "maxAdjacentRGBMAE": 11.9455,
+        "topConnectedComponents": [
+          1,
+          3,
+          1,
+          3,
+          1
+        ],
+        "midframeLoopPixelCounts": {
+          "101.25": 194,
+          "123.75": 911
+        }
+      },
+      "nearest_owner": {
+        "maxAdjacentRGBMAE": 12.3159,
+        "topConnectedComponents": [
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "midframeLoopPixelCounts": {
+          "101.25": 959,
+          "123.75": 1033
+        }
+      }
+    },
+    "referenceMaxAdjacentRGBMAE": 12.0984,
+    "visualFindings": "Root/apex similarity alignment permits preserving individual source loop silhouettes but signed-distance mask fusion collapses the 101.25-degree arc to a small fragment; nearest-owner source art keeps the 101.25 loop but leaves disconnected crown strokes and a broken root at 123.75 degrees.",
+    "acceptanceGate": {
+      "passes": false,
+      "productionCandidateSelected": false,
+      "referenceTopComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "candidateDisconnectedMidviews": {
+        "mask_1": [
+          101.25,
+          123.75
+        ],
+        "mask_3": [
+          101.25,
+          123.75
+        ],
+        "mask_5": [
+          101.25,
+          123.75
+        ],
+        "nearest_owner": [
+          101.25,
+          123.75
+        ]
+      },
+      "sourceCurveIdentityVerified": false,
+      "reason": "Both signed-distance fusion and nearest-owner transforms have disconnected or unregistered root segments. Two point anchors do not establish corresponding loop boundaries."
+    },
+    "originalKeyframesPreserved": true,
+    "canonicalRendererUpdated": false,
+    "continuousVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-158-loop-correspondence-qa.json"
+    ],
+    "review": "private-assets/exports/p15-158-loop-correspondence/index.html",
+    "next": "Establish full-loop source control points and painter-verified root/crown underpaint per view; replace endpoint-only correspondence with curve-aware matching and verify single-loop root continuity at both mid angles."
   }
 }
