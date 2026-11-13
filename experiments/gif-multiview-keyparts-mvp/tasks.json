@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_108_GARMENT_STROKE_ROLE_GEOMETRY_VERIFIED_VISUAL_CONTINUITY_PENDING",
+  "status": "P15_109_SOURCE_STROKE_PATHS_VERIFIED_FULL_ART_CORRESPONDENCE_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-108 independent source-owned garment layers, stroke region identity candidates, three render strategies with browser and unit verification",
+  "lastCompleted": "P15-109 native source ink path matching, verified collar path local VDD and browser evidence",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -5554,5 +5554,200 @@
       "evidence/p15-108-browser-qa.json"
     ],
     "next": "Ground native 60/67.5/75 stroke IDs with actual matching paths and source-owned hidden surface/matte; rerender without source ink underpainting artifacts"
+  },
+  "p15_109StrokePaths": {
+    "status": "THREE_VIEW_SOURCE_STROKE_PATH_CORRESPONDENCE_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      67.5,
+      75
+    ],
+    "candidateStrokeIDs": [
+      "bow.left_loop",
+      "bow.right_loop",
+      "bow.left_tail",
+      "bow.right_tail",
+      "collar.left_crease",
+      "collar.right_crease"
+    ],
+    "candidateStrokeCount": 6,
+    "verifiedSourcePathRoles": [
+      "collar.left_crease"
+    ],
+    "sourcePathSamplePoints": 24,
+    "sourcePathEvidenceSHA256": "d29c9a32d80b5e43abc9b737527a39566bc93ab40d352a8b622da48b5a34b40e",
+    "sourceConsistencyGate": {
+      "bow.left_loop": {
+        "commonSourceSupport": true,
+        "reasons": [
+          "source path length ratio exceeds 2.5",
+          "gold-normalized path drift exceeds 38 pixels"
+        ],
+        "sourcePointCount": 24,
+        "usableForMorph": false,
+        "pathLengthsPx": [
+          26.749,
+          72.06,
+          47.776
+        ],
+        "lengthRatio": 2.694,
+        "meanPathDisplacementPx": [
+          66.367,
+          26.969
+        ],
+        "pairOrientations": [
+          "forward",
+          "forward"
+        ]
+      },
+      "bow.right_loop": {
+        "commonSourceSupport": true,
+        "reasons": [
+          "source path length ratio exceeds 2.5",
+          "gold-normalized path drift exceeds 38 pixels"
+        ],
+        "sourcePointCount": 24,
+        "usableForMorph": false,
+        "pathLengthsPx": [
+          55.551,
+          66.721,
+          21.053
+        ],
+        "lengthRatio": 3.169,
+        "meanPathDisplacementPx": [
+          63.647,
+          33.194
+        ],
+        "pairOrientations": [
+          "forward",
+          "forward"
+        ]
+      },
+      "bow.left_tail": {
+        "commonSourceSupport": true,
+        "reasons": [
+          "source path length ratio exceeds 2.5",
+          "gold-normalized path drift exceeds 38 pixels"
+        ],
+        "sourcePointCount": 24,
+        "usableForMorph": false,
+        "pathLengthsPx": [
+          28.266,
+          141.665,
+          31.52
+        ],
+        "lengthRatio": 5.012,
+        "meanPathDisplacementPx": [
+          59.88,
+          37.15
+        ],
+        "pairOrientations": [
+          "forward",
+          "forward"
+        ]
+      },
+      "bow.right_tail": {
+        "commonSourceSupport": true,
+        "reasons": [
+          "source path length ratio exceeds 2.5",
+          "gold-normalized path drift exceeds 38 pixels"
+        ],
+        "sourcePointCount": 24,
+        "usableForMorph": false,
+        "pathLengthsPx": [
+          14.235,
+          89.417,
+          92.364
+        ],
+        "lengthRatio": 6.489,
+        "meanPathDisplacementPx": [
+          94.212,
+          58.896
+        ],
+        "pairOrientations": [
+          "reverse",
+          "reverse"
+        ]
+      },
+      "collar.left_crease": {
+        "commonSourceSupport": true,
+        "reasons": [],
+        "sourcePointCount": 24,
+        "usableForMorph": true,
+        "pathLengthsPx": [
+          122.636,
+          75.471,
+          73.675
+        ],
+        "lengthRatio": 1.665,
+        "meanPathDisplacementPx": [
+          19.561,
+          9.284
+        ],
+        "pairOrientations": [
+          "forward",
+          "forward"
+        ]
+      },
+      "collar.right_crease": {
+        "commonSourceSupport": false,
+        "reasons": [
+          "missing measured ink polyline at one or more source views"
+        ],
+        "sourcePointCount": 24,
+        "usableForMorph": false
+      }
+    },
+    "sourceKeyviewsKeptPixelExact": true,
+    "candidateRenderedFrameCount": 18,
+    "historicalComparisonFrames": 18,
+    "renderStrategies": [
+      "collar_path_narrow",
+      "collar_path_wide"
+    ],
+    "measuredMaxAdjacentRGBMAE": {
+      "fold": {
+        "P15-101": 10.1515,
+        "P15-107-native": 8.7232,
+        "P15-109-narrow": 10.6365
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "P15-109-narrow": 9.5091
+      },
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "P15-109-narrow": 13.4455
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "P15-109-narrow": 10.9954
+      }
+    },
+    "unitTestsPass": 17,
+    "browserChecksPass": 72,
+    "technicalVerification": true,
+    "artistStrokeCorrespondenceApproved": false,
+    "continuousYawVisualAccepted": false,
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "selectedThreeSourceArtCandidate": "P15-107 companion_direct_native_keys",
+    "review": "private-assets/exports/p15-109-collar-render/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-109-stroke-path-review.zip",
+      "bytes": 34460486,
+      "sha256": "1125d5cc1060dfeb008cdde52980eb3e7ec0382dbad5ba4bc5d6c1d4f0438a45",
+      "entries": 74
+    },
+    "evidence": [
+      "evidence/p15-109-path-qa.json",
+      "evidence/p15-109-render-qa.json",
+      "evidence/p15-109-review-qa.json",
+      "evidence/p15-109-browser-qa.json"
+    ],
+    "next": "Author real persistent source-to-source ink path IDs for bow loops and tails, then provide occluded inner collar/shoulder artwork before promoting garment VDD"
   }
 }
