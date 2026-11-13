@@ -7550,5 +7550,87 @@
     ],
     "review": "private-assets/exports/p15-141-correspondence-gate/index.html",
     "next": "Correct the actual source RGBA layers by strand identity and separate face/ear material from hair. Approve physical anchors and matching underpaint across keyviews before source-key VDD rerender."
+  },
+  "p15_142FaceHairOwnership": {
+    "status": "FACE_HAIR_OWNERSHIP_CANDIDATES_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "protectedFeatures": [
+      "eye.near.center",
+      "ear.center",
+      "nose.tip",
+      "chin"
+    ],
+    "variants": {
+      "face_guard_075": {
+        "maxAdjacentRGBMAE": 17.3355,
+        "adjacentRGBMAE": [
+          8.3139,
+          17.3355,
+          6.1717,
+          15.8528
+        ],
+        "reassignedFacePixelsByYaw": {
+          "90.0": 1010,
+          "112.5": 1011,
+          "135.0": 136
+        },
+        "nativeKeyframesPixelExact": true
+      },
+      "face_guard_100": {
+        "maxAdjacentRGBMAE": 17.3181,
+        "adjacentRGBMAE": [
+          8.112,
+          17.3181,
+          6.0445,
+          15.8331
+        ],
+        "reassignedFacePixelsByYaw": {
+          "90.0": 2098,
+          "112.5": 1659,
+          "135.0": 325
+        },
+        "nativeKeyframesPixelExact": true
+      },
+      "face_guard_125": {
+        "maxAdjacentRGBMAE": 17.2557,
+        "adjacentRGBMAE": [
+          7.7015,
+          17.2557,
+          5.7573,
+          15.7816
+        ],
+        "reassignedFacePixelsByYaw": {
+          "90.0": 3571,
+          "112.5": 2604,
+          "135.0": 734
+        },
+        "nativeKeyframesPixelExact": true
+      }
+    },
+    "baselineMaxAdjacentCompositeRGBMAE": 17.3248,
+    "bestDiagnostic": "face_guard_125",
+    "visualFindings": "Image-space protection of eye/ear/nose/chin pixels removes part of the incorrect hair deformation. The best tested radius slightly reduces adjacent-frame error, but face ink fragments at 101.25° and irregular hair fringe / ahoge at 123.75° remain visibly unacceptable.",
+    "sourceRecompositionExact": true,
+    "nativeKeyframesPreserved": true,
+    "artistVerifiedIndividualParts": false,
+    "physicalCrossViewCorrespondence": false,
+    "fullVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-142-face-ownership-qa.json"
+    ],
+    "review": "private-assets/exports/p15-142-face-ownership/index.html",
+    "next": "Obtain verified, separable source-painted eye/ear/front hair and rear hair RGBA parts, register actual hair-root/tip tracks and hidden material across 90/112.5/135; rerender without stretching face ink."
   }
 }
