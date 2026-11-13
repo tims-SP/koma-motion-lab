@@ -1,0 +1,177 @@
+{
+  "schema": "KOMA_P15_136_ANATOMICAL_UNDERPAINT_EXTENSION_V1",
+  "characterId": "p0_character_001",
+  "yaw": 112.5,
+  "regions": {
+    "eye": [
+      180,
+      295,
+      270,
+      370
+    ],
+    "ear": [
+      180,
+      325,
+      195,
+      280
+    ],
+    "neck": [
+      285,
+      370,
+      140,
+      320
+    ]
+  },
+  "comparison": {
+    "native_aligned": {
+      "inferredPixels": 0,
+      "shifts": {
+        "0": {
+          "alphaHoles": {
+            "eye": 0,
+            "ear": 0,
+            "neck": 0,
+            "all": 0
+          },
+          "faceNeckRegionHoleTotal": 0,
+          "comparisonRGBMAE": 0.5979
+        },
+        "12": {
+          "alphaHoles": {
+            "eye": 219,
+            "ear": 157,
+            "neck": 231,
+            "all": 3825
+          },
+          "faceNeckRegionHoleTotal": 607,
+          "comparisonRGBMAE": 14.7117
+        },
+        "24": {
+          "alphaHoles": {
+            "eye": 309,
+            "ear": 199,
+            "neck": 309,
+            "all": 6831
+          },
+          "faceNeckRegionHoleTotal": 817,
+          "comparisonRGBMAE": 20.1952
+        }
+      }
+    },
+    "extended_8": {
+      "inferredPixels": 255,
+      "shifts": {
+        "0": {
+          "alphaHoles": {
+            "eye": 0,
+            "ear": 0,
+            "neck": 0,
+            "all": 0
+          },
+          "faceNeckRegionHoleTotal": 0,
+          "comparisonRGBMAE": 0.6042
+        },
+        "12": {
+          "alphaHoles": {
+            "eye": 219,
+            "ear": 60,
+            "neck": 106,
+            "all": 3677
+          },
+          "faceNeckRegionHoleTotal": 385,
+          "comparisonRGBMAE": 14.6588
+        },
+        "24": {
+          "alphaHoles": {
+            "eye": 293,
+            "ear": 75,
+            "neck": 127,
+            "all": 6622
+          },
+          "faceNeckRegionHoleTotal": 495,
+          "comparisonRGBMAE": 20.1206
+        }
+      }
+    },
+    "extended_16": {
+      "inferredPixels": 369,
+      "shifts": {
+        "0": {
+          "alphaHoles": {
+            "eye": 0,
+            "ear": 0,
+            "neck": 0,
+            "all": 0
+          },
+          "faceNeckRegionHoleTotal": 0,
+          "comparisonRGBMAE": 0.6096
+        },
+        "12": {
+          "alphaHoles": {
+            "eye": 219,
+            "ear": 0,
+            "neck": 13,
+            "all": 3584
+          },
+          "faceNeckRegionHoleTotal": 232,
+          "comparisonRGBMAE": 14.6153
+        },
+        "24": {
+          "alphaHoles": {
+            "eye": 287,
+            "ear": 0,
+            "neck": 13,
+            "all": 6508
+          },
+          "faceNeckRegionHoleTotal": 300,
+          "comparisonRGBMAE": 20.0723
+        }
+      }
+    },
+    "extended_24": {
+      "inferredPixels": 382,
+      "shifts": {
+        "0": {
+          "alphaHoles": {
+            "eye": 0,
+            "ear": 0,
+            "neck": 0,
+            "all": 0
+          },
+          "faceNeckRegionHoleTotal": 0,
+          "comparisonRGBMAE": 0.6104
+        },
+        "12": {
+          "alphaHoles": {
+            "eye": 219,
+            "ear": 0,
+            "neck": 0,
+            "all": 3571
+          },
+          "faceNeckRegionHoleTotal": 219,
+          "comparisonRGBMAE": 14.6125
+        },
+        "24": {
+          "alphaHoles": {
+            "eye": 287,
+            "ear": 0,
+            "neck": 0,
+            "all": 6495
+          },
+          "faceNeckRegionHoleTotal": 287,
+          "comparisonRGBMAE": 20.0695
+        }
+      }
+    }
+  },
+  "selectedDiagnostic": "extended_16",
+  "inferenceMethod": "nearest opaque underpaint pixels within 16px, restricted to originally hair-covered ear and neck regions; eye region measured but not extrapolated",
+  "paintedVsInferred": "extrapolated pixels are algorithmic candidates; raw model-painted underpaint remains unchanged",
+  "sourceKeyPixelPreservation": true,
+  "sourceUnderpaintPreservation": true,
+  "physicalCorrespondenceVerified": false,
+  "artQualityAccepted": false,
+  "fullVisualAcceptance": false,
+  "review": "private-assets/exports/p15-136-underpaint-registration/index.html",
+  "next": "Refine artist-authored hair boundary and align face, neck, ear underpaint; address outer rear hair hidden surface separately."
+}

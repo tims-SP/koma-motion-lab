@@ -7129,5 +7129,63 @@
     ],
     "review": "private-assets/exports/p15-135-closed-hair/index.html",
     "next": "Create and approve physically defined front/back hair parts and scalp/face/neck underlayers with source-matched eye and ear topology, then validate zero transparent holes under hair movement."
+  },
+  "p15_136UnderpaintVisibilityRegistration": {
+    "status": "ANATOMICAL_UNDERPAINT_EXTENSION_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "yaw": 112.5,
+    "selectedCandidate": "extended_16",
+    "inferredPixels": 369,
+    "sourceKeyPixelsPreserved": true,
+    "generatedUnderpaintPreserved": true,
+    "baselineHoleCounts": {
+      "0": {
+        "eye": 0,
+        "ear": 0,
+        "neck": 0,
+        "all": 0
+      },
+      "12": {
+        "eye": 219,
+        "ear": 157,
+        "neck": 231,
+        "all": 3825
+      },
+      "24": {
+        "eye": 309,
+        "ear": 199,
+        "neck": 309,
+        "all": 6831
+      }
+    },
+    "candidateHoleCounts": {
+      "0": {
+        "eye": 0,
+        "ear": 0,
+        "neck": 0,
+        "all": 0
+      },
+      "12": {
+        "eye": 219,
+        "ear": 0,
+        "neck": 13,
+        "all": 3584
+      },
+      "24": {
+        "eye": 287,
+        "ear": 0,
+        "neck": 13,
+        "all": 6508
+      }
+    },
+    "visualFindings": "Controlled nearest-underpaint extension only in previously hair-covered ear and neck regions reduced local reveal holes without producing the detached face polygon seen in unrestricted extrapolation. Near-eye ownership and rear-hair scalp coverage remain unresolved.",
+    "artistApprovedUnderpaint": false,
+    "eyeBoundaryAccepted": false,
+    "fullVisualAccepted": false,
+    "review": "private-assets/exports/p15-136-underpaint-registration/index.html",
+    "evidence": [
+      "evidence/p15-136-underpaint-registration-qa.json"
+    ],
+    "next": "Produce a source-authored closed front-fringe/near-eye ArtMesh and rear-scalp paint, refine eye/ear source ownership and test with actual motion rather than static translation only."
   }
 }
