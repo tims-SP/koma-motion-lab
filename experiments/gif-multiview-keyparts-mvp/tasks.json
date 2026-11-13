@@ -7442,5 +7442,39 @@
     ],
     "review": "private-assets/exports/p15-139-hair-artmesh/index.html",
     "next": "Make a hair-boundary conforming triangulated mesh with a verified near-eye / ear/neck visibility and topology, then render 90-112.5-135 yaw with source-owned materials."
+  },
+  "p15_140ContourArtMeshYaw": {
+    "status": "CROSS_VIEW_CONTOUR_MESH_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sharedVertexCount": 73,
+    "sharedTriangleCount": 120,
+    "minimumTriangleAreaByMidAngle": {
+      "101.25": 351.2146,
+      "123.75": 364.8817
+    },
+    "nativeKeyframesPixelExact": true,
+    "baselineMaxAdjacentRGBMAE": 11.8477,
+    "contourMeshMaxAdjacentRGBMAE": 17.3248,
+    "visualFindings": "Corresponding polar mesh IDs and positive triangle areas render at 90–135 yaw; 101.25/123.75 still show lower-hair truncation, near-eye fragments, ahoge discontinuity, and source-key ink mismatches. New renderer is not selected as canonical VDD.",
+    "physicalStrandTopologyValidated": false,
+    "perViewHiddenMaterialValidated": false,
+    "fullVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-140-contour-yaw-mesh-qa.json"
+    ],
+    "review": "private-assets/exports/p15-140-contour-yaw-mesh/index.html",
+    "next": "Acquire drawn hair-strand identity and closed boundary masks across keyviews, with independent face/neck/coat underpaint; test mesh with actual occlusion correspondence before selecting full yaw."
   }
 }
