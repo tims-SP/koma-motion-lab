@@ -8979,5 +8979,86 @@
     ],
     "review": "private-assets/exports/p15-162-root-layers/index.html",
     "next": "Revise the independent RGBA loop art with exact canonical reference alignment at each yaw. Require root extension, top silhouette match and human-readable local closeups to pass before any VDD updates."
+  },
+  "p15_163CanonicalLoopRegistration": {
+    "status": "SOURCE_VISIBLE_LOOP_REGISTRATION_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceLoopIoU": {
+      "90": {
+        "original": 0.48357,
+        "registered": 0.59693
+      },
+      "112.5": {
+        "original": 0.14151,
+        "registered": 0.829
+      },
+      "135": {
+        "original": 0.46889,
+        "registered": 0.71734
+      }
+    },
+    "rootAtActualY": {
+      "90": true,
+      "112.5": true,
+      "135": true
+    },
+    "affineTransforms": {
+      "90": {
+        "scale": 0.985,
+        "translationXY": [
+          3,
+          -1
+        ]
+      },
+      "112.5": {
+        "scale": 0.665,
+        "translationXY": [
+          35,
+          -1
+        ]
+      },
+      "135": {
+        "scale": 0.955,
+        "translationXY": [
+          -1,
+          -5
+        ]
+      }
+    },
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "registeredCandidate": 12.3906
+    },
+    "visibleFindings": "Three independent loop sources now align more closely with their source-visible canonical loop silhouettes and meet the actual root-row contact proxy. Both intermediate frames still exhibit inaccurate hair ownership, with a detached ink fragment at 101.25 degrees and an unnatural root/loop overlap at 123.75 degrees. Preserve the baseline renderer.",
+    "nativeKeyframesPixelExact": true,
+    "acceptedSingleViewAlignmentForFurtherStudy": true,
+    "canonicalRendererUpdated": false,
+    "continuousYawVisualAccepted": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "allLoopIoUImproved": true,
+      "allVisibleLoopIoUOver0p45": true,
+      "allRootsReachActualY": true,
+      "midYawSingleComponent": false,
+      "artisticAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-163-canonical-registration-qa.json"
+    ],
+    "review": "private-assets/exports/p15-163-canonical-registration/index.html",
+    "next": "Construct actual original-view-matched scalp underpainting with loop pixels removed and one root owner per key. Validate 101.25/123.75 mask connectivity without residual old loop before VDD admission."
   }
 }
