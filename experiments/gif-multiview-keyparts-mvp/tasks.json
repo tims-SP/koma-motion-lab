@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_112_GARMENT_VISIBILITY_MECHANISM_VERIFIED_CONTINUOUS_YAW_ART_PENDING",
+  "status": "P15_113_CANONICAL_TOPOLOGY_VERIFIED_COLLAR_SOURCE_CORRESPONDENCE_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-112 three-source bow/jewel geometry and source-hidden material exposure, full-character yaw comparison and browser evidence",
+  "lastCompleted": "P15-113 source-anchored three-view shared ArtMesh with single garment drawing, material IoU validation, and full-character yaw evidence",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -6019,5 +6019,128 @@
       "evidence/p15-112-browser-qa.json"
     ],
     "next": "Produce a single canonically corresponding ribbon and collar drawing with consistent hidden/visible stroke identity across all three views, then rerender the source-owned VDD and inspect contour quality before promoting a visual benchmark"
+  },
+  "p15_113CanonicalTopology": {
+    "status": "SINGLE_GARMENT_TEXTURE_SHARED_TOPOLOGY_AND_NATIVE_ART_CORRESPONDENCE_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      67.5,
+      75
+    ],
+    "canonicalSourceAngle": 67.5,
+    "canonicalSourceSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "meshSourceSHA256": "74f60b76ec7ea803425d516c8e1e64a6881a1ec3f0c9a12a20585f2d53df730c",
+    "sourceMeshRoles": [
+      "bow",
+      "collar",
+      "jewel"
+    ],
+    "perPartVertices": 33,
+    "perPartTriangles": 48,
+    "targetMaskIoU": {
+      "bow": {
+        "60": 0.71304,
+        "67.5": 0.95755,
+        "75": 0.66506
+      },
+      "collar": {
+        "60": 0.26131,
+        "67.5": 0.81988,
+        "75": 0.41019
+      },
+      "jewel": {
+        "60": 0.87385,
+        "67.5": 0.96752,
+        "75": 0.66908
+      }
+    },
+    "measuredInkPathDisplacement": {
+      "bow.left_outer_outline": {
+        "60": 8.684,
+        "75": 6.787
+      },
+      "bow.right_outer_outline": {
+        "60": 9.6,
+        "75": 5.55
+      },
+      "bow.left_inner_fold": {
+        "60": 2.55,
+        "75": 3.307
+      },
+      "bow.right_inner_fold": {
+        "60": 5.809,
+        "75": 3.483
+      },
+      "bow.left_tail_fold": {
+        "60": 8.091,
+        "75": 16.346
+      },
+      "bow.right_tail_fold": {}
+    },
+    "canonicalMiddleRGBAMAEPixel": {
+      "canonical_full": 5.8167,
+      "canonical_bow_native_torso": 5.3629,
+      "canonical_bow_owner_torso": 5.3629
+    },
+    "originalIndependentSourceAssetsRetained": true,
+    "renderedCandidateFrames": 27,
+    "referenceFrames": 27,
+    "testAngles": [
+      60,
+      61.875,
+      63.75,
+      65.625,
+      67.5,
+      69.375,
+      71.25,
+      73.125,
+      75
+    ],
+    "renderMethods": [
+      "canonical_full",
+      "canonical_bow_native_torso",
+      "canonical_bow_owner_torso"
+    ],
+    "regionalMaxAdjacentRGBMAE": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "canonical-full": 12.3774,
+        "canonical-bow-native-torso": 14.3288
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "canonical-full": 11.1614,
+        "canonical-bow-native-torso": 9.5558
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "canonical-full": 11.4968,
+        "canonical-bow-native-torso": 14.2181
+      }
+    },
+    "sourceTopologyEngineeringVerified": true,
+    "fullYawVisualAccepted": false,
+    "visualBenchmark": "P15-101 head_alpha_blend",
+    "nativeGarmentBenchmark": "P15-107 companion_direct_native_keys",
+    "unitTestsPass": 20,
+    "chromiumChecksPass": 108,
+    "review": "private-assets/exports/p15-113-canonical-topology/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-113-canonical-garment-topology-review.zip",
+      "bytes": 49405992,
+      "sha256": "22de41d63b5c78effd8ac6556bc0ec8bca0b4385b1f7b6e346b97160d51de80c",
+      "entries": 110
+    },
+    "evidence": [
+      "evidence/p15-113-topology-qa.json",
+      "evidence/p15-113-render-qa.json",
+      "evidence/p15-113-review-qa.json",
+      "evidence/p15-113-browser-qa.json"
+    ],
+    "next": "Reauthor two source-view collar outline/fold artworks with canonical stroke and UV identities; verify shape IoU with actual native source and nine-frame visual quality, then introduce matching torso trim geometry"
   }
 }

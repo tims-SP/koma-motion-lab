@@ -1,0 +1,1846 @@
+{
+  "schema": "KOMA_P15_113_CANONICAL_GARMENT_SHARED_TOPOLOGY_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "canonicalTextureAngle": 67.5,
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "models": [
+    "canonical_full",
+    "canonical_bow_native_torso",
+    "canonical_bow_owner_torso"
+  ],
+  "sourceMeshSHA256": "74f60b76ec7ea803425d516c8e1e64a6881a1ec3f0c9a12a20585f2d53df730c",
+  "canonicalSourceRGBA": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+  "canonicalSourceSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+  "textures": {
+    "background": "384ade535c1c1b38db65b95f9c406efc44375f8e7b083f1bcad89a70c872b7c3",
+    "goldTrim": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+    "collarWhite": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+    "bowFabric": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+    "jewel": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f"
+  },
+  "sharedMeshPerPart": {
+    "vertices": 33,
+    "triangles": 48,
+    "sourceUVCount": 1
+  },
+  "sourceColorAndInkIdentity": "one 67.5° bow/jewel source UV for all yaw; canonical_full also shares collar/trim, native-torso modes retain independent background artwork",
+  "pixelSourceNativeKeyframesAlteredInCandidates": true,
+  "nativeOriginalArtPreservedOnDisk": true,
+  "independentArtistArtworkApproval": false,
+  "full360YawVisualAccepted": false,
+  "methods": {
+    "canonical_full": {
+      "60": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw60.png",
+        "sha256": "1be91fc13c0f19c1a65e091964e089cb82fa7e65803cd64b1917d6607f7418d3",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 98.66275,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 44.83142,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 73.22609,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.44581,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.96485,
+            "translation": [
+              -9.14,
+              -15.628
+            ],
+            "targetBrooch": [
+              317.2300109863281,
+              405.2749938964844
+            ],
+            "targetShoulder": [
+              202.2760009765625,
+              393.2090148925781
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw61p875.png",
+        "sha256": "679dad77efad3da8916f652e4946dfacd6cd4cbfa44824e559db87ea6842d750",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 109.72818,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 52.83359,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 69.5435,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.50255,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.97363,
+            "translation": [
+              -6.796,
+              -11.618
+            ],
+            "targetBrooch": [
+              317.8337707519531,
+              405.0587463378906
+            ],
+            "targetShoulder": [
+              201.8625030517578,
+              392.6128845214844
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw63p75.png",
+        "sha256": "383c2403a6518a564b994898c59d2a346ab5be05ebd767164d1f322999da3a57",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 121.38081,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 61.47126,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 65.95719,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.55915,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.98242,
+            "translation": [
+              -4.492,
+              -7.678
+            ],
+            "targetBrooch": [
+              318.4375,
+              404.8424987792969
+            ],
+            "targetShoulder": [
+              201.44900512695312,
+              392.0167541503906
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw65p625.png",
+        "sha256": "277420a2c48fd54c936ec4b9f11e11098b2faa26c740b8c6fa843b0346bf9e3f",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 133.62057,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 68.09998,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 62.46544,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.6155,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.99121,
+            "translation": [
+              -2.227,
+              -3.806
+            ],
+            "targetBrooch": [
+              319.0412292480469,
+              404.6262512207031
+            ],
+            "targetShoulder": [
+              201.03549194335938,
+              391.4206237792969
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw67p5.png",
+        "sha256": "48ad538d3ffde8296bccb03a5427d6b531c16d0904b9032583113fcd0509459a",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 146.4471,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 68.02907,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 59.0677,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.67224,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 1.0,
+            "translation": [
+              0.0,
+              0.0
+            ],
+            "targetBrooch": [
+              319.6449890136719,
+              404.4100036621094
+            ],
+            "targetShoulder": [
+              200.6219940185547,
+              390.8244934082031
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw69p375.png",
+        "sha256": "2e1b95c2c90d0d7f72c19c9efadbb74ac4c983f2d3b11118544f651e13be10e7",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 142.72412,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 61.99897,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 52.14849,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 12.29842,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.98391,
+            "translation": [
+              -5.841,
+              -6.394
+            ],
+            "targetBrooch": [
+              320.24871826171875,
+              404.1937561035156
+            ],
+            "targetShoulder": [
+              203.0814971923828,
+              391.3587646484375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw71p25.png",
+        "sha256": "9a9ba63393aa1fbb8a6a69f9850d8a35be6bfad5d05270affe6dfd7e712e149a",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 139.04922,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 53.94542,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 45.65395,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 10.99716,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.96784,
+            "translation": [
+              -11.87,
+              -12.992
+            ],
+            "targetBrooch": [
+              320.85247802734375,
+              403.9775085449219
+            ],
+            "targetShoulder": [
+              205.54100036621094,
+              391.89300537109375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw73p125.png",
+        "sha256": "15d1d6a7b7d2acc44a443e57b43c05b2561a4758fba4da39b000e6d98fe75a4e",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 135.42154,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 46.45073,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 39.58483,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 9.76814,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.95179,
+            "translation": [
+              -18.094,
+              -19.803
+            ],
+            "targetBrooch": [
+              321.45623779296875,
+              403.7612609863281
+            ],
+            "targetShoulder": [
+              208.00050354003906,
+              392.42724609375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-yaw75.png",
+        "sha256": "8b4d47c3bd2477a4cc86a1601389f72438bd51a78cfd5380124edecd4a7f0ed7",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 131.84163,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 39.51524,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 33.94177,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 8.53747,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.93576,
+            "translation": [
+              -24.523,
+              -26.836
+            ],
+            "targetBrooch": [
+              322.05999755859375,
+              403.5450134277344
+            ],
+            "targetShoulder": [
+              210.4600067138672,
+              392.96148681640625
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      }
+    },
+    "canonical_bow_native_torso": {
+      "60": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw60.png",
+        "sha256": "fd9088164cf5d96b4ea077a894455a8a22e68d0b3ac50765f65853bbca80ee43",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 98.66275,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 44.83142,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 73.22609,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.44581,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.96485,
+            "translation": [
+              -9.14,
+              -15.628
+            ],
+            "targetBrooch": [
+              317.2300109863281,
+              405.2749938964844
+            ],
+            "targetShoulder": [
+              202.2760009765625,
+              393.2090148925781
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw61p875.png",
+        "sha256": "f5e89403aa528c6ce232d3dde26987fff86300a145409f53d30c2e2a1cb85bbe",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 109.72818,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 52.83359,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 69.5435,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.50255,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.97363,
+            "translation": [
+              -6.796,
+              -11.618
+            ],
+            "targetBrooch": [
+              317.8337707519531,
+              405.0587463378906
+            ],
+            "targetShoulder": [
+              201.8625030517578,
+              392.6128845214844
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw63p75.png",
+        "sha256": "15485a54692d077687335e3d729868c50348ce87c75b8850a9a0bfd03db6de2f",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 121.38081,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 61.47126,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 65.95719,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.55915,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.98242,
+            "translation": [
+              -4.492,
+              -7.678
+            ],
+            "targetBrooch": [
+              318.4375,
+              404.8424987792969
+            ],
+            "targetShoulder": [
+              201.44900512695312,
+              392.0167541503906
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw65p625.png",
+        "sha256": "de209729250273f6e4b31ad3285b02356220d8484916caf26366684bd7320a32",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 133.62057,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 68.09998,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 62.46544,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.6155,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.99121,
+            "translation": [
+              -2.227,
+              -3.806
+            ],
+            "targetBrooch": [
+              319.0412292480469,
+              404.6262512207031
+            ],
+            "targetShoulder": [
+              201.03549194335938,
+              391.4206237792969
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw67p5.png",
+        "sha256": "f0213047f676c120ce4057b76e113b8495b9cc602d7a86ea7e7f5731477c9f80",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 146.4471,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 68.02907,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 59.0677,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.67224,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 1.0,
+            "translation": [
+              0.0,
+              0.0
+            ],
+            "targetBrooch": [
+              319.6449890136719,
+              404.4100036621094
+            ],
+            "targetShoulder": [
+              200.6219940185547,
+              390.8244934082031
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw69p375.png",
+        "sha256": "89f727fef3ac2282a2db937a2be1d2882a9452f41c5f2bef04f787b37c292b6e",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 142.72412,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 61.99897,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 52.14849,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 12.29842,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.98391,
+            "translation": [
+              -5.841,
+              -6.394
+            ],
+            "targetBrooch": [
+              320.24871826171875,
+              404.1937561035156
+            ],
+            "targetShoulder": [
+              203.0814971923828,
+              391.3587646484375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw71p25.png",
+        "sha256": "dfe1e2a87f256e6a12f9654563e57316adff8e09c10e58ad92a7a0b454c62711",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 139.04922,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 53.94542,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 45.65395,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 10.99716,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.96784,
+            "translation": [
+              -11.87,
+              -12.992
+            ],
+            "targetBrooch": [
+              320.85247802734375,
+              403.9775085449219
+            ],
+            "targetShoulder": [
+              205.54100036621094,
+              391.89300537109375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw73p125.png",
+        "sha256": "02b4883858f72d2984427b47ed9644cb00fdf6ecc870172d8b6c94f6d02ba404",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 135.42154,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 46.45073,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 39.58483,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 9.76814,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.95179,
+            "translation": [
+              -18.094,
+              -19.803
+            ],
+            "targetBrooch": [
+              321.45623779296875,
+              403.7612609863281
+            ],
+            "targetShoulder": [
+              208.00050354003906,
+              392.42724609375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-yaw75.png",
+        "sha256": "ec67be7658ecd15a178374c8f05a863c6ec5bc8ef9eb860034be04a6b146a7e9",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 131.84163,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 39.51524,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 33.94177,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 8.53747,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.93576,
+            "translation": [
+              -24.523,
+              -26.836
+            ],
+            "targetBrooch": [
+              322.05999755859375,
+              403.5450134277344
+            ],
+            "targetShoulder": [
+              210.4600067138672,
+              392.96148681640625
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      }
+    },
+    "canonical_bow_owner_torso": {
+      "60": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw60.png",
+        "sha256": "fd9088164cf5d96b4ea077a894455a8a22e68d0b3ac50765f65853bbca80ee43",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 98.66275,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 44.83142,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 73.22609,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.44581,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.96485,
+            "translation": [
+              -9.14,
+              -15.628
+            ],
+            "targetBrooch": [
+              317.2300109863281,
+              405.2749938964844
+            ],
+            "targetShoulder": [
+              202.2760009765625,
+              393.2090148925781
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw61p875.png",
+        "sha256": "f2e783c5296dc3c9151535eeacfdf394066e7722ec5485b0487e325400a193b1",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 109.72818,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 52.83359,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 69.5435,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.50255,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.97363,
+            "translation": [
+              -6.796,
+              -11.618
+            ],
+            "targetBrooch": [
+              317.8337707519531,
+              405.0587463378906
+            ],
+            "targetShoulder": [
+              201.8625030517578,
+              392.6128845214844
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw63p75.png",
+        "sha256": "37d3cf62c22b180b1068ab95b2ab471d96ceb6f314d6f566dc66eeacfef081b7",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 121.38081,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 61.47126,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 65.95719,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.55915,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.98242,
+            "translation": [
+              -4.492,
+              -7.678
+            ],
+            "targetBrooch": [
+              318.4375,
+              404.8424987792969
+            ],
+            "targetShoulder": [
+              201.44900512695312,
+              392.0167541503906
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw65p625.png",
+        "sha256": "7688ccd196b8e8e350a4c64a01acbf6be550bbbbba45bb2bca706385c553ac4b",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 133.62057,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 68.09998,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 62.46544,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.6155,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.99121,
+            "translation": [
+              -2.227,
+              -3.806
+            ],
+            "targetBrooch": [
+              319.0412292480469,
+              404.6262512207031
+            ],
+            "targetShoulder": [
+              201.03549194335938,
+              391.4206237792969
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw67p5.png",
+        "sha256": "f0213047f676c120ce4057b76e113b8495b9cc602d7a86ea7e7f5731477c9f80",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 146.4471,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 68.02907,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 59.0677,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 13.67224,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 1.0,
+            "translation": [
+              0.0,
+              0.0
+            ],
+            "targetBrooch": [
+              319.6449890136719,
+              404.4100036621094
+            ],
+            "targetShoulder": [
+              200.6219940185547,
+              390.8244934082031
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw69p375.png",
+        "sha256": "0f158e422a6f82d3c8c25d20e480bdfd6370e662ec94336bc5f18148dbb09de6",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 142.72412,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 61.99897,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 52.14849,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 12.29842,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.98391,
+            "translation": [
+              -5.841,
+              -6.394
+            ],
+            "targetBrooch": [
+              320.24871826171875,
+              404.1937561035156
+            ],
+            "targetShoulder": [
+              203.0814971923828,
+              391.3587646484375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw71p25.png",
+        "sha256": "6707884fb17149e64b1ebc30041a578dfc7b8c5f52829b05bb0549595827c60e",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 139.04922,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 53.94542,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 45.65395,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 10.99716,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.96784,
+            "translation": [
+              -11.87,
+              -12.992
+            ],
+            "targetBrooch": [
+              320.85247802734375,
+              403.9775085449219
+            ],
+            "targetShoulder": [
+              205.54100036621094,
+              391.89300537109375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw73p125.png",
+        "sha256": "2d6f9d800c7b6fb0900883c3832ad8a1b8589d462eb602c7df7521df2583ce20",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 135.42154,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 46.45073,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 39.58483,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 9.76814,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.95179,
+            "translation": [
+              -18.094,
+              -19.803
+            ],
+            "targetBrooch": [
+              321.45623779296875,
+              403.7612609863281
+            ],
+            "targetShoulder": [
+              208.00050354003906,
+              392.42724609375
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-yaw75.png",
+        "sha256": "ec67be7658ecd15a178374c8f05a863c6ec5bc8ef9eb860034be04a6b146a7e9",
+        "geometry": {
+          "triangleGeometry": {
+            "shoulder.left": {
+              "minimumTriangleOrientation": 131.84163,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "collar": {
+              "minimumTriangleOrientation": 39.51524,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "bow": {
+              "minimumTriangleOrientation": 33.94177,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            },
+            "jewel": {
+              "minimumTriangleOrientation": 8.53747,
+              "negativeTargetTriangles": 0,
+              "rasterCrackPixels": 0
+            }
+          },
+          "background": {
+            "scale": 0.93576,
+            "translation": [
+              -24.523,
+              -26.836
+            ],
+            "targetBrooch": [
+              322.05999755859375,
+              403.5450134277344
+            ],
+            "targetShoulder": [
+              210.4600067138672,
+              392.96148681640625
+            ]
+          },
+          "canonicalBowTextureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "canonicalJewelTextureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "sourceOwnerCount": 1
+        }
+      }
+    }
+  },
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "maxAdjacentRGBMAE": 10.1016,
+        "meanAdjacentRGBMAE": 7.9434,
+        "interiorMaxRGBMAE": 7.2775,
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 9.5625,
+        "meanAdjacentRGBMAE": 7.0499,
+        "interiorMaxRGBMAE": 6.7573,
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 9.1631,
+        "meanAdjacentRGBMAE": 6.1601,
+        "interiorMaxRGBMAE": 5.1833,
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 8.0853,
+        "meanAdjacentRGBMAE": 6.2248,
+        "interiorMaxRGBMAE": 5.9747,
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 14.9137,
+        "meanAdjacentRGBMAE": 11.5744,
+        "interiorMaxRGBMAE": 11.7003,
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ]
+      }
+    },
+    "P15-107-native": {
+      "bow": {
+        "maxAdjacentRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146,
+        "interiorMaxRGBMAE": 12.8767,
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757,
+        "interiorMaxRGBMAE": 8.7588,
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208,
+        "interiorMaxRGBMAE": 10.2434,
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 9.2766,
+        "meanAdjacentRGBMAE": 7.8486,
+        "interiorMaxRGBMAE": 9.2766,
+        "adjacentRGBMAE": [
+          6.9229,
+          6.6883,
+          6.5505,
+          7.2027,
+          9.2766,
+          8.6715,
+          8.6737,
+          8.8022
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      }
+    },
+    "P15-112-edgeGuard": {
+      "bow": {
+        "maxAdjacentRGBMAE": 18.2524,
+        "meanAdjacentRGBMAE": 13.5149,
+        "interiorMaxRGBMAE": 18.2524,
+        "adjacentRGBMAE": [
+          10.3502,
+          8.8692,
+          12.1952,
+          11.2292,
+          15.1675,
+          14.6846,
+          18.2524,
+          17.371
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 11.4007,
+        "meanAdjacentRGBMAE": 9.7027,
+        "interiorMaxRGBMAE": 10.5776,
+        "adjacentRGBMAE": [
+          9.2829,
+          8.03,
+          8.9193,
+          8.7614,
+          10.5776,
+          10.1818,
+          10.4679,
+          11.4007
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 17.4354,
+        "meanAdjacentRGBMAE": 13.5705,
+        "interiorMaxRGBMAE": 15.4428,
+        "adjacentRGBMAE": [
+          12.0199,
+          10.4855,
+          14.0958,
+          12.0975,
+          13.1302,
+          15.4428,
+          13.8566,
+          17.4354
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 11.4865,
+        "meanAdjacentRGBMAE": 9.8011,
+        "interiorMaxRGBMAE": 11.3544,
+        "adjacentRGBMAE": [
+          9.0855,
+          7.7536,
+          8.9122,
+          8.9826,
+          10.883,
+          9.9507,
+          11.3544,
+          11.4865
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      }
+    },
+    "canonical_full": {
+      "bow": {
+        "maxAdjacentRGBMAE": 12.3774,
+        "meanAdjacentRGBMAE": 9.797,
+        "interiorMaxRGBMAE": 12.3774,
+        "adjacentRGBMAE": [
+          8.4123,
+          7.9189,
+          7.6569,
+          8.432,
+          12.3774,
+          11.396,
+          11.2176,
+          10.9649
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 11.1614,
+        "meanAdjacentRGBMAE": 9.9539,
+        "interiorMaxRGBMAE": 11.1614,
+        "adjacentRGBMAE": [
+          10.5379,
+          9.2803,
+          8.2927,
+          8.2781,
+          11.1614,
+          10.6943,
+          10.4884,
+          10.8978
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 11.4968,
+        "meanAdjacentRGBMAE": 9.5324,
+        "interiorMaxRGBMAE": 11.4968,
+        "adjacentRGBMAE": [
+          8.4785,
+          8.7867,
+          7.771,
+          8.6618,
+          11.4968,
+          9.7659,
+          10.1698,
+          11.1286
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 10.6317,
+        "meanAdjacentRGBMAE": 8.4156,
+        "interiorMaxRGBMAE": 10.194,
+        "adjacentRGBMAE": [
+          7.3719,
+          6.8001,
+          6.4034,
+          6.7532,
+          9.8607,
+          9.3095,
+          10.194,
+          10.6317
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      }
+    },
+    "canonical_bow_native_torso": {
+      "bow": {
+        "maxAdjacentRGBMAE": 14.3288,
+        "meanAdjacentRGBMAE": 10.6362,
+        "interiorMaxRGBMAE": 13.968,
+        "adjacentRGBMAE": [
+          7.8764,
+          7.6344,
+          7.4644,
+          7.533,
+          12.9649,
+          13.3194,
+          13.968,
+          14.3288
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 9.5558,
+        "meanAdjacentRGBMAE": 8.296,
+        "interiorMaxRGBMAE": 9.1146,
+        "adjacentRGBMAE": [
+          7.9365,
+          7.4244,
+          7.1809,
+          7.2163,
+          8.9789,
+          8.9608,
+          9.1146,
+          9.5558
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 14.2181,
+        "meanAdjacentRGBMAE": 9.9961,
+        "interiorMaxRGBMAE": 12.3705,
+        "adjacentRGBMAE": [
+          7.2535,
+          7.4889,
+          7.3255,
+          8.4705,
+          11.7584,
+          11.083,
+          12.3705,
+          14.2181
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 9.6961,
+        "meanAdjacentRGBMAE": 8.0568,
+        "interiorMaxRGBMAE": 9.3794,
+        "adjacentRGBMAE": [
+          7.1164,
+          6.8438,
+          6.6569,
+          6.5494,
+          9.0639,
+          9.1488,
+          9.3794,
+          9.6961
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      }
+    },
+    "canonical_bow_owner_torso": {
+      "bow": {
+        "maxAdjacentRGBMAE": 37.5307,
+        "meanAdjacentRGBMAE": 13.2721,
+        "interiorMaxRGBMAE": 37.5307,
+        "adjacentRGBMAE": [
+          7.9438,
+          18.8742,
+          6.8091,
+          7.6264,
+          10.3126,
+          37.5307,
+          8.3522,
+          8.7279
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 20.5016,
+        "meanAdjacentRGBMAE": 9.8778,
+        "interiorMaxRGBMAE": 20.5016,
+        "adjacentRGBMAE": [
+          7.913,
+          13.7669,
+          6.5283,
+          6.9694,
+          8.0441,
+          20.5016,
+          7.2928,
+          8.0063
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 18.5845,
+        "meanAdjacentRGBMAE": 10.8114,
+        "interiorMaxRGBMAE": 18.5845,
+        "adjacentRGBMAE": [
+          7.4671,
+          11.3576,
+          6.7079,
+          7.8743,
+          10.7241,
+          18.5845,
+          11.1507,
+          12.6247
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 26.3963,
+        "meanAdjacentRGBMAE": 10.099,
+        "interiorMaxRGBMAE": 26.3963,
+        "adjacentRGBMAE": [
+          6.8768,
+          17.0783,
+          5.6069,
+          6.1103,
+          7.0086,
+          26.3963,
+          5.6004,
+          6.1142
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-113-canonical-topology/canonical-garment-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "sourceAsset": "original native registered 67.5-degree garment source, used as shared UV/ink for all three keyviews",
+    "samePhysicalRoleTopology": "33 indexed vertices and 48 fixed nonfolding triangles per collar/bow/jewel mesh",
+    "sourceDrawingUnity": "one 67.5-degree physical bow and jewel artwork provides identical ink identity across every output angle; canonical_full additionally shares collar and gold trim; native-torso variants retain independent body art",
+    "nativeSourceArtworkPreserved": true,
+    "nativeTargetMaskAgreement": {
+      "bow": {
+        "60": 0.71304,
+        "67.5": 0.95755,
+        "75": 0.66506
+      },
+      "collar": {
+        "60": 0.26131,
+        "67.5": 0.81988,
+        "75": 0.41019
+      },
+      "jewel": {
+        "60": 0.87385,
+        "67.5": 0.96752,
+        "75": 0.66908
+      }
+    },
+    "sourceMeasuredInkDisplacement": {
+      "bow.left_outer_outline": {
+        "60": 8.684,
+        "75": 6.787
+      },
+      "bow.right_outer_outline": {
+        "60": 9.6,
+        "75": 5.55
+      },
+      "bow.left_inner_fold": {
+        "60": 2.55,
+        "75": 3.307
+      },
+      "bow.right_inner_fold": {
+        "60": 5.809,
+        "75": 3.483
+      },
+      "bow.left_tail_fold": {
+        "60": 8.091,
+        "75": 16.346
+      },
+      "bow.right_tail_fold": {}
+    },
+    "canonicalMiddleRegionalRGBAMAEPixel": {
+      "canonical_full": 5.8167,
+      "canonical_bow_native_torso": 5.3629,
+      "canonical_bow_owner_torso": 5.3629
+    },
+    "quantitative": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "canonical-full": 12.3774,
+        "canonical-bow-native-torso": 14.3288
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "canonical-full": 11.1614,
+        "canonical-bow-native-torso": 9.5558
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "canonical-full": 11.4968,
+        "canonical-bow-native-torso": 14.2181
+      }
+    },
+    "actualVisualFindings": {
+      "bow": "shared source bow ink retains one physical fold design, with moderate source shape discrepancy at 60 and 75 degrees",
+      "collar": "single-source collar mesh produces visible high protrusions and geometric distortion; native collar background reduces this artifact",
+      "goldJewel": "source-owned gemstone keeps a single set of facets but still diverges in side silhouette",
+      "shoulderTrim": "native shirt/jacket view differences create doubled trim when independent source backgrounds are blended",
+      "torsoOwnerSwitch": "single-source background owner introduces large keyview temporal jumps",
+      "head": "existing P15-101 head/hair mesh and visual limitations remain unmodified"
+    },
+    "selectedFullCharacterVisualBenchmark": "P15-101 head_alpha_blend",
+    "selectedNativeThreeViewGarmentCandidate": "P15-107 companion_direct_native_keys",
+    "validatedEngineeringResult": "one-source physical ink texture and shared topology with source-measured morphology audit",
+    "fullYawArtisticAccepted": false,
+    "nextDecisiveAction": "Reauthor 60/75 collar source shapes to fit one canonical 67.5 collar with per-ink/UV identity; then verify 60/75 source silhouette IoU and full nine-frame image quality before expanding torso"
+  }
+}
