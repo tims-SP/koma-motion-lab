@@ -1,0 +1,912 @@
+{
+  "schema": "KOMA_P15_110_VISION_CORRESPONDENCE_QA_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "annotationSHA256": "b5d3d00417b136c5c6663afc5bd9bf0c1336525a8c97af50a004893aa39cc341",
+  "annotationSource": "Codex gpt-6.1-sol image vision, 7 native/cropped source images",
+  "sourceImages": {
+    "60": {
+      "path": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+      "sha256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2"
+    },
+    "67.5": {
+      "path": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+      "sha256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261"
+    },
+    "75": {
+      "path": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+      "sha256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+    }
+  },
+  "roleNames": [
+    "bow.left_outer_outline",
+    "bow.right_outer_outline",
+    "bow.left_inner_fold",
+    "bow.right_inner_fold",
+    "bow.left_tail_fold",
+    "bow.right_tail_fold",
+    "collar.left_inner_edge",
+    "collar.right_inner_edge"
+  ],
+  "roles": {
+    "bow.left_outer_outline": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.88,
+          "modelConfidence": 0.9,
+          "sourcePointCount": 6,
+          "points": [
+            [
+              550.0,
+              897.0
+            ],
+            [
+              525.0,
+              851.0
+            ],
+            [
+              503.0,
+              792.0
+            ],
+            [
+              526.0,
+              778.0
+            ],
+            [
+              573.0,
+              775.0
+            ],
+            [
+              615.0,
+              790.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 233.9425,
+          "minStep": 26.926,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.88,
+          "modelConfidence": 0.9,
+          "sourcePointCount": 6,
+          "points": [
+            [
+              563.0,
+              902.0
+            ],
+            [
+              534.0,
+              857.0
+            ],
+            [
+              507.0,
+              787.0
+            ],
+            [
+              531.0,
+              776.0
+            ],
+            [
+              578.0,
+              775.0
+            ],
+            [
+              620.0,
+              790.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 246.5713,
+          "minStep": 26.401,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.477,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.86,
+          "modelConfidence": 0.88,
+          "sourcePointCount": 6,
+          "points": [
+            [
+              587.0,
+              886.0
+            ],
+            [
+              560.0,
+              845.0
+            ],
+            [
+              540.0,
+              788.0
+            ],
+            [
+              560.0,
+              779.0
+            ],
+            [
+              599.0,
+              778.0
+            ],
+            [
+              632.0,
+              791.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 205.9115,
+          "minStep": 21.932,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.477,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        }
+      },
+      "modelCrossViewConfidence": 0.94,
+      "crossViewAcceptedForExperiment": true,
+      "reasons": [],
+      "sourceLengthRatio": 1.197,
+      "normalizedPairwiseDriftPx": [
+        5.194,
+        21.243
+      ],
+      "reversePairDirections": [
+        false,
+        false
+      ]
+    },
+    "bow.right_outer_outline": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.85,
+          "modelConfidence": 0.88,
+          "sourcePointCount": 6,
+          "points": [
+            [
+              733.0,
+              887.0
+            ],
+            [
+              725.0,
+              838.0
+            ],
+            [
+              721.0,
+              791.0
+            ],
+            [
+              706.0,
+              779.0
+            ],
+            [
+              680.0,
+              778.0
+            ],
+            [
+              657.0,
+              790.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 167.9895,
+          "minStep": 19.209,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 0.8333,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.85,
+          "modelConfidence": 0.88,
+          "sourcePointCount": 6,
+          "points": [
+            [
+              728.0,
+              890.0
+            ],
+            [
+              718.0,
+              840.0
+            ],
+            [
+              713.0,
+              792.0
+            ],
+            [
+              700.0,
+              780.0
+            ],
+            [
+              678.0,
+              778.0
+            ],
+            [
+              660.0,
+              791.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 161.236,
+          "minStep": 17.692,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 0.6667,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.8,
+          "modelConfidence": 0.8,
+          "sourcePointCount": 6,
+          "points": [
+            [
+              704.0,
+              873.0
+            ],
+            [
+              705.0,
+              851.0
+            ],
+            [
+              693.0,
+              816.0
+            ],
+            [
+              687.0,
+              790.0
+            ],
+            [
+              672.0,
+              782.0
+            ],
+            [
+              655.0,
+              789.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 121.0908,
+          "minStep": 17.0,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.955,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        }
+      },
+      "modelCrossViewConfidence": 0.88,
+      "crossViewAcceptedForExperiment": true,
+      "reasons": [],
+      "sourceLengthRatio": 1.387,
+      "normalizedPairwiseDriftPx": [
+        10.135,
+        23.038
+      ],
+      "reversePairDirections": [
+        false,
+        false
+      ]
+    },
+    "bow.left_inner_fold": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.75,
+          "modelConfidence": 0.78,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              567.0,
+              814.0
+            ],
+            [
+              581.0,
+              807.0
+            ],
+            [
+              598.0,
+              808.0
+            ],
+            [
+              615.0,
+              815.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 51.0666,
+          "minStep": 15.652,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.75,
+          "modelConfidence": 0.8,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              570.0,
+              813.0
+            ],
+            [
+              584.0,
+              805.0
+            ],
+            [
+              602.0,
+              808.0
+            ],
+            [
+              619.0,
+              815.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 52.7576,
+          "minStep": 16.125,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.7,
+          "modelConfidence": 0.76,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              596.0,
+              812.0
+            ],
+            [
+              609.0,
+              806.0
+            ],
+            [
+              622.0,
+              810.0
+            ],
+            [
+              630.0,
+              816.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 37.9193,
+          "minStep": 10.0,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        }
+      },
+      "modelCrossViewConfidence": 0.86,
+      "crossViewAcceptedForExperiment": true,
+      "reasons": [],
+      "sourceLengthRatio": 1.391,
+      "normalizedPairwiseDriftPx": [
+        1.886,
+        14.537
+      ],
+      "reversePairDirections": [
+        false,
+        false
+      ]
+    },
+    "bow.right_inner_fold": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.7,
+          "modelConfidence": 0.74,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              695.0,
+              815.0
+            ],
+            [
+              682.0,
+              808.0
+            ],
+            [
+              669.0,
+              808.0
+            ],
+            [
+              658.0,
+              814.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 40.2948,
+          "minStep": 12.53,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.477,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.7,
+          "modelConfidence": 0.74,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              695.0,
+              813.0
+            ],
+            [
+              681.0,
+              806.0
+            ],
+            [
+              669.0,
+              807.0
+            ],
+            [
+              660.0,
+              813.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 38.5107,
+          "minStep": 10.817,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "golden brooch",
+          "passesViewGate": true
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.55,
+          "modelConfidence": 0.64,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              678.0,
+              814.0
+            ],
+            [
+              670.0,
+              808.0
+            ],
+            [
+              661.0,
+              808.0
+            ],
+            [
+              655.0,
+              813.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 26.8102,
+          "minStep": 7.81,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.477,
+          "occludedBy": "golden brooch",
+          "passesViewGate": false
+        }
+      },
+      "modelCrossViewConfidence": 0.77,
+      "crossViewAcceptedForExperiment": false,
+      "reasons": [
+        "missing source-observed view path or insufficient source-edge support"
+      ]
+    },
+    "bow.left_tail_fold": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.58,
+          "modelConfidence": 0.72,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              621.0,
+              850.0
+            ],
+            [
+              604.0,
+              872.0
+            ],
+            [
+              590.0,
+              895.0
+            ],
+            [
+              581.0,
+              921.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 82.2423,
+          "minStep": 26.926,
+          "edgeWithin9pxFraction": 0.75,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 5.477,
+          "occludedBy": "golden brooch and overlapping bow wing",
+          "passesViewGate": true
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.58,
+          "modelConfidence": 0.74,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              626.0,
+              849.0
+            ],
+            [
+              611.0,
+              871.0
+            ],
+            [
+              600.0,
+              895.0
+            ],
+            [
+              594.0,
+              918.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 76.7975,
+          "minStep": 23.77,
+          "edgeWithin9pxFraction": 0.75,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 5.955,
+          "occludedBy": "golden brooch and overlapping bow wing",
+          "passesViewGate": true
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.55,
+          "modelConfidence": 0.7,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              636.0,
+              844.0
+            ],
+            [
+              624.0,
+              863.0
+            ],
+            [
+              615.0,
+              886.0
+            ],
+            [
+              610.0,
+              908.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 69.7314,
+          "minStep": 22.472,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 1.64,
+          "occludedBy": "golden brooch and overlapping bow wing",
+          "passesViewGate": true
+        }
+      },
+      "modelCrossViewConfidence": 0.8,
+      "crossViewAcceptedForExperiment": true,
+      "reasons": [],
+      "sourceLengthRatio": 1.179,
+      "normalizedPairwiseDriftPx": [
+        4.224,
+        10.084
+      ],
+      "reversePairDirections": [
+        false,
+        false
+      ]
+    },
+    "bow.right_tail_fold": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": false,
+          "visibleFraction": 0.0,
+          "modelConfidence": 0.25,
+          "sourcePointCount": 0,
+          "points": [],
+          "sourceBounds": true,
+          "pathLength": 0.0,
+          "minStep": 0,
+          "edgeWithin9pxFraction": 0.0,
+          "sourceAlphaFraction": 0.0,
+          "medianSourceEdgeDistancePx": null,
+          "occludedBy": "overlapping right bow wing near the tail root",
+          "passesViewGate": false
+        },
+        "67.5": {
+          "declaredVisible": false,
+          "visibleFraction": 0.0,
+          "modelConfidence": 0.25,
+          "sourcePointCount": 0,
+          "points": [],
+          "sourceBounds": true,
+          "pathLength": 0.0,
+          "minStep": 0,
+          "edgeWithin9pxFraction": 0.0,
+          "sourceAlphaFraction": 0.0,
+          "medianSourceEdgeDistancePx": null,
+          "occludedBy": "overlapping right bow wing near the tail root",
+          "passesViewGate": false
+        },
+        "75": {
+          "declaredVisible": false,
+          "visibleFraction": 0.0,
+          "modelConfidence": 0.2,
+          "sourcePointCount": 0,
+          "points": [],
+          "sourceBounds": true,
+          "pathLength": 0.0,
+          "minStep": 0,
+          "edgeWithin9pxFraction": 0.0,
+          "sourceAlphaFraction": 0.0,
+          "medianSourceEdgeDistancePx": null,
+          "occludedBy": "overlapping right bow wing near the tail root",
+          "passesViewGate": false
+        }
+      },
+      "modelCrossViewConfidence": 0.0,
+      "crossViewAcceptedForExperiment": false,
+      "reasons": [
+        "missing source-observed view path or insufficient source-edge support",
+        "vision model identity confidence < .73"
+      ]
+    },
+    "collar.left_inner_edge": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.65,
+          "modelConfidence": 0.66,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              570.0,
+              739.0
+            ],
+            [
+              582.0,
+              760.0
+            ],
+            [
+              596.0,
+              778.0
+            ],
+            [
+              608.0,
+              788.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 62.6108,
+          "minStep": 15.62,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 1.162,
+          "occludedBy": "bow fabric and golden brooch",
+          "passesViewGate": true
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.65,
+          "modelConfidence": 0.68,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              585.0,
+              738.0
+            ],
+            [
+              596.0,
+              758.0
+            ],
+            [
+              609.0,
+              777.0
+            ],
+            [
+              620.0,
+              787.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 60.7132,
+          "minStep": 14.866,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.955,
+          "occludedBy": "bow fabric and golden brooch",
+          "passesViewGate": true
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.6,
+          "modelConfidence": 0.65,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              597.0,
+              740.0
+            ],
+            [
+              607.0,
+              758.0
+            ],
+            [
+              619.0,
+              777.0
+            ],
+            [
+              629.0,
+              786.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 56.5171,
+          "minStep": 13.454,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.477,
+          "occludedBy": "bow fabric and golden brooch",
+          "passesViewGate": false
+        }
+      },
+      "modelCrossViewConfidence": 0.73,
+      "crossViewAcceptedForExperiment": false,
+      "reasons": [
+        "missing source-observed view path or insufficient source-edge support"
+      ]
+    },
+    "collar.right_inner_edge": {
+      "sourceView": {
+        "60": {
+          "declaredVisible": true,
+          "visibleFraction": 0.45,
+          "modelConfidence": 0.7,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              594.0,
+              719.0
+            ],
+            [
+              590.0,
+              725.0
+            ],
+            [
+              586.0,
+              739.0
+            ],
+            [
+              586.0,
+              750.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 32.7713,
+          "minStep": 7.211,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.955,
+          "occludedBy": "bow fabric below the exposed collar",
+          "passesViewGate": false
+        },
+        "67.5": {
+          "declaredVisible": true,
+          "visibleFraction": 0.45,
+          "modelConfidence": 0.7,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              610.0,
+              714.0
+            ],
+            [
+              604.0,
+              720.0
+            ],
+            [
+              599.0,
+              735.0
+            ],
+            [
+              596.0,
+              749.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 38.6145,
+          "minStep": 8.485,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "bow fabric below the exposed collar",
+          "passesViewGate": false
+        },
+        "75": {
+          "declaredVisible": true,
+          "visibleFraction": 0.4,
+          "modelConfidence": 0.67,
+          "sourcePointCount": 4,
+          "points": [
+            [
+              613.0,
+              711.0
+            ],
+            [
+              608.0,
+              718.0
+            ],
+            [
+              604.0,
+              733.0
+            ],
+            [
+              603.0,
+              747.0
+            ]
+          ],
+          "sourceBounds": true,
+          "pathLength": 38.1622,
+          "minStep": 8.602,
+          "edgeWithin9pxFraction": 1.0,
+          "sourceAlphaFraction": 1.0,
+          "medianSourceEdgeDistancePx": 0.0,
+          "occludedBy": "bow fabric below the exposed collar",
+          "passesViewGate": false
+        }
+      },
+      "modelCrossViewConfidence": 0.76,
+      "crossViewAcceptedForExperiment": false,
+      "reasons": [
+        "missing source-observed view path or insufficient source-edge support"
+      ]
+    }
+  },
+  "experimentAcceptedRoles": [
+    "bow.left_outer_outline",
+    "bow.right_outer_outline",
+    "bow.left_inner_fold",
+    "bow.left_tail_fold"
+  ],
+  "sourceImageVisualGate": "source-edge distance, alpha support, material-length and model confidence",
+  "artistStrokeIDsApproved": false,
+  "full360YawAccepted": false
+}

@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_109_SOURCE_STROKE_PATHS_VERIFIED_FULL_ART_CORRESPONDENCE_PENDING",
+  "status": "P15_110_VISION_SOURCE_STROKE_PATHS_VERIFIED_HIDDEN_SURFACE_ART_REVIEW_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-109 native source ink path matching, verified collar path local VDD and browser evidence",
+  "lastCompleted": "P15-110 Codex observed multi-source bow stroke paths, source-pixel QA and VDD animation comparison",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -5749,5 +5749,87 @@
       "evidence/p15-109-browser-qa.json"
     ],
     "next": "Author real persistent source-to-source ink path IDs for bow loops and tails, then provide occluded inner collar/shoulder artwork before promoting garment VDD"
+  },
+  "p15_110VisionStrokeCorrespondence": {
+    "status": "THREE_SOURCE_MODEL_GROUNDED_STROKE_PATHS_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceViews": [
+      60,
+      67.5,
+      75
+    ],
+    "visionSource": "Codex multimodal image interpretation with original source coordinate grids",
+    "roleCandidates": [
+      "bow.left_outer_outline",
+      "bow.right_outer_outline",
+      "bow.left_inner_fold",
+      "bow.right_inner_fold",
+      "bow.left_tail_fold",
+      "bow.right_tail_fold",
+      "collar.left_inner_edge",
+      "collar.right_inner_edge"
+    ],
+    "sourcePointCount": 96,
+    "acceptedSourceRoles": [
+      "bow.left_outer_outline",
+      "bow.right_outer_outline",
+      "bow.left_inner_fold",
+      "bow.left_tail_fold"
+    ],
+    "sourcePathsSHA256": "b5d3d00417b136c5c6663afc5bd9bf0c1336525a8c97af50a004893aa39cc341",
+    "sourceOwnedImageSHA256": {
+      "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "67.5": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+      "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+    },
+    "sourcePixelAndGeometryGate": "source-edge alpha and normalized cross-view path displacement",
+    "renderedCandidateFrames": 18,
+    "comparatorFrames": 18,
+    "renderMethods": [
+      "matched_path_direct",
+      "matched_path_owner"
+    ],
+    "regionalMaxAdjacentRGBMAE": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "pathDirect": 17.2767,
+        "pathOwner": 21.7637
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "pathDirect": 10.9761,
+        "pathOwner": 12.878
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "pathDirect": 16.1008,
+        "pathOwner": 16.5179
+      }
+    },
+    "nativeKeyframeSourcePixelExact": true,
+    "hiddenSurfaceNeedsOriginalArt": true,
+    "artistApprovedStrokes": false,
+    "fullYawVisualAccepted": false,
+    "visualBenchmark": "P15-101 head_alpha_blend",
+    "preferredThreeKeyGarmentCandidate": "P15-107 companion_direct_native_keys",
+    "unitTestsPass": 17,
+    "chromiumChecksPass": 72,
+    "review": "private-assets/exports/p15-110-path-vdd/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-110-vision-stroke-correspondence.zip",
+      "bytes": 33974405,
+      "entries": 72,
+      "sha256": "1147927f2e6082afbc2ce3d16041c950b5d96792b5985f74fa418bc8345f2f0b"
+    },
+    "evidence": [
+      "evidence/p15-110-vision-qa.json",
+      "evidence/p15-110-render-qa.json",
+      "evidence/p15-110-review-qa.json",
+      "evidence/p15-110-browser-qa.json"
+    ],
+    "next": "Develop source-backed inner folds and hidden collar/jewel surfaces for incomplete roles, then apply per-part occlusion and verify nine yaw frames for artifact removal"
   }
 }
