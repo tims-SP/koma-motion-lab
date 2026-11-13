@@ -7632,5 +7632,29 @@
     ],
     "review": "private-assets/exports/p15-142-face-ownership/index.html",
     "next": "Obtain verified, separable source-painted eye/ear/front hair and rear hair RGBA parts, register actual hair-root/tip tracks and hidden material across 90/112.5/135; rerender without stretching face ink."
+  },
+  "p15_143IndependentFrontBangs": {
+    "status": "INDEPENDENT_FRONT_BANGS_GENERATED_AND_COMPOSITION_REVIEWED",
+    "characterId": "p0_character_001",
+    "requestedYaw": 112.5,
+    "generator": "Codex image_gen.imagegen",
+    "nativeSource": "private-assets/p15-143-front-bangs/front-bangs-native.png",
+    "nativeSHA256": "bdbd39e65f34f7745a1a8f4a66058df1450ee12c340efbfd783e0f43f43141ac",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "nearEyeOpaqueCandidatePixels": 425,
+    "opaquePixelsOutsideSourceSilhouette": 9085,
+    "directOverlayRegistrationGatePassed": false,
+    "visualFindings": "Independent transparent front fringe part has source-like line and pink color palette, but full-overlay review covers the visible near eye and duplicates frontal bangs. Placement and strand identity are not registered to the canonical 112.5° painting.",
+    "productionSourceAccepted": false,
+    "continuousYawRendered": false,
+    "fullVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-143-front-bangs-qa.json"
+    ],
+    "review": "private-assets/exports/p15-143-front-bangs/index.html",
+    "next": "Align new front-bangs painted part with source hair ownership and remove source-overlapping bangs before compositing; confirm face and eye underpaint, then test actual ArtMesh displacement and 90–135 yaw."
   }
 }
