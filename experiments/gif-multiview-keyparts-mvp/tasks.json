@@ -7012,5 +7012,38 @@
     ],
     "review": "private-assets/exports/p15-132-landmark-vdd/index.html",
     "next": "Replace provisional centroid/point-based movement with separate independently authored hair/face/collar textures, source mask ownership, and occluded underpaint; validate continuous frames before acceptance."
+  },
+  "p15_133VisibleSemanticLayerCandidate": {
+    "status": "VISIBLE_SOURCE_LAYERS_AND_LOCAL_MOTION_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90,
+      112.5,
+      135
+    ],
+    "roles": [
+      "hair.visible",
+      "skin.visible",
+      "bow.visible",
+      "collar.visible",
+      "uniform.visible"
+    ],
+    "layerFileCount": 15,
+    "pixelRecompositionExact": true,
+    "nativeKeyframesPixelExact": true,
+    "baselineMaxAdjacentCompositeRGBMAE": 11.8477,
+    "perPartMaxAdjacentCompositeRGBMAE": 13.7176,
+    "visualFindings": "Five visible-pixel layers per angle recombine exactly, but pigment masks fragment face and garment lines. Optical-flow compositing by these provisional masks creates more face transparency and gold-trim drift at intermediate angles; not accepted for ArtMesh/VDD.",
+    "semanticBoundariesApproved": false,
+    "hiddenUnderpaintVerified": false,
+    "visualAccepted": false,
+    "testsPassed": 6,
+    "evidence": [
+      "evidence/p15-133-semantic-source-qa.json",
+      "evidence/p15-133-part-motion-qa.json"
+    ],
+    "sourceReview": "private-assets/exports/p15-133-semantic-source/index.html",
+    "motionReview": "private-assets/exports/p15-133-part-motion/index.html",
+    "next": "Obtain source-authored semantic RGBA art with coherent face/hair/coat ownership and painted occluded materials, then validate real mid-angles. Preserve exact source keyframes and current benchmarks."
   }
 }

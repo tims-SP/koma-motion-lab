@@ -1,0 +1,40 @@
+{
+  "schema": "KOMA_P15_133_SEMANTIC_MOTION_PROBE_V1",
+  "characterId": "p0_character_001",
+  "yawSamples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "parts": [
+    "hair.visible",
+    "skin.visible",
+    "bow.visible",
+    "collar.visible",
+    "uniform.visible"
+  ],
+  "candidateAlgorithm": "per-part DIS morph of disjoint source-visible color/region masks, composited in an approximate painter order",
+  "baselineMaxAdjacentCompositeRGBMAE": 11.8477,
+  "candidateMaxAdjacentCompositeRGBMAE": 13.7176,
+  "baselineAdjacentCompositeRGBMAE": [
+    11.8477,
+    11.5362,
+    10.2206,
+    11.756
+  ],
+  "candidateAdjacentCompositeRGBMAE": [
+    13.7176,
+    11.6183,
+    11.1403,
+    12.1199
+  ],
+  "nativeKeyframePixelExact": true,
+  "semanticArtMeshVerified": false,
+  "hiddenUnderpaintVerified": false,
+  "artistVisualAccepted": false,
+  "visualAcceptance": false,
+  "review": "private-assets/exports/p15-133-part-motion/index.html",
+  "next": "Replace automated appearance masks with source-painted semantic parts and underpaint, then use physical visibility and anchor constraints for 90–135 VDD."
+}
