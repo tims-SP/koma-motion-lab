@@ -7883,5 +7883,66 @@
     ],
     "review": "private-assets/exports/p15-147-ahoge-track/index.html",
     "next": "Obtain a complete authored looped-ahoge isolated RGBA part and its root attachment/hidden scalp source at all three keyviews. Validate exact source registration before shared deform."
+  },
+  "p15_148NativeAhogeRegistration": {
+    "status": "INDEPENDENT_AHOGE_SOURCE_GENERATED_REGISTERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90,
+      112.5,
+      135
+    ],
+    "nativeGenerator": "Codex CLI image_gen.imagegen",
+    "nativeRGBA": "private-assets/p15-148-ahoge/ahoge-native.png",
+    "nativeSHA256": "71ef0fcf1dc66ddf1c890f429dfb385d58daf6070068281335ed6bbe90bd9b6c",
+    "nativeImageDimensions": [
+      1254,
+      1254
+    ],
+    "visiblePartAlphaStats": {
+      "opaquePixels": 2254,
+      "boundingBoxXYXY": [
+        223,
+        16,
+        313,
+        118
+      ],
+      "insideExpectedTopRegion": 2254,
+      "outsideExpectedTopRegion": 0,
+      "outsideSourceSilhouette": 1337,
+      "faceRegionPixels": 0,
+      "componentSizesOver50": [
+        2254
+      ]
+    },
+    "registeredTransform": {
+      "iouAboveCrown": 0.65973,
+      "scale": 0.9,
+      "shiftXY": [
+        24,
+        -14
+      ],
+      "intersectionPixels": 729,
+      "unionPixels": 1105
+    },
+    "maxAdjacentRGBMAE": {
+      "canonical": 12.0984,
+      "direct_overlay": 12.4887,
+      "registered_overlay": 12.16,
+      "loop_replacement": 12.1844
+    },
+    "nativeKeyframes90And135Exact": true,
+    "sourceLowerHairUnmodified": true,
+    "visualFindings": "One original isolated RGBA loop ahoge has been painted and checked. Bounded registration moves it toward the canonical 112.5-degree root. Single-owner upper-loop replacement reduces duplicate-overlap artifact but a visible crossing and clipped right loop leg remain at the crown; 90-135 continuity is worse than original source baseline.",
+    "productionArtMeshAccepted": false,
+    "rootAttachmentVerified": false,
+    "hiddenScalpUnderpaintVerified": false,
+    "fullYawVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-148-native-ahoge-qa.json",
+      "evidence/p15-148-ahoge-registration-qa.json"
+    ],
+    "review": "private-assets/exports/p15-148-native-ahoge/registration.html",
+    "next": "Paint an aligned complete ahoge loop at each source key including both crown attachment roots and underlying scalp material. Use source-owner replacement with full root identity before continuous yaw ArtMesh."
   }
 }
