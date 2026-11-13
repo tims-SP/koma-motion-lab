@@ -6524,5 +6524,24 @@
     ],
     "review": "private-assets/exports/p15-118-back-source-review/index.html",
     "next": "Produce and register semantic source layers and hidden garment/head surfaces from 135/180-degree reference artwork; visually approve identity before VDD binding."
+  },
+  "p15_119BackHeadVisiblePartition": {
+    "status": "BACK_HEAD_VISIBLE_PIXEL_PARTITION_VERIFIED",
+    "characterId": "p0_character_001",
+    "angles": [
+      135,
+      180
+    ],
+    "candidateLayerCount": 4,
+    "pixelRecompositionExact": true,
+    "semanticArtMeshAccepted": false,
+    "hiddenUnderpaintAccepted": false,
+    "bodyGarmentSourceAccepted": false,
+    "unitTestsPass": 23,
+    "evidence": [
+      "evidence/p15-119-back-head-layers-qa.json"
+    ],
+    "review": "private-assets/exports/p15-119-back-head-layers/index.html",
+    "next": "Produce true separately painted 135/180 head, hair and garment semantic source layers, hidden underpaint and registration checks before VDD/full yaw approval."
   }
 }
