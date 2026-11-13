@@ -7729,5 +7729,81 @@
     ],
     "review": "private-assets/exports/p15-145-fringe-source-transfer/index.html",
     "next": "Produce source-painted strand labels and structurally matching scalp/face/collar layers across 90/112.5/135, then test actual independent ArtMesh motion on aligned geometry."
+  },
+  "p15_146SourceStrandRegionIdentity": {
+    "status": "SOURCE_STRAND_REGION_LABELS_AND_MESH_YAW_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "labels": [
+      "crown",
+      "fringe",
+      "nape"
+    ],
+    "sourcePartCoverage": {
+      "90": {
+        "hairPixelCount": 43266,
+        "labels": {
+          "crown": 28614,
+          "fringe": 7811,
+          "nape": 6841
+        },
+        "protectedFacePixelCount": 8110,
+        "recompositionExact": true
+      },
+      "112.5": {
+        "hairPixelCount": 42849,
+        "labels": {
+          "crown": 28098,
+          "fringe": 6408,
+          "nape": 8343
+        },
+        "protectedFacePixelCount": 7808,
+        "recompositionExact": true
+      },
+      "135": {
+        "hairPixelCount": 48755,
+        "labels": {
+          "crown": 28824,
+          "fringe": 10300,
+          "nape": 9631
+        },
+        "protectedFacePixelCount": 3472,
+        "recompositionExact": true
+      }
+    },
+    "nativeKeyframePixelExact": true,
+    "sourceRecompositionPixelExact": true,
+    "referenceMaxAdjacentRGBMAE": 12.0224,
+    "candidateMaxAdjacentRGBMAE": {
+      "source_owned_000": 17.6688,
+      "strand_mesh_025": 17.2923,
+      "strand_mesh_050": 17.2214
+    },
+    "candidateGate": {
+      "thresholdMaxAdjacentRGBMAE": 12.0224,
+      "passes": false,
+      "selectedForProduction": false,
+      "reason": "Source region labels have no verified material identity, and middle-angle renderings show line tears and owner switching."
+    },
+    "visualFindings": "Part region IDs are stable for mask storage, but physical strands are not corresponded between independently painted keys. Mesh deformation at 101.25/123.75 yields visible horizontal seams, face ink tearing, and abrupt ownership changes. Preserve P15-145 reference as current research baseline.",
+    "artistApprovedStrandIdentity": false,
+    "perViewHiddenSourcePaintApproved": false,
+    "continuousVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-146-strand-identities-qa.json"
+    ],
+    "review": "private-assets/exports/p15-146-strand-identities/index.html",
+    "next": "Generate and visually register reference-painted per-strand overlays with annotated root/tip and hidden face/neck material for each actual source key; rerender only when semantic identity is validated."
   }
 }
