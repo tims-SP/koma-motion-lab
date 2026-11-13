@@ -8233,5 +8233,106 @@
     ],
     "review": "private-assets/exports/p15-154-visible-strand-parts/index.html",
     "next": "Artist-align a continuous second strand root/edge mask from canonical 90° source and paint corresponding hidden crown pixels. Require clean 2/4/8px independent motion before mapping to other yaw keys."
+  },
+  "p15_155AnchoredCrownVisibleLoop": {
+    "status": "ROOT_ANCHORED_LOOP_DEFORMATION_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 90.0,
+    "sourceOwnedLoopPart": "private-assets/exports/p15-154-visible-strand-parts/left_fine_visible.png",
+    "rootAnchorY": 54,
+    "tipAnchorY": 27,
+    "testedDisplacements": [
+      0,
+      2,
+      4,
+      8
+    ],
+    "displacementResults": {
+      "rigid_00": {
+        "exposedFormerHairPixels": 0,
+        "exposedAirPixels": 0,
+        "exposedCrownPixels": 0,
+        "rootPatchRGBMAE": 0.0,
+        "rootPixelExact": true,
+        "partRGBAAtRootExact": true,
+        "localRGBMAE": 0.0
+      },
+      "anchored_00": {
+        "exposedFormerHairPixels": 0,
+        "exposedAirPixels": 0,
+        "exposedCrownPixels": 0,
+        "rootPatchRGBMAE": 0.0,
+        "rootPixelExact": true,
+        "partRGBAAtRootExact": true,
+        "localRGBMAE": 0.0
+      },
+      "rigid_02": {
+        "exposedFormerHairPixels": 50,
+        "exposedAirPixels": 48,
+        "exposedCrownPixels": 2,
+        "rootPatchRGBMAE": 13.75,
+        "rootPixelExact": false,
+        "partRGBAAtRootExact": false,
+        "localRGBMAE": 1.013
+      },
+      "anchored_02": {
+        "exposedFormerHairPixels": 17,
+        "exposedAirPixels": 17,
+        "exposedCrownPixels": 0,
+        "rootPatchRGBMAE": 1.6645,
+        "rootPixelExact": true,
+        "partRGBAAtRootExact": true,
+        "localRGBMAE": 0.4683
+      },
+      "rigid_04": {
+        "exposedFormerHairPixels": 55,
+        "exposedAirPixels": 53,
+        "exposedCrownPixels": 2,
+        "rootPatchRGBMAE": 13.75,
+        "rootPixelExact": false,
+        "partRGBAAtRootExact": false,
+        "localRGBMAE": 1.138
+      },
+      "anchored_04": {
+        "exposedFormerHairPixels": 33,
+        "exposedAirPixels": 33,
+        "exposedCrownPixels": 0,
+        "rootPatchRGBMAE": 2.8288,
+        "rootPixelExact": true,
+        "partRGBAAtRootExact": true,
+        "localRGBMAE": 0.7413
+      },
+      "rigid_08": {
+        "exposedFormerHairPixels": 55,
+        "exposedAirPixels": 53,
+        "exposedCrownPixels": 2,
+        "rootPatchRGBMAE": 13.75,
+        "rootPixelExact": false,
+        "partRGBAAtRootExact": false,
+        "localRGBMAE": 1.1465
+      },
+      "anchored_08": {
+        "exposedFormerHairPixels": 46,
+        "exposedAirPixels": 46,
+        "exposedCrownPixels": 0,
+        "rootPatchRGBMAE": 5.3758,
+        "rootPixelExact": true,
+        "partRGBAAtRootExact": true,
+        "localRGBMAE": 0.9041
+      }
+    },
+    "zeroDisplacementSourcePixelExact": true,
+    "geometryFindings": "Tapered vertex displacement holds canonical pixels at and below y54 and eliminates new opaque-crown alpha holes for 2,4,8px displacement. Transparency exposed above the hairline is air and is correctly left transparent.",
+    "visualFindings": "At 8px the visible left loop boundary still produces a doubled line; the 55-pixel partition represents a segment of the major loop contour, not an artist-verified distinct hair strand.",
+    "rootGeometryGatePassed": true,
+    "sourceStrandIdentityVerified": false,
+    "independentLoopVisualAccepted": false,
+    "crossYawMaterialCorrespondenceVerified": false,
+    "full360VisualAccepted": false,
+    "evidence": [
+      "evidence/p15-155-anchored-crown-motion-qa.json"
+    ],
+    "review": "private-assets/exports/p15-155-anchored-crown-motion/index.html",
+    "next": "Treat the left line as part of the full loop, build a single continuous loop boundary and a root-fixed deformation over that complete part; check 8px close-up before three-keyview transfer."
   }
 }
