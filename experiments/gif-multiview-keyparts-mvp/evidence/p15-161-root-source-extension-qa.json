@@ -1,0 +1,144 @@
+{
+  "schema": "KOMA_P15_161_SOURCE_ROOT_EXTENSION_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "cutoffY": 54,
+  "rootCandidateSources": {
+    "root_band_13": {
+      "90": {
+        "visibleLoopPixels": 1205,
+        "extendedRootPixels": 0,
+        "extensionBelowCutPixels": 0,
+        "sourceRecompositionExact": true,
+        "roiBandHalfWidth": 13,
+        "darkLineThresholdRatio": 0.75,
+        "extensionBBox": null
+      },
+      "112.5": {
+        "visibleLoopPixels": 945,
+        "extendedRootPixels": 0,
+        "extensionBelowCutPixels": 0,
+        "sourceRecompositionExact": true,
+        "roiBandHalfWidth": 13,
+        "darkLineThresholdRatio": 0.75,
+        "extensionBBox": null
+      },
+      "135": {
+        "visibleLoopPixels": 1071,
+        "extendedRootPixels": 0,
+        "extensionBelowCutPixels": 0,
+        "sourceRecompositionExact": true,
+        "roiBandHalfWidth": 13,
+        "darkLineThresholdRatio": 0.75,
+        "extensionBBox": null
+      }
+    },
+    "root_band_19": {
+      "90": {
+        "visibleLoopPixels": 1205,
+        "extendedRootPixels": 0,
+        "extensionBelowCutPixels": 0,
+        "sourceRecompositionExact": true,
+        "roiBandHalfWidth": 19,
+        "darkLineThresholdRatio": 0.85,
+        "extensionBBox": null
+      },
+      "112.5": {
+        "visibleLoopPixels": 945,
+        "extendedRootPixels": 3,
+        "extensionBelowCutPixels": 3,
+        "sourceRecompositionExact": true,
+        "roiBandHalfWidth": 19,
+        "darkLineThresholdRatio": 0.85,
+        "extensionBBox": [
+          313,
+          54,
+          313,
+          56
+        ]
+      },
+      "135": {
+        "visibleLoopPixels": 1071,
+        "extendedRootPixels": 0,
+        "extensionBelowCutPixels": 0,
+        "sourceRecompositionExact": true,
+        "roiBandHalfWidth": 19,
+        "darkLineThresholdRatio": 0.85,
+        "extensionBBox": null
+      }
+    }
+  },
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "midframeAlphaHolesBelowCrown": {
+        "101.25": 0,
+        "123.75": 0
+      }
+    },
+    "root_band_13": {
+      "maxAdjacentRGBMAE": 12.3388,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "midframeAlphaHolesBelowCrown": {
+        "101.25": 0,
+        "123.75": 0
+      }
+    },
+    "root_band_19": {
+      "maxAdjacentRGBMAE": 12.3388,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "midframeAlphaHolesBelowCrown": {
+        "101.25": 0,
+        "123.75": 0
+      }
+    }
+  },
+  "sourceMaterialPreserved": true,
+  "artistVerifiedRootOutline": false,
+  "hiddenCrownUnderpaintValidated": false,
+  "visualAccepted": false,
+  "selectedForProduction": false,
+  "review": "private-assets/exports/p15-161-root-source-extension/index.html",
+  "next": "Replace line-ratio segmentation with source-painted semantic root and hidden crown material, then retest both midway view connectivity.",
+  "gate": {
+    "materialRootPixelsThreshold": 20,
+    "realSourceRootPixelsRecovered": false,
+    "allViewRootPixelsRecovered": false,
+    "allMidviewsConnected": false,
+    "passes": false,
+    "reason": "No view-complete root was extracted from whole source art; at most three extra 112.5-degree pixels were found and intermediate loops remain broken. Source-derived line masks are not artist-verified root material."
+  }
+}

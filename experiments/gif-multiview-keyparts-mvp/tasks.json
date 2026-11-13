@@ -8851,5 +8851,74 @@
     ],
     "review": "private-assets/exports/p15-160-root-underpaint/index.html",
     "next": "Replace y54 proxy extraction with separate source-painted loop/roots and matched hidden crown material for each view, then rerender and require connected roots at both intermediate angles."
+  },
+  "p15_161SourceRootExtraction": {
+    "status": "WHOLE_SOURCE_ROOT_EXTRACTION_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceRootCandidatePixelCounts": {
+      "root_band_13": {
+        "90": 0,
+        "112.5": 0,
+        "135": 0
+      },
+      "root_band_19": {
+        "90": 0,
+        "112.5": 3,
+        "135": 0
+      }
+    },
+    "referenceMaxAdjacentRGBMAE": 12.0984,
+    "candidateMaxAdjacentRGBMAE": {
+      "root_band_13": 12.3388,
+      "root_band_19": 12.3388
+    },
+    "candidateTopConnectedComponents": {
+      "root_band_13": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "root_band_19": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ]
+    },
+    "sourceRecompositionExact": true,
+    "sourceKeyframesPixelExact": true,
+    "visualFindings": "Direct extraction from the uncropped original key art finds no eligible root pixels at 90/135 degrees and only three at 112.5. Five-angle renders still show broken intermediate arcs and crown seams. The original source linework cannot reliably be separated into physical hair roots using local dark-pixel heuristics.",
+    "rootMaterialValidated": false,
+    "hiddenCrownArtworkValidated": false,
+    "canonicalRendererUpdated": false,
+    "fullYawVisualAccepted": false,
+    "acceptanceGate": {
+      "materialRootPixelsThreshold": 20,
+      "realSourceRootPixelsRecovered": false,
+      "allViewRootPixelsRecovered": false,
+      "allMidviewsConnected": false,
+      "passes": false,
+      "reason": "No view-complete root was extracted from whole source art; at most three extra 112.5-degree pixels were found and intermediate loops remain broken. Source-derived line masks are not artist-verified root material."
+    },
+    "evidence": [
+      "evidence/p15-161-root-source-extension-qa.json"
+    ],
+    "review": "private-assets/exports/p15-161-root-source-extension/index.html",
+    "next": "Acquire source-registered painted root layers and a matching hidden crown for each keyview; rerun only when the per-view root part extends to its actual attachment with visually continuous material."
   }
 }
