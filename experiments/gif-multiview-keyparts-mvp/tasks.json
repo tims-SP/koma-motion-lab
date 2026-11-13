@@ -6478,5 +6478,32 @@
       "entries": 128
     },
     "next": "Inventory and validate the complete P0 0–180° source-view/part/hidden-surface coverage before deciding further clothing mesh refinement. Prioritize coherent character rotation over isolated 60–75° garment optimizations."
+  },
+  "p15_117CanonicalSourceCoverage": {
+    "status": "CANONICAL_SOURCE_MANIFEST_COVERAGE_AUDITED",
+    "characterId": "p0_character_001",
+    "scopeAngles": [
+      0,
+      45,
+      90,
+      135,
+      180
+    ],
+    "verifiedCompleteManifestAngles": [
+      0,
+      45,
+      90
+    ],
+    "missingCanonicalManifestAngles": [
+      135,
+      180
+    ],
+    "verifiedNativeParts": 39,
+    "unitTestsPass": 19,
+    "fullYawVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-117-source-coverage-qa.json"
+    ],
+    "next": "Create and verify P0 135/180 native semantic layers with visible/hidden surfaces and source ownership; inspect visual source identity before reworking VDD."
   }
 }

@@ -1,0 +1,299 @@
+{
+  "schema": "KOMA_P15_117_SOURCE_COVERAGE_V1",
+  "characterId": "p0_character_001",
+  "scope": "canonical-source-manifest coverage from 0 to 180 degrees",
+  "requiredCheckpointAngles": [
+    0,
+    45,
+    90,
+    135,
+    180
+  ],
+  "semanticRoles": [
+    "body.reference",
+    "ear.far",
+    "ear.near",
+    "eye.far",
+    "eye.near",
+    "face.skin",
+    "hair.ahoge",
+    "hair.back",
+    "hair.clip.cross_gold",
+    "hair.front",
+    "hair.side",
+    "mouth",
+    "nose"
+  ],
+  "perAngleSourceParts": {
+    "0": {
+      "body.reference": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "hair.back": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "face.skin": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "ear.far": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "ear.near": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "hair.side": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "eye.far": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "eye.near": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "nose": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "mouth": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "hair.front": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "hair.ahoge": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      },
+      "hair.clip.cross_gold": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p1-front/parts.json"
+      }
+    },
+    "45": {
+      "body.reference": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.back": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "face.skin": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "ear.far": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "ear.near": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.side": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "eye.far": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "eye.near": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "nose": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "mouth": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.front": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.ahoge": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.clip.cross_gold": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      }
+    },
+    "90": {
+      "body.reference": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.back": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "face.skin": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "ear.far": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "ear.near": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.side": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "eye.far": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "eye.near": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "nose": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "mouth": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.front": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.ahoge": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      },
+      "hair.clip.cross_gold": {
+        "exists": true,
+        "hashVerified": true,
+        "alphaInspection": "see p15-20-canonical-source-views/qa.json",
+        "manifest": "p2-views/parts.json"
+      }
+    },
+    "135": {},
+    "180": {}
+  },
+  "supplementarySingleViewPaintings": {
+    "52.5": {
+      "path": "p15-93-yaw0525/yaw0525-native.png",
+      "exists": true,
+      "classification": "single-view raster; part decomposition not verified"
+    },
+    "75": {
+      "path": "p15-92-yaw075/yaw075-native.png",
+      "exists": true,
+      "classification": "single-view raster; part decomposition not verified"
+    }
+  },
+  "verifiedCompleteManifestAngles": [
+    0,
+    45,
+    90
+  ],
+  "missingCanonicalManifestAngles": [
+    135,
+    180
+  ],
+  "invalidSourceParts": [],
+  "outcome": "CANONICAL_180_SOURCE_COVERAGE_INCOMPLETE",
+  "acceptance": {
+    "fullYawVisualAccepted": false,
+    "nativeSourcePixelIntegrity": true
+  },
+  "next": "Acquire and verify independent 135/180-degree P0 semantic art and underpaint before promising 180/360-degree source-correct rotation."
+}
