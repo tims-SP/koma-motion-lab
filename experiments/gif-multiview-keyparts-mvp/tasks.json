@@ -8920,5 +8920,64 @@
     ],
     "review": "private-assets/exports/p15-161-root-source-extension/index.html",
     "next": "Acquire source-registered painted root layers and a matching hidden crown for each keyview; rerun only when the per-view root part extends to its actual attachment with visually continuous material."
+  },
+  "p15_162RootArtworkCandidates": {
+    "status": "SOURCE_ROOT_ART_CANDIDATES_GENERATED_AND_VISUALLY_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "newSources": [
+      90,
+      112.5
+    ],
+    "referenceAssetSource135": "P15-150 native RGBA reuse",
+    "nativeSHA256": {
+      "90": "4c079e84b8fc4945d3dc17642eea3618f31d3c7edb1ae1845a9a1252877d5963",
+      "112.5": "b53fa18312fc31a303b76c88bd0161661c1fd81a5839bb86054c42034b0aaea4",
+      "135": "b96ab8b90c9e899a07e3583fe3ff810f25af9c52e95d89e5a335dbe85194f992"
+    },
+    "rootAtY75": {
+      "90": false,
+      "112.5": true,
+      "135": true
+    },
+    "sourceTopAlphaIoU": {
+      "90": 0.13183,
+      "112.5": 0.105,
+      "135": 0.15668
+    },
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "candidate": 12.3931
+    },
+    "candidateTopComponentCounts": [
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "nativeSourceKeysPixelExact": true,
+    "visualFindings": "Two newly generated transparent source-root candidates were assessed with the previously generated 135-degree root part. The 90-degree roots stop before y75, all three source-top silhouette IoU values are below 0.16, and yaw 101.25 has detached hair remnants while yaw 123.75 has an oversized loop passing through crown artwork. Root-material correspondence and underpaint are not acceptable.",
+    "acceptanceGate": {
+      "allViewsAvailable": true,
+      "allViewsNewlyGenerated": false,
+      "alphaDomainValid": true,
+      "sufficientRootPixels": true,
+      "allRootsReachY75": false,
+      "sourceTopRegistration": false,
+      "visualAndGeometryApproved": false,
+      "passes": false
+    },
+    "canonicalRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "evidence": [
+      "evidence/p15-162-root-layers-qa.json"
+    ],
+    "review": "private-assets/exports/p15-162-root-layers/index.html",
+    "next": "Revise the independent RGBA loop art with exact canonical reference alignment at each yaw. Require root extension, top silhouette match and human-readable local closeups to pass before any VDD updates."
   }
 }
