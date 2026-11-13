@@ -1,0 +1,1042 @@
+{
+  "schema": "KOMA_P15_103_GARMENT_ARTMESH_RENDER_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "sourceAngles": [
+    60,
+    75
+  ],
+  "sourceMesh": "private-assets/exports/p15-103-part-mesh/garment-parts-mesh.json",
+  "meshSHA256": "05c4db0318371499c67e84f6a596ce201550a383dcb4cb75ac39f9b35bb9249c",
+  "sourcePixelsArtOwner": "P15-103 native source RGBA with per-part masks and normalized shared UV",
+  "methods": {
+    "bow_uv_blend": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw60.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "685436f7b19eaee4d229724915b2c39323ba92c2263ae17a7286d6be00c05246",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw61p875.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "63.75": {
+        "sha256": "b012aab197d56b582534e1d5eb2b714fd73bcd32cb338430a64bd724c99d4276",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw63p75.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "65.625": {
+        "sha256": "74c6c820bd5fc24b23f12ac6f24e68abcd445edc07d207d4fa027bd223ebae19",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw65p625.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "67.5": {
+        "sha256": "2596a549a23db47badf2e01d202cc0c2a50a75b00d7218b902bdce21395537ae",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw67p5.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "69.375": {
+        "sha256": "7498bde8ea2b90663c9b5186dcff78dd66934876ac291900ffac1d0bce768069",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw69p375.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "71.25": {
+        "sha256": "ea2bfc855cefd5b17ead0348fd1ec2db3f548f957c0270bc0be942d2448b7a91",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw71p25.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "73.125": {
+        "sha256": "1be2134b108a1372a6fe16a155a33ff79be51a022578e40046faf11e8943a313",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw73p125.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_blend-yaw75.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      }
+    },
+    "bow_uv_union": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw60.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "3b2344bf6630c7a6b1d9bff01162ee6fd17ce459f0b67b1afa7978b9843bfa8b",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw61p875.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "63.75": {
+        "sha256": "458a4a229283904df3ff4bd65ff0155ac5ac08db7d587899372bfd88ac866c96",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw63p75.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "65.625": {
+        "sha256": "46604b194067ac3058f814329c32631328e9e35ce824f7e81c59a6de21056275",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw65p625.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "67.5": {
+        "sha256": "c2e94c57f615b80321b6a47e97e8f7775c69bef4f4013939ed4e68b0288a2ad3",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw67p5.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "69.375": {
+        "sha256": "c54ae70a4621fb8deb0adc697bd921239a54058348cd5f1bca9745a25d03041f",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw69p375.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "71.25": {
+        "sha256": "c39a4d78cfe6c8fa44accf36df04f808cbf4cfc818b6bac62a83f05d6908bf9d",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw71p25.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "73.125": {
+        "sha256": "a664ce85aefea159493814f812b79459d6c84410a24f963cc2f70d5eab05c67d",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw73p125.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_union-yaw75.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      }
+    },
+    "bow_uv_owner": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw60.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "b0563fef7cd8618bdc7d80e503667b68fe09eaac8a41b6a0ed895ace2be64d2e",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw61p875.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "63.75": {
+        "sha256": "dc93f59d519e9ea6df61a3bb60e6ed873ee3a66188a7940b2ce922c8987d48ce",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw63p75.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "65.625": {
+        "sha256": "d3d841efb0a85ae6b5b3c3419ca68a78ceacb671cdbe9e7cea4c201fc98c05bc",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw65p625.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "67.5": {
+        "sha256": "fe4cf0ac11a6e9aaeecfd13cbbd7b5e4c419d3c2d0bdd66d6f7e7de9d62172e2",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw67p5.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "69.375": {
+        "sha256": "5e3d8fdeedfef0090ffc63da37ffac9aa062dba3acdcf1ece16159f3c694015d",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw69p375.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "71.25": {
+        "sha256": "f7cd3a316ce104d32a5d4ecbb2b51c7b5293d895d1bf3dea4f308faebf1fe03c",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw71p25.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "73.125": {
+        "sha256": "ea8dd19938c8caf4c1c797cd9a28c770721d7c269d1cbacbe39822b343561df6",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw73p125.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-103-render/bow_uv_owner-yaw75.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      }
+    },
+    "all_parts_blend": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw60.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "48c0e154a5da26aea32a3304feb3e2733b0d6078463acdffa8fb9e60dc6479cf",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw61p875.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "63.75": {
+        "sha256": "cb7bf748882bf3ad353b344bc22eccd839ff7d31b9aa3c6b2304fa3f6a354bd6",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw63p75.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "65.625": {
+        "sha256": "55146ba86622fdb1f50919e035fecaebc4c78aed637e7ad86473acc6e191489d",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw65p625.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "67.5": {
+        "sha256": "fa1aa8639ca6c301ad4ddb52e92fc85581a9eaea4dae4c0e62a2c71330c85288",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw67p5.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "69.375": {
+        "sha256": "2009aa4c353dbc6bacca3ebaaad3ac9e77aee69621e8d6e690eae92b7fdb6e68",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw69p375.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "71.25": {
+        "sha256": "33ca097f4db7b1ec4cff1e1febb1cbbd01c05661fe05ff83ad63d14dc3a0244c",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw71p25.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "73.125": {
+        "sha256": "9ac84bd8605060ab13ade614e101e4e76df93b785ad6ed31dba3731cbfe4a5b0",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw73p125.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_blend-yaw75.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      }
+    },
+    "all_parts_owner": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw60.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "6e9ab6e2f6b0d1df1b0c1cec5624ed506bdb80050827c22222e845c90202d9d6",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw61p875.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "63.75": {
+        "sha256": "4648c8092ce8caca2f02550f47e046fdbe44f44284f8fffc30444727e1b6d9c0",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw63p75.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "65.625": {
+        "sha256": "6ec1eb40b98c14df8a7bf2c9c42092132c7791f4339be085c3304b50e58b461e",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw65p625.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "67.5": {
+        "sha256": "c178db4f38a8436746eac4271b868a2e5452872866b690d812b874cf651eaebc",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw67p5.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "69.375": {
+        "sha256": "53edd4d32ba7bb2c534ce8f7b5b670a6c294d722fc57aaf9cd3f4dae53c35b48",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw69p375.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "71.25": {
+        "sha256": "5ef8160e570cbfd3f792d909b952f7ae92a3952cc5afa717cc8256e4e0da32d4",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw71p25.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "73.125": {
+        "sha256": "d2d27936b20c0086f1313ea4abaf7703722fd3f9454a297ca6f833b43a7d6238",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw73p125.png",
+        "diagnostics": {
+          "endpoint": false,
+          "componentRoles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "sam3Source": "P15-99 real eye/fringe retained in head source",
+          "geometryFolded": false
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-103-render/all_parts_owner-yaw75.png",
+        "diagnostics": {
+          "endpoint": true
+        }
+      }
+    }
+  },
+  "fullContinuityAccepted": false,
+  "formalArtMeshArtistApproved": false,
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "face": {
+        "maxAdjacentMAE": 14.4622,
+        "midpointAdjacentMAE": 9.8768,
+        "adjacentMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 9.6149,
+        "midpointAdjacentMAE": 6.3125,
+        "adjacentMAE": [
+          9.6149,
+          6.7532,
+          6.5024,
+          6.3125,
+          6.2275,
+          6.231,
+          6.2239,
+          8.6926
+        ]
+      },
+      "bow": {
+        "maxAdjacentMAE": 10.1016,
+        "midpointAdjacentMAE": 7.2519,
+        "adjacentMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 9.1631,
+        "midpointAdjacentMAE": 5.1791,
+        "adjacentMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.386,
+        "midpointAdjacentMAE": 5.3751,
+        "adjacentMAE": [
+          7.386,
+          5.6937,
+          5.4589,
+          5.3751,
+          5.2582,
+          5.154,
+          5.1292,
+          6.3367
+        ]
+      }
+    },
+    "bow_uv_blend": {
+      "face": {
+        "maxAdjacentMAE": 14.4622,
+        "midpointAdjacentMAE": 9.8768,
+        "adjacentMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 11.0844,
+        "midpointAdjacentMAE": 7.0282,
+        "adjacentMAE": [
+          11.0844,
+          7.3525,
+          7.0615,
+          6.9873,
+          7.0282,
+          7.2077,
+          7.445,
+          10.4577
+        ]
+      },
+      "bow": {
+        "maxAdjacentMAE": 13.9269,
+        "midpointAdjacentMAE": 8.8224,
+        "adjacentMAE": [
+          13.7308,
+          8.8059,
+          8.6221,
+          8.614,
+          8.8224,
+          9.0477,
+          9.4962,
+          13.9269
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 14.9542,
+        "midpointAdjacentMAE": 8.0472,
+        "adjacentMAE": [
+          14.9542,
+          8.8043,
+          8.2345,
+          8.0472,
+          7.9794,
+          8.1807,
+          8.7088,
+          14.6837
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.4784,
+        "midpointAdjacentMAE": 5.3709,
+        "adjacentMAE": [
+          7.4784,
+          5.7149,
+          5.4544,
+          5.3709,
+          5.2526,
+          5.1494,
+          5.1235,
+          6.3351
+        ]
+      }
+    },
+    "bow_uv_union": {
+      "face": {
+        "maxAdjacentMAE": 14.4622,
+        "midpointAdjacentMAE": 9.8768,
+        "adjacentMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 12.744,
+        "midpointAdjacentMAE": 7.0112,
+        "adjacentMAE": [
+          11.4358,
+          7.6107,
+          7.2309,
+          7.0112,
+          6.8417,
+          6.8315,
+          6.8678,
+          12.744
+        ]
+      },
+      "bow": {
+        "maxAdjacentMAE": 19.5392,
+        "midpointAdjacentMAE": 8.3165,
+        "adjacentMAE": [
+          17.4813,
+          8.3433,
+          8.3231,
+          8.2402,
+          8.3165,
+          8.3669,
+          8.5869,
+          19.5392
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 18.4622,
+        "midpointAdjacentMAE": 7.7364,
+        "adjacentMAE": [
+          15.1969,
+          8.1292,
+          7.7864,
+          7.7364,
+          7.5502,
+          7.5469,
+          7.7891,
+          18.4622
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.4759,
+        "midpointAdjacentMAE": 5.3709,
+        "adjacentMAE": [
+          7.4759,
+          5.7194,
+          5.4553,
+          5.3709,
+          5.2526,
+          5.1494,
+          5.1235,
+          6.3351
+        ]
+      }
+    },
+    "bow_uv_owner": {
+      "face": {
+        "maxAdjacentMAE": 14.4622,
+        "midpointAdjacentMAE": 9.8768,
+        "adjacentMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 10.8145,
+        "midpointAdjacentMAE": 10.0091,
+        "adjacentMAE": [
+          10.8145,
+          7.2694,
+          7.0137,
+          10.0091,
+          7.317,
+          7.3129,
+          7.3146,
+          10.0711
+        ]
+      },
+      "bow": {
+        "maxAdjacentMAE": 21.5902,
+        "midpointAdjacentMAE": 21.5902,
+        "adjacentMAE": [
+          12.6016,
+          7.9766,
+          8.0125,
+          21.5902,
+          8.4772,
+          8.4783,
+          8.5214,
+          12.6188
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 21.987,
+        "midpointAdjacentMAE": 21.987,
+        "adjacentMAE": [
+          14.4472,
+          8.7615,
+          8.8508,
+          21.987,
+          8.6078,
+          8.5308,
+          8.5827,
+          13.54
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.4794,
+        "midpointAdjacentMAE": 5.371,
+        "adjacentMAE": [
+          7.4794,
+          5.7168,
+          5.4546,
+          5.371,
+          5.2526,
+          5.1494,
+          5.1235,
+          6.3351
+        ]
+      }
+    },
+    "all_parts_blend": {
+      "face": {
+        "maxAdjacentMAE": 14.4914,
+        "midpointAdjacentMAE": 9.8971,
+        "adjacentMAE": [
+          14.4914,
+          11.336,
+          10.5547,
+          9.8971,
+          9.7174,
+          9.897,
+          10.5008,
+          13.2807
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 13.1901,
+        "midpointAdjacentMAE": 8.2613,
+        "adjacentMAE": [
+          13.1901,
+          8.7513,
+          8.1207,
+          8.136,
+          8.2613,
+          8.5677,
+          9.188,
+          13.0505
+        ]
+      },
+      "bow": {
+        "maxAdjacentMAE": 14.659,
+        "midpointAdjacentMAE": 9.1193,
+        "adjacentMAE": [
+          14.3654,
+          9.1142,
+          8.8223,
+          8.8458,
+          9.1193,
+          9.4513,
+          10.0396,
+          14.659
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 15.0581,
+        "midpointAdjacentMAE": 8.3191,
+        "adjacentMAE": [
+          14.8587,
+          9.3628,
+          8.462,
+          8.3191,
+          8.3054,
+          8.6298,
+          9.3249,
+          15.0581
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 10.6712,
+        "midpointAdjacentMAE": 7.2602,
+        "adjacentMAE": [
+          9.215,
+          6.71,
+          6.7911,
+          6.9303,
+          7.2602,
+          7.434,
+          7.879,
+          10.6712
+        ]
+      }
+    },
+    "all_parts_owner": {
+      "face": {
+        "maxAdjacentMAE": 14.492,
+        "midpointAdjacentMAE": 9.9127,
+        "adjacentMAE": [
+          14.492,
+          11.339,
+          10.562,
+          9.9127,
+          9.7023,
+          9.8837,
+          10.4826,
+          13.2647
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 22.2364,
+        "midpointAdjacentMAE": 22.2364,
+        "adjacentMAE": [
+          12.0663,
+          8.3766,
+          8.0538,
+          22.2364,
+          8.0651,
+          8.0795,
+          8.2825,
+          11.3291
+        ]
+      },
+      "bow": {
+        "maxAdjacentMAE": 23.1587,
+        "midpointAdjacentMAE": 23.1587,
+        "adjacentMAE": [
+          13.1038,
+          8.3776,
+          8.4421,
+          23.1587,
+          8.8752,
+          8.9403,
+          9.0418,
+          13.1533
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 24.7811,
+        "midpointAdjacentMAE": 24.7811,
+        "adjacentMAE": [
+          13.9758,
+          9.5196,
+          9.5355,
+          24.7811,
+          9.1824,
+          9.1249,
+          9.1248,
+          13.4775
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 21.2979,
+        "midpointAdjacentMAE": 21.2979,
+        "adjacentMAE": [
+          8.4082,
+          6.4363,
+          6.4112,
+          21.2979,
+          6.1425,
+          5.9261,
+          5.8852,
+          7.7215
+        ]
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-103-render/garment-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "sourceKeyviewsPixelExact": true,
+    "sourceLayerReconstruction": "byte-exact source RGBA for both keyviews",
+    "meshGeometry": "four independent matching 9-vertex garment parts with shared 8-triangle topology",
+    "segmentVisualFindings": {
+      "bow": "source-owned ribbon body and folds extracted in both views; internal line shapes remain view-dependent",
+      "jewel": "central ornament remains single semantic part but cross-view ornament ink differs",
+      "collar": "polygon ownership is a provisional layout proxy that contains nearby neck/hair pixels",
+      "shoulder": "independent left shoulder support does not resolve jacket trim beyond the support"
+    },
+    "localFlowResult": "after view-mesh alignment, local DIS residual registration still increases garment adjacent frame pixel differences",
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "visualGate": "ARTIST_VERIFIABLE_COLLAR_BOW_STRAND_CORRESPONDENCE",
+    "continuousYawAccepted": false,
+    "formalArtMeshApproved": false,
+    "engineeringQA": "PASS"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "KOMA_P15_103_GARMENT_MESH_QA_V1",
+  "semanticPartCount": 4,
+  "vertexCount": 36,
+  "triangleCount": 32,
+  "sampledAngles": 9,
+  "negativeTriangleCount": 0,
+  "meshSHA256": "05c4db0318371499c67e84f6a596ce201550a383dcb4cb75ac39f9b35bb9249c",
+  "sourcePartEvidenceSHA256": "790d94d94cd4c44b41fd8eb210337a58d54c8a46ed6ee9dc06d11de2b2a48cf1",
+  "sourceRoles": [
+    "collar",
+    "bow",
+    "jewel",
+    "shoulder.left"
+  ],
+  "artistApproved": false
+}

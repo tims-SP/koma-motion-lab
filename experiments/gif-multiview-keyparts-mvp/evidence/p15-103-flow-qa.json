@@ -1,0 +1,274 @@
+{
+  "schema": "KOMA_P15_103_LOCAL_COMPONENT_FLOW_QA_V1",
+  "localFlowROI": [
+    252,
+    367,
+    390,
+    498
+  ],
+  "flowMagnitudeMeanPx": 7.687070369720459,
+  "flowMagnitudeMaxPx": 14.142134666442871,
+  "model": "DIS local optical flow over actual source bow texture, after per-view UV mesh registration",
+  "methods": {
+    "bow_flow_blend": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw61p875.png",
+        "sha256": "bcc5bb9a925feeb6f00526806473ac25fc99ea0cd0aeb68cfcf5d4de880512b2"
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw63p75.png",
+        "sha256": "d4730698d6e8a6477551281069041cd663e11d6c6e33e7c8be30998a23986d45"
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw65p625.png",
+        "sha256": "8b8bc279e8b53f635182703326e36a1133a76777298a506c2d87991342dbe9c4"
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw67p5.png",
+        "sha256": "6c662a9ead92eca9a4b3197d13eace0cbb54dc02a0a7d3e88a6bb164030d1957"
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw69p375.png",
+        "sha256": "2bb2422eeb5e2e4ad4bec2e5609a0d8e4307bcc0aa4a66d0ee7dbb414c94ad04"
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw71p25.png",
+        "sha256": "2d68c2d323987b81fc8c2adc8c93a211dd8d55b8a5df19f9e9f3e66b86a90fb1"
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw73p125.png",
+        "sha256": "57d31d0ea06ed4f24d5e69761a892234c7436d7897dff07249c514c2ea93e267"
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_blend-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    },
+    "bow_flow_union": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw61p875.png",
+        "sha256": "139f62da32093578fbe7ef571dd4dc2dd61acd7c78591dd72fd6721be83fa72b"
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw63p75.png",
+        "sha256": "edbe07655fd77f1311ded0142b90e4e856581713f5315a8be4a2548c2923d311"
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw65p625.png",
+        "sha256": "76e998ef491749bfabd144a653476715f2dfbd6522724cb160c7569e6be2647c"
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw67p5.png",
+        "sha256": "2f4ce9abbdf97ed07b04544fd7c5e6bf07a0e1c125f2bec918382575c84d0085"
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw69p375.png",
+        "sha256": "5422fa48f8b009d76e89632de032884e5fb1f0f76cf83764439f014a6ed909e2"
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw71p25.png",
+        "sha256": "3546a4fbffdb8474508b39fa9502699e71c4b5751debe1b8fabefd8aad19ad7c"
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw73p125.png",
+        "sha256": "6c26f0b6439b66698d92af6ea83c36e51a978f578d65173e01de5f692f702e00"
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-103-render/bow_flow_union-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    }
+  },
+  "visualAccepted": false,
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "bow": {
+        "maxAdjacentMAE": 10.1016,
+        "midpointAdjacentMAE": 7.2519,
+        "adjacentMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 9.1631,
+        "midpointAdjacentMAE": 5.1791,
+        "adjacentMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 9.6149,
+        "midpointAdjacentMAE": 6.3125,
+        "adjacentMAE": [
+          9.6149,
+          6.7532,
+          6.5024,
+          6.3125,
+          6.2275,
+          6.231,
+          6.2239,
+          8.6926
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.386,
+        "midpointAdjacentMAE": 5.3751,
+        "adjacentMAE": [
+          7.386,
+          5.6937,
+          5.4589,
+          5.3751,
+          5.2582,
+          5.154,
+          5.1292,
+          6.3367
+        ]
+      }
+    },
+    "bow_flow_blend": {
+      "bow": {
+        "maxAdjacentMAE": 14.3282,
+        "midpointAdjacentMAE": 9.1841,
+        "adjacentMAE": [
+          14.3282,
+          9.0894,
+          8.9458,
+          9.0499,
+          9.1841,
+          9.2109,
+          9.4456,
+          13.8564
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 15.6237,
+        "midpointAdjacentMAE": 7.8288,
+        "adjacentMAE": [
+          15.3594,
+          8.7452,
+          8.0763,
+          7.682,
+          7.8288,
+          8.0838,
+          8.9181,
+          15.6237
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 11.0244,
+        "midpointAdjacentMAE": 7.0145,
+        "adjacentMAE": [
+          11.0244,
+          7.2394,
+          6.9871,
+          6.957,
+          7.0145,
+          7.1273,
+          7.2892,
+          10.3559
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.4771,
+        "midpointAdjacentMAE": 5.371,
+        "adjacentMAE": [
+          7.4771,
+          5.7142,
+          5.4548,
+          5.371,
+          5.2526,
+          5.1494,
+          5.1235,
+          6.3351
+        ]
+      }
+    },
+    "bow_flow_union": {
+      "bow": {
+        "maxAdjacentMAE": 16.0759,
+        "midpointAdjacentMAE": 9.5624,
+        "adjacentMAE": [
+          16.0759,
+          9.4853,
+          9.4358,
+          9.5019,
+          9.5624,
+          9.3457,
+          9.3692,
+          14.7531
+        ]
+      },
+      "jewel": {
+        "maxAdjacentMAE": 18.156,
+        "midpointAdjacentMAE": 7.7343,
+        "adjacentMAE": [
+          16.6454,
+          8.8629,
+          8.1059,
+          7.7049,
+          7.7343,
+          7.7113,
+          8.1937,
+          18.156
+        ]
+      },
+      "collar": {
+        "maxAdjacentMAE": 11.2971,
+        "midpointAdjacentMAE": 6.9557,
+        "adjacentMAE": [
+          11.0075,
+          7.2833,
+          7.0085,
+          6.9417,
+          6.9557,
+          7.0362,
+          7.1598,
+          11.2971
+        ]
+      },
+      "shoulder": {
+        "maxAdjacentMAE": 7.4759,
+        "midpointAdjacentMAE": 5.371,
+        "adjacentMAE": [
+          7.4759,
+          5.716,
+          5.4549,
+          5.371,
+          5.2526,
+          5.1494,
+          5.1235,
+          6.3351
+        ]
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-103-render/bow-flow-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "visualAcceptance": false,
+    "sourceInput": "native source bow texture on per-view registered UV mesh",
+    "diagnostic": "mapped ribbon folds and edges remain inconsistent at intermediate yaw"
+  }
+}

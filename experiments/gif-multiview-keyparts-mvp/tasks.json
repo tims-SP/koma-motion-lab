@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_102_NECK_EYE_CORRESPONDENCE_EVIDENCE_READY_ART_REVIEW_PENDING",
+  "status": "P15_103_GARMENT_SOURCE_ARTMESH_REPRODUCED_VIEW_CORRESPONDENCE_REVIEW",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-102 source-owned neck mesh, native near-eye/profile and gold bow landmark registration with Chromium visual QA",
+  "lastCompleted": "P15-103 source-owned 60°–75° garment ArtMesh and local flow correspondence evidence with browser and unit QA",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -5002,5 +5002,81 @@
       "evidence/p15-102-browser-qa.json"
     ],
     "next": "Establish source-owned collar, bow, jacket and neck silhouette ArtMesh correspondences before rerendering full character yaw"
+  },
+  "p15_103GarmentArtMesh": {
+    "status": "SOURCE_OWNED_GARMENT_COMPONENT_UV_CORRESPONDENCE_REPRODUCED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      75
+    ],
+    "sourceLayerCount": 5,
+    "componentMeshCount": 4,
+    "componentMeshVertices": 36,
+    "componentTriangles": 32,
+    "sampledAngleCount": 9,
+    "foldedTriangles": 0,
+    "sourceImageReassemblyPixelExact": true,
+    "candidateFrameCount": 63,
+    "baselineFrameCount": 9,
+    "methodNames": [
+      "bow_uv_blend",
+      "bow_uv_union",
+      "bow_uv_owner",
+      "all_parts_blend",
+      "all_parts_owner",
+      "bow_flow_blend",
+      "bow_flow_union"
+    ],
+    "actualImageOutputs": [
+      "native_rgba",
+      "garment_ownership_masks",
+      "head_uv_artmesh",
+      "component_uv_grid",
+      "local_dis_flow"
+    ],
+    "browserChecksPass": 144,
+    "unitTestsPass": 14,
+    "baselineBowMaxAdjacentRGBMAE": 10.1016,
+    "candidateBowMaxAdjacentRGBMAE": {
+      "bow_uv_blend": 13.9269,
+      "bow_uv_union": 19.5392,
+      "bow_uv_owner": 21.5902,
+      "all_parts_blend": 14.659,
+      "all_parts_owner": 23.1587,
+      "bow_flow_blend": 14.3282,
+      "bow_flow_union": 16.0759
+    },
+    "baselineJewelMaxAdjacentRGBMAE": 9.1631,
+    "candidateJewelMaxAdjacentRGBMAE": {
+      "bow_uv_blend": 14.9542,
+      "bow_uv_union": 18.4622,
+      "bow_uv_owner": 21.987,
+      "all_parts_blend": 15.0581,
+      "all_parts_owner": 24.7811,
+      "bow_flow_blend": 15.6237,
+      "bow_flow_union": 18.156
+    },
+    "selectedVisualBaseline": "P15-101 head_alpha_blend",
+    "engineeringVerified": true,
+    "continuousYawVisualAccepted": false,
+    "formalArtMeshArtistApproved": false,
+    "visualGate": "ARTIST_VERIFIABLE_COLLAR_BOW_STRAND_CORRESPONDENCE",
+    "review": "private-assets/exports/p15-103-render/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-103-garment-artmesh-study.zip",
+      "bytes": 75137175,
+      "entries": 134,
+      "sha256": "d196f488f79861fbd60b6c873fa2c4b82507da59bcae6b3ef15e2cbac47bc4ed"
+    },
+    "evidence": [
+      "evidence/p15-103-parts-qa.json",
+      "evidence/p15-103-mesh-qa.json",
+      "evidence/p15-103-render-qa.json",
+      "evidence/p15-103-flow-qa.json",
+      "evidence/p15-103-review-qa.json",
+      "evidence/p15-103-browser-qa.json"
+    ],
+    "next": "Establish artist-confirmable ribbon fold and collar trim landmarks / masks on both source keyviews; rerender corresponding ArtMesh before expanding head yaw"
   }
 }
