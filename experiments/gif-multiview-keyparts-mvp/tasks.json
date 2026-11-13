@@ -7045,5 +7045,46 @@
     "sourceReview": "private-assets/exports/p15-133-semantic-source/index.html",
     "motionReview": "private-assets/exports/p15-133-part-motion/index.html",
     "next": "Obtain source-authored semantic RGBA art with coherent face/hair/coat ownership and painted occluded materials, then validate real mid-angles. Preserve exact source keyframes and current benchmarks."
+  },
+  "p15_134IndependentUnderpaint": {
+    "status": "INDEPENDENT_OCCLUSION_UNDERPAINT_GENERATED_AND_RENDER_REVIEWED",
+    "characterId": "p0_character_001",
+    "requestedYaw": 112.5,
+    "generatedAsset": "private-assets/p15-134-occlusion-underpaint/underpaint-native.png",
+    "nativeSHA256": "b0a24c7cbb6a20c7091ac273c741b0e5d88a4e2134056806caf95a2fad825b25",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "sourceGenerator": "image_gen.imagegen through Codex CLI",
+    "sourceRGBARecompositionExact": true,
+    "jacketRegionAlphaIoU": 0.99594,
+    "jacketRegionRGBMAE": 3.7189,
+    "displacementStress": {
+      "0": {
+        "compositeDifferenceAgainstOriginalRGBMAE": 0.6196,
+        "newVisibleAlphaPixelsOutsideOriginal": 221
+      },
+      "12": {
+        "compositeDifferenceAgainstOriginalRGBMAE": 16.8539,
+        "newVisibleAlphaPixelsOutsideOriginal": 3187
+      },
+      "24": {
+        "compositeDifferenceAgainstOriginalRGBMAE": 23.0931,
+        "newVisibleAlphaPixelsOutsideOriginal": 5244
+      }
+    },
+    "visualFindings": "Independent short-hair/scalp, ear, jaw and neck underpaint paints meaningful covered areas. In 12/24 px hair displacement, the provisional P15-133 color-mask creates face-edge voids and black seams. Jacket alignment is close but physical facial registration is not accepted.",
+    "nativeGenerationVerified": true,
+    "artistApprovedGeometry": false,
+    "hairArtMeshMaskVerified": false,
+    "occlusionGeometryAccepted": false,
+    "fullYawVisualAcceptance": false,
+    "testCasesPassed": 11,
+    "evidence": [
+      "evidence/p15-134-underpaint-qa.json"
+    ],
+    "review": "private-assets/exports/p15-134-underpaint-review/index.html",
+    "next": "Replace approximate hair color mask with closed authored ArtMesh boundary, register underpaint ear/face/neck anchors and rerun 0/12/24 px hair reveal without alpha holes."
   }
 }
