@@ -6786,5 +6786,54 @@
       "evidence/p15-126-midview-correspondence-qa.json"
     ],
     "next": "Supply true independent 112.5-degree reference art for face, hair, neck/collar and body, then verify semantic segmentation and source-owner anchors before VDD."
+  },
+  "p15_127IndependentMidviewKeyart": {
+    "status": "INDEPENDENT_NATIVE_MIDVIEW_SOURCE_GENERATED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "requestedYaw": 112.5,
+    "generator": "Codex CLI image_gen.imagegen",
+    "actualNativeGenerationCount": 2,
+    "nativeSourceSHA256": {
+      "candidateA": "0eea9a9623cc7fc4ce3858b97fedc5af4c8647c0264a507cc2941d9c0a81db38",
+      "candidateB": "12ae03af7aa9b756a3d04eb96173ed3a294c96c73b38c77226c090ec0e5e358d"
+    },
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "referenceAngles": [
+      90,
+      135,
+      180
+    ],
+    "preferredExplorationCandidate": "B",
+    "faceRegionSkinPixelCounts": {
+      "90": 4880,
+      "A": 765,
+      "B": 3114,
+      "135": 1025
+    },
+    "renderedTransitionAngles": [
+      90,
+      101.25,
+      112.5,
+      123.75,
+      135
+    ],
+    "maxAdjacentCompositeRGBMAE": 14.2285,
+    "comparisonPreviousP15_124At90To135": 9.5435,
+    "visualFindings": "Native B has face visible-area between 90 and 135 source. Its palette/line-art, hair and jacket silhouette differ from the canonical views. Bidirectional optical-flow inbetweens produce double hair arcs and coat mismatch at 101.25 and 123.75. New source art is not accepted for canonical VDD.",
+    "sourceIdentityAccepted": false,
+    "physicalYawVerified": false,
+    "semanticLayersApproved": false,
+    "hiddenUnderpaintValidated": false,
+    "visualContinuityAccepted": false,
+    "focusedRegressionTestsPassed": 19,
+    "evidence": [
+      "evidence/p15-127-native-keyart-qa.json",
+      "evidence/p15-127-keyview-transition-qa.json"
+    ],
+    "review": "private-assets/exports/p15-127-yaw112p5-review/index.html",
+    "next": "Align independently generated midview to canonical drawing style and anchor silhouette; obtain independently painted separable face/hair/collar/garment layers and hidden surfaces, then rerender 90–135 view transition."
   }
 }

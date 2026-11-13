@@ -1,0 +1,56 @@
+{
+  "schema": "KOMA_P15_127_NATIVE_MIDVIEW_TRANSITION_V1",
+  "characterId": "p0_character_001",
+  "targetYaw": 112.5,
+  "sourceAngles": [
+    90,
+    135
+  ],
+  "nativeGenerationCandidates": {
+    "candidateA": {
+      "sha256": "0eea9a9623cc7fc4ce3858b97fedc5af4c8647c0264a507cc2941d9c0a81db38",
+      "actualImageGeneration": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "faceSkinPixels": 765
+    },
+    "candidateB": {
+      "sha256": "12ae03af7aa9b756a3d04eb96173ed3a294c96c73b38c77226c090ec0e5e358d",
+      "actualImageGeneration": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "faceSkinPixels": 3114
+    }
+  },
+  "selectedCandidate": "B",
+  "candidateSelection": "face coverage bracket plus visual continuity hypothesis",
+  "renderMethod": "bidirectional DIS flow between independently generated 112.5° painting and existing 90°/135° source frames",
+  "metrics": {
+    "maxAdjacentCompositeRGBMAE": 14.2285,
+    "adjacentCompositeRGBMAE": [
+      14.2285,
+      13.2046,
+      13.1288,
+      13.9569
+    ],
+    "nativeSourceEndpointPixelExact": true,
+    "faceSkinPixelCounts": {
+      "90": 4880,
+      "A": 765,
+      "B": 3114,
+      "135": 1025
+    },
+    "expectedFaceSkinMidpoint": 2952.5,
+    "candidateBWithinFaceVisibilityBracket": true
+  },
+  "artisticYawVerified": false,
+  "semanticPartIdentityVerified": false,
+  "hiddenUnderpaintVerified": false,
+  "fullSequenceVisualAccepted": false,
+  "review": "private-assets/exports/p15-127-yaw112p5-review/index.html",
+  "next": "Inspect independent midview key in 90–135 sequence. Fix silhouette, line-art palette, bow and hair correspondence via source art before admitting it as production VDD source."
+}
