@@ -1,0 +1,142 @@
+{
+  "schema": "KOMA_P15_121_REAR_ARC_RENDER_V1",
+  "characterId": "p0_character_001",
+  "sourceType": "recovered 443x443 multi-view GIF frame references",
+  "sourceKeyAngles": [
+    90,
+    135,
+    180
+  ],
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0,
+    146.25,
+    157.5,
+    168.75,
+    180.0
+  ],
+  "sourceSHA256": {
+    "90": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9",
+    "135": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16",
+    "180": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363"
+  },
+  "renderMethods": {
+    "crossfade": {
+      "adjacentCompositeRGBMAE": [
+        3.4572,
+        3.4378,
+        3.4525,
+        3.413,
+        3.1306,
+        3.1486,
+        3.1522,
+        3.1379
+      ],
+      "maxAdjacentCompositeRGBMAE": 3.4572,
+      "meanIntermediatePartialAlphaPixels": 13484.0,
+      "originalKeyframesPixelExact": true
+    },
+    "dis_flow": {
+      "adjacentCompositeRGBMAE": [
+        7.1884,
+        5.9304,
+        5.7167,
+        6.2657,
+        5.8295,
+        5.2764,
+        5.5632,
+        6.4452
+      ],
+      "maxAdjacentCompositeRGBMAE": 7.1884,
+      "meanIntermediatePartialAlphaPixels": 8048.5,
+      "originalKeyframesPixelExact": true
+    }
+  },
+  "files": {
+    "crossfade": {
+      "90.0": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw090p00.png",
+        "sha256": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9"
+      },
+      "101.25": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw101p25.png",
+        "sha256": "464cdabac623530757636dcfed2adc790dccf65f66e3e28f5c9715509a2a4f2b"
+      },
+      "112.5": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw112p50.png",
+        "sha256": "b7f39b44f009f4ae86571a5b8dae31902df379fb0e3b25856286ea4ad8ad4c4e"
+      },
+      "123.75": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw123p75.png",
+        "sha256": "0cd4bbdfc49b896e342be4c4b2da5c967e34db82eaaf7bece4137575e7f1895a"
+      },
+      "135.0": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw135p00.png",
+        "sha256": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16"
+      },
+      "146.25": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw146p25.png",
+        "sha256": "58b2dcc598302341bc5776863a64e83247cd3c325bb3b83c9eda0ff793e656d8"
+      },
+      "157.5": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw157p50.png",
+        "sha256": "393c3065ce459ce9045c26824a2bca096ef067b620da283f9cfca44342a442d3"
+      },
+      "168.75": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw168p75.png",
+        "sha256": "81a13f95ae478c78c0f82ff4401389c9c385db5cbe35b45e1df219142e5b5ece"
+      },
+      "180.0": {
+        "path": "private-assets/exports/p15-121-rear-arc/crossfade/yaw180p00.png",
+        "sha256": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363"
+      }
+    },
+    "dis_flow": {
+      "90.0": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw090p00.png",
+        "sha256": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9"
+      },
+      "101.25": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw101p25.png",
+        "sha256": "76c588c830d09bdd8abcbf2507af61a7b279607f1a1587da641c63c319b163f7"
+      },
+      "112.5": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw112p50.png",
+        "sha256": "fbff1e953391831693fa05520c49fba47a9036657bf3010fc8bf813f24a06cec"
+      },
+      "123.75": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw123p75.png",
+        "sha256": "1607c889d78345549d7cf4333e04c601eb8cec640171a6215cd3f84700e10284"
+      },
+      "135.0": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw135p00.png",
+        "sha256": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16"
+      },
+      "146.25": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw146p25.png",
+        "sha256": "85d41fbf16f55fc3162901be649a20024caa9528662f3871198728288d07784c"
+      },
+      "157.5": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw157p50.png",
+        "sha256": "b6e668652139082ec6892d5267b2f9833c41ceff99829db759bd38f50d55d946"
+      },
+      "168.75": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw168p75.png",
+        "sha256": "b1a6a1af1e43b6f4934c3bb50f8da4ce3d44fd4d661ea216ea8714e310d61091"
+      },
+      "180.0": {
+        "path": "private-assets/exports/p15-121-rear-arc/dis_flow/yaw180p00.png",
+        "sha256": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363"
+      }
+    }
+  },
+  "review": "private-assets/exports/p15-121-rear-arc/index.html",
+  "nativePixelExact": true,
+  "visualAcceptance": false,
+  "crossAngleGeometryVerified": false,
+  "hiddenUnderpaintVerified": false,
+  "next": "Inspect motion discontinuity and garment/head correspondence; derive physically correct view-conditioned deformers with underpaint before full 360 approval."
+}
