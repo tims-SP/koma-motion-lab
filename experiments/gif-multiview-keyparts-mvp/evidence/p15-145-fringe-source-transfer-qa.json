@@ -1,0 +1,152 @@
+{
+  "schema": "KOMA_P15_145_FRINGE_TEXTURE_OWNERSHIP_V1",
+  "characterId": "p0_character_001",
+  "yaw": 112.5,
+  "sourceOwner": "native 112.5 forehead and hair silhouette",
+  "registeredTextureOwner": "P15-143 independently generated front-bangs pixels",
+  "maskPixels": 12714,
+  "variants": {
+    "canonical": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "texturePixels": 0,
+      "textureWeightTotal": 0.0,
+      "zeroOffsetSourceExact": true,
+      "native90And135Exact": true,
+      "stress": {
+        "0": {
+          "alphaHoles": 0,
+          "faceRGBMAE": 0.0
+        },
+        "12": {
+          "alphaHoles": 388,
+          "faceRGBMAE": 12.5037
+        },
+        "24": {
+          "alphaHoles": 644,
+          "faceRGBMAE": 17.3535
+        }
+      }
+    },
+    "transfer_025": {
+      "maxAdjacentRGBMAE": 12.0739,
+      "adjacentRGBMAE": [
+        12.0739,
+        10.9469,
+        10.5537,
+        11.5916
+      ],
+      "texturePixels": 10479,
+      "textureWeightTotal": 2175.17,
+      "zeroOffsetSourceExact": false,
+      "native90And135Exact": true,
+      "stress": {
+        "0": {
+          "alphaHoles": 0,
+          "faceRGBMAE": 0.4772
+        },
+        "12": {
+          "alphaHoles": 388,
+          "faceRGBMAE": 12.38
+        },
+        "24": {
+          "alphaHoles": 644,
+          "faceRGBMAE": 17.1965
+        }
+      }
+    },
+    "transfer_050": {
+      "maxAdjacentRGBMAE": 12.0224,
+      "adjacentRGBMAE": [
+        12.0224,
+        10.8474,
+        10.5888,
+        11.5044
+      ],
+      "texturePixels": 10513,
+      "textureWeightTotal": 4350.33,
+      "zeroOffsetSourceExact": false,
+      "native90And135Exact": true,
+      "stress": {
+        "0": {
+          "alphaHoles": 0,
+          "faceRGBMAE": 0.958
+        },
+        "12": {
+          "alphaHoles": 388,
+          "faceRGBMAE": 12.339
+        },
+        "24": {
+          "alphaHoles": 644,
+          "faceRGBMAE": 17.0897
+        }
+      }
+    },
+    "transfer_075": {
+      "maxAdjacentRGBMAE": 12.0746,
+      "adjacentRGBMAE": [
+        12.0746,
+        10.9252,
+        10.3327,
+        11.4485
+      ],
+      "texturePixels": 10528,
+      "textureWeightTotal": 6525.5,
+      "zeroOffsetSourceExact": false,
+      "native90And135Exact": true,
+      "stress": {
+        "0": {
+          "alphaHoles": 0,
+          "faceRGBMAE": 1.4505
+        },
+        "12": {
+          "alphaHoles": 388,
+          "faceRGBMAE": 12.3323
+        },
+        "24": {
+          "alphaHoles": 644,
+          "faceRGBMAE": 17.0142
+        }
+      }
+    },
+    "transfer_100": {
+      "maxAdjacentRGBMAE": 12.1245,
+      "adjacentRGBMAE": [
+        12.1245,
+        10.9108,
+        10.4487,
+        11.4528
+      ],
+      "texturePixels": 10532,
+      "textureWeightTotal": 8700.67,
+      "zeroOffsetSourceExact": false,
+      "native90And135Exact": true,
+      "stress": {
+        "0": {
+          "alphaHoles": 0,
+          "faceRGBMAE": 1.9436
+        },
+        "12": {
+          "alphaHoles": 388,
+          "faceRGBMAE": 12.3539
+        },
+        "24": {
+          "alphaHoles": 644,
+          "faceRGBMAE": 16.9675
+        }
+      }
+    }
+  },
+  "sourceKeyRGBAUnmodified": true,
+  "sourceMaskRecompositionExact": true,
+  "eyesProtected": true,
+  "fullYawVisualAccepted": false,
+  "artistApprovedStrandIdentity": false,
+  "hiddenScalpGeometryApproved": false,
+  "review": "private-assets/exports/p15-145-fringe-source-transfer/index.html"
+}

@@ -7687,5 +7687,47 @@
     ],
     "review": "private-assets/exports/p15-144-bangs-registration/index.html",
     "next": "Redraw front-bangs source aligned to canonical 112.5° hair-root/eye geometry and replace matching source hair pixels with a coherent underpaint, then validate semantic strand identities before ArtMesh yaw interpolation."
+  },
+  "p15_145CanonicalFringeSourceTransfer": {
+    "status": "FRONT_FRINGE_TEXTURE_TRANSFER_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 112.5,
+    "sourceOwner": "original 112.5° silhouette, face and eye",
+    "textureReference": "P15-143 native independent bangs painting registered in P15-144",
+    "testedStrengths": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "selectedDiagnostic": "transfer_050",
+    "visibleSourceMaskPixels": 12714,
+    "textureContributingPixels": 10513,
+    "maxAdjacentRGBMAE": {
+      "source": 12.0984,
+      "selected": 12.0224
+    },
+    "hairDisplacement24px": {
+      "source": {
+        "alphaHoles": 644,
+        "faceRGBMAE": 17.3535
+      },
+      "selected": {
+        "alphaHoles": 644,
+        "faceRGBMAE": 17.0897
+      }
+    },
+    "pixelIntegrity": "Canonical alpha, eye, face and non-fringe pixels maintained; original files unchanged",
+    "visualFindings": "Source-owned fringe silhouette avoids duplicated overlaid bangs, keeps eye facial ink and modestly reduces five-angle frame RGB variation. Source hair/ahoge still ghosts at 101.25/123.75 and jacket/collar source art differs across views; texture transfer is research-only.",
+    "productionVDDApproved": false,
+    "trueStrandCorrespondenceVerified": false,
+    "underpaintGeometryApproved": false,
+    "fullVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-145-fringe-source-transfer-qa.json"
+    ],
+    "review": "private-assets/exports/p15-145-fringe-source-transfer/index.html",
+    "next": "Produce source-painted strand labels and structurally matching scalp/face/collar layers across 90/112.5/135, then test actual independent ArtMesh motion on aligned geometry."
   }
 }
