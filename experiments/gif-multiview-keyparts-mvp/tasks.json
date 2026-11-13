@@ -8150,5 +8150,37 @@
     ],
     "review": "private-assets/exports/p15-152-root-paint/index.html",
     "next": "Generate or paint source-matched ahoge double-root attachment and scalp underpaint with strict alpha and exact geometry; require close-up keyview quality before whole-head yaw tests."
+  },
+  "p15_153CanonicalAhogeSourceTopology": {
+    "status": "PIXEL_EXACT_NATIVE_STRAND_SOURCE_EXTRACTED_AND_MOTION_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sourceComponents": {
+      "90": 1,
+      "112.5": 1,
+      "135": 1
+    },
+    "nativeSourcePixelExact": true,
+    "sourceVisibleHairPixels": {
+      "90": 1205,
+      "112.5": 945,
+      "135": 1071
+    },
+    "sourceBaselineMaxAdjacentRGBMAE": 12.0984,
+    "isolatedMotionMaxAdjacentRGBMAE": 17.8802,
+    "visualFindings": "The original profile displays a broad loop and fine adjacent stroke; their visible alpha merges into one connected component at all three tested viewpoints. Source reconstruction is lossless, but connected-component partitioning does not distinguish their physical roots. A generated short-root patch depicts different anatomy.",
+    "sourcePartGeometryArtistApproved": false,
+    "hiddenRootUnderpaintApproved": false,
+    "crossViewStrandIdentityVerified": false,
+    "selectedForProduction": false,
+    "review": "private-assets/exports/p15-153-source-topology/index.html",
+    "evidence": [
+      "evidence/p15-153-source-topology-qa.json"
+    ],
+    "next": "Author matched loop and thin-strand roots from original source geometry, separating the joined alpha strokes by semantic drawing; paint hidden attachment before evaluating cross-view motion."
   }
 }
