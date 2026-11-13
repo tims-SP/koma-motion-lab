@@ -1,0 +1,97 @@
+{
+  "schema": "KOMA_P15_156_WHOLE_VISIBLE_LOOP_ARTMESH_V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 90.0,
+  "material": "one complete connected visible-source upper loop",
+  "sourceLoopPixels": 1205,
+  "topology": "source-owned connected silhouette; pixel-sampled smooth inverse warp with root fixed",
+  "rootAnchorY": 54,
+  "tipAnchorY": 12,
+  "offsets": [
+    0,
+    2,
+    4,
+    8
+  ],
+  "results": {
+    "rigid_00": {
+      "exposedFormerOpaquePixels": 0,
+      "exposedAirPixels": 0,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 0.0,
+      "localRGBMAE": 0.0
+    },
+    "anchored_00": {
+      "exposedFormerOpaquePixels": 0,
+      "exposedAirPixels": 0,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 0.0,
+      "localRGBMAE": 0.0
+    },
+    "rigid_02": {
+      "exposedFormerOpaquePixels": 186,
+      "exposedAirPixels": 186,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 5.3439,
+      "localRGBMAE": 2.6543
+    },
+    "anchored_02": {
+      "exposedFormerOpaquePixels": 80,
+      "exposedAirPixels": 80,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 0.2616,
+      "localRGBMAE": 1.5433
+    },
+    "rigid_04": {
+      "exposedFormerOpaquePixels": 339,
+      "exposedAirPixels": 339,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 8.105,
+      "localRGBMAE": 4.5333
+    },
+    "anchored_04": {
+      "exposedFormerOpaquePixels": 178,
+      "exposedAirPixels": 178,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 0.4482,
+      "localRGBMAE": 2.7888
+    },
+    "rigid_08": {
+      "exposedFormerOpaquePixels": 581,
+      "exposedAirPixels": 581,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 11.1942,
+      "localRGBMAE": 7.5653
+    },
+    "anchored_08": {
+      "exposedFormerOpaquePixels": 371,
+      "exposedAirPixels": 371,
+      "exposedCrownPixels": 0,
+      "rootBoundaryBelowExact": true,
+      "sourcePartBelowRootExact": true,
+      "rootRGBMAE": 0.8117,
+      "localRGBMAE": 5.045
+    }
+  },
+  "nativeSourcePreserved": true,
+  "zeroShiftPixelExact": true,
+  "independentHiddenRootAuthored": false,
+  "artistApprovedPhysicalLoop": false,
+  "continuousYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-156-whole-loop-artmesh/index.html",
+  "next": "Evaluate root-boundary visual continuity at 8px and prepare matched source-owned loop shapes at 112.5° and 135° only after local render acceptance."
+}

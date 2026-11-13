@@ -8334,5 +8334,101 @@
     ],
     "review": "private-assets/exports/p15-155-anchored-crown-motion/index.html",
     "next": "Treat the left line as part of the full loop, build a single continuous loop boundary and a root-fixed deformation over that complete part; check 8px close-up before three-keyview transfer."
+  },
+  "p15_156WholeLoopArtMesh": {
+    "status": "WHOLE_VISIBLE_LOOP_ROOT_ANCHORED_MOTION_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 90.0,
+    "singleSourcePart": "private-assets/exports/p15-156-whole-loop-artmesh/whole-visible-loop.png",
+    "sourcePixels": 1205,
+    "motionGeometry": "source-owned connected silhouette; pixel-sampled smooth inverse warp with root fixed",
+    "rootAnchorY": 54,
+    "tipAnchorY": 12,
+    "offsetTests": {
+      "rigid_00": {
+        "exposedFormerOpaquePixels": 0,
+        "exposedAirPixels": 0,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 0.0,
+        "localRGBMAE": 0.0
+      },
+      "anchored_00": {
+        "exposedFormerOpaquePixels": 0,
+        "exposedAirPixels": 0,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 0.0,
+        "localRGBMAE": 0.0
+      },
+      "rigid_02": {
+        "exposedFormerOpaquePixels": 186,
+        "exposedAirPixels": 186,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 5.3439,
+        "localRGBMAE": 2.6543
+      },
+      "anchored_02": {
+        "exposedFormerOpaquePixels": 80,
+        "exposedAirPixels": 80,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 0.2616,
+        "localRGBMAE": 1.5433
+      },
+      "rigid_04": {
+        "exposedFormerOpaquePixels": 339,
+        "exposedAirPixels": 339,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 8.105,
+        "localRGBMAE": 4.5333
+      },
+      "anchored_04": {
+        "exposedFormerOpaquePixels": 178,
+        "exposedAirPixels": 178,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 0.4482,
+        "localRGBMAE": 2.7888
+      },
+      "rigid_08": {
+        "exposedFormerOpaquePixels": 581,
+        "exposedAirPixels": 581,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 11.1942,
+        "localRGBMAE": 7.5653
+      },
+      "anchored_08": {
+        "exposedFormerOpaquePixels": 371,
+        "exposedAirPixels": 371,
+        "exposedCrownPixels": 0,
+        "rootBoundaryBelowExact": true,
+        "sourcePartBelowRootExact": true,
+        "rootRGBMAE": 0.8117,
+        "localRGBMAE": 5.045
+      }
+    },
+    "keySourceExactAtZero": true,
+    "localRootIntegrityAccepted": true,
+    "visualFindings": "The complete visible source loop bends as one shape under a smooth root-fixed warp. Enlarged 8px frames show a continuous curve and attached crown without doubled left-leg line. Source crown below y54 is unchanged.",
+    "hiddenPhysicalRootsComplete": false,
+    "threeViewIdentityVerified": false,
+    "crossYawVDDVisualAccepted": false,
+    "overall360VisualAccepted": false,
+    "evidence": [
+      "evidence/p15-156-whole-loop-artmesh-qa.json"
+    ],
+    "review": "private-assets/exports/p15-156-whole-loop-artmesh/index.html",
+    "next": "Apply the same source-owned continuous-loop segmentation to 112.5/135 views, then validate matching visible loop attachment and five-angle interpolation against baseline."
   }
 }
