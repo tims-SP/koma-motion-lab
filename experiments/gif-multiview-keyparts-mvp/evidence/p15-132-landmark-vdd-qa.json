@@ -1,0 +1,1047 @@
+{
+  "schema": "KOMA_P15_132_LANDMARK_VDD_ABLATION_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "anchorRoles": [
+    "hair.ahoge.root",
+    "hair.ahoge.apex",
+    "hair.crown",
+    "hair.back.tip",
+    "ear.center",
+    "nose.tip",
+    "chin",
+    "collar.back.center",
+    "shoulder.near.outer",
+    "jacket.gold.trim"
+  ],
+  "method": "localized bounded inverse displacement fields driven by 2D source-view landmark proposals",
+  "methods": {
+    "source_owned": {
+      "maxAdjacentCompositeRGBMAE": 11.8477,
+      "adjacentCompositeRGBMAE": [
+        11.8477,
+        11.5362,
+        10.2206,
+        11.756
+      ],
+      "nativeKeysPixelExact": true
+    },
+    "localized_025": {
+      "maxAdjacentCompositeRGBMAE": 11.8004,
+      "adjacentCompositeRGBMAE": [
+        11.8004,
+        11.4108,
+        10.2806,
+        11.6409
+      ],
+      "nativeKeysPixelExact": true
+    },
+    "localized_050": {
+      "maxAdjacentCompositeRGBMAE": 12.0513,
+      "adjacentCompositeRGBMAE": [
+        12.0513,
+        11.1833,
+        10.4383,
+        11.5566
+      ],
+      "nativeKeysPixelExact": true
+    },
+    "localized_075": {
+      "maxAdjacentCompositeRGBMAE": 12.4235,
+      "adjacentCompositeRGBMAE": [
+        12.4235,
+        11.0194,
+        10.5566,
+        11.5838
+      ],
+      "nativeKeysPixelExact": true
+    }
+  },
+  "displacements": {
+    "localized_025": [
+      {
+        "yaw": 90.0,
+        "applied": []
+      },
+      {
+        "yaw": 101.25,
+        "applied": [
+          {
+            "role": "hair.ahoge.root",
+            "sourceXY": [
+              205.0,
+              65.0
+            ],
+            "targetXY": [
+              249.5,
+              68.5
+            ],
+            "offsetXY": [
+              10.0,
+              0.875
+            ]
+          },
+          {
+            "role": "hair.ahoge.apex",
+            "sourceXY": [
+              233.0,
+              5.0
+            ],
+            "targetXY": [
+              260.5,
+              13.0
+            ],
+            "offsetXY": [
+              6.875,
+              2.0
+            ]
+          },
+          {
+            "role": "hair.crown",
+            "sourceXY": [
+              229.0,
+              57.0
+            ],
+            "targetXY": [
+              241.5,
+              62.0
+            ],
+            "offsetXY": [
+              3.125,
+              1.25
+            ]
+          },
+          {
+            "role": "hair.back.tip",
+            "sourceXY": [
+              116.0,
+              279.0
+            ],
+            "targetXY": [
+              130.0,
+              275.5
+            ],
+            "offsetXY": [
+              3.5,
+              -0.875
+            ]
+          },
+          {
+            "role": "ear.center",
+            "sourceXY": [
+              239.0,
+              244.0
+            ],
+            "targetXY": [
+              247.5,
+              249.0
+            ],
+            "offsetXY": [
+              2.125,
+              1.25
+            ]
+          },
+          {
+            "role": "nose.tip",
+            "sourceXY": [
+              340.0,
+              248.0
+            ],
+            "targetXY": [
+              332.5,
+              249.5
+            ],
+            "offsetXY": [
+              -1.875,
+              0.375
+            ]
+          },
+          {
+            "role": "chin",
+            "sourceXY": [
+              289.0,
+              299.0
+            ],
+            "targetXY": [
+              298.0,
+              290.5
+            ],
+            "offsetXY": [
+              2.25,
+              -2.125
+            ]
+          },
+          {
+            "role": "collar.back.center",
+            "sourceXY": [
+              208.0,
+              332.0
+            ],
+            "targetXY": [
+              211.5,
+              327.0
+            ],
+            "offsetXY": [
+              0.875,
+              -1.25
+            ]
+          },
+          {
+            "role": "shoulder.near.outer",
+            "sourceXY": [
+              152.0,
+              369.0
+            ],
+            "targetXY": [
+              156.5,
+              366.5
+            ],
+            "offsetXY": [
+              1.125,
+              -0.625
+            ]
+          },
+          {
+            "role": "jacket.gold.trim",
+            "sourceXY": [
+              159.0,
+              365.0
+            ],
+            "targetXY": [
+              179.5,
+              353.0
+            ],
+            "offsetXY": [
+              5.125,
+              -3.0
+            ]
+          }
+        ]
+      },
+      {
+        "yaw": 112.5,
+        "applied": []
+      },
+      {
+        "yaw": 123.75,
+        "applied": [
+          {
+            "role": "hair.ahoge.root",
+            "sourceXY": [
+              294.0,
+              72.0
+            ],
+            "targetXY": [
+              279.0,
+              69.5
+            ],
+            "offsetXY": [
+              -3.75,
+              -0.625
+            ]
+          },
+          {
+            "role": "hair.ahoge.apex",
+            "sourceXY": [
+              288.0,
+              21.0
+            ],
+            "targetXY": [
+              273.0,
+              14.5
+            ],
+            "offsetXY": [
+              -3.75,
+              -1.625
+            ]
+          },
+          {
+            "role": "hair.crown",
+            "sourceXY": [
+              254.0,
+              67.0
+            ],
+            "targetXY": [
+              252.0,
+              65.0
+            ],
+            "offsetXY": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "role": "hair.back.tip",
+            "sourceXY": [
+              144.0,
+              272.0
+            ],
+            "targetXY": [
+              155.5,
+              277.5
+            ],
+            "offsetXY": [
+              2.875,
+              1.375
+            ]
+          },
+          {
+            "role": "ear.center",
+            "sourceXY": [
+              256.0,
+              254.0
+            ],
+            "targetXY": [
+              283.0,
+              261.0
+            ],
+            "offsetXY": [
+              6.75,
+              1.75
+            ]
+          },
+          {
+            "role": "nose.tip",
+            "sourceXY": [
+              325.0,
+              251.0
+            ],
+            "targetXY": [
+              327.0,
+              262.0
+            ],
+            "offsetXY": [
+              0.5,
+              2.75
+            ]
+          },
+          {
+            "role": "chin",
+            "sourceXY": [
+              307.0,
+              282.0
+            ],
+            "targetXY": [
+              306.0,
+              284.5
+            ],
+            "offsetXY": [
+              -0.25,
+              0.625
+            ]
+          },
+          {
+            "role": "collar.back.center",
+            "sourceXY": [
+              215.0,
+              322.0
+            ],
+            "targetXY": [
+              218.0,
+              321.0
+            ],
+            "offsetXY": [
+              0.75,
+              -0.25
+            ]
+          },
+          {
+            "role": "shoulder.near.outer",
+            "sourceXY": [
+              161.0,
+              364.0
+            ],
+            "targetXY": [
+              169.5,
+              359.5
+            ],
+            "offsetXY": [
+              2.125,
+              -1.125
+            ]
+          },
+          {
+            "role": "jacket.gold.trim",
+            "sourceXY": [
+              200.0,
+              341.0
+            ],
+            "targetXY": [
+              208.5,
+              338.5
+            ],
+            "offsetXY": [
+              2.125,
+              -0.625
+            ]
+          }
+        ]
+      },
+      {
+        "yaw": 135.0,
+        "applied": []
+      }
+    ],
+    "localized_050": [
+      {
+        "yaw": 90.0,
+        "applied": []
+      },
+      {
+        "yaw": 101.25,
+        "applied": [
+          {
+            "role": "hair.ahoge.root",
+            "sourceXY": [
+              205.0,
+              65.0
+            ],
+            "targetXY": [
+              249.5,
+              68.5
+            ],
+            "offsetXY": [
+              10.0,
+              1.75
+            ]
+          },
+          {
+            "role": "hair.ahoge.apex",
+            "sourceXY": [
+              233.0,
+              5.0
+            ],
+            "targetXY": [
+              260.5,
+              13.0
+            ],
+            "offsetXY": [
+              10.0,
+              4.0
+            ]
+          },
+          {
+            "role": "hair.crown",
+            "sourceXY": [
+              229.0,
+              57.0
+            ],
+            "targetXY": [
+              241.5,
+              62.0
+            ],
+            "offsetXY": [
+              6.25,
+              2.5
+            ]
+          },
+          {
+            "role": "hair.back.tip",
+            "sourceXY": [
+              116.0,
+              279.0
+            ],
+            "targetXY": [
+              130.0,
+              275.5
+            ],
+            "offsetXY": [
+              7.0,
+              -1.75
+            ]
+          },
+          {
+            "role": "ear.center",
+            "sourceXY": [
+              239.0,
+              244.0
+            ],
+            "targetXY": [
+              247.5,
+              249.0
+            ],
+            "offsetXY": [
+              4.25,
+              2.5
+            ]
+          },
+          {
+            "role": "nose.tip",
+            "sourceXY": [
+              340.0,
+              248.0
+            ],
+            "targetXY": [
+              332.5,
+              249.5
+            ],
+            "offsetXY": [
+              -3.75,
+              0.75
+            ]
+          },
+          {
+            "role": "chin",
+            "sourceXY": [
+              289.0,
+              299.0
+            ],
+            "targetXY": [
+              298.0,
+              290.5
+            ],
+            "offsetXY": [
+              4.5,
+              -4.25
+            ]
+          },
+          {
+            "role": "collar.back.center",
+            "sourceXY": [
+              208.0,
+              332.0
+            ],
+            "targetXY": [
+              211.5,
+              327.0
+            ],
+            "offsetXY": [
+              1.75,
+              -2.5
+            ]
+          },
+          {
+            "role": "shoulder.near.outer",
+            "sourceXY": [
+              152.0,
+              369.0
+            ],
+            "targetXY": [
+              156.5,
+              366.5
+            ],
+            "offsetXY": [
+              2.25,
+              -1.25
+            ]
+          },
+          {
+            "role": "jacket.gold.trim",
+            "sourceXY": [
+              159.0,
+              365.0
+            ],
+            "targetXY": [
+              179.5,
+              353.0
+            ],
+            "offsetXY": [
+              10.0,
+              -6.0
+            ]
+          }
+        ]
+      },
+      {
+        "yaw": 112.5,
+        "applied": []
+      },
+      {
+        "yaw": 123.75,
+        "applied": [
+          {
+            "role": "hair.ahoge.root",
+            "sourceXY": [
+              294.0,
+              72.0
+            ],
+            "targetXY": [
+              279.0,
+              69.5
+            ],
+            "offsetXY": [
+              -7.5,
+              -1.25
+            ]
+          },
+          {
+            "role": "hair.ahoge.apex",
+            "sourceXY": [
+              288.0,
+              21.0
+            ],
+            "targetXY": [
+              273.0,
+              14.5
+            ],
+            "offsetXY": [
+              -7.5,
+              -3.25
+            ]
+          },
+          {
+            "role": "hair.crown",
+            "sourceXY": [
+              254.0,
+              67.0
+            ],
+            "targetXY": [
+              252.0,
+              65.0
+            ],
+            "offsetXY": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "role": "hair.back.tip",
+            "sourceXY": [
+              144.0,
+              272.0
+            ],
+            "targetXY": [
+              155.5,
+              277.5
+            ],
+            "offsetXY": [
+              5.75,
+              2.75
+            ]
+          },
+          {
+            "role": "ear.center",
+            "sourceXY": [
+              256.0,
+              254.0
+            ],
+            "targetXY": [
+              283.0,
+              261.0
+            ],
+            "offsetXY": [
+              10.0,
+              3.5
+            ]
+          },
+          {
+            "role": "nose.tip",
+            "sourceXY": [
+              325.0,
+              251.0
+            ],
+            "targetXY": [
+              327.0,
+              262.0
+            ],
+            "offsetXY": [
+              1.0,
+              5.5
+            ]
+          },
+          {
+            "role": "chin",
+            "sourceXY": [
+              307.0,
+              282.0
+            ],
+            "targetXY": [
+              306.0,
+              284.5
+            ],
+            "offsetXY": [
+              -0.5,
+              1.25
+            ]
+          },
+          {
+            "role": "collar.back.center",
+            "sourceXY": [
+              215.0,
+              322.0
+            ],
+            "targetXY": [
+              218.0,
+              321.0
+            ],
+            "offsetXY": [
+              1.5,
+              -0.5
+            ]
+          },
+          {
+            "role": "shoulder.near.outer",
+            "sourceXY": [
+              161.0,
+              364.0
+            ],
+            "targetXY": [
+              169.5,
+              359.5
+            ],
+            "offsetXY": [
+              4.25,
+              -2.25
+            ]
+          },
+          {
+            "role": "jacket.gold.trim",
+            "sourceXY": [
+              200.0,
+              341.0
+            ],
+            "targetXY": [
+              208.5,
+              338.5
+            ],
+            "offsetXY": [
+              4.25,
+              -1.25
+            ]
+          }
+        ]
+      },
+      {
+        "yaw": 135.0,
+        "applied": []
+      }
+    ],
+    "localized_075": [
+      {
+        "yaw": 90.0,
+        "applied": []
+      },
+      {
+        "yaw": 101.25,
+        "applied": [
+          {
+            "role": "hair.ahoge.root",
+            "sourceXY": [
+              205.0,
+              65.0
+            ],
+            "targetXY": [
+              249.5,
+              68.5
+            ],
+            "offsetXY": [
+              10.0,
+              2.625
+            ]
+          },
+          {
+            "role": "hair.ahoge.apex",
+            "sourceXY": [
+              233.0,
+              5.0
+            ],
+            "targetXY": [
+              260.5,
+              13.0
+            ],
+            "offsetXY": [
+              10.0,
+              6.0
+            ]
+          },
+          {
+            "role": "hair.crown",
+            "sourceXY": [
+              229.0,
+              57.0
+            ],
+            "targetXY": [
+              241.5,
+              62.0
+            ],
+            "offsetXY": [
+              9.375,
+              3.75
+            ]
+          },
+          {
+            "role": "hair.back.tip",
+            "sourceXY": [
+              116.0,
+              279.0
+            ],
+            "targetXY": [
+              130.0,
+              275.5
+            ],
+            "offsetXY": [
+              10.0,
+              -2.625
+            ]
+          },
+          {
+            "role": "ear.center",
+            "sourceXY": [
+              239.0,
+              244.0
+            ],
+            "targetXY": [
+              247.5,
+              249.0
+            ],
+            "offsetXY": [
+              6.375,
+              3.75
+            ]
+          },
+          {
+            "role": "nose.tip",
+            "sourceXY": [
+              340.0,
+              248.0
+            ],
+            "targetXY": [
+              332.5,
+              249.5
+            ],
+            "offsetXY": [
+              -5.625,
+              1.125
+            ]
+          },
+          {
+            "role": "chin",
+            "sourceXY": [
+              289.0,
+              299.0
+            ],
+            "targetXY": [
+              298.0,
+              290.5
+            ],
+            "offsetXY": [
+              6.75,
+              -6.375
+            ]
+          },
+          {
+            "role": "collar.back.center",
+            "sourceXY": [
+              208.0,
+              332.0
+            ],
+            "targetXY": [
+              211.5,
+              327.0
+            ],
+            "offsetXY": [
+              2.625,
+              -3.75
+            ]
+          },
+          {
+            "role": "shoulder.near.outer",
+            "sourceXY": [
+              152.0,
+              369.0
+            ],
+            "targetXY": [
+              156.5,
+              366.5
+            ],
+            "offsetXY": [
+              3.375,
+              -1.875
+            ]
+          },
+          {
+            "role": "jacket.gold.trim",
+            "sourceXY": [
+              159.0,
+              365.0
+            ],
+            "targetXY": [
+              179.5,
+              353.0
+            ],
+            "offsetXY": [
+              10.0,
+              -9.0
+            ]
+          }
+        ]
+      },
+      {
+        "yaw": 112.5,
+        "applied": []
+      },
+      {
+        "yaw": 123.75,
+        "applied": [
+          {
+            "role": "hair.ahoge.root",
+            "sourceXY": [
+              294.0,
+              72.0
+            ],
+            "targetXY": [
+              279.0,
+              69.5
+            ],
+            "offsetXY": [
+              -10.0,
+              -1.875
+            ]
+          },
+          {
+            "role": "hair.ahoge.apex",
+            "sourceXY": [
+              288.0,
+              21.0
+            ],
+            "targetXY": [
+              273.0,
+              14.5
+            ],
+            "offsetXY": [
+              -10.0,
+              -4.875
+            ]
+          },
+          {
+            "role": "hair.crown",
+            "sourceXY": [
+              254.0,
+              67.0
+            ],
+            "targetXY": [
+              252.0,
+              65.0
+            ],
+            "offsetXY": [
+              -1.5,
+              -1.5
+            ]
+          },
+          {
+            "role": "hair.back.tip",
+            "sourceXY": [
+              144.0,
+              272.0
+            ],
+            "targetXY": [
+              155.5,
+              277.5
+            ],
+            "offsetXY": [
+              8.625,
+              4.125
+            ]
+          },
+          {
+            "role": "ear.center",
+            "sourceXY": [
+              256.0,
+              254.0
+            ],
+            "targetXY": [
+              283.0,
+              261.0
+            ],
+            "offsetXY": [
+              10.0,
+              5.25
+            ]
+          },
+          {
+            "role": "nose.tip",
+            "sourceXY": [
+              325.0,
+              251.0
+            ],
+            "targetXY": [
+              327.0,
+              262.0
+            ],
+            "offsetXY": [
+              1.5,
+              8.25
+            ]
+          },
+          {
+            "role": "chin",
+            "sourceXY": [
+              307.0,
+              282.0
+            ],
+            "targetXY": [
+              306.0,
+              284.5
+            ],
+            "offsetXY": [
+              -0.75,
+              1.875
+            ]
+          },
+          {
+            "role": "collar.back.center",
+            "sourceXY": [
+              215.0,
+              322.0
+            ],
+            "targetXY": [
+              218.0,
+              321.0
+            ],
+            "offsetXY": [
+              2.25,
+              -0.75
+            ]
+          },
+          {
+            "role": "shoulder.near.outer",
+            "sourceXY": [
+              161.0,
+              364.0
+            ],
+            "targetXY": [
+              169.5,
+              359.5
+            ],
+            "offsetXY": [
+              6.375,
+              -3.375
+            ]
+          },
+          {
+            "role": "jacket.gold.trim",
+            "sourceXY": [
+              200.0,
+              341.0
+            ],
+            "targetXY": [
+              208.5,
+              338.5
+            ],
+            "offsetXY": [
+              6.375,
+              -1.875
+            ]
+          }
+        ]
+      },
+      {
+        "yaw": 135.0,
+        "applied": []
+      }
+    ]
+  },
+  "sourceArtPreserved": true,
+  "artistApprovedCorrespondence": false,
+  "truePhysicalAnchorsVerified": false,
+  "occludedUnderpaintAvailable": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-132-landmark-vdd/index.html",
+  "next": "Replace provisional point correspondences with verified per-part geometry and complete source-painted hidden surfaces; use actual face, hair and garment visibility control."
+}

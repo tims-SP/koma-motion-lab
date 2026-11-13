@@ -6966,5 +6966,51 @@
     ],
     "review": "private-assets/exports/p15-131-semantic-landmarks/index.html",
     "next": "Use source-guided 2D landmark correction and individually approved hair/face/garment source layer masks, then perform a genuine 90–135 keyview VDD visual check."
+  },
+  "p15_132LandmarkLocalVDD": {
+    "status": "LOCAL_SEMANTIC_DISPLACEMENT_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "angles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "roles": [
+      "hair.ahoge.root",
+      "hair.ahoge.apex",
+      "hair.crown",
+      "hair.back.tip",
+      "ear.center",
+      "nose.tip",
+      "chin",
+      "collar.back.center",
+      "shoulder.near.outer",
+      "jacket.gold.trim"
+    ],
+    "testedVariants": [
+      "source_owned",
+      "localized_025",
+      "localized_050",
+      "localized_075"
+    ],
+    "maxAdjacentCompositeRGBMAE": {
+      "source_owned": 11.8477,
+      "localized_025": 11.8004,
+      "localized_050": 12.0513,
+      "localized_075": 12.4235
+    },
+    "bestDiagnostic": "localized_025",
+    "visualFindings": "Small per-anchor inverse deformation changes little visually and yields a slight adjacent-frame error reduction; hair/face ink ghosts and neckline/coat gaps remain. Larger deformation worsens the max jump. Candidate is not an approved ArtMesh/VDD asset.",
+    "nativeKeyframesPixelExact": true,
+    "artistApprovedLandmarks": false,
+    "hiddenUnderpaintVerified": false,
+    "fullVisualAcceptance": false,
+    "evidence": [
+      "evidence/p15-132-landmark-vdd-qa.json"
+    ],
+    "review": "private-assets/exports/p15-132-landmark-vdd/index.html",
+    "next": "Replace provisional centroid/point-based movement with separate independently authored hair/face/collar textures, source mask ownership, and occluded underpaint; validate continuous frames before acceptance."
   }
 }
