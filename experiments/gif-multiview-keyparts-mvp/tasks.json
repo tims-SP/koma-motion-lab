@@ -6597,5 +6597,76 @@
     ],
     "review": "private-assets/exports/p15-122-source-owned/index.html",
     "next": "Replace whole-frame source ownership with per-part articulated visibility, source correspondences, anchors and native hidden-surface materials for 90–180 degrees."
+  },
+  "p15_123RearPartVDD": {
+    "status": "REAR_PART_VDD_RENDER_AND_VISUAL_AUDIT_COMPLETED",
+    "characterId": "p0_character_001",
+    "angles": [
+      90,
+      135,
+      180
+    ],
+    "partRoles": [
+      "garment.visible",
+      "skin.visible",
+      "hair.visible"
+    ],
+    "sourceAnchors": {
+      "90": {
+        "garment.visible": [
+          238.001,
+          380.302
+        ],
+        "skin.visible": [
+          289.063,
+          243.883
+        ],
+        "hair.visible": [
+          212.938,
+          178.012
+        ]
+      },
+      "135": {
+        "garment.visible": [
+          230.035,
+          386.087
+        ],
+        "skin.visible": [
+          310.277,
+          253.319
+        ],
+        "hair.visible": [
+          222.637,
+          185.197
+        ]
+      },
+      "180": {
+        "garment.visible": [
+          222.927,
+          388.305
+        ],
+        "skin.visible": [
+          0.0,
+          0.0
+        ],
+        "hair.visible": [
+          225.151,
+          188.875
+        ]
+      }
+    },
+    "nativeKeyframesPixelExact": true,
+    "maxAdjacentCompositeRGBMAE": 10.6396,
+    "comparisonP15_122MaxAdjacentRGBMAE": 9.4029,
+    "visualFindings": "Per-part source flow makes jacket detail locally more legible but creates fragmented face/neck geometry, broken hair outlines and garment seams at 112.5 degrees. Not accepted as production VDD.",
+    "visualAccepted": false,
+    "physicalAnchorCorrespondenceValidated": false,
+    "hiddenUnderpaintValidated": false,
+    "focusedRegressionTestsPassed": 6,
+    "evidence": [
+      "evidence/p15-123-part-vdd-qa.json"
+    ],
+    "review": "private-assets/exports/p15-123-part-vdd/index.html",
+    "next": "Obtain source-painted and artist-approved anatomical part boundaries and hidden materials, especially 90–135 face/ear and clothing transitions, then validate per-part anchor correspondences."
   }
 }
