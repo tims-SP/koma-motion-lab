@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_99_SOURCE_OWNED_TOPOLOGY_READY_SHARED_MESH_CORRESPONDENCE_NEXT",
+  "status": "P15_100_SHARED_FACE_MESH_VERIFIED_HEAD_HAIR_CORRESPONDENCE_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-99 real SAM3 eye visibility, exact 7-role source partitions and layered yaw occlusion comparison",
+  "lastCompleted": "P15-100 shared 2D face mesh correspondence with persistent view UVs and four real VDD render comparisons",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -4810,6 +4810,75 @@
       "evidence/p15-99-topology-qa.json",
       "evidence/p15-99-topology-vdd-qa.json",
       "evidence/p15-99-browser-qa.json"
+    ]
+  },
+  "p15_100SharedFaceMesh": {
+    "status": "SOURCE_OWNED_SHARED_FACE_MESH_AND_VIEW_UV_GEOMETRY_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      75
+    ],
+    "renderedAngles": [
+      60,
+      61.875,
+      63.75,
+      65.625,
+      67.5,
+      69.375,
+      71.25,
+      73.125,
+      75
+    ],
+    "vertexCount": 22,
+    "validTriangles": 28,
+    "explicitlyExcludedThinTriangles": 1,
+    "sampledFaceMeshFoldedTriangles": 0,
+    "faceCoverageFractionMin": 0.9966192701600876,
+    "sourceEndpointPixelsExact": true,
+    "viewDependentUVStored": true,
+    "sourceOwnedEyeHairInput": true,
+    "faceMaterialGeometry": "regularized 2D Delaunay piecewise-affine shared triangle map",
+    "renderedCandidateCount": 36,
+    "methodNames": [
+      "mesh_source_blend",
+      "mesh_undercoat_blend",
+      "mesh_owner_eyes",
+      "mesh_rear_owned"
+    ],
+    "faceMaxAdjacentRGBMAE": {
+      "p15-99-topology_staged": 20.6421,
+      "mesh_source_blend": 19.3208,
+      "mesh_undercoat_blend": 19.8716,
+      "mesh_owner_eyes": 20.0615,
+      "mesh_rear_owned": 21.4652
+    },
+    "midpointAdjacentRGBMAE": {
+      "p15-99-topology_staged": 17.854,
+      "mesh_source_blend": 13.4735,
+      "mesh_undercoat_blend": 14.3587,
+      "mesh_owner_eyes": 15.1006,
+      "mesh_rear_owned": 21.4652
+    },
+    "unitTestsPass": 13,
+    "browserChecksPass": 72,
+    "localFaceGeometryAccepted": true,
+    "fullHeadArtMeshAccepted": false,
+    "continuousYawVisualAccepted": false,
+    "visualGate": "SHARED_HEAD_HAIR_MESH_AND_VISIBILITY_CORRESPONDENCE",
+    "next": "Align source-owned rear hair, fringe, profile contour and occluded face surfaces to the same shared head mesh, validating inter-layer texture seams in 60°–75° yaw",
+    "review": "private-assets/exports/p15-100-mesh-vdd/index.html",
+    "mesh": "private-assets/exports/p15-100-shared-face-mesh/face-shared-mesh.json",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-100-shared-face-mesh-review.zip",
+      "sha256": "7c692c603390432826150b5a52486039909be7b2e7177fd38c473a184d75f24e",
+      "bytes": 47534175,
+      "entries": 78
+    },
+    "evidence": [
+      "evidence/p15-100-mesh-qa.json",
+      "evidence/p15-100-render-qa.json",
+      "evidence/p15-100-browser-qa.json"
     ]
   }
 }

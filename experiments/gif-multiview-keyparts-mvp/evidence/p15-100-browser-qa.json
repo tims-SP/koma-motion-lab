@@ -1,0 +1,441 @@
+{
+  "schema": "KOMA_P15_100_SHARED_MESH_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_source_blend",
+      "angleIndex": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "mesh_rear_owned",
+      "angleIndex": 8,
+      "imagesLoaded": 5,
+      "screenshotSHA256": "a371d12a857e8072732093b0ed1e5f9cc4635abed1886b2508d3dcc48c157bea"
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_source_blend",
+      "angleIndex": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_undercoat_blend",
+      "angleIndex": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_owner_eyes",
+      "angleIndex": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "mesh_rear_owned",
+      "angleIndex": 8,
+      "imagesLoaded": 5,
+      "screenshotSHA256": "6bb4105315e9464c4e66016486becd7be246fc568c0371e3b46330242ca52ab2"
+    }
+  ],
+  "errors": []
+}
