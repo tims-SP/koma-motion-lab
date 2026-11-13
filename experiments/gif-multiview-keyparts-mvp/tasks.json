@@ -7944,5 +7944,45 @@
     ],
     "review": "private-assets/exports/p15-148-native-ahoge/registration.html",
     "next": "Paint an aligned complete ahoge loop at each source key including both crown attachment roots and underlying scalp material. Use source-owner replacement with full root identity before continuous yaw ArtMesh."
+  },
+  "p15_149AhogeCrownAttachment": {
+    "status": "CROWN_ATTACHMENT_BLEND_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "registeredIndependentSource": "private-assets/p15-148-ahoge/ahoge-native.png",
+    "sourceNativeSHA256": "71ef0fcf1dc66ddf1c890f429dfb385d58daf6070068281335ed6bbe90bd9b6c",
+    "testedFadeVariants": [
+      "crown_fade_65",
+      "crown_fade_78",
+      "crown_fade_90"
+    ],
+    "bestStudyCandidate": "crown_fade_65",
+    "maxAdjacentRGBMAE": {
+      "canonical": 12.0984,
+      "p15_148": 12.1844,
+      "crown_fade_65": 12.1655
+    },
+    "rootAlphaHoles": 6,
+    "original90And135PixelExact": true,
+    "visualFindings": "Opacity tapering reconnects the independent loop to the existing 112.5-degree hair crown more smoothly than a hard horizontal cut, but the loop tail remains clipped and root linework still diverges. The source canonical arc is visually preferable and continues to be used as baseline.",
+    "selectedForProduction": false,
+    "artistApprovedRootAndScalp": false,
+    "fullYawVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-149-root-attachment-qa.json"
+    ],
+    "review": "private-assets/exports/p15-149-root-attachment/index.html",
+    "next": "Obtain exact aligned 90/112.5/135 part artwork including both attached roots and hidden crown scalp. Only retest when a visually coherent source can replace the failed root seam."
   }
 }
