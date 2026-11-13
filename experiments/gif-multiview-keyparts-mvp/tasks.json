@@ -7187,5 +7187,43 @@
       "evidence/p15-136-underpaint-registration-qa.json"
     ],
     "next": "Produce a source-authored closed front-fringe/near-eye ArtMesh and rear-scalp paint, refine eye/ear source ownership and test with actual motion rather than static translation only."
+  },
+  "p15_137EyeRearScalpReveal": {
+    "status": "REGION_REVEAL_STRESS_AND_VISUAL_REVIEW_COMPLETED",
+    "characterId": "p0_character_001",
+    "yaw": 112.5,
+    "baseline": "p15_136",
+    "reviewedVariants": [
+      "p15_136",
+      "eye_08",
+      "eye_16",
+      "rear_12",
+      "eye_rear_08",
+      "eye_rear_16"
+    ],
+    "selectedDiagnostic": "eye_08",
+    "selectedInferredPixels": 46,
+    "eyeHoleCount12px": {
+      "baseline": 219,
+      "candidate": 214
+    },
+    "eyeHoleCount24px": {
+      "baseline": 327,
+      "candidate": 302
+    },
+    "rearScalpHoleCount24px": {
+      "baseline": 5296,
+      "candidate": 5296
+    },
+    "visualFindings": "Small eye-only extension is visually tolerable but marginal; nearest-color rear scalp extrapolation produces an extraneous dark contour along crown/back and is unsuitable as hidden original art. Source painting and true yaw transitions require new geometry.",
+    "continuousYawVerified": false,
+    "hiddenScalpSourcePaintApproved": false,
+    "artistEyeBoundaryApproved": false,
+    "overallVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-137-occlusion-regions-qa.json"
+    ],
+    "review": "private-assets/exports/p15-137-occlusion-regions/index.html",
+    "next": "Create a true behind-hair rear scalp/face RGBA source with registered anatomy and authored eye/bang ownership, then test under 90–135 yaw, not only image-space translation."
   }
 }

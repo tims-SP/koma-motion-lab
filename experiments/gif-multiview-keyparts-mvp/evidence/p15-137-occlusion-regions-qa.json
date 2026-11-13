@@ -1,0 +1,259 @@
+{
+  "schema": "KOMA_P15_137_REAR_SCALP_EYE_REVEAL_V1",
+  "characterId": "p0_character_001",
+  "yaw": 112.5,
+  "regions": {
+    "eye": [
+      175,
+      295,
+      265,
+      365
+    ],
+    "rear_scalp": [
+      52,
+      305,
+      85,
+      245
+    ],
+    "neck": [
+      285,
+      370,
+      140,
+      320
+    ],
+    "ear": [
+      180,
+      325,
+      195,
+      280
+    ]
+  },
+  "variants": {
+    "p15_136": {
+      "addedInferredPixels": 0,
+      "shiftTests": {
+        "0": {
+          "holes": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6096
+        },
+        "12": {
+          "holes": {
+            "all": 3584,
+            "eye": 219,
+            "rear_scalp": 2630,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 14.6153
+        },
+        "24": {
+          "holes": {
+            "all": 6508,
+            "eye": 327,
+            "rear_scalp": 5296,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 20.0723
+        }
+      }
+    },
+    "eye_08": {
+      "addedInferredPixels": 46,
+      "shiftTests": {
+        "0": {
+          "holes": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6099
+        },
+        "12": {
+          "holes": {
+            "all": 3579,
+            "eye": 214,
+            "rear_scalp": 2630,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 14.6083
+        },
+        "24": {
+          "holes": {
+            "all": 6483,
+            "eye": 302,
+            "rear_scalp": 5296,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 20.0523
+        }
+      }
+    },
+    "eye_16": {
+      "addedInferredPixels": 125,
+      "shiftTests": {
+        "0": {
+          "holes": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6105
+        },
+        "12": {
+          "holes": {
+            "all": 3540,
+            "eye": 175,
+            "rear_scalp": 2630,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 14.5882
+        },
+        "24": {
+          "holes": {
+            "all": 6429,
+            "eye": 248,
+            "rear_scalp": 5296,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 20.0257
+        }
+      }
+    },
+    "rear_12": {
+      "addedInferredPixels": 3933,
+      "shiftTests": {
+        "0": {
+          "holes": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6291
+        },
+        "12": {
+          "holes": {
+            "all": 3427,
+            "eye": 219,
+            "rear_scalp": 2473,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 14.5699
+        },
+        "24": {
+          "holes": {
+            "all": 4939,
+            "eye": 327,
+            "rear_scalp": 3727,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 19.6261
+        }
+      }
+    },
+    "eye_rear_08": {
+      "addedInferredPixels": 2662,
+      "shiftTests": {
+        "0": {
+          "holes": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6236
+        },
+        "12": {
+          "holes": {
+            "all": 3523,
+            "eye": 214,
+            "rear_scalp": 2574,
+            "neck": 1,
+            "ear": 0
+          },
+          "rgbMAE": 14.5865
+        },
+        "24": {
+          "holes": {
+            "all": 5685,
+            "eye": 302,
+            "rear_scalp": 4498,
+            "neck": 1,
+            "ear": 0
+          },
+          "rgbMAE": 19.7795
+        }
+      }
+    },
+    "eye_rear_16": {
+      "addedInferredPixels": 5207,
+      "shiftTests": {
+        "0": {
+          "holes": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6341
+        },
+        "12": {
+          "holes": {
+            "all": 2849,
+            "eye": 175,
+            "rear_scalp": 1939,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 14.49
+        },
+        "24": {
+          "holes": {
+            "all": 4110,
+            "eye": 248,
+            "rear_scalp": 2977,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 19.4683
+        }
+      }
+    }
+  },
+  "sourcePixelsUnchanged": true,
+  "nativeGeneratedUnderpaintUnchanged": true,
+  "inference": "nearest visible underpaint RGBA, constrained to originally hair-covered pixels of chosen source anatomy region",
+  "baseline": "p15_136",
+  "selectedDiagnostic": "eye_08",
+  "visualFindings": {
+    "eye_08": "Small decrease in near-eye reveal gaps without new prominent shapes in the contact sheet",
+    "rear_scalp": "Extrapolated rear scalp produces obvious dark fringe and crown artifacts; unsuitable for visual acceptance"
+  },
+  "continuousYawRendered": false,
+  "physicalHairVisibilityVerified": false,
+  "artistApprovedEyeArt": false,
+  "rearScalpSourcePaintApproved": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-137-occlusion-regions/index.html",
+  "next": "Source-paint eye/face and rear-scalp hidden regions with anatomical silhouettes; verify at intermediate yaw as well as translation."
+}
