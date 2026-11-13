@@ -1,0 +1,92 @@
+{
+  "schema": "KOMA_P15_122_SOURCE_OWNER_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0,
+    146.25,
+    157.5,
+    168.75,
+    180.0
+  ],
+  "ownerByAngle": {
+    "90.0": 90,
+    "101.25": 90,
+    "112.5": 135,
+    "123.75": 135,
+    "135.0": 135,
+    "146.25": 135,
+    "157.5": 180,
+    "168.75": 180,
+    "180.0": 180
+  },
+  "method": "bidirectional DIS optical flow, one native drawing owner per interpolated frame",
+  "adjacentCompositeRGBMAE": [
+    6.6562,
+    9.4029,
+    5.8241,
+    5.8859,
+    5.6138,
+    7.7515,
+    6.1357,
+    6.2491
+  ],
+  "maxAdjacentCompositeRGBMAE": 9.4029,
+  "meanIntermediatePartialAlphaPixels": 2593.3333333333335,
+  "sourceKeyframePixelExact": true,
+  "frames": [
+    {
+      "angle": 90.0,
+      "path": "private-assets/exports/p15-122-source-owned/yaw090p00.png",
+      "sha256": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9"
+    },
+    {
+      "angle": 101.25,
+      "path": "private-assets/exports/p15-122-source-owned/yaw101p25.png",
+      "sha256": "0a92ff82303a2a8650146ab02b3bad0e0c3f26756a0c08d5fa41b75ec01796d4"
+    },
+    {
+      "angle": 112.5,
+      "path": "private-assets/exports/p15-122-source-owned/yaw112p50.png",
+      "sha256": "7fc32dba6ac0dd7b362bc69c5167d7ba17ba30f22f4bd575acd5d5d7fa0f89b0"
+    },
+    {
+      "angle": 123.75,
+      "path": "private-assets/exports/p15-122-source-owned/yaw123p75.png",
+      "sha256": "4a614bebf8d5f4f29fb7ebb08a538f4424ee335df0835034dcb6ccb2293b85f7"
+    },
+    {
+      "angle": 135.0,
+      "path": "private-assets/exports/p15-122-source-owned/yaw135p00.png",
+      "sha256": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16"
+    },
+    {
+      "angle": 146.25,
+      "path": "private-assets/exports/p15-122-source-owned/yaw146p25.png",
+      "sha256": "035898a7427915d24a16f27da87a14aff415759886cbfc7240230c874d5a3880"
+    },
+    {
+      "angle": 157.5,
+      "path": "private-assets/exports/p15-122-source-owned/yaw157p50.png",
+      "sha256": "630247b5b76c8e0c27d73e16529e9c888649383a6065a01098be0698096433dd"
+    },
+    {
+      "angle": 168.75,
+      "path": "private-assets/exports/p15-122-source-owned/yaw168p75.png",
+      "sha256": "9748069c7af3cb29e182b40b1c3a3855d53ec4d1e339f173471394db99c13a36"
+    },
+    {
+      "angle": 180.0,
+      "path": "private-assets/exports/p15-122-source-owned/yaw180p00.png",
+      "sha256": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363"
+    }
+  ],
+  "review": "private-assets/exports/p15-122-source-owned/index.html",
+  "actualArtMeshGeometryVerified": false,
+  "underpaintVerified": false,
+  "visualAcceptance": false,
+  "next": "Review midpoint owner-switch discontinuities and real hidden material; constrain head, face and coat separately with canonical anchors."
+}

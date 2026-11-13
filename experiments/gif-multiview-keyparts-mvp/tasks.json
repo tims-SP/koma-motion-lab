@@ -6569,5 +6569,33 @@
       "evidence/p15-120-back-semantic-qa.json"
     ],
     "next": "Refine 135/180 visible layers into physically registered ArtMesh with reliable boundary matte and hidden-surface underpaint; validate 90-to-135-to-180 sequential render."
+  },
+  "p15_122SourceOwnedVisibility": {
+    "status": "SOURCE_OWNED_REAR_ARC_RENDER_EVALUATED",
+    "characterId": "p0_character_001",
+    "angles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0,
+      146.25,
+      157.5,
+      168.75,
+      180.0
+    ],
+    "method": "bidirectional DIS optical flow, one native drawing owner per interpolated frame",
+    "maxAdjacentRGBMAE": 9.4029,
+    "meanIntermediatePartialAlphaPixels": 2593.3333333333335,
+    "sourceKeyframePixelExact": true,
+    "observed": "Source ownership removes transparent double silhouettes but whole-frame optical flow still distorts hair strands and jacket lines; owner switching raises discontinuity.",
+    "visualAccepted": false,
+    "sourcePartAnchorsVerified": false,
+    "hiddenUnderpaintVerified": false,
+    "evidence": [
+      "evidence/p15-122-source-owned-qa.json"
+    ],
+    "review": "private-assets/exports/p15-122-source-owned/index.html",
+    "next": "Replace whole-frame source ownership with per-part articulated visibility, source correspondences, anchors and native hidden-surface materials for 90–180 degrees."
   }
 }
