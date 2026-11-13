@@ -7656,5 +7656,36 @@
     ],
     "review": "private-assets/exports/p15-143-front-bangs/index.html",
     "next": "Align new front-bangs painted part with source hair ownership and remove source-overlapping bangs before compositing; confirm face and eye underpaint, then test actual ArtMesh displacement and 90–135 yaw."
+  },
+  "p15_144BangsAlignmentAndYaw": {
+    "status": "NATIVE_FRONT_BANGS_REGISTERED_AND_YAW_VISUALLY_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 112.5,
+    "transform": {
+      "scale": 0.8,
+      "translationXY": [
+        -8,
+        -22
+      ]
+    },
+    "registeredMaskIoU": 0.58016,
+    "offSilhouetteOpaquePixels": 1645,
+    "eyeOwnerOpaquePixelsAfterProtection": 0,
+    "faceCompositeAlphaHoles": 147,
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "registered": 12.6733
+    },
+    "native90And135PixelExact": true,
+    "visualFindings": "Affine registration reduces front bangs misplacement and maintains eye ownership but the independently generated strand material duplicates existing hairlines and produces cheek/neck gaps. At 101.25° and 123.75°, DIS interpolation still ghosts the ahoge and hair texture; new midview key increases max frame discontinuity.",
+    "productionCandidateAccepted": false,
+    "sourceArtUnmodified": true,
+    "fullYawVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-144-bangs-registration-qa.json",
+      "evidence/p15-144-transition-qa.json"
+    ],
+    "review": "private-assets/exports/p15-144-bangs-registration/index.html",
+    "next": "Redraw front-bangs source aligned to canonical 112.5° hair-root/eye geometry and replace matching source hair pixels with a coherent underpaint, then validate semantic strand identities before ArtMesh yaw interpolation."
   }
 }

@@ -1,0 +1,47 @@
+{
+  "schema": "KOMA_P15_144_BANGS_SPATIAL_REGISTRATION_V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 112.5,
+  "nativeAssetSHA256": "bdbd39e65f34f7745a1a8f4a66058df1450ee12c340efbfd783e0f43f43141ac",
+  "nativeGeneratedArtUnmodified": true,
+  "registeredScale": 0.8,
+  "registeredTranslationXY": [
+    -8,
+    -22
+  ],
+  "sourceBangsCandidatePixels": 12714,
+  "registeredMaskIoU": 0.58016,
+  "registeredOffSilhouettePixels": 1645,
+  "registeredEyeOpaquePixels": 3,
+  "afterEyeOwnerOpaquePixels": 0,
+  "methods": {
+    "original": {
+      "facePatchRGBMAE": 0.0,
+      "alphaHolesOverOriginal": 0,
+      "eyePatchRGBMAE": 0.0
+    },
+    "direct_overlay": {
+      "facePatchRGBMAE": 25.4563,
+      "alphaHolesOverOriginal": 0,
+      "eyePatchRGBMAE": 33.1531
+    },
+    "registered_unprotected": {
+      "facePatchRGBMAE": 11.4546,
+      "alphaHolesOverOriginal": 147,
+      "eyePatchRGBMAE": 1.0688
+    },
+    "registered_eye_owned": {
+      "facePatchRGBMAE": 11.4392,
+      "alphaHolesOverOriginal": 147,
+      "eyePatchRGBMAE": 0.9449
+    }
+  },
+  "eyeIsSourceOwned": true,
+  "sourcePixelIdentityRetainedInUnmodifiedRegions": true,
+  "sourceKeyframePixelExactAfterRegistration": false,
+  "underpaintSourcePhysicalRegistrationApproved": false,
+  "artisticBangsIdentityApproved": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-144-bangs-registration/index.html",
+  "next": "Inspect the registered hairline and face source ownership. If acceptable, evaluate displacement and 90–135 yaw; otherwise revise independent painted front-hair source."
+}
