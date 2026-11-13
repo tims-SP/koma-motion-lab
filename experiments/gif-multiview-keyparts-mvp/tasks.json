@@ -6668,5 +6668,42 @@
     ],
     "review": "private-assets/exports/p15-123-part-vdd/index.html",
     "next": "Obtain source-painted and artist-approved anatomical part boundaries and hidden materials, especially 90–135 face/ear and clothing transitions, then validate per-part anchor correspondences."
+  },
+  "p15_124FaceSafeGarmentRegion": {
+    "status": "FACE_SAFE_GARMENT_REGION_RENDER_REVIEWED",
+    "characterId": "p0_character_001",
+    "angles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0,
+      146.25,
+      157.5,
+      168.75,
+      180.0
+    ],
+    "nativeKeyframesPixelExact": true,
+    "maxAdjacentCompositeRGBMAE": 9.5435,
+    "comparisonP15_122": 9.4029,
+    "comparisonP15_123": 10.6396,
+    "faceRoiDifferenceFromP15_122": {
+      "101.25": 0.00024,
+      "112.5": 0.02109,
+      "123.75": 8e-05,
+      "146.25": 9e-05,
+      "157.5": 1e-05,
+      "168.75": 0.00132
+    },
+    "visualFindings": "The original source-owned face remains coherent at 112.5 degrees, unlike the fragmented P15-123 face. Jacket lines remain partly crisp, but hair flow errors and collar seam inconsistencies persist.",
+    "visualAccepted": false,
+    "physicalCorrespondenceVerified": false,
+    "hiddenUnderpaintVerified": false,
+    "focusedRegressionTestsPassed": 9,
+    "evidence": [
+      "evidence/p15-124-face-safe-qa.json"
+    ],
+    "review": "private-assets/exports/p15-124-face-safe/index.html",
+    "next": "Generate and validate physically source-painted hair, face, collar and coat boundaries and hidden surface artwork for 90–135-degree VDD. Preserve previously selected visual benchmarks."
   }
 }

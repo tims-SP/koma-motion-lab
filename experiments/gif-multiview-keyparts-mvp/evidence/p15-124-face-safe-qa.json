@@ -1,0 +1,45 @@
+{
+  "schema": "KOMA_P15_124_FACE_SAFE_REGION_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0,
+    146.25,
+    157.5,
+    168.75,
+    180.0
+  ],
+  "interpolation": "P15-122 head/face region and P15-123 lower-garment region blended in premultiplied alpha",
+  "necklineRegion": {
+    "centerY": 330,
+    "featherPixels": 24
+  },
+  "nativeKeyframesPixelExact": true,
+  "adjacentCompositeRGBMAE": [
+    6.8682,
+    9.5435,
+    5.8574,
+    5.8588,
+    5.5938,
+    7.7572,
+    6.1785,
+    6.3129
+  ],
+  "maxAdjacentCompositeRGBMAE": 9.5435,
+  "faceRoiAbsoluteDifferenceFromSourceOwned": {
+    "101.25": 0.00024,
+    "112.5": 0.02109,
+    "123.75": 8e-05,
+    "146.25": 9e-05,
+    "157.5": 1e-05,
+    "168.75": 0.00132
+  },
+  "underpaintVerified": false,
+  "physicalCorrespondenceVerified": false,
+  "artistVisualAccepted": false,
+  "review": "private-assets/exports/p15-124-face-safe/index.html",
+  "next": "Assess face integrity vs garment seam. Produce source-drawn masks, hidden geometry and physically matched anchors before final VDD selection."
+}
