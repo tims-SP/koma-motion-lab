@@ -7384,5 +7384,63 @@
     ],
     "review": "private-assets/exports/p15-138-rear-scalp/index.html",
     "next": "Match anatomical ear/neck/head masks and source-painted hidden material at 90/112.5/135, then test component visibility and true ArtMesh deformation instead of whole-image optical flow."
+  },
+  "p15_139HairArtMeshReveal": {
+    "status": "TRIANGULATED_HAIR_ARTMESH_REVEAL_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "yaw": 112.5,
+    "meshVertices": 400,
+    "meshTriangles": 722,
+    "meshFolds": {
+      "0": 0,
+      "12": 0,
+      "24": 0
+    },
+    "comparedRenderers": [
+      "baseline_translation",
+      "hybrid_translation",
+      "baseline_mesh",
+      "hybrid_mesh"
+    ],
+    "baseline24px": {
+      "holes": {
+        "all": 6483,
+        "rear_scalp": 5296,
+        "eye": 302,
+        "ear": 0,
+        "neck": 13
+      },
+      "rgbMAE": 20.0523
+    },
+    "hybridTranslation24px": {
+      "holes": {
+        "all": 3788,
+        "rear_scalp": 2520,
+        "eye": 313,
+        "ear": 81,
+        "neck": 179
+      },
+      "rgbMAE": 19.0635
+    },
+    "hybridMesh24px": {
+      "holes": {
+        "all": 3391,
+        "rear_scalp": 2120,
+        "eye": 326,
+        "ear": 80,
+        "neck": 128
+      },
+      "rgbMAE": 17.0553
+    },
+    "visualFindings": "Image-space triangular ArtMesh deforms hair independently over painted hidden material, reducing 24px alpha holes and background-composited RGB difference. Eye-front black fragment and neck silhouette still render incorrectly; triangulated proxy does not establish hair-strand identity or cross-yaw material correspondence.",
+    "selectedDiagnostic": "hybrid_mesh",
+    "productionArtMeshAccepted": false,
+    "crossYawMaterialCorrespondenceVerified": false,
+    "fullContinuousRotationVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-139-hair-artmesh-qa.json"
+    ],
+    "review": "private-assets/exports/p15-139-hair-artmesh/index.html",
+    "next": "Make a hair-boundary conforming triangulated mesh with a verified near-eye / ear/neck visibility and topology, then render 90-112.5-135 yaw with source-owned materials."
   }
 }
