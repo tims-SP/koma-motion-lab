@@ -1,0 +1,173 @@
+{
+  "schema": "KOMA_P15_99_REAL_SAM3_EYE_MASK_QA_V1",
+  "model": "prithivMLmods/SAM3-Demo",
+  "prompt": "eye iris eyelashes",
+  "actualExternalModelOutput": true,
+  "viewResults": {
+    "60": {
+      "sourceSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+      "candidates": [
+        {
+          "index": 0,
+          "rawSHA256": "fa96290cae61d30cd823c7022ec07fbbe8416737f2f6953f79ed47d0d01ff0c3",
+          "maskSHA256": "e2fed38cc1d073601c3a400e42dc8a4fea92730ec95dc19643862db038e2a35f",
+          "bbox": [
+            643,
+            434,
+            654,
+            464
+          ],
+          "area": 292,
+          "nearBoxOverlapPx": 292,
+          "farBoxOverlapPx": 0
+        },
+        {
+          "index": 1,
+          "rawSHA256": "e36185593da002f07b7bdeb62b7885e3b31a6a5b8639f25b5ad589812d46e759",
+          "maskSHA256": "67510ea6b12bb93728c34124b99c7c38c8aa3464cdbd0db256c6d03e5728a995",
+          "bbox": [
+            725,
+            438,
+            757,
+            494
+          ],
+          "area": 976,
+          "nearBoxOverlapPx": 0,
+          "farBoxOverlapPx": 976
+        },
+        {
+          "index": 2,
+          "rawSHA256": "cd317914d353c849201733f6b03f5524501297afb494620a9b5a36451a3b6d2e",
+          "maskSHA256": "62cfc59f7fdd3c47088a42b26b06c2735b99d4a892dc9db109d155f6f753f67d",
+          "bbox": [
+            622,
+            427,
+            667,
+            486
+          ],
+          "area": 2152,
+          "nearBoxOverlapPx": 2152,
+          "farBoxOverlapPx": 0
+        },
+        {
+          "index": 3,
+          "rawSHA256": "a79762764b5b862350e22583a47476af484ad41bc28ab374be9537b5640d9fc5",
+          "maskSHA256": "bd1bfae0d958e68c4dcb88cb5bcb38713c85c2d33f1424975fae58b3d96c3674",
+          "bbox": [
+            643,
+            445,
+            654,
+            462
+          ],
+          "area": 153,
+          "nearBoxOverlapPx": 153,
+          "farBoxOverlapPx": 0
+        },
+        {
+          "index": 4,
+          "rawSHA256": "f2887130e05f7f5329c259d624739f76c0ee262a031f99bddfd9230c4c70638f",
+          "maskSHA256": "7e3c342a0b280eec0b608d425cbf9b28497cd84233a498b98ebff60f3046eddf",
+          "bbox": [
+            730,
+            450,
+            744,
+            490
+          ],
+          "area": 410,
+          "nearBoxOverlapPx": 0,
+          "farBoxOverlapPx": 410
+        },
+        {
+          "index": 5,
+          "rawSHA256": "2c177e2f6e9697914c4050043220e62da8d947d909038205bf011db2e757a04e",
+          "maskSHA256": "74a3f4422665638e554c385edc7687bec43fe39eebc47e114c80f1f472886811",
+          "bbox": [
+            563,
+            414,
+            678,
+            490
+          ],
+          "area": 5456,
+          "nearBoxOverlapPx": 5241,
+          "farBoxOverlapPx": 100
+        },
+        {
+          "index": 6,
+          "rawSHA256": "68e0768e6a5c3cc338495a37fc8de4c882b707135682843dd33dee85ba1c6663",
+          "maskSHA256": "320163e049fb3860a450c8bb1f379c68337250fea98a7eff90bc063c55c44006",
+          "bbox": [
+            562,
+            414,
+            758,
+            494
+          ],
+          "area": 6555,
+          "nearBoxOverlapPx": 5276,
+          "farBoxOverlapPx": 1184
+        },
+        {
+          "index": 7,
+          "rawSHA256": "413bbee33d377139496c86028ad7f7153b636f7568b13a1b12d4fa44ce5574ad",
+          "maskSHA256": "806e40cabce10e1ff681df8799f646a7fc271db5791b28f9b25f416cd92c78e9",
+          "bbox": [
+            562,
+            414,
+            760,
+            494
+          ],
+          "area": 6536,
+          "nearBoxOverlapPx": 5251,
+          "farBoxOverlapPx": 1190
+        }
+      ]
+    },
+    "75": {
+      "sourceSHA256": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+      "candidates": [
+        {
+          "index": 0,
+          "rawSHA256": "a462d0529cdcc165f5d426d50d5e1d3ab962f4213188932d24f4409dd62dee06",
+          "maskSHA256": "b735cb0eb2c915875a548d2e263686529670771d9f42d01badfff424264ab359",
+          "bbox": [
+            608,
+            413,
+            704,
+            483
+          ],
+          "area": 4069,
+          "nearBoxOverlapPx": 3960,
+          "farBoxOverlapPx": 0
+        },
+        {
+          "index": 1,
+          "rawSHA256": "36832fdbfd284c97b56d42fc22b0c4cc3d3700a26b0723a2827adee2acffab53",
+          "maskSHA256": "7fc17dc0cd23b6d1302fd04f5f9842a9806ad64788fd05c2e3f85920a8a35a02",
+          "bbox": [
+            666,
+            427,
+            693,
+            483
+          ],
+          "area": 1290,
+          "nearBoxOverlapPx": 1290,
+          "farBoxOverlapPx": 0
+        },
+        {
+          "index": 2,
+          "rawSHA256": "f251ff4922eeb5e6462a1e404381ce859883d6a7113bf9a36059cca71610a832",
+          "maskSHA256": "fcfcc8eb60b7b3f91bcfa3345562975aa4c9e3cff4452a0ff467641ef0dc848a",
+          "bbox": [
+            666,
+            427,
+            685,
+            459
+          ],
+          "area": 454,
+          "nearBoxOverlapPx": 454,
+          "farBoxOverlapPx": 0
+        }
+      ]
+    }
+  },
+  "approvedForFormalArtMesh": false
+}

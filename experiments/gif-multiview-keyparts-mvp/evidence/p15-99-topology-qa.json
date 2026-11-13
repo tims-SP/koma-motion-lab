@@ -1,0 +1,362 @@
+{
+  "schema": "KOMA_P15_99_SEMANTIC_TOPOLOGY_V1",
+  "angles": [
+    60,
+    75
+  ],
+  "roles": [
+    "other.rear",
+    "face.skin",
+    "face.contour",
+    "eye.far",
+    "eye.near",
+    "hair.front",
+    "hair.clip"
+  ],
+  "occlusionOrder": [
+    "other.rear",
+    "face.skin",
+    "face.contour",
+    "eye.far",
+    "eye.near",
+    "hair.front",
+    "hair.clip"
+  ],
+  "occlusionEdges": [
+    [
+      "other.rear",
+      "face.skin"
+    ],
+    [
+      "face.skin",
+      "face.contour"
+    ],
+    [
+      "face.skin",
+      "eye.far"
+    ],
+    [
+      "face.skin",
+      "eye.near"
+    ],
+    [
+      "eye.far",
+      "hair.front"
+    ],
+    [
+      "eye.near",
+      "hair.front"
+    ],
+    [
+      "face.contour",
+      "hair.front"
+    ],
+    [
+      "hair.front",
+      "hair.clip"
+    ]
+  ],
+  "sourcePixelOwnership": "Each RGBA pixel assigned to exactly one owner, lossless source raster reconstruction",
+  "segmentation": "SAM3 actual eye/hair alpha threshold; face silhouette and contour visual hand proxies",
+  "semanticsArtistApproved": false,
+  "hiddenAnatomyModelVerified": false,
+  "sourceReconstructionAccepted": true,
+  "views": {
+    "60": {
+      "sourcePath": "private-assets/exports/p15-97-multiview-motion/yaw60-frame-06.png",
+      "sourceSHA256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+      "reconstructedSHA256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+      "pixelExactReconstruction": true,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "roleMasks": {
+        "other.rear": {
+          "sourcePixelCount": 921643,
+          "opaquePixels": 310124,
+          "sourceOwnedLayerSHA256": "733f4227d9bc759e39cb69e8e375eda9a0b9b37cd98becf8af267a41fbc6688e",
+          "maskSHA256": "4fba639af52785403a7492e8bde61b07a58f8fa3c76648fa25e4e69e653fa302"
+        },
+        "face.skin": {
+          "sourcePixelCount": 29229,
+          "opaquePixels": 29156,
+          "sourceOwnedLayerSHA256": "8a438fda22f0e559a448459c51c0fea259e3c3fe1fa295c9aafe81807eef44b1",
+          "maskSHA256": "8a7782b1469a1eea0db6b3c050a2d412e2cb613d4c66fc7d3a771fbb75509855"
+        },
+        "face.contour": {
+          "sourcePixelCount": 444,
+          "opaquePixels": 159,
+          "sourceOwnedLayerSHA256": "825a6dc072824f05c7fbf9c05669f05e386ee336e07175e874add5102327cd43",
+          "maskSHA256": "9e56941d5715f1a33bd4c9115d5144b2d68d9d2015c13761a6692a87ea502976"
+        },
+        "eye.far": {
+          "sourcePixelCount": 1046,
+          "opaquePixels": 1046,
+          "sourceOwnedLayerSHA256": "f59ee90f75a6d6172047d5df70c22c04dcbd3c4808f66a55d7a770c31754aa0c",
+          "maskSHA256": "9d18c74d9fa0fabf6f3682afaad8208e6991af99ad3f4363722236a7107067d0"
+        },
+        "eye.near": {
+          "sourcePixelCount": 5567,
+          "opaquePixels": 5567,
+          "sourceOwnedLayerSHA256": "8f5baff957fedbf2fb4d66977348c1b7e0492e03f2a4520bf448ac6498b31f38",
+          "maskSHA256": "35712267a666de5ec77aa429f66572b8ddb872e5cb8e6c6d6feaff2ae5acb099"
+        },
+        "hair.front": {
+          "sourcePixelCount": 88714,
+          "opaquePixels": 88252,
+          "sourceOwnedLayerSHA256": "dbb772e0dc021f79ae69fdba1df5c4c872015d8c704939d33aad61e74e44100f",
+          "maskSHA256": "3a9c36f2071355453adde9c55033f77e2b1fbe46615557cdc615dec9b63d701c"
+        },
+        "hair.clip": {
+          "sourcePixelCount": 1933,
+          "opaquePixels": 1673,
+          "sourceOwnedLayerSHA256": "f67db057c6411fa85e88210ad030cdfe2aa6c73dc1017cae5e7ed1f1bece710f",
+          "maskSHA256": "5c44b8c3b74a0dd61c6c04a0d3acc3f389ae5a4f8b75dd5701a345f0b55a29ad"
+        }
+      },
+      "externalSAM3EyeNear": "private-assets/exports/p15-99-topology/yaw60/sam3-eye-mask-5.png",
+      "externalSAM3EyeFar": "private-assets/exports/p15-99-topology/yaw60/sam3-eye-mask-1.png",
+      "externalSAM3Hair": "private-assets/exports/p15-94-sam3-yaw060/hair-candidate-0-alpha1024.png",
+      "modelUnderpaint": "private-assets/exports/p15-95-yaw060-motion/generated-face-aligned.png",
+      "landmarksSource": "evidence/p15-98-landmarks.json",
+      "facePolygon": [
+        [
+          535,
+          416
+        ],
+        [
+          575,
+          396
+        ],
+        [
+          678,
+          389
+        ],
+        [
+          748,
+          420
+        ],
+        [
+          777,
+          480
+        ],
+        [
+          779,
+          520
+        ],
+        [
+          762,
+          550
+        ],
+        [
+          750,
+          593
+        ],
+        [
+          706,
+          647
+        ],
+        [
+          657,
+          650
+        ],
+        [
+          603,
+          606
+        ],
+        [
+          563,
+          559
+        ],
+        [
+          538,
+          501
+        ]
+      ],
+      "faceProfileContour": [
+        [
+          762,
+          464
+        ],
+        [
+          765,
+          494
+        ],
+        [
+          785,
+          524
+        ],
+        [
+          769,
+          554
+        ],
+        [
+          754,
+          579
+        ],
+        [
+          737,
+          614
+        ],
+        [
+          708,
+          647
+        ],
+        [
+          669,
+          646
+        ]
+      ],
+      "farEyeVisible": true
+    },
+    "75": {
+      "sourcePath": "private-assets/exports/p15-97-multiview-motion/yaw75-frame-06.png",
+      "sourceSHA256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+      "reconstructedSHA256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+      "pixelExactReconstruction": true,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "roleMasks": {
+        "other.rear": {
+          "sourcePixelCount": 947373,
+          "opaquePixels": 303004,
+          "sourceOwnedLayerSHA256": "31d66875fcd8dd4dcdcbb508e213ee0530b43b9d8ec7acbacfc1c0110f1cead1",
+          "maskSHA256": "fc183deb64f00f71a1f8faa26d38e2fa2ca2623da5dee55d43ce9c594a39c497"
+        },
+        "face.skin": {
+          "sourcePixelCount": 20771,
+          "opaquePixels": 20266,
+          "sourceOwnedLayerSHA256": "0d3baed063fe76cca23027f123d67b4f9d1b5cd6b81ef0dabc9bded6a0d9a647",
+          "maskSHA256": "46ebe604a7dacd85022d205cdcdc81ed400db5a975b61feb77b1dbdb87e0d656"
+        },
+        "face.contour": {
+          "sourcePixelCount": 1248,
+          "opaquePixels": 13,
+          "sourceOwnedLayerSHA256": "e9644fc222d89dd80757a00974a19786cca62c5953eadf154644d199832482fd",
+          "maskSHA256": "b3c86fe3be7ef22d8b44fedb84b055aea45f5f38ea2b7b1100106f93dda221cb"
+        },
+        "eye.far": {
+          "sourcePixelCount": 0,
+          "opaquePixels": 0,
+          "sourceOwnedLayerSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "maskSHA256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+        },
+        "eye.near": {
+          "sourcePixelCount": 4153,
+          "opaquePixels": 4153,
+          "sourceOwnedLayerSHA256": "2f41499141abc001665f351a49e1261a0c35813e51a7311864b0efab5eae8a63",
+          "maskSHA256": "56b76d322a0eb3fff134d0cb8a72b58b9148f87f4fdb3a2c8402cf234da8f623"
+        },
+        "hair.front": {
+          "sourcePixelCount": 73355,
+          "opaquePixels": 73117,
+          "sourceOwnedLayerSHA256": "ed61d4f08a417dbc7aa8b36bf76f2fc004e4f6cdf8be11070dfa15cf291db05b",
+          "maskSHA256": "1ce4f83441e0e75d76db2e1db8225a094083fe6ef9a1649dfa4dd2828d716e3b"
+        },
+        "hair.clip": {
+          "sourcePixelCount": 1676,
+          "opaquePixels": 1377,
+          "sourceOwnedLayerSHA256": "24f30dfdfc9686adf78a15574385182337e6ed82440f644bd38c02e3f3710620",
+          "maskSHA256": "0bdb1b789b8dc324871c5d62ce42cc0e1ec684048368781da647f9b0d607f7ab"
+        }
+      },
+      "externalSAM3EyeNear": "private-assets/exports/p15-99-topology/yaw75/sam3-eye-mask-0.png",
+      "externalSAM3EyeFar": null,
+      "externalSAM3Hair": "private-assets/exports/p15-97-sam3-yaw75/mask-1-1024.png",
+      "modelUnderpaint": "private-assets/p15-97-underpaint-75/model-registered-source.png",
+      "landmarksSource": "evidence/p15-98-landmarks.json",
+      "facePolygon": [
+        [
+          610,
+          393
+        ],
+        [
+          645,
+          379
+        ],
+        [
+          721,
+          392
+        ],
+        [
+          770,
+          432
+        ],
+        [
+          785,
+          481
+        ],
+        [
+          809,
+          521
+        ],
+        [
+          793,
+          552
+        ],
+        [
+          775,
+          603
+        ],
+        [
+          750,
+          661
+        ],
+        [
+          701,
+          648
+        ],
+        [
+          657,
+          594
+        ],
+        [
+          625,
+          545
+        ],
+        [
+          610,
+          480
+        ]
+      ],
+      "faceProfileContour": [
+        [
+          774,
+          461
+        ],
+        [
+          783,
+          488
+        ],
+        [
+          814,
+          518
+        ],
+        [
+          797,
+          548
+        ],
+        [
+          782,
+          563
+        ],
+        [
+          766,
+          613
+        ],
+        [
+          746,
+          655
+        ],
+        [
+          710,
+          648
+        ]
+      ],
+      "farEyeVisible": false
+    }
+  }
+}
