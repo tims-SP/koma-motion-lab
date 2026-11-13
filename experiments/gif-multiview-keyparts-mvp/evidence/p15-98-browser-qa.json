@@ -1,0 +1,549 @@
+{
+  "schema": "KOMA_P15_98_VDD_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "dis_blend",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_blend",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_eye_owner",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_union",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "method": "landmark_visibility_eye_owner",
+      "index": 8,
+      "imageCount": 4,
+      "screenshotSHA256": "ddc8c85e43a0a421d7dd4c00eb5468c28fd8e807793fbb950c84fdea3a2201bb"
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "dis_blend",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_blend",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_eye_owner",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_union",
+      "index": 8,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 0,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 1,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 2,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 3,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 4,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 5,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 6,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 7,
+      "imageCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "method": "landmark_visibility_eye_owner",
+      "index": 8,
+      "imageCount": 4,
+      "screenshotSHA256": "5fefd33c1a22762e87f5bd98d24486fd7f5c005d03f11cdd26b2594d5fac8892"
+    }
+  ],
+  "errors": []
+}

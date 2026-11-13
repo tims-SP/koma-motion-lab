@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_97_THREE_VIEW_HAIR_TIP_VERIFIED_CONTINUOUS_YAW_PENDING",
+  "status": "P15_98_SEMANTIC_YAW_CORRESPONDENCE_EVIDENCE_READY_ARTMESH_NEXT",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-97 real SAM3 and Codex independent view sources, root-pinned 39 pose frames, 78 Chromium checks, 13 provenance tests",
+  "lastCompleted": "P15-98 five-method cross-view yaw research on independent source art with 90 Chromium checks and 11 unit tests",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -4651,5 +4651,74 @@
       "evidence/p15-97-underpaint-yaw75.json"
     ],
     "next": "Assess eye/bang semantic ownership and actual continuous 52.5–75 yaw animation using this source-owned local motion prototype"
+  },
+  "p15_98SemanticAnchorContinuousYaw": {
+    "status": "CORRESPONDENCE_EXPERIMENT_RENDERED_AND_REPRODUCED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      52.5,
+      60,
+      75
+    ],
+    "renderedYawAngles": [
+      52.5,
+      54.375,
+      56.25,
+      58.125,
+      60,
+      63.75,
+      67.5,
+      71.25,
+      75
+    ],
+    "sourcePoseOffsetPx": 6,
+    "semanticProxyRoles": 15,
+    "methods": [
+      "dis_blend",
+      "landmark_blend",
+      "landmark_eye_owner",
+      "landmark_visibility_union",
+      "landmark_visibility_eye_owner"
+    ],
+    "maxAdjacentFaceRGBMAE": {
+      "dis_blend": 22.3774,
+      "landmark_blend": 21.1882,
+      "landmark_eye_owner": 21.5216,
+      "landmark_visibility_union": 24.6543,
+      "landmark_visibility_eye_owner": 33.672
+    },
+    "keyview60BoundaryRatios": {
+      "dis_blend": 1.2109,
+      "landmark_blend": 1.1306,
+      "landmark_eye_owner": 1.1215,
+      "landmark_visibility_union": 1.1951,
+      "landmark_visibility_eye_owner": 1.0744
+    },
+    "anchorFaceROIFolds": 0,
+    "originalKeyframesPixelExact": true,
+    "unitTestsPass": 11,
+    "browserChecksPass": 90,
+    "visualContinuityAccepted": false,
+    "formalArtMeshAccepted": false,
+    "visualGate": "SEPARATE_PER_VIEW_FACE_EYES_BANGS_AND_HIDDEN_UNDERDRAWING",
+    "diagnosedGaps": [
+      "per-view skin/face topology ownership",
+      "near/far eye visibility",
+      "source-owned eyebrow and fringe layer edges",
+      "hidden face texture continuity"
+    ],
+    "next": "Build independent per-view eye/face/hair ArtMesh and explicit occlusion topology at 60°–75°, then evaluate intermediate yaw",
+    "review": "private-assets/exports/p15-98-vdd-review/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-98-continuous-yaw-correspondence-study.zip",
+      "sha256": "f5434cd5f843f8a0d85129ddfdf7bf0e80a4209bc306bd9f5f88aa0fe4946a2a",
+      "bytes": 46093041,
+      "entries": 65
+    },
+    "evidence": [
+      "evidence/p15-98-landmarks.json",
+      "evidence/p15-98-anchor-vdd-qa.json",
+      "evidence/p15-98-browser-qa.json"
+    ]
   }
 }
