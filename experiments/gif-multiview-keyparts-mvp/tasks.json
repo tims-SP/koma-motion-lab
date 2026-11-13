@@ -9226,5 +9226,149 @@
     ],
     "review": "private-assets/exports/p15-165-root-ink-ownership/index.html",
     "next": "Produce rootless crown art authored against canonical source views and full continuous root layers, then verify intermediate alpha ownership and single-loop contours before switching to independent VDD."
+  },
+  "p15_166CrownSilhouetteOwnership": {
+    "status": "CROWN_SILHOUETTE_SOURCE_OWNERSHIP_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "headCoreOpeningRadii": [
+      5,
+      9,
+      13
+    ],
+    "sourceCrownPixelPreservation": true,
+    "sourceKeyframesPixelExact": true,
+    "candidateMaxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "crown_05": 12.3581,
+      "crown_09": 12.3581,
+      "crown_13": 12.3582
+    },
+    "candidateTopComponents": {
+      "reference": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "crown_05": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "crown_09": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "crown_13": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    "crownEdgeDiagnostics": {
+      "crown_05": {
+        "101.25": {
+          "erasedUpperAlphaPixels": 1846,
+          "newLoopOpaquePixels": 1138,
+          "preservedCrownPixels": true,
+          "crownAlphaChangedPixels": 0,
+          "crownEdgeRangeY": [
+            51.04,
+            137.56
+          ]
+        },
+        "123.75": {
+          "erasedUpperAlphaPixels": 1918,
+          "newLoopOpaquePixels": 1451,
+          "preservedCrownPixels": true,
+          "crownAlphaChangedPixels": 0,
+          "crownEdgeRangeY": [
+            50.84,
+            137.36
+          ]
+        }
+      },
+      "crown_09": {
+        "101.25": {
+          "erasedUpperAlphaPixels": 1846,
+          "newLoopOpaquePixels": 1138,
+          "preservedCrownPixels": true,
+          "crownAlphaChangedPixels": 0,
+          "crownEdgeRangeY": [
+            51.04,
+            137.56
+          ]
+        },
+        "123.75": {
+          "erasedUpperAlphaPixels": 1919,
+          "newLoopOpaquePixels": 1451,
+          "preservedCrownPixels": true,
+          "crownAlphaChangedPixels": 0,
+          "crownEdgeRangeY": [
+            50.85,
+            137.38
+          ]
+        }
+      },
+      "crown_13": {
+        "101.25": {
+          "erasedUpperAlphaPixels": 1847,
+          "newLoopOpaquePixels": 1138,
+          "preservedCrownPixels": true,
+          "crownAlphaChangedPixels": 0,
+          "crownEdgeRangeY": [
+            51.04,
+            137.56
+          ]
+        },
+        "123.75": {
+          "erasedUpperAlphaPixels": 1920,
+          "newLoopOpaquePixels": 1451,
+          "preservedCrownPixels": true,
+          "crownAlphaChangedPixels": 0,
+          "crownEdgeRangeY": [
+            50.87,
+            137.37
+          ]
+        }
+      }
+    },
+    "visualFindings": "Morphological head-core silhouette separates above-crown loop pixels while preserving existing crown RGBA underneath. The 101.25-degree loop has a detached lower end; 123.75-degree root connection remains visually unregistered. Adjusting opening radius 5/9/13 has negligible effect on output. Native keys remain pixel exact.",
+    "productionRendererUpdated": false,
+    "continuousYawVisualAccepted": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "crownPixelsPreserved": true,
+      "allFiveFrameSourceKeysExact": true,
+      "allMidviewLoopsConnected": false,
+      "candidateImprovesMotion": false,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-166-crown-silhouette-qa.json"
+    ],
+    "review": "private-assets/exports/p15-166-crown-silhouette/index.html",
+    "next": "Prepare matched source-painted crown and complete attached-loop roots as a paired asset, then verify per-view source reconstruction and intermediate root attachment against real frames."
   }
 }

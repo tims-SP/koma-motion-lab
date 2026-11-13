@@ -1,0 +1,144 @@
+{
+  "schema": "KOMA_P15_166_CROWN_SILHOUETTE_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "topComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysPixelExact": true
+    },
+    "crown_05": {
+      "maxAdjacentRGBMAE": 12.3581,
+      "topComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysPixelExact": true
+    },
+    "crown_09": {
+      "maxAdjacentRGBMAE": 12.3581,
+      "topComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysPixelExact": true
+    },
+    "crown_13": {
+      "maxAdjacentRGBMAE": 12.3582,
+      "topComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysPixelExact": true
+    }
+  },
+  "crownBoundaries": {
+    "crown_05": {
+      "101.25": {
+        "erasedUpperAlphaPixels": 1846,
+        "newLoopOpaquePixels": 1138,
+        "preservedCrownPixels": true,
+        "crownAlphaChangedPixels": 0,
+        "crownEdgeRangeY": [
+          51.04,
+          137.56
+        ]
+      },
+      "123.75": {
+        "erasedUpperAlphaPixels": 1918,
+        "newLoopOpaquePixels": 1451,
+        "preservedCrownPixels": true,
+        "crownAlphaChangedPixels": 0,
+        "crownEdgeRangeY": [
+          50.84,
+          137.36
+        ]
+      }
+    },
+    "crown_09": {
+      "101.25": {
+        "erasedUpperAlphaPixels": 1846,
+        "newLoopOpaquePixels": 1138,
+        "preservedCrownPixels": true,
+        "crownAlphaChangedPixels": 0,
+        "crownEdgeRangeY": [
+          51.04,
+          137.56
+        ]
+      },
+      "123.75": {
+        "erasedUpperAlphaPixels": 1919,
+        "newLoopOpaquePixels": 1451,
+        "preservedCrownPixels": true,
+        "crownAlphaChangedPixels": 0,
+        "crownEdgeRangeY": [
+          50.85,
+          137.38
+        ]
+      }
+    },
+    "crown_13": {
+      "101.25": {
+        "erasedUpperAlphaPixels": 1847,
+        "newLoopOpaquePixels": 1138,
+        "preservedCrownPixels": true,
+        "crownAlphaChangedPixels": 0,
+        "crownEdgeRangeY": [
+          51.04,
+          137.56
+        ]
+      },
+      "123.75": {
+        "erasedUpperAlphaPixels": 1920,
+        "newLoopOpaquePixels": 1451,
+        "preservedCrownPixels": true,
+        "crownAlphaChangedPixels": 0,
+        "crownEdgeRangeY": [
+          50.87,
+          137.37
+        ]
+      }
+    }
+  },
+  "sourceUnmodified": true,
+  "originalRootlessCrownPaintApproved": false,
+  "physicallyMatchedHairRootsApproved": false,
+  "continuousVisualAccepted": false,
+  "productionSelected": false,
+  "review": "private-assets/exports/p15-166-crown-silhouette/index.html",
+  "gate": {
+    "crownPixelsPreserved": true,
+    "allFiveFrameSourceKeysExact": true,
+    "allMidviewLoopsConnected": false,
+    "candidateImprovesMotion": false,
+    "visualAccepted": false,
+    "passes": false
+  }
+}
