@@ -1,0 +1,924 @@
+{
+  "schema": "KOMA_P15_106_GARMENT_SHARED_RADIAL_VDD_V1",
+  "characterId": "p0_character_001",
+  "meshSHA256": "74f60b76ec7ea803425d516c8e1e64a6881a1ec3f0c9a12a20585f2d53df730c",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "native67p5SourceSha256": "b91745a58412bc856e75af27fead2574f9da051f1027a00c987a8e8f9868ecf0",
+  "sourceRoleGeometry": "common 33 vertices / 48 fixed triangles per component in all three views",
+  "renderedMethodNames": [
+    "bow_radial_blend",
+    "bow_radial_soft_visibility",
+    "all_parts_radial_blend"
+  ],
+  "methods": {
+    "bow_radial_blend": {
+      "60": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "sourceEndpoint": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw61p875.png",
+        "sha256": "96aa92ce0431b09c0668d09768486f97c65e6825fe4d051bae306ef411c78153",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.25,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw63p75.png",
+        "sha256": "9cf81d07430d9fcf0476f2218f61a58c7493c4cef28c69e5d0a2d1beaa95fa5b",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.5,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw65p625.png",
+        "sha256": "abd54fcd5b2bb59b193c8b14c43160507eb7da42d8fd52ce8ff1103b21da13b4",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.75,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw67p5.png",
+        "sha256": "cb8715347412d68ad6def26e4e1a96e9a97fa770904e19e127c0443d6e89d419",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 1.0,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw69p375.png",
+        "sha256": "9d1ed3b67345949524783eb0a32afbbb3616b691505e512226929d3d231f5b64",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.25,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw71p25.png",
+        "sha256": "32c4a5a01516836fa27351d03c0cc8ccac2e046249e21e3fdfcf4a9c419c42b1",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.5,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw73p125.png",
+        "sha256": "523053724d3663c899e3155c618e0732468a1d512a9d90aa4f47232f43362dc5",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.75,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "sourceEndpoint": true
+        }
+      }
+    },
+    "bow_radial_soft_visibility": {
+      "60": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "sourceEndpoint": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw61p875.png",
+        "sha256": "878ee8ec5568ca734d15ba0cfb417af156c004173a8478db2828606f61669cf8",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.25,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw63p75.png",
+        "sha256": "9cf81d07430d9fcf0476f2218f61a58c7493c4cef28c69e5d0a2d1beaa95fa5b",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.5,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw65p625.png",
+        "sha256": "fd8fb4893ed4c840a69305bb2a34b130bd9ce03252f03c25feab240e015d1a97",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.75,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw67p5.png",
+        "sha256": "cb8715347412d68ad6def26e4e1a96e9a97fa770904e19e127c0443d6e89d419",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 1.0,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw69p375.png",
+        "sha256": "f8be5b0457cc0c05252e14dbe1c70e6f71e26859d4c37dcc32d353032b677f7d",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.25,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw71p25.png",
+        "sha256": "32c4a5a01516836fa27351d03c0cc8ccac2e046249e21e3fdfcf4a9c419c42b1",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.5,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw73p125.png",
+        "sha256": "6a1e08fa63c4d50aa1780155f87108118cafb83b4922c05990d92bd23a030a3f",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.75,
+          "roles": [
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "sourceEndpoint": true
+        }
+      }
+    },
+    "all_parts_radial_blend": {
+      "60": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "sourceEndpoint": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw61p875.png",
+        "sha256": "70f835ab4de3797bb049941ab3e43a98f50f08debce5f6d4a72f85b8ff4ea664",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.25,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw63p75.png",
+        "sha256": "a8cf1cf16ceb881cb8a7ede617821bd068683bcf6bb5a2175a07a6b55757aeef",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.5,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw65p625.png",
+        "sha256": "1b603059c6c7e89724824f49009d8d9fa6e21a265406053ede30457d0dad51b0",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.75,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw67p5.png",
+        "sha256": "90520ddd229a022fcf00b0da312f0a9476ef8f07cc294ffc12a4f1293c9d4076",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 1.0,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw69p375.png",
+        "sha256": "e439fd9e9f78f7b49ed9ff5b5e12918fc94b4f4be0119fc8625985705bec595b",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.25,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw71p25.png",
+        "sha256": "fa5b3adcf161579ecafc5fe4ed9a09b221f1ca53e4edce9e372707f1ab28cc37",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.5,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw73p125.png",
+        "sha256": "4fff68e3f11cb4cd4f52315a778124dfa523232cdee53dcd43afcc1bc538f230",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.75,
+          "roles": [
+            "shoulder.left",
+            "collar",
+            "bow",
+            "jewel"
+          ],
+          "maxRasterCrackPixels": 0
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "sourceEndpoint": true
+        }
+      }
+    }
+  },
+  "continuousYawVisualAccepted": false,
+  "formalArtMeshApproved": false,
+  "nativeMiddleRgbaExactFraction": 1.0,
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "midpointAdjacentRGBMAE": 5.6403,
+        "meanAdjacentRGBMAE": 6.2248
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "midpointAdjacentRGBMAE": 7.2519,
+        "meanAdjacentRGBMAE": 7.9434
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "midpointAdjacentRGBMAE": 5.1791,
+        "meanAdjacentRGBMAE": 6.1601
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "midpointAdjacentRGBMAE": 6.291,
+        "meanAdjacentRGBMAE": 7.0499
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "midpointAdjacentRGBMAE": 10.2164,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "P15-105-three_key_direct": {
+      "garment": {
+        "adjacentRGBMAE": [
+          8.6766,
+          6.661,
+          6.6147,
+          7.0437,
+          9.5856,
+          9.1875,
+          9.0895,
+          10.8569
+        ],
+        "maxAdjacentRGBMAE": 10.8569,
+        "midpointAdjacentRGBMAE": 9.5856,
+        "meanAdjacentRGBMAE": 8.4644
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          9.5295,
+          6.8264,
+          6.9317,
+          8.0346,
+          13.4768,
+          12.6596,
+          12.4983,
+          14.9315
+        ],
+        "maxAdjacentRGBMAE": 14.9315,
+        "midpointAdjacentRGBMAE": 13.4768,
+        "meanAdjacentRGBMAE": 10.6111
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          10.3755,
+          6.9599,
+          7.079,
+          8.2945,
+          10.2295,
+          9.0715,
+          8.9172,
+          12.2252
+        ],
+        "maxAdjacentRGBMAE": 12.2252,
+        "midpointAdjacentRGBMAE": 10.2295,
+        "meanAdjacentRGBMAE": 9.144
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.7092,
+          7.2566,
+          7.0841,
+          7.2934,
+          9.339,
+          9.0284,
+          9.0067,
+          11.2075
+        ],
+        "maxAdjacentRGBMAE": 11.2075,
+        "midpointAdjacentRGBMAE": 9.339,
+        "meanAdjacentRGBMAE": 8.7406
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.0192,
+          11.8921,
+          11.0844,
+          10.3898,
+          9.922,
+          10.1136,
+          10.6984,
+          13.4757
+        ],
+        "maxAdjacentRGBMAE": 15.0192,
+        "midpointAdjacentRGBMAE": 10.3898,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "bow_radial_blend": {
+      "garment": {
+        "adjacentRGBMAE": [
+          9.4757,
+          6.9299,
+          6.9269,
+          8.2975,
+          10.8408,
+          9.8361,
+          10.2889,
+          12.4848
+        ],
+        "maxAdjacentRGBMAE": 12.4848,
+        "midpointAdjacentRGBMAE": 10.8408,
+        "meanAdjacentRGBMAE": 9.3851
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          11.9489,
+          7.759,
+          7.7809,
+          10.8245,
+          16.0288,
+          14.3879,
+          15.7694,
+          19.6397
+        ],
+        "maxAdjacentRGBMAE": 19.6397,
+        "midpointAdjacentRGBMAE": 16.0288,
+        "meanAdjacentRGBMAE": 13.0174
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          15.083,
+          8.7701,
+          8.5938,
+          13.013,
+          15.0468,
+          11.3634,
+          12.3597,
+          19.5535
+        ],
+        "maxAdjacentRGBMAE": 19.5535,
+        "midpointAdjacentRGBMAE": 15.0468,
+        "meanAdjacentRGBMAE": 12.9729
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          10.6951,
+          7.5124,
+          7.4672,
+          8.6721,
+          10.1464,
+          9.6554,
+          10.2169,
+          12.9505
+        ],
+        "maxAdjacentRGBMAE": 12.9505,
+        "midpointAdjacentRGBMAE": 10.1464,
+        "meanAdjacentRGBMAE": 9.6645
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.0676,
+          11.842,
+          11.0431,
+          10.3456,
+          9.9229,
+          10.1139,
+          10.6986,
+          13.476
+        ],
+        "maxAdjacentRGBMAE": 15.0676,
+        "midpointAdjacentRGBMAE": 10.3456,
+        "meanAdjacentRGBMAE": 11.5637
+      }
+    },
+    "bow_radial_soft_visibility": {
+      "garment": {
+        "adjacentRGBMAE": [
+          9.1533,
+          7.5016,
+          7.5059,
+          8.0098,
+          10.488,
+          10.4317,
+          10.8203,
+          12.2773
+        ],
+        "maxAdjacentRGBMAE": 12.2773,
+        "midpointAdjacentRGBMAE": 10.488,
+        "meanAdjacentRGBMAE": 9.5235
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          11.0303,
+          9.3881,
+          9.3599,
+          10.0764,
+          15.2005,
+          15.9077,
+          17.2512,
+          19.0405
+        ],
+        "maxAdjacentRGBMAE": 19.0405,
+        "midpointAdjacentRGBMAE": 15.2005,
+        "meanAdjacentRGBMAE": 13.4068
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          13.696,
+          11.0739,
+          10.5333,
+          12.3505,
+          14.1555,
+          13.2068,
+          14.1461,
+          18.9525
+        ],
+        "maxAdjacentRGBMAE": 18.9525,
+        "midpointAdjacentRGBMAE": 14.1555,
+        "meanAdjacentRGBMAE": 13.5143
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          10.4164,
+          7.9486,
+          7.8357,
+          8.5582,
+          10.1091,
+          9.7559,
+          10.3635,
+          12.9079
+        ],
+        "maxAdjacentRGBMAE": 12.9079,
+        "midpointAdjacentRGBMAE": 10.1091,
+        "meanAdjacentRGBMAE": 9.7369
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.0676,
+          11.842,
+          11.0431,
+          10.3456,
+          9.9229,
+          10.1139,
+          10.6986,
+          13.476
+        ],
+        "maxAdjacentRGBMAE": 15.0676,
+        "midpointAdjacentRGBMAE": 10.3456,
+        "meanAdjacentRGBMAE": 11.5637
+      }
+    },
+    "all_parts_radial_blend": {
+      "garment": {
+        "adjacentRGBMAE": [
+          11.7845,
+          8.5762,
+          8.0294,
+          9.5791,
+          12.0487,
+          10.6664,
+          11.4397,
+          14.6776
+        ],
+        "maxAdjacentRGBMAE": 14.6776,
+        "midpointAdjacentRGBMAE": 12.0487,
+        "meanAdjacentRGBMAE": 10.8502
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          13.1051,
+          8.797,
+          8.7571,
+          11.9069,
+          16.6064,
+          14.8768,
+          16.2645,
+          20.6287
+        ],
+        "maxAdjacentRGBMAE": 20.6287,
+        "midpointAdjacentRGBMAE": 16.6064,
+        "meanAdjacentRGBMAE": 13.8678
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          16.7011,
+          10.0777,
+          9.8248,
+          14.0386,
+          16.4134,
+          11.9239,
+          13.1202,
+          20.8168
+        ],
+        "maxAdjacentRGBMAE": 20.8168,
+        "midpointAdjacentRGBMAE": 16.4134,
+        "meanAdjacentRGBMAE": 14.1146
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          14.8284,
+          10.9173,
+          10.4036,
+          12.3204,
+          13.334,
+          11.671,
+          12.156,
+          16.1834
+        ],
+        "maxAdjacentRGBMAE": 16.1834,
+        "midpointAdjacentRGBMAE": 13.334,
+        "meanAdjacentRGBMAE": 12.7268
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.0676,
+          11.842,
+          11.0431,
+          10.3456,
+          9.9229,
+          10.1139,
+          10.6986,
+          13.476
+        ],
+        "maxAdjacentRGBMAE": 15.0676,
+        "midpointAdjacentRGBMAE": 10.3456,
+        "meanAdjacentRGBMAE": 11.5637
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-106-three-key-render/three-view-artmesh-contact.jpg",
+  "segmentBoundaryMotion": {
+    "P15-101-head_alpha_blend": {
+      "bow": {
+        "60to67p5MAE": 7.9207,
+        "67p5to75MAE": 7.9662
+      },
+      "jewel": {
+        "60to67p5MAE": 6.1711,
+        "67p5to75MAE": 6.149
+      },
+      "collar": {
+        "60to67p5MAE": 7.2757,
+        "67p5to75MAE": 6.824
+      }
+    },
+    "P15-105-three_key_direct": {
+      "bow": {
+        "60to67p5MAE": 7.8305,
+        "67p5to75MAE": 13.3916
+      },
+      "jewel": {
+        "60to67p5MAE": 8.1772,
+        "67p5to75MAE": 10.1109
+      },
+      "collar": {
+        "60to67p5MAE": 7.8358,
+        "67p5to75MAE": 9.6454
+      }
+    },
+    "bow_radial_blend": {
+      "bow": {
+        "60to67p5MAE": 9.5783,
+        "67p5to75MAE": 16.4565
+      },
+      "jewel": {
+        "60to67p5MAE": 11.365,
+        "67p5to75MAE": 14.5808
+      },
+      "collar": {
+        "60to67p5MAE": 8.5867,
+        "67p5to75MAE": 10.7423
+      }
+    },
+    "bow_radial_soft_visibility": {
+      "bow": {
+        "60to67p5MAE": 9.9637,
+        "67p5to75MAE": 16.85
+      },
+      "jewel": {
+        "60to67p5MAE": 11.9134,
+        "67p5to75MAE": 15.1152
+      },
+      "collar": {
+        "60to67p5MAE": 8.6897,
+        "67p5to75MAE": 10.7841
+      }
+    },
+    "all_parts_radial_blend": {
+      "bow": {
+        "60to67p5MAE": 10.6415,
+        "67p5to75MAE": 17.0941
+      },
+      "jewel": {
+        "60to67p5MAE": 12.6606,
+        "67p5to75MAE": 15.5686
+      },
+      "collar": {
+        "60to67p5MAE": 12.1174,
+        "67p5to75MAE": 13.3361
+      }
+    }
+  },
+  "visualReview": {
+    "performed": true,
+    "geometryStatus": "COMMON_TRIANGULATION_NONFOLDED",
+    "maskReconstruction": "source owned 3 keyframes / all garment part pixels have one owner",
+    "artifactAssessment": {
+      "bow": "radial geometry follows native bow edges but source folds still create doubled interior line contours",
+      "collar": "registered native keyframe profile differs from both original view collars; blend seam remains visible",
+      "jewel": "radial anchor is stable but surface details vary across views",
+      "shoulder": "full component radial matte creates extra duplicated shoulder trim detail",
+      "head": "P15-101 face/hair mesh retained with its previous face and fringe limitations"
+    },
+    "inpaintRasterBoundary": "full source garment assembled at original 1024 before a single resizing pass",
+    "qualitativeBestVisualBenchmark": "P15-101 head_alpha_blend",
+    "continuousVisualAccepted": false,
+    "numericComparison": {
+      "bow": {
+        "baseline": 10.1016,
+        "prior3Key": 14.9315,
+        "radialSoftVisibility": 19.0405
+      },
+      "jewel": {
+        "baseline": 9.1631,
+        "prior3Key": 12.2252,
+        "radialSoftVisibility": 18.9525
+      },
+      "collar": {
+        "baseline": 9.5625,
+        "prior3Key": 11.2075,
+        "radialSoftVisibility": 12.9079
+      }
+    },
+    "nextCriticalEvidence": "matching ribbon-tail contour, fold/trim line topology and neck occlusion across all native keyviews"
+  }
+}

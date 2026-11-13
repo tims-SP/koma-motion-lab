@@ -1,0 +1,101 @@
+{
+  "schema": "KOMA_P15_106_THREE_KEY_REVIEW_V1",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "frameFiles": {
+    "P15-101-baseline": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-105-direct": {
+      "60": "../p15-105-three-key-vdd/three_key_direct-yaw60.png",
+      "61.875": "../p15-105-three-key-vdd/three_key_direct-yaw61p875.png",
+      "63.75": "../p15-105-three-key-vdd/three_key_direct-yaw63p75.png",
+      "65.625": "../p15-105-three-key-vdd/three_key_direct-yaw65p625.png",
+      "67.5": "../p15-105-three-key-vdd/three_key_direct-yaw67p5.png",
+      "69.375": "../p15-105-three-key-vdd/three_key_direct-yaw69p375.png",
+      "71.25": "../p15-105-three-key-vdd/three_key_direct-yaw71p25.png",
+      "73.125": "../p15-105-three-key-vdd/three_key_direct-yaw73p125.png",
+      "75": "../p15-105-three-key-vdd/three_key_direct-yaw75.png"
+    },
+    "bow_radial_blend": {
+      "60": "bow_radial_blend-yaw60.png",
+      "61.875": "bow_radial_blend-yaw61p875.png",
+      "63.75": "bow_radial_blend-yaw63p75.png",
+      "65.625": "bow_radial_blend-yaw65p625.png",
+      "67.5": "bow_radial_blend-yaw67p5.png",
+      "69.375": "bow_radial_blend-yaw69p375.png",
+      "71.25": "bow_radial_blend-yaw71p25.png",
+      "73.125": "bow_radial_blend-yaw73p125.png",
+      "75": "bow_radial_blend-yaw75.png"
+    },
+    "bow_radial_soft_visibility": {
+      "60": "bow_radial_soft_visibility-yaw60.png",
+      "61.875": "bow_radial_soft_visibility-yaw61p875.png",
+      "63.75": "bow_radial_soft_visibility-yaw63p75.png",
+      "65.625": "bow_radial_soft_visibility-yaw65p625.png",
+      "67.5": "bow_radial_soft_visibility-yaw67p5.png",
+      "69.375": "bow_radial_soft_visibility-yaw69p375.png",
+      "71.25": "bow_radial_soft_visibility-yaw71p25.png",
+      "73.125": "bow_radial_soft_visibility-yaw73p125.png",
+      "75": "bow_radial_soft_visibility-yaw75.png"
+    },
+    "all_parts_radial_blend": {
+      "60": "all_parts_radial_blend-yaw60.png",
+      "61.875": "all_parts_radial_blend-yaw61p875.png",
+      "63.75": "all_parts_radial_blend-yaw63p75.png",
+      "65.625": "all_parts_radial_blend-yaw65p625.png",
+      "67.5": "all_parts_radial_blend-yaw67p5.png",
+      "69.375": "all_parts_radial_blend-yaw69p375.png",
+      "71.25": "all_parts_radial_blend-yaw71p25.png",
+      "73.125": "all_parts_radial_blend-yaw73p125.png",
+      "75": "all_parts_radial_blend-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-baseline": {
+      "path": "private-assets/exports/p15-106-three-key-render/P15-101-baseline-loop.gif",
+      "sha256": "66db1d05b2d57f68dea3b4c0a3f913514a175d8e434a797b207fa51d22584030"
+    },
+    "P15-105-direct": {
+      "path": "private-assets/exports/p15-106-three-key-render/P15-105-direct-loop.gif",
+      "sha256": "f84b70dffdaf291840a1f70a1ce4b144fd1998c249e18990a326fe4f3c669dab"
+    },
+    "bow_radial_blend": {
+      "path": "private-assets/exports/p15-106-three-key-render/bow_radial_blend-loop.gif",
+      "sha256": "9508c3a073a0f8d261dfc69dd80c1e6b70dcbce29f616d4ffa365b4a9781a33a"
+    },
+    "bow_radial_soft_visibility": {
+      "path": "private-assets/exports/p15-106-three-key-render/bow_radial_soft_visibility-loop.gif",
+      "sha256": "3231411be641c80dac65a0bf4ef6b80ac7d36a47ad78e0525d4942e6b9c3b211"
+    },
+    "all_parts_radial_blend": {
+      "path": "private-assets/exports/p15-106-three-key-render/all_parts_radial_blend-loop.gif",
+      "sha256": "cca01180648118563c8f7cbcd1f4a9e4f017ac2e6e0c1af2735f6c8930665f85"
+    }
+  },
+  "entry": "private-assets/exports/p15-106-three-key-render/index.html",
+  "continuousVisualAccepted": false,
+  "formalArtMeshArtistApproved": false
+}

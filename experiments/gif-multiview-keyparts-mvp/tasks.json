@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_105_THREE_KEY_GARMENT_ASSET_READY_SEMANTIC_CONTINUITY_PENDING",
+  "status": "P15_106_SOURCE_ARTMESH_GEOMETRY_VERIFIED_GARMENT_VISUAL_REVIEW_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-105 generated independent 67.5 garment native source and rendered three-key garment VDD against P15-101 benchmark",
+  "lastCompleted": "P15-106 shared three-key source-garment ArtMesh with nonfolding topology and VDD comparison",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -5288,6 +5288,73 @@
       "evidence/p15-105-render-qa.json",
       "evidence/p15-105-review-qa.json",
       "evidence/p15-105-browser-qa.json"
+    ]
+  },
+  "p15_106ThreeKeyGarmentArtMesh": {
+    "status": "THREE_KEY_GARMENT_SOURCE_ARTMESH_GEOMETRY_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      67.5,
+      75
+    ],
+    "sampledAngles": [
+      60,
+      61.875,
+      63.75,
+      65.625,
+      67.5,
+      69.375,
+      71.25,
+      73.125,
+      75
+    ],
+    "sourceNativeMidpointSHA256": "b91745a58412bc856e75af27fead2574f9da051f1027a00c987a8e8f9868ecf0",
+    "sourceRegisteredMidpointSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "semanticParts": [
+      "shoulder.left",
+      "collar",
+      "bow",
+      "jewel"
+    ],
+    "meshVertexCount": 132,
+    "meshTriangleCount": 192,
+    "noFoldSampleCount": 72,
+    "sourceOwnershipPixelExact": true,
+    "midpointRegisteredGarmentPixelExact": true,
+    "renderedCandidateFrames": 27,
+    "priorComparisonFrames": 18,
+    "renderStrategies": [
+      "bow_radial_blend",
+      "bow_radial_soft_visibility",
+      "all_parts_radial_blend"
+    ],
+    "maxAdjacentBowRGBMAE": {
+      "P15-101-head_alpha_blend": 10.1016,
+      "P15-105-three_key_direct": 14.9315,
+      "bow_radial_blend": 19.6397,
+      "bow_radial_soft_visibility": 19.0405,
+      "all_parts_radial_blend": 20.6287
+    },
+    "unitTestsPass": 17,
+    "browserChecksPass": 90,
+    "geometryAccepted": true,
+    "visualAcceptance": false,
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "next": "Use source-owned ribbon fold, collar gold trim and shoulder silhouette correspondences with valid hidden surfaces to reduce garment contour overlap across 60–67.5–75°",
+    "visualGate": "ARTIST_VALIDATED_COLLAR_BOW_SHOULDER_HIDDEN_SURFACE_CORRESPONDENCES",
+    "review": "private-assets/exports/p15-106-three-key-render/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-106-three-key-garment-artmesh.zip",
+      "bytes": 48252115,
+      "sha256": "83f5df9a56292a6c3b997de744ca7594573e1755f8ec6d7efd164ebc09172452",
+      "entries": 118
+    },
+    "evidence": [
+      "evidence/p15-106-mesh-qa.json",
+      "evidence/p15-106-render-qa.json",
+      "evidence/p15-106-review-qa.json",
+      "evidence/p15-106-browser-qa.json"
     ]
   }
 }
