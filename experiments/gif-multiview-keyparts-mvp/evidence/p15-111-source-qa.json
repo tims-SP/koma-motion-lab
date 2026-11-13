@@ -1,0 +1,271 @@
+{
+  "schema": "KOMA_P15_111_GENUINE_OCCLUDED_MATERIAL_ART_V1",
+  "character": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "artSource": "Codex builtin image_gen.imagegen",
+  "meaning": "source-conditioned illustrated continuation of non-observed garment material",
+  "nativeSourcePreserved": true,
+  "sourceImageSHA256": {
+    "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+    "67.5": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+  },
+  "hiddenMaterialIsObservedGroundTruth": false,
+  "layers": {
+    "60": {
+      "collar": {
+        "nativePath": "private-assets/p15-111-hidden-art/yaw60-collar-native.png",
+        "nativeSHA256": "61b01accd5af1dd5081c3749ba9592c77f3cee155fe5110f8602b2726972d22c",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "nativeAlphaBBox": [
+          41,
+          32,
+          1214,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-111-hidden-registered/yaw60-collar-registered.png",
+        "registeredSHA256": "bf24bdebe85b9e9bf34a17b14bb8bd329d8650615c2abf3326c84aeb8f9912f4",
+        "hiddenOnlyPath": "private-assets/exports/p15-111-hidden-registered/yaw60-collar-hidden.png",
+        "hiddenOnlySHA256": "1fc74a4386be62469c49e0e95ff9d2f4bd9d2de70c32b1f6a8c63649d6778ba7",
+        "sourceMaterialCenter": [
+          515.64,
+          724.039
+        ],
+        "nativeNormalizedMaterialCenter": [
+          527.659,
+          749.73
+        ],
+        "registrationShift1024": [
+          -12.019,
+          -25.691
+        ],
+        "colorMaterialSourcePixels": 14361,
+        "colorMaterialGeneratedPixels": 25312,
+        "hiddenTargetPixels": 20278,
+        "hiddenCoveragePixels": 12920,
+        "hiddenCoverageFraction": 0.63714,
+        "sourceArtOriginalUnchanged": true
+      },
+      "bow": {
+        "nativePath": "private-assets/p15-111-hidden-art/yaw60-bow-native.png",
+        "nativeSHA256": "863ae87f7bdce60e1c5a10c562c552fe452befcdac9bc436287a555bc9a9c9e7",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "nativeAlphaBBox": [
+          105,
+          222,
+          967,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-111-hidden-registered/yaw60-bow-registered.png",
+        "registeredSHA256": "5e7b0dc3ae090ccfb0fe402dda3089e3c4d446488ad1946c8b861f999a0e6462",
+        "hiddenOnlyPath": "private-assets/exports/p15-111-hidden-registered/yaw60-bow-hidden.png",
+        "hiddenOnlySHA256": "a766df88b4a9872ef447fbe0162e5ec18313698da83c751d06d9e83a1e436d01",
+        "sourceMaterialCenter": [
+          632.397,
+          874.489
+        ],
+        "nativeNormalizedMaterialCenter": [
+          611.852,
+          871.27
+        ],
+        "registrationShift1024": [
+          20.546,
+          3.219
+        ],
+        "colorMaterialSourcePixels": 31855,
+        "colorMaterialGeneratedPixels": 60147,
+        "hiddenTargetPixels": 1665,
+        "hiddenCoveragePixels": 1373,
+        "hiddenCoverageFraction": 0.82462,
+        "sourceArtOriginalUnchanged": true
+      }
+    },
+    "67.5": {
+      "collar": {
+        "nativePath": "private-assets/p15-111-hidden-art/yaw67p5-collar-native.png",
+        "nativeSHA256": "588e98e2907f012bb17db1d561fd646f7aabc832feec9f168753584a2e67a2c6",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "nativeAlphaBBox": [
+          25,
+          167,
+          1200,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-111-hidden-registered/yaw67p5-collar-registered.png",
+        "registeredSHA256": "4d28a211b42b9329f1d7b38a6edbc856cf65368720cf5f0b9da674e18c0eb948",
+        "hiddenOnlyPath": "private-assets/exports/p15-111-hidden-registered/yaw67p5-collar-hidden.png",
+        "hiddenOnlySHA256": "a4656fdb1d2fec705ce4a04bb1add976559914d42ee4b404926225af99a6f7c8",
+        "sourceMaterialCenter": [
+          527.647,
+          719.504
+        ],
+        "nativeNormalizedMaterialCenter": [
+          511.551,
+          744.068
+        ],
+        "registrationShift1024": [
+          16.097,
+          -24.564
+        ],
+        "colorMaterialSourcePixels": 15073,
+        "colorMaterialGeneratedPixels": 26772,
+        "hiddenTargetPixels": 19689,
+        "hiddenCoveragePixels": 10305,
+        "hiddenCoverageFraction": 0.52339,
+        "sourceArtOriginalUnchanged": true
+      },
+      "bow": {
+        "nativePath": "private-assets/p15-111-hidden-art/yaw67p5-bow-native.png",
+        "nativeSHA256": "98e30764dc6c64f13001ba9355b5eaf1f948b2bd95ab031916a3e36ad629a79a",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "nativeAlphaBBox": [
+          57,
+          32,
+          1214,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-111-hidden-registered/yaw67p5-bow-registered.png",
+        "registeredSHA256": "91430502ac2dd8397666162c6069e28bd11487fd95a8c218a7ef72efd0b7492e",
+        "hiddenOnlyPath": "private-assets/exports/p15-111-hidden-registered/yaw67p5-bow-hidden.png",
+        "hiddenOnlySHA256": "e1aaf783097f0723bebffe4426a62e09f021cacec98f203a012c50c00e7c374f",
+        "sourceMaterialCenter": [
+          632.772,
+          873.479
+        ],
+        "nativeNormalizedMaterialCenter": [
+          601.95,
+          871.491
+        ],
+        "registrationShift1024": [
+          30.823,
+          1.988
+        ],
+        "colorMaterialSourcePixels": 30683,
+        "colorMaterialGeneratedPixels": 52454,
+        "hiddenTargetPixels": 1660,
+        "hiddenCoveragePixels": 1660,
+        "hiddenCoverageFraction": 1.0,
+        "sourceArtOriginalUnchanged": true
+      }
+    },
+    "75": {
+      "collar": {
+        "nativePath": "private-assets/p15-111-hidden-art/yaw75-collar-native.png",
+        "nativeSHA256": "2eab1db0ce3f646f8fe93d80eb581a1bd08c7738a169895b97e7393d3dd7318d",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "nativeAlphaBBox": [
+          136,
+          53,
+          1226,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-111-hidden-registered/yaw75-collar-registered.png",
+        "registeredSHA256": "514e8797c191edfc18c5540c9415e4fc8d36b6ad38f5026bd574ac996059c9e0",
+        "hiddenOnlyPath": "private-assets/exports/p15-111-hidden-registered/yaw75-collar-hidden.png",
+        "hiddenOnlySHA256": "1be0652f8c7eab9beba99ca6a2e93c7605f777d9b5ae861f7f4375e43307d430",
+        "sourceMaterialCenter": [
+          535.306,
+          719.559
+        ],
+        "nativeNormalizedMaterialCenter": [
+          526.549,
+          740.342
+        ],
+        "registrationShift1024": [
+          8.757,
+          -20.783
+        ],
+        "colorMaterialSourcePixels": 13429,
+        "colorMaterialGeneratedPixels": 29302,
+        "hiddenTargetPixels": 15417,
+        "hiddenCoveragePixels": 12809,
+        "hiddenCoverageFraction": 0.83084,
+        "sourceArtOriginalUnchanged": true
+      },
+      "bow": {
+        "nativePath": "private-assets/p15-111-hidden-art/yaw75-bow-native.png",
+        "nativeSHA256": "cfcf1a43d4a6d1e7668db9ae3ac6319cc3c7e37718a8329ad801ec49b6e26ea5",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "nativeAlphaBBox": [
+          41,
+          86,
+          1202,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-111-hidden-registered/yaw75-bow-registered.png",
+        "registeredSHA256": "2edb4145037627667f472cae221d1501e9cf733e4245e33b6554d55e2b71c3df",
+        "hiddenOnlyPath": "private-assets/exports/p15-111-hidden-registered/yaw75-bow-hidden.png",
+        "hiddenOnlySHA256": "41498111e3273e6548ae2c5c61ccdf3eaf3dd83559a02a484158ee44054935ec",
+        "sourceMaterialCenter": [
+          636.301,
+          866.967
+        ],
+        "nativeNormalizedMaterialCenter": [
+          591.952,
+          872.593
+        ],
+        "registrationShift1024": [
+          44.349,
+          -5.626
+        ],
+        "colorMaterialSourcePixels": 20651,
+        "colorMaterialGeneratedPixels": 49137,
+        "hiddenTargetPixels": 1663,
+        "hiddenCoveragePixels": 1663,
+        "hiddenCoverageFraction": 1.0,
+        "sourceArtOriginalUnchanged": true
+      }
+    }
+  },
+  "sourceMasks": {
+    "60": {
+      "jewelForegroundPath": "private-assets/exports/p15-108-stroke-identity/yaw60/jewel-mask.png",
+      "bowForegroundPath": "private-assets/exports/p15-108-stroke-identity/yaw60/bowFabric-mask.png",
+      "hiddenBowTestPixels": 1665,
+      "hiddenCollarTestPixels": 20278
+    },
+    "67.5": {
+      "jewelForegroundPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel-mask.png",
+      "bowForegroundPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric-mask.png",
+      "hiddenBowTestPixels": 1660,
+      "hiddenCollarTestPixels": 19689
+    },
+    "75": {
+      "jewelForegroundPath": "private-assets/exports/p15-108-stroke-identity/yaw75/jewel-mask.png",
+      "bowForegroundPath": "private-assets/exports/p15-108-stroke-identity/yaw75/bowFabric-mask.png",
+      "hiddenBowTestPixels": 1663,
+      "hiddenCollarTestPixels": 15417
+    }
+  },
+  "nativeImageCount": 6,
+  "sourceViewsRegistered": 3,
+  "contact": "private-assets/exports/p15-111-hidden-registered/underpaint-source-contact.jpg"
+}
