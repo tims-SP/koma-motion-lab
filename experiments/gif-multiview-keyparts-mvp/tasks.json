@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_92_FOUR_ANGLE_SOURCES_READY_INTERPOLATION_VISUAL_PENDING",
+  "status": "P15_93_INDEPENDENT_VIEW_52_5_READY_SEMANTIC_VDD_NEXT",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-92 four independent keyview images, model provenance, browser review and 7-angle interpolation diagnostics",
+  "lastCompleted": "P15-93 image-generated 52.5 reference, midpoint interpolation and source-preserving flow boundary tests",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -4364,6 +4364,55 @@
       "evidence/p15-92-native-keyart-qa.json",
       "evidence/p15-92-view-flow-qa.json",
       "evidence/p15-92-browser-qa.json"
+    ]
+  },
+  "p15_93KeyviewTransitionDiagnostics": {
+    "status": "INDEPENDENT_52_5_REFERENCE_AND_INTERPOLATION_DIAGNOSTICS_READY",
+    "characterId": "p0_character_001",
+    "nativeImageSourceSHA256": "638da76be2c3153ac987dc529616ea40ebe6ac9cd36199422292cf2f7722e3bc",
+    "registeredSourceSHA256": "f99c495dd3adcdc34329a54413cbcccb25ddc3d146167ffe5c4398c1b8f3e708",
+    "sourceAngles": [
+      45,
+      52.5,
+      60,
+      75,
+      90
+    ],
+    "experimentalMidpointAngles": [
+      48.75,
+      56.25,
+      67.5,
+      82.5
+    ],
+    "observedQuality": "52.5 independent source restores coherent face; 56.25 still has face/hair double contours",
+    "forwardWarpBoundaryRatio": [
+      1.525,
+      1.573,
+      1.712
+    ],
+    "blendWarpBoundaryRatio": [
+      1.095,
+      1.194,
+      1.164
+    ],
+    "browserChecksPass": 10,
+    "unitTestsPass": 9,
+    "formalArtMeshAccepted": false,
+    "formalKeyframeAccepted": false,
+    "continuousVddAccepted": false,
+    "visualGate": "SEMANTIC_LAYER_CORRESPONDENCE_REQUIRED",
+    "review": "private-assets/exports/p15-93-yaw0525-review/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-93-keyart-motion-review.zip",
+      "bytes": 13716969,
+      "sha256": "fe8d4814c1a10fa3fa0052e25cb5cbf0fd8ca737ef81ca546969bd1d55362190",
+      "entries": 29
+    },
+    "evidence": [
+      "evidence/p15-93-flow-ablation-qa.json",
+      "evidence/p15-93-boundary-qa.json",
+      "evidence/p15-93-native52-qa.json",
+      "evidence/p15-93-browser-qa.json"
     ]
   }
 }

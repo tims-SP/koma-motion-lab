@@ -1,0 +1,60 @@
+{
+  "schema": "KOMA-P15-93-SOURCE_PRESERVING_FLOW_ABLATION_V1",
+  "angles": [
+    52.5,
+    67.5,
+    82.5
+  ],
+  "methods": [
+    "blend",
+    "forward",
+    "backward"
+  ],
+  "frames": {
+    "52.5": {
+      "blend": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw52p5-blend.png",
+        "sha256": "b46a6a02ec87df1fbfac82986437de651681812e4e98d0dc2b5cca0c41685f2c"
+      },
+      "forward": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw52p5-forward.png",
+        "sha256": "5c6b7402add877e7a34ffb475c02d0bdb98f4c28f3dfa5fe2a1efe26e5259d01"
+      },
+      "backward": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw52p5-backward.png",
+        "sha256": "40dcd96f53cf9376802aa1993a5eb036f0aa34943b055b4c0a15ee883befbe66"
+      }
+    },
+    "67.5": {
+      "blend": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw67p5-blend.png",
+        "sha256": "4534e53eb050153539e00c37bd30996c6522cedb42702e18a6f6abcbc1a39eb6"
+      },
+      "forward": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw67p5-forward.png",
+        "sha256": "edcbd53c6706a31cf70661edbc2162a4a74f53879b95e24f0d38361d7a9c8fc2"
+      },
+      "backward": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw67p5-backward.png",
+        "sha256": "caaf32852703d70101d3a84c6936916c87b425255bb125fa856e850fb7e216d0"
+      }
+    },
+    "82.5": {
+      "blend": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw82p5-blend.png",
+        "sha256": "6a569e017f9d8cfc7e56c39642d488c0d9ec8ff9b20d5e6569b119042a0c4bf7"
+      },
+      "forward": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw82p5-forward.png",
+        "sha256": "1685c9f7b5c37af5ff80eb46367cabdfc6bdfc1d933c7f0b124401e5ae33b002"
+      },
+      "backward": {
+        "path": "private-assets/exports/p15-93-flow-ablation/yaw82p5-backward.png",
+        "sha256": "7b38b023190f962f5aa396de0644c6c0871646c3fb99e03b4d3cb435caac53f6"
+      }
+    }
+  },
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_VISUAL_SELECTION",
+  "contact": "private-assets/exports/p15-93-flow-ablation/comparison.jpg"
+}
