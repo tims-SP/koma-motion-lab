@@ -1,0 +1,277 @@
+{
+  "schema": "KOMA_P15_159_FIVE_CONTROL_CURVE_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "sampleAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "viewControls": {
+    "90": [
+      [
+        205.0,
+        65.0
+      ],
+      [
+        233.0,
+        5.0
+      ],
+      [
+        187.0,
+        33.0
+      ],
+      [
+        278.0,
+        28.0
+      ],
+      [
+        270.0,
+        46.0
+      ]
+    ],
+    "112.5": [
+      [
+        294.0,
+        72.0
+      ],
+      [
+        288.0,
+        21.0
+      ],
+      [
+        255.0,
+        42.0
+      ],
+      [
+        321.0,
+        42.0
+      ],
+      [
+        323.0,
+        47.0
+      ]
+    ],
+    "135": [
+      [
+        264.0,
+        67.0
+      ],
+      [
+        258.0,
+        8.0
+      ],
+      [
+        222.0,
+        35.0
+      ],
+      [
+        297.0,
+        32.0
+      ],
+      [
+        292.0,
+        46.0
+      ]
+    ]
+  },
+  "controlDefinitions": [
+    "proposed_root",
+    "apex",
+    "left_mid_contour",
+    "right_mid_contour",
+    "lower_outer_leg"
+  ],
+  "renderers": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sourceKeyframesPixelExact": true,
+      "crownBelowCutPixelExact": true,
+      "midview": {}
+    },
+    "controls_only": {
+      "maxAdjacentRGBMAE": 12.3388,
+      "adjacentRGBMAE": [
+        12.3388,
+        11.1963,
+        10.3903,
+        11.5277
+      ],
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "sourceKeyframesPixelExact": true,
+      "crownBelowCutPixelExact": false,
+      "midview": {
+        "101.25": {
+          "owner": 90.0,
+          "curveControls": [
+            [
+              249.5,
+              68.5
+            ],
+            [
+              260.5,
+              13.0
+            ],
+            [
+              221.0,
+              37.5
+            ],
+            [
+              299.5,
+              35.0
+            ],
+            [
+              296.5,
+              46.5
+            ]
+          ],
+          "upperPartPixels": 908
+        },
+        "123.75": {
+          "owner": 112.5,
+          "curveControls": [
+            [
+              279.0,
+              69.5
+            ],
+            [
+              273.0,
+              14.5
+            ],
+            [
+              238.5,
+              38.5
+            ],
+            [
+              309.0,
+              37.0
+            ],
+            [
+              307.5,
+              46.5
+            ]
+          ],
+          "upperPartPixels": 866
+        }
+      }
+    },
+    "controls_bridge": {
+      "maxAdjacentRGBMAE": 12.3218,
+      "adjacentRGBMAE": [
+        12.3218,
+        11.2116,
+        10.3935,
+        11.53
+      ],
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "sourceKeyframesPixelExact": true,
+      "crownBelowCutPixelExact": false,
+      "midview": {
+        "101.25": {
+          "owner": 90.0,
+          "curveControls": [
+            [
+              249.5,
+              68.5
+            ],
+            [
+              260.5,
+              13.0
+            ],
+            [
+              221.0,
+              37.5
+            ],
+            [
+              299.5,
+              35.0
+            ],
+            [
+              296.5,
+              46.5
+            ]
+          ],
+          "upperPartPixels": 908
+        },
+        "123.75": {
+          "owner": 112.5,
+          "curveControls": [
+            [
+              279.0,
+              69.5
+            ],
+            [
+              273.0,
+              14.5
+            ],
+            [
+              238.5,
+              38.5
+            ],
+            [
+              309.0,
+              37.0
+            ],
+            [
+              307.5,
+              46.5
+            ]
+          ],
+          "upperPartPixels": 866
+        }
+      }
+    }
+  },
+  "sourceArtUnchanged": true,
+  "realPhysicalStrandIdentityVerified": false,
+  "hiddenScalpArtValidated": false,
+  "artistCurveControlsApproved": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-159-curve-controls/index.html",
+  "next": "Review 101.25/123.75 loop structure and artifact seams. Author matching 3-view root underpaint and true inner/outer contour points before selecting continuous yaw.",
+  "acceptanceGate": {
+    "passes": false,
+    "candidateSelectedForProduction": false,
+    "maxPermittedAdjacentRGBMAE": 12.0984,
+    "midviewSingleComponent": {
+      "controls_only": false,
+      "controls_bridge": false
+    },
+    "crownPixelPreservation": {
+      "controls_only": false,
+      "controls_bridge": false
+    },
+    "reason": "Source root pixels cross the experimental upper-hair boundary; 101.25 and 123.75 show extra connected components, remaining crown strokes and owner-switch discontinuity."
+  }
+}

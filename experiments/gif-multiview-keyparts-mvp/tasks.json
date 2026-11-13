@@ -8636,5 +8636,142 @@
     ],
     "review": "private-assets/exports/p15-158-loop-correspondence/index.html",
     "next": "Establish full-loop source control points and painter-verified root/crown underpaint per view; replace endpoint-only correspondence with curve-aware matching and verify single-loop root continuity at both mid angles."
+  },
+  "p15_159FiveControlLoopCorrespondence": {
+    "status": "FIVE_CONTROL_LOOP_ARTMESH_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "viewCurveControls": {
+      "90": [
+        [
+          205.0,
+          65.0
+        ],
+        [
+          233.0,
+          5.0
+        ],
+        [
+          187.0,
+          33.0
+        ],
+        [
+          278.0,
+          28.0
+        ],
+        [
+          270.0,
+          46.0
+        ]
+      ],
+      "112.5": [
+        [
+          294.0,
+          72.0
+        ],
+        [
+          288.0,
+          21.0
+        ],
+        [
+          255.0,
+          42.0
+        ],
+        [
+          321.0,
+          42.0
+        ],
+        [
+          323.0,
+          47.0
+        ]
+      ],
+      "135": [
+        [
+          264.0,
+          67.0
+        ],
+        [
+          258.0,
+          8.0
+        ],
+        [
+          222.0,
+          35.0
+        ],
+        [
+          297.0,
+          32.0
+        ],
+        [
+          292.0,
+          46.0
+        ]
+      ]
+    },
+    "controlRoles": [
+      "proposed_root",
+      "apex",
+      "left_mid_contour",
+      "right_mid_contour",
+      "lower_outer_leg"
+    ],
+    "referenceMaxAdjacentRGBMAE": 12.0984,
+    "candidateMaxAdjacentRGBMAE": {
+      "controls_only": 12.3388,
+      "controls_bridge": 12.3218
+    },
+    "candidateTopConnectedComponents": {
+      "controls_only": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "controls_bridge": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ]
+    },
+    "sourceKeyframesPixelExact": true,
+    "visualFindings": "Five view-space controls retain a substantially fuller intermediate loop than distance-field mask blending, but 101.25 and 123.75 degree renders retain root strokes, separated upper-hair components and misregistered crown boundaries. A local synthetic root bridge produces an extra intersection stroke. Do not select either candidate as the canonical VDD renderer.",
+    "acceptanceGate": {
+      "passes": false,
+      "candidateSelectedForProduction": false,
+      "maxPermittedAdjacentRGBMAE": 12.0984,
+      "midviewSingleComponent": {
+        "controls_only": false,
+        "controls_bridge": false
+      },
+      "crownPixelPreservation": {
+        "controls_only": false,
+        "controls_bridge": false
+      },
+      "reason": "Source root pixels cross the experimental upper-hair boundary; 101.25 and 123.75 show extra connected components, remaining crown strokes and owner-switch discontinuity."
+    },
+    "physicalStrandIdentityVerified": false,
+    "hiddenScalpArtworkApproved": false,
+    "canonicalRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "evidence": [
+      "evidence/p15-159-curve-controls-qa.json"
+    ],
+    "review": "private-assets/exports/p15-159-curve-controls/index.html",
+    "next": "Create source-registered inner/outer strand edges and matching root attachment/hidden scalp, then test intermediate curve connectivity and all native keyframes before updating VDD."
   }
 }
