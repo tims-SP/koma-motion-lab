@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_96_ROOT_ANCHORED_HAIR_TIP_REVIEW_READY_MULTIVIEW_PENDING",
+  "status": "P15_97_THREE_VIEW_HAIR_TIP_VERIFIED_CONTINUOUS_YAW_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-96 source-owned pinned-root 60-degree front-hair tip deformation with 13-frame visual review",
+  "lastCompleted": "P15-97 real SAM3 and Codex independent view sources, root-pinned 39 pose frames, 78 Chromium checks, 13 provenance tests",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -4578,5 +4578,78 @@
       "evidence/p15-96-browser-qa.json"
     ],
     "next": "Validate semantic hair-tip anchors and matching face underdrawing across 52.5°/60°/75° before continuous VDD admission"
+  },
+  "p15_97ThreeViewHairTipMotion": {
+    "status": "THREE_VIEW_LOCAL_HAIR_TIP_ENGINEERING_VERIFIED",
+    "characterId": "p0_character_001",
+    "anglesTarget": [
+      52.5,
+      60,
+      75
+    ],
+    "sharedParameter": "hairTipOffsetPx",
+    "offsetsPx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "frameCount": 39,
+    "unitTestsPass": 13,
+    "browserChecksPass": 78,
+    "sourceIdentityPixelExactAtZero": true,
+    "newTransparentHoles": 0,
+    "changedPixelsOutsideSemanticSupports": 0,
+    "rootChangedPixels": 0,
+    "tipChangedPixelsAt12": {
+      "52p5": 2412,
+      "60": 5495,
+      "75": 2593
+    },
+    "maxAdjacentLocalRGBMAE": {
+      "52p5": 0.16207,
+      "60": 0.3247,
+      "75": 0.27459
+    },
+    "actualSAM3SourceViews": [
+      52.5,
+      60,
+      75
+    ],
+    "actualCodexFaceUnderpaintingViews": [
+      52.5,
+      60,
+      75
+    ],
+    "sourceViewAngleMeasured": false,
+    "localHairTipCandidateAccepted": true,
+    "formalFullArtMeshAccepted": false,
+    "continuousYawVddAccepted": false,
+    "visualGate": "LOCAL_THREE_VIEW_TIP_MOTION_READY_FULL_VDD_REMAINS_ART_REVIEW",
+    "review": "private-assets/exports/p15-97-multiview-motion/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-97-three-view-hair-motion.zip",
+      "sha256": "a621ed852773266e742b995a97476214decccad8e64c5fda2866af4999bbeb6e",
+      "bytes": 54218218,
+      "entries": 90
+    },
+    "evidence": [
+      "evidence/p15-97-multiview-motion-qa.json",
+      "evidence/p15-97-browser-qa.json",
+      "evidence/p15-97-sam3-yaw52p5.json",
+      "evidence/p15-97-sam3-yaw75.json",
+      "evidence/p15-97-underpaint-yaw52p5.json",
+      "evidence/p15-97-underpaint-yaw75.json"
+    ],
+    "next": "Assess eye/bang semantic ownership and actual continuous 52.5–75 yaw animation using this source-owned local motion prototype"
   }
 }

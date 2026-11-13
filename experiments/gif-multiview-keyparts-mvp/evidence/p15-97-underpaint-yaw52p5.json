@@ -1,0 +1,32 @@
+{
+  "schema": "KOMA_P15_97_CODEX_NATIVE_UNDERPAINT_REGISTRATION_V1",
+  "view": "52p5",
+  "sourceSHA256": "f99c495dd3adcdc34329a54413cbcccb25ddc3d146167ffe5c4398c1b8f3e708",
+  "nativeModelSHA256": "32d87f9f10bcae2352d2eb6b4655c62e51d8f652dd4198e2794d696bc1cc6cf8",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeTool": "Codex CLI image_gen.imagegen",
+  "referenceSHA256": "3f327116074e38b6ada857bbe42a76736cf1275c34e831f4121ff4d840c04160",
+  "registeredSourceSHA256": "5d1f866e09ff4ece59752d9880bf6ae8af38540bb07fa0f5d64c64c799d3a773",
+  "registration": "translation",
+  "warp": [
+    [
+      1.0,
+      0.0,
+      0.12232371419668198
+    ],
+    [
+      0.0,
+      1.0,
+      0.03597705066204071
+    ]
+  ],
+  "score": 0.9863110263499686,
+  "outsideMaskRGBMAE": 4.9296,
+  "insideMaskRGBMAE": 32.5127,
+  "pixelExactMaskedModelEdit": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "SOURCE_REGISTERED_FOR_MOTION_TEST_ONLY"
+}

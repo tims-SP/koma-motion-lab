@@ -1,0 +1,45 @@
+{
+  "schema": "KOMA_P15_97_REAL_SAM3_VIEW_V1",
+  "view": "75",
+  "sourceSHA256": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+  "model": "prithivMLmods/SAM3-Demo",
+  "execution": "authenticated Hugging Face plugin Space invocation",
+  "providerAccountSlot": "secondary-2",
+  "prompt": "front bangs hair over the forehead",
+  "status": "MODEL_RETURNED",
+  "annotationCount": 2,
+  "annotations": [
+    {
+      "index": 0,
+      "label": "front bangs hair over the forehead (0.80)",
+      "rawSHA256": "946808dc39367677f4f59a3eb47fbb1ca61b62ed568376de2545e3b8fb462eb2",
+      "maskSHA256": "2e8f3ddfd272037c266db40e85131885906c81b339104451e1f4d845f33af87f",
+      "cutoutSHA256": "0539fdf411a7a83cbb83a1530895985e7ad8cc4525ced64822f98b023462233b",
+      "areaAlpha128": 215210,
+      "bboxAlpha128": [
+        178,
+        112,
+        774,
+        706
+      ]
+    },
+    {
+      "index": 1,
+      "label": "front bangs hair over the forehead (0.62)",
+      "rawSHA256": "b80b3004e2394d72ffd588ace526742e833855d44e0c2c08d928aa275c397810",
+      "maskSHA256": "d8a0b558d319b4b75bba1b4c0e27b47b862dc691b3ed895b6c4c959b99394da8",
+      "cutoutSHA256": "644e32939b0822489f24c4bd7303117b91bdff8824e8a87f987324c8aa9e590d",
+      "areaAlpha128": 73522,
+      "bboxAlpha128": [
+        506,
+        130,
+        776,
+        706
+      ]
+    }
+  ],
+  "sourceRGBPreserved": true,
+  "semanticArtMeshApproved": false,
+  "visualGate": "FRONT_BANG_ANNOTATIONS_FOR_REVIEW",
+  "contact": "exports/p15-97-sam3-yaw75/mask-contact.jpg"
+}

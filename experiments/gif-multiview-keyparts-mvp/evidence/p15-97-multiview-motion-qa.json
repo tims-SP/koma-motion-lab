@@ -1,0 +1,460 @@
+{
+  "schema": "KOMA_P15_97_MULTIVIEW_ROOT_ANCHORED_MOTION_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    52.5,
+    60,
+    75
+  ],
+  "offsetsPx": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "sharedParameter": "hairTipOffsetPx",
+  "model": {
+    "segmentation": "Hugging Face SAM3",
+    "underpaint": "Codex native image_gen"
+  },
+  "views": {
+    "52p5": {
+      "view": "52p5",
+      "sourceSHA256": "f99c495dd3adcdc34329a54413cbcccb25ddc3d146167ffe5c4398c1b8f3e708",
+      "SAM3MaskSHA256": "211ba89dc9208410f5f8fcf0fd818c900006fc63c2c96352cea1bd9f38f53106",
+      "underpaintSHA256": "5d1f866e09ff4ece59752d9880bf6ae8af38540bb07fa0f5d64c64c799d3a773",
+      "frontHairSHA256": "e42cec3d64aaa156f71199a421dc89f3810f579040ff08da7570ffa725bc39e5",
+      "rootAnchor": {
+        "rootY": 410,
+        "yRamp": 38,
+        "leftX": 600,
+        "xRamp": 30,
+        "rightX": 690,
+        "rightRamp": 36,
+        "bottomY": 470,
+        "bottomRamp": 32
+      },
+      "frames": {
+        "0": {
+          "sha256": "f99c495dd3adcdc34329a54413cbcccb25ddc3d146167ffe5c4398c1b8f3e708",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0
+        },
+        "1": {
+          "sha256": "530e66124d98644c62c9e2356381ed3e325e08caa612dc7af2c5d80ee193aa0a",
+          "changedPixels": 1504,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 1479,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.16207
+        },
+        "2": {
+          "sha256": "acac11fabc5f3daad6932f90cdf42280c53da17282f2142c81204c2a72c2f9d8",
+          "changedPixels": 1811,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 1774,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14425
+        },
+        "3": {
+          "sha256": "e2f4540cf2cb4d5a253cd22e79343f54deae8a7de920f60ebdb4fda954bb8c50",
+          "changedPixels": 1998,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 1952,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14793
+        },
+        "4": {
+          "sha256": "6d916ada1cc04fecfd5521155ede183f953ac626c58ac6718cf238107e204ff5",
+          "changedPixels": 2105,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2054,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14928
+        },
+        "5": {
+          "sha256": "4f3ede645c5e61fa8e59b35eb0f90a1944bd18212d345741c6ed7785297e91ac",
+          "changedPixels": 2203,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2144,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14808
+        },
+        "6": {
+          "sha256": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+          "changedPixels": 2269,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2205,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14637
+        },
+        "7": {
+          "sha256": "07505fb8eaddd63cb9258f47f8822080994db5707dc14bf526b98e5b06419af9",
+          "changedPixels": 2323,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2255,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14813
+        },
+        "8": {
+          "sha256": "f9e996ffd31843e0e857db09839cdba5552292e223e8a0c9f9123d74352caf27",
+          "changedPixels": 2386,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2305,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.14389
+        },
+        "9": {
+          "sha256": "0f61cbbe8559b68c1898d08fa22b082ed10b5411157399ee85be7b10053c00e6",
+          "changedPixels": 2422,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2338,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.13966
+        },
+        "10": {
+          "sha256": "4a9b6ef077a3285145d322868cd36e00e760fb2635e901182035bdb10eb9cd42",
+          "changedPixels": 2447,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2357,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.13766
+        },
+        "11": {
+          "sha256": "9ee27d378aad9fed15fd3c5614dbac5f2215f89799ba6d5a3256fc5932281a86",
+          "changedPixels": 2491,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2396,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.13489
+        },
+        "12": {
+          "sha256": "a1f6ea8ab4fcf99e3b4f0282eb9d826de4b8e97b50a95d4b015018497f47ffaa",
+          "changedPixels": 2507,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2412,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.13105
+        }
+      },
+      "maxAdjacentRGBMAE": 0.16207,
+      "firstStepRatio": 1.1235,
+      "rootInvariant": true,
+      "restPoseSourcePixelExact": true,
+      "hasVisibleTipMotion": true
+    },
+    "60": {
+      "view": "60",
+      "sourceSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+      "SAM3MaskSHA256": "f29a0a68ab697452933cdd2748ef19273a8d384da4f906c63f8a1635d1b9e879",
+      "underpaintSHA256": "e5891f3568bd54e7ae86f516385f2a17c2830a2c3badece088d92e24e395a034",
+      "frontHairSHA256": "862cb658268cf07af7fd16233613fdb27e2594030681a2edebf226310482de2b",
+      "rootAnchor": {
+        "fixedAboveY": 420,
+        "yRampPx": 65,
+        "leftAnchorX": 620,
+        "leftRampPx": 35,
+        "rightAnchorX": 805,
+        "rightRampPx": 65,
+        "bottomAnchorY": 570,
+        "bottomRampPx": 70
+      },
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0
+        },
+        "1": {
+          "sha256": "f24cb9d17ee610f5b8ececc4de3d60c2f7efbd3afc93d2bc79497ed184aea68a",
+          "changedPixels": 4425,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 4174,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.3247
+        },
+        "2": {
+          "sha256": "b2be968d042928e71ab675566098de5ac193c8551df2612463e722cb1fa631df",
+          "changedPixels": 4915,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 4633,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2733
+        },
+        "3": {
+          "sha256": "cc1ae34e93ba166634787baee2bfebc4fa0ae3424b0959de25594d95b4d49644",
+          "changedPixels": 5133,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 4819,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2873
+        },
+        "4": {
+          "sha256": "d49d51343d1db0caeaa0db9a6a55cfab4730363e1bf4de4432396488723d5d32",
+          "changedPixels": 5307,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 4972,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2927
+        },
+        "5": {
+          "sha256": "c3b98d7012642935531df48594d46ffef442501b2c1c1e51a51840219f42a74a",
+          "changedPixels": 5434,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5074,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2903
+        },
+        "6": {
+          "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+          "changedPixels": 5521,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5142,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2694
+        },
+        "7": {
+          "sha256": "cd859a0de1e8f078e17b811810d7b69006897e1a5c6719553f7841f091491bdb",
+          "changedPixels": 5591,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5203,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2618
+        },
+        "8": {
+          "sha256": "fa5a8b8915e478518c8fe8ba440dc34c615fe9c44e974fa464d9570fcfd20d8d",
+          "changedPixels": 5687,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5281,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2724
+        },
+        "9": {
+          "sha256": "b4d4b784261adb32698cff129c3066cb9361aa04c1c3bb8065e0ea61ca1138ea",
+          "changedPixels": 5747,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5330,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2542
+        },
+        "10": {
+          "sha256": "d23b2d40ed8701652d12b90a856e112a6d5919a857a3e88409cdad10e2a303d6",
+          "changedPixels": 5812,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5387,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2547
+        },
+        "11": {
+          "sha256": "f0f853f4bed22102539c2f48d268bc00af7c99fcb7babb079086746bbfdf1a02",
+          "changedPixels": 5869,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5435,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2615
+        },
+        "12": {
+          "sha256": "46af4b2bd01dd7491038829b3f5ba28534e44415a828eefb57fb091803838dc1",
+          "changedPixels": 5934,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 5495,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2451
+        }
+      },
+      "maxAdjacentRGBMAE": 0.3247,
+      "firstStepRatio": 1.2053,
+      "rootInvariant": true,
+      "restPoseSourcePixelExact": true,
+      "hasVisibleTipMotion": true
+    },
+    "75": {
+      "view": "75",
+      "sourceSHA256": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+      "SAM3MaskSHA256": "d8a0b558d319b4b75bba1b4c0e27b47b862dc691b3ed895b6c4c959b99394da8",
+      "underpaintSHA256": "e79a359861e9661a6a038ffe7f593bbadbf502013a3b655ee434071c475c617d",
+      "frontHairSHA256": "b6e2222836887abd0cd5309bf7d0e5654ecc3f17b7080dad990a85168484450c",
+      "rootAnchor": {
+        "rootY": 410,
+        "yRamp": 35,
+        "leftX": 715,
+        "xRamp": 28,
+        "rightX": 790,
+        "rightRamp": 35,
+        "bottomY": 475,
+        "bottomRamp": 35
+      },
+      "frames": {
+        "0": {
+          "sha256": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0
+        },
+        "1": {
+          "sha256": "440c8a8c9adaafcce9d735811d108222f90f029e3eeb68008754ae93f682341d",
+          "changedPixels": 2432,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2216,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.27459
+        },
+        "2": {
+          "sha256": "7ea6683f3dd67e34d47b1a36dbbff1fa8885b6f9b45cf1419baacc00ad98e1ab",
+          "changedPixels": 2656,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2351,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.21002
+        },
+        "3": {
+          "sha256": "8063f3ce36da14e02e9e381642bf402e7cb35c3d0f756d4582687992b152ac66",
+          "changedPixels": 2765,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2412,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2147
+        },
+        "4": {
+          "sha256": "26abe52d8cb03b9d9062f539cd1126d554bdaee7fe8ffbb69fea55cf12a462ee",
+          "changedPixels": 2835,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2455,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.2215
+        },
+        "5": {
+          "sha256": "01c3a6759cb9def8c2da16d9594b2d2107cc8dc3bdbde7c3afafdd06a6355fa2",
+          "changedPixels": 2892,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2482,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20975
+        },
+        "6": {
+          "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+          "changedPixels": 2928,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2501,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.22255
+        },
+        "7": {
+          "sha256": "73712dd26d55da02157bf189a74e1fc8665a1bf6fddbd98b9671a49af94b8697",
+          "changedPixels": 2974,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2526,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20773
+        },
+        "8": {
+          "sha256": "37db9e2a5bc488a5171f9d837dce36ba7223a46b87bb1e7303c98e1126a095bc",
+          "changedPixels": 2997,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2538,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20873
+        },
+        "9": {
+          "sha256": "9482cd4ca6b99f129a8f5e354197a803b64811934e75723fc74bd19122562570",
+          "changedPixels": 3031,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2560,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20546
+        },
+        "10": {
+          "sha256": "3aaf43e89b0051f5f4ec2aa8d5fe2f0e589f9b440f1997a5b0431f1d5a7654b8",
+          "changedPixels": 3050,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2573,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20374
+        },
+        "11": {
+          "sha256": "7e824fcdc9b0fc1ad1a197d583e2de61d99a130a60706fad88abd39649042fe1",
+          "changedPixels": 3066,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2585,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20218
+        },
+        "12": {
+          "sha256": "a88bfeadc0a144dc5a1141b938819b81029b2231ba526e655388bfa0557ea024",
+          "changedPixels": 3081,
+          "changedOutsideHairSupports": 0,
+          "rootChangedPixels": 0,
+          "tipChangedPixels": 2593,
+          "newHoles": 0,
+          "adjacentRGBMAE": 0.20315
+        }
+      },
+      "maxAdjacentRGBMAE": 0.27459,
+      "firstStepRatio": 1.3155,
+      "rootInvariant": true,
+      "restPoseSourcePixelExact": true,
+      "hasVisibleTipMotion": true
+    }
+  },
+  "formalFullArtMeshAccepted": false,
+  "continuousVddAccepted": false,
+  "visualGate": "MULTIANGLE_LOCAL_HAIR_TIP_REVIEW",
+  "contact": "exports/p15-97-multiview-motion/view-coupled-contact.jpg",
+  "animatedPreviewSHA256": "8f4c09f28b2ae94b1fc278d0914f912e4922b31303ff4700116e66e4ca29c331",
+  "browserEntry": "private-assets/exports/p15-97-multiview-motion/index.html"
+}
