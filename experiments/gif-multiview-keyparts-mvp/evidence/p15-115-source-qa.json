@@ -1,0 +1,332 @@
+{
+  "schema": "KOMA_P15_115_REGISTERED_GARMENT_PARTS_V1",
+  "characterId": "p0_character_001",
+  "sourceView": "67.5",
+  "targetViews": [
+    "60",
+    "67.5",
+    "75"
+  ],
+  "roles": [
+    "bowFabric",
+    "jewel",
+    "goldTrimLeft",
+    "goldTrimRight"
+  ],
+  "method": "native 512-matte ECC alignment with explicit per-part source owner, inverse 1024 affine",
+  "sourceArtImmutable": true,
+  "registered": {
+    "bowFabric": {
+      "60": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric.png",
+        "sourceSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw60/bowFabric-mask.png",
+        "targetMaskSHA256": "68adba825e43bd957e1396c9e8de1d39e9e77165486cd4bc7a3329f3bc7b788c",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            0.9301803112030029,
+            0.06802736967802048,
+            -4.739386081695557
+          ],
+          [
+            -0.007798337377607822,
+            1.0152864456176758,
+            -4.216189384460449
+          ]
+        ],
+        "jacobianDeterminant": 0.94493,
+        "ECC": 0.98645,
+        "sourceToNativeMaskIoU": 0.87496,
+        "registeredPath": "private-assets/exports/p15-115-component-art/bowFabric-yaw60.png",
+        "registeredSHA256": "2ff6d9b81fc4459b62b895426eb2bdaed2067de605c39f6958222c51044ed246"
+      },
+      "67.5": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric.png",
+        "sourceSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric-mask.png",
+        "targetMaskSHA256": "3680a44245e35f73ad27d015bd0024e01d6bc666e594e1c3487705ca387ca6e0",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "jacobianDeterminant": 1.0,
+        "ECC": 1.0,
+        "sourceToNativeMaskIoU": 1.0,
+        "registeredPath": "private-assets/exports/p15-115-component-art/bowFabric-yaw67p5.png",
+        "registeredSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38"
+      },
+      "75": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric.png",
+        "sourceSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw75/bowFabric-mask.png",
+        "targetMaskSHA256": "5ad07c71b53c907ce1a32c298712c943f83d6210b321d3a0d1cb45af0fb284a3",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.3858622312545776,
+            -0.13101635873317719,
+            -70.41844177246094
+          ],
+          [
+            0.02769332006573677,
+            1.1051024198532104,
+            -50.68672561645508
+          ]
+        ],
+        "jacobianDeterminant": 1.53515,
+        "ECC": 0.947571,
+        "sourceToNativeMaskIoU": 0.79488,
+        "registeredPath": "private-assets/exports/p15-115-component-art/bowFabric-yaw75.png",
+        "registeredSHA256": "742ec0d536165b9c3f6bab100773e3acbf207d0e187b53f36227d79a2d8265fe"
+      }
+    },
+    "jewel": {
+      "60": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel.png",
+        "sourceSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw60/jewel-mask.png",
+        "targetMaskSHA256": "bf487fdab0e78695c9b3e06355c7c4b60b860fd8311303b0064d43ab6f970e01",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.001266598701477,
+            -0.08018607646226883,
+            34.42985153198242
+          ],
+          [
+            0.0776762068271637,
+            1.008062720298767,
+            -28.76307487487793
+          ]
+        ],
+        "jacobianDeterminant": 1.01557,
+        "ECC": 0.998653,
+        "sourceToNativeMaskIoU": 0.90466,
+        "registeredPath": "private-assets/exports/p15-115-component-art/jewel-yaw60.png",
+        "registeredSHA256": "21557900619b5e37356bae10c8c56c952c3e03d32db1978956f26d7ad12cf1f6"
+      },
+      "67.5": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel.png",
+        "sourceSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel-mask.png",
+        "targetMaskSHA256": "53d90f7d38b16f91192bc52fbf290cabf064b573901094eaf6bc2c4d637f3092",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "jacobianDeterminant": 1.0,
+        "ECC": 1.0,
+        "sourceToNativeMaskIoU": 1.0,
+        "registeredPath": "private-assets/exports/p15-115-component-art/jewel-yaw67p5.png",
+        "registeredSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f"
+      },
+      "75": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel.png",
+        "sourceSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw75/jewel-mask.png",
+        "targetMaskSHA256": "409c31cabc95c2760ebf7a0fc1e26508686115bdb736da936072021d4269d2eb",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.009935736656189,
+            0.012774466536939144,
+            -10.810209274291992
+          ],
+          [
+            -0.010071978904306889,
+            0.9991500973701477,
+            4.469895839691162
+          ]
+        ],
+        "jacobianDeterminant": 1.00921,
+        "ECC": 0.997133,
+        "sourceToNativeMaskIoU": 0.92807,
+        "registeredPath": "private-assets/exports/p15-115-component-art/jewel-yaw75.png",
+        "registeredSHA256": "ac3263da51c943f72af3e849da21c28d72da49e3fed863bfb20613d221e85c8c"
+      }
+    },
+    "goldTrimLeft": {
+      "60": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+        "sourceSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw60/goldTrim-mask.png",
+        "targetMaskSHA256": "577e4fd0929cf2b364dc73a6d84bbd6727881e330de934f6c0142a28201f1cc3",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            0.9360147714614868,
+            0.07587388157844543,
+            -9.737585067749023
+          ],
+          [
+            -0.05045517161488533,
+            1.0044647455215454,
+            13.874747276306152
+          ]
+        ],
+        "jacobianDeterminant": 0.94402,
+        "ECC": 0.967491,
+        "sourceToNativeMaskIoU": 0.66242,
+        "registeredPath": "private-assets/exports/p15-115-component-art/goldTrimLeft-yaw60.png",
+        "registeredSHA256": "e4e8e2e3f3a6c2f5860fe0a8210035febc839867d255cd2edfa7613c2b205f55"
+      },
+      "67.5": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+        "sourceSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim-mask.png",
+        "targetMaskSHA256": "432c83d0bb0cad15022dfcd4be5546b6887009c412364abf4e63db9bbbfcabea",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "jacobianDeterminant": 1.0,
+        "ECC": 1.0,
+        "sourceToNativeMaskIoU": 1.0,
+        "registeredPath": "private-assets/exports/p15-115-component-art/goldTrimLeft-yaw67p5.png",
+        "registeredSHA256": "875c67510d592fc182114839a48b4a85dcb03d9e26ee315fb01b8a4fa25e12c4"
+      },
+      "75": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+        "sourceSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw75/goldTrim-mask.png",
+        "targetMaskSHA256": "ae3087c8aa6df89fd35840f497f54a3ca846e4f31400cc24af4b3f559f2357f4",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.0332977771759033,
+            -0.12456668168306351,
+            30.45587730407715
+          ],
+          [
+            -0.02874814160168171,
+            0.9645949006080627,
+            27.492244720458984
+          ]
+        ],
+        "jacobianDeterminant": 0.99313,
+        "ECC": 0.913923,
+        "sourceToNativeMaskIoU": 0.62571,
+        "registeredPath": "private-assets/exports/p15-115-component-art/goldTrimLeft-yaw75.png",
+        "registeredSHA256": "31dca195f40a2bf63d7a6d83de15cc37e8d813d23b48d3945fd796ebae325bd3"
+      }
+    },
+    "goldTrimRight": {
+      "60": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+        "sourceSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw60/goldTrim-mask.png",
+        "targetMaskSHA256": "577e4fd0929cf2b364dc73a6d84bbd6727881e330de934f6c0142a28201f1cc3",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            0.9324519634246826,
+            0.06675824522972107,
+            -7.791585445404053
+          ],
+          [
+            0.03361892327666283,
+            0.9831172227859497,
+            -5.8558244705200195
+          ]
+        ],
+        "jacobianDeterminant": 0.91447,
+        "ECC": 0.953892,
+        "sourceToNativeMaskIoU": 0.53862,
+        "registeredPath": "private-assets/exports/p15-115-component-art/goldTrimRight-yaw60.png",
+        "registeredSHA256": "f26d41638d2c7595a240ff3c2fe3053d2aa4d023a150e7b375b2fe034c460d78"
+      },
+      "67.5": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+        "sourceSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim-mask.png",
+        "targetMaskSHA256": "432c83d0bb0cad15022dfcd4be5546b6887009c412364abf4e63db9bbbfcabea",
+        "sourceOwner": "canonical67.5",
+        "inverseAffine512": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "jacobianDeterminant": 1.0,
+        "ECC": 1.0,
+        "sourceToNativeMaskIoU": 1.0,
+        "registeredPath": "private-assets/exports/p15-115-component-art/goldTrimRight-yaw67p5.png",
+        "registeredSHA256": "502417747f637a63f604c4b6e70f451c2e0d2795f8df6e46a2175f26bebfd341"
+      },
+      "75": {
+        "source": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+        "sourceSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+        "targetMask": "private-assets/exports/p15-108-stroke-identity/yaw75/goldTrim-mask.png",
+        "targetMaskSHA256": "ae3087c8aa6df89fd35840f497f54a3ca846e4f31400cc24af4b3f559f2357f4",
+        "sourceOwner": "nativeTarget",
+        "inverseAffine512": [
+          [
+            1.6040757894515991,
+            0.016615571454167366,
+            -219.2503204345703
+          ],
+          [
+            0.7875962257385254,
+            1.1377699375152588,
+            -367.14013671875
+          ]
+        ],
+        "jacobianDeterminant": 1.81198,
+        "ECC": 0.762227,
+        "sourceToNativeMaskIoU": 0.34732,
+        "registeredPath": "private-assets/exports/p15-115-component-art/goldTrimRight-yaw75.png",
+        "registeredSHA256": "1de1e09703d47a15c3235dd2b5d0d47677eb1be42bd449f4d9800c95ccf618f8"
+      }
+    }
+  },
+  "sourceMatteIoU": {},
+  "sourceOwnerPolicy": {
+    "bowFabric": "67.5 native source throughout",
+    "jewel": "67.5 native source throughout",
+    "goldTrimLeft": "67.5 native source throughout",
+    "goldTrimRight": "source-owned where correspondence supports it; native target art for 75-degree sparse trim"
+  },
+  "sourcePaintStatus": "native original material ink and colors, translated/deformed by measured affine only",
+  "artistVisualApproved": false,
+  "sourceArtSHA256": {
+    "bowFabric": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+    "jewel": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+    "goldTrimLeft": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+    "goldTrimRight": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9"
+  },
+  "contact": "private-assets/exports/p15-115-component-art/component-registration-contact.jpg"
+}

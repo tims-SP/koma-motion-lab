@@ -1,0 +1,981 @@
+{
+  "schema": "KOMA_P15_115_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-114-collar",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "registered_full",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "target_matte",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "owner_body",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "inner_fabric",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_core_gold",
+      "index": 8,
+      "loadedImages": 5,
+      "screenshotSHA256": "f0c9ca7b4832138342849e4dac6bde2508c342f42353587df404392bd2170716"
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-114-collar",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "registered_full",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "target_matte",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "owner_body",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "inner_fabric",
+      "index": 8,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 0,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 1,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 2,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 3,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 4,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 6,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 7,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_core_gold",
+      "index": 8,
+      "loadedImages": 5,
+      "screenshotSHA256": "34937c6b745ddaaf6c8569ea4caf08581330777d414bd2fe3cefd8dc138cc4c2"
+    }
+  ],
+  "errors": []
+}

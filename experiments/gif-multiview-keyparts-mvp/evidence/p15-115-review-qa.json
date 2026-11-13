@@ -1,0 +1,157 @@
+{
+  "schema": "KOMA_P15_115_COMPONENT_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "P15-114-collar": {
+      "60": "../p15-114-collar-render/source_collar_continuous-yaw60.png",
+      "61.875": "../p15-114-collar-render/source_collar_continuous-yaw61p875.png",
+      "63.75": "../p15-114-collar-render/source_collar_continuous-yaw63p75.png",
+      "65.625": "../p15-114-collar-render/source_collar_continuous-yaw65p625.png",
+      "67.5": "../p15-114-collar-render/source_collar_continuous-yaw67p5.png",
+      "69.375": "../p15-114-collar-render/source_collar_continuous-yaw69p375.png",
+      "71.25": "../p15-114-collar-render/source_collar_continuous-yaw71p25.png",
+      "73.125": "../p15-114-collar-render/source_collar_continuous-yaw73p125.png",
+      "75": "../p15-114-collar-render/source_collar_continuous-yaw75.png"
+    },
+    "registered_full": {
+      "60": "../p15-115-component-render/registered_full-yaw60.png",
+      "61.875": "../p15-115-component-render/registered_full-yaw61p875.png",
+      "63.75": "../p15-115-component-render/registered_full-yaw63p75.png",
+      "65.625": "../p15-115-component-render/registered_full-yaw65p625.png",
+      "67.5": "../p15-115-component-render/registered_full-yaw67p5.png",
+      "69.375": "../p15-115-component-render/registered_full-yaw69p375.png",
+      "71.25": "../p15-115-component-render/registered_full-yaw71p25.png",
+      "73.125": "../p15-115-component-render/registered_full-yaw73p125.png",
+      "75": "../p15-115-component-render/registered_full-yaw75.png"
+    },
+    "target_matte": {
+      "60": "../p15-115-component-render/target_matte-yaw60.png",
+      "61.875": "../p15-115-component-render/target_matte-yaw61p875.png",
+      "63.75": "../p15-115-component-render/target_matte-yaw63p75.png",
+      "65.625": "../p15-115-component-render/target_matte-yaw65p625.png",
+      "67.5": "../p15-115-component-render/target_matte-yaw67p5.png",
+      "69.375": "../p15-115-component-render/target_matte-yaw69p375.png",
+      "71.25": "../p15-115-component-render/target_matte-yaw71p25.png",
+      "73.125": "../p15-115-component-render/target_matte-yaw73p125.png",
+      "75": "../p15-115-component-render/target_matte-yaw75.png"
+    },
+    "owner_body": {
+      "60": "../p15-115-component-render/owner_body-yaw60.png",
+      "61.875": "../p15-115-component-render/owner_body-yaw61p875.png",
+      "63.75": "../p15-115-component-render/owner_body-yaw63p75.png",
+      "65.625": "../p15-115-component-render/owner_body-yaw65p625.png",
+      "67.5": "../p15-115-component-render/owner_body-yaw67p5.png",
+      "69.375": "../p15-115-component-render/owner_body-yaw69p375.png",
+      "71.25": "../p15-115-component-render/owner_body-yaw71p25.png",
+      "73.125": "../p15-115-component-render/owner_body-yaw73p125.png",
+      "75": "../p15-115-component-render/owner_body-yaw75.png"
+    },
+    "ink_core": {
+      "60": "../p15-115-local-patch/ink_core-yaw60.png",
+      "61.875": "../p15-115-local-patch/ink_core-yaw61p875.png",
+      "63.75": "../p15-115-local-patch/ink_core-yaw63p75.png",
+      "65.625": "../p15-115-local-patch/ink_core-yaw65p625.png",
+      "67.5": "../p15-115-local-patch/ink_core-yaw67p5.png",
+      "69.375": "../p15-115-local-patch/ink_core-yaw69p375.png",
+      "71.25": "../p15-115-local-patch/ink_core-yaw71p25.png",
+      "73.125": "../p15-115-local-patch/ink_core-yaw73p125.png",
+      "75": "../p15-115-local-patch/ink_core-yaw75.png"
+    },
+    "inner_fabric": {
+      "60": "../p15-115-local-patch/inner_fabric-yaw60.png",
+      "61.875": "../p15-115-local-patch/inner_fabric-yaw61p875.png",
+      "63.75": "../p15-115-local-patch/inner_fabric-yaw63p75.png",
+      "65.625": "../p15-115-local-patch/inner_fabric-yaw65p625.png",
+      "67.5": "../p15-115-local-patch/inner_fabric-yaw67p5.png",
+      "69.375": "../p15-115-local-patch/inner_fabric-yaw69p375.png",
+      "71.25": "../p15-115-local-patch/inner_fabric-yaw71p25.png",
+      "73.125": "../p15-115-local-patch/inner_fabric-yaw73p125.png",
+      "75": "../p15-115-local-patch/inner_fabric-yaw75.png"
+    },
+    "ink_core_gold": {
+      "60": "../p15-115-local-patch/ink_core_gold-yaw60.png",
+      "61.875": "../p15-115-local-patch/ink_core_gold-yaw61p875.png",
+      "63.75": "../p15-115-local-patch/ink_core_gold-yaw63p75.png",
+      "65.625": "../p15-115-local-patch/ink_core_gold-yaw65p625.png",
+      "67.5": "../p15-115-local-patch/ink_core_gold-yaw67p5.png",
+      "69.375": "../p15-115-local-patch/ink_core_gold-yaw69p375.png",
+      "71.25": "../p15-115-local-patch/ink_core_gold-yaw71p25.png",
+      "73.125": "../p15-115-local-patch/ink_core_gold-yaw73p125.png",
+      "75": "../p15-115-local-patch/ink_core_gold-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-115-review/P15-101-original-loop.gif",
+      "sha256": "7e34b1eec6e7c02fb2dd410302b7adbb1b9e79e8e0df75e339aab2c62895fc5c"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-115-review/P15-107-native-loop.gif",
+      "sha256": "eb0d6d53e699d4ac9e77fb3952716189679fc32aa06276c895454168d6e45c20"
+    },
+    "P15-114-collar": {
+      "path": "private-assets/exports/p15-115-review/P15-114-collar-loop.gif",
+      "sha256": "d0bf69bd2274fdb4dada36e8808b221e81cb9fbe57b43f5551bb757597023c21"
+    },
+    "registered_full": {
+      "path": "private-assets/exports/p15-115-review/registered_full-loop.gif",
+      "sha256": "dbc4153c20c33d57676b7cc4f046615552428cc7fd5b2b3cb6c1d848e3c12a02"
+    },
+    "target_matte": {
+      "path": "private-assets/exports/p15-115-review/target_matte-loop.gif",
+      "sha256": "e2f1642ceff15ef3903d4a74138175f2e4fd3885358d3c728e50ed0a8a697cb8"
+    },
+    "owner_body": {
+      "path": "private-assets/exports/p15-115-review/owner_body-loop.gif",
+      "sha256": "2de1d1d2c2180cb5868f4e73d2d1cf8338dc19f6b8ea292111d4c2a5940e5e1c"
+    },
+    "ink_core": {
+      "path": "private-assets/exports/p15-115-review/ink_core-loop.gif",
+      "sha256": "de1eea04a5514445dd7e11181846ed33a4cfce898b05291db25019b28938eaef"
+    },
+    "inner_fabric": {
+      "path": "private-assets/exports/p15-115-review/inner_fabric-loop.gif",
+      "sha256": "1fb4e54b95c46c8f9df3388e3d8fc962b1588c9e7c0099985fec95cbcb81b8ba"
+    },
+    "ink_core_gold": {
+      "path": "private-assets/exports/p15-115-review/ink_core_gold-loop.gif",
+      "sha256": "5cdbb8d4fdd0092c672cda0499adf44179117928482b936fa3b51b0f90bcce55"
+    }
+  },
+  "sourceRegistrationSHA256": "439437c04b6a8b2f08913ea6fd566279eaabb0dd507376005ec9d7aa90095d4e",
+  "entry": "private-assets/exports/p15-115-review/index.html",
+  "fullYawVisualApproved": false
+}
