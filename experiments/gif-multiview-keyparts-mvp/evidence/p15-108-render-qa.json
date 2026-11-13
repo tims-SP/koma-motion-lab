@@ -1,0 +1,611 @@
+{
+  "schema": "KOMA_P15_108_SOURCE_STROKE_SDF_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "sourceStrokeQASHA256": "007e207ab1b3433f4582cf1932b40ed8a26372fab6c5158b3e4aa24e19784929",
+  "sourceNativeSHA256": {
+    "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+    "67.5": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+  },
+  "method": "per-region signed distance ink correspondence after bidirectional source optical flow",
+  "depthRules": [
+    "collarInk",
+    "bowInk",
+    "goldJewel",
+    "headHair"
+  ],
+  "artisticStrokeIDsApproved": false,
+  "continuousYawVisualAccepted": false,
+  "methods": {
+    "sdf_role_ink_native_keys": {
+      "60": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw61p875.png",
+        "sha256": "85a54feae7ef03d3d22436d7b2dbddc2e9e791c64500e2ed73788d0a978996af",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw63p75.png",
+        "sha256": "101e6f708a6dbb744a50c0692eaf2d10d22e3cf3183a67c09cb1034ade9024ad",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw65p625.png",
+        "sha256": "45531d2f7a9d9f28f691e150404d7b3ba2df2efc5f68fdaf6b1866f212d6bee1",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw69p375.png",
+        "sha256": "1ad10fc8391d547fa65c795f768588951d7cc406d37a3c94bcc79dfefcfa19ef",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw71p25.png",
+        "sha256": "4886ab3f78516a885c7f1aee546add8a4b0fc7073a80c5cc317f8e41d9d99c1b",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw73p125.png",
+        "sha256": "643e4c8a9a5b240135fea4b8a68a4898ecc6d6eea987b2cf85a2fa2c9c0373b9",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "75": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      }
+    },
+    "sdf_role_ink_original_keys": {
+      "60": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "sourceKind": "ORIGINAL_P0_CHARACTER_SOURCE"
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw61p875.png",
+        "sha256": "85a54feae7ef03d3d22436d7b2dbddc2e9e791c64500e2ed73788d0a978996af",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw63p75.png",
+        "sha256": "101e6f708a6dbb744a50c0692eaf2d10d22e3cf3183a67c09cb1034ade9024ad",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw65p625.png",
+        "sha256": "45531d2f7a9d9f28f691e150404d7b3ba2df2efc5f68fdaf6b1866f212d6bee1",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw69p375.png",
+        "sha256": "1ad10fc8391d547fa65c795f768588951d7cc406d37a3c94bcc79dfefcfa19ef",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw71p25.png",
+        "sha256": "4886ab3f78516a885c7f1aee546add8a4b0fc7073a80c5cc317f8e41d9d99c1b",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw73p125.png",
+        "sha256": "643e4c8a9a5b240135fea4b8a68a4898ecc6d6eea987b2cf85a2fa2c9c0373b9",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "75": {
+        "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "sourceKind": "ORIGINAL_P0_CHARACTER_SOURCE"
+      }
+    },
+    "single_bow_owner": {
+      "60": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw61p875.png",
+        "sha256": "2a101b961f509c1ee7665e140467da9b6f16c3e432af4004ef671888646e539b",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw63p75.png",
+        "sha256": "38d686aa5c080516f9f2db6c5d785ebee0bf83431d49304613da934b07e151c6",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw65p625.png",
+        "sha256": "b23d05637248251cf9786d8cd44d3f119539ab83224e4cd2a51f8ea46fd2a5cf",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw69p375.png",
+        "sha256": "287df3d8fa46716fb22c7d9462a8b4fea303ce52592e522e6e022f3479fa8a0f",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw71p25.png",
+        "sha256": "a0c094d0ee7587f9ca47befc60d638c63cd101fc87ea8e7230ffcf94daefdac2",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw73p125.png",
+        "sha256": "8609279c8ae1e3947a5b7079ea8ffba9f9dea637502752f2fff8ced4bff803e9",
+        "sourceKind": "SYNTHETIC_INBETWEEN"
+      },
+      "75": {
+        "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "sourceKind": "NATIVE_COMPANION_FULL_CHARACTER"
+      }
+    }
+  },
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "interiorMaxRGBMAE": 7.2775,
+        "meanAdjacentRGBMAE": 7.9434
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "interiorMaxRGBMAE": 5.1833,
+        "meanAdjacentRGBMAE": 6.1601
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "interiorMaxRGBMAE": 6.7573,
+        "meanAdjacentRGBMAE": 7.0499
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "interiorMaxRGBMAE": 5.9747,
+        "meanAdjacentRGBMAE": 6.2248
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "interiorMaxRGBMAE": 11.7003,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "P15-107-three-native": {
+      "bow": {
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ],
+        "maxAdjacentRGBMAE": 12.8767,
+        "interiorMaxRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ],
+        "maxAdjacentRGBMAE": 10.2434,
+        "interiorMaxRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ],
+        "maxAdjacentRGBMAE": 8.7588,
+        "interiorMaxRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          6.9229,
+          6.6883,
+          6.5505,
+          7.2027,
+          9.2766,
+          8.6715,
+          8.6737,
+          8.8022
+        ],
+        "maxAdjacentRGBMAE": 9.2766,
+        "interiorMaxRGBMAE": 9.2766,
+        "meanAdjacentRGBMAE": 7.8486
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    },
+    "sdf_role_ink_native_keys": {
+      "bow": {
+        "adjacentRGBMAE": [
+          12.5793,
+          10.4637,
+          10.8303,
+          15.2724,
+          20.801,
+          17.3337,
+          18.4801,
+          21.0662
+        ],
+        "maxAdjacentRGBMAE": 21.0662,
+        "interiorMaxRGBMAE": 20.801,
+        "meanAdjacentRGBMAE": 15.8533
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          14.2636,
+          9.6212,
+          9.0852,
+          18.795,
+          18.7489,
+          11.3805,
+          12.5136,
+          17.8639
+        ],
+        "maxAdjacentRGBMAE": 18.795,
+        "interiorMaxRGBMAE": 18.795,
+        "meanAdjacentRGBMAE": 14.034
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          11.0377,
+          8.7094,
+          8.4933,
+          10.8319,
+          13.8252,
+          11.2882,
+          11.8149,
+          14.031
+        ],
+        "maxAdjacentRGBMAE": 14.031,
+        "interiorMaxRGBMAE": 13.8252,
+        "meanAdjacentRGBMAE": 11.2539
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          10.3534,
+          8.7537,
+          8.7371,
+          10.7833,
+          15.3875,
+          12.9987,
+          13.2014,
+          14.63
+        ],
+        "maxAdjacentRGBMAE": 15.3875,
+        "interiorMaxRGBMAE": 15.3875,
+        "meanAdjacentRGBMAE": 11.8556
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    },
+    "sdf_role_ink_original_keys": {
+      "bow": {
+        "adjacentRGBMAE": [
+          25.3513,
+          10.4637,
+          10.8303,
+          15.2724,
+          20.801,
+          17.3337,
+          18.4801,
+          30.5183
+        ],
+        "maxAdjacentRGBMAE": 30.5183,
+        "interiorMaxRGBMAE": 20.801,
+        "meanAdjacentRGBMAE": 18.6313
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          24.2405,
+          9.6212,
+          9.0852,
+          18.795,
+          18.7489,
+          11.3805,
+          12.5136,
+          25.38
+        ],
+        "maxAdjacentRGBMAE": 25.38,
+        "interiorMaxRGBMAE": 18.795,
+        "meanAdjacentRGBMAE": 16.2206
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          20.9631,
+          8.7094,
+          8.4933,
+          10.8319,
+          13.8252,
+          11.2882,
+          11.8149,
+          22.3765
+        ],
+        "maxAdjacentRGBMAE": 22.3765,
+        "interiorMaxRGBMAE": 13.8252,
+        "meanAdjacentRGBMAE": 13.5378
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          22.3232,
+          8.7537,
+          8.7371,
+          10.7833,
+          15.3875,
+          12.9987,
+          13.2014,
+          21.9511
+        ],
+        "maxAdjacentRGBMAE": 22.3232,
+        "interiorMaxRGBMAE": 15.3875,
+        "meanAdjacentRGBMAE": 14.267
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          16.0265,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          13.4756
+        ],
+        "maxAdjacentRGBMAE": 16.0265,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.5915
+      }
+    },
+    "single_bow_owner": {
+      "bow": {
+        "adjacentRGBMAE": [
+          12.5481,
+          11.2374,
+          10.9072,
+          14.1368,
+          20.1286,
+          18.2476,
+          20.0399,
+          21.3398
+        ],
+        "maxAdjacentRGBMAE": 21.3398,
+        "interiorMaxRGBMAE": 20.1286,
+        "meanAdjacentRGBMAE": 16.0732
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          13.4149,
+          10.1126,
+          8.9129,
+          13.5444,
+          13.3271,
+          12.119,
+          13.3402,
+          17.2233
+        ],
+        "maxAdjacentRGBMAE": 17.2233,
+        "interiorMaxRGBMAE": 13.5444,
+        "meanAdjacentRGBMAE": 12.7493
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          11.5343,
+          8.9286,
+          8.4724,
+          11.0665,
+          14.0594,
+          11.4185,
+          12.1582,
+          14.6694
+        ],
+        "maxAdjacentRGBMAE": 14.6694,
+        "interiorMaxRGBMAE": 14.0594,
+        "meanAdjacentRGBMAE": 11.5384
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          10.4508,
+          9.0352,
+          8.7494,
+          10.5339,
+          15.311,
+          13.2741,
+          13.7181,
+          14.8788
+        ],
+        "maxAdjacentRGBMAE": 15.311,
+        "interiorMaxRGBMAE": 15.311,
+        "meanAdjacentRGBMAE": 11.9939
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-108-stroke-render/stroke-sdf-occlusion-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "sourcePartition": "all five role-owned RGBA layers per view reconstruct native original pixel-exactly",
+    "automaticCandidateIdentity": "four bow subregions and two collar seam regions, identified by material and location",
+    "correctedBowFabricMask": "source crimson HSV 160–179 with source-coordinate spatial support; dark jacket excluded",
+    "strokeGeometry": "signed-distance contour for each role formed from real source ink candidates",
+    "layerOrder": [
+      "collarInk",
+      "bowInk",
+      "jewel",
+      "headHair"
+    ],
+    "visualObservations": {
+      "bow": "single-source contour within ink regions is possible, but inbetween folds and outer contours remain inconsistent",
+      "collar": "automatic white-collar line extraction and color-fill underpainting create local distortions",
+      "jewel": "occlusion owner selection can jump between source keyframes",
+      "body": "independent source jacket linework and shoulder profile create cross-view ghosting",
+      "head": "preexisting P15-101 mesh and hair interpolation limit full-frame realism"
+    },
+    "measuredComparisons": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "P15-108-sdf-ink": 21.0662,
+        "P15-108-owner-ink": 21.3398
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "P15-108-sdf-ink": 18.795,
+        "P15-108-owner-ink": 17.2233
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "P15-108-sdf-ink": 14.031,
+        "P15-108-owner-ink": 14.6694
+      }
+    },
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "sourceArtCandidate": "P15-107 three native garment sources",
+    "engineeringValidation": "PASS",
+    "artisticContinuityAccepted": false,
+    "nextEvidence": "artist-identified cross-view stroke paths, matching layer masks and hidden-collar/shoulder reconstruction"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema": "KOMA_P15_108_STROKE_OCCLUSION_REVIEW_V1",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "sdf_role_ink_native_keys": {
+      "60": "sdf_role_ink_native_keys-yaw60.png",
+      "61.875": "sdf_role_ink_native_keys-yaw61p875.png",
+      "63.75": "sdf_role_ink_native_keys-yaw63p75.png",
+      "65.625": "sdf_role_ink_native_keys-yaw65p625.png",
+      "67.5": "sdf_role_ink_native_keys-yaw67p5.png",
+      "69.375": "sdf_role_ink_native_keys-yaw69p375.png",
+      "71.25": "sdf_role_ink_native_keys-yaw71p25.png",
+      "73.125": "sdf_role_ink_native_keys-yaw73p125.png",
+      "75": "sdf_role_ink_native_keys-yaw75.png"
+    },
+    "sdf_role_ink_original_keys": {
+      "60": "sdf_role_ink_original_keys-yaw60.png",
+      "61.875": "sdf_role_ink_original_keys-yaw61p875.png",
+      "63.75": "sdf_role_ink_original_keys-yaw63p75.png",
+      "65.625": "sdf_role_ink_original_keys-yaw65p625.png",
+      "67.5": "sdf_role_ink_original_keys-yaw67p5.png",
+      "69.375": "sdf_role_ink_original_keys-yaw69p375.png",
+      "71.25": "sdf_role_ink_original_keys-yaw71p25.png",
+      "73.125": "sdf_role_ink_original_keys-yaw73p125.png",
+      "75": "sdf_role_ink_original_keys-yaw75.png"
+    },
+    "single_bow_owner": {
+      "60": "single_bow_owner-yaw60.png",
+      "61.875": "single_bow_owner-yaw61p875.png",
+      "63.75": "single_bow_owner-yaw63p75.png",
+      "65.625": "single_bow_owner-yaw65p625.png",
+      "67.5": "single_bow_owner-yaw67p5.png",
+      "69.375": "single_bow_owner-yaw69p375.png",
+      "71.25": "single_bow_owner-yaw71p25.png",
+      "73.125": "single_bow_owner-yaw73p125.png",
+      "75": "single_bow_owner-yaw75.png"
+    }
+  },
+  "gifs": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-108-stroke-render/P15-101-original-loop.gif",
+      "sha256": "56c83a4a9158fb76d16139c2d2184a7e6fad2744cfc9932650d4a8a4a6990c42"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-108-stroke-render/P15-107-native-loop.gif",
+      "sha256": "3b80c1f76ef580a2fb906fe2b0ac5275c4a56a31e52719a6b10441bea324da8c"
+    },
+    "sdf_role_ink_native_keys": {
+      "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_native_keys-loop.gif",
+      "sha256": "cb857e887b3fad97c8ccf996a0cdc1a38afdf47e7d6fcd81f61f6a47509c6f5f"
+    },
+    "sdf_role_ink_original_keys": {
+      "path": "private-assets/exports/p15-108-stroke-render/sdf_role_ink_original_keys-loop.gif",
+      "sha256": "0bb88c05a8e3f5ecebd6c528482086c383eff84f1d7672fca3df7e73ef591735"
+    },
+    "single_bow_owner": {
+      "path": "private-assets/exports/p15-108-stroke-render/single_bow_owner-loop.gif",
+      "sha256": "3bc853d434a2e55451fbc5a443d0d9e3826b068e96471086de1d722ff9ff36f7"
+    }
+  },
+  "entry": "private-assets/exports/p15-108-stroke-render/index.html",
+  "automaticStrokeIdentityArtistApproved": false,
+  "fullVisualContinuityAccepted": false
+}

@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_107_THREE_SOURCE_GARMENT_ART_READY_STROKE_OCCLUSION_REVIEW_PENDING",
+  "status": "P15_108_GARMENT_STROKE_ROLE_GEOMETRY_VERIFIED_VISUAL_CONTINUITY_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-107 native 60/75 companion keyart, three-view costume source registration and actual VDD browser evidence",
+  "lastCompleted": "P15-108 independent source-owned garment layers, stroke region identity candidates, three render strategies with browser and unit verification",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -5460,5 +5460,99 @@
     "currentVisualBenchmark": "P15-101 head_alpha_blend",
     "artisticSourceApproval": false,
     "inkReview": "private-assets/exports/p15-107-canonical-ink/index.html"
+  },
+  "p15_108StrokeOcclusion": {
+    "status": "SOURCE_OWNED_STROKE_ROLE_AND_OCCLUSION_EVIDENCE_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      67.5,
+      75
+    ],
+    "garmentDepthLayers": [
+      "background",
+      "goldTrim",
+      "collarWhite",
+      "bowFabric",
+      "jewel"
+    ],
+    "candidateStrokeIDs": [
+      "bow.left_loop",
+      "bow.right_loop",
+      "bow.left_tail",
+      "bow.right_tail",
+      "collar.left_crease",
+      "collar.right_crease"
+    ],
+    "pixelExactLayerReconstructions": 3,
+    "sourceStrokeRoleProvenance": {
+      "60": {
+        "bowPixels": 910,
+        "collarPixels": 2164
+      },
+      "67.5": {
+        "bowPixels": 5566,
+        "collarPixels": 2125
+      },
+      "75": {
+        "bowPixels": 1794,
+        "collarPixels": 1553
+      }
+    },
+    "nativeSourceSHA256": {
+      "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "67.5": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+      "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+    },
+    "candidateFrames": 27,
+    "referenceFrames": 18,
+    "renderStrategies": [
+      "sdf_role_ink_native_keys",
+      "sdf_role_ink_original_keys",
+      "single_bow_owner"
+    ],
+    "regionMaxAdjacentRGBMAE": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "P15-108-sdf-ink": 21.0662,
+        "P15-108-owner-ink": 21.3398
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "P15-108-sdf-ink": 18.795,
+        "P15-108-owner-ink": 17.2233
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "P15-108-sdf-ink": 14.031,
+        "P15-108-owner-ink": 14.6694
+      }
+    },
+    "unitTestsPass": 17,
+    "browserChecksPass": 90,
+    "sourceLayerEngineeringVerified": true,
+    "automaticStrokeIdentityArtistApproved": false,
+    "continuousYawVisualAccepted": false,
+    "visualBenchmark": "P15-101 head_alpha_blend",
+    "nativeGarmentSources": "P15-107 source-registered 60°, 67.5°, 75°",
+    "visualGate": "SOURCE_STROKE_PATH_IDENTITY_AND_HIDDEN_SURFACE_OCCLUSION",
+    "review": "private-assets/exports/p15-108-stroke-render/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-108-stroke-occlusion-study.zip",
+      "bytes": 43214463,
+      "sha256": "bff0fc6b29497345f62a42d14e9a723aed874628f6766e321e5b40664195f8c9",
+      "entries": 144
+    },
+    "evidence": [
+      "evidence/p15-108-source-qa.json",
+      "evidence/p15-108-stroke-qa.json",
+      "evidence/p15-108-render-qa.json",
+      "evidence/p15-108-review-qa.json",
+      "evidence/p15-108-browser-qa.json"
+    ],
+    "next": "Ground native 60/67.5/75 stroke IDs with actual matching paths and source-owned hidden surface/matte; rerender without source ink underpainting artifacts"
   }
 }
