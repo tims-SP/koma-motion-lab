@@ -1,0 +1,67 @@
+{
+  "schema": "KOMA-P15-92-INDEPENDENT_KEYVIEW_FLOW_QA_V1",
+  "sourceAngles": [
+    45,
+    60,
+    75,
+    90
+  ],
+  "independentSourceHashes": {
+    "45": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "60": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+    "75": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+    "90": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16"
+  },
+  "interpolation": "OpenCV DIS bidirectional optical flow between independent raster keyviews",
+  "interpolationOnlyAngles": [
+    52.5,
+    67.5,
+    82.5
+  ],
+  "frames": {
+    "45": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw045p0.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "independentKeyart": true
+    },
+    "52.5": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw052p5.png",
+      "sha256": "b46a6a02ec87df1fbfac82986437de651681812e4e98d0dc2b5cca0c41685f2c",
+      "independentKeyart": false
+    },
+    "60": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw060p0.png",
+      "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+      "independentKeyart": true
+    },
+    "67.5": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw067p5.png",
+      "sha256": "4534e53eb050153539e00c37bd30996c6522cedb42702e18a6f6abcbc1a39eb6",
+      "independentKeyart": false
+    },
+    "75": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw075p0.png",
+      "sha256": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+      "independentKeyart": true
+    },
+    "82.5": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw082p5.png",
+      "sha256": "6a569e017f9d8cfc7e56c39642d488c0d9ec8ff9b20d5e6569b119042a0c4bf7",
+      "independentKeyart": false
+    },
+    "90": {
+      "path": "private-assets/exports/p15-92-angle-keyart/yaw090p0.png",
+      "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "independentKeyart": true
+    }
+  },
+  "contact": "private-assets/exports/p15-92-angle-keyart/seven-angle-contact.jpg",
+  "modelYawTargets": [
+    60,
+    75
+  ],
+  "actualGeometricYawConfirmed": false,
+  "formalKeyframeAccepted": false,
+  "formalArtMeshAccepted": false,
+  "visualGate": "VIEW_CONTINUITY_PREVIEW_REQUIRES_ART_REVIEW"
+}

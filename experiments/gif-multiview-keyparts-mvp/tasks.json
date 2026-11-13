@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_91_LOCAL_EYE_CONTOUR_REVIEW_READY_FULL_VDD_PENDING",
+  "status": "P15_92_FOUR_ANGLE_SOURCES_READY_INTERPOLATION_VISUAL_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-91 native imagegen source, semantic hair correction, continuous 0–18 px review and Chromium checks; overall ArtMesh visual approval pending",
+  "lastCompleted": "P15-92 four independent keyview images, model provenance, browser review and 7-angle interpolation diagnostics",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -4315,5 +4315,55 @@
       "sha256": "1a16fa55e18a1d92c4681b5ca84eb3d09cb71ec06583740ee399261eda25ee56",
       "entries": 64
     }
+  },
+  "p15_92CodexIndependentKeyviews": {
+    "status": "FOUR_INDEPENDENT_ANGLE_SOURCES_AND_DIAGNOSTIC_INTERPOLATION_AVAILABLE",
+    "characterId": "p0_character_001",
+    "generation": "Codex native image_gen",
+    "independentAngles": [
+      45,
+      60,
+      75,
+      90
+    ],
+    "generatedAngles": [
+      60,
+      75
+    ],
+    "interpolatedReviewAngles": [
+      52.5,
+      67.5,
+      82.5
+    ],
+    "nativeGeneratorSHA256": {
+      "60": "4d65f2a68599adc463672c0e5fbfaeb4e636a05ddf68e7537dbf75cfa39b3642",
+      "75": "38b0a9cd8e0728bdcf604cc8951b0d2c277233c2ef3df737b00acb9062d374ab"
+    },
+    "registeredSHA256": {
+      "60": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+      "75": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6"
+    },
+    "registeredSize": [
+      1024,
+      1024
+    ],
+    "browserChecksPass": 14,
+    "unitTestsPass": 14,
+    "formalArtMeshAccepted": false,
+    "formalKeyframeAccepted": false,
+    "actualGeometricYawVerified": false,
+    "visualGate": "FOUR_KEYART_REVIEW_READY_INTERPOLATION_VISUAL_PENDING",
+    "review": "private-assets/exports/p15-92-angle-keyart/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-92-keyview-review.zip",
+      "sha256": "f908d0d59eded7133574468bb0a54c681e7d5c1f1b6134d08c3e299c70b618db",
+      "bytes": 11116099,
+      "entries": 24
+    },
+    "evidence": [
+      "evidence/p15-92-native-keyart-qa.json",
+      "evidence/p15-92-view-flow-qa.json",
+      "evidence/p15-92-browser-qa.json"
+    ]
   }
 }

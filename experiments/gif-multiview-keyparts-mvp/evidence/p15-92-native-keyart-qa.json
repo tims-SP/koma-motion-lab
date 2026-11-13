@@ -1,0 +1,99 @@
+{
+  "schema": "KOMA-P15-92-CODEX_ANGLE_SOURCE_V1",
+  "characterId": "p0_character_001",
+  "generator": "Codex CLI built-in image_gen.imagegen",
+  "requestedYaw": 60,
+  "actualYawVerified": false,
+  "inputSourceHashes": {
+    "yaw045": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "yaw090": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16"
+  },
+  "nativeOutputSHA256": "4d65f2a68599adc463672c0e5fbfaeb4e636a05ddf68e7537dbf75cfa39b3642",
+  "registeredOutputSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+  "registeredSize": [
+    1024,
+    1024
+  ],
+  "alphaNormalization": "fully opaque for native post-resample alpha >= 249, preserve semitransparent edges",
+  "sourceMetrics": {
+    "45": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha128Pixels": 468848,
+      "alpha128BBox": [
+        159,
+        14,
+        855,
+        1019
+      ],
+      "alpha254Pixels": 452942,
+      "transparentPixels": 561876
+    },
+    "60": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha128Pixels": 435853,
+      "alpha128BBox": [
+        173,
+        14,
+        825,
+        1017
+      ],
+      "alpha254Pixels": 428127,
+      "transparentPixels": 594230
+    },
+    "90": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha128Pixels": 403005,
+      "alpha128BBox": [
+        176,
+        12,
+        811,
+        1019
+      ],
+      "alpha254Pixels": 389218,
+      "transparentPixels": 629873
+    },
+    "75": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha128Pixels": 401764,
+      "alpha128BBox": [
+        174,
+        6,
+        778,
+        1020
+      ],
+      "alpha254Pixels": 394334,
+      "transparentPixels": 623822
+    }
+  },
+  "identityReferenceVerified": false,
+  "formalKeyframeAccepted": false,
+  "formalArtMeshAccepted": false,
+  "visualGate": "FOUR_INDEPENDENT_SOURCE_ANGLES_VISUAL_REVIEW_REQUIRED",
+  "contact": "private-assets/exports/p15-92-angle-keyart/source-triple-contact.jpg",
+  "nativeYaw75SHA256": "38b0a9cd8e0728bdcf604cc8951b0d2c277233c2ef3df737b00acb9062d374ab",
+  "registeredYaw75SHA256": "2a9827d26ad4dba75c702f28ee7248e787cb416a36fac4a80e61c3cf3ed778e6",
+  "sourceAngles": [
+    45,
+    60,
+    75,
+    90
+  ],
+  "nativeSourcesVerified": 4,
+  "yaw75SilhouetteAreaBetweenSources": false
+}
