@@ -1,0 +1,145 @@
+{
+  "schema": "KOMA_P15_96_DISOCCLUSION_OWNERSHIP_V1",
+  "sourceSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+  "hairSHA256": "862cb658268cf07af7fd16233613fdb27e2594030681a2edebf226310482de2b",
+  "modelSHA256": "e5891f3568bd54e7ae86f516385f2a17c2830a2c3badece088d92e24e395a034",
+  "skinMatchedRGBOffsets": [
+    -2.0,
+    2.0,
+    1.0
+  ],
+  "staticRestFrameExact": true,
+  "methods": {
+    "model-direct": {
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 0,
+          "newHoles": 0
+        },
+        "4": {
+          "sha256": "c5a0b38974e39bbc4955e2bc5e0dce8ba047e8da844320428d2666e950f9e30e",
+          "changedPixels": 26848,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 1168,
+          "newHoles": 0
+        },
+        "8": {
+          "sha256": "d5081e8752710654f9969e52e74fce8627fa759ef18acbd5423f2486b144d065",
+          "changedPixels": 28731,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 2195,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "65a55594dfd9eafde926e24c694c05eb78feb9106ba7c7692ffdc236a298697a",
+          "changedPixels": 30031,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 3079,
+          "newHoles": 0
+        }
+      }
+    },
+    "model-feather": {
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 0,
+          "newHoles": 0
+        },
+        "4": {
+          "sha256": "a1c626b48ddac2b893c901a56618833138ad12fb9938128f3f66dafd366e2018",
+          "changedPixels": 26919,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 1171,
+          "newHoles": 0
+        },
+        "8": {
+          "sha256": "380d9781db43b822c5fe620bb3f1ef8ff148cc3183a8ac5019d9f3524a9d28e7",
+          "changedPixels": 28771,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 2203,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "9eccf9fadc7c3b50d49269257923e112fb178cbbc42eaf3b2e20f1f49278aa77",
+          "changedPixels": 30057,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 3094,
+          "newHoles": 0
+        }
+      }
+    },
+    "matched-direct": {
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 0,
+          "newHoles": 0
+        },
+        "4": {
+          "sha256": "c2666f63ab9fadf3607c1e3ead10de4136081e8fb8a73153f0b6f25a30622c83",
+          "changedPixels": 26834,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 1168,
+          "newHoles": 0
+        },
+        "8": {
+          "sha256": "92f91c1896f99a110ab25cccbdd6cedf690f6e842eeda57b5090f2c22ecc5b42",
+          "changedPixels": 28712,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 2195,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "33719e56cca9a808b8b42f91cba18c8b4d38a73c01aa094975b2b8cc30446ab4",
+          "changedPixels": 30015,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 3079,
+          "newHoles": 0
+        }
+      }
+    },
+    "matched-feather": {
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 0,
+          "newHoles": 0
+        },
+        "4": {
+          "sha256": "5453b6c3d564cabb4642f6412fa52666d9019698c540d4cd6102f6394f2cc878",
+          "changedPixels": 26903,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 1171,
+          "newHoles": 0
+        },
+        "8": {
+          "sha256": "9aa8bdf0d9c317b5282d3af6d5eaaf4a1dce8dd56c3dfceb2f9cccc0bec66f3a",
+          "changedPixels": 28750,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 2203,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "9a130aba32306f08392c81202e40000293f2c3adc9a3db742ae0f922b1c3d2c4",
+          "changedPixels": 30039,
+          "changedOutsideHairSupports": 0,
+          "exposedMaskOverHalf": 3094,
+          "newHoles": 0
+        }
+      }
+    }
+  },
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_IMAGE_REVIEW",
+  "contact": "private-assets/exports/p15-96-disocclusion/disocclusion-contact.jpg"
+}
