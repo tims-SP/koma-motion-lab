@@ -1,0 +1,40 @@
+{
+  "schema": "KOMA-P15-95-REPRODUCIBLE_UNDERPAINT_SOURCE_V1",
+  "sourceSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+  "sam3MaskSHA256": "f29a0a68ab697452933cdd2748ef19273a8d384da4f906c63f8a1635d1b9e879",
+  "inputReferenceSHA256": "157f0884af786659f3542411f2f96bcb8b87b6e85b69fc3b9526bcab8c54d715",
+  "inputMaskSHA256": "d7fd1ed525340645ee9a8dbcf1ee8a92e4b2dab49d38142811a3fed666665af4",
+  "sourceMaskSHA256": "64c55a0b4c77edca0c415edc205a2fab92a8c7a4fef067e687a54c8cf579383a",
+  "sourceCropBox": [
+    450,
+    275,
+    870,
+    695
+  ],
+  "modelReturned": true,
+  "formalArtMeshAccepted": false,
+  "nativeModelSHA256": "806696889c2289d2eb00821624b775bdcca22a2d6898e15517a5d1aa147528a3",
+  "registeredSHA256": "43c641d61649563b0e097eb214bcb6e43f59fb2c1a1340d8d8476c1d04acc847",
+  "registeredOutsideMaskMAE": 5.2732,
+  "registeredInsideMaskMAE": 31.3268,
+  "registrationScore": 0.98316,
+  "registrationWarp": [
+    [
+      1.0,
+      0.0,
+      0.4760593771934509
+    ],
+    [
+      0.0,
+      1.0,
+      -0.13928663730621338
+    ]
+  ],
+  "actualStrictMaskEditing": false,
+  "modelImageLimitations": [
+    "Native tool used supplied mask and overlay as visual guides; no strict pixel-locked mask editing parameter was available.",
+    "Global redraw altered details outside the intended mask, including linework, hair and facial details; exact eye strokes and source pixels are not guaranteed.",
+    "Native output copied byte-for-byte without resizing, compositing, recoloring or other image processing.",
+    "This is a generated underpaint candidate and does not constitute ArtMesh approval."
+  ]
+}

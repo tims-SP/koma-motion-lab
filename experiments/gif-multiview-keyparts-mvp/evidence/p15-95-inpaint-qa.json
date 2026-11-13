@@ -1,0 +1,54 @@
+{
+  "schema": "KOMA-P15-95_INPAINT_UNDERPAINT_COMPARISON_V1",
+  "algorithms": [
+    "original",
+    "generated",
+    "inpaint-r5",
+    "inpaint-r12",
+    "model-and-inpaint"
+  ],
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_VISUAL_REVIEW",
+  "frames": {
+    "original:4": {
+      "sha256": "39bb2656808cf3068e4ac51d54d4151c685dcab7934b9b7c25a436d580656834",
+      "holes": 0
+    },
+    "generated:4": {
+      "sha256": "f0b349f88ca3ce1bef0f049420cfffb57828ba390be76d3c990decb819b6e1ff",
+      "holes": 0
+    },
+    "inpaint-r5:4": {
+      "sha256": "71582d60b2bf09a199ec7cb49572c59057a9bed31345209e5ee02fd136dab92e",
+      "holes": 0
+    },
+    "inpaint-r12:4": {
+      "sha256": "38633ccc1c88867de289c10e36eb52fd695d2c2121df89a752017e75cb01d600",
+      "holes": 0
+    },
+    "model-and-inpaint:4": {
+      "sha256": "c5a3c64011f55ac1130188141a44246f12e5f8bdc5395d24d082417dbf2a976a",
+      "holes": 0
+    },
+    "original:12": {
+      "sha256": "d16feb54baa850a2748f744376087ddef72d2494260209919e86fec445977e7f",
+      "holes": 0
+    },
+    "generated:12": {
+      "sha256": "20685eb2260cdbafbe618cdba13f70066dd69c8105f43c06ab98e4dbe658636e",
+      "holes": 0
+    },
+    "inpaint-r5:12": {
+      "sha256": "2f759d499e92bfa8f479abbc2abed91d4045f952a6f5172edb4abe5dcdbef551",
+      "holes": 0
+    },
+    "inpaint-r12:12": {
+      "sha256": "62d1b50b2bba94b59e728962453ac607e2953896c71e3f2c8ed9d28488055486",
+      "holes": 0
+    },
+    "model-and-inpaint:12": {
+      "sha256": "b4d5241996c521d897bc5cefa8380098257fb45de2d03c60576feeed1fb6a9dd",
+      "holes": 0
+    }
+  }
+}
