@@ -1,0 +1,62 @@
+{
+  "schema": "KOMA_P15_101_HEAD_HAIR_GEOMETRY_QA_V1",
+  "sourceAngles": [
+    60,
+    75
+  ],
+  "vertexCount": 59,
+  "triangleCount": 90,
+  "omittedTriangleCount": 3,
+  "sampledGeometry": [
+    {
+      "ratio": 0.0,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 175.0
+    },
+    {
+      "ratio": 0.125,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 162.9844
+    },
+    {
+      "ratio": 0.25,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 151.9375
+    },
+    {
+      "ratio": 0.375,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 141.8594
+    },
+    {
+      "ratio": 0.5,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 114.75
+    },
+    {
+      "ratio": 0.625,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 86.7031
+    },
+    {
+      "ratio": 0.75,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 61.5625
+    },
+    {
+      "ratio": 0.875,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 39.3281
+    },
+    {
+      "ratio": 1.0,
+      "negativeTriangleCount": 0,
+      "minimumSignedArea": 20.0
+    }
+  ],
+  "meshSha256": "ed61bba2866f425d785439fe938bf4576245dc1ee22b64cc12a6dac81f7915e3",
+  "commonMeshStored": "private-assets/exports/p15-101-shared-head-mesh/head-hair-shared-mesh.json",
+  "nonfolding": true,
+  "meshIsAnatomical3D": false,
+  "artistApproved": false
+}

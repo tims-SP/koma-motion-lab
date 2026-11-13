@@ -1,0 +1,694 @@
+{
+  "schema": "KOMA_P15_101_COUPLED_HEAD_HAIR_VDD_V1",
+  "mesh": "private-assets/exports/p15-101-shared-head-mesh/head-hair-shared-mesh.json",
+  "meshSHA256": "ed61bba2866f425d785439fe938bf4576245dc1ee22b64cc12a6dac81f7915e3",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "head_alpha_blend": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw61p875.png",
+        "sha256": "cb759cf7570726b3492d8cbeac279f528712bd0b25d197ce05e9c692cbaaa522",
+        "diagnostics": {
+          "coverage60": 0.9940841549784752,
+          "coverage75": 0.9940841549784752,
+          "meshCracks60": 426,
+          "meshCracks75": 426
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw63p75.png",
+        "sha256": "994c5d6d2bd4fc8af0b5584732097efee0f9592c55f86ef3bdcb3a3f558889dd",
+        "diagnostics": {
+          "coverage60": 0.9937895965321774,
+          "coverage75": 0.9937895965321774,
+          "meshCracks60": 447,
+          "meshCracks75": 447
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw65p625.png",
+        "sha256": "3fcce57397afc033c9d7fdd6b040e3c12aadd6bd17e26948e6a8d5e7ac99fbd7",
+        "diagnostics": {
+          "coverage60": 0.9969386193173121,
+          "coverage75": 0.9969386193173121,
+          "meshCracks60": 220,
+          "meshCracks75": 220
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw67p5.png",
+        "sha256": "2b4932f9a13f36c80d0519cfcae01e1def5cb652e381a44d9ffb69f50ef5dee9",
+        "diagnostics": {
+          "coverage60": 0.9987579893382456,
+          "coverage75": 0.9987579893382456,
+          "meshCracks60": 89,
+          "meshCracks75": 89
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw69p375.png",
+        "sha256": "f0642e270b8f43fc5e741b7be789840728c909251de62a17e44e13427a35dae8",
+        "diagnostics": {
+          "coverage60": 0.9999720935424458,
+          "coverage75": 0.9999720935424458,
+          "meshCracks60": 2,
+          "meshCracks75": 2
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw71p25.png",
+        "sha256": "573ef326a65d314aa6d2f5ac25ebdb79d09f10d047c05d31be0d2c08b543b13c",
+        "diagnostics": {
+          "coverage60": 0.9998040971678047,
+          "coverage75": 0.9998040971678047,
+          "meshCracks60": 14,
+          "meshCracks75": 14
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw73p125.png",
+        "sha256": "e7279e72079fdbf12c86f0694dd305d6b7347dc599b53b8f9aa22508d63b8ad9",
+        "diagnostics": {
+          "coverage60": 0.999859947900619,
+          "coverage75": 0.999859947900619,
+          "meshCracks60": 10,
+          "meshCracks75": 10
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "head_eye_owned": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw61p875.png",
+        "sha256": "7712c4373da6e7d2e3cedd5aa592b2863d1de25657d0ba327a4416f0545a9d34",
+        "diagnostics": {
+          "coverage60": 0.9940841549784752,
+          "coverage75": 0.9940841549784752,
+          "meshCracks60": 426,
+          "meshCracks75": 426
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw63p75.png",
+        "sha256": "983f1f5cfe497c2afff17d6a385c36c15cae7695b9c1757d089b0c5f36def2be",
+        "diagnostics": {
+          "coverage60": 0.9937895965321774,
+          "coverage75": 0.9937895965321774,
+          "meshCracks60": 447,
+          "meshCracks75": 447
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw65p625.png",
+        "sha256": "4029d3055ee86e57ca97068482488f5ca3526f0d14bf6a16ee1f28a149f22a23",
+        "diagnostics": {
+          "coverage60": 0.9969386193173121,
+          "coverage75": 0.9969386193173121,
+          "meshCracks60": 220,
+          "meshCracks75": 220
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw67p5.png",
+        "sha256": "6b8d7fa28bb2e2997181b2709cfabce4aee990a98c55ac2105b0c764ca51ac84",
+        "diagnostics": {
+          "coverage60": 0.9987579893382456,
+          "coverage75": 0.9987579893382456,
+          "meshCracks60": 89,
+          "meshCracks75": 89
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw69p375.png",
+        "sha256": "25c050c5e1c0925b20af9a12cfd53ce9f668f031490ffe82d506dd276e89506b",
+        "diagnostics": {
+          "coverage60": 0.9999720935424458,
+          "coverage75": 0.9999720935424458,
+          "meshCracks60": 2,
+          "meshCracks75": 2
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw71p25.png",
+        "sha256": "9019102aed2b4500b50c67472ee26462b6f65a01740bc004b482addd8914977a",
+        "diagnostics": {
+          "coverage60": 0.9998040971678047,
+          "coverage75": 0.9998040971678047,
+          "meshCracks60": 14,
+          "meshCracks75": 14
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw73p125.png",
+        "sha256": "87c75bcba03429c3fddc224296faabd3069690012d80746ce2414d6e9b9dd550",
+        "diagnostics": {
+          "coverage60": 0.999859947900619,
+          "coverage75": 0.999859947900619,
+          "meshCracks60": 10,
+          "meshCracks75": 10
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "head_hair_owned": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw61p875.png",
+        "sha256": "a29b65be40e1488d5567dddb85266d375d9a67168ccea3c9ee68f6d59853192a",
+        "diagnostics": {
+          "coverage60": 0.9940841549784752,
+          "coverage75": 0.9940841549784752,
+          "meshCracks60": 426,
+          "meshCracks75": 426
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw63p75.png",
+        "sha256": "0aee6a75fb2375153a370dcdef6627b0ba55c1bd8092759341432b40e96a4c0e",
+        "diagnostics": {
+          "coverage60": 0.9937895965321774,
+          "coverage75": 0.9937895965321774,
+          "meshCracks60": 447,
+          "meshCracks75": 447
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw65p625.png",
+        "sha256": "d9187d2a63dbc814282aaad9efdf81457300dec0d158bead8c7260e107d8e4aa",
+        "diagnostics": {
+          "coverage60": 0.9969386193173121,
+          "coverage75": 0.9969386193173121,
+          "meshCracks60": 220,
+          "meshCracks75": 220
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw67p5.png",
+        "sha256": "70a933bed35c67d426495e05a35c829134ae330254b657d6c4b339753408c820",
+        "diagnostics": {
+          "coverage60": 0.9987579893382456,
+          "coverage75": 0.9987579893382456,
+          "meshCracks60": 89,
+          "meshCracks75": 89
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw69p375.png",
+        "sha256": "1d33bf7cfd2d71edb9e1b2a2efcb3f09fdd42a58990072583a726857fdf1172d",
+        "diagnostics": {
+          "coverage60": 0.9999720935424458,
+          "coverage75": 0.9999720935424458,
+          "meshCracks60": 2,
+          "meshCracks75": 2
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw71p25.png",
+        "sha256": "361dbb84f3fa2ee60fc2ffe029c33435abea1a5a5e73e3278d15307f9f436254",
+        "diagnostics": {
+          "coverage60": 0.9998040971678047,
+          "coverage75": 0.9998040971678047,
+          "meshCracks60": 14,
+          "meshCracks75": 14
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw73p125.png",
+        "sha256": "17be1f31abdee66314e1f60f1b8bd0949a92a3b2a56f4111d66a7799b731e6b2",
+        "diagnostics": {
+          "coverage60": 0.999859947900619,
+          "coverage75": 0.999859947900619,
+          "meshCracks60": 10,
+          "meshCracks75": 10
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "head_visibility_union": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw61p875.png",
+        "sha256": "e9257abd73ab2c4ca524e0c4aa4458bd3572aeeb8c72a57bb5e4a193b1d252a0",
+        "diagnostics": {
+          "coverage60": 0.9940841549784752,
+          "coverage75": 0.9940841549784752,
+          "meshCracks60": 426,
+          "meshCracks75": 426
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw63p75.png",
+        "sha256": "dc8fadc6dc39ac2890d9dcf1bf878057b4d94c54c89a19849cf429daf61756b9",
+        "diagnostics": {
+          "coverage60": 0.9937895965321774,
+          "coverage75": 0.9937895965321774,
+          "meshCracks60": 447,
+          "meshCracks75": 447
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw65p625.png",
+        "sha256": "3691f89b4d15406c17ace3f5aa7adcf8b9ae3a33547ea805efe165670afb4682",
+        "diagnostics": {
+          "coverage60": 0.9969386193173121,
+          "coverage75": 0.9969386193173121,
+          "meshCracks60": 220,
+          "meshCracks75": 220
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw67p5.png",
+        "sha256": "95c4b3a75a67f48cdc8b2b06f556e3b672290420e991d6f53e0df0e789847827",
+        "diagnostics": {
+          "coverage60": 0.9987579893382456,
+          "coverage75": 0.9987579893382456,
+          "meshCracks60": 89,
+          "meshCracks75": 89
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw69p375.png",
+        "sha256": "6f58a3e5575f80d61152b476e3ca0160b01bf0b4a7617cf1a2197be7afe26081",
+        "diagnostics": {
+          "coverage60": 0.9999720935424458,
+          "coverage75": 0.9999720935424458,
+          "meshCracks60": 2,
+          "meshCracks75": 2
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw71p25.png",
+        "sha256": "33becfab4fe2dd1d97f189c2099c2fbd0c13d649bba762d372a0015177744805",
+        "diagnostics": {
+          "coverage60": 0.9998040971678047,
+          "coverage75": 0.9998040971678047,
+          "meshCracks60": 14,
+          "meshCracks75": 14
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw73p125.png",
+        "sha256": "0eac46d7c309dd01a84c534ae8014b2e4bb95667f62b26147afd62de55c3b0bb",
+        "diagnostics": {
+          "coverage60": 0.999859947900619,
+          "coverage75": 0.999859947900619,
+          "meshCracks60": 10,
+          "meshCracks75": 10
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "head_tone_mapped": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw61p875.png",
+        "sha256": "4cce0fc448146f37fa9ffcbc76de4e1ada0a9a430ac18e3607022887c0385179",
+        "diagnostics": {
+          "coverage60": 0.9940841549784752,
+          "coverage75": 0.9940841549784752,
+          "meshCracks60": 426,
+          "meshCracks75": 426
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw63p75.png",
+        "sha256": "8e0aeba6644275bd492ed446c1f9bb156eeac632fb87b7da3bdeb28731397362",
+        "diagnostics": {
+          "coverage60": 0.9937895965321774,
+          "coverage75": 0.9937895965321774,
+          "meshCracks60": 447,
+          "meshCracks75": 447
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw65p625.png",
+        "sha256": "b6d1ebcc9b5e4f3af265302a12bfd9466c884d444e571e360898d2a39abe2198",
+        "diagnostics": {
+          "coverage60": 0.9969386193173121,
+          "coverage75": 0.9969386193173121,
+          "meshCracks60": 220,
+          "meshCracks75": 220
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw67p5.png",
+        "sha256": "6efb9f5c0ce4bd34f54c478c55535290ba0228b2141664256009ca09f8b9a8ae",
+        "diagnostics": {
+          "coverage60": 0.9987579893382456,
+          "coverage75": 0.9987579893382456,
+          "meshCracks60": 89,
+          "meshCracks75": 89
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw69p375.png",
+        "sha256": "cc77712ddfac186d3b5754ddee880491b25fb7fb8d4ccd5e38a133a7fa283e50",
+        "diagnostics": {
+          "coverage60": 0.9999720935424458,
+          "coverage75": 0.9999720935424458,
+          "meshCracks60": 2,
+          "meshCracks75": 2
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw71p25.png",
+        "sha256": "503c56c1bc123b7a6b6a213dea96723503384dc90385a85879a83170b07d22c2",
+        "diagnostics": {
+          "coverage60": 0.9998040971678047,
+          "coverage75": 0.9998040971678047,
+          "meshCracks60": 14,
+          "meshCracks75": 14
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw73p125.png",
+        "sha256": "f12623e78c8976a9a3db2c96c323ea9e68983c38232ec32b2ccc67cdfdc2aee6",
+        "diagnostics": {
+          "coverage60": 0.999859947900619,
+          "coverage75": 0.999859947900619,
+          "meshCracks60": 10,
+          "meshCracks75": 10
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "head_profile_owner": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw61p875.png",
+        "sha256": "6b5afb00b96100b4f7ffc684ffa671aa50e4827cd07488586e1dd99b45a25d94",
+        "diagnostics": {
+          "coverage60": 0.9940841549784752,
+          "coverage75": 0.9940841549784752,
+          "meshCracks60": 426,
+          "meshCracks75": 426
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw63p75.png",
+        "sha256": "f3f332e0f2291a0fa5fc90ed4efb30d5fde87676aa553900cc10e69a41970771",
+        "diagnostics": {
+          "coverage60": 0.9937895965321774,
+          "coverage75": 0.9937895965321774,
+          "meshCracks60": 447,
+          "meshCracks75": 447
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw65p625.png",
+        "sha256": "23393fabe075278c1ea1a724e1e6d32383f9a1322327c9b43458aa3d890d16dc",
+        "diagnostics": {
+          "coverage60": 0.9969386193173121,
+          "coverage75": 0.9969386193173121,
+          "meshCracks60": 220,
+          "meshCracks75": 220
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw67p5.png",
+        "sha256": "37282a402ee87d7a9c2fe9b80c27b976cdd07754ae818ac6c25dea942c022ae1",
+        "diagnostics": {
+          "coverage60": 0.9987579893382456,
+          "coverage75": 0.9987579893382456,
+          "meshCracks60": 89,
+          "meshCracks75": 89
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw69p375.png",
+        "sha256": "0bd86e592ff79346da9d21018b44298da8474dcbed77b0346f65632e5cd49a12",
+        "diagnostics": {
+          "coverage60": 0.9999720935424458,
+          "coverage75": 0.9999720935424458,
+          "meshCracks60": 2,
+          "meshCracks75": 2
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw71p25.png",
+        "sha256": "92db579150c551acbeedf8f33004c89983456366576a57cfd51231e937027c62",
+        "diagnostics": {
+          "coverage60": 0.9998040971678047,
+          "coverage75": 0.9998040971678047,
+          "meshCracks60": 14,
+          "meshCracks75": 14
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw73p125.png",
+        "sha256": "970ca2b0aaefeade0951297f19e33a8fcc0b7ab3f834e26733b73181b7160793",
+        "diagnostics": {
+          "coverage60": 0.999859947900619,
+          "coverage75": 0.999859947900619,
+          "meshCracks60": 10,
+          "meshCracks75": 10
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    }
+  },
+  "headMeshFolds": 0,
+  "headTexelTopologyArtistApproved": false,
+  "continuousYawVisualAccepted": false,
+  "metrics": {
+    "p15-100-mesh_source_blend": {
+      "adjacentFaceRGBMAE": [
+        15.8334,
+        12.5075,
+        17.9503,
+        12.9722,
+        10.9434,
+        11.0908,
+        11.5802,
+        14.1099
+      ],
+      "maxAdjacentMAE": 17.9503,
+      "midpointJumpMAE": 12.9722,
+      "meanAdjacentMAE": 13.3735
+    },
+    "head_alpha_blend": {
+      "adjacentFaceRGBMAE": [
+        14.4622,
+        11.3271,
+        10.5418,
+        9.8768,
+        9.7007,
+        9.8802,
+        10.4772,
+        13.2588
+      ],
+      "maxAdjacentMAE": 14.4622,
+      "midpointJumpMAE": 9.8768,
+      "meanAdjacentMAE": 11.1906
+    },
+    "head_eye_owned": {
+      "adjacentFaceRGBMAE": [
+        14.6045,
+        11.6019,
+        10.9163,
+        9.9471,
+        10.1386,
+        10.2351,
+        10.7067,
+        13.385
+      ],
+      "maxAdjacentMAE": 14.6045,
+      "midpointJumpMAE": 10.1386,
+      "meanAdjacentMAE": 11.4419
+    },
+    "head_hair_owned": {
+      "adjacentFaceRGBMAE": [
+        14.5278,
+        11.9802,
+        11.6604,
+        14.2584,
+        10.6167,
+        10.6987,
+        11.0302,
+        13.3875
+      ],
+      "maxAdjacentMAE": 14.5278,
+      "midpointJumpMAE": 14.2584,
+      "meanAdjacentMAE": 12.27
+    },
+    "head_visibility_union": {
+      "adjacentFaceRGBMAE": [
+        14.4226,
+        11.5199,
+        11.007,
+        10.6215,
+        10.7015,
+        11.0591,
+        11.9109,
+        18.0066
+      ],
+      "maxAdjacentMAE": 18.0066,
+      "midpointJumpMAE": 10.7015,
+      "meanAdjacentMAE": 12.4061
+    },
+    "head_tone_mapped": {
+      "adjacentFaceRGBMAE": [
+        14.4113,
+        11.1346,
+        10.3612,
+        9.7058,
+        9.5359,
+        9.7116,
+        10.2943,
+        13.2521
+      ],
+      "maxAdjacentMAE": 14.4113,
+      "midpointJumpMAE": 9.7058,
+      "meanAdjacentMAE": 11.0509
+    },
+    "head_profile_owner": {
+      "adjacentFaceRGBMAE": [
+        14.5474,
+        11.3496,
+        10.573,
+        9.9107,
+        9.7191,
+        9.9054,
+        10.5068,
+        13.291
+      ],
+      "maxAdjacentMAE": 14.5474,
+      "midpointJumpMAE": 9.9107,
+      "meanAdjacentMAE": 11.2254
+    }
+  },
+  "visualContact": "private-assets/exports/p15-101-head-render/head-hair-contact.jpg",
+  "animations": {
+    "head_alpha_blend": {
+      "relativePath": "private-assets/exports/p15-101-head-render/head_alpha_blend-yaw-loop.gif",
+      "sha256": "146eea700a415fc892294fc2d982cef8004ef66fb53e5bf2571efb2917d95c47"
+    },
+    "head_eye_owned": {
+      "relativePath": "private-assets/exports/p15-101-head-render/head_eye_owned-yaw-loop.gif",
+      "sha256": "abf08f4cb02381af7574c26e534949ae7da2b5b08ea73f44e77a12260b30383b"
+    },
+    "head_hair_owned": {
+      "relativePath": "private-assets/exports/p15-101-head-render/head_hair_owned-yaw-loop.gif",
+      "sha256": "2ec19777e8f043b73a8b6b37c5676f01be0c87c0f08db966cdfb39f7d0005b72"
+    },
+    "head_visibility_union": {
+      "relativePath": "private-assets/exports/p15-101-head-render/head_visibility_union-yaw-loop.gif",
+      "sha256": "42a8c46d7d9f10a34d55a2150f65901aa5227b1d900a41b4497cc5f3a1024323"
+    },
+    "head_tone_mapped": {
+      "relativePath": "private-assets/exports/p15-101-head-render/head_tone_mapped-yaw-loop.gif",
+      "sha256": "70686c2d9eed23dc830c1e072345a4d08dc9f1100264628e6c5471ff4516218a"
+    },
+    "head_profile_owner": {
+      "relativePath": "private-assets/exports/p15-101-head-render/head_profile_owner-yaw-loop.gif",
+      "sha256": "7e9991f6a0d0e5834af609191783cdfe50a802be049b1419c4a05fc300b7f3ea"
+    }
+  },
+  "htmlReview": "private-assets/exports/p15-101-head-render/index.html",
+  "visualReview": {
+    "performed": true,
+    "localHeadShapeAndHairGeometry": "VIEW_DEPENDENT_SHARED_MESH_RENDERED",
+    "selectedResearchCandidate": "head_alpha_blend",
+    "sourceKeyviewsPixelExact": true,
+    "observedContinuity": {
+      "coupledHairAndFace": "hair shell follows one common deformable head topology",
+      "earAndJaw": "landmark-locked geometry improves positional continuity",
+      "hairColor": "view sources still differ in texture and natural strand identity"
+    },
+    "remainingReviewItems": [
+      "near/far-eye eyelashes and front-side contour still show limited ghost lines",
+      "neck and clothing are outside shared head mesh and produce doubled torso details",
+      "ahoge/forehead hidden content are not semantically complete at every yaw",
+      "actual head shape and invisible surfaces require artist-approved UV/topology"
+    ],
+    "fullHeadArtMeshArtistApproved": false,
+    "continuousYawVisualAccepted": false,
+    "engineeringQA": "PASS",
+    "visualGate": "SOURCE_OWNED_HIDDEN_SURFACE_EYE_PROFILE_AND_NECK_CONTINUITY"
+  },
+  "visualGate": "SOURCE_OWNED_HIDDEN_SURFACE_EYE_PROFILE_AND_NECK_CONTINUITY"
+}
