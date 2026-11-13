@@ -6835,5 +6835,39 @@
     ],
     "review": "private-assets/exports/p15-127-yaw112p5-review/index.html",
     "next": "Align independently generated midview to canonical drawing style and anchor silhouette; obtain independently painted separable face/hair/collar/garment layers and hidden surfaces, then rerender 90–135 view transition."
+  },
+  "p15_128MidviewGeometryRegistration": {
+    "status": "INDEPENDENT_KEYART_SILHOUETTE_REGISTERED_AND_RENDER_REVIEWED",
+    "characterId": "p0_character_001",
+    "targetYaw": 112.5,
+    "sourceAngles": [
+      90,
+      135
+    ],
+    "transform": {
+      "scale": 0.97,
+      "translationXY": [
+        12,
+        12
+      ]
+    },
+    "maskIoU": {
+      "source": 0.75555,
+      "registered": 0.83077
+    },
+    "maxAdjacentCompositeRGBMAE": {
+      "source": 14.2285,
+      "registered": 12.0984
+    },
+    "visualFindings": "The approximate 112.5° silhouette registration improves coverage and adjacent frame difference. The inbetweens retain ghost ahoge, diverging hair strand identity, bow/shoulder pose mismatch and ink/color differences. Source painting is still exploratory.",
+    "visualAccepted": false,
+    "semanticAnchorsVerified": false,
+    "hiddenSurfaceArtVerified": false,
+    "nativeGenerationSourcePreserved": true,
+    "evidence": [
+      "evidence/p15-128-keyart-registration-qa.json"
+    ],
+    "review": "private-assets/exports/p15-128-keyart-registration/index.html",
+    "next": "Use source-driven part correspondences, hair-tip and garment line anchors, and correctly painted hidden materials to reconcile 90/112.5/135 geometry; accept only after continuous visual review."
   }
 }
