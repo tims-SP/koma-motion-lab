@@ -8056,5 +8056,59 @@
     ],
     "review": "private-assets/exports/p15-150-three-view-ahoge/index.html",
     "next": "Correct both roots and loop shape per source view and paint source-matched hidden crown. Verify zero overlapping loop strokes and continuity at intermediate yaw before ArtMesh admission."
+  },
+  "p15_151DoubleRootAttachment": {
+    "status": "DOUBLE_ROOT_CONTINUITY_AUDITED_AND_90DEG_GEOMETRY_VALIDATED",
+    "characterId": "p0_character_001",
+    "keyAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "attachmentInspectionRowY": 75,
+    "sourceLastPairedRootRowY": {
+      "90": 55,
+      "112.5": 80,
+      "135": 75
+    },
+    "missingSourceAttachmentAngles": [
+      "90"
+    ],
+    "rootExtensionCandidates": {
+      "source_fit": {
+        "lastPairedRowY": 55,
+        "reachesAttachment": false,
+        "maxAdjacentRGBMAE": 12.0795
+      },
+      "root_075": {
+        "lastPairedRowY": 75,
+        "reachesAttachment": true,
+        "maxAdjacentRGBMAE": 12.2241
+      },
+      "root_081": {
+        "lastPairedRowY": 80,
+        "reachesAttachment": true,
+        "maxAdjacentRGBMAE": 12.0794
+      },
+      "root_087": {
+        "lastPairedRowY": 80,
+        "reachesAttachment": true,
+        "maxAdjacentRGBMAE": 12.2799
+      }
+    },
+    "bestGeometryDiagnostic": "root_081",
+    "sourceMaxAdjacentRGBMAE": 12.0984,
+    "visualFindings": "90-degree generated loop has two free roots terminating around y55 without penetrating crown. Piecewise geometric lengthening to y81 reaches y75 and slightly decreases the maximum five-frame pixel difference, but does not resolve double ink strokes or source-matched hidden crown anatomy.",
+    "canonicalRendererUpdated": false,
+    "sourceArtPreserved": true,
+    "artistApprovedRoots": false,
+    "hiddenCrownSourceComplete": false,
+    "continuousVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-151-double-root-gate-qa.json",
+      "evidence/p15-151-root-extension-qa.json"
+    ],
+    "review": "private-assets/exports/p15-151-double-root-gate/index.html",
+    "next": "Source-paint both 90-degree roots under the correct hair crown. Check 112.5/135 root contours and hidden scalp, then perform whole-head motion and occlusion validation."
   }
 }
