@@ -6543,5 +6543,31 @@
     ],
     "review": "private-assets/exports/p15-119-back-head-layers/index.html",
     "next": "Produce true separately painted 135/180 head, hair and garment semantic source layers, hidden underpaint and registration checks before VDD/full yaw approval."
+  },
+  "p15_120BackSemanticCandidates": {
+    "status": "BACK_VIEW_NATIVE_VISIBLE_SEMANTIC_CANDIDATES_VALIDATED",
+    "characterId": "p0_character_001",
+    "angles": [
+      135,
+      180
+    ],
+    "visibleLayerRoles": [
+      "hair.visible",
+      "skin.visible",
+      "garment.visible"
+    ],
+    "layerFileCount": 6,
+    "pixelRecompositionExact": true,
+    "sourceMaterialPreserved": true,
+    "testsPassed": 138,
+    "visualReview": "private-assets/exports/p15-120-back-semantic-candidates/index.html",
+    "visualFindings": "Hair, jacket and right-profile visible skin are separable; small boundary residuals remain; underpaint and physical layer correspondence require validation.",
+    "artistApproved": false,
+    "underpaintValidated": false,
+    "crossViewOcclusionValidated": false,
+    "evidence": [
+      "evidence/p15-120-back-semantic-qa.json"
+    ],
+    "next": "Refine 135/180 visible layers into physically registered ArtMesh with reliable boundary matte and hidden-surface underpaint; validate 90-to-135-to-180 sequential render."
   }
 }
