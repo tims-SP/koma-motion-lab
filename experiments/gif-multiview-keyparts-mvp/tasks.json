@@ -9134,5 +9134,97 @@
     ],
     "review": "private-assets/exports/p15-164-loop-ownership/index.html",
     "next": "Acquire a fully source-matched crown background with the original root ink explicitly painted out, and a physically attached loop root layer in each canonical view. Validate root/crown pixels at the two intermediate angles before selecting VDD."
+  },
+  "p15_165CrownInkOwnership": {
+    "status": "ROOT_INK_CROWN_OWNERSHIP_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "rootInkRemovalWidths": [
+      8,
+      12,
+      16
+    ],
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "root_ink_8": 12.3873,
+      "root_ink_12": 12.3849,
+      "root_ink_16": 12.3836
+    },
+    "topConnectedComponents": {
+      "reference": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "root_ink_8": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "root_ink_12": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "root_ink_16": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    "crownAlphaChangedPixels": {
+      "reference": {
+        "101.25": 0,
+        "123.75": 0
+      },
+      "root_ink_8": {
+        "101.25": 184,
+        "123.75": 564
+      },
+      "root_ink_12": {
+        "101.25": 184,
+        "123.75": 564
+      },
+      "root_ink_16": {
+        "101.25": 184,
+        "123.75": 564
+      }
+    },
+    "sourceKeyviewsPixelExact": true,
+    "visualFindings": "Root-ink masks and bounded inpaint allow diagnostic removal of original attachment strokes without modifying canonical keys. 101.25-degree intermediate view still contains a separate residual strand, and the repaired 123.75-degree loop has an unnatural crown junction. Candidate alpha differs from reference in the crown region and frame-to-frame continuity remains worse than baseline.",
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "nativeKeyframesExact": true,
+      "midframesOneTopComponent": false,
+      "crownAlphaUnchanged": false,
+      "beatsReference": false,
+      "artistSourceApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-165-root-ink-ownership-qa.json"
+    ],
+    "review": "private-assets/exports/p15-165-root-ink-ownership/index.html",
+    "next": "Produce rootless crown art authored against canonical source views and full continuous root layers, then verify intermediate alpha ownership and single-loop contours before switching to independent VDD."
   }
 }
