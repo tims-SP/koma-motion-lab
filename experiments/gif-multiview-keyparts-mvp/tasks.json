@@ -7984,5 +7984,77 @@
     ],
     "review": "private-assets/exports/p15-149-root-attachment/index.html",
     "next": "Obtain exact aligned 90/112.5/135 part artwork including both attached roots and hidden crown scalp. Only retest when a visually coherent source can replace the failed root seam."
+  },
+  "p15_150ThreeViewIndependentAhoge": {
+    "status": "THREE_VIEW_AHOGE_SOURCES_GENERATED_REGISTERED_AND_RENDER_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderedYaw": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceFiles": {
+      "90": "private-assets/p15-150-ahoge/yaw090/ahoge-native.png",
+      "112.5": "private-assets/p15-148-ahoge/ahoge-native.png",
+      "135": "private-assets/p15-150-ahoge/yaw135/ahoge-native.png"
+    },
+    "provenanceSHA256": {
+      "90": "2be6cc3bb0039078e6cb6cadc5cb45afd6b164c956598743560846f59bc171e7",
+      "112.5": "71ef0fcf1dc66ddf1c890f429dfb385d58daf6070068281335ed6bbe90bd9b6c",
+      "135": "b96ab8b90c9e899a07e3583fe3ff810f25af9c52e95d89e5a335dbe85194f992"
+    },
+    "registrations": {
+      "90": {
+        "scale": 0.9,
+        "shiftXY": [
+          8,
+          -24
+        ],
+        "freeLoopAlphaIoU": 0.52984
+      },
+      "112.5": {
+        "scale": 0.9,
+        "shiftXY": [
+          24,
+          -16
+        ],
+        "freeLoopAlphaIoU": 0.72287
+      },
+      "135": {
+        "scale": 0.9,
+        "shiftXY": [
+          0,
+          -24
+        ],
+        "freeLoopAlphaIoU": 0.61555
+      }
+    },
+    "maxAdjacentRGBMAE": {
+      "canonical": 12.0984,
+      "threeViewCandidate": 12.0838
+    },
+    "visualFindings": {
+      "yaw090": "Generated loop is a disconnected arch with incomplete double-root attachment, and registered replacement shows a thin duplicate root stroke.",
+      "yaw112p5": "Source-aligned part retains a root crossing and loop tail mismatch.",
+      "yaw135": "Generated loop and root placement differ from source; registered replacement still leaves overlapping hair arcs.",
+      "intermediates": "At 101.25 and 123.75 degrees, double loops and source face/garment ghosting remain visible."
+    },
+    "sourcePreserved": true,
+    "artistApprovedDoubleRoots": false,
+    "paintedHiddenScalpComplete": false,
+    "productionCandidateSelected": false,
+    "fullYawVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-150-three-view-ahoge-qa.json"
+    ],
+    "review": "private-assets/exports/p15-150-three-view-ahoge/index.html",
+    "next": "Correct both roots and loop shape per source view and paint source-matched hidden crown. Verify zero overlapping loop strokes and continuity at intermediate yaw before ArtMesh admission."
   }
 }
