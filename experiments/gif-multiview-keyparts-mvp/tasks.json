@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_106_SOURCE_ARTMESH_GEOMETRY_VERIFIED_GARMENT_VISUAL_REVIEW_PENDING",
+  "status": "P15_107_THREE_SOURCE_GARMENT_ART_READY_STROKE_OCCLUSION_REVIEW_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-106 shared three-key source-garment ArtMesh with nonfolding topology and VDD comparison",
+  "lastCompleted": "P15-107 native 60/75 companion keyart, three-view costume source registration and actual VDD browser evidence",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -5356,5 +5356,109 @@
       "evidence/p15-106-review-qa.json",
       "evidence/p15-106-browser-qa.json"
     ]
+  },
+  "p15_107SourceInkCorrespondence": {
+    "status": "NATIVE_THREE_VIEW_GARMENT_SOURCES_GENERATED_AND_VIEW_RENDER_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceGarment": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+    "sourceOriginalSHA256": "b91745a58412bc856e75af27fead2574f9da051f1027a00c987a8e8f9868ecf0",
+    "sourceRegisteredSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "sourceMeshSHA256": "74f60b76ec7ea803425d516c8e1e64a6881a1ec3f0c9a12a20585f2d53df730c",
+    "correspondenceSource": "P15-106 three-key source garment ArtMesh landmarks",
+    "viewAngles": [
+      60,
+      61.875,
+      63.75,
+      65.625,
+      67.5,
+      69.375,
+      71.25,
+      73.125,
+      75
+    ],
+    "nonfoldedTPSFrames": 7,
+    "landmarksMin": 56,
+    "landmarksMax": 58,
+    "candidateMethodNames": [
+      "canonical_full",
+      "canonical_bow",
+      "canonical_bow_soft_edge"
+    ],
+    "renderedCandidateFrames": 27,
+    "referenceFrames": 18,
+    "baselineBowMaxAdjacentRGBMAE": 10.1016,
+    "singleSourceBowMaxAdjacentRGBMAE": 24.6827,
+    "baselineCollarMaxAdjacentRGBMAE": 9.5625,
+    "singleSourceBowCollarMaxAdjacentRGBMAE": 13.4293,
+    "sourceInkTechnicalVerified": true,
+    "continuousYawVisualAccepted": false,
+    "visualBenchmark": "P15-101 head_alpha_blend",
+    "unitTestsPass": 15,
+    "chromiumChecksPass": 90,
+    "next": "Review native garment keyart with source asset pose and ink checks; if approved, establish part/stroke-level continuity across these keyviews while rebuilding the shared occlusion mesh",
+    "visualGate": "UNIFIED_SOURCE_GARMENT_STROKE_AND_OCCLUSION_CORRESPONDENCE_APPROVAL",
+    "review": "private-assets/exports/p15-107-companion-render/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-107-three-view-garment-review.zip",
+      "sha256": "7d0d6a6cdfd3c2ead91f23eb79ea91ac6d2b7e2f8bad6dce31ccaff1ca2b94c1",
+      "bytes": 86417209,
+      "entries": 143
+    },
+    "evidence": [
+      "evidence/p15-107-ink-qa.json",
+      "evidence/p15-107-patch-qa.json",
+      "evidence/p15-107-companion-qa.json",
+      "evidence/p15-107-companion-review-qa.json",
+      "evidence/p15-107-companion-browser-qa.json",
+      "evidence/p15-107-browser-qa.json"
+    ],
+    "nativeSourceAngles": [
+      60,
+      67.5,
+      75
+    ],
+    "nativeCompanionSources": {
+      "60": {
+        "sourcePath": "private-assets/p15-107-codex-patches/yaw060-consistent-native.png",
+        "sourceSHA256": "02a0e4ed80e7bc054ebad45e78cfaa1f98cff6ce6e1493ae73e2e812f91283ae",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+        "registeredSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+        "goldCenterOffsetPx": [
+          -19.702,
+          38.319
+        ]
+      },
+      "75": {
+        "sourcePath": "private-assets/p15-107-codex-patches/yaw075-consistent-native.png",
+        "sourceSHA256": "d6d9fa2bae99a48023445b0965efb1933dee5711935e3f230155b4eb8b0c27fe",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "registeredPath": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+        "registeredSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+        "goldCenterOffsetPx": [
+          -2.563,
+          6.229
+        ]
+      }
+    },
+    "artworkGeneration": "Codex image_gen.imagegen",
+    "nativeSourcePrecheckPassed": true,
+    "nativeThreeSourceFrames": 45,
+    "sourceInkTransportFrames": 27,
+    "sourceInkUnitTestsPass": 15,
+    "companionSourceUnitTestsPass": 14,
+    "currentP15RegressionTestsPass": 17,
+    "browserChecksPass": 216,
+    "nativeGarmentCollarMaxAdjacentRGBMAE": 8.7588,
+    "nativeGarmentBowMaxAdjacentRGBMAE": 12.8767,
+    "currentVisualBenchmark": "P15-101 head_alpha_blend",
+    "artisticSourceApproval": false,
+    "inkReview": "private-assets/exports/p15-107-canonical-ink/index.html"
   }
 }

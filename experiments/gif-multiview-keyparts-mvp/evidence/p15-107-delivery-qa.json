@@ -1,0 +1,73 @@
+{
+  "schema": "KOMA_P15_107_NATIVE_GARMENT_DELIVERY_QA_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "sourceModel": "Codex built-in image_gen.imagegen",
+  "nativeSourceCompanions": {
+    "60": {
+      "sourcePath": "private-assets/p15-107-codex-patches/yaw060-consistent-native.png",
+      "sourceSHA256": "02a0e4ed80e7bc054ebad45e78cfaa1f98cff6ce6e1493ae73e2e812f91283ae",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "registeredPath": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+      "registeredSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "goldCenterOffsetPx": [
+        -19.702,
+        38.319
+      ]
+    },
+    "75": {
+      "sourcePath": "private-assets/p15-107-codex-patches/yaw075-consistent-native.png",
+      "sourceSHA256": "d6d9fa2bae99a48023445b0965efb1933dee5711935e3f230155b4eb8b0c27fe",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "registeredPath": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+      "registeredSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+      "goldCenterOffsetPx": [
+        -2.563,
+        6.229
+      ]
+    }
+  },
+  "realSourceColorAndAlphaPassed": true,
+  "sourceOriginalKeyframesUnchanged": true,
+  "renderedCompanionFrames": 45,
+  "renderedSingleInkFrames": 27,
+  "companionBrowserChecks": 126,
+  "singleInkBrowserChecks": 90,
+  "sourceArtArtistApproved": false,
+  "fullCharacterYawArtisticAccepted": false,
+  "sourceViewEndpointsComparison": {
+    "sameNewSourceNativeKeysCollarMAE": 8.7588,
+    "existingP15_101CollarMAE": 9.5625,
+    "sameNewSourceNativeKeysBowMAE": 12.8767,
+    "existingP15_101BowMAE": 10.1016,
+    "existingP0EndpointKeysWithNewGarmentBowMAE": 28.5677
+  },
+  "visualReview": {
+    "sourceDesignContinuity": "three independent native garment sources use one unified collar, gold edging, bow and emblem design",
+    "testedPreview": "three-view native source frame and 60–75-degree actual character yaw loops",
+    "collarLineConsistency": "native-key set reduces localized temporal RGB difference in collar ROI",
+    "bowIdentity": "native key bow folds look more coherent in each source, but cross-view fade retains double profiles",
+    "originalP0Keyframes": "existing P0 keyframes preserved; their transition to the new garment source remains discontinuous",
+    "headSkin": "P15-101 source head hair mesh reused with its existing profile and occlusion limitations",
+    "nextGate": "artist-approved consistent native garments or stroke/layer correspondence with explicit hidden-surface occlusion"
+  },
+  "benchmark": "P15-101 head_alpha_blend",
+  "evidence": [
+    "evidence/p15-107-ink-qa.json",
+    "evidence/p15-107-patch-qa.json",
+    "evidence/p15-107-companion-qa.json",
+    "evidence/p15-107-companion-review-qa.json",
+    "evidence/p15-107-companion-browser-qa.json",
+    "evidence/p15-107-browser-qa.json"
+  ]
+}

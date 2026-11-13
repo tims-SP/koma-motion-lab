@@ -1,0 +1,70 @@
+{
+  "schema": "KOMA_P15_107_COMPANION_GARMENT_SOURCE_AUDIT_V1",
+  "characterId": "p0_character_001",
+  "sourceReference": "P15-105 native 67.5 transparent garment",
+  "generatedCompanions": {
+    "60": {
+      "nativePath": "private-assets/p15-107-codex-patches/yaw060-consistent-native.png",
+      "nativeSHA256": "02a0e4ed80e7bc054ebad45e78cfaa1f98cff6ce6e1493ae73e2e812f91283ae",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeRGBA": true,
+      "registeredPath": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+      "registeredSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "measuredBrooch": [
+        654.162,
+        772.231
+      ],
+      "registrationOffset": [
+        -19.702,
+        38.319
+      ],
+      "registeredAlphaBounds": [
+        176,
+        652,
+        847,
+        1024
+      ],
+      "opaqueAbove590": 0,
+      "bowHuePixels": 32045,
+      "goldHuePixels": 15787,
+      "geometryAndColorPrecheck": true,
+      "artistApproved": false
+    },
+    "75": {
+      "nativePath": "private-assets/p15-107-codex-patches/yaw075-consistent-native.png",
+      "nativeSHA256": "d6d9fa2bae99a48023445b0965efb1933dee5711935e3f230155b4eb8b0c27fe",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeRGBA": true,
+      "registeredPath": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+      "registeredSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+      "measuredBrooch": [
+        646.683,
+        800.861
+      ],
+      "registrationOffset": [
+        -2.563,
+        6.229
+      ],
+      "registeredAlphaBounds": [
+        273,
+        648,
+        774,
+        1024
+      ],
+      "opaqueAbove590": 0,
+      "bowHuePixels": 20713,
+      "goldHuePixels": 12600,
+      "geometryAndColorPrecheck": true,
+      "artistApproved": false
+    }
+  },
+  "allDimensionsAndColorsValidated": true,
+  "artisticApproved": false,
+  "contact": "private-assets/exports/p15-107-source-patches/consistent-garment-contact.jpg"
+}

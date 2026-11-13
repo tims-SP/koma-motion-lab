@@ -1,0 +1,95 @@
+{
+  "schema": "KOMA_P15_107_SOURCE_INK_REVIEW_V1",
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "P15-101-baseline": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-105-native-middle": {
+      "60": "../p15-105-three-key-vdd/three_key_direct-yaw60.png",
+      "61.875": "../p15-105-three-key-vdd/three_key_direct-yaw61p875.png",
+      "63.75": "../p15-105-three-key-vdd/three_key_direct-yaw63p75.png",
+      "65.625": "../p15-105-three-key-vdd/three_key_direct-yaw65p625.png",
+      "67.5": "../p15-105-three-key-vdd/three_key_direct-yaw67p5.png",
+      "69.375": "../p15-105-three-key-vdd/three_key_direct-yaw69p375.png",
+      "71.25": "../p15-105-three-key-vdd/three_key_direct-yaw71p25.png",
+      "73.125": "../p15-105-three-key-vdd/three_key_direct-yaw73p125.png",
+      "75": "../p15-105-three-key-vdd/three_key_direct-yaw75.png"
+    },
+    "canonical_full": {
+      "60": "canonical_full-yaw60.png",
+      "61.875": "canonical_full-yaw61p875.png",
+      "63.75": "canonical_full-yaw63p75.png",
+      "65.625": "canonical_full-yaw65p625.png",
+      "67.5": "canonical_full-yaw67p5.png",
+      "69.375": "canonical_full-yaw69p375.png",
+      "71.25": "canonical_full-yaw71p25.png",
+      "73.125": "canonical_full-yaw73p125.png",
+      "75": "canonical_full-yaw75.png"
+    },
+    "canonical_bow": {
+      "60": "canonical_bow-yaw60.png",
+      "61.875": "canonical_bow-yaw61p875.png",
+      "63.75": "canonical_bow-yaw63p75.png",
+      "65.625": "canonical_bow-yaw65p625.png",
+      "67.5": "canonical_bow-yaw67p5.png",
+      "69.375": "canonical_bow-yaw69p375.png",
+      "71.25": "canonical_bow-yaw71p25.png",
+      "73.125": "canonical_bow-yaw73p125.png",
+      "75": "canonical_bow-yaw75.png"
+    },
+    "canonical_bow_soft_edge": {
+      "60": "canonical_bow_soft_edge-yaw60.png",
+      "61.875": "canonical_bow_soft_edge-yaw61p875.png",
+      "63.75": "canonical_bow_soft_edge-yaw63p75.png",
+      "65.625": "canonical_bow_soft_edge-yaw65p625.png",
+      "67.5": "canonical_bow_soft_edge-yaw67p5.png",
+      "69.375": "canonical_bow_soft_edge-yaw69p375.png",
+      "71.25": "canonical_bow_soft_edge-yaw71p25.png",
+      "73.125": "canonical_bow_soft_edge-yaw73p125.png",
+      "75": "canonical_bow_soft_edge-yaw75.png"
+    }
+  },
+  "gifs": {
+    "P15-101-baseline": {
+      "relativePath": "private-assets/exports/p15-107-canonical-ink/P15-101-baseline-loop.gif",
+      "sha256": "e61e4a95b64cf5f72ebdd9fda2fc29b934b4c3fc201957fe72dd40d0fc0f0104"
+    },
+    "P15-105-native-middle": {
+      "relativePath": "private-assets/exports/p15-107-canonical-ink/P15-105-native-middle-loop.gif",
+      "sha256": "89b28c701f9679c01cf9b50b625ce0aab09d73435148c1590fd9245e064fe472"
+    },
+    "canonical_full": {
+      "relativePath": "private-assets/exports/p15-107-canonical-ink/canonical_full-loop.gif",
+      "sha256": "50e3f0d36261fe0edc167c1a02a8c151a9b6a5e76b42cf4facb1a87377a664b6"
+    },
+    "canonical_bow": {
+      "relativePath": "private-assets/exports/p15-107-canonical-ink/canonical_bow-loop.gif",
+      "sha256": "c709c5edcb4cd8b0cec994674d9bf154cb16787164c2271b73e4197555db8bcc"
+    },
+    "canonical_bow_soft_edge": {
+      "relativePath": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-loop.gif",
+      "sha256": "0b462a5fe8db4b502f0c935da9a31c03b2054d325f9827922c80d70cfc9665b4"
+    }
+  },
+  "entry": "private-assets/exports/p15-107-canonical-ink/index.html",
+  "sourceContinuityApproved": false
+}

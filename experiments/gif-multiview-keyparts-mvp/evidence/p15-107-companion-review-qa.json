@@ -1,0 +1,129 @@
+{
+  "schema": "KOMA_P15_107_COMPANION_REVIEW_V1",
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "P15-101-baseline": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-105-three_key_direct": {
+      "60": "../p15-105-three-key-vdd/three_key_direct-yaw60.png",
+      "61.875": "../p15-105-three-key-vdd/three_key_direct-yaw61p875.png",
+      "63.75": "../p15-105-three-key-vdd/three_key_direct-yaw63p75.png",
+      "65.625": "../p15-105-three-key-vdd/three_key_direct-yaw65p625.png",
+      "67.5": "../p15-105-three-key-vdd/three_key_direct-yaw67p5.png",
+      "69.375": "../p15-105-three-key-vdd/three_key_direct-yaw69p375.png",
+      "71.25": "../p15-105-three-key-vdd/three_key_direct-yaw71p25.png",
+      "73.125": "../p15-105-three-key-vdd/three_key_direct-yaw73p125.png",
+      "75": "../p15-105-three-key-vdd/three_key_direct-yaw75.png"
+    },
+    "companion_direct_orig_keys": {
+      "60": "companion_direct_orig_keys-yaw60.png",
+      "61.875": "companion_direct_orig_keys-yaw61p875.png",
+      "63.75": "companion_direct_orig_keys-yaw63p75.png",
+      "65.625": "companion_direct_orig_keys-yaw65p625.png",
+      "67.5": "companion_direct_orig_keys-yaw67p5.png",
+      "69.375": "companion_direct_orig_keys-yaw69p375.png",
+      "71.25": "companion_direct_orig_keys-yaw71p25.png",
+      "73.125": "companion_direct_orig_keys-yaw73p125.png",
+      "75": "companion_direct_orig_keys-yaw75.png"
+    },
+    "companion_flow_orig_keys": {
+      "60": "companion_flow_orig_keys-yaw60.png",
+      "61.875": "companion_flow_orig_keys-yaw61p875.png",
+      "63.75": "companion_flow_orig_keys-yaw63p75.png",
+      "65.625": "companion_flow_orig_keys-yaw65p625.png",
+      "67.5": "companion_flow_orig_keys-yaw67p5.png",
+      "69.375": "companion_flow_orig_keys-yaw69p375.png",
+      "71.25": "companion_flow_orig_keys-yaw71p25.png",
+      "73.125": "companion_flow_orig_keys-yaw73p125.png",
+      "75": "companion_flow_orig_keys-yaw75.png"
+    },
+    "companion_soft_orig_keys": {
+      "60": "companion_soft_orig_keys-yaw60.png",
+      "61.875": "companion_soft_orig_keys-yaw61p875.png",
+      "63.75": "companion_soft_orig_keys-yaw63p75.png",
+      "65.625": "companion_soft_orig_keys-yaw65p625.png",
+      "67.5": "companion_soft_orig_keys-yaw67p5.png",
+      "69.375": "companion_soft_orig_keys-yaw69p375.png",
+      "71.25": "companion_soft_orig_keys-yaw71p25.png",
+      "73.125": "companion_soft_orig_keys-yaw73p125.png",
+      "75": "companion_soft_orig_keys-yaw75.png"
+    },
+    "companion_direct_native_keys": {
+      "60": "companion_direct_native_keys-yaw60.png",
+      "61.875": "companion_direct_native_keys-yaw61p875.png",
+      "63.75": "companion_direct_native_keys-yaw63p75.png",
+      "65.625": "companion_direct_native_keys-yaw65p625.png",
+      "67.5": "companion_direct_native_keys-yaw67p5.png",
+      "69.375": "companion_direct_native_keys-yaw69p375.png",
+      "71.25": "companion_direct_native_keys-yaw71p25.png",
+      "73.125": "companion_direct_native_keys-yaw73p125.png",
+      "75": "companion_direct_native_keys-yaw75.png"
+    },
+    "companion_flow_native_keys": {
+      "60": "companion_flow_native_keys-yaw60.png",
+      "61.875": "companion_flow_native_keys-yaw61p875.png",
+      "63.75": "companion_flow_native_keys-yaw63p75.png",
+      "65.625": "companion_flow_native_keys-yaw65p625.png",
+      "67.5": "companion_flow_native_keys-yaw67p5.png",
+      "69.375": "companion_flow_native_keys-yaw69p375.png",
+      "71.25": "companion_flow_native_keys-yaw71p25.png",
+      "73.125": "companion_flow_native_keys-yaw73p125.png",
+      "75": "companion_flow_native_keys-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-baseline": {
+      "path": "private-assets/exports/p15-107-companion-render/P15-101-baseline-loop.gif",
+      "sha256": "8750196b3cfc61a9bcaa5f8d2b0691921f674c44174b2d3e911b759ca690170a"
+    },
+    "P15-105-three_key_direct": {
+      "path": "private-assets/exports/p15-107-companion-render/P15-105-three_key_direct-loop.gif",
+      "sha256": "3e2a93a628644faa99f3b04cea3343f9c8d794b244c336bb790c50b226d01b8f"
+    },
+    "companion_direct_orig_keys": {
+      "path": "private-assets/exports/p15-107-companion-render/companion_direct_orig_keys-loop.gif",
+      "sha256": "fffca65e3487bcfd21a5a42e53f5111d97c934265199e353c7aa06f4b46be754"
+    },
+    "companion_flow_orig_keys": {
+      "path": "private-assets/exports/p15-107-companion-render/companion_flow_orig_keys-loop.gif",
+      "sha256": "e1656bd91ebc561bceda960c212eff4b6e3f808542bcdabf52e7c47d2488fd96"
+    },
+    "companion_soft_orig_keys": {
+      "path": "private-assets/exports/p15-107-companion-render/companion_soft_orig_keys-loop.gif",
+      "sha256": "c4613396cac040fb387a75a4238f86fce15ba2d619e08725d654564cac380efc"
+    },
+    "companion_direct_native_keys": {
+      "path": "private-assets/exports/p15-107-companion-render/companion_direct_native_keys-loop.gif",
+      "sha256": "b68824bc8feae57a0b747d716ff2dfe8ebd77207353780a51c6aea20752f30d1"
+    },
+    "companion_flow_native_keys": {
+      "path": "private-assets/exports/p15-107-companion-render/companion_flow_native_keys-loop.gif",
+      "sha256": "ae175d56cf8b4207b8ffbebdb7326cfe12106be8fe47138ca4d5f192c70e2737"
+    }
+  },
+  "entry": "private-assets/exports/p15-107-companion-render/index.html",
+  "allSourcesRegAndOriginalSHA": {
+    "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+    "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+  },
+  "visualAccepted": false
+}
