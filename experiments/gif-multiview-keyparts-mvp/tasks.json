@@ -8773,5 +8773,83 @@
     ],
     "review": "private-assets/exports/p15-159-curve-controls/index.html",
     "next": "Create source-registered inner/outer strand edges and matching root attachment/hidden scalp, then test intermediate curve connectivity and all native keyframes before updating VDD."
+  },
+  "p15_160RootOwnershipUnderpaint": {
+    "status": "THREE_VIEW_ROOT_BOUNDARY_AND_CROWN_REPAIR_RENDERED_AND_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "existingLayerCutoffY": 54,
+    "rootLandmarks": {
+      "90": [
+        205.0,
+        65.0
+      ],
+      "112.5": [
+        294.0,
+        72.0
+      ],
+      "135": [
+        264.0,
+        67.0
+      ]
+    },
+    "actualLoopPixelsBelowExistingCut": {
+      "90": 0,
+      "112.5": 0,
+      "135": 0
+    },
+    "crownRepairPixelCounts": {
+      "90": 140,
+      "112.5": 189,
+      "135": 154
+    },
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "source_ownership": 12.3388,
+      "bounded_underpaint": 12.2994
+    },
+    "midviewTopComponents": {
+      "reference": {
+        "101.25": 1,
+        "123.75": 1
+      },
+      "source_ownership": {
+        "101.25": 2,
+        "123.75": 3
+      },
+      "bounded_underpaint": {
+        "101.25": 2,
+        "123.75": 3
+      }
+    },
+    "findings": "All three original source root landmarks are below the y54 visible-loop extraction cut, leaving zero material pixels beneath the cut. Synthetic bounded inpainting cannot restore actual root attachment, and the 101.25/123.75 intermediate crowns remain disconnected. Preserve the original reference pipeline.",
+    "materialCorrespondenceAccepted": false,
+    "productionRendererUpdated": false,
+    "sourceKeysPixelExact": true,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "passes": false,
+      "productionCandidateSelected": false,
+      "allSourceRootsBelowOldCut": true,
+      "extractedLoopContainsBelowCutPixels": false,
+      "bothMidviewsSingleComponent": false,
+      "reason": "All source root anchors fall below the extracted material boundary; synthetic underpaint neither supplies root semantics nor produces connected intermediate silhouettes."
+    },
+    "evidence": [
+      "evidence/p15-160-root-underpaint-qa.json"
+    ],
+    "review": "private-assets/exports/p15-160-root-underpaint/index.html",
+    "next": "Replace y54 proxy extraction with separate source-painted loop/roots and matched hidden crown material for each view, then rerender and require connected roots at both intermediate angles."
   }
 }
