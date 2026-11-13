@@ -6705,5 +6705,36 @@
     ],
     "review": "private-assets/exports/p15-124-face-safe/index.html",
     "next": "Generate and validate physically source-painted hair, face, collar and coat boundaries and hidden surface artwork for 90–135-degree VDD. Preserve previously selected visual benchmarks."
+  },
+  "p15_125RearHairCorrespondence": {
+    "status": "REAR_90_135_HEAD_FLOW_REGULARIZATION_REVIEWED",
+    "characterId": "p0_character_001",
+    "angles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "testedSigma": [
+      0,
+      4,
+      10
+    ],
+    "maxAdjacentCompositeRGBMAE": {
+      "head_flow_raw": 9.5435,
+      "head_flow_smooth4": 9.7512,
+      "head_flow_smooth10": 10.1818
+    },
+    "sourceKeyframesPixelExact": true,
+    "visualFinding": "The 112.5-degree source-view ownership switch creates a visible discontinuity. Smoothing reduces selected strand artifacts but does not resolve the source correspondence or garment occlusion; larger smoothing increases frame-to-frame error.",
+    "visualAccepted": false,
+    "physicalArtMeshVerified": false,
+    "hiddenSurfaceArtVerified": false,
+    "evidence": [
+      "evidence/p15-125-hair-flow-qa.json"
+    ],
+    "review": "private-assets/exports/p15-125-hair-flow-regularization/index.html",
+    "next": "Acquire physically corresponding head/hair, face and coat source material near 112.5 degrees and validate hidden surfaces and anchor topology before another view interpolation refinement."
   }
 }

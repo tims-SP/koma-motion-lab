@@ -1,0 +1,56 @@
+{
+  "schema": "KOMA_P15_125_HAIR_FLOW_REGULARIZATION_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "methods": {
+    "head_flow_raw": {
+      "sigma": 0,
+      "maxAdjacentCompositeRGBMAE": 9.5435,
+      "adjacentCompositeRGBMAE": [
+        6.8682,
+        9.5435,
+        5.8574,
+        5.8588
+      ],
+      "nativeKeyframesPixelExact": true
+    },
+    "head_flow_smooth4": {
+      "sigma": 4,
+      "maxAdjacentCompositeRGBMAE": 9.7512,
+      "adjacentCompositeRGBMAE": [
+        6.7903,
+        9.7512,
+        5.8896,
+        5.8588
+      ],
+      "nativeKeyframesPixelExact": true
+    },
+    "head_flow_smooth10": {
+      "sigma": 10,
+      "maxAdjacentCompositeRGBMAE": 10.1818,
+      "adjacentCompositeRGBMAE": [
+        6.6822,
+        10.1818,
+        5.9127,
+        5.8523
+      ],
+      "nativeKeyframesPixelExact": true
+    }
+  },
+  "sourceKeyframeSHA256": {
+    "90": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9",
+    "135": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16"
+  },
+  "nativeKeyframePixelExact": true,
+  "review": "private-assets/exports/p15-125-hair-flow-regularization/index.html",
+  "physicalArtMeshVerified": false,
+  "hiddenSurfaceArtVerified": false,
+  "artistVisualAccepted": false,
+  "next": "Use actual source-authored scalp/face/neck and coat layer outlines and anchors to address the documented hair line and neckline transition errors."
+}
