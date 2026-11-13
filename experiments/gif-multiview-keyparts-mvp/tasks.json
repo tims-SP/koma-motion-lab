@@ -6505,5 +6505,24 @@
       "evidence/p15-117-source-coverage-qa.json"
     ],
     "next": "Create and verify P0 135/180 native semantic layers with visible/hidden surfaces and source ownership; inspect visual source identity before reworking VDD."
+  },
+  "p15_118BackSourceReview": {
+    "status": "BACK_VIEW_REFERENCE_PROVENANCE_VERIFIED",
+    "characterId": "p0_character_001",
+    "referenceAngles": [
+      90,
+      135,
+      180
+    ],
+    "referenceClass": "recovered head_8 whole-frame art",
+    "registeredToCanonical": false,
+    "nativeSemanticLayerCountAt135180": 0,
+    "unitTestsPass": 21,
+    "visualAcceptance": false,
+    "evidence": [
+      "evidence/p15-118-back-source-review-qa.json"
+    ],
+    "review": "private-assets/exports/p15-118-back-source-review/index.html",
+    "next": "Produce and register semantic source layers and hidden garment/head surfaces from 135/180-degree reference artwork; visually approve identity before VDD binding."
   }
 }

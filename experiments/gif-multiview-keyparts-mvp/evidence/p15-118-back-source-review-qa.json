@@ -1,0 +1,81 @@
+{
+  "schema": "KOMA_P15_118_BACK_SOURCE_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "candidates": [
+    {
+      "angle": 90,
+      "source": "recovered-review/frames/head_8/yaw090_whole.png",
+      "sourceSHA256": "0a7d1e3167215b7f1de8f73a8b109e65ca0655ca59d7d21e7d4906c3cb0463c2",
+      "extracted": "extracted/whole/yaw090.png",
+      "extractedSHA256": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9",
+      "pixelIdenticalToRecovered": true,
+      "size": [
+        443,
+        443
+      ],
+      "alphaPixelsGt16": 75477,
+      "alphaBBox": [
+        76,
+        5,
+        351,
+        441
+      ],
+      "registeredToP0Canonical": false,
+      "independentlyEditableLayers": false,
+      "sourceRole": "multi-view whole-frame drawing reference"
+    },
+    {
+      "angle": 135,
+      "source": "recovered-review/frames/head_8/yaw135_whole.png",
+      "sourceSHA256": "e630ec6023bb42b7e37099fbe14cb0f6a2441b2a611c56d76b6253d68fee21b2",
+      "extracted": "extracted/whole/yaw135.png",
+      "extractedSHA256": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16",
+      "pixelIdenticalToRecovered": true,
+      "size": [
+        443,
+        443
+      ],
+      "alphaPixelsGt16": 75898,
+      "alphaBBox": [
+        80,
+        8,
+        351,
+        441
+      ],
+      "registeredToP0Canonical": false,
+      "independentlyEditableLayers": false,
+      "sourceRole": "multi-view whole-frame drawing reference"
+    },
+    {
+      "angle": 180,
+      "source": "recovered-review/frames/head_8/yaw180_whole.png",
+      "sourceSHA256": "70239ede6f5d44fb0bbb73d2ce86a722692a4124219293c40a9ae6198566dd50",
+      "extracted": "extracted/whole/yaw180.png",
+      "extractedSHA256": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363",
+      "pixelIdenticalToRecovered": true,
+      "size": [
+        443,
+        443
+      ],
+      "alphaPixelsGt16": 86807,
+      "alphaBBox": [
+        63,
+        10,
+        383,
+        443
+      ],
+      "registeredToP0Canonical": false,
+      "independentlyEditableLayers": false,
+      "sourceRole": "multi-view whole-frame drawing reference"
+    }
+  ],
+  "provenance": "recovered-review/manifest.json head_8 frames",
+  "identityReferenceApproved": false,
+  "registrationVerified": false,
+  "semanticLayerCoverage135180": 0,
+  "expectedSemanticLayersPerAngle": 13,
+  "visualAcceptance": false,
+  "next": "Use these native 135/180 drawings as visual references; create true 13-slot source layers, occlusion underpaint, and registration proof before binding VDD.",
+  "contact": "private-assets/exports/p15-118-back-source-review/back-source-contact.jpg",
+  "entry": "private-assets/exports/p15-118-back-source-review/index.html"
+}
