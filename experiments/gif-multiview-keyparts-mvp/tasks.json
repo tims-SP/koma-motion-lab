@@ -7225,5 +7225,164 @@
     ],
     "review": "private-assets/exports/p15-137-occlusion-regions/index.html",
     "next": "Create a true behind-hair rear scalp/face RGBA source with registered anatomy and authored eye/bang ownership, then test under 90–135 yaw, not only image-space translation."
+  },
+  "p15_138NativeRearScalpPaintAndYaw": {
+    "status": "NATIVE_REAR_SCALP_PAINT_AND_YAW_COMPARISON_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 112.5,
+    "nativeGenerationTool": "image_gen.imagegen via Codex",
+    "newNativeSource": "private-assets/p15-138-rear-scalp/underpaint-native.png",
+    "nativeSHA256": "b501750eef43fa7362029ca93b043b7332c0c83ce45459fefeacdb7bc24e8580",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "registration": {
+      "jacketAlphaIoU": 0.9966,
+      "scale": 0.97,
+      "translationXY": [
+        12,
+        12
+      ]
+    },
+    "staticDisplacement": {
+      "p15_137": {
+        "0": {
+          "alphaHoles": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6099
+        },
+        "12": {
+          "alphaHoles": {
+            "all": 3579,
+            "eye": 214,
+            "rear_scalp": 2630,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 14.6083
+        },
+        "24": {
+          "alphaHoles": {
+            "all": 6483,
+            "eye": 302,
+            "rear_scalp": 5296,
+            "neck": 13,
+            "ear": 0
+          },
+          "rgbMAE": 20.0523
+        }
+      },
+      "new_painted": {
+        "0": {
+          "alphaHoles": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6456
+        },
+        "12": {
+          "alphaHoles": {
+            "all": 2908,
+            "eye": 267,
+            "rear_scalp": 1801,
+            "neck": 212,
+            "ear": 153
+          },
+          "rgbMAE": 14.6352
+        },
+        "24": {
+          "alphaHoles": {
+            "all": 3926,
+            "eye": 406,
+            "rear_scalp": 2520,
+            "neck": 285,
+            "ear": 194
+          },
+          "rgbMAE": 19.1232
+        }
+      },
+      "hybrid_rear": {
+        "0": {
+          "alphaHoles": {
+            "all": 0,
+            "eye": 0,
+            "rear_scalp": 0,
+            "neck": 0,
+            "ear": 0
+          },
+          "rgbMAE": 0.6492
+        },
+        "12": {
+          "alphaHoles": {
+            "all": 2831,
+            "eye": 225,
+            "rear_scalp": 1801,
+            "neck": 144,
+            "ear": 81
+          },
+          "rgbMAE": 14.5981
+        },
+        "24": {
+          "alphaHoles": {
+            "all": 3788,
+            "eye": 313,
+            "rear_scalp": 2520,
+            "neck": 179,
+            "ear": 81
+          },
+          "rgbMAE": 19.0635
+        }
+      }
+    },
+    "yawTransition": {
+      "p15_137": {
+        "maxAdjacentCompositeRGBMAE": 12.0062,
+        "adjacentCompositeRGBMAE": [
+          12.0062,
+          11.0249,
+          10.543,
+          11.5949
+        ],
+        "nativeSource90And135PixelExact": true
+      },
+      "new_painted": {
+        "maxAdjacentCompositeRGBMAE": 12.2615,
+        "adjacentCompositeRGBMAE": [
+          12.2615,
+          11.0779,
+          10.8293,
+          11.5225
+        ],
+        "nativeSource90And135PixelExact": true
+      },
+      "hybrid_rear": {
+        "maxAdjacentCompositeRGBMAE": 12.1691,
+        "adjacentCompositeRGBMAE": [
+          12.1691,
+          10.9996,
+          10.7825,
+          11.6557
+        ],
+        "nativeSource90And135PixelExact": true
+      }
+    },
+    "visualFindings": "Newly painted rear scalp extends hidden coverage and reduces 24-pixel rear gaps substantially. Replacing the whole underpaint introduces eye/ear/neck gaps; a spatial hybrid reduces total holes but does not retain the prior neck/ear edge quality. DIS inbetweens still show ghosted hair/ahoge and jacket line errors at 101.25 and 123.75 degrees.",
+    "productionSelected": false,
+    "rearScalpArtistApproved": false,
+    "canonicalVDDVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-138-rear-scalp-qa.json"
+    ],
+    "review": "private-assets/exports/p15-138-rear-scalp/index.html",
+    "next": "Match anatomical ear/neck/head masks and source-painted hidden material at 90/112.5/135, then test component visibility and true ArtMesh deformation instead of whole-image optical flow."
   }
 }
