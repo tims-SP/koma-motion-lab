@@ -6736,5 +6736,55 @@
     ],
     "review": "private-assets/exports/p15-125-hair-flow-regularization/index.html",
     "next": "Acquire physically corresponding head/hair, face and coat source material near 112.5 degrees and validate hidden surfaces and anchor topology before another view interpolation refinement."
+  },
+  "p15_126MidviewCorrespondence": {
+    "status": "MIDVIEW_DIRECTIONAL_OCCLUSION_AND_CORRESPONDENCE_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90,
+      135
+    ],
+    "targetAngle": 112.5,
+    "sourceArtAt112p5Available": false,
+    "regionDisagreement": {
+      "hair": {
+        "meanBackgroundCompositeRGBDisagreement": 12.2044,
+        "p95BackgroundCompositeRGBDisagreement": 56.6667,
+        "pixelsGreaterThan20": 17397,
+        "regionPixels": 83700
+      },
+      "face": {
+        "meanBackgroundCompositeRGBDisagreement": 15.0851,
+        "p95BackgroundCompositeRGBDisagreement": 73.6667,
+        "pixelsGreaterThan20": 6465,
+        "regionPixels": 25650
+      },
+      "neck_collar": {
+        "meanBackgroundCompositeRGBDisagreement": 16.41,
+        "p95BackgroundCompositeRGBDisagreement": 86.0961,
+        "pixelsGreaterThan20": 6555,
+        "regionPixels": 24500
+      },
+      "jacket": {
+        "meanBackgroundCompositeRGBDisagreement": 11.1206,
+        "p95BackgroundCompositeRGBDisagreement": 50.6667,
+        "pixelsGreaterThan20": 5756,
+        "regionPixels": 31360
+      }
+    },
+    "partMaskIoU": {
+      "garment.visible": 0.81023,
+      "skin.visible": 0.34339,
+      "hair.visible": 0.89861
+    },
+    "actualVisualReview": "Face eye/cheek and garment bow/lapel differ substantially between forward and reverse flow. Hair strands and collar contours do not correspond physically.",
+    "visualAccepted": false,
+    "hiddenSurfaceArtValidated": false,
+    "focusedRegressionTestsPassed": 14,
+    "review": "private-assets/exports/p15-126-midview-correspondence/index.html",
+    "evidence": [
+      "evidence/p15-126-midview-correspondence-qa.json"
+    ],
+    "next": "Supply true independent 112.5-degree reference art for face, hair, neck/collar and body, then verify semantic segmentation and source-owner anchors before VDD."
   }
 }
