@@ -7476,5 +7476,79 @@
     ],
     "review": "private-assets/exports/p15-140-contour-yaw-mesh/index.html",
     "next": "Acquire drawn hair-strand identity and closed boundary masks across keyviews, with independent face/neck/coat underpaint; test mesh with actual occlusion correspondence before selecting full yaw."
+  },
+  "p15_141SourceStrandCorrespondenceGate": {
+    "status": "CROSS_VIEW_HAIR_MATERIAL_CORRESPONDENCE_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sourcePairs": [
+      [
+        90.0,
+        112.5
+      ],
+      [
+        112.5,
+        135.0
+      ]
+    ],
+    "auditRegions": [
+      "ahoge_crown",
+      "rear_hair",
+      "face_ear",
+      "lower_hair_boundary"
+    ],
+    "textureDisagreementThreshold": 15.0,
+    "regionsExceedingThreshold": [
+      {
+        "pair": "112.5-135",
+        "region": "rear_hair",
+        "rgbMAE": 25.5963
+      },
+      {
+        "pair": "112.5-135",
+        "region": "face_ear",
+        "rgbMAE": 25.3312
+      },
+      {
+        "pair": "90-112.5",
+        "region": "ahoge_crown",
+        "rgbMAE": 24.3182
+      },
+      {
+        "pair": "90-112.5",
+        "region": "rear_hair",
+        "rgbMAE": 23.45
+      },
+      {
+        "pair": "90-112.5",
+        "region": "face_ear",
+        "rgbMAE": 21.3314
+      },
+      {
+        "pair": "112.5-135",
+        "region": "ahoge_crown",
+        "rgbMAE": 21.2213
+      },
+      {
+        "pair": "112.5-135",
+        "region": "lower_hair_boundary",
+        "rgbMAE": 15.9876
+      }
+    ],
+    "sourceGatePassed": false,
+    "visualFindings": "Source-keyframe hair masks are not physically corresponding ArtMesh textures. Forward/reverse texture projection mismatches cluster at 112.5-to-135 rear hair and face/ear, and at 90-to-112.5 crown/ahoge. The appearance-based hair masks also contain face/eye ink, invalidating blind shared-mesh texture deformation.",
+    "nativeArtUnchanged": true,
+    "fullVisualAccepted": false,
+    "verifiedStrandLabels": false,
+    "perViewHiddenSourcePaintComplete": false,
+    "evidence": [
+      "evidence/p15-141-correspondence-gate-qa.json"
+    ],
+    "review": "private-assets/exports/p15-141-correspondence-gate/index.html",
+    "next": "Correct the actual source RGBA layers by strand identity and separate face/ear material from hair. Approve physical anchors and matching underpaint across keyviews before source-key VDD rerender."
   }
 }
