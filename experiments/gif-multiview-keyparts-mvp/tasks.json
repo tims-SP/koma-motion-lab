@@ -8182,5 +8182,56 @@
       "evidence/p15-153-source-topology-qa.json"
     ],
     "next": "Author matched loop and thin-strand roots from original source geometry, separating the joined alpha strokes by semantic drawing; paint hidden attachment before evaluating cross-view motion."
+  },
+  "p15_154VisibleSourceStrandParts": {
+    "status": "NATIVE_90DEG_VISIBLE_PIXEL_PARTITION_AND_MOTION_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceYaw": 90.0,
+    "sourceMasks": {
+      "mainLoop": "private-assets/exports/p15-154-visible-strand-parts/main_loop_visible.png",
+      "leftStroke": "private-assets/exports/p15-154-visible-strand-parts/left_fine_visible.png"
+    },
+    "sourcePixelRecompositionExact": true,
+    "sourcePartCounts": {
+      "loop": 1217,
+      "leftStroke": 55
+    },
+    "displacementStress": {
+      "0": {
+        "sourceExact": true,
+        "newAlphaHoles": 0,
+        "rootROIAlphaHoles": 0,
+        "rootROIRGBMAE": 0.0
+      },
+      "2": {
+        "sourceExact": false,
+        "newAlphaHoles": 50,
+        "rootROIAlphaHoles": 50,
+        "rootROIRGBMAE": 1.2442
+      },
+      "4": {
+        "sourceExact": false,
+        "newAlphaHoles": 55,
+        "rootROIAlphaHoles": 55,
+        "rootROIRGBMAE": 1.3977
+      },
+      "8": {
+        "sourceExact": false,
+        "newAlphaHoles": 55,
+        "rootROIAlphaHoles": 55,
+        "rootROIRGBMAE": 1.4082
+      }
+    },
+    "visualFindings": "The main loop and manually bounded left stroke can be stored in source-exact transparent layers, but isolated stroke translation reveals holes and disconnects part of the visible loop. The cut is a source-pixel partition, not a verified second physically independent strand.",
+    "independentMotionAccepted": false,
+    "sourceHiddenRootPaintComplete": false,
+    "sourcePhysicalStrandIdentityVerified": false,
+    "crossViewCorrespondenceValidated": false,
+    "full360VisualAccepted": false,
+    "evidence": [
+      "evidence/p15-154-visible-strand-parts-qa.json"
+    ],
+    "review": "private-assets/exports/p15-154-visible-strand-parts/index.html",
+    "next": "Artist-align a continuous second strand root/edge mask from canonical 90° source and paint corresponding hidden crown pixels. Require clean 2/4/8px independent motion before mapping to other yaw keys."
   }
 }
