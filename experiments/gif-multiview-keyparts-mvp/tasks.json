@@ -6941,5 +6941,30 @@
       "evidence/p15-130-ahoge-anchors-qa.json"
     ],
     "next": "Register manually verified hair root and tip pairs and collar/face/shoulder line landmarks from approved independently painted semantic layers; verify motion with 90/112.5/135 actual frames."
+  },
+  "p15_131SemanticCorrespondenceReview": {
+    "status": "SEMANTIC_SOURCE_LANDMARK_REVIEW_COMPLETED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90,
+      112.5,
+      135
+    ],
+    "candidateLandmarkRoles": 12,
+    "threeViewVisibleRoles": 10,
+    "visibleLandmarkForegroundWarnings": 0,
+    "hairAhogeRootMidpointDeviationPx": 59.802,
+    "hairAhogeApexMidpointDeviationPx": 44.905,
+    "observed": "Twelve labeled, source-visible 2D landmark candidates and explicit eye/bow occlusion states. The 112.5-degree generated keyframe has large root and apex deviation from the 90/135 midpoint; physical identity and anatomical anchor registration remain pending.",
+    "artistApproved": false,
+    "physicalAnchorCorrespondenceVerified": false,
+    "sourcePartArtMeshApproved": false,
+    "hiddenUnderpaintValidated": false,
+    "fullYawVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-131-semantic-landmarks-qa.json"
+    ],
+    "review": "private-assets/exports/p15-131-semantic-landmarks/index.html",
+    "next": "Use source-guided 2D landmark correction and individually approved hair/face/garment source layer masks, then perform a genuine 90–135 keyview VDD visual check."
   }
 }
