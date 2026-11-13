@@ -7805,5 +7805,83 @@
     ],
     "review": "private-assets/exports/p15-146-strand-identities/index.html",
     "next": "Generate and visually register reference-painted per-strand overlays with annotated root/tip and hidden face/neck material for each actual source key; rerender only when semantic identity is validated."
+  },
+  "p15_147AhogeRootTipMotion": {
+    "status": "SOURCE_AHOGE_ROOT_TIP_MOTION_AUDITED",
+    "characterId": "p0_character_001",
+    "angles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "samples": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceAnchors": {
+      "90": {
+        "hair.ahoge.root": [
+          205.0,
+          65.0
+        ],
+        "hair.ahoge.apex": [
+          233.0,
+          5.0
+        ]
+      },
+      "112.5": {
+        "hair.ahoge.root": [
+          294.0,
+          72.0
+        ],
+        "hair.ahoge.apex": [
+          288.0,
+          21.0
+        ]
+      },
+      "135": {
+        "hair.ahoge.root": [
+          264.0,
+          67.0
+        ],
+        "hair.ahoge.apex": [
+          258.0,
+          8.0
+        ]
+      }
+    },
+    "methods": {
+      "reference": {
+        "maxAdjacentRGBMAE": 12.0224,
+        "keyframesPixelExact": true
+      },
+      "partial_anchor_050": {
+        "maxAdjacentRGBMAE": 12.1932,
+        "keyframesPixelExact": true
+      },
+      "full_anchor_100": {
+        "maxAdjacentRGBMAE": 12.251,
+        "keyframesPixelExact": true
+      }
+    },
+    "motionCandidateGate": {
+      "referenceMaxAdjacentRGBMAE": 12.0224,
+      "passes": false,
+      "selectedForProduction": false,
+      "visualFindings": "The loop is truncated near its root by alpha-domain extraction; intermediate frames show dangling arcs and extra fragments."
+    },
+    "visualFindings": "Explicit two-point ahoge alignment can transform the native loop geometrically, but cropped visible art has an incomplete root. Intermediate frames create dangling and duplicated loops; continuity worsens compared with source-owned P15-145.",
+    "nativeArtPreserved": true,
+    "artistApprovedPhysicalRootTip": false,
+    "completePaintedUnderlayer": false,
+    "fullVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-147-ahoge-track-qa.json"
+    ],
+    "review": "private-assets/exports/p15-147-ahoge-track/index.html",
+    "next": "Obtain a complete authored looped-ahoge isolated RGBA part and its root attachment/hidden scalp source at all three keyviews. Validate exact source registration before shared deform."
   }
 }
