@@ -157,49 +157,53 @@ def render(t,method):
  out=over(out,get_ahoge(t))
  return rgba(out),{'coverage60':maps['60'][3],'coverage75':maps['75'][3],
                     'meshCracks60':maps['60'][4],'meshCracks75':maps['75'][4]}
-methods=['head_alpha_blend','head_eye_owned','head_hair_owned','head_visibility_union','head_tone_mapped','head_profile_owner']
-qa={'schema':'KOMA_P15_101_COUPLED_HEAD_HAIR_VDD_V1',
- 'mesh':'private-assets/exports/p15-101-shared-head-mesh/head-hair-shared-mesh.json',
- 'meshSHA256':G['meshSha256'],'angles':angles,'methods':{m:{} for m in methods},
- 'headMeshFolds':sum(q['negativeTriangleCount'] for q in G['sampledGeometry']),
- 'headTexelTopologyArtistApproved':False,'continuousYawVisualAccepted':False}
-for angle in angles:
- t=(angle-60)/15
- for method in methods:
-  if t==0:
-   img=Image.open(R/TOP['views']['60']['sourcePath']).convert('RGBA')
-   diag={'source':True}
-  elif t==1:
-   img=Image.open(R/TOP['views']['75']['sourcePath']).convert('RGBA')
-   diag={'source':True}
-  else:
-   array,diag=render(t,method)
-   img=Image.fromarray(array,'RGBA').resize((1024,1024),Image.Resampling.LANCZOS)
-  p=D/(method+'-yaw'+f'{angle:g}'.replace('.','p')+'.png')
-  img.save(p)
-  qa['methods'][method][f'{angle:g}']={'relativePath':str(p.relative_to(R)),
-   'sha256':sha(p),'diagnostics':diag}
- print('render',angle,flush=True)
-# Visual comparison with P15-100 face-only result.
-contact=Image.new('RGB',(380*len(angles),390*(1+len(methods))),'white')
-d=ImageDraw.Draw(contact)
-crop=(445,275,845,675)
-metrics={}
-for row,method in enumerate(['p15-100-mesh_source_blend']+methods):
- frames=[]
- for col,angle in enumerate(angles):
-  p=(R/BASE['methods']['mesh_source_blend'][f'{angle:g}']['path']) if row==0 else (R/qa['methods'][method][f'{angle:g}']['relativePath'])
-  art=Image.open(p).convert('RGBA')
-  bg=Image.new('RGBA',art.size,'white');bg.alpha_composite(art)
-  tile=bg.convert('RGB').crop(crop)
-  frames.append(np.asarray(tile,np.float32))
-  contact.paste(tile.resize((380,360),Image.Resampling.LANCZOS),(col*380,row*390+25))
-  d.text((col*380+5,row*390+5),f'{method} yaw {angle:g}',fill='black')
- delta=[round(float(np.abs(frames[i]-frames[i-1]).mean()),4) for i in range(1,len(frames))]
- metrics[method]={'adjacentFaceRGBMAE':delta,'maxAdjacentMAE':max(delta),
-  'midpointJumpMAE':max(delta[3:5]),'meanAdjacentMAE':round(statistics.mean(delta),4)}
-contact.save(D/'head-hair-contact.jpg',quality=93)
-qa['metrics']=metrics
-qa['visualContact']='private-assets/exports/p15-101-head-render/head-hair-contact.jpg'
-(R/'evidence/p15-101-render-qa.json').write_text(json.dumps(qa,indent=2,ensure_ascii=False)+'\n')
-print('METRICS',json.dumps({k:{z:v[z] for z in ('maxAdjacentMAE','midpointJumpMAE')} for k,v in metrics.items()},indent=2),flush=True)
+def main():
+ methods=['head_alpha_blend','head_eye_owned','head_hair_owned','head_visibility_union','head_tone_mapped','head_profile_owner']
+ qa={'schema':'KOMA_P15_101_COUPLED_HEAD_HAIR_VDD_V1',
+  'mesh':'private-assets/exports/p15-101-shared-head-mesh/head-hair-shared-mesh.json',
+  'meshSHA256':G['meshSha256'],'angles':angles,'methods':{m:{} for m in methods},
+  'headMeshFolds':sum(q['negativeTriangleCount'] for q in G['sampledGeometry']),
+  'headTexelTopologyArtistApproved':False,'continuousYawVisualAccepted':False}
+ for angle in angles:
+  t=(angle-60)/15
+  for method in methods:
+   if t==0:
+    img=Image.open(R/TOP['views']['60']['sourcePath']).convert('RGBA')
+    diag={'source':True}
+   elif t==1:
+    img=Image.open(R/TOP['views']['75']['sourcePath']).convert('RGBA')
+    diag={'source':True}
+   else:
+    array,diag=render(t,method)
+    img=Image.fromarray(array,'RGBA').resize((1024,1024),Image.Resampling.LANCZOS)
+   p=D/(method+'-yaw'+f'{angle:g}'.replace('.','p')+'.png')
+   img.save(p)
+   qa['methods'][method][f'{angle:g}']={'relativePath':str(p.relative_to(R)),
+    'sha256':sha(p),'diagnostics':diag}
+  print('render',angle,flush=True)
+ # Visual comparison with P15-100 face-only result.
+ contact=Image.new('RGB',(380*len(angles),390*(1+len(methods))),'white')
+ d=ImageDraw.Draw(contact)
+ crop=(445,275,845,675)
+ metrics={}
+ for row,method in enumerate(['p15-100-mesh_source_blend']+methods):
+  frames=[]
+  for col,angle in enumerate(angles):
+   p=(R/BASE['methods']['mesh_source_blend'][f'{angle:g}']['path']) if row==0 else (R/qa['methods'][method][f'{angle:g}']['relativePath'])
+   art=Image.open(p).convert('RGBA')
+   bg=Image.new('RGBA',art.size,'white');bg.alpha_composite(art)
+   tile=bg.convert('RGB').crop(crop)
+   frames.append(np.asarray(tile,np.float32))
+   contact.paste(tile.resize((380,360),Image.Resampling.LANCZOS),(col*380,row*390+25))
+   d.text((col*380+5,row*390+5),f'{method} yaw {angle:g}',fill='black')
+  delta=[round(float(np.abs(frames[i]-frames[i-1]).mean()),4) for i in range(1,len(frames))]
+  metrics[method]={'adjacentFaceRGBMAE':delta,'maxAdjacentMAE':max(delta),
+   'midpointJumpMAE':max(delta[3:5]),'meanAdjacentMAE':round(statistics.mean(delta),4)}
+ contact.save(D/'head-hair-contact.jpg',quality=93)
+ qa['metrics']=metrics
+ qa['visualContact']='private-assets/exports/p15-101-head-render/head-hair-contact.jpg'
+ (R/'evidence/p15-101-render-qa.json').write_text(json.dumps(qa,indent=2,ensure_ascii=False)+'\n')
+ print('METRICS',json.dumps({k:{z:v[z] for z in ('maxAdjacentMAE','midpointJumpMAE')} for k,v in metrics.items()},indent=2),flush=True)
+
+if __name__=='__main__':
+ main()

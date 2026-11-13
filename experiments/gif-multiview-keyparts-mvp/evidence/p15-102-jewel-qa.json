@@ -1,0 +1,550 @@
+{
+  "schema": "KOMA_P15_102_SOURCE_OWNED_GOLD_JEWEL_QA_V1",
+  "sourceRealEmblemLandmarks": {
+    "60": {
+      "centerMeasured": [
+        634.46,
+        810.55
+      ],
+      "sourceBlobArea": 411,
+      "sourceDistanceFromExpected": 0.705,
+      "mattePixels": 960,
+      "matteBBox": [
+        602,
+        772,
+        670,
+        852
+      ]
+    },
+    "75": {
+      "centerMeasured": [
+        644.12,
+        807.09
+      ],
+      "sourceBlobArea": 277,
+      "sourceDistanceFromExpected": 1.269,
+      "mattePixels": 766,
+      "matteBBox": [
+        616,
+        770,
+        672,
+        846
+      ]
+    }
+  },
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "headMeshSHA256": "ed61bba2866f425d785439fe938bf4576245dc1ee22b64cc12a6dac81f7915e3",
+  "neckMeshSHA256": "16cdd594df34c18366b2f65227f24bce19b60783dc692cf870df479d2ea34067",
+  "methods": {
+    "gold_owner_static": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "d31a9f609b1d7015fc0f3f20f8d9e20b926b5c19a2059784f51f6ed379144820",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw61p875.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9940841549784752,
+          "neckMeshCoverage": 1.3968661018702295e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "60"
+        }
+      },
+      "63.75": {
+        "sha256": "e999ebf0256293e370c7668e865267175195f8a7f046e832516bcbc534847cee",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw63p75.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9937895965321774,
+          "neckMeshCoverage": 1.3970033245705966e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "60"
+        }
+      },
+      "65.625": {
+        "sha256": "5091e7356a8ada318fa835a5ad62e512abbeb36cba3a548e55f7c18495d8d1c0",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw65p625.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9969386193173121,
+          "neckMeshCoverage": 1.3961190005015642e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "60"
+        }
+      },
+      "67.5": {
+        "sha256": "329c65d89d77d3223e5222dfa89e204539e9d96faffde55391696bc320c43012",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw67p5.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9987579893382456,
+          "neckMeshCoverage": 1.3950669597987499e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "69.375": {
+        "sha256": "bd4b12995b1f2bd78a5200b08c6be10a2a29b6d1089d0d7c73a226f5e2cd758a",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw69p375.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9999720935424458,
+          "neckMeshCoverage": 1.3949144901316753e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "71.25": {
+        "sha256": "b5fe835109962e5a16aee024d3896252fa8bbf9fb0541eba191b4c126fc3ada4",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw71p25.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9998040971678047,
+          "neckMeshCoverage": 1.3954328869997287e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "73.125": {
+        "sha256": "ec0d4bdf3a7f862ae71a117dac4a57d20a473ea98a9591c971d243064f7e5119",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw73p125.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.999859947900619,
+          "neckMeshCoverage": 1.3942131296631322e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "gold_owner_mesh": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "0ae31b352326ea0cd4a243f12fd510a082e0baf4c0ca35dfb28642ce11466e79",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw61p875.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9940841549784752,
+          "neckMeshCoverage": 1.3968661018702295e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "60"
+        }
+      },
+      "63.75": {
+        "sha256": "b56c80aaed076d7432e6d73244d26ac30e757f355af1f739c48d5713d11ff9b1",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw63p75.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9937895965321774,
+          "neckMeshCoverage": 1.3970033245705966e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "60"
+        }
+      },
+      "65.625": {
+        "sha256": "e9118e1d4217ac7b98cd2d8ee26198b28abac487a182822ae71df7d57df1f42d",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw65p625.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9969386193173121,
+          "neckMeshCoverage": 1.3961190005015642e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "60"
+        }
+      },
+      "67.5": {
+        "sha256": "2d50266332b065b09b391110ded512c847d39736530e66f8059d670e7a7cbb0b",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw67p5.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9987579893382456,
+          "neckMeshCoverage": 1.3950669597987499e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "69.375": {
+        "sha256": "1c8df259b72f09f1289de85ade67d63f7082193ca8d12b68f0cbb5277da0e364",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw69p375.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9999720935424458,
+          "neckMeshCoverage": 1.3949144901316753e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "71.25": {
+        "sha256": "e502a5d75c1874d2beafe7aa395d0c90f50b9e46551e2ff7b018d924d38927ea",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw71p25.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9998040971678047,
+          "neckMeshCoverage": 1.3954328869997287e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "73.125": {
+        "sha256": "6360538bbdca3375916ed73c39e0a3040d6e8559f053e3a7556f38cac931e96b",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw73p125.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.999859947900619,
+          "neckMeshCoverage": 1.3942131296631322e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "75"
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "gold_crossfade_mesh": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "6c73ef954c919cfeabaa6ce1065fe4e512772fb0abb5fa956d247890600a3456",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw61p875.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9940841549784752,
+          "neckMeshCoverage": 1.3968661018702295e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "63.75": {
+        "sha256": "a1e8a1e519135f51a9c9bfbff69df7249fdc84c7ebdd512bd5f212bdf4b822fb",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw63p75.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9937895965321774,
+          "neckMeshCoverage": 1.3970033245705966e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "65.625": {
+        "sha256": "9ee6909e113db8a222e04c86636c67478dba700e86c8df37973d6c404a432072",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw65p625.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9969386193173121,
+          "neckMeshCoverage": 1.3961190005015642e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "67.5": {
+        "sha256": "222996c5f3134880c754ee55921789e56159bbe05a1eca7168449cc482ea2217",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw67p5.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9987579893382456,
+          "neckMeshCoverage": 1.3950669597987499e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "69.375": {
+        "sha256": "03f38514c4e6dc12a599f0120b0842c22b8005625cbc775a5e697d179c329ccb",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw69p375.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9999720935424458,
+          "neckMeshCoverage": 1.3949144901316753e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "71.25": {
+        "sha256": "a26b9bb48bb25bd5d88fe9eb79c7f0610568c7048a6e9501bb0b748fac6cab25",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw71p25.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.9998040971678047,
+          "neckMeshCoverage": 1.3954328869997287e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "73.125": {
+        "sha256": "3473622a55d6a859777d5ffe3115a11d0f21246c4e217d3d4a37d9868e1d4e9f",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw73p125.png",
+        "diagnostics": {
+          "headMeshCoverage": 0.999859947900619,
+          "neckMeshCoverage": 1.3942131296631322e-05,
+          "jewelSourceOwned": true,
+          "emblemOwner": "blend"
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    }
+  },
+  "visualAcceptance": false,
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ],
+        "maxAdjacentRGBMAE": 14.4622,
+        "midpointAdjacentRGBMAE": 9.8768
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.0193,
+          21.4167,
+          19.7644,
+          18.547,
+          18.1254,
+          18.6324,
+          19.8858,
+          25.6015
+        ],
+        "maxAdjacentRGBMAE": 27.0193,
+        "midpointAdjacentRGBMAE": 18.547
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          9.5173,
+          6.8861,
+          6.6412,
+          6.4621,
+          6.3894,
+          6.3683,
+          6.4034,
+          8.7605
+        ],
+        "maxAdjacentRGBMAE": 9.5173,
+        "midpointAdjacentRGBMAE": 6.4621
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.0787,
+          5.5247,
+          5.5021,
+          5.5109,
+          5.515,
+          5.4934,
+          5.5121,
+          9.4517
+        ],
+        "maxAdjacentRGBMAE": 9.4517,
+        "midpointAdjacentRGBMAE": 5.515
+      }
+    },
+    "gold_owner_static": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ],
+        "maxAdjacentRGBMAE": 14.4622,
+        "midpointAdjacentRGBMAE": 9.8768
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.0193,
+          21.4167,
+          19.7644,
+          18.547,
+          18.1254,
+          18.6324,
+          19.8858,
+          25.6015
+        ],
+        "maxAdjacentRGBMAE": 27.0193,
+        "midpointAdjacentRGBMAE": 18.547
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          10.0839,
+          7.2863,
+          7.0661,
+          7.4997,
+          6.7197,
+          6.6955,
+          6.6954,
+          9.1386
+        ],
+        "maxAdjacentRGBMAE": 10.0839,
+        "midpointAdjacentRGBMAE": 7.4997
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          14.5149,
+          9.5025,
+          9.7302,
+          15.401,
+          8.5907,
+          8.5692,
+          8.3138,
+          13.0137
+        ],
+        "maxAdjacentRGBMAE": 15.401,
+        "midpointAdjacentRGBMAE": 15.401
+      }
+    },
+    "gold_owner_mesh": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.6809,
+          11.3208,
+          10.5525,
+          9.895,
+          9.718,
+          9.8817,
+          10.4657,
+          13.2294
+        ],
+        "maxAdjacentRGBMAE": 14.6809,
+        "midpointAdjacentRGBMAE": 9.895
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.0193,
+          21.4167,
+          19.7644,
+          18.547,
+          18.1254,
+          18.6324,
+          19.8858,
+          25.6015
+        ],
+        "maxAdjacentRGBMAE": 27.0193,
+        "midpointAdjacentRGBMAE": 18.547
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          14.5011,
+          11.2783,
+          10.6308,
+          10.6197,
+          9.75,
+          9.5999,
+          9.755,
+          12.0028
+        ],
+        "maxAdjacentRGBMAE": 14.5011,
+        "midpointAdjacentRGBMAE": 10.6197
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          19.1255,
+          14.0017,
+          13.9502,
+          19.0318,
+          12.7941,
+          13.1113,
+          13.3778,
+          17.3917
+        ],
+        "maxAdjacentRGBMAE": 19.1255,
+        "midpointAdjacentRGBMAE": 19.0318
+      }
+    },
+    "gold_crossfade_mesh": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.6805,
+          11.3206,
+          10.5526,
+          9.8924,
+          9.7199,
+          9.882,
+          10.4663,
+          13.2298
+        ],
+        "maxAdjacentRGBMAE": 14.6805,
+        "midpointAdjacentRGBMAE": 9.8924
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.0192,
+          21.4171,
+          19.7638,
+          18.5467,
+          18.1268,
+          18.6323,
+          19.8859,
+          25.6018
+        ],
+        "maxAdjacentRGBMAE": 27.0192,
+        "midpointAdjacentRGBMAE": 18.5467
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          14.5016,
+          11.278,
+          10.6306,
+          10.1905,
+          9.9431,
+          9.5993,
+          9.7551,
+          12.0031
+        ],
+        "maxAdjacentRGBMAE": 14.5016,
+        "midpointAdjacentRGBMAE": 10.1905
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          19.1268,
+          14.0015,
+          13.9482,
+          14.8468,
+          14.7494,
+          13.1112,
+          13.3772,
+          17.3924
+        ],
+        "maxAdjacentRGBMAE": 19.1268,
+        "midpointAdjacentRGBMAE": 14.8468
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-102-neck-eye-profile/jewel-ownership-contact.jpg",
+  "visualReview": {
+    "actualSourceEmblemDetected": true,
+    "independentEmblemLayerExtracted": true,
+    "selectedBaseline": "P15-101 head_alpha_blend",
+    "visualAcceptance": false
+  }
+}

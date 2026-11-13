@@ -1,0 +1,873 @@
+{
+  "schema": "KOMA_P15_102_NECK_EYE_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "baseline_head",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_mesh",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_owner",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "neck_eye_profile",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_static",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_owner_mesh",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "desktop",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 8,
+      "imageCount": 6,
+      "screenshotSHA256": "f501ce94775a58f94138746d4d0a15a174211690730eca2c0cd990997669dc24"
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "baseline_head",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_mesh",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_owner",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_dissolve",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "neck_eye_profile",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_static",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_owner_mesh",
+      "angleIndex": 8,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 0,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 1,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 2,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 3,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 4,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 5,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 6,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 7,
+      "imageCount": 6
+    },
+    {
+      "viewport": "mobile",
+      "method": "gold_crossfade_mesh",
+      "angleIndex": 8,
+      "imageCount": 6,
+      "screenshotSHA256": "e935eb6879d8c056997bc9f656ec540c724df27ff94170457d6b8fbd745e0d09"
+    }
+  ],
+  "errors": []
+}

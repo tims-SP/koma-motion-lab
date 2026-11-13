@@ -18,7 +18,7 @@
     "expectedApprovedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54"
   },
   "plan": "docs/plans/2026-11-05-gif-multiview-keyparts-mvp.md",
-  "status": "P15_101_SHARED_HEAD_HAIR_MESH_VERIFIED_SEMANTIC_CONTINUITY_NEXT",
+  "status": "P15_102_NECK_EYE_CORRESPONDENCE_EVIDENCE_READY_ART_REVIEW_PENDING",
   "date": "2026-11-05",
   "sourceGeneration": {
     "engineOutput": "animated GIF with transparent background",
@@ -1212,7 +1212,7 @@
       "delivery": "experiments/gif-multiview-keyparts-mvp/evidence/p15-38-delivery.json"
     }
   },
-  "lastCompleted": "P15-101 common indexed 60°–75° head/hair/face UV mesh with real view-dependent output and Chromium review",
+  "lastCompleted": "P15-102 source-owned neck mesh, native near-eye/profile and gold bow landmark registration with Chromium visual QA",
   "implementation": {
     "branch": "feature/gif-multiview-p0-ingestion-20261105",
     "rawGIFs": 4,
@@ -4942,5 +4942,65 @@
       "evidence/p15-101-browser-qa.json"
     ],
     "next": "Establish artist-verifiable near/far-eye and profile-line correspondence and extend the head UV mesh to neck and clothing for uninterrupted 60°–75° yaw"
+  },
+  "p15_102NeckEyeProfileCorrespondence": {
+    "status": "SOURCE_NECK_EYE_EMBLEM_CORRESPONDENCE_EVIDENCE_VERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      60,
+      75
+    ],
+    "anglesRendered": [
+      60,
+      61.875,
+      63.75,
+      65.625,
+      67.5,
+      69.375,
+      71.25,
+      73.125,
+      75
+    ],
+    "headMeshSHA256": "ed61bba2866f425d785439fe938bf4576245dc1ee22b64cc12a6dac81f7915e3",
+    "neckMeshSHA256": "16cdd594df34c18366b2f65227f24bce19b60783dc692cf870df479d2ea34067",
+    "neckMeshVertices": 28,
+    "neckMeshTriangles": 36,
+    "neckMeshSampledFoldCount": 0,
+    "eyeSource": "P15-99 actual SAM3 native eye layer",
+    "goldEmblemNativeCenters": {
+      "60": [
+        634.46,
+        810.55
+      ],
+      "75": [
+        644.12,
+        807.09
+      ]
+    },
+    "visualComparisonMethodCount": 8,
+    "fullResolutionCandidateFrames": 72,
+    "unitTestsPass": 14,
+    "browserChecksPass": 144,
+    "sourceEndpointPixelExact": true,
+    "geometryAndAssetReproducibilityVerified": true,
+    "currentVisualBaseline": "P15-101 head_alpha_blend",
+    "continuousYawVisualAccepted": false,
+    "formalHeadShoulderArtMeshApproved": false,
+    "visualGate": "COLLAR_BOW_TOPOLOGY_AND_EYE_PROFILE_HIDDEN_SURFACE_CORRESPONDENCE",
+    "review": "private-assets/exports/p15-102-neck-eye-profile/index.html",
+    "package": {
+      "path": "private-assets/exports/p0-character-001-p15-102-neck-eye-correspondence-review.zip",
+      "bytes": 73164989,
+      "sha256": "0d1d022cae43bf2db637fb5f74f0199d9bbf2d64614afb34cd3997ecefdd4491",
+      "entries": 119
+    },
+    "evidence": [
+      "evidence/p15-102-neck-mesh-qa.json",
+      "evidence/p15-102-render-qa.json",
+      "evidence/p15-102-jewel-qa.json",
+      "evidence/p15-102-review-qa.json",
+      "evidence/p15-102-browser-qa.json"
+    ],
+    "next": "Establish source-owned collar, bow, jacket and neck silhouette ArtMesh correspondences before rerendering full character yaw"
   }
 }

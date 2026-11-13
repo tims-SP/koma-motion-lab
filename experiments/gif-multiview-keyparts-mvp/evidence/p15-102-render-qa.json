@@ -1,0 +1,692 @@
+{
+  "schema": "KOMA_P15_102_NECK_EYE_PROFILE_VDD_V1",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "headMeshSHA256": "ed61bba2866f425d785439fe938bf4576245dc1ee22b64cc12a6dac81f7915e3",
+  "bodyMeshSHA256": "16cdd594df34c18366b2f65227f24bce19b60783dc692cf870df479d2ea34067",
+  "textureRole": "real source RGBA with eye/profile-source-owned layers",
+  "eyeMasks": {
+    "60": 2180,
+    "75": 1748
+  },
+  "profileMasks": {
+    "60": 909,
+    "75": 40
+  },
+  "methods": {
+    "neck_mesh": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "da1ae034542f9d3890edb03afe005372af2d9655fe4af76d8dc89821960e6b16",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw61p875.png",
+        "diagnostics": {
+          "headCoverage": 0.9940841549784752,
+          "bodyCoverage": 1.3968661018702295e-05,
+          "bodyMeshCracks": 9248,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "63.75": {
+        "sha256": "116fa9bd5227ccf15d34a24b185bc333c156ee621f4b05ff06bda0adb211bf62",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw63p75.png",
+        "diagnostics": {
+          "headCoverage": 0.9937895965321774,
+          "bodyCoverage": 1.3970033245705966e-05,
+          "bodyMeshCracks": 9239,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "65.625": {
+        "sha256": "17ddbaf9f45e6d91fbc2517e2d074918f7deb4d07afd0fae9ab04e08a43f228f",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw65p625.png",
+        "diagnostics": {
+          "headCoverage": 0.9969386193173121,
+          "bodyCoverage": 1.3961190005015642e-05,
+          "bodyMeshCracks": 9297,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "67.5": {
+        "sha256": "3df810298ae0e58b520dd1310e37a912efba518b469208a6b31d6766e09365a1",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw67p5.png",
+        "diagnostics": {
+          "headCoverage": 0.9987579893382456,
+          "bodyCoverage": 1.3950669597987499e-05,
+          "bodyMeshCracks": 9366,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "69.375": {
+        "sha256": "57a090c671d0c5e20d44d900f3604257696e1a37a91749a4f74b86d52eebde19",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw69p375.png",
+        "diagnostics": {
+          "headCoverage": 0.9999720935424458,
+          "bodyCoverage": 1.3949144901316753e-05,
+          "bodyMeshCracks": 9376,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "71.25": {
+        "sha256": "71fe6af2eff9748dbf46421745e4415855827885ed0b32cec1b2c2a32de41796",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw71p25.png",
+        "diagnostics": {
+          "headCoverage": 0.9998040971678047,
+          "bodyCoverage": 1.3954328869997287e-05,
+          "bodyMeshCracks": 9342,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "73.125": {
+        "sha256": "143f87af281c23742f773ee988dc3e8bafd43c5df6a53ee4b5c88a6f743500de",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw73p125.png",
+        "diagnostics": {
+          "headCoverage": 0.999859947900619,
+          "bodyCoverage": 1.3942131296631322e-05,
+          "bodyMeshCracks": 9422,
+          "eyeRestoredFromNativeSource": false
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "neck_eye_owner": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "582a8b41ef32f156bfa42bb17b786a084f8f60a7418450f8a7f1e18e30fae3fe",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw61p875.png",
+        "diagnostics": {
+          "headCoverage": 0.9940841549784752,
+          "bodyCoverage": 1.3968661018702295e-05,
+          "bodyMeshCracks": 9248,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "63.75": {
+        "sha256": "7bfb274b9a1598ac0e20b1f05da12f121a37da4974a656103c9bc32acfd4641e",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw63p75.png",
+        "diagnostics": {
+          "headCoverage": 0.9937895965321774,
+          "bodyCoverage": 1.3970033245705966e-05,
+          "bodyMeshCracks": 9239,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "65.625": {
+        "sha256": "d1e1396773129ec817ae07db56bc5e21159273b2637dd4cdd2cf0fdd751468a5",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw65p625.png",
+        "diagnostics": {
+          "headCoverage": 0.9969386193173121,
+          "bodyCoverage": 1.3961190005015642e-05,
+          "bodyMeshCracks": 9297,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "67.5": {
+        "sha256": "ee04e52305c64bd56a05e775af24d7eb450154f72c59467ec3005d2a6d79c252",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw67p5.png",
+        "diagnostics": {
+          "headCoverage": 0.9987579893382456,
+          "bodyCoverage": 1.3950669597987499e-05,
+          "bodyMeshCracks": 9366,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "69.375": {
+        "sha256": "d6f03a0aa69ebbf4af4d861a73dc4af819b51c431b5bad013705f2b4b99183ac",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw69p375.png",
+        "diagnostics": {
+          "headCoverage": 0.9999720935424458,
+          "bodyCoverage": 1.3949144901316753e-05,
+          "bodyMeshCracks": 9376,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "71.25": {
+        "sha256": "66795a00e947b7e1072480c3fae4743523f39be8f7f967e1478020534c4301fd",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw71p25.png",
+        "diagnostics": {
+          "headCoverage": 0.9998040971678047,
+          "bodyCoverage": 1.3954328869997287e-05,
+          "bodyMeshCracks": 9342,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "73.125": {
+        "sha256": "ad2aa4482dded6d19a50cd366a0b6162bd2544e71cc7339249f5e0765ca82cc0",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw73p125.png",
+        "diagnostics": {
+          "headCoverage": 0.999859947900619,
+          "bodyCoverage": 1.3942131296631322e-05,
+          "bodyMeshCracks": 9422,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "neck_eye_dissolve": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "d83d20f4b1126502ab91052888884106f08b1c37078b4b389765cb1dd94d92a5",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw61p875.png",
+        "diagnostics": {
+          "headCoverage": 0.9940841549784752,
+          "bodyCoverage": 1.3968661018702295e-05,
+          "bodyMeshCracks": 9248,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "63.75": {
+        "sha256": "a8e6cb567fecf05673c6ed8d3db3b50d61fd35d12d413b89346d793121036726",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw63p75.png",
+        "diagnostics": {
+          "headCoverage": 0.9937895965321774,
+          "bodyCoverage": 1.3970033245705966e-05,
+          "bodyMeshCracks": 9239,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "65.625": {
+        "sha256": "d529d00c3ee4c6933cab2c13952624a2d9e9917d0ebe6864bb927a22d44b0f6d",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw65p625.png",
+        "diagnostics": {
+          "headCoverage": 0.9969386193173121,
+          "bodyCoverage": 1.3961190005015642e-05,
+          "bodyMeshCracks": 9297,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "67.5": {
+        "sha256": "2c46b510821f822e35260bf6f9300006b92f04aa99a461c4d260726af6c22778",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw67p5.png",
+        "diagnostics": {
+          "headCoverage": 0.9987579893382456,
+          "bodyCoverage": 1.3950669597987499e-05,
+          "bodyMeshCracks": 9366,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "69.375": {
+        "sha256": "647d9f0921eeebc6ec8c527e50e1aad41120e91e22d3e58c0b5b31d9deeac42e",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw69p375.png",
+        "diagnostics": {
+          "headCoverage": 0.9999720935424458,
+          "bodyCoverage": 1.3949144901316753e-05,
+          "bodyMeshCracks": 9376,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "71.25": {
+        "sha256": "4469ebbbe6802e218a2e928bbadf1466a42da0aa1063e6320d067d3f06db5afb",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw71p25.png",
+        "diagnostics": {
+          "headCoverage": 0.9998040971678047,
+          "bodyCoverage": 1.3954328869997287e-05,
+          "bodyMeshCracks": 9342,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "73.125": {
+        "sha256": "2b428b52d16caf4da3c996a5fb6b162e34e7c4750e4bfd62ed45a6c7cc7202b4",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw73p125.png",
+        "diagnostics": {
+          "headCoverage": 0.999859947900619,
+          "bodyCoverage": 1.3942131296631322e-05,
+          "bodyMeshCracks": 9422,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    },
+    "neck_eye_profile": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw60.png",
+        "diagnostics": {
+          "source": true
+        }
+      },
+      "61.875": {
+        "sha256": "3bc66f332ddc28f9b6cf6bb8c45cddd83f7297fcae327cd2972c9e961b932430",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw61p875.png",
+        "diagnostics": {
+          "headCoverage": 0.9940841549784752,
+          "bodyCoverage": 1.3968661018702295e-05,
+          "bodyMeshCracks": 9248,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "63.75": {
+        "sha256": "11d257c041290fca38322fa4533eddc68d804b09ca68e59eb0d50b5141c075dc",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw63p75.png",
+        "diagnostics": {
+          "headCoverage": 0.9937895965321774,
+          "bodyCoverage": 1.3970033245705966e-05,
+          "bodyMeshCracks": 9239,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "65.625": {
+        "sha256": "719880ea3ecba302a079b1dfa8a2a26747a9615c8427400e3c408a760297742b",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw65p625.png",
+        "diagnostics": {
+          "headCoverage": 0.9969386193173121,
+          "bodyCoverage": 1.3961190005015642e-05,
+          "bodyMeshCracks": 9297,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "67.5": {
+        "sha256": "88993e12c7c84260eb9b492774096f67dc00212a3b0d0fcd792c96e909bb6fdb",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw67p5.png",
+        "diagnostics": {
+          "headCoverage": 0.9987579893382456,
+          "bodyCoverage": 1.3950669597987499e-05,
+          "bodyMeshCracks": 9366,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "69.375": {
+        "sha256": "6621c0d2ede156487a3ac9ac157ae67e50ab8c6592bf3f89d600e8dd73dc2bbc",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw69p375.png",
+        "diagnostics": {
+          "headCoverage": 0.9999720935424458,
+          "bodyCoverage": 1.3949144901316753e-05,
+          "bodyMeshCracks": 9376,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "71.25": {
+        "sha256": "a355e5de194bacded96b387a54cd370c0acb6e743f5cad63d37b39150bd43e63",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw71p25.png",
+        "diagnostics": {
+          "headCoverage": 0.9998040971678047,
+          "bodyCoverage": 1.3954328869997287e-05,
+          "bodyMeshCracks": 9342,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "73.125": {
+        "sha256": "e288dc5415abe4640aca3eb48b85364eb11f5a0903394acfca667aacb3b86cd8",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw73p125.png",
+        "diagnostics": {
+          "headCoverage": 0.999859947900619,
+          "bodyCoverage": 1.3942131296631322e-05,
+          "bodyMeshCracks": 9422,
+          "eyeRestoredFromNativeSource": true
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-yaw75.png",
+        "diagnostics": {
+          "source": true
+        }
+      }
+    }
+  },
+  "fullVisualAccepted": false,
+  "metrics": {
+    "p15-101-head_alpha_blend": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.4622,
+          11.3271,
+          10.5418,
+          9.8768,
+          9.7007,
+          9.8802,
+          10.4772,
+          13.2588
+        ],
+        "maxAdjacentRGBMAE": 14.4622,
+        "midpointAdjacentRGBMAE": 9.8768
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.0193,
+          21.4167,
+          19.7644,
+          18.547,
+          18.1254,
+          18.6324,
+          19.8858,
+          25.6015
+        ],
+        "maxAdjacentRGBMAE": 27.0193,
+        "midpointAdjacentRGBMAE": 18.547
+      },
+      "nose_jaw": {
+        "adjacentRGBMAE": [
+          13.2476,
+          10.2261,
+          9.2562,
+          8.4616,
+          7.9632,
+          7.5713,
+          7.6025,
+          8.5145
+        ],
+        "maxAdjacentRGBMAE": 13.2476,
+        "midpointAdjacentRGBMAE": 8.4616
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          9.5173,
+          6.8861,
+          6.6412,
+          6.4621,
+          6.3894,
+          6.3683,
+          6.4034,
+          8.7605
+        ],
+        "maxAdjacentRGBMAE": 9.5173,
+        "midpointAdjacentRGBMAE": 6.4621
+      }
+    },
+    "neck_mesh": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.6809,
+          11.3208,
+          10.5525,
+          9.895,
+          9.718,
+          9.8817,
+          10.4657,
+          13.2294
+        ],
+        "maxAdjacentRGBMAE": 14.6809,
+        "midpointAdjacentRGBMAE": 9.895
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.0193,
+          21.4167,
+          19.7644,
+          18.547,
+          18.1254,
+          18.6324,
+          19.8858,
+          25.6015
+        ],
+        "maxAdjacentRGBMAE": 27.0193,
+        "midpointAdjacentRGBMAE": 18.547
+      },
+      "nose_jaw": {
+        "adjacentRGBMAE": [
+          14.1891,
+          10.192,
+          9.3069,
+          8.5324,
+          8.0074,
+          7.5604,
+          7.5331,
+          8.3734
+        ],
+        "maxAdjacentRGBMAE": 14.1891,
+        "midpointAdjacentRGBMAE": 8.5324
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          14.461,
+          11.3019,
+          10.5959,
+          10.0052,
+          9.7588,
+          9.6124,
+          9.8036,
+          12.0357
+        ],
+        "maxAdjacentRGBMAE": 14.461,
+        "midpointAdjacentRGBMAE": 10.0052
+      }
+    },
+    "neck_eye_owner": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.7474,
+          11.3882,
+          10.7578,
+          9.8894,
+          9.8731,
+          10.0148,
+          10.5208,
+          13.2644
+        ],
+        "maxAdjacentRGBMAE": 14.7474,
+        "midpointAdjacentRGBMAE": 9.8894
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.3995,
+          21.7907,
+          20.9114,
+          18.5154,
+          18.9913,
+          19.3749,
+          20.1932,
+          25.7972
+        ],
+        "maxAdjacentRGBMAE": 27.3995,
+        "midpointAdjacentRGBMAE": 18.9913
+      },
+      "nose_jaw": {
+        "adjacentRGBMAE": [
+          14.1897,
+          10.1931,
+          9.4122,
+          8.4924,
+          7.6616,
+          7.3223,
+          7.4011,
+          8.3193
+        ],
+        "maxAdjacentRGBMAE": 14.1897,
+        "midpointAdjacentRGBMAE": 8.4924
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          14.461,
+          11.3019,
+          10.5959,
+          10.0052,
+          9.7588,
+          9.6124,
+          9.8036,
+          12.0357
+        ],
+        "maxAdjacentRGBMAE": 14.461,
+        "midpointAdjacentRGBMAE": 10.0052
+      }
+    },
+    "neck_eye_dissolve": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.747,
+          11.3879,
+          10.7579,
+          9.8257,
+          9.6135,
+          10.015,
+          10.5214,
+          13.2649
+        ],
+        "maxAdjacentRGBMAE": 14.747,
+        "midpointAdjacentRGBMAE": 9.8257
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.3994,
+          21.7906,
+          20.9107,
+          18.1743,
+          17.5332,
+          19.3746,
+          20.1933,
+          25.7973
+        ],
+        "maxAdjacentRGBMAE": 27.3994,
+        "midpointAdjacentRGBMAE": 18.1743
+      },
+      "nose_jaw": {
+        "adjacentRGBMAE": [
+          14.1892,
+          10.1931,
+          9.4113,
+          8.611,
+          7.8796,
+          7.3235,
+          7.4018,
+          8.3202
+        ],
+        "maxAdjacentRGBMAE": 14.1892,
+        "midpointAdjacentRGBMAE": 8.611
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          14.4615,
+          11.3016,
+          10.5956,
+          10.0045,
+          9.7594,
+          9.6118,
+          9.8038,
+          12.036
+        ],
+        "maxAdjacentRGBMAE": 14.4615,
+        "midpointAdjacentRGBMAE": 10.0045
+      }
+    },
+    "neck_eye_profile": {
+      "face": {
+        "adjacentRGBMAE": [
+          14.8103,
+          11.5439,
+          11.0264,
+          10.4804,
+          9.8434,
+          9.9962,
+          10.5079,
+          13.2493
+        ],
+        "maxAdjacentRGBMAE": 14.8103,
+        "midpointAdjacentRGBMAE": 10.4804
+      },
+      "eye": {
+        "adjacentRGBMAE": [
+          27.4424,
+          21.9037,
+          21.1963,
+          19.5489,
+          18.9048,
+          19.3175,
+          20.1609,
+          25.7812
+        ],
+        "maxAdjacentRGBMAE": 27.4424,
+        "midpointAdjacentRGBMAE": 19.5489
+      },
+      "nose_jaw": {
+        "adjacentRGBMAE": [
+          14.5074,
+          10.9801,
+          10.7769,
+          11.4946,
+          7.5108,
+          7.2285,
+          7.3354,
+          8.2423
+        ],
+        "maxAdjacentRGBMAE": 14.5074,
+        "midpointAdjacentRGBMAE": 11.4946
+      },
+      "neck_collar": {
+        "adjacentRGBMAE": [
+          14.461,
+          11.3019,
+          10.5959,
+          10.0052,
+          9.7588,
+          9.6124,
+          9.8036,
+          12.0357
+        ],
+        "maxAdjacentRGBMAE": 14.461,
+        "midpointAdjacentRGBMAE": 10.0052
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-102-neck-eye-profile/neck-eye-profile-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "selectedBaseline": "P15-101 head_alpha_blend",
+    "neckMeshGeometry": "28 source-owned vertices, 36 triangles; 9 sampled yaw angles with positive areas",
+    "sourceEye": "actual P15-99 SAM3 mask and source pixels with reconstructed underdraw",
+    "sourceGoldEmblem": "native gold color connected components and measured per-view centers",
+    "baseline": {
+      "collarMaxAdjacentRGBMAE": 9.5173,
+      "eyeMaxAdjacentRGBMAE": 27.0193,
+      "emblemMaxAdjacentRGBMAE": 9.4517
+    },
+    "candidateMetrics": {
+      "neckMeshCollarMaxAdjacentRGBMAE": 14.461,
+      "eyeDissolveMaxAdjacentRGBMAE": 27.3994,
+      "emblemStaticOwnerMaxAdjacentRGBMAE": 15.401
+    },
+    "visualFindings": {
+      "neckAndCollar": "warp alone does not align unique collar and shoulder ink textures across views",
+      "nearEye": "eye ownership removes some local double-iris ambiguity but source masks/underpaint remain incomplete",
+      "noseAndJaw": "single source nose contour introduces a view-switch difference",
+      "jewel": "centers measured from source; source-owner switch introduces a sharp emblem appearance change"
+    },
+    "visualAccepted": false,
+    "engineeringReproducibility": "PASS",
+    "nextCriticalAction": "semantic collar and bow layers with shared correspondences and explicit viewpoint-consistent occlusion"
+  },
+  "visualGate": "COLLAR_BOW_TOPOLOGY_AND_EYE_PROFILE_HIDDEN_SURFACE_CORRESPONDENCE"
+}
