@@ -1,0 +1,97 @@
+{
+  "schema": "KOMA_P15_164_LOOP_PIXEL_OWNERSHIP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "sourceDetails": {
+    "90": {
+      "erasedVisiblePixels": 1205,
+      "syntheticCrownPixels": 375,
+      "sourceBelowY91Unmodified": true,
+      "sourceAlphaBelowY54Unmodified": true,
+      "sourceVisibleLoopPixels": 1205,
+      "sourcePartitionExact": true,
+      "sourceHeadExactBeforeInpaint": true
+    },
+    "112.5": {
+      "erasedVisiblePixels": 945,
+      "syntheticCrownPixels": 165,
+      "sourceBelowY91Unmodified": true,
+      "sourceAlphaBelowY54Unmodified": true,
+      "sourceVisibleLoopPixels": 945,
+      "sourcePartitionExact": true,
+      "sourceHeadExactBeforeInpaint": true
+    },
+    "135": {
+      "erasedVisiblePixels": 1071,
+      "syntheticCrownPixels": 404,
+      "sourceBelowY91Unmodified": true,
+      "sourceAlphaBelowY54Unmodified": true,
+      "sourceVisibleLoopPixels": 1071,
+      "sourcePartitionExact": true,
+      "sourceHeadExactBeforeInpaint": true
+    }
+  },
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "keyframesPixelExact": true,
+      "crownAlphaIntact": true
+    },
+    "source_owned": {
+      "maxAdjacentRGBMAE": 12.3159,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "keyframesPixelExact": true,
+      "crownAlphaIntact": false
+    },
+    "registered_owned": {
+      "maxAdjacentRGBMAE": 12.3403,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "keyframesPixelExact": true,
+      "crownAlphaIntact": false
+    }
+  },
+  "sourceKeyArtUnchanged": true,
+  "actualScalpPaintingApproved": false,
+  "physicalRootIdentityVerified": false,
+  "continuousVisualAccepted": false,
+  "productionSelected": false,
+  "review": "private-assets/exports/p15-164-loop-ownership/index.html",
+  "gate": {
+    "keyviewsExact": true,
+    "sourceVisiblePixelsErased": true,
+    "sourceCrownAlphaPreserved": false,
+    "bothIntermediateConnected": false,
+    "beatsReference": false,
+    "passes": false
+  }
+}
