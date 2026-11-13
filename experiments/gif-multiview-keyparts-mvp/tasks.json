@@ -6869,5 +6869,34 @@
     ],
     "review": "private-assets/exports/p15-128-keyart-registration/index.html",
     "next": "Use source-driven part correspondences, hair-tip and garment line anchors, and correctly painted hidden materials to reconcile 90/112.5/135 geometry; accept only after continuous visual review."
+  },
+  "p15_129AhogeSourceOwnership": {
+    "status": "AHOGE_SOURCE_OWNERSHIP_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "selectedLocalCandidate": "nearest_key_owner",
+    "maxAdjacentCompositeRGBMAEBaseline": 12.0984,
+    "maxAdjacentCompositeRGBMAECandidate": 11.8477,
+    "observed": "Nearest native-key head-top ownership reduces double ahoge at 101.25 and 123.75 degrees. Hair strand patterns, facial visibility and shoulder/bow geometry still change inconsistently across angles.",
+    "nativeKeyframePixelExact": true,
+    "sourcePartAnchorsVerified": false,
+    "hiddenSurfaceUnderpaintVerified": false,
+    "overallVisualAccepted": false,
+    "evidence": [
+      "evidence/p15-129-ahoge-owner-qa.json"
+    ],
+    "review": "private-assets/exports/p15-129-ahoge-owner/index.html",
+    "next": "Align hair tip/root trajectories and manually matched line-art correspondences plus face/collar/coat boundaries using independent painted semantic layers and missing underpaint."
   }
 }
