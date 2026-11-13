@@ -1,0 +1,404 @@
+{
+  "schema": "KOMA_P15_112_SOURCE_OCCLUSION_REVEAL_QA_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "poseLabels": [
+    "neutral",
+    "bow_left",
+    "bow_right",
+    "jewel_left",
+    "jewel_right"
+  ],
+  "mechanism": "source-owned 1024x1024 alpha mattes with separate bow, jewel and inferred underpaint layers",
+  "sourceVisibleArtUnchanged": true,
+  "viewRecords": {
+    "60": {
+      "sourceImage": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+      "sourceSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "hiddenArtSHA256": {
+        "collar": "61b01accd5af1dd5081c3749ba9592c77f3cee155fe5110f8602b2726972d22c",
+        "bow": "863ae87f7bdce60e1c5a10c562c552fe452befcdac9bc436287a555bc9a9c9e7"
+      },
+      "poseMetrics": {
+        "neutral": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "none",
+          "exposureDonor": "none",
+          "newlyExposedSourceOwnedPixels": 0,
+          "donorAlphaCoveredExposedPixels": 0,
+          "donorCoverageOfExposureFraction": 0.0,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 0,
+          "hiddenArtChangedPixels": 14468,
+          "zeroPoseSourceRGBAMAEPixel": 0.087886
+        },
+        "bow_left": {
+          "bowShiftPx": -10,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "bowFabric",
+          "exposureDonor": "collar",
+          "newlyExposedSourceOwnedPixels": 4738,
+          "donorAlphaCoveredExposedPixels": 1343,
+          "donorCoverageOfExposureFraction": 0.283453,
+          "opaquePixelsWithoutHidden": 393,
+          "opaquePixelsWithHidden": 1368,
+          "hiddenArtChangedPixels": 14100,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "bow_right": {
+          "bowShiftPx": 10,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "bowFabric",
+          "exposureDonor": "collar",
+          "newlyExposedSourceOwnedPixels": 4736,
+          "donorAlphaCoveredExposedPixels": 1396,
+          "donorCoverageOfExposureFraction": 0.294764,
+          "opaquePixelsWithoutHidden": 402,
+          "opaquePixelsWithHidden": 1748,
+          "hiddenArtChangedPixels": 14464,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "jewel_left": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": -7,
+          "movingOccluder": "jewel",
+          "exposureDonor": "bow",
+          "newlyExposedSourceOwnedPixels": 389,
+          "donorAlphaCoveredExposedPixels": 229,
+          "donorCoverageOfExposureFraction": 0.588689,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 229,
+          "hiddenArtChangedPixels": 14223,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "jewel_right": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": 7,
+          "movingOccluder": "jewel",
+          "exposureDonor": "bow",
+          "newlyExposedSourceOwnedPixels": 389,
+          "donorAlphaCoveredExposedPixels": 322,
+          "donorCoverageOfExposureFraction": 0.827763,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 322,
+          "hiddenArtChangedPixels": 14426,
+          "zeroPoseSourceRGBAMAEPixel": null
+        }
+      },
+      "files": {
+        "neutral": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-neutral-with_underpaint.png",
+            "sha256": "9203c757f364484c15f9c02e80545e9b1fc58a7161e502903c885d98d38727d7"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-neutral-source_matte.png",
+            "sha256": "6386929e72c9fafa47e599a8afb19281acbd5cfe2e1582632c8517b35f81ac76"
+          }
+        },
+        "bow_left": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-bow_left-with_underpaint.png",
+            "sha256": "9440add24de6e442d825164d43183368cdd016a69631a4de345f808190c2d2c2"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-bow_left-source_matte.png",
+            "sha256": "81ee22d213dfcd426bd0edc309ddea1a3dd7cc61834672060714d8cb5a54d44b"
+          }
+        },
+        "bow_right": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-bow_right-with_underpaint.png",
+            "sha256": "a7b0596b13ed165d1b554894aae9b205bd275bb08b45d71cf1e721bf4e2cd330"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-bow_right-source_matte.png",
+            "sha256": "d66e7e0e1da4b28eccc4eebdbc5cc86ad0f063414510165736e88a329679f50d"
+          }
+        },
+        "jewel_left": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-jewel_left-with_underpaint.png",
+            "sha256": "d0b0dc8a5a1d7bd1ff5ba5c7f1833bd583ea15b7e5b6327927f7f1bf5802b558"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-jewel_left-source_matte.png",
+            "sha256": "c798857a36d7c59cb1b6818585d127c5fed009f1098edd94a9345fdfddc15217"
+          }
+        },
+        "jewel_right": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-jewel_right-with_underpaint.png",
+            "sha256": "3b3eb00136c83ac4e6b2429101dde1c3aaf5fa453dc9cf7a8abade2e8aab390e"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw60-jewel_right-source_matte.png",
+            "sha256": "3edca1722ff7b3c7c72cfcca72f998ec9f6da596fb640257a0d499793c1a1e71"
+          }
+        }
+      }
+    },
+    "67.5": {
+      "sourceImage": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+      "sourceSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+      "hiddenArtSHA256": {
+        "collar": "588e98e2907f012bb17db1d561fd646f7aabc832feec9f168753584a2e67a2c6",
+        "bow": "98e30764dc6c64f13001ba9355b5eaf1f948b2bd95ab031916a3e36ad629a79a"
+      },
+      "poseMetrics": {
+        "neutral": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "none",
+          "exposureDonor": "none",
+          "newlyExposedSourceOwnedPixels": 0,
+          "donorAlphaCoveredExposedPixels": 0,
+          "donorCoverageOfExposureFraction": 0.0,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 0,
+          "hiddenArtChangedPixels": 12183,
+          "zeroPoseSourceRGBAMAEPixel": 0.084355
+        },
+        "bow_left": {
+          "bowShiftPx": -10,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "bowFabric",
+          "exposureDonor": "collar",
+          "newlyExposedSourceOwnedPixels": 4837,
+          "donorAlphaCoveredExposedPixels": 1428,
+          "donorCoverageOfExposureFraction": 0.295224,
+          "opaquePixelsWithoutHidden": 362,
+          "opaquePixelsWithHidden": 1428,
+          "hiddenArtChangedPixels": 11821,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "bow_right": {
+          "bowShiftPx": 10,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "bowFabric",
+          "exposureDonor": "collar",
+          "newlyExposedSourceOwnedPixels": 4838,
+          "donorAlphaCoveredExposedPixels": 995,
+          "donorCoverageOfExposureFraction": 0.205663,
+          "opaquePixelsWithoutHidden": 381,
+          "opaquePixelsWithHidden": 1339,
+          "hiddenArtChangedPixels": 12131,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "jewel_left": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": -7,
+          "movingOccluder": "jewel",
+          "exposureDonor": "bow",
+          "newlyExposedSourceOwnedPixels": 374,
+          "donorAlphaCoveredExposedPixels": 321,
+          "donorCoverageOfExposureFraction": 0.858289,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 321,
+          "hiddenArtChangedPixels": 11943,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "jewel_right": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": 7,
+          "movingOccluder": "jewel",
+          "exposureDonor": "bow",
+          "newlyExposedSourceOwnedPixels": 374,
+          "donorAlphaCoveredExposedPixels": 321,
+          "donorCoverageOfExposureFraction": 0.858289,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 321,
+          "hiddenArtChangedPixels": 12153,
+          "zeroPoseSourceRGBAMAEPixel": null
+        }
+      },
+      "files": {
+        "neutral": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-neutral-with_underpaint.png",
+            "sha256": "31c4ffa08e8d07570651d603d90fa01de5c22b0ebb1754fb80d08be8f03ecd0a"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-neutral-source_matte.png",
+            "sha256": "0024d763f57246d9551f6baeee56e407541e4e55a67e29387f398a0fe955b9e7"
+          }
+        },
+        "bow_left": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-bow_left-with_underpaint.png",
+            "sha256": "5d4cf19b04b735744dd069f3a1285df918063c5825c1ff5968f8c54e77c0db23"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-bow_left-source_matte.png",
+            "sha256": "94faaec348fbe0d31406bddf68d3e635d2caf9fd844b96e2228e93bf268e379b"
+          }
+        },
+        "bow_right": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-bow_right-with_underpaint.png",
+            "sha256": "34482e5717384c08b8b0816f26ee051e74322c919f60bd1c76d43f8d0f118775"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-bow_right-source_matte.png",
+            "sha256": "cf7ffe4356ddc2d6ffc13d5556aec336b7ab39182fd83bec96650cb63fc0eebb"
+          }
+        },
+        "jewel_left": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-jewel_left-with_underpaint.png",
+            "sha256": "1551045ff80a1f30072dcfe957f646280f6e151258eec3426c352d6b04f2bcbf"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-jewel_left-source_matte.png",
+            "sha256": "8bd552b6ef34771edb1d4ada38e52ed3b648330249adb34b72f94fa57d300df5"
+          }
+        },
+        "jewel_right": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-jewel_right-with_underpaint.png",
+            "sha256": "70265ac6b230c7c40730175457c066b7db03e3a5a2b2046a1e97d5c158868717"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw67p5-jewel_right-source_matte.png",
+            "sha256": "ac77c5075ad11656078a366ca392499d84ed70a27c59e2a4210e3fa6242f5a21"
+          }
+        }
+      }
+    },
+    "75": {
+      "sourceImage": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+      "sourceSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+      "hiddenArtSHA256": {
+        "collar": "2eab1db0ce3f646f8fe93d80eb581a1bd08c7738a169895b97e7393d3dd7318d",
+        "bow": "cfcf1a43d4a6d1e7668db9ae3ac6319cc3c7e37718a8329ad801ec49b6e26ea5"
+      },
+      "poseMetrics": {
+        "neutral": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "none",
+          "exposureDonor": "none",
+          "newlyExposedSourceOwnedPixels": 0,
+          "donorAlphaCoveredExposedPixels": 0,
+          "donorCoverageOfExposureFraction": 0.0,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 0,
+          "hiddenArtChangedPixels": 14611,
+          "zeroPoseSourceRGBAMAEPixel": 0.090507
+        },
+        "bow_left": {
+          "bowShiftPx": -10,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "bowFabric",
+          "exposureDonor": "collar",
+          "newlyExposedSourceOwnedPixels": 3656,
+          "donorAlphaCoveredExposedPixels": 965,
+          "donorCoverageOfExposureFraction": 0.26395,
+          "opaquePixelsWithoutHidden": 425,
+          "opaquePixelsWithHidden": 965,
+          "hiddenArtChangedPixels": 14186,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "bow_right": {
+          "bowShiftPx": 10,
+          "jewelRelativeShiftPx": 0,
+          "movingOccluder": "bowFabric",
+          "exposureDonor": "collar",
+          "newlyExposedSourceOwnedPixels": 3658,
+          "donorAlphaCoveredExposedPixels": 1389,
+          "donorCoverageOfExposureFraction": 0.379716,
+          "opaquePixelsWithoutHidden": 431,
+          "opaquePixelsWithHidden": 1723,
+          "hiddenArtChangedPixels": 14504,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "jewel_left": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": -7,
+          "movingOccluder": "jewel",
+          "exposureDonor": "bow",
+          "newlyExposedSourceOwnedPixels": 319,
+          "donorAlphaCoveredExposedPixels": 318,
+          "donorCoverageOfExposureFraction": 0.996865,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 318,
+          "hiddenArtChangedPixels": 14318,
+          "zeroPoseSourceRGBAMAEPixel": null
+        },
+        "jewel_right": {
+          "bowShiftPx": 0,
+          "jewelRelativeShiftPx": 7,
+          "movingOccluder": "jewel",
+          "exposureDonor": "bow",
+          "newlyExposedSourceOwnedPixels": 319,
+          "donorAlphaCoveredExposedPixels": 319,
+          "donorCoverageOfExposureFraction": 1.0,
+          "opaquePixelsWithoutHidden": 0,
+          "opaquePixelsWithHidden": 319,
+          "hiddenArtChangedPixels": 14532,
+          "zeroPoseSourceRGBAMAEPixel": null
+        }
+      },
+      "files": {
+        "neutral": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-neutral-with_underpaint.png",
+            "sha256": "345c1f70bee8127a916eeb8ced49c5fb15b60969bbd3cab499311cd871d29ff7"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-neutral-source_matte.png",
+            "sha256": "bfcd108e0e6aaefefe6c43458f32f2171d9acc5a4ed3a4a0b38dd28eb44b9aef"
+          }
+        },
+        "bow_left": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-bow_left-with_underpaint.png",
+            "sha256": "2b64d554b830fe1e5e93c96eb2d6fa5fcc4d26966b6b9afbb8eda222f7ae2533"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-bow_left-source_matte.png",
+            "sha256": "d429df1b91e9b8a2eea738a938cddbc29ddf2c35e454c351b673ed9b2a0e802f"
+          }
+        },
+        "bow_right": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-bow_right-with_underpaint.png",
+            "sha256": "8ca8a587d0107155e53c5086fc96945d314d9853f17737c3876890a865222abf"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-bow_right-source_matte.png",
+            "sha256": "acc931b122502af037c230051994c80f7cace546c99e1dbe1cd5a6bb4828167c"
+          }
+        },
+        "jewel_left": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-jewel_left-with_underpaint.png",
+            "sha256": "f1a916d73ebebb902a9c20ec96ee21d23c5b95f5c2a3db73b5e8ca93cc338c43"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-jewel_left-source_matte.png",
+            "sha256": "ed9f5872387c5e2c8660a3f3218afba6ae0b395571468764deb3294e10e5d58a"
+          }
+        },
+        "jewel_right": {
+          "with_underpaint": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-jewel_right-with_underpaint.png",
+            "sha256": "b6b6d176354aeb16ec1d96fe6fe6936163ec9749a9acee120ecb03008c8f8213"
+          },
+          "source_matte": {
+            "path": "private-assets/exports/p15-112-occlusion-probe/yaw75-jewel_right-source_matte.png",
+            "sha256": "ac1e42b234dfa83a74175691d7f65f2b9b529a144c131d239a591c02bbbeee66"
+          }
+        }
+      }
+    }
+  },
+  "sourcePixelReconstructionTolerance": "RGBA MAE per-channel at zero displacement",
+  "artisticHiddenSurfaceApproval": false,
+  "contact": "private-assets/exports/p15-112-occlusion-probe/three-view-occlusion-reveal-contact.jpg"
+}

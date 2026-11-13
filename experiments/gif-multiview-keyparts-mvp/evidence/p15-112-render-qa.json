@@ -1,0 +1,957 @@
+{
+  "schema": "KOMA_P15_112_VIEW_GEOMETRY_VISIBILITY_VDD_V1",
+  "character": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "models": [
+    "visible_blend",
+    "single_ink_owner",
+    "edge_guard"
+  ],
+  "sourceVisionSHA256": "0d8e8d135e21d4f9585334d0a3103e4d2de1479810155f4b9d507e5a8f3a3cd2",
+  "sourceHiddenSHA256": "a954f946cfa06428259e715ab2483243429aef9b458f159298e209491f19d7ce",
+  "nativeSourceImageHashes": {
+    "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+    "67.5": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+  },
+  "geometry": "source-observed ribbon paths, per-segment Gaussian displacement with rigid anchor translation",
+  "visibility": "single SDF ribbon shape, own ink, native jewel owner, source-hidden collar/bow underpaint",
+  "artistVisualAccepted": false,
+  "newMaterialArtInferred": true,
+  "methods": {
+    "visible_blend": {
+      "60": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw61p875.png",
+        "sha256": "72115a43a45280124a6846c8b4cf71072b3ff7f385fe5541ce5f732cc0aeb28e",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.25,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.89652,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw63p75.png",
+        "sha256": "9f3bb6c7562f9408dcee6f85de64be9b4833e21520fe7871212105c2c4ef66cb",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.5,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.92957,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw65p625.png",
+        "sha256": "48d9813dd337f70831c606cbcca78d3afda0e6cb6821ff5082144da854570668",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.75,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.90608,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw69p375.png",
+        "sha256": "9b6ec14a65d29543ab6a7a0ce59589aebcba644820cfdf3e0c6159009dc40fcb",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.25,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.63138,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw71p25.png",
+        "sha256": "1be228cb8d9c052b7f200200d28d94cdc7a316edf1571f3fb593f6aff21a3f49",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.5,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.715,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw73p125.png",
+        "sha256": "33be3698136897865365c92710634c637600587aaf72c3880d96a1fa04b82efa",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.75,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.81755,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      }
+    },
+    "single_ink_owner": {
+      "60": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw61p875.png",
+        "sha256": "0b39335045961055303d705915d8e093986d4ba367112e777de2a99a3dc8edcb",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.25,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.89652,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw63p75.png",
+        "sha256": "c3a0d15d8690a1135ce315c52a8e81bfbd57e1761b6fe159a92cf3be0081268d",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.5,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.92957,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw65p625.png",
+        "sha256": "50fa810134a88f1cdb3e55840762d6ee9ee0e3fbe976862b7bab32a236556a5f",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.75,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.90608,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw69p375.png",
+        "sha256": "070b9ead88aed258ac67889d196e33b9a9731fae42614e09a10acd6e6ea0f02e",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.25,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.63138,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw71p25.png",
+        "sha256": "9f2b693dd70350d6bd326bf38a482c88983e3a0d6d8934ebaa46a8d0ea604378",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.5,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.715,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw73p125.png",
+        "sha256": "fef4ee9e7d6f32b7f28e104af5bada62f3ade9ad6009bb0f5f4f6bab5b7dd3cc",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.75,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.81755,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      }
+    },
+    "edge_guard": {
+      "60": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw61p875.png",
+        "sha256": "b09f22a324f7ffe86219ca5c48ccfe6a31ea3e37530f94315ab03a3ad5861774",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.25,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.89652,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw63p75.png",
+        "sha256": "acf636fb200efec33050fc83912e0947a12cda161494e3a88b3b3e0a63eb9a81",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.5,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.92957,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw65p625.png",
+        "sha256": "78954332902ef40d160f21af236c1b20daf93414abbcffeb6100cb8f2686dc2a",
+        "diagnostics": {
+          "sourceSegment": [
+            "60",
+            "67.5"
+          ],
+          "relativeYawPosition": 0.75,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.90608,
+          "sourceBowPixelCounts": [
+            10027,
+            9714
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw69p375.png",
+        "sha256": "7bbfef950c372997d5254269f756faf274b9c6f10254574a51216b41869a27b6",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.25,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.63138,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw71p25.png",
+        "sha256": "3f3688dbd04b385b82598e1da250a8371a53a1c05c57073a55a8b1966eab9171",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.5,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.715,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw73p125.png",
+        "sha256": "92b3abc17289648801be912133c48d929554ce10dcaff4f9022e5d3121db5664",
+        "diagnostics": {
+          "sourceSegment": [
+            "67.5",
+            "75"
+          ],
+          "relativeYawPosition": 0.75,
+          "negativeWarpJacobianSamples": 0,
+          "minJacobian": 0.81755,
+          "sourceBowPixelCounts": [
+            9714,
+            6895
+          ],
+          "generatedHiddenCollarUnderpaint": true,
+          "generatedHiddenBowUnderpaint": true
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "nativeKeyframeExact": true
+        }
+      }
+    }
+  },
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "meanAdjacentRGBMAE": 7.9434,
+        "interiorMaxRGBMAE": 7.2775
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "meanAdjacentRGBMAE": 6.1601,
+        "interiorMaxRGBMAE": 5.1833
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "meanAdjacentRGBMAE": 7.0499,
+        "interiorMaxRGBMAE": 6.7573
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "meanAdjacentRGBMAE": 6.2248,
+        "interiorMaxRGBMAE": 5.9747
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "meanAdjacentRGBMAE": 11.5744,
+        "interiorMaxRGBMAE": 11.7003
+      }
+    },
+    "P15-107-native": {
+      "bow": {
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ],
+        "maxAdjacentRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146,
+        "interiorMaxRGBMAE": 12.8767
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ],
+        "maxAdjacentRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208,
+        "interiorMaxRGBMAE": 10.2434
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ],
+        "maxAdjacentRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757,
+        "interiorMaxRGBMAE": 8.7588
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          6.9229,
+          6.6883,
+          6.5505,
+          7.2027,
+          9.2766,
+          8.6715,
+          8.6737,
+          8.8022
+        ],
+        "maxAdjacentRGBMAE": 9.2766,
+        "meanAdjacentRGBMAE": 7.8486,
+        "interiorMaxRGBMAE": 9.2766
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    },
+    "P15-111-layered": {
+      "bow": {
+        "adjacentRGBMAE": [
+          10.6768,
+          7.314,
+          7.5695,
+          11.8862,
+          16.3722,
+          11.8067,
+          12.9812,
+          17.9777
+        ],
+        "maxAdjacentRGBMAE": 17.9777,
+        "meanAdjacentRGBMAE": 12.073,
+        "interiorMaxRGBMAE": 16.3722
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          10.7408,
+          7.8472,
+          7.6278,
+          11.2222,
+          12.6937,
+          8.8687,
+          9.2747,
+          10.786
+        ],
+        "maxAdjacentRGBMAE": 12.6937,
+        "meanAdjacentRGBMAE": 9.8826,
+        "interiorMaxRGBMAE": 12.6937
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          8.7919,
+          7.1737,
+          6.9768,
+          8.3533,
+          9.9939,
+          8.4512,
+          8.7525,
+          10.8786
+        ],
+        "maxAdjacentRGBMAE": 10.8786,
+        "meanAdjacentRGBMAE": 8.6715,
+        "interiorMaxRGBMAE": 9.9939
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.5087,
+          6.6145,
+          6.6717,
+          8.9582,
+          11.0328,
+          8.5983,
+          9.1275,
+          11.6418
+        ],
+        "maxAdjacentRGBMAE": 11.6418,
+        "meanAdjacentRGBMAE": 8.8942,
+        "interiorMaxRGBMAE": 11.0328
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    },
+    "visible_blend": {
+      "bow": {
+        "adjacentRGBMAE": [
+          11.7127,
+          10.1519,
+          9.9159,
+          12.4168,
+          18.4759,
+          17.1295,
+          17.5835,
+          19.402
+        ],
+        "maxAdjacentRGBMAE": 19.402,
+        "meanAdjacentRGBMAE": 14.5985,
+        "interiorMaxRGBMAE": 18.4759
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          13.9898,
+          11.3489,
+          10.5444,
+          14.3765,
+          15.1564,
+          12.2923,
+          13.4749,
+          18.838
+        ],
+        "maxAdjacentRGBMAE": 18.838,
+        "meanAdjacentRGBMAE": 13.7526,
+        "interiorMaxRGBMAE": 15.1564
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.7047,
+          8.377,
+          8.1399,
+          9.2006,
+          11.0323,
+          10.1981,
+          10.3814,
+          11.7413
+        ],
+        "maxAdjacentRGBMAE": 11.7413,
+        "meanAdjacentRGBMAE": 9.8469,
+        "interiorMaxRGBMAE": 11.0323
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          9.6628,
+          8.2872,
+          7.9766,
+          9.4772,
+          12.2362,
+          10.9372,
+          11.0264,
+          12.2339
+        ],
+        "maxAdjacentRGBMAE": 12.2362,
+        "meanAdjacentRGBMAE": 10.2297,
+        "interiorMaxRGBMAE": 12.2362
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    },
+    "single_ink_owner": {
+      "bow": {
+        "adjacentRGBMAE": [
+          10.0646,
+          8.6799,
+          13.9716,
+          11.1114,
+          14.9314,
+          14.4573,
+          19.4889,
+          17.2826
+        ],
+        "maxAdjacentRGBMAE": 19.4889,
+        "meanAdjacentRGBMAE": 13.7485,
+        "interiorMaxRGBMAE": 19.4889
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          11.4941,
+          10.0459,
+          17.0084,
+          11.7237,
+          13.1399,
+          15.5042,
+          15.4906,
+          17.4713
+        ],
+        "maxAdjacentRGBMAE": 17.4713,
+        "meanAdjacentRGBMAE": 13.9848,
+        "interiorMaxRGBMAE": 17.0084
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.1682,
+          7.9358,
+          9.4955,
+          8.7182,
+          10.5001,
+          10.108,
+          10.8408,
+          11.3936
+        ],
+        "maxAdjacentRGBMAE": 11.3936,
+        "meanAdjacentRGBMAE": 9.77,
+        "interiorMaxRGBMAE": 10.8408
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.9777,
+          7.6814,
+          9.576,
+          8.9351,
+          10.7989,
+          9.87,
+          11.7925,
+          11.455
+        ],
+        "maxAdjacentRGBMAE": 11.7925,
+        "meanAdjacentRGBMAE": 9.8858,
+        "interiorMaxRGBMAE": 11.7925
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    },
+    "edge_guard": {
+      "bow": {
+        "adjacentRGBMAE": [
+          10.3502,
+          8.8692,
+          12.1952,
+          11.2292,
+          15.1675,
+          14.6846,
+          18.2524,
+          17.371
+        ],
+        "maxAdjacentRGBMAE": 18.2524,
+        "meanAdjacentRGBMAE": 13.5149,
+        "interiorMaxRGBMAE": 18.2524
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          12.0199,
+          10.4855,
+          14.0958,
+          12.0975,
+          13.1302,
+          15.4428,
+          13.8566,
+          17.4354
+        ],
+        "maxAdjacentRGBMAE": 17.4354,
+        "meanAdjacentRGBMAE": 13.5705,
+        "interiorMaxRGBMAE": 15.4428
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.2829,
+          8.03,
+          8.9193,
+          8.7614,
+          10.5776,
+          10.1818,
+          10.4679,
+          11.4007
+        ],
+        "maxAdjacentRGBMAE": 11.4007,
+        "meanAdjacentRGBMAE": 9.7027,
+        "interiorMaxRGBMAE": 10.5776
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          9.0855,
+          7.7536,
+          8.9122,
+          8.9826,
+          10.883,
+          9.9507,
+          11.3544,
+          11.4865
+        ],
+        "maxAdjacentRGBMAE": 11.4865,
+        "meanAdjacentRGBMAE": 9.8011,
+        "interiorMaxRGBMAE": 11.3544
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-112-visibility-vdd/visibility-geometry-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "sourceArtwork": "three native P0 garment source views with the six inferred hidden textile layers",
+    "geometry": "four measured bow source paths mapped to one SDF outline and source-owned foreground ink",
+    "sampledJacobian": "all 36 endpoint warp samples at nine yaw positions retain positive Jacobian",
+    "sourceViewOcclusionExperiment": "move native 1024 bow 10px or golden jewel 7px to reveal lower source-owned layers",
+    "revealedSourceOwnedPixels": 28627,
+    "inferredMaterialCoveragePixels": 9346,
+    "newOpaquePixelsFromUnderpaint": 8007,
+    "zeroPoseRGBAReconstructionMAE": {
+      "60": 0.087886,
+      "67.5": 0.084355,
+      "75": 0.090507
+    },
+    "visualFindings": {
+      "sourceLevelReconstruction": "the native layer partition preserves original character garment pixels at zero relative displacement",
+      "broochDisocclusion": "genuine hidden red ribbon paint fills the majority of newly exposed brooch region at sampled offsets",
+      "collarDisocclusion": "white collar underpaint restores a subset of newly exposed ribbon occlusion; exterior rim still has missing source-backed textile",
+      "animatedAppearance": "cross-source bow creases and edge texture remain inconsistent; shape-map output produces local dark gaps and contour distortion",
+      "layerPriority": "source-owned jewel draws above ribbon; ribbon draws above shirt/collar; head remains P15-101 source-owned mesh"
+    },
+    "regionalMaxAdjacentRGBMAE": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107": 12.8767,
+        "P15-112-edgeGuard": 18.2524
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107": 8.7588,
+        "P15-112-edgeGuard": 11.4007
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107": 10.2434,
+        "P15-112-edgeGuard": 17.4354
+      }
+    },
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "selectedGarmentCandidate": "P15-107 companion_direct_native_keys",
+    "fullContinuousYawArtistApproved": false,
+    "nextRequiredEvidence": "canonical ribbon/collar source ink artwork and matched visible-to-hidden contours; new garment source must have one physical component topology in all keyviews"
+  }
+}

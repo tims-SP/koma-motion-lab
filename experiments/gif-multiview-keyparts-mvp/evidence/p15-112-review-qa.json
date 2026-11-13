@@ -1,0 +1,191 @@
+{
+  "schema": "KOMA_P15_112_GEOMETRY_OCCLUSION_REVIEW_V1",
+  "entry": "private-assets/exports/p15-112-visibility-vdd/index.html",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "renderMethods": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "P15-111-layered": {
+      "60": "../p15-111-layered-render/layered_full-yaw60.png",
+      "61.875": "../p15-111-layered-render/layered_full-yaw61p875.png",
+      "63.75": "../p15-111-layered-render/layered_full-yaw63p75.png",
+      "65.625": "../p15-111-layered-render/layered_full-yaw65p625.png",
+      "67.5": "../p15-111-layered-render/layered_full-yaw67p5.png",
+      "69.375": "../p15-111-layered-render/layered_full-yaw69p375.png",
+      "71.25": "../p15-111-layered-render/layered_full-yaw71p25.png",
+      "73.125": "../p15-111-layered-render/layered_full-yaw73p125.png",
+      "75": "../p15-111-layered-render/layered_full-yaw75.png"
+    },
+    "visible_blend": {
+      "60": "visible_blend-yaw60.png",
+      "61.875": "visible_blend-yaw61p875.png",
+      "63.75": "visible_blend-yaw63p75.png",
+      "65.625": "visible_blend-yaw65p625.png",
+      "67.5": "visible_blend-yaw67p5.png",
+      "69.375": "visible_blend-yaw69p375.png",
+      "71.25": "visible_blend-yaw71p25.png",
+      "73.125": "visible_blend-yaw73p125.png",
+      "75": "visible_blend-yaw75.png"
+    },
+    "single_ink_owner": {
+      "60": "single_ink_owner-yaw60.png",
+      "61.875": "single_ink_owner-yaw61p875.png",
+      "63.75": "single_ink_owner-yaw63p75.png",
+      "65.625": "single_ink_owner-yaw65p625.png",
+      "67.5": "single_ink_owner-yaw67p5.png",
+      "69.375": "single_ink_owner-yaw69p375.png",
+      "71.25": "single_ink_owner-yaw71p25.png",
+      "73.125": "single_ink_owner-yaw73p125.png",
+      "75": "single_ink_owner-yaw75.png"
+    },
+    "edge_guard": {
+      "60": "edge_guard-yaw60.png",
+      "61.875": "edge_guard-yaw61p875.png",
+      "63.75": "edge_guard-yaw63p75.png",
+      "65.625": "edge_guard-yaw65p625.png",
+      "67.5": "edge_guard-yaw67p5.png",
+      "69.375": "edge_guard-yaw69p375.png",
+      "71.25": "edge_guard-yaw71p25.png",
+      "73.125": "edge_guard-yaw73p125.png",
+      "75": "edge_guard-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-112-visibility-vdd/P15-101-original-loop.gif",
+      "sha256": "56c83a4a9158fb76d16139c2d2184a7e6fad2744cfc9932650d4a8a4a6990c42"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-112-visibility-vdd/P15-107-native-loop.gif",
+      "sha256": "3b80c1f76ef580a2fb906fe2b0ac5275c4a56a31e52719a6b10441bea324da8c"
+    },
+    "P15-111-layered": {
+      "path": "private-assets/exports/p15-112-visibility-vdd/P15-111-layered-loop.gif",
+      "sha256": "0cd9e296db491e13d1dd1cac38a2d6e6751e3f528a14e156af556c6c7763e8d1"
+    },
+    "visible_blend": {
+      "path": "private-assets/exports/p15-112-visibility-vdd/visible_blend-loop.gif",
+      "sha256": "97d5b7ed68e2f4e974ab67f00af7e615d1ef1700b0b54dd8bbac7b8d48c24025"
+    },
+    "single_ink_owner": {
+      "path": "private-assets/exports/p15-112-visibility-vdd/single_ink_owner-loop.gif",
+      "sha256": "e10182e9253a352fb4b2e5723f00d8ee4f2b8bdf73f72f584325fa5906baf0b5"
+    },
+    "edge_guard": {
+      "path": "private-assets/exports/p15-112-visibility-vdd/edge_guard-loop.gif",
+      "sha256": "81ded9580ea3af19068c93e505aec3c812d8edc0301cc87fbd796e30cda336d9"
+    }
+  },
+  "revealSourceViews": [
+    "60",
+    "67.5",
+    "75"
+  ],
+  "revealPoses": [
+    "neutral",
+    "bow_left",
+    "bow_right",
+    "jewel_left",
+    "jewel_right"
+  ],
+  "revealImageSources": {
+    "60": {
+      "neutral": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw60-neutral-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw60-neutral-source_matte.png"
+      },
+      "bow_left": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw60-bow_left-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw60-bow_left-source_matte.png"
+      },
+      "bow_right": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw60-bow_right-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw60-bow_right-source_matte.png"
+      },
+      "jewel_left": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw60-jewel_left-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw60-jewel_left-source_matte.png"
+      },
+      "jewel_right": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw60-jewel_right-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw60-jewel_right-source_matte.png"
+      }
+    },
+    "67.5": {
+      "neutral": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw67p5-neutral-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw67p5-neutral-source_matte.png"
+      },
+      "bow_left": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw67p5-bow_left-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw67p5-bow_left-source_matte.png"
+      },
+      "bow_right": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw67p5-bow_right-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw67p5-bow_right-source_matte.png"
+      },
+      "jewel_left": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw67p5-jewel_left-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw67p5-jewel_left-source_matte.png"
+      },
+      "jewel_right": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw67p5-jewel_right-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw67p5-jewel_right-source_matte.png"
+      }
+    },
+    "75": {
+      "neutral": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw75-neutral-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw75-neutral-source_matte.png"
+      },
+      "bow_left": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw75-bow_left-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw75-bow_left-source_matte.png"
+      },
+      "bow_right": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw75-bow_right-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw75-bow_right-source_matte.png"
+      },
+      "jewel_left": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw75-jewel_left-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw75-jewel_left-source_matte.png"
+      },
+      "jewel_right": {
+        "with_underpaint": "../p15-112-occlusion-probe/yaw75-jewel_right-with_underpaint.png",
+        "source_matte": "../p15-112-occlusion-probe/yaw75-jewel_right-source_matte.png"
+      }
+    }
+  },
+  "artistCorrespondenceAccepted": false,
+  "fullYawVisualAccepted": false
+}
