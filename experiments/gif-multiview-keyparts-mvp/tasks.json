@@ -7086,5 +7086,48 @@
     ],
     "review": "private-assets/exports/p15-134-underpaint-review/index.html",
     "next": "Replace approximate hair color mask with closed authored ArtMesh boundary, register underpaint ear/face/neck anchors and rerun 0/12/24 px hair reveal without alpha holes."
+  },
+  "p15_135ClosedHairUnderpaintReveal": {
+    "status": "CLOSED_HAIR_REGION_AND_UNDERPAINT_STRESS_REVIEWED",
+    "characterId": "p0_character_001",
+    "yaw": 112.5,
+    "candidateMask": "private-assets/exports/p15-135-closed-hair/hair-region-mask.png",
+    "connectedRegionsOver20Pixels": [
+      45438
+    ],
+    "nativeSourceRecompositionExact": true,
+    "displacementRGBMAE": {
+      "pigment": {
+        "0": 0.5979,
+        "12": 15.7722,
+        "24": 21.6563
+      },
+      "closed": {
+        "0": 0.5979,
+        "12": 14.7117,
+        "24": 20.1952
+      }
+    },
+    "displacementAlphaHoles": {
+      "pigment": {
+        "0": 0,
+        "12": 3736,
+        "24": 6842
+      },
+      "closed": {
+        "0": 0,
+        "12": 3825,
+        "24": 6831
+      }
+    },
+    "visualFindings": "Closed pigment-derived region reduces 12/24px RGB difference but fails to eliminate visible holes. Face and near-eye ownership and neck reveal still show dark seams. One contiguous region is not proof of painter-authored ArtMesh.",
+    "physicalHairArtMeshAccepted": false,
+    "underpaintRegistrationAccepted": false,
+    "fullVisualAcceptance": false,
+    "evidence": [
+      "evidence/p15-135-closed-hair-qa.json"
+    ],
+    "review": "private-assets/exports/p15-135-closed-hair/index.html",
+    "next": "Create and approve physically defined front/back hair parts and scalp/face/neck underlayers with source-matched eye and ear topology, then validate zero transparent holes under hair movement."
   }
 }

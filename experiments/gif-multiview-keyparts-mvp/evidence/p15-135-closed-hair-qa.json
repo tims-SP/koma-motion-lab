@@ -1,0 +1,46 @@
+{
+  "schema": "KOMA_P15_135_CLOSED_HAIR_REVEAL_V1",
+  "characterId": "p0_character_001",
+  "angle": 112.5,
+  "sourceRGBAExactAfterSplit": true,
+  "pixelOwnershipExclusive": true,
+  "maskMethod": "filled pigment-derived contours with protected facial features; provisional image-space boundary",
+  "maskInfo": {
+    "seedPixels": 46646,
+    "closedPixels": 45453,
+    "contourCount": 1
+  },
+  "connectedRegionsOver20Pixels": [
+    45438
+  ],
+  "displacementRGBMAE": {
+    "pigment": {
+      "0": 0.5979,
+      "12": 15.7722,
+      "24": 21.6563
+    },
+    "closed": {
+      "0": 0.5979,
+      "12": 14.7117,
+      "24": 20.1952
+    }
+  },
+  "displacementAlphaHoles": {
+    "pigment": {
+      "0": 0,
+      "12": 3736,
+      "24": 6842
+    },
+    "closed": {
+      "0": 0,
+      "12": 3825,
+      "24": 6831
+    }
+  },
+  "referenceGeometryArtistApproved": false,
+  "semanticArtMeshGeometryApproved": false,
+  "physicalUnderpaintRegistrationApproved": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-135-closed-hair/index.html",
+  "next": "Inspect masks and visible ear/face/neck seams, then obtain artist-corrected coherent hair boundary and registered hidden material."
+}
