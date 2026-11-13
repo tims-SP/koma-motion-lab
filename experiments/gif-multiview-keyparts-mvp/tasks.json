@@ -6898,5 +6898,48 @@
     ],
     "review": "private-assets/exports/p15-129-ahoge-owner/index.html",
     "next": "Align hair tip/root trajectories and manually matched line-art correspondences plus face/collar/coat boundaries using independent painted semantic layers and missing underpaint."
+  },
+  "p15_130AhogeAnchorTrajectory": {
+    "status": "HAIR_APEX_PROXY_TRAJECTORY_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "anchorProxies": {
+      "90.0": [
+        233.0,
+        5.0
+      ],
+      "112.5": [
+        288.0,
+        21.0
+      ],
+      "135.0": [
+        258.0,
+        8.0
+      ]
+    },
+    "sourceOwnerBaselineMaxAdjacentRGBMAE": 11.8477,
+    "trajectoryCandidateMaxAdjacentRGBMAE": 12.4068,
+    "nativeKeyframesPixelExact": true,
+    "observed": "Apex pixel locations vary sharply between independent art sources. Translating the top region along inferred trajectory creates a secondary hair edge at 101.25/123.75 and higher frame difference; it is a diagnostic, not an accepted animation method.",
+    "physicalHairRootTipAnchorsValidated": false,
+    "faceGarmentAnchorsValidated": false,
+    "hiddenUnderpaintValidated": false,
+    "visualAccepted": false,
+    "review": "private-assets/exports/p15-130-ahoge-anchors/index.html",
+    "evidence": [
+      "evidence/p15-130-ahoge-anchors-qa.json"
+    ],
+    "next": "Register manually verified hair root and tip pairs and collar/face/shoulder line landmarks from approved independently painted semantic layers; verify motion with 90/112.5/135 actual frames."
   }
 }

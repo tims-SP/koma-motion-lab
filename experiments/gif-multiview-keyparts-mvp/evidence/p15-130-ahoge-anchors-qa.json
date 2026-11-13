@@ -1,0 +1,109 @@
+{
+  "schema": "KOMA_P15_130_AHOGE_ANCHOR_V1",
+  "characterId": "p0_character_001",
+  "sourceKeyAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "yawSamples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "sourceAnchorPixels": {
+    "90.0": [
+      233.0,
+      5.0
+    ],
+    "112.5": [
+      288.0,
+      21.0
+    ],
+    "135.0": [
+      258.0,
+      8.0
+    ]
+  },
+  "anchorDefinition": "uppermost visible-alpha ink coordinate and median x among top seven rows; geometric proxy pending artist verification",
+  "trajectories": [
+    {
+      "yaw": 90.0,
+      "owner": 90.0,
+      "target": [
+        233.0,
+        5.0
+      ],
+      "deltaXY": [
+        0,
+        0
+      ]
+    },
+    {
+      "yaw": 101.25,
+      "owner": 90.0,
+      "target": [
+        260.5,
+        13.0
+      ],
+      "deltaXY": [
+        27.5,
+        8.0
+      ]
+    },
+    {
+      "yaw": 112.5,
+      "owner": 112.5,
+      "target": [
+        288.0,
+        21.0
+      ],
+      "deltaXY": [
+        0,
+        0
+      ]
+    },
+    {
+      "yaw": 123.75,
+      "owner": 112.5,
+      "target": [
+        273.0,
+        14.5
+      ],
+      "deltaXY": [
+        -15.0,
+        -6.5
+      ]
+    },
+    {
+      "yaw": 135.0,
+      "owner": 135.0,
+      "target": [
+        258.0,
+        8.0
+      ],
+      "deltaXY": [
+        0,
+        0
+      ]
+    }
+  ],
+  "translationScale": 1,
+  "maxAdjacentCompositeRGBMAE": 12.4068,
+  "adjacentCompositeRGBMAE": [
+    12.4068,
+    11.4609,
+    10.6826,
+    11.6573
+  ],
+  "nativeKeyframesPixelExact": true,
+  "sourceArtPreserved": true,
+  "physicalRootTipCorrespondenceVerified": false,
+  "underpaintVerified": false,
+  "garmentAnchorVerified": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-130-ahoge-anchors/index.html",
+  "next": "Inspect source-strand identity and garment/face correspondence with authored anatomy, before selecting production VDD."
+}
