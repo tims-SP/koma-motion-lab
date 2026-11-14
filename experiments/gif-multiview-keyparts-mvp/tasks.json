@@ -9962,5 +9962,50 @@
     ],
     "review": "private-assets/exports/p15-171-paired-layer-flow/index.html",
     "next": "Paint source-registered crown underlayers that contain no inherited root ink at 90/112.5/135, confirm separate hair identity and exact keyview compositing, then re-evaluate intermediate view appearance and motion."
+  },
+  "p15_172CrownUnderpaintSourceAssets": {
+    "status": "THREE_KEYVIEW_SOURCE_REGISTERED_CROWN_ART_RENDERED_AND_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "methods": [
+      "conservative",
+      "connected",
+      "feathered",
+      "semantic_patch"
+    ],
+    "sourcePairReconstructionPixelExact": true,
+    "sourceCrownRGBAAssets": "private-assets/exports/p15-172-crown-underpaint/{method}/yaw{angle}/rootless-crown-candidate.png",
+    "sourceLoopRGBAAssets": "private-assets/exports/p15-172-crown-underpaint/{method}/yaw{angle}/source-owned-loop.png",
+    "semanticPatchPixels": {
+      "90": 74,
+      "112.5": 342,
+      "135": 182
+    },
+    "sourceKeyviewsPreserved": true,
+    "visualFindings": "All three original keyviews retain reversible source-matched hair and crown ownership. Bounded root RGB reconstruction is restricted to small crown patches, but the 112.5-degree vertical attachment ink and edge artifacts at 90/135 persist in direct image review. Source-visible loop identity remains valid for diagnostic layering; hidden crown painting is not yet visually approved.",
+    "singleKeyviewVisualAccepted": false,
+    "midframeVDDRun": false,
+    "canonicalRendererUpdated": false,
+    "overall360VisualAccepted": false,
+    "acceptanceGate": {
+      "threeViewsAvailable": true,
+      "nativeLayerPairReconstructionExact": true,
+      "headBelowY125Exact": true,
+      "allViewsHavePaintMask": true,
+      "semanticPaintLocality": true,
+      "rootStubsVisuallyCleared": false,
+      "sourceCrownContourVisuallyMatched": false,
+      "visualPaintApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-172-crown-underpaint-qa.json"
+    ],
+    "review": "private-assets/exports/p15-172-crown-underpaint/index.html",
+    "next": "Create source-matched rootless crown paint at 90/112.5/135, explicitly including the 112.5 crown-edge post; after visual approval, retest intermediate yaw against unchanged optical-flow baseline."
   }
 }
