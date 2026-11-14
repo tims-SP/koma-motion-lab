@@ -13103,5 +13103,604 @@
     "review": "private-assets/exports/p15-196-descending-shoulder-identity/index.html",
     "assets": "private-assets/exports/p15-196-descending-shoulder-identity/",
     "next": "Investigate why the native 112.5-degree descending shoulder is 48 px farther right and 13-17 px lower than the corresponding 90/135-degree shoulders relative to their roots. Separate true view-dependent shape change from source-curve tracing/endpoint correspondence error. Test root-relative rigid/affine normalization and silhouette-derived contour anchors before further feature-parameter interpolation. Compare the held-out 112.5 native key and neighboring 108.75/116.25 views; do not promote feature reparameterization unless it improves both full-frame and local temporal metrics."
+  },
+  "p15_197LocalShapeRegistration": {
+    "status": "NATIVE_VIEW_POSE_SHAPE_SEPARATION_VALIDATED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "method": "Register source-owned hair masks and five semantic landmarks using translation, rigid, similarity and affine models. Fit root, entry shoulder, arc apex, descending shoulder; hold out free tip and evaluate full-mask IoU.",
+    "landmarkNames": [
+      "root",
+      "entry_shoulder",
+      "outer_apex",
+      "descending_shoulder",
+      "heldout_free_tip"
+    ],
+    "source": {
+      "90.0": {
+        "indices": [
+          0,
+          12,
+          87,
+          142,
+          159
+        ],
+        "coordinates": [
+          [
+            184.0,
+            63.0
+          ],
+          [
+            184.24969482421875,
+            52.249698638916016
+          ],
+          [
+            232.3614044189453,
+            8.0
+          ],
+          [
+            270.0,
+            35.883399963378906
+          ],
+          [
+            262.0,
+            50.0
+          ]
+        ],
+        "sourceHash": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "alphaArea": 1064,
+        "rootRelativeLandmarks": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.24969999492168427,
+            -10.750300407409668
+          ],
+          [
+            48.36140060424805,
+            -55.0
+          ],
+          [
+            86.0,
+            -27.116600036621094
+          ],
+          [
+            78.0,
+            -13.0
+          ]
+        ],
+        "rootToTipDistancePixels": 79.0759
+      },
+      "112.5": {
+        "indices": [
+          0,
+          20,
+          79,
+          129,
+          159
+        ],
+        "coordinates": [
+          [
+            258.0,
+            83.0
+          ],
+          [
+            256.6051940917969,
+            63.605201721191406
+          ],
+          [
+            284.7789001464844,
+            24.0
+          ],
+          [
+            318.00830078125,
+            53.00830078125
+          ],
+          [
+            306.0,
+            76.0
+          ]
+        ],
+        "sourceHash": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "alphaArea": 1350,
+        "rootRelativeLandmarks": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            -1.3947999477386475,
+            -19.394800186157227
+          ],
+          [
+            26.778900146484375,
+            -59.0
+          ],
+          [
+            60.00830078125,
+            -29.99169921875
+          ],
+          [
+            48.0,
+            -7.0
+          ]
+        ],
+        "rootToTipDistancePixels": 48.5077
+      },
+      "135.0": {
+        "indices": [
+          0,
+          26,
+          82,
+          139,
+          159
+        ],
+        "coordinates": [
+          [
+            222.0,
+            61.0
+          ],
+          [
+            222.0,
+            38.68370056152344
+          ],
+          [
+            257.05389404296875,
+            11.0
+          ],
+          [
+            288.0,
+            39.92430114746094
+          ],
+          [
+            278.0,
+            53.0
+          ]
+        ],
+        "sourceHash": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "alphaArea": 1033,
+        "rootRelativeLandmarks": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -22.316299438476562
+          ],
+          [
+            35.05390167236328,
+            -50.0
+          ],
+          [
+            66.0,
+            -21.075700759887695
+          ],
+          [
+            56.0,
+            -8.0
+          ]
+        ],
+        "rootToTipDistancePixels": 56.5685
+      }
+    },
+    "comparisons": {
+      "90->112.5": {
+        "translation": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              61.695324
+            ],
+            [
+              0.0,
+              1.0,
+              16.120101
+            ]
+          ],
+          "fitLandmarkRMS": 12.0129,
+          "heldOutTipErrorPixels": 20.2666,
+          "allFiveLandmarkRMS": 14.0568,
+          "perLandmarkResidualPixels": [
+            12.9019,
+            11.6765,
+            9.2786,
+            13.7239,
+            20.2666
+          ],
+          "determinant": 1.0,
+          "axisScales": [
+            1.0,
+            1.0
+          ],
+          "maskIoU": 0.18566,
+          "warpedArea": 1064,
+          "nativeTargetArea": 1350
+        },
+        "rigid": {
+          "matrix": [
+            [
+              0.991792,
+              0.12786,
+              58.395074
+            ],
+            [
+              -0.12786,
+              0.991792,
+              44.27582
+            ]
+          ],
+          "fitLandmarkRMS": 11.0565,
+          "heldOutTipErrorPixels": 24.3266,
+          "allFiveLandmarkRMS": 14.7021,
+          "perLandmarkResidualPixels": [
+            9.0629,
+            12.534,
+            5.3095,
+            14.8846,
+            24.3266
+          ],
+          "determinant": 1.0,
+          "axisScales": [
+            1.0,
+            1.0
+          ],
+          "maskIoU": 0.17558,
+          "warpedArea": 1067,
+          "nativeTargetArea": 1350
+        },
+        "similarity": {
+          "matrix": [
+            [
+              0.77002,
+              0.09927,
+              107.801731
+            ],
+            [
+              -0.09927,
+              0.77002,
+              46.875823
+            ]
+          ],
+          "fitLandmarkRMS": 5.9738,
+          "heldOutTipErrorPixels": 18.6829,
+          "allFiveLandmarkRMS": 9.9176,
+          "perLandmarkResidualPixels": [
+            6.2982,
+            5.4964,
+            6.5683,
+            5.4523,
+            18.6829
+          ],
+          "determinant": 0.60279,
+          "axisScales": [
+            0.77639,
+            0.77639
+          ],
+          "maskIoU": 0.26316,
+          "warpedArea": 642,
+          "nativeTargetArea": 1350
+        },
+        "affine": {
+          "matrix": [
+            [
+              0.751144,
+              0.175382,
+              108.882282
+            ],
+            [
+              0.035504,
+              1.056373,
+              6.149769
+            ]
+          ],
+          "fitLandmarkRMS": 2.9276,
+          "heldOutTipErrorPixels": 11.4527,
+          "allFiveLandmarkRMS": 5.7524,
+          "perLandmarkResidualPixels": [
+            3.7686,
+            4.2844,
+            1.1502,
+            0.6344,
+            11.4527
+          ],
+          "determinant": 0.78726,
+          "axisScales": [
+            1.09196,
+            0.72096
+          ],
+          "maskIoU": 0.5913,
+          "warpedArea": 846,
+          "nativeTargetArea": 1350
+        }
+      },
+      "135->112.5": {
+        "translation": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              32.084625
+            ],
+            [
+              0.0,
+              1.0,
+              18.251375
+            ]
+          ],
+          "fitLandmarkRMS": 6.2814,
+          "heldOutTipErrorPixels": 6.2637,
+          "allFiveLandmarkRMS": 6.2778,
+          "perLandmarkResidualPixels": [
+            5.4205,
+            7.1305,
+            6.8252,
+            5.5689,
+            6.2637
+          ],
+          "determinant": 1.0,
+          "axisScales": [
+            1.0,
+            1.0
+          ],
+          "maskIoU": 0.39438,
+          "warpedArea": 1033,
+          "nativeTargetArea": 1350
+        },
+        "rigid": {
+          "matrix": [
+            [
+              0.985384,
+              0.17035,
+              29.284702
+            ],
+            [
+              -0.17035,
+              0.985384,
+              60.922929
+            ]
+          ],
+          "fitLandmarkRMS": 2.848,
+          "heldOutTipErrorPixels": 11.9701,
+          "allFiveLandmarkRMS": 5.9284,
+          "perLandmarkResidualPixels": [
+            0.4813,
+            3.0943,
+            3.9863,
+            2.5978,
+            11.9701
+          ],
+          "determinant": 1.0,
+          "axisScales": [
+            1.0,
+            1.0
+          ],
+          "maskIoU": 0.44802,
+          "warpedArea": 1032,
+          "nativeTargetArea": 1350
+        },
+        "similarity": {
+          "matrix": [
+            [
+              0.98434,
+              0.170169,
+              29.549606
+            ],
+            [
+              -0.170169,
+              0.98434,
+              60.917611
+            ]
+          ],
+          "fitLandmarkRMS": 2.8478,
+          "heldOutTipErrorPixels": 11.9609,
+          "allFiveLandmarkRMS": 5.9246,
+          "perLandmarkResidualPixels": [
+            0.4896,
+            3.082,
+            4.0162,
+            2.5636,
+            11.9609
+          ],
+          "determinant": 0.99788,
+          "axisScales": [
+            0.99894,
+            0.99894
+          ],
+          "maskIoU": 0.44796,
+          "warpedArea": 1029,
+          "nativeTargetArea": 1350
+        },
+        "affine": {
+          "matrix": [
+            [
+              0.93628,
+              0.123261,
+              43.199331
+            ],
+            [
+              -0.152005,
+              1.08196,
+              52.750632
+            ]
+          ],
+          "fitLandmarkRMS": 1.9972,
+          "heldOutTipErrorPixels": 9.0981,
+          "allFiveLandmarkRMS": 4.4437,
+          "perLandmarkResidualPixels": [
+            2.0852,
+            2.855,
+            1.6418,
+            0.872,
+            9.0981
+          ],
+          "determinant": 1.03175,
+          "axisScales": [
+            1.09271,
+            0.94422
+          ],
+          "maskIoU": 0.52369,
+          "warpedArea": 1062,
+          "nativeTargetArea": 1350
+        }
+      },
+      "90->135": {
+        "translation": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              29.610699
+            ],
+            [
+              0.0,
+              1.0,
+              -2.131274
+            ]
+          ],
+          "fitLandmarkRMS": 11.0773,
+          "heldOutTipErrorPixels": 14.5458,
+          "allFiveLandmarkRMS": 11.8525,
+          "perLandmarkResidualPixels": [
+            8.3903,
+            14.0359,
+            7.1077,
+            13.1493,
+            14.5458
+          ],
+          "determinant": 1.0,
+          "axisScales": [
+            1.0,
+            1.0
+          ],
+          "maskIoU": 0.07044,
+          "warpedArea": 1064,
+          "nativeTargetArea": 1033
+        },
+        "rigid": {
+          "matrix": [
+            [
+              0.998657,
+              -0.05181,
+              31.9642
+            ],
+            [
+              0.05181,
+              0.998657,
+              -13.354492
+            ]
+          ],
+          "fitLandmarkRMS": 10.9133,
+          "heldOutTipErrorPixels": 13.3295,
+          "allFiveLandmarkRMS": 11.4374,
+          "perLandmarkResidualPixels": [
+            9.7354,
+            13.0477,
+            7.8459,
+            12.2401,
+            13.3295
+          ],
+          "determinant": 1.0,
+          "axisScales": [
+            1.0,
+            1.0
+          ],
+          "maskIoU": 0.09048,
+          "warpedArea": 1064,
+          "nativeTargetArea": 1033
+        },
+        "similarity": {
+          "matrix": [
+            [
+              0.774574,
+              -0.040185,
+              80.274026
+            ],
+            [
+              0.040185,
+              0.774574,
+              -1.909424
+            ]
+          ],
+          "fitLandmarkRMS": 5.6514,
+          "heldOutTipErrorPixels": 6.4968,
+          "allFiveLandmarkRMS": 5.8303,
+          "perLandmarkResidualPixels": [
+            6.938,
+            7.3664,
+            3.8963,
+            3.1896,
+            6.4968
+          ],
+          "determinant": 0.60158,
+          "axisScales": [
+            0.77562,
+            0.77562
+          ],
+          "maskIoU": 0.56331,
+          "warpedArea": 646,
+          "nativeTargetArea": 1033
+        },
+        "affine": {
+          "matrix": [
+            [
+              0.781525,
+              0.052001,
+              75.093634
+            ],
+            [
+              0.132697,
+              0.954296,
+              -29.194968
+            ]
+          ],
+          "fitLandmarkRMS": 4.3974,
+          "heldOutTipErrorPixels": 4.4624,
+          "allFiveLandmarkRMS": 4.4105,
+          "perLandmarkResidualPixels": [
+            5.6606,
+            6.4354,
+            1.7276,
+            0.9528,
+            4.4624
+          ],
+          "determinant": 0.73891,
+          "axisScales": [
+            0.9953,
+            0.74239
+          ],
+          "maskIoU": 0.49588,
+          "warpedArea": 783,
+          "nativeTargetArea": 1033
+        }
+      }
+    },
+    "finding": "Source-owned ahoge silhouettes were fit by translation, rigid, similarity and affine registration using four source landmarks and independently evaluated with the held-out free tip and the full native target alpha mask. For 90°→112.5°, affine achieves mask IoU 0.59130 and held-out tip error 11.4527 px; for 135°→112.5°, IoU 0.52369 and tip error 9.0981 px. Both fail thresholds IoU>=0.75 and tip<=5 px. Root-relative position and affine normalization are insufficient to reproduce 112.5° shape; further evidence is needed to distinguish genuine view-dependent local deformation from imperfect feature identity.",
+    "threeNativeMasksFingerprinted": true,
+    "affineExplainsMiddleViewShape": false,
+    "sourceSemanticIdentityApproved": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "threeNativeMasksFingerprinted": true,
+      "allPositiveTransformDeterminants": true,
+      "affineExplainsMiddleViewShape": false,
+      "sourceSemanticIdentityApproved": false,
+      "productionApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-197-local-shape-registration-qa.json"
+    ],
+    "review": "private-assets/exports/p15-197-local-shape-registration/index.html",
+    "assets": "private-assets/exports/p15-197-local-shape-registration/",
+    "next": "Use the five source centerline landmarks plus full alpha silhouette to test minimal local nonrigid deformation, with held-out tip validation and topology checks. Preserve all source keyframes; do not treat affine fitting accuracy alone as proof of semantic correspondence. Evaluate 108.75°/112.5°/116.25° images and local/global temporal behavior before renderer integration."
   }
 }
