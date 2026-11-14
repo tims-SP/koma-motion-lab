@@ -10912,5 +10912,136 @@
     "review": "private-assets/exports/p15-185-keyview-geometry-correspondence/index.html",
     "assets": "private-assets/exports/p15-185-keyview-geometry-correspondence/",
     "next": "Establish reliable source-local 112.5-degree strand correspondence and classify the source free-tip/crown-contact topology before further interpolation. Verify source landmark and variable width profile against actual alpha silhouettes; use only measured correction to re-run 13-yaw continuity."
+  },
+  "p15_186SourceLandmarkAudit": {
+    "status": "SOURCE_GEOMETRY_AUDIT_COMPLETE_CORRESPONDENCE_UNVERIFIED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "rootAndTipProposalSource": "scripts/p15_167_endpoint_pair.py ROOT_AND_TIP",
+    "criticalFinding": "P15-181 source_curve() samples the contour returned by P15-153 extract(), whose loop_visible mask is clipped at y=54. The resulting 160 samples lie on the full source mask boundary (mean distance-transform radius 1 px), not on its medial centerline. It must not be treated as a centerline.",
+    "fullSourceMaskSkeleton": {
+      "90": {
+        "endpointCount": 2,
+        "orderedPathPixels": 140,
+        "branchPixelCount": 68,
+        "widthProfile": {
+          "sampleCount": 161,
+          "mean": 6.596,
+          "p10": 2.0,
+          "median": 6.394,
+          "p90": 10.788
+        },
+        "rootProposalDistance": 10.0,
+        "tipProposalDistance": 4.472
+      },
+      "112.5": {
+        "endpointCount": 2,
+        "orderedPathPixels": 137,
+        "branchPixelCount": 46,
+        "widthProfile": {
+          "sampleCount": 154,
+          "mean": 8.704,
+          "p10": 4.394,
+          "median": 8.0,
+          "p90": 14.0
+        },
+        "rootProposalDistance": 6.0,
+        "tipProposalDistance": 9.849
+      },
+      "135": {
+        "endpointCount": 2,
+        "orderedPathPixels": 121,
+        "branchPixelCount": 62,
+        "widthProfile": {
+          "sampleCount": 143,
+          "mean": 7.057,
+          "p10": 2.0,
+          "median": 7.194,
+          "p90": 11.51
+        },
+        "rootProposalDistance": 6.0,
+        "tipProposalDistance": 10.63
+      }
+    },
+    "pairwiseEndpointAlignedCorrespondence": {
+      "90-112.5": {
+        "endpointAlignedLandmarkRMS": 26.9401,
+        "endpointAlignedLandmarkErrors": [
+          0.0,
+          11.244999885559082,
+          22.624000549316406,
+          32.619998931884766,
+          41.09600067138672,
+          43.0880012512207,
+          38.15599822998047,
+          28.645000457763672,
+          18.76099967956543,
+          10.361000061035156,
+          0.0
+        ],
+        "widthProfileRMS": 2.8343,
+        "sourceMaskAreaRatio": 0.7881
+      },
+      "112.5-135": {
+        "endpointAlignedLandmarkRMS": 10.2639,
+        "endpointAlignedLandmarkErrors": [
+          0.0,
+          4.193999767303467,
+          8.77299976348877,
+          13.326000213623047,
+          16.07900047302246,
+          16.78499984741211,
+          13.973999977111816,
+          9.96500015258789,
+          6.165999889373779,
+          3.7139999866485596,
+          0.0
+        ],
+        "widthProfileRMS": 2.3609,
+        "sourceMaskAreaRatio": 1.3069
+      },
+      "90-135": {
+        "endpointAlignedLandmarkRMS": 10.6127,
+        "endpointAlignedLandmarkErrors": [
+          0.0,
+          4.885000228881836,
+          8.505000114440918,
+          11.385000228881836,
+          15.345000267028809,
+          16.218000411987305,
+          15.75,
+          12.71399974822998,
+          9.256999969482422,
+          4.386000156402588,
+          0.0
+        ],
+        "widthProfileRMS": 0.7641,
+        "sourceMaskAreaRatio": 1.03
+      }
+    },
+    "nativeKeyframesRecompositionExact": true,
+    "semanticCrossViewCorrespondenceEstablished": false,
+    "productionGeometryApproved": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allSourceKeyviewsPixelHashRecorded": true,
+      "legacyCurveUsesFullSilhouette": false,
+      "fullSilhouetteSkeletonHasTwoEndpoints": true,
+      "sourceDerivedVariableWidthProfilesAvailable": true,
+      "semanticCrossViewCorrespondenceEstablished": false,
+      "productionGeometryApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-186-source-landmark-audit-qa.json"
+    ],
+    "review": "private-assets/exports/p15-186-source-landmark-audit/index.html",
+    "assets": "private-assets/exports/p15-186-source-landmark-audit/",
+    "next": "Replace the cropped-boundary proxy with the full source-owned strand silhouette skeleton as the geometric centerline candidate. Validate endpoint identity, ordered path, per-point width profile and source pixel reconstruction; only then test endpoint-aligned centerline interpolation on 13 yaw samples. Do not reuse the P15-181 160-point contour as centerline."
   }
 }
