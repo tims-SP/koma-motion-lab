@@ -9870,5 +9870,97 @@
     ],
     "review": "private-assets/exports/p15-170-semantic-ink/index.html",
     "next": "Produce a painter-confirmed rootless crown and root-connected strand for each original view, using the validated pixel-ownership mask and source contact point. Verify local composite with zero ghost ink at 101.25/123.75 before any renderer adoption."
+  },
+  "p15_171PairedCrownLayerInterpolation": {
+    "status": "PAIRED_CROWN_AND_SOURCE_LOOP_INTERPOLATION_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "pairedSourceChecks": {
+      "90": {
+        "rootPixels": 45,
+        "underpaintPixels": 45,
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "pairedReassemblyExact": true
+      },
+      "112.5": {
+        "rootPixels": 155,
+        "underpaintPixels": 155,
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "pairedReassemblyExact": true
+      },
+      "135": {
+        "rootPixels": 70,
+        "underpaintPixels": 70,
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "pairedReassemblyExact": true
+      }
+    },
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "paired_crown": 12.2591,
+      "paired_root": 12.242,
+      "paired_root_soft": 12.2321
+    },
+    "topConnectedComponents": {
+      "reference": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "paired_crown": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "paired_root": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "paired_root_soft": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "originalKeyframesPixelExact": true,
+    "bodyBelowY125PixelExact": true,
+    "experimentalSourceLayerMode": "independent DIS crown-background interpolation with source-owned ahoge root and free-tip transform",
+    "visualFindings": "Independent optical flow on source-owned crown underpainting and loop/attachment motion preserves exact canonical views, body pixels, and one top connected component at both intermediate angles. The synthetic crown source still contains unregistered root pigment and view-dependent texture drift; 101.25 degree strand retains ink residue and 123.75 crown texture ghosts. None of the candidate continuity metrics beats the reference.",
+    "acceptedForProduction": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "sourcePairsExact": true,
+      "nativeKeysExact": true,
+      "deepBodyExact": true,
+      "midviewConnected": true,
+      "beatsReference": false,
+      "artistApproval": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-171-paired-layer-flow-qa.json"
+    ],
+    "review": "private-assets/exports/p15-171-paired-layer-flow/index.html",
+    "next": "Paint source-registered crown underlayers that contain no inherited root ink at 90/112.5/135, confirm separate hair identity and exact keyview compositing, then re-evaluate intermediate view appearance and motion."
   }
 }
