@@ -1,0 +1,137 @@
+{
+  "schema": "KOMA_P15_165_ROOT_INK_OWNERSHIP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "maskStudy": {
+    "root_ink_8": {
+      "101.25": {
+        "freeLoopPixels": 1761,
+        "rootInkPixels": 51,
+        "sourceBelowY96Exact": true,
+        "alphaCrownPreserved": true
+      },
+      "123.75": {
+        "freeLoopPixels": 1881,
+        "rootInkPixels": 9,
+        "sourceBelowY96Exact": true,
+        "alphaCrownPreserved": true
+      }
+    },
+    "root_ink_12": {
+      "101.25": {
+        "freeLoopPixels": 1761,
+        "rootInkPixels": 97,
+        "sourceBelowY96Exact": true,
+        "alphaCrownPreserved": true
+      },
+      "123.75": {
+        "freeLoopPixels": 1881,
+        "rootInkPixels": 21,
+        "sourceBelowY96Exact": true,
+        "alphaCrownPreserved": true
+      }
+    },
+    "root_ink_16": {
+      "101.25": {
+        "freeLoopPixels": 1761,
+        "rootInkPixels": 137,
+        "sourceBelowY96Exact": true,
+        "alphaCrownPreserved": true
+      },
+      "123.75": {
+        "freeLoopPixels": 1881,
+        "rootInkPixels": 63,
+        "sourceBelowY96Exact": true,
+        "alphaCrownPreserved": true
+      }
+    }
+  },
+  "renderers": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "crownAlphaChangedPixels": {
+        "101.25": 0,
+        "123.75": 0
+      }
+    },
+    "root_ink_8": {
+      "maxAdjacentRGBMAE": 12.3873,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "crownAlphaChangedPixels": {
+        "101.25": 184,
+        "123.75": 564
+      }
+    },
+    "root_ink_12": {
+      "maxAdjacentRGBMAE": 12.3849,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "crownAlphaChangedPixels": {
+        "101.25": 184,
+        "123.75": 564
+      }
+    },
+    "root_ink_16": {
+      "maxAdjacentRGBMAE": 12.3836,
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "crownAlphaChangedPixels": {
+        "101.25": 184,
+        "123.75": 564
+      }
+    }
+  },
+  "nativeArtPreserved": true,
+  "independentRootArtworkArtistApproved": false,
+  "sourceMatchedScalpArtworkApproved": false,
+  "continuousVisualAccepted": false,
+  "productionSelected": false,
+  "review": "private-assets/exports/p15-165-root-ink-ownership/index.html",
+  "next": "Paint rootless crown at 90,112.5,135 degrees and fully attached source-matched loop root; verify crown pixels and single connected loop at both intermediate angles.",
+  "gate": {
+    "nativeKeyframesExact": true,
+    "midframesOneTopComponent": false,
+    "crownAlphaUnchanged": false,
+    "beatsReference": false,
+    "artistSourceApproved": false,
+    "passes": false
+  }
+}

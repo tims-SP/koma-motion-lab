@@ -1,0 +1,84 @@
+{
+  "schema": "KOMA-P15-36-KEYPART-INTERACTIVE-REVIEW-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    57.5,
+    60
+  ],
+  "roleCount": 13,
+  "frames": [
+    {
+      "yaw": 57.5,
+      "dir": "yaw57p5",
+      "outputSHA256": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+      "sourceSHA256": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+      "donorSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+      "donorRegistrationOffset": [
+        19.053,
+        -18.76
+      ],
+      "modelPaintedRoleCount": 3,
+      "semanticRoles": 13,
+      "newPixelsChanged": 24801,
+      "independentHiddenUnderpaintApproved": false,
+      "artisticApproval": false,
+      "sha256": {
+        "original-p15-35.png": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+        "new-original-keyparts.png": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+        "full-qwen-paint-source.png": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+        "cel-stroke-comparison.png": "63f8833a9c93e10a30ef140d0e439e94cdc64e45a52400de2cbdfd3f774469e5",
+        "eye-far-rgba.png": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+        "face-skin-rgba.png": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+        "hair-fringe-rgba.png": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+        "gold-cross-rgba.png": "5858a0448e51c70a7812911ffeacd85aa1fcd6e080a3e8e24a081db95724e58c",
+        "eye-far-local-paint.png": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+        "face-local-paint.png": "cf0a2141a707b0880864ba18c36dc337bb04ff4195a5b64afdd7f4dd985f1149",
+        "fringe-local-paint.png": "75eeabc10fff6ee0ed7e95608759d5fde963a7d32643ef2cbd12d4bf7d9fd325",
+        "eye-far-original.png": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+        "eye-far-hidden.png": "d043cea4afc1378295724caef8269f94d1171c260f6ffa8244c3d2bc8a5fac3d",
+        "difference-x4.png": "c26d424bb27356bb6938f217e90434de6134bd04cde77b38ee61d1a498b70fbf"
+      }
+    },
+    {
+      "yaw": 60.0,
+      "dir": "yaw60",
+      "outputSHA256": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+      "sourceSHA256": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+      "donorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "donorRegistrationOffset": [
+        5.86,
+        -9.36
+      ],
+      "modelPaintedRoleCount": 3,
+      "semanticRoles": 13,
+      "newPixelsChanged": 26211,
+      "independentHiddenUnderpaintApproved": false,
+      "artisticApproval": false,
+      "sha256": {
+        "original-p15-35.png": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+        "new-original-keyparts.png": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+        "full-qwen-paint-source.png": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+        "cel-stroke-comparison.png": "69289a40a0525a2aaff09653246916f58c595eb260d7e6770bb4b6c57d4ae914",
+        "eye-far-rgba.png": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+        "face-skin-rgba.png": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+        "hair-fringe-rgba.png": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+        "gold-cross-rgba.png": "39e72f7f7bd405b39451f8c685a1530230ddfea94b5cb412044886936bbcc972",
+        "eye-far-local-paint.png": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+        "face-local-paint.png": "667d15bcb79fbec5cbd62928e845a8c43cf420c95d44f521b15b4acbfed46abe",
+        "fringe-local-paint.png": "dedbd10294310dfcebdf0ffc8b988d80c4d9074750409e5b9295f48871984b80",
+        "eye-far-original.png": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+        "eye-far-hidden.png": "05f7fb83713dd44faa7e2c94b353b4d6bc2c308ec77e643778545bec54b69c01",
+        "difference-x4.png": "039c350a719a5e0c582dfbb76d2b453553ddf85db4ec38ec6526f12c0b1b5fd1"
+      }
+    }
+  ],
+  "modeCount": 3,
+  "modes": [
+    "compare",
+    "parts",
+    "hidden"
+  ],
+  "artisticApproval": false,
+  "underpaintFromExistingSource": true,
+  "newModelPaintedSemanticRolesPerAngle": 3
+}

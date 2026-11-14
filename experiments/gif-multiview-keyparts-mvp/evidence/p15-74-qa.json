@@ -1,0 +1,55 @@
+{
+  "schema": "KOMA-P15-74-ZERO_POSE_ALPHA_DEDUP_V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "baseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+  "eyeSourceSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "hairSourceSHA256": "2ad8ea97da2070d711e014f435255b6d751eba9b0fcd98611b3e262c4146f533",
+  "clipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+  "repairedHairSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+  "duplicateSemiTransparentPixelsRemoved": 95,
+  "cleanedRegionBBox": [
+    750,
+    270,
+    785,
+    400
+  ],
+  "beforeZeroPoseDiffBBox": [
+    759,
+    288,
+    776,
+    373
+  ],
+  "afterZeroPoseDiffBBox": null,
+  "actualAnimationZeroPoseSourceExact": true,
+  "frameHashes": [
+    {
+      "dx": 0,
+      "sha256": "22ae4a488901a29f2051025a4a432df1a50247bdc21ba4d8b4c70712cc273e99",
+      "eyeMatteSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625"
+    },
+    {
+      "dx": 9,
+      "sha256": "5a1031c4eae8f02d45a1d154f9da28f732edc59b5c49513dd37a55fb58b154f1",
+      "eyeMatteSHA256": "3025918160a308e6cb19e184b00cde40109cf2e9ea7877193a5c3f6e41d3c6b1"
+    },
+    {
+      "dx": 18,
+      "sha256": "43c5b14f775b91dfc725ab504f314d7ff0dd37bd6c7b5e91a46924226b9b9c79",
+      "eyeMatteSHA256": "5be67650aacaba89089cfd995918d9675678f2bb7542cbec4618c1b525b922be"
+    }
+  ],
+  "motionEyeAlphaMethod": "P15-65 original at 0px, linearly blended toward 1px morphological matte erosion at 18px",
+  "motionHoleCounts": {
+    "0": 0,
+    "9": 0,
+    "18": 0
+  },
+  "eyeVisualAssessment": "At 18px the mild eye-alpha shrink reduces fringe around lower lid/outer lash compared to unshrunk sprite; enlarged images still show a dashed eyebrow/forehead remnant and reddish seam at left eye corner. Not anime-quality approved.",
+  "hairVisualAssessment": "Only 95 semi-transparent pixels on far-right outer silhouette are deduplicated. Main SAM front-hair hair strands remain unchanged. No new art or source-semantic fix is claimed.",
+  "sourceIdentityPreserved": true,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "ZERO_POSE_PIXEL_GATE_PASS_DYNAMIC_EYELASH_HAIR_EDGE_VISUAL_FAIL",
+  "next": "P15-75 repaint eyebrow/lash-underbang edge from genuine source layers or accurate guided semantic editing; only admit to VDD after dynamic detail is clean"
+}

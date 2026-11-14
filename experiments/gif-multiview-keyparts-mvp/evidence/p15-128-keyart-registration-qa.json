@@ -1,0 +1,44 @@
+{
+  "schema": "KOMA_P15_128_NATIVE_KEYART_ALIGNMENT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90,
+    135
+  ],
+  "targetYaw": 112.5,
+  "nativeCandidateSHA256": "12ae03af7aa9b756a3d04eb96173ed3a294c96c73b38c77226c090ec0e5e358d",
+  "method": "bounded scale/translation registration to signed-distance interpolated silhouette; keyframe-preserving bidirectional DIS review",
+  "candidateScale": 0.97,
+  "candidateShiftXY": [
+    12,
+    12
+  ],
+  "targetDefinition": "0.5 weighted source silhouette signed distance",
+  "maskIoUBefore": 0.75555,
+  "maskIoUAfter": 0.83077,
+  "faceSkinPixelsBefore": 3114,
+  "faceSkinPixelsAfter": 2945,
+  "adjacentCompositeRGBMAEBefore": [
+    14.2285,
+    13.2046,
+    13.1288,
+    13.9569
+  ],
+  "adjacentCompositeRGBMAEAfter": [
+    12.0984,
+    11.067,
+    10.4616,
+    11.6306
+  ],
+  "maxAdjacentCompositeRGBMAEBefore": 14.2285,
+  "maxAdjacentCompositeRGBMAEAfter": 12.0984,
+  "sourceKeyframesPixelExact": true,
+  "nativeImageUnmodified": true,
+  "semanticAnchorVerified": false,
+  "hairStrokeCorrespondenceVerified": false,
+  "physicalYawVerified": false,
+  "hiddenSurfaceVerified": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-128-keyart-registration/index.html",
+  "next": "Use verified native art to solve individual line identity, eyes and garment visibility, with painted hidden surface; approve only after actual frame continuity improves."
+}

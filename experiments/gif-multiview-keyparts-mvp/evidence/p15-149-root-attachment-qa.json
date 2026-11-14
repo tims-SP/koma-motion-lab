@@ -1,0 +1,123 @@
+{
+  "schema": "KOMA_P15_149_CROWN_ATTACHMENT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "nativeIndependentPartSHA256": "71ef0fcf1dc66ddf1c890f429dfb385d58daf6070068281335ed6bbe90bd9b6c",
+  "sourcePreserved": true,
+  "registeredTransform": {
+    "scale": 0.9,
+    "shiftXY": [
+      24,
+      -14
+    ]
+  },
+  "methods": {
+    "canonical": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "native90And135Exact": true,
+      "rootCoverageAlphaHoles": 0
+    },
+    "p15_148_loop_replacement": {
+      "maxAdjacentRGBMAE": 12.1844,
+      "adjacentRGBMAE": [
+        12.1844,
+        11.1375,
+        10.6476,
+        11.591
+      ],
+      "native90And135Exact": true,
+      "rootCoverageAlphaHoles": 6
+    },
+    "crown_fade_65": {
+      "maxAdjacentRGBMAE": 12.1655,
+      "adjacentRGBMAE": [
+        12.1655,
+        11.132,
+        10.6491,
+        11.645
+      ],
+      "native90And135Exact": true,
+      "rootCoverageAlphaHoles": 6
+    },
+    "crown_fade_78": {
+      "maxAdjacentRGBMAE": 12.1633,
+      "adjacentRGBMAE": [
+        12.1633,
+        11.2118,
+        10.6471,
+        11.6048
+      ],
+      "native90And135Exact": true,
+      "rootCoverageAlphaHoles": 6
+    },
+    "crown_fade_90": {
+      "maxAdjacentRGBMAE": 12.1879,
+      "adjacentRGBMAE": [
+        12.1879,
+        11.1922,
+        10.7375,
+        11.6166
+      ],
+      "native90And135Exact": true,
+      "rootCoverageAlphaHoles": 6
+    }
+  },
+  "candidateDetails": {
+    "crown_fade_65": {
+      "fadeY": [
+        46,
+        65
+      ],
+      "sourceFreeLoopErasedPixels": 956,
+      "newPartNonzeroPixels": 1343,
+      "rootRGBMAE": 3.4287,
+      "sourcePixelsBelowFadeExact": true,
+      "sourceRGBAUnmodified": true
+    },
+    "crown_fade_78": {
+      "fadeY": [
+        49,
+        78
+      ],
+      "sourceFreeLoopErasedPixels": 956,
+      "newPartNonzeroPixels": 1591,
+      "rootRGBMAE": 4.8017,
+      "sourcePixelsBelowFadeExact": true,
+      "sourceRGBAUnmodified": true
+    },
+    "crown_fade_90": {
+      "fadeY": [
+        52,
+        90
+      ],
+      "sourceFreeLoopErasedPixels": 956,
+      "newPartNonzeroPixels": 1791,
+      "rootRGBMAE": 6.0014,
+      "sourcePixelsBelowFadeExact": true,
+      "sourceRGBAUnmodified": true
+    }
+  },
+  "materialOwnership": "Native source crown under y>=fade end; fitted loop contributes only to upper crown fade",
+  "rootAnatomyArtistApproved": false,
+  "fullLoopHiddenPaintVerified": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-149-root-attachment/index.html",
+  "next": "Register complete source-painted loop roots and crown underpaint across 90/112.5/135. Confirm physical continuity in both roots before ArtMesh yaw use."
+}

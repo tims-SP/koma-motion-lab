@@ -1,0 +1,34 @@
+{
+  "schema": "KOMA-P15-71-FRONT_HAIR_SOURCE_GATE_V1",
+  "characterId": "p0_character_001",
+  "baselineCommit": "b69f9d250e888fd5e072d9fba6aa779b85ee9e9e",
+  "currentSourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "colorLayerSHA256": "d2ccd0886f0436a85a28a751d295572635a1d882609ac22dc84de33ec6bd349b",
+  "p15_70CompositeSHA256": "d30122434e5f11492bb24e7c62f5e7eb7476833efbba2fb578b18b0c0de969f3",
+  "legacyIndependentHairSHA256": {
+    "yaw045": "44b442963a080299d03241fc725f51bda9a6fd11559a3aba5b30665845782bd7",
+    "yaw090": "59a765ee05d3219f6cc1d59cc101dde27696ffcd84a1eda56c1aa6c9a13ecf2f",
+    "prior41": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6"
+  },
+  "legacySourcesAreSameP156Source": false,
+  "sam2InputSHA256": "602dc4ca6e4c1e4678a3dad16d321a77d826d24acebc36f1c7988956a3e8ff09",
+  "sam2EndpointStatus": {
+    "on_image_select": "FAILED",
+    "segment_everything": "FAILED"
+  },
+  "sam2SegmentEverythingError": "RuntimeError(\"{'msg': 'process_completed', 'event_id': '1e8ecda4006c4127ac03d80f8a06c15f', 'output': {'error': 'You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens', 'duration': 10, 'visible': True, 'title': 'ZeroGPU quota exceeded'}, 'success': False, 'title': 'ZeroGPU quota exceeded'}\")",
+  "sam2VisibleCutoutProduced": false,
+  "sameViewCleanFrontHairAvailable": false,
+  "fullFrontHairSegmentationApproved": false,
+  "fullHairHiddenUnderpaintAvailable": false,
+  "movementOffsetsAvailable": [
+    0,
+    9,
+    18
+  ],
+  "visualAssessment": "The existing full hair is a visible chroma matte containing a horizontal grey-purple forehead line and incomplete true eye-overlap strands. Older independent frontal/profile PSD layers are different camera views or source composites and fail exact P15-56 provenance. SAM2 prompt attempted; click returned generic backend failure and segment-everything returned ZeroGPU quota exhausted.",
+  "visualGate": "FAIL_NO_SAME_VIEW_SEMANTIC_HAIR_SOURCE_SAM2_COMPUTE_BLOCKED",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "next": "Acquire or render a true clean same-view hair alpha through an available semantic segmentation service or independent same-pose layered drawing; do not optimize color thresholds further."
+}

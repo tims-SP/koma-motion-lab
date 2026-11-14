@@ -1,0 +1,99 @@
+{
+  "schema": "KOMA-P15-12-GEOMETRY-CONDITIONED-CANDIDATE-QA-V1",
+  "characterId": "p0_character_001",
+  "guideSourceQA": "evidence/p15-12-camera-proxy-qa.json",
+  "model": "Qwen-Image-Edit-2511",
+  "inputImageOrder": "P15 geometry guide then P0 identity",
+  "generated": [
+    {
+      "angle": 57.5,
+      "sourcePath": "p15-12-camera-proxy/generated/yaw57p5-identity-guided.png",
+      "sourceSHA256": "3247fe9717dc5e180308ca6db4864d97b24f092222745bfef79c63c4873e973c",
+      "sourceGitBlob": "6955bc66250d430469d598c6c3958a11709b5e4d",
+      "seed": 575126,
+      "adapter": "Anime-V2",
+      "firstConditioningImage": "p15-12-camera-proxy/conditioning/yaw57p5-pose.jpg",
+      "firstConditioningSHA256": "a3714bb48ee6ded62db9d4dd180bd027be3a9fb44c197f1bfa51d8ef3b0b4e5c",
+      "secondIdentitySource": "p2-views/whole/yaw045.png",
+      "secondIdentitySHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "silhouetteIoUWithPoseGuide": 0.8955,
+      "silhouetteIoUWithOriginal45": 0.4353,
+      "hairclipConnectedComponent": {
+        "present": true,
+        "pixels": 1846,
+        "center": [
+          754.0,
+          322.62
+        ]
+      },
+      "expectedEyeNoseGapPixelsFromProxy": 18.967,
+      "expectedNearEye": [
+        581.874,
+        463.052
+      ],
+      "expectedFarEye": [
+        716.453,
+        469.04
+      ],
+      "requiredQualitativeCheck": [
+        "far eye width and occlusion",
+        "nose and jaw direction",
+        "head silhouette",
+        "clip handedness",
+        "uniform pose",
+        "expression consistency"
+      ],
+      "visualReview": "POSE_AND_EXPRESSION_REWORK",
+      "acceptedAsIndependentKeyframe": false
+    },
+    {
+      "angle": 60.0,
+      "sourcePath": "p15-12-camera-proxy/generated/yaw60-identity-guided.png",
+      "sourceSHA256": "c562335b6d1e1e250c3b28f9cb87614389d343447449d24605a581979ccaac36",
+      "sourceGitBlob": "eab482565db6ee750322f1220b7c6645fd3d2e91",
+      "seed": 600126,
+      "adapter": "Anime-V2",
+      "firstConditioningImage": "p15-12-camera-proxy/conditioning/yaw60-pose.jpg",
+      "firstConditioningSHA256": "c97419e5b719dfc728a54a333d08c40141e122ac845af0764dae4a12998b8f0b",
+      "secondIdentitySource": "p2-views/whole/yaw045.png",
+      "secondIdentitySHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "silhouetteIoUWithPoseGuide": 0.80923,
+      "silhouetteIoUWithOriginal45": 0.44193,
+      "hairclipConnectedComponent": {
+        "present": true,
+        "pixels": 1446,
+        "center": [
+          758.91,
+          323.51
+        ]
+      },
+      "expectedEyeNoseGapPixelsFromProxy": 16.807,
+      "expectedNearEye": [
+        589.499,
+        462.24
+      ],
+      "expectedFarEye": [
+        720.76,
+        469.04
+      ],
+      "requiredQualitativeCheck": [
+        "far eye width and occlusion",
+        "nose and jaw direction",
+        "head silhouette",
+        "clip handedness",
+        "uniform pose",
+        "expression consistency"
+      ],
+      "visualReview": "POSE_AND_EXPRESSION_REWORK",
+      "acceptedAsIndependentKeyframe": false
+    }
+  ],
+  "generatedCount": 2,
+  "contactPath": "p15-12-camera-proxy/p15-12-angle-guides-contact.jpg",
+  "contactSHA256": "21a1b12f27b5d9456a601afef5c7fe185a52d3218721196b65c39c42e7c3c484",
+  "independentlyPaintedKeyframesAdmitted": 0,
+  "paintedSemanticLayersAdmitted": 0,
+  "sourceGeometryRole": "pose guide, not independent painting",
+  "formalArtGate": "GEOMETRY_GUIDES_VALID_ARTWORK_POSE_REVIEW",
+  "sourceHeroSHA256Verified": false
+}

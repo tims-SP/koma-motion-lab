@@ -1,0 +1,147 @@
+{
+  "schema": "KOMA-P0-P15-06-GENERATED-KEYVIEWS-ARTMESH-ENGINEERING-V1",
+  "characterId": "p0_character_001",
+  "originalKeyviewSHA256Verified": [
+    0,
+    45,
+    90
+  ],
+  "generatedIndependentCandidateViews": [
+    {
+      "angle": 65.0,
+      "sourceView": 45,
+      "sourceViewSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "seed": 65022,
+      "originalPainting": {
+        "path": "p15-independent-candidates/yaw065-qwen2511-v2.png",
+        "sha256": "1121c12f2e5452f657c6bb1ecd6193ca256e5bfeaf8b6cacd1a8698944de1842"
+      },
+      "transparentPainting": {
+        "path": "p15-independent-candidates/yaw065-source-rgba.png",
+        "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506"
+      },
+      "semanticLayerCount": 13,
+      "visibleRoleCount": 10,
+      "singleAhogePixelCount": 10999,
+      "nearEarPixelCount": 1204,
+      "renderRecomposition": {
+        "maxAlphaDifference": 0,
+        "maxRGBDifferenceOnSource": 0
+      },
+      "sourceQA_SHA256": "3d89700741265a810a8a192198163501601b03c63e11667f2b24552c741d6dd1",
+      "formalIngestionSHA256": "f59ea953b3cbab90a36aca6d1266eb0d1b223ae44bf711afe011f0738ab3be7f",
+      "sourceVisualContact": {
+        "path": "p15-independent-candidates/yaw065-artmesh/yaw065-source-artmesh-contact.jpg",
+        "sha256": "19a933eba6b63453aee3fdc1e0bcd9cc30e262fa8751ff7c44de8064d107d30c"
+      },
+      "semanticBoundaryStatus": "PENDING_VISUAL_PART_OWNERSHIP_REVIEW"
+    },
+    {
+      "angle": 77.5,
+      "sourceView": 90,
+      "sourceViewSHA256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "model": "Qwen-Image-Edit-2511",
+      "adapter": "Multiple-Angles",
+      "seed": 77522,
+      "originalPainting": {
+        "path": "p15-independent-candidates/yaw077p5-qwen2511-v2.png",
+        "sha256": "f24a6b7eaf7f802cd5867f37ee113d1bf325b3cd1321b89fe8a4b57b5e506fbe"
+      },
+      "transparentPainting": {
+        "path": "p15-independent-candidates/yaw077p5-source-rgba.png",
+        "sha256": "1d7a757e557507b5fbd6f4e5881df3e0fae58e0155786de85bddea564515b1c9"
+      },
+      "semanticLayerCount": 13,
+      "visibleRoleCount": 10,
+      "singleAhogePixelCount": 9021,
+      "nearEarPixelCount": 97,
+      "renderRecomposition": {
+        "maxAlphaDifference": 0,
+        "maxRGBDifferenceOnSource": 0
+      },
+      "sourceQA_SHA256": "ad69b8c9127f66610c89312bbc3cf3a53b0d543c35498f69ac9d7adec4a260b5",
+      "formalIngestionSHA256": "1bcbc6e3b943b2f69dbadcb19231192083ba55bef61c4a7c6d4c2564c500e409",
+      "sourceVisualContact": {
+        "path": "p15-independent-candidates/yaw077p5-artmesh/yaw077p5-source-artmesh-contact.jpg",
+        "sha256": "3cadaf81a6f6f386dfaa75f7c50964cd3ce90bccdf7bb8ce29580c3f2d2005d9"
+      },
+      "semanticBoundaryStatus": "PENDING_VISUAL_PART_OWNERSHIP_REVIEW"
+    }
+  ],
+  "candidateViewCount": 2,
+  "registeredSemanticRGBA": 26,
+  "sourceExactRecompositions": 2,
+  "sourceRGBAResolution": [
+    1024,
+    1024
+  ],
+  "seeThroughBackHairAndSkin": {
+    "sourceSpace": "afredzhou/see-through-demo",
+    "sourceResolution": [
+      768,
+      768
+    ],
+    "targetAngle": 77.5,
+    "PSD_SHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+    "hiddenInpaintedPixels": 81594,
+    "hiddenSourceRoles": [
+      {
+        "role": "hair.back",
+        "seeThroughLayer": "back hair",
+        "inpaintedHiddenPixels": 42751,
+        "originalVisiblePixels": 38143,
+        "futureOpaqueOcclusionPixels": 254258,
+        "sourcePSDLayerSHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+        "maskPolicy": "ONLY_INPAINT_WHERE_FULLY_OCCLUDED_BY_LATER_ARTMESH"
+      },
+      {
+        "role": "face.skin",
+        "seeThroughLayer": "face",
+        "inpaintedHiddenPixels": 33249,
+        "originalVisiblePixels": 31928,
+        "futureOpaqueOcclusionPixels": 224777,
+        "sourcePSDLayerSHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+        "maskPolicy": "ONLY_INPAINT_WHERE_FULLY_OCCLUDED_BY_LATER_ARTMESH"
+      },
+      {
+        "role": "hair.side",
+        "seeThroughLayer": "back hair",
+        "inpaintedHiddenPixels": 5594,
+        "originalVisiblePixels": 81123,
+        "futureOpaqueOcclusionPixels": 147777,
+        "sourcePSDLayerSHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+        "maskPolicy": "ONLY_INPAINT_WHERE_FULLY_OCCLUDED_BY_LATER_ARTMESH"
+      },
+      {
+        "role": "eye.near",
+        "seeThroughLayer": "eyewhite",
+        "inpaintedHiddenPixels": 0,
+        "originalVisiblePixels": 11625,
+        "futureOpaqueOcclusionPixels": 136662,
+        "sourcePSDLayerSHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+        "maskPolicy": "ONLY_INPAINT_WHERE_FULLY_OCCLUDED_BY_LATER_ARTMESH"
+      }
+    ],
+    "resultRGBAExactRecomposition": {
+      "maxAlphaDifference": 0,
+      "maxRGBDifferenceOnSource": 0
+    },
+    "sourceQA_SHA256": "3f3c01af832b98b6959c3cd4fedbc11adade120844b2eb9b3affca979e8701e2"
+  },
+  "browserReview": {
+    "source": "Chromium Playwright",
+    "reviewScreenshots": 8,
+    "sourceImagesHashVerified": 32,
+    "sourceQA_SHA256": "67b233601b2fa0d6f1dd211ad19cc0a7749632fe8b3f848e5cf3c37870aad52d",
+    "javascriptErrors": 0,
+    "failedRequests": 0,
+    "status": "PASS_SOURCE_HASHED_GENERATED_KEYVIEW_BROWSER_REVIEW"
+  },
+  "referenceHeroSHA256Verified": false,
+  "candidateStatus": "P15_06_INDEPENDENT_ART_AND_SEMANTIC_ENGINEERING_VERIFIED",
+  "artisticQualityStatus": "PENDING_FIVE_SENSE_AND_STRAND_VISUAL_ACCEPTANCE",
+  "formalArtAcceptance": 0,
+  "renderBaseline": "P8_SEMANTIC_OCCLUSION_ARTMESH"
+}

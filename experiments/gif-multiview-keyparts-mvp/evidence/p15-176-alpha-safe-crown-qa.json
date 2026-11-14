@@ -1,0 +1,89 @@
+{
+  "schema": "KOMA_P15_176_ALPHA_SAFE_CROWN_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "layerContracts": {
+    "ahoge": "source-owned RGBA strand including its root attachment",
+    "crownMotionUnderpaint": "full reconstructed head texture/alpha for deformation and exposure",
+    "crownStaticKeyframe": "same underpaint RGB but alpha zero under the source-owned ahoge matte"
+  },
+  "perView": {
+    "90": {
+      "rootBandVisibleDiffPixels": 147,
+      "visibleDiffOutsideRootBand": 0,
+      "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+      "strandSHA256": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+      "motionCrownSHA256": "2a4a39417583458002584b22174c70bd8bc91643f5482838591fe1165d441c12",
+      "staticCrownSHA256": "3c6744e1f1b37275a9cd35a768058910ce53cc75af492153ffea8c541d764f2d",
+      "compositeSHA256": "cc2774437d97ab12bfa67f9c8ca6a3cf52d9b1cda9162b38281695bd07120f15",
+      "ownerPixels": 1064,
+      "visibleCompositeDiffPixels": 147,
+      "doubleAlphaPixels": 0,
+      "motionUnderpaintRetainsAlpha": true,
+      "staticCrownTransparentUnderStrand": true,
+      "deepMotionUnderpaintExact": true,
+      "sourceRoot": [
+        184,
+        53
+      ]
+    },
+    "112.5": {
+      "rootBandVisibleDiffPixels": 84,
+      "visibleDiffOutsideRootBand": 0,
+      "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+      "strandSHA256": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+      "motionCrownSHA256": "888c3a2b4bb8f2b5cd69e4eb6048d750c9963dc6910bc4db6a6f927e8cea8fe0",
+      "staticCrownSHA256": "4d57396f064c9c58b0ea3e3fe18a2033cc45ee3b42e20b0c6cc76b9b1f6c578a",
+      "compositeSHA256": "7d864be97314d17ec15440d2b22877f4267edca9094bd842102d1aa1bcab73e7",
+      "ownerPixels": 1350,
+      "visibleCompositeDiffPixels": 84,
+      "doubleAlphaPixels": 0,
+      "motionUnderpaintRetainsAlpha": true,
+      "staticCrownTransparentUnderStrand": true,
+      "deepMotionUnderpaintExact": true,
+      "sourceRoot": [
+        258,
+        77
+      ]
+    },
+    "135": {
+      "rootBandVisibleDiffPixels": 125,
+      "visibleDiffOutsideRootBand": 0,
+      "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+      "strandSHA256": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+      "motionCrownSHA256": "0e6c118a57bad86244c8d45752bd6d936805e010db333130af7f468f2185292a",
+      "staticCrownSHA256": "034fb7b9028423e35f7ff2f4bb7adc8840ccdbe75c467c8dd41a17a003da7266",
+      "compositeSHA256": "f246a058f30b555e7842d6e653b5b757fea6e01c8c6123395606d06cbd4cd49c",
+      "ownerPixels": 1033,
+      "visibleCompositeDiffPixels": 125,
+      "doubleAlphaPixels": 0,
+      "motionUnderpaintRetainsAlpha": true,
+      "staticCrownTransparentUnderStrand": true,
+      "deepMotionUnderpaintExact": true,
+      "sourceRoot": [
+        222,
+        55
+      ]
+    }
+  },
+  "midYawRendered": false,
+  "productionRendererUpdated": false,
+  "visualApproved": false,
+  "visualFindings": "The three layer contracts are now distinct and non-overlapping in the static keyframe composite. The motion underpaint still shows small source-root remnants at 90, 112.5, and 135 degrees; the alpha-safe keyframe version has transparent holes under the ahoge that are filled by the matching strand at rest. Artist-matched crown cleanup is still required before VDD.",
+  "review": "private-assets/exports/p15-176-alpha-safe-crown/index.html",
+  "gate": {
+    "allThreePairsPresent": true,
+    "standardAlphaOverChangesOnlyRootBand": true,
+    "noDoubleAlphaOwnership": true,
+    "staticCrownTransparentUnderStrand": true,
+    "motionUnderpaintRetained": true,
+    "deepUnderpaintPreserved": true,
+    "visualRootRepairApproved": false,
+    "rootlessCrownVisualAccepted": false,
+    "passes": false
+  }
+}

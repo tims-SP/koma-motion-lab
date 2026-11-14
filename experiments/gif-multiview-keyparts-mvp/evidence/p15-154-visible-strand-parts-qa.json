@@ -1,0 +1,60 @@
+{
+  "schema": "KOMA_P15_154_VISIBLE_SOURCE_STRAND_PARTS_V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 90.0,
+  "sourcePixelOwnership": {
+    "sourceExact": true,
+    "loopPixels": 1217,
+    "finePixels": 55,
+    "exclusive": true,
+    "fineBBox": [
+      184,
+      27,
+      190,
+      54
+    ],
+    "loopBBox": [
+      188,
+      5,
+      278,
+      54
+    ],
+    "ownershipMethod": "manually bounded split at left visible line; root attachment still source-owned below y55"
+  },
+  "motionStress": {
+    "0": {
+      "sourceExact": true,
+      "newAlphaHoles": 0,
+      "rootROIAlphaHoles": 0,
+      "rootROIRGBMAE": 0.0
+    },
+    "2": {
+      "sourceExact": false,
+      "newAlphaHoles": 50,
+      "rootROIAlphaHoles": 50,
+      "rootROIRGBMAE": 1.2442
+    },
+    "4": {
+      "sourceExact": false,
+      "newAlphaHoles": 55,
+      "rootROIAlphaHoles": 55,
+      "rootROIRGBMAE": 1.3977
+    },
+    "8": {
+      "sourceExact": false,
+      "newAlphaHoles": 55,
+      "rootROIAlphaHoles": 55,
+      "rootROIRGBMAE": 1.4082
+    }
+  },
+  "sourceArtUnmodified": true,
+  "sourcePaintOnly": true,
+  "hiddenRootPaintAvailable": false,
+  "rootGeometryVerified": false,
+  "physicalStrandIdentityArtistApproved": false,
+  "independentMotionVisuallyApproved": false,
+  "crossViewCorrespondenceVerified": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-154-visible-strand-parts/index.html",
+  "next": "Paint and register two source-matched underlying root patches at the crown; then repeat independent displacement with zero junction voids before cross-view interpolation."
+}

@@ -1,0 +1,861 @@
+{
+  "schema": "KOMA_P15_186_SOURCE_LANDMARK_AUDIT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "sourceGeometry": {
+    "90": {
+      "angle": 90.0,
+      "legacyCropBoundaryY": 54,
+      "legacyCurveStart": [
+        184.0,
+        41.0
+      ],
+      "legacyCurveEnd": [
+        278.0,
+        34.0
+      ],
+      "legacyCurveLength": 129.096,
+      "legacyCurvePointsInsideFullSourceMaskRatio": 1.0,
+      "legacyCurveMeanDistanceTransformRadius": 1.0,
+      "legacyCurveMaxDistanceTransformRadius": 1.0,
+      "fullVisibleSourceMaskPixels": 1064,
+      "fullVisibleSourceMaskBBox": [
+        184,
+        8,
+        88,
+        56
+      ],
+      "fullVisibleSourceMaskSHA256": "9184fc939eb965b333d68df238442927540d5035018963006dc4e8a134d0e0cf",
+      "sourcePairRecompositionExact": true,
+      "sourceRootProposal": [
+        184,
+        53
+      ],
+      "sourceTipProposal": [
+        264,
+        46
+      ],
+      "skeleton": {
+        "skeletonPixels": 161,
+        "endpointCount": 2,
+        "branchPixelCount": 68,
+        "endpoints": [
+          [
+            262,
+            50
+          ],
+          [
+            184,
+            63
+          ]
+        ],
+        "orderedPathPixels": 140
+      },
+      "orderedRootToTipLandmarks": [
+        [
+          184.0,
+          63.0
+        ],
+        [
+          184.0,
+          48.354
+        ],
+        [
+          188.0,
+          33.709
+        ],
+        [
+          197.612,
+          21.388
+        ],
+        [
+          210.604,
+          13.396
+        ],
+        [
+          225.086,
+          9.0
+        ],
+        [
+          240.56,
+          9.0
+        ],
+        [
+          255.145,
+          13.145
+        ],
+        [
+          267.551,
+          22.551
+        ],
+        [
+          270.0,
+          37.011
+        ],
+        [
+          262.0,
+          50.0
+        ]
+      ],
+      "orderedWidthProfile": [
+        6.0,
+        6.0,
+        4.394,
+        4.0,
+        2.0,
+        2.0,
+        2.0,
+        2.8,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0,
+        2.8,
+        2.0,
+        2.0,
+        2.8,
+        2.0,
+        2.8,
+        2.0,
+        4.0,
+        2.8,
+        4.0,
+        4.0,
+        4.0,
+        4.394,
+        4.0,
+        4.394,
+        4.394,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        4.394,
+        5.6,
+        5.6,
+        5.6,
+        6.394,
+        5.6,
+        5.6,
+        6.394,
+        5.6,
+        6.394,
+        6.0,
+        7.194,
+        6.394,
+        6.394,
+        7.194,
+        6.394,
+        7.194,
+        7.194,
+        6.394,
+        7.194,
+        8.0,
+        6.0,
+        6.394,
+        7.194,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        7.194,
+        8.0,
+        8.0,
+        8.0,
+        7.194,
+        8.394,
+        7.194,
+        8.394,
+        8.0,
+        8.788,
+        8.394,
+        8.788,
+        9.994,
+        8.788,
+        9.994,
+        8.788,
+        9.994,
+        9.994,
+        10.788,
+        11.2,
+        11.588,
+        12.788,
+        11.588,
+        12.788,
+        11.588,
+        12.788,
+        12.394,
+        13.181,
+        12.788,
+        12.394,
+        12.0,
+        12.0,
+        12.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        8.0,
+        8.0,
+        8.0,
+        6.394,
+        7.194,
+        6.0,
+        6.394,
+        5.6,
+        4.394,
+        4.0,
+        2.8,
+        2.0
+      ],
+      "skeletonRadiusWidth": {
+        "sampleCount": 161,
+        "mean": 6.596,
+        "p10": 2.0,
+        "median": 6.394,
+        "p90": 10.788
+      },
+      "nearestSkeletonEndpointToRoot": [
+        184.0,
+        63.0
+      ],
+      "nearestSkeletonEndpointToTip": [
+        262.0,
+        50.0
+      ],
+      "rootProposalToSkeletonEndpointDistance": 10.0,
+      "tipProposalToSkeletonEndpointDistance": 4.472
+    },
+    "112.5": {
+      "angle": 112.5,
+      "legacyCropBoundaryY": 54,
+      "legacyCurveStart": [
+        252.0,
+        49.0
+      ],
+      "legacyCurveEnd": [
+        324.0,
+        53.0
+      ],
+      "legacyCurveLength": 107.821,
+      "legacyCurvePointsInsideFullSourceMaskRatio": 1.0,
+      "legacyCurveMeanDistanceTransformRadius": 1.0,
+      "legacyCurveMaxDistanceTransformRadius": 1.0,
+      "fullVisibleSourceMaskPixels": 1350,
+      "fullVisibleSourceMaskBBox": [
+        255,
+        24,
+        65,
+        60
+      ],
+      "fullVisibleSourceMaskSHA256": "0c5918c8fbd43aa07545c1bc19063f6867cc464e2c456d05300387f9007bfbb9",
+      "sourcePairRecompositionExact": true,
+      "sourceRootProposal": [
+        258,
+        77
+      ],
+      "sourceTipProposal": [
+        315,
+        72
+      ],
+      "skeleton": {
+        "skeletonPixels": 154,
+        "endpointCount": 2,
+        "branchPixelCount": 46,
+        "endpoints": [
+          [
+            306,
+            76
+          ],
+          [
+            258,
+            83
+          ]
+        ],
+        "orderedPathPixels": 137
+      },
+      "orderedRootToTipLandmarks": [
+        [
+          258.0,
+          83.0
+        ],
+        [
+          258.0,
+          67.122
+        ],
+        [
+          255.0,
+          52.486
+        ],
+        [
+          260.227,
+          38.773
+        ],
+        [
+          271.057,
+          28.0
+        ],
+        [
+          285.278,
+          24.0
+        ],
+        [
+          299.5,
+          28.0
+        ],
+        [
+          311.167,
+          38.167
+        ],
+        [
+          318.0,
+          51.214
+        ],
+        [
+          317.0,
+          65.85
+        ],
+        [
+          306.0,
+          76.0
+        ]
+      ],
+      "orderedWidthProfile": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.394,
+        7.194,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        6.394,
+        7.194,
+        8.0,
+        8.0,
+        8.0,
+        7.194,
+        6.394,
+        6.0,
+        8.0,
+        7.194,
+        8.394,
+        7.194,
+        8.394,
+        7.194,
+        8.394,
+        7.194,
+        8.394,
+        8.394,
+        7.194,
+        7.194,
+        8.394,
+        8.4,
+        8.4,
+        8.394,
+        7.194,
+        7.194,
+        7.194,
+        8.394,
+        7.194,
+        7.194,
+        8.394,
+        7.194,
+        8.0,
+        6.394,
+        7.194,
+        7.194,
+        6.394,
+        7.194,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.394,
+        8.788,
+        9.994,
+        10.0,
+        9.994,
+        8.788,
+        8.394,
+        10.0,
+        10.0,
+        9.994,
+        10.788,
+        10.394,
+        11.588,
+        10.788,
+        12.394,
+        11.588,
+        12.788,
+        11.588,
+        12.788,
+        13.181,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.388,
+        13.181,
+        14.0,
+        14.388,
+        14.388,
+        14.388,
+        14.388,
+        14.388,
+        13.181,
+        14.0,
+        13.181,
+        12.788,
+        13.181,
+        12.788,
+        12.394,
+        12.0,
+        10.788,
+        10.394,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        8.0,
+        8.0,
+        8.394,
+        8.788,
+        8.788,
+        8.0,
+        6.394,
+        7.194,
+        7.194,
+        6.394,
+        5.6,
+        4.394,
+        4.394,
+        4.0,
+        2.8,
+        2.8,
+        2.0
+      ],
+      "skeletonRadiusWidth": {
+        "sampleCount": 154,
+        "mean": 8.704,
+        "p10": 4.394,
+        "median": 8.0,
+        "p90": 14.0
+      },
+      "nearestSkeletonEndpointToRoot": [
+        258.0,
+        83.0
+      ],
+      "nearestSkeletonEndpointToTip": [
+        306.0,
+        76.0
+      ],
+      "rootProposalToSkeletonEndpointDistance": 6.0,
+      "tipProposalToSkeletonEndpointDistance": 9.849
+    },
+    "135": {
+      "angle": 135.0,
+      "legacyCropBoundaryY": 54,
+      "legacyCurveStart": [
+        221.0,
+        38.0
+      ],
+      "legacyCurveEnd": [
+        297.0,
+        37.0
+      ],
+      "legacyCurveLength": 108.198,
+      "legacyCurvePointsInsideFullSourceMaskRatio": 1.0,
+      "legacyCurveMeanDistanceTransformRadius": 1.0,
+      "legacyCurveMaxDistanceTransformRadius": 1.0,
+      "fullVisibleSourceMaskPixels": 1033,
+      "fullVisibleSourceMaskBBox": [
+        221,
+        11,
+        69,
+        51
+      ],
+      "fullVisibleSourceMaskSHA256": "407c97c8ae59a70a0ecd2290172432a6215daf432f81a0d3df13168fdf57a25f",
+      "sourcePairRecompositionExact": true,
+      "sourceRootProposal": [
+        222,
+        55
+      ],
+      "sourceTipProposal": [
+        286,
+        46
+      ],
+      "skeleton": {
+        "skeletonPixels": 143,
+        "endpointCount": 2,
+        "branchPixelCount": 62,
+        "endpoints": [
+          [
+            278,
+            53
+          ],
+          [
+            222,
+            61
+          ]
+        ],
+        "orderedPathPixels": 121
+      },
+      "orderedRootToTipLandmarks": [
+        [
+          222.0,
+          61.0
+        ],
+        [
+          221.0,
+          47.26
+        ],
+        [
+          223.753,
+          34.247
+        ],
+        [
+          231.64,
+          23.36
+        ],
+        [
+          242.331,
+          15.0
+        ],
+        [
+          255.172,
+          11.828
+        ],
+        [
+          268.109,
+          13.109
+        ],
+        [
+          279.582,
+          19.582
+        ],
+        [
+          288.176,
+          30.176
+        ],
+        [
+          287.0,
+          43.16
+        ],
+        [
+          278.0,
+          53.0
+        ]
+      ],
+      "orderedWidthProfile": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        5.6,
+        2.8,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0,
+        2.8,
+        2.0,
+        4.0,
+        2.8,
+        4.0,
+        4.0,
+        4.394,
+        4.0,
+        4.394,
+        5.6,
+        4.394,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        6.394,
+        7.194,
+        7.194,
+        6.394,
+        7.194,
+        7.194,
+        7.194,
+        7.194,
+        8.0,
+        7.194,
+        8.394,
+        8.0,
+        8.0,
+        8.394,
+        8.394,
+        8.0,
+        8.0,
+        8.394,
+        8.394,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.394,
+        8.394,
+        8.0,
+        8.788,
+        8.788,
+        8.394,
+        8.788,
+        8.788,
+        9.994,
+        8.788,
+        9.994,
+        9.994,
+        9.994,
+        10.788,
+        11.2,
+        11.2,
+        11.2,
+        11.2,
+        11.2,
+        11.588,
+        12.788,
+        12.794,
+        11.588,
+        12.788,
+        11.588,
+        12.788,
+        12.394,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        8.0,
+        8.394,
+        7.194,
+        8.0,
+        6.394,
+        5.6,
+        5.6,
+        4.394,
+        4.394,
+        4.394,
+        2.8,
+        2.0
+      ],
+      "skeletonRadiusWidth": {
+        "sampleCount": 143,
+        "mean": 7.057,
+        "p10": 2.0,
+        "median": 7.194,
+        "p90": 11.51
+      },
+      "nearestSkeletonEndpointToRoot": [
+        222.0,
+        61.0
+      ],
+      "nearestSkeletonEndpointToTip": [
+        278.0,
+        53.0
+      ],
+      "rootProposalToSkeletonEndpointDistance": 6.0,
+      "tipProposalToSkeletonEndpointDistance": 10.63
+    }
+  },
+  "pairwiseCorrespondence": {
+    "90-112.5": {
+      "endpointAlignedLandmarkRMS": 26.9401,
+      "endpointAlignedLandmarkErrors": [
+        0.0,
+        11.244999885559082,
+        22.624000549316406,
+        32.619998931884766,
+        41.09600067138672,
+        43.0880012512207,
+        38.15599822998047,
+        28.645000457763672,
+        18.76099967956543,
+        10.361000061035156,
+        0.0
+      ],
+      "widthProfileRMS": 2.8343,
+      "sourceMaskAreaRatio": 0.7881
+    },
+    "112.5-135": {
+      "endpointAlignedLandmarkRMS": 10.2639,
+      "endpointAlignedLandmarkErrors": [
+        0.0,
+        4.193999767303467,
+        8.77299976348877,
+        13.326000213623047,
+        16.07900047302246,
+        16.78499984741211,
+        13.973999977111816,
+        9.96500015258789,
+        6.165999889373779,
+        3.7139999866485596,
+        0.0
+      ],
+      "widthProfileRMS": 2.3609,
+      "sourceMaskAreaRatio": 1.3069
+    },
+    "90-135": {
+      "endpointAlignedLandmarkRMS": 10.6127,
+      "endpointAlignedLandmarkErrors": [
+        0.0,
+        4.885000228881836,
+        8.505000114440918,
+        11.385000228881836,
+        15.345000267028809,
+        16.218000411987305,
+        15.75,
+        12.71399974822998,
+        9.256999969482422,
+        4.386000156402588,
+        0.0
+      ],
+      "widthProfileRMS": 0.7641,
+      "sourceMaskAreaRatio": 1.03
+    }
+  },
+  "endpointIdentity": {
+    "90": {
+      "rootEndpoint": [
+        184.0,
+        63.0
+      ],
+      "tipEndpoint": [
+        262.0,
+        50.0
+      ],
+      "rootProposalDistance": 10.0,
+      "tipProposalDistance": 4.472
+    },
+    "112.5": {
+      "rootEndpoint": [
+        258.0,
+        83.0
+      ],
+      "tipEndpoint": [
+        306.0,
+        76.0
+      ],
+      "rootProposalDistance": 6.0,
+      "tipProposalDistance": 9.849
+    },
+    "135": {
+      "rootEndpoint": [
+        222.0,
+        61.0
+      ],
+      "tipEndpoint": [
+        278.0,
+        53.0
+      ],
+      "rootProposalDistance": 6.0,
+      "tipProposalDistance": 10.63
+    }
+  },
+  "legacyCurveUsesCropBoundaryInsteadOfFullSilhouette": true,
+  "fullSilhouetteSkeletonHasTwoEndpoints": true,
+  "sourceDerivedVariableWidthProfilesAvailable": true,
+  "interpretation": "P15-181 obtains its 160-point curve from p15-153 extract(), whose visible loop is cropped at y=54. The selected contour is therefore a boundary of a clipped mask, not a medial centerline. Full source-owned strand silhouettes from P15-167 support alpha-distance width measurement and skeleton topology, but endpoint proposals and cross-view semantic point correspondence still need authoring/visual confirmation.",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-186-source-landmark-audit/index.html",
+  "gate": {
+    "allSourceKeyviewsPixelHashRecorded": true,
+    "legacyCurveUsesFullSilhouette": false,
+    "fullSilhouetteSkeletonHasTwoEndpoints": true,
+    "sourceDerivedVariableWidthProfilesAvailable": true,
+    "semanticCrossViewCorrespondenceEstablished": false,
+    "productionGeometryApproved": false,
+    "passes": false
+  }
+}

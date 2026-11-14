@@ -1,0 +1,620 @@
+{
+  "schema": "KOMA_P15_110_VISION_SOURCE_BOW_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "acceptedSourceStrokeRoles": [
+    "bow.left_outer_outline",
+    "bow.right_outer_outline",
+    "bow.left_inner_fold",
+    "bow.left_tail_fold"
+  ],
+  "visionEvidenceSHA256": "0d8e8d135e21d4f9585334d0a3103e4d2de1479810155f4b9d507e5a8f3a3cd2",
+  "assetSHA256": {
+    "60": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+    "67.5": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+    "75": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b"
+  },
+  "method": "source-observed model-grounded stroke landmarks with local Gaussian displacement warp",
+  "artistSourceCorrespondenceApproved": false,
+  "naturalYawAccepted": false,
+  "layerOcclusionSource": "P15-108 native part alpha and top jewel/head ordering",
+  "methods": {
+    "matched_path_direct": {
+      "60": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "sourceOwnedKeyframe": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw61p875.png",
+        "sha256": "6104443fb3673d08c51331bd7492a42f07fae77c1ea88d081cbfb673ba8e2a46",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "weight": 0.25,
+          "maxWarpSourceA": 1.4811,
+          "maxWarpSourceB": 4.4434
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw63p75.png",
+        "sha256": "5077c92a6d3a56e59ed8c5f32efb5329d4edeb97265bd6442636fc7cd9cef82f",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "weight": 0.5,
+          "maxWarpSourceA": 2.9609,
+          "maxWarpSourceB": 2.9609
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw65p625.png",
+        "sha256": "b715a1fde34e123d6b97a599f6a451b60077fcabd33e8eaabd4d68f6f80246aa",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "weight": 0.75,
+          "maxWarpSourceA": 4.4246,
+          "maxWarpSourceB": 1.4749
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "sourceOwnedKeyframe": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw69p375.png",
+        "sha256": "73fecc1da9be59536290ede228556761c07cf5f8eb7ca908323360d992527654",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "weight": 0.25,
+          "maxWarpSourceA": 3.7653,
+          "maxWarpSourceB": 11.2959
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw71p25.png",
+        "sha256": "9f635b86c7cb85bb50849dcc29d78c026c8566dfb97f9940128a464b9d25043f",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "weight": 0.5,
+          "maxWarpSourceA": 7.4952,
+          "maxWarpSourceB": 7.4952
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw73p125.png",
+        "sha256": "fd75a81fa73aaccab4e1cd6ca6cbd19140d5db1c650d7fd6bd927c166084c7c4",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "weight": 0.75,
+          "maxWarpSourceA": 11.2158,
+          "maxWarpSourceB": 3.7386
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "sourceOwnedKeyframe": true
+        }
+      }
+    },
+    "matched_path_owner": {
+      "60": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "sourceOwnedKeyframe": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw61p875.png",
+        "sha256": "23c856c75d09534848782eac5253f21b6d7e7a799626d1fdd86a73d92603d5a4",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "weight": 0.04052,
+          "maxWarpSourceA": 1.4811,
+          "maxWarpSourceB": 4.4434
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw63p75.png",
+        "sha256": "5077c92a6d3a56e59ed8c5f32efb5329d4edeb97265bd6442636fc7cd9cef82f",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "weight": 0.5,
+          "maxWarpSourceA": 2.9609,
+          "maxWarpSourceB": 2.9609
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw65p625.png",
+        "sha256": "b0f6617094bfb0283537e1d40f4ff63d473856c912a91f13f3cc1f9adde82ccd",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "weight": 0.95948,
+          "maxWarpSourceA": 4.4246,
+          "maxWarpSourceB": 1.4749
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "sourceOwnedKeyframe": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw69p375.png",
+        "sha256": "be41b843d41e5caf16c12955ef33f1c05df0db356e69e894c2b1054e5fec4582",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "weight": 0.04052,
+          "maxWarpSourceA": 3.7653,
+          "maxWarpSourceB": 11.2959
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw71p25.png",
+        "sha256": "9f635b86c7cb85bb50849dcc29d78c026c8566dfb97f9940128a464b9d25043f",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "weight": 0.5,
+          "maxWarpSourceA": 7.4952,
+          "maxWarpSourceB": 7.4952
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw73p125.png",
+        "sha256": "b55a8e9e7571728614fa80853cf52a7d617527eb6ceabbd0ecfb0be74ef12c0b",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "weight": 0.95948,
+          "maxWarpSourceA": 11.2158,
+          "maxWarpSourceB": 3.7386
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "sourceOwnedKeyframe": true
+        }
+      }
+    }
+  },
+  "diagnostics": {},
+  "occlusion": {
+    "depthOrder": [
+      "background",
+      "goldTrim",
+      "collarWhite",
+      "bowFabric",
+      "jewel"
+    ],
+    "sourceViewsWithForegroundJewel": [
+      "60",
+      "67.5",
+      "75"
+    ],
+    "actualHiddenUnderBroochPixelsNotObserved": true,
+    "syntheticHiddenArtworkApproved": false,
+    "sourceSeparation": "P15-108 exact native RGBA per-pixel partition"
+  },
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "meanAdjacentRGBMAE": 7.9434,
+        "interiorMaxRGBMAE": 7.2775
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "meanAdjacentRGBMAE": 6.1601,
+        "interiorMaxRGBMAE": 5.1833
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "meanAdjacentRGBMAE": 7.0499,
+        "interiorMaxRGBMAE": 6.7573
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "meanAdjacentRGBMAE": 6.2248,
+        "interiorMaxRGBMAE": 5.9747
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "meanAdjacentRGBMAE": 11.5744,
+        "interiorMaxRGBMAE": 11.7003
+      }
+    },
+    "P15-107-three-native": {
+      "bow": {
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ],
+        "maxAdjacentRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146,
+        "interiorMaxRGBMAE": 12.8767
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ],
+        "maxAdjacentRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208,
+        "interiorMaxRGBMAE": 10.2434
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ],
+        "maxAdjacentRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757,
+        "interiorMaxRGBMAE": 8.7588
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          6.9229,
+          6.6883,
+          6.5505,
+          7.2027,
+          9.2766,
+          8.6715,
+          8.6737,
+          8.8022
+        ],
+        "maxAdjacentRGBMAE": 9.2766,
+        "meanAdjacentRGBMAE": 7.8486,
+        "interiorMaxRGBMAE": 9.2766
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    },
+    "matched_path_direct": {
+      "bow": {
+        "adjacentRGBMAE": [
+          9.5123,
+          8.1655,
+          8.1458,
+          10.401,
+          16.7573,
+          14.4411,
+          15.1777,
+          17.2767
+        ],
+        "maxAdjacentRGBMAE": 17.2767,
+        "meanAdjacentRGBMAE": 12.4847,
+        "interiorMaxRGBMAE": 16.7573
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          10.4513,
+          8.6153,
+          8.4684,
+          11.0919,
+          14.8147,
+          10.1048,
+          11.5388,
+          16.1008
+        ],
+        "maxAdjacentRGBMAE": 16.1008,
+        "meanAdjacentRGBMAE": 11.3983,
+        "interiorMaxRGBMAE": 14.8147
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          8.6023,
+          7.4819,
+          7.2299,
+          7.8893,
+          10.7673,
+          9.5775,
+          9.842,
+          10.9761
+        ],
+        "maxAdjacentRGBMAE": 10.9761,
+        "meanAdjacentRGBMAE": 9.0458,
+        "interiorMaxRGBMAE": 10.7673
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          7.7574,
+          6.9857,
+          6.8298,
+          7.8812,
+          10.8573,
+          9.6384,
+          9.9501,
+          10.8708
+        ],
+        "maxAdjacentRGBMAE": 10.8708,
+        "meanAdjacentRGBMAE": 8.8463,
+        "interiorMaxRGBMAE": 10.8573
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    },
+    "matched_path_owner": {
+      "bow": {
+        "adjacentRGBMAE": [
+          6.1505,
+          12.3418,
+          12.3242,
+          7.4056,
+          12.6606,
+          20.2378,
+          21.7637,
+          12.0724
+        ],
+        "maxAdjacentRGBMAE": 21.7637,
+        "meanAdjacentRGBMAE": 13.1196,
+        "interiorMaxRGBMAE": 21.7637
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          7.2337,
+          12.7894,
+          12.5725,
+          8.3888,
+          15.0445,
+          11.8472,
+          13.7089,
+          16.5179
+        ],
+        "maxAdjacentRGBMAE": 16.5179,
+        "meanAdjacentRGBMAE": 12.2629,
+        "interiorMaxRGBMAE": 15.0445
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          6.0478,
+          10.3962,
+          10.266,
+          5.2871,
+          8.6971,
+          12.2664,
+          12.878,
+          8.6166
+        ],
+        "maxAdjacentRGBMAE": 12.878,
+        "meanAdjacentRGBMAE": 9.3069,
+        "interiorMaxRGBMAE": 12.878
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          4.5825,
+          10.5043,
+          10.3921,
+          5.0033,
+          7.1275,
+          14.2137,
+          14.8896,
+          6.4817
+        ],
+        "maxAdjacentRGBMAE": 14.8896,
+        "meanAdjacentRGBMAE": 9.1493,
+        "interiorMaxRGBMAE": 14.8896
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "meanAdjacentRGBMAE": 11.212,
+        "interiorMaxRGBMAE": 11.566
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-110-path-vdd/vision-matched-bow-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "trueSourceCoordinates": "Codex visual observations with source 1024x1024 image grids",
+    "crossViewExperimentPaths": [
+      "bow.left_outer_outline",
+      "bow.right_outer_outline",
+      "bow.left_inner_fold",
+      "bow.left_tail_fold"
+    ],
+    "crossViewCandidateCount": 8,
+    "acceptedPathCount": 4,
+    "sourceImageConstraint": "all accepted points checked for source ink-edge and alpha support",
+    "occlusionFacts": {
+      "jewel": "front of ribbon bow",
+      "ribbon": "front of white collar seam",
+      "hair": "existing source-owned head/hair mesh",
+      "actualHiddenUnderBroochArtwork": "SOURCE_NOT_OBSERVED",
+      "newHiddenSurfaceArtistApproved": false
+    },
+    "observedFrameArtifacts": {
+      "bow": "local path displacement registers some source edges but introduces duplicated fabric silhouettes around ribbon wing transitions",
+      "jewel": "brooch remains view-dependent; mismatch between generated source keyviews causes ghosted gold boundaries",
+      "collar": "collar hidden edge and fabric folds have no approved source-backed underpainting, so warped blends retain double seams",
+      "head": "P15-101 head and hair still exhibit separate source profile limitations"
+    },
+    "quantitative": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "pathDirect": 17.2767,
+        "pathOwner": 21.7637
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "pathDirect": 10.9761,
+        "pathOwner": 12.878
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "pathDirect": 16.1008,
+        "pathOwner": 16.5179
+      }
+    },
+    "baselineSelection": "P15-101 head_alpha_blend",
+    "threeKeyCandidate": "P15-107 companion_direct_native_keys",
+    "engineeringQA": "PASS",
+    "completeYawArtisticAccepted": false,
+    "nextCriticalResource": "source-matched bow interior fold paths plus artist-consistent hidden collar/brooch surface artwork"
+  }
+}

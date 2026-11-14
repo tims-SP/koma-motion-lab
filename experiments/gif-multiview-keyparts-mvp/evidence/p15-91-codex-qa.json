@@ -1,0 +1,126 @@
+{
+  "schema": "KOMA-P15-91-CODEX_NATIVE_ART_V1",
+  "source": "Codex CLI 0.167.2 built-in image_gen.imagegen",
+  "rawGeneratedSHA256": "1ee321b0b7104efe7ab3cffcfbad2138c2e2a4dbd7beef99f4f4ec88dcb04b8d",
+  "rawGeneratedDimensions": [
+    1254,
+    1254
+  ],
+  "closeupSourceSHA256": "72ca62df960ec5795f6985c3c3141f315f9e0277d509772ca55bb80d4a8da7ee",
+  "cropRegion": [
+    460,
+    355,
+    660,
+    555
+  ],
+  "registration": "ECC grayscale translation, masked excludes inpaint region",
+  "registrationScore": 0.979576,
+  "registrationWarp": [
+    [
+      1.0,
+      0.0,
+      -0.10976285487413406
+    ],
+    [
+      0.0,
+      1.0,
+      0.5041276812553406
+    ]
+  ],
+  "outsideMaskMAE": 3.5081,
+  "insideMaskMAE": 12.9655,
+  "restPoseUsesSourceOwnedLayers": true,
+  "variants": {
+    "r4": {
+      "maskSHA256": "3ddf9ae0aa3d827c6836a3e4adf611fdd1a181f664ca45625ecc89bc2e192ca0",
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 14,
+          "darkAfter": 14
+        },
+        "9": {
+          "sha256": "9a91384f4db50ea93dff7f11237692949f35b046fd95a8f5fa802934e6b7674d",
+          "changedPixels": 96,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        },
+        "18": {
+          "sha256": "9de1ed139c1492e4736f1be968820e98fcfc6c36636428113f67d533c81d5490",
+          "changedPixels": 96,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        }
+      }
+    },
+    "r6": {
+      "maskSHA256": "5a7cd9c1123360e02fc66653b50ff7b42275e9dc61555c539dc82975da2b5f45",
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 14,
+          "darkAfter": 14
+        },
+        "9": {
+          "sha256": "e6e4f00e7c0da84a6c1bb0567cae9a10676cea1c8d835966a41b8837428b84cd",
+          "changedPixels": 157,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        },
+        "18": {
+          "sha256": "ba0d15df8618feeffd932615f7e556b1b12f3ddec67544a0b255e23a58d86544",
+          "changedPixels": 157,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        }
+      }
+    },
+    "r8": {
+      "maskSHA256": "e153e1f90af3767c1bca43919dcb5fb8cdb816c327cf60f0a4a69f5738872a68",
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 14,
+          "darkAfter": 14
+        },
+        "9": {
+          "sha256": "886e5c444f7ae5ba15b7a8bd03f7022d94166a288e4331cb2c44e9084fa08e1b",
+          "changedPixels": 226,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        },
+        "18": {
+          "sha256": "fe03ae53e4b44f81e4cb431f693c8526358c6cb8d78ed79ecc3cc4afb8c32c6e",
+          "changedPixels": 226,
+          "outsideMaskChangedPixels": 0,
+          "newTransparentHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        }
+      }
+    }
+  },
+  "candidateAccepted": false,
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_REAL_VISUAL_INSPECTION",
+  "contact": "private-assets/exports/p15-91-codex-art/dynamic-contact.jpg"
+}

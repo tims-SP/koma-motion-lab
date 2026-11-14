@@ -1,0 +1,64 @@
+{
+  "schema": "KOMA-P15-84-REAL-HIDDEN-BROW-EYE-INPAINT-V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "eyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "browLayerSHA256": "d72cd4d59e6b837d00b903f102263757f0e05669a896cfc1353714f14d08d8f3",
+  "hairMaskSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+  "cropBox": [
+    380,
+    300,
+    892,
+    812
+  ],
+  "inputSHA256": "b2cc5ab64fd71bcb5aca1d250ed2d052f3384b219ffe65b68ac218a5435eee5d",
+  "maskSHA256": "470806c77206b0c831f8ec87d210c5499164b1290027b27031a86bbeb2c369f8",
+  "maskMethod": "union of independently extracted full near-eye and eyebrow alpha, dilated 8px eye / 5px brow; subtract SAM3 foreground bangs",
+  "maskPixels": 9019,
+  "provider": "pg56714/Inpaint-Anything",
+  "model": "LaMa neural inpainting CPU",
+  "modelStatus": "SUCCESS",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "modelSHA256": "a764685e8f7fb0ae6fdd2acbd94f6ad930451266f92f4f24f6843d1d8e5c1663",
+  "underpaintSHA256": "064a081960dbed71279251f00aac0c2d90276f42c61a22770d1c13415e6259aa",
+  "underpaintChangedOutsideMask": 0,
+  "modelChangedInsideMask": 0,
+  "frameHashes": {
+    "0": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+    "9": "fab5dc46c9cf2c2bb021796474640d430d2542b65bcc271b5aadd25eae0ef2bf",
+    "18": "c15a7f877b78e704b5935afc01b20d2bf59ab79084d1ca3b08640b7fbe6e4a75"
+  },
+  "motionFrames": {
+    "9": {
+      "sha256": "fab5dc46c9cf2c2bb021796474640d430d2542b65bcc271b5aadd25eae0ef2bf",
+      "holesROI": 0,
+      "changedInMask": 8972,
+      "changedOutsideMask": 0
+    },
+    "18": {
+      "sha256": "c15a7f877b78e704b5935afc01b20d2bf59ab79084d1ca3b08640b7fbe6e4a75",
+      "holesROI": 0,
+      "changedInMask": 8972,
+      "changedOutsideMask": 0
+    }
+  },
+  "zeroPoseUsesP1582IndependentParts": true,
+  "zeroPoseVisibleSourceExact": true,
+  "visualGate": "PROMISING_BROW_REMOVAL_MINOR_OUTER_LASH_HAIR_SEAM_REMAINS",
+  "modelChangedInsideMaskPixels": 8972,
+  "modelChangedOutsideMaskPixels": 0,
+  "visualAssessment": "LaMa genuine inpainting removes the old brow/eye contour behind the moving eye. 9px retains a tiny thin mark at the outer-left boundary; 18px is cleaner. No new transparent holes. The 0px control remains source-owned independent layers. Candidate is useful for further refinement but not yet formal ArtMesh due residual eye/hair edge.",
+  "modelEventId": "f5ff08c7c97846b78029f94a994c6862",
+  "modelBytes": 15638,
+  "modelOutputSize": [
+    512,
+    512
+  ],
+  "modelOutputProvider": "pg56714/Inpaint-Anything / LaMa CPU",
+  "browserStatus": "PASS",
+  "browserChecks": 2,
+  "browserImagesLoadedPerViewport": 12,
+  "browserPageErrors": 0,
+  "regressionTestsPass": 66,
+  "browserImagesLoadedTotal": 24
+}

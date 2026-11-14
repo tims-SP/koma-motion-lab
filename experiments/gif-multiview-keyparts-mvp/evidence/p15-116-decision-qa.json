@@ -1,0 +1,54 @@
+{
+  "schema": "KOMA_P15_116_VISUAL_DECISION_V1",
+  "character": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "readableMetric": "max adjacent-frame RGB MAE (0–255) inside each physical garment region",
+  "nativeKeyframeByteExact": true,
+  "candidateModels": [
+    "ribbon_core",
+    "ribbon_edge",
+    "ribbon_edge_jewel",
+    "trim_matte"
+  ],
+  "sourceOwner": {
+    "bowFabric": "67.5",
+    "jewel": "67.5",
+    "goldTrimLeft": "67.5",
+    "goldTrimRight75": "75"
+  },
+  "originalSourceBaseline": {
+    "bow": 12.8767,
+    "jewel": 10.2434,
+    "collar": 8.7588,
+    "goldTrim": 11.9516,
+    "rightLap": 12.4831
+  },
+  "headBenchmark": {
+    "bow": 10.1016,
+    "jewel": 9.1631,
+    "collar": 9.5625,
+    "goldTrim": 8.7373,
+    "rightLap": 9.7786
+  },
+  "measuredLocalTrimDifferenceFromNative": {
+    "bow": -0.0082,
+    "goldTrim": -0.0058,
+    "rightLap": 0.0
+  },
+  "fullSequenceVisionApproved": false,
+  "selectedOverallVisualBenchmark": "P15-101 head_alpha_blend",
+  "selectedThreeViewSourceGarmentBenchmark": "P15-107 companion_direct_native_keys",
+  "localVisibilityMechanism": "native source masks, one-source material, physical right-lapel ownership, bounded inbetween correction",
+  "actualVisualInspection": {
+    "trim": "source-owned gold strokes remain confined to source-registered lapels; the right-hand 75° occlusion uses its original material",
+    "ribbon": "single-source ribbon side material introduces native-versus-interpolated ink mismatch on the outer side silhouette",
+    "occlusion": "inpainting of old source rim material cannot reconstruct wholly hidden cloth and jacket surfaces",
+    "head": "preexisting P15-101 head/hair source-view inbetweens remain in the full-character preview"
+  },
+  "conclusion": "geometry, identity and editable source-owned visibility are reproducible; finished animation awaits physical-source view/occlusion correspondence",
+  "nextRequiredAsset": "0–180° canonical P0 source-view coverage audit and consistent side-view bow/lapel/underlay art"
+}

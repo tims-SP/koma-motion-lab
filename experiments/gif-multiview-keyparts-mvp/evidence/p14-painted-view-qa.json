@@ -1,0 +1,109 @@
+{
+  "schema": "KOMA-P0-P14-PAINTED-VIEW-ENGINEERING-QA-V1",
+  "characterId": "p0_character_001",
+  "sourceKeyAngles": [
+    0,
+    45,
+    90
+  ],
+  "generatedCandidateAngles": [
+    67.5,
+    72.5
+  ],
+  "artMesh": {
+    "semanticRoleCount": 13,
+    "sourceRgbaCanvas": [
+      1024,
+      1024
+    ],
+    "candidateLayersVerified": 26,
+    "registeredViewLayers": {
+      "67.5": {
+        "layerCount": 13,
+        "compositeSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+        "qaSHA256": "11144bdf3efe2aa93bbca163afdca86baef363c81cb9a1c202d5b536373ec8b1"
+      },
+      "72.5": {
+        "layerCount": 13,
+        "compositeSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+        "qaSHA256": "98dcde8deeed219febdb7d8ae48bf2e6576e891ab1b4232bf02b5f4c2b422bd3"
+      }
+    },
+    "sourceMethod": "generated multi-view artwork with original-P0 semantic part reprojection"
+  },
+  "motion": {
+    "framesVerified": 37,
+    "frameFirstSHA256": "626f9105d4413477aed256d3bca340166c767a84821bd289d37144449bd67dd3",
+    "frameLastSHA256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+    "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+    "medianAdjacentDelta": 5.7449,
+    "maximumAdjacentDelta": 10.2741,
+    "outliers": [],
+    "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+    "textureHoldoutEdgeDensityRatios": {
+      "22.5": 1.281,
+      "67.5": 0.4274
+    }
+  },
+  "browser": {
+    "engine": "Chromium Playwright",
+    "screenshotCount": 12,
+    "sampleCount": 6,
+    "sourceImagesHashVerifiedPerSample": 5,
+    "scriptErrors": 0,
+    "failedRequests": 0,
+    "status": "PASS_REAL_P0_PAINTED_KEYVIEW_REVIEW"
+  },
+  "visualComparison": {
+    "sourcePath": "p14-authored-candidates/p14-quality/p14-p0-painted-vdd-visual-comparison.jpg",
+    "sha256": "14232075b5ae0f46e634571514723198ad157037d7ed09b1465a760d6f24a84f",
+    "alphaGapProxy": [
+      {
+        "angle": 65,
+        "baselineGapPixels": 1576,
+        "candidateGapPixels": 2207,
+        "candidateMinusBaselinePixels": 631
+      },
+      {
+        "angle": 67.5,
+        "baselineGapPixels": 1694,
+        "candidateGapPixels": 1449,
+        "candidateMinusBaselinePixels": -245
+      },
+      {
+        "angle": 77.5,
+        "baselineGapPixels": 1988,
+        "candidateGapPixels": 2014,
+        "candidateMinusBaselinePixels": 26
+      }
+    ],
+    "metricRole": "relative structural diagnostic; artistic stroke and identity require visual review",
+    "adoptedRenderer": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+    "candidateStatus": "ARTISTIC_ACCEPTANCE_PENDING",
+    "focusAngles": [
+      65,
+      67.5,
+      72.5,
+      77.5
+    ],
+    "focusParts": [
+      "face.skin",
+      "eye.near",
+      "ear.near",
+      "hair.front",
+      "hair.back",
+      "hair.ahoge"
+    ]
+  },
+  "evidenceHashes": {
+    "paint67": "11144bdf3efe2aa93bbca163afdca86baef363c81cb9a1c202d5b536373ec8b1",
+    "paint72": "98dcde8deeed219febdb7d8ae48bf2e6576e891ab1b4232bf02b5f4c2b422bd3",
+    "motion": "2631086a4d5cf4d351d5c37f99664cee9b91bc80dface4d588860ce3f386fdd5",
+    "temporal": "4161491c0e5dca794658a904a707ba370c62072bee21eb75af6395c66980cb48",
+    "texture": "db370f197031e2dfe52bee65a4fe3136bd8025b064b875d82397b658683e1a8b",
+    "chromium": "0db443bcf6d20fbcc4b4609fe198c3f45811b324ef8f774fef39bd635ee98618",
+    "quality": "ac06751a9ac7feeb510aad2a027aef6096750f19964f2aa189ba07798bc91ee2",
+    "baseline": "ab20866a54527a8d1a723638fbb72ee25f0a0184d4c743781901e386bda6b8ea"
+  },
+  "status": "P14_ENGINEERING_EVIDENCE_VERIFIED"
+}

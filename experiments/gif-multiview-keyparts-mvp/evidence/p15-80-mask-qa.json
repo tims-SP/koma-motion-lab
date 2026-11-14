@@ -1,0 +1,66 @@
+{
+  "schema": "KOMA-P15-80-MASK-QUALITY-PROBE-V1",
+  "sourceSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+  "roi": [
+    605,
+    370,
+    740,
+    470
+  ],
+  "variants": {
+    "median3": {
+      "changedAlphaPixels": 375,
+      "zerosBefore": 5028,
+      "zerosAfter": 4821,
+      "hairSHA256": "a4f3bff71b024ad65f9500c9722ce397ed37e117a5bc652091ced606fbc1d987",
+      "frameSHA256": "5730d556473d0677ff2171cd64db825e7a49ee144f50764a5fbc4a05f7150bf0",
+      "rasterZigzagCount": 1,
+      "changedOutsideROI": 0
+    },
+    "opening3": {
+      "changedAlphaPixels": 735,
+      "zerosBefore": 5028,
+      "zerosAfter": 5763,
+      "hairSHA256": "051c7d6017d9dcb1349e36bd88c0aaa4cc5c08bfd54ee69d6adf13eada684c50",
+      "frameSHA256": "626d09a3e93511da18083ef10defde19809800431347fec212e6dc3ab4b07141",
+      "rasterZigzagCount": 0,
+      "changedOutsideROI": 0
+    },
+    "closing3": {
+      "changedAlphaPixels": 586,
+      "zerosBefore": 5028,
+      "zerosAfter": 4442,
+      "hairSHA256": "eccf026cbee9939e6076b7e1e70cc48f906d83248e1f44c7baca1bc48079b826",
+      "frameSHA256": "1749d6dab5f1296b60f0af9f47bd03b8dd14571bebc1a2a0121c0dd47e4a74f6",
+      "rasterZigzagCount": 0,
+      "changedOutsideROI": 0
+    }
+  },
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "FAIL_UNRESOLVED_FRONT_HAIR_SEMANTIC_LAYER",
+  "roiRasterZigzagOriginal": 0,
+  "reviewFrames": {
+    "0": {
+      "sha256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "changedAgainstBaselinePixels": 6951,
+      "transparentHoles": 0
+    },
+    "9": {
+      "sha256": "40f52c816139c897fd34f2ab0c43838066e461c4ddc216d782bc44c9828fc6f0",
+      "changedAgainstBaselinePixels": 132,
+      "transparentHoles": 0
+    },
+    "18": {
+      "sha256": "5730d556473d0677ff2171cd64db825e7a49ee144f50764a5fbc4a05f7150bf0",
+      "changedAgainstBaselinePixels": 133,
+      "transparentHoles": 0
+    }
+  },
+  "provisionalCandidate": null,
+  "zeroPoseSourceExact": true,
+  "rasterEdgeCheck": "Zigzag count measures only local mask topology, not semantic correctness",
+  "visualAssessment": "Median, opening, and closing change 375/735/586 alpha pixels respectively but none solves semantic contamination. Median increases the chosen raster zigzag count from 0 to 1; opening truncates hair tips and closing extends mixed skin/brow coverage. None is approved. The original P15-74 hair is unchanged. At zero pose the diagnostic reproduces the P15-56 source; at 9/18 the test variants have no new face-alpha holes.",
+  "next": "P15-81 acquire or create true same-pose isolated bangs artwork with explicit source/rest correspondence; stop morphological/threshold optimization",
+  "selectedForFormalOrNativePipeline": false
+}

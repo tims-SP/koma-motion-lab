@@ -1,0 +1,1149 @@
+{
+  "schema": "KOMA_P15_116_SOURCE_MATTE_OCCLUSION_REPAIR_V1",
+  "characterId": "p0_character_001",
+  "sourceViews": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "sourceQASHA256": "439437c04b6a8b2f08913ea6fd566279eaabb0dd507376005ec9d7aa90095d4e",
+  "physicalSourceOwnership": {
+    "bowFabric": "67.5",
+    "jewel": "67.5",
+    "goldTrimLeft": "67.5",
+    "goldTrimRight75": "75"
+  },
+  "base": "P15-107 intact full-character native-key direct garment source",
+  "method": "source-part canonical warp, source-material SDF with local inpaint and original torso donor",
+  "outsideMaterialRegionPixelExact": true,
+  "nativeKeyframeByteExact": true,
+  "full360ArtistApproved": false,
+  "models": {
+    "ribbon_core": {
+      "60": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw61p875.png",
+        "sha256": "108f67d0bccb723411c36e5fa528f86838e99dcb8aed9fbaddbce6af01dc3d55",
+        "changed512Pixels": 5258,
+        "changedBoundingBox512": [
+          254,
+          387,
+          375,
+          495
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 5905,
+            "nativeMaterialMaskPixels": 7869
+          }
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw63p75.png",
+        "sha256": "af8b15ed7af4c7d25e48491f55f43379750e3b487e7c204251eb8f1e2ba252ee",
+        "changed512Pixels": 5841,
+        "changedBoundingBox512": [
+          255,
+          386,
+          375,
+          496
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 5908,
+            "nativeMaterialMaskPixels": 7615
+          }
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw65p625.png",
+        "sha256": "2f25783a3506cf840a2f27d66378864cb6646df4c6675a1a23d3a833ee7fb5ff",
+        "changed512Pixels": 1862,
+        "changedBoundingBox512": [
+          256,
+          385,
+          375,
+          497
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 5865,
+            "nativeMaterialMaskPixels": 7542
+          }
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw69p375.png",
+        "sha256": "7433700845448e9d980310ee41a61c777f9c38db67216dde402d2767e4c57870",
+        "changed512Pixels": 3519,
+        "changedBoundingBox512": [
+          262,
+          386,
+          372,
+          492
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 5061,
+            "nativeMaterialMaskPixels": 7024
+          }
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw71p25.png",
+        "sha256": "d2b0dfd848f6250b7eb463e81e14805f1b4e0980bb90b77ef025a3bd5b9d36f2",
+        "changed512Pixels": 4318,
+        "changedBoundingBox512": [
+          267,
+          388,
+          369,
+          487
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 4362,
+            "nativeMaterialMaskPixels": 6409
+          }
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw73p125.png",
+        "sha256": "ea824c1728307e96202016599ac65a393cf0fa561ef87483711f9220fc31662b",
+        "changed512Pixels": 3305,
+        "changedBoundingBox512": [
+          271,
+          389,
+          366,
+          484
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 3762,
+            "nativeMaterialMaskPixels": 5894
+          }
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      }
+    },
+    "ribbon_edge": {
+      "60": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw61p875.png",
+        "sha256": "7e49b64ef348bb0638e1d2e16776d669fd9d71b93b671d1efd5caab172a59980",
+        "changed512Pixels": 8731,
+        "changedBoundingBox512": [
+          250,
+          379,
+          382,
+          503
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1420,
+            "newOneSourcePixels": 8277,
+            "nativeMaterialMaskPixels": 7869
+          }
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw63p75.png",
+        "sha256": "c8fc3e7814fd247b49bb3815ff216bef8142d4fd8a30f19d4a87809fac104a9b",
+        "changed512Pixels": 9458,
+        "changedBoundingBox512": [
+          250,
+          379,
+          382,
+          503
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1557,
+            "newOneSourcePixels": 8456,
+            "nativeMaterialMaskPixels": 7615
+          }
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw65p625.png",
+        "sha256": "3a8da91c9f405f16c5c11c08607041e8c7cacd6035743bf32d02b28c0d3e4a9b",
+        "changed512Pixels": 5276,
+        "changedBoundingBox512": [
+          250,
+          379,
+          382,
+          504
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1639,
+            "newOneSourcePixels": 8229,
+            "nativeMaterialMaskPixels": 7542
+          }
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw69p375.png",
+        "sha256": "3e300626a1a18c8f6eef663492e14ba39d023932f98c653c70ff40b95fd5b003",
+        "changed512Pixels": 7451,
+        "changedBoundingBox512": [
+          253,
+          379,
+          380,
+          502
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1993,
+            "newOneSourcePixels": 7303,
+            "nativeMaterialMaskPixels": 7024
+          }
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw71p25.png",
+        "sha256": "90db07139752c75897ffb45e6a3d936987f4c288fec2ec45c5d9ecf9bba00891",
+        "changed512Pixels": 8325,
+        "changedBoundingBox512": [
+          258,
+          380,
+          376,
+          495
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1953,
+            "newOneSourcePixels": 6670,
+            "nativeMaterialMaskPixels": 6409
+          }
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw73p125.png",
+        "sha256": "a9e3e459ed154538648a9bb3cef70bad23cd1fa42664b7fce6751a3de5dd3524",
+        "changed512Pixels": 6573,
+        "changedBoundingBox512": [
+          262,
+          380,
+          373,
+          494
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1481,
+            "newOneSourcePixels": 5792,
+            "nativeMaterialMaskPixels": 5894
+          }
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      }
+    },
+    "ribbon_edge_jewel": {
+      "60": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw61p875.png",
+        "sha256": "0ad3cef765e22a388b3bc24585575df76e4072db3a1f3d69d44b66c0a0349ec6",
+        "changed512Pixels": 8950,
+        "changedBoundingBox512": [
+          250,
+          379,
+          382,
+          503
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1420,
+            "newOneSourcePixels": 8277,
+            "nativeMaterialMaskPixels": 7869
+          },
+          "jewel": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 225,
+            "nativeMaterialMaskPixels": 416
+          }
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw63p75.png",
+        "sha256": "0bf5b502662c8faa1549f1e53db9fe8b02f5da408f7e444d78451551e590a81a",
+        "changed512Pixels": 9682,
+        "changedBoundingBox512": [
+          250,
+          379,
+          382,
+          503
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1557,
+            "newOneSourcePixels": 8456,
+            "nativeMaterialMaskPixels": 7615
+          },
+          "jewel": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 226,
+            "nativeMaterialMaskPixels": 403
+          }
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw65p625.png",
+        "sha256": "b5a3c134b8758fa0f3d283c166f4e4cbff190760e03fe8d7ff9b7deb1201ef38",
+        "changed512Pixels": 5486,
+        "changedBoundingBox512": [
+          250,
+          379,
+          382,
+          504
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1639,
+            "newOneSourcePixels": 8229,
+            "nativeMaterialMaskPixels": 7542
+          },
+          "jewel": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 230,
+            "nativeMaterialMaskPixels": 419
+          }
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw69p375.png",
+        "sha256": "693bd281e34c87176b112de07fb706282eac3ef268ea68402a403a27b1b95597",
+        "changed512Pixels": 7658,
+        "changedBoundingBox512": [
+          253,
+          379,
+          380,
+          502
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1993,
+            "newOneSourcePixels": 7303,
+            "nativeMaterialMaskPixels": 7024
+          },
+          "jewel": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 224,
+            "nativeMaterialMaskPixels": 410
+          }
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw71p25.png",
+        "sha256": "2d9c638580a20c24f6e266bc59e3a06709399fcdd2d87135277ca89443abf868",
+        "changed512Pixels": 8550,
+        "changedBoundingBox512": [
+          258,
+          380,
+          376,
+          495
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1953,
+            "newOneSourcePixels": 6670,
+            "nativeMaterialMaskPixels": 6409
+          },
+          "jewel": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 227,
+            "nativeMaterialMaskPixels": 398
+          }
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw73p125.png",
+        "sha256": "021c5cb96f2834edad58da47e07d93abc704fc2decf7a6b7606d55b51b57992e",
+        "changed512Pixels": 6796,
+        "changedBoundingBox512": [
+          262,
+          380,
+          373,
+          494
+        ],
+        "ownerDebug": {
+          "bowFabric": {
+            "oldRimRemovedPixels": 1481,
+            "newOneSourcePixels": 5792,
+            "nativeMaterialMaskPixels": 5894
+          },
+          "jewel": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 228,
+            "nativeMaterialMaskPixels": 410
+          }
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      }
+    },
+    "trim_matte": {
+      "60": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw61p875.png",
+        "sha256": "1a1e883e0e87a4026e82589f1e6b584bc4cc28d04a612f8efcfc515675fcca8c",
+        "changed512Pixels": 203,
+        "changedBoundingBox512": [
+          234,
+          419,
+          396,
+          506
+        ],
+        "ownerDebug": {
+          "goldTrimLeft": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 202,
+            "nativeMaterialMaskPixels": 1078
+          },
+          "goldTrimRight": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 34,
+            "nativeMaterialMaskPixels": 684
+          }
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw63p75.png",
+        "sha256": "256d4c5dd7665522d1f0422b73bc92ddbe18d7d5f0fc4b5cb4f68f9414c08e30",
+        "changed512Pixels": 158,
+        "changedBoundingBox512": [
+          235,
+          419,
+          396,
+          506
+        ],
+        "ownerDebug": {
+          "goldTrimLeft": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 148,
+            "nativeMaterialMaskPixels": 837
+          },
+          "goldTrimRight": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 23,
+            "nativeMaterialMaskPixels": 459
+          }
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw65p625.png",
+        "sha256": "78737cde3cfc21eeda440f45b917d20b3675f0a346d032514687f52fe2a64126",
+        "changed512Pixels": 221,
+        "changedBoundingBox512": [
+          236,
+          417,
+          396,
+          505
+        ],
+        "ownerDebug": {
+          "goldTrimLeft": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 302,
+            "nativeMaterialMaskPixels": 1026
+          },
+          "goldTrimRight": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 19,
+            "nativeMaterialMaskPixels": 604
+          }
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw69p375.png",
+        "sha256": "1054f16530531134b633d268a58c3d9f7673a2b3766d60c96f7eed08b76305c3",
+        "changed512Pixels": 17,
+        "changedBoundingBox512": [
+          250,
+          425,
+          261,
+          428
+        ],
+        "ownerDebug": {
+          "goldTrimLeft": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 17,
+            "nativeMaterialMaskPixels": 239
+          },
+          "goldTrimRight": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 0,
+            "nativeMaterialMaskPixels": 19
+          }
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw71p25.png",
+        "sha256": "fd75082a889aa9bc85d3ce4b6f2a12eb712438630ef678d29e7374cbe30ad577",
+        "changed512Pixels": 2,
+        "changedBoundingBox512": [
+          255,
+          421,
+          256,
+          421
+        ],
+        "ownerDebug": {
+          "goldTrimLeft": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 2,
+            "nativeMaterialMaskPixels": 95
+          },
+          "goldTrimRight": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 0,
+            "nativeMaterialMaskPixels": 0
+          }
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw73p125.png",
+        "sha256": "2727604aa67a3b85e177441599a14bc335ceb20d309fa1a3f5be2552162403c3",
+        "changed512Pixels": 47,
+        "changedBoundingBox512": [
+          253,
+          418,
+          271,
+          453
+        ],
+        "ownerDebug": {
+          "goldTrimLeft": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 53,
+            "nativeMaterialMaskPixels": 309
+          },
+          "goldTrimRight": {
+            "oldRimRemovedPixels": 0,
+            "newOneSourcePixels": 0,
+            "nativeMaterialMaskPixels": 29
+          }
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "changed512Pixels": 0,
+        "changedBoundingBox512": null,
+        "ownerDebug": {
+          "nativeKeyframeSourceExact": true
+        }
+      }
+    }
+  },
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "maxAdjacentRGBMAE": 10.1016,
+        "meanAdjacentRGBMAE": 7.9434,
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 9.1631,
+        "meanAdjacentRGBMAE": 6.1601,
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 9.5625,
+        "meanAdjacentRGBMAE": 7.0499,
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 8.7373,
+        "meanAdjacentRGBMAE": 7.0137,
+        "adjacentRGBMAE": [
+          8.6399,
+          6.481,
+          6.4576,
+          6.432,
+          6.456,
+          6.437,
+          6.4688,
+          8.7373
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 9.7786,
+        "meanAdjacentRGBMAE": 7.9962,
+        "adjacentRGBMAE": [
+          9.2482,
+          7.5197,
+          7.5425,
+          7.4155,
+          7.4778,
+          7.5026,
+          7.4847,
+          9.7786
+        ]
+      }
+    },
+    "P15-107-native": {
+      "bow": {
+        "maxAdjacentRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146,
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208,
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757,
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 11.9516,
+        "meanAdjacentRGBMAE": 9.2026,
+        "adjacentRGBMAE": [
+          6.8236,
+          6.9109,
+          6.9451,
+          8.1774,
+          11.9516,
+          11.0063,
+          10.957,
+          10.8486
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 12.4831,
+        "meanAdjacentRGBMAE": 9.8602,
+        "adjacentRGBMAE": [
+          7.1766,
+          7.2971,
+          7.2991,
+          8.446,
+          12.4831,
+          12.1815,
+          12.0361,
+          11.9621
+        ]
+      }
+    },
+    "P15-115-inkCore": {
+      "bow": {
+        "maxAdjacentRGBMAE": 13.3415,
+        "meanAdjacentRGBMAE": 9.8508,
+        "adjacentRGBMAE": [
+          7.1398,
+          7.5013,
+          7.5539,
+          7.3461,
+          11.6349,
+          13.3415,
+          12.3095,
+          11.9796
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 10.104,
+        "meanAdjacentRGBMAE": 8.6418,
+        "adjacentRGBMAE": [
+          7.525,
+          7.8005,
+          7.9326,
+          7.781,
+          9.0456,
+          10.104,
+          9.7213,
+          9.2247
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 8.8,
+        "meanAdjacentRGBMAE": 7.9239,
+        "adjacentRGBMAE": [
+          7.752,
+          7.2857,
+          7.0759,
+          6.9365,
+          8.2685,
+          8.8,
+          8.5819,
+          8.6908
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 11.9103,
+        "meanAdjacentRGBMAE": 9.104,
+        "adjacentRGBMAE": [
+          6.7621,
+          7.0456,
+          7.1072,
+          7.0717,
+          10.8819,
+          11.9103,
+          11.1838,
+          10.8697
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 13.1611,
+        "meanAdjacentRGBMAE": 9.6936,
+        "adjacentRGBMAE": [
+          7.1137,
+          7.344,
+          7.2978,
+          7.2634,
+          11.3405,
+          13.1611,
+          12.0863,
+          11.9417
+        ]
+      }
+    },
+    "ribbon_core": {
+      "bow": {
+        "maxAdjacentRGBMAE": 13.4701,
+        "meanAdjacentRGBMAE": 10.2802,
+        "adjacentRGBMAE": [
+          7.7388,
+          7.7448,
+          7.6397,
+          8.4984,
+          12.4267,
+          12.5022,
+          13.4701,
+          12.2207
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 10.622,
+        "meanAdjacentRGBMAE": 9.0594,
+        "adjacentRGBMAE": [
+          8.4059,
+          8.304,
+          7.5187,
+          8.9858,
+          9.9233,
+          9.3619,
+          10.622,
+          9.3538
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 8.8682,
+        "meanAdjacentRGBMAE": 8.0651,
+        "adjacentRGBMAE": [
+          8.0071,
+          7.3777,
+          7.0325,
+          7.3278,
+          8.5859,
+          8.54,
+          8.8682,
+          8.7816
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 11.9705,
+        "meanAdjacentRGBMAE": 9.4599,
+        "adjacentRGBMAE": [
+          7.1908,
+          7.2274,
+          7.1449,
+          8.1322,
+          11.6332,
+          11.3008,
+          11.9705,
+          11.0794
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 13.0529,
+        "meanAdjacentRGBMAE": 10.0031,
+        "adjacentRGBMAE": [
+          7.4171,
+          7.4251,
+          7.3048,
+          8.4432,
+          11.9552,
+          12.2666,
+          13.0529,
+          12.16
+        ]
+      }
+    },
+    "ribbon_edge": {
+      "bow": {
+        "maxAdjacentRGBMAE": 14.8334,
+        "meanAdjacentRGBMAE": 11.0694,
+        "adjacentRGBMAE": [
+          8.8193,
+          8.0883,
+          8.0006,
+          9.0599,
+          13.1649,
+          13.2123,
+          14.8334,
+          13.3766
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 11.7105,
+        "meanAdjacentRGBMAE": 10.0648,
+        "adjacentRGBMAE": [
+          10.7187,
+          8.8264,
+          7.541,
+          9.5926,
+          11.7105,
+          9.4376,
+          11.4916,
+          11.2002
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 9.3153,
+        "meanAdjacentRGBMAE": 8.2968,
+        "adjacentRGBMAE": [
+          8.423,
+          7.4548,
+          7.1294,
+          7.4595,
+          8.7895,
+          8.571,
+          9.3153,
+          9.2319
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 12.974,
+        "meanAdjacentRGBMAE": 10.0345,
+        "adjacentRGBMAE": [
+          8.0061,
+          7.4732,
+          7.403,
+          8.5565,
+          12.1724,
+          11.823,
+          12.974,
+          11.8679
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 13.6269,
+        "meanAdjacentRGBMAE": 10.3533,
+        "adjacentRGBMAE": [
+          7.7803,
+          7.5155,
+          7.5065,
+          8.9722,
+          12.0623,
+          12.2538,
+          13.6269,
+          13.1089
+        ]
+      }
+    },
+    "ribbon_edge_jewel": {
+      "bow": {
+        "maxAdjacentRGBMAE": 14.9196,
+        "meanAdjacentRGBMAE": 11.1214,
+        "adjacentRGBMAE": [
+          8.8511,
+          8.143,
+          8.0529,
+          9.069,
+          13.1594,
+          13.2705,
+          14.9196,
+          13.5055
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 12.0852,
+        "meanAdjacentRGBMAE": 10.4218,
+        "adjacentRGBMAE": [
+          10.9375,
+          9.2017,
+          7.9004,
+          9.6548,
+          11.6727,
+          9.8378,
+          12.0841,
+          12.0852
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 9.3993,
+        "meanAdjacentRGBMAE": 8.3474,
+        "adjacentRGBMAE": [
+          8.454,
+          7.508,
+          7.1803,
+          7.4683,
+          8.7841,
+          8.6277,
+          9.3993,
+          9.3573
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 13.0342,
+        "meanAdjacentRGBMAE": 10.0708,
+        "adjacentRGBMAE": [
+          8.0284,
+          7.5113,
+          7.4395,
+          8.5628,
+          12.1685,
+          11.8637,
+          13.0342,
+          11.9578
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 13.6269,
+        "meanAdjacentRGBMAE": 10.3533,
+        "adjacentRGBMAE": [
+          7.7803,
+          7.5155,
+          7.5065,
+          8.9722,
+          12.0623,
+          12.2538,
+          13.6269,
+          13.1089
+        ]
+      }
+    },
+    "trim_matte": {
+      "bow": {
+        "maxAdjacentRGBMAE": 12.8685,
+        "meanAdjacentRGBMAE": 9.9302,
+        "adjacentRGBMAE": [
+          7.2038,
+          7.421,
+          7.4134,
+          8.5306,
+          12.8685,
+          12.0924,
+          12.0336,
+          11.8783
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208,
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757,
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ]
+      },
+      "goldTrim": {
+        "maxAdjacentRGBMAE": 11.9458,
+        "meanAdjacentRGBMAE": 9.2146,
+        "adjacentRGBMAE": [
+          6.7951,
+          7.0019,
+          6.9871,
+          8.1685,
+          11.9458,
+          11.0121,
+          10.9661,
+          10.8405
+        ]
+      },
+      "rightLap": {
+        "maxAdjacentRGBMAE": 12.4831,
+        "meanAdjacentRGBMAE": 9.8612,
+        "adjacentRGBMAE": [
+          7.1736,
+          7.2988,
+          7.3077,
+          8.4464,
+          12.4831,
+          12.1815,
+          12.0361,
+          11.9621
+        ]
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-116-visibility-repair/source-matte-occlusion-contact.jpg"
+}

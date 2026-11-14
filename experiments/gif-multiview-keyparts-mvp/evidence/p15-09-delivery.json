@@ -1,0 +1,12 @@
+{
+  "schema": "KOMA-P15-09-PRIVATE-REVIEW-ASSET-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-09-anchor-midarc-review.zip",
+  "sha256": "281e28d2f861683dfe8726e74730bd0eb744afed25d50faf2deb379d3aaa13ee",
+  "bytes": 22237508,
+  "verifiedEntries": 41,
+  "htmlEntry": "review/p15-09-midarc.html",
+  "renderedFrameCount": 27,
+  "browserScreenshotCount": 6,
+  "artisticStatus": "POSE_REFERENCE_REQUIRES_VISUAL_REVIEW"
+}

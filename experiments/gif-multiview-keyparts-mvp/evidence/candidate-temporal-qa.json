@@ -1,0 +1,208 @@
+{
+  "schema": "KOMA-P0-TURN-TEMPORAL-CONTINUITY-QA-V1",
+  "characterId": "p0_character_001",
+  "sourceRole": "real_recovered_gif_view_flow_proxy",
+  "angles": 37,
+  "startYaw": 0.0,
+  "endYaw": 90.0,
+  "medianAdjacentMeanRGBDelta": 5.4211,
+  "maxAdjacentMeanRGBDelta": 14.4204,
+  "maxMedianRatio": 1.8,
+  "outliers": [
+    {
+      "fromYaw": 20.0,
+      "toYaw": 22.5,
+      "meanRGBAbsoluteDelta": 11.2824,
+      "relativeToMedian": 2.081
+    },
+    {
+      "fromYaw": 65.0,
+      "toYaw": 67.5,
+      "meanRGBAbsoluteDelta": 14.4204,
+      "relativeToMedian": 2.66
+    }
+  ],
+  "measurements": [
+    {
+      "fromYaw": 0.0,
+      "toYaw": 2.5,
+      "meanRGBAbsoluteDelta": 6.0161
+    },
+    {
+      "fromYaw": 2.5,
+      "toYaw": 5.0,
+      "meanRGBAbsoluteDelta": 5.5232
+    },
+    {
+      "fromYaw": 5.0,
+      "toYaw": 7.5,
+      "meanRGBAbsoluteDelta": 5.4704
+    },
+    {
+      "fromYaw": 7.5,
+      "toYaw": 10.0,
+      "meanRGBAbsoluteDelta": 5.4606
+    },
+    {
+      "fromYaw": 10.0,
+      "toYaw": 12.5,
+      "meanRGBAbsoluteDelta": 5.4446
+    },
+    {
+      "fromYaw": 12.5,
+      "toYaw": 15.0,
+      "meanRGBAbsoluteDelta": 5.4288
+    },
+    {
+      "fromYaw": 15.0,
+      "toYaw": 17.5,
+      "meanRGBAbsoluteDelta": 5.4241
+    },
+    {
+      "fromYaw": 17.5,
+      "toYaw": 20.0,
+      "meanRGBAbsoluteDelta": 5.4181
+    },
+    {
+      "fromYaw": 20.0,
+      "toYaw": 22.5,
+      "meanRGBAbsoluteDelta": 11.2824
+    },
+    {
+      "fromYaw": 22.5,
+      "toYaw": 25.0,
+      "meanRGBAbsoluteDelta": 5.6308
+    },
+    {
+      "fromYaw": 25.0,
+      "toYaw": 27.5,
+      "meanRGBAbsoluteDelta": 5.6021
+    },
+    {
+      "fromYaw": 27.5,
+      "toYaw": 30.0,
+      "meanRGBAbsoluteDelta": 5.5514
+    },
+    {
+      "fromYaw": 30.0,
+      "toYaw": 32.5,
+      "meanRGBAbsoluteDelta": 5.5093
+    },
+    {
+      "fromYaw": 32.5,
+      "toYaw": 35.0,
+      "meanRGBAbsoluteDelta": 5.4717
+    },
+    {
+      "fromYaw": 35.0,
+      "toYaw": 37.5,
+      "meanRGBAbsoluteDelta": 5.4464
+    },
+    {
+      "fromYaw": 37.5,
+      "toYaw": 40.0,
+      "meanRGBAbsoluteDelta": 5.4457
+    },
+    {
+      "fromYaw": 40.0,
+      "toYaw": 42.5,
+      "meanRGBAbsoluteDelta": 5.4383
+    },
+    {
+      "fromYaw": 42.5,
+      "toYaw": 45.0,
+      "meanRGBAbsoluteDelta": 5.8789
+    },
+    {
+      "fromYaw": 45.0,
+      "toYaw": 47.5,
+      "meanRGBAbsoluteDelta": 3.6745
+    },
+    {
+      "fromYaw": 47.5,
+      "toYaw": 50.0,
+      "meanRGBAbsoluteDelta": 3.3511
+    },
+    {
+      "fromYaw": 50.0,
+      "toYaw": 52.5,
+      "meanRGBAbsoluteDelta": 3.2926
+    },
+    {
+      "fromYaw": 52.5,
+      "toYaw": 55.0,
+      "meanRGBAbsoluteDelta": 3.2892
+    },
+    {
+      "fromYaw": 55.0,
+      "toYaw": 57.5,
+      "meanRGBAbsoluteDelta": 3.2657
+    },
+    {
+      "fromYaw": 57.5,
+      "toYaw": 60.0,
+      "meanRGBAbsoluteDelta": 3.2546
+    },
+    {
+      "fromYaw": 60.0,
+      "toYaw": 62.5,
+      "meanRGBAbsoluteDelta": 3.2119
+    },
+    {
+      "fromYaw": 62.5,
+      "toYaw": 65.0,
+      "meanRGBAbsoluteDelta": 3.1758
+    },
+    {
+      "fromYaw": 65.0,
+      "toYaw": 67.5,
+      "meanRGBAbsoluteDelta": 14.4204
+    },
+    {
+      "fromYaw": 67.5,
+      "toYaw": 70.0,
+      "meanRGBAbsoluteDelta": 2.2837
+    },
+    {
+      "fromYaw": 70.0,
+      "toYaw": 72.5,
+      "meanRGBAbsoluteDelta": 2.2754
+    },
+    {
+      "fromYaw": 72.5,
+      "toYaw": 75.0,
+      "meanRGBAbsoluteDelta": 2.2619
+    },
+    {
+      "fromYaw": 75.0,
+      "toYaw": 77.5,
+      "meanRGBAbsoluteDelta": 2.2421
+    },
+    {
+      "fromYaw": 77.5,
+      "toYaw": 80.0,
+      "meanRGBAbsoluteDelta": 2.226
+    },
+    {
+      "fromYaw": 80.0,
+      "toYaw": 82.5,
+      "meanRGBAbsoluteDelta": 2.2073
+    },
+    {
+      "fromYaw": 82.5,
+      "toYaw": 85.0,
+      "meanRGBAbsoluteDelta": 2.1952
+    },
+    {
+      "fromYaw": 85.0,
+      "toYaw": 87.5,
+      "meanRGBAbsoluteDelta": 2.2262
+    },
+    {
+      "fromYaw": 87.5,
+      "toYaw": 90.0,
+      "meanRGBAbsoluteDelta": 2.4797
+    }
+  ],
+  "status": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT"
+}

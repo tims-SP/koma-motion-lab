@@ -1,0 +1,19 @@
+{
+  "schema": "KOMA-P15-37-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "zipPath": "private-assets/exports/p15-37-temporal-art-review.zip",
+  "sha256": "c8f54bf7113645403e48313c9ac31ec97346e0e84b4b483eaa4c7fea09b747b8",
+  "bytes": 25623457,
+  "entriesVerified": 107,
+  "htmlEntry": "index.html",
+  "frames": 9,
+  "semanticRoles": 13,
+  "paintKeys": [
+    57.5,
+    60.0
+  ],
+  "browserChecks": 54,
+  "imageLoads": 216,
+  "browserScreenshots": 10,
+  "formalArtistAdmission": 0
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "KOMA-P15-14-HF-CONNECTED-ACCOUNT-EXECUTION-QA-V1",
+  "date": "2026-11-10",
+  "characterId": "p0_character_001",
+  "objective": "Use connected Hugging Face plugin accounts to generate native See-through semantic PSD remotely.",
+  "executionLocation": "Hugging Face plugin and Hugging Face cloud services",
+  "testedSpace": "24yearsold/see-through-demo",
+  "testingApproach": "Sequential connected-account capabilities probe; no target-VPS execution",
+  "accounts": [
+    {
+      "account": "wcev",
+      "authenticated": true,
+      "pro": false,
+      "remoteJobs": {
+        "test": "cpu-basic minimal Python",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "sandbox": {
+        "test": "create with forwarded HF authentication",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "directSpaceMcp": {
+        "result": "HTTP_404_NOT_FOUND"
+      }
+    },
+    {
+      "account": "kkdcgtx",
+      "authenticated": true,
+      "pro": false,
+      "remoteJobs": {
+        "test": "cpu-basic minimal Python",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "sandbox": {
+        "test": "create default sandbox",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "directSpaceMcp": {
+        "result": "HTTP_404_NOT_FOUND"
+      }
+    },
+    {
+      "account": "wfswhytrjutrj",
+      "authenticated": true,
+      "pro": false,
+      "remoteJobs": {
+        "test": "cpu-basic minimal Python",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "sandbox": {
+        "test": "create default sandbox",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "directSpaceMcp": {
+        "result": "HTTP_404_NOT_FOUND"
+      }
+    },
+    {
+      "account": "dfvswegwseg",
+      "authenticated": true,
+      "pro": false,
+      "remoteJobs": {
+        "test": "cpu-basic minimal Python",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "sandbox": {
+        "test": "create default sandbox",
+        "result": "HTTP_402_PAYMENT_REQUIRED"
+      },
+      "directSpaceMcp": {
+        "result": "HTTP_404_NOT_FOUND"
+      }
+    }
+  ],
+  "alternateSpacesInspected": [
+    {
+      "space": "RickyRoscoe/see-through-demo",
+      "mcp": "HTTP_404_NOT_FOUND"
+    },
+    {
+      "space": "yuyuanan/see-through-nf4",
+      "mcp": "HTTP_404_NOT_FOUND"
+    },
+    {
+      "space": "ryu/see-through-demo",
+      "mcp": "HTTP_404_NOT_FOUND"
+    },
+    {
+      "space": "ifire/see-through-space",
+      "mcp": "HTTP_404_NOT_FOUND"
+    }
+  ],
+  "remoteJobsBilling": "Each linked account's compute job requests were denied before starting; no GPU or CPU inference executed.",
+  "directSpaceMcp": "The listed See-through Space does not expose a callable MCP tool endpoint through dynamic_space.",
+  "zeroGpuPerAccountQuota": "NOT_DETERMINED: the MCP tool could not reach /inference, and HF Jobs/Sandbox billing is a separate quota system.",
+  "generatedPsdCount": 0,
+  "generatedSemanticLayers": 0,
+  "recommendedContinuation": "Use a Space execution method that carries the selected account's authorized ZeroGPU session, or activate Hugging Face remote compute billing. Re-run the existing P0 SHA-pinned source through the See-through PSD API, then validate each layer against the registered 13-role ArtMesh.",
+  "status": "HF_PLUGIN_ACCOUNT_CAPABILITIES_VERIFIED"
+}

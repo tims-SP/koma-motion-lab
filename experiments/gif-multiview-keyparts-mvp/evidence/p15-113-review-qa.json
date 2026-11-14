@@ -1,0 +1,117 @@
+{
+  "schema": "KOMA_P15_113_CANONICAL_GARMENT_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "sourceViews": [
+    60,
+    67.5,
+    75
+  ],
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "P15-112-edgeGuard": {
+      "60": "../p15-112-visibility-vdd/edge_guard-yaw60.png",
+      "61.875": "../p15-112-visibility-vdd/edge_guard-yaw61p875.png",
+      "63.75": "../p15-112-visibility-vdd/edge_guard-yaw63p75.png",
+      "65.625": "../p15-112-visibility-vdd/edge_guard-yaw65p625.png",
+      "67.5": "../p15-112-visibility-vdd/edge_guard-yaw67p5.png",
+      "69.375": "../p15-112-visibility-vdd/edge_guard-yaw69p375.png",
+      "71.25": "../p15-112-visibility-vdd/edge_guard-yaw71p25.png",
+      "73.125": "../p15-112-visibility-vdd/edge_guard-yaw73p125.png",
+      "75": "../p15-112-visibility-vdd/edge_guard-yaw75.png"
+    },
+    "canonical_full": {
+      "60": "canonical_full-yaw60.png",
+      "61.875": "canonical_full-yaw61p875.png",
+      "63.75": "canonical_full-yaw63p75.png",
+      "65.625": "canonical_full-yaw65p625.png",
+      "67.5": "canonical_full-yaw67p5.png",
+      "69.375": "canonical_full-yaw69p375.png",
+      "71.25": "canonical_full-yaw71p25.png",
+      "73.125": "canonical_full-yaw73p125.png",
+      "75": "canonical_full-yaw75.png"
+    },
+    "canonical_bow_native_torso": {
+      "60": "canonical_bow_native_torso-yaw60.png",
+      "61.875": "canonical_bow_native_torso-yaw61p875.png",
+      "63.75": "canonical_bow_native_torso-yaw63p75.png",
+      "65.625": "canonical_bow_native_torso-yaw65p625.png",
+      "67.5": "canonical_bow_native_torso-yaw67p5.png",
+      "69.375": "canonical_bow_native_torso-yaw69p375.png",
+      "71.25": "canonical_bow_native_torso-yaw71p25.png",
+      "73.125": "canonical_bow_native_torso-yaw73p125.png",
+      "75": "canonical_bow_native_torso-yaw75.png"
+    },
+    "canonical_bow_owner_torso": {
+      "60": "canonical_bow_owner_torso-yaw60.png",
+      "61.875": "canonical_bow_owner_torso-yaw61p875.png",
+      "63.75": "canonical_bow_owner_torso-yaw63p75.png",
+      "65.625": "canonical_bow_owner_torso-yaw65p625.png",
+      "67.5": "canonical_bow_owner_torso-yaw67p5.png",
+      "69.375": "canonical_bow_owner_torso-yaw69p375.png",
+      "71.25": "canonical_bow_owner_torso-yaw71p25.png",
+      "73.125": "canonical_bow_owner_torso-yaw73p125.png",
+      "75": "canonical_bow_owner_torso-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-113-canonical-topology/P15-101-original-loop.gif",
+      "sha256": "7e34b1eec6e7c02fb2dd410302b7adbb1b9e79e8e0df75e339aab2c62895fc5c"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-113-canonical-topology/P15-107-native-loop.gif",
+      "sha256": "eb0d6d53e699d4ac9e77fb3952716189679fc32aa06276c895454168d6e45c20"
+    },
+    "P15-112-edgeGuard": {
+      "path": "private-assets/exports/p15-113-canonical-topology/P15-112-edgeGuard-loop.gif",
+      "sha256": "9310cb7484669a544fdb734df64524a062a2edad0370a51c816a7cd109958989"
+    },
+    "canonical_full": {
+      "path": "private-assets/exports/p15-113-canonical-topology/canonical_full-loop.gif",
+      "sha256": "91948ee94ea2a08e6aa3bf7dfd68b2442e3eacaebfdf3ee5eaabd6e30cc67cb2"
+    },
+    "canonical_bow_native_torso": {
+      "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_native_torso-loop.gif",
+      "sha256": "44ecbabb1c37a545b9e6cb114c63e27b09110c13226aa864397810134ae01fee"
+    },
+    "canonical_bow_owner_torso": {
+      "path": "private-assets/exports/p15-113-canonical-topology/canonical_bow_owner_torso-loop.gif",
+      "sha256": "79311c30d9f1edf387542b11623e3849d42399d79fd0b9ce39b06b604d0d7425"
+    }
+  },
+  "entry": "private-assets/exports/p15-113-canonical-topology/index.html",
+  "topologySourceSHA256": "87b7b9e0f33bbadcb16833b7e29499cb692b35db95518d2cab35e36a6213b325",
+  "fullYawArtistApproved": false
+}

@@ -1,0 +1,320 @@
+{
+  "schema": "KOMA-P15-40-PROFILE-VISIBILITY-V1",
+  "characterId": "p0_character_001",
+  "frames": [
+    {
+      "tag": "yaw45",
+      "angle": 45.0,
+      "sourceSHA256": "8b3d09014be2956d5cef0a394c1db9ae3209aa64360ab86e52d90e1e07d500fd",
+      "candidateSHA256": "ec8a396940fabf92ae4faf808394328c897cfa44a83078d990ba2710dea4f501",
+      "sourceEyeSHA256": "dbd24f45046613ba541c038df03eaa6c40854909779644b8c7dc9b3b92258353",
+      "changedPixels": 956,
+      "farEyeSourceAlpha": 786094.0,
+      "farEyeVisibleAlpha": 786094.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 345.0,
+      "clipShiftXY": [
+        -3,
+        0
+      ],
+      "clipContactBefore": 0.939996,
+      "clipContactAfter": 0.997811,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw47p5",
+      "angle": 47.5,
+      "sourceSHA256": "fa9c66ff540002a53603de55d2fff49487ea90e1275493f5bb293a935220ddb8",
+      "candidateSHA256": "dee81c28380f5c8daae2ad1ceae3ef7c04d1abd17982b095b781a8f80d9b5a04",
+      "sourceEyeSHA256": "15ed247a7599c403efc01c5196b390c0c74ff239c332692daadd4bc6f38a4bd3",
+      "changedPixels": 1061,
+      "farEyeSourceAlpha": 712202.0,
+      "farEyeVisibleAlpha": 712202.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 345.0,
+      "clipShiftXY": [
+        -3,
+        0
+      ],
+      "clipContactBefore": 0.934082,
+      "clipContactAfter": 0.993981,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw50",
+      "angle": 50.0,
+      "sourceSHA256": "b58dae5cd3b5c67f0d42abe35fa33300b159f90a1bbb361aecd7629b673182f2",
+      "candidateSHA256": "e9ec47ee050bdc1fb516224906cf125a1ad55eb88b5f33447753b61d1141054c",
+      "sourceEyeSHA256": "f8fdeb1ea66c151aa4eb3d4e44e5dc780755d4a9e8c30f0ebf978672da0ebe34",
+      "changedPixels": 1073,
+      "farEyeSourceAlpha": 642034.0,
+      "farEyeVisibleAlpha": 642034.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 345.0,
+      "clipShiftXY": [
+        -3,
+        0
+      ],
+      "clipContactBefore": 0.927404,
+      "clipContactAfter": 0.99105,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw52p5",
+      "angle": 52.5,
+      "sourceSHA256": "b1970c31c16500690d8a33446e3cd6be51f363c137b65445ba671d6514b372d3",
+      "candidateSHA256": "aba3d19ac1128f082a544ace445784b71b0f9ce734585acfdceb7402dc5d457b",
+      "sourceEyeSHA256": "7ff33710507249012f2b5b026ebbd71122493e2a2ab6258f3e4a9fcc68eea2b7",
+      "changedPixels": 1129,
+      "farEyeSourceAlpha": 574320.0,
+      "farEyeVisibleAlpha": 574320.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 345.0,
+      "clipShiftXY": [
+        -3,
+        0
+      ],
+      "clipContactBefore": 0.919981,
+      "clipContactAfter": 0.988288,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw55",
+      "angle": 55.0,
+      "sourceSHA256": "040aa5ceb6625a0bf4575cf5c827d6f5e6c4de6197cb7de7191a72d138406979",
+      "candidateSHA256": "76ef189c3a986281a672abe063703b110ef20beaec45732430a325f360e35e8c",
+      "sourceEyeSHA256": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+      "changedPixels": 1030,
+      "farEyeSourceAlpha": 509511.0,
+      "farEyeVisibleAlpha": 509511.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 345.0,
+      "clipShiftXY": [
+        -3,
+        0
+      ],
+      "clipContactBefore": 0.911628,
+      "clipContactAfter": 0.985643,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw56p25",
+      "angle": 56.25,
+      "sourceSHA256": "50574c534fe4185c8dafba0e08fffc6fc55c0543a85529c25ea664d5449a9c28",
+      "candidateSHA256": "43f168c52e008742e858a0718cc3e142abdf3770038b046baae897e910cbfc00",
+      "sourceEyeSHA256": "acb892c7f00807469975dce786a3b53b2201ff584546df9b8559867a71c87458",
+      "changedPixels": 1190,
+      "farEyeSourceAlpha": 324243.0,
+      "farEyeVisibleAlpha": 324243.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 346.0,
+      "clipShiftXY": [
+        -3,
+        1
+      ],
+      "clipContactBefore": 0.896819,
+      "clipContactAfter": 0.978921,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw57p5",
+      "angle": 57.5,
+      "sourceSHA256": "232714d0a293dfff14687923678c5a454f3335af8dd6395e4b22aa44e008f99b",
+      "candidateSHA256": "aa9c8e015523f90529ca751a1cc39412d98575643af955174127cf0b94c1c382",
+      "sourceEyeSHA256": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+      "changedPixels": 1087,
+      "farEyeSourceAlpha": 163338.0,
+      "farEyeVisibleAlpha": 163338.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 329.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.862013,
+      "clipContactAfter": 0.980112,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw58p75",
+      "angle": 58.75,
+      "sourceSHA256": "e653e47ab2721873ed31dbf4cc96c5cf545c69a0f9e84dd0a1fea1cf6d6ca444",
+      "candidateSHA256": "3d9752b05c10f2aa6c94699eed368b0346763774a586449363275056cd57c1a5",
+      "sourceEyeSHA256": "7491b4e3c64997e88002c43faa0a314d0e1c14bea2462b6b6acce45b9749beff",
+      "changedPixels": 1207,
+      "farEyeSourceAlpha": 163469.0,
+      "farEyeVisibleAlpha": 163469.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 330.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.844463,
+      "clipContactAfter": 0.962252,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw60",
+      "angle": 60.0,
+      "sourceSHA256": "0ab3857dcba68f24842706933436fe6ca709ec47e934622b296ce2abd8ebec5a",
+      "candidateSHA256": "5dfe6197364f48aaedcd1cbde96ae46bd7040bf39af2637b17b48db527d8d4bd",
+      "sourceEyeSHA256": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+      "changedPixels": 1094,
+      "farEyeSourceAlpha": 163385.0,
+      "farEyeVisibleAlpha": 163385.0,
+      "eyeVisibleRatio": 1.0,
+      "eyeOuterAnchorX443": 331.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.817679,
+      "clipContactAfter": 0.962419,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw61p25",
+      "angle": 61.25,
+      "sourceSHA256": "8073023cb6dc52cd3b34a38258e84f57ecfa5e5288757881b8836aa88f0bfb87",
+      "candidateSHA256": "e335827216f9b311b3bdffd2eaf5c9eb84a0c551a86d99087bb510bf178da1f3",
+      "sourceEyeSHA256": "fcb3d53b98b6b61d097cf7204140af02b1b8355ea85aad4b2bd5f06e145b3b1d",
+      "changedPixels": 2769,
+      "farEyeSourceAlpha": 159675.0,
+      "farEyeVisibleAlpha": 102270.0,
+      "eyeVisibleRatio": 0.640488,
+      "eyeOuterAnchorX443": 349.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.778092,
+      "clipContactAfter": 0.933168,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw62p5",
+      "angle": 62.5,
+      "sourceSHA256": "67ebb23d746712cca7181a4ea933b06258db8fc91c1175a0b223c863046503d9",
+      "candidateSHA256": "524abc178a6a5951c1ae1a11f720a1ca6b791dd8aa68b267a961d25deb415064",
+      "sourceEyeSHA256": "37f15e1f876f51b09c755099b62984e83dbbd7e60ed6791ea289c2739cacf82a",
+      "changedPixels": 2665,
+      "farEyeSourceAlpha": 118952.0,
+      "farEyeVisibleAlpha": 42847.0,
+      "eyeVisibleRatio": 0.360204,
+      "eyeOuterAnchorX443": 350.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.744479,
+      "clipContactAfter": 0.915431,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw63p75",
+      "angle": 63.75,
+      "sourceSHA256": "d1bb59290b2e695964a8302fd36b43f128a085fe354069808cd5858f88adb097",
+      "candidateSHA256": "1f3ed4d9e876f567bef95eceb7078f8e443a9e54d9aa58cfce3a84d93e0ad26b",
+      "sourceEyeSHA256": "e9c2fc9997e1862c0e56019497ba3ad53d80ccb3d7dabeae47661e06061b60e8",
+      "changedPixels": 2922,
+      "farEyeSourceAlpha": 69900.0,
+      "farEyeVisibleAlpha": 8594.0,
+      "eyeVisibleRatio": 0.122947,
+      "eyeOuterAnchorX443": 352.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.718759,
+      "clipContactAfter": 0.887982,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    },
+    {
+      "tag": "yaw65",
+      "angle": 65.0,
+      "sourceSHA256": "d6f896761815c230c165b98e8c5d0191dc878aa85a2d1f5c3cfb140d383bc4c3",
+      "candidateSHA256": "fb1d9b17e2a8bb7ad5329b67111ab2e1d81454cc915d8bf99162f0ee669f8dcc",
+      "sourceEyeSHA256": "a7ae70c115c945916e14d887427fd8c5f7be407b1a6f97bf7756a428641193e0",
+      "changedPixels": 1699,
+      "farEyeSourceAlpha": 55713.0,
+      "farEyeVisibleAlpha": 0.0,
+      "eyeVisibleRatio": 0.0,
+      "eyeOuterAnchorX443": 352.0,
+      "clipShiftXY": [
+        -3,
+        3
+      ],
+      "clipContactBefore": 0.685118,
+      "clipContactAfter": 0.858752,
+      "sourceLayersPreserved": true,
+      "independentHiddenPaint": false,
+      "artisticallyApproved": false
+    }
+  ],
+  "geometricScales": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.6,
+    0.35,
+    0.0
+  ],
+  "browserChecked": true,
+  "artisticApproval": false,
+  "sourceP15_39AuditSHA256": "3d9bfa920ded83d14f482b3fdbb014cfea3dd203cc701f7a8c66360d669b4f7b",
+  "geometryMethod": "complete source eye affine geometry contraction toward outer eye corner; independent hair-contact clip translation",
+  "browserChecks": 78,
+  "browserScreenshots": 8,
+  "visualInspection": {
+    "anglesReviewed": [
+      57.5,
+      60,
+      65
+    ],
+    "observations": {
+      "57.5": "Stable full eye shapes and clip visual correspondence, provenance still mixed",
+      "60": "Source eye intact and clip registration improved",
+      "65": "Blank profile-face region and fragmented facial drawing remain visibly unsuitable"
+    },
+    "highFidelityArtAccepted": false,
+    "highestPriorityNext": "Independent 65-degree anime keyframe with anatomically coherent face and true hair/clip occlusion"
+  },
+  "releaseArchive": {
+    "path": "private-assets/exports/p15-40-profile-review.zip",
+    "sha256": "384de6be8598e7363634ba34672df0a6d433e0b4f243257fe98e9336575af23e",
+    "bytes": 8346369,
+    "entriesVerified": 87
+  }
+}

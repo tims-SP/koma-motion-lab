@@ -1,0 +1,427 @@
+{
+  "schema": "KOMA-P0-P15-06-PRIVATE-ASSET-BUNDLE-V1",
+  "characterId": "p0_character_001",
+  "assetBundlePath": "private-assets/exports/p15-06-generated-keyviews-artmesh-v1.zip",
+  "assetBundleSHA256": "d7eb6c5f51f511e9a5a3b13b45691ea5d5670f2716212e5b4cb6e1590ee4e81c",
+  "assetBundleBytes": 17132171,
+  "sourceFileCount": 81,
+  "sourceFiles": [
+    {
+      "path": "evidence/p15-06-generated-keyviews-qa.json",
+      "bytes": 5773,
+      "sha256": "9b7b39b1fa3b19489698dd477214a564d43e6c79a325f79f3543237fc97e2c4b"
+    },
+    {
+      "path": "evidence/p15-06-source-readiness.json",
+      "bytes": 1961,
+      "sha256": "2a0ef4a601813312ebad89e6ed3d98eab1b6e4fb4bef7a0113ce4803f98e29af"
+    },
+    {
+      "path": "metadata/p15-holdout-generation-contract.json",
+      "bytes": 3592,
+      "sha256": "203a0eb2bee711c8416c927400b6c953bfa837b3c27cc39a5f8e921bb246b3dc"
+    },
+    {
+      "path": "private-assets/p1-front/diagnostics/front-reference.png",
+      "bytes": 773121,
+      "sha256": "626f9105d4413477aed256d3bca340166c767a84821bd289d37144449bd67dd3"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/qa.json",
+      "bytes": 2938,
+      "sha256": "67b233601b2fa0d6f1dd211ad19cc0a7749632fe8b3f848e5cf3c37870aad52d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw65-eye-near.png",
+      "bytes": 281820,
+      "sha256": "c2dae90bbc71e61714dcf35736948f60d4d1827f64bfa3540738d9fb525446e2"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw65-face-skin.png",
+      "bytes": 288993,
+      "sha256": "84d77c4418614fad53232b694a218cab7e8b19276679afea0bc9a8bcd0da86f8"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw65-hair-back.png",
+      "bytes": 287461,
+      "sha256": "18b165ca4fad9011abeac94305a19f45e7bf7246fa2b0f881d95eba207cdf44d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw65-hair-front.png",
+      "bytes": 288690,
+      "sha256": "36551077cb7d0727afc97c71a62daa9b2603d9c80990de48072643688edf629e"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw77p5-face-skin.png",
+      "bytes": 261323,
+      "sha256": "24a1af67d5c40af3816c38715f531569e6d1263c7175079b565622da43521ef3"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw77p5-hair-back-hidden.png",
+      "bytes": 271788,
+      "sha256": "f7d5f6b326cab178714b819b02f4a9b100a509dd3090eef716edd70ff29d9981"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw77p5-hair-back.png",
+      "bytes": 257995,
+      "sha256": "c3c45fb717536e891eaf0a43e2ef77b67e325ead087e8f7935c356d3ec2d6343"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/browser/yaw77p5-hair-side-hidden.png",
+      "bytes": 261207,
+      "sha256": "2715ea30524aac381036fe03c84b935aae23bf90de91b2ecfa70f6a3bc0d00a8"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/seethrough/yaw077p5-layers.psd",
+      "bytes": 11585358,
+      "sha256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/seethrough/yaw077p5-psd-layer-audit.jpg",
+      "bytes": 155394,
+      "sha256": "aed09efbad03e8886a05e7d3e2e190ed55c328e7810da949c297507cbc7999f9"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/seethrough/yaw077p5-qa.json",
+      "bytes": 623,
+      "sha256": "38992ba85f74d377968a3f4dd5c688e16db87807472d1f797ac29529b30b3131"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/seethrough/yaw077p5-structure-qa.json",
+      "bytes": 1504,
+      "sha256": "9d7a884846cb1ac6fa79af8e7b9f006ed7786f4037ce8e398f6bedc56ddd8631"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/ingest-qa.json",
+      "bytes": 7057,
+      "sha256": "f59ea953b3cbab90a36aca6d1266eb0d1b223ae44bf711afe011f0738ab3be7f"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/body.reference.png",
+      "bytes": 147396,
+      "sha256": "84fdb74ba1f14043751b2be98e62941cedacb55f71bca389b44fabeb47d041e4"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/ear.far.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/ear.near.png",
+      "bytes": 7132,
+      "sha256": "a0c1a52781ad86721350e1d197756f5bec0731e896cd8eb5ae9344b0f2ae9858"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/eye.far.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/eye.near.png",
+      "bytes": 30488,
+      "sha256": "d4a0752741828c0f6e32b90b5a6889482e75af8fa2685c599b38b5e923c6671d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/face.skin.png",
+      "bytes": 61922,
+      "sha256": "f24994812dac595e6154e1f2f47724153f9fa88e0c388c03dd6beef03286c08c"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/hair.ahoge.png",
+      "bytes": 30731,
+      "sha256": "4aa83a70dd40424f34d40760825c9f251328a8c37bdfd2a75c04e305f2f7fd42"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/hair.back.png",
+      "bytes": 89376,
+      "sha256": "19b6f94c5a2a0b23e77909995668c4fd25281590e8c5fe029673d38022c71811"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/hair.clip.cross_gold.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/hair.front.png",
+      "bytes": 198141,
+      "sha256": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/hair.side.png",
+      "bytes": 173229,
+      "sha256": "9f98cb0cf3ad76b37a5977b0ff82686e9f3223359b1cad3836b4bf9a8f99a59e"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/mouth.png",
+      "bytes": 9696,
+      "sha256": "a0b0a4dcc15c1e1e49c290a987e705a71f79437007309668c127192c671b3251"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/layers/nose.png",
+      "bytes": 13143,
+      "sha256": "bc212dffbeda1365351d45f95a4ed6e911112015f89bbd5f86d5164188464a98"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/p15-parts-audit.jpg",
+      "bytes": 59872,
+      "sha256": "e3a7b865019af6366eb6e6564f7767ba6b7418a696060ec0e22263dd348f9994"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/qa.json",
+      "bytes": 10212,
+      "sha256": "3d89700741265a810a8a192198163501601b03c63e11667f2b24552c741d6dd1"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/yaw065-artmesh-composite.png",
+      "bytes": 643443,
+      "sha256": "2f3d92c014d04390bfd55762476131f6987c030d2d26c5896357afdb19820d3c"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-artmesh/yaw065-source-artmesh-contact.jpg",
+      "bytes": 99673,
+      "sha256": "19a933eba6b63453aee3fdc1e0bcd9cc30e262fa8751ff7c44de8064d107d30c"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-qwen2511-v2.png",
+      "bytes": 761260,
+      "sha256": "1121c12f2e5452f657c6bb1ecd6193ca256e5bfeaf8b6cacd1a8698944de1842"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-qwen2511-v2.provenance.json",
+      "bytes": 288,
+      "sha256": "c8a3538579a34fc9225e17522e71c438348972edbe518cf645a313e49f0069b6"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-source-rgba.png",
+      "bytes": 643608,
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw065-source-rgba.qa.json",
+      "bytes": 1201,
+      "sha256": "4745b26340bf4a4535a0a5d4ae8cd5fc7e3aafce58f86661ad0f8cb3535841fb"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/ingest-qa.json",
+      "bytes": 7082,
+      "sha256": "1bcbc6e3b943b2f69dbadcb19231192083ba55bef61c4a7c6d4c2564c500e409"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/body.reference.png",
+      "bytes": 180870,
+      "sha256": "1c6365d8b896d4215079837c4b801830be75b38e9fa63a9e8fe86056e6f7e725"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/ear.far.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/ear.near.png",
+      "bytes": 6732,
+      "sha256": "616df1e95821460412208d98d91093c6db557fa9bf0fd5c4bbddac114daf214d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/eye.far.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/eye.near.png",
+      "bytes": 33393,
+      "sha256": "9b1e54467a7e1f4eacf80bcd09817cafebc469b7850a40f09c88c5f3f398bd3d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/face.skin.png",
+      "bytes": 69441,
+      "sha256": "667ea239c0f0730f4015d5050356464722d1faf8e7619af8443878ead03784fc"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/hair.ahoge.png",
+      "bytes": 28674,
+      "sha256": "a045562e9b79b8f7b09f7efe63555b647e2068ea9f57a485da92e5b59ffa39ea"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/hair.back.png",
+      "bytes": 80166,
+      "sha256": "3a7122a386c79688ae81383fa9f354fc27a6f36fbebad4c046f447bdbb04504f"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/hair.clip.cross_gold.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/hair.front.png",
+      "bytes": 196973,
+      "sha256": "f22580bafda23799963524c0de68c83009344409d6c80955a729f2830ab398b6"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/hair.side.png",
+      "bytes": 151966,
+      "sha256": "eace664d09b34733407c15fc85adef76a3b49219293bac970535d6813269d77f"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/mouth.png",
+      "bytes": 8387,
+      "sha256": "020b2680b22828e828f4ae6278ce5c811825be043696fe34f1c092463224db60"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/layers/nose.png",
+      "bytes": 14976,
+      "sha256": "c7c22acc6024d4140ab4a023dc368765d0e8b311932955072e5e58c464a57532"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/p15-parts-audit.jpg",
+      "bytes": 60799,
+      "sha256": "490d71ba2bf3f3c84a6385e3944ac37cfd3004bc3a807beceaf291c8bf9c235b"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/qa.json",
+      "bytes": 10270,
+      "sha256": "ad69b8c9127f66610c89312bbc3cf3a53b0d543c35498f69ac9d7adec4a260b5"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/yaw077p5-artmesh-composite.png",
+      "bytes": 657329,
+      "sha256": "832d61faad9a305ec69a9267d9c10e4af057c8903f6f34928766dd560ba343e9"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-artmesh/yaw077p5-source-artmesh-contact.jpg",
+      "bytes": 101994,
+      "sha256": "3cadaf81a6f6f386dfaa75f7c50964cd3ce90bccdf7bb8ce29580c3f2d2005d9"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/body.reference.png",
+      "bytes": 180870,
+      "sha256": "1c6365d8b896d4215079837c4b801830be75b38e9fa63a9e8fe86056e6f7e725"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/ear.far.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/ear.near.png",
+      "bytes": 6732,
+      "sha256": "616df1e95821460412208d98d91093c6db557fa9bf0fd5c4bbddac114daf214d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/eye.far.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/eye.near.png",
+      "bytes": 33393,
+      "sha256": "9b1e54467a7e1f4eacf80bcd09817cafebc469b7850a40f09c88c5f3f398bd3d"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/face.skin.png",
+      "bytes": 93439,
+      "sha256": "9cfb3119efb16bbbe86a6073e2a1282ff78ca88c20224462892c443299c8b354"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/hair.ahoge.png",
+      "bytes": 28674,
+      "sha256": "a045562e9b79b8f7b09f7efe63555b647e2068ea9f57a485da92e5b59ffa39ea"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/hair.back.png",
+      "bytes": 143112,
+      "sha256": "47a0307583a93994c0217a2a97a55b5e15fb738991d67b00ed2a15591d0834e6"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/hair.clip.cross_gold.png",
+      "bytes": 4144,
+      "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/hair.front.png",
+      "bytes": 196973,
+      "sha256": "f22580bafda23799963524c0de68c83009344409d6c80955a729f2830ab398b6"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/hair.side.png",
+      "bytes": 158353,
+      "sha256": "22ac3feccb471f6daf7814cdd852ea8a99c113659d5bd8d0fd3043bcea28290a"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/mouth.png",
+      "bytes": 8387,
+      "sha256": "020b2680b22828e828f4ae6278ce5c811825be043696fe34f1c092463224db60"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/layers/nose.png",
+      "bytes": 14976,
+      "sha256": "c7c22acc6024d4140ab4a023dc368765d0e8b311932955072e5e58c464a57532"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/qa.json",
+      "bytes": 7474,
+      "sha256": "3f3c01af832b98b6959c3cd4fedbc11adade120844b2eb9b3affca979e8701e2"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/yaw077p5-artmesh-underpaint.png",
+      "bytes": 657329,
+      "sha256": "832d61faad9a305ec69a9267d9c10e4af057c8903f6f34928766dd560ba343e9"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-inpainted/yaw077p5-inpainted-layer-review.jpg",
+      "bytes": 69336,
+      "sha256": "286be694692171e647ad8e10a87d382154f002dbe93208729cd3d834cfac3cae"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-qwen2511-v2.png",
+      "bytes": 747896,
+      "sha256": "f24a6b7eaf7f802cd5867f37ee113d1bf325b3cd1321b89fe8a4b57b5e506fbe"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-qwen2511-v2.provenance.json",
+      "bytes": 290,
+      "sha256": "6b51a805a523be32ac13e8d854c8918eea0e662fe1e17ecb5536f98878c32a18"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-source-rgba.png",
+      "bytes": 657337,
+      "sha256": "1d7a757e557507b5fbd6f4e5881df3e0fae58e0155786de85bddea564515b1c9"
+    },
+    {
+      "path": "private-assets/p15-independent-candidates/yaw077p5-source-rgba.qa.json",
+      "bytes": 1205,
+      "sha256": "5a49c8770dfc1c623a74ef04cd33f9e12384b50c3ec02920769c915f222e83dd"
+    },
+    {
+      "path": "private-assets/p2-views/whole/yaw045.png",
+      "bytes": 751830,
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40"
+    },
+    {
+      "path": "private-assets/p2-views/whole/yaw090.png",
+      "bytes": 599404,
+      "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16"
+    },
+    {
+      "path": "review/p15-06-keyview-art.html",
+      "bytes": 2341,
+      "sha256": "57e108d5063545b8a22bdc4eefb4d2f1673167eeed57d4ab7032667132ebc808"
+    },
+    {
+      "path": "review/p15-06-keyview-art.js",
+      "bytes": 4472,
+      "sha256": "2b7e2eec6f1c23ca2ea6a1b2e6ca334031848b4f79c6c9d030f8829676f25475"
+    }
+  ],
+  "originalP0Angles": [
+    0,
+    45,
+    90
+  ],
+  "generatedCandidateAngles": [
+    65.0,
+    77.5
+  ],
+  "nativeSemanticRGBA": 26,
+  "inpaintedPSDView": 77.5,
+  "bundleStatus": "ZIP_INTEGRITY_AND_SOURCE_SHA256_VERIFIED"
+}

@@ -1,0 +1,511 @@
+{
+  "schema": "KOMA-P15-40-CHROMIUM-REVIEW-V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "index": 0,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 0,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 0,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 1,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 1,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 1,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 2,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 2,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 2,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 3,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 3,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 3,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 4,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 4,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 4,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 5,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 5,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 5,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 6,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 6,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 6,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 7,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 7,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 7,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 8,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 8,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 8,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 9,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 9,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 9,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 10,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 10,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 10,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 11,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 11,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 11,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 12,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 12,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "desktop",
+      "index": 12,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 0,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 0,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 0,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 1,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 1,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 1,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 2,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 2,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 2,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 3,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 3,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 3,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 4,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 4,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 4,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 5,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 5,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 5,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 6,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 6,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 6,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 7,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 7,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 7,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 8,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 8,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 8,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 9,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 9,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 9,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 10,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 10,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 10,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 11,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 11,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 11,
+      "mode": "layers",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 12,
+      "mode": "whole",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 12,
+      "mode": "zoom",
+      "images": 2
+    },
+    {
+      "viewport": "mobile",
+      "index": 12,
+      "mode": "layers",
+      "images": 2
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-0-whole.png",
+      "sha256": "6e64776bae9a57f6defe62b32198b2c3248dcba3311ab52d989f20935f75262d"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-0-zoom.png",
+      "sha256": "a5a9c047342c3feddbdfd9214e0f540c4e5c3b4b2deff32e3e76cb85ec71d620"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-6-whole.png",
+      "sha256": "7c0ba50cb19f01ea575655ee6dc81d0fae3e5668028217e374f5a3430901f55b"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-6-zoom.png",
+      "sha256": "27e74596a9ece5a7a9db86cbbbdcc111c293ed3311fdba867439bae956d12845"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-8-whole.png",
+      "sha256": "59848cf3fe1b24cc70f012e5f511d2cb8ef8c541cc2a3838db6b5f679ea4dbab"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-8-zoom.png",
+      "sha256": "217b01ea4f079ce687c21acdb7a062346a1524d44d7c505df07b07a99c56133a"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-12-whole.png",
+      "sha256": "4e05e94e368beabd9af4974e7ae64b5254d15c6557edb24570eb6affef6de651"
+    },
+    {
+      "path": "private-assets/exports/p15-40-profile-review/browser-desktop-12-zoom.png",
+      "sha256": "1e716ba914511ab43f7134776a246b865fc7a68fe52e7d0fa958aab5095eed7e"
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "status": "P15_40_BROWSER_REVIEW_READY",
+  "viewportChecks": 78
+}

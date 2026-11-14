@@ -1,0 +1,55 @@
+{
+  "schema": "KOMA-P15-93-INDEPENDENT_YAW52_IMAGEGEN_V1",
+  "model": "Codex CLI built-in image_gen.imagegen",
+  "nativeSourceSHA256": "638da76be2c3153ac987dc529616ea40ebe6ac9cd36199422292cf2f7722e3bc",
+  "registeredSourceSHA256": "f99c495dd3adcdc34329a54413cbcccb25ddc3d146167ffe5c4398c1b8f3e708",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "registeredDimensions": [
+    1024,
+    1024
+  ],
+  "alpha128Pixels": 464255,
+  "alpha128BBox": [
+    164,
+    12,
+    854,
+    1021
+  ],
+  "independentSourceAngles": [
+    45,
+    52.5,
+    60
+  ],
+  "interpolatedAngles": [
+    48.75,
+    56.25
+  ],
+  "frames": {
+    "48.75": {
+      "path": "private-assets/exports/p15-93-yaw0525-review/yaw48p75-blend.png",
+      "sha256": "7c9582a215663397ccb87d1ad2da32bb7d7de10f608a7546c6c03f7ad2bc62a8",
+      "interpolation": "OpenCV DIS bidirectional optical flow",
+      "sourceAngles": [
+        45,
+        52.5
+      ]
+    },
+    "56.25": {
+      "path": "private-assets/exports/p15-93-yaw0525-review/yaw56p25-blend.png",
+      "sha256": "ad0c0b5579baff55b68e89df52193ed0c8dc2b9a81501680c09bac0be8891e02",
+      "interpolation": "OpenCV DIS bidirectional optical flow",
+      "sourceAngles": [
+        52.5,
+        60
+      ]
+    }
+  },
+  "actualYawVerified": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "INDEPENDENT_52_5_KEYART_VISUAL_REVIEW_REQUIRED",
+  "contact": "exports/p15-93-yaw0525-review/five-angle-contact.jpg"
+}

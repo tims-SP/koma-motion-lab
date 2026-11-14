@@ -1,0 +1,10 @@
+{
+  "schema": "KOMA-P15-81-SAM3-TEXT_FRONT_HAIR_V1",
+  "inputSHA256": "488dd3cad3225bbcbb21bb1a3a507ffdda0a55665485b7539017d64e73888d4d",
+  "model": "prithivMLmods/SAM3-Demo",
+  "prompt": "front bangs hair fringe on forehead",
+  "conf_thresh": 0.25,
+  "status": "FAILED",
+  "formalArtMeshAccepted": false,
+  "error": "RuntimeError('{\"error\": \"You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens\", \"duration\": 10, \"visible\": true, \"title\": \"ZeroGPU quota exceeded\"}')"
+}

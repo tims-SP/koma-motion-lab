@@ -1,0 +1,211 @@
+{
+  "schema": "KOMA-P15-29-P0-FAR-EYE-DEFADE-AND-BRIDGE-PROXY-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    55,
+    57.5,
+    60,
+    62.5,
+    65
+  ],
+  "sourceP0_45": "p5-see-through/yaw045/integrated/parts/eye.far.png",
+  "sourceP0_SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+  "legacyFade": "P8_HIDDEN_WINDOWS_EYE_FAR_52_TO_75_SMOOTHSTEP",
+  "recoveryMethod": "inverse_alpha_known_schedule_preserving_existing_RGB",
+  "recoveryIsOriginalIndependentPainting": false,
+  "geometry": "P15-12_CAMERA_ANCHOR_NOSE_TO_FAR_EYE_SLOPED_EDGE_PROXY",
+  "geometryIsValidatedPhysical3D": false,
+  "artAccepted": false,
+  "productionVddModified": false,
+  "frames": [
+    {
+      "angle": 55,
+      "scheduleFactor": 0.953399,
+      "sourceP0_45SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "oldIntermediateSHA256": "93121c643122acdb031ac3fb4e0618e52f209c749b66a9e332eb337c560be1da",
+      "p15LayerExactSHA256": "93121c643122acdb031ac3fb4e0618e52f209c749b66a9e332eb337c560be1da",
+      "anchors": {
+        "nose": [
+          690.852,
+          534.302
+        ],
+        "farEye": [
+          712.147,
+          469.04
+        ],
+        "bridgeX": 694.046
+      },
+      "legacyEyeMass": 15813.65,
+      "restoredEyeMass": 16571.78,
+      "restoredToLegacyMassRatio": 1.04794,
+      "bridgeEyeMass": 11535.69,
+      "bridgeVisibleFractionOfRestored": 0.6961,
+      "uncutRestoredPixels": 17286,
+      "proxyVisiblePixels": 12279,
+      "wholeFrameChangedFromBaseline": 16552,
+      "resampledLegacyToOriginalPixelDifference": 16160,
+      "nativeBaselineExact": true,
+      "images": {
+        "legacy-faded": "93121c643122acdb031ac3fb4e0618e52f209c749b66a9e332eb337c560be1da",
+        "inverse-fade": "626f9a654f3656e0f2ef232fdfc9c49b01811ba5e01f6c92814ae67404c6e4c7",
+        "bridge-proxy": "3b0616585ac328eb54ccaae8c595d3d58ce9705f3a59ead234b49ae2ab4ec8bd",
+        "legacy-composite": "31279b0ee27b997708f0b7631c63aa191fc5ad8328eabdeefb8fa0017c0da907",
+        "recovered-composite": "bb990a28f52cdc63933e9b08569978990c4e7460a8b60ebedb0d29116c6a618e",
+        "bridge-composite": "fb9b5875fce1a4d7620ff1838174e686363b329c64a5522e0de2861b7df8db17"
+      }
+    },
+    {
+      "angle": 57.5,
+      "scheduleFactor": 0.855798,
+      "sourceP0_45SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "oldIntermediateSHA256": "0baa59eda0109980fd0038981b8514bef5ce044833c89cd9525cf5cddd0c1fe8",
+      "p15LayerExactSHA256": "0baa59eda0109980fd0038981b8514bef5ce044833c89cd9525cf5cddd0c1fe8",
+      "anchors": {
+        "nose": [
+          697.486,
+          534.638
+        ],
+        "farEye": [
+          716.453,
+          469.04
+        ],
+        "bridgeX": 702.939
+      },
+      "legacyEyeMass": 14193.96,
+      "restoredEyeMass": 16571.23,
+      "restoredToLegacyMassRatio": 1.16748,
+      "bridgeEyeMass": 10387.07,
+      "bridgeVisibleFractionOfRestored": 0.62681,
+      "uncutRestoredPixels": 17283,
+      "proxyVisiblePixels": 11108,
+      "wholeFrameChangedFromBaseline": 16125,
+      "resampledLegacyToOriginalPixelDifference": 14979,
+      "nativeBaselineExact": true,
+      "images": {
+        "legacy-faded": "0baa59eda0109980fd0038981b8514bef5ce044833c89cd9525cf5cddd0c1fe8",
+        "inverse-fade": "ebbdfbbb56f7841c0c0d0e2d4f1384833639f14b3dfaff465d7022cae9d8728a",
+        "bridge-proxy": "0bbbc97d4a16850070c83446b7c197519f687249b107c0d9fa0b91d0c482ab5e",
+        "legacy-composite": "f01ff44e21c5c84ffa0dd7ecda62b2346fcbded3305b89edd3beb930c9af1473",
+        "recovered-composite": "8e1125c465d74ff9b06614bf36d63b9248afe41790eacff2166bb96aafbe2a83",
+        "bridge-composite": "0be35d90dcc3a1b19348e5be02ce7c03b33a3297dd84fa03652528b0f9b45bb5"
+      }
+    },
+    {
+      "angle": 60,
+      "scheduleFactor": 0.721213,
+      "sourceP0_45SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "oldIntermediateSHA256": "bfafd02848cf7345843e7ee6d35dab2980094ca7669b9140535824841b290a1d",
+      "p15LayerExactSHA256": "bfafd02848cf7345843e7ee6d35dab2980094ca7669b9140535824841b290a1d",
+      "anchors": {
+        "nose": [
+          703.953,
+          534.973
+        ],
+        "farEye": [
+          720.76,
+          469.04
+        ],
+        "bridgeX": 711.096
+      },
+      "legacyEyeMass": 11979.05,
+      "restoredEyeMass": 16572.09,
+      "restoredToLegacyMassRatio": 1.38342,
+      "bridgeEyeMass": 9305.64,
+      "bridgeVisibleFractionOfRestored": 0.56152,
+      "uncutRestoredPixels": 17290,
+      "proxyVisiblePixels": 9998,
+      "wholeFrameChangedFromBaseline": 15660,
+      "resampledLegacyToOriginalPixelDifference": 14111,
+      "nativeBaselineExact": true,
+      "images": {
+        "legacy-faded": "bfafd02848cf7345843e7ee6d35dab2980094ca7669b9140535824841b290a1d",
+        "inverse-fade": "0e0abb35a9a595bee14e8b99376940fa71ff91eab5060fe71efd1d8bb7bc046a",
+        "bridge-proxy": "606ab6a8c779950d8ec102d89311613ba6eedc5812af9ecbc15ae654f94e1924",
+        "legacy-composite": "7ad5eb85f0e0f8d8ec8d0bf14be713d1cb5acb4bc3ac387c0dc489d4801155db",
+        "recovered-composite": "8eaa0dea5060e5f71da0a9c4eb4a8cb431233a1d1eccc76a15b32837629e4be7",
+        "bridge-composite": "64a744c85378b6811215f0e9762c519b0ecf46434206e3710a5fb3bdeda185e1"
+      }
+    },
+    {
+      "angle": 62.5,
+      "scheduleFactor": 0.565053,
+      "sourceP0_45SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "oldIntermediateSHA256": "8c9366951d16e1a3ffaaa1733e23042fa060aba93cf09ef7f47028081726933f",
+      "p15LayerExactSHA256": "8c9366951d16e1a3ffaaa1733e23042fa060aba93cf09ef7f47028081726933f",
+      "anchors": {
+        "nose": [
+          710.243,
+          535.309
+        ],
+        "farEye": [
+          725.067,
+          469.04
+        ],
+        "bridgeX": 718.582
+      },
+      "legacyEyeMass": 9375.46,
+      "restoredEyeMass": 16571.99,
+      "restoredToLegacyMassRatio": 1.76759,
+      "bridgeEyeMass": 8308.02,
+      "bridgeVisibleFractionOfRestored": 0.50133,
+      "uncutRestoredPixels": 17285,
+      "proxyVisiblePixels": 8965,
+      "wholeFrameChangedFromBaseline": 15086,
+      "resampledLegacyToOriginalPixelDifference": 13241,
+      "nativeBaselineExact": true,
+      "images": {
+        "legacy-faded": "8c9366951d16e1a3ffaaa1733e23042fa060aba93cf09ef7f47028081726933f",
+        "inverse-fade": "9ffdba602e0258fe41c547aafe8582e081d7a0aebfc163d4edd44ab10b813689",
+        "bridge-proxy": "d129524cbb2c6788477b971fb12e49c1ce3771b38ae34ed481c16e34ba6b5fcb",
+        "legacy-composite": "a0491d69dabd8fdce3cd9ee55306db287176669fd2860ba16fcaba523f07b140",
+        "recovered-composite": "d5a7c2a8e3e7ff8a5c150f5cf4106c6277debf473224b8af4a60b161309b50a8",
+        "bridge-composite": "d6c7888c496b70e9d12b8e276abd64354a6876329cfddd85f3679f62ba2b713d"
+      }
+    },
+    {
+      "angle": 65,
+      "scheduleFactor": 0.402729,
+      "sourceP0_45SHA256": "5a0888c5cc3334e039314afa37c9f05adc27a0c653e0a2e492904690a97e4a2f",
+      "oldIntermediateSHA256": "2f54b47b61e0059504f4e0090e42e6ebf9331fb37e75a7a91a60a140b7cea7d7",
+      "p15LayerExactSHA256": "2f54b47b61e0059504f4e0090e42e6ebf9331fb37e75a7a91a60a140b7cea7d7",
+      "anchors": {
+        "nose": [
+          716.341,
+          535.644
+        ],
+        "farEye": [
+          729.373,
+          469.04
+        ],
+        "bridgeX": 725.463
+      },
+      "legacyEyeMass": 6704.69,
+      "restoredEyeMass": 16572.1,
+      "restoredToLegacyMassRatio": 2.47172,
+      "bridgeEyeMass": 7395.92,
+      "bridgeVisibleFractionOfRestored": 0.44629,
+      "uncutRestoredPixels": 17290,
+      "proxyVisiblePixels": 8020,
+      "wholeFrameChangedFromBaseline": 13829,
+      "resampledLegacyToOriginalPixelDifference": 10901,
+      "nativeBaselineExact": true,
+      "images": {
+        "legacy-faded": "2f54b47b61e0059504f4e0090e42e6ebf9331fb37e75a7a91a60a140b7cea7d7",
+        "inverse-fade": "67775e48ce9aa576a7f0c117e854a3258180dd8aefb53d584755bc8af6802ba7",
+        "bridge-proxy": "dd616de48588bc7919441f179e5732ee093a0fcabe91858c46bc150d7314e96e",
+        "legacy-composite": "b0fa3d8f91bc26e13f84935a23c9a4cc450a9755c53dfd75e40ffa077bb82c6b",
+        "recovered-composite": "517f2c7a213e9e0dddf04df8da832b9a02bd06868187b0475c22cb34703215e9",
+        "bridge-composite": "21cf08cf05f045d95e96f208cd9f6d8cb96dcbe08f44ccd8a20f254b6ce59cf0"
+      }
+    }
+  ],
+  "next": "Visually approve, then replace heuristic nose bridge proxy with verified head-surface occlusion and independently painted eye keyviews",
+  "visualReview": {
+    "evidence": "private-assets/p15-29-defade-bridge/yaw60/visual-three-way-tiny.jpg",
+    "comparison": "60-degree source faded / defaded / projected nasal bridge proxy",
+    "finding": "Defaded far eye becomes substantially more visible; proxy reduces screen-right far-eye area. Keeps source P0 linework but proxy geometry is not independently calibrated with approved 3D face.",
+    "status": "CANDIDATE_REQUIRES_ART_REVIEW",
+    "productionAdmission": false
+  },
+  "acceptance": "ENGINEERING_DEFADE_PASS_VISUAL_OCCLUSION_UNAPPROVED"
+}

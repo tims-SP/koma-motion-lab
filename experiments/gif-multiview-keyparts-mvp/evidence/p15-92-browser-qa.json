@@ -1,0 +1,93 @@
+{
+  "schema": "KOMA-P15-92-KEYVIEW_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "index": 0,
+      "angle": "45°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "desktop",
+      "index": 1,
+      "angle": "52.5°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "desktop",
+      "index": 2,
+      "angle": "60°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "desktop",
+      "index": 3,
+      "angle": "67.5°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "desktop",
+      "index": 4,
+      "angle": "75°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "desktop",
+      "index": 5,
+      "angle": "82.5°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "desktop",
+      "index": 6,
+      "angle": "90°",
+      "imagesLoaded": 6,
+      "screenshotSHA256": "2f98a605b8a234ea8c61e6117ee7199ec8340a2efda06fd478a523f2f2db8687"
+    },
+    {
+      "viewport": "mobile",
+      "index": 0,
+      "angle": "45°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "mobile",
+      "index": 1,
+      "angle": "52.5°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "mobile",
+      "index": 2,
+      "angle": "60°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "mobile",
+      "index": 3,
+      "angle": "67.5°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "mobile",
+      "index": 4,
+      "angle": "75°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "mobile",
+      "index": 5,
+      "angle": "82.5°",
+      "imagesLoaded": 6
+    },
+    {
+      "viewport": "mobile",
+      "index": 6,
+      "angle": "90°",
+      "imagesLoaded": 6,
+      "screenshotSHA256": "bfad925074d1dfc561f6cb47fcd1d4e9e241fe189be85490d4eb717dd9547d90"
+    }
+  ],
+  "errors": []
+}

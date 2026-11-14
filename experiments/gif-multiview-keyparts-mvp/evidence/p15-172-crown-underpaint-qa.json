@@ -1,0 +1,219 @@
+{
+  "schema": "KOMA_P15_172_SOURCE_REGISTERED_CROWN_UNDERPAINT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "methods": {
+    "conservative": {
+      "90": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 54,
+        "paintMaskPixels": 43,
+        "rgbEditedPixels": 43,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "underpaintRGBA_SHA256": "ee6b4565332449ddae68cc7f20f4786da0ad04b495d6d40fad088909226e88b0",
+        "rootStubAboveCrownPixels": 9
+      },
+      "112.5": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 119,
+        "paintMaskPixels": 68,
+        "rgbEditedPixels": 92,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 746,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "underpaintRGBA_SHA256": "d0e7f2d2e35845721cd433e39c5bc64b6cdba0b1318e3fbf5ffd222380048817",
+        "rootStubAboveCrownPixels": 33
+      },
+      "135": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 80,
+        "paintMaskPixels": 68,
+        "rgbEditedPixels": 65,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "underpaintRGBA_SHA256": "06c68d82f8521f57170632b7dd4e1e36e22eae343073bda5f20c93c1063780ee",
+        "rootStubAboveCrownPixels": 10
+      }
+    },
+    "connected": {
+      "90": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 54,
+        "paintMaskPixels": 66,
+        "rgbEditedPixels": 68,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "underpaintRGBA_SHA256": "1e0f2a477be44236306d775cdd9ba0e82bd7bdc98e450d15b410365288e5a096",
+        "rootStubAboveCrownPixels": 9
+      },
+      "112.5": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 119,
+        "paintMaskPixels": 90,
+        "rgbEditedPixels": 115,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 746,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "underpaintRGBA_SHA256": "ee85cc3009bae9b479e32f31a59a80ba67333fceedb4b23dd7bc526936a71bac",
+        "rootStubAboveCrownPixels": 33
+      },
+      "135": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 80,
+        "paintMaskPixels": 93,
+        "rgbEditedPixels": 94,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "underpaintRGBA_SHA256": "42d1cd4d90bbac92c69c28955af65b99e44fa0f93b94ffb2566133978e3a26b2",
+        "rootStubAboveCrownPixels": 10
+      }
+    },
+    "feathered": {
+      "90": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 54,
+        "paintMaskPixels": 66,
+        "rgbEditedPixels": 63,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "underpaintRGBA_SHA256": "4b912b216574a270469f0a23ec8324b83f9a2538f92bc331ea75c0e963228519",
+        "rootStubAboveCrownPixels": 9
+      },
+      "112.5": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 119,
+        "paintMaskPixels": 90,
+        "rgbEditedPixels": 112,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 746,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "underpaintRGBA_SHA256": "d1ed17bcba509d76078292112e79195c966a4a13f1434c04eb85571387dfefd6",
+        "rootStubAboveCrownPixels": 33
+      },
+      "135": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 80,
+        "paintMaskPixels": 93,
+        "rgbEditedPixels": 87,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "underpaintRGBA_SHA256": "1cf363fbe94145616ed47955d244d606e51ef2ee244de5506efdf010e9a3a3aa",
+        "rootStubAboveCrownPixels": 10
+      }
+    },
+    "semantic_patch": {
+      "90": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 54,
+        "paintMaskPixels": 74,
+        "rgbEditedPixels": 87,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "underpaintRGBA_SHA256": "e8d754091c6b7f6e21bd6ccac2b8a5057cd2371db915f8e54dce9ac5cee6822f",
+        "rootStubAboveCrownPixels": 9
+      },
+      "112.5": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 119,
+        "paintMaskPixels": 342,
+        "rgbEditedPixels": 352,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 746,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "underpaintRGBA_SHA256": "1928e9622b58e0b711023189e897d0681655cd58371937f38b61e1b6961818e1",
+        "rootStubAboveCrownPixels": 33
+      },
+      "135": {
+        "sourceReassemblyPixelExact": true,
+        "semanticRootPixels": 80,
+        "paintMaskPixels": 182,
+        "rgbEditedPixels": 187,
+        "headBelowY125Exact": true,
+        "alphaOutsideSourceAir": 0,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "underpaintRGBA_SHA256": "c06cc2b964fdf80e955a8c0693d68154ec52d22a278a6a5b23e5b4b60792a050",
+        "rootStubAboveCrownPixels": 10
+      }
+    }
+  },
+  "materialType": "source-registered bounded crown RGB reconstruction",
+  "originalKeyviewsPreserved": true,
+  "nativeSourceRecompositionExact": true,
+  "sourcePaintArtistApproved": false,
+  "hiddenRootAndCrownArtistApproved": false,
+  "crossViewPhysicalAttachmentValidated": false,
+  "productionRendererUpdated": false,
+  "review": "private-assets/exports/p15-172-crown-underpaint/index.html",
+  "next": "Acquire source-matched crown art with the 112.5-degree root stub and 90/135 edge remnants painted out; inspect all three closeups and prove clean root boundary before mid-yaw VDD.",
+  "gate": {
+    "threeViewsAvailable": true,
+    "nativeLayerPairReconstructionExact": true,
+    "headBelowY125Exact": true,
+    "allViewsHavePaintMask": true,
+    "semanticPaintLocality": true,
+    "rootStubsVisuallyCleared": false,
+    "sourceCrownContourVisuallyMatched": false,
+    "visualPaintApproved": false,
+    "passes": false
+  }
+}

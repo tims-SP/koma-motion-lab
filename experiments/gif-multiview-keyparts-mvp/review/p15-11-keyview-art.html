@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P15-11 · 多视角独立原画姿态审查</title>
+<style>
+:root{color-scheme:dark;background:#171d28;color:#f3f6fb;font:15px/1.5 system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}body{padding:20px;margin:0}main{max-width:1450px;margin:auto}
+h1{font-size:23px;margin:0 0 6px}p{color:#c6d1e0;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+article{background:#273244;border:1px solid #394a63;border-radius:12px;overflow:hidden}
+header{font-size:14px;font-weight:650;padding:12px 12px 8px}
+.frame{background:repeating-conic-gradient(#d6dbe3 0% 25%,#f7f8fa 0% 50%) 50%/24px 24px}
+.frame img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+meta{display:none}small{display:block;font-size:13px;line-height:1.45;color:#d1dded;padding:12px}
+#status{margin:16px 0;border-top:1px solid #47536c;padding-top:10px;color:#bcd0e7}
+</style></head><body><main>
+<h1>P15-11 · 57.5° / 60° 原画候选与身份基准</h1>
+<p>每张画面均为独立图像来源。左侧原始 P0 45° 与 P15 65° 用于比对姿态、远眼、金色发夹和服装；候选原画需逐张通过身份与视角验收。</p>
+<div class="grid" id="gallery">
+<article><header>原始 P0 · 45°</header><div class="frame"><img data-id="p0-45" src="../private-assets/p2-views/whole/yaw045.png" alt="P0 45度原画"></div><small>角色身份、画面右侧发夹与双眼原始参考。</small></article>
+<article><header>57.5° · 双参考生成</header><div class="frame"><img data-id="candidate-57-dual" src="../private-assets/p15-11-generation/yaw057p5-multi-reference-profile.png" alt="57.5双参考生成候选"></div><small>接近侧脸；远眼缺失，发夹位置与原始身份不匹配。</small></article>
+<article><header>57.5° · 朝向校准</header><div class="frame"><img data-id="candidate-57-reverse" src="../private-assets/p15-11-generation/yaw057p5-dual-reversed.png" alt="57.5逆向候选"></div><small>角色转向相反方向；当前不适合作为右转中间关键帧。</small></article>
+<article><header>57.5° · 单参考生成</header><div class="frame"><img data-id="candidate-57-single" src="../private-assets/p15-11-generation/yaw057p5-single-source-profile.png" alt="57.5单参考候选"></div><small>转向右侧，但接近全侧脸、远眼缺失。</small></article>
+<article><header>60° · 侧脸回转候选</header><div class="frame"><img data-id="candidate-60" src="../private-assets/p15-11-generation/yaw060-near-source-eye-detail.png" alt="60度候选"></div><small>面部朝向漂移；可见眼部纹理不完整。</small></article>
+<article><header>P15 绘制候选 · 65°</header><div class="frame"><img data-id="p15-65" src="../private-assets/p15-independent-candidates/yaw065-source-rgba.png" alt="65度原画候选"></div><small>已有 13 部件注册的侧脸参考。</small></article>
+</div>
+<div id="status" role="status">正在加载并验证 6 张原画。</div>
+</main>
+<script>
+"use strict";
+window.__KOMA_P15_11={ready:false,sourceCount:0,errors:[],sources:[]};
+(async()=>{
+ const imgs=[...document.querySelectorAll("#gallery img")];
+ const results=await Promise.allSettled(imgs.map(async img=>{
+   await img.decode();
+   if(img.naturalWidth!==1024||img.naturalHeight!==1024)throw Error("Unexpected canvas: "+img.dataset.id);
+   return {id:img.dataset.id,width:img.naturalWidth,height:img.naturalHeight,path:img.getAttribute("src")};
+ }));
+ for(const r of results){
+   if(r.status==="fulfilled")window.__KOMA_P15_11.sources.push(r.value);
+   else window.__KOMA_P15_11.errors.push(String(r.reason));
+ }
+ const state=window.__KOMA_P15_11;
+ state.sourceCount=state.sources.length;
+ state.ready=state.sourceCount===6&&state.errors.length===0;
+ document.querySelector("#status").textContent=state.ready?"已载入 6 张 1024×1024 原画；等待正式艺术验收。":"图像数据加载检查发现异常。";
+})();
+</script>
+</body></html>

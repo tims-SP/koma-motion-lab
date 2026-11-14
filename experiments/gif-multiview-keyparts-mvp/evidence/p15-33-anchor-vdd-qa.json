@@ -1,0 +1,1202 @@
+{
+  "schema": "KOMA-P15-33-SEMANTIC-ANCHOR-CONSTRAINED-2D-MESH-V1",
+  "characterId": "p0_character_001",
+  "frames": [
+    {
+      "yaw": 55.0,
+      "kind": "exact-source-keyframe",
+      "compositeSha256": "45c6d79f5d7ef56d3dc8aecce919f28a517411d0c52ec369aaa9a7b5d4e9a9fb",
+      "roles": 13,
+      "keyframeExact": true
+    },
+    {
+      "yaw": 56.25,
+      "kind": "semantic-anchor-constrained-mesh",
+      "from": [
+        55.0,
+        57.5
+      ],
+      "compositeSha256": "ac8e3e1b61ea1aebf9cebf6e01317c4c847a3ad7a94554c84023c408c0e8d3d1",
+      "roles": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "constraintIds": [
+            "iris.camera",
+            "eye.left.alpha.proxy",
+            "eye.right.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              309.01800537109375,
+              202.9149932861328
+            ],
+            [
+              303.0,
+              195.25
+            ],
+            [
+              340.0,
+              195.25
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 2.02806,
+            "maxConstraintResidualPx": 0.04128,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.861844,
+            "coveredPixels": 4739,
+            "featureTargets": [
+              [
+                309.01800537109375,
+                202.9149932861328
+              ],
+              [
+                303.0,
+                195.25
+              ],
+              [
+                340.0,
+                195.25
+              ]
+            ],
+            "featurePredictions": [
+              [
+                309.0589904785156,
+                202.91000366210938
+              ],
+              [
+                302.9800109863281,
+                195.24600219726562
+              ],
+              [
+                340.0060119628906,
+                195.2469940185547
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 2.27476,
+            "maxConstraintResidualPx": 0.03617,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.882892,
+            "coveredPixels": 4999,
+            "featureTargets": [
+              [
+                309.01800537109375,
+                202.9149932861328
+              ],
+              [
+                303.0,
+                195.25
+              ],
+              [
+                340.0,
+                195.25
+              ]
+            ],
+            "featurePredictions": [
+              [
+                308.9830017089844,
+                202.92100524902344
+              ],
+              [
+                303.02099609375,
+                195.2550048828125
+              ],
+              [
+                339.99200439453125,
+                195.2519989013672
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 2621,
+          "outputSha256": "823f60bd68df6499d73170ce507ff549a671646e3d405697492f23635e34b6ff",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "constraintIds": [
+            "clip.center.camera",
+            "cross.tip_a.alpha.proxy",
+            "cross.tip_b.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              336.6839904785156,
+              138.4810028076172
+            ],
+            [
+              326.5,
+              124.0
+            ],
+            [
+              346.5,
+              153.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.39915,
+            "maxConstraintResidualPx": 0.00604,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.906666,
+            "coveredPixels": 2515,
+            "featureTargets": [
+              [
+                336.6839904785156,
+                138.4810028076172
+              ],
+              [
+                326.5,
+                124.0
+              ],
+              [
+                346.5,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                336.6809997558594,
+                138.4810028076172
+              ],
+              [
+                326.5060119628906,
+                124.0
+              ],
+              [
+                346.5060119628906,
+                153.0
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.39868,
+            "maxConstraintResidualPx": 0.00629,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.935989,
+            "coveredPixels": 2572,
+            "featureTargets": [
+              [
+                336.6839904785156,
+                138.4810028076172
+              ],
+              [
+                326.5,
+                124.0
+              ],
+              [
+                346.5,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                336.68701171875,
+                138.4810028076172
+              ],
+              [
+                326.4939880371094,
+                124.0
+              ],
+              [
+                346.4939880371094,
+                153.0
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 811,
+          "outputSha256": "c072da2f7e4fee5e616f4b807807027ec373c0de4848f614ac9217dd5bd163c4",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.side": {
+          "constraintIds": [
+            "hair.side.root.camera.proxy",
+            "hair.tip.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              148.00100708007812,
+              248.53900146484375
+            ],
+            [
+              196.0,
+              310.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 1.053,
+            "maxConstraintResidualPx": 0.0278,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.95661,
+            "coveredPixels": 38033,
+            "featureTargets": [
+              [
+                148.00100708007812,
+                248.53900146484375
+              ],
+              [
+                196.0,
+                310.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                148.0279998779297,
+                248.5449981689453
+              ],
+              [
+                195.99000549316406,
+                309.9989929199219
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 1.00632,
+            "maxConstraintResidualPx": 0.02654,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.955898,
+            "coveredPixels": 37616,
+            "featureTargets": [
+              [
+                148.00100708007812,
+                248.53900146484375
+              ],
+              [
+                196.0,
+                310.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.97500610351562,
+                248.5330047607422
+              ],
+              [
+                196.00799560546875,
+                310.0
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 19078,
+          "outputSha256": "d4e85772a116becdc9b9afb0ec3ff9e6395df87fa040cd53730a6c2010eb0055",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 57.5,
+      "kind": "exact-source-keyframe",
+      "compositeSha256": "e64cdb0dab90230186b32712ad3fb9b37a420d7b15ccdc03901bfb0d7efc6d52",
+      "roles": 13,
+      "keyframeExact": true
+    },
+    {
+      "yaw": 58.75,
+      "kind": "semantic-anchor-constrained-mesh",
+      "from": [
+        57.5,
+        60.0
+      ],
+      "compositeSha256": "73c4e3f4cff59f0c21bf76f25204057bf33223c4538e06a3d302636a61378fa7",
+      "roles": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "constraintIds": [
+            "iris.camera",
+            "eye.left.alpha.proxy",
+            "eye.right.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              310.8819885253906,
+              202.9149932861328
+            ],
+            [
+              306.5,
+              195.25
+            ],
+            [
+              342.0,
+              195.25
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 1.58452,
+            "maxConstraintResidualPx": 0.04054,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.897154,
+            "coveredPixels": 4769,
+            "featureTargets": [
+              [
+                310.8819885253906,
+                202.9149932861328
+              ],
+              [
+                306.5,
+                195.25
+              ],
+              [
+                342.0,
+                195.25
+              ]
+            ],
+            "featurePredictions": [
+              [
+                310.9100036621094,
+                202.88600158691406
+              ],
+              [
+                306.4909973144531,
+                195.25399780273438
+              ],
+              [
+                342.00299072265625,
+                195.25399780273438
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 1.55333,
+            "maxConstraintResidualPx": 0.03276,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.821075,
+            "coveredPixels": 4802,
+            "featureTargets": [
+              [
+                310.8819885253906,
+                202.9149932861328
+              ],
+              [
+                306.5,
+                195.25
+              ],
+              [
+                342.0,
+                195.25
+              ]
+            ],
+            "featurePredictions": [
+              [
+                310.8590087890625,
+                202.93800354003906
+              ],
+              [
+                306.5150146484375,
+                195.2429962158203
+              ],
+              [
+                341.9989929199219,
+                195.2449951171875
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 2457,
+          "outputSha256": "f72cc436ab9c88776a5fe9668459c2a371922030b8ea2f2240f9e76fbe4594ab",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "constraintIds": [
+            "clip.center.camera",
+            "cross.tip_a.alpha.proxy",
+            "cross.tip_b.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              338.1300048828125,
+              138.4810028076172
+            ],
+            [
+              328.0,
+              124.0
+            ],
+            [
+              348.0,
+              153.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.4931,
+            "maxConstraintResidualPx": 0.00779,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.896759,
+            "coveredPixels": 2534,
+            "featureTargets": [
+              [
+                338.1300048828125,
+                138.4810028076172
+              ],
+              [
+                328.0,
+                124.0
+              ],
+              [
+                348.0,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                338.1340026855469,
+                138.4810028076172
+              ],
+              [
+                327.99200439453125,
+                124.0
+              ],
+              [
+                347.9930114746094,
+                153.0
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.49283,
+            "maxConstraintResidualPx": 0.00778,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.90638,
+            "coveredPixels": 2546,
+            "featureTargets": [
+              [
+                338.1300048828125,
+                138.4810028076172
+              ],
+              [
+                328.0,
+                124.0
+              ],
+              [
+                348.0,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                338.1260070800781,
+                138.4810028076172
+              ],
+              [
+                328.0069885253906,
+                124.0
+              ],
+              [
+                348.00799560546875,
+                153.0
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 913,
+          "outputSha256": "218bb875b58dc97fbdc1e7a4021137130fe5831f087b0707dd1b61bae3557425",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.side": {
+          "constraintIds": [
+            "hair.side.root.camera.proxy",
+            "hair.tip.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              147.7449951171875,
+              248.1540069580078
+            ],
+            [
+              198.0,
+              310.5
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.96014,
+            "maxConstraintResidualPx": 0.02693,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.956772,
+            "coveredPixels": 38545,
+            "featureTargets": [
+              [
+                147.7449951171875,
+                248.1540069580078
+              ],
+              [
+                198.0,
+                310.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.77099609375,
+                248.15899658203125
+              ],
+              [
+                197.98800659179688,
+                310.489990234375
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.89994,
+            "maxConstraintResidualPx": 0.02489,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.950512,
+            "coveredPixels": 37849,
+            "featureTargets": [
+              [
+                147.7449951171875,
+                248.1540069580078
+              ],
+              [
+                198.0,
+                310.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.72000122070312,
+                248.14999389648438
+              ],
+              [
+                198.01100158691406,
+                310.510009765625
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 19462,
+          "outputSha256": "5d4925039146f585774c92e498e2093892e8f72f98fbcfad060d849f769ef32a",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 60.0,
+      "kind": "exact-source-keyframe",
+      "compositeSha256": "a08d8eac8101c2b2b862fe4eb2ef419e642bc809af54315922f7621fe1327179",
+      "roles": 13,
+      "keyframeExact": true
+    },
+    {
+      "yaw": 61.25,
+      "kind": "semantic-anchor-constrained-mesh",
+      "from": [
+        60.0,
+        62.5
+      ],
+      "compositeSha256": "7a24cb5278bf70af141dd29a32c40dc097ef422580ecf0c820c0b09a1fb6450b",
+      "roles": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "constraintIds": [
+            "iris.camera",
+            "eye.left.alpha.proxy",
+            "eye.right.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              312.7449951171875,
+              202.9149932861328
+            ],
+            [
+              310.0,
+              195.0
+            ],
+            [
+              344.0,
+              195.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 2.58524,
+            "maxConstraintResidualPx": 0.04511,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.879724,
+            "coveredPixels": 4585,
+            "featureTargets": [
+              [
+                312.7449951171875,
+                202.9149932861328
+              ],
+              [
+                310.0,
+                195.0
+              ],
+              [
+                344.0,
+                195.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                312.7879943847656,
+                202.9010009765625
+              ],
+              [
+                309.9679870605469,
+                195.0019989013672
+              ],
+              [
+                344.0060119628906,
+                195.00100708007812
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 2.77203,
+            "maxConstraintResidualPx": 0.04704,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.876575,
+            "coveredPixels": 4702,
+            "featureTargets": [
+              [
+                312.7449951171875,
+                202.9149932861328
+              ],
+              [
+                310.0,
+                195.0
+              ],
+              [
+                344.0,
+                195.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                312.7090148925781,
+                202.927001953125
+              ],
+              [
+                310.0469970703125,
+                194.9969940185547
+              ],
+              [
+                343.9960021972656,
+                194.99899291992188
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 2474,
+          "outputSha256": "b947b9dcaf9eba5cc0b87cefad5e786449b365e787d6b159a674d7f92a556915",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "constraintIds": [
+            "clip.center.camera",
+            "cross.tip_a.alpha.proxy",
+            "cross.tip_b.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              339.57598876953125,
+              138.4810028076172
+            ],
+            [
+              329.5,
+              124.0
+            ],
+            [
+              349.5,
+              153.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.39967,
+            "maxConstraintResidualPx": 0.00617,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.908599,
+            "coveredPixels": 2575,
+            "featureTargets": [
+              [
+                339.57598876953125,
+                138.4810028076172
+              ],
+              [
+                329.5,
+                124.0
+              ],
+              [
+                349.5,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                339.572998046875,
+                138.4810028076172
+              ],
+              [
+                329.5060119628906,
+                124.0
+              ],
+              [
+                349.5060119628906,
+                153.0
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.39611,
+            "maxConstraintResidualPx": 0.00629,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.919542,
+            "coveredPixels": 2605,
+            "featureTargets": [
+              [
+                339.57598876953125,
+                138.4810028076172
+              ],
+              [
+                329.5,
+                124.0
+              ],
+              [
+                349.5,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                339.5799865722656,
+                138.4810028076172
+              ],
+              [
+                329.4939880371094,
+                124.0
+              ],
+              [
+                349.4939880371094,
+                153.0
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 821,
+          "outputSha256": "88b7684969dfa5ba4632ee328efbcabbacaac02ac4f3142a4eb1fa8a9079294d",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.side": {
+          "constraintIds": [
+            "hair.side.root.camera.proxy",
+            "hair.tip.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              147.781005859375,
+              247.77000427246094
+            ],
+            [
+              199.5,
+              311.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.5684,
+            "maxConstraintResidualPx": 0.01457,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.960725,
+            "coveredPixels": 38517,
+            "featureTargets": [
+              [
+                147.781005859375,
+                247.77000427246094
+              ],
+              [
+                199.5,
+                311.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.79600524902344,
+                247.77200317382812
+              ],
+              [
+                199.5,
+                311.00201416015625
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.56965,
+            "maxConstraintResidualPx": 0.01396,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.95785,
+            "coveredPixels": 38302,
+            "featureTargets": [
+              [
+                147.781005859375,
+                247.77000427246094
+              ],
+              [
+                199.5,
+                311.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                147.76800537109375,
+                247.76699829101562
+              ],
+              [
+                199.49899291992188,
+                310.9989929199219
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 18564,
+          "outputSha256": "8a3cb10e756360a0ca573ca8d72aa6f754ae4ac0790aa32ffe251195b6ea8320",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 62.5,
+      "kind": "exact-source-keyframe",
+      "compositeSha256": "87497e5cde15b92b9945687a736617c80bff20a7ddfcfc3eb29f6af5ed00cc37",
+      "roles": 13,
+      "keyframeExact": true
+    },
+    {
+      "yaw": 63.75,
+      "kind": "semantic-anchor-constrained-mesh",
+      "from": [
+        62.5,
+        65.0
+      ],
+      "compositeSha256": "39db52fdff677a3a346631277cc22a99f090d4fad38b5a476a69910a9d8206cc",
+      "roles": 13,
+      "meshDiagnostics": {
+        "eye.far": {
+          "constraintIds": [
+            "iris.camera",
+            "eye.left.alpha.proxy",
+            "eye.right.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              314.6080017089844,
+              202.9149932861328
+            ],
+            [
+              313.0,
+              195.0
+            ],
+            [
+              345.94000244140625,
+              195.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.48983,
+            "maxConstraintResidualPx": 0.01386,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.908266,
+            "coveredPixels": 4503,
+            "featureTargets": [
+              [
+                314.6080017089844,
+                202.9149932861328
+              ],
+              [
+                313.0,
+                195.0
+              ],
+              [
+                345.94000244140625,
+                195.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                314.6159973144531,
+                202.9040069580078
+              ],
+              [
+                312.9989929199219,
+                195.0030059814453
+              ],
+              [
+                345.9389953613281,
+                195.00100708007812
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.50056,
+            "maxConstraintResidualPx": 0.01381,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.851054,
+            "coveredPixels": 4496,
+            "featureTargets": [
+              [
+                314.6080017089844,
+                202.9149932861328
+              ],
+              [
+                313.0,
+                195.0
+              ],
+              [
+                345.94000244140625,
+                195.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                314.5989990234375,
+                202.9250030517578
+              ],
+              [
+                313.0010070800781,
+                194.9969940185547
+              ],
+              [
+                345.9410095214844,
+                194.99899291992188
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 1971,
+          "outputSha256": "0a158a2f6c91dcae4ba71365c51c668e999354ccfc575ef4ddf3397b53cae6b7",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.clip.cross_gold": {
+          "constraintIds": [
+            "clip.center.camera",
+            "cross.tip_a.alpha.proxy",
+            "cross.tip_b.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              341.0220031738281,
+              138.4810028076172
+            ],
+            [
+              331.0,
+              124.0
+            ],
+            [
+              351.0,
+              153.0
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 0.4899,
+            "maxConstraintResidualPx": 0.0076,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.898587,
+            "coveredPixels": 2564,
+            "featureTargets": [
+              [
+                341.0220031738281,
+                138.4810028076172
+              ],
+              [
+                331.0,
+                124.0
+              ],
+              [
+                351.0,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                341.0260009765625,
+                138.4810028076172
+              ],
+              [
+                330.99200439453125,
+                124.0
+              ],
+              [
+                350.9930114746094,
+                153.0
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 0.49469,
+            "maxConstraintResidualPx": 0.00781,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.905005,
+            "coveredPixels": 2525,
+            "featureTargets": [
+              [
+                341.0220031738281,
+                138.4810028076172
+              ],
+              [
+                331.0,
+                124.0
+              ],
+              [
+                351.0,
+                153.0
+              ]
+            ],
+            "featurePredictions": [
+              [
+                341.01800537109375,
+                138.4810028076172
+              ],
+              [
+                331.0060119628906,
+                124.0
+              ],
+              [
+                351.00799560546875,
+                153.0
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 897,
+          "outputSha256": "49b39ad3aaf2d82cd0c10e0bffb7e486b3f24b69839fccbdd846ba8dc04e5d2d",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        },
+        "hair.side": {
+          "constraintIds": [
+            "hair.side.root.camera.proxy",
+            "hair.tip.alpha.proxy"
+          ],
+          "targetFeatures443": [
+            [
+              148.11099243164062,
+              247.38499450683594
+            ],
+            [
+              200.0,
+              311.5
+            ]
+          ],
+          "left": {
+            "maxCorrectionPx": 2.23692,
+            "maxConstraintResidualPx": 0.06298,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.731852,
+            "coveredPixels": 38741,
+            "featureTargets": [
+              [
+                148.11099243164062,
+                247.38499450683594
+              ],
+              [
+                200.0,
+                311.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                148.04800415039062,
+                247.39500427246094
+              ],
+              [
+                200.03799438476562,
+                311.4849853515625
+              ]
+            ]
+          },
+          "right": {
+            "maxCorrectionPx": 2.24056,
+            "maxConstraintResidualPx": 0.0602,
+            "triangleFlips": 0,
+            "minAreaRatio": 0.606919,
+            "coveredPixels": 38320,
+            "featureTargets": [
+              [
+                148.11099243164062,
+                247.38499450683594
+              ],
+              [
+                200.0,
+                311.5
+              ]
+            ],
+            "featurePredictions": [
+              [
+                148.1510009765625,
+                247.33999633789062
+              ],
+              [
+                199.96400451660156,
+                311.5270080566406
+              ]
+            ]
+          },
+          "changedPixelsVsP15_32": 22795,
+          "outputSha256": "41495e0c0ab5f57e1e04b6bd80c83283bddc3b417394bb57efc94108e05561e3",
+          "sourceKind": "P0_DERIVED_2D_CAMERA_AND_ALPHA_SUPPORT_PROXIES",
+          "independentArtistApproved": false
+        }
+      }
+    },
+    {
+      "yaw": 65.0,
+      "kind": "exact-source-keyframe",
+      "compositeSha256": "bf1c3f27f9c85dbaa3ecea5624dce72333dcd0ae0c25e6d85cb4bb2a3bc723e9",
+      "roles": 13,
+      "keyframeExact": true
+    }
+  ],
+  "meshRoles": [
+    "eye.far",
+    "hair.clip.cross_gold",
+    "hair.side"
+  ],
+  "meshSize": [
+    7,
+    7
+  ],
+  "trianglesPerRole": 72,
+  "registeredCameraAnchorSource": "evidence/p15-12-camera-proxy-qa.json",
+  "roleFeatureTypes": {
+    "eye.far": [
+      "iris.camera",
+      "eye.left.alpha.proxy",
+      "eye.right.alpha.proxy"
+    ],
+    "hair.clip.cross_gold": [
+      "clip.center.camera",
+      "cross.tip_a.alpha.proxy",
+      "cross.tip_b.alpha.proxy"
+    ],
+    "hair.side": [
+      "hair.side.root.camera.proxy",
+      "hair.tip.alpha.proxy"
+    ]
+  },
+  "secondaryFeaturesAreUnapprovedAlphaDerivedProxies": true,
+  "physical3DModelUsed": false,
+  "trueNoseOcclusionVerified": false,
+  "clipPhysicalHairLockMountVerified": false,
+  "independentOriginalPaint": false,
+  "artisticallyAccepted": false,
+  "productionVddModified": false,
+  "engineeringResults": {
+    "maxConstraintResidualPx": 0.06298,
+    "meshTriangleFlips": 0,
+    "minTriangleAreaRatio": 0.606919,
+    "maxWarpCorrectionPx": 2.77203,
+    "partChangePxPerMidpoint": [
+      22510,
+      22832,
+      21859,
+      25663
+    ],
+    "wholeFrameChangePxPerMidpoint": [
+      117641,
+      120617,
+      115358,
+      131735
+    ],
+    "unitTestsPassed": 8,
+    "chromiumViewportFrames": 18,
+    "chromiumImageLoads": 108,
+    "chromiumErrors": 0
+  },
+  "formalStatus": "SEMANTIC_CONSTRAINED_MESH_ENGINEERING_PASS_PHYSICAL_OCCLUSION_AND_ART_GATE_FAIL"
+}

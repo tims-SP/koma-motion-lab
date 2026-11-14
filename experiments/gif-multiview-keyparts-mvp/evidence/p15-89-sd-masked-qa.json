@@ -1,0 +1,24 @@
+{
+  "schema": "KOMA-P15-89-SD-MASK-API-V1",
+  "modelService": "https://pg56714-inpaint-anything.hf.space",
+  "api": "/get_fill_img_with_sd",
+  "maskPassedAsTrueModelArgument": true,
+  "status": "QUEUE_TIMEOUT_NO_MODEL_RESULT",
+  "modelOutputCreated": false,
+  "formalArtMeshAccepted": false,
+  "inputSHA256": "a8191193f1da5d2f9a385a8b5e74727d5ee176b331ee2d560aa8c5388a3f21e6",
+  "maskSHA256": "d53c09581b06847fca2b439fe0987bc0e89a68b09154e4e67d1307221d4fe9c3",
+  "inputSize": [
+    768,
+    768
+  ],
+  "maskBBox": [
+    374,
+    318,
+    415,
+    359
+  ],
+  "eventId": "18e64851829e4e1ea031aaf436cba3a8",
+  "error": "SSE stream returned heartbeats only for over six minutes, no complete event or image; terminated client polling to avoid an indefinite stuck session.",
+  "terminatedClientUTC": "2026-11-11T13:08:54.995100+00:00"
+}

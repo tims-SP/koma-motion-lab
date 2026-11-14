@@ -1,0 +1,600 @@
+{
+  "schema": "KOMA-P15-07-SHORT-ARC-RENDERER-ACCEPTANCE-V1",
+  "characterId": "p0_character_001",
+  "sourceOriginalAngles": [
+    0,
+    45,
+    90
+  ],
+  "paintedCandidateInputAngles": [
+    65.0,
+    77.5
+  ],
+  "sourceKeyframeProvenance": {
+    "45.0": {
+      "source": "P0_ORIGINAL",
+      "path": "p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40"
+    },
+    "90.0": {
+      "source": "P0_ORIGINAL",
+      "path": "p2-views/whole/yaw090.png",
+      "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16"
+    },
+    "65.0": {
+      "source": "P15_PAINTED_KEYVIEW_CANDIDATE",
+      "path": "p15-independent-candidates/yaw065-source-rgba.png",
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506"
+    },
+    "77.5": {
+      "source": "P15_PAINTED_KEYVIEW_CANDIDATE",
+      "path": "p15-independent-candidates/yaw077p5-source-rgba.png",
+      "sha256": "1d7a757e557507b5fbd6f4e5881df3e0fae58e0155786de85bddea564515b1c9"
+    }
+  },
+  "sourceSemanticRoles": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "renderers": {
+    "semantic": {
+      "renderDirectory": "p15-07-semantic-preview",
+      "sourceKeyviewsPixelExact": [
+        45.0,
+        65.0,
+        77.5,
+        90.0
+      ],
+      "frameCount": 37,
+      "rendererQASHA256": "202729659477ffbb3cd6c7028632a37ceb3cb422f031c1cc0aa24e865c76f826",
+      "paintedReferenceComparisons": [
+        {
+          "yaw": 67.5,
+          "referenceRole": "P14_GENERATED_CANDIDATE_COMPARISON_ONLY",
+          "referenceSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+          "metrics": {
+            "silhouetteIoU": 0.862236,
+            "relativeAreaError": 0.053157,
+            "headIoU": 0.902683
+          }
+        },
+        {
+          "yaw": 72.5,
+          "referenceRole": "P14_GENERATED_CANDIDATE_COMPARISON_ONLY",
+          "referenceSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+          "metrics": {
+            "silhouetteIoU": 0.841151,
+            "relativeAreaError": 0.099,
+            "headIoU": 0.870816
+          }
+        }
+      ],
+      "temporalMedianRGBChange": 5.3762,
+      "temporalMaxRGBChange": 12.987049,
+      "temporalOutliers": [],
+      "adjacentFrameMetrics": [
+        {
+          "from": 0.0,
+          "to": 2.5,
+          "meanAdjacentRGBChange": 6.39036,
+          "alphaIoU": 0.99271
+        },
+        {
+          "from": 2.5,
+          "to": 5.0,
+          "meanAdjacentRGBChange": 5.091822,
+          "alphaIoU": 0.992576
+        },
+        {
+          "from": 5.0,
+          "to": 7.5,
+          "meanAdjacentRGBChange": 4.982588,
+          "alphaIoU": 0.993031
+        },
+        {
+          "from": 7.5,
+          "to": 10.0,
+          "meanAdjacentRGBChange": 4.858736,
+          "alphaIoU": 0.992324
+        },
+        {
+          "from": 10.0,
+          "to": 12.5,
+          "meanAdjacentRGBChange": 4.88461,
+          "alphaIoU": 0.992273
+        },
+        {
+          "from": 12.5,
+          "to": 15.0,
+          "meanAdjacentRGBChange": 4.730256,
+          "alphaIoU": 0.992605
+        },
+        {
+          "from": 15.0,
+          "to": 17.5,
+          "meanAdjacentRGBChange": 4.641894,
+          "alphaIoU": 0.991947
+        },
+        {
+          "from": 17.5,
+          "to": 20.0,
+          "meanAdjacentRGBChange": 4.586051,
+          "alphaIoU": 0.992321
+        },
+        {
+          "from": 20.0,
+          "to": 22.5,
+          "meanAdjacentRGBChange": 4.567729,
+          "alphaIoU": 0.987979
+        },
+        {
+          "from": 22.5,
+          "to": 25.0,
+          "meanAdjacentRGBChange": 4.583653,
+          "alphaIoU": 0.989225
+        },
+        {
+          "from": 25.0,
+          "to": 27.5,
+          "meanAdjacentRGBChange": 4.649385,
+          "alphaIoU": 0.992445
+        },
+        {
+          "from": 27.5,
+          "to": 30.0,
+          "meanAdjacentRGBChange": 4.737735,
+          "alphaIoU": 0.992515
+        },
+        {
+          "from": 30.0,
+          "to": 32.5,
+          "meanAdjacentRGBChange": 4.827604,
+          "alphaIoU": 0.992061
+        },
+        {
+          "from": 32.5,
+          "to": 35.0,
+          "meanAdjacentRGBChange": 4.936238,
+          "alphaIoU": 0.991933
+        },
+        {
+          "from": 35.0,
+          "to": 37.5,
+          "meanAdjacentRGBChange": 5.027246,
+          "alphaIoU": 0.990819
+        },
+        {
+          "from": 37.5,
+          "to": 40.0,
+          "meanAdjacentRGBChange": 5.141225,
+          "alphaIoU": 0.991116
+        },
+        {
+          "from": 40.0,
+          "to": 42.5,
+          "meanAdjacentRGBChange": 5.272404,
+          "alphaIoU": 0.991084
+        },
+        {
+          "from": 42.5,
+          "to": 45.0,
+          "meanAdjacentRGBChange": 6.472909,
+          "alphaIoU": 0.989771
+        },
+        {
+          "from": 45.0,
+          "to": 47.5,
+          "meanAdjacentRGBChange": 9.349665,
+          "alphaIoU": 0.942292
+        },
+        {
+          "from": 47.5,
+          "to": 50.0,
+          "meanAdjacentRGBChange": 8.474387,
+          "alphaIoU": 0.944265
+        },
+        {
+          "from": 50.0,
+          "to": 52.5,
+          "meanAdjacentRGBChange": 8.184861,
+          "alphaIoU": 0.950272
+        },
+        {
+          "from": 52.5,
+          "to": 55.0,
+          "meanAdjacentRGBChange": 12.987049,
+          "alphaIoU": 0.946235
+        },
+        {
+          "from": 55.0,
+          "to": 57.5,
+          "meanAdjacentRGBChange": 9.313649,
+          "alphaIoU": 0.93996
+        },
+        {
+          "from": 57.5,
+          "to": 60.0,
+          "meanAdjacentRGBChange": 9.254474,
+          "alphaIoU": 0.922269
+        },
+        {
+          "from": 60.0,
+          "to": 62.5,
+          "meanAdjacentRGBChange": 8.679389,
+          "alphaIoU": 0.914762
+        },
+        {
+          "from": 62.5,
+          "to": 65.0,
+          "meanAdjacentRGBChange": 8.598101,
+          "alphaIoU": 0.920928
+        },
+        {
+          "from": 65.0,
+          "to": 67.5,
+          "meanAdjacentRGBChange": 6.040457,
+          "alphaIoU": 0.950643
+        },
+        {
+          "from": 67.5,
+          "to": 70.0,
+          "meanAdjacentRGBChange": 5.402488,
+          "alphaIoU": 0.948022
+        },
+        {
+          "from": 70.0,
+          "to": 72.5,
+          "meanAdjacentRGBChange": 7.48632,
+          "alphaIoU": 0.949096
+        },
+        {
+          "from": 72.5,
+          "to": 75.0,
+          "meanAdjacentRGBChange": 5.349912,
+          "alphaIoU": 0.948889
+        },
+        {
+          "from": 75.0,
+          "to": 77.5,
+          "meanAdjacentRGBChange": 6.548334,
+          "alphaIoU": 0.945376
+        },
+        {
+          "from": 77.5,
+          "to": 80.0,
+          "meanAdjacentRGBChange": 6.266354,
+          "alphaIoU": 0.95774
+        },
+        {
+          "from": 80.0,
+          "to": 82.5,
+          "meanAdjacentRGBChange": 5.871075,
+          "alphaIoU": 0.955698
+        },
+        {
+          "from": 82.5,
+          "to": 85.0,
+          "meanAdjacentRGBChange": 7.364117,
+          "alphaIoU": 0.964815
+        },
+        {
+          "from": 85.0,
+          "to": 87.5,
+          "meanAdjacentRGBChange": 4.991292,
+          "alphaIoU": 0.964865
+        },
+        {
+          "from": 87.5,
+          "to": 90.0,
+          "meanAdjacentRGBChange": 5.835546,
+          "alphaIoU": 0.963394
+        }
+      ]
+    },
+    "wholeGeometry": {
+      "renderDirectory": "p15-07-wholekey-preview",
+      "sourceKeyviewsPixelExact": [
+        45.0,
+        65.0,
+        77.5,
+        90.0
+      ],
+      "frameCount": 37,
+      "rendererQASHA256": "6df276a6757a27cd4feffef482aaa4b89d8cdc827ca1b68ab36e56a40a7d1bc9",
+      "paintedReferenceComparisons": [
+        {
+          "yaw": 67.5,
+          "referenceRole": "P14_GENERATED_CANDIDATE_COMPARISON_ONLY",
+          "referenceSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+          "metrics": {
+            "silhouetteIoU": 0.864352,
+            "relativeAreaError": 0.036091,
+            "headIoU": 0.905456
+          }
+        },
+        {
+          "yaw": 72.5,
+          "referenceRole": "P14_GENERATED_CANDIDATE_COMPARISON_ONLY",
+          "referenceSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+          "metrics": {
+            "silhouetteIoU": 0.851177,
+            "relativeAreaError": 0.082959,
+            "headIoU": 0.88605
+          }
+        }
+      ],
+      "temporalMedianRGBChange": 5.866535,
+      "temporalMaxRGBChange": 16.134981,
+      "temporalOutliers": [
+        {
+          "from": 52.5,
+          "to": 55.0,
+          "meanAdjacentRGBChange": 16.134981,
+          "alphaIoU": 0.956849
+        }
+      ],
+      "adjacentFrameMetrics": [
+        {
+          "from": 0.0,
+          "to": 2.5,
+          "meanAdjacentRGBChange": 6.39036,
+          "alphaIoU": 0.99271
+        },
+        {
+          "from": 2.5,
+          "to": 5.0,
+          "meanAdjacentRGBChange": 5.091822,
+          "alphaIoU": 0.992576
+        },
+        {
+          "from": 5.0,
+          "to": 7.5,
+          "meanAdjacentRGBChange": 4.982588,
+          "alphaIoU": 0.993031
+        },
+        {
+          "from": 7.5,
+          "to": 10.0,
+          "meanAdjacentRGBChange": 4.858736,
+          "alphaIoU": 0.992324
+        },
+        {
+          "from": 10.0,
+          "to": 12.5,
+          "meanAdjacentRGBChange": 4.88461,
+          "alphaIoU": 0.992273
+        },
+        {
+          "from": 12.5,
+          "to": 15.0,
+          "meanAdjacentRGBChange": 4.730256,
+          "alphaIoU": 0.992605
+        },
+        {
+          "from": 15.0,
+          "to": 17.5,
+          "meanAdjacentRGBChange": 4.641894,
+          "alphaIoU": 0.991947
+        },
+        {
+          "from": 17.5,
+          "to": 20.0,
+          "meanAdjacentRGBChange": 4.586051,
+          "alphaIoU": 0.992321
+        },
+        {
+          "from": 20.0,
+          "to": 22.5,
+          "meanAdjacentRGBChange": 4.567729,
+          "alphaIoU": 0.987979
+        },
+        {
+          "from": 22.5,
+          "to": 25.0,
+          "meanAdjacentRGBChange": 4.583653,
+          "alphaIoU": 0.989225
+        },
+        {
+          "from": 25.0,
+          "to": 27.5,
+          "meanAdjacentRGBChange": 4.649385,
+          "alphaIoU": 0.992445
+        },
+        {
+          "from": 27.5,
+          "to": 30.0,
+          "meanAdjacentRGBChange": 4.737735,
+          "alphaIoU": 0.992515
+        },
+        {
+          "from": 30.0,
+          "to": 32.5,
+          "meanAdjacentRGBChange": 4.827604,
+          "alphaIoU": 0.992061
+        },
+        {
+          "from": 32.5,
+          "to": 35.0,
+          "meanAdjacentRGBChange": 4.936238,
+          "alphaIoU": 0.991933
+        },
+        {
+          "from": 35.0,
+          "to": 37.5,
+          "meanAdjacentRGBChange": 5.027246,
+          "alphaIoU": 0.990819
+        },
+        {
+          "from": 37.5,
+          "to": 40.0,
+          "meanAdjacentRGBChange": 5.141225,
+          "alphaIoU": 0.991116
+        },
+        {
+          "from": 40.0,
+          "to": 42.5,
+          "meanAdjacentRGBChange": 5.272404,
+          "alphaIoU": 0.991084
+        },
+        {
+          "from": 42.5,
+          "to": 45.0,
+          "meanAdjacentRGBChange": 6.472909,
+          "alphaIoU": 0.989771
+        },
+        {
+          "from": 45.0,
+          "to": 47.5,
+          "meanAdjacentRGBChange": 10.353037,
+          "alphaIoU": 0.949506
+        },
+        {
+          "from": 47.5,
+          "to": 50.0,
+          "meanAdjacentRGBChange": 9.817023,
+          "alphaIoU": 0.955895
+        },
+        {
+          "from": 50.0,
+          "to": 52.5,
+          "meanAdjacentRGBChange": 9.701369,
+          "alphaIoU": 0.959326
+        },
+        {
+          "from": 52.5,
+          "to": 55.0,
+          "meanAdjacentRGBChange": 16.134981,
+          "alphaIoU": 0.956849
+        },
+        {
+          "from": 55.0,
+          "to": 57.5,
+          "meanAdjacentRGBChange": 9.211242,
+          "alphaIoU": 0.959036
+        },
+        {
+          "from": 57.5,
+          "to": 60.0,
+          "meanAdjacentRGBChange": 8.992429,
+          "alphaIoU": 0.953004
+        },
+        {
+          "from": 60.0,
+          "to": 62.5,
+          "meanAdjacentRGBChange": 8.810836,
+          "alphaIoU": 0.945731
+        },
+        {
+          "from": 62.5,
+          "to": 65.0,
+          "meanAdjacentRGBChange": 7.875494,
+          "alphaIoU": 0.944579
+        },
+        {
+          "from": 65.0,
+          "to": 67.5,
+          "meanAdjacentRGBChange": 6.989593,
+          "alphaIoU": 0.949662
+        },
+        {
+          "from": 67.5,
+          "to": 70.0,
+          "meanAdjacentRGBChange": 6.797966,
+          "alphaIoU": 0.957048
+        },
+        {
+          "from": 70.0,
+          "to": 72.5,
+          "meanAdjacentRGBChange": 8.320765,
+          "alphaIoU": 0.958877
+        },
+        {
+          "from": 72.5,
+          "to": 75.0,
+          "meanAdjacentRGBChange": 6.237372,
+          "alphaIoU": 0.96054
+        },
+        {
+          "from": 75.0,
+          "to": 77.5,
+          "meanAdjacentRGBChange": 6.893484,
+          "alphaIoU": 0.956932
+        },
+        {
+          "from": 77.5,
+          "to": 80.0,
+          "meanAdjacentRGBChange": 5.824698,
+          "alphaIoU": 0.971635
+        },
+        {
+          "from": 80.0,
+          "to": 82.5,
+          "meanAdjacentRGBChange": 5.127173,
+          "alphaIoU": 0.973613
+        },
+        {
+          "from": 82.5,
+          "to": 85.0,
+          "meanAdjacentRGBChange": 6.899872,
+          "alphaIoU": 0.97265
+        },
+        {
+          "from": 85.0,
+          "to": 87.5,
+          "meanAdjacentRGBChange": 5.908373,
+          "alphaIoU": 0.971916
+        },
+        {
+          "from": 87.5,
+          "to": 90.0,
+          "meanAdjacentRGBChange": 6.034046,
+          "alphaIoU": 0.970487
+        }
+      ]
+    }
+  },
+  "browser": {
+    "qaPath": "private-assets/p15-07-browser/qa.json",
+    "qaSHA256": "add678ecadb0866f8c2ff1f1c4ea986ed2fb6db3c99755d450505acdd2771682",
+    "screenshotCount": 8,
+    "imageLoads": 28,
+    "javascriptErrors": 0,
+    "failedRequests": 0
+  },
+  "visualReview": {
+    "reviewedAngles": [
+      45,
+      55,
+      65,
+      67.5,
+      72.5,
+      77.5,
+      85,
+      90
+    ],
+    "observed45to65Transition": "source pose gap; 55 degree facial contour and accessory/neck geometry require separately authored key art",
+    "observedSemanticTransitions": "source-aligned semantic layer boundaries diverge around facial contours, rear hair, ear and collar",
+    "observedWholeGeometry": "outline improved around 67.5/72.5/85 degrees but whole-image transport does not preserve semantic topology",
+    "requiredNextInputs": [
+      "55_degree_keyview_with_physical_face_anchors",
+      "independent_semantic_occlusion_and_hidden_fills",
+      "original_hero_source_identity_verification"
+    ],
+    "artisticStatus": "REWORK_REQUIRED"
+  },
+  "technicalGate": "SOURCE_INTEGRITY_AND_BROWSER_PASS",
+  "overallStatus": "P15_07_ENGINEERING_REVIEW_COMPLETE_ARTWORK_REFINEMENT",
+  "identityHeroApprovedSha256Verified": false,
+  "next": "P15-08 45-to-65 authored source registration and view-dependent stroke topology"
+}

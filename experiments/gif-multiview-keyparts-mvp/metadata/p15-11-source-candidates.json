@@ -1,0 +1,103 @@
+{
+  "schema": "KOMA-P15-11-GENERATION-SOURCE-REGISTRY-V1",
+  "characterId": "p0_character_001",
+  "referenceImages": [
+    {
+      "yawDeg": 45,
+      "path": "p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "role": "original P0 45 reference"
+    },
+    {
+      "yawDeg": 65,
+      "path": "p15-independent-candidates/yaw065-source-rgba.png",
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "role": "independently generated 65 view candidate"
+    }
+  ],
+  "model": "Qwen-Image-Edit-2511",
+  "space": "akhaliq/Qwen-Image-Edit-2511-LoRAs-Fast",
+  "candidates": [
+    {
+      "file": "yaw057p5-multi-reference-profile.png",
+      "sha256": "f345c495eed853cbae698b2fd2999fd80434ced0e466de8b2d0b880d5743cfc5",
+      "sourceBlobSHA": "891175e6c76a4163dd279beb3061bff9f34fcb9d",
+      "requestedYaw": 57.5,
+      "referenceAngles": [
+        45,
+        65
+      ],
+      "adapter": "Multiple-Angles",
+      "seed": 57511,
+      "model": "Qwen-Image-Edit-2511",
+      "visualObservations": [
+        "profile-like pose rather than intermediate two-eye view",
+        "far eye absent",
+        "gold cross hairclip shifts onto left side of canvas"
+      ],
+      "visualDisposition": "REWORK_REQUIRED"
+    },
+    {
+      "file": "yaw057p5-dual-reversed.png",
+      "sha256": "0a292d963c4c86977c0e6ee0b767d6b7ef38de9d810a55e29296490a5e29f60b",
+      "sourceBlobSHA": "c6b91fffda41497f61adba750b900a94eba6ff30",
+      "requestedYaw": 57.5,
+      "referenceAngles": [
+        45,
+        65
+      ],
+      "adapter": "Multiple-Angles",
+      "seed": 57511,
+      "model": "Qwen-Image-Edit-2511",
+      "visualObservations": [
+        "head faces opposite side of registered 45-degree original",
+        "far eye absent",
+        "hairclip physical-side identity altered"
+      ],
+      "visualDisposition": "REWORK_REQUIRED"
+    },
+    {
+      "file": "yaw057p5-single-source-profile.png",
+      "sha256": "6d330f0c619e9283e90254fc5df49e6ef562f2485b9a61b46dfc4c7ea7b64ddc",
+      "sourceBlobSHA": "e1b6260ca4c089da3021f14e6d75923ccb89e01b",
+      "requestedYaw": 57.5,
+      "referenceAngles": [
+        45
+      ],
+      "adapter": "Fal-Multiple-Angles",
+      "seed": 57519,
+      "model": "Qwen-Image-Edit-2511",
+      "visualObservations": [
+        "rightward rotation preserved",
+        "nearly full profile with distant eye absent",
+        "crossed clip mostly edge-on rather than the original clearly crossed emblem"
+      ],
+      "visualDisposition": "REWORK_REQUIRED"
+    },
+    {
+      "file": "yaw060-near-source-eye-detail.png",
+      "sha256": "ad222866528c00d2a0e6815a15c851eeaf7893ad6ddc5bfc29e3b0ffcda1eef3",
+      "sourceBlobSHA": "f980f788f0729438cee6ba88a72c2dfc97dec30a",
+      "requestedYaw": 60,
+      "referenceAngles": [
+        65
+      ],
+      "adapter": "Fal-Multiple-Angles",
+      "seed": 60051,
+      "model": "Qwen-Image-Edit-2511",
+      "visualObservations": [
+        "pose drift toward near-frontal rather than 60-degree intermediate",
+        "visible eye has missing iris and sclera texture",
+        "face/bangs occlusion no longer follows registered 65 view"
+      ],
+      "visualDisposition": "REWORK_REQUIRED"
+    }
+  ],
+  "sourcePolicy": {
+    "background": "RGB source remains immutable; generate RGBA via traceable separate matte",
+    "sourceStorage": "private-assets/p15-11-generation",
+    "rendererKeyframeAdmission": "visual pose, handedness, eyes and identity inspection required",
+    "noSelfHoldout": true,
+    "heroApprovalHashVerified": false
+  }
+}

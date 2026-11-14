@@ -1,0 +1,524 @@
+{
+  "schema": "KOMA_P15_105_THREE_KEY_GARMENT_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "modelOriginalKeyartSha256": "b91745a58412bc856e75af27fead2574f9da051f1027a00c987a8e8f9868ecf0",
+  "registeredKeyartSha256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+  "headRenderer": "P15-101 source-owned head-hair ArtMesh",
+  "sourceGarments": {
+    "60": "P15-101 native 60 body",
+    "67.5": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+    "75": "P15-101 native 75 body"
+  },
+  "registrationVerified": true,
+  "methods": {
+    "three_key_direct": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw61p875.png",
+        "sha256": "1c9aaa225f07cb2c3b7b2bfaa0707575edebc22a4c289186ff0ba46ff82cf363"
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw63p75.png",
+        "sha256": "0bbdc2eb45ccfda0c19d48d9dbb23022e878411806866ab2e520f162068aa085"
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw65p625.png",
+        "sha256": "658c4877564e39cbb515d3844cb8eaf6dd6a6314a30114dc49c76362adabae04"
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw67p5.png",
+        "sha256": "5132cbcd3bb21b6c41e7de324e9dd497444245880d710f88ceecb8ba2b0c82fa"
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw69p375.png",
+        "sha256": "57677848a2ef35847ab93beed80c7d24a9cc77391c22e6d0940122ec8c79f45b"
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw71p25.png",
+        "sha256": "96662cb09a089cf9a781d670a2b47a33ab978c2e08abb8c4f05827eedcbe8496"
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw73p125.png",
+        "sha256": "80b5ff50601bf5a9e37b1ac78d595a1c1c079235b341a190105c4d7b29a8255f"
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    },
+    "three_key_flow": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw61p875.png",
+        "sha256": "9c5f9732c78e53ac1829efd07bd19aa52fcd5589e8cde27aae952783fbd29e97"
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw63p75.png",
+        "sha256": "eab4186b1bd6fab153b59e84788cdf83b3b6b786666a3d89206feffe1537930a"
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw65p625.png",
+        "sha256": "794eff0668b9cf83da70634568f3b9bd3865f0e4b9127f0a2dfbdcb8c203ee12"
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw67p5.png",
+        "sha256": "5132cbcd3bb21b6c41e7de324e9dd497444245880d710f88ceecb8ba2b0c82fa"
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw69p375.png",
+        "sha256": "22f5821ef5bc8e032f8526083d7acf1a5c0b74405bf2b326ccc844f455142bba"
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw71p25.png",
+        "sha256": "452a055bea5078efbde539906dd164fbfaa5f165cf1cd280bea74b067ab63116"
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw73p125.png",
+        "sha256": "ce57902ed2451c64888a93cc0c2f33503c94392a7829c1d2bf07e057436260cc"
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    },
+    "three_key_owner": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw61p875.png",
+        "sha256": "6e8c36e56ba5e37451cf452b528ff0812ebeb7c1eea4caa204a992caa610b758"
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw63p75.png",
+        "sha256": "7459944f0bf52792c172059bf8888df2145d0f54299363f4e9a94611a1977012"
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw65p625.png",
+        "sha256": "2935e14e7c5c259b6aba714b0d43aa36e926931c9e7d617541926ff989c1de35"
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw67p5.png",
+        "sha256": "e05dd527fcef9efea2f02cf23d4318e0d3e1ebc1c2c3c7ccfaadfb96a983d98e"
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw69p375.png",
+        "sha256": "c0a6f44426f4920473f7213e49f97bb12660ec9066e7cae6bf278e979fa167e7"
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw71p25.png",
+        "sha256": "88533c07e5224bc9bdf4391642bf3400794a6a2d7bf16f9fbcace608a1a3c1c1"
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw73p125.png",
+        "sha256": "08d5fc5cc9082fd8b419299eb096c8a555fd60cd9507761f8db3382588387eea"
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    }
+  },
+  "nativeMidpointGeometryAccepted": false,
+  "continuousVisualAccepted": false,
+  "sourceGenuineMidpoint": true,
+  "flowMagnitude": {
+    "60-67.5": {
+      "meanPx": 5.825023651123047,
+      "maxPx": 30.353351593017578
+    },
+    "67.5-75": {
+      "meanPx": 9.80945873260498,
+      "maxPx": 42.426021575927734
+    }
+  },
+  "nativeMidKeyframe": {
+    "clothingOpaquePixelsBelow770": 137195,
+    "clothingSourceMAE": 0.0,
+    "clothingSourceExactFraction": 1.0
+  },
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "meanAdjacentRGBMAE": 6.2248,
+        "midpointAdjacentRGBMAE": 5.6403
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "meanAdjacentRGBMAE": 7.9434,
+        "midpointAdjacentRGBMAE": 7.2519
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "meanAdjacentRGBMAE": 6.1601,
+        "midpointAdjacentRGBMAE": 5.1791
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "meanAdjacentRGBMAE": 7.0499,
+        "midpointAdjacentRGBMAE": 6.291
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "meanAdjacentRGBMAE": 11.5744,
+        "midpointAdjacentRGBMAE": 10.2164
+      }
+    },
+    "three_key_direct": {
+      "garment": {
+        "adjacentRGBMAE": [
+          8.6766,
+          6.661,
+          6.6147,
+          7.0437,
+          9.5856,
+          9.1875,
+          9.0895,
+          10.8569
+        ],
+        "maxAdjacentRGBMAE": 10.8569,
+        "meanAdjacentRGBMAE": 8.4644,
+        "midpointAdjacentRGBMAE": 9.5856
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          9.5295,
+          6.8264,
+          6.9317,
+          8.0346,
+          13.4768,
+          12.6596,
+          12.4983,
+          14.9315
+        ],
+        "maxAdjacentRGBMAE": 14.9315,
+        "meanAdjacentRGBMAE": 10.6111,
+        "midpointAdjacentRGBMAE": 13.4768
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          10.3755,
+          6.9599,
+          7.079,
+          8.2945,
+          10.2295,
+          9.0715,
+          8.9172,
+          12.2252
+        ],
+        "maxAdjacentRGBMAE": 12.2252,
+        "meanAdjacentRGBMAE": 9.144,
+        "midpointAdjacentRGBMAE": 10.2295
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.7092,
+          7.2566,
+          7.0841,
+          7.2934,
+          9.339,
+          9.0284,
+          9.0067,
+          11.2075
+        ],
+        "maxAdjacentRGBMAE": 11.2075,
+        "meanAdjacentRGBMAE": 8.7406,
+        "midpointAdjacentRGBMAE": 9.339
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.0192,
+          11.8921,
+          11.0844,
+          10.3898,
+          9.922,
+          10.1136,
+          10.6984,
+          13.4757
+        ],
+        "maxAdjacentRGBMAE": 15.0192,
+        "meanAdjacentRGBMAE": 11.5744,
+        "midpointAdjacentRGBMAE": 10.3898
+      }
+    },
+    "three_key_flow": {
+      "garment": {
+        "adjacentRGBMAE": [
+          12.138,
+          9.3921,
+          8.658,
+          8.8867,
+          16.1932,
+          15.1129,
+          15.6708,
+          17.8901
+        ],
+        "maxAdjacentRGBMAE": 17.8901,
+        "meanAdjacentRGBMAE": 12.9927,
+        "midpointAdjacentRGBMAE": 16.1932
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          13.8113,
+          10.2654,
+          9.4631,
+          10.708,
+          21.8113,
+          19.9757,
+          21.8785,
+          25.4661
+        ],
+        "maxAdjacentRGBMAE": 25.4661,
+        "meanAdjacentRGBMAE": 16.6724,
+        "midpointAdjacentRGBMAE": 21.8113
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          13.3554,
+          8.6774,
+          8.2918,
+          10.5825,
+          15.6196,
+          12.0003,
+          14.315,
+          20.5863
+        ],
+        "maxAdjacentRGBMAE": 20.5863,
+        "meanAdjacentRGBMAE": 12.9285,
+        "midpointAdjacentRGBMAE": 15.6196
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          12.7796,
+          9.0922,
+          8.0719,
+          8.4217,
+          13.7761,
+          13.0846,
+          14.5645,
+          17.5284
+        ],
+        "maxAdjacentRGBMAE": 17.5284,
+        "meanAdjacentRGBMAE": 12.1649,
+        "midpointAdjacentRGBMAE": 13.7761
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.347,
+          11.9941,
+          11.0548,
+          10.305,
+          9.922,
+          10.1136,
+          10.6984,
+          13.4757
+        ],
+        "maxAdjacentRGBMAE": 15.347,
+        "meanAdjacentRGBMAE": 11.6138,
+        "midpointAdjacentRGBMAE": 10.305
+      }
+    },
+    "three_key_owner": {
+      "garment": {
+        "adjacentRGBMAE": [
+          11.6443,
+          10.0698,
+          9.1652,
+          8.9808,
+          16.9881,
+          15.5089,
+          17.1175,
+          16.9541
+        ],
+        "maxAdjacentRGBMAE": 17.1175,
+        "meanAdjacentRGBMAE": 13.3036,
+        "midpointAdjacentRGBMAE": 16.9881
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          13.6558,
+          11.1179,
+          9.8921,
+          10.8325,
+          22.4347,
+          20.7758,
+          24.2956,
+          24.5451
+        ],
+        "maxAdjacentRGBMAE": 24.5451,
+        "meanAdjacentRGBMAE": 17.1937,
+        "midpointAdjacentRGBMAE": 22.4347
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          12.962,
+          9.6517,
+          9.0273,
+          10.5175,
+          14.54,
+          13.133,
+          16.5587,
+          19.8789
+        ],
+        "maxAdjacentRGBMAE": 19.8789,
+        "meanAdjacentRGBMAE": 13.2836,
+        "midpointAdjacentRGBMAE": 14.54
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          12.8368,
+          9.8253,
+          8.6018,
+          8.2165,
+          14.3624,
+          13.2414,
+          15.5186,
+          17.4161
+        ],
+        "maxAdjacentRGBMAE": 17.4161,
+        "meanAdjacentRGBMAE": 12.5024,
+        "midpointAdjacentRGBMAE": 14.3624
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.3097,
+          12.2995,
+          11.2728,
+          10.1117,
+          9.9229,
+          10.1139,
+          10.6986,
+          13.476
+        ],
+        "maxAdjacentRGBMAE": 15.3097,
+        "meanAdjacentRGBMAE": 11.6506,
+        "midpointAdjacentRGBMAE": 10.1117
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-105-three-key-vdd/three-key-garment-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "actualModelGeneratedGarment": true,
+    "nativeSourceDimension": [
+      1254,
+      1254
+    ],
+    "registeredLandmarkShift": [
+      -2.315999984741211,
+      29.51799964904785
+    ],
+    "sourceMidGarmentPixelExactBelow770": true,
+    "nativeMiddleArt": "one coherent source garment bow and jewel; pose angle and edge integration need independent approval",
+    "observedArtifacts": {
+      "beforeMidpoint": "double collar/garment outlines appear during independent source blending",
+      "at67p5": "single source garment and gold brooch; head surface retains earlier ghost lines",
+      "afterMidpoint": "large difference in garment proportions between generated native midpoint and 75° original produces doubled outlines and sharp trim motion",
+      "opticalFlow": "DIS displacement distorts ribbon and collar linework, raising local temporal changes"
+    },
+    "quantitative": {
+      "bow": {
+        "P15-101-baseline": 10.1016,
+        "threeKeyDirect": 14.9315,
+        "threeKeyFlow": 25.4661,
+        "threeKeyOwner": 24.5451
+      },
+      "jewel": {
+        "P15-101-baseline": 9.1631,
+        "threeKeyDirect": 12.2252,
+        "threeKeyFlow": 20.5863,
+        "threeKeyOwner": 19.8789
+      },
+      "collar": {
+        "P15-101-baseline": 9.5625,
+        "threeKeyDirect": 11.2075,
+        "threeKeyFlow": 17.5284,
+        "threeKeyOwner": 17.4161
+      },
+      "head": {
+        "P15-101-baseline": 14.9137,
+        "threeKeyDirect": 15.0192,
+        "threeKeyFlow": 15.347,
+        "threeKeyOwner": 15.3097
+      }
+    },
+    "engineeringQA": "PASS",
+    "artisticContinuousYaw": "NOT_APPROVED",
+    "selectedVisualBaseline": "P15-101 head_alpha_blend",
+    "candidateForNative67p5Keyframe": "true native registered garment source"
+  }
+}

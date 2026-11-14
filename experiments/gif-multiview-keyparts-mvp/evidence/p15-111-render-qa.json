@@ -1,0 +1,802 @@
+{
+  "schema": "KOMA_P15_111_SOURCE_HIDDEN_GARMENT_LAYER_RENDER_V1",
+  "character": "p0_character_001",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "sourceArtSHA256": "a954f946cfa06428259e715ab2483243429aef9b458f159298e209491f19d7ce",
+  "layerCountPerView": 7,
+  "hiddenOriginalGenuineModelImages": 6,
+  "method": "source-owned separate image layers, independent depth and correspondence",
+  "drawingOrder": [
+    "background",
+    "goldTrim",
+    "collarUnder",
+    "collarWhite",
+    "bowUnder",
+    "bowFabric",
+    "jewel",
+    "headHair"
+  ],
+  "inferredArtGroundTruth": false,
+  "visualApproved": false,
+  "methods": {
+    "layered_full": {
+      "60": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw61p875.png",
+        "sha256": "648e941c6e1149cc4a5bb4073dba120de7c0e94735d91e246cd267197eb3a90b",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.25,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": false
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw63p75.png",
+        "sha256": "38a8d31a41f1ea59c0ec1688b8acf72580b9893a8087fcd87e57245a2d78e70f",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.5,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": false
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw65p625.png",
+        "sha256": "541092e787deeeceaba9c2ac5b12aa4043bcd948bc906c0805901688bea26421",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.75,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": false
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw69p375.png",
+        "sha256": "f7af5044b9898098b2960b149dd48b616fb1c11708148a641ebf78dfaa064ebb",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.25,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": false
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw71p25.png",
+        "sha256": "931541bac64372bff7704b11714769b888931b8576f43313e8b76926a4008a8a",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.5,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": false
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw73p125.png",
+        "sha256": "9e3c32bef54406f21b0dfcebda645507d5826570f36eaf9c27c777b0a4cd6f84",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.75,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": false
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_full-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      }
+    },
+    "layered_jewel_owner": {
+      "60": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw61p875.png",
+        "sha256": "7e0e5cef869d21823a01f2bab92b9814d5ff4511df5354451d8206e004cc3235",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.25,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw63p75.png",
+        "sha256": "96d36ab55c92f188b2228192a4981f92c770ed6297bc465d823961e11a7a4f31",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.5,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw65p625.png",
+        "sha256": "d5d731d1b8780ab2044d93c12ac80fc3ae6f71fe74b47ad8e28d40b12b2e6622",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.75,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw69p375.png",
+        "sha256": "1f45bf099201d9c122dacf9dd7973121b6cd6b359faa81dcdea6fd0fe5d7107e",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.25,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw71p25.png",
+        "sha256": "1e7e0b4dff0e62f1aa69964910a9a56d7b101e15117acd69160a838eaf5364f4",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.5,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw73p125.png",
+        "sha256": "de98570d6dd955dd1b31183e751cd753286b099846799b4477f7bd50592dd2be",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.75,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      }
+    },
+    "layered_bow_owner": {
+      "60": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw60.png",
+        "sha256": "fa1c27d91300c136c28aa66e302a0b7181a6972fa7f4420fcff72cf47f74982e",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw61p875.png",
+        "sha256": "f01a5144a51ced62473675aea1567db2f5420530007bf42e48b6aace4d9c9556",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.25,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw63p75.png",
+        "sha256": "3397fdce73dd51e202fcf659aa20985f6e5b35f1f1b775e9a702fdc065f38ad3",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.5,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw65p625.png",
+        "sha256": "caa89b5b3e0983e5d27a98977744794f4d53244d87688c5a850f09496bc6d988",
+        "diagnostics": {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "t": 0.75,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw67p5.png",
+        "sha256": "53b9319f99e2edfb99c6a17caab12e8c571de5cdef9efd878f6ab49a5f394082",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw69p375.png",
+        "sha256": "26cb6aad97b170c3e41e076df913f4ca155efb113d93d9c401dcf59750a1012a",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.25,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw71p25.png",
+        "sha256": "b6507500b138646414d20cf4add13f3353920b65634bd9a28b81579b6db5e199",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.5,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw73p125.png",
+        "sha256": "9fe8de2a3771170ca327c10f7ff901df9689422d136962e3e3315f4f6afd02fd",
+        "diagnostics": {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "t": 0.75,
+          "collarArtwork": "registered inferred collar under native fabric",
+          "bowArtwork": "registered inferred bow under native golden jewel",
+          "sourceNativeJewel": true
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-yaw75.png",
+        "sha256": "00dc21558babdeac13a1dd14094f631b773d78dd7c3145ffe22c0d42abf91f3c",
+        "diagnostics": {
+          "exactFullCharacterSource": true
+        }
+      }
+    }
+  },
+  "hiddenCoverage": {
+    "60": {
+      "collar": 0.63714,
+      "bow": 0.82462
+    },
+    "67.5": {
+      "collar": 0.52339,
+      "bow": 1.0
+    },
+    "75": {
+      "collar": 0.83084,
+      "bow": 1.0
+    }
+  },
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "interiorMaxRGBMAE": 7.2775,
+        "meanAdjacentRGBMAE": 7.9434
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "interiorMaxRGBMAE": 5.1833,
+        "meanAdjacentRGBMAE": 6.1601
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "interiorMaxRGBMAE": 6.7573,
+        "meanAdjacentRGBMAE": 7.0499
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "interiorMaxRGBMAE": 5.9747,
+        "meanAdjacentRGBMAE": 6.2248
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "interiorMaxRGBMAE": 11.7003,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "P15-107-three-native": {
+      "bow": {
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ],
+        "maxAdjacentRGBMAE": 12.8767,
+        "interiorMaxRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ],
+        "maxAdjacentRGBMAE": 10.2434,
+        "interiorMaxRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ],
+        "maxAdjacentRGBMAE": 8.7588,
+        "interiorMaxRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          6.9229,
+          6.6883,
+          6.5505,
+          7.2027,
+          9.2766,
+          8.6715,
+          8.6737,
+          8.8022
+        ],
+        "maxAdjacentRGBMAE": 9.2766,
+        "interiorMaxRGBMAE": 9.2766,
+        "meanAdjacentRGBMAE": 7.8486
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    },
+    "layered_full": {
+      "bow": {
+        "adjacentRGBMAE": [
+          10.6768,
+          7.314,
+          7.5695,
+          11.8862,
+          16.3722,
+          11.8067,
+          12.9812,
+          17.9777
+        ],
+        "maxAdjacentRGBMAE": 17.9777,
+        "interiorMaxRGBMAE": 16.3722,
+        "meanAdjacentRGBMAE": 12.073
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          10.7408,
+          7.8472,
+          7.6278,
+          11.2222,
+          12.6937,
+          8.8687,
+          9.2747,
+          10.786
+        ],
+        "maxAdjacentRGBMAE": 12.6937,
+        "interiorMaxRGBMAE": 12.6937,
+        "meanAdjacentRGBMAE": 9.8826
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          8.7919,
+          7.1737,
+          6.9768,
+          8.3533,
+          9.9939,
+          8.4512,
+          8.7525,
+          10.8786
+        ],
+        "maxAdjacentRGBMAE": 10.8786,
+        "interiorMaxRGBMAE": 9.9939,
+        "meanAdjacentRGBMAE": 8.6715
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.5087,
+          6.6145,
+          6.6717,
+          8.9582,
+          11.0328,
+          8.5983,
+          9.1275,
+          11.6418
+        ],
+        "maxAdjacentRGBMAE": 11.6418,
+        "interiorMaxRGBMAE": 11.0328,
+        "meanAdjacentRGBMAE": 8.8942
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    },
+    "layered_jewel_owner": {
+      "bow": {
+        "adjacentRGBMAE": [
+          10.8075,
+          7.5282,
+          7.6306,
+          11.9863,
+          16.4804,
+          12.402,
+          13.0233,
+          18.0868
+        ],
+        "maxAdjacentRGBMAE": 18.0868,
+        "interiorMaxRGBMAE": 16.4804,
+        "meanAdjacentRGBMAE": 12.2431
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          11.6412,
+          9.3175,
+          8.0464,
+          11.9071,
+          13.4327,
+          12.9304,
+          9.5671,
+          11.5399
+        ],
+        "maxAdjacentRGBMAE": 13.4327,
+        "interiorMaxRGBMAE": 13.4327,
+        "meanAdjacentRGBMAE": 11.0478
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          8.919,
+          7.3824,
+          7.0364,
+          8.4505,
+          10.0993,
+          9.0304,
+          8.7935,
+          10.9848
+        ],
+        "maxAdjacentRGBMAE": 10.9848,
+        "interiorMaxRGBMAE": 10.0993,
+        "meanAdjacentRGBMAE": 8.837
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.5546,
+          6.6897,
+          6.6932,
+          8.9933,
+          11.0708,
+          8.8073,
+          9.1423,
+          11.6801
+        ],
+        "maxAdjacentRGBMAE": 11.6801,
+        "interiorMaxRGBMAE": 11.0708,
+        "meanAdjacentRGBMAE": 8.9539
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    },
+    "layered_bow_owner": {
+      "bow": {
+        "adjacentRGBMAE": [
+          10.4416,
+          14.3084,
+          8.1116,
+          12.0037,
+          12.8357,
+          30.7463,
+          13.5699,
+          17.1611
+        ],
+        "maxAdjacentRGBMAE": 30.7463,
+        "interiorMaxRGBMAE": 30.7463,
+        "meanAdjacentRGBMAE": 14.8973
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          11.8486,
+          16.046,
+          8.1067,
+          11.8653,
+          13.1287,
+          31.5341,
+          8.4958,
+          10.4524
+        ],
+        "maxAdjacentRGBMAE": 31.5341,
+        "interiorMaxRGBMAE": 31.5341,
+        "meanAdjacentRGBMAE": 13.9347
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          8.822,
+          9.6318,
+          7.0521,
+          8.3855,
+          8.9016,
+          14.8203,
+          8.4518,
+          10.1569
+        ],
+        "maxAdjacentRGBMAE": 14.8203,
+        "interiorMaxRGBMAE": 14.8203,
+        "meanAdjacentRGBMAE": 9.5277
+      },
+      "garment": {
+        "adjacentRGBMAE": [
+          8.3688,
+          9.3442,
+          6.8365,
+          8.9269,
+          9.6829,
+          15.6203,
+          9.4886,
+          11.3661
+        ],
+        "maxAdjacentRGBMAE": 15.6203,
+        "interiorMaxRGBMAE": 15.6203,
+        "meanAdjacentRGBMAE": 9.9543
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ],
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-111-layered-render/hidden-material-layer-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "artProduction": "6 individually generated model-native transparent RGBAs",
+    "sourceIdentity": "original p0_character_001 three-view character garments",
+    "materialContent": "extended white collar under red bow; continuous red ribbon under central golden brooch",
+    "registration": "source color/material centroids and physical source-occluder masks",
+    "sourceNativeOutputPreservation": "original native 1254x1254 RGBA bytes SHA256 verified",
+    "occlusionStructuralQA": "front bow and jewel source-owned masks gate each inferred hidden material image",
+    "nativeViewKeyframeFidelity": "P15-107 source-owned full-character keyframes preserved",
+    "visualFindings": {
+      "underpaint": "generated transparent assets contain coherent collar folds and crimson material behind occluders",
+      "uncoveredTexels": "registered images provide measured hidden-zone coverage per view, with remaining gaps at white collar boundaries",
+      "artifactStatus": "independent imagegen source silhouettes need matched deformation and visibility; blended collar seams and jacket lines remain doubled",
+      "goldJewel": "separate jewel ownership provides isolated foreground control but source-art shape differences cause temporal jumps",
+      "head": "existing P15-101 multi-view head/hair ArtMesh remains unchanged"
+    },
+    "regionalComparison": {
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "P15-111-layered": 17.9777,
+        "P15-111-jewelOwner": 18.0868
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "P15-111-layered": 12.6937,
+        "P15-111-jewelOwner": 13.4327
+      },
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "P15-111-layered": 10.8786,
+        "P15-111-jewelOwner": 10.9848
+      }
+    },
+    "artisticAcceptance": false,
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "sourceCostumeCandidate": "P15-107 companion_direct_native_keys",
+    "nextCriticalEvidence": "source-consistent 2D deformation and disocclusion owner transitions, validated at actual bow/collar edges"
+  }
+}

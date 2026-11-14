@@ -1,0 +1,125 @@
+{
+  "schema": "KOMA-P0-P5-TWO-PSD-VIEW-CORRESPONDENCE-QA-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "source": {
+    "originalP0Angles": [
+      0,
+      45,
+      90
+    ],
+    "PSDUnderpaintAngles": [
+      0,
+      45
+    ],
+    "originalViewAngle": [
+      90
+    ],
+    "approvedHeroMasterSHAverified": false,
+    "model": "See-through single-image anime layer decomposition SIGGRAPH 2026",
+    "upstream": "https://github.com/shitagaki-lab/see-through",
+    "paper": "https://doi.org/10.1145/3799902.3811209",
+    "modelNativeCanvas": [
+      768,
+      768
+    ],
+    "ArtMeshCanvas": [
+      1024,
+      1024
+    ],
+    "modelPSDHashes": {
+      "0": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04",
+      "45": "2527b97209c2bb912f260ba14179dcccacd45b39322077ec1fd92746ea8636fd"
+    },
+    "original45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "PSD45Bytes": 11356742
+  },
+  "artMeshes": {
+    "semanticViewSlots": 39,
+    "PSD0SemanticLayers": 13,
+    "PSD45SemanticLayers": 13,
+    "PSD0UnderpaintPixels": 376671,
+    "PSD45UnderpaintPixels": 260870,
+    "endpointSourceIoU": {
+      "0": 1.0,
+      "45": 1.0,
+      "90": 1
+    },
+    "45SourceChangedPixels": 50,
+    "45OpaqueSourceHoles": 0
+  },
+  "landmarks": {
+    "physicalTracks": 13,
+    "sourceAngles": [
+      0,
+      45,
+      90
+    ],
+    "imageDerivedPSDSourceAngles": [
+      0,
+      45
+    ],
+    "holdoutPositions": {
+      "22.5": 12,
+      "67.5": 10
+    },
+    "qaGates": {
+      "sourcePSDEyeIrisComponents0": true,
+      "sourcePSDEyeIrisComponents45": true,
+      "nearEyePhysicalXMileage": true,
+      "nosePhysicalXMileage": true,
+      "profileFarEyeHidden": true,
+      "profileGoldClipHidden": true,
+      "twoHoldoutsRegistered": true
+    },
+    "contactPath": "p5-see-through/mv-candidate/landmark-correspondence.jpg",
+    "contactSHA256": "735f5c071d17e591a872ac4330b62c78335670592f596fa84640ad1d214c1ab1",
+    "visualReview": "PENDING_ANATOMICAL_WARP"
+  },
+  "HTMLVDD": {
+    "reviewURL": "review/index.html?mode=candidate&source=seethrough-paired",
+    "sampleAngles": [
+      0,
+      22.5,
+      45,
+      67.5,
+      90
+    ],
+    "realBrowserFrames": 37,
+    "GIFFrames": 72,
+    "GIFSHA256": "4f1d30ca273f38c35170c76df5b06db08678a45432acd52d727b7823184a8166",
+    "faceCoreCoverage": "PASS_HOLDOUT_COVERAGE",
+    "textureCorrespondence": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+    "textureEdgeRatios": {
+      "22.5": 8.9567,
+      "67.5": 3.1966
+    },
+    "artisticAcceptance": "PENDING_CROSS_VIEW_TEXTURE_DEFORMATION"
+  },
+  "privatePackage": {
+    "path": "private-assets/exports/p0-character-001-two-psd-artmesh-review-v6.zip",
+    "bytes": 148889224,
+    "sha256": "3e8d97b676511d382d8cab1efcc47c0e3058ca3a8929634646c95d53b2799482",
+    "entries": 293,
+    "internalSHA256Verified": true
+  },
+  "generatedAssets": {
+    "45PSD": "private-assets/p5-see-through/yaw045/p0-character-001-see-through.psd",
+    "animatedGIF": "private-assets/p5-see-through/mv-candidate/p0-psd-paired-vdd-turn.gif",
+    "landmarkImage": "private-assets/p5-see-through/mv-candidate/landmark-correspondence.jpg",
+    "45Comparison": "private-assets/p5-see-through/yaw045/integrated/semantic-comparison.jpg",
+    "unitTestsPassed": 46,
+    "unitTestsFailed": 0
+  },
+  "sourceAvailability": {
+    "45": "HOSTED_PSD_GENERATED",
+    "90": "HOSTED_GPU_DAILY_QUOTA",
+    "ModelScope": "STUDIO_HTTP_403",
+    "localNvidiaGPU": false
+  },
+  "nextStage": [
+    "Complete genuine P0 90-degree PSD from original source view",
+    "Apply true physical landmark constraints to VDD face and fringe mesh warps",
+    "Revalidate 22.5 and 67.5 high-frequency texture integrity against source key views"
+  ]
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>p0_character_001 · 多视角原画部件审查</title>
+<style>
+:root{font-family:system-ui,"Noto Sans CJK SC",sans-serif;color-scheme:dark;
+ background:#131c2a;color:#f2f5fb}*{box-sizing:border-box}
+body{max-width:1500px;margin:auto;padding:20px}
+h1{font-size:22px}h2{font-size:17px}
+p{color:#c0cddd;line-height:1.55}
+label{font-size:13px;color:#cddbeb}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:11px;border:1px solid #415871;
+ background:#21324a;padding:15px;border-radius:11px;margin:16px 0}
+select,input{accent-color:#68d6bf;background:#2a405e;color:#f3f6fd;
+ border:1px solid #586f8a;border-radius:8px;padding:8px}
+input[type=range]{width:min(330px,100%)}
+canvas{width:100%;height:auto;border:1px solid #415a72;background:#33465c;
+ border-radius:9px;display:block}
+#status{font-size:13px;color:#b6ead7}
+#detail{white-space:pre-wrap;overflow-wrap:anywhere;color:#c9d7e8;font-size:12px}
+details{padding:12px;border:1px solid #435b72;border-radius:9px;margin-top:12px}
+@media(max-width:650px){body{padding:9px}}
+</style></head>
+<body>
+<h1>P0 · 0°—90° 动画与中间角部件</h1>
+<p>两条转头轨道使用同一套 P0 原画关键视角。左侧为 P8 动画基线，右侧为 P13 原画来源分层候选；下方可逐层查看 45°、90° 参考和 67.5°/72.5° 对应 PNG。</p>
+<div class="controls">
+<label for="yaw">转头角度</label>
+<input id="yaw" type="range" min="0" max="90" step="2.5" value="67.5">
+<output id="yawValue">67.5°</output>
+<label for="partYaw">部件视角</label>
+<select id="partYaw"><option value="67.5" selected>67.5°</option><option value="72.5">72.5°</option></select>
+<label for="role">语义部件</label><select id="role"></select>
+</div>
+<p id="status" role="status">验证 P0 原画来源与透明部件…</p>
+<h2>实际 37 帧原画来源转头</h2>
+<canvas id="motion" width="1024" height="550" aria-label="P8 与 P13 转头动画真实 RGBA 画面对照"></canvas>
+<h2>原画部件 45° / 90° / 中间角</h2>
+<canvas id="parts" width="1536" height="550" aria-label="真实源部件与透明中间角候选 PNG 对应"></canvas>
+<details><summary>原画来源、锚点、显隐与 SHA-256</summary><pre id="detail"></pre></details>
+<script src="./p13-intermediate.js" defer></script>
+</body></html>

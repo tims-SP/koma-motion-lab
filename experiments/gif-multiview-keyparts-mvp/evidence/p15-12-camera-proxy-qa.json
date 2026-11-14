@@ -1,0 +1,888 @@
+{
+  "schema": "KOMA-P15-12-CAMERA-PROXY-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    45.0,
+    55.0,
+    57.5,
+    60.0,
+    62.5,
+    65.0,
+    90.0
+  ],
+  "roleCount": 12,
+  "roles": [
+    "face.chin",
+    "face.jaw.near",
+    "eye.near.iris",
+    "eye.far.iris",
+    "ear.near",
+    "nose",
+    "mouth",
+    "hair.ahoge.root",
+    "hair.clip.center",
+    "hair.front",
+    "hair.side",
+    "hair.back"
+  ],
+  "sourceLandmarkSHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+  "sourcePartRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+  "calibration": {
+    "face.chin": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 522.6091270347396,
+      "X": 11.890872965260428,
+      "Z": 120.89087296526043,
+      "reprojection45Error": 1.1368683772161603e-13
+    },
+    "face.jaw.near": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 446.35075759508214,
+      "X": -48.870757595082125,
+      "Z": 99.56924240491782,
+      "reprojection45Error": 1.7053025658242404e-13
+    },
+    "eye.near.iris": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 590.1228881426705,
+      "X": -151.7228881426705,
+      "Z": 86.87711185732951,
+      "reprojection45Error": 1.1368683772161603e-13
+    },
+    "eye.far.iris": {
+      "mode": "two_view_linear_extrapolation",
+      "x45": 694.92,
+      "dxPerDegree": 1.7226666666666663
+    },
+    "ear.near": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 512.8012030511497,
+      "X": -159.79120305114975,
+      "Z": 25.19879694885026,
+      "reprojection45Error": 1.1368683772161603e-13
+    },
+    "nose": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 610.1433293935233,
+      "X": -79.73332939352338,
+      "Z": 154.35667060647665,
+      "reprojection45Error": 2.2737367544323206e-13
+    },
+    "mouth": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 629.0251262658467,
+      "X": -98.02512626584667,
+      "Z": 106.47487373415333,
+      "reprojection45Error": 2.2737367544323206e-13
+    },
+    "hair.ahoge.root": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 501.80761184457475,
+      "X": -3.307611844574751,
+      "Z": 34.69238815542525,
+      "reprojection45Error": 1.1368683772161603e-13
+    },
+    "hair.clip.center": {
+      "mode": "two_view_linear_extrapolation",
+      "x45": 763.21,
+      "dxPerDegree": 1.3368888888888908
+    },
+    "hair.front": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 494.61343802041534,
+      "X": 74.38656197958466,
+      "Z": 107.88656197958466,
+      "reprojection45Error": 2.2737367544323206e-13
+    },
+    "hair.side": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 696.9820164090892,
+      "X": -179.48201640908917,
+      "Z": -306.98201640908917,
+      "reprojection45Error": 1.1368683772161603e-13
+    },
+    "hair.back": {
+      "mode": "three_view_orthographic_proxy",
+      "c": 496.7573593128805,
+      "X": 17.74264068711949,
+      "Z": -3.25735931288051,
+      "reprojection45Error": 5.684341886080802e-14
+    }
+  },
+  "frames": [
+    {
+      "yaw": 45.0,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            616.5,
+            664.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            482.2,
+            552.56
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            544.27,
+            467.11
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            694.92,
+            469.04
+          ],
+          "visibility": 1.0,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            417.63,
+            518.82
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            662.91,
+            532.96
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            635.0,
+            592.36
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            524.0,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            763.21,
+            320.1
+          ],
+          "visibility": 1.0,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            623.5,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            353.0,
+            578.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            507.0,
+            516.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 32.01,
+      "clipX": 763.21,
+      "farEyeVisibilityProxy": 1.0
+    },
+    {
+      "yaw": 55.0,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            628.457,
+            662.444
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            499.882,
+            551.191
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            574.264,
+            463.863
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            712.147,
+            469.04
+          ],
+          "visibility": 0.93969,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            441.79,
+            517.638
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            690.852,
+            534.302
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            660.019,
+            594.613
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            528.329,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            776.579,
+            320.1
+          ],
+          "visibility": 0.93969,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            625.655,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            342.57,
+            574.944
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            504.266,
+            516.278
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 21.295,
+      "clipX": 776.579,
+      "farEyeVisibilityProxy": 0.93969,
+      "guide": {
+        "sourceGeometryPath": "p15-09-midarc/yaw55.png",
+        "sourceGeometrySHA256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+        "conditioningPath": "p15-12-camera-proxy/conditioning/yaw55-pose.jpg",
+        "conditioningSHA256": "f195af454d17529fa56c84f8d44f133c1a1d0801e8a55debcbf35c6bae56573b",
+        "annotatedPath": "p15-12-camera-proxy/annotated/yaw55-anchor.png",
+        "annotatedSHA256": "95596f1c374888a723dfbb0472d10370829e692fda7fffde395b9664eab2290b"
+      }
+    },
+    {
+      "yaw": 57.5,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            630.956,
+            662.056
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            504.068,
+            550.849
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            581.874,
+            463.052
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            716.453,
+            469.04
+          ],
+          "visibility": 0.90631,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            448.198,
+            517.342
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            697.486,
+            534.638
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            666.156,
+            595.177
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            529.29,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            779.921,
+            320.1
+          ],
+          "visibility": 0.90631,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            625.572,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            341.64,
+            574.056
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            503.543,
+            516.222
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 18.967,
+      "clipX": 779.921,
+      "farEyeVisibilityProxy": 0.90631,
+      "guide": {
+        "sourceGeometryPath": "p15-09-midarc/yaw57p5.png",
+        "sourceGeometrySHA256": "eb8f7a4e7fa21c5a69d450cd11c0aece67a4554b8f9d2c14552621c054058d9a",
+        "conditioningPath": "p15-12-camera-proxy/conditioning/yaw57p5-pose.jpg",
+        "conditioningSHA256": "a3714bb48ee6ded62db9d4dd180bd027be3a9fb44c197f1bfa51d8ef3b0b4e5c",
+        "annotatedPath": "p15-12-camera-proxy/annotated/yaw57p5-anchor.png",
+        "annotatedSHA256": "28439813e657a661ae27ab255c772814fa5a46f72a46e63b1ed0d01f8108b0a8"
+      }
+    },
+    {
+      "yaw": 60.0,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            633.249,
+            661.667
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            508.145,
+            550.507
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            589.499,
+            462.24
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            720.76,
+            469.04
+          ],
+          "visibility": 0.86603,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            454.728,
+            517.047
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            703.953,
+            534.973
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            672.223,
+            595.74
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            530.198,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            783.263,
+            320.1
+          ],
+          "visibility": 0.86603,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            625.239,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            341.387,
+            573.167
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            502.808,
+            516.167
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 16.807,
+      "clipX": 783.263,
+      "farEyeVisibilityProxy": 0.86603,
+      "guide": {
+        "sourceGeometryPath": "p15-09-midarc/yaw60.png",
+        "sourceGeometrySHA256": "8efe32dc7dabdfaf184fc63c1dc6732db3a8e43c8ee6fc5c145da0e881f207ae",
+        "conditioningPath": "p15-12-camera-proxy/conditioning/yaw60-pose.jpg",
+        "conditioningSHA256": "c97419e5b719dfc728a54a333d08c40141e122ac845af0764dae4a12998b8f0b",
+        "annotatedPath": "p15-12-camera-proxy/annotated/yaw60-anchor.png",
+        "annotatedSHA256": "c7b4fbdc2db3c73b6358bf5c92beafd0812252cc5e4b3f40d6ea9d5e93230b60"
+      }
+    },
+    {
+      "yaw": 62.5,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            635.331,
+            661.278
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            512.104,
+            550.164
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            597.126,
+            461.428
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            725.067,
+            469.04
+          ],
+          "visibility": 0.81915,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            461.369,
+            516.751
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            710.243,
+            535.309
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            678.207,
+            596.303
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            531.053,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            786.606,
+            320.1
+          ],
+          "visibility": 0.81915,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            624.658,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            341.81,
+            572.278
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            502.061,
+            516.111
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 14.824,
+      "clipX": 786.606,
+      "farEyeVisibilityProxy": 0.81915,
+      "guide": {
+        "sourceGeometryPath": "p15-09-midarc/yaw62p5.png",
+        "sourceGeometrySHA256": "c22443cbe6de6f024da97979ac7f80883d71588e3a84faa80e77e165c8a4c1a7",
+        "conditioningPath": "p15-12-camera-proxy/conditioning/yaw62p5-pose.jpg",
+        "conditioningSHA256": "022bfc50b207c67e4cc84922aebe97bef4daa56bf467ff489b58be189b1b4a2c",
+        "annotatedPath": "p15-12-camera-proxy/annotated/yaw62p5-anchor.png",
+        "annotatedSHA256": "75e798257b6eb44663e113aa702b5e5b18b0cc7aaf9237c10dbc6546f82f197e"
+      }
+    },
+    {
+      "yaw": 65.0,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            637.199,
+            660.889
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            515.937,
+            549.822
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            604.739,
+            460.617
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            729.373,
+            469.04
+          ],
+          "visibility": 0.76604,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            468.108,
+            516.456
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            716.341,
+            535.644
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            684.097,
+            596.867
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            531.852,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            789.948,
+            320.1
+          ],
+          "visibility": 0.76604,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            623.829,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            342.909,
+            571.389
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            501.304,
+            516.056
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 13.032,
+      "clipX": 789.948,
+      "farEyeVisibilityProxy": 0.76604,
+      "guide": {
+        "sourceGeometryPath": "p15-09-midarc/yaw65.png",
+        "sourceGeometrySHA256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+        "conditioningPath": "p15-12-camera-proxy/conditioning/yaw65-pose.jpg",
+        "conditioningSHA256": "fd54db481f9411f61b449fed42b44d82a0b382123828cb00145ba5b9e05ccf69",
+        "annotatedPath": "p15-12-camera-proxy/annotated/yaw65-anchor.png",
+        "annotatedSHA256": "c9359b7c3cbd833b68772d8952f9baf9141c3822291c7c644f9005817b4a1d98"
+      }
+    },
+    {
+      "yaw": 90.0,
+      "anchors": {
+        "face.chin": {
+          "xy": [
+            643.5,
+            657.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "face.jaw.near": {
+          "xy": [
+            545.92,
+            546.4
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.near.iris": {
+          "xy": [
+            677.0,
+            452.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "eye.far.iris": {
+          "xy": [
+            772.44,
+            469.04
+          ],
+          "visibility": 0.0,
+          "model": "two_view_linear_extrapolation"
+        },
+        "ear.near": {
+          "xy": [
+            538.0,
+            513.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "nose": {
+          "xy": [
+            764.5,
+            539.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "mouth": {
+          "xy": [
+            735.5,
+            602.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.ahoge.root": {
+          "xy": [
+            536.5,
+            148.0
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.clip.center": {
+          "xy": [
+            823.37,
+            320.1
+          ],
+          "visibility": 0.0,
+          "model": "two_view_linear_extrapolation"
+        },
+        "hair.front": {
+          "xy": [
+            602.5,
+            340.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.side": {
+          "xy": [
+            390.0,
+            562.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        },
+        "hair.back": {
+          "xy": [
+            493.5,
+            515.5
+          ],
+          "visibility": 1.0,
+          "model": "three_view_orthographic_proxy"
+        }
+      },
+      "eyeNoseGap": 7.94,
+      "clipX": 823.37,
+      "farEyeVisibilityProxy": 0.0
+    }
+  ],
+  "model": "screen x=c+X*cos(yaw)+Z*sin(yaw); y from registered 45-to-90 views",
+  "visibilityUncertainty": "cosine taper for roles hidden by 90; heuristic, not measured art truth",
+  "poseGuides": "P15-09 geometry reference registered separately from independent painting",
+  "status": "NUMERIC_CAMERA_PROXY_VERIFIED",
+  "formalArtGate": "INDEPENDENT_MIDANGLE_PAINTINGS_REQUIRED",
+  "originalHeroSHA256Verified": false
+}

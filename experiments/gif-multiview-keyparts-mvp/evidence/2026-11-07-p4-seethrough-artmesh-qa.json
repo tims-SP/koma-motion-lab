@@ -1,0 +1,139 @@
+{
+  "schema": "KOMA-P0-P4-SEETHROUGH-PSD-VDD-EVIDENCE-V1",
+  "date": "2026-11-07",
+  "characterId": "p0_character_001",
+  "repository": "tims-SP/koma-motion-lab",
+  "source": {
+    "originalP0FrontSHA256": "626f9105d4413477aed256d3bca340166c767a84821bd289d37144449bd67dd3",
+    "approvedP0HeroOriginalSHAverified": false,
+    "method": "See-through single-image semantic-layer inference",
+    "upstream": "https://github.com/shitagaki-lab/see-through",
+    "upstreamCommit": "df019de5129d6c4b406587a14c3501669441a783",
+    "paper": "https://arxiv.org/abs/2602.03749",
+    "hosting": "https://huggingface.co/spaces/24yearsold/see-through-demo",
+    "psdSHA256": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04",
+    "nativeModelResolution": [
+      768,
+      768
+    ],
+    "globalRGBAResolution": [
+      1024,
+      1024
+    ],
+    "psdBytes": 12027746
+  },
+  "layers": {
+    "modelPSDSemanticLayers": 13,
+    "P0ArtMeshParts": 13,
+    "physicalIds": [
+      "eye.near",
+      "eye.far",
+      "ear.near",
+      "ear.far"
+    ],
+    "underpaintPixels": 376671,
+    "modelLayerIds": [
+      "hair.back",
+      "body.neck",
+      "body.topwear",
+      "ear.pair",
+      "face.skin",
+      "nose",
+      "mouth",
+      "eye.sclera.pair",
+      "eye.iris.pair",
+      "eyebrow.pair",
+      "eye.lash.pair",
+      "hair.front",
+      "hair.clip.cross_gold"
+    ]
+  },
+  "static": {
+    "sourceSilhouetteIoU": 1.0,
+    "changedPixels": 667,
+    "opaqueHoles": 0,
+    "channelMAE": 0.00351
+  },
+  "motion": {
+    "eyeNearDx": 10,
+    "eyeNearOpaqueHoles": 0,
+    "fringeDx": 16,
+    "fringeBeforeOpaqueHoles": 3169,
+    "fringeWithPSDOpaqueHoles": 429,
+    "fringeHolesReducedPercent": 86.46,
+    "underpaintRestoredPixels": 2740,
+    "browserStatus": "PASS_P4_PSD_BROWSER_ENGINEERING",
+    "browserScreenshots": [
+      {
+        "name": "p4-psd-front-default",
+        "sha256": "7bf67980589a687e50ec4a7a0c7cae9bf9989a2476f1e375f5b9fea6f03b0329"
+      },
+      {
+        "name": "p4-psd-eye-near-10px",
+        "sha256": "b76c075ffc397954bb30c392319ad9c51d280180a30026368f4d9923e99c20a0"
+      },
+      {
+        "name": "p4-psd-hair-parts",
+        "sha256": "a7b1c1183ac8208ba45d626789c9931e5d5c051d7c05876ad1a000e22dccddcc"
+      }
+    ],
+    "artisticAcceptance": "PENDING"
+  },
+  "multiview": {
+    "yawKeys": [
+      0,
+      45,
+      90
+    ],
+    "registeredSemanticSlots": 39,
+    "PSDEnhancedYawKeys": [
+      0
+    ],
+    "originalGIFYawKeys": [
+      45,
+      90
+    ],
+    "holdoutAngles": [
+      22.5,
+      67.5
+    ],
+    "faceCoreCoverage": "PASS_HOLDOUT_COVERAGE",
+    "textureContinuity": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+    "holdoutRelativeEdgeDensity": [
+      {
+        "yaw": 22.5,
+        "factor": 8.9459
+      },
+      {
+        "yaw": 67.5,
+        "factor": 3.1966
+      }
+    ],
+    "realBrowserSourceFrames": 37,
+    "animatedGIFFrames": 72,
+    "GIFSHA256": "b117c0f8d54773647032515a79e0a1fc1957f721eea6910f5d476f5376c807c9",
+    "visualAcceptance": "PENDING_CROSS_VIEW_TEXTURE_CORRESPONDENCE"
+  },
+  "deliverables": {
+    "reviewArchive": "private-assets/exports/p0-character-001-artmesh-psd-review-v5.zip",
+    "reviewArchiveBytes": 89493429,
+    "reviewArchiveSHA256": "08761e4f7e2412d83deac685ed40b516dc917d4ea3abd1160c214cd89faf0cde",
+    "archiveEntries": 199,
+    "internalHashesVerified": true,
+    "HTMLPSD": "review/p1-front.html?source=seethrough",
+    "HTMLMultiview": "review/index.html?mode=candidate&source=seethrough-front",
+    "PSDMotionGIF": "private-assets/p4-see-through/mv-candidate/p0-psd-front-vdd-turn.gif",
+    "regressionTestsPassed": 37
+  },
+  "inferenceAvailability": {
+    "P0FrontPSD": "GENERATED",
+    "P0Yaw45PSD": "HOSTED_ZERO_GPU_QUOTA",
+    "ModelScopeEndpoint": "HTTP_403",
+    "localNvidiaGPU": false
+  },
+  "nextTasks": [
+    "Produce P0 45/90 native semantic PSD from original reference viewpoints",
+    "Match cross-view physical face, ear, eye, and hair mesh landmarks",
+    "Rerun VDD at 22.5 and 67.5 with texture correspondence and inspect render"
+  ]
+}

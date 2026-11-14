@@ -1,0 +1,549 @@
+{
+  "schema": "KOMA_P15_104_DETAIL_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-baseline",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-103-part-grid",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_all_detail_blend",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_bow_only",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "desktop",
+      "method": "ink_soft_owner",
+      "index": 8,
+      "loadedImages": 7,
+      "screenshotSHA256": "27727eaa5673bcc5640d3dc5931cae67305f44f12d6b004200e92745f5787506"
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-baseline",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-103-part-grid",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_all_detail_blend",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_bow_only",
+      "index": 8,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 0,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 1,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 2,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 3,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 4,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 5,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 6,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 7,
+      "loadedImages": 7
+    },
+    {
+      "viewport": "mobile",
+      "method": "ink_soft_owner",
+      "index": 8,
+      "loadedImages": 7,
+      "screenshotSHA256": "82ae354724fe86e652ddc237e275ace30a107ccceb4d319acb9d2df264e90980"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,337 @@
+{
+  "schema": "KOMA_P15_99_EXPLICIT_OCCLUSION_TOPOLOGY_VDD_V1",
+  "sourceYaw": [
+    60,
+    75
+  ],
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "sampledHeadMotion": "P15-97 6px hair-tip offset",
+  "semantics": "source-owned split layers with separate model underdraw and explicit near/far eye visibility",
+  "maskSource": "actual SAM3 near eye, far eye and front hair + visually authored skin/contour proxy",
+  "layerDepthOrder": [
+    "other.rear",
+    "face.underpaint",
+    "face.skin",
+    "face.contour",
+    "eye.far",
+    "eye.near",
+    "hair.front",
+    "hair.clip"
+  ],
+  "roleVisibility": {
+    "eye.far": {
+      "60": 1,
+      "75": 0
+    },
+    "eye.near": {
+      "60": 1,
+      "75": 1
+    }
+  },
+  "hiddenFaceSource": {
+    "60": "private-assets/exports/p15-95-yaw060-motion/generated-face-aligned.png",
+    "75": "private-assets/p15-97-underpaint-75/model-registered-source.png"
+  },
+  "artistApproved": false,
+  "continuousYawAccepted": false,
+  "methods": {
+    "topology_nearest": {
+      "60": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "keyviewExact": true
+      },
+      "61.875": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw61p875.png",
+        "sha256": "b196e01fe27ea50d12492b4daeecefc24b69792057a38e4b5f3f6ae0ab64385b",
+        "keyviewExact": false
+      },
+      "63.75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw63p75.png",
+        "sha256": "72625b7a5abafab65551a0925867f559451d94eb492ae4254e853ebda081ddeb",
+        "keyviewExact": false
+      },
+      "65.625": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw65p625.png",
+        "sha256": "a5a694221cf7478475592f3ed5b7d35d67c24f3f1802ca597228ef9e78f20546",
+        "keyviewExact": false
+      },
+      "67.5": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw67p5.png",
+        "sha256": "34a659edaec7a987acba90c5154e563f5d9cefdba6f706c825036507ee27acce",
+        "keyviewExact": false
+      },
+      "69.375": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw69p375.png",
+        "sha256": "d46cbab1b6664d2a96411902fe6b14d2983777c8a2d304ebef5bdc93f2e423a2",
+        "keyviewExact": false
+      },
+      "71.25": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw71p25.png",
+        "sha256": "8d66e8fd12208d22d28d6b53582ef4b72d29833329584e84b897d32b1584e6dc",
+        "keyviewExact": false
+      },
+      "73.125": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw73p125.png",
+        "sha256": "7b4b0ca63c544c3f3bbcc3b94a0e99875bdd97710082959f8e1dfc06a56eb8f4",
+        "keyviewExact": false
+      },
+      "75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "keyviewExact": true
+      }
+    },
+    "topology_blended_skin": {
+      "60": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "keyviewExact": true
+      },
+      "61.875": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw61p875.png",
+        "sha256": "9d1a042d101d66b74ce45e2bbde9a4a2e4eaf134eb67417ed303beca9255a985",
+        "keyviewExact": false
+      },
+      "63.75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw63p75.png",
+        "sha256": "726bbf67ced85355791e9ae2c58609caa2e70cca561c6f9f73a03fc1bab6b0da",
+        "keyviewExact": false
+      },
+      "65.625": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw65p625.png",
+        "sha256": "5fe179ce53cae4c9daf5976dd9ba59e5c16c0f3fd1efd8d6c5b4fe3962951851",
+        "keyviewExact": false
+      },
+      "67.5": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw67p5.png",
+        "sha256": "05fce85c90e90ae0baf7d571e091b72eb5d4b38f5eea9af8067b00d98aed3f4a",
+        "keyviewExact": false
+      },
+      "69.375": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw69p375.png",
+        "sha256": "8d01216d989093d82da408a55f346caf95ff67994f69cb5d82182a9a62d106bb",
+        "keyviewExact": false
+      },
+      "71.25": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw71p25.png",
+        "sha256": "425999ba81a288ececa55f0f60a54b635cbc967212da8f987c32633e3f8dd5a2",
+        "keyviewExact": false
+      },
+      "73.125": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw73p125.png",
+        "sha256": "0f48ad683849ce6f53ea4160b091bc3d62d54883daf212d22305b209e21b5b40",
+        "keyviewExact": false
+      },
+      "75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "keyviewExact": true
+      }
+    },
+    "topology_staged": {
+      "60": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "keyviewExact": true
+      },
+      "61.875": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw61p875.png",
+        "sha256": "9dfebd9d1dc7d56c9bcd80c25d940f91204dcfe53cb3d36a668a969a228f8f5e",
+        "keyviewExact": false
+      },
+      "63.75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw63p75.png",
+        "sha256": "171a0923ee36f1ad4be7812e6362330c6fef8b4b314c97cc2c9230cbcf9d07e4",
+        "keyviewExact": false
+      },
+      "65.625": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw65p625.png",
+        "sha256": "e94b4a820e0b20885e21cae9acd6107145e0533c4a7d7129c736d9efb205577f",
+        "keyviewExact": false
+      },
+      "67.5": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw67p5.png",
+        "sha256": "82da3bffb427fd892c1f973d00c7abfebc706ec4f36824a34e9fa6d4551c17ed",
+        "keyviewExact": false
+      },
+      "69.375": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw69p375.png",
+        "sha256": "d46cbab1b6664d2a96411902fe6b14d2983777c8a2d304ebef5bdc93f2e423a2",
+        "keyviewExact": false
+      },
+      "71.25": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw71p25.png",
+        "sha256": "8d66e8fd12208d22d28d6b53582ef4b72d29833329584e84b897d32b1584e6dc",
+        "keyviewExact": false
+      },
+      "73.125": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw73p125.png",
+        "sha256": "7b4b0ca63c544c3f3bbcc3b94a0e99875bdd97710082959f8e1dfc06a56eb8f4",
+        "keyviewExact": false
+      },
+      "75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "keyviewExact": true
+      }
+    },
+    "topology_rear_owner": {
+      "60": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "keyviewExact": true
+      },
+      "61.875": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw61p875.png",
+        "sha256": "1ece54e6d22f2c7aa1ccb95b188c3edcec2dbe55e300afbc1679b28df2370e57",
+        "keyviewExact": false
+      },
+      "63.75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw63p75.png",
+        "sha256": "81c8c97cc4bce1a6879f274fac56eef7dfb57cbcda7c99b6fa480b54fe21b55b",
+        "keyviewExact": false
+      },
+      "65.625": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw65p625.png",
+        "sha256": "21eb307def1e87122ca07e66de781df6b1a7803eb3b691b181b8f6977aaf6792",
+        "keyviewExact": false
+      },
+      "67.5": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw67p5.png",
+        "sha256": "80a569b528af67b68ab51fad59ae16b17e3b8ebe3560ef87fbef0c15c1a26d96",
+        "keyviewExact": false
+      },
+      "69.375": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw69p375.png",
+        "sha256": "b5a988248f39375fd74e1af9b483a4037d6fbd02cde493c7ab409c1f7a7f4e95",
+        "keyviewExact": false
+      },
+      "71.25": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw71p25.png",
+        "sha256": "8cccbf2f2402bd47094da1c4c2e83a86361bff584a3e1623935cf89843239b5f",
+        "keyviewExact": false
+      },
+      "73.125": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw73p125.png",
+        "sha256": "fb754beec3ed289c69b0281d87903cf462dadf39c1c0b4b15a0b038980d74f9b",
+        "keyviewExact": false
+      },
+      "75": {
+        "file": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "keyviewExact": true
+      }
+    }
+  },
+  "geometry": {},
+  "sourceSHA256": {
+    "60": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+    "75": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+  },
+  "metrics": {
+    "topology_nearest": {
+      "adjacentFaceMAE": [
+        16.3964,
+        13.8859,
+        13.9316,
+        24.8223,
+        11.8144,
+        11.8142,
+        11.9301,
+        13.7895
+      ],
+      "maxAdjacentMAE": 24.8223,
+      "meanAdjacentMAE": 14.798,
+      "midpointJumpMAE": 24.8223
+    },
+    "topology_blended_skin": {
+      "adjacentFaceMAE": [
+        16.396,
+        13.8849,
+        13.9581,
+        23.2985,
+        11.7178,
+        11.7268,
+        11.9005,
+        13.828
+      ],
+      "maxAdjacentMAE": 23.2985,
+      "meanAdjacentMAE": 14.5888,
+      "midpointJumpMAE": 23.2985
+    },
+    "topology_staged": {
+      "adjacentFaceMAE": [
+        16.3941,
+        13.8818,
+        19.8073,
+        19.3941,
+        11.671,
+        11.8142,
+        11.9301,
+        13.7895
+      ],
+      "maxAdjacentMAE": 19.8073,
+      "meanAdjacentMAE": 14.8353,
+      "midpointJumpMAE": 19.3941
+    },
+    "topology_rear_owner": {
+      "adjacentFaceMAE": [
+        16.3076,
+        13.8602,
+        13.9551,
+        26.0462,
+        11.5059,
+        11.5167,
+        11.5373,
+        13.4023
+      ],
+      "maxAdjacentMAE": 26.0462,
+      "meanAdjacentMAE": 14.7664,
+      "midpointJumpMAE": 26.0462
+    }
+  },
+  "contact": "private-assets/exports/p15-99-vdd-review/topology-vdd-contact.jpg",
+  "animations": {
+    "topology_nearest": {
+      "path": "private-assets/exports/p15-99-vdd-review/topology_nearest-yaw-motion.gif",
+      "sha256": "791b5cc4e277baf579e7b4c45c65f51b1cafc93ca9e9c6a1ba70ccb39e4abca5"
+    },
+    "topology_blended_skin": {
+      "path": "private-assets/exports/p15-99-vdd-review/topology_blended_skin-yaw-motion.gif",
+      "sha256": "5362b6b658f6c42886932dbdafd1d6f70eaf867bc5410ffa21876396499395f9"
+    },
+    "topology_staged": {
+      "path": "private-assets/exports/p15-99-vdd-review/topology_staged-yaw-motion.gif",
+      "sha256": "8b179579beec0c5d1586c03e3baeb9992132482430410b2144ce6a8f0195a102"
+    },
+    "topology_rear_owner": {
+      "path": "private-assets/exports/p15-99-vdd-review/topology_rear_owner-yaw-motion.gif",
+      "sha256": "570cf8a0ecfe062cdaf00050efc0ecfc883b9651aabadf2c1d69ae31d5dbd56b"
+    }
+  },
+  "reviewPage": "private-assets/exports/p15-99-vdd-review/index.html",
+  "visualReview": {
+    "performed": true,
+    "formalApproval": false,
+    "observations": {
+      "perLayerEyeVisibility": "correct 60° far-eye pixels to absent 75° far-eye layer",
+      "faceContour": "single-source topology avoids multiple nose ink contours in select intermediate views",
+      "rearHair": "single owner produces cleaner silhouette but stronger midpoint jump",
+      "artisticContinuity": "keyview switching and hair-boundary geometry remain visible"
+    },
+    "engineeringTest": "PASS",
+    "visualGate": "ANCHORED_SHARED_MESH_CORRESPONDENCE_AND_CONCEALED_SURFACE_MATCHING"
+  },
+  "visualGate": "ANCHORED_SHARED_MESH_CORRESPONDENCE_AND_CONCEALED_SURFACE_MATCHING"
+}

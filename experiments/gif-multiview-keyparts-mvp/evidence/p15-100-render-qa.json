@@ -1,0 +1,462 @@
+{
+  "schema": "KOMA_P15_100_SHARED_TRIANGULAR_FACE_VDD_V1",
+  "sourceAngles": [
+    60,
+    75
+  ],
+  "interpolatedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "meshJSON": "private-assets/exports/p15-100-shared-face-mesh/face-shared-mesh.json",
+  "meshSHA256": "3cc0e8a71c9a83a65a0bbcdccbba161198aac11405543b1b01acaa4bb243b470",
+  "sourceTopology": "P15-99 seven owner layers per view, real SAM3 eye/hair masks",
+  "methods": {
+    "mesh_source_blend": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw60.png",
+        "geometry": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "d1f9506cb4b92522036b810cdf815278742eb15745c386781cbbdecb9b3c1fbf",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw61p875.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9980491942324003,
+          "sharedTriangles": 28
+        }
+      },
+      "63.75": {
+        "sha256": "df635bba49cf9389ce038363ef964fe8c61ee6b55babcc512dca0fa8d997a05e",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw63p75.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9973134587052604,
+          "sharedTriangles": 28
+        }
+      },
+      "65.625": {
+        "sha256": "9a434e52f65164ac94ca63d823b2280e6e7d665c2cf4da5fd6050679689e8851",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw65p625.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9975955116216938,
+          "sharedTriangles": 28
+        }
+      },
+      "67.5": {
+        "sha256": "51ea9f3119f1f55a83b3b2d86d1c78f1900a097487b72ba3ca7457077ec724d8",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw67p5.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9992670636738433,
+          "sharedTriangles": 28
+        }
+      },
+      "69.375": {
+        "sha256": "a53aa639ba5d9e771bcdd7da41344cdf8b6772d66fd5b278002de0aed05f271f",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw69p375.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9998116760828625,
+          "sharedTriangles": 28
+        }
+      },
+      "71.25": {
+        "sha256": "539cc2da752ea21ef72dc010bd05bc6d09312164f5de5d81e523950de83394a5",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw71p25.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9988333657398406,
+          "sharedTriangles": 28
+        }
+      },
+      "73.125": {
+        "sha256": "a7ba43ea7b46a27a882dc27234a5d222b65ceb38a15d959f62dca08a93108f07",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw73p125.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9966192701600876,
+          "sharedTriangles": 28
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw75.png",
+        "geometry": {
+          "endpoint": true
+        }
+      }
+    },
+    "mesh_undercoat_blend": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw60.png",
+        "geometry": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "3b023c553296b72a0f014af2e9488c998995e8d5b8d2ba1ce45860bc9401ee0f",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw61p875.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9980491942324003,
+          "sharedTriangles": 28
+        }
+      },
+      "63.75": {
+        "sha256": "baef182466032869d66fde95c8b291a3781f24c1671d50bfc4837824cbafe2ba",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw63p75.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9973134587052604,
+          "sharedTriangles": 28
+        }
+      },
+      "65.625": {
+        "sha256": "60e6f9254908798f85e78eec5dc00728ccc136365d401b2ddf2b20fb4c34d165",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw65p625.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9975955116216938,
+          "sharedTriangles": 28
+        }
+      },
+      "67.5": {
+        "sha256": "42c1eaa918fa2c7906ae2bca9e335dc4d5023481c50195ddf372d7a4f1b89eb6",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw67p5.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9992670636738433,
+          "sharedTriangles": 28
+        }
+      },
+      "69.375": {
+        "sha256": "90ab12ff717f27a194e87db1462632a1df5fcddbcf56ff5580ae691fd5ed411b",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw69p375.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9998116760828625,
+          "sharedTriangles": 28
+        }
+      },
+      "71.25": {
+        "sha256": "107495522ac74623eb8c46eb39e6342b63c9a46bca37beeb0d869c31785673bc",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw71p25.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9988333657398406,
+          "sharedTriangles": 28
+        }
+      },
+      "73.125": {
+        "sha256": "914ba01d2abbf20436e3e011dc51974e0167a723e61e5f25291ac02923c3c90c",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw73p125.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9966192701600876,
+          "sharedTriangles": 28
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw75.png",
+        "geometry": {
+          "endpoint": true
+        }
+      }
+    },
+    "mesh_owner_eyes": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw60.png",
+        "geometry": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "4b3d5e0b07ac381ee491988def61cc313b0ecbcd8157d4e70e31028c26ac7171",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw61p875.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9980491942324003,
+          "sharedTriangles": 28
+        }
+      },
+      "63.75": {
+        "sha256": "def396ab40ea2e84b0b262d2c86cf17c949f2689214eb0b0aafba8d77a2b943c",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw63p75.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9973134587052604,
+          "sharedTriangles": 28
+        }
+      },
+      "65.625": {
+        "sha256": "977b0c5dcf5cf76e44f04bfca9b44b452e9dc53a17a99f1f33e9c466489849cd",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw65p625.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9975955116216938,
+          "sharedTriangles": 28
+        }
+      },
+      "67.5": {
+        "sha256": "61523d6169851465a99138bb194055de44804c232e7e5b4853e9afabf0804209",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw67p5.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9992670636738433,
+          "sharedTriangles": 28
+        }
+      },
+      "69.375": {
+        "sha256": "a95934f236ef2fd4f8ce47dd6fcc0d8d46b310a66171f2a5fe772d007c4fab25",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw69p375.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9998116760828625,
+          "sharedTriangles": 28
+        }
+      },
+      "71.25": {
+        "sha256": "347e96ccf58d347ffad5f0dd1bb690221c9e8767bf2b9fe624d6cba6060b371e",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw71p25.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9988333657398406,
+          "sharedTriangles": 28
+        }
+      },
+      "73.125": {
+        "sha256": "3320141d3f9b0595360771d2cbe2b51fd199d73eac8c329df2fed1b36ccda8ad",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw73p125.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9966192701600876,
+          "sharedTriangles": 28
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw75.png",
+        "geometry": {
+          "endpoint": true
+        }
+      }
+    },
+    "mesh_rear_owned": {
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw60.png",
+        "geometry": {
+          "endpoint": true
+        }
+      },
+      "61.875": {
+        "sha256": "dde8de2c8048b09b5d64223390dfa00c65bab3c4f04fc5954c4b8a7392774a17",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw61p875.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9980491942324003,
+          "sharedTriangles": 28
+        }
+      },
+      "63.75": {
+        "sha256": "84143143e68ada2e6dcbb70daa5b6f7483a7dd224f57993e1fa578b6151b40cd",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw63p75.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9973134587052604,
+          "sharedTriangles": 28
+        }
+      },
+      "65.625": {
+        "sha256": "c96d1dc8b732fa34ff5873dea3ddfaa25a3988e98daacd491ae11c936a01c7b3",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw65p625.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9975955116216938,
+          "sharedTriangles": 28
+        }
+      },
+      "67.5": {
+        "sha256": "722fc55b9e8c9c6c509af0a7285585db14cd69a1df936495c1b56edf173e7c1a",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw67p5.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9992670636738433,
+          "sharedTriangles": 28
+        }
+      },
+      "69.375": {
+        "sha256": "ab4314ae0f51bc61fd9ad7209d9c7a6fc2f37f36c906fb2184573eecc3ef6636",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw69p375.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9998116760828625,
+          "sharedTriangles": 28
+        }
+      },
+      "71.25": {
+        "sha256": "a7237bb1bf0227500add158aa12cfced77be4063bfe63fc5774cc279e599b2bd",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw71p25.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9988333657398406,
+          "sharedTriangles": 28
+        }
+      },
+      "73.125": {
+        "sha256": "ad8185bbfebe780e00f93d1a1dd460d785dfcf0d44b1ec68ce17f825cb559db2",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw73p125.png",
+        "geometry": {
+          "endpoint": false,
+          "maskCoverage": 0.9966192701600876,
+          "sharedTriangles": 28
+        }
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "path": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw75.png",
+        "geometry": {
+          "endpoint": true
+        }
+      }
+    }
+  },
+  "geometryFoldCount": 0,
+  "texelsArtistApproved": false,
+  "continuousYawVisualAccepted": false,
+  "metrics": {
+    "p15-99-topology_staged": {
+      "adjacentFaceMAE": [
+        15.9805,
+        13.4232,
+        20.6421,
+        17.854,
+        11.0779,
+        11.2084,
+        11.3175,
+        13.2343
+      ],
+      "maxAdjacentMAE": 20.6421,
+      "meanAdjacentMAE": 14.3422,
+      "midpointJumpMAE": 17.854
+    },
+    "mesh_source_blend": {
+      "adjacentFaceMAE": [
+        16.6655,
+        13.2797,
+        19.3208,
+        13.4735,
+        11.4633,
+        11.6436,
+        12.1979,
+        14.7748
+      ],
+      "maxAdjacentMAE": 19.3208,
+      "meanAdjacentMAE": 14.1024,
+      "midpointJumpMAE": 13.4735
+    },
+    "mesh_undercoat_blend": {
+      "adjacentFaceMAE": [
+        16.8968,
+        13.5363,
+        19.8716,
+        14.3587,
+        12.5059,
+        12.5774,
+        12.9104,
+        15.3521
+      ],
+      "maxAdjacentMAE": 19.8716,
+      "meanAdjacentMAE": 14.7512,
+      "midpointJumpMAE": 14.3587
+    },
+    "mesh_owner_eyes": {
+      "adjacentFaceMAE": [
+        16.641,
+        13.6097,
+        20.0615,
+        15.1006,
+        12.0376,
+        12.142,
+        12.5084,
+        14.8323
+      ],
+      "maxAdjacentMAE": 20.0615,
+      "meanAdjacentMAE": 14.6166,
+      "midpointJumpMAE": 15.1006
+    },
+    "mesh_rear_owned": {
+      "adjacentFaceMAE": [
+        16.4983,
+        13.1765,
+        12.7383,
+        21.4652,
+        11.239,
+        11.4155,
+        11.8539,
+        14.4423
+      ],
+      "maxAdjacentMAE": 21.4652,
+      "meanAdjacentMAE": 14.1036,
+      "midpointJumpMAE": 21.4652
+    }
+  },
+  "contact": "private-assets/exports/p15-100-mesh-vdd/mesh-vdd-contact.jpg",
+  "animations": {
+    "mesh_source_blend": {
+      "relativePath": "private-assets/exports/p15-100-mesh-vdd/mesh_source_blend-yaw-loop.gif",
+      "sha256": "d5210b0e7c54711671e9507e2d7b97c77df46f195bdeffe8071a66ebf79a0ec2"
+    },
+    "mesh_undercoat_blend": {
+      "relativePath": "private-assets/exports/p15-100-mesh-vdd/mesh_undercoat_blend-yaw-loop.gif",
+      "sha256": "5b54ff468c874015564c5e3e5fe04d240df6c12c6f57935e7b1ca9c4409a214e"
+    },
+    "mesh_owner_eyes": {
+      "relativePath": "private-assets/exports/p15-100-mesh-vdd/mesh_owner_eyes-yaw-loop.gif",
+      "sha256": "5974e656b81c6485d3c915d020d1290b0cd363342a95adeb5c874acc42885acb"
+    },
+    "mesh_rear_owned": {
+      "relativePath": "private-assets/exports/p15-100-mesh-vdd/mesh_rear_owned-yaw-loop.gif",
+      "sha256": "7677b90868e2f2e327c1276544c6c4b209faf373d7ba61faf525aa1bc186412d"
+    }
+  },
+  "htmlReview": "private-assets/exports/p15-100-mesh-vdd/index.html",
+  "visualReview": {
+    "performed": true,
+    "structuralMeshIntegrity": "PASS",
+    "keyframesSourcePixelExact": true,
+    "continuousFaceGeometry": "POSITIVE_TRIANGLE_AREAS_ON_9_SAMPLED_YAWS",
+    "quantitativeTemporalResult": {
+      "baselineMidpointJumpRGBMAE": 17.854,
+      "meshSourceBlendMidpointJumpRGBMAE": 13.4735,
+      "baselineMaxAdjacentRGBMAE": 20.6421,
+      "meshSourceBlendMaxAdjacentRGBMAE": 19.3208
+    },
+    "observedArtifacts": {
+      "faceSurfaceBoundary": "visible blend seam around cheek and forehead",
+      "hairOcclusion": "rear hair and fringe transitions do not share face mesh support",
+      "profile": "ghost contour next to nose and jaw in intermediate views",
+      "textureSurface": "model-derived underpaint cannot recover unobserved anatomy"
+    },
+    "engineeringQA": "PASS",
+    "visualQA": "REQUIRES_SHARED_HEAD_HAIR_SURFACE",
+    "fullArtMeshAccepted": false,
+    "continuousYawAccepted": false
+  },
+  "visualGate": "SHARED_HEAD_HAIR_MESH_AND_VISIBILITY_CORRESPONDENCE"
+}

@@ -1,0 +1,560 @@
+{
+  "schema": "KOMA_P15_151_DOUBLE_ROOT_ATTACHMENT_AUDIT_V1",
+  "characterId": "p0_character_001",
+  "keyAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "attachmentProbeY": 75,
+  "sampleRows": [
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80
+  ],
+  "views": {
+    "90": {
+      "nativeSHA256": "2be6cc3bb0039078e6cb6cadc5cb45afd6b164c956598743560846f59bc171e7",
+      "registration": {
+        "scale": 0.9,
+        "shiftXY": [
+          8,
+          -24
+        ],
+        "freeLoopAlphaIoU": 0.52984
+      },
+      "rows": [
+        {
+          "y": 45,
+          "intervals": [
+            [
+              192,
+              194
+            ],
+            [
+              262,
+              268
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              192,
+              194
+            ],
+            [
+              262,
+              268
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 50,
+          "intervals": [
+            [
+              192,
+              194
+            ],
+            [
+              260,
+              263
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              192,
+              194
+            ],
+            [
+              260,
+              263
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 55,
+          "intervals": [
+            [
+              193,
+              194
+            ],
+            [
+              259,
+              261
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              193,
+              194
+            ],
+            [
+              259,
+              261
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 60,
+          "intervals": [],
+          "twoBranchIntervals": [],
+          "twoRootsVisible": false
+        },
+        {
+          "y": 65,
+          "intervals": [],
+          "twoBranchIntervals": [],
+          "twoRootsVisible": false
+        },
+        {
+          "y": 70,
+          "intervals": [],
+          "twoBranchIntervals": [],
+          "twoRootsVisible": false
+        },
+        {
+          "y": 75,
+          "intervals": [],
+          "twoBranchIntervals": [],
+          "twoRootsVisible": false
+        },
+        {
+          "y": 80,
+          "intervals": [],
+          "twoBranchIntervals": [],
+          "twoRootsVisible": false
+        }
+      ],
+      "lastPairedRowY": 55,
+      "twoRootsReachAttachmentY75": false,
+      "opaquePixelsBetweenY75And110": 0,
+      "sourceUpperAlphaHolesAfterReplacement": 334,
+      "sourceBelowY130PixelExact": true
+    },
+    "112.5": {
+      "nativeSHA256": "71ef0fcf1dc66ddf1c890f429dfb385d58daf6070068281335ed6bbe90bd9b6c",
+      "registration": {
+        "scale": 0.9,
+        "shiftXY": [
+          24,
+          -16
+        ],
+        "freeLoopAlphaIoU": 0.72287
+      },
+      "rows": [
+        {
+          "y": 45,
+          "intervals": [
+            [
+              252,
+              260
+            ],
+            [
+              309,
+              327
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              252,
+              260
+            ],
+            [
+              309,
+              327
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 50,
+          "intervals": [
+            [
+              250,
+              256
+            ],
+            [
+              311,
+              328
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              250,
+              256
+            ],
+            [
+              311,
+              328
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 55,
+          "intervals": [
+            [
+              248,
+              254
+            ],
+            [
+              313,
+              328
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              248,
+              254
+            ],
+            [
+              313,
+              328
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 60,
+          "intervals": [
+            [
+              247,
+              252
+            ],
+            [
+              313,
+              328
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              247,
+              252
+            ],
+            [
+              313,
+              328
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 65,
+          "intervals": [
+            [
+              247,
+              251
+            ],
+            [
+              313,
+              326
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              247,
+              251
+            ],
+            [
+              313,
+              326
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 70,
+          "intervals": [
+            [
+              247,
+              251
+            ],
+            [
+              311,
+              323
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              247,
+              251
+            ],
+            [
+              311,
+              323
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 75,
+          "intervals": [
+            [
+              248,
+              252
+            ],
+            [
+              307,
+              319
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              248,
+              252
+            ],
+            [
+              307,
+              319
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 80,
+          "intervals": [
+            [
+              250,
+              253
+            ],
+            [
+              302,
+              312
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              250,
+              253
+            ],
+            [
+              302,
+              312
+            ]
+          ],
+          "twoRootsVisible": true
+        }
+      ],
+      "lastPairedRowY": 80,
+      "twoRootsReachAttachmentY75": true,
+      "opaquePixelsBetweenY75And110": 338,
+      "sourceUpperAlphaHolesAfterReplacement": 8,
+      "sourceBelowY130PixelExact": true
+    },
+    "135": {
+      "nativeSHA256": "b96ab8b90c9e899a07e3583fe3ff810f25af9c52e95d89e5a335dbe85194f992",
+      "registration": {
+        "scale": 0.9,
+        "shiftXY": [
+          0,
+          -24
+        ],
+        "freeLoopAlphaIoU": 0.61555
+      },
+      "rows": [
+        {
+          "y": 45,
+          "intervals": [
+            [
+              221,
+              223
+            ],
+            [
+              278,
+              288
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              221,
+              223
+            ],
+            [
+              278,
+              288
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 50,
+          "intervals": [
+            [
+              222,
+              224
+            ],
+            [
+              273,
+              282
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              222,
+              224
+            ],
+            [
+              273,
+              282
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 55,
+          "intervals": [
+            [
+              224,
+              226
+            ],
+            [
+              266,
+              274
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              224,
+              226
+            ],
+            [
+              266,
+              274
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 60,
+          "intervals": [
+            [
+              228,
+              230
+            ],
+            [
+              257,
+              264
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              228,
+              230
+            ],
+            [
+              257,
+              264
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 65,
+          "intervals": [
+            [
+              232,
+              234
+            ],
+            [
+              251,
+              254
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              232,
+              234
+            ],
+            [
+              251,
+              254
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 70,
+          "intervals": [
+            [
+              235,
+              237
+            ],
+            [
+              247,
+              249
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              235,
+              237
+            ],
+            [
+              247,
+              249
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 75,
+          "intervals": [
+            [
+              237,
+              238
+            ],
+            [
+              244,
+              245
+            ]
+          ],
+          "twoBranchIntervals": [
+            [
+              237,
+              238
+            ],
+            [
+              244,
+              245
+            ]
+          ],
+          "twoRootsVisible": true
+        },
+        {
+          "y": 80,
+          "intervals": [
+            [
+              243,
+              244
+            ]
+          ],
+          "twoBranchIntervals": [],
+          "twoRootsVisible": false
+        }
+      ],
+      "lastPairedRowY": 75,
+      "twoRootsReachAttachmentY75": true,
+      "opaquePixelsBetweenY75And110": 24,
+      "sourceUpperAlphaHolesAfterReplacement": 268,
+      "sourceBelowY130PixelExact": true
+    }
+  },
+  "geometryGate": {
+    "allViewsTwoRootsReachAttachment": false,
+    "physicalCorrespondenceApproved": false,
+    "sourcePaintedHiddenScalpAvailable": false,
+    "meaning": "Both roots must reach the near-crown attachment row; this does not prove source alignment or physical identity"
+  },
+  "selectedForProduction": false,
+  "fullYawVisualAccepted": false,
+  "sourceArtworkUnmodified": true,
+  "review": "private-assets/exports/p15-151-double-root-gate/index.html",
+  "next": "Paint source-registered double-root attachment for yaw90 and match source crown geometry for 112.5/135; validate hidden scalp and displacement before accepting ArtMesh."
+}

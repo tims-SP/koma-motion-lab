@@ -1,0 +1,65 @@
+{
+  "schema": "KOMA_P15_127_NATIVE_KEYART_VISUAL_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "generator": "image_gen.imagegen",
+  "actualNativeToolInvoked": true,
+  "nativeImage": "private-assets/p15-127-yaw112p5/yaw112p5-native.png",
+  "nativeSHA256": "0eea9a9623cc7fc4ce3858b97fedc5af4c8647c0264a507cc2941d9c0a81db38",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceReferenceSHA256": {
+    "90": "e711b9379d18fa9f46dd2ee981190aa125b64991a32211dca65be82d9dcc1df9",
+    "135": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16",
+    "180": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363"
+  },
+  "registeredOutput": "private-assets/exports/p15-127-yaw112p5-review/yaw112p5-review.png",
+  "reviewCanvasDimensions": [
+    443,
+    443
+  ],
+  "normalization": "whole canvas Lanczos resampling; native image remains unchanged",
+  "largestForegroundBBoxXYWH": {
+    "90": [
+      76,
+      5,
+      275,
+      436,
+      75476
+    ],
+    "135": [
+      80,
+      8,
+      271,
+      433,
+      75880
+    ],
+    "180": [
+      63,
+      10,
+      320,
+      433,
+      86806
+    ],
+    "112.5": [
+      80,
+      8,
+      265,
+      432,
+      73313
+    ]
+  },
+  "originalImageAlphaExtrema": [
+    0,
+    255
+  ],
+  "independentNativeRasterConfirmed": true,
+  "matchedPhysicalYawVerified": false,
+  "geometryAndIdentityArtistApproved": false,
+  "semanticArtMeshApproved": false,
+  "hiddenUnderpaintApproved": false,
+  "visualAcceptance": false,
+  "next": "Visually assess size/linework, orientation, hair/face/shoulder identity; validate 90–112.5–135 transition before using as VDD keyview.",
+  "review": "private-assets/exports/p15-127-yaw112p5-review/index.html"
+}

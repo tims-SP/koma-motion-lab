@@ -1,0 +1,31 @@
+{
+  "schema": "KOMA-P15-89-MASKED-CONTROL-V1",
+  "sourceSHA256": "41c68813cb9c5324bcd7b6b2d2fafeef4dc86ef3bcf5fb74ba6de720fdc72ade",
+  "referenceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "inputSHA256": "e287d4a8dd6e8bf9733befa9e5705daa2a045d298afa1e0f87ec395dae7622bd",
+  "controlSHA256": "bf43e5a7302438f783b884e2fcde8be98a797efaedb88a658070c17013480a6d",
+  "maskSHA256": "dab526be92bfe4232d5ce85783a6742220d313dfc7b56aa8df1117fa09d22ac8",
+  "maskBBox": [
+    499,
+    424,
+    553,
+    479
+  ],
+  "maskActivePixels": 2259,
+  "canvas": [
+    1024,
+    1024
+  ],
+  "maskPassedAsTrueModelArgument": true,
+  "status": "INFERENCE_FAILED",
+  "modelOutputCreated": false,
+  "candidateAccepted": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "model": "hugging-apps/Qwen-Image-2.1-ControlNet-Union-Demo",
+  "api": "/gradio_api/call/generate",
+  "seed": 1589001,
+  "eventId": "a39fd57826b84ea0b3fcb33e5243009c",
+  "errorType": "RuntimeError",
+  "error": "model returned error {\"error\": \"You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens\", \"duration\": 10, \"visible\": true, \"title\": \"ZeroGPU quota exceeded\"}"
+}

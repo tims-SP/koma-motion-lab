@@ -1,0 +1,45 @@
+{
+  "schema": "KOMA-P15-41-CHROMIUM-V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "mode": "pose",
+      "images": 3
+    },
+    {
+      "viewport": "desktop",
+      "mode": "parts",
+      "images": 3
+    },
+    {
+      "viewport": "mobile",
+      "mode": "pose",
+      "images": 3
+    },
+    {
+      "viewport": "mobile",
+      "mode": "parts",
+      "images": 3
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "browser-desktop-pose.png",
+      "sha256": "66d617fde9a3a727a209523e0dbd23666b7b0a22165ec3ba8ced67e56b79c4cc"
+    },
+    {
+      "file": "browser-desktop-parts.png",
+      "sha256": "7a4d720ca4b51f2aca2691df1bf47471123f8a8019d42abb737132a738a8a9c1"
+    },
+    {
+      "file": "browser-mobile-pose.png",
+      "sha256": "ae6b7f3eb1277bc6467ca8eecbbf267dc02339547f4a3c0a65d638c372bd16ff"
+    },
+    {
+      "file": "browser-mobile-parts.png",
+      "sha256": "ae2625d73970b3fbe285f41f0ae7e930c542754334307b9feb272ddbf44bdfda"
+    }
+  ],
+  "errors": [],
+  "status": "P15_41_HTML_REVIEW_VERIFIED"
+}

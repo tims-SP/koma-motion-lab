@@ -1,0 +1,629 @@
+{
+  "schema": "KOMA-P15-35-P0-FACE-DEPTH-AND-HAIR-MOUNT-CANDIDATE-V1",
+  "characterId": "p0_character_001",
+  "sourceInkQA_SHA256": "2eaec233f01a6a4f336df7664be38961594c51460b1b0d80fc5fc24963d5098b",
+  "sourceMeshQA_SHA256": "23a78294f04271185dd9fdc7bfb8de8bceff1bd087134b866769349d26293174",
+  "sourceP0OriginalSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "angles": [
+    55.0,
+    56.25,
+    57.5,
+    58.75,
+    60.0,
+    61.25,
+    62.5,
+    63.75,
+    65.0
+  ],
+  "frames": [
+    {
+      "yaw": 55.0,
+      "sourceKind": "exact-source-keyframe",
+      "sourceCompositeSHA256": "45c6d79f5d7ef56d3dc8aecce919f28a517411d0c52ec369aaa9a7b5d4e9a9fb",
+      "sourceEyeSHA256": "daf851c7caf58a3f2951551794bf02bf398573d59d1dbb68b2408d2b4dbcd869",
+      "sourceClipSHA256": "1ae7694f501eaee188e7e8f0b950fcc8d608a5fe8e906fe4c0b104e28c847d64",
+      "sourceSkinSHA256": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+      "sourceHairSHA256": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+      "sourceNoseSHA256": "83ccbde644f2777413ed8b6c703e95d0dbad4ac83f3f20f29b6639557b0a8ab0",
+      "sourceEyeMass": 2159.2275,
+      "eyeRGBAHiddenUnderpaintMass": 161.8174,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.072475,
+        "hiddenByNose": 0.002122,
+        "hiddenByBangs": 0.092021,
+        "eyeVisible": 0.833381
+      },
+      "depthEdgeX443": 301.8,
+      "depthSweepProgress": 0.0,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          31.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          335.686,
+          138.199
+        ],
+        "parentLocalUVBefore": [
+          0.86606,
+          0.47857
+        ],
+        "parentLocalUVTarget": [
+          0.86606,
+          0.47857
+        ],
+        "parentLocalUVAfter": [
+          0.8449,
+          0.48303
+        ],
+        "uvResidual": 0.02163,
+        "clipPixelShift": [
+          -4,
+          1
+        ],
+        "centerAfter443": [
+          331.686,
+          139.199
+        ],
+        "sourceContactCoverage": 0.725712,
+        "attachedContactCoverage": 0.911628,
+        "sourceKeyframeOriginalPreservedInP15_34": true,
+        "candidateClipOffsetAppliedAtKeyframe": true,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 10576,
+      "outputSHA256": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 56.25,
+      "sourceKind": "ink-observed-constrained-mesh",
+      "sourceCompositeSHA256": "1c72ca083a6d2616f16575d28c46db710b4d0d71ac0aab2577ab6b6b3d7e4aad",
+      "sourceEyeSHA256": "954be25a302aaff5681b57a5f591402025890edfef7a47e82a6ca547eefbcf79",
+      "sourceClipSHA256": "2b7fca38e01f448118ab90d6a708f87ff4e7ddd732211801cd1ee418fa5cac06",
+      "sourceSkinSHA256": "f767178ac4ce537918ff8ae700ea4523c56a9937e7dc9743c32483a8018397f8",
+      "sourceHairSHA256": "f0055b5903b5ccf1f67ff85daac4258eb2d289eb8f6b7a901da098a06ef685f9",
+      "sourceNoseSHA256": "a0244f4658fa308d5cfa3e77ff83c30eb86d82aa03de208b00b257c0f87c514d",
+      "sourceEyeMass": 2102.0627,
+      "eyeRGBAHiddenUnderpaintMass": 201.5488,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.091274,
+        "hiddenByNose": 0.001749,
+        "hiddenByBangs": 0.145123,
+        "eyeVisible": 0.761854
+      },
+      "depthEdgeX443": 304.5423,
+      "depthSweepProgress": 0.042969,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          32.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          336.38,
+          138.164
+        ],
+        "parentLocalUVBefore": [
+          0.86973,
+          0.47607
+        ],
+        "parentLocalUVTarget": [
+          0.86982,
+          0.4774
+        ],
+        "parentLocalUVAfter": [
+          0.84857,
+          0.48504
+        ],
+        "uvResidual": 0.022583,
+        "clipPixelShift": [
+          -4,
+          2
+        ],
+        "centerAfter443": [
+          332.38,
+          140.164
+        ],
+        "sourceContactCoverage": 0.697313,
+        "attachedContactCoverage": 0.896819,
+        "sourceKeyframeOriginalPreservedInP15_34": false,
+        "candidateClipOffsetAppliedAtKeyframe": false,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 11605,
+      "outputSHA256": "7d1dfceaa08d1fbf61f618d8d35bc2f9d22355cb402859606b23f181c7b543f1",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 57.5,
+      "sourceKind": "exact-source-keyframe",
+      "sourceCompositeSHA256": "e64cdb0dab90230186b32712ad3fb9b37a420d7b15ccdc03901bfb0d7efc6d52",
+      "sourceEyeSHA256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+      "sourceClipSHA256": "66e36ef4391d08fd76ed446b90ab3f72e3b3b466ea4a51aca0ad1b9961c4803f",
+      "sourceSkinSHA256": "a225e35faf55735d200c876b2c6bafd09619d864e28f7e282116b16215abe8d3",
+      "sourceHairSHA256": "1f4703c72d819ae8a08fbcf247732da005afc86ca16864bc243835809e8c19af",
+      "sourceNoseSHA256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063",
+      "sourceEyeMass": 2049.5333,
+      "eyeRGBAHiddenUnderpaintMass": 455.5936,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.212389,
+        "hiddenByNose": 0.001209,
+        "hiddenByBangs": 0.145448,
+        "eyeVisible": 0.640954
+      },
+      "depthEdgeX443": 311.2063,
+      "depthSweepProgress": 0.15625,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          32.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          337.106,
+          138.199
+        ],
+        "parentLocalUVBefore": [
+          0.87358,
+          0.47623
+        ],
+        "parentLocalUVTarget": [
+          0.87358,
+          0.47623
+        ],
+        "parentLocalUVAfter": [
+          0.85241,
+          0.48071
+        ],
+        "uvResidual": 0.021634,
+        "clipPixelShift": [
+          -4,
+          1
+        ],
+        "centerAfter443": [
+          333.106,
+          139.199
+        ],
+        "sourceContactCoverage": 0.670404,
+        "attachedContactCoverage": 0.862013,
+        "sourceKeyframeOriginalPreservedInP15_34": true,
+        "candidateClipOffsetAppliedAtKeyframe": true,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 12510,
+      "outputSHA256": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 58.75,
+      "sourceKind": "ink-observed-constrained-mesh",
+      "sourceCompositeSHA256": "4bae64ac16c6515c5a18922883341564a2ac451b8b2ff1e736f6264a2f2da272",
+      "sourceEyeSHA256": "2435e6375ac886273444d7b305f4177c98b8d190bcc606ee7c2d90da90abd955",
+      "sourceClipSHA256": "54d1c12ba7b079f9ef7c687deb295c15dc76d261200c8c4e37e1b4cd61af0ee1",
+      "sourceSkinSHA256": "16e267265ef76f0b6ced63d9024fd3aa1ed8c695f66e4bb59c8c85bd573dc1a0",
+      "sourceHairSHA256": "a36166eec8ace151ad56111534e0bee2a4e81c5c12c5b6fb5d9da4db98686584",
+      "sourceNoseSHA256": "41361cbb31a041a23c1eaf6d854a45a58b10a976966415f35bdea76e8d59294d",
+      "sourceEyeMass": 2011.298,
+      "eyeRGBAHiddenUnderpaintMass": 737.2222,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.339712,
+        "hiddenByNose": 0.001401,
+        "hiddenByBangs": 0.191209,
+        "eyeVisible": 0.467678
+      },
+      "depthEdgeX443": 317.9527,
+      "depthSweepProgress": 0.316406,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          32.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          337.886,
+          138.169
+        ],
+        "parentLocalUVBefore": [
+          0.8777,
+          0.4761
+        ],
+        "parentLocalUVTarget": [
+          0.87748,
+          0.47622
+        ],
+        "parentLocalUVAfter": [
+          0.85654,
+          0.48506
+        ],
+        "uvResidual": 0.022728,
+        "clipPixelShift": [
+          -4,
+          2
+        ],
+        "centerAfter443": [
+          333.886,
+          140.169
+        ],
+        "sourceContactCoverage": 0.645377,
+        "attachedContactCoverage": 0.844463,
+        "sourceKeyframeOriginalPreservedInP15_34": false,
+        "candidateClipOffsetAppliedAtKeyframe": false,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 14656,
+      "outputSHA256": "5a828e728171954489f8355a8e4c368a6eecee080225eab6ef793f5160419242",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 60.0,
+      "sourceKind": "exact-source-keyframe",
+      "sourceCompositeSHA256": "a08d8eac8101c2b2b862fe4eb2ef419e642bc809af54315922f7621fe1327179",
+      "sourceEyeSHA256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+      "sourceClipSHA256": "33277d15b485092fdcc959cbc07270cd50adfebf31c6f4f94f7ab87d7eeba129",
+      "sourceSkinSHA256": "d63470eb4abd566b6bbccab70b285aeed934477071e6991529fd2b81077f4748",
+      "sourceHairSHA256": "393975293e5641efe2c2917868151826a1ecaae22eb7a38f6d34606064f79b3f",
+      "sourceNoseSHA256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6",
+      "sourceEyeMass": 1955.4392,
+      "eyeRGBAHiddenUnderpaintMass": 1081.4619,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.505397,
+        "hiddenByNose": 0.001306,
+        "hiddenByBangs": 0.197166,
+        "eyeVisible": 0.29613
+      },
+      "depthEdgeX443": 326.05,
+      "depthSweepProgress": 0.5,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          32.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          338.58,
+          138.197
+        ],
+        "parentLocalUVBefore": [
+          0.88138,
+          0.47622
+        ],
+        "parentLocalUVTarget": [
+          0.88138,
+          0.47622
+        ],
+        "parentLocalUVAfter": [
+          0.86021,
+          0.48519
+        ],
+        "uvResidual": 0.022986,
+        "clipPixelShift": [
+          -4,
+          2
+        ],
+        "centerAfter443": [
+          334.58,
+          140.197
+        ],
+        "sourceContactCoverage": 0.616594,
+        "attachedContactCoverage": 0.817679,
+        "sourceKeyframeOriginalPreservedInP15_34": true,
+        "candidateClipOffsetAppliedAtKeyframe": true,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 15134,
+      "outputSHA256": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 61.25,
+      "sourceKind": "ink-observed-constrained-mesh",
+      "sourceCompositeSHA256": "ab7a5a332d740aeb4d079bba7aadc56e736328f08f3e8e7e84309dd44474553e",
+      "sourceEyeSHA256": "63b34df4079b0f7cf5891c120ad9b9b87f03c640af19b60e7a334241952b745f",
+      "sourceClipSHA256": "590c831ed08f7a440fc310821a02d7ade3d27367aaa8229080b1987562eca25e",
+      "sourceSkinSHA256": "8177163d240d1a68fba34a436ea6267e7199976953cc71d3772048fd48ea0176",
+      "sourceHairSHA256": "0406dbe39278c9a5aaaf02aebedb8eadad8fec12203a6d0309b562df4c43aa9e",
+      "sourceNoseSHA256": "02c7e90afc567c0dc5e7826c70a99cca806abc9acccf54cc255852ef81df6f78",
+      "sourceEyeMass": 1918.0118,
+      "eyeRGBAHiddenUnderpaintMass": 1370.4809,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.619799,
+        "hiddenByNose": 0.000785,
+        "hiddenByBangs": 0.232043,
+        "eyeVisible": 0.147374
+      },
+      "depthEdgeX443": 333.4941,
+      "depthSweepProgress": 0.683594,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          32.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          339.322,
+          138.208
+        ],
+        "parentLocalUVBefore": [
+          0.8853,
+          0.47627
+        ],
+        "parentLocalUVTarget": [
+          0.88512,
+          0.47505
+        ],
+        "parentLocalUVAfter": [
+          0.86414,
+          0.48075
+        ],
+        "uvResidual": 0.021741,
+        "clipPixelShift": [
+          -4,
+          1
+        ],
+        "centerAfter443": [
+          335.322,
+          139.208
+        ],
+        "sourceContactCoverage": 0.592547,
+        "attachedContactCoverage": 0.778092,
+        "sourceKeyframeOriginalPreservedInP15_34": false,
+        "candidateClipOffsetAppliedAtKeyframe": false,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 16691,
+      "outputSHA256": "a5a1377cc549a6e5407c5eafb1a6fa4b157f98c96382d777223b545378682c87",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 62.5,
+      "sourceKind": "exact-source-keyframe",
+      "sourceCompositeSHA256": "87497e5cde15b92b9945687a736617c80bff20a7ddfcfc3eb29f6af5ed00cc37",
+      "sourceEyeSHA256": "384d92b9498cee71794cbfdc3dc2bb6f64cfb49d0260ee8a21b4a2eef170682b",
+      "sourceClipSHA256": "e22a091c84e76ce4f96e2062ede4342dea6c2713022f0ab6befe3df1158a7fd7",
+      "sourceSkinSHA256": "766978ce1be500fe5db32ad7b7c21afb8f145f2620da82f0a4f22db123d7d0fc",
+      "sourceHairSHA256": "59a6601da236b0997c91b097f01f7569fbb4d2f6619e37c2e30f7a5daf8760be",
+      "sourceNoseSHA256": "2618dc19459f2bb5eb1d071c98cdaefd71888708269fd8a00e74d9f7a3f54f94",
+      "sourceEyeMass": 1875.8588,
+      "eyeRGBAHiddenUnderpaintMass": 1584.4963,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.668299,
+        "hiddenByNose": 0.000431,
+        "hiddenByBangs": 0.258479,
+        "eyeVisible": 0.072791
+      },
+      "depthEdgeX443": 340.3575,
+      "depthSweepProgress": 0.84375,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          172.0,
+          33.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          339.994,
+          138.201
+        ],
+        "parentLocalUVBefore": [
+          0.88885,
+          0.47388
+        ],
+        "parentLocalUVTarget": [
+          0.88885,
+          0.47388
+        ],
+        "parentLocalUVAfter": [
+          0.86769,
+          0.47838
+        ],
+        "uvResidual": 0.021638,
+        "clipPixelShift": [
+          -4,
+          1
+        ],
+        "centerAfter443": [
+          335.994,
+          139.201
+        ],
+        "sourceContactCoverage": 0.565427,
+        "attachedContactCoverage": 0.744479,
+        "sourceKeyframeOriginalPreservedInP15_34": true,
+        "candidateClipOffsetAppliedAtKeyframe": true,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 16405,
+      "outputSHA256": "1c3c77eac8a1a8b64db217fd544caddd783cc17000b770143515b82986c34214",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 63.75,
+      "sourceKind": "ink-observed-constrained-mesh",
+      "sourceCompositeSHA256": "5eed006f144cb02ecdca5bc96ae11a9966b9fe1d12df5a638d6b9d61b2ed0765",
+      "sourceEyeSHA256": "db3a42b3fded7653c66b243b534af78eb1993b81ea92f6452dd37ac13fbd35f0",
+      "sourceClipSHA256": "29298757ccbc82873ff1f5abdc6c07a485a2d2885ee5a89ebb661ca951a8cada",
+      "sourceSkinSHA256": "f240d1124f0ec71535ccc5e44fe7dfcef074774292b50d2ed48a593d05b611a4",
+      "sourceHairSHA256": "358eccdd7c2f71f46846d07b54bbb7d23ae5bbece1a04a49fb8c348fdd2eaebb",
+      "sourceNoseSHA256": "7d7e98aa3060bad354833dad78961fa36dd5116a5bf44d1243a7ad22e1086652",
+      "sourceEyeMass": 1808.7843,
+      "eyeRGBAHiddenUnderpaintMass": 1602.8109,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.645996,
+        "hiddenByNose": 0.001097,
+        "hiddenByBangs": 0.297348,
+        "eyeVisible": 0.055559
+      },
+      "depthEdgeX443": 345.2453,
+      "depthSweepProgress": 0.957031,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          173.0,
+          33.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          340.731,
+          138.076
+        ],
+        "parentLocalUVBefore": [
+          0.89219,
+          0.47331
+        ],
+        "parentLocalUVTarget": [
+          0.8925,
+          0.47387
+        ],
+        "parentLocalUVAfter": [
+          0.87091,
+          0.47782
+        ],
+        "uvResidual": 0.021948,
+        "clipPixelShift": [
+          -4,
+          1
+        ],
+        "centerAfter443": [
+          336.731,
+          139.076
+        ],
+        "sourceContactCoverage": 0.540842,
+        "attachedContactCoverage": 0.718759,
+        "sourceKeyframeOriginalPreservedInP15_34": false,
+        "candidateClipOffsetAppliedAtKeyframe": false,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 17006,
+      "outputSHA256": "44f448f72bcf87095b4250e8eee1be604b40bde609f60e3cd2565df4fe5e414a",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    },
+    {
+      "yaw": 65.0,
+      "sourceKind": "exact-source-keyframe",
+      "sourceCompositeSHA256": "bf1c3f27f9c85dbaa3ecea5624dce72333dcd0ae0c25e6d85cb4bb2a3bc723e9",
+      "sourceEyeSHA256": "7407b43e73c49c3e4961778da3e87465e3f4337abf11eea1fffefe64c4639a04",
+      "sourceClipSHA256": "5c37ff0f661325d7dfe2e5c25b001e3bfbffc8f168dce72d44f64e83e26b78c4",
+      "sourceSkinSHA256": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d",
+      "sourceHairSHA256": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6",
+      "sourceNoseSHA256": "4499954095f75911c6b55c474b90cdf56ce009fc27a61e198bed7ed337a1a60f",
+      "sourceEyeMass": 1812.0745,
+      "eyeRGBAHiddenUnderpaintMass": 1593.5627,
+      "eyeSourceRGBKept": true,
+      "wholeLayerEyeFadeApplied": false,
+      "eyeAlphaPartitionFractions": {
+        "hiddenByFace": 0.595746,
+        "hiddenByNose": 0.000219,
+        "hiddenByBangs": 0.348397,
+        "eyeVisible": 0.055638
+      },
+      "depthEdgeX443": 346.96,
+      "depthSweepProgress": 1.0,
+      "clipAttachment": {
+        "parentRole": "hair.front",
+        "mountModel": "front-hair visible alpha bounding box UV",
+        "parentBounds443": [
+          173.0,
+          33.0,
+          361.0,
+          255.0
+        ],
+        "sourceCenter443": [
+          341.476,
+          138.199
+        ],
+        "parentLocalUVBefore": [
+          0.89615,
+          0.47387
+        ],
+        "parentLocalUVTarget": [
+          0.89615,
+          0.47387
+        ],
+        "parentLocalUVAfter": [
+          0.87487,
+          0.47837
+        ],
+        "uvResidual": 0.021748,
+        "clipPixelShift": [
+          -4,
+          1
+        ],
+        "centerAfter443": [
+          337.476,
+          139.199
+        ],
+        "sourceContactCoverage": 0.508691,
+        "attachedContactCoverage": 0.685118,
+        "sourceKeyframeOriginalPreservedInP15_34": true,
+        "candidateClipOffsetAppliedAtKeyframe": true,
+        "physicallyApprovedMount": false
+      },
+      "changedCompositePixelsVsP15_34": 16053,
+      "outputSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+      "roleCount": 13,
+      "sourceRolesUnmodifiedExceptEyeAndClip": true
+    }
+  ],
+  "depthMethod": "face.skin RGBA material underlay with yaw-dependent far-eye Z boundary from painted eye bbox",
+  "faceMask3DModelValidated": false,
+  "nosePhysicalVolumeVerified": false,
+  "clipMount3DValidated": false,
+  "clipMountRole": "hair.front",
+  "eyeOcclusionCause": "local face-surface depth and native nose/front-hair alpha",
+  "artistApprovedOcclusion": false,
+  "artistApprovedHairLock": false,
+  "underpaintRecoveredFromOriginalRGB": true,
+  "newIndependentPaintings": 0,
+  "sourceArtModified": false,
+  "productionRendererChanged": false,
+  "candidateKeyframeClipPixelsMayShift": true,
+  "formalArtisticAcceptance": false,
+  "status": "P15_35_EXPLICIT_LOCAL_Z_OCCLUSION_AND_HAIR_UV_ENGINEERING_CANDIDATE"
+}

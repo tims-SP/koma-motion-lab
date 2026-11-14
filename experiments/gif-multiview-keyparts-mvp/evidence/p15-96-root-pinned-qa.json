@@ -1,0 +1,148 @@
+{
+  "schema": "KOMA_P15_96_ROOT_ANCHORED_ARTMESH_V1",
+  "inputSourceSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+  "inputModelSHA256": "e5891f3568bd54e7ae86f516385f2a17c2830a2c3badece088d92e24e395a034",
+  "pinnedHairRoot": true,
+  "realNonzeroMotionRequired": true,
+  "modes": {
+    "full": {
+      "params": {
+        "rootY": 294,
+        "yRamp": 70,
+        "leftX": 535,
+        "xRamp": 60
+      },
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "6": {
+          "sha256": "663ec65c968fe8d31378e8305c67dfcc407d484df1717c6c6a3ef161508c65e7",
+          "changedPixels": 28096,
+          "topRegionChangedPixels": 10026,
+          "tipChangedPixels": 5574,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "243273b376ee7c12e516822a2f1ef10fc5438ef7675aa3165b5f9b0aa6e7d6f6",
+          "changedPixels": 30336,
+          "topRegionChangedPixels": 10702,
+          "tipChangedPixels": 5937,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        }
+      }
+    },
+    "root390": {
+      "params": {
+        "rootY": 390,
+        "yRamp": 70,
+        "leftX": 610,
+        "xRamp": 40
+      },
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "6": {
+          "sha256": "c86207b28287efb0cfa1d00903ffd3f618295d43cbaa31604c81d7daf7c531de",
+          "changedPixels": 8987,
+          "topRegionChangedPixels": 479,
+          "tipChangedPixels": 5540,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "7ecfa981c1a58ea08eb5ac5f3b396c19701182e7ff01dc1f6e1695b62df0316e",
+          "changedPixels": 9700,
+          "topRegionChangedPixels": 625,
+          "tipChangedPixels": 5867,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        }
+      }
+    },
+    "root420": {
+      "params": {
+        "rootY": 420,
+        "yRamp": 65,
+        "leftX": 620,
+        "xRamp": 35
+      },
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "6": {
+          "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+          "changedPixels": 5521,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 5142,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "46af4b2bd01dd7491038829b3f5ba28534e44415a828eefb57fb091803838dc1",
+          "changedPixels": 5934,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 5495,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        }
+      }
+    },
+    "root445": {
+      "params": {
+        "rootY": 445,
+        "yRamp": 55,
+        "leftX": 630,
+        "xRamp": 35
+      },
+      "frames": {
+        "0": {
+          "sha256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+          "changedPixels": 0,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 0,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "6": {
+          "sha256": "1bc454419a1d9120709996c6c40b3f10680b70e3e68449aa6b897e85f4882543",
+          "changedPixels": 3557,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 3296,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        },
+        "12": {
+          "sha256": "d7a7a1d7230aa33747d544cc439e81b19bddfe424b43ce0abba1fd0f8adb42c5",
+          "changedPixels": 3786,
+          "topRegionChangedPixels": 0,
+          "tipChangedPixels": 3509,
+          "changedOutsideHairSupports": 0,
+          "newHoles": 0
+        }
+      }
+    }
+  },
+  "formalArtMeshAccepted": false,
+  "visualGate": "PENDING_REVIEW",
+  "contact": "private-assets/exports/p15-96-root-pinned/root-pinned-contact.jpg"
+}

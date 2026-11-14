@@ -1,0 +1,598 @@
+{
+  "schema": "KOMA_P15_178_AI_ROOTLESS_CROWN_PATCH_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "model": "Flux.2 Klein 4B via Hugging Face Spaces",
+  "modelSeeds": {
+    "90": "1770090",
+    "112.5": "1781128",
+    "135": "1770135"
+  },
+  "registrationMethod": "SIFT feature matching below y=40, ratio test 0.72, RANSAC homography, then 270x150 native crop registration",
+  "accountsTried": [
+    "wcev",
+    "kkdcgtx"
+  ],
+  "aiOutputFiles": {
+    "90": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/exports/p15-178-ai-rootless-crown/yaw090-ai-rootless-full.png",
+    "112.5": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/exports/p15-178-ai-rootless-crown/yaw112p5-ai-rootless-full.png",
+    "135": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/exports/p15-178-ai-rootless-crown/yaw135-ai-rootless-full.png"
+  },
+  "patchModes": {
+    "tight": [
+      10,
+      3,
+      20
+    ],
+    "local": [
+      14,
+      8,
+      25
+    ],
+    "broad": [
+      18,
+      12,
+      30
+    ]
+  },
+  "perMode": {
+    "tight": {
+      "90": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 67,
+          "keypointsAI": 74,
+          "goodMatches": 26,
+          "inliers": 20,
+          "homography": [
+            [
+              0.9815174536697847,
+              -0.029644188736488126,
+              2.694604659075275
+            ],
+            [
+              -0.002346475352958162,
+              0.9218056675135986,
+              6.039441769093696
+            ],
+            [
+              1.6654203515949366e-05,
+              -0.00022460827969906003,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "aiOutputSHA256": "1d5eeffc40aa34abe7aceebbeffa5918f7f2b5bd897444b4d9d82d10fdf8a124",
+        "candidateSHA256": "46106c3485c5427c57c4e265751c8f68f022a04ab256f9d150c34e9ac5a67471",
+        "changedRGBPixels": 352,
+        "weightedPatchPixels": 357,
+        "semanticRootCorePixels": 66,
+        "clearedRootAirAlphaPixels": 116,
+        "visibleCompositeDiffPixels": 286,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          184,
+          53
+        ],
+        "rootEdgeY": 57.75712585449219,
+        "patchBounds": [
+          174,
+          54,
+          194,
+          77
+        ],
+        "weightRange": [
+          0.0,
+          1.0
+        ],
+        "artistApproval": false
+      },
+      "112.5": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 62,
+          "keypointsAI": 72,
+          "goodMatches": 24,
+          "inliers": 19,
+          "homography": [
+            [
+              0.9908942160101686,
+              0.0342785665966162,
+              -1.4719393970009296
+            ],
+            [
+              -0.010988449993706286,
+              1.0113526480496167,
+              0.7459552188081877
+            ],
+            [
+              -8.709007736016226e-05,
+              0.0001837453926445402,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "aiOutputSHA256": "cd6996663b1afbbfb74c62c68056134265c4281152f996e945fcda6e30df1195",
+        "candidateSHA256": "d56cc149ca126c5ba740e7c63ad08900d2fdfffb7bc7421e1fb49539b551b8d8",
+        "changedRGBPixels": 369,
+        "weightedPatchPixels": 372,
+        "semanticRootCorePixels": 197,
+        "clearedRootAirAlphaPixels": 433,
+        "visibleCompositeDiffPixels": 210,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          258,
+          77
+        ],
+        "rootEdgeY": 59.84492874145508,
+        "patchBounds": [
+          248,
+          56,
+          268,
+          79
+        ],
+        "weightRange": [
+          0.0,
+          0.9866666793823242
+        ],
+        "artistApproval": false
+      },
+      "135": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 50,
+          "keypointsAI": 92,
+          "goodMatches": 31,
+          "inliers": 19,
+          "homography": [
+            [
+              0.9995304226291826,
+              -0.0007998757470882193,
+              0.01773666973022961
+            ],
+            [
+              -0.0013448238177076574,
+              0.9834975329815099,
+              1.3808771867538228
+            ],
+            [
+              5.064041845535338e-06,
+              -1.3839751566545913e-05,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "aiOutputSHA256": "46fd6a6258e63d3224aab6bd641dfbaef629b61682f47c860d9c6da91807ddbf",
+        "candidateSHA256": "9bf471467b92bf1c068ba4264c7c4e15b0c7178d29bac83547b98c118508e590",
+        "changedRGBPixels": 346,
+        "weightedPatchPixels": 364,
+        "semanticRootCorePixels": 94,
+        "clearedRootAirAlphaPixels": 133,
+        "visibleCompositeDiffPixels": 252,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          222,
+          55
+        ],
+        "rootEdgeY": 51.472408294677734,
+        "patchBounds": [
+          212,
+          48,
+          232,
+          71
+        ],
+        "weightRange": [
+          0.0,
+          1.0
+        ],
+        "artistApproval": false
+      }
+    },
+    "local": {
+      "90": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 67,
+          "keypointsAI": 74,
+          "goodMatches": 26,
+          "inliers": 20,
+          "homography": [
+            [
+              0.9815174536697847,
+              -0.029644188736488126,
+              2.694604659075275
+            ],
+            [
+              -0.002346475352958162,
+              0.9218056675135986,
+              6.039441769093696
+            ],
+            [
+              1.6654203515949366e-05,
+              -0.00022460827969906003,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "aiOutputSHA256": "1d5eeffc40aa34abe7aceebbeffa5918f7f2b5bd897444b4d9d82d10fdf8a124",
+        "candidateSHA256": "a365a69dcb742012c80f8ea869cd34144f87e37558c14ea5e6981aaf05206343",
+        "changedRGBPixels": 619,
+        "weightedPatchPixels": 624,
+        "semanticRootCorePixels": 66,
+        "clearedRootAirAlphaPixels": 116,
+        "visibleCompositeDiffPixels": 553,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          184,
+          53
+        ],
+        "rootEdgeY": 57.75712585449219,
+        "patchBounds": [
+          170,
+          49,
+          198,
+          82
+        ],
+        "weightRange": [
+          0.0,
+          1.0
+        ],
+        "artistApproval": false
+      },
+      "112.5": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 62,
+          "keypointsAI": 72,
+          "goodMatches": 24,
+          "inliers": 19,
+          "homography": [
+            [
+              0.9908942160101686,
+              0.0342785665966162,
+              -1.4719393970009296
+            ],
+            [
+              -0.010988449993706286,
+              1.0113526480496167,
+              0.7459552188081877
+            ],
+            [
+              -8.709007736016226e-05,
+              0.0001837453926445402,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "aiOutputSHA256": "cd6996663b1afbbfb74c62c68056134265c4281152f996e945fcda6e30df1195",
+        "candidateSHA256": "e576a04e14cdd0b902d1ef77c2b4d5921db7b89574bd3c8773ae913bffb7171a",
+        "changedRGBPixels": 628,
+        "weightedPatchPixels": 636,
+        "semanticRootCorePixels": 222,
+        "clearedRootAirAlphaPixels": 433,
+        "visibleCompositeDiffPixels": 444,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          258,
+          77
+        ],
+        "rootEdgeY": 59.84492874145508,
+        "patchBounds": [
+          244,
+          51,
+          272,
+          84
+        ],
+        "weightRange": [
+          0.0,
+          0.9866666793823242
+        ],
+        "artistApproval": false
+      },
+      "135": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 50,
+          "keypointsAI": 92,
+          "goodMatches": 31,
+          "inliers": 19,
+          "homography": [
+            [
+              0.9995304226291826,
+              -0.0007998757470882193,
+              0.01773666973022961
+            ],
+            [
+              -0.0013448238177076574,
+              0.9834975329815099,
+              1.3808771867538228
+            ],
+            [
+              5.064041845535338e-06,
+              -1.3839751566545913e-05,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "aiOutputSHA256": "46fd6a6258e63d3224aab6bd641dfbaef629b61682f47c860d9c6da91807ddbf",
+        "candidateSHA256": "6c088098fc04a86f209a8671b754b00007f384b3bacb95db96edc7e3f2f6fe2a",
+        "changedRGBPixels": 622,
+        "weightedPatchPixels": 637,
+        "semanticRootCorePixels": 94,
+        "clearedRootAirAlphaPixels": 133,
+        "visibleCompositeDiffPixels": 528,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          222,
+          55
+        ],
+        "rootEdgeY": 51.472408294677734,
+        "patchBounds": [
+          208,
+          43,
+          236,
+          76
+        ],
+        "weightRange": [
+          0.0,
+          1.0
+        ],
+        "artistApproval": false
+      }
+    },
+    "broad": {
+      "90": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 67,
+          "keypointsAI": 74,
+          "goodMatches": 26,
+          "inliers": 20,
+          "homography": [
+            [
+              0.9815174536697847,
+              -0.029644188736488126,
+              2.694604659075275
+            ],
+            [
+              -0.002346475352958162,
+              0.9218056675135986,
+              6.039441769093696
+            ],
+            [
+              1.6654203515949366e-05,
+              -0.00022460827969906003,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "aiOutputSHA256": "1d5eeffc40aa34abe7aceebbeffa5918f7f2b5bd897444b4d9d82d10fdf8a124",
+        "candidateSHA256": "a4d378400f9248e0f3e00b165de5307b01e5b79ecfb54ec23e8430b0a8f908dc",
+        "changedRGBPixels": 961,
+        "weightedPatchPixels": 965,
+        "semanticRootCorePixels": 66,
+        "clearedRootAirAlphaPixels": 116,
+        "visibleCompositeDiffPixels": 895,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          184,
+          53
+        ],
+        "rootEdgeY": 57.75712585449219,
+        "patchBounds": [
+          166,
+          45,
+          202,
+          87
+        ],
+        "weightRange": [
+          0.0,
+          1.0
+        ],
+        "artistApproval": false
+      },
+      "112.5": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 62,
+          "keypointsAI": 72,
+          "goodMatches": 24,
+          "inliers": 19,
+          "homography": [
+            [
+              0.9908942160101686,
+              0.0342785665966162,
+              -1.4719393970009296
+            ],
+            [
+              -0.010988449993706286,
+              1.0113526480496167,
+              0.7459552188081877
+            ],
+            [
+              -8.709007736016226e-05,
+              0.0001837453926445402,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "aiOutputSHA256": "cd6996663b1afbbfb74c62c68056134265c4281152f996e945fcda6e30df1195",
+        "candidateSHA256": "1de604d18e2409ff8619394120546572f0f4996407493481e8bd5ca3d00bfd8e",
+        "changedRGBPixels": 955,
+        "weightedPatchPixels": 978,
+        "semanticRootCorePixels": 232,
+        "clearedRootAirAlphaPixels": 433,
+        "visibleCompositeDiffPixels": 761,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          258,
+          77
+        ],
+        "rootEdgeY": 59.84492874145508,
+        "patchBounds": [
+          240,
+          47,
+          276,
+          89
+        ],
+        "weightRange": [
+          0.0,
+          0.9866666793823242
+        ],
+        "artistApproval": false
+      },
+      "135": {
+        "aiOutputSize": [
+          1024,
+          560
+        ],
+        "registration": {
+          "keypointsSource": 50,
+          "keypointsAI": 92,
+          "goodMatches": 31,
+          "inliers": 19,
+          "homography": [
+            [
+              0.9995304226291826,
+              -0.0007998757470882193,
+              0.01773666973022961
+            ],
+            [
+              -0.0013448238177076574,
+              0.9834975329815099,
+              1.3808771867538228
+            ],
+            [
+              5.064041845535338e-06,
+              -1.3839751566545913e-05,
+              1.0
+            ]
+          ]
+        },
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "aiOutputSHA256": "46fd6a6258e63d3224aab6bd641dfbaef629b61682f47c860d9c6da91807ddbf",
+        "candidateSHA256": "a1f0b8eb93c16d4b955d2334758e13ed6731e24abb34b0964bccc5df4ecdf726",
+        "changedRGBPixels": 971,
+        "weightedPatchPixels": 989,
+        "semanticRootCorePixels": 94,
+        "clearedRootAirAlphaPixels": 133,
+        "visibleCompositeDiffPixels": 877,
+        "compositeDiffOutsidePatch": 0,
+        "doubleAlphaPixels": 0,
+        "alphaExactOutsideRootAir": true,
+        "rootAirAlphaCleared": true,
+        "outsidePatchRGBExact": true,
+        "deepHeadExact": true,
+        "root": [
+          222,
+          55
+        ],
+        "rootEdgeY": 51.472408294677734,
+        "patchBounds": [
+          204,
+          39,
+          240,
+          81
+        ],
+        "weightRange": [
+          0.0,
+          1.0
+        ],
+        "artistApproval": false
+      }
+    }
+  },
+  "canonicalSourceKeysUnmodified": true,
+  "midYawRendered": false,
+  "productionRendererUpdated": false,
+  "visualAccepted": true,
+  "visualGate": "Agent visual inspection: all three motion underpaints have no detached loop/root post; the static keyframe composites reconnect the original ahoge naturally. User review remains available before intermediate-yaw rollout.",
+  "review": "private-assets/exports/p15-178-ai-rootless-crown/index.html",
+  "gate": {
+    "threeAIViewsAvailable": true,
+    "rootAirAlphaCleared": true,
+    "outsidePatchRGBExact": true,
+    "sourceAlphaExactOutsideRootAir": true,
+    "deepHeadExact": true,
+    "noDoubleAlpha": true,
+    "compositeDiffLocalized": true,
+    "rootlessCrownVisualAccepted": true,
+    "passes": true
+  }
+}

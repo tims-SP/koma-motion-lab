@@ -1,0 +1,104 @@
+{
+  "schema": "KOMA_P15_111_HIDDEN_MATERIAL_REVIEW_V1",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-baseline": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-three-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "layered_full": {
+      "60": "layered_full-yaw60.png",
+      "61.875": "layered_full-yaw61p875.png",
+      "63.75": "layered_full-yaw63p75.png",
+      "65.625": "layered_full-yaw65p625.png",
+      "67.5": "layered_full-yaw67p5.png",
+      "69.375": "layered_full-yaw69p375.png",
+      "71.25": "layered_full-yaw71p25.png",
+      "73.125": "layered_full-yaw73p125.png",
+      "75": "layered_full-yaw75.png"
+    },
+    "layered_jewel_owner": {
+      "60": "layered_jewel_owner-yaw60.png",
+      "61.875": "layered_jewel_owner-yaw61p875.png",
+      "63.75": "layered_jewel_owner-yaw63p75.png",
+      "65.625": "layered_jewel_owner-yaw65p625.png",
+      "67.5": "layered_jewel_owner-yaw67p5.png",
+      "69.375": "layered_jewel_owner-yaw69p375.png",
+      "71.25": "layered_jewel_owner-yaw71p25.png",
+      "73.125": "layered_jewel_owner-yaw73p125.png",
+      "75": "layered_jewel_owner-yaw75.png"
+    },
+    "layered_bow_owner": {
+      "60": "layered_bow_owner-yaw60.png",
+      "61.875": "layered_bow_owner-yaw61p875.png",
+      "63.75": "layered_bow_owner-yaw63p75.png",
+      "65.625": "layered_bow_owner-yaw65p625.png",
+      "67.5": "layered_bow_owner-yaw67p5.png",
+      "69.375": "layered_bow_owner-yaw69p375.png",
+      "71.25": "layered_bow_owner-yaw71p25.png",
+      "73.125": "layered_bow_owner-yaw73p125.png",
+      "75": "layered_bow_owner-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-baseline": {
+      "path": "private-assets/exports/p15-111-layered-render/P15-101-baseline-loop.gif",
+      "sha256": "631835d386237487adac61839a434ae2dc96f99ecac43b03848e68dad8c92e62"
+    },
+    "P15-107-three-native": {
+      "path": "private-assets/exports/p15-111-layered-render/P15-107-three-native-loop.gif",
+      "sha256": "77e05558f66f2e6b910cb5b1087e4b3058b8b3a938dde7d07af282034be4d10f"
+    },
+    "layered_full": {
+      "path": "private-assets/exports/p15-111-layered-render/layered_full-loop.gif",
+      "sha256": "266df070aa5d3f803e996947546d8b2a7577b7cf5994dbfdb9f2c956014b1333"
+    },
+    "layered_jewel_owner": {
+      "path": "private-assets/exports/p15-111-layered-render/layered_jewel_owner-loop.gif",
+      "sha256": "a42b724c5d29e8f0f41e8004f4dd5cf9d372dd1783708b7d3d474166d652bff5"
+    },
+    "layered_bow_owner": {
+      "path": "private-assets/exports/p15-111-layered-render/layered_bow_owner-loop.gif",
+      "sha256": "6ec607c0eb7fce2bfc70ff7f071c3269ac911d749dcf9ab210bf24cdd08132ef"
+    }
+  },
+  "nativeGeneratedLayerCount": 6,
+  "registeredViewCount": 3,
+  "sourceArtifactSHA256": "a954f946cfa06428259e715ab2483243429aef9b458f159298e209491f19d7ce",
+  "entry": "private-assets/exports/p15-111-layered-render/index.html",
+  "nativeHiddenArtArtistApproved": false,
+  "fullYawVisualAccepted": false
+}

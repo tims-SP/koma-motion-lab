@@ -1,0 +1,57 @@
+{
+  "schema": "KOMA_P15_102_NECK_MESH_QA_V1",
+  "vertices": 28,
+  "triangles": 36,
+  "nonfolding": true,
+  "sampleAngles": [
+    {
+      "fraction": 0.0,
+      "minimumArea": 1940.0,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.125,
+      "minimumArea": 1953.5625,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.25,
+      "minimumArea": 1969.0,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.375,
+      "minimumArea": 1986.3125,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.5,
+      "minimumArea": 2005.5,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.625,
+      "minimumArea": 2026.5625,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.75,
+      "minimumArea": 2049.5,
+      "foldCount": 0
+    },
+    {
+      "fraction": 0.875,
+      "minimumArea": 2074.3125,
+      "foldCount": 0
+    },
+    {
+      "fraction": 1.0,
+      "minimumArea": 2101.0,
+      "foldCount": 0
+    }
+  ],
+  "meshSHA256": "16cdd594df34c18366b2f65227f24bce19b60783dc692cf870df479d2ea34067",
+  "meshPath": "private-assets/exports/p15-102-neck-shoulder-mesh/neck-shoulder-mesh.json",
+  "headMeshLinked": true,
+  "artistApproved": false
+}

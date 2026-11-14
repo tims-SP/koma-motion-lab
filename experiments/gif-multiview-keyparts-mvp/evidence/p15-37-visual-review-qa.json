@@ -1,0 +1,301 @@
+{
+  "schema": "KOMA-P15-37-VISUAL-REVIEW-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    55.0,
+    56.25,
+    57.5,
+    58.75,
+    60.0,
+    61.25,
+    62.5,
+    63.75,
+    65.0
+  ],
+  "frameCount": 9,
+  "modeCount": 3,
+  "sourceP0_45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "newModelPaintedKeyAngles": [
+    57.5,
+    60.0
+  ],
+  "frames": [
+    {
+      "angle": 55.0,
+      "slug": "yaw55",
+      "sourceType": "source-endpoint",
+      "paintWeight": 0.0,
+      "fullKeyframeApproved": false,
+      "changedPixels": 0,
+      "eyeVisibleAlphaMass": 1998.0824,
+      "clipHairContactCoverage": 0.911628,
+      "sourceDonorYaw": 57.5,
+      "sourceDonorSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+      "sourcePartOrigins": [
+        {
+          "angle": 57.5,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+        "p15-37-painted-vdd.png": "45144cc273c52d81845c837992234df1de4e48b4d5aeb5a317ddad70711d40a7",
+        "eye-far.png": "7d8c1cb7a5c7a14abe33066b592f259bdc26955e9f384428710019c828d1ac7b",
+        "face-skin.png": "452ddd3c46b5c8db5ef64f86d32f08274265f29cb19795590972793e96803fa6",
+        "hair-front.png": "a4d399a490829011a743ab90ec598278f44a79565857ce8c63537bd21f7ea7ed",
+        "clip-gold.png": "b6c01667cc19df6aab86f2ecbbe4e0a434e53686858a5793f92101b6cce7d5ce",
+        "eye-hidden-source.png": "4194c4f892986d3825ed2b8add45ef9de694826626d79e06463ae334a1abb4e8",
+        "new-keyart-rgb.png": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+        "paint-change-x4.png": "a92c05a208bf9b7a3fc8056e0adb7f878f7b0463c266c6fa8095dbaf788033c0",
+        "paint-owner-change.png": "82c1dfe25b432dbe4bf11fec44084557411a3f57c2717f2664b0562e656326f0"
+      }
+    },
+    {
+      "angle": 56.25,
+      "slug": "yaw56p25",
+      "sourceType": "paint-inbetween",
+      "paintWeight": 0.5,
+      "fullKeyframeApproved": false,
+      "changedPixels": 24993,
+      "eyeVisibleAlphaMass": 1271.5411,
+      "clipHairContactCoverage": 0.896819,
+      "sourceDonorYaw": 57.5,
+      "sourceDonorSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+      "sourcePartOrigins": [
+        {
+          "angle": 57.5,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "7d1dfceaa08d1fbf61f618d8d35bc2f9d22355cb402859606b23f181c7b543f1",
+        "p15-37-painted-vdd.png": "412c92da1d7608829041834d57b82ea66429ac1030cb96b799d2bb74e14bd543",
+        "eye-far.png": "acb892c7f00807469975dce786a3b53b2201ff584546df9b8559867a71c87458",
+        "face-skin.png": "8971cec5c02a7112fe0c7a19e805485a100bacad8096f96bf9296e8bb88dde73",
+        "hair-front.png": "cd72ada1a8e4e6c7459b36650b25945a3e66beb54dd5c4da1e23d651bc5f594d",
+        "clip-gold.png": "124d0e4cda2958395c806ac2b084e5469f6a847702133efb40c94d56a53fd963",
+        "eye-hidden-source.png": "8fe8344b46ea0ac5f1cdab596a520ce447df35d0dbbaedc8174e04f14d44e5e4",
+        "new-keyart-rgb.png": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+        "paint-change-x4.png": "8905c4458bedf72a2d9c380366aeb57940f84cfc9f9d28251ee32c9dc5cad35a",
+        "paint-owner-change.png": "7d2a9160ace51e91e37780fbc85b68d95bdd545617322fabde7671372c87f266"
+      }
+    },
+    {
+      "angle": 57.5,
+      "slug": "yaw57p5",
+      "sourceType": "painted-keyframe",
+      "paintWeight": 1.0,
+      "fullKeyframeApproved": false,
+      "changedPixels": 24801,
+      "eyeVisibleAlphaMass": 640.5412,
+      "clipHairContactCoverage": 0.862013,
+      "sourceDonorYaw": 57.5,
+      "sourceDonorSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+      "sourcePartOrigins": [
+        {
+          "angle": 57.5,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+        "p15-37-painted-vdd.png": "607e8aa2366e82b5888a83e1e8531b2372eaa6c2eff11cf99de3d03a00f3fa42",
+        "eye-far.png": "096917ac508e9af0c705be0d7c5f0d627debf34639f85b446231422dbf25125b",
+        "face-skin.png": "c847df114716d3e2e7904155d5e98efdba6895a2a144b0e04c3f46644a1da65d",
+        "hair-front.png": "2839249ff21a29956417010117c2484470ed2e16a7e52f30c6c973f4760c4ec5",
+        "clip-gold.png": "5858a0448e51c70a7812911ffeacd85aa1fcd6e080a3e8e24a081db95724e58c",
+        "eye-hidden-source.png": "d043cea4afc1378295724caef8269f94d1171c260f6ffa8244c3d2bc8a5fac3d",
+        "new-keyart-rgb.png": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+        "paint-change-x4.png": "c26d424bb27356bb6938f217e90434de6134bd04cde77b38ee61d1a498b70fbf",
+        "paint-owner-change.png": "7da4a4249ac116b9cb0818f5676679dfbbed3ae594786841cbb7b081fb7a088e"
+      }
+    },
+    {
+      "angle": 58.75,
+      "slug": "yaw58p75",
+      "sourceType": "paint-inbetween",
+      "paintWeight": 1.0,
+      "fullKeyframeApproved": false,
+      "changedPixels": 27133,
+      "eyeVisibleAlphaMass": 641.0549,
+      "clipHairContactCoverage": 0.844463,
+      "sourceDonorYaw": 57.5,
+      "sourceDonorSHA256": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+      "sourcePartOrigins": [
+        {
+          "angle": 57.5,
+          "weight": 0.5
+        },
+        {
+          "angle": 60.0,
+          "weight": 0.5
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "5a828e728171954489f8355a8e4c368a6eecee080225eab6ef793f5160419242",
+        "p15-37-painted-vdd.png": "8cf2c23e007ceca6272e6f15c9a2ae64c61bbd741d1040d7cc6ff6a2053692c4",
+        "eye-far.png": "7491b4e3c64997e88002c43faa0a314d0e1c14bea2462b6b6acce45b9749beff",
+        "face-skin.png": "3474eb7b6699075a7d8c546003fa83370a22943639e1ab3f666ef1bf0370c485",
+        "hair-front.png": "8d5c9cb61e14b50559e84a3f1812159f5ba72ec5ce66e36455b15e4dbf5f049e",
+        "clip-gold.png": "7cff1542ef5a4db99d376b240bae7edabe413a6d1dc5355fd90ea1ec522eb71f",
+        "eye-hidden-source.png": "62babc755f5233ee4a325b8fdad9c98586b270bd1c82521128156637bf7dd00c",
+        "new-keyart-rgb.png": "2ce02b8199af3c414aa1feec3c6d7d797236a42b80ae031ceb69d94b1539945b",
+        "paint-change-x4.png": "9f3b6a3d63427d23d83f089853054f20d2e0703cb837109f6455a3e4bf0e41d1",
+        "paint-owner-change.png": "8c189438f6822917918a2c6565a882c1f56c028889f41a44b67ecf58b2061a9a"
+      }
+    },
+    {
+      "angle": 60.0,
+      "slug": "yaw60",
+      "sourceType": "painted-keyframe",
+      "paintWeight": 1.0,
+      "fullKeyframeApproved": false,
+      "changedPixels": 26211,
+      "eyeVisibleAlphaMass": 640.7255,
+      "clipHairContactCoverage": 0.817678,
+      "sourceDonorYaw": 60.0,
+      "sourceDonorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "sourcePartOrigins": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+        "p15-37-painted-vdd.png": "b4cc74b8598e61f64f4c68f67b9ef0e1c3d8f6be999892dac6d67b947e4fca53",
+        "eye-far.png": "7b00ee182f5d9b24e8a370bd7f7a49f046ca558ffe83f8bc49c566f03256ea6b",
+        "face-skin.png": "5bab3cd21e553e3773af53f5717b6fcb69bab7cb25e49502df8b973958d13bb5",
+        "hair-front.png": "a76a8dfed5a3df5adbf417397db6f7d8a15ceae75c29e8066f04199984948312",
+        "clip-gold.png": "39e72f7f7bd405b39451f8c685a1530230ddfea94b5cb412044886936bbcc972",
+        "eye-hidden-source.png": "05f7fb83713dd44faa7e2c94b353b4d6bc2c308ec77e643778545bec54b69c01",
+        "new-keyart-rgb.png": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+        "paint-change-x4.png": "039c350a719a5e0c582dfbb76d2b453553ddf85db4ec38ec6526f12c0b1b5fd1",
+        "paint-owner-change.png": "daf173560ce0b0d644ca15dafddcb6859e252dd1297872ce55e76e25509d0a22"
+      }
+    },
+    {
+      "angle": 61.25,
+      "slug": "yaw61p25",
+      "sourceType": "paint-inbetween",
+      "paintWeight": 0.84375,
+      "fullKeyframeApproved": false,
+      "changedPixels": 26581,
+      "eyeVisibleAlphaMass": 626.1765,
+      "clipHairContactCoverage": 0.778092,
+      "sourceDonorYaw": 60.0,
+      "sourceDonorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "sourcePartOrigins": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "a5a1377cc549a6e5407c5eafb1a6fa4b157f98c96382d777223b545378682c87",
+        "p15-37-painted-vdd.png": "572ac49841a6ea11effd8aef5eb64416a38133ea506588681d3fd002074855f4",
+        "eye-far.png": "fcb3d53b98b6b61d097cf7204140af02b1b8355ea85aad4b2bd5f06e145b3b1d",
+        "face-skin.png": "07f436112ff22f7e5b33701cfec84a268bedf864babc66ae2be561e20a8370ce",
+        "hair-front.png": "bc51de6fb7b66c928ee5876ae995387d26950543ff2775216048557b5d357bd0",
+        "clip-gold.png": "1bdc651a29a1bfd90363cff76b0a715099508b0ec0335172fd85c9ec01161396",
+        "eye-hidden-source.png": "5a3df81268c817f7b56fcbdb4c2ca82cfc788ea477c2c6c86dafca4599ee251e",
+        "new-keyart-rgb.png": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+        "paint-change-x4.png": "65bb500168cd187c14f2994ec792e2678037d2021aba4b3625f74153892e334f",
+        "paint-owner-change.png": "0b55a0d385466d9929711d027a82654c39175e0a1f19bb6ef6b62cc3e0c0bfd7"
+      }
+    },
+    {
+      "angle": 62.5,
+      "slug": "yaw62p5",
+      "sourceType": "paint-inbetween",
+      "paintWeight": 0.5,
+      "fullKeyframeApproved": false,
+      "changedPixels": 25151,
+      "eyeVisibleAlphaMass": 466.4785,
+      "clipHairContactCoverage": 0.744479,
+      "sourceDonorYaw": 60.0,
+      "sourceDonorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "sourcePartOrigins": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "1c3c77eac8a1a8b64db217fd544caddd783cc17000b770143515b82986c34214",
+        "p15-37-painted-vdd.png": "ab746b0a72f12ec175efe63e9e688ff3272dda25e35268ff30e176b3092c505f",
+        "eye-far.png": "37f15e1f876f51b09c755099b62984e83dbbd7e60ed6791ea289c2739cacf82a",
+        "face-skin.png": "ff26c04d9adff8dae45eb466490e832774a89f2746352a81449f28ea0a48ee94",
+        "hair-front.png": "70adddd59c424c24e84c49771aa050ce23ee59e1b0f17ccd2e04dd894da6b589",
+        "clip-gold.png": "01e42846d79cd456911490af876a2fdc49cee6d9208ee503b35f289e7a5def91",
+        "eye-hidden-source.png": "886636e8e029fa830e958e7f101b825420c461b8bafe90a0edb902d83f991a4b",
+        "new-keyart-rgb.png": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+        "paint-change-x4.png": "f78b7ab65e91eef5246322f6e1e34f79343ed7b2c8e5386081a81dee8a9ffd8f",
+        "paint-owner-change.png": "5ca3ad492dcbb9b86f781bc023d70a81a533a7d2d5ceb66dad24f0c6166e7305"
+      }
+    },
+    {
+      "angle": 63.75,
+      "slug": "yaw63p75",
+      "sourceType": "paint-inbetween",
+      "paintWeight": 0.15625,
+      "fullKeyframeApproved": false,
+      "changedPixels": 23561,
+      "eyeVisibleAlphaMass": 274.1176,
+      "clipHairContactCoverage": 0.718759,
+      "sourceDonorYaw": 60.0,
+      "sourceDonorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "sourcePartOrigins": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "44f448f72bcf87095b4250e8eee1be604b40bde609f60e3cd2565df4fe5e414a",
+        "p15-37-painted-vdd.png": "1a8b2b3f8c7e0b1919877544d70b51b01401c55fa51373491606f23925e0ae55",
+        "eye-far.png": "e9c2fc9997e1862c0e56019497ba3ad53d80ccb3d7dabeae47661e06061b60e8",
+        "face-skin.png": "4f82e814139c9f975db70475b31e420849ca4c5632f1f26f5f5391e971d42fd2",
+        "hair-front.png": "0cf268a1341e2bd1491b43b4e231de3f7539a3f34a7d63cc6cf9d989582f7485",
+        "clip-gold.png": "b2a9b9a6dfd5419d748c8e3ddee07a1a5c4ecb29e9ce585b20b639da9b04b49f",
+        "eye-hidden-source.png": "ecb80de48260f5ffdd3169bbbe2c1624efbcbb406d0ca5c8a0e238a413d2c9bf",
+        "new-keyart-rgb.png": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+        "paint-change-x4.png": "c4e340b58ae970cdcbdb177680d47e733f7a3d363fe9eb5b6676ca41debf6fd1",
+        "paint-owner-change.png": "dcfcc97de96e9fe9d677f99b910a12c34148e65c01e7e9cea644fd46c141d637"
+      }
+    },
+    {
+      "angle": 65.0,
+      "slug": "yaw65",
+      "sourceType": "source-endpoint",
+      "paintWeight": 0.0,
+      "fullKeyframeApproved": false,
+      "changedPixels": 0,
+      "eyeVisibleAlphaMass": 218.4824,
+      "clipHairContactCoverage": 0.685118,
+      "sourceDonorYaw": 60.0,
+      "sourceDonorSHA256": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+      "sourcePartOrigins": [
+        {
+          "angle": 60.0,
+          "weight": 1.0
+        }
+      ],
+      "sources": {
+        "p15-35-reference.png": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+        "p15-37-painted-vdd.png": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+        "eye-far.png": "a7ae70c115c945916e14d887427fd8c5f7be407b1a6f97bf7756a428641193e0",
+        "face-skin.png": "e8e61e388647bd11b3be90930c41d79f682d8e795059af90090bc9fa9e88f99d",
+        "hair-front.png": "f87707d2f72c366d44bf1f05fc57e25b5ca8d2bae27f24664952e6cd3b813ac6",
+        "clip-gold.png": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+        "eye-hidden-source.png": "e2873be3170438692ac361f92d045771e11357c354a4004bea318fffa8d4d49b",
+        "new-keyart-rgb.png": "3c37a6e4f11b8c1a2ef33f6e44362088b0a37eb264171c79ff1eab771770da33",
+        "paint-change-x4.png": "a92c05a208bf9b7a3fc8056e0adb7f878f7b0463c266c6fa8095dbaf788033c0",
+        "paint-owner-change.png": "82c1dfe25b432dbe4bf11fec44084557411a3f57c2717f2664b0562e656326f0"
+      }
+    }
+  ],
+  "independentlyApprovedFullOriginalKeyviews": 0,
+  "independentHiddenUnderpaintingApproved": 0,
+  "formalArtistApproval": false
+}

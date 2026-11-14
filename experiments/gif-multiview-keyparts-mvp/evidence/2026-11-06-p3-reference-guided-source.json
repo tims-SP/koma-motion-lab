@@ -1,0 +1,93 @@
+{
+  "schema": "KOMA-P0-P3-REFERENCE-GUIDED-ASSET-GENERATION-QA-V1",
+  "characterId": "p0_character_001",
+  "date": "2026-11-06",
+  "reference": {
+    "originalP0Yaw0SHA256": "4ff6deb850498e307137e221cb0fe48357d9a9aa791467f7ffa54a8e149c7f64",
+    "originalP0Yaw45SHA256": "56312da0b651582b4360870e8a482738d141676a357ca11f6e9a4d98609bc6db",
+    "originalP0Yaw90SHA256": "0a7d1e3167215b7f1de8f73a8b109e65ca0655ca59d7d21e7d4906c3cb0463c2",
+    "approvedHeroMasterSHAverified": false
+  },
+  "generator": {
+    "engine": "MiniMax matrix generate_image reference-guided generation",
+    "transparencyPipeline": "JPEG output converted to RGBA PNG by remove_image_background",
+    "semanticPartGenerationAvailable": false
+  },
+  "generatedCandidates": [
+    {
+      "yawRequested": 22.5,
+      "sha256": "bf72631d4d9b259742f0d2d8f9423aa988fdaff77a7abf7013ee1dab1560f7dd",
+      "path": "private-assets/p3-native-source-trial/yaw0225_whole.png",
+      "mode": "RGBA",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "angleAcceptance": "PENDING_FURTHER_POSE_CONSTRAINTS"
+    },
+    {
+      "yawRequested": 67.5,
+      "sha256": "e68682d0f5f3d30505adfe988bfcc5245ebd0d0806f47cd6ab834fd049b8156f",
+      "path": "private-assets/p3-native-source-trial/yaw0675_whole.png",
+      "mode": "RGBA",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "angleAcceptance": "PENDING_FURTHER_POSE_CONSTRAINTS"
+    },
+    {
+      "yawRequested": 67.5,
+      "sha256": "8804f7967e452e85d279319ad913831f1d1d51e741d6e39684a33ed689bf4aff",
+      "path": "private-assets/p3-native-source-trial/iteration2/yaw0675_pose_guided.png",
+      "mode": "RGBA",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "angleAcceptance": "PENDING_FURTHER_POSE_CONSTRAINTS"
+    }
+  ],
+  "qa": {
+    "allThreeRGBA1024": true,
+    "alphaCornersTransparent": true,
+    "globalSourceGeneratedViews": 3,
+    "originalReferenceFrames": 3,
+    "silhouetteMidwayViewProgress": {
+      "definition": "(1-IoU(start,candidate))/[(1-IoU(start,candidate))+(1-IoU(candidate,end))] restricted to source head ROI",
+      "acceptedDiagnosticRange": [
+        0.3,
+        0.7
+      ],
+      "22.5": 0.06256,
+      "67.5": 0.182852,
+      "status": "GENERATED_VIEW_ANGLES_REQUIRE_POSE_CONSTRAINTS"
+    },
+    "secondPoseGuidedCameraEstimate": "around 35-45 deg; exact 67.5 not verified",
+    "identityDesignPreservation": "visually consistent P0 hair outfit and signature elements",
+    "pureNativeRGBAProducedByGenerator": false,
+    "singleComponentArtMeshesGenerated": false
+  },
+  "outputs": {
+    "fiveViewContact": {
+      "path": "private-assets/p3-native-source-trial/preview/five-view-source-comparison.jpg",
+      "sha256": "f48328b5742d846eccc22808d835c63a1d7ae1f632680940efebd2493a2b402c"
+    },
+    "fiveViewGIF": {
+      "frames": 8,
+      "path": "private-assets/p3-native-source-trial/preview/five-view-identity-storyboard.gif",
+      "sha256": "e00b0c3397a81bfa43ef9e5a8a8f51befdaf6552fd940047b7b760f534118ea1"
+    },
+    "completeReviewPackage": {
+      "path": "private-assets/exports/p0-character-001-multiview-source-review-v4.zip",
+      "bytes": 27528797,
+      "files": 97,
+      "sha256": "10e17c51a0953f6c15c292fcf4127203a7f393c26adaae57dcf786584c9849e7"
+    }
+  },
+  "regression": {
+    "passed": 29,
+    "failed": 0
+  },
+  "nextAction": "Build angle constrained layer-specific source art with original P0 identity and physical eye/ear/hair occlusion, then retest source composition and 2.5D turn"
+}

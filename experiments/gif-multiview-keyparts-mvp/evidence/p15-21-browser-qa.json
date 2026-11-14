@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "yawIndex": 0,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 1440,
+      "yawIndex": 1,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 1440,
+      "yawIndex": 2,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 1440,
+      "yawIndex": 3,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 1440,
+      "yawIndex": 4,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 390,
+      "yawIndex": 0,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 390,
+      "yawIndex": 1,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 390,
+      "yawIndex": 2,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 390,
+      "yawIndex": 3,
+      "loaded": 14,
+      "parts": 13
+    },
+    {
+      "viewport": 390,
+      "yawIndex": 4,
+      "loaded": 14,
+      "parts": 13
+    }
+  ],
+  "errors": [],
+  "interactiveChecks": 6
+}

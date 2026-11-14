@@ -1,0 +1,54 @@
+{
+  "schema": "KOMA_P15_134_NATIVE_OCCLUSION_UNDERPAINT_V1",
+  "characterId": "p0_character_001",
+  "requestedYaw": 112.5,
+  "tool": "image_gen.imagegen",
+  "nativeUnderpaintSHA256": "b0a24c7cbb6a20c7091ac273c741b0e5d88a4e2134056806caf95a2fad825b25",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceSHA256": "79f4902a02ca47f78a5aad36502b5ce0f0ecb812bc42c33552f6bc5685d7b0c2",
+  "hairCandidateSHA256": "8781add5562ce2b8bf8121b264fa6dbb417466e2b0044fa737f21e18c82772e4",
+  "nativeRGBAProven": true,
+  "sourceAndHairPixelReconstructionExact": true,
+  "underpaintRegistration": {
+    "scale": 0.97,
+    "translationXY": [
+      12,
+      12
+    ],
+    "method": "reuse P15-128 generated source transform; no physical-anchor optimization",
+    "jacketROI": [
+      80,
+      335,
+      375,
+      435
+    ],
+    "jacketAlphaIoU": 0.99594,
+    "jacketCompositeRGBMAE": 3.7189
+  },
+  "displacementStress": {
+    "0": {
+      "compositeDifferenceAgainstOriginalRGBMAE": 0.6196,
+      "newVisibleAlphaPixelsOutsideOriginal": 221
+    },
+    "12": {
+      "compositeDifferenceAgainstOriginalRGBMAE": 16.8539,
+      "newVisibleAlphaPixelsOutsideOriginal": 3187
+    },
+    "24": {
+      "compositeDifferenceAgainstOriginalRGBMAE": 23.0931,
+      "newVisibleAlphaPixelsOutsideOriginal": 5244
+    }
+  },
+  "underpaintClass": "independently model-generated painted scalp, ear, cheek, neck and jacket behind front hair",
+  "hairLayerClass": "P15-133 approximate visible-pigment mask",
+  "paintedHiddenScalpPresent": true,
+  "artistApprovedGeometry": false,
+  "occlusionEdgeRegistrationAccepted": false,
+  "physicalCorrespondenceValidated": false,
+  "fullRotationVisualAccepted": false,
+  "review": "private-assets/exports/p15-134-underpaint-review/index.html",
+  "next": "Correct scalp/ear/face/collar underpaint geometry and replace P15-133 hair-pigment mask with source-authored closed ArtMesh silhouette. Validate recovered hidden region under hair displacement."
+}

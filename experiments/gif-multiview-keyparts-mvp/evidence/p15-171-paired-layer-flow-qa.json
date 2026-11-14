@@ -1,0 +1,169 @@
+{
+  "schema": "KOMA_P15_171_PAIRED_LAYER_FLOW_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "keyviewPairs": {
+    "90": {
+      "rootPixels": 45,
+      "underpaintPixels": 45,
+      "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+      "pairedReassemblyExact": true
+    },
+    "112.5": {
+      "rootPixels": 155,
+      "underpaintPixels": 155,
+      "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+      "pairedReassemblyExact": true
+    },
+    "135": {
+      "rootPixels": 70,
+      "underpaintPixels": 70,
+      "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+      "pairedReassemblyExact": true
+    }
+  },
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sourceKeysPixelExact": true,
+      "bodyBelowY125Exact": true
+    },
+    "paired_crown": {
+      "maxAdjacentRGBMAE": 12.2591,
+      "adjacentRGBMAE": [
+        12.2591,
+        11.1756,
+        10.4848,
+        11.7121
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sourceKeysPixelExact": true,
+      "bodyBelowY125Exact": true
+    },
+    "paired_root": {
+      "maxAdjacentRGBMAE": 12.242,
+      "adjacentRGBMAE": [
+        12.242,
+        11.192,
+        10.4656,
+        11.7337
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sourceKeysPixelExact": true,
+      "bodyBelowY125Exact": true
+    },
+    "paired_root_soft": {
+      "maxAdjacentRGBMAE": 12.2321,
+      "adjacentRGBMAE": [
+        12.2321,
+        11.1983,
+        10.4623,
+        11.7424
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sourceKeysPixelExact": true,
+      "bodyBelowY125Exact": true
+    }
+  },
+  "midframeChecks": {
+    "paired_crown": {
+      "101.25": {
+        "pairedCrownRGBEditedPixels": 8452,
+        "foregroundLoopPixels": 775,
+        "sourceBelowY125Exact": true,
+        "sourceCrownAlphaChangedPixels": 246
+      },
+      "123.75": {
+        "pairedCrownRGBEditedPixels": 8071,
+        "foregroundLoopPixels": 1306,
+        "sourceBelowY125Exact": true,
+        "sourceCrownAlphaChangedPixels": 172
+      }
+    },
+    "paired_root": {
+      "101.25": {
+        "pairedCrownRGBEditedPixels": 8240,
+        "foregroundLoopPixels": 775,
+        "sourceBelowY125Exact": true,
+        "sourceCrownAlphaChangedPixels": 246
+      },
+      "123.75": {
+        "pairedCrownRGBEditedPixels": 7951,
+        "foregroundLoopPixels": 1306,
+        "sourceBelowY125Exact": true,
+        "sourceCrownAlphaChangedPixels": 172
+      }
+    },
+    "paired_root_soft": {
+      "101.25": {
+        "pairedCrownRGBEditedPixels": 5892,
+        "foregroundLoopPixels": 770,
+        "sourceBelowY125Exact": true,
+        "sourceCrownAlphaChangedPixels": 246
+      },
+      "123.75": {
+        "pairedCrownRGBEditedPixels": 5769,
+        "foregroundLoopPixels": 1311,
+        "sourceBelowY125Exact": true,
+        "sourceCrownAlphaChangedPixels": 183
+      }
+    }
+  },
+  "materialMethod": "independent DIS crown-background interpolation with source-owned ahoge root and free-tip transform",
+  "artistApprovedUnderpaint": false,
+  "artistApprovedHairAttachment": false,
+  "continuousVisualAccepted": false,
+  "canonicalRendererUpdated": false,
+  "review": "private-assets/exports/p15-171-paired-layer-flow/index.html",
+  "gate": {
+    "sourcePairsExact": true,
+    "nativeKeysExact": true,
+    "deepBodyExact": true,
+    "midviewConnected": true,
+    "beatsReference": false,
+    "artistApproval": false,
+    "passes": false
+  }
+}

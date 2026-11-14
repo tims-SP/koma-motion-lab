@@ -1,0 +1,936 @@
+{
+  "schema": "KOMA_P15_104_DETAIL_GARMENT_RENDER_V1",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "sourceAngles": [
+    60,
+    75
+  ],
+  "sourceMeshSHA256": "07630446cd84068a8fdb3214f8795e0e756fd45c2b6dd9d9c2f1606bf24a14cf",
+  "sourceArtMesh": "P15-103 independent garment layer/UV source",
+  "featureMatches": {
+    "collar": 3,
+    "bow": 6,
+    "jewel": 2,
+    "shoulder.left": 2
+  },
+  "methods": {
+    "ink_all_detail_blend": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "sourceExact": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw61p875.png",
+        "sha256": "b4f5f1dde6d8f1f68a59ff2f9993e98fb904a4af71c0f193da47d230fab7116c",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw63p75.png",
+        "sha256": "4b582d2f563f6dc9ba92fb6c530efb362f60e664ea98231c7d390c1636c3ed60",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 2
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 16
+          }
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw65p625.png",
+        "sha256": "1a7b955c06f1a8b2c1d59eac20455459da35ddcff7173060c1c4ddf58b157de7",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw67p5.png",
+        "sha256": "19f91e018c80fc1866a97da6902b4606c3a493b0a63fe2dfee202654a7fad6d1",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw69p375.png",
+        "sha256": "34cbf2d7cc71e5e2d4d3f1586eb01cbd7cd2d6feea697b5d23c24221bf71947f",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw71p25.png",
+        "sha256": "c13502a30db9cc676357446dd7b82271d4b9497e38a47be628942b93cf5bba46",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 140
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 145
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw73p125.png",
+        "sha256": "c9818f27c440ddb9ebb0982b6c0cbb7554f34b0f0fd0a39e39efd74a2029014d",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "sourceExact": true
+        }
+      }
+    },
+    "ink_bow_only": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "sourceExact": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw61p875.png",
+        "sha256": "7cbc583e3f0705bc58dca228dd477e87cc03fdebc21c783e74df557d77716103",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw63p75.png",
+        "sha256": "ae54534ac7278178e2e944747bd62c6952360f6863831d3af78dd56e9080323e",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 16
+          }
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw65p625.png",
+        "sha256": "c1e648e3011610899a445f9fc7afbf8e5ebbd62076a21c0a632cd7cbb57e3986",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw67p5.png",
+        "sha256": "27a343aa7f0e3f364ad539674f6273a9907d886a1774ee35fe69078c3afc3b3e",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw69p375.png",
+        "sha256": "54484bbbb5a0ac8e50f7798827db2a058bb81637369b1d2f16ab71075f8f85bc",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw71p25.png",
+        "sha256": "785a92a69e106be80ded44db406ab4f297b9e2f7b262a02799c26691a29b9e17",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw73p125.png",
+        "sha256": "61179e3458b01392dd88c46c127a6b74bb496c1c700a71b75d37c05171f5d5b4",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": false
+          },
+          "collar": {
+            "adaptive": false
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_bow_only-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "sourceExact": true
+        }
+      }
+    },
+    "ink_soft_owner": {
+      "60": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "diagnostics": {
+          "sourceExact": true
+        }
+      },
+      "61.875": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw61p875.png",
+        "sha256": "3bae67085d4a52a66803e06716b94485c6b441dad40eef02ce270a0c11071ca5",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "63.75": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw63p75.png",
+        "sha256": "0aeb7d63c4fca8b0eaa6e1f3e837cdc5f9408edd3e4623ac0abb2c6c3f2e6076",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 2
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 16
+          }
+        }
+      },
+      "65.625": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw65p625.png",
+        "sha256": "dcae397218e9749f0229772e6cee5b17562f1578558a5dfc3d44e372592a9525",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "67.5": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw67p5.png",
+        "sha256": "8c9531491899597a2530cc892d6daf18c6679c8d99a08fd517b93805221089e5",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "69.375": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw69p375.png",
+        "sha256": "de467ff394317aa3ff5e0da128ec3252d652972fe05be3bc38f0c087a960089f",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "71.25": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw71p25.png",
+        "sha256": "e9ed287047833f7ef8680e1f97a06e5b7aa801f2f56a310e293e254c6d1fc366",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 140
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 145
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "73.125": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw73p125.png",
+        "sha256": "028552f62649e4d5bc1b8fd322af6f7105627548ec91ce55bb79246b319d1e4a",
+        "diagnostics": {
+          "shoulder.left": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "collar": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "bow": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          },
+          "jewel": {
+            "adaptive": true,
+            "subpixelCracks": 0
+          }
+        }
+      },
+      "75": {
+        "relativePath": "private-assets/exports/p15-104-detail-render/ink_soft_owner-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "diagnostics": {
+          "sourceExact": true
+        }
+      }
+    }
+  },
+  "geometryFolds": 0,
+  "continuousYawAccepted": false,
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "bow": {
+        "adjacentMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentMAE": 10.1016,
+        "midpointAdjacentMAE": 7.2519
+      },
+      "jewel": {
+        "adjacentMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentMAE": 9.1631,
+        "midpointAdjacentMAE": 5.1791
+      },
+      "collar": {
+        "adjacentMAE": [
+          9.6149,
+          6.7532,
+          6.5024,
+          6.3125,
+          6.2275,
+          6.231,
+          6.2239,
+          8.6926
+        ],
+        "maxAdjacentMAE": 9.6149,
+        "midpointAdjacentMAE": 6.3125
+      },
+      "shoulder": {
+        "adjacentMAE": [
+          7.386,
+          5.6937,
+          5.4589,
+          5.3751,
+          5.2582,
+          5.154,
+          5.1292,
+          6.3367
+        ],
+        "maxAdjacentMAE": 7.386,
+        "midpointAdjacentMAE": 5.3751
+      }
+    },
+    "P15-103-all_parts_blend": {
+      "bow": {
+        "adjacentMAE": [
+          14.3654,
+          9.1142,
+          8.8223,
+          8.8458,
+          9.1193,
+          9.4513,
+          10.0396,
+          14.659
+        ],
+        "maxAdjacentMAE": 14.659,
+        "midpointAdjacentMAE": 9.1193
+      },
+      "jewel": {
+        "adjacentMAE": [
+          14.8587,
+          9.3628,
+          8.462,
+          8.3191,
+          8.3054,
+          8.6298,
+          9.3249,
+          15.0581
+        ],
+        "maxAdjacentMAE": 15.0581,
+        "midpointAdjacentMAE": 8.3191
+      },
+      "collar": {
+        "adjacentMAE": [
+          13.1901,
+          8.7513,
+          8.1207,
+          8.136,
+          8.2613,
+          8.5677,
+          9.188,
+          13.0505
+        ],
+        "maxAdjacentMAE": 13.1901,
+        "midpointAdjacentMAE": 8.2613
+      },
+      "shoulder": {
+        "adjacentMAE": [
+          9.215,
+          6.71,
+          6.7911,
+          6.9303,
+          7.2602,
+          7.434,
+          7.879,
+          10.6712
+        ],
+        "maxAdjacentMAE": 10.6712,
+        "midpointAdjacentMAE": 7.2602
+      }
+    },
+    "ink_all_detail_blend": {
+      "bow": {
+        "adjacentMAE": [
+          14.177,
+          9.08,
+          8.896,
+          8.9444,
+          9.1691,
+          9.4772,
+          10.0838,
+          14.6998
+        ],
+        "maxAdjacentMAE": 14.6998,
+        "midpointAdjacentMAE": 9.1691
+      },
+      "jewel": {
+        "adjacentMAE": [
+          14.7742,
+          9.5659,
+          8.828,
+          8.6454,
+          8.4961,
+          9.0099,
+          9.8033,
+          15.2513
+        ],
+        "maxAdjacentMAE": 15.2513,
+        "midpointAdjacentMAE": 8.6454
+      },
+      "collar": {
+        "adjacentMAE": [
+          14.1477,
+          9.7551,
+          9.1181,
+          8.997,
+          8.987,
+          9.3451,
+          9.8889,
+          13.6863
+        ],
+        "maxAdjacentMAE": 14.1477,
+        "midpointAdjacentMAE": 8.997
+      },
+      "shoulder": {
+        "adjacentMAE": [
+          10.6141,
+          8.0032,
+          7.8944,
+          7.8818,
+          8.0926,
+          8.317,
+          8.7982,
+          11.4867
+        ],
+        "maxAdjacentMAE": 11.4867,
+        "midpointAdjacentMAE": 8.0926
+      }
+    },
+    "ink_bow_only": {
+      "bow": {
+        "adjacentMAE": [
+          14.3902,
+          9.2433,
+          9.0099,
+          9.0417,
+          9.2725,
+          9.606,
+          10.2059,
+          14.6848
+        ],
+        "maxAdjacentMAE": 14.6848,
+        "midpointAdjacentMAE": 9.2725
+      },
+      "jewel": {
+        "adjacentMAE": [
+          15.0726,
+          9.7896,
+          8.9956,
+          8.7372,
+          8.5455,
+          9.0837,
+          9.838,
+          15.3823
+        ],
+        "maxAdjacentMAE": 15.3823,
+        "midpointAdjacentMAE": 8.7372
+      },
+      "collar": {
+        "adjacentMAE": [
+          13.1111,
+          8.7627,
+          8.1498,
+          8.1459,
+          8.2563,
+          8.566,
+          9.186,
+          13.0032
+        ],
+        "maxAdjacentMAE": 13.1111,
+        "midpointAdjacentMAE": 8.2563
+      },
+      "shoulder": {
+        "adjacentMAE": [
+          9.2149,
+          6.7103,
+          6.7911,
+          6.9303,
+          7.2602,
+          7.434,
+          7.879,
+          10.6712
+        ],
+        "maxAdjacentMAE": 10.6712,
+        "midpointAdjacentMAE": 7.2602
+      }
+    },
+    "ink_soft_owner": {
+      "bow": {
+        "adjacentMAE": [
+          13.1783,
+          8.3449,
+          9.0243,
+          12.3085,
+          12.7181,
+          9.6238,
+          9.1708,
+          13.5044
+        ],
+        "maxAdjacentMAE": 13.5044,
+        "midpointAdjacentMAE": 12.7181
+      },
+      "jewel": {
+        "adjacentMAE": [
+          14.2661,
+          9.6664,
+          9.9526,
+          12.2549,
+          11.6716,
+          9.5863,
+          9.8181,
+          14.2792
+        ],
+        "maxAdjacentMAE": 14.2792,
+        "midpointAdjacentMAE": 12.2549
+      },
+      "collar": {
+        "adjacentMAE": [
+          13.9353,
+          9.7275,
+          9.2133,
+          9.582,
+          9.7042,
+          9.5111,
+          9.7612,
+          13.3286
+        ],
+        "maxAdjacentMAE": 13.9353,
+        "midpointAdjacentMAE": 9.7042
+      },
+      "shoulder": {
+        "adjacentMAE": [
+          10.6159,
+          7.9987,
+          7.901,
+          7.876,
+          8.096,
+          8.3098,
+          8.8047,
+          11.4897
+        ],
+        "maxAdjacentMAE": 11.4897,
+        "midpointAdjacentMAE": 8.096
+      }
+    }
+  },
+  "inkAlignmentAt67p5": {
+    "shoulder.left": {
+      "grid": {
+        "edgeAgreementWithin2Px": 0.50904,
+        "edgePixels60": 1066,
+        "edgePixels75": 926
+      },
+      "detailed": {
+        "edgeAgreementWithin2Px": 0.65797,
+        "edgePixels60": 1071,
+        "edgePixels75": 923
+      }
+    },
+    "collar": {
+      "grid": {
+        "edgeAgreementWithin2Px": 0.70128,
+        "edgePixels60": 986,
+        "edgePixels75": 651
+      },
+      "detailed": {
+        "edgeAgreementWithin2Px": 0.74112,
+        "edgePixels60": 919,
+        "edgePixels75": 630
+      }
+    },
+    "bow": {
+      "grid": {
+        "edgeAgreementWithin2Px": 0.64114,
+        "edgePixels60": 1330,
+        "edgePixels75": 1242
+      },
+      "detailed": {
+        "edgeAgreementWithin2Px": 0.69543,
+        "edgePixels60": 1339,
+        "edgePixels75": 1245
+      }
+    },
+    "jewel": {
+      "grid": {
+        "edgeAgreementWithin2Px": 1.0,
+        "edgePixels60": 256,
+        "edgePixels75": 245
+      },
+      "detailed": {
+        "edgeAgreementWithin2Px": 1.0,
+        "edgePixels60": 250,
+        "edgePixels75": 253
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-104-detail-render/detail-garment-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "sourceKeyframesPixelExact": true,
+    "sourceNativeArt": "P0 independently authored 60 and 75 degree garments",
+    "sourceLandmarks": "real SIFT/RANSAC inlier pairs filtered by part ownership, displacement and nonfolding topology",
+    "geometry": "49 total vertices and 58 2D triangles shared across source views",
+    "midpointEdgeAgreement2px": {
+      "shoulder.left": {
+        "grid": {
+          "edgeAgreementWithin2Px": 0.50904,
+          "edgePixels60": 1066,
+          "edgePixels75": 926
+        },
+        "detailed": {
+          "edgeAgreementWithin2Px": 0.65797,
+          "edgePixels60": 1071,
+          "edgePixels75": 923
+        }
+      },
+      "collar": {
+        "grid": {
+          "edgeAgreementWithin2Px": 0.70128,
+          "edgePixels60": 986,
+          "edgePixels75": 651
+        },
+        "detailed": {
+          "edgeAgreementWithin2Px": 0.74112,
+          "edgePixels60": 919,
+          "edgePixels75": 630
+        }
+      },
+      "bow": {
+        "grid": {
+          "edgeAgreementWithin2Px": 0.64114,
+          "edgePixels60": 1330,
+          "edgePixels75": 1242
+        },
+        "detailed": {
+          "edgeAgreementWithin2Px": 0.69543,
+          "edgePixels60": 1339,
+          "edgePixels75": 1245
+        }
+      },
+      "jewel": {
+        "grid": {
+          "edgeAgreementWithin2Px": 1.0,
+          "edgePixels60": 256,
+          "edgePixels75": 245
+        },
+        "detailed": {
+          "edgeAgreementWithin2Px": 1.0,
+          "edgePixels60": 250,
+          "edgePixels75": 253
+        }
+      }
+    },
+    "artifacts": {
+      "collar": "correspondence set includes a provisional collar polygon with nearby hair/neck pixels",
+      "ribbon": "interior folds and ribbon tips retain source-specific silhouettes; some double lines persist",
+      "shoulder": "native jacket gold edging aligns in parts; global torso silhouette remains separately blended",
+      "jewel": "ornament landmark alignment remains source-dependent"
+    },
+    "engineeringQA": "PASS",
+    "visualQuality": "SOURCE_INK_ALIGNMENT_IMPROVED_ARTISTIC_CONTINUITY_PENDING",
+    "selectedVisualBenchmark": "P15-101 head_alpha_blend",
+    "next": "artist-consistent source garment internal fold and outline correspondences for 60/75 keyviews"
+  }
+}

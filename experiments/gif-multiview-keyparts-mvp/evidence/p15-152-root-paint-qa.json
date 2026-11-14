@@ -1,0 +1,105 @@
+{
+  "schema": "KOMA_P15_152_NATIVE_AHOGE_ROOT_PATCH_V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 90.0,
+  "referenceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "nativeSHA256": "401bf03df4f622d5080fc1533dc053d3ab9982aecca05ae7460b2f1fd4d492fa",
+  "nativeRGBA": true,
+  "nativeCanvas": [
+    1254,
+    1254
+  ],
+  "rawMaterial": {
+    "opaquePixels": 1986,
+    "bboxXYXY": [
+      162,
+      45,
+      242,
+      83
+    ],
+    "opaqueOutsideExpectedROI": 72,
+    "opaqueOutsideSourceSilhouette": 259,
+    "overlapExistingArt": 1727
+  },
+  "alignedMaterial": {
+    "opaquePixels": 1986,
+    "bboxXYXY": [
+      194,
+      61,
+      274,
+      99
+    ],
+    "opaqueOutsideExpectedROI": 0,
+    "opaqueOutsideSourceSilhouette": 0,
+    "overlapExistingArt": 1986
+  },
+  "alignment": {
+    "shiftXY": [
+      32,
+      16
+    ],
+    "jacketExcludedCrownIoU": 0.36142
+  },
+  "variants": {
+    "original": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "rootPatchRGBMAE": 0.0,
+      "native112p5And135Exact": true,
+      "sourceBelowY130Exact": true
+    },
+    "root_patch_025": {
+      "maxAdjacentRGBMAE": 12.1083,
+      "rootPatchRGBMAE": 1.8694,
+      "native112p5And135Exact": true,
+      "sourceBelowY130Exact": false
+    },
+    "root_patch_050": {
+      "maxAdjacentRGBMAE": 12.1642,
+      "rootPatchRGBMAE": 3.8333,
+      "native112p5And135Exact": true,
+      "sourceBelowY130Exact": false
+    },
+    "root_patch_075": {
+      "maxAdjacentRGBMAE": 12.6948,
+      "rootPatchRGBMAE": 5.8345,
+      "native112p5And135Exact": true,
+      "sourceBelowY130Exact": false
+    },
+    "bounded_clean_025": {
+      "maxAdjacentRGBMAE": 12.0639,
+      "rootPatchRGBMAE": 1.0459,
+      "native112p5And135Exact": true,
+      "sourceBelowY130Exact": true
+    },
+    "bounded_clean_050": {
+      "maxAdjacentRGBMAE": 12.1006,
+      "rootPatchRGBMAE": 2.0943,
+      "native112p5And135Exact": true,
+      "sourceBelowY130Exact": true
+    }
+  },
+  "rawNonzeroAlphaOutsideExpectedROI": 70932,
+  "rawTransparentRegionGatePassed": false,
+  "boundedCleanRemovedPixels": 73410,
+  "boundedCleanBelowY130Exact": true,
+  "candidateAdmissionGatePassed": false,
+  "visualFindings": "Native paint adds large low-alpha grey-white noise around the crown; bounded cleaning restores the alpha domain, but the root drawing does not establish physical double-root attachment and frame continuity does not exceed the original baseline.",
+  "nativeSourcePreserved": true,
+  "artistVerifiedDoubleRootJunction": false,
+  "hiddenScalpPaintApproved": false,
+  "physicalStrandIdentityVerified": false,
+  "continuousVisualAccepted": false,
+  "review": "private-assets/exports/p15-152-root-paint/index.html",
+  "next": "Complete physically matched double-root layers and scalp underpaint at all three source views, and verify their actual attachment without duplicate ink."
+}

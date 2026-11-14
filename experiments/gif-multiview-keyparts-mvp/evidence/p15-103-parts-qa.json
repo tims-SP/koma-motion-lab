@@ -1,0 +1,278 @@
+{
+  "schema": "KOMA_P15_103_SOURCE_OWNED_GARMENT_PARTS_V1",
+  "characterId": "p0_character_001",
+  "segmentation": "HSV photometric seed + morphology + manual layout proxy",
+  "sourceAngles": [
+    60,
+    75
+  ],
+  "partOrder": [
+    "jacket",
+    "shoulder.left",
+    "collar",
+    "bow",
+    "jewel"
+  ],
+  "sourceReassemblyExact": true,
+  "partBoundariesArtistApproved": false,
+  "views": {
+    "60": {
+      "sourceSHA256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+      "sourceReconstructedPixelExact": true,
+      "reconstructionSHA256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+      "source": "private-assets/exports/p15-97-multiview-motion/yaw60-frame-06.png",
+      "partStats": {
+        "jacket": {
+          "pixels": 980198,
+          "opaquePixels": 370715,
+          "textureSHA256": "f67d795bbdcc9b9a29952996a456d09a716ff242c7324941395c58bd31fc6d80",
+          "maskSHA256": "576c4433c38f9da8df47f3208fc2b295e35c4c1b9a64434f2aa0a151eed8ddc4"
+        },
+        "shoulder.left": {
+          "pixels": 21757,
+          "opaquePixels": 20392,
+          "textureSHA256": "a689a820fc7df00ac607d1d4f184029a6edd43f811def8c982e2047c25d5dce2",
+          "maskSHA256": "375e2bb9bfa1757386e90f0d452ebefdd382617f2cf4859a74c9e273edafcc23"
+        },
+        "collar": {
+          "pixels": 14859,
+          "opaquePixels": 13655,
+          "textureSHA256": "7330fa1cda6f5480d5485c01f24268d7c3f7f224851da76b0640c3fa807914fb",
+          "maskSHA256": "d95a0e708eca0fff07febe4baeab0fca655975ba8d471dacb9c4e14efcdf0674"
+        },
+        "bow": {
+          "pixels": 29207,
+          "opaquePixels": 28660,
+          "textureSHA256": "95db05a730a5a718bf8efd6fb8252f37c6bab335e9437cd0dc1bc0ae58d58bc2",
+          "maskSHA256": "8c7bb99cbb29e7c7d71fb86c191d51ad4a4a11827b69be3d6820d77aaa7e0320"
+        },
+        "jewel": {
+          "pixels": 2555,
+          "opaquePixels": 2555,
+          "textureSHA256": "f41dc67b6057e8cea035b621fddde312084365081fa31471412248ea5411c5b2",
+          "maskSHA256": "e59bef64d9c6a5c6e80fd4c865efdc4834c48945f51de5e32682270aa8b22b07"
+        }
+      },
+      "bowHSVBlobPx": 30423,
+      "jewelPx": 2555,
+      "collarPolygon": [
+        [
+          470,
+          670
+        ],
+        [
+          585,
+          676
+        ],
+        [
+          634,
+          698
+        ],
+        [
+          702,
+          669
+        ],
+        [
+          764,
+          689
+        ],
+        [
+          779,
+          741
+        ],
+        [
+          759,
+          800
+        ],
+        [
+          686,
+          843
+        ],
+        [
+          651,
+          803
+        ],
+        [
+          591,
+          809
+        ],
+        [
+          523,
+          760
+        ]
+      ],
+      "shoulderPolygon": [
+        [
+          209,
+          705
+        ],
+        [
+          330,
+          686
+        ],
+        [
+          454,
+          702
+        ],
+        [
+          497,
+          746
+        ],
+        [
+          480,
+          818
+        ],
+        [
+          399,
+          859
+        ],
+        [
+          299,
+          833
+        ]
+      ],
+      "bowROI": [
+        500,
+        751,
+        768,
+        961
+      ],
+      "jewelROI": [
+        595,
+        770,
+        679,
+        860
+      ],
+      "contact": "private-assets/exports/p15-103-parts/yaw60/parts-contact.jpg"
+    },
+    "75": {
+      "sourceSHA256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+      "sourceReconstructedPixelExact": true,
+      "reconstructionSHA256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+      "source": "private-assets/exports/p15-97-multiview-motion/yaw75-frame-06.png",
+      "partStats": {
+        "jacket": {
+          "pixels": 986623,
+          "opaquePixels": 344263,
+          "textureSHA256": "fba22a1b780d0454ae7ea735d04e118047cb80b828cd86166cf4484f8feb2334",
+          "maskSHA256": "4dbf12064fd7632c4f397bb729969f11c158940a344fa7cdf2c3a77ff664fcf1"
+        },
+        "shoulder.left": {
+          "pixels": 24768,
+          "opaquePixels": 22959,
+          "textureSHA256": "a671fb40c407799ebb6a1641427271375251cc1b4ce794498fcc3cde420d0fd9",
+          "maskSHA256": "715f7189bd7a68c1124963f0c99f2287a8f451208109c757fbcc112c347f9fd4"
+        },
+        "collar": {
+          "pixels": 11915,
+          "opaquePixels": 10632,
+          "textureSHA256": "ac6201f4d2063da46c527526bb4daf2e0759e1dd62561cb9d0e8fcc9cfe9b719",
+          "maskSHA256": "a0b5227d7fda821c814e7bd4590bccae5566931993975cf129492b3f710c0e1a"
+        },
+        "bow": {
+          "pixels": 23339,
+          "opaquePixels": 22153,
+          "textureSHA256": "baf8834aea3fa7560a01f511ff05e5445490bef31300ab2f18773e3005e579f8",
+          "maskSHA256": "9880904b50144f4cfe7bec4fde58bbfdc90bc0b626985c384bb98c156c45ea02"
+        },
+        "jewel": {
+          "pixels": 1931,
+          "opaquePixels": 1923,
+          "textureSHA256": "4b33d62335012f88cb143257d861fdd547d3ecccf7f793f8bee759d2d4611ebd",
+          "maskSHA256": "70d2d7493162f2b7251811e51e59cea28193beeea5f39f8f20669a9934d9afe5"
+        }
+      },
+      "bowHSVBlobPx": 24552,
+      "jewelPx": 1931,
+      "collarPolygon": [
+        [
+          487,
+          663
+        ],
+        [
+          593,
+          668
+        ],
+        [
+          642,
+          694
+        ],
+        [
+          708,
+          675
+        ],
+        [
+          786,
+          693
+        ],
+        [
+          795,
+          752
+        ],
+        [
+          770,
+          813
+        ],
+        [
+          699,
+          849
+        ],
+        [
+          651,
+          812
+        ],
+        [
+          592,
+          811
+        ],
+        [
+          541,
+          761
+        ]
+      ],
+      "shoulderPolygon": [
+        [
+          217,
+          704
+        ],
+        [
+          330,
+          690
+        ],
+        [
+          461,
+          705
+        ],
+        [
+          516,
+          746
+        ],
+        [
+          501,
+          829
+        ],
+        [
+          405,
+          870
+        ],
+        [
+          296,
+          839
+        ]
+      ],
+      "bowROI": [
+        527,
+        748,
+        780,
+        974
+      ],
+      "jewelROI": [
+        608,
+        770,
+        686,
+        857
+      ],
+      "contact": "private-assets/exports/p15-103-parts/yaw75/parts-contact.jpg"
+    }
+  }
+}

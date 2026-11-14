@@ -1,0 +1,163 @@
+{
+  "schema": "KOMA_P15_139_ARTMESH_REVEAL_V1",
+  "characterId": "p0_character_001",
+  "angle": 112.5,
+  "geometry": "two-triangle regular-grid ArtMesh with piecewise barycentric inverse UV sampling",
+  "vertexCount": 400,
+  "triangleCount": 722,
+  "vertexSpacing": 24,
+  "geometryQuality": {
+    "0": {
+      "minSignedArea": 100.0,
+      "folds": 0
+    },
+    "12": {
+      "minSignedArea": 100.0,
+      "folds": 0
+    },
+    "24": {
+      "minSignedArea": 100.0,
+      "folds": 0
+    }
+  },
+  "composites": {
+    "baseline_translation": {
+      "0": {
+        "holes": {
+          "all": 0,
+          "rear_scalp": 0,
+          "eye": 0,
+          "ear": 0,
+          "neck": 0
+        },
+        "rgbMAE": 0.6099
+      },
+      "12": {
+        "holes": {
+          "all": 3579,
+          "rear_scalp": 2630,
+          "eye": 214,
+          "ear": 0,
+          "neck": 13
+        },
+        "rgbMAE": 14.6083
+      },
+      "24": {
+        "holes": {
+          "all": 6483,
+          "rear_scalp": 5296,
+          "eye": 302,
+          "ear": 0,
+          "neck": 13
+        },
+        "rgbMAE": 20.0523
+      }
+    },
+    "hybrid_translation": {
+      "0": {
+        "holes": {
+          "all": 0,
+          "rear_scalp": 0,
+          "eye": 0,
+          "ear": 0,
+          "neck": 0
+        },
+        "rgbMAE": 0.6492
+      },
+      "12": {
+        "holes": {
+          "all": 2831,
+          "rear_scalp": 1801,
+          "eye": 225,
+          "ear": 81,
+          "neck": 144
+        },
+        "rgbMAE": 14.5981
+      },
+      "24": {
+        "holes": {
+          "all": 3788,
+          "rear_scalp": 2520,
+          "eye": 313,
+          "ear": 81,
+          "neck": 179
+        },
+        "rgbMAE": 19.0635
+      }
+    },
+    "baseline_mesh": {
+      "0": {
+        "holes": {
+          "all": 0,
+          "rear_scalp": 0,
+          "eye": 0,
+          "ear": 0,
+          "neck": 0
+        },
+        "rgbMAE": 0.6099
+      },
+      "12": {
+        "holes": {
+          "all": 3370,
+          "rear_scalp": 2411,
+          "eye": 223,
+          "ear": 0,
+          "neck": 12
+        },
+        "rgbMAE": 13.8897
+      },
+      "24": {
+        "holes": {
+          "all": 5742,
+          "rear_scalp": 4551,
+          "eye": 315,
+          "ear": 0,
+          "neck": 13
+        },
+        "rgbMAE": 17.8999
+      }
+    },
+    "hybrid_mesh": {
+      "0": {
+        "holes": {
+          "all": 0,
+          "rear_scalp": 0,
+          "eye": 0,
+          "ear": 0,
+          "neck": 0
+        },
+        "rgbMAE": 0.6492
+      },
+      "12": {
+        "holes": {
+          "all": 2680,
+          "rear_scalp": 1678,
+          "eye": 227,
+          "ear": 43,
+          "neck": 114
+        },
+        "rgbMAE": 13.8597
+      },
+      "24": {
+        "holes": {
+          "all": 3391,
+          "rear_scalp": 2120,
+          "eye": 326,
+          "ear": 80,
+          "neck": 128
+        },
+        "rgbMAE": 17.0553
+      }
+    }
+  },
+  "sourcePixelSplitExact": true,
+  "sourceKeyframeUnmodified": true,
+  "nativeUnderpaintUnmodified": true,
+  "artistApprovedTopology": false,
+  "realCrossViewCorrespondence": false,
+  "physicalDepthOrderAccepted": false,
+  "actualYawTransitionAccepted": false,
+  "visualAcceptance": false,
+  "review": "private-assets/exports/p15-139-hair-artmesh/index.html",
+  "next": "Replace rectangular proxy with hair-root/tip boundary-conforming mesh and source-paint behind eye, ear and neck. Validate by actual 90–135 yaw mesh interpolation, not only displaced 112.5 view."
+}

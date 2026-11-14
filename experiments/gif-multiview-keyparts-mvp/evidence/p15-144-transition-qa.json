@@ -1,0 +1,35 @@
+{
+  "schema": "KOMA_P15_144_REGISTERED_BANGS_YAW_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "maxAdjacentRGBMAE": {
+    "reference": 12.0984,
+    "registered": 12.6733
+  },
+  "adjacentRGBMAE": {
+    "reference": [
+      12.0984,
+      11.067,
+      10.4616,
+      11.6306
+    ],
+    "registered": [
+      12.6733,
+      11.585,
+      11.2667,
+      11.6086
+    ]
+  },
+  "original90And135PixelExact": true,
+  "native112p5ImagePreserved": true,
+  "midway112p5SourcePixelExact": false,
+  "realHairPartIdentityApproved": false,
+  "continuousVisualAccepted": false,
+  "review": "private-assets/exports/p15-144-bangs-registration/transition.html"
+}

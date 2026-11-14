@@ -1,0 +1,256 @@
+{
+  "schema": "KOMA-P0-P15-06-INDEPENDENT-ARTMESH-INGEST-V1",
+  "characterId": "p0_character_001",
+  "yaw": 72.5,
+  "sourceKind": "registered-p14-fixture",
+  "sourceProducer": null,
+  "sourceSeed": null,
+  "referencePainting": {
+    "path": "p14-authored-candidates/yaw072p5-artmesh/yaw072p5-p0-source-mapped-artmesh.png",
+    "sha256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb"
+  },
+  "semanticLayers": [
+    {
+      "semanticId": "body.reference",
+      "depthOrder": 0,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/body.reference.png",
+      "sourceSHA256": "c840ad1359540803e67800c04bf12b973e12f21141761d03e8ed6ec1d603d56a",
+      "visiblePixels": 130632,
+      "partialAlphaPixels": 3017,
+      "bboxRGBA": [
+        206,
+        715,
+        763,
+        1024
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "hair.back",
+      "depthOrder": 1,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.back.png",
+      "sourceSHA256": "b21b0a5efff13b8391b3b14583204c9d922df6675b783a10b58d55be6a66bb23",
+      "visiblePixels": 34146,
+      "partialAlphaPixels": 4428,
+      "bboxRGBA": [
+        153,
+        86,
+        737,
+        747
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "face.skin",
+      "depthOrder": 2,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/face.skin.png",
+      "sourceSHA256": "82eec148a06b23d42c671aa7f59f45ff31e10cd81f704b85bea5629153a6b71f",
+      "visiblePixels": 54654,
+      "partialAlphaPixels": 1438,
+      "bboxRGBA": [
+        434,
+        256,
+        769,
+        714
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "ear.far",
+      "depthOrder": 3,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/ear.far.png",
+      "sourceSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+      "visiblePixels": 0,
+      "partialAlphaPixels": 0,
+      "bboxRGBA": null,
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "ear.near",
+      "depthOrder": 4,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/ear.near.png",
+      "sourceSHA256": "52efbd10bdc2d1b7132d7b23858692330ab80aac9698cefa2fbc976cb6b07da4",
+      "visiblePixels": 6995,
+      "partialAlphaPixels": 0,
+      "bboxRGBA": [
+        422,
+        420,
+        504,
+        555
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "hair.side",
+      "depthOrder": 5,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.side.png",
+      "sourceSHA256": "e76b9ee5336fc3665a96b3a9df97b05d4b48f71ae8cd9357391ee6b0a040e74d",
+      "visiblePixels": 80320,
+      "partialAlphaPixels": 4058,
+      "bboxRGBA": [
+        153,
+        381,
+        539,
+        738
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "eye.far",
+      "depthOrder": 6,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/eye.far.png",
+      "sourceSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+      "visiblePixels": 0,
+      "partialAlphaPixels": 0,
+      "bboxRGBA": null,
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "eye.near",
+      "depthOrder": 7,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/eye.near.png",
+      "sourceSHA256": "547937351db3dad9cf003f0a9f014a270c8c68496709a6dfe1c4e042e13f76b7",
+      "visiblePixels": 17272,
+      "partialAlphaPixels": 201,
+      "bboxRGBA": [
+        533,
+        364,
+        750,
+        491
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "nose",
+      "depthOrder": 8,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/nose.png",
+      "sourceSHA256": "67d68300cee855c92dfa5366a483a297ea4bce72511fd0f432f3c578dbab3936",
+      "visiblePixels": 4254,
+      "partialAlphaPixels": 425,
+      "bboxRGBA": [
+        676,
+        486,
+        747,
+        571
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "mouth",
+      "depthOrder": 9,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/mouth.png",
+      "sourceSHA256": "215042fdcbdb2f6011409d7b64140e7ad36f6437f1432a8f98a3c1c412368b6e",
+      "visiblePixels": 1898,
+      "partialAlphaPixels": 264,
+      "bboxRGBA": [
+        668,
+        569,
+        728,
+        620
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "hair.front",
+      "depthOrder": 10,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.front.png",
+      "sourceSHA256": "75272764b025f0044c37f73e2294802cafeb29a3139bcddcbbaa9d3cd3f0bddc",
+      "visiblePixels": 111848,
+      "partialAlphaPixels": 2203,
+      "bboxRGBA": [
+        312,
+        90,
+        767,
+        627
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "hair.ahoge",
+      "depthOrder": 11,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.ahoge.png",
+      "sourceSHA256": "91408de76082fc5a20acc3d9370740efaec5d8489f9c62bee9685e5220aa9298",
+      "visiblePixels": 9184,
+      "partialAlphaPixels": 5888,
+      "bboxRGBA": [
+        408,
+        12,
+        625,
+        147
+      ],
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    },
+    {
+      "semanticId": "hair.clip.cross_gold",
+      "depthOrder": 12,
+      "path": "p14-authored-candidates/yaw072p5-artmesh/layers/hair.clip.cross_gold.png",
+      "sourceSHA256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+      "visiblePixels": 0,
+      "partialAlphaPixels": 0,
+      "bboxRGBA": null,
+      "registeredCanvas": [
+        1024,
+        1024
+      ],
+      "sourceKind": "registered-p14-fixture"
+    }
+  ],
+  "partCount": 13,
+  "recomposition": {
+    "maximumAlphaDifference": 0,
+    "maximumVisibleRGBDifference": 0,
+    "meanVisibleRGBDifference": 0.0
+  },
+  "sourceOriginalP0MetadataSHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+  "sourceHoldoutContractSHA256": "203a0eb2bee711c8416c927400b6c953bfa837b3c27cc39a5f8e921bb246b3dc",
+  "status": "PASS_SOURCE_ARTMESH_INGEST_FIXTURE",
+  "artisticAcceptance": "NOT_APPLICABLE_FIXTURE"
+}

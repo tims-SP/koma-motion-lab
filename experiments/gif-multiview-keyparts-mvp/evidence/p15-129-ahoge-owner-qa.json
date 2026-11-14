@@ -1,0 +1,75 @@
+{
+  "schema": "KOMA_P15_129_AHOGE_OWNER_STUDY_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "methods": {
+    "bidirectional_blend": {
+      "maxAdjacentCompositeRGBMAE": 12.0984,
+      "adjacentCompositeRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true
+    },
+    "intermediate_owner": {
+      "maxAdjacentCompositeRGBMAE": 12.4542,
+      "adjacentCompositeRGBMAE": [
+        12.4542,
+        10.7272,
+        10.8402,
+        11.6156
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true
+    },
+    "nearest_key_owner": {
+      "maxAdjacentCompositeRGBMAE": 11.8477,
+      "adjacentCompositeRGBMAE": [
+        11.8477,
+        11.5362,
+        10.2206,
+        11.756
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true
+    }
+  },
+  "nativeArtPreserved": true,
+  "physicalStrandCorrespondenceVerified": false,
+  "garmentAndFaceCorrespondenceVerified": false,
+  "hiddenUnderpaintVerified": false,
+  "artistVisualApproved": false,
+  "review": "private-assets/exports/p15-129-ahoge-owner/index.html"
+}

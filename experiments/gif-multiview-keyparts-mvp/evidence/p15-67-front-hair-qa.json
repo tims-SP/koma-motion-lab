@@ -1,0 +1,76 @@
+{
+  "schema": "KOMA-P15-67-FULL_FRONT_HAIR_FEASIBILITY_V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "oldHairSHA256": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6",
+  "underpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+  "eyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "method": "HAND_ENVELOPE_CHROMA_MATTE_VISIBLE_PIXELS_ONLY",
+  "fullHairCandidateSHA256": "613864fa62e37ffef1a3830f8b3c417760c0dbad29fe0880539c7fcdd5de1783",
+  "maskSHA256": "96767fb3027d29db0f1484dbfd7994059d93fe7d8821b72894fcd87f601f2f3b",
+  "newLayerBBox": [
+    432,
+    104,
+    783,
+    575
+  ],
+  "visiblePixels": 107158,
+  "alphaPartials": 34448,
+  "recomposeChangedPixelsOverSource": 19565,
+  "originalHiddenForeheadUnderpaintAvailable": false,
+  "trueIndependentPaintedHair": false,
+  "semanticHairPurityVerified": false,
+  "candidateFrames": [
+    {
+      "shiftPx": 0,
+      "fullHairFile": "eye-shift-00-full-hair.png"
+    },
+    {
+      "shiftPx": 9,
+      "fullHairFile": "eye-shift-09-full-hair.png"
+    },
+    {
+      "shiftPx": 18,
+      "fullHairFile": "eye-shift-18-full-hair.png"
+    }
+  ],
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "FAIL_FULL_FRONT_HAIR_MATTE_SEMANTICS_AND_HIDDEN_UNDERPAINT",
+  "refinedEyeExcludedSHA256": "42eb6774a7dfcdbb10cde4b4aed116165b14df967877e5e593f08dab9c68f50f",
+  "refinedMaskSHA256": "0fe5bc10370c3a7d6454258cb468edfa0fcc383e498d8504d74caacde551f15c",
+  "eyeExcludedLayerBBox": [
+    432,
+    104,
+    783,
+    575
+  ],
+  "eyeExcludedNonzeroAlphaPixels": 97237,
+  "eyeExcludedPartialAlphaPixels": 29916,
+  "refinedFrames": [
+    {
+      "dx": 0,
+      "image": "eye-shift-00-v2.png"
+    },
+    {
+      "dx": 9,
+      "image": "eye-shift-09-v2.png"
+    },
+    {
+      "dx": 18,
+      "image": "eye-shift-18-v2.png"
+    }
+  ],
+  "eyeRegionExclusionMethod": "COARSE_NEAR_FAR_EYE_ELLIPSE_VISUAL_QA_ONLY",
+  "eyePixelsConservativelyExcluded": true,
+  "frontBangOcclusionPreservedAcrossEyes": false,
+  "fullHairTopologyMatched": false,
+  "hiddenForeheadSkinIndependentlyReconstructed": false,
+  "actualVisualFailures": [
+    "top-left hair cap sheared by coarse envelope",
+    "hair texture and facial pigment cannot be separated cleanly from a flat composite",
+    "exclusion of eye regions also removes real overlapping bang strands",
+    "hidden forehead/roots behind movable front hair remain absent"
+  ],
+  "next": "Stop color-only extraction. Obtain genuine semantic hair alpha with manual strand boundary correction and independent hidden forehead underpaint before treating hair as a deformable ArtMesh."
+}

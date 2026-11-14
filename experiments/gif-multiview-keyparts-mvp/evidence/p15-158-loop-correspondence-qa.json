@@ -1,0 +1,275 @@
+{
+  "schema": "KOMA_P15_158_ANCHOR_SDF_LOOP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "sampleAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "anchorProposals": {
+    "90": [
+      [
+        205.0,
+        65.0
+      ],
+      [
+        233.0,
+        5.0
+      ]
+    ],
+    "112.5": [
+      [
+        294.0,
+        72.0
+      ],
+      [
+        288.0,
+        21.0
+      ]
+    ],
+    "135": [
+      [
+        264.0,
+        67.0
+      ],
+      [
+        258.0,
+        8.0
+      ]
+    ]
+  },
+  "method": "Two-point source similarity registration, signed-distance loop alpha and source-owned donor color",
+  "reference": {
+    "maxAdjacentRGBMAE": 12.0984,
+    "topConnectedComponents": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "variants": {
+    "mask_1": {
+      "maxAdjacentRGBMAE": 11.9448,
+      "adjacentRGBMAE": [
+        11.9448,
+        10.953,
+        10.3692,
+        11.5661
+      ],
+      "topConnectedComponents": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "belowCrownMatchesReference": true,
+      "intermediate": {
+        "101.25": {
+          "maskPixels": 192,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            249.5,
+            68.5
+          ],
+          "targetApex": [
+            260.5,
+            13.0
+          ]
+        },
+        "123.75": {
+          "maskPixels": 909,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            279.0,
+            69.5
+          ],
+          "targetApex": [
+            273.0,
+            14.5
+          ]
+        }
+      }
+    },
+    "mask_3": {
+      "maxAdjacentRGBMAE": 11.9455,
+      "adjacentRGBMAE": [
+        11.9455,
+        10.9537,
+        10.3691,
+        11.5663
+      ],
+      "topConnectedComponents": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "belowCrownMatchesReference": true,
+      "intermediate": {
+        "101.25": {
+          "maskPixels": 194,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            249.5,
+            68.5
+          ],
+          "targetApex": [
+            260.5,
+            13.0
+          ]
+        },
+        "123.75": {
+          "maskPixels": 911,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            279.0,
+            69.5
+          ],
+          "targetApex": [
+            273.0,
+            14.5
+          ]
+        }
+      }
+    },
+    "mask_5": {
+      "maxAdjacentRGBMAE": 11.9455,
+      "adjacentRGBMAE": [
+        11.9455,
+        10.9537,
+        10.3691,
+        11.5663
+      ],
+      "topConnectedComponents": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "belowCrownMatchesReference": true,
+      "intermediate": {
+        "101.25": {
+          "maskPixels": 194,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            249.5,
+            68.5
+          ],
+          "targetApex": [
+            260.5,
+            13.0
+          ]
+        },
+        "123.75": {
+          "maskPixels": 911,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            279.0,
+            69.5
+          ],
+          "targetApex": [
+            273.0,
+            14.5
+          ]
+        }
+      }
+    },
+    "nearest_owner": {
+      "maxAdjacentRGBMAE": 12.3159,
+      "adjacentRGBMAE": [
+        12.3159,
+        11.14,
+        10.3755,
+        11.5563
+      ],
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "belowCrownMatchesReference": false,
+      "intermediate": {
+        "101.25": {
+          "maskPixels": 959,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            249.5,
+            68.5
+          ],
+          "targetApex": [
+            260.5,
+            13.0
+          ]
+        },
+        "123.75": {
+          "maskPixels": 1033,
+          "connectedMaskComponents": 1,
+          "targetRoot": [
+            279.0,
+            69.5
+          ],
+          "targetApex": [
+            273.0,
+            14.5
+          ]
+        }
+      }
+    }
+  },
+  "sourceKeyframesUnmodified": true,
+  "physicalAnchorApproval": false,
+  "artistVerifiedHairCurve": false,
+  "matchedUnderpaintAvailable": false,
+  "fullFrameVisualAccepted": false,
+  "review": "private-assets/exports/p15-158-loop-correspondence/index.html",
+  "next": "Compare intermediate loop root and ink continuity, confirm real root/tip source geometry and hidden scalp before selecting a VDD candidate.",
+  "acceptanceGate": {
+    "passes": false,
+    "productionCandidateSelected": false,
+    "referenceTopComponents": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "candidateDisconnectedMidviews": {
+      "mask_1": [
+        101.25,
+        123.75
+      ],
+      "mask_3": [
+        101.25,
+        123.75
+      ],
+      "mask_5": [
+        101.25,
+        123.75
+      ],
+      "nearest_owner": [
+        101.25,
+        123.75
+      ]
+    },
+    "sourceCurveIdentityVerified": false,
+    "reason": "Both signed-distance fusion and nearest-owner transforms have disconnected or unregistered root segments. Two point anchors do not establish corresponding loop boundaries."
+  }
+}

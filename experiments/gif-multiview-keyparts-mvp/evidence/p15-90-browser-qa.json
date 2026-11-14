@@ -1,0 +1,39 @@
+{
+  "schema": "KOMA-P15-90-CHROMIUM_VISUAL_REVIEW_V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "pose": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "pose": 9,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "pose": 18,
+      "imagesLoaded": 5,
+      "screenshotSHA256": "ea8f14e4ad24480136991dce53fdf51516a3048a89e0847d5d6221e1311176b8"
+    },
+    {
+      "viewport": "mobile",
+      "pose": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "pose": 9,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "pose": 18,
+      "imagesLoaded": 5,
+      "screenshotSHA256": "d62b4612109a385cc13e20ad46e933343df1f9c1f59873a25920a7f3dc5da2d6"
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

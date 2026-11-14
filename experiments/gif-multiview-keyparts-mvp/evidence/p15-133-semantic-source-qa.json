@@ -1,0 +1,86 @@
+{
+  "schema": "KOMA_P15_133_SOURCE_SEMANTIC_LAYER_CANDIDATES_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90,
+    112.5,
+    135
+  ],
+  "parts": [
+    "hair.visible",
+    "skin.visible",
+    "bow.visible",
+    "collar.visible",
+    "uniform.visible"
+  ],
+  "views": [
+    {
+      "angle": 90.0,
+      "sourcePixelSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+      "sourceDimensions": [
+        443,
+        443
+      ],
+      "sourceAlphaPixels": 75477,
+      "layerVisiblePixelCounts": {
+        "hair.visible": 46837,
+        "skin.visible": 809,
+        "bow.visible": 4306,
+        "collar.visible": 2856,
+        "uniform.visible": 20669
+      },
+      "recompositionByteExact": true,
+      "sourceUnmodified": true,
+      "paintedHiddenPixels": 0,
+      "semanticClass": "appearance/region-guided candidate; pixel-wise exclusive; artwork quality pending review"
+    },
+    {
+      "angle": 112.5,
+      "sourcePixelSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+      "sourceDimensions": [
+        443,
+        443
+      ],
+      "sourceAlphaPixels": 79352,
+      "layerVisiblePixelCounts": {
+        "hair.visible": 46646,
+        "skin.visible": 4320,
+        "bow.visible": 2435,
+        "collar.visible": 1326,
+        "uniform.visible": 24625
+      },
+      "recompositionByteExact": true,
+      "sourceUnmodified": true,
+      "paintedHiddenPixels": 0,
+      "semanticClass": "appearance/region-guided candidate; pixel-wise exclusive; artwork quality pending review"
+    },
+    {
+      "angle": 135.0,
+      "sourcePixelSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+      "sourceDimensions": [
+        443,
+        443
+      ],
+      "sourceAlphaPixels": 75898,
+      "layerVisiblePixelCounts": {
+        "hair.visible": 49489,
+        "skin.visible": 720,
+        "bow.visible": 308,
+        "collar.visible": 1874,
+        "uniform.visible": 23507
+      },
+      "recompositionByteExact": true,
+      "sourceUnmodified": true,
+      "paintedHiddenPixels": 0,
+      "semanticClass": "appearance/region-guided candidate; pixel-wise exclusive; artwork quality pending review"
+    }
+  ],
+  "visibleSourceRecompositionExact": true,
+  "artistApprovedSemantics": false,
+  "sourceNativeReferenceApproved": false,
+  "hiddenUnderpaintVerified": false,
+  "physicalOcclusionValidated": false,
+  "fullRotationVisualAcceptance": false,
+  "review": "private-assets/exports/p15-133-semantic-source/index.html",
+  "next": "Assess each segmentation boundary visually, then add separately generated painted occluded materials and correct geometry correspondence before using as ArtMesh."
+}

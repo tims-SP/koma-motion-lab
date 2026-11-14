@@ -1,0 +1,109 @@
+{
+  "schema": "KOMA_P15_153_CANONICAL_HAIR_STRAND_SOURCE_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "pixelExactPartRecomposition": true,
+  "sourceSourceKeyframesUnchanged": true,
+  "perView": {
+    "90": {
+      "components": [
+        {
+          "size": 1205,
+          "bbox": [
+            184,
+            5,
+            95,
+            49
+          ],
+          "centroid": [
+            239.99,
+            26.6
+          ]
+        }
+      ],
+      "loopVisiblePixels": 1205,
+      "otherUpperPixels": 0,
+      "upperTotal": 1205,
+      "recompositionExact": true
+    },
+    "112.5": {
+      "components": [
+        {
+          "size": 945,
+          "bbox": [
+            252,
+            20,
+            73,
+            34
+          ],
+          "centroid": [
+            291.99,
+            35.41
+          ]
+        }
+      ],
+      "loopVisiblePixels": 945,
+      "otherUpperPixels": 0,
+      "upperTotal": 945,
+      "recompositionExact": true
+    },
+    "135": {
+      "components": [
+        {
+          "size": 1071,
+          "bbox": [
+            221,
+            8,
+            77,
+            46
+          ],
+          "centroid": [
+            264.89,
+            28.11
+          ]
+        }
+      ],
+      "loopVisiblePixels": 1071,
+      "otherUpperPixels": 0,
+      "upperTotal": 1071,
+      "recompositionExact": true
+    }
+  },
+  "sourceFreeLoopType": "single connected visible-source alpha component per key, above a diagnostic horizontal crown cutoff",
+  "separateSecondaryStrand": false,
+  "visualFindings": "The original profile displays a broad loop and fine adjacent stroke; their visible alpha merges into one connected component at all three tested viewpoints. Source reconstruction is lossless, but connected-component partitioning does not distinguish their physical roots. A generated short-root patch depicts different anatomy.",
+  "motionComparison": {
+    "canonicalMaxAdjacentRGBMAE": 12.0984,
+    "sourceOwnedMotionMaxAdjacentRGBMAE": 17.8802,
+    "canonicalAdjacentRGBMAE": [
+      12.0984,
+      11.067,
+      10.4616,
+      11.6306
+    ],
+    "sourceOwnedAdjacentRGBMAE": [
+      0.238,
+      17.8802,
+      0.1382,
+      16.5392
+    ]
+  },
+  "artistApprovedRootTopology": false,
+  "hiddenRootScalpPaintComplete": false,
+  "crossViewPhysicalCorrespondence": false,
+  "fullYawVisualAccepted": false,
+  "selectedForProduction": false,
+  "review": "private-assets/exports/p15-153-source-topology/index.html",
+  "next": "Author a loop plus fine-strand asset from confirmed visible-source shapes, including occluded root underpaint and matching keyview coordinates. Gate closeup before interpolation."
+}

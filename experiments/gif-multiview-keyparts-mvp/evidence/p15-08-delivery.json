@@ -1,0 +1,10 @@
+{
+  "schema": "KOMA-P15-08-55DEG-POSE-REVIEW-PACKAGE-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-08-pose-source-review.zip",
+  "sha256": "c7cec0056902aa3b251980149bf2cdf80fefa2569dca25dd734e69d9f0d4a6c7",
+  "bytes": 5589502,
+  "entries": 16,
+  "htmlEntry": "review/p15-08-mid-angle.html",
+  "artisticAdmission": "PENDING_POSE_AND_HAIRPIN_CORRESPONDENCE"
+}

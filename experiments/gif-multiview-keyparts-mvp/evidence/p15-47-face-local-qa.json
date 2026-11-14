@@ -1,0 +1,34 @@
+{
+  "schema": "KOMA-P15-47-LOCAL-COMPOSITE-V1",
+  "sourceSHA256": "77fd162e876605fbca9829435ccd0b43b7ea304f38ad10950c26add6b9c07756",
+  "modelOutputSHA256": "118a1b044756d7ca4cd55c175e2a143001d2067dc347112d289b65ce0aa86d0e",
+  "maskSHA256": "bb628be5bdc75c4d5e34e2405045336cbc265f0aa5d130a7f32b2c434fbbe126",
+  "controlGuideSHA256": "2efdd77e0b62d8ecb1ae50ff104719ffee0642c4e8e6c614063abf7bd4ecb64f",
+  "compositeSHA256": "4180bd028d3741329572cdeefd8a994747ba4cd9c2cfd7a773a1ab9d405c941a",
+  "modelOutput": "P15-45 seed 65445; not a new inference",
+  "sourceAlphaRange": [
+    0,
+    255
+  ],
+  "generatedAlphaRange": [
+    49,
+    255
+  ],
+  "maskZeroPixelCount": 988123,
+  "modelChangedOutsideMaskPixels": 681119,
+  "modelChangedOutsideMaskRatio": 0.689306,
+  "compositeChangedOutsideMaskPixels": 0,
+  "modelChangedAlphaPixels": 647309,
+  "compositeChangedAlphaPixels": 0,
+  "compositeChangedPixels": 55541,
+  "newInferenceStatus": "BLOCKED_ZERO_GPU_QUOTA_EXCEEDED",
+  "pose65Accepted": false,
+  "identityAccepted": false,
+  "formalArtMeshModified": false,
+  "notes": "Face-local RGB repair engineering witness only; camera landmarks still not visually approved.",
+  "archive": {
+    "bytes": 4377686,
+    "sha256": "188641b59721ac3c3d2a94fdb3137e1e0ec5d156349389e0e909456841f07720",
+    "entries": 13
+  }
+}

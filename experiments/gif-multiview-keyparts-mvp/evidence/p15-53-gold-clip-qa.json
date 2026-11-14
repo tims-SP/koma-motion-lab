@@ -1,0 +1,51 @@
+{
+  "schema": "KOMA-P15-53-GOLD-CLIP-COMPOSITE-V1",
+  "characterId": "p0_character_001",
+  "sourceRegisteredClip": {
+    "path": "private-assets/exports/p15-38-original-p0-arc-review/yaw65/gold-clip.png",
+    "sha256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50"
+  },
+  "sourceTransparentCandidate": {
+    "path": "private-assets/exports/p15-52-transparency-geometry/camera-plus20-transparent.png",
+    "sha256": "6b17cdd4f5a3d5bf309f8c6ce958ea38085be37493188976d16cb1ffb50d6323"
+  },
+  "independentClip": {
+    "file": "hair.clip.cross_gold.png",
+    "sha256": "baf4b451a153f49485e2ea541f07a379c55f1c936d9b013594bb1f524a13dd52",
+    "bbox": [
+      719,
+      279,
+      788,
+      370
+    ],
+    "alphaRange": [
+      0,
+      255
+    ]
+  },
+  "underlayRepaired": {
+    "sha256": "6f0f6f12be646d572f1565a9cffef90a21fd8c6cde83b666b627bbf36a1f1589",
+    "goldPixelsReplaced": 1201,
+    "detachedTuftAlphaPixelsRemoved": 352
+  },
+  "composite": {
+    "file": "candidate-gold-cross-restored.png",
+    "sha256": "e012fb3bd1625f81bfc72887f45c083f9f21df6e707611415a94b8dce13115fc",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "horizontalRegisteredOffsetPx": -28,
+  "sourceScale": 2.311512415349887,
+  "method": "Reuse registered 65-degree P0 cross clip, alpha-composite detached layer after targeted gold-color cleanup",
+  "verification": {
+    "bothCrossingArmsReused": true,
+    "noWholeCharacterRegeneration": true,
+    "absoluteYaw65Verified": false,
+    "manualIdentityAccepted": false,
+    "artMeshModified": false,
+    "formalKeyframeAccepted": false
+  },
+  "uncertainty": "Source arc clip is previously registered but not an independently artist-approved yaw65 view; occlusion/attachment requires visual review."
+}

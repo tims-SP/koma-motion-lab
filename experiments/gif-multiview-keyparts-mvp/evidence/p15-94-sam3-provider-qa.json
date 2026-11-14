@@ -1,0 +1,157 @@
+{
+  "schema": "KOMA-P15-94-SAM3_YAW60_SEMANTIC_SOURCE_V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "8797d32a201a8e4daf764bc3cc2e9de0217c1881e3e2060c7499e3650799b554",
+  "inputSHA256": "2591566e695dbceca6e055b0dc603371d19de2f1338048c066cbb377b1595b1b",
+  "role": "hair.front",
+  "model": "prithivMLmods/SAM3-Demo",
+  "prompt": "front bangs hair over the forehead",
+  "conf_thresh": 0.25,
+  "status": "MODEL_RETURNED",
+  "modelMaskProven": false,
+  "formalArtMeshAccepted": false,
+  "resultSHA256": "69c29554a46801e398cd0fcd699c5a6f772292700bfe9b3ff7bfc5ea4bc739c0",
+  "rawResult": "private-assets/exports/p15-94-sam3-yaw060/raw-result.json",
+  "outputs": [
+    {
+      "role": "visual",
+      "index": 0,
+      "path": "private-assets/exports/p15-94-sam3-yaw060/visual-0.webp",
+      "sha256": "ffc916b3ccfd15d5251bdd0a3ede08891b86d1d614b7dc7de72d4e826545e2cc",
+      "bytes": 30368,
+      "image": {
+        "dimensions": [
+          640,
+          640
+        ],
+        "mode": "RGB",
+        "extrema": [
+          [
+            6,
+            255
+          ],
+          [
+            0,
+            255
+          ],
+          [
+            0,
+            255
+          ]
+        ],
+        "alphaNonZero": null
+      }
+    },
+    {
+      "role": "annotation",
+      "index": 0,
+      "path": "private-assets/exports/p15-94-sam3-yaw060/annotation-0.png",
+      "sha256": "204cdf7b3bd080f525a0125c76e97aa2286e0638f84c3560d244a14e5ac23e9a",
+      "bytes": 4905,
+      "image": {
+        "dimensions": [
+          640,
+          640
+        ],
+        "mode": "RGBA",
+        "extrema": [
+          [
+            0,
+            255
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            255
+          ]
+        ],
+        "alphaNonZero": 34747
+      },
+      "label": "front bangs hair over the forehead (0.65)"
+    },
+    {
+      "role": "annotation",
+      "index": 1,
+      "path": "private-assets/exports/p15-94-sam3-yaw060/annotation-1.png",
+      "sha256": "ce5f6f0eb5c7f03b3644d229e0ef6172bf1b25da5e5e705867b3a46ea31aa7bb",
+      "bytes": 5511,
+      "image": {
+        "dimensions": [
+          640,
+          640
+        ],
+        "mode": "RGBA",
+        "extrema": [
+          [
+            0,
+            255
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            255
+          ]
+        ],
+        "alphaNonZero": 84809
+      },
+      "label": "front bangs hair over the forehead (0.78)"
+    }
+  ],
+  "annotationCount": 2,
+  "visualGate": "SOURCE_OWNED_SAM3_MASK_CANDIDATES_REQUIRE_LAYER_OWNERSHIP_AND_UNDERPAINT",
+  "segmentationValidation": {
+    "candidateMasks": [
+      {
+        "index": 0,
+        "annotationSHA256": "204cdf7b3bd080f525a0125c76e97aa2286e0638f84c3560d244a14e5ac23e9a",
+        "maskSHA256": "f29a0a68ab697452933cdd2748ef19273a8d384da4f906c63f8a1635d1b9e879",
+        "rgbaSHA256": "1b24acfc7862d1ecf9c48937eae166da972bf6f5ee6fdbc8f3184333fe247b93",
+        "alpha128Pixels": 88940,
+        "alpha128BBox": [
+          462,
+          128,
+          800,
+          704
+        ],
+        "rgbPreservesSource": true,
+        "roleCandidate": "hair.front"
+      },
+      {
+        "index": 1,
+        "annotationSHA256": "ce5f6f0eb5c7f03b3644d229e0ef6172bf1b25da5e5e705867b3a46ea31aa7bb",
+        "maskSHA256": "1273d62f85b6767ae38f7d0ad8dd22cf05a8fded5a282b4184ff242eafbac787",
+        "rgbaSHA256": "b971fa671d1c1376ac6c591dff458fa16d2d42c454193897567c95ca16261477",
+        "alpha128Pixels": 217061,
+        "alpha128BBox": [
+          174,
+          112,
+          800,
+          704
+        ],
+        "rgbPreservesSource": true,
+        "roleCandidate": "hair.all"
+      }
+    ],
+    "intersectionPixels": 86952,
+    "frontWithinAllRatio": 0.97765,
+    "actualSourceRGBPreserved": true,
+    "sourceUnderdrawingAvailable": false,
+    "semanticMaskApproved": false,
+    "formalArtMeshAccepted": false,
+    "contact": "private-assets/exports/p15-94-sam3-yaw060/semantic-mask-contact.jpg"
+  }
+}

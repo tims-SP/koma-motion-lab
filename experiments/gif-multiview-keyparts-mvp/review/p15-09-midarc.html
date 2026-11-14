@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P15-09 · 45°–65° 解剖锚点视角过渡</title>
+<style>
+:root{color-scheme:dark;font:15px/1.5 system-ui,sans-serif;background:#171c25;color:#f3f6fc}
+*{box-sizing:border-box}body{margin:0;padding:22px}main{max-width:1600px;margin:auto}
+h1{font-size:23px;margin:0 0 8px}p{color:#c4cfe0;margin:5px 0 14px}
+.controls{display:flex;align-items:center;gap:16px;padding:14px;background:#263040;border-radius:12px}
+input[type=range]{flex:1;min-width:140px;accent-color:#9fbbff}
+#angle-value{font-weight:bold;font-size:22px;min-width:66px;text-align:right}
+button{color:white;background:#394660;border:1px solid #6e7e98;border-radius:9px;padding:8px 13px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+article{background:#283244;border:1px solid #3a4860;border-radius:14px;overflow:hidden}
+header{font-weight:650;padding:10px 12px}
+.view{background:repeating-conic-gradient(#d4d8df 0% 25%,#f5f6f9 0% 50%) 50%/26px 26px}
+img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+small{display:block;padding:9px 12px;color:#d1daea}
+#notes{font-size:14px;margin-top:16px;color:#c8d4e5}
+</style>
+</head>
+<body>
+<main>
+<h1>P15-09 · 45°–65° 物理锚点过渡审查</h1>
+<p>同角度比较 P8、P15-07 原画关键帧形变，以及 P5 解剖锚点引导的局部几何变形。</p>
+<div class="controls">
+<button type="button" id="prev">上一帧</button>
+<input type="range" id="yaw" min="45" max="65" step="2.5" value="55" aria-label="相机水平偏航角度">
+<button type="button" id="next">下一帧</button>
+<b id="angle-value">55°</b>
+</div>
+<div class="gallery">
+<article><header>P8 · 语义 ArtMesh 基线</header><div class="view"><img id="frame-p8" alt="P8 原渲染"></div><small>原始三视角工程基线</small></article>
+<article><header>P15-07 · 原画关键帧几何</header><div class="view"><img id="frame-old" alt="P15-07 整图几何"></div><small>0°–90° 连续关键帧对照</small></article>
+<article><header>P15-09 · P5 锚点引导</header><div class="view"><img id="frame-new" alt="P15-09 锚点几何"></div><small id="pose-status">几何参考视角</small></article>
+</div>
+<div id="notes">55° 姿态通过原画锚点约束生成，65° 使用注册的 P15 原画。解剖、发束和遮挡仍需独立原画校准。</div>
+</main>
+<script src="p15-09-midarc.js"></script>
+</body>
+</html>

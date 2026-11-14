@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 · 多视角动画纹理对照工作台</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Noto Sans CJK SC",sans-serif;background:#101a27;color:#f1f5fa}
+*{box-sizing:border-box}
+body{margin:0 auto;max-width:1650px;padding:22px}
+header{margin:0 0 18px}
+h1{font-size:22px;font-weight:650;margin:0 0 10px}
+p{color:#b0bfce;margin:7px 0;line-height:1.55}
+.controls{display:flex;align-items:center;gap:14px;padding:18px;border:1px solid #3c4b5d;border-radius:12px;flex-wrap:wrap}
+#yaw{flex:1;min-width:190px;accent-color:#90bced}
+button{background:#293951;color:#f1f5fa;border:1px solid #50647c;border-radius:8px;padding:9px 15px;cursor:pointer}
+button:hover{background:#3b506e}
+button:focus-visible,input:focus-visible{outline:3px solid #92c5ff}
+#angle{font-variant-numeric:tabular-nums;min-width:58px;font-size:20px;font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+article{background:#1b2838;border:1px solid #3e4d61;border-radius:12px;padding:10px;min-width:0}
+h2{font-size:15px;margin:3px 0 8px}
+canvas{display:block;width:100%;height:auto;aspect-ratio:1;background-color:#35455a;
+background-image:linear-gradient(45deg,#435166 25%,transparent 25%),linear-gradient(-45deg,#435166 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#435166 75%),linear-gradient(-45deg,transparent 75%,#435166 75%);background-size:22px 22px;background-position:0 0,0 11px,11px -11px,-11px 0}
+.meta{font-size:12px;color:#bbcad9;min-height:47px;margin:10px 2px 3px}
+details{border:1px solid #3e4d61;border-radius:10px;padding:10px 16px}
+summary{cursor:pointer}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#bfcede}
+#status{color:#b8d8ee;font-size:13px}
+@media(max-width:950px){.gallery{grid-template-columns:1fr}canvas{max-width:650px;margin:auto}}
+</style>
+</head>
+<body>
+<header>
+<h1>p0_character_001 · 多视角纹理对应对照</h1>
+<p>已批准的 P0 原画 · 0°、45°、90° 参考关键帧 · 真实 RGBA 部件构建 · 每帧 SHA-256 校验。</p>
+<p>三组动画使用同一角色及原始来源。中间角为研究生成画面，适用于检查脸型、发丝、五官和遮挡。</p>
+</header>
+<div class="controls">
+<button type="button" id="prev" aria-label="前一角度">−2.5°</button>
+<label for="yaw">转头角度</label>
+<input id="yaw" type="range" min="0" max="90" step="2.5" value="0">
+<output id="angle" for="yaw">0.0°</output>
+<button type="button" id="next" aria-label="下一角度">+2.5°</button>
+<button type="button" id="play">播放</button>
+<button type="button" id="stop">暂停</button>
+</div>
+<p id="status" role="status">正在校验 P0 原画资产索引…</p>
+<div class="gallery">
+ <article data-method="p6-mesh"><h2>P6 · 物理锚点 ArtMesh</h2><canvas width="1024" height="1024" aria-label="物理锚点 2.5D 转头画面"></canvas><div class="meta"></div></article>
+ <article data-method="p7-dense"><h2>P7 · 语义稠密光流</h2><canvas width="1024" height="1024" aria-label="多部件稠密光流画面"></canvas><div class="meta"></div></article>
+ <article data-method="p7-guided"><h2>P7 · 视角连续过渡</h2><canvas width="1024" height="1024" aria-label="语义部件连续转头画面"></canvas><div class="meta"></div></article>
+</div>
+<details>
+ <summary>来源与质量验收</summary>
+ <pre id="detail">载入中</pre>
+</details>
+<script src="./p7-motion.js" defer></script>
+</body>
+</html>

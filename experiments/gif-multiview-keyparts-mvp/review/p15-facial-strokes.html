@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 · 五官笔触与解剖锚点对应</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui;background:#131d2b;color:#f1f5fb}
+body{max-width:1480px;margin:auto;padding:18px}h1{font-size:22px}
+p{color:#bdd0e1;line-height:1.6}select{padding:9px;background:#293c55;color:#fff}
+canvas{display:block;width:100%;height:auto;background:#293951;border-radius:8px}
+pre{font-size:12px;white-space:pre-wrap;word-break:break-word}
+details{margin-top:15px;padding:10px;border:1px solid #566d8b;border-radius:8px}
+</style></head><body>
+<h1>p0_character_001 · 四视角语义部件追踪</h1>
+<p>绿色连线：高置信笔触对应候选；金色十字：P5 原始物理锚点线性参考。各视角 PNG 经 SHA-256 验证。</p>
+<label>部件 <select id="role"><option value="face.skin">面部 / 下颌</option>
+<option value="eye.near">近侧眼睛</option><option value="nose">鼻子</option><option value="mouth">嘴巴</option></select></label>
+<p id="status">正在检查来源…</p>
+<canvas id="overview" width="1400" height="410"></canvas>
+<details><summary>来源证据</summary><pre id="detail"></pre></details>
+<script src="./p15-facial-strokes.js" defer></script></body></html>

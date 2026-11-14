@@ -1,0 +1,154 @@
+{
+  "schema": "KOMA_P15_162_THREE_VIEW_ROOT_ART_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "producedSources": {
+    "90": {
+      "provenanceSHA256": "4c079e84b8fc4945d3dc17642eea3618f31d3c7edb1ae1845a9a1252877d5963",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "assetOrigin": "P15-162 source generation",
+      "diagnostics": {
+        "opaquePixels": 1560,
+        "bboxXYXY": [
+          176,
+          5,
+          276,
+          69
+        ],
+        "visibleOutsideTarget": 0,
+        "lowAlphaOutsideTarget": 1,
+        "opaqueFaceBodyPixels": 0,
+        "rootRegionPixels": 168,
+        "sourceTopAlphaIoU": 0.13183,
+        "rootAtY75": false,
+        "rootRows55to85": [
+          11,
+          9,
+          0,
+          0
+        ],
+        "largeComponents": [
+          1672
+        ],
+        "outsideNativeSilhouette": 597
+      }
+    },
+    "112.5": {
+      "provenanceSHA256": "b53fa18312fc31a303b76c88bd0161661c1fd81a5839bb86054c42034b0aaea4",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "assetOrigin": "P15-162 source generation",
+      "diagnostics": {
+        "opaquePixels": 3165,
+        "bboxXYXY": [
+          198,
+          7,
+          313,
+          115
+        ],
+        "visibleOutsideTarget": 31,
+        "lowAlphaOutsideTarget": 228,
+        "opaqueFaceBodyPixels": 0,
+        "rootRegionPixels": 974,
+        "sourceTopAlphaIoU": 0.105,
+        "rootAtY75": true,
+        "rootRows55to85": [
+          33,
+          30,
+          25,
+          21
+        ],
+        "largeComponents": [
+          3324
+        ],
+        "outsideNativeSilhouette": 2121
+      }
+    },
+    "135": {
+      "provenanceSHA256": "b96ab8b90c9e899a07e3583fe3ff810f25af9c52e95d89e5a335dbe85194f992",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "assetOrigin": "P15-150 verified source reuse",
+      "diagnostics": {
+        "opaquePixels": 1556,
+        "bboxXYXY": [
+          221,
+          10,
+          301,
+          95
+        ],
+        "visibleOutsideTarget": 0,
+        "lowAlphaOutsideTarget": 0,
+        "opaqueFaceBodyPixels": 0,
+        "rootRegionPixels": 416,
+        "sourceTopAlphaIoU": 0.15668,
+        "rootAtY75": true,
+        "rootRows55to85": [
+          16,
+          15,
+          8,
+          7
+        ],
+        "largeComponents": [
+          1702
+        ],
+        "outsideNativeSilhouette": 533
+      }
+    }
+  },
+  "unavailableSources": [],
+  "currentGenerationSourceCount": 2,
+  "nativeKeyArtworkPreserved": true,
+  "fullVisualAccepted": false,
+  "sourceUnderpaintArtistApproved": false,
+  "rootCorrespondenceVerified": false,
+  "productionAdmitted": false,
+  "yaw": {
+    "angles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "baselineMaxAdjacentRGBMAE": 12.0984,
+    "candidateMaxAdjacentRGBMAE": 12.3931,
+    "baselineTopComponents": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "candidateTopComponents": [
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "nativeKeyviewsPixelExact": true
+  },
+  "gate": {
+    "allViewsAvailable": true,
+    "allViewsNewlyGenerated": false,
+    "alphaDomainValid": true,
+    "sufficientRootPixels": true,
+    "allRootsReachY75": false,
+    "sourceTopRegistration": false,
+    "visualAndGeometryApproved": false,
+    "passes": false
+  },
+  "review": "private-assets/exports/p15-162-root-layers/index.html"
+}

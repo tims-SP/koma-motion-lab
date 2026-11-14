@@ -1,0 +1,38 @@
+{
+  "schema": "KOMA_P15_143_NATIVE_FRONT_BANGS_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "requestedYaw": 112.5,
+  "nativeFileSHA256": "bdbd39e65f34f7745a1a8f4a66058df1450ee12c340efbfd783e0f43f43141ac",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeRGBA": true,
+  "generatedPartClass": "new independent front hair/bangs paint candidate",
+  "registeredCanvas": [
+    443,
+    443
+  ],
+  "opaqueSourcePixels": 26718,
+  "opaquePixelsBelowY320": 16,
+  "nearEyeOpaqueCandidatePixels": 425,
+  "nearEyeRegionPixels": 935,
+  "opaquePixelsOutsideSourceSilhouette": 9085,
+  "directOverlayRegistrationGatePassed": false,
+  "occupiedRois": {
+    "head_top": 11987,
+    "front_fringe": 21218,
+    "face": 9958,
+    "lower_garment": 12
+  },
+  "nativeReferenceUnmodified": true,
+  "sourceKeyPixelIntegrity": true,
+  "visibleOverlayDifferenceRGBMAE": 10.8943,
+  "partIdentityArtistVerified": false,
+  "spatialRegistrationApproved": false,
+  "fullySeparateSemanticBangsApproved": false,
+  "crossViewStrandIdentityVerified": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-143-front-bangs/index.html",
+  "next": "Use source-aligned front fringe plus painted forehead/eye underlayer to evaluate independent ArtMesh motion without double bangs or face overlap."
+}

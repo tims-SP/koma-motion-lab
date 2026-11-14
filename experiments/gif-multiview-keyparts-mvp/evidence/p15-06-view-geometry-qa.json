@@ -1,0 +1,105 @@
+{
+  "schema": "KOMA-P0-P15-06-VIEW-GEOMETRY-QA-V1",
+  "characterId": "p0_character_001",
+  "baseline": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+  "comparisonRole": "independent-painting holdout and canvas-alignment diagnostic",
+  "alphaMaskThreshold": 128,
+  "headDiagnosticCropY": 710,
+  "thresholds": {
+    "silhouetteIoUMin": 0.9,
+    "relativeAreaErrorMax": 0.08
+  },
+  "inputs": {
+    "original45": {
+      "path": "p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "opaqueMaskPixels": 468874,
+      "semiTransparentPixels": 35750
+    },
+    "P8_65": {
+      "path": "p8-semantic-occlusion/selective-sequence/yaw65.png",
+      "sha256": "47cb28559b1370ae36882fdfc487f3056d9fd8910fca0cf61a542a54957762d7",
+      "opaqueMaskPixels": 453560,
+      "semiTransparentPixels": 65020
+    },
+    "painted65": {
+      "path": "p15-independent-candidates/yaw065-source-rgba.png",
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "opaqueMaskPixels": 396179,
+      "semiTransparentPixels": 28202
+    },
+    "P8_77p5": {
+      "path": "p8-semantic-occlusion/selective-sequence/yaw77p5.png",
+      "sha256": "78fb254d8cdaa2e83009e0e8d76df231ab20bba548b7d891040a3c5f1bf13af0",
+      "opaqueMaskPixels": 408492,
+      "semiTransparentPixels": 77150
+    },
+    "painted77p5": {
+      "path": "p15-independent-candidates/yaw077p5-source-rgba.png",
+      "sha256": "1d7a757e557507b5fbd6f4e5881df3e0fae58e0155786de85bddea564515b1c9",
+      "opaqueMaskPixels": 406586,
+      "semiTransparentPixels": 46512
+    },
+    "original90": {
+      "path": "p2-views/whole/yaw090.png",
+      "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+      "opaqueMaskPixels": 403040,
+      "semiTransparentPixels": 31151
+    }
+  },
+  "samples": [
+    {
+      "yawDeg": 65.0,
+      "renderer": "P8_65",
+      "independentCandidate": "painted65",
+      "fullCanvas": {
+        "intersectionPixels": 358699,
+        "unionPixels": 491040,
+        "renderAreaPixels": 453560,
+        "sourceAreaPixels": 396179,
+        "silhouetteIoU": 0.730488,
+        "relativeAreaError": 0.144836
+      },
+      "headCrop": {
+        "intersectionPixels": 262526,
+        "unionPixels": 333609,
+        "renderAreaPixels": 299928,
+        "sourceAreaPixels": 296207,
+        "silhouetteIoU": 0.786927,
+        "relativeAreaError": 0.012562
+      },
+      "silhouetteGate": "REWORK_REQUIRED"
+    },
+    {
+      "yawDeg": 77.5,
+      "renderer": "P8_77p5",
+      "independentCandidate": "painted77p5",
+      "fullCanvas": {
+        "intersectionPixels": 375704,
+        "unionPixels": 439374,
+        "renderAreaPixels": 408492,
+        "sourceAreaPixels": 406586,
+        "silhouetteIoU": 0.855089,
+        "relativeAreaError": 0.004688
+      },
+      "headCrop": {
+        "intersectionPixels": 273720,
+        "unionPixels": 308579,
+        "renderAreaPixels": 291335,
+        "sourceAreaPixels": 290964,
+        "silhouetteIoU": 0.887034,
+        "relativeAreaError": 0.001275
+      },
+      "silhouetteGate": "REWORK_REQUIRED"
+    }
+  ],
+  "comparisonImage": {
+    "path": "private-assets/p15-independent-candidates/p15-pose-comparison.jpg",
+    "sha256": "07426e0f1967d4ef09303cd23f17f69fddb799b56e284b7f0dfda033788861b5",
+    "bytes": 142034,
+    "visibility": "private"
+  },
+  "sourceIdentityHeroVerified": false,
+  "visualAcceptance": "REWORK_REQUIRED",
+  "assessmentLimit": "Raw pixel masks include differences in view registration and painted silhouette; human anatomy/identity review is separate."
+}

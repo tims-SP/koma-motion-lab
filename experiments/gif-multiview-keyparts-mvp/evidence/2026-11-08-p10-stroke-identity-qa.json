@@ -1,0 +1,150 @@
+{
+  "schema": "KOMA-P0-P10-INK_STROKE-ORIGINAL-ARTWORK-QA-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "source": {
+    "originalViews": [
+      0,
+      45,
+      90
+    ],
+    "genuineSemanticPSDViews": [
+      0,
+      45
+    ],
+    "registeredArtMeshViews": 39,
+    "sourceRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "landmarkRegistrySHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "P9RegionQASHA256": "a29a9a7a6d44e8cdd09f1b1c82a329be2a8481752ec16c0a8284e95dba674fd9",
+    "approvedHeroMasterSHAverified": false
+  },
+  "strokeIdentity": {
+    "algorithm": "RGBA interior Canny and luminance ink extraction; connected components; P0 physical-motion guided bidirectional ambiguity exclusion",
+    "nativeAnalysisCanvas": [
+      443,
+      443
+    ],
+    "semanticViewPairs": 22,
+    "extractedStrokes": 184,
+    "candidateIdentities": 24,
+    "minimumConfidence": 0.43,
+    "verifiedContactImage": "p10-stroke-identity/stroke-identity-contact.jpg",
+    "verifiedContactSHA256": "c6c06a2002ca36851a6cc5ad23af8858185def151beb850fcfb8773919c5f742",
+    "frontHairProfilePair": {
+      "sourceStrokes": 15,
+      "destinationStrokes": 9,
+      "candidateMatches": 1,
+      "sourceCoverage": 0.0667,
+      "confidence": [
+        0.4685
+      ]
+    },
+    "status": "SOURCE_DERIVED_CANDIDATE_IDENTITIES"
+  },
+  "motion": {
+    "adoptedRenderer": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+    "registeredRGBAFrames": 37,
+    "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+    "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+    "temporalOutliers": 0,
+    "previewGIF": "private-assets/p8-semantic-occlusion/p0-semantic-occlusion-turn.gif",
+    "artisticQuality": "PENDING_CROSS_VIEW_TEXEL_ALIGNMENT"
+  },
+  "browser": {
+    "entry": "review/p10-stroke.html",
+    "status": "PASS_REAL_ORIGINAL_P0_STROKE_REVIEW",
+    "sourceVerification": "SHA-256 of 2 original RGBA parts and 1 original-derived P8 inbetween per selection",
+    "screenshots": [
+      {
+        "pair": "0-45",
+        "semanticId": "hair.front",
+        "threshold": 0.45,
+        "yaw": 22.5,
+        "displayedStrokeCandidates": 5,
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p10-stroke-identity/browser/p10-0-45-hair-front-yaw22p5.png",
+        "sha256": "f7035918c490ae306a882abfd6109c8371e03ecbd4b43e655c1cafc3bb8b827d",
+        "bytes": 333047
+      },
+      {
+        "pair": "0-45",
+        "semanticId": "eye.near",
+        "threshold": 0.45,
+        "yaw": 22.5,
+        "displayedStrokeCandidates": 0,
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p10-stroke-identity/browser/p10-0-45-eye-near-yaw22p5.png",
+        "sha256": "424f819ec35c69b3fd20702d629561bb9b5f971a32761b232e6deaa5a78aaf7b",
+        "bytes": 254495
+      },
+      {
+        "pair": "0-45",
+        "semanticId": "hair.ahoge",
+        "threshold": 0.45,
+        "yaw": 22.5,
+        "displayedStrokeCandidates": 2,
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p10-stroke-identity/browser/p10-0-45-hair-ahoge-yaw22p5.png",
+        "sha256": "86d545ed32ea5e3ae31017872485db8682ab15b7a00d30c58b726667ae58bf51",
+        "bytes": 244297
+      },
+      {
+        "pair": "45-90",
+        "semanticId": "hair.front",
+        "threshold": 0.45,
+        "yaw": 67.5,
+        "displayedStrokeCandidates": 1,
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p10-stroke-identity/browser/p10-45-90-hair-front-yaw67p5.png",
+        "sha256": "68371b169e32a7d769b8de9af00309eb804bdb1d72f6912ac1aef4a1b3bbde98",
+        "bytes": 314851
+      },
+      {
+        "pair": "45-90",
+        "semanticId": "face.skin",
+        "threshold": 0.45,
+        "yaw": 67.5,
+        "displayedStrokeCandidates": 2,
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p10-stroke-identity/browser/p10-45-90-face-skin-yaw67p5.png",
+        "sha256": "7977423040d0bdafcbe41e3b0d76f6fab9c7d8a88a0070b9b8406eeaaa66922f",
+        "bytes": 260860
+      },
+      {
+        "pair": "45-90",
+        "semanticId": "hair.front",
+        "threshold": 0.45,
+        "yaw": 72.5,
+        "displayedStrokeCandidates": 1,
+        "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p10-stroke-identity/browser/p10-45-90-hair-front-yaw72p5.png",
+        "sha256": "c5ba2015b1434b11a032b0779f568e33f793bea959cc57f97feea7a38f7ff1a7",
+        "bytes": 315730
+      }
+    ],
+    "errors": [],
+    "failedRequests": []
+  },
+  "archive": {
+    "path": "private-assets/exports/p0-character-001-stroke-identity-review-v11.zip",
+    "bytes": 51639313,
+    "sha256": "e4488bbf47925a33cda820f1a9b6f7e6c1491d4aef33cba24c89cfc522f07f9a",
+    "entryCount": 113,
+    "internalHashesVerified": true
+  },
+  "regressions": {
+    "testsRun": 87,
+    "testsPassed": 87,
+    "testsFailed": 0,
+    "environment": "isolated VPS plus Chromium",
+    "githubActionsUsed": false
+  },
+  "nextStage": {
+    "name": "P11_SEMANTIC_STROKE_AND_PROFILE_VIEW_REFINEMENT",
+    "goal": "build iris and front-hair identity tracks with view-consistent occlusion",
+    "reviewAngles": [
+      22.5,
+      67.5,
+      72.5
+    ],
+    "priority": [
+      "precise iris and eyebrow identity",
+      "individual front-hair tip identity",
+      "conservative profile view art alignment and occlusion"
+    ]
+  }
+}

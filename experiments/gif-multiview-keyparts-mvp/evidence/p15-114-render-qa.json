@@ -1,0 +1,840 @@
+{
+  "schema": "KOMA_P15_114_CORRESPONDING_NATIVE_COLLAR_YAW_V1",
+  "character": "p0_character_001",
+  "nativeSourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "source_collar_continuous": {
+      "60": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw60.png",
+        "sha256": "1646555069acdd6651e5aca55d1eae447d0d18348effa07f8d9c78b7c34d2655",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.074396014213562,
+              -0.06225600093603134,
+              7.315686225891113
+            ],
+            [
+              0.0013719999697059393,
+              1.0323439836502075,
+              -14.823749542236328
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw61p875.png",
+        "sha256": "79fdc2833994167b8cff313b27d7acfe63dbd8ff832320be09c275fce875d85c",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0557969808578491,
+              -0.04669199883937836,
+              5.486763954162598
+            ],
+            [
+              0.0010290000354871154,
+              1.024258017539978,
+              -11.117812156677246
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw63p75.png",
+        "sha256": "983770124f5a958656af5ba6d6c64d64cc345bf3bc4db784e5dadc824bb3a9de",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0371979475021362,
+              -0.03112800046801567,
+              3.6578431129455566
+            ],
+            [
+              0.0006859999848529696,
+              1.0161720514297485,
+              -7.411874771118164
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw65p625.png",
+        "sha256": "881d2537f40a4e966136813dcc6690b36940c192186a8b9bcf8977726953f947",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.018599033355713,
+              -0.015564000234007835,
+              1.8289209604263306
+            ],
+            [
+              0.0003429999924264848,
+              1.0080859661102295,
+              -3.7059381008148193
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw67p5.png",
+        "sha256": "a733252d73e9b9ad0ad199ab7c95b679031bdf2bca693b8a5d3dab1eefe304a8",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw69p375.png",
+        "sha256": "784c176c8251719b90065149c7885d33dc6d43b4e2852ecaa7639b6f67cc80d9",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0271719694137573,
+              -0.057346001267433167,
+              12.317404747009277
+            ],
+            [
+              0.0011970000341534615,
+              0.9940140247344971,
+              1.8572900295257568
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw71p25.png",
+        "sha256": "aab117f6e94fe303cc397e02fdc3f9d838dfaf18fce3d15932a613d915be28ad",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0543440580368042,
+              -0.11469300091266632,
+              24.634809494018555
+            ],
+            [
+              0.002394000068306923,
+              0.9880279898643494,
+              3.7145800590515137
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw73p125.png",
+        "sha256": "be254c1fbe7a1a3055208b07de7ac6aaf3cee899e29e47d21fd2c253a6fe9092",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0815160274505615,
+              -0.1720390021800995,
+              36.952213287353516
+            ],
+            [
+              0.0035910001024603844,
+              0.9820430278778076,
+              5.571870803833008
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_continuous-yaw75.png",
+        "sha256": "c94e3e9b984c3a73d91e27edb4589a309dc24f952ac2c5f39e7c04eee588fed0",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.1086889505386353,
+              -0.22938600182533264,
+              49.26961898803711
+            ],
+            [
+              0.004788000136613846,
+              0.9760569930076599,
+              7.429161071777344
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "single canonical 67.5° source geometry"
+        }
+      }
+    },
+    "source_collar_silhouette": {
+      "60": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw60.png",
+        "sha256": "bef4395d61328b1d5a686b8749ff0d11ff0ce26e492425c1feb7c4312e1f9dff",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.074396014213562,
+              -0.06225600093603134,
+              7.315686225891113
+            ],
+            [
+              0.0013719999697059393,
+              1.0323439836502075,
+              -14.823749542236328
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw61p875.png",
+        "sha256": "6066257655c016ad5fe737704378dbd84c9b2001a9d40ff5fd2473e8da488c52",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0557969808578491,
+              -0.04669199883937836,
+              5.486763954162598
+            ],
+            [
+              0.0010290000354871154,
+              1.024258017539978,
+              -11.117812156677246
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw63p75.png",
+        "sha256": "bad35c935fe3ecff43b0c8a334538fc32c60cca7251dc763f7e5dc142c0fb319",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0371979475021362,
+              -0.03112800046801567,
+              3.6578431129455566
+            ],
+            [
+              0.0006859999848529696,
+              1.0161720514297485,
+              -7.411874771118164
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw65p625.png",
+        "sha256": "140dbe4d4a655b7c975f24626d8a13b628c039a290dd7ca21aae50d0f3d01aa0",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.018599033355713,
+              -0.015564000234007835,
+              1.8289209604263306
+            ],
+            [
+              0.0003429999924264848,
+              1.0080859661102295,
+              -3.7059381008148193
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw67p5.png",
+        "sha256": "5e8b2568c7031a6aa3fd8c7340dd0d64e5549446f724d1e0e16336a9f2d1d049",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw69p375.png",
+        "sha256": "dc9f7de8d80b2e65d64581348f1c1465fa7b4c697e68ca3a99c91f1dc1ce19c4",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0271719694137573,
+              -0.057346001267433167,
+              12.317404747009277
+            ],
+            [
+              0.0011970000341534615,
+              0.9940140247344971,
+              1.8572900295257568
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw71p25.png",
+        "sha256": "34072fabbbeaee61214133f836fbbfdda004bf4eb6139a57de24fc88783d74ea",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0543440580368042,
+              -0.11469300091266632,
+              24.634809494018555
+            ],
+            [
+              0.002394000068306923,
+              0.9880279898643494,
+              3.7145800590515137
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw73p125.png",
+        "sha256": "f60ab90a562cd6dc83cf41ea04f030634d86829570ddf8d65a2f240ca105fd8a",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.0815160274505615,
+              -0.1720390021800995,
+              36.952213287353516
+            ],
+            [
+              0.0035910001024603844,
+              0.9820430278778076,
+              5.571870803833008
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      },
+      "75": {
+        "path": "private-assets/exports/p15-114-collar-render/source_collar_silhouette-yaw75.png",
+        "sha256": "3d98358d26f226280d71b4ed7d5d7b379388bf71a0fb4f30cbeb13544d2f3612",
+        "diagnostics": {
+          "sourceTargetInverseAffine": [
+            [
+              1.1086889505386353,
+              -0.22938600182533264,
+              49.26961898803711
+            ],
+            [
+              0.004788000136613846,
+              0.9760569930076599,
+              7.429161071777344
+            ]
+          ],
+          "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "silhouetteSource": "interpolated signed-distance matte from original 60/67.5/75 owner masks"
+        }
+      }
+    }
+  },
+  "singleSourceCollarAngle": 67.5,
+  "sourceRegistrationSHA256": "1cd3841358934fe8d5b81efc6e1613b6b00d3a248b5ccb9498318d122466a2c2",
+  "canonicalTextureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+  "bodyArt": "P15-108 source-owner garment layers with P15-111 hidden textile",
+  "headArt": "P15-101 VDD head and ahoge",
+  "nativeOriginalSourceRGBAUnchanged": true,
+  "fullVisualApproved": false,
+  "metrics": {
+    "P15-101-original": {
+      "bow": {
+        "maxAdjacentRGBMAE": 10.1016,
+        "interiorMaxRGBMAE": 7.2775,
+        "meanAdjacentRGBMAE": 7.9434,
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 9.5625,
+        "interiorMaxRGBMAE": 6.7573,
+        "meanAdjacentRGBMAE": 7.0499,
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 9.1631,
+        "interiorMaxRGBMAE": 5.1833,
+        "meanAdjacentRGBMAE": 6.1601,
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 14.9137,
+        "interiorMaxRGBMAE": 11.7003,
+        "meanAdjacentRGBMAE": 11.5744,
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 8.0853,
+        "interiorMaxRGBMAE": 5.9747,
+        "meanAdjacentRGBMAE": 6.2248,
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ]
+      }
+    },
+    "P15-107-native": {
+      "bow": {
+        "maxAdjacentRGBMAE": 12.8767,
+        "interiorMaxRGBMAE": 12.8767,
+        "meanAdjacentRGBMAE": 9.9146,
+        "adjacentRGBMAE": [
+          7.2224,
+          7.3212,
+          7.3621,
+          8.5399,
+          12.8767,
+          12.084,
+          12.0205,
+          11.89
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 8.7588,
+        "interiorMaxRGBMAE": 8.7588,
+        "meanAdjacentRGBMAE": 7.9757,
+        "adjacentRGBMAE": [
+          7.805,
+          7.2423,
+          7.0293,
+          7.3438,
+          8.7588,
+          8.4623,
+          8.4642,
+          8.7
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 10.2434,
+        "interiorMaxRGBMAE": 10.2434,
+        "meanAdjacentRGBMAE": 8.5208,
+        "adjacentRGBMAE": [
+          7.5024,
+          7.5903,
+          7.5871,
+          9.0908,
+          10.2434,
+          8.7476,
+          8.7795,
+          8.6252
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 9.2766,
+        "interiorMaxRGBMAE": 9.2766,
+        "meanAdjacentRGBMAE": 7.8486,
+        "adjacentRGBMAE": [
+          6.9229,
+          6.6883,
+          6.5505,
+          7.2027,
+          9.2766,
+          8.6715,
+          8.6737,
+          8.8022
+        ]
+      }
+    },
+    "P15-113-singleSource": {
+      "bow": {
+        "maxAdjacentRGBMAE": 12.3774,
+        "interiorMaxRGBMAE": 12.3774,
+        "meanAdjacentRGBMAE": 9.797,
+        "adjacentRGBMAE": [
+          8.4123,
+          7.9189,
+          7.6569,
+          8.432,
+          12.3774,
+          11.396,
+          11.2176,
+          10.9649
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 11.1614,
+        "interiorMaxRGBMAE": 11.1614,
+        "meanAdjacentRGBMAE": 9.9539,
+        "adjacentRGBMAE": [
+          10.5379,
+          9.2803,
+          8.2927,
+          8.2781,
+          11.1614,
+          10.6943,
+          10.4884,
+          10.8978
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 11.4968,
+        "interiorMaxRGBMAE": 11.4968,
+        "meanAdjacentRGBMAE": 9.5324,
+        "adjacentRGBMAE": [
+          8.4785,
+          8.7867,
+          7.771,
+          8.6618,
+          11.4968,
+          9.7659,
+          10.1698,
+          11.1286
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 10.6317,
+        "interiorMaxRGBMAE": 10.194,
+        "meanAdjacentRGBMAE": 8.4156,
+        "adjacentRGBMAE": [
+          7.3719,
+          6.8001,
+          6.4034,
+          6.7532,
+          9.8607,
+          9.3095,
+          10.194,
+          10.6317
+        ]
+      }
+    },
+    "source_collar_continuous": {
+      "bow": {
+        "maxAdjacentRGBMAE": 18.7631,
+        "interiorMaxRGBMAE": 16.9969,
+        "meanAdjacentRGBMAE": 13.1857,
+        "adjacentRGBMAE": [
+          11.7184,
+          9.1016,
+          9.1089,
+          12.1031,
+          16.9969,
+          13.4332,
+          14.2604,
+          18.7631
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 11.4209,
+        "interiorMaxRGBMAE": 11.1568,
+        "meanAdjacentRGBMAE": 9.5832,
+        "adjacentRGBMAE": [
+          9.7551,
+          8.3163,
+          7.9912,
+          8.9757,
+          11.1568,
+          9.4611,
+          9.5885,
+          11.4209
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 14.5937,
+        "interiorMaxRGBMAE": 14.5937,
+        "meanAdjacentRGBMAE": 11.4303,
+        "adjacentRGBMAE": [
+          11.7623,
+          9.3299,
+          9.131,
+          10.9041,
+          14.5937,
+          11.1296,
+          10.9921,
+          13.6
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 12.3589,
+        "interiorMaxRGBMAE": 11.5541,
+        "meanAdjacentRGBMAE": 9.7397,
+        "adjacentRGBMAE": [
+          9.5721,
+          7.8009,
+          7.7142,
+          9.316,
+          11.5541,
+          9.5985,
+          10.003,
+          12.3589
+        ]
+      }
+    },
+    "source_collar_silhouette": {
+      "bow": {
+        "maxAdjacentRGBMAE": 19.0149,
+        "interiorMaxRGBMAE": 16.9557,
+        "meanAdjacentRGBMAE": 13.2426,
+        "adjacentRGBMAE": [
+          11.7334,
+          9.0738,
+          9.1236,
+          12.1168,
+          16.9557,
+          13.5012,
+          14.4213,
+          19.0149
+        ]
+      },
+      "collar": {
+        "maxAdjacentRGBMAE": 11.7807,
+        "interiorMaxRGBMAE": 11.1545,
+        "meanAdjacentRGBMAE": 9.6749,
+        "adjacentRGBMAE": [
+          9.8472,
+          8.2668,
+          8.0223,
+          8.9731,
+          11.1545,
+          9.554,
+          9.8006,
+          11.7807
+        ]
+      },
+      "jewel": {
+        "maxAdjacentRGBMAE": 14.3692,
+        "interiorMaxRGBMAE": 14.3692,
+        "meanAdjacentRGBMAE": 11.4077,
+        "adjacentRGBMAE": [
+          11.7081,
+          9.1753,
+          9.1233,
+          10.996,
+          14.3692,
+          11.1164,
+          11.0024,
+          13.7708
+        ]
+      },
+      "head": {
+        "maxAdjacentRGBMAE": 13.692,
+        "interiorMaxRGBMAE": 11.566,
+        "meanAdjacentRGBMAE": 11.212,
+        "adjacentRGBMAE": [
+          13.692,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          12.7738
+        ]
+      },
+      "garment": {
+        "maxAdjacentRGBMAE": 12.4887,
+        "interiorMaxRGBMAE": 11.5532,
+        "meanAdjacentRGBMAE": 9.7728,
+        "adjacentRGBMAE": [
+          9.6053,
+          7.783,
+          7.7254,
+          9.3151,
+          11.5532,
+          9.632,
+          10.0796,
+          12.4887
+        ]
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-114-collar-render/single-source-collar-yaw-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "artSource": "one native 67.5-degree P0 white collar drawing projected to three source-view positions",
+    "sourceRegistration": "source mask ECC affine alignment with 1024 RGBA texture and model-observed crease endpoints",
+    "shapeAgreement": {
+      "60": {
+        "nativeTargetIoU": 0.86799,
+        "previousSharedMeshIoU": 0.26131,
+        "leftCreaseMeanDriftPx": 3.887,
+        "rightCreaseMeanDriftPx": 1.876
+      },
+      "67.5": {
+        "nativeTargetIoU": 1.0,
+        "previousSharedMeshIoU": 0.81988,
+        "leftCreaseMeanDriftPx": 0.0,
+        "rightCreaseMeanDriftPx": 0.0
+      },
+      "75": {
+        "nativeTargetIoU": 0.83129,
+        "previousSharedMeshIoU": 0.41019,
+        "leftCreaseMeanDriftPx": 3.655,
+        "rightCreaseMeanDriftPx": 3.121
+      }
+    },
+    "sourceColorAndStroke": "single canonical collar ink, shades and highlights across all 9 angles",
+    "separateSilhouetteGate": "one variant clips the registered art to interpolated native-view collar ownership",
+    "regionalMaxAdjacentRGBMAE": {
+      "collar": {
+        "P15-101": 9.5625,
+        "P15-107-native": 8.7588,
+        "P15-114-continuous": 11.4209,
+        "P15-114-silhouette": 11.7807
+      },
+      "bow": {
+        "P15-101": 10.1016,
+        "P15-107-native": 12.8767,
+        "P15-114-continuous": 18.7631,
+        "P15-114-silhouette": 19.0149
+      },
+      "jewel": {
+        "P15-101": 9.1631,
+        "P15-107-native": 10.2434,
+        "P15-114-continuous": 14.5937,
+        "P15-114-silhouette": 14.3692
+      }
+    },
+    "observedVisualFindings": {
+      "collar": "affine registration matches collar silhouettes and native seam endpoints without the P15-113 protruding fabric artifact",
+      "sourceArt": "all output collar folds use the same source-original inner crease identities and shading",
+      "torso": "separately generated source-view jacket, gold trim and bow artwork still overlap during intermediate yaw",
+      "underpaint": "existing six native hidden garment image sources remain in the correct depth order",
+      "head": "preexisting P15-101 head and hair rendering continues unchanged"
+    },
+    "bestSourceRegistration": "P15-114 source_collar_continuous geometric correspondence",
+    "selectedOverallVisualBenchmark": "P15-101 head_alpha_blend",
+    "selectedThreeViewCostumeBenchmark": "P15-107 companion_direct_native_keys",
+    "fullYawArtisticApproved": false,
+    "nextDecisiveWork": "register jacket/gold trim and bow to one source geometry or develop source-owned per-part occlusion; validate actual 60–75 image motion before full 360° expansion"
+  }
+}

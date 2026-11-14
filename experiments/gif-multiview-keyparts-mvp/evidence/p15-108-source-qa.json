@@ -1,0 +1,534 @@
+{
+  "schema": "KOMA_P15_108_SOURCE_GARMENT_STROKE_CANDIDATES_V1",
+  "angles": [
+    60,
+    67.5,
+    75
+  ],
+  "roleKinds": [
+    "bowFabric",
+    "bowInk",
+    "goldTrim",
+    "collarWhite",
+    "collarInk"
+  ],
+  "identityAssignment": "relative anchors plus local ink contour candidates",
+  "artistStrokeIdentityApproved": false,
+  "views": {
+    "60": {
+      "source": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+      "sourceSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "goldCenter": [
+        634.46,
+        810.55
+      ],
+      "masks": {
+        "bowFabric": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw60/bowFabric.png",
+          "sha256": "b6c29394b6c59236e933fa62731047b54f61281fb74a5f6a11385a089b0b0e46",
+          "pixels": 32178
+        },
+        "bowInk": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw60/bowInk.png",
+          "sha256": "96977d1a171537a6dc991be1c5de7d7ab8345624baf751a444bae1c58419c33b",
+          "pixels": 929
+        },
+        "goldTrim": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw60/goldTrim.png",
+          "sha256": "1093a8439bc5395573d19786d7a13343816a905ea1e64625d0503351a2b60b76",
+          "pixels": 8823
+        },
+        "collarWhite": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw60/collarWhite.png",
+          "sha256": "3503eb7184a4b69a32065c57e89cb41aa8506b983edc2aa8b35f1795eab4758c",
+          "pixels": 10226
+        },
+        "collarInk": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw60/collarInk.png",
+          "sha256": "982130d1b740b0ae57a35b0482f52727a9188809c4e8de434df3dbdc36f153e8",
+          "pixels": 2165
+        }
+      },
+      "bowInkComponents": [
+        {
+          "area": 155,
+          "bbox": [
+            646,
+            776,
+            675,
+            797
+          ],
+          "center": [
+            655.88,
+            784.06
+          ]
+        },
+        {
+          "area": 290,
+          "bbox": [
+            713,
+            798,
+            732,
+            851
+          ],
+          "center": [
+            720.71,
+            822.15
+          ]
+        },
+        {
+          "area": 367,
+          "bbox": [
+            524,
+            832,
+            552,
+            879
+          ],
+          "center": [
+            539.26,
+            854.83
+          ]
+        },
+        {
+          "area": 20,
+          "bbox": [
+            733,
+            859,
+            735,
+            873
+          ],
+          "center": [
+            733.7,
+            866.7
+          ]
+        },
+        {
+          "area": 53,
+          "bbox": [
+            750,
+            941,
+            758,
+            955
+          ],
+          "center": [
+            754.57,
+            945.68
+          ]
+        },
+        {
+          "area": 44,
+          "bbox": [
+            728,
+            991,
+            737,
+            1001
+          ],
+          "center": [
+            730.66,
+            994.23
+          ]
+        }
+      ]
+    },
+    "67.5": {
+      "source": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+      "sourceSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+      "goldCenter": [
+        639.29,
+        808.82
+      ],
+      "masks": {
+        "bowFabric": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw67p5/bowFabric.png",
+          "sha256": "990d64c839c636859ca8eb36966f0d1055a6c43528f77b94dcea6dbf62418216",
+          "pixels": 30839
+        },
+        "bowInk": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw67p5/bowInk.png",
+          "sha256": "bc3b19ae73ab7952878e3e801aecf7b5df88370b16910ed3acd75eeb01f017a8",
+          "pixels": 5583
+        },
+        "goldTrim": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw67p5/goldTrim.png",
+          "sha256": "3c8f4ae570119379846a8f7e7f5ac6f8be97f16020c1e35edfc81701dfb543de",
+          "pixels": 8230
+        },
+        "collarWhite": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw67p5/collarWhite.png",
+          "sha256": "e96fb88c384619df976fa88e1f5b13a84b341091556c3e66ff8c9426b5d5acab",
+          "pixels": 11127
+        },
+        "collarInk": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw67p5/collarInk.png",
+          "sha256": "ff67945e21837aa634a68ec1a1c18d480d0cabd3813e89b046d3401881f1f1ea",
+          "pixels": 2135
+        }
+      },
+      "bowInkComponents": [
+        {
+          "area": 370,
+          "bbox": [
+            562,
+            763,
+            615,
+            796
+          ],
+          "center": [
+            583.65,
+            778.74
+          ]
+        },
+        {
+          "area": 33,
+          "bbox": [
+            627,
+            768,
+            634,
+            776
+          ],
+          "center": [
+            629.0,
+            772.55
+          ]
+        },
+        {
+          "area": 29,
+          "bbox": [
+            667,
+            774,
+            675,
+            782
+          ],
+          "center": [
+            669.55,
+            778.45
+          ]
+        },
+        {
+          "area": 33,
+          "bbox": [
+            652,
+            786,
+            659,
+            794
+          ],
+          "center": [
+            655.67,
+            788.79
+          ]
+        },
+        {
+          "area": 512,
+          "bbox": [
+            571,
+            799,
+            623,
+            823
+          ],
+          "center": [
+            597.74,
+            810.81
+          ]
+        },
+        {
+          "area": 429,
+          "bbox": [
+            664,
+            803,
+            696,
+            822
+          ],
+          "center": [
+            677.17,
+            812.01
+          ]
+        },
+        {
+          "area": 154,
+          "bbox": [
+            711,
+            803,
+            720,
+            840
+          ],
+          "center": [
+            715.45,
+            822.06
+          ]
+        },
+        {
+          "area": 1689,
+          "bbox": [
+            638,
+            821,
+            738,
+            905
+          ],
+          "center": [
+            695.4,
+            864.67
+          ]
+        },
+        {
+          "area": 1920,
+          "bbox": [
+            570,
+            828,
+            639,
+            913
+          ],
+          "center": [
+            606.13,
+            867.22
+          ]
+        },
+        {
+          "area": 270,
+          "bbox": [
+            538,
+            837,
+            557,
+            882
+          ],
+          "center": [
+            548.29,
+            859.32
+          ]
+        },
+        {
+          "area": 48,
+          "bbox": [
+            723,
+            845,
+            729,
+            865
+          ],
+          "center": [
+            726.12,
+            853.46
+          ]
+        },
+        {
+          "area": 47,
+          "bbox": [
+            555,
+            880,
+            564,
+            889
+          ],
+          "center": [
+            559.43,
+            884.21
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            693,
+            904,
+            697,
+            911
+          ],
+          "center": [
+            694.2,
+            907.3
+          ]
+        },
+        {
+          "area": 39,
+          "bbox": [
+            748,
+            942,
+            755,
+            955
+          ],
+          "center": [
+            751.95,
+            947.0
+          ]
+        }
+      ]
+    },
+    "75": {
+      "source": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+      "sourceSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+      "goldCenter": [
+        644.12,
+        807.09
+      ],
+      "masks": {
+        "bowFabric": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw75/bowFabric.png",
+          "sha256": "838a947e0bda4453c45a80225a411be2eb2854f39400226a68b56079a0e25a4a",
+          "pixels": 22335
+        },
+        "bowInk": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw75/bowInk.png",
+          "sha256": "d953d185349f68168275adc11bc38bf13b8503c0800d32b1d138dc781752f476",
+          "pixels": 1944
+        },
+        "goldTrim": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw75/goldTrim.png",
+          "sha256": "679fa206b2e63959f55ffccc36dc2a57b3e34ed16e384a8ee0a427c0ae7d05ae",
+          "pixels": 7660
+        },
+        "collarWhite": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw75/collarWhite.png",
+          "sha256": "1ad650d358cb2ff7193af8ba06994e6d485458c029c594474d9b5c97ce1705d7",
+          "pixels": 10093
+        },
+        "collarInk": {
+          "path": "private-assets/exports/p15-108-stroke-sources/yaw75/collarInk.png",
+          "sha256": "3f9384aed586725eb2f196d1752ae29a098d25606ac864c2e387759afb2857a5",
+          "pixels": 1555
+        }
+      },
+      "bowInkComponents": [
+        {
+          "area": 249,
+          "bbox": [
+            586,
+            766,
+            627,
+            798
+          ],
+          "center": [
+            602.03,
+            780.44
+          ]
+        },
+        {
+          "area": 147,
+          "bbox": [
+            635,
+            772,
+            660,
+            787
+          ],
+          "center": [
+            646.05,
+            777.95
+          ]
+        },
+        {
+          "area": 25,
+          "bbox": [
+            654,
+            787,
+            659,
+            796
+          ],
+          "center": [
+            656.56,
+            790.04
+          ]
+        },
+        {
+          "area": 428,
+          "bbox": [
+            597,
+            799,
+            632,
+            821
+          ],
+          "center": [
+            614.1,
+            810.59
+          ]
+        },
+        {
+          "area": 147,
+          "bbox": [
+            664,
+            805,
+            678,
+            819
+          ],
+          "center": [
+            669.33,
+            811.56
+          ]
+        },
+        {
+          "area": 38,
+          "bbox": [
+            689,
+            805,
+            695,
+            826
+          ],
+          "center": [
+            691.11,
+            814.87
+          ]
+        },
+        {
+          "area": 421,
+          "bbox": [
+            563,
+            821,
+            592,
+            879
+          ],
+          "center": [
+            575.27,
+            846.46
+          ]
+        },
+        {
+          "area": 42,
+          "bbox": [
+            667,
+            883,
+            678,
+            900
+          ],
+          "center": [
+            670.74,
+            892.57
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            679,
+            893,
+            681,
+            900
+          ],
+          "center": [
+            679.7,
+            896.5
+          ]
+        },
+        {
+          "area": 421,
+          "bbox": [
+            701,
+            905,
+            737,
+            942
+          ],
+          "center": [
+            720.62,
+            920.93
+          ]
+        },
+        {
+          "area": 16,
+          "bbox": [
+            717,
+            962,
+            722,
+            971
+          ],
+          "center": [
+            718.56,
+            966.44
+          ]
+        }
+      ]
+    }
+  },
+  "contact": "private-assets/exports/p15-108-stroke-sources/source-stroke-ownership-contact.jpg"
+}

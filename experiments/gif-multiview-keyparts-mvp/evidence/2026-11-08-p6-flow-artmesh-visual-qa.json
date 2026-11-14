@@ -1,0 +1,128 @@
+{
+  "schema": "KOMA-P0-P6-SOURCE-DERIVED-ARTMESH-FLOW-QA-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "reference": {
+    "originalViews": [
+      0,
+      45,
+      90
+    ],
+    "semanticPSDViews": [
+      0,
+      45
+    ],
+    "originalProfileView": 90,
+    "P0HeroMasterSHAverified": false,
+    "originalViewHashes": {
+      "0": "4ff6deb850498e307137e221cb0fe48357d9a9aa791467f7ffa54a8e149c7f64",
+      "45": "56312da0b651582b4360870e8a482738d141676a357ca11f6e9a4d98609bc6db",
+      "90": "0a7d1e3167215b7f1de8f73a8b109e65ca0655ca59d7d21e7d4906c3cb0463c2"
+    },
+    "PSDSHA256": {
+      "0": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04",
+      "45": "2527b97209c2bb912f260ba14179dcccacd45b39322077ec1fd92746ea8636fd"
+    }
+  },
+  "geometry": {
+    "globalCanvas": [
+      1024,
+      1024
+    ],
+    "nativeFlowCanvas": [
+      443,
+      443
+    ],
+    "semanticArtMeshViews": 39,
+    "physicalLandmarkTracks": 13,
+    "landmarkGates": {
+      "sourcePSDEyeIrisComponents0": true,
+      "sourcePSDEyeIrisComponents45": true,
+      "nearEyePhysicalXMileage": true,
+      "nosePhysicalXMileage": true,
+      "profileFarEyeHidden": true,
+      "profileGoldClipHidden": true,
+      "twoHoldoutsRegistered": true
+    },
+    "flowControlVertices": 2548,
+    "flowJSONSHA256": "88db58b4048920744a2dbf0e0610ddec16a0e1d1a3729bfa8148148f67d0fb19",
+    "sourceMethod": "OpenCV DIS dense flow sampled on real source meshes plus physical anchor residuals"
+  },
+  "realBrowserRendering": {
+    "sampleAngles": [
+      0,
+      22.5,
+      45,
+      67.5,
+      90
+    ],
+    "sourceRGBAFramesPerMethod": 37,
+    "GIFFramesPerMethod": 72,
+    "GIFs": {
+      "semantic_source": {
+        "sha256": "4f1d30ca273f38c35170c76df5b06db08678a45432acd52d727b7823184a8166",
+        "bytes": 6005632,
+        "path": "p5-see-through/mv-candidate/p0-psd-paired-vdd-turn.gif"
+      },
+      "physical_flow": {
+        "sha256": "f948e443bade383fa63f84386e0c86b9c47adf19250c6f70608a4c658c45d6d1",
+        "bytes": 5894693,
+        "path": "p5-see-through/mv-candidate/p0-physical-flow-vdd-turn.gif"
+      },
+      "source_transition": {
+        "sha256": "99677238be31b51217151d191e9d0ecc5be8723ec985cf93b3d86c0ae97b073a",
+        "bytes": 5800443,
+        "path": "p5-see-through/mv-candidate/p0-flow-transition-review.gif"
+      }
+    },
+    "qaByMethod": {
+      "originalSemanticMesh": {
+        "edgeRatios": {
+          "22.5": 8.9567,
+          "67.5": 3.1966
+        },
+        "temporalStatus": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+        "temporalOutliers": 2,
+        "medianFrameDifference": 4.7835,
+        "maximumFrameDifference": 19.9701
+      },
+      "physicalFlowArtMesh": {
+        "edgeRatios": {
+          "22.5": 0.6054,
+          "67.5": 1.7779
+        },
+        "temporalStatus": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+        "temporalOutliers": 2,
+        "medianFrameDifference": 5.5277,
+        "maximumFrameDifference": 17.1892
+      },
+      "sourceTransitionStudy": {
+        "edgeRatios": {
+          "22.5": 1.1189,
+          "67.5": 2.2482
+        },
+        "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+        "temporalOutliers": 0,
+        "medianFrameDifference": 5.764,
+        "maximumFrameDifference": 9.5386
+      }
+    },
+    "faceCoreAlphaCoverage": "PASS_HOLDOUT_COVERAGE",
+    "sourceImageComparison": "private-assets/p5-see-through/p6-motion/rendering-quality-comparison.jpg",
+    "comparisonSHA256": "71c2129e56786346168f9e55ff0098ab4b16202f7cc9f4e6ac42a78355ccb5e8",
+    "qualityState": "PENDING_CROSS_VIEW_TEXEL_AND_OCCLUSION_ART"
+  },
+  "deliverables": {
+    "privateArchive": "private-assets/exports/p0-character-001-flow-correspondence-review-v7.zip",
+    "archiveBytes": 117174660,
+    "archiveSHA256": "325fb28989a1b26820f43c7581335cfa5ec70b13c0e22f852a48e84b30d48326",
+    "archiveEntryCount": 218,
+    "contentIntegrityVerified": true,
+    "interactiveViewer": "review/index.html?mode=candidate&source=seethrough-paired&warp=flow",
+    "transitionViewer": "review/index.html?mode=candidate&source=seethrough-paired&warp=flow&blend=window",
+    "testSuitePassed": 53,
+    "testSuiteFailed": 0
+  },
+  "nextRequiredAsset": "P0 90-degree independent semantic PSD",
+  "nextRequiredRendering": "Single-view temporally coherent ArtMesh texel correspondence"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "KOMA-P15-12-REVIEW-ARTIFACT-V1",
+  "characterId": "p0_character_001",
+  "archivePath": "private-assets/exports/p15-12-camera-pose-review.zip",
+  "sha256": "7ce26d0379f80b94c9250befd00828655015a4dce174ab7af480b129b2b1aeb6",
+  "bytes": 8252034,
+  "entries": 20,
+  "htmlEntry": "review/p15-12-pose-calibration.html",
+  "cameraAnchors": 12,
+  "targetAngles": [
+    57.5,
+    60
+  ],
+  "generatedSourceCandidates": 2,
+  "browserCaptures": 4,
+  "visualAcceptance": "ANATOMICAL_PAINTING_REVIEW_REQUIRED"
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "KOMA-P15-58-PROVENANCE-POSE-V1",
+  "characterId": "p0_character_001",
+  "canonical45": {
+    "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "verifiedIdenticalCopies": {
+      "original_recovered_P2": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "P15_37_identity": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "P15_38_original": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "P15_42_reference": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "P15_43_reference": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40"
+    },
+    "verifiedArchiveEntry": {
+      "zip": "private-assets/exports/p0-character-001-multiview-source-review-v4.zip",
+      "entry": "private-assets/p2-views/whole/yaw045.png",
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40"
+    },
+    "recoveryPixelParityClaimMatches": true,
+    "sourceImageBytesIdentical": true,
+    "approvedHeroSHA256OnRecord": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+    "approvedHeroBytesValidated": false,
+    "heroTo45ProvenanceLevel": "NOT_PROVEN; canonical45 downstream identity established, original approved Hero file unverified"
+  },
+  "candidate": {
+    "source45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+    "cameraCommandRelativeDegrees": 20,
+    "cameraCommandAxis": "left",
+    "randomSeed": 65451,
+    "rawModelOutputSHA256": "c3151c9a2defd7fa61bd71fa80107b1c6dd2948174ef66e5d8e14464ed917127",
+    "selectedP1556SHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+    "absoluteYawDegrees": null,
+    "absoluteYawVerified": false,
+    "yawReason": "A relative natural-language/LoRA camera rotation command does not provide an externally calibrated 3D rotation angle. The original image yaw is nominal 45deg, not independently camera calibrated."
+  },
+  "historic90": {
+    "sha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+    "role": "historical reference only; not camera calibration"
+  },
+  "features": [
+    {
+      "feature": "short_lavender_bob",
+      "source45": "visible",
+      "candidate": "visible",
+      "assessment": "consistent color and haircut class"
+    },
+    {
+      "feature": "single_ahoge",
+      "source45": "visible",
+      "candidate": "visible",
+      "assessment": "single curled strand retained; curve differs"
+    },
+    {
+      "feature": "purple_pink_eyes",
+      "source45": "both visible",
+      "candidate": "near eye dominant and far eye strongly foreshortened",
+      "assessment": "plausible yaw progression; no calibrated 3D landmark geometry"
+    },
+    {
+      "feature": "nose_bridge_and_chin",
+      "source45": "three-quarter",
+      "candidate": "nose shifts to right and chin narrows",
+      "assessment": "plausible side-turn; manual visual only"
+    },
+    {
+      "feature": "gold_cross_hairclip",
+      "source45": "right side of image",
+      "candidate": "right side of image, independent alpha-refined piece",
+      "assessment": "X preserved; mounted position and perspective not independently artist-approved"
+    },
+    {
+      "feature": "navy_uniform_red_bow",
+      "source45": "visible",
+      "candidate": "visible",
+      "assessment": "outfit palette and bow preserved"
+    }
+  ],
+  "visualIdentityStatus": "PLAUSIBLE_CONTINUITY_NOT_APPROVED",
+  "poseStatus": "RIGHT_FACING_STRONGER_PROFILE_NOT_CALIBRATED_65",
+  "formalArtMeshModified": false,
+  "formalKeyframeAccepted": false,
+  "next": "Use an independently calibrated 3D or keypoint-to-camera representation for absolute yaw; the provenance chain to approved Hero bytes remains unresolved.",
+  "approvedHeroLocalImageSearch": {
+    "scannedImages": 5785,
+    "matchingSHA256Files": 0,
+    "scope": "private-assets on target VPS; archive contents not exhaustively scanned"
+  }
+}

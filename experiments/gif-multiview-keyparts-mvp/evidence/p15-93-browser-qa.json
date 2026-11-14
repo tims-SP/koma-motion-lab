@@ -1,0 +1,59 @@
+{
+  "schema": "KOMA-P15-93-KEYART_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "angle": 45,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "angle": 48.75,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "angle": 52.5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "loadedImages": 5,
+      "screenshotSHA256": "2ee8dec13093b36a6d24117d75465a254068053832837778ceff1992dd1626d9"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 45,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "angle": 48.75,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "angle": 52.5,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "loadedImages": 5
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "loadedImages": 5,
+      "screenshotSHA256": "3fce8ae1cf3c5572c7e77090c42b1f03ca9260be8ab5bc962ec3b5ebe2792701"
+    }
+  ],
+  "errors": []
+}

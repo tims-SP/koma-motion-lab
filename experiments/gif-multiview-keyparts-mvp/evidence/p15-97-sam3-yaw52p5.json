@@ -1,0 +1,59 @@
+{
+  "schema": "KOMA_P15_97_REAL_SAM3_VIEW_V1",
+  "view": "52p5",
+  "sourceSHA256": "f99c495dd3adcdc34329a54413cbcccb25ddc3d146167ffe5c4398c1b8f3e708",
+  "model": "prithivMLmods/SAM3-Demo",
+  "execution": "authenticated Hugging Face plugin Space invocation",
+  "providerAccountSlot": "secondary-1",
+  "prompt": "front bangs hair over the forehead",
+  "status": "MODEL_RETURNED",
+  "annotationCount": 3,
+  "annotations": [
+    {
+      "index": 0,
+      "label": "front bangs hair over the forehead (0.44)",
+      "rawSHA256": "c65b244573f623afa433da29693fe242cb801a30c4e7867f46ff50681f16b5dd",
+      "maskSHA256": "e4689a0ea2b810ef0e5c6da2f157af16703723497db52b09e5894408b4ca76d2",
+      "cutoutSHA256": "a707489aedebdc0dc56435a5ecb917d3307045a49ebd4b9d7f67ed695c58e20b",
+      "areaAlpha128": 226246,
+      "bboxAlpha128": [
+        173,
+        14,
+        810,
+        713
+      ]
+    },
+    {
+      "index": 1,
+      "label": "front bangs hair over the forehead (0.49)",
+      "rawSHA256": "3f9bebb5dfa62a738c54ed7129174f72e45aa608ad1b175c9815e4a3beb13613",
+      "maskSHA256": "d9815749d0cc32a8253fa73a86be87690d72fe13d1653f6ef7ce6bd010846b52",
+      "cutoutSHA256": "53c5ba479cf8bbad2b0151fcf7605bd7367dfd68ada45288630e1021665e810f",
+      "areaAlpha128": 213815,
+      "bboxAlpha128": [
+        174,
+        115,
+        806,
+        712
+      ]
+    },
+    {
+      "index": 2,
+      "label": "front bangs hair over the forehead (0.74)",
+      "rawSHA256": "743039661cfe9e47256d899680fdca7e0c5d6ab7d4b1db2a619ef403bfda51dd",
+      "maskSHA256": "211ba89dc9208410f5f8fcf0fd818c900006fc63c2c96352cea1bd9f38f53106",
+      "cutoutSHA256": "817851ccf05af8fe8d24c21e965128e9c0881f97a8f67ba497452aec2938b675",
+      "areaAlpha128": 113958,
+      "bboxAlpha128": [
+        395,
+        115,
+        806,
+        712
+      ]
+    }
+  ],
+  "sourceRGBPreserved": true,
+  "semanticArtMeshApproved": false,
+  "visualGate": "FRONT_BANG_ANNOTATIONS_FOR_REVIEW",
+  "contact": "exports/p15-97-sam3-yaw52p5/mask-contact.jpg"
+}

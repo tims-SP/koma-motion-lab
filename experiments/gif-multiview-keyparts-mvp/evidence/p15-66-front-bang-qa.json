@@ -1,0 +1,62 @@
+{
+  "schema": "KOMA-P15-66-LOCAL_BANG_OCCLUSION_V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "neuralUnderpaintSHA256": "55e034618d670f6ed47c959e5d04c224daff364eea4aeb08c44d27cd28e50cdb",
+  "eyeLayerSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "originalInpaintMaskSHA256": "a6f1df092bd3634dc33956381a5af3adaa3e57efa97db78657eb31862c27a1a1",
+  "older45BangLayerSHA256": "644f0fc8ae86b122bf766aa1abdfbbf425848e17a076b44bb753d4cd64beb8d6",
+  "older45BangReusedAsNewArtwork": false,
+  "chromaMethod": {
+    "minimumBlueMinusGreen": 12,
+    "featherPx": 0.65,
+    "xLowerFadeStart": 628,
+    "mattedOnlyInsideOriginalNeuralInpaintMask": true,
+    "purpose": "local front bang at near eye"
+  },
+  "localBangAlphaBBox": [
+    641,
+    432,
+    658,
+    456
+  ],
+  "localBangAlphaPixels": 164,
+  "localBangPartialAlphaPixels": 164,
+  "localBangSHA256": "92aeb0cfb87c587e38ef0f7c7788206070042b6d757ddcee1ec028d24f18d13b",
+  "localBangMaskSHA256": "0cfbd8325ac8c494b489e8931700b06ff860a63956dc2aa317606beccd00ae1b",
+  "frames": [
+    {
+      "dx": 0,
+      "sha256": "41cff8dfe8471d78714e89e85e9df7625573ef8c5124310546d0de4396087bc2",
+      "noOcclusionSHA256": "89a246035fb381146bf670a80797ff444aa190429b014c0c093f1ce13da7f188",
+      "changedRGBPixelsNearBang": 158,
+      "transparentHolePixels": 0
+    },
+    {
+      "dx": 9,
+      "sha256": "1bb302c0cd2a1e431c96b25dc6ae4a59d68bef09fccc82dfe81edf27b4a77e0e",
+      "noOcclusionSHA256": "983414044f1584d7b5df29520185578df33ffda67a1d3cc1b481491adb3fb66d",
+      "changedRGBPixelsNearBang": 158,
+      "transparentHolePixels": 0
+    },
+    {
+      "dx": 18,
+      "sha256": "d6718a698bae3ebdd21a8ad9ad228831b29fd6bcf46e98663dbaf5475c23dbb2",
+      "noOcclusionSHA256": "bece7e33d60b476bc8a565570443f735d8022584253a70a618a142efc7502a0b",
+      "changedRGBPixelsNearBang": 148,
+      "transparentHolePixels": 0
+    }
+  ],
+  "zOrder": [
+    "neural_skin_underpaint",
+    "eye.near.refined-layer",
+    "hair.front.eye-overlap"
+  ],
+  "fullIndependentFrontHairAvailable": false,
+  "perStrandHairIdentityVerified": false,
+  "visualAssessment": "The chroma matte avoids the straight polygon seams seen in P15-65 and restores a small foreground pink strand near the right eyelid; it only covers a tiny eye-overlap patch, not complete independent front hair. The eyelash and hair junction remains insufficient for full quality certification.",
+  "visualGate": "LOCAL_OCCLUSION_DIAGNOSTIC_PASS_FULL_HAIR_ARTMESH_FAIL",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "next": "P15-67 acquire clean full front-hair layer with transparent strand boundaries and recheck occlusion without relying on pixel-color heuristics."
+}

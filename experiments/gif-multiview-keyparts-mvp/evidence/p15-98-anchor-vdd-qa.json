@@ -1,0 +1,461 @@
+{
+  "schema": "KOMA_P15_98_SEMANTIC_ANCHOR_VDD_ABLATION_V1",
+  "source": "P15-97 6px hair-tip pose with independent keyed RGBA and generated semantic underpaint",
+  "geometry": "regularized Gaussian landmark inverse warp with fixed canvas points and facial correspondences",
+  "manualLandmarkProxies": true,
+  "geometricYawMeasured": false,
+  "anglesDegrees": [
+    52.5,
+    54.375,
+    56.25,
+    58.125,
+    60,
+    63.75,
+    67.5,
+    71.25,
+    75
+  ],
+  "sourceHashes": {
+    "52p5": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+    "60": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+    "75": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+  },
+  "methodFrames": {
+    "dis_blend": {
+      "52.5": {
+        "sha256": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw52p5.png",
+        "independentKeyframe": true
+      },
+      "54.375": {
+        "sha256": "7a875a9c14eecc263d371e3f3f36e5d0a804f2d13b714e88babe46f697aa80f8",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw54p375.png",
+        "independentKeyframe": false
+      },
+      "56.25": {
+        "sha256": "6914d0b38dd31fbb3368bd5018432db3c23522edb072f2b138fe2a560ef8f7f6",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw56p25.png",
+        "independentKeyframe": false
+      },
+      "58.125": {
+        "sha256": "e289af18ca1f6c544eea076850320a0023b5460492830237a693d8ecd6c92e91",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw58p125.png",
+        "independentKeyframe": false
+      },
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw60.png",
+        "independentKeyframe": true
+      },
+      "63.75": {
+        "sha256": "8d796748620a8045e6bb436775968cfee0795e198d6611a73d2b3d8e3d4dac19",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw63p75.png",
+        "independentKeyframe": false
+      },
+      "67.5": {
+        "sha256": "c8f24f99a5259ded0e5da92427a45ab7a03723aa70c50ca9f000d6d93176e255",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw67p5.png",
+        "independentKeyframe": false
+      },
+      "71.25": {
+        "sha256": "37246d4723e68ce8b342585784ec2d9c7baec198e9496f2f161696dab45c723a",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw71p25.png",
+        "independentKeyframe": false
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-yaw75.png",
+        "independentKeyframe": true
+      }
+    },
+    "landmark_blend": {
+      "52.5": {
+        "sha256": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw52p5.png",
+        "independentKeyframe": true
+      },
+      "54.375": {
+        "sha256": "77607a3dc84b1c7d6a8c0958ebb61d341cf4f7c731d8abe0e4d14e3c405e19bf",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw54p375.png",
+        "independentKeyframe": false
+      },
+      "56.25": {
+        "sha256": "f850d3ac6d8f504dcc6a0f156691407579833cf04debea7d41088771a1fc27a7",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw56p25.png",
+        "independentKeyframe": false
+      },
+      "58.125": {
+        "sha256": "c2a0fe3a238e09e69d008b6636a11374be0be44f4075bca1fc0c0b4c92addc92",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw58p125.png",
+        "independentKeyframe": false
+      },
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw60.png",
+        "independentKeyframe": true
+      },
+      "63.75": {
+        "sha256": "5be99d6d2d5c8d2ac656f50fffb2443d0728e6712c6783ddd81ba8ce6a06e795",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw63p75.png",
+        "independentKeyframe": false
+      },
+      "67.5": {
+        "sha256": "d768d0b61e18a965de1addd93554b0c60cba1910ec0cf09cd52a5d4893671265",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw67p5.png",
+        "independentKeyframe": false
+      },
+      "71.25": {
+        "sha256": "b5b210f849262130f69b234ef2251eb0a4e240cf9bb6ab94deb9e4ed987b8574",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw71p25.png",
+        "independentKeyframe": false
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-yaw75.png",
+        "independentKeyframe": true
+      }
+    },
+    "landmark_eye_owner": {
+      "52.5": {
+        "sha256": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw52p5.png",
+        "independentKeyframe": true
+      },
+      "54.375": {
+        "sha256": "22102c07a5a0f7064a20b017f6512bb037b7983aa4b38a793536abb0b6968a7b",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw54p375.png",
+        "independentKeyframe": false
+      },
+      "56.25": {
+        "sha256": "f850d3ac6d8f504dcc6a0f156691407579833cf04debea7d41088771a1fc27a7",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw56p25.png",
+        "independentKeyframe": false
+      },
+      "58.125": {
+        "sha256": "1ac618523417d631f70c28df3ce8c724515b06672c84ca7d9b9b4f4eac3d008c",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw58p125.png",
+        "independentKeyframe": false
+      },
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw60.png",
+        "independentKeyframe": true
+      },
+      "63.75": {
+        "sha256": "4770adc8c507d8a63d1f63a818b9182a9d6746e46944305fc2eb9b7c44c62193",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw63p75.png",
+        "independentKeyframe": false
+      },
+      "67.5": {
+        "sha256": "d768d0b61e18a965de1addd93554b0c60cba1910ec0cf09cd52a5d4893671265",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw67p5.png",
+        "independentKeyframe": false
+      },
+      "71.25": {
+        "sha256": "70f8d044cd3f095f365ebeb59ad516e611656d4c71c1b6a61d0243a1a1bb688d",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw71p25.png",
+        "independentKeyframe": false
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-yaw75.png",
+        "independentKeyframe": true
+      }
+    },
+    "landmark_visibility_union": {
+      "52.5": {
+        "sha256": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw52p5.png",
+        "independentKeyframe": true
+      },
+      "54.375": {
+        "sha256": "d3849609613bfb1de6c8269f8d5a144cfb0d19e51e7a76f1940e3f3ab0ef5e50",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw54p375.png",
+        "independentKeyframe": false
+      },
+      "56.25": {
+        "sha256": "6580ea376cfc318959f00ad40058eb2d9f70ee49d21672799d7da9f8a419ab6b",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw56p25.png",
+        "independentKeyframe": false
+      },
+      "58.125": {
+        "sha256": "5e660fa474bd1700fa1fadc961c32f3dd8af15d6188d705c77e1678f8db46455",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw58p125.png",
+        "independentKeyframe": false
+      },
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw60.png",
+        "independentKeyframe": true
+      },
+      "63.75": {
+        "sha256": "2cca9107ba1d2018a758dbbba1e3aa42c5558a245dc2eb42515713c16a0543f0",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw63p75.png",
+        "independentKeyframe": false
+      },
+      "67.5": {
+        "sha256": "1d0894fe9ee7c0b5e010f101e7fa3630da5fbfb853161426d8747e8f958cf15d",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw67p5.png",
+        "independentKeyframe": false
+      },
+      "71.25": {
+        "sha256": "be4d6a416a64901b5490d63e8efa8014c36513b0f0a3151adb7340a8601795ca",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw71p25.png",
+        "independentKeyframe": false
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-yaw75.png",
+        "independentKeyframe": true
+      }
+    },
+    "landmark_visibility_eye_owner": {
+      "52.5": {
+        "sha256": "af5b31e079a07c7096014cf99d48494e9dc5393fa8a24be4c93524350adf8cf6",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw52p5.png",
+        "independentKeyframe": true
+      },
+      "54.375": {
+        "sha256": "765f9e139a8ab5bcaa702474496bd576648534efb4b54c62c8862f8d562091aa",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw54p375.png",
+        "independentKeyframe": false
+      },
+      "56.25": {
+        "sha256": "6580ea376cfc318959f00ad40058eb2d9f70ee49d21672799d7da9f8a419ab6b",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw56p25.png",
+        "independentKeyframe": false
+      },
+      "58.125": {
+        "sha256": "e283b3414d729704d23915f85e31678f895b98e7d0e384fc97151f7560f9b206",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw58p125.png",
+        "independentKeyframe": false
+      },
+      "60": {
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw60.png",
+        "independentKeyframe": true
+      },
+      "63.75": {
+        "sha256": "404309a5e86cf8ad624b28e81f84869f342232ca8fe6bf1bbe3b76c3e024d35d",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw63p75.png",
+        "independentKeyframe": false
+      },
+      "67.5": {
+        "sha256": "1d0894fe9ee7c0b5e010f101e7fa3630da5fbfb853161426d8747e8f958cf15d",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw67p5.png",
+        "independentKeyframe": false
+      },
+      "71.25": {
+        "sha256": "8318880ba47579f18c2547d5cfc238658bf899a72b7e2982e9a509b48b6dd6fd",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw71p25.png",
+        "independentKeyframe": false
+      },
+      "75": {
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492",
+        "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-yaw75.png",
+        "independentKeyframe": true
+      }
+    }
+  },
+  "landmarkQA": {
+    "52.5": {
+      "sourceKeyview": "52p5"
+    },
+    "54.375": {
+      "sourceA": {
+        "maxDisplacementPxHalfRes": 10.25,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.81429
+      },
+      "sourceB": {
+        "maxDisplacementPxHalfRes": 30.749,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.54723
+      }
+    },
+    "56.25": {
+      "sourceA": {
+        "maxDisplacementPxHalfRes": 20.267,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.6495
+      },
+      "sourceB": {
+        "maxDisplacementPxHalfRes": 20.267,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.68331
+      }
+    },
+    "58.125": {
+      "sourceA": {
+        "maxDisplacementPxHalfRes": 30.216,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.50765
+      },
+      "sourceB": {
+        "maxDisplacementPxHalfRes": 10.072,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.83311
+      }
+    },
+    "60": {
+      "sourceKeyview": "60"
+    },
+    "63.75": {
+      "sourceA": {
+        "maxDisplacementPxHalfRes": 6.988,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.88677
+      },
+      "sourceB": {
+        "maxDisplacementPxHalfRes": 20.963,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.65917
+      }
+    },
+    "67.5": {
+      "sourceA": {
+        "maxDisplacementPxHalfRes": 13.803,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.77719
+      },
+      "sourceB": {
+        "maxDisplacementPxHalfRes": 13.803,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.75845
+      }
+    },
+    "71.25": {
+      "sourceA": {
+        "maxDisplacementPxHalfRes": 20.494,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.67043
+      },
+      "sourceB": {
+        "maxDisplacementPxHalfRes": 6.831,
+        "negativeJacobianFractionInFaceROI": 0.0,
+        "minJacobianFaceROI": 0.87351
+      }
+    },
+    "75": {
+      "sourceKeyview": "75"
+    }
+  },
+  "continuousYawVisualAccepted": false,
+  "formalArtMeshAccepted": false,
+  "methodMetrics": {
+    "dis_blend": {
+      "faceAdjacentMAE": [
+        21.5451,
+        17.5467,
+        18.5271,
+        22.3774,
+        18.632,
+        15.155,
+        15.3753,
+        18.4322
+      ],
+      "maxFaceAdjacentMAE": 22.3774,
+      "meanFaceAdjacentMAE": 18.4489,
+      "keyview60BoundaryRatio": 1.2109
+    },
+    "landmark_blend": {
+      "faceAdjacentMAE": [
+        20.9523,
+        16.3558,
+        16.4434,
+        21.1882,
+        20.7576,
+        15.9699,
+        16.7241,
+        21.077
+      ],
+      "maxFaceAdjacentMAE": 21.1882,
+      "meanFaceAdjacentMAE": 18.6835,
+      "keyview60BoundaryRatio": 1.1306
+    },
+    "landmark_eye_owner": {
+      "faceAdjacentMAE": [
+        21.5216,
+        17.2337,
+        17.1595,
+        21.4311,
+        20.97,
+        17.0436,
+        19.1093,
+        19.1088
+      ],
+      "maxFaceAdjacentMAE": 21.5216,
+      "meanFaceAdjacentMAE": 19.1972,
+      "keyview60BoundaryRatio": 1.1215
+    },
+    "landmark_visibility_union": {
+      "faceAdjacentMAE": [
+        21.5302,
+        16.2976,
+        16.5727,
+        22.5842,
+        20.176,
+        17.0751,
+        17.618,
+        24.6543
+      ],
+      "maxFaceAdjacentMAE": 24.6543,
+      "meanFaceAdjacentMAE": 19.5635,
+      "keyview60BoundaryRatio": 1.1951
+    },
+    "landmark_visibility_eye_owner": {
+      "faceAdjacentMAE": [
+        22.1075,
+        17.1686,
+        17.313,
+        22.8967,
+        20.5136,
+        17.4145,
+        25.1291,
+        33.672
+      ],
+      "maxFaceAdjacentMAE": 33.672,
+      "meanFaceAdjacentMAE": 22.0269,
+      "keyview60BoundaryRatio": 1.0744
+    }
+  },
+  "contact": "private-assets/exports/p15-98-vdd-review/three-method-contact.jpg",
+  "animated": {
+    "dis_blend": {
+      "sha256": "d1be6c9996dfec9db0e3653220b3e69d5275e08530229d46e50c98d92a69ec8f",
+      "relativePath": "private-assets/exports/p15-98-vdd-review/dis_blend-loop.gif"
+    },
+    "landmark_blend": {
+      "sha256": "7fec30747a5c6c1c15b8aba3b16a013da06e68232a9b2727956bc53d129598bf",
+      "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_blend-loop.gif"
+    },
+    "landmark_eye_owner": {
+      "sha256": "6dfbb3e50b65fef6af81293806d2e8fb7814ab5b4aebdb16c572a453b878c267",
+      "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_eye_owner-loop.gif"
+    },
+    "landmark_visibility_union": {
+      "sha256": "9b48fe65391bf9865e3d7c082b3bb03567f5d81a1c6bcd8b8db99ea672206998",
+      "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_union-loop.gif"
+    },
+    "landmark_visibility_eye_owner": {
+      "sha256": "fc9191d2884576ce96acd928d7bb3c01bb74a72610ba91201dea39832fff5595",
+      "relativePath": "private-assets/exports/p15-98-vdd-review/landmark_visibility_eye_owner-loop.gif"
+    }
+  },
+  "review": "private-assets/exports/p15-98-vdd-review/index.html",
+  "visualReview": {
+    "reviewPerformed": true,
+    "selectedSourceOfTruth": "registered independent 52.5, 60 and 75 degree keyview images",
+    "observations": {
+      "faceLineConsistency": "eyelid/brow double lines in intermediate yaw",
+      "occlusionBoundary": "face contour and bang edge diverge for 60-75 degree segment",
+      "visibilityUnion": "restores alpha coverage but can duplicate silhouette and hair",
+      "materialContinuity": "identity texture and occluded face topology not fully aligned"
+    },
+    "engineeringQA": "PASS",
+    "artisticQA": "REQUIRES_SEMANTIC_PART_CORRESPONDENCE",
+    "releaseGate": "LOCAL_VDD_DIAGNOSTIC_ONLY",
+    "fullContinuousYawAccepted": false
+  },
+  "visualGate": "SEPARATE_PER_VIEW_FACE_EYES_BANGS_AND_HIDDEN_UNDERDRAWING"
+}

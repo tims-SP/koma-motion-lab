@@ -1,0 +1,46 @@
+{
+  "schema": "KOMA_P15_148_NATIVE_ISOLATED_AHOGE_QA_V1",
+  "characterId": "p0_character_001",
+  "requestedYaw": 112.5,
+  "generator": "image_gen.imagegen",
+  "nativeAssetSHA256": "71ef0fcf1dc66ddf1c890f429dfb385d58daf6070068281335ed6bbe90bd9b6c",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "registeredReviewCanvas": [
+    443,
+    443
+  ],
+  "alphaStats": {
+    "opaquePixels": 2254,
+    "boundingBoxXYXY": [
+      223,
+      16,
+      313,
+      118
+    ],
+    "insideExpectedTopRegion": 2254,
+    "outsideExpectedTopRegion": 0,
+    "outsideSourceSilhouette": 1337,
+    "faceRegionPixels": 0,
+    "componentSizesOver50": [
+      2254
+    ]
+  },
+  "nativeAssetPreserved": true,
+  "sourceOriginalUnchanged": true,
+  "sourceEndpoints90And135Exact": true,
+  "maxAdjacentRGBMAE": {
+    "source": 12.0984,
+    "directOverlayCandidate": 12.4887
+  },
+  "directOverlayRGBAAbsoluteMAE": 1.4435,
+  "registrationGatePassed": true,
+  "rootTipArtistVerified": false,
+  "nativeSourceCompatible": false,
+  "completeHiddenScalpApproved": false,
+  "continuousVisualAccepted": false,
+  "review": "private-assets/exports/p15-148-native-ahoge/index.html",
+  "next": "Register an isolated root and tip with original source ahoge and remove original owned pixels. Only then test replacement under 90–135° yaw."
+}

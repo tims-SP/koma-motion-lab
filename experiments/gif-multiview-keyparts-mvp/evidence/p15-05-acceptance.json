@@ -1,0 +1,133 @@
+{
+  "schema": "KOMA-P0-P15-05-HAIR-OCCLUSION-ACCEPTANCE-V1",
+  "characterId": "p0_character_001",
+  "status": "PASS_HAIR_SOURCE_STRAND_AND_DEPTH_ENGINEERING",
+  "sourceRegisteredLayers": 28,
+  "sourceSHA256UniqueCount": 28,
+  "hairSemanticRoles": [
+    "hair.back",
+    "hair.side",
+    "hair.front",
+    "hair.ahoge"
+  ],
+  "viewAngles": [
+    45,
+    67.5,
+    72.5,
+    90
+  ],
+  "strandViewPairs": 12,
+  "candidateStrokeMatches": 23,
+  "occlusionPairChecks": 16,
+  "generatedKeyviewOcclusion": [
+    {
+      "hair.front>eye.near": {
+        "frontSemanticId": "hair.front",
+        "backSemanticId": "eye.near",
+        "frontDepthOrder": 10,
+        "backDepthOrder": 7,
+        "frontVisiblePixels": 99906,
+        "backVisiblePixels": 17418,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 117324
+      },
+      "hair.side>ear.near": {
+        "frontSemanticId": "hair.side",
+        "backSemanticId": "ear.near",
+        "frontDepthOrder": 5,
+        "backDepthOrder": 4,
+        "frontVisiblePixels": 69188,
+        "backVisiblePixels": 6681,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 75869
+      },
+      "face.skin>hair.back": {
+        "frontSemanticId": "face.skin",
+        "backSemanticId": "hair.back",
+        "frontDepthOrder": 2,
+        "backDepthOrder": 1,
+        "frontVisiblePixels": 52270,
+        "backVisiblePixels": 32130,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 84400
+      },
+      "hair.ahoge>hair.front": {
+        "frontSemanticId": "hair.ahoge",
+        "backSemanticId": "hair.front",
+        "frontDepthOrder": 11,
+        "backDepthOrder": 10,
+        "frontVisiblePixels": 4491,
+        "backVisiblePixels": 99906,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 104397
+      }
+    },
+    {
+      "hair.front>eye.near": {
+        "frontSemanticId": "hair.front",
+        "backSemanticId": "eye.near",
+        "frontDepthOrder": 10,
+        "backDepthOrder": 7,
+        "frontVisiblePixels": 111101,
+        "backVisiblePixels": 17148,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 128249
+      },
+      "hair.side>ear.near": {
+        "frontSemanticId": "hair.side",
+        "backSemanticId": "ear.near",
+        "frontDepthOrder": 5,
+        "backDepthOrder": 4,
+        "frontVisiblePixels": 78460,
+        "backVisiblePixels": 6995,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 85455
+      },
+      "face.skin>hair.back": {
+        "frontSemanticId": "face.skin",
+        "backSemanticId": "hair.back",
+        "frontDepthOrder": 2,
+        "backDepthOrder": 1,
+        "frontVisiblePixels": 53837,
+        "backVisiblePixels": 32268,
+        "overlapPixels": 0,
+        "backAlphaCoveredFraction": 0.0,
+        "singleVisibleBoundaryPixels": 86105
+      },
+      "hair.ahoge>hair.front": {
+        "frontSemanticId": "hair.ahoge",
+        "backSemanticId": "hair.front",
+        "frontDepthOrder": 11,
+        "backDepthOrder": 10,
+        "frontVisiblePixels": 7947,
+        "backVisiblePixels": 111101,
+        "overlapPixels": 2784,
+        "backAlphaCoveredFraction": 0.025058,
+        "singleVisibleBoundaryPixels": 113480
+      }
+    }
+  ],
+  "browserScreenshots": 4,
+  "browserSourceImagesHashVerified": 16,
+  "sourceQA_SHA256": "8ce91694f15d22be12845ff0f7c032eb739e35ff0f2b593b4d388619e649fc9c",
+  "sourceBrowserSHA256": "cbd343299efcc9ee8af5ba7aa73b53df1405c5b5348496a40e521389bbbd6cca",
+  "sourcePhysicalAnchor": "P5_ORIGINAL_45_90_PROJECTED_REFERENCE",
+  "nativeRGBA": [
+    1024,
+    1024
+  ],
+  "adoptedRenderer": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+  "artisticAcceptance": "PENDING_INDEPENDENT_STRAND_AND_MASK_REVIEW",
+  "nextVisualPriority": [
+    "hair.back",
+    "hair.front",
+    "hair.side",
+    "hair.ahoge"
+  ]
+}

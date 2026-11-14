@@ -1,0 +1,996 @@
+{
+  "schema": "KOMA-P0-P15-04-FACIAL-STROKE-ANCHOR-CORRESPONDENCE-V1",
+  "characterId": "p0_character_001",
+  "originalKeyAngles": [
+    45,
+    90
+  ],
+  "intermediateCandidateAngles": [
+    67.5,
+    72.5
+  ],
+  "semanticRoles": [
+    "face.skin",
+    "eye.near",
+    "nose",
+    "mouth"
+  ],
+  "sourceSize": [
+    1024,
+    1024
+  ],
+  "strokeWorkingCanvas": [
+    443,
+    443
+  ],
+  "sourceMetadataSHA256": {
+    "P5ArtMesh": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "P5Landmarks": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "P9Palette": "a29a9a7a6d44e8cdd09f1b1c82a329be2a8481752ec16c0a8284e95dba674fd9",
+    "P10StrokeBaseline": "b510d61f2ef89b5fc0b5aaaa95b20bf7cc43ab7fc9b281a0c082ca9d7f8d633e"
+  },
+  "method": "Original P10 RGBA interior stroke segmentation + palette-assisted connected components and one-to-one ambiguity rejection; view local alpha centroids; independent P5 linear physical anchor reference",
+  "pairCount": 12,
+  "matchedStrokeCandidateCount": 3,
+  "pairs": {
+    "45-67.5/face.skin": {
+      "role": "face.skin",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/face.skin.png",
+          "sha256": "9bdb945a26d33351602cd424ef683f5de57d79b05f2d246efe627a942c2bc5c3"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/face.skin.png",
+          "sha256": "dbba2dac8f58d1619e2542cb4bd32593e2138c9b9015b87fd5b58056ac43d2bb"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          255.799,
+          189.456
+        ],
+        "b": [
+          245.76,
+          233.354
+        ]
+      },
+      "measuredCenterShift443": [
+        -4.343,
+        18.991
+      ],
+      "physicalP5Predictions1024": {
+        "face.chin": {
+          "a": [
+            616.5,
+            664.0
+          ],
+          "b": [
+            630.0,
+            660.5
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 10.745,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "face.jaw.near": {
+          "a": [
+            482.2,
+            552.56
+          ],
+          "b": [
+            514.06,
+            549.48
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "eye.near.iris": {
+          "a": [
+            544.27,
+            467.11
+          ],
+          "b": [
+            610.635,
+            459.805
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 28.697,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "nose": {
+          "a": [
+            662.91,
+            532.96
+          ],
+          "b": [
+            713.705,
+            535.98
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 34.817,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "mouth": {
+          "a": [
+            635.0,
+            592.36
+          ],
+          "b": [
+            685.25,
+            597.43
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 14.868,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 6,
+      "targetStrokeCount": 4,
+      "accepted": [],
+      "unmatchedSourceCount": 6,
+      "unmatchedTargetCount": 4,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "67.5-72.5/face.skin": {
+      "role": "face.skin",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/face.skin.png",
+          "sha256": "dbba2dac8f58d1619e2542cb4bd32593e2138c9b9015b87fd5b58056ac43d2bb"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/face.skin.png",
+          "sha256": "82eec148a06b23d42c671aa7f59f45ff31e10cd81f704b85bea5629153a6b71f"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          245.76,
+          233.354
+        ],
+        "b": [
+          246.003,
+          234.19
+        ]
+      },
+      "measuredCenterShift443": [
+        0.105,
+        0.362
+      ],
+      "physicalP5Predictions1024": {
+        "face.chin": {
+          "a": [
+            630.0,
+            660.5
+          ],
+          "b": [
+            633.0,
+            659.722
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "face.jaw.near": {
+          "a": [
+            514.06,
+            549.48
+          ],
+          "b": [
+            521.14,
+            548.796
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "eye.near.iris": {
+          "a": [
+            610.635,
+            459.805
+          ],
+          "b": [
+            625.383,
+            458.182
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 30.905,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "nose": {
+          "a": [
+            713.705,
+            535.98
+          ],
+          "b": [
+            724.993,
+            536.651
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 43.354,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "mouth": {
+          "a": [
+            685.25,
+            597.43
+          ],
+          "b": [
+            696.417,
+            598.557
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 17.66,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 4,
+      "targetStrokeCount": 2,
+      "accepted": [
+        {
+          "sourceId": "face.skin.yaw675.stroke.000",
+          "targetId": "face.skin.yaw725.stroke.000",
+          "sourceXY": [
+            230.05,
+            255.66
+          ],
+          "targetXY": [
+            235.22,
+            264.12
+          ],
+          "sourceArea": 99,
+          "targetArea": 77,
+          "cost": 14.04,
+          "physicalResidual": 9.55,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.8293,
+          "sourcePalette": 4,
+          "targetPalette": 4,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        },
+        {
+          "sourceId": "face.skin.yaw675.stroke.003",
+          "targetId": "face.skin.yaw725.stroke.001",
+          "sourceXY": [
+            252.0,
+            277.33
+          ],
+          "targetXY": [
+            246.8,
+            285.2
+          ],
+          "sourceArea": 9,
+          "targetArea": 10,
+          "cost": 24.35,
+          "physicalResidual": 9.19,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.7228,
+          "sourcePalette": 1,
+          "targetPalette": 1,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedSourceCount": 2,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 0.5,
+      "targetCoverage": 1.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "72.5-90/face.skin": {
+      "role": "face.skin",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/face.skin.png",
+          "sha256": "82eec148a06b23d42c671aa7f59f45ff31e10cd81f704b85bea5629153a6b71f"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/face.skin.png",
+          "sha256": "e084fc4904b182a1eae02aae523d342c86dd18651ab9f651d744efacf795af31"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          246.003,
+          234.19
+        ],
+        "b": [
+          278.983,
+          194.666
+        ]
+      },
+      "measuredCenterShift443": [
+        14.268,
+        -17.099
+      ],
+      "physicalP5Predictions1024": {
+        "face.chin": {
+          "a": [
+            633.0,
+            659.722
+          ],
+          "b": [
+            643.5,
+            657.0
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": false,
+            "distanceToCandidateAlphaPx1024": 18.325,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "face.jaw.near": {
+          "a": [
+            521.14,
+            548.796
+          ],
+          "b": [
+            545.92,
+            546.4
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "eye.near.iris": {
+          "a": [
+            625.383,
+            458.182
+          ],
+          "b": [
+            677.0,
+            452.5
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "nose": {
+          "a": [
+            724.993,
+            536.651
+          ],
+          "b": [
+            764.5,
+            539.0
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        },
+        "mouth": {
+          "a": [
+            696.417,
+            598.557
+          ],
+          "b": [
+            735.5,
+            602.5
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 2,
+      "targetStrokeCount": 2,
+      "accepted": [],
+      "unmatchedSourceCount": 2,
+      "unmatchedTargetCount": 2,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "45-67.5/eye.near": {
+      "role": "eye.near",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/eye.near.png",
+          "sha256": "28c985c102668e2448e26064b2eb36586c9f15755d8ea655944967912a6af0fe"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/eye.near.png",
+          "sha256": "ed086b6ac5c99c05f0cfac03df77973ec6b641e06a471edd0aa426e152cc63b4"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          230.315,
+          195.723
+        ],
+        "b": [
+          268.837,
+          186.663
+        ]
+      },
+      "measuredCenterShift443": [
+        16.665,
+        -3.92
+      ],
+      "physicalP5Predictions1024": {
+        "eye.near.iris": {
+          "a": [
+            544.27,
+            467.11
+          ],
+          "b": [
+            610.635,
+            459.805
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 1,
+      "targetStrokeCount": 1,
+      "accepted": [],
+      "unmatchedSourceCount": 1,
+      "unmatchedTargetCount": 1,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "67.5-72.5/eye.near": {
+      "role": "eye.near",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/eye.near.png",
+          "sha256": "ed086b6ac5c99c05f0cfac03df77973ec6b641e06a471edd0aa426e152cc63b4"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/eye.near.png",
+          "sha256": "547937351db3dad9cf003f0a9f014a270c8c68496709a6dfe1c4e042e13f76b7"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          268.837,
+          186.663
+        ],
+        "b": [
+          268.109,
+          186.469
+        ]
+      },
+      "measuredCenterShift443": [
+        -0.315,
+        -0.084
+      ],
+      "physicalP5Predictions1024": {
+        "eye.near.iris": {
+          "a": [
+            610.635,
+            459.805
+          ],
+          "b": [
+            625.383,
+            458.182
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 1,
+      "targetStrokeCount": 3,
+      "accepted": [],
+      "unmatchedSourceCount": 1,
+      "unmatchedTargetCount": 3,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "72.5-90/eye.near": {
+      "role": "eye.near",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/eye.near.png",
+          "sha256": "547937351db3dad9cf003f0a9f014a270c8c68496709a6dfe1c4e042e13f76b7"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/eye.near.png",
+          "sha256": "56ed2cb3d17fa2f3bff20582dd4771848e27ed13b11f3f8dfa62303b1ddc4352"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          268.109,
+          186.469
+        ],
+        "b": [
+          291.732,
+          193.923
+        ]
+      },
+      "measuredCenterShift443": [
+        10.22,
+        3.224
+      ],
+      "physicalP5Predictions1024": {
+        "eye.near.iris": {
+          "a": [
+            625.383,
+            458.182
+          ],
+          "b": [
+            677.0,
+            452.5
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 3,
+      "targetStrokeCount": 0,
+      "accepted": [],
+      "unmatchedSourceCount": 3,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "45-67.5/nose": {
+      "role": "nose",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/nose.png",
+          "sha256": "af71c8ed7b022d763d7d357971488c69f60f31ea37bdc0e14b1d140f71fb79f5"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/nose.png",
+          "sha256": "f54c4d5ffb35680430fd9149178802af99331abc9c688e4bd330b0f196ede70d"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          286.251,
+          239.275
+        ],
+        "b": [
+          304.104,
+          227.322
+        ]
+      },
+      "measuredCenterShift443": [
+        7.724,
+        -5.171
+      ],
+      "physicalP5Predictions1024": {
+        "nose": {
+          "a": [
+            662.91,
+            532.96
+          ],
+          "b": [
+            713.705,
+            535.98
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 1,
+      "targetStrokeCount": 0,
+      "accepted": [],
+      "unmatchedSourceCount": 1,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "67.5-72.5/nose": {
+      "role": "nose",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/nose.png",
+          "sha256": "f54c4d5ffb35680430fd9149178802af99331abc9c688e4bd330b0f196ede70d"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/nose.png",
+          "sha256": "67d68300cee855c92dfa5366a483a297ea4bce72511fd0f432f3c578dbab3936"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          304.104,
+          227.322
+        ],
+        "b": [
+          305.678,
+          228.013
+        ]
+      },
+      "measuredCenterShift443": [
+        0.681,
+        0.299
+      ],
+      "physicalP5Predictions1024": {
+        "nose": {
+          "a": [
+            713.705,
+            535.98
+          ],
+          "b": [
+            724.993,
+            536.651
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 0,
+      "targetStrokeCount": 0,
+      "accepted": [],
+      "unmatchedSourceCount": 0,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "72.5-90/nose": {
+      "role": "nose",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/nose.png",
+          "sha256": "67d68300cee855c92dfa5366a483a297ea4bce72511fd0f432f3c578dbab3936"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/nose.png",
+          "sha256": "535de1060b84a89a6d8a5a7f90b23f1b8b642bf40edee9b87f572536546b5efc"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          305.678,
+          228.013
+        ],
+        "b": [
+          328.976,
+          231.311
+        ]
+      },
+      "measuredCenterShift443": [
+        10.079,
+        1.427
+      ],
+      "physicalP5Predictions1024": {
+        "nose": {
+          "a": [
+            724.993,
+            536.651
+          ],
+          "b": [
+            764.5,
+            539.0
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 0,
+      "targetStrokeCount": 0,
+      "accepted": [],
+      "unmatchedSourceCount": 0,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "45-67.5/mouth": {
+      "role": "mouth",
+      "angles": [
+        45,
+        67.5
+      ],
+      "source": {
+        "a": {
+          "path": "p5-see-through/yaw045/integrated/parts/mouth.png",
+          "sha256": "b783bbb31681155ca68ad56f5d18c91c7e913be5a398e928f06ce6517ec7ceb4"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/mouth.png",
+          "sha256": "c2aba7708302fbfa2000eb4c659ba0c51e92a8059703102be79ae5f9c9b476c8"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          270.649,
+          263.483
+        ],
+        "b": [
+          297.201,
+          254.86
+        ]
+      },
+      "measuredCenterShift443": [
+        11.487,
+        -3.73
+      ],
+      "physicalP5Predictions1024": {
+        "mouth": {
+          "a": [
+            635.0,
+            592.36
+          ],
+          "b": [
+            685.25,
+            597.43
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 0,
+      "targetStrokeCount": 1,
+      "accepted": [],
+      "unmatchedSourceCount": 0,
+      "unmatchedTargetCount": 1,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "67.5-72.5/mouth": {
+      "role": "mouth",
+      "angles": [
+        67.5,
+        72.5
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw067p5-artmesh/layers/mouth.png",
+          "sha256": "c2aba7708302fbfa2000eb4c659ba0c51e92a8059703102be79ae5f9c9b476c8"
+        },
+        "b": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/mouth.png",
+          "sha256": "215042fdcbdb2f6011409d7b64140e7ad36f6437f1432a8f98a3c1c412368b6e"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          297.201,
+          254.86
+        ],
+        "b": [
+          299.075,
+          255.225
+        ]
+      },
+      "measuredCenterShift443": [
+        0.811,
+        0.158
+      ],
+      "physicalP5Predictions1024": {
+        "mouth": {
+          "a": [
+            685.25,
+            597.43
+          ],
+          "b": [
+            696.417,
+            598.557
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 1,
+      "targetStrokeCount": 1,
+      "accepted": [
+        {
+          "sourceId": "mouth.yaw675.stroke.000",
+          "targetId": "mouth.yaw725.stroke.000",
+          "sourceXY": [
+            299.67,
+            250.9
+          ],
+          "targetXY": [
+            300.34,
+            253.17
+          ],
+          "sourceArea": 21,
+          "targetArea": 29,
+          "cost": 21.79,
+          "physicalResidual": 2.12,
+          "ambiguityMargin": 100.0,
+          "confidence": 0.7478,
+          "sourcePalette": 3,
+          "targetPalette": 0,
+          "occlusion": "COMMON_VISIBLE_CANDIDATE"
+        }
+      ],
+      "unmatchedSourceCount": 0,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 1.0,
+      "targetCoverage": 1.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    },
+    "72.5-90/mouth": {
+      "role": "mouth",
+      "angles": [
+        72.5,
+        90
+      ],
+      "source": {
+        "a": {
+          "path": "p14-authored-candidates/yaw072p5-artmesh/layers/mouth.png",
+          "sha256": "215042fdcbdb2f6011409d7b64140e7ad36f6437f1432a8f98a3c1c412368b6e"
+        },
+        "b": {
+          "path": "p2-views/parts/yaw090/mouth.png",
+          "sha256": "87c4fb5627e5868114dd197adcfa77572636709348c09c2574d067b0998e9b7c"
+        }
+      },
+      "alphaMeasuredCentroids443": {
+        "a": [
+          299.075,
+          255.225
+        ],
+        "b": [
+          317.304,
+          259.898
+        ]
+      },
+      "measuredCenterShift443": [
+        7.886,
+        2.022
+      ],
+      "physicalP5Predictions1024": {
+        "mouth": {
+          "a": [
+            696.417,
+            598.557
+          ],
+          "b": [
+            735.5,
+            602.5
+          ],
+          "type": "P5_LINEAR_PROJECTION_REFERENCE_ONLY",
+          "targetAlphaSupport": {
+            "candidateMaskContainsPrediction": true,
+            "distanceToCandidateAlphaPx1024": 0.0,
+            "method": "P5_LINEAR_PREDICTION_WITH_RGBA_ALPHA_SUPPORT"
+          }
+        }
+      },
+      "measuredCenterKind": "RGBA_ALPHA_CENTROID_NOT_ANATOMICAL_LANDMARK",
+      "sourceStrokeCount": 1,
+      "targetStrokeCount": 0,
+      "accepted": [],
+      "unmatchedSourceCount": 1,
+      "unmatchedTargetCount": 0,
+      "sourceCoverage": 0.0,
+      "targetCoverage": 0.0,
+      "strokeStatus": "IDENTITY_CANDIDATES_REQUIRE_VISUAL_CONFIRMATION"
+    }
+  },
+  "preview": {
+    "privateRelativePath": "p15-facial-strokes/face-strokes-contact.jpg",
+    "sha256": "f96604182c1c82c967ff1571e4451909ace61922e3732b102358967a7ba774ed"
+  },
+  "artisticAcceptance": "PENDING_INDEPENDENT_STROKE_REVIEW",
+  "status": "P15_04_SOURCE_BACKED_FACIAL_CORRESPONDENCE_REGISTERED"
+}

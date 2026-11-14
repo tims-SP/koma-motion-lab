@@ -1,0 +1,70 @@
+{
+  "schema": "KOMA_P15_148_AHOGE_SPATIAL_REGISTRATION_V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 112.5,
+  "nativeGeneratedSourceUnchanged": true,
+  "fit": {
+    "iouAboveCrown": 0.65973,
+    "scale": 0.9,
+    "shiftXY": [
+      24,
+      -14
+    ],
+    "intersectionPixels": 729,
+    "unionPixels": 1105
+  },
+  "freeStandingSourcePixelsErased": 956,
+  "replacementOpaquePixelsAboveCrown": 1032,
+  "sourcePixelsBelowCrownUnmodified": true,
+  "methods": {
+    "canonical": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "sourceEndpoint90And135PixelExact": true,
+      "sourceDifferenceMAE": 0.0
+    },
+    "direct_overlay": {
+      "maxAdjacentRGBMAE": 12.4887,
+      "adjacentRGBMAE": [
+        12.4887,
+        11.3789,
+        11.0008,
+        11.4371
+      ],
+      "sourceEndpoint90And135PixelExact": true,
+      "sourceDifferenceMAE": 0.8761
+    },
+    "registered_overlay": {
+      "maxAdjacentRGBMAE": 12.16,
+      "adjacentRGBMAE": [
+        12.16,
+        11.2228,
+        10.8207,
+        11.6221
+      ],
+      "sourceEndpoint90And135PixelExact": true,
+      "sourceDifferenceMAE": 0.4724
+    },
+    "loop_replacement": {
+      "maxAdjacentRGBMAE": 12.1844,
+      "adjacentRGBMAE": [
+        12.1844,
+        11.1375,
+        10.6476,
+        11.591
+      ],
+      "sourceEndpoint90And135PixelExact": true,
+      "sourceDifferenceMAE": 0.2438
+    }
+  },
+  "sourceArtAndIdentityVerified": false,
+  "hiddenRootPaintVerified": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-148-native-ahoge/registration.html",
+  "next": "Draw fully matching complete root and visible loop contour plus crown hidden underpaint; validate physically registered three-yaw isolated hair layers before VDD."
+}

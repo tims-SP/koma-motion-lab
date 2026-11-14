@@ -1,0 +1,136 @@
+{
+  "schema": "KOMA-P15-73-INTERACTIVE-POINT-SAM-V1",
+  "provider": "basimbashir/segment_anything_webui",
+  "model": "vit_b",
+  "device": "cpu",
+  "status": "MODEL_RETURNED",
+  "points": [
+    {
+      "type": "foreground_point",
+      "xy": [
+        250,
+        245
+      ]
+    },
+    {
+      "type": "foreground_point",
+      "xy": [
+        300,
+        220
+      ]
+    },
+    {
+      "type": "foreground_point",
+      "xy": [
+        340,
+        260
+      ]
+    },
+    {
+      "type": "foreground_point",
+      "xy": [
+        205,
+        270
+      ]
+    },
+    {
+      "type": "background_point",
+      "xy": [
+        240,
+        345
+      ]
+    },
+    {
+      "type": "background_point",
+      "xy": [
+        250,
+        415
+      ]
+    },
+    {
+      "type": "background_point",
+      "xy": [
+        390,
+        170
+      ]
+    },
+    {
+      "type": "background_point",
+      "xy": [
+        400,
+        390
+      ]
+    }
+  ],
+  "selectedPoints": [
+    [
+      [
+        250,
+        245
+      ],
+      1
+    ],
+    [
+      [
+        300,
+        220
+      ],
+      1
+    ],
+    [
+      [
+        340,
+        260
+      ],
+      1
+    ],
+    [
+      [
+        205,
+        270
+      ],
+      1
+    ],
+    [
+      [
+        240,
+        345
+      ],
+      0
+    ],
+    [
+      [
+        250,
+        415
+      ],
+      0
+    ],
+    [
+      [
+        390,
+        170
+      ],
+      0
+    ],
+    [
+      [
+        400,
+        390
+      ],
+      0
+    ]
+  ],
+  "outputs": [
+    {
+      "file": "sam-mask-0.png",
+      "bytes": 174774,
+      "sha256": "d28ad49ebf58aba216943507871ca99b137b244929a7f73722b403d918dbe94b"
+    },
+    {
+      "file": "sam-mask-1.png",
+      "bytes": 13050,
+      "sha256": "614cab9a572e07d5c33a2a7a65579bd6a9b243dde958639f8b41388990fe65c9"
+    }
+  ],
+  "outputCount": 2
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "KOMA-P15-47-BROWSER-V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "imageLoads": 7
+    },
+    {
+      "viewport": "mobile",
+      "imageLoads": 7
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "browser-desktop.png",
+      "sha256": "326bbee803952656d0d30b8e98e2d74fd9d718c842f164fff5bdc2f144f3c55d"
+    },
+    {
+      "file": "browser-mobile.png",
+      "sha256": "e194a168cb90976fb0c4b9030d60504a3e9771047c987d2ddc9fde6b45f67db4"
+    }
+  ],
+  "errors": [],
+  "status": "P15_47_REVIEW_HTML_VERIFIED"
+}

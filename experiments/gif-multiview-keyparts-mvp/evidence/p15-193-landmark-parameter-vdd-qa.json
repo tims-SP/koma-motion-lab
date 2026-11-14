@@ -1,0 +1,875 @@
+{
+  "schema": "KOMA_P15_193_ROOT_LANDMARK_PARAMETER_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "methods": {
+    "arc_linear": {
+      "maxAdjacentLocalRGBMAE": 7.8619,
+      "maxAdjacentGlobalRGBMAE": 6.9103,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.4503,
+      "middleRootCrossingStepsPixels": [
+        12.4503,
+        6.5835
+      ],
+      "meanRootCrossingTargetResidual": 4.4033,
+      "maxRootCrossingTargetResidual": 7.1662,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "allFreeTipsSourceInterpolated": true
+    },
+    "landmark_linear": {
+      "maxAdjacentLocalRGBMAE": 7.8493,
+      "maxAdjacentGlobalRGBMAE": 6.908,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 13.1017,
+      "middleRootCrossingStepsPixels": [
+        12.5991,
+        6.5898
+      ],
+      "meanRootCrossingTargetResidual": 4.4539,
+      "maxRootCrossingTargetResidual": 7.3044,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "allFreeTipsSourceInterpolated": true
+    },
+    "landmark_pchip": {
+      "maxAdjacentLocalRGBMAE": 9.0897,
+      "maxAdjacentGlobalRGBMAE": 7.0684,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 18.4372,
+      "middleRootCrossingStepsPixels": [
+        3.1518,
+        2.2132
+      ],
+      "meanRootCrossingTargetResidual": 10.459,
+      "maxRootCrossingTargetResidual": 15.4704,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "allFreeTipsSourceInterpolated": true
+    }
+  },
+  "details": {
+    "arc_linear": {
+      "93.75": {
+        "rootCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "rootCrossingTarget": [
+          197.6667022705078,
+          57.290000915527344
+        ],
+        "rootCrossingTargetResidual": 4.1199,
+        "crossingTangent": [
+          0.0,
+          -1.0
+        ],
+        "freeTip": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1266,
+        "colorSeam": 0.851
+      },
+      "97.5": {
+        "rootCrossing": [
+          208.30340576171875,
+          51.03219985961914
+        ],
+        "rootCrossingTarget": [
+          209.3332977294922,
+          57.74340057373047
+        ],
+        "rootCrossingTargetResidual": 6.7898,
+        "crossingTangent": [
+          -0.06689999997615814,
+          -0.9977999925613403
+        ],
+        "freeTip": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1289,
+        "colorSeam": 8.7656
+      },
+      "101.25": {
+        "rootCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "rootCrossingTarget": [
+          221.0,
+          58.196800231933594
+        ],
+        "rootCrossingTargetResidual": 7.1662,
+        "crossingTangent": [
+          0.09969999641180038,
+          -0.9950000047683716
+        ],
+        "freeTip": [
+          284.0,
+          63.0
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1331,
+        "colorSeam": 32.2209
+      },
+      "105": {
+        "rootCrossing": [
+          232.3332977294922,
+          52.4536018371582
+        ],
+        "rootCrossingTarget": [
+          232.6667022705078,
+          58.650299072265625
+        ],
+        "rootCrossingTargetResidual": 6.2056,
+        "crossingTangent": [
+          0.08529999852180481,
+          -0.996399998664856
+        ],
+        "freeTip": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1399,
+        "colorSeam": 26.2998
+      },
+      "108.75": {
+        "rootCrossing": [
+          244.16659545898438,
+          55.686500549316406
+        ],
+        "rootCrossingTarget": [
+          244.3332977294922,
+          59.10380172729492
+        ],
+        "rootCrossingTargetResidual": 3.4214,
+        "crossingTangent": [
+          0.0421999990940094,
+          -0.9991000294685364
+        ],
+        "freeTip": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1464,
+        "colorSeam": 37.756
+      },
+      "116.25": {
+        "rootCrossing": [
+          250.17379760742188,
+          56.491600036621094
+        ],
+        "rootCrossingTarget": [
+          250.16659545898438,
+          58.24020004272461
+        ],
+        "rootCrossingTargetResidual": 1.7487,
+        "crossingTangent": [
+          0.04320000112056732,
+          -0.9991000294685364
+        ],
+        "freeTip": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1450,
+        "colorSeam": 37.3355
+      },
+      "120": {
+        "rootCrossing": [
+          244.33340454101562,
+          53.51750183105469
+        ],
+        "rootCrossingTarget": [
+          244.33340454101562,
+          56.923301696777344
+        ],
+        "rootCrossingTargetResidual": 3.4057,
+        "crossingTangent": [
+          0.08940000087022781,
+          -0.9959999918937683
+        ],
+        "freeTip": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1375,
+        "colorSeam": 24.7961
+      },
+      "123.75": {
+        "rootCrossing": [
+          238.5,
+          51.36140060424805
+        ],
+        "rootCrossingTarget": [
+          238.5,
+          55.606300354003906
+        ],
+        "rootCrossingTargetResidual": 4.2449,
+        "crossingTangent": [
+          0.08100000023841858,
+          -0.9966999888420105
+        ],
+        "freeTip": [
+          292.0,
+          64.5
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1302,
+        "colorSeam": 39.5355
+      },
+      "127.5": {
+        "rootCrossing": [
+          232.84939575195312,
+          50.1963005065918
+        ],
+        "rootCrossingTarget": [
+          232.6667022705078,
+          54.28929901123047
+        ],
+        "rootCrossingTargetResidual": 4.0971,
+        "crossingTangent": [
+          -0.12309999763965607,
+          -0.9923999905586243
+        ],
+        "freeTip": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1251,
+        "colorSeam": 37.5386
+      },
+      "131.25": {
+        "rootCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "rootCrossingTarget": [
+          226.8332977294922,
+          52.9724006652832
+        ],
+        "rootCrossingTargetResidual": 2.8341,
+        "crossingTangent": [
+          -0.03200000151991844,
+          -0.9994999766349792
+        ],
+        "freeTip": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1198,
+        "colorSeam": 8.4283
+      }
+    },
+    "landmark_linear": {
+      "93.75": {
+        "rootCrossing": [
+          196.4873046875,
+          53.30730056762695
+        ],
+        "rootCrossingTarget": [
+          197.6667022705078,
+          57.290000915527344
+        ],
+        "rootCrossingTargetResidual": 4.1536,
+        "crossingTangent": [
+          -0.22380000352859497,
+          -0.9746000170707703
+        ],
+        "freeTip": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1241,
+        "colorSeam": 15.3442
+      },
+      "97.5": {
+        "rootCrossing": [
+          207.6667022705078,
+          51.03219985961914
+        ],
+        "rootCrossingTarget": [
+          209.3332977294922,
+          57.74340057373047
+        ],
+        "rootCrossingTargetResidual": 6.915,
+        "crossingTangent": [
+          -0.012400000356137753,
+          -0.9998999834060669
+        ],
+        "freeTip": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1271,
+        "colorSeam": 36.7346
+      },
+      "101.25": {
+        "rootCrossing": [
+          219.5,
+          51.048099517822266
+        ],
+        "rootCrossingTarget": [
+          221.0,
+          58.196800231933594
+        ],
+        "rootCrossingTargetResidual": 7.3044,
+        "crossingTangent": [
+          -0.013799999840557575,
+          -0.9998999834060669
+        ],
+        "freeTip": [
+          284.0,
+          63.0
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1322,
+        "colorSeam": 15.2963
+      },
+      "105": {
+        "rootCrossing": [
+          231.33340454101562,
+          52.37710189819336
+        ],
+        "rootCrossingTarget": [
+          232.6667022705078,
+          58.650299072265625
+        ],
+        "rootCrossingTargetResidual": 6.4133,
+        "crossingTangent": [
+          -0.015300000086426735,
+          -0.9998999834060669
+        ],
+        "freeTip": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1391,
+        "colorSeam": 0.6532
+      },
+      "108.75": {
+        "rootCrossing": [
+          244.01019287109375,
+          55.686500549316406
+        ],
+        "rootCrossingTarget": [
+          244.3332977294922,
+          59.10380172729492
+        ],
+        "rootCrossingTargetResidual": 3.4325,
+        "crossingTangent": [
+          -0.24660000205039978,
+          -0.9690999984741211
+        ],
+        "freeTip": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1451,
+        "colorSeam": 51.3377
+      },
+      "116.25": {
+        "rootCrossing": [
+          250.16659545898438,
+          56.491600036621094
+        ],
+        "rootCrossingTarget": [
+          250.16659545898438,
+          58.24020004272461
+        ],
+        "rootCrossingTargetResidual": 1.7486,
+        "crossingTangent": [
+          -0.0982000008225441,
+          -0.995199978351593
+        ],
+        "freeTip": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1442,
+        "colorSeam": 37.3107
+      },
+      "120": {
+        "rootCrossing": [
+          244.22120666503906,
+          53.51750183105469
+        ],
+        "rootCrossingTarget": [
+          244.33340454101562,
+          56.923301696777344
+        ],
+        "rootCrossingTargetResidual": 3.4076,
+        "crossingTangent": [
+          -0.1671999990940094,
+          -0.9858999848365784
+        ],
+        "freeTip": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1370,
+        "colorSeam": 18.7098
+      },
+      "123.75": {
+        "rootCrossing": [
+          238.22500610351562,
+          51.36140060424805
+        ],
+        "rootCrossingTarget": [
+          238.5,
+          55.606300354003906
+        ],
+        "rootCrossingTargetResidual": 4.2538,
+        "crossingTangent": [
+          -0.11860000342130661,
+          -0.992900013923645
+        ],
+        "freeTip": [
+          292.0,
+          64.5
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1309,
+        "colorSeam": 4.7699
+      },
+      "127.5": {
+        "rootCrossing": [
+          232.50950622558594,
+          50.1963005065918
+        ],
+        "rootCrossingTarget": [
+          232.6667022705078,
+          54.28929901123047
+        ],
+        "rootCrossingTargetResidual": 4.0961,
+        "crossingTangent": [
+          -0.08219999819993973,
+          -0.9965999722480774
+        ],
+        "freeTip": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1249,
+        "colorSeam": 40.1399
+      },
+      "131.25": {
+        "rootCrossing": [
+          226.8280029296875,
+          50.15800094604492
+        ],
+        "rootCrossingTarget": [
+          226.8332977294922,
+          52.9724006652832
+        ],
+        "rootCrossingTargetResidual": 2.8144,
+        "crossingTangent": [
+          -0.03739999979734421,
+          -0.9993000030517578
+        ],
+        "freeTip": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1192,
+        "colorSeam": 24.3952
+      }
+    },
+    "landmark_pchip": {
+      "93.75": {
+        "rootCrossing": [
+          203.55320739746094,
+          51.19609832763672
+        ],
+        "rootCrossingTarget": [
+          197.6667022705078,
+          57.290000915527344
+        ],
+        "rootCrossingTargetResidual": 8.4727,
+        "crossingTangent": [
+          -0.012600000016391277,
+          -0.9998999834060669
+        ],
+        "freeTip": [
+          274.51849365234375,
+          57.77080154418945
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1285,
+        "colorSeam": 49.3268
+      },
+      "97.5": {
+        "rootCrossing": [
+          220.70370483398438,
+          50.06159973144531
+        ],
+        "rootCrossingTarget": [
+          209.3332977294922,
+          57.74340057373047
+        ],
+        "rootCrossingTargetResidual": 13.7221,
+        "crossingTangent": [
+          0.0,
+          -1.0
+        ],
+        "freeTip": [
+          285.2591857910156,
+          64.22219848632812
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1354,
+        "colorSeam": 32.5769
+      },
+      "101.25": {
+        "rootCrossing": [
+          234.9375,
+          51.48270034790039
+        ],
+        "rootCrossingTarget": [
+          221.0,
+          58.196800231933594
+        ],
+        "rootCrossingTargetResidual": 15.4704,
+        "crossingTangent": [
+          0.0,
+          -1.0
+        ],
+        "freeTip": [
+          294.0,
+          69.3125
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1415,
+        "colorSeam": 8.0675
+      },
+      "105": {
+        "rootCrossing": [
+          245.84060668945312,
+          54.52539825439453
+        ],
+        "rootCrossingTarget": [
+          232.6667022705078,
+          58.650299072265625
+        ],
+        "rootCrossingTargetResidual": 13.8046,
+        "crossingTangent": [
+          -0.24549999833106995,
+          -0.9693999886512756
+        ],
+        "freeTip": [
+          300.51849365234375,
+          73.0
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1476,
+        "colorSeam": 18.9948
+      },
+      "108.75": {
+        "rootCrossing": [
+          253.6134033203125,
+          57.49850082397461
+        ],
+        "rootCrossingTarget": [
+          244.3332977294922,
+          59.10380172729492
+        ],
+        "rootCrossingTargetResidual": 9.4179,
+        "crossingTangent": [
+          -0.12860000133514404,
+          -0.9916999936103821
+        ],
+        "freeTip": [
+          304.59259033203125,
+          75.24310302734375
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1513,
+        "colorSeam": 68.4118
+      },
+      "116.25": {
+        "rootCrossing": [
+          255.44239807128906,
+          57.415401458740234
+        ],
+        "rootCrossingTarget": [
+          250.16659545898438,
+          58.24020004272461
+        ],
+        "rootCrossingTargetResidual": 5.3398,
+        "crossingTangent": [
+          -0.11069999635219574,
+          -0.9937999844551086
+        ],
+        "freeTip": [
+          305.40740966796875,
+          75.39579772949219
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1507,
+        "colorSeam": 27.2784
+      },
+      "120": {
+        "rootCrossing": [
+          253.40879821777344,
+          55.45920181274414
+        ],
+        "rootCrossingTarget": [
+          244.33340454101562,
+          56.923301696777344
+        ],
+        "rootCrossingTargetResidual": 9.1928,
+        "crossingTangent": [
+          -0.19130000472068787,
+          -0.9815000295639038
+        ],
+        "freeTip": [
+          303.48150634765625,
+          73.55560302734375
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1470,
+        "colorSeam": 25.9739
+      },
+      "123.75": {
+        "rootCrossing": [
+          249.05859375,
+          52.86479949951172
+        ],
+        "rootCrossingTarget": [
+          238.5,
+          55.606300354003906
+        ],
+        "rootCrossingTargetResidual": 10.9087,
+        "crossingTangent": [
+          -0.1655000001192093,
+          -0.9861999750137329
+        ],
+        "freeTip": [
+          300.0,
+          70.4375
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1421,
+        "colorSeam": 30.7468
+      },
+      "127.5": {
+        "rootCrossing": [
+          242.67300415039062,
+          50.65129852294922
+        ],
+        "rootCrossingTarget": [
+          232.6667022705078,
+          54.28929901123047
+        ],
+        "rootCrossingTargetResidual": 10.6471,
+        "crossingTangent": [
+          -0.11479999870061874,
+          -0.993399977684021
+        ],
+        "freeTip": [
+          294.7408142089844,
+          66.0
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1323,
+        "colorSeam": 29.7673
+      },
+      "131.25": {
+        "rootCrossing": [
+          233.6490020751953,
+          49.578800201416016
+        ],
+        "rootCrossingTarget": [
+          226.8332977294922,
+          52.9724006652832
+        ],
+        "rootCrossingTargetResidual": 7.6138,
+        "crossingTangent": [
+          -0.057999998331069946,
+          -0.9983000159263611
+        ],
+        "freeTip": [
+          287.48150634765625,
+          60.20140075683594
+        ],
+        "sourceTipInterpolationExact": true,
+        "singleConnectedStrand": true,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1230,
+        "colorSeam": 23.2549
+      }
+    }
+  },
+  "sourceLandmarks": {
+    "90": {
+      "originalCrossingSegment": 7,
+      "sourceCrossingFractionalNode": 6.8193,
+      "newCrossingNode": 32,
+      "sourceCrossing": [
+        186.0,
+        56.83649826049805
+      ],
+      "newCrossingControl": [
+        186.0,
+        56.83649826049805
+      ],
+      "landmarkResidualPixels": 0.0,
+      "freeTipExact": true
+    },
+    "112.5": {
+      "originalCrossingSegment": 25,
+      "sourceCrossingFractionalNode": 24.3046,
+      "newCrossingNode": 32,
+      "sourceCrossing": [
+        256.0,
+        59.55720138549805
+      ],
+      "newCrossingControl": [
+        256.0,
+        59.55720138549805
+      ],
+      "landmarkResidualPixels": 0.0,
+      "freeTipExact": true
+    },
+    "135": {
+      "originalCrossingSegment": 11,
+      "sourceCrossingFractionalNode": 10.9627,
+      "newCrossingNode": 32,
+      "sourceCrossing": [
+        221.0,
+        51.655399322509766
+      ],
+      "newCrossingControl": [
+        221.0,
+        51.655399322509766
+      ],
+      "landmarkResidualPixels": 0.0,
+      "freeTipExact": true
+    }
+  },
+  "landmarkNode": 32,
+  "selectedDiagnosticMethod": "arc_linear",
+  "method": "Native-source root/crown crossing aligned to shared u=0.2; root and free tip are u=0,1. Jointly resample 160-point medial centerline, source donor sampling normals and variable width, then compare linear and PCHIP geometry.",
+  "nativeKeyframeSHA256": {
+    "90": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+    "112.5": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+    "135": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+  },
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-193-landmark-parameter-vdd/index.html",
+  "gate": {
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "allMidframesSingleComponent": true,
+    "allSourceLandmarksWithinPixel": true,
+    "crossingImprovedOverArc": false,
+    "localTemporalBeatsDIS": true,
+    "globalTemporalBeatsDIS": false,
+    "visualAccepted": false,
+    "semanticCorrespondenceApproved": false,
+    "passes": false
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "schema": "KOMA_P15_191_ROOT_COLOR_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "rootAnchorVsCrossing": {
+    "90": {
+      "anchor": [
+        184.0,
+        53.0
+      ],
+      "crossing": [
+        186.0,
+        56.83649826049805
+      ],
+      "distance": 4.3265
+    },
+    "112.5": {
+      "anchor": [
+        258.0,
+        77.0
+      ],
+      "crossing": [
+        256.0,
+        59.55720138549805
+      ],
+      "distance": 17.5571
+    },
+    "135": {
+      "anchor": [
+        222.0,
+        55.0
+      ],
+      "crossing": [
+        221.0,
+        51.655399322509766
+      ],
+      "distance": 3.4909
+    }
+  },
+  "nativeVisibleColorPalette": {
+    "90": [
+      165.343994140625,
+      126.63200378417969,
+      148.4149932861328
+    ],
+    "112.5": [
+      143.59300231933594,
+      97.57499694824219,
+      122.21199798583984
+    ],
+    "135": [
+      150.96800231933594,
+      110.11599731445312,
+      135.6510009765625
+    ]
+  },
+  "methods": {
+    "original": {
+      "maxAdjacentRootColorSeamChange": 29.1103,
+      "middleSeamChanges": [
+        24.5499,
+        24.9704
+      ],
+      "maxAdjacentLocalRGBMAE": 7.8619,
+      "maxAdjacentGlobalRGBMAE": 6.9103,
+      "changedRGBPixels": 0,
+      "alphaExact": true,
+      "below125Exact": true,
+      "nativeKeysExact": true
+    },
+    "radius_5": {
+      "maxAdjacentRootColorSeamChange": 43.2697,
+      "middleSeamChanges": [
+        43.2697,
+        43.2506
+      ],
+      "maxAdjacentLocalRGBMAE": 7.8841,
+      "maxAdjacentGlobalRGBMAE": 6.9142,
+      "changedRGBPixels": 3615,
+      "alphaExact": true,
+      "below125Exact": true,
+      "nativeKeysExact": true
+    },
+    "radius_8": {
+      "maxAdjacentRootColorSeamChange": 43.7024,
+      "middleSeamChanges": [
+        43.7024,
+        43.4044
+      ],
+      "maxAdjacentLocalRGBMAE": 7.946,
+      "maxAdjacentGlobalRGBMAE": 6.9253,
+      "changedRGBPixels": 8925,
+      "alphaExact": true,
+      "below125Exact": true,
+      "nativeKeysExact": true
+    },
+    "radius_12": {
+      "maxAdjacentRootColorSeamChange": 43.7103,
+      "middleSeamChanges": [
+        43.7103,
+        43.5996
+      ],
+      "maxAdjacentLocalRGBMAE": 8.0799,
+      "maxAdjacentGlobalRGBMAE": 6.9493,
+      "changedRGBPixels": 19383,
+      "alphaExact": true,
+      "below125Exact": true,
+      "nativeKeysExact": true
+    },
+    "radius_8_strong": {
+      "maxAdjacentRootColorSeamChange": 54.0567,
+      "middleSeamChanges": [
+        54.0567,
+        53.5316
+      ],
+      "maxAdjacentLocalRGBMAE": 8.0061,
+      "maxAdjacentGlobalRGBMAE": 6.9361,
+      "changedRGBPixels": 9796,
+      "alphaExact": true,
+      "below125Exact": true,
+      "nativeKeysExact": true
+    }
+  },
+  "details": {
+    "original": {
+      "90": {
+        "changedRGBPixels": 0,
+        "seam": 22.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "93.75": {
+        "changedRGBPixels": 0,
+        "seam": 0.851,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "97.5": {
+        "changedRGBPixels": 0,
+        "seam": 8.7656,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "101.25": {
+        "changedRGBPixels": 0,
+        "seam": 32.2209,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "105": {
+        "changedRGBPixels": 0,
+        "seam": 26.2998,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "108.75": {
+        "changedRGBPixels": 0,
+        "seam": 37.756,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "112.5": {
+        "changedRGBPixels": 0,
+        "seam": 62.3059,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "116.25": {
+        "changedRGBPixels": 0,
+        "seam": 37.3355,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "120": {
+        "changedRGBPixels": 0,
+        "seam": 24.7961,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "123.75": {
+        "changedRGBPixels": 0,
+        "seam": 39.5355,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "127.5": {
+        "changedRGBPixels": 0,
+        "seam": 37.5386,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "131.25": {
+        "changedRGBPixels": 0,
+        "seam": 8.4283,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "135": {
+        "changedRGBPixels": 0,
+        "seam": 17.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      }
+    },
+    "radius_5": {
+      "90": {
+        "changedRGBPixels": 0,
+        "seam": 22.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "93.75": {
+        "changedRGBPixels": 346,
+        "seam": 6.4113,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "97.5": {
+        "changedRGBPixels": 343,
+        "seam": 7.5721,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "101.25": {
+        "changedRGBPixels": 374,
+        "seam": 26.3129,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "105": {
+        "changedRGBPixels": 370,
+        "seam": 15.7233,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "108.75": {
+        "changedRGBPixels": 365,
+        "seam": 19.0362,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "112.5": {
+        "changedRGBPixels": 0,
+        "seam": 62.3059,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "116.25": {
+        "changedRGBPixels": 393,
+        "seam": 19.0553,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "120": {
+        "changedRGBPixels": 364,
+        "seam": 15.519,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "123.75": {
+        "changedRGBPixels": 358,
+        "seam": 20.142,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "127.5": {
+        "changedRGBPixels": 356,
+        "seam": 27.8946,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "131.25": {
+        "changedRGBPixels": 346,
+        "seam": 9.7107,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "135": {
+        "changedRGBPixels": 0,
+        "seam": 17.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      }
+    },
+    "radius_8": {
+      "90": {
+        "changedRGBPixels": 0,
+        "seam": 22.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "93.75": {
+        "changedRGBPixels": 861,
+        "seam": 6.6584,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "97.5": {
+        "changedRGBPixels": 874,
+        "seam": 7.3102,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "101.25": {
+        "changedRGBPixels": 875,
+        "seam": 26.7329,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "105": {
+        "changedRGBPixels": 885,
+        "seam": 15.6928,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "108.75": {
+        "changedRGBPixels": 938,
+        "seam": 18.6035,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "112.5": {
+        "changedRGBPixels": 0,
+        "seam": 62.3059,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "116.25": {
+        "changedRGBPixels": 952,
+        "seam": 18.9015,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "120": {
+        "changedRGBPixels": 916,
+        "seam": 15.3608,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "123.75": {
+        "changedRGBPixels": 890,
+        "seam": 19.8845,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "127.5": {
+        "changedRGBPixels": 868,
+        "seam": 27.6749,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "131.25": {
+        "changedRGBPixels": 866,
+        "seam": 9.8623,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "135": {
+        "changedRGBPixels": 0,
+        "seam": 17.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      }
+    },
+    "radius_12": {
+      "90": {
+        "changedRGBPixels": 0,
+        "seam": 22.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "93.75": {
+        "changedRGBPixels": 1880,
+        "seam": 6.729,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "97.5": {
+        "changedRGBPixels": 1842,
+        "seam": 7.3991,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "101.25": {
+        "changedRGBPixels": 1914,
+        "seam": 26.7246,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "105": {
+        "changedRGBPixels": 1932,
+        "seam": 15.8392,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "108.75": {
+        "changedRGBPixels": 2026,
+        "seam": 18.5956,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "112.5": {
+        "changedRGBPixels": 0,
+        "seam": 62.3059,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "116.25": {
+        "changedRGBPixels": 2049,
+        "seam": 18.7063,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "120": {
+        "changedRGBPixels": 1991,
+        "seam": 15.4749,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "123.75": {
+        "changedRGBPixels": 1928,
+        "seam": 19.8113,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "127.5": {
+        "changedRGBPixels": 1909,
+        "seam": 27.6749,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "131.25": {
+        "changedRGBPixels": 1912,
+        "seam": 9.8623,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "135": {
+        "changedRGBPixels": 0,
+        "seam": 17.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      }
+    },
+    "radius_8_strong": {
+      "90": {
+        "changedRGBPixels": 0,
+        "seam": 22.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "93.75": {
+        "changedRGBPixels": 943,
+        "seam": 9.8728,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "97.5": {
+        "changedRGBPixels": 961,
+        "seam": 6.7159,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "101.25": {
+        "changedRGBPixels": 951,
+        "seam": 23.9804,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "105": {
+        "changedRGBPixels": 975,
+        "seam": 9.9081,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "108.75": {
+        "changedRGBPixels": 1020,
+        "seam": 8.2492,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "112.5": {
+        "changedRGBPixels": 0,
+        "seam": 62.3059,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "116.25": {
+        "changedRGBPixels": 1048,
+        "seam": 8.7743,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "120": {
+        "changedRGBPixels": 1002,
+        "seam": 10.546,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "123.75": {
+        "changedRGBPixels": 974,
+        "seam": 9.3407,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "127.5": {
+        "changedRGBPixels": 971,
+        "seam": 22.4139,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "131.25": {
+        "changedRGBPixels": 951,
+        "seam": 10.7852,
+        "alphaExact": true,
+        "below125Exact": true
+      },
+      "135": {
+        "changedRGBPixels": 0,
+        "seam": 17.3333,
+        "alphaExact": true,
+        "below125Exact": true
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "original",
+  "referenceDISLocalMAE": 7.9475,
+  "referenceDISGlobalMAE": 6.6299,
+  "sourceAssetsModified": false,
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-191-source-root-color/index.html",
+  "gate": {
+    "nativeKeysExact": true,
+    "allAlphaExact": true,
+    "deepBodyExact": true,
+    "rootSeamImproved": false,
+    "localTemporalBeatsDIS": true,
+    "globalTemporalBeatsDIS": false,
+    "sourceRootIdentityApproved": false,
+    "visualAccepted": false,
+    "passes": false
+  }
+}

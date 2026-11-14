@@ -1,0 +1,140 @@
+{
+  "schema": "KOMA_P15_146_SOURCE_STRAND_REGIONS_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "candidateLabels": [
+    "crown",
+    "fringe",
+    "nape"
+  ],
+  "definition": "mutually exclusive crown, near-face fringe and lower nape regions of existing hair candidate mask",
+  "referenceP15_145": {
+    "adjacentRGBMAE": [
+      12.0224,
+      10.8474,
+      10.5888,
+      11.5044
+    ],
+    "maxAdjacentRGBMAE": 12.0224
+  },
+  "methods": {
+    "source_owned_000": {
+      "adjacentRGBMAE": [
+        0.321,
+        17.6688,
+        0.1451,
+        16.4645
+      ],
+      "maxAdjacentRGBMAE": 17.6688,
+      "meshGeometry": {
+        "101.25": {
+          "minimumTriangleArea": 288.2587,
+          "folds": 0
+        },
+        "123.75": {
+          "minimumTriangleArea": 345.64215,
+          "folds": 0
+        }
+      },
+      "nativeKeysPixelExact": true
+    },
+    "strand_mesh_025": {
+      "adjacentRGBMAE": [
+        4.034,
+        17.2923,
+        2.8117,
+        16.2828
+      ],
+      "maxAdjacentRGBMAE": 17.2923,
+      "meshGeometry": {
+        "101.25": {
+          "minimumTriangleArea": 295.15396,
+          "folds": 0
+        },
+        "123.75": {
+          "minimumTriangleArea": 345.08762,
+          "folds": 0
+        }
+      },
+      "nativeKeysPixelExact": true
+    },
+    "strand_mesh_050": {
+      "adjacentRGBMAE": [
+        5.8012,
+        17.2214,
+        4.3304,
+        16.1038
+      ],
+      "maxAdjacentRGBMAE": 17.2214,
+      "meshGeometry": {
+        "101.25": {
+          "minimumTriangleArea": 302.12872,
+          "folds": 0
+        },
+        "123.75": {
+          "minimumTriangleArea": 344.5285,
+          "folds": 0
+        }
+      },
+      "nativeKeysPixelExact": true
+    }
+  },
+  "sourceCoverage": {
+    "90": {
+      "hairPixelCount": 43266,
+      "labels": {
+        "crown": 28614,
+        "fringe": 7811,
+        "nape": 6841
+      },
+      "protectedFacePixelCount": 8110,
+      "recompositionExact": true
+    },
+    "112.5": {
+      "hairPixelCount": 42849,
+      "labels": {
+        "crown": 28098,
+        "fringe": 6408,
+        "nape": 8343
+      },
+      "protectedFacePixelCount": 7808,
+      "recompositionExact": true
+    },
+    "135": {
+      "hairPixelCount": 48755,
+      "labels": {
+        "crown": 28824,
+        "fringe": 10300,
+        "nape": 9631
+      },
+      "protectedFacePixelCount": 3472,
+      "recompositionExact": true
+    }
+  },
+  "sourceArtPreserved": true,
+  "pixelPerfectSourceReassembly": true,
+  "eyeProtectMaskEnabled": true,
+  "trueAnatomicalRootTipCorrespondenceVerified": false,
+  "artistApprovedStrandLabels": false,
+  "underpaintAcrossViewsValidated": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-146-strand-identities/index.html",
+  "next": "Source-paint identifiable strands in 90/112.5/135 and validate root/tip relations; then deform owner-matched ArtMesh with per-view face/neck underpaint.",
+  "motionCandidateGate": {
+    "thresholdMaxAdjacentRGBMAE": 12.0224,
+    "passes": false,
+    "selectedForProduction": false,
+    "reason": "Source region labels have no verified material identity, and middle-angle renderings show line tears and owner switching."
+  }
+}

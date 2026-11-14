@@ -1,0 +1,549 @@
+{
+  "schema": "KOMA_P15_108_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-101-original",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "P15-107-native",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_native_keys",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "sdf_role_ink_original_keys",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "method": "single_bow_owner",
+      "index": 8,
+      "loaded": 5,
+      "screenSHA256": "95617f0d884ccbc9e6a10abad3fcf12e95e0100608a9a1cd1417dff0ee4c0f1a"
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-101-original",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "P15-107-native",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_native_keys",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "sdf_role_ink_original_keys",
+      "index": 8,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 0,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 1,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 2,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 3,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 4,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 5,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 6,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 7,
+      "loaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "method": "single_bow_owner",
+      "index": 8,
+      "loaded": 5,
+      "screenSHA256": "525d5150b03216a77d7f19d851980187859f06c2884ba19b2bd72d9c5aacf70d"
+    }
+  ],
+  "errors": []
+}

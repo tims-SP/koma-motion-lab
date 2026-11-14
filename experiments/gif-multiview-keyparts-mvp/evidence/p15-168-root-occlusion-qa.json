@@ -1,0 +1,151 @@
+{
+  "schema": "KOMA_P15_168_ROOT_OCCLUSION_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "variants": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "originalKeyviewsPixelExact": true
+    },
+    "upper_only": {
+      "maxAdjacentRGBMAE": 12.2313,
+      "adjacentRGBMAE": [
+        12.2313,
+        11.2026,
+        10.4575,
+        11.7492
+      ],
+      "topConnectedComponents": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "originalKeyviewsPixelExact": true
+    },
+    "root_front": {
+      "maxAdjacentRGBMAE": 12.2304,
+      "adjacentRGBMAE": [
+        12.2304,
+        11.195,
+        10.4538,
+        11.7502
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "originalKeyviewsPixelExact": true
+    },
+    "crown_front": {
+      "maxAdjacentRGBMAE": 12.2297,
+      "adjacentRGBMAE": [
+        12.2297,
+        11.1971,
+        10.4569,
+        11.7481
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "originalKeyviewsPixelExact": true
+    }
+  },
+  "midframeDiagnostics": {
+    "upper_only": {
+      "101.25": {
+        "visibleHairPixels": 759,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 0
+      },
+      "123.75": {
+        "visibleHairPixels": 1274,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 0
+      }
+    },
+    "root_front": {
+      "101.25": {
+        "visibleHairPixels": 778,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 19
+      },
+      "123.75": {
+        "visibleHairPixels": 1327,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 54
+      }
+    },
+    "crown_front": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32
+      }
+    }
+  },
+  "sourcePartSelection": "P15-167 source-native hair ownership and source-verified contact/free-tip proposals",
+  "syntheticCrownUnderpaintOnly": true,
+  "painterApprovedUnderpaint": false,
+  "physicalRootConnected": false,
+  "fullYawVisualAccepted": false,
+  "productionRendererUpdated": false,
+  "review": "private-assets/exports/p15-168-root-occlusion/index.html",
+  "gate": {
+    "originalKeyviewsPixelExact": true,
+    "bothMidframesConnected": true,
+    "zeroChangedPixelsBelowY125": true,
+    "beatsCurrentBaseline": false,
+    "visualApproval": false,
+    "passes": false
+  }
+}

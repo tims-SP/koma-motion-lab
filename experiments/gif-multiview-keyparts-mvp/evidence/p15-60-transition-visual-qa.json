@@ -1,0 +1,160 @@
+{
+  "schema": "KOMA-P15-60-VISUAL-TRANSITION-DIAGNOSTIC-V1",
+  "characterId": "p0_character_001",
+  "source45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "targetRelativePlus20SHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "parameterDomain": {
+    "start": 45,
+    "end": 65,
+    "meaning": "NOMINAL_VDD_PARAMETER_NOT_PHYSICAL_CAMERA_YAW"
+  },
+  "method": "PREMULTIPLIED_RGBA_WHOLE_FRAME_CROSSFADE_DIAGNOSTIC_ONLY",
+  "frames": [
+    {
+      "index": 0,
+      "nominalYawParameter": 45.0,
+      "blendFactor": 0.0,
+      "frameSHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "frame": "frame-00.png",
+      "faceCrop": "face-00.png",
+      "alphaBBox": [
+        154,
+        8,
+        861,
+        1024
+      ]
+    },
+    {
+      "index": 1,
+      "nominalYawParameter": 47.5,
+      "blendFactor": 0.125,
+      "frameSHA256": "f4067cc1fdfd69f849b7ce3c8cd0bc7ad7d1649ee1c0e000891b119436a303fd",
+      "frame": "frame-01.png",
+      "faceCrop": "face-01.png",
+      "alphaBBox": [
+        154,
+        8,
+        861,
+        1024
+      ]
+    },
+    {
+      "index": 2,
+      "nominalYawParameter": 50.0,
+      "blendFactor": 0.25,
+      "frameSHA256": "423fe2c14eb7300ae8bfd04590e060d5388eac0e1ec8b1e3f2ead57a2f6a3c4d",
+      "frame": "frame-02.png",
+      "faceCrop": "face-02.png",
+      "alphaBBox": [
+        154,
+        8,
+        861,
+        1024
+      ]
+    },
+    {
+      "index": 3,
+      "nominalYawParameter": 52.5,
+      "blendFactor": 0.375,
+      "frameSHA256": "45d1833bdb98d2680142510139102a4f771ec8d335442faaba51019ea3e134bf",
+      "frame": "frame-03.png",
+      "faceCrop": "face-03.png",
+      "alphaBBox": [
+        154,
+        8,
+        861,
+        1024
+      ]
+    },
+    {
+      "index": 4,
+      "nominalYawParameter": 55.0,
+      "blendFactor": 0.5,
+      "frameSHA256": "6d9c1dfbbe2dd7020c9f90ac5f520c15d06616ddd485774a0cfb0fba65e4daf6",
+      "frame": "frame-04.png",
+      "faceCrop": "face-04.png",
+      "alphaBBox": [
+        154,
+        9,
+        861,
+        1024
+      ]
+    },
+    {
+      "index": 5,
+      "nominalYawParameter": 57.5,
+      "blendFactor": 0.625,
+      "frameSHA256": "4a0726c0d5cb1448c1f1ce6267a2ade27cf60658717a588c1eff1df726d3b035",
+      "frame": "frame-05.png",
+      "faceCrop": "face-05.png",
+      "alphaBBox": [
+        154,
+        9,
+        861,
+        1024
+      ]
+    },
+    {
+      "index": 6,
+      "nominalYawParameter": 60.0,
+      "blendFactor": 0.75,
+      "frameSHA256": "a5f162e9f32c183c9f2670f5fd5c3d94432facd3b42d9afd8ebf12659daad556",
+      "frame": "frame-06.png",
+      "faceCrop": "face-06.png",
+      "alphaBBox": [
+        154,
+        9,
+        860,
+        1024
+      ]
+    },
+    {
+      "index": 7,
+      "nominalYawParameter": 62.5,
+      "blendFactor": 0.875,
+      "frameSHA256": "ad9213340e5c5bd89af4b8d302c31ea736e5841c0b95ca2e3bb41c77e5dfe02d",
+      "frame": "frame-07.png",
+      "faceCrop": "face-07.png",
+      "alphaBBox": [
+        155,
+        9,
+        860,
+        1024
+      ]
+    },
+    {
+      "index": 8,
+      "nominalYawParameter": 65.0,
+      "blendFactor": 1.0,
+      "frameSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+      "frame": "frame-08.png",
+      "faceCrop": "face-08.png",
+      "alphaBBox": [
+        169,
+        10,
+        805,
+        1024
+      ]
+    }
+  ],
+  "metrics": {
+    "sourceSupportPixels": 466490,
+    "targetSupportPixels": 447009,
+    "supportIoU": 0.882312,
+    "eyeRegionMeanRGBDelta": 49.49,
+    "midpointAlphaBBox": [
+      154,
+      9,
+      861,
+      1024
+    ]
+  },
+  "independent65Painting": false,
+  "trueViewDependentDeformation": false,
+  "visualGate": "FAIL_DOUBLE_FEATURE_EXPOSURE_MIDPOINT",
+  "formalKeyframeAccepted": false,
+  "productionArtMeshModified": false,
+  "next": "Inspect midpoint for double eyes, nose contours and hairclip ghosting. If present, reject whole-frame crossfade and require independent semantic layers plus view-dependent mesh/occlusion.",
+  "visualEvidence": "face-04.png at nominal parameter yaw55 contains duplicated iris/lash boundaries and nose/jaw contours from two inconsistent complete paintings",
+  "recommendedNextStep": "Integrate only genuinely separated, view-specific RGBA roles with geometric deformation and depth-aware far-eye/nose/hairclip occlusion; do not use full-frame crossfade"
+}

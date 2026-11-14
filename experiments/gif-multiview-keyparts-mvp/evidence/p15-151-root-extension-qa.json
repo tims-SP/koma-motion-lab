@@ -1,0 +1,82 @@
+{
+  "schema": "KOMA_P15_151_ROOT_EXTENSION_STUDY_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "sourceMaximumAdjacentRGBMAE": 12.0984,
+  "variants": {
+    "source_fit": {
+      "geometryEnd": 56,
+      "rootAtY75": false,
+      "lastPairedRowY": 55,
+      "upperRootRGBAAbsoluteMAE": 6.3307,
+      "maxAdjacentRGBMAE": 12.0795,
+      "adjacentRGBMAE": [
+        12.0795,
+        11.1008,
+        10.533,
+        11.5392
+      ],
+      "sourceBelowY130Exact": true
+    },
+    "root_075": {
+      "geometryEnd": 75,
+      "rootAtY75": true,
+      "lastPairedRowY": 75,
+      "upperRootRGBAAbsoluteMAE": 6.8923,
+      "maxAdjacentRGBMAE": 12.2241,
+      "adjacentRGBMAE": [
+        12.2241,
+        11.1885,
+        10.533,
+        11.5392
+      ],
+      "sourceBelowY130Exact": true
+    },
+    "root_081": {
+      "geometryEnd": 81,
+      "rootAtY75": true,
+      "lastPairedRowY": 80,
+      "upperRootRGBAAbsoluteMAE": 7.1999,
+      "maxAdjacentRGBMAE": 12.0794,
+      "adjacentRGBMAE": [
+        12.0794,
+        11.1659,
+        10.533,
+        11.5392
+      ],
+      "sourceBelowY130Exact": true
+    },
+    "root_087": {
+      "geometryEnd": 87,
+      "rootAtY75": true,
+      "lastPairedRowY": 80,
+      "upperRootRGBAAbsoluteMAE": 7.4729,
+      "maxAdjacentRGBMAE": 12.2799,
+      "adjacentRGBMAE": [
+        12.2799,
+        11.1778,
+        10.533,
+        11.5392
+      ],
+      "sourceBelowY130Exact": true
+    }
+  },
+  "geometry": "piecewise vertical inverse remap constrained above crown and source-preserving alpha composite",
+  "nativeSourcePreserved": true,
+  "actualHiddenCrownScalpPaintVerified": false,
+  "rootTopologyArtistApproved": false,
+  "fullYawVisualAccepted": false,
+  "review": "private-assets/exports/p15-151-root-extension/index.html",
+  "next": "Create an authored loop with both roots physically embedded beneath matching scalp material in each source view; confirm source-level registration and yaw frame appearance."
+}

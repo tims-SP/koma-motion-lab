@@ -1,0 +1,227 @@
+{
+  "schema": "KOMA_P15_104_DETAIL_MESH_QA_V1",
+  "roles": {
+    "collar": {
+      "sourceFeatureCandidates": 5,
+      "acceptedInteriorCorrespondences": 3,
+      "vertexCount": 12,
+      "triangleCount": 14,
+      "minimumSignedArea": 881.996,
+      "sampledGeometry": [
+        {
+          "fraction": 0.0,
+          "minSignedArea": 881.996,
+          "folds": 0
+        },
+        {
+          "fraction": 0.125,
+          "minSignedArea": 914.8773,
+          "folds": 0
+        },
+        {
+          "fraction": 0.25,
+          "minSignedArea": 947.6993,
+          "folds": 0
+        },
+        {
+          "fraction": 0.375,
+          "minSignedArea": 980.467,
+          "folds": 0
+        },
+        {
+          "fraction": 0.5,
+          "minSignedArea": 1013.1738,
+          "folds": 0
+        },
+        {
+          "fraction": 0.625,
+          "minSignedArea": 1045.8184,
+          "folds": 0
+        },
+        {
+          "fraction": 0.75,
+          "minSignedArea": 1057.6086,
+          "folds": 0
+        },
+        {
+          "fraction": 0.875,
+          "minSignedArea": 1054.1621,
+          "folds": 0
+        },
+        {
+          "fraction": 1.0,
+          "minSignedArea": 1050.6119,
+          "folds": 0
+        }
+      ]
+    },
+    "bow": {
+      "sourceFeatureCandidates": 11,
+      "acceptedInteriorCorrespondences": 6,
+      "vertexCount": 15,
+      "triangleCount": 20,
+      "minimumSignedArea": 182.3513,
+      "sampledGeometry": [
+        {
+          "fraction": 0.0,
+          "minSignedArea": 182.3513,
+          "folds": 0
+        },
+        {
+          "fraction": 0.125,
+          "minSignedArea": 186.9471,
+          "folds": 0
+        },
+        {
+          "fraction": 0.25,
+          "minSignedArea": 191.3513,
+          "folds": 0
+        },
+        {
+          "fraction": 0.375,
+          "minSignedArea": 195.5645,
+          "folds": 0
+        },
+        {
+          "fraction": 0.5,
+          "minSignedArea": 199.5848,
+          "folds": 0
+        },
+        {
+          "fraction": 0.625,
+          "minSignedArea": 203.4121,
+          "folds": 0
+        },
+        {
+          "fraction": 0.75,
+          "minSignedArea": 207.0503,
+          "folds": 0
+        },
+        {
+          "fraction": 0.875,
+          "minSignedArea": 210.4953,
+          "folds": 0
+        },
+        {
+          "fraction": 1.0,
+          "minSignedArea": 213.7462,
+          "folds": 0
+        }
+      ]
+    },
+    "jewel": {
+      "sourceFeatureCandidates": 8,
+      "acceptedInteriorCorrespondences": 2,
+      "vertexCount": 11,
+      "triangleCount": 12,
+      "minimumSignedArea": 189.9962,
+      "sampledGeometry": [
+        {
+          "fraction": 0.0,
+          "minSignedArea": 231.9917,
+          "folds": 0
+        },
+        {
+          "fraction": 0.125,
+          "minSignedArea": 226.6867,
+          "folds": 0
+        },
+        {
+          "fraction": 0.25,
+          "minSignedArea": 221.3983,
+          "folds": 0
+        },
+        {
+          "fraction": 0.375,
+          "minSignedArea": 216.1262,
+          "folds": 0
+        },
+        {
+          "fraction": 0.5,
+          "minSignedArea": 210.8684,
+          "folds": 0
+        },
+        {
+          "fraction": 0.625,
+          "minSignedArea": 205.6263,
+          "folds": 0
+        },
+        {
+          "fraction": 0.75,
+          "minSignedArea": 200.4008,
+          "folds": 0
+        },
+        {
+          "fraction": 0.875,
+          "minSignedArea": 195.1897,
+          "folds": 0
+        },
+        {
+          "fraction": 1.0,
+          "minSignedArea": 189.9962,
+          "folds": 0
+        }
+      ]
+    },
+    "shoulder.left": {
+      "sourceFeatureCandidates": 10,
+      "acceptedInteriorCorrespondences": 2,
+      "vertexCount": 11,
+      "triangleCount": 12,
+      "minimumSignedArea": 1068.1724,
+      "sampledGeometry": [
+        {
+          "fraction": 0.0,
+          "minSignedArea": 2629.0525,
+          "folds": 0
+        },
+        {
+          "fraction": 0.125,
+          "minSignedArea": 2600.3584,
+          "folds": 0
+        },
+        {
+          "fraction": 0.25,
+          "minSignedArea": 2388.2004,
+          "folds": 0
+        },
+        {
+          "fraction": 0.375,
+          "minSignedArea": 2173.8005,
+          "folds": 0
+        },
+        {
+          "fraction": 0.5,
+          "minSignedArea": 1957.1584,
+          "folds": 0
+        },
+        {
+          "fraction": 0.625,
+          "minSignedArea": 1738.2771,
+          "folds": 0
+        },
+        {
+          "fraction": 0.75,
+          "minSignedArea": 1517.1509,
+          "folds": 0
+        },
+        {
+          "fraction": 0.875,
+          "minSignedArea": 1293.7827,
+          "folds": 0
+        },
+        {
+          "fraction": 1.0,
+          "minSignedArea": 1068.1724,
+          "folds": 0
+        }
+      ]
+    }
+  },
+  "sourceSIFTSHA256": "0b4284b3ac1e48a80917f07c80d696cf4dbd40d0372b9a28620ffd3c3d1204af",
+  "sourceArtMeshSHA256": "05c4db0318371499c67e84f6a596ce201550a383dcb4cb75ac39f9b35bb9249c",
+  "sourceGeometryFolded": false,
+  "formalTopologyApproved": false,
+  "meshSHA256": "07630446cd84068a8fdb3214f8795e0e756fd45c2b6dd9d9c2f1606bf24a14cf",
+  "meshFile": "private-assets/exports/p15-104-detail-mesh/garment-ink-correspondence.json"
+}

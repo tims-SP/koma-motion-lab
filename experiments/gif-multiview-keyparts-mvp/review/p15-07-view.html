@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P15-07 · 多视角 ArtMesh 形变审查</title>
+<style>
+:root{color-scheme:dark;font:15px/1.5 system-ui,sans-serif;background:#171b22;color:#f1f3f7}
+*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1600px;margin:auto}
+h1{font-size:22px;margin:0 0 6px}p{color:#bdc4d0;margin:4px 0 14px}
+.controls{display:flex;gap:20px;align-items:center;flex-wrap:wrap;padding:14px;background:#242a34;border-radius:12px;margin-bottom:14px}
+input[type=range]{flex:1;min-width:240px;accent-color:#83bcff}
+#angle-value{font-variant-numeric:tabular-nums;min-width:72px;text-align:right;font-weight:700;font-size:21px}
+button{background:#343c4a;border:1px solid #657083;color:#fff;border-radius:7px;padding:6px 12px;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+article{background:#242a34;border-radius:11px;overflow:hidden;border:1px solid #323a47}
+article header{padding:10px 12px;font-size:14px;font-weight:600}
+.view{min-height:230px;background:repeating-conic-gradient(#c0c4cf 0% 25%,#e4e6eb 0% 50%) 50%/22px 22px}
+img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.meta{font-size:12px;padding:7px 12px;color:#b7c3d5;border-top:1px solid #343d49}
+#reference-note{padding-top:12px;color:#c8d4e5}
+</style>
+</head>
+<body>
+<main>
+<h1>P15-07 · 多视角 ArtMesh 与关键原画对照</h1>
+<p>左列为 P8 原始基线，中间两列分别比较分层 ArtMesh 与整图几何传输；最右列只在已登记的绘制角度显示参考图。</p>
+<div class="controls">
+<button id="previous" type="button">上一角度</button>
+<input type="range" id="angle" min="0" max="90" step="2.5" value="67.5" aria-label="水平转头角度">
+<button id="next" type="button">下一角度</button>
+<span id="angle-value">67.5°</span>
+</div>
+<div class="gallery" id="gallery">
+ <article><header>P8 · 基线 ArtMesh</header><div class="view"><img id="view-p8" alt="P8 原始视角"></div><div class="meta" id="meta-p8"></div></article>
+ <article><header>P15-07 · 13 层语义 ArtMesh</header><div class="view"><img id="view-semantic" alt="语义分层新渲染"></div><div class="meta" id="meta-semantic"></div></article>
+ <article><header>P15-07 · 整图几何诊断</header><div class="view"><img id="view-whole" alt="整图关键帧变形诊断"></div><div class="meta" id="meta-whole"></div></article>
+ <article><header>独立绘制视角参考</header><div class="view"><img id="view-reference" alt="已登记独立绘制关键帧"></div><div class="meta" id="meta-reference"></div></article>
+</div>
+<div id="reference-note">原画对照用于检查轮廓、五官、发束、遮挡和角度准确性。保留 ArtMesh 可追踪来源和候选艺术审批状态。</div>
+</main>
+<script src="./p15-07-view.js"></script>
+</body>
+</html>

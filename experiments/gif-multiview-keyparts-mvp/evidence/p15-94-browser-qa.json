@@ -1,0 +1,29 @@
+{
+  "schema": "KOMA-P15-94-SAM3_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "candidate": 0,
+      "imagesLoaded": 3
+    },
+    {
+      "viewport": "desktop",
+      "candidate": 1,
+      "imagesLoaded": 3,
+      "screenshotSHA256": "7b964fed95483ad46f66c24de7ee48ee1d4315b185519a2667f33c8d9b6f634e"
+    },
+    {
+      "viewport": "mobile",
+      "candidate": 0,
+      "imagesLoaded": 3
+    },
+    {
+      "viewport": "mobile",
+      "candidate": 1,
+      "imagesLoaded": 3,
+      "screenshotSHA256": "44b225f8f325a8b79cc845960295bb2df8c446ff68bed2f33c1a11e44048c58b"
+    }
+  ],
+  "errors": []
+}

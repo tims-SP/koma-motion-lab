@@ -1,0 +1,43 @@
+{
+  "schema": "KOMA_P15_119_BACK_HEAD_VISIBLE_PARTITION_V1",
+  "characterId": "p0_character_001",
+  "outputs": [
+    {
+      "angle": 135,
+      "source": "extracted/whole/yaw135.png",
+      "sourceSHA256": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16",
+      "visiblePixelCount": 75898,
+      "pinkClassifiedPixelCount": 50296,
+      "remainingVisiblePixelCount": 25602,
+      "pixelRecompositionExact": true,
+      "partOverlapPixels": 0,
+      "classSemantics": "pixel appearance candidate, not verified anatomy or paintable hair",
+      "occludedSurfaceReconstruction": false
+    },
+    {
+      "angle": 180,
+      "source": "extracted/whole/yaw180.png",
+      "sourceSHA256": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363",
+      "visiblePixelCount": 86807,
+      "pinkClassifiedPixelCount": 55053,
+      "remainingVisiblePixelCount": 31754,
+      "pixelRecompositionExact": true,
+      "partOverlapPixels": 0,
+      "classSemantics": "pixel appearance candidate, not verified anatomy or paintable hair",
+      "occludedSurfaceReconstruction": false
+    }
+  ],
+  "candidateLayerCount": 4,
+  "angles": [
+    135,
+    180
+  ],
+  "recompositionExact": true,
+  "nativeSourcePreserved": true,
+  "semanticallyRegisteredArtMesh": false,
+  "bodyAndGarmentCovered": false,
+  "hiddenUnderpaintCovered": false,
+  "artistApproved": false,
+  "review": "private-assets/exports/p15-119-back-head-layers/index.html",
+  "next": "Create approved independently painted back head/hair anatomy plus clothing and underlay art at 135/180, register to P0 anchors and test visual occlusion."
+}

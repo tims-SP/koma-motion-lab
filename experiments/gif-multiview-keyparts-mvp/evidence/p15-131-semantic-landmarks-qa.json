@@ -1,0 +1,367 @@
+{
+  "schema": "KOMA_P15_131_SEMANTIC_LANDMARK_REVIEW_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90,
+    112.5,
+    135
+  ],
+  "coordinateSpace": "native reference 443×443 resized review raster",
+  "nativeKeySHA256RGBA": {
+    "90": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+    "112.5": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+    "135": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+  },
+  "landmarks": {
+    "hair.ahoge.root": {
+      "motionGroup": "top-hair",
+      "coordinates": {
+        "90": [
+          205,
+          65
+        ],
+        "112.5": [
+          294,
+          72
+        ],
+        "135": [
+          264,
+          67
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "hair.ahoge.apex": {
+      "motionGroup": "top-hair",
+      "coordinates": {
+        "90": [
+          233,
+          5
+        ],
+        "112.5": [
+          288,
+          21
+        ],
+        "135": [
+          258,
+          8
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "hair.crown": {
+      "motionGroup": "head",
+      "coordinates": {
+        "90": [
+          229,
+          57
+        ],
+        "112.5": [
+          254,
+          67
+        ],
+        "135": [
+          250,
+          63
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "hair.back.tip": {
+      "motionGroup": "back-hair",
+      "coordinates": {
+        "90": [
+          116,
+          279
+        ],
+        "112.5": [
+          144,
+          272
+        ],
+        "135": [
+          167,
+          283
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "ear.center": {
+      "motionGroup": "face/hair boundary",
+      "coordinates": {
+        "90": [
+          239,
+          244
+        ],
+        "112.5": [
+          256,
+          254
+        ],
+        "135": [
+          310,
+          268
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "eye.near.center": {
+      "motionGroup": "face visibility",
+      "coordinates": {
+        "90": [
+          291,
+          218
+        ],
+        "112.5": [
+          316,
+          218
+        ],
+        "135": null
+      },
+      "visible": [
+        90,
+        112.5
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "nose.tip": {
+      "motionGroup": "face visibility",
+      "coordinates": {
+        "90": [
+          340,
+          248
+        ],
+        "112.5": [
+          325,
+          251
+        ],
+        "135": [
+          329,
+          273
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "chin": {
+      "motionGroup": "face visibility",
+      "coordinates": {
+        "90": [
+          289,
+          299
+        ],
+        "112.5": [
+          307,
+          282
+        ],
+        "135": [
+          305,
+          287
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "collar.back.center": {
+      "motionGroup": "neck-to-coat",
+      "coordinates": {
+        "90": [
+          208,
+          332
+        ],
+        "112.5": [
+          215,
+          322
+        ],
+        "135": [
+          221,
+          320
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "shoulder.near.outer": {
+      "motionGroup": "shoulder",
+      "coordinates": {
+        "90": [
+          152,
+          369
+        ],
+        "112.5": [
+          161,
+          364
+        ],
+        "135": [
+          178,
+          355
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "jacket.gold.trim": {
+      "motionGroup": "coat trim",
+      "coordinates": {
+        "90": [
+          159,
+          365
+        ],
+        "112.5": [
+          200,
+          341
+        ],
+        "135": [
+          217,
+          336
+        ]
+      },
+      "visible": [
+        90,
+        112.5,
+        135
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    },
+    "bow.center": {
+      "motionGroup": "front-to-back garment visibility",
+      "coordinates": {
+        "90": [
+          251,
+          369
+        ],
+        "112.5": [
+          271,
+          362
+        ],
+        "135": null
+      },
+      "visible": [
+        90,
+        112.5
+      ],
+      "classification": "proposed manual image-space landmark; artwork registration pending"
+    }
+  },
+  "geometryDiagnostics": {
+    "hair.ahoge.root": {
+      "midpointDeviationPx": 59.802,
+      "segmentDistancesPx": [
+        89.275,
+        30.414
+      ]
+    },
+    "hair.ahoge.apex": {
+      "midpointDeviationPx": 44.905,
+      "segmentDistancesPx": [
+        57.28,
+        32.696
+      ]
+    },
+    "hair.crown": {
+      "midpointDeviationPx": 16.101,
+      "segmentDistancesPx": [
+        26.926,
+        5.657
+      ]
+    },
+    "hair.back.tip": {
+      "midpointDeviationPx": 9.341,
+      "segmentDistancesPx": [
+        28.862,
+        25.495
+      ]
+    },
+    "ear.center": {
+      "midpointDeviationPx": 18.608,
+      "segmentDistancesPx": [
+        19.723,
+        55.785
+      ]
+    },
+    "nose.tip": {
+      "midpointDeviationPx": 13.435,
+      "segmentDistancesPx": [
+        15.297,
+        22.361
+      ]
+    },
+    "chin": {
+      "midpointDeviationPx": 14.866,
+      "segmentDistancesPx": [
+        24.759,
+        5.385
+      ]
+    },
+    "collar.back.center": {
+      "midpointDeviationPx": 4.031,
+      "segmentDistancesPx": [
+        12.207,
+        6.325
+      ]
+    },
+    "shoulder.near.outer": {
+      "midpointDeviationPx": 4.472,
+      "segmentDistancesPx": [
+        10.296,
+        19.235
+      ]
+    },
+    "jacket.gold.trim": {
+      "midpointDeviationPx": 15.305,
+      "segmentDistancesPx": [
+        47.508,
+        17.72
+      ]
+    }
+  },
+  "warnings": [],
+  "manualProposalsCount": 12,
+  "threeViewVisibleCount": 10,
+  "artistVerifiedLandmarks": false,
+  "physical3DAnchorVerified": false,
+  "faceFeatureVisibilityMode": "explicit; missing far-side features marked null",
+  "renderIntegrationAccepted": false,
+  "visualAccepted": false,
+  "next": "Correct highlighted art-space landmarks against source pixels; extract individually painted hair/ear/collar/shoulder masks and true underpaint for constrained ArtMesh VDD.",
+  "review": "private-assets/exports/p15-131-semantic-landmarks/index.html"
+}

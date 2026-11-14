@@ -1,0 +1,43 @@
+{
+  "schema": "KOMA-P0-P15-04-FACIAL-CORRESPONDENCE-ACCEPTANCE-V1",
+  "characterId": "p0_character_001",
+  "engineeringStatus": "PASS_SOURCE_STROKE_AND_CHROMIUM_REVIEW",
+  "semanticRoles": [
+    "face.skin",
+    "eye.near",
+    "nose",
+    "mouth"
+  ],
+  "sourceOriginalAngles": [
+    45,
+    90
+  ],
+  "generatedIntermediateAngles": [
+    67.5,
+    72.5
+  ],
+  "semanticViewPairsVerified": 12,
+  "sourceRGBAHashesVerified": 16,
+  "highConfidenceStrokeCandidates": 3,
+  "physicalReferenceType": "P5_APPROVED_KEYVIEW_LINEAR_PROJECTION",
+  "landmarkImageOverlapType": "CANDIDATE_RGBA_ALPHA_SUPPORT",
+  "sourceMetadataSHA256": {
+    "P5ArtMesh": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "P5Landmarks": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "P9Palette": "a29a9a7a6d44e8cdd09f1b1c82a329be2a8481752ec16c0a8284e95dba674fd9",
+    "P10StrokeBaseline": "b510d61f2ef89b5fc0b5aaaa95b20bf7cc43ab7fc9b281a0c082ca9d7f8d633e"
+  },
+  "chromiumCanvasScreenshots": 4,
+  "chromiumSourceImagesHashVerified": 16,
+  "chromiumSummarySHA256": "5a08cb133ff68cf1ba3b3c0cd2f69a3e7c04efc38431d4530de2058a2d5a0da3",
+  "sourceCorrespondenceSHA256": "8f6d80db5fd6f68bea7524337b0af5c58e0f3b97afec94a490ab64cff290d5d7",
+  "manualReviewPriority": [
+    "eye.near",
+    "nose",
+    "mouth",
+    "face.skin"
+  ],
+  "manualReviewFinding": "MID_VIEW_PART_PAINTING_REQUIRES_FEATURE_STROKE_AND_LAYER_EDGE_REFINEMENT",
+  "adoptedRenderBaseline": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+  "artisticAcceptance": "PENDING_INDEPENDENT_ARTISTIC_REVIEW"
+}

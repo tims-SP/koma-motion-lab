@@ -1,0 +1,117 @@
+{
+  "schema": "KOMA-P15-72-SEMANTIC-INFERENCE-QUALITY-V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "inputSHA256": "602dc4ca6e4c1e4678a3dad16d321a77d826d24acebc36f1c7988956a3e8ff09",
+  "provider": "Volkopat/SegmentAnythingxGroundingDINO",
+  "providerModel": "GroundingDINO + SAM (CPU Space)",
+  "providerCalls": 2,
+  "providerResults": [
+    {
+      "prompt": "pink_anime_bangs_hair",
+      "path": "grounded-sam-output.png",
+      "sha256": "2bebeb3b4d29c9a46b1680350ae0b2e4e851615b37ee685861e8932b95ddb3b9",
+      "size": [
+        512,
+        512
+      ],
+      "samplePixelRGB": {
+        "near_eye": [
+          171,
+          65,
+          87
+        ],
+        "cheek_skin": [
+          255,
+          149,
+          144
+        ],
+        "lower_cheek": [
+          253,
+          149,
+          143
+        ],
+        "forehead_skin": [
+          136,
+          33,
+          38
+        ],
+        "hair_interior": [
+          236,
+          115,
+          128
+        ],
+        "outside_character": [
+          0,
+          0,
+          0
+        ]
+      },
+      "nearEyeIncluded": true,
+      "cheekIncluded": true,
+      "lowerCheekIncluded": true,
+      "hairInteriorIncluded": true
+    },
+    {
+      "prompt": "front_hair_fringe_bangs",
+      "path": "grounded-sam-fringe.png",
+      "sha256": "1fc8e95b72abce263de9a8cf837240e098a7c97ddfeac03558dab952496e4410",
+      "size": [
+        512,
+        512
+      ],
+      "samplePixelRGB": {
+        "near_eye": [
+          168,
+          64,
+          86
+        ],
+        "cheek_skin": [
+          254,
+          150,
+          144
+        ],
+        "lower_cheek": [
+          253,
+          149,
+          143
+        ],
+        "forehead_skin": [
+          136,
+          33,
+          38
+        ],
+        "hair_interior": [
+          236,
+          115,
+          128
+        ],
+        "outside_character": [
+          0,
+          0,
+          0
+        ]
+      },
+      "nearEyeIncluded": true,
+      "cheekIncluded": true,
+      "lowerCheekIncluded": true,
+      "hairInteriorIncluded": true
+    }
+  ],
+  "modelProducedImage": true,
+  "modelProducedUsableFrontHairAlpha": false,
+  "faceContaminationConfirmed": true,
+  "sourceHairMatteStillUnapproved": true,
+  "baselineMovementOffsets": [
+    0,
+    9,
+    18
+  ],
+  "modelOutputsUsedToGenerateNewArtMesh": false,
+  "originalP0Modified": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "FAIL_MODEL_SEGMENTATION_INCLUDES_EYES_AND_CHEEK",
+  "analysis": "Provider reports single detected object but outputs contain whole head/face rather than clean front-hair semantic mask. Both the near-eye and facial skin locations are nonblack in the result crop. No independent hair alpha layer or 0px exact-reconstruction proof exists.",
+  "next": "P15-73 seek a genuinely supported hair-part segmentation/edit pipeline or commissioned same-view layered artwork; require full 0px identity reconstruction before dynamic eye offsets."
+}

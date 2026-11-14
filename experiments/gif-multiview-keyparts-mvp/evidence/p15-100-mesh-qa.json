@@ -1,0 +1,64 @@
+{
+  "schema": "KOMA_P15_100_SHARED_MESH_GEOMETRY_QA_V1",
+  "sourceViews": [
+    "60",
+    "75"
+  ],
+  "vertexCount": 22,
+  "triangleCount": 28,
+  "excludedTriangleCount": 1,
+  "meshJSON": "private-assets/exports/p15-100-shared-face-mesh/face-shared-mesh.json",
+  "meshSHA256": "3cc0e8a71c9a83a65a0bbcdccbba161198aac11405543b1b01acaa4bb243b470",
+  "meshType": "view-dependent 2D ArtMesh correspondence, not verified 3D geometry",
+  "meshTrianglesNonFolded": true,
+  "signedTriangleAreas": [
+    {
+      "t": 0.0,
+      "minSignedTriangleArea": 22.75,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.125,
+      "minSignedTriangleArea": 24.2812,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.25,
+      "minSignedTriangleArea": 25.6875,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.375,
+      "minSignedTriangleArea": 26.9688,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.5,
+      "minSignedTriangleArea": 28.125,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.625,
+      "minSignedTriangleArea": 29.1562,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.75,
+      "minSignedTriangleArea": 30.0625,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 0.875,
+      "minSignedTriangleArea": 30.8438,
+      "foldedTriangleCount": 0
+    },
+    {
+      "t": 1.0,
+      "minSignedTriangleArea": 31.5,
+      "foldedTriangleCount": 0
+    }
+  ],
+  "geometryArtistApproved": false,
+  "sourceLandmarkSHA256": "1ac039b34bb574d3554c5928c01e4546fc8a4db15149cf744d139438bd96f2da",
+  "sourceTopologySHA256": "b4effc2bd632c3734c5f850f03fe37396a005f4c3c18d6873b1deefa76e34099"
+}

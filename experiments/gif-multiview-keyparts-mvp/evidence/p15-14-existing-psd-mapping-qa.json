@@ -1,0 +1,606 @@
+{
+  "schema": "KOMA-P15-14-EXISTING-PSD-AUDIT-V1",
+  "characterId": "p0_character_001",
+  "roles": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "sources": [
+    {
+      "angle": "yaw000",
+      "source": "p4-see-through/front/p0-character-001-see-through.psd",
+      "sourceSHA256": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04",
+      "size": [
+        768,
+        768
+      ],
+      "nativeLayerCount": 13,
+      "nativeLayerEntries": [
+        {
+          "index": 0,
+          "name": "back hair",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "hair.back"
+          ],
+          "pixelCount": 167104,
+          "fullyCoveredPixels": 0,
+          "partiallyCoveredPixels": 0,
+          "sha256": "4c82ac1e4a98191f7a31b3fab78a2e8bfdd95fcac441b576e9a45daae4d4d68e",
+          "path": "p15-14-existing-psd-audit/yaw000/native-00.png"
+        },
+        {
+          "index": 1,
+          "name": "neck",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 15600,
+          "fullyCoveredPixels": 9796,
+          "partiallyCoveredPixels": 677,
+          "sha256": "24da6601f101746aed492523cd3706a0eecdd12421fdd5a987401d178736912f",
+          "path": "p15-14-existing-psd-audit/yaw000/native-01.png"
+        },
+        {
+          "index": 2,
+          "name": "topwear",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 103951,
+          "fullyCoveredPixels": 7114,
+          "partiallyCoveredPixels": 544,
+          "sha256": "c8e742b286334084da402c543d69406052a563f4763ea6ac2b4b62a15613dcac",
+          "path": "p15-14-existing-psd-audit/yaw000/native-02.png"
+        },
+        {
+          "index": 3,
+          "name": "ears",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "ear.near",
+            "ear.far"
+          ],
+          "pixelCount": 6429,
+          "fullyCoveredPixels": 6429,
+          "partiallyCoveredPixels": 0,
+          "sha256": "1a198081ee5631d4ddfb255ceb036249b303d68d51aaf546a14b7e3a22cb6f71",
+          "path": "p15-14-existing-psd-audit/yaw000/native-03.png"
+        },
+        {
+          "index": 4,
+          "name": "face",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "face.skin"
+          ],
+          "pixelCount": 72513,
+          "fullyCoveredPixels": 72513,
+          "partiallyCoveredPixels": 0,
+          "sha256": "66fcdba7e1082d9e33c8a6bf1f4a765079006fc8ab138f3cee9f06628837c940",
+          "path": "p15-14-existing-psd-audit/yaw000/native-04.png"
+        },
+        {
+          "index": 5,
+          "name": "nose",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "nose"
+          ],
+          "pixelCount": 540,
+          "fullyCoveredPixels": 540,
+          "partiallyCoveredPixels": 0,
+          "sha256": "8a171bdaf4b4a34867d0b74af83b5b3cbdf7742e15fe0ea8dcbd09f06977f7aa",
+          "path": "p15-14-existing-psd-audit/yaw000/native-05.png"
+        },
+        {
+          "index": 6,
+          "name": "mouth",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "mouth"
+          ],
+          "pixelCount": 1799,
+          "fullyCoveredPixels": 1799,
+          "partiallyCoveredPixels": 0,
+          "sha256": "ea85ef8400da0881038e6f695511f715e7dc5d4d8dd46089cc2a1a114ddb35ab",
+          "path": "p15-14-existing-psd-audit/yaw000/native-06.png"
+        },
+        {
+          "index": 7,
+          "name": "eyewhite",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 5483,
+          "fullyCoveredPixels": 5483,
+          "partiallyCoveredPixels": 0,
+          "sha256": "2587568003f2ed110474ff783d3e2b50658a5b48d2bdb7191af0f5e655adc227",
+          "path": "p15-14-existing-psd-audit/yaw000/native-07.png"
+        },
+        {
+          "index": 8,
+          "name": "irides",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 3857,
+          "fullyCoveredPixels": 3857,
+          "partiallyCoveredPixels": 0,
+          "sha256": "1b74b934b06c5060a6ec52d6c49806def3b1cef84a999c127c32c31d6ad7800b",
+          "path": "p15-14-existing-psd-audit/yaw000/native-08.png"
+        },
+        {
+          "index": 9,
+          "name": "eyebrow",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 636,
+          "fullyCoveredPixels": 636,
+          "partiallyCoveredPixels": 0,
+          "sha256": "216ca4d90d6b23a6b1ad1638ea2125ffaf41110189fd354fc5374948742fb619",
+          "path": "p15-14-existing-psd-audit/yaw000/native-09.png"
+        },
+        {
+          "index": 10,
+          "name": "eyelash",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 2803,
+          "fullyCoveredPixels": 2803,
+          "partiallyCoveredPixels": 0,
+          "sha256": "43e517a7df6849e2f91417d6a55499bc63e5b18da1552402b16e0a0db8182ca4",
+          "path": "p15-14-existing-psd-audit/yaw000/native-10.png"
+        },
+        {
+          "index": 11,
+          "name": "front hair",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "hair.front",
+            "hair.side",
+            "hair.ahoge"
+          ],
+          "pixelCount": 81930,
+          "fullyCoveredPixels": 77100,
+          "partiallyCoveredPixels": 344,
+          "sha256": "d7b76effb08687021ed9056ec9d2d7b4ec258a832fcb18f6a337de29fa79770f",
+          "path": "p15-14-existing-psd-audit/yaw000/native-11.png"
+        },
+        {
+          "index": 12,
+          "name": "headwear",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "hair.clip.cross_gold"
+          ],
+          "pixelCount": 1973,
+          "fullyCoveredPixels": 1973,
+          "partiallyCoveredPixels": 0,
+          "sha256": "3390fe41204e1193398b406b166cf1c9403d46d3ec2372710c8315ae9f26db37",
+          "path": "p15-14-existing-psd-audit/yaw000/native-12.png"
+        }
+      ],
+      "underpaintCandidateCoveredPixelInstances": 190043,
+      "verifiedUnderpaintCorrectness": false,
+      "compositePath": "p15-14-existing-psd-audit/yaw000/psd-composite.png",
+      "compositeSHA256": "6794315512dd7823acce299777099452b9dab02410f657f6084993e3fe8465e4",
+      "status": "PSD_LAYER_EXTRACTION_VERIFIED_MAPPING_INCOMPLETE"
+    },
+    {
+      "angle": "yaw045",
+      "source": "p5-see-through/yaw045/p0-character-001-see-through.psd",
+      "sourceSHA256": "2527b97209c2bb912f260ba14179dcccacd45b39322077ec1fd92746ea8636fd",
+      "size": [
+        768,
+        768
+      ],
+      "nativeLayerCount": 13,
+      "nativeLayerEntries": [
+        {
+          "index": 0,
+          "name": "back hair",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "hair.back"
+          ],
+          "pixelCount": 176064,
+          "fullyCoveredPixels": 0,
+          "partiallyCoveredPixels": 0,
+          "sha256": "9108f0f42188686fb72f1da0f84591639bf1af468abc6d9868cde90d7daecb13",
+          "path": "p15-14-existing-psd-audit/yaw045/native-00.png"
+        },
+        {
+          "index": 1,
+          "name": "neck",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 15531,
+          "fullyCoveredPixels": 11768,
+          "partiallyCoveredPixels": 572,
+          "sha256": "31e867683687dd2774e5316388c86fd6eeb343189ae5150459e0e5e71e837b94",
+          "path": "p15-14-existing-psd-audit/yaw045/native-01.png"
+        },
+        {
+          "index": 2,
+          "name": "topwear",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 97776,
+          "fullyCoveredPixels": 7287,
+          "partiallyCoveredPixels": 572,
+          "sha256": "1f765ab73847cdb6aa759f1745f0c27aa6bd507d59d7fd7f635c84bc32c113c4",
+          "path": "p15-14-existing-psd-audit/yaw045/native-02.png"
+        },
+        {
+          "index": 3,
+          "name": "ears",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "ear.near",
+            "ear.far"
+          ],
+          "pixelCount": 6519,
+          "fullyCoveredPixels": 6519,
+          "partiallyCoveredPixels": 0,
+          "sha256": "f6ed3b0091726de30d7d268427f8babc6465effef4d1961dc2b39df4d7cd62e0",
+          "path": "p15-14-existing-psd-audit/yaw045/native-03.png"
+        },
+        {
+          "index": 4,
+          "name": "face",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "face.skin"
+          ],
+          "pixelCount": 66469,
+          "fullyCoveredPixels": 66469,
+          "partiallyCoveredPixels": 0,
+          "sha256": "04ed1f14ec301a4818749814b13d176c5012ea8bf252124ef7909546507fe178",
+          "path": "p15-14-existing-psd-audit/yaw045/native-04.png"
+        },
+        {
+          "index": 5,
+          "name": "nose",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "nose"
+          ],
+          "pixelCount": 251,
+          "fullyCoveredPixels": 251,
+          "partiallyCoveredPixels": 0,
+          "sha256": "11e0c8f7e0f69f2c484177610f9b0db55e305f8104d83404ec5fc54f289e920f",
+          "path": "p15-14-existing-psd-audit/yaw045/native-05.png"
+        },
+        {
+          "index": 6,
+          "name": "mouth",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "mouth"
+          ],
+          "pixelCount": 630,
+          "fullyCoveredPixels": 630,
+          "partiallyCoveredPixels": 0,
+          "sha256": "f167fc113446ef9d49121be98f878e15a92a075cb7bd9ab52283bbe09c4b767b",
+          "path": "p15-14-existing-psd-audit/yaw045/native-06.png"
+        },
+        {
+          "index": 7,
+          "name": "eyewhite",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 4802,
+          "fullyCoveredPixels": 4802,
+          "partiallyCoveredPixels": 0,
+          "sha256": "533a4c8e4e7e9e2f610891d1f7f5a480cb0644e1bdee1f718c3d5640519b248b",
+          "path": "p15-14-existing-psd-audit/yaw045/native-07.png"
+        },
+        {
+          "index": 8,
+          "name": "irides",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 3144,
+          "fullyCoveredPixels": 3144,
+          "partiallyCoveredPixels": 0,
+          "sha256": "37c6b4cfe2ce1e5a7063a60c9477f69f8ef183d04385379593887a6c2fe5ebf8",
+          "path": "p15-14-existing-psd-audit/yaw045/native-08.png"
+        },
+        {
+          "index": 9,
+          "name": "eyelash",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 3174,
+          "fullyCoveredPixels": 3174,
+          "partiallyCoveredPixels": 0,
+          "sha256": "fcba5ca722c9b846ad126e225dd68507d64fc7cbfa74791afeaf4c42afa76d38",
+          "path": "p15-14-existing-psd-audit/yaw045/native-09.png"
+        },
+        {
+          "index": 10,
+          "name": "eyebrow",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 632,
+          "fullyCoveredPixels": 632,
+          "partiallyCoveredPixels": 0,
+          "sha256": "c61a00cb1cb7569ed1074550ff98b91739040004a87f7b04f3851b29c47babd4",
+          "path": "p15-14-existing-psd-audit/yaw045/native-10.png"
+        },
+        {
+          "index": 11,
+          "name": "front hair",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "hair.front",
+            "hair.side",
+            "hair.ahoge"
+          ],
+          "pixelCount": 94205,
+          "fullyCoveredPixels": 88970,
+          "partiallyCoveredPixels": 64,
+          "sha256": "e767dea551a079d707f307faa301f9b7d37705054533b26fd34f9ff979bf574b",
+          "path": "p15-14-existing-psd-audit/yaw045/native-11.png"
+        },
+        {
+          "index": 12,
+          "name": "headwear",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "hair.clip.cross_gold"
+          ],
+          "pixelCount": 1571,
+          "fullyCoveredPixels": 1536,
+          "partiallyCoveredPixels": 34,
+          "sha256": "e2015ac6e929cbd03e747439893cbe6a221a41225efdea2a1f773fec09028c95",
+          "path": "p15-14-existing-psd-audit/yaw045/native-12.png"
+        }
+      ],
+      "underpaintCandidateCoveredPixelInstances": 195182,
+      "verifiedUnderpaintCorrectness": false,
+      "compositePath": "p15-14-existing-psd-audit/yaw045/psd-composite.png",
+      "compositeSHA256": "ee9f0cd764b4739b0ca11accf74b2c53ee889360e51e98718e2b9e6e1579dfc1",
+      "status": "PSD_LAYER_EXTRACTION_VERIFIED_MAPPING_INCOMPLETE"
+    },
+    {
+      "angle": "yaw077p5",
+      "source": "p15-independent-candidates/seethrough/yaw077p5-layers.psd",
+      "sourceSHA256": "df8dbb28b79c680098682ff789a6450cfaba781bb0811cb1fd352ca6084ee0c0",
+      "size": [
+        768,
+        768
+      ],
+      "nativeLayerCount": 13,
+      "nativeLayerEntries": [
+        {
+          "index": 0,
+          "name": "neck",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 15884,
+          "fullyCoveredPixels": 0,
+          "partiallyCoveredPixels": 0,
+          "sha256": "8864731ce9b13487e13815e92653e1029b841763a34e1693f556bdcf12bc091a",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-00.png"
+        },
+        {
+          "index": 1,
+          "name": "topwear",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 64726,
+          "fullyCoveredPixels": 3891,
+          "partiallyCoveredPixels": 349,
+          "sha256": "67ab0942a41ec2b8c261ee8eb1e7dcdcf4fddde1ec8315dcb0b772013d66b1eb",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-01.png"
+        },
+        {
+          "index": 2,
+          "name": "handwear",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "body.reference"
+          ],
+          "pixelCount": 22129,
+          "fullyCoveredPixels": 21962,
+          "partiallyCoveredPixels": 167,
+          "sha256": "47cac60894d515a890c795f81ad5c5f653dd080eec2e4648722bde3a1f634ba9",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-02.png"
+        },
+        {
+          "index": 3,
+          "name": "ears",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "ear.near",
+            "ear.far"
+          ],
+          "pixelCount": 4740,
+          "fullyCoveredPixels": 100,
+          "partiallyCoveredPixels": 58,
+          "sha256": "8b94a761daba1c911ea417a38ac82180131929ad15507f91a96b8ba4ad2b479f",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-03.png"
+        },
+        {
+          "index": 4,
+          "name": "back hair",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "hair.back"
+          ],
+          "pixelCount": 150941,
+          "fullyCoveredPixels": 16667,
+          "partiallyCoveredPixels": 1104,
+          "sha256": "04f62ba30248abc1bf65d30401af7e67a4c2f8d083031d8cb2c8ab5e84eb90f7",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-04.png"
+        },
+        {
+          "index": 5,
+          "name": "face",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "face.skin"
+          ],
+          "pixelCount": 50670,
+          "fullyCoveredPixels": 43918,
+          "partiallyCoveredPixels": 341,
+          "sha256": "3f06922385c420dae6da26475136219d709b2ad928d9861972b72a8905a2684d",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-05.png"
+        },
+        {
+          "index": 6,
+          "name": "nose",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "nose"
+          ],
+          "pixelCount": 52612,
+          "fullyCoveredPixels": 52087,
+          "partiallyCoveredPixels": 380,
+          "sha256": "c7429cba17c88e59b5ae26d512b6f6ba159bc64d4276b9322115e4ba8ab34a03",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-06.png"
+        },
+        {
+          "index": 7,
+          "name": "mouth",
+          "status": "DIRECT_ROLE_CLASS_ONLY",
+          "candidateRoles": [
+            "mouth"
+          ],
+          "pixelCount": 42,
+          "fullyCoveredPixels": 42,
+          "partiallyCoveredPixels": 0,
+          "sha256": "2beea4c5845939bdcce1bd468f11b03c8b40e09a25a9c7a292a65646ef695dd8",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-07.png"
+        },
+        {
+          "index": 8,
+          "name": "eyewhite",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 1928,
+          "fullyCoveredPixels": 1928,
+          "partiallyCoveredPixels": 0,
+          "sha256": "2b85d8876cd32c3cb0e8b0bd39384247371532e51fd2fda19199aa82089f58c6",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-08.png"
+        },
+        {
+          "index": 9,
+          "name": "irides",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 734,
+          "fullyCoveredPixels": 734,
+          "partiallyCoveredPixels": 0,
+          "sha256": "7e63b4ae20b6cf0bf115c2874567bdab881cd7a7bd0db1adc95b37e357c32359",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-09.png"
+        },
+        {
+          "index": 10,
+          "name": "eyelash",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 1415,
+          "fullyCoveredPixels": 1404,
+          "partiallyCoveredPixels": 11,
+          "sha256": "7d41ecccc927f83908dc74a92bd39e4f7e545e5694926f3f1f412a83ab8b82d0",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-10.png"
+        },
+        {
+          "index": 11,
+          "name": "eyebrow",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "eye.near",
+            "eye.far"
+          ],
+          "pixelCount": 394,
+          "fullyCoveredPixels": 394,
+          "partiallyCoveredPixels": 0,
+          "sha256": "96a78050025f72b810e781a9c44c7efb5647e68d452b5b56746a79a380aade7d",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-11.png"
+        },
+        {
+          "index": 12,
+          "name": "front hair",
+          "status": "SPLIT_OR_IDENTITY_REVIEW_REQUIRED",
+          "candidateRoles": [
+            "hair.front",
+            "hair.side",
+            "hair.ahoge"
+          ],
+          "pixelCount": 80353,
+          "fullyCoveredPixels": 73784,
+          "partiallyCoveredPixels": 735,
+          "sha256": "1e4f4c4f52182a157fd7e5ab82619c6cd9b4792b260f2a74da4d1de526688d90",
+          "path": "p15-14-existing-psd-audit/yaw077p5/native-12.png"
+        }
+      ],
+      "underpaintCandidateCoveredPixelInstances": 216911,
+      "verifiedUnderpaintCorrectness": false,
+      "compositePath": "p15-14-existing-psd-audit/yaw077p5/psd-composite.png",
+      "compositeSHA256": "2cddc5f7c518719bd05f60b9704b10aa47d8c1cbce3c87641049bd9d4e17ea9e",
+      "status": "PSD_LAYER_EXTRACTION_VERIFIED_MAPPING_INCOMPLETE"
+    }
+  ],
+  "sourceP0IdentityAudit": "Existing PSDs, not newly inferred PSD; verify identity externally",
+  "directRoleAcceptance": false,
+  "layerSplitAccepted": false,
+  "hiddenRegionArtAcceptance": false,
+  "artmeshIndependentLayersAccepted": 0,
+  "next": "Split eye and ear by geometry; separate front hair, ahoge and clip with transparency and inspect hidden paint"
+}

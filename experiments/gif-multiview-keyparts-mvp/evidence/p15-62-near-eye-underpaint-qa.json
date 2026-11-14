@@ -1,0 +1,85 @@
+{
+  "schema": "KOMA-P15-62-NEAR-EYE-UNDERPAINT-V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "sourceMethod": "LOCAL_CHEEK_TEXTURE_CLONE_COLOR_MATCHED_AND_FEATHERED_NOT_AI_INPAINT",
+  "donorRect": [
+    542,
+    535,
+    647,
+    635
+  ],
+  "eyeMaskPolygon": [
+    [
+      522,
+      449
+    ],
+    [
+      535,
+      430
+    ],
+    [
+      565,
+      420
+    ],
+    [
+      606,
+      421
+    ],
+    [
+      637,
+      436
+    ],
+    [
+      652,
+      457
+    ],
+    [
+      650,
+      480
+    ],
+    [
+      636,
+      503
+    ],
+    [
+      613,
+      516
+    ],
+    [
+      581,
+      516
+    ],
+    [
+      552,
+      505
+    ],
+    [
+      533,
+      486
+    ]
+  ],
+  "eyeMovePx": [
+    18,
+    0
+  ],
+  "eyeCutoutSHA256": "3443b7ab11af3536569df3eb6fb40607adaf123adb8deb25e3aa285ba5de82cd",
+  "underpaintSHA256": "936eab600f1487ecf80ae017397871098f24cc2079392cd658280e7d5e4529be",
+  "shiftedPreviewSHA256": "6bb5d7e6104ae0dda4451a9a374c8e40c4a836bd7b88cc042d68800a02952d8d",
+  "transparentHolePixelsNearEyeROI": 0,
+  "opaqueCoverageMissingPixelsInEyePolygon": 0,
+  "outsideMaskChangedPixels": 0,
+  "sourceVisiblePixelExactOutsideMask": true,
+  "hiddenSkinAuthenticallyReconstructed": false,
+  "methodIsIndependentOriginalPainting": false,
+  "visualGate": "FAIL_LOCAL_TEXTURE_CLONE_VISIBLE_SEAM",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualEvidence": "The shifted preview has no transparent hole, but the cloned cheek patch creates a visible pink polygon/texture seam around the former eye footprint and does not reproduce the original eye-adjacent skin/hair shading.",
+  "modelInference": {
+    "space": "akhaliq/Qwen-Image-Edit-2511-LoRAs-Fast",
+    "adapter": "Anime-V2",
+    "status": "BLOCKED_ZERO_GPU_QUOTA_EXCEEDED",
+    "generatedImageAccepted": false
+  }
+}

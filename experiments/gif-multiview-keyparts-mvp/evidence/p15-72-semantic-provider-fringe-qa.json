@@ -1,0 +1,10 @@
+{
+  "schema": "KOMA-P15-72-CPU-SEMANTIC-V1",
+  "sourceSHA256": "602dc4ca6e4c1e4678a3dad16d321a77d826d24acebc36f1c7988956a3e8ff09",
+  "provider": "Volkopat/SegmentAnythingxGroundingDINO",
+  "prompt": "front hair fringe bangs",
+  "status": "MODEL_RETURNED",
+  "formalArtMeshAccepted": false,
+  "outputBytes": 12592,
+  "outputSHA256": "1fc8e95b72abce263de9a8cf837240e098a7c97ddfeac03558dab952496e4410"
+}

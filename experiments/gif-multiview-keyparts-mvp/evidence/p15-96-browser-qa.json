@@ -1,0 +1,139 @@
+{
+  "schema": "KOMA_P15_96_BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "offsetPx": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 9,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 10,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 11,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "desktop",
+      "offsetPx": 12,
+      "imagesLoaded": 5,
+      "screenshotSHA256": "4c4e5bbf101ac05cc5696a826631174a6d2a5f0865acfb76877eeb88000e64c4"
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 4,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 5,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 6,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 7,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 8,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 9,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 10,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 11,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": "mobile",
+      "offsetPx": 12,
+      "imagesLoaded": 5,
+      "screenshotSHA256": "293ed7e47fa3f385b1dab9f1726f92a6dbebe22eee81e5dd917b79ff99726c71"
+    }
+  ],
+  "errors": []
+}

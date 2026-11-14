@@ -1,0 +1,95 @@
+{
+  "schema": "KOMA_P15_104_DETAIL_REVIEW_V1",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "frameFiles": {
+    "P15-101-baseline": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-103-part-grid": {
+      "60": "../p15-103-render/all_parts_blend-yaw60.png",
+      "61.875": "../p15-103-render/all_parts_blend-yaw61p875.png",
+      "63.75": "../p15-103-render/all_parts_blend-yaw63p75.png",
+      "65.625": "../p15-103-render/all_parts_blend-yaw65p625.png",
+      "67.5": "../p15-103-render/all_parts_blend-yaw67p5.png",
+      "69.375": "../p15-103-render/all_parts_blend-yaw69p375.png",
+      "71.25": "../p15-103-render/all_parts_blend-yaw71p25.png",
+      "73.125": "../p15-103-render/all_parts_blend-yaw73p125.png",
+      "75": "../p15-103-render/all_parts_blend-yaw75.png"
+    },
+    "ink_all_detail_blend": {
+      "60": "ink_all_detail_blend-yaw60.png",
+      "61.875": "ink_all_detail_blend-yaw61p875.png",
+      "63.75": "ink_all_detail_blend-yaw63p75.png",
+      "65.625": "ink_all_detail_blend-yaw65p625.png",
+      "67.5": "ink_all_detail_blend-yaw67p5.png",
+      "69.375": "ink_all_detail_blend-yaw69p375.png",
+      "71.25": "ink_all_detail_blend-yaw71p25.png",
+      "73.125": "ink_all_detail_blend-yaw73p125.png",
+      "75": "ink_all_detail_blend-yaw75.png"
+    },
+    "ink_bow_only": {
+      "60": "ink_bow_only-yaw60.png",
+      "61.875": "ink_bow_only-yaw61p875.png",
+      "63.75": "ink_bow_only-yaw63p75.png",
+      "65.625": "ink_bow_only-yaw65p625.png",
+      "67.5": "ink_bow_only-yaw67p5.png",
+      "69.375": "ink_bow_only-yaw69p375.png",
+      "71.25": "ink_bow_only-yaw71p25.png",
+      "73.125": "ink_bow_only-yaw73p125.png",
+      "75": "ink_bow_only-yaw75.png"
+    },
+    "ink_soft_owner": {
+      "60": "ink_soft_owner-yaw60.png",
+      "61.875": "ink_soft_owner-yaw61p875.png",
+      "63.75": "ink_soft_owner-yaw63p75.png",
+      "65.625": "ink_soft_owner-yaw65p625.png",
+      "67.5": "ink_soft_owner-yaw67p5.png",
+      "69.375": "ink_soft_owner-yaw69p375.png",
+      "71.25": "ink_soft_owner-yaw71p25.png",
+      "73.125": "ink_soft_owner-yaw73p125.png",
+      "75": "ink_soft_owner-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-baseline": {
+      "path": "private-assets/exports/p15-104-detail-render/P15-101-baseline-loop.gif",
+      "sha256": "f26e05ed133a4091fecba20c82dbae3ad242aaae8474e77b2e9957ec1e73bb3e"
+    },
+    "P15-103-part-grid": {
+      "path": "private-assets/exports/p15-104-detail-render/P15-103-part-grid-loop.gif",
+      "sha256": "160b21e5421d5fc83a589fdff43246c4789897adec02a9aa5a071a3f89ff7438"
+    },
+    "ink_all_detail_blend": {
+      "path": "private-assets/exports/p15-104-detail-render/ink_all_detail_blend-loop.gif",
+      "sha256": "037ee3ca761c3048081f2577f7581425a8b95453b17b6eecb5ca0dbfc6b9828d"
+    },
+    "ink_bow_only": {
+      "path": "private-assets/exports/p15-104-detail-render/ink_bow_only-loop.gif",
+      "sha256": "03ec9fea38593de4ded584b18138f15bb7fc19b3bd7eacdc011b88227b97ce3f"
+    },
+    "ink_soft_owner": {
+      "path": "private-assets/exports/p15-104-detail-render/ink_soft_owner-loop.gif",
+      "sha256": "10718a50188ab4f105dfc9ecdb69c33fa2dc0ad49ff8e8dc92736b9e1148cbc6"
+    }
+  },
+  "entry": "private-assets/exports/p15-104-detail-render/index.html",
+  "visualAccepted": false
+}

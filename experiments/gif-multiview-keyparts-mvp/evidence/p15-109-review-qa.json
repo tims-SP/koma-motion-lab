@@ -1,0 +1,81 @@
+{
+  "schema": "KOMA_P15_109_STROKE_PATH_REVIEW_V1",
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "collar_path_narrow": {
+      "60": "collar_path_narrow-yaw60.png",
+      "61.875": "collar_path_narrow-yaw61p875.png",
+      "63.75": "collar_path_narrow-yaw63p75.png",
+      "65.625": "collar_path_narrow-yaw65p625.png",
+      "67.5": "collar_path_narrow-yaw67p5.png",
+      "69.375": "collar_path_narrow-yaw69p375.png",
+      "71.25": "collar_path_narrow-yaw71p25.png",
+      "73.125": "collar_path_narrow-yaw73p125.png",
+      "75": "collar_path_narrow-yaw75.png"
+    },
+    "collar_path_wide": {
+      "60": "collar_path_wide-yaw60.png",
+      "61.875": "collar_path_wide-yaw61p875.png",
+      "63.75": "collar_path_wide-yaw63p75.png",
+      "65.625": "collar_path_wide-yaw65p625.png",
+      "67.5": "collar_path_wide-yaw67p5.png",
+      "69.375": "collar_path_wide-yaw69p375.png",
+      "71.25": "collar_path_wide-yaw71p25.png",
+      "73.125": "collar_path_wide-yaw73p125.png",
+      "75": "collar_path_wide-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-109-collar-render/P15-101-original-loop.gif",
+      "sha256": "5d2f2cbabb33d61f9550c0c4ea156693438537b7b683de436cee737de0df5ef6"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-109-collar-render/P15-107-native-loop.gif",
+      "sha256": "2554c0007396e361c535cc70747770cee22c8c1a19539b3f6badeef8f86f99ff"
+    },
+    "collar_path_narrow": {
+      "path": "private-assets/exports/p15-109-collar-render/collar_path_narrow-loop.gif",
+      "sha256": "c33fc1f80e8770d0fd7beeac7ed3b4ec2545bb25c7f565da4b9ef5540eb97049"
+    },
+    "collar_path_wide": {
+      "path": "private-assets/exports/p15-109-collar-render/collar_path_wide-loop.gif",
+      "sha256": "266107e98e570e1d85e09708ef27ce9e6c1e0efd7798a7d5775da404f145e9de"
+    }
+  },
+  "entry": "private-assets/exports/p15-109-collar-render/index.html",
+  "formalArtPathApproved": false,
+  "continuousVisualAccepted": false
+}

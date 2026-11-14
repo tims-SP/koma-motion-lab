@@ -1,0 +1,126 @@
+{
+  "schema": "KOMA-P15-81-AUTH_SAM3_SEMANTIC_ASSET_QA_V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "inputSHA256": "488dd3cad3225bbcbb21bb1a3a507ffdda0a55665485b7539017d64e73888d4d",
+  "provider": "prithivMLmods/SAM3-Demo",
+  "authAttemptSucceeded": true,
+  "maskClass": "front bangs hair fringe on forehead",
+  "masks": {
+    "027": {
+      "rawMaskSHA256": "97646f71fd8132003ea3cb4036e7a43360a22833eefbbca086b72c42a05879fb",
+      "alignedMaskSHA256": "52d19e18093e5a031b7e212172e70ea6e5fedf762ac5c86f18745f0511d79e84",
+      "hairSHA256": "5857c2a67bfc2d4bf545f24d707fd945830ce3d8cccfc47d86e59d42770dc128",
+      "maskOriginalPixels": 69350,
+      "alignedAlphaPixels": 88740,
+      "alignedBBox": [
+        453,
+        120,
+        782,
+        714
+      ],
+      "actualRestPoseDiffBBox": [
+        609,
+        272,
+        776,
+        714
+      ],
+      "mathComplementRestDiffBBox": null,
+      "dynamic9SHA256": "d38ceb0cc615e80531dbee943bb3dbe27191ba59965c24c15905defa192b9aa5",
+      "dynamic18SHA256": "393fc247eae88a86cd1af5430558e311251e767e149e42325a4cc84ccf3b26ee",
+      "anchorAlpha": {
+        "frontHair": 255,
+        "bangNearEyebrow": 252,
+        "nearIris": 0,
+        "cheekSkin": 0,
+        "goldClip": 0,
+        "sideHair": 0
+      },
+      "actualRestPoseChangedPixels": 8409,
+      "actualRestPoseExact": false,
+      "newHolesByOffset": {
+        "9": 0,
+        "18": 0
+      }
+    },
+    "083": {
+      "rawMaskSHA256": "5fce13fc61199cd0cd1c116ae8d626bae23908c4c586c07434ce1045dca78d94",
+      "alignedMaskSHA256": "0c008a591d4191e61aaff7d3c4e34b9179fc6f74f57d84ce222f150af78c444f",
+      "hairSHA256": "35b90ec1b597ad3cb867696435c60b7a7810a765ab0e286b92a8ced54f5e5193",
+      "maskOriginalPixels": 178738,
+      "alignedAlphaPixels": 222306,
+      "alignedBBox": [
+        173,
+        45,
+        783,
+        714
+      ],
+      "actualRestPoseDiffBBox": [
+        177,
+        110,
+        776,
+        714
+      ],
+      "mathComplementRestDiffBBox": null,
+      "dynamic9SHA256": "7e1584b60418541c6d4facd80a185dcbb8ee491c0c87440b879ccc4621a1c99c",
+      "dynamic18SHA256": "050433453132435b28801966a71d6a5eb217db8b27ab38070887c86a60d6425a",
+      "anchorAlpha": {
+        "frontHair": 255,
+        "bangNearEyebrow": 252,
+        "nearIris": 0,
+        "cheekSkin": 0,
+        "goldClip": 0,
+        "sideHair": 255
+      },
+      "actualRestPoseChangedPixels": 8475,
+      "actualRestPoseExact": false,
+      "newHolesByOffset": {
+        "9": 0,
+        "18": 0
+      }
+    }
+  },
+  "referenceP1574HairSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+  "sourcePixelRGBPreserved": true,
+  "resultsAreRawModelSemanticMasks": true,
+  "hiddenUnderpaintGenerated": false,
+  "realRestPoseExact": false,
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "visualGate": "SAM3_IMPROVED_BANGS_MASK_BUT_ACTUAL_REST_AND_DYNAMIC_VISUAL_FAIL",
+  "samplingAnchors": {
+    "frontHair": [
+      620,
+      305
+    ],
+    "bangNearEyebrow": [
+      590,
+      395
+    ],
+    "nearIris": [
+      600,
+      475
+    ],
+    "cheekSkin": [
+      640,
+      555
+    ],
+    "goldClip": [
+      720,
+      320
+    ],
+    "sideHair": [
+      430,
+      420
+    ]
+  },
+  "comparison": {
+    "narrowMask": "027 candidate selectively retains front hair and leaves the iris/cheek sample outside",
+    "wideMask": "083 includes large back-hair region and is not an isolated bangs layer",
+    "sourceRestReconstruction": "mathematical binary mask complementary decomposition reassembles the original; actual moving pipeline 0px does not",
+    "visual": "SAM3 reduces grid holes of the previous SAM output, but current face underpaint and 0px compositing still produce duplicate eyebrow/eyelid edges, and hair-clip-specific layering is not fully solved"
+  },
+  "provisionalNarrowMaskAvailable": true,
+  "newIndependentCleanBangAndHiddenSkinLayerAccepted": false,
+  "next": "P15-82 create true occluded clean forehead/eyelash underlay matching SAM3-027 bangs, fix real 0px before dynamic 9/18; do not use old SAM or claim Qwen Image Layered succeeded."
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "KOMA_P15_163_CANONICAL_LOOP_REGISTRATION_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "views": {
+    "90": {
+      "sourceSHA256": "4c079e84b8fc4945d3dc17642eea3618f31d3c7edb1ae1845a9a1252877d5963",
+      "original": {
+        "sourceVisibleLoopIoU": 0.48357,
+        "sourceVisibleLoopIntersection": 883,
+        "offSourceVisibleLoopPixels": 621,
+        "rootCandidatePixels": 168,
+        "rootAtActualY": true,
+        "opaqueAboveCrownPixels": 1504
+      },
+      "registered": {
+        "scale": 0.985,
+        "translationXY": [
+          3,
+          -1
+        ],
+        "sourceLoopMatch": {
+          "sourceVisibleLoopIoU": 0.59693,
+          "sourceVisibleLoopIntersection": 1010,
+          "offSourceVisibleLoopPixels": 487,
+          "rootCandidatePixels": 155,
+          "rootAtActualY": true,
+          "opaqueAboveCrownPixels": 1497
+        },
+        "actualRootY": 65
+      }
+    },
+    "112.5": {
+      "sourceSHA256": "b53fa18312fc31a303b76c88bd0161661c1fd81a5839bb86054c42034b0aaea4",
+      "original": {
+        "sourceVisibleLoopIoU": 0.14151,
+        "sourceVisibleLoopIntersection": 361,
+        "offSourceVisibleLoopPixels": 1688,
+        "rootCandidatePixels": 768,
+        "rootAtActualY": true,
+        "opaqueAboveCrownPixels": 2049
+      },
+      "registered": {
+        "scale": 0.665,
+        "translationXY": [
+          35,
+          -1
+        ],
+        "sourceLoopMatch": {
+          "sourceVisibleLoopIoU": 0.829,
+          "sourceVisibleLoopIntersection": 829,
+          "offSourceVisibleLoopPixels": 137,
+          "rootCandidatePixels": 440,
+          "rootAtActualY": true,
+          "opaqueAboveCrownPixels": 966
+        },
+        "actualRootY": 72
+      }
+    },
+    "135": {
+      "sourceSHA256": "b96ab8b90c9e899a07e3583fe3ff810f25af9c52e95d89e5a335dbe85194f992",
+      "original": {
+        "sourceVisibleLoopIoU": 0.46889,
+        "sourceVisibleLoopIntersection": 746,
+        "offSourceVisibleLoopPixels": 520,
+        "rootCandidatePixels": 311,
+        "rootAtActualY": true,
+        "opaqueAboveCrownPixels": 1266
+      },
+      "registered": {
+        "scale": 0.955,
+        "translationXY": [
+          -1,
+          -5
+        ],
+        "sourceLoopMatch": {
+          "sourceVisibleLoopIoU": 0.71734,
+          "sourceVisibleLoopIntersection": 972,
+          "offSourceVisibleLoopPixels": 284,
+          "rootCandidatePixels": 265,
+          "rootAtActualY": true,
+          "opaqueAboveCrownPixels": 1256
+        },
+        "actualRootY": 67
+      }
+    }
+  },
+  "render": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "topComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "registeredCandidate": {
+      "maxAdjacentRGBMAE": 12.3906,
+      "topComponents": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true
+    }
+  },
+  "artProvenancePreserved": true,
+  "sourceKeyviewsPreserved": true,
+  "matchedHiddenCrownVerified": false,
+  "physicalRootContinuityArtistApproved": false,
+  "fullYawVisualAccepted": false,
+  "productionAdmitted": false,
+  "review": "private-assets/exports/p15-163-canonical-registration/index.html",
+  "next": "Use the correctly registered source-visible loop as artwork reference and paint actual attached roots plus hidden crown for each keyview before retesting VDD.",
+  "gate": {
+    "allLoopIoUImproved": true,
+    "allVisibleLoopIoUOver0p45": true,
+    "allRootsReachActualY": true,
+    "midYawSingleComponent": false,
+    "artisticAccepted": false,
+    "passes": false
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schema": "KOMA-P15-09-ANCHOR-POSE-ARC-REVIEW-V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    45.0,
+    47.5,
+    50.0,
+    52.5,
+    55.0,
+    57.5,
+    60.0,
+    62.5,
+    65.0
+  ],
+  "source45Sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "source65Sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+  "anchorGeometry55Sha256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+  "renderedFrames": [
+    {
+      "yaw": 45.0,
+      "sha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+      "method": "P5_ANCHOR_GEOMETRY"
+    },
+    {
+      "yaw": 47.5,
+      "sha256": "38a945f13aa76d80e6f44cc472ac1453d0bf87b2fa29dbc01822aa055824298a",
+      "method": "P5_ANCHOR_GEOMETRY"
+    },
+    {
+      "yaw": 50.0,
+      "sha256": "6dd608ea349ac223fa4b06305d4f8a0d28279340c5df9254cac46aac89a198fe",
+      "method": "P5_ANCHOR_GEOMETRY"
+    },
+    {
+      "yaw": 52.5,
+      "sha256": "6de3356153b27959da43a799bcf74a49e6446da32344b4f8d52faeaaf2e89b33",
+      "method": "P5_ANCHOR_GEOMETRY"
+    },
+    {
+      "yaw": 55.0,
+      "sha256": "2ef4bca92ebe4bd197adf62ad1ac91d55519330007bd97222d2366d6169e1d2e",
+      "method": "P5_ANCHOR_GEOMETRY"
+    },
+    {
+      "yaw": 57.5,
+      "sha256": "eb8f7a4e7fa21c5a69d450cd11c0aece67a4554b8f9d2c14552621c054058d9a",
+      "method": "P15_PAINTED_BRIDGE"
+    },
+    {
+      "yaw": 60.0,
+      "sha256": "8efe32dc7dabdfaf184fc63c1dc6732db3a8e43c8ee6fc5c145da0e881f207ae",
+      "method": "P15_PAINTED_BRIDGE"
+    },
+    {
+      "yaw": 62.5,
+      "sha256": "c22443cbe6de6f024da97979ac7f80883d71588e3a84faa80e77e165c8a4c1a7",
+      "method": "P15_PAINTED_BRIDGE"
+    },
+    {
+      "yaw": 65.0,
+      "sha256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+      "method": "P15_PAINTED_BRIDGE"
+    }
+  ],
+  "adjacentGeometry": [
+    {
+      "from": 45.0,
+      "to": 47.5,
+      "anchorAlphaIoU": 0.98778,
+      "baselineAlphaIoU": 0.94951,
+      "anchorMeanOpaqueRGBDelta": 5.4477,
+      "baselineMeanOpaqueRGBDelta": 9.6326
+    },
+    {
+      "from": 47.5,
+      "to": 50.0,
+      "anchorAlphaIoU": 0.98723,
+      "baselineAlphaIoU": 0.95589,
+      "anchorMeanOpaqueRGBDelta": 5.3876,
+      "baselineMeanOpaqueRGBDelta": 8.7036
+    },
+    {
+      "from": 50.0,
+      "to": 52.5,
+      "anchorAlphaIoU": 0.98674,
+      "baselineAlphaIoU": 0.95933,
+      "anchorMeanOpaqueRGBDelta": 5.5008,
+      "baselineMeanOpaqueRGBDelta": 8.3202
+    },
+    {
+      "from": 52.5,
+      "to": 55.0,
+      "anchorAlphaIoU": 0.98615,
+      "baselineAlphaIoU": 0.95685,
+      "anchorMeanOpaqueRGBDelta": 5.5805,
+      "baselineMeanOpaqueRGBDelta": 12.7611
+    },
+    {
+      "from": 55.0,
+      "to": 57.5,
+      "anchorAlphaIoU": 0.89519,
+      "baselineAlphaIoU": 0.95904,
+      "anchorMeanOpaqueRGBDelta": 15.0629,
+      "baselineMeanOpaqueRGBDelta": 7.3721
+    },
+    {
+      "from": 57.5,
+      "to": 60.0,
+      "anchorAlphaIoU": 0.9087,
+      "baselineAlphaIoU": 0.953,
+      "anchorMeanOpaqueRGBDelta": 15.5927,
+      "baselineMeanOpaqueRGBDelta": 7.2961
+    },
+    {
+      "from": 60.0,
+      "to": 62.5,
+      "anchorAlphaIoU": 0.90896,
+      "baselineAlphaIoU": 0.94573,
+      "anchorMeanOpaqueRGBDelta": 11.3721,
+      "baselineMeanOpaqueRGBDelta": 6.8834
+    },
+    {
+      "from": 62.5,
+      "to": 65.0,
+      "anchorAlphaIoU": 0.90784,
+      "baselineAlphaIoU": 0.94458,
+      "anchorMeanOpaqueRGBDelta": 10.0772,
+      "baselineMeanOpaqueRGBDelta": 5.9503
+    }
+  ],
+  "contactSha256": "3eeb48d847a1c3374575fed7a079eaefac6dc6c8a75cf5ede77f2bf288c2e937",
+  "contactPrivatePath": "p15-09-midarc/p15-09-midarc-contact.jpg",
+  "renderStatus": "GEOMETRY_REFERENCE_GENERATED",
+  "artisticStatus": "NEEDS_INDEPENDENT_POSE_AND_OCCLUSION_ART",
+  "source55Admission": "GEOMETRY_DERIVED_INTERMEDIATE"
+}

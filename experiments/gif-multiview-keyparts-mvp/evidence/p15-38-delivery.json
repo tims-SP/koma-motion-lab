@@ -1,0 +1,16 @@
+{
+  "schema": "KOMA-P15-38-DELIVERY-V1",
+  "characterId": "p0_character_001",
+  "zipPath": "private-assets/exports/p15-38-p0-original-arc-review.zip",
+  "sha256": "8ab36033ede907681215850a424dfa93191098d6ba99eae2d51f194351c1a62c",
+  "bytes": 29603030,
+  "entriesVerified": 136,
+  "htmlEntry": "index.html",
+  "frames": 13,
+  "roles": 13,
+  "sourceP0Original45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "realBrowserChecks": 78,
+  "browserImageLoads": 312,
+  "browserScreenshots": 12,
+  "formalArtApproval": false
+}

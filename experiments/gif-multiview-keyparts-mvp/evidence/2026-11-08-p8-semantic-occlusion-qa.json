@@ -1,0 +1,159 @@
+{
+  "schema": "KOMA-P0-P8-SEMANTIC-OCCLUSION-ACCEPTANCE-QA-V1",
+  "date": "2026-11-08",
+  "characterId": "p0_character_001",
+  "source": {
+    "originalKeyAngles": [
+      0,
+      45,
+      90
+    ],
+    "genuinePSDViews": [
+      0,
+      45
+    ],
+    "originalP0HeroMasterSHAverified": false,
+    "registeredArtMeshViews": 39,
+    "P0SemanticRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "landmarkRegistrySHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "sourcePSDHashes": {
+      "0": "43f5c62f06398acba2f947ab3f97fe89077c95e432f5d7e075ca48ca6ee81b04",
+      "45": "2527b97209c2bb912f260ba14179dcccacd45b39322077ec1fd92746ea8636fd"
+    }
+  },
+  "geometry": {
+    "method": "Per-semantic DIS with physical landmark guidance, alpha-aware warping and angle-dependent occlusion",
+    "originalKeyframesPixelStable": true,
+    "globalRGBAResolution": [
+      1024,
+      1024
+    ],
+    "nativeFlowResolution": [
+      443,
+      443
+    ],
+    "sourceMotionPairs": 22,
+    "visibilityWindows": [
+      {
+        "pair": [
+          0,
+          45
+        ],
+        "semanticId": "ear.far",
+        "visibilityWindow": [
+          2,
+          31
+        ]
+      },
+      {
+        "pair": [
+          45,
+          90
+        ],
+        "semanticId": "eye.far",
+        "visibilityWindow": [
+          52,
+          75
+        ]
+      },
+      {
+        "pair": [
+          45,
+          90
+        ],
+        "semanticId": "hair.clip.cross_gold",
+        "visibilityWindow": [
+          48,
+          70
+        ]
+      }
+    ],
+    "sourceRGBAFrames": 37,
+    "stepDegrees": 2.5,
+    "completeMotionYaw": [
+      0,
+      90
+    ],
+    "originalSideViewMethod": "P0 original 90-degree ArtMesh"
+  },
+  "validation": {
+    "P7Reference": {
+      "edgeRatios": {
+        "22.5": 1.2486,
+        "67.5": 0.8674
+      },
+      "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+      "outliers": 0
+    },
+    "P8": {
+      "edgeRatios": {
+        "22.5": 1.281,
+        "67.5": 0.8371
+      },
+      "edgeDensityStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+      "temporalStatus": "PASS_TEMPORAL_CONTINUITY",
+      "temporalOutliers": 0,
+      "medianRGBChange": 4.3745,
+      "maximumRGBChange": 6.0578,
+      "faceAlphaStatus": "PASS_HOLDOUT_COVERAGE",
+      "profileComparisonStatus": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE"
+    },
+    "realBrowser": {
+      "sampledAngles": [
+        0,
+        22.5,
+        45,
+        67.5,
+        72.5,
+        90
+      ],
+      "screenshots": 6,
+      "canvasCaptures": 18,
+      "qa": "PASS_REAL_BROWSER_TEXTURE_PREVIEW",
+      "errors": [],
+      "failedRequests": [],
+      "HTML": "review/p8-motion.html"
+    },
+    "artisticAcceptance": "PENDING_ANATOMICAL_TEXEL_CORRESPONDENCE",
+    "visualTargetAreas": [
+      "front fringe",
+      "near eye",
+      "nose",
+      "face jaw",
+      "ear",
+      "collar",
+      "gold cross hair clip"
+    ]
+  },
+  "assets": {
+    "motionGif": "private-assets/p8-semantic-occlusion/p0-semantic-occlusion-turn.gif",
+    "motionGIFFrames": 72,
+    "motionGIFSHA256": "cb85a0c60314e03b995e2afdfb9c338d2ce41ec31edb02a305d9f23c43c7870a",
+    "privateReviewZip": "private-assets/exports/p0-character-001-semantic-occlusion-review-v9.zip",
+    "privateReviewZipSHA256": "ce3a36fe9ea44384f3a26bfaf1385c79846223f7ae1fa4ff6b5bdf3edb8a8cd7",
+    "privateReviewZipBytes": 140302406,
+    "privateReviewZipEntries": 230,
+    "internalSourceHashesVerified": true
+  },
+  "inferenceStatus": {
+    "yaw90": "INFERENCE_UNAVAILABLE",
+    "hostedGPULimit": "ZeroGPU 180s requested vs 115s left at attempt",
+    "authoredP0ProfileKept": true
+  },
+  "regression": {
+    "testsRun": 72,
+    "testsPassed": 72,
+    "testsFailed": 0,
+    "mode": "local isolated environment"
+  },
+  "next": {
+    "stage": "P9_PER_PIXEL_SOURCE_CORRESPONDENCE",
+    "goal": "use physically consistent keypoint and layered occlusion matching for face and hair texels",
+    "sourceArt": "approved P0 keyframes",
+    "gates": [
+      "fix 67.5-72.5 face and collar double lines",
+      "gold clip and far-eye occlusion",
+      "full motion temporal zero-outlier"
+    ]
+  }
+}

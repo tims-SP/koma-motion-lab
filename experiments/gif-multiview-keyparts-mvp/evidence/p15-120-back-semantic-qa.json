@@ -1,0 +1,42 @@
+{
+  "schema": "KOMA_P15_120_BACK_SEMANTIC_CANDIDATES_V1",
+  "characterId": "p0_character_001",
+  "views": [
+    {
+      "yaw": 135,
+      "source": "extracted/whole/yaw135.png",
+      "sha256": "1e2bad63b672cffc36beb77b2d68eff6cfe661bd663670e9fffeae6040bfaf16",
+      "pixelCounts": {
+        "hair.visible": 51438,
+        "skin.visible": 875,
+        "garment.visible": 23585
+      },
+      "pixelReconstructionExact": true,
+      "alphaExclusive": true,
+      "appearanceSegmentationConfidence": "candidate pending artist review",
+      "physicalUnderpaintExists": false
+    },
+    {
+      "yaw": 180,
+      "source": "extracted/whole/yaw180.png",
+      "sha256": "7cbeb307c5e94adce89553b71e13402757176d8e5705040322d7ffadcdcb2363",
+      "pixelCounts": {
+        "hair.visible": 54866,
+        "skin.visible": 0,
+        "garment.visible": 31941
+      },
+      "pixelReconstructionExact": true,
+      "alphaExclusive": true,
+      "appearanceSegmentationConfidence": "candidate pending artist review",
+      "physicalUnderpaintExists": false
+    }
+  ],
+  "layerCount": 6,
+  "sourcePixelRecompositionExact": true,
+  "classification": "native-visible-pixel semantic candidate",
+  "underpaintVerified": false,
+  "occlusionCorrespondenceVerified": false,
+  "artistVisualApproved": false,
+  "review": "private-assets/exports/p15-120-back-semantic-candidates/index.html",
+  "next": "Inspect hair/skin/garment boundaries; refine into independently paintable anatomy with underpaint and cross-angle anchors."
+}

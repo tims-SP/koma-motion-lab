@@ -1,0 +1,104 @@
+{
+  "schema": "KOMA_P15_157_THREE_VIEW_WHOLE_LOOP_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "loopCutoffY": 54,
+  "viewLoopPixelCounts": {
+    "90": 1205,
+    "112.5": 945,
+    "135": 1071
+  },
+  "viewSourceRecompositionExact": true,
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "nativeKeyframesPixelExact": true,
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "midframeTopRGBMAEToBaseline": {
+        "101.25": 0.0,
+        "123.75": 0.0
+      },
+      "sourceCrownBelowY54Exact": true
+    },
+    "flow_part": {
+      "maxAdjacentRGBMAE": 12.2013,
+      "adjacentRGBMAE": [
+        12.2013,
+        11.1746,
+        10.3474,
+        11.56
+      ],
+      "nativeKeyframesPixelExact": true,
+      "topConnectedComponents": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "midframeTopRGBMAEToBaseline": {
+        "101.25": 5.8912,
+        "123.75": 3.3781
+      },
+      "sourceCrownBelowY54Exact": true
+    },
+    "anchor_owner": {
+      "maxAdjacentRGBMAE": 12.3803,
+      "adjacentRGBMAE": [
+        12.3803,
+        11.2688,
+        10.1289,
+        11.6061
+      ],
+      "nativeKeyframesPixelExact": true,
+      "topConnectedComponents": [
+        1,
+        4,
+        1,
+        3,
+        1
+      ],
+      "midframeTopRGBMAEToBaseline": {
+        "101.25": 7.0417,
+        "123.75": 4.5207
+      },
+      "sourceCrownBelowY54Exact": true
+    }
+  },
+  "sourceKeyViewsUnmodified": true,
+  "sourceOwnedPhysicalCorrespondence": false,
+  "loopRootArtCompleted": false,
+  "headFaceOcclusionValidated": false,
+  "visualAccepted": false,
+  "selectedForProduction": false,
+  "review": "private-assets/exports/p15-157-three-view-loop-vdd/index.html",
+  "next": "Correct source part correspondence and crown underpaint; visually inspect top hair and full frame at 101.25° and 123.75° before adopting any VDD.",
+  "acceptanceGate": {
+    "passes": false,
+    "allCandidateMidframesConnected": false,
+    "reason": "Intermediate loop components break source identity and crown attachment"
+  }
+}

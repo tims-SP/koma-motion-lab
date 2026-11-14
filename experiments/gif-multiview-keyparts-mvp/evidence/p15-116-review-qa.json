@@ -1,0 +1,128 @@
+{
+  "schema": "KOMA_P15_116_VISIBILITY_REVIEW_V1",
+  "character": "p0_character_001",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "P15-115-inkCore": {
+      "60": "../p15-115-local-patch/ink_core-yaw60.png",
+      "61.875": "../p15-115-local-patch/ink_core-yaw61p875.png",
+      "63.75": "../p15-115-local-patch/ink_core-yaw63p75.png",
+      "65.625": "../p15-115-local-patch/ink_core-yaw65p625.png",
+      "67.5": "../p15-115-local-patch/ink_core-yaw67p5.png",
+      "69.375": "../p15-115-local-patch/ink_core-yaw69p375.png",
+      "71.25": "../p15-115-local-patch/ink_core-yaw71p25.png",
+      "73.125": "../p15-115-local-patch/ink_core-yaw73p125.png",
+      "75": "../p15-115-local-patch/ink_core-yaw75.png"
+    },
+    "ribbon_core": {
+      "60": "ribbon_core-yaw60.png",
+      "61.875": "ribbon_core-yaw61p875.png",
+      "63.75": "ribbon_core-yaw63p75.png",
+      "65.625": "ribbon_core-yaw65p625.png",
+      "67.5": "ribbon_core-yaw67p5.png",
+      "69.375": "ribbon_core-yaw69p375.png",
+      "71.25": "ribbon_core-yaw71p25.png",
+      "73.125": "ribbon_core-yaw73p125.png",
+      "75": "ribbon_core-yaw75.png"
+    },
+    "ribbon_edge": {
+      "60": "ribbon_edge-yaw60.png",
+      "61.875": "ribbon_edge-yaw61p875.png",
+      "63.75": "ribbon_edge-yaw63p75.png",
+      "65.625": "ribbon_edge-yaw65p625.png",
+      "67.5": "ribbon_edge-yaw67p5.png",
+      "69.375": "ribbon_edge-yaw69p375.png",
+      "71.25": "ribbon_edge-yaw71p25.png",
+      "73.125": "ribbon_edge-yaw73p125.png",
+      "75": "ribbon_edge-yaw75.png"
+    },
+    "ribbon_edge_jewel": {
+      "60": "ribbon_edge_jewel-yaw60.png",
+      "61.875": "ribbon_edge_jewel-yaw61p875.png",
+      "63.75": "ribbon_edge_jewel-yaw63p75.png",
+      "65.625": "ribbon_edge_jewel-yaw65p625.png",
+      "67.5": "ribbon_edge_jewel-yaw67p5.png",
+      "69.375": "ribbon_edge_jewel-yaw69p375.png",
+      "71.25": "ribbon_edge_jewel-yaw71p25.png",
+      "73.125": "ribbon_edge_jewel-yaw73p125.png",
+      "75": "ribbon_edge_jewel-yaw75.png"
+    },
+    "trim_matte": {
+      "60": "trim_matte-yaw60.png",
+      "61.875": "trim_matte-yaw61p875.png",
+      "63.75": "trim_matte-yaw63p75.png",
+      "65.625": "trim_matte-yaw65p625.png",
+      "67.5": "trim_matte-yaw67p5.png",
+      "69.375": "trim_matte-yaw69p375.png",
+      "71.25": "trim_matte-yaw71p25.png",
+      "73.125": "trim_matte-yaw73p125.png",
+      "75": "trim_matte-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-116-visibility-repair/P15-101-original-loop.gif",
+      "sha256": "7e34b1eec6e7c02fb2dd410302b7adbb1b9e79e8e0df75e339aab2c62895fc5c"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-116-visibility-repair/P15-107-native-loop.gif",
+      "sha256": "eb0d6d53e699d4ac9e77fb3952716189679fc32aa06276c895454168d6e45c20"
+    },
+    "P15-115-inkCore": {
+      "path": "private-assets/exports/p15-116-visibility-repair/P15-115-inkCore-loop.gif",
+      "sha256": "de1eea04a5514445dd7e11181846ed33a4cfce898b05291db25019b28938eaef"
+    },
+    "ribbon_core": {
+      "path": "private-assets/exports/p15-116-visibility-repair/ribbon_core-loop.gif",
+      "sha256": "af9099e58466ab1037788f7981fd8360e94a56d593b76cedf7c74f9b796844e8"
+    },
+    "ribbon_edge": {
+      "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge-loop.gif",
+      "sha256": "a6c26558bd9099547187166b83170fb61423dbe6d408b15d35628254111be82e"
+    },
+    "ribbon_edge_jewel": {
+      "path": "private-assets/exports/p15-116-visibility-repair/ribbon_edge_jewel-loop.gif",
+      "sha256": "38e73b7de9caba5a4013089d96eb34fd1394fb1eb8eff5f8bac0ea391d9c7cf1"
+    },
+    "trim_matte": {
+      "path": "private-assets/exports/p15-116-visibility-repair/trim_matte-loop.gif",
+      "sha256": "e8fb31d0e1e56a1577ce853ead3bbad6ea7c1c784991d41fc41c6747b25296e1"
+    }
+  },
+  "evidenceSHA256": "353b51893977728c630c845b3e700e429c4996eba97bf6baf491d9d043490edd",
+  "entry": "private-assets/exports/p15-116-visibility-repair/index.html",
+  "sourceNativeKeyframesPreserved": true,
+  "artistFullYawAccepted": false
+}

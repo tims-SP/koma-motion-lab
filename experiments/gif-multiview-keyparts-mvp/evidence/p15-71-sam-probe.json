@@ -1,0 +1,17 @@
+{
+  "schema": "KOMA-P15-71-SAM2-PROBE-V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "cropBox": [
+    350,
+    125,
+    862,
+    637
+  ],
+  "space": "Premkishor0007/sam2-image-segmentation",
+  "model": "SAM2",
+  "operation": "on_image_select",
+  "sourceSameView": true,
+  "status": "FAILED",
+  "formalArtMeshAccepted": false,
+  "error": "RuntimeError(\"{'msg': 'process_completed', 'event_id': '8f1d4d60f38c491bb22ae7d8a388a514', 'output': {'error': None}, 'success': False, 'title': 'Error'}\")"
+}

@@ -1,0 +1,324 @@
+{
+  "schema": "KOMA-P15-13-STRUCTURAL-CONDITION-V1",
+  "characterId": "p0_character_001",
+  "sourceCameraSHA256": "43892dab63e169d00cd38344582729449d0b2efc3d73d7abab9727358bdeabb3",
+  "sourcePaintedCandidatesSHA256": "0a310993beba4273021f176924b197c33232aa540df87b48c28ad78e12e1e7a0",
+  "sourceSemanticArcSHA256": "717230d19ccef4e0382d523215a9e16f6675940446776eb3914aadfd33f77805",
+  "original45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "detectorMethod": "color components calibrated against P5 original 45 annotations; diagnostic only",
+  "detectorBiasPerEye": [
+    [
+      -4.428,
+      -6.89
+    ],
+    [
+      19.591,
+      -5.757
+    ]
+  ],
+  "sourceRoleOrder": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "angles": [
+    57.5,
+    60.0
+  ],
+  "frames": [
+    {
+      "angle": 57.5,
+      "sourcePaintingPath": "p15-12-camera-proxy/generated/yaw57p5-identity-guided.png",
+      "sourcePaintingSHA256": "3247fe9717dc5e180308ca6db4864d97b24f092222745bfef79c63c4873e973c",
+      "actualIrisColorFeatures": [
+        {
+          "center": [
+            541.835,
+            464.558
+          ],
+          "area": 2223,
+          "bounds": [
+            514,
+            441,
+            57,
+            56
+          ]
+        },
+        {
+          "center": [
+            687.842,
+            467.006
+          ],
+          "area": 1445,
+          "bounds": [
+            667,
+            444,
+            42,
+            54
+          ]
+        }
+      ],
+      "cameraProjectedIrisTargets": [
+        [
+          577.446,
+          456.162
+        ],
+        [
+          736.044,
+          463.283
+        ]
+      ],
+      "irisFeatureDeviationPixels": [
+        36.587,
+        48.346
+      ],
+      "featureErrorTotalPixels": 84.933,
+      "isAnatomicalLandmarkDetection": false,
+      "semanticLayers": {
+        "body.reference": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/body.reference.png",
+          "sha256": "d3a182dd038d85526d5f8d9e4854152eabc7a4d768b588e74766055fabd88a32",
+          "visiblePixels": 158165
+        },
+        "hair.back": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/hair.back.png",
+          "sha256": "94e8788c4a9f9dc5c746653fd8e22370932335339a90810e7b0ed4f5c2bdf75f",
+          "visiblePixels": 64296
+        },
+        "face.skin": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/face.skin.png",
+          "sha256": "d8ae3c1c4b400c903cd21fca2f0359599af8c4146d0e4dbe220b072bedcfa48d",
+          "visiblePixels": 20837
+        },
+        "ear.far": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/ear.far.png",
+          "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "visiblePixels": 0
+        },
+        "ear.near": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/ear.near.png",
+          "sha256": "8c89ac96cf4c99ae68c0da37cf6723344d504f2c3117c36e35594d8eca8d78f9",
+          "visiblePixels": 5810
+        },
+        "hair.side": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/hair.side.png",
+          "sha256": "34dc9ed3facca304a66ec964904230ac15b12ea54584cd9a6332d41b3af5428e",
+          "visiblePixels": 81932
+        },
+        "eye.far": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/eye.far.png",
+          "sha256": "75b5a7c10f60f9c11aeae1b4e65e72ecb9084edf0740df06fef2f59d540d3e80",
+          "visiblePixels": 14362
+        },
+        "eye.near": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/eye.near.png",
+          "sha256": "47865e221c304212b6cf01aadaabd24ea6e0b5ecbfa21073511d02139272684f",
+          "visiblePixels": 19490
+        },
+        "nose": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/nose.png",
+          "sha256": "a1ec5c322e9a39800bb6741f5789fb7f58cce9d4a4bd405f3a1d840e866356f6",
+          "visiblePixels": 1770
+        },
+        "mouth": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/mouth.png",
+          "sha256": "309e04fa0f2b72c4836d97a8829c291f392c5513bb1f38e1918816059af99665",
+          "visiblePixels": 2046
+        },
+        "hair.front": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/hair.front.png",
+          "sha256": "cb09159e1bf95bffe7af52f8bdcf00879151d14ff930c8c11bb2021410f0915d",
+          "visiblePixels": 98125
+        },
+        "hair.ahoge": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/hair.ahoge.png",
+          "sha256": "415d20d77715d20d26d9b2020f7950aa72ef12f7fe23a43adaec0b24df93e3b8",
+          "visiblePixels": 12410
+        },
+        "hair.clip.cross_gold": {
+          "path": "p15-10-semantic-pose/arc/yaw57p5/parts/hair.clip.cross_gold.png",
+          "sha256": "e356bcd12045440c521879d20926c9de3b521a780728dcea844e4f2c47bb7a40",
+          "visiblePixels": 3267
+        }
+      },
+      "artmeshRoleCount": 13,
+      "farEyeVisibilityProxy": 0.90631,
+      "hairclipVisibilityProxy": 0.90631,
+      "outputs": {
+        "owner": {
+          "path": "p15-13-structural/yaw57p5/owner.png",
+          "sha256": "f30ac0d20452e7bc3206d88ab0c397bfc4f16cea3c74f30333a2e2d24d703d7d"
+        },
+        "lineart": {
+          "path": "p15-13-structural/yaw57p5/lineart.png",
+          "sha256": "0aaa3866042dadf77884472ec93f82fa4e1bcddc326e1651a693477e13a93904"
+        },
+        "heatmap": {
+          "path": "p15-13-structural/yaw57p5/heatmap.png",
+          "sha256": "1ad4f7a312101118deedc0a3dc81827e27c7458d81637dab16d7313d38c8670c"
+        },
+        "preview": {
+          "path": "p15-13-structural/yaw57p5/preview.png",
+          "sha256": "38cbc6b20d673fe9425c447cfbb45377f6142c12478e3ec1fdf7355ef21567b4"
+        }
+      }
+    },
+    {
+      "angle": 60.0,
+      "sourcePaintingPath": "p15-12-camera-proxy/generated/yaw60-identity-guided.png",
+      "sourcePaintingSHA256": "c562335b6d1e1e250c3b28f9cb87614389d343447449d24605a581979ccaac36",
+      "actualIrisColorFeatures": [
+        {
+          "center": [
+            533.004,
+            467.297
+          ],
+          "area": 2281,
+          "bounds": [
+            505,
+            445,
+            57,
+            53
+          ]
+        },
+        {
+          "center": [
+            687.081,
+            469.048
+          ],
+          "area": 1385,
+          "bounds": [
+            667,
+            447,
+            40,
+            51
+          ]
+        }
+      ],
+      "cameraProjectedIrisTargets": [
+        [
+          585.071,
+          455.35
+        ],
+        [
+          740.351,
+          463.283
+        ]
+      ],
+      "irisFeatureDeviationPixels": [
+        53.42,
+        53.581
+      ],
+      "featureErrorTotalPixels": 107.001,
+      "isAnatomicalLandmarkDetection": false,
+      "semanticLayers": {
+        "body.reference": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/body.reference.png",
+          "sha256": "98ba94661f14bb586363fc237ff6c2cf273efd28636012e4d39ce6787f808c1d",
+          "visiblePixels": 102634
+        },
+        "hair.back": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/hair.back.png",
+          "sha256": "debbff8f68d1411800fee1d303b30b54a8f76f9db2e95e030d6e23d5464bdf84",
+          "visiblePixels": 37397
+        },
+        "face.skin": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/face.skin.png",
+          "sha256": "0dedbf7c40da9a5da611933b2a80a7bf20e20639c66119760b584a5a1f4b1733",
+          "visiblePixels": 33606
+        },
+        "ear.far": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/ear.far.png",
+          "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "visiblePixels": 0
+        },
+        "ear.near": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/ear.near.png",
+          "sha256": "57bcb7738220c6d139556bc3ae0e8015a523e1450a1b21850bd80557d5ffc1ef",
+          "visiblePixels": 2605
+        },
+        "hair.side": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/hair.side.png",
+          "sha256": "468a0fe4f7075ec0f09a19d192f10a423555db126e608bce53275ca28bbdb2c9",
+          "visiblePixels": 94698
+        },
+        "eye.far": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/eye.far.png",
+          "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "visiblePixels": 0
+        },
+        "eye.near": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/eye.near.png",
+          "sha256": "8e0e8246797048a503f4d69c2f4cdf9867a420feb18646dc9e1b34bba59c6fab",
+          "visiblePixels": 11116
+        },
+        "nose": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/nose.png",
+          "sha256": "844292c5a98f2ca85f13ac4380a5ec18aa24a9500db0c16fe2bdf5aee86973fd",
+          "visiblePixels": 7362
+        },
+        "mouth": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/mouth.png",
+          "sha256": "52957cd7b4283507b7525a167aa528e1eb923b7d99b54b5ab674d7d31c321efd",
+          "visiblePixels": 5977
+        },
+        "hair.front": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/hair.front.png",
+          "sha256": "fcfbdcf29cc4c613309ca7d23ae03e68833a46cb0a9726f33c70ce65b7bb6b6e",
+          "visiblePixels": 122584
+        },
+        "hair.ahoge": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/hair.ahoge.png",
+          "sha256": "9343718391c008d58fcd2709fa30a71dcec515bcdb75ec6c580e85bdcdde4290",
+          "visiblePixels": 10242
+        },
+        "hair.clip.cross_gold": {
+          "path": "p15-10-semantic-pose/arc/yaw60/parts/hair.clip.cross_gold.png",
+          "sha256": "59141e9a74fea7b8e5ccee9078846a0efaaab2e3628f0fd0f6c472b4c1ca8322",
+          "visiblePixels": 0
+        }
+      },
+      "artmeshRoleCount": 13,
+      "farEyeVisibilityProxy": 0.86603,
+      "hairclipVisibilityProxy": 0.86603,
+      "outputs": {
+        "owner": {
+          "path": "p15-13-structural/yaw60/owner.png",
+          "sha256": "733463f016a87b52f1c3c86e2d534e956dfc6a9dddc9828bec351970f1541dc5"
+        },
+        "lineart": {
+          "path": "p15-13-structural/yaw60/lineart.png",
+          "sha256": "f989f9e4d818e77499067ab212518ee1825a4777d3672978ce6acf90903f59e2"
+        },
+        "heatmap": {
+          "path": "p15-13-structural/yaw60/heatmap.png",
+          "sha256": "2c8565172ed763c098f66ee40692b83c02233dad8624f5e896cfee0337d4f99e"
+        },
+        "preview": {
+          "path": "p15-13-structural/yaw60/preview.png",
+          "sha256": "6874691fef723a4e55c7c390af7d0b35ac96d68e403fe20a407e7308a4d27f1e"
+        }
+      }
+    }
+  ],
+  "structuralConditions": [
+    "landmark heatmap",
+    "source-owned lineart",
+    "13-role owner ID",
+    "physical clip and far-eye occlusion"
+  ],
+  "imageEndpointWithHardConditioningVerified": false,
+  "approvedIndependentKeyPaintings": 0,
+  "approvedHiddenUnderpainting": 0,
+  "status": "CAMERA_CONDITION_AND_IRIS_LOCATION_EVIDENCE_VERIFIED"
+}

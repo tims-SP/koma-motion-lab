@@ -1,0 +1,41 @@
+{
+  "schema": "KOMA-P15-41-INDEPENDENT-PROFILE-CANDIDATE-V1",
+  "characterId": "p0_character_001",
+  "sourceRegistrySHA256": "3d89700741265a810a8a192198163501601b03c63e11667f2b24552c741d6dd1",
+  "sourceIndependentArtSHA256": "c8e92f9c9c733a0a62f02258998273d7221a4b1eb394b85f77f7ef2111a1f506",
+  "roles": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "layerCount": 13,
+  "clipSourceSHA256": "cb102d6340b7f6a0f2847346750d82804e45c615cfbdcfb83bdb972751d85c50",
+  "clipAnchor": [
+    690,
+    295
+  ],
+  "candidateSHA256": "8bd6de05424261393c0dbe71e20d64ddaedb80006bc8cb66b3342c854172a403",
+  "heroSourceApproved": false,
+  "yaw65PoseApproved": false,
+  "hiddenInkApproved": false,
+  "visualArtApproved": false,
+  "browserVerified": true,
+  "browserChecks": 4,
+  "screenshotCount": 4,
+  "zip": {
+    "path": "private-assets/exports/p15-41-profile-candidate.zip",
+    "sha256": "e96376d3f99f134ac505d1e5119bcdb9e252f5d042154780322671a288f372c6",
+    "files": 23,
+    "bytes": 4483290
+  }
+}

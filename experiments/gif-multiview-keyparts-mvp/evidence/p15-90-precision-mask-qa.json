@@ -1,0 +1,110 @@
+{
+  "schema": "KOMA-P15-90-PRECISION_MASK_QA_V1",
+  "modelSHA256": "c92731b4391488a4e02d50cd9372372864b05babeb716984cab7191e138c2f25",
+  "variants": {
+    "r4": {
+      "maskSHA256": "3ddf9ae0aa3d827c6836a3e4adf611fdd1a181f664ca45625ecc89bc2e192ca0",
+      "maskBBox": [
+        522,
+        441,
+        539,
+        458
+      ],
+      "activePixels": 221,
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsideMask": 0,
+          "darkBefore": 14,
+          "darkAfter": 14
+        },
+        "9": {
+          "sha256": "41600f8b3ac618b5618bd916533b3b71b8b31466b6c2d33787029cff4941aa88",
+          "changedPixels": 85,
+          "outsideMask": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        },
+        "18": {
+          "sha256": "88add004194daee7a434ceda37575f02372ead6235a97e24a3ffd93f98b41d3b",
+          "changedPixels": 85,
+          "outsideMask": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        }
+      }
+    },
+    "r6": {
+      "maskSHA256": "5a7cd9c1123360e02fc66653b50ff7b42275e9dc61555c539dc82975da2b5f45",
+      "maskBBox": [
+        520,
+        439,
+        541,
+        460
+      ],
+      "activePixels": 373,
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsideMask": 0,
+          "darkBefore": 14,
+          "darkAfter": 14
+        },
+        "9": {
+          "sha256": "5de1ad9bc58cdba87d6996b8dc68814e0d3f10133af882264c9bf22f2b44cbdb",
+          "changedPixels": 138,
+          "outsideMask": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        },
+        "18": {
+          "sha256": "0c4be21361c58d53c8b078f2ceb4c905ef7d131c9262606c7a4b17725e8c09f0",
+          "changedPixels": 141,
+          "outsideMask": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        }
+      }
+    },
+    "r8": {
+      "maskSHA256": "e153e1f90af3767c1bca43919dcb5fb8cdb816c327cf60f0a4a69f5738872a68",
+      "maskBBox": [
+        516,
+        435,
+        545,
+        464
+      ],
+      "activePixels": 623,
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsideMask": 0,
+          "darkBefore": 14,
+          "darkAfter": 14
+        },
+        "9": {
+          "sha256": "b68adad6090d63f17b021b363954d54ae2c86cb4497b37016f8e1acb1a1bbc2e",
+          "changedPixels": 194,
+          "outsideMask": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        },
+        "18": {
+          "sha256": "d2ccd9c4561bc565faf7eb181e4a4fd837d05731e68c7f0d2aa1531fdd964123",
+          "changedPixels": 196,
+          "outsideMask": 0,
+          "darkBefore": 2,
+          "darkAfter": 0
+        }
+      }
+    }
+  },
+  "sourceOwnedRestPose": true,
+  "formalArtMeshAccepted": false,
+  "candidateAccepted": false,
+  "visualGate": "PENDING_IMAGE_REVIEW",
+  "review": "private-assets/exports/p15-90-precision-mask/precision-contact.jpg"
+}

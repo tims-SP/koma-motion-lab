@@ -1,0 +1,714 @@
+{
+  "schema": "KOMA_P15_106_THREE_VIEW_ARTMESH_QA_V1",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "characterId": "p0_character_001",
+  "sourceRegSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+  "depthOrder": [
+    "shoulder.left",
+    "collar",
+    "bow",
+    "jewel"
+  ],
+  "parts": {
+    "shoulder.left": {
+      "vertices": 33,
+      "triangles": 48,
+      "sampledGeometry": [
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 394.65688,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 585.77548,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 416.49254,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 578.30802,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 438.91511,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 570.88812,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 461.92458,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 563.51578,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 485.52096,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 556.191,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 509.70423,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 548.91379,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 534.47441,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 541.68414,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 559.83149,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 534.50205,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 585.77548,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 527.36753,
+          "negativeTriangles": 0
+        }
+      ],
+      "pixelCount": {
+        "60": 19584,
+        "67.5": 25825,
+        "75": 23102
+      }
+    },
+    "collar": {
+      "vertices": 33,
+      "triangles": 48,
+      "sampledGeometry": [
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 179.32886,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 272.11998,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 195.01267,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 264.9278,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 211.3321,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 247.98291,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 228.28714,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 231.59705,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 245.87781,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 215.77023,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 261.23395,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 200.50245,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 272.39498,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 185.79371,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 283.75224,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 171.64401,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 272.11998,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 158.05335,
+          "negativeTriangles": 0
+        }
+      ],
+      "pixelCount": {
+        "60": 8785,
+        "67.5": 13105,
+        "75": 7091
+      }
+    },
+    "bow": {
+      "vertices": 33,
+      "triangles": 48,
+      "sampledGeometry": [
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 292.90177,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 236.25649,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 285.48868,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 222.20449,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 278.17056,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 208.57802,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 270.94743,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 195.37708,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 263.81928,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 182.60167,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 256.78611,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 170.25179,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 249.84792,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 158.32743,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 243.00471,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 146.8286,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 236.25649,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 135.75531,
+          "negativeTriangles": 0
+        }
+      ],
+      "pixelCount": {
+        "60": 28703,
+        "67.5": 32561,
+        "75": 22224
+      }
+    },
+    "jewel": {
+      "vertices": 33,
+      "triangles": 48,
+      "sampledGeometry": [
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 53.77823,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.0,
+          "minSignedArea": 54.68841,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 53.89199,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.125,
+          "minSignedArea": 51.9053,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 54.00576,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.25,
+          "minSignedArea": 49.19458,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 54.11952,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.375,
+          "minSignedArea": 46.55624,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 54.23329,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.5,
+          "minSignedArea": 43.99029,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 54.34707,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.625,
+          "minSignedArea": 41.49673,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 54.46084,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.75,
+          "minSignedArea": 39.07556,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 54.57463,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 0.875,
+          "minSignedArea": 36.72678,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "60",
+            "67.5"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 54.68841,
+          "negativeTriangles": 0
+        },
+        {
+          "segment": [
+            "67.5",
+            "75"
+          ],
+          "fraction": 1.0,
+          "minSignedArea": 34.14809,
+          "negativeTriangles": 0
+        }
+      ],
+      "pixelCount": {
+        "60": 2555,
+        "67.5": 2800,
+        "75": 1927
+      }
+    }
+  },
+  "sourcePixelReconstruction": true,
+  "artistApproved": false,
+  "meshPath": "private-assets/exports/p15-106-three-key-mesh/garment-three-key-mesh.json",
+  "meshSHA256": "74f60b76ec7ea803425d516c8e1e64a6881a1ec3f0c9a12a20585f2d53df730c"
+}

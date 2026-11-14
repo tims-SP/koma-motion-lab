@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "angleIndex": 0,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 1,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 2,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 3,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 1440,
+      "angleIndex": 4,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 0,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 1,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 2,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 3,
+      "imageCount": 18,
+      "loaded": 18
+    },
+    {
+      "viewport": 390,
+      "angleIndex": 4,
+      "imageCount": 18,
+      "loaded": 18
+    }
+  ],
+  "errors": []
+}

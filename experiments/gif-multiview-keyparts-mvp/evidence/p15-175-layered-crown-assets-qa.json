@@ -1,0 +1,211 @@
+{
+  "schema": "KOMA_P15_175_LAYERED_CROWN_ASSETS_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "candidateModes": [
+    "root_contact",
+    "root_band",
+    "source_ai"
+  ],
+  "componentTypes": [
+    "crown_underpaint",
+    "source_ahoge"
+  ],
+  "canvas": [
+    443,
+    443
+  ],
+  "sourcePixelOwnerRule": "source-ownership-matte overwrites the crown with native strand pixels at the original keyview",
+  "alphaOverIsEvaluatedSeparately": true,
+  "perView": {
+    "root_contact": {
+      "90": {
+        "sourceSha256RGBA": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "crownSha256RGBA": "245559b98253c5881732cddc743d227aad89ffb1b2fc3b1b79306d07dc6a9647",
+        "strandSha256RGBA": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+        "sourceOwnerPixels": 1064,
+        "rootContactPaintPixels": 45,
+        "nativeReassemblyDiffPixels": 0,
+        "alphaOverDiffVisiblePixels": 0,
+        "strandTransparentPixelCount": 195185,
+        "crownTransparentPixelCount": 121791,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "crownRootRGBChangedPixels": 45
+      },
+      "112.5": {
+        "sourceSha256RGBA": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "crownSha256RGBA": "2058c20e321dcaa23f462120768ca0c690f1f92f08a599a3520c2563d895aa7c",
+        "strandSha256RGBA": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+        "sourceOwnerPixels": 1350,
+        "rootContactPaintPixels": 85,
+        "nativeReassemblyDiffPixels": 0,
+        "alphaOverDiffVisiblePixels": 155,
+        "strandTransparentPixelCount": 194899,
+        "crownTransparentPixelCount": 118092,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "crownRootRGBChangedPixels": 84
+      },
+      "135": {
+        "sourceSha256RGBA": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "crownSha256RGBA": "76f1faf31f52f2c15e92fda56c8c2a4f7c323ac8c585699f7e5e74af4dcd2746",
+        "strandSha256RGBA": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+        "sourceOwnerPixels": 1033,
+        "rootContactPaintPixels": 70,
+        "nativeReassemblyDiffPixels": 0,
+        "alphaOverDiffVisiblePixels": 0,
+        "strandTransparentPixelCount": 195216,
+        "crownTransparentPixelCount": 121314,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "crownRootRGBChangedPixels": 69
+      }
+    },
+    "root_band": {
+      "90": {
+        "sourceSha256RGBA": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "crownSha256RGBA": "2a4a39417583458002584b22174c70bd8bc91643f5482838591fe1165d441c12",
+        "strandSha256RGBA": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+        "sourceOwnerPixels": 1064,
+        "rootContactPaintPixels": 199,
+        "nativeReassemblyDiffPixels": 147,
+        "alphaOverDiffVisiblePixels": 147,
+        "strandTransparentPixelCount": 195185,
+        "crownTransparentPixelCount": 121791,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "crownRootRGBChangedPixels": 192
+      },
+      "112.5": {
+        "sourceSha256RGBA": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "crownSha256RGBA": "888c3a2b4bb8f2b5cd69e4eb6048d750c9963dc6910bc4db6a6f927e8cea8fe0",
+        "strandSha256RGBA": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+        "sourceOwnerPixels": 1350,
+        "rootContactPaintPixels": 171,
+        "nativeReassemblyDiffPixels": 84,
+        "alphaOverDiffVisiblePixels": 239,
+        "strandTransparentPixelCount": 194899,
+        "crownTransparentPixelCount": 118092,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "crownRootRGBChangedPixels": 169
+      },
+      "135": {
+        "sourceSha256RGBA": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "crownSha256RGBA": "0e6c118a57bad86244c8d45752bd6d936805e010db333130af7f468f2185292a",
+        "strandSha256RGBA": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+        "sourceOwnerPixels": 1033,
+        "rootContactPaintPixels": 196,
+        "nativeReassemblyDiffPixels": 125,
+        "alphaOverDiffVisiblePixels": 125,
+        "strandTransparentPixelCount": 195216,
+        "crownTransparentPixelCount": 121314,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "crownRootRGBChangedPixels": 195
+      }
+    },
+    "source_ai": {
+      "90": {
+        "sourceSha256RGBA": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "crownSha256RGBA": "2a4a39417583458002584b22174c70bd8bc91643f5482838591fe1165d441c12",
+        "strandSha256RGBA": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+        "sourceOwnerPixels": 1064,
+        "rootContactPaintPixels": 199,
+        "nativeReassemblyDiffPixels": 147,
+        "alphaOverDiffVisiblePixels": 147,
+        "strandTransparentPixelCount": 195185,
+        "crownTransparentPixelCount": 121791,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "crownRootRGBChangedPixels": 192
+      },
+      "112.5": {
+        "sourceSha256RGBA": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "crownSha256RGBA": "aee08f4a0e09d5567e47cf182f9a2727de27c735c4aeb2b36468c678f287841c",
+        "strandSha256RGBA": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+        "sourceOwnerPixels": 1350,
+        "rootContactPaintPixels": 171,
+        "nativeReassemblyDiffPixels": 85,
+        "alphaOverDiffVisiblePixels": 240,
+        "strandTransparentPixelCount": 194899,
+        "crownTransparentPixelCount": 118092,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "crownRootRGBChangedPixels": 170
+      },
+      "135": {
+        "sourceSha256RGBA": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "crownSha256RGBA": "0e6c118a57bad86244c8d45752bd6d936805e010db333130af7f468f2185292a",
+        "strandSha256RGBA": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+        "sourceOwnerPixels": 1033,
+        "rootContactPaintPixels": 196,
+        "nativeReassemblyDiffPixels": 125,
+        "alphaOverDiffVisiblePixels": 125,
+        "strandTransparentPixelCount": 195216,
+        "crownTransparentPixelCount": 121314,
+        "sourceBelowY125Exact": true,
+        "originalSourceUnmodified": true,
+        "sourceRoot": [
+          222,
+          55
+        ],
+        "crownRootRGBChangedPixels": 195
+      }
+    }
+  },
+  "sourceArtOriginalSHA256Unchanged": true,
+  "rootlessCrownArtworkArtistApproved": false,
+  "independentHairArtArtistApproved": false,
+  "keyviewVisualAccepted": false,
+  "midYawRendered": false,
+  "productionRendererUpdated": false,
+  "review": "private-assets/exports/p15-175-layered-crown-assets/index.html",
+  "next": "Finish matched hidden crown paint around all source-root contact pixels and validate clean alpha-over keyviews before testing 101.25/123.75 yaw.",
+  "gate": {
+    "allThreePairsPresent": true,
+    "allPairsTransparent": true,
+    "losslessOwnerReassembly": false,
+    "deepHeadPreserved": true,
+    "normalAlphaOverSourceExact": false,
+    "visualApproved": false,
+    "passes": false
+  }
+}

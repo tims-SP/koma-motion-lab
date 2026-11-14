@@ -1,0 +1,88 @@
+{
+  "schema": "KOMA_P15_105_THREE_KEY_REVIEW_V1",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "nativeMiddleSource": "private-assets/p15-105-yaw0675/yaw0675-garment-native.png",
+  "nativeImageSHA256": "b91745a58412bc856e75af27fead2574f9da051f1027a00c987a8e8f9868ecf0",
+  "frameFiles": {
+    "P15-101-baseline": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "three_key_direct": {
+      "60": "three_key_direct-yaw60.png",
+      "61.875": "three_key_direct-yaw61p875.png",
+      "63.75": "three_key_direct-yaw63p75.png",
+      "65.625": "three_key_direct-yaw65p625.png",
+      "67.5": "three_key_direct-yaw67p5.png",
+      "69.375": "three_key_direct-yaw69p375.png",
+      "71.25": "three_key_direct-yaw71p25.png",
+      "73.125": "three_key_direct-yaw73p125.png",
+      "75": "three_key_direct-yaw75.png"
+    },
+    "three_key_flow": {
+      "60": "three_key_flow-yaw60.png",
+      "61.875": "three_key_flow-yaw61p875.png",
+      "63.75": "three_key_flow-yaw63p75.png",
+      "65.625": "three_key_flow-yaw65p625.png",
+      "67.5": "three_key_flow-yaw67p5.png",
+      "69.375": "three_key_flow-yaw69p375.png",
+      "71.25": "three_key_flow-yaw71p25.png",
+      "73.125": "three_key_flow-yaw73p125.png",
+      "75": "three_key_flow-yaw75.png"
+    },
+    "three_key_owner": {
+      "60": "three_key_owner-yaw60.png",
+      "61.875": "three_key_owner-yaw61p875.png",
+      "63.75": "three_key_owner-yaw63p75.png",
+      "65.625": "three_key_owner-yaw65p625.png",
+      "67.5": "three_key_owner-yaw67p5.png",
+      "69.375": "three_key_owner-yaw69p375.png",
+      "71.25": "three_key_owner-yaw71p25.png",
+      "73.125": "three_key_owner-yaw73p125.png",
+      "75": "three_key_owner-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-baseline": {
+      "path": "private-assets/exports/p15-105-three-key-vdd/P15-101-baseline-loop.gif",
+      "sha256": "b61ac60fa1ac68fe9d1ee286461abf5d720b83661e051ccd7fbfe0ed6cff8342"
+    },
+    "three_key_direct": {
+      "path": "private-assets/exports/p15-105-three-key-vdd/three_key_direct-loop.gif",
+      "sha256": "03001c679f77222e7d897741f52f828ea83a00fcfa40c98e464f7c03cc89e51b"
+    },
+    "three_key_flow": {
+      "path": "private-assets/exports/p15-105-three-key-vdd/three_key_flow-loop.gif",
+      "sha256": "b5febaee1b1648fd6be84f532cfd2e3d6182a2e58a4d8a503f31efcf1e298759"
+    },
+    "three_key_owner": {
+      "path": "private-assets/exports/p15-105-three-key-vdd/three_key_owner-loop.gif",
+      "sha256": "d1d4063aac9cc4a2bd5a2d45ded3cf6da316c37b00c628a65ea6076e0e642bb7"
+    }
+  },
+  "entry": "private-assets/exports/p15-105-three-key-vdd/index.html",
+  "modelMiddleArtAccepted": false,
+  "continuousAnimationAccepted": false
+}

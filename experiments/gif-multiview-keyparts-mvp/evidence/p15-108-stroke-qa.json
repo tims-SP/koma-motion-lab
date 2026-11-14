@@ -1,0 +1,442 @@
+{
+  "schema": "KOMA_P15_108_SOURCE_STROKE_ROLE_IDENTITY_V1",
+  "characterId": "p0_character_001",
+  "views": {
+    "60": {
+      "source": "private-assets/exports/p15-107-source-patches/yaw60-registered.png",
+      "sourceSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "reassembledPixelExact": true,
+      "reconstructedSHA256": "b5973b66167aa03d05e64c8ee18f9621e777826794bd79d46aa05693518f57e2",
+      "layers": {
+        "background": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw60/background.png",
+          "textureSHA256": "9ec05d26235f632c3dbd56192cfe6af4e5184b60435d52f72e84754a5ae29c16",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/background-mask.png",
+          "maskSHA256": "606bf46d159820dc2a731640be4715d417b38fc0f42ee503df3b2246c3d37948",
+          "sourcePixels": 996299,
+          "opaquePixels": 122388
+        },
+        "goldTrim": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw60/goldTrim.png",
+          "textureSHA256": "bdd83ab44af0ef1bf2bf8f1654a33757552d3b5acbe7abab31e9d618c9db7686",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/goldTrim-mask.png",
+          "maskSHA256": "577e4fd0929cf2b364dc73a6d84bbd6727881e330de934f6c0142a28201f1cc3",
+          "sourcePixels": 8345,
+          "opaquePixels": 8344
+        },
+        "collarWhite": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw60/collarWhite.png",
+          "textureSHA256": "b67345418af4be50d0fddf9899e07e6176a654392edd15d7bdc1d625ff9f16fd",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/collarWhite-mask.png",
+          "maskSHA256": "0be422bad62874b0791d950a7221e568b2dd498517f3838fd07e992551741257",
+          "sourcePixels": 10202,
+          "opaquePixels": 10202
+        },
+        "bowFabric": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw60/bowFabric.png",
+          "textureSHA256": "e0a050cf66b94c607a43373c9d7a15d79e574fcada6ffe4bbfb222a7523f1751",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/bowFabric-mask.png",
+          "maskSHA256": "68adba825e43bd957e1396c9e8de1d39e9e77165486cd4bc7a3329f3bc7b788c",
+          "sourcePixels": 31993,
+          "opaquePixels": 31975
+        },
+        "jewel": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw60/jewel.png",
+          "textureSHA256": "6ea1576eb443bc21a144931b7f999bc0cfdbdd44b069c8a339f83ab69820d5e9",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/jewel-mask.png",
+          "maskSHA256": "bf487fdab0e78695c9b3e06355c7c4b60b860fd8311303b0064d43ab6f970e01",
+          "sourcePixels": 1737,
+          "opaquePixels": 1737
+        }
+      },
+      "strokeRegions": {
+        "bow.left_loop": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/bow_left_loop.png",
+          "maskSHA256": "aaeebf905dbcf2876a2ace3825a3ecd62f4fd2904384c5ec005c93a97589ed7d",
+          "pixelCount": 168,
+          "boundingBox": [
+            524,
+            832,
+            546,
+            853
+          ],
+          "meanPosition": [
+            534.131,
+            844.78
+          ]
+        },
+        "bow.right_loop": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/bow_right_loop.png",
+          "maskSHA256": "3c1248542127ef8bf454e0c707bc2c23f932f6ee0a453ce551fe8c3988d4c82c",
+          "pixelCount": 426,
+          "boundingBox": [
+            646,
+            776,
+            732,
+            851
+          ],
+          "meanPosition": [
+            699.918,
+            810.207
+          ]
+        },
+        "bow.left_tail": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/bow_left_tail.png",
+          "maskSHA256": "d73f96fa39723a6f1dd0dd0b23489b99e5f577a2413245a365bd37438188c7da",
+          "pixelCount": 199,
+          "boundingBox": [
+            530,
+            853,
+            552,
+            879
+          ],
+          "meanPosition": [
+            543.598,
+            863.317
+          ]
+        },
+        "bow.right_tail": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/bow_right_tail.png",
+          "maskSHA256": "5dac8326a1bb113a3a7ddcf9f6a5becb45aab03894e09c5dae6c5a0e2611a096",
+          "pixelCount": 117,
+          "boundingBox": [
+            728,
+            859,
+            758,
+            1001
+          ],
+          "meanPosition": [
+            742.009,
+            950.436
+          ]
+        },
+        "collar.left_crease": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/collar_left_crease.png",
+          "maskSHA256": "3f854a42d7bbd746bb31ea796ab920a0552a2bda49ab4bc00795b9c51ec0c9e3",
+          "pixelCount": 2163,
+          "boundingBox": [
+            472,
+            678,
+            634,
+            790
+          ],
+          "meanPosition": [
+            586.073,
+            739.757
+          ]
+        },
+        "collar.right_crease": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw60/collar_right_crease.png",
+          "maskSHA256": "a78252c8fe8bcec0860c6d10ecc8b07e71dcef8b84c8d05e33673c41ee15e94c",
+          "pixelCount": 1,
+          "boundingBox": [
+            637,
+            783,
+            638,
+            784
+          ],
+          "meanPosition": [
+            637.0,
+            783.0
+          ]
+        }
+      },
+      "bowInkPixelsOwned": 910,
+      "collarInkPixelsOwned": 2164
+    },
+    "67.5": {
+      "source": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+      "sourceSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+      "reassembledPixelExact": true,
+      "reconstructedSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+      "layers": {
+        "background": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/background.png",
+          "textureSHA256": "384ade535c1c1b38db65b95f9c406efc44375f8e7b083f1bcad89a70c872b7c3",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/background-mask.png",
+          "maskSHA256": "7fc83ee96d44c452a44ffbdae2719c5abedad6ae50883d4d42c8bc46304b8eb0",
+          "sourcePixels": 997189,
+          "opaquePixels": 116739
+        },
+        "goldTrim": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim.png",
+          "textureSHA256": "034a4c10cbd52df518ffe7edaf2394a63a88831962d2c0c7a9d218eb372b8ce9",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/goldTrim-mask.png",
+          "maskSHA256": "432c83d0bb0cad15022dfcd4be5546b6887009c412364abf4e63db9bbbfcabea",
+          "sourcePixels": 7928,
+          "opaquePixels": 7928
+        },
+        "collarWhite": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collarWhite.png",
+          "textureSHA256": "45d069ca806817810fa4c76aeb707b6fc240314294c6e71e1d1bec7b67899d81",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collarWhite-mask.png",
+          "maskSHA256": "8818982bf76c18cf93c9aba5f28d336d19aa5b4bc05e8627d94b1de657c9939d",
+          "sourcePixels": 11085,
+          "opaquePixels": 11085
+        },
+        "bowFabric": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric.png",
+          "textureSHA256": "1114a48c6936376acb4b70342774f0886d7314c981c9d68e8dc68229aee89b38",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bowFabric-mask.png",
+          "maskSHA256": "3680a44245e35f73ad27d015bd0024e01d6bc666e594e1c3487705ca387ca6e0",
+          "sourcePixels": 30660,
+          "opaquePixels": 30658
+        },
+        "jewel": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel.png",
+          "textureSHA256": "0ad1b064fcce05899b0e9941c11d691a97dd3153fdbb798afd7b4063d13b202f",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/jewel-mask.png",
+          "maskSHA256": "53d90f7d38b16f91192bc52fbf290cabf064b573901094eaf6bc2c4d637f3092",
+          "sourcePixels": 1714,
+          "opaquePixels": 1714
+        }
+      },
+      "strokeRegions": {
+        "bow.left_loop": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bow_left_loop.png",
+          "maskSHA256": "8aa69e9a5538af5f1cfc21b1b2412adec7b69c983da5ce65d457a486335a62c2",
+          "pixelCount": 1395,
+          "boundingBox": [
+            538,
+            763,
+            640,
+            851
+          ],
+          "meanPosition": [
+            599.796,
+            812.686
+          ]
+        },
+        "bow.right_loop": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bow_right_loop.png",
+          "maskSHA256": "ae3a0290f44ffa0ac7d82bcfe972fc4cb8477d5b5294c9a857b6e8115c406e95",
+          "pixelCount": 1046,
+          "boundingBox": [
+            640,
+            777,
+            727,
+            851
+          ],
+          "meanPosition": [
+            679.924,
+            823.922
+          ]
+        },
+        "bow.left_tail": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bow_left_tail.png",
+          "maskSHA256": "1579a42f30990a4c6c499d14eca8f233f29b68921598a201f439299293f20f72",
+          "pixelCount": 1751,
+          "boundingBox": [
+            542,
+            851,
+            639,
+            913
+          ],
+          "meanPosition": [
+            594.215,
+            873.128
+          ]
+        },
+        "bow.right_tail": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/bow_right_tail.png",
+          "maskSHA256": "7d49cde472a94198d2e5666522f659482106da43c4f164e2189b5d814b5aae6c",
+          "pixelCount": 1374,
+          "boundingBox": [
+            666,
+            851,
+            755,
+            955
+          ],
+          "meanPosition": [
+            705.183,
+            873.663
+          ]
+        },
+        "collar.left_crease": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collar_left_crease.png",
+          "maskSHA256": "11bcf7eb942040f4fadce71f4269361d52c761afecdceab77b1a51c77e980675",
+          "pixelCount": 2097,
+          "boundingBox": [
+            477,
+            669,
+            640,
+            781
+          ],
+          "meanPosition": [
+            597.625,
+            735.8
+          ]
+        },
+        "collar.right_crease": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw67p5/collar_right_crease.png",
+          "maskSHA256": "864617006ab2afa8d3f05f68fd7e9bcb55b7cb77a0577a20e268264f0e593f67",
+          "pixelCount": 28,
+          "boundingBox": [
+            640,
+            773,
+            647,
+            784
+          ],
+          "meanPosition": [
+            642.643,
+            777.286
+          ]
+        }
+      },
+      "bowInkPixelsOwned": 5566,
+      "collarInkPixelsOwned": 2125
+    },
+    "75": {
+      "source": "private-assets/exports/p15-107-source-patches/yaw75-registered.png",
+      "sourceSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+      "reassembledPixelExact": true,
+      "reconstructedSHA256": "995f3fcf92c1988e4ee85bd8ac4839a17b6fb1ad54e232e51fd25a4505e84c4b",
+      "layers": {
+        "background": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw75/background.png",
+          "textureSHA256": "894a247a8c79acb5ac578ae702e066b52767874862b89b3b48edc280b7188b9d",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/background-mask.png",
+          "maskSHA256": "9cee11b88a22276ead5c03536266265a5d96818feac00b26de5b62e97cee99b5",
+          "sourcePixels": 1008019,
+          "opaquePixels": 95333
+        },
+        "goldTrim": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw75/goldTrim.png",
+          "textureSHA256": "bfaeafd481c14ad5a127861ec6d91e6edc49e0a475c7bb82655240e61ff8bc95",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/goldTrim-mask.png",
+          "maskSHA256": "ae3087c8aa6df89fd35840f497f54a3ca846e4f31400cc24af4b3f559f2357f4",
+          "sourcePixels": 6999,
+          "opaquePixels": 6998
+        },
+        "collarWhite": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw75/collarWhite.png",
+          "textureSHA256": "f0786156131a8c4004eb95872240a1b6a6b562637913f972397ca1d96317dc60",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/collarWhite-mask.png",
+          "maskSHA256": "a184ddb41e116ea766706d2343ba24bceaf650e0b61007993fbfde93cab13dc5",
+          "sourcePixels": 10085,
+          "opaquePixels": 10085
+        },
+        "bowFabric": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw75/bowFabric.png",
+          "textureSHA256": "652218bddef607e2d3df33a7a6d6acedfaaf80a24ebdd0b210b7cb5b3a1235bd",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/bowFabric-mask.png",
+          "maskSHA256": "5ad07c71b53c907ce1a32c298712c943f83d6210b321d3a0d1cb45af0fb284a3",
+          "sourcePixels": 21810,
+          "opaquePixels": 21803
+        },
+        "jewel": {
+          "texturePath": "private-assets/exports/p15-108-stroke-identity/yaw75/jewel.png",
+          "textureSHA256": "a3e9aa50d48e0199750147a7532c6053b867557be09c66de0baf6f2a60d57682",
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/jewel-mask.png",
+          "maskSHA256": "409c31cabc95c2760ebf7a0fc1e26508686115bdb736da936072021d4269d2eb",
+          "sourcePixels": 1663,
+          "opaquePixels": 1663
+        }
+      },
+      "strokeRegions": {
+        "bow.left_loop": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/bow_left_loop.png",
+          "maskSHA256": "5703272fbe7e1884502812172f1e1c5c31c7d58d163c6e9b486587f1d981facd",
+          "pixelCount": 918,
+          "boundingBox": [
+            563,
+            766,
+            645,
+            850
+          ],
+          "meanPosition": [
+            598.767,
+            808.524
+          ]
+        },
+        "bow.right_loop": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/bow_right_loop.png",
+          "maskSHA256": "3d82f2195f6cc8f017e0beeeeb7f030de43b2014a67cf8af2a40001865554c74",
+          "pixelCount": 240,
+          "boundingBox": [
+            645,
+            772,
+            695,
+            826
+          ],
+          "meanPosition": [
+            665.933,
+            800.05
+          ]
+        },
+        "bow.left_tail": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/bow_left_tail.png",
+          "maskSHA256": "6c868a7e5123952cd05c4afca6b76b2d64491419cb8a7fa745436eb368436d76",
+          "pixelCount": 147,
+          "boundingBox": [
+            573,
+            850,
+            592,
+            879
+          ],
+          "meanPosition": [
+            581.177,
+            862.592
+          ]
+        },
+        "bow.right_tail": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/bow_right_tail.png",
+          "maskSHA256": "09fa67b7642f57ad6f5901d5d35872c7eb676bafc0044e34a26db32eb9420e46",
+          "pixelCount": 489,
+          "boundingBox": [
+            667,
+            883,
+            737,
+            971
+          ],
+          "meanPosition": [
+            715.434,
+            919.483
+          ]
+        },
+        "collar.left_crease": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/collar_left_crease.png",
+          "maskSHA256": "60676ebdcd1c3ed0d6ea2ce70899751040a263a0a7b6404435031dbe4c6418fa",
+          "pixelCount": 1553,
+          "boundingBox": [
+            483,
+            671,
+            632,
+            783
+          ],
+          "meanPosition": [
+            602.381,
+            732.923
+          ]
+        },
+        "collar.right_crease": {
+          "maskPath": "private-assets/exports/p15-108-stroke-identity/yaw75/collar_right_crease.png",
+          "maskSHA256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665",
+          "pixelCount": 0,
+          "boundingBox": null,
+          "meanPosition": null
+        }
+      },
+      "bowInkPixelsOwned": 1794,
+      "collarInkPixelsOwned": 1553
+    }
+  },
+  "roleIDs": [
+    "bow.left_loop",
+    "bow.right_loop",
+    "bow.left_tail",
+    "bow.right_tail",
+    "collar.left_crease",
+    "collar.right_crease"
+  ],
+  "depthOrder": [
+    "background",
+    "goldTrim",
+    "collarWhite",
+    "bowFabric",
+    "jewel"
+  ],
+  "identityKind": "color-and-position role proposal",
+  "sameStrokeAcrossViewsArtistVerified": false,
+  "sourcePixelPartitionExact": true
+}

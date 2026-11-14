@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "roleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 1440,
+      "roleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 1440,
+      "roleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 1440,
+      "roleIndex": 3,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 390,
+      "roleIndex": 0,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 390,
+      "roleIndex": 1,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 390,
+      "roleIndex": 2,
+      "imagesLoaded": 5
+    },
+    {
+      "viewport": 390,
+      "roleIndex": 3,
+      "imagesLoaded": 5
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,409 @@
+{
+  "schema": "KOMA-P15-37-PAINTED-VDD-CHROMIUM-V1",
+  "characterId": "p0_character_001",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 56.25,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 61.25,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 61.25,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 61.25,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 62.5,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 62.5,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 62.5,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 63.75,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 63.75,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 63.75,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 55,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 56.25,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 58.75,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 58.75,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 58.75,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 61.25,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 61.25,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 61.25,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 62.5,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 62.5,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 62.5,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 63.75,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 63.75,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 63.75,
+      "mode": "sources",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "compare",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "parts",
+      "sourceCount": 4
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "sources",
+      "sourceCount": 4
+    }
+  ],
+  "screenshots": [
+    {
+      "viewport": "desktop",
+      "angle": 55,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw55-compare.png",
+      "sha256": "1e01a2201a789d127cf80856617e726d682924646c8b1065383ff583adc37d91"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw57p5-compare.png",
+      "sha256": "240bf16b5afbe08a1b2a85a80609569f71d263ec93677f08e264bbf14a5fb2fe"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 57.5,
+      "mode": "parts",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw57p5-parts.png",
+      "sha256": "6669183202f422e74b222329183b92944b9601a8c4e61a715e6e865c297bbddd"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 58.75,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw58p75-compare.png",
+      "sha256": "ee4900acdae86c837ea595e45f16c4c78d62c446187681aadf63a272a6722c98"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw60-compare.png",
+      "sha256": "a520d7cba5cb0d32a1bd2ca0604a0c163aac77d4bda63ffa0891511f82d64890"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 60,
+      "mode": "parts",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw60-parts.png",
+      "sha256": "188fcf5a699bf99f064e7ff94025a3fc7dd46fc340621527740b9bed5f8945ac"
+    },
+    {
+      "viewport": "desktop",
+      "angle": 65,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/desktop-yaw65-compare.png",
+      "sha256": "8d766f7c800fefcebf700cdf53e7e28f30d641bac84f3491f45d72e62df5b835"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 57.5,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/mobile-yaw57p5-compare.png",
+      "sha256": "78e4f55b147c979578d8c0d3c5839c98e4cddc461252c3326382c323e0a5e1cc"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 60,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/mobile-yaw60-compare.png",
+      "sha256": "d980dd2aded55ee66d74f0eaaac0b0dd9efb13bfccf6f031b9807aa889686929"
+    },
+    {
+      "viewport": "mobile",
+      "angle": 65,
+      "mode": "compare",
+      "path": "private-assets/exports/p15-37-temporal-art-review/browser/mobile-yaw65-compare.png",
+      "sha256": "7be9ca01a56b2c0b6f697f4cec2338c30fa04395e63b98e1740a70446ac12ed7"
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "artisticGate": "SOURCE_PAINTING_REVIEW",
+  "status": "P15_37_NINE_FRAME_THREE_MODE_CHROMIUM_VERIFIED",
+  "viewportChecks": 54,
+  "imageLoads": 216,
+  "screenshotCount": 10
+}

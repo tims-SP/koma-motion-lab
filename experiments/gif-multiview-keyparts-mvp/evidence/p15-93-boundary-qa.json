@@ -1,0 +1,103 @@
+{
+  "schema": "KOMA-P15-93-BOUNDARY_CONTINUITY_V1",
+  "segments": {
+    "45-60": {
+      "blend": {
+        "adjacentMAE": [
+          15.783,
+          13.687,
+          12.692,
+          12.012,
+          12.129,
+          13.897
+        ],
+        "boundaryStepMAE": 13.897,
+        "internalMedianMAE": 12.692,
+        "boundaryToInternalRatio": 1.095,
+        "maxStepMAE": 15.783
+      },
+      "forward": {
+        "adjacentMAE": [
+          15.336,
+          15.103,
+          14.958,
+          14.492,
+          14.757,
+          22.804
+        ],
+        "boundaryStepMAE": 22.804,
+        "internalMedianMAE": 14.958,
+        "boundaryToInternalRatio": 1.525,
+        "maxStepMAE": 22.804
+      }
+    },
+    "60-75": {
+      "blend": {
+        "adjacentMAE": [
+          11.183,
+          9.331,
+          9.054,
+          9.274,
+          9.6,
+          11.142
+        ],
+        "boundaryStepMAE": 11.142,
+        "internalMedianMAE": 9.331,
+        "boundaryToInternalRatio": 1.194,
+        "maxStepMAE": 11.183
+      },
+      "forward": {
+        "adjacentMAE": [
+          11.39,
+          10.366,
+          10.415,
+          10.397,
+          10.334,
+          16.354
+        ],
+        "boundaryStepMAE": 16.354,
+        "internalMedianMAE": 10.397,
+        "boundaryToInternalRatio": 1.573,
+        "maxStepMAE": 16.354
+      }
+    },
+    "75-90": {
+      "blend": {
+        "adjacentMAE": [
+          7.907,
+          6.493,
+          6.237,
+          6.094,
+          6.24,
+          7.264
+        ],
+        "boundaryStepMAE": 7.264,
+        "internalMedianMAE": 6.24,
+        "boundaryToInternalRatio": 1.164,
+        "maxStepMAE": 7.907
+      },
+      "forward": {
+        "adjacentMAE": [
+          7.643,
+          6.983,
+          7.174,
+          7.23,
+          7.314,
+          12.38
+        ],
+        "boundaryStepMAE": 12.38,
+        "internalMedianMAE": 7.23,
+        "boundaryToInternalRatio": 1.712,
+        "maxStepMAE": 12.38
+      }
+    }
+  },
+  "roiHalfResolution": [
+    240,
+    155,
+    475,
+    355
+  ],
+  "status": "RESEARCH_DIAGNOSTIC",
+  "contact": "private-assets/exports/p15-93-flow-ablation/boundary-contact.jpg"
+}

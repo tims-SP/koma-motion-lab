@@ -1,0 +1,335 @@
+{
+  "schema": "KOMA-P0-P12-ORIGINAL-VIEW-ANATOMICAL-CORRESPONDENCE-QA-V1",
+  "date": "2026-11-09",
+  "characterId": "p0_character_001",
+  "source": {
+    "sourceAuthorKeyViews": [
+      0,
+      45,
+      90
+    ],
+    "sourcePSDViews": [
+      0,
+      45,
+      90
+    ],
+    "trueSourceP0ArtMeshViews": 39,
+    "P11ProfilePSD_SHA256": "b23debe04dd6fc7d6820c3e9401a8838b47bb62ad6cc77d963c4ba853ddc01e8",
+    "P11ProfilePSDAlphasExact": true,
+    "sourceArtMeshRegistrySHA256": "7181173ec21ea8ba6402f7133e3f5fb05a6e413073a121052e8e20e97d2ad297",
+    "sourcePhysicalLandmarksSHA256": "38d3054b05ecaddc89dec3d76dd52b9d60b158e983c416895f0fa2e06f1addc7",
+    "P10SourceStrokeCandidates": 24,
+    "P10StrokeQA_SHA256": "b510d61f2ef89b5fc0b5aaaa95b20bf7cc43ab7fc9b281a0c082ca9d7f8d633e"
+  },
+  "diagnostics": {
+    "originalSourceViewPair": [
+      45,
+      90
+    ],
+    "sourceAlphaCoverageAtlas": "private-assets/p12-occlusion-gap/qa.json",
+    "sourceAlphaCoverageSHA256": "e6eb9275a87e8a7d686eae71a0e5b1972b1ad029adbea806baac7444b7176f43",
+    "sourceSemanticParts": 13,
+    "prioritySourceGapParts": [
+      {
+        "semanticId": "ear.near",
+        "targetOnlyFraction": 0.674,
+        "targetOnlyNativePixels": 643,
+        "registrationMethod": "physical-landmark-translation",
+        "source45SHA256": "94f221fe1b606c9baaf0bfe7d4ebe68d448c33d5e506a9447c4cb7e6d1213b78",
+        "source90SHA256": "0339cd4783451cba6946149402f51a7c52db9b2e956249b39a94daeb4175bbd9",
+        "visualAtlasPath": "p12-occlusion-gap/ear.near.jpg",
+        "visualAtlasSHA256": "f45cfa6a7a9c7003cd46ee6a69456f4c42b253228dc3a878ec9bebf9af24021c",
+        "interpretation": "POTENTIAL_ARTWORK_OR_GEOMETRY_CORRESPONDENCE_GAP"
+      },
+      {
+        "semanticId": "mouth",
+        "targetOnlyFraction": 0.6278,
+        "targetOnlyNativePixels": 140,
+        "registrationMethod": "physical-landmark-translation",
+        "source45SHA256": "b783bbb31681155ca68ad56f5d18c91c7e913be5a398e928f06ce6517ec7ceb4",
+        "source90SHA256": "87c4fb5627e5868114dd197adcfa77572636709348c09c2574d067b0998e9b7c",
+        "visualAtlasPath": "p12-occlusion-gap/mouth.jpg",
+        "visualAtlasSHA256": "9bfd94d407b18fb55f80396378f88c3a2e24b1455078182a9be1d0410bfe7c2f",
+        "interpretation": "POTENTIAL_ARTWORK_OR_GEOMETRY_CORRESPONDENCE_GAP"
+      },
+      {
+        "semanticId": "nose",
+        "targetOnlyFraction": 0.49618,
+        "targetOnlyNativePixels": 195,
+        "registrationMethod": "physical-landmark-translation",
+        "source45SHA256": "af71c8ed7b022d763d7d357971488c69f60f31ea37bdc0e14b1d140f71fb79f5",
+        "source90SHA256": "535de1060b84a89a6d8a5a7f90b23f1b8b642bf40edee9b87f572536546b5efc",
+        "visualAtlasPath": "p12-occlusion-gap/nose.jpg",
+        "visualAtlasSHA256": "28f4cc1d11a7cd05ba21c50b6f1511ac85ad33fa50bec43e91c0771271975520",
+        "interpretation": "POTENTIAL_ARTWORK_OR_GEOMETRY_CORRESPONDENCE_GAP"
+      },
+      {
+        "semanticId": "body.reference",
+        "targetOnlyFraction": 0.32481,
+        "targetOnlyNativePixels": 6643,
+        "registrationMethod": "reverse-DIS-original-layer",
+        "source45SHA256": "8097f37ffa4b6a81d94f7eb90e35464408c06e0a8d4267868cc30e21179c52b1",
+        "source90SHA256": "aea2222388ea9db1976491c1f5dbf5ff6af2771526165a4e11e739f8880a1e5f",
+        "visualAtlasPath": "p12-occlusion-gap/body.reference.jpg",
+        "visualAtlasSHA256": "cc4cf8946fdddfc9733559e387a29edb2c1e9f4e27623fe78c2a5b7daf288d55",
+        "interpretation": "POTENTIAL_ARTWORK_OR_GEOMETRY_CORRESPONDENCE_GAP"
+      },
+      {
+        "semanticId": "hair.back",
+        "targetOnlyFraction": 0.29355,
+        "targetOnlyNativePixels": 4169,
+        "registrationMethod": "reverse-DIS-original-layer",
+        "source45SHA256": "47adcbb5de5912537f0023d9daa2f6302a7746d7e6813139d63772f3c899e36e",
+        "source90SHA256": "db583154f9b10734deafcc1c94100180ce331e39b420b622bdd260b082dd00af",
+        "visualAtlasPath": "p12-occlusion-gap/hair.back.jpg",
+        "visualAtlasSHA256": "cf908464c42317fb6a96773204be206da0a92df69a7e3c9304e46a7784222e0c",
+        "interpretation": "POTENTIAL_ARTWORK_OR_GEOMETRY_CORRESPONDENCE_GAP"
+      },
+      {
+        "semanticId": "hair.front",
+        "targetOnlyFraction": 0.15256,
+        "targetOnlyNativePixels": 3226,
+        "registrationMethod": "reverse-DIS-original-layer",
+        "source45SHA256": "bfa6223060975873da9a5335f09cc424ffc5e1224c1fadab5923c11eaa50a6de",
+        "source90SHA256": "59a765ee05d3219f6cc1d59cc101dde27696ffcd84a1eda56c1aa6c9a13ecf2f",
+        "visualAtlasPath": "p12-occlusion-gap/hair.front.jpg",
+        "visualAtlasSHA256": "d96522f57d9fd38a784c2820d8c1259fea1790472c3fead48490484efc9031ad",
+        "interpretation": "POTENTIAL_ARTWORK_OR_GEOMETRY_CORRESPONDENCE_GAP"
+      }
+    ],
+    "measurementDefinition": "Target 90-degree alpha pixels uncovered by source 45-degree part after per-semantic physical-anchor or DIS registration; values include geometric registration uncertainty",
+    "sourceComparisonContact": "private-assets/p12-comparison/p12-motion-candidate-contact.jpg",
+    "sourceComparisonContactSHA256": "6aed2e5d195972c8030c08b298776caa6ebbb1b153df2f6c3ecc09cd45656598"
+  },
+  "rendererAlternatives": {
+    "sourceAlgorithms": [
+      {
+        "method": "p8-selective",
+        "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "holdoutEdgeRatios": {
+          "22.5": 1.281,
+          "67.5": 0.8371
+        },
+        "sampleFrames": 6
+      },
+      {
+        "method": "anatomy",
+        "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "holdoutEdgeRatios": {
+          "22.5": 1.0865,
+          "67.5": 1.525
+        },
+        "sampleFrames": 6
+      },
+      {
+        "method": "anatomy-strokes",
+        "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "holdoutEdgeRatios": {
+          "22.5": 0.9567,
+          "67.5": 1.525
+        },
+        "sampleFrames": 6
+      },
+      {
+        "method": "stroke-wide",
+        "textureStatus": "PASS_TEXTURE_EDGE_DIAGNOSTIC",
+        "holdoutEdgeRatios": {
+          "22.5": 0.9567,
+          "67.5": 1.6261
+        },
+        "sampleFrames": 6
+      },
+      {
+        "method": "affine-face",
+        "textureStatus": "REQUIRES_SEMANTIC_TEXTURE_CORRESPONDENCE",
+        "holdoutEdgeRatios": {
+          "22.5": 1.0324,
+          "67.5": 1.9119
+        },
+        "sampleFrames": 6
+      }
+    ],
+    "P12HeldoutAngles": [
+      0,
+      22.5,
+      45,
+      67.5,
+      72.5,
+      90
+    ],
+    "adoptedMotionBaseline": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+    "P8FullMotion37Frames": "PASS_TEMPORAL_CONTINUITY",
+    "P12MotionAcceptance": "ORIGINAL_P0_KEYFRAMES_AND_HOLDOUTS_VERIFIED",
+    "qualityGate": "PENDING_FACE_HAIR_TEXTURE_AND_SOURCE_ARTISTIC_MAPPING",
+    "researchSourcePapers": [
+      "https://openaccess.thecvf.com/content/ICCV2023/html/Siyao_Deep_Geometrized_Cartoon_Line_Inbetweening_ICCV_2023_paper.html",
+      "https://doi.org/10.1145/3811364"
+    ]
+  },
+  "browser": {
+    "entry": "review/p12-inspection.html",
+    "status": "PASS_REAL_SOURCE_ARTMESH_P12_REVIEW",
+    "actualSourceVerifiedImagesPerScreenshot": 3,
+    "actualScreenshots": 12,
+    "screens": [
+      {
+        "angle": 22.5,
+        "variant": "anatomy",
+        "semanticId": "eye.near",
+        "verifiedSourceImages": 3,
+        "gapRatio": 0.0831,
+        "screenshots": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw22p5-anatomy-eye-near-motion.png",
+            "sha256": "1807ebfcc0a52b27eb372abb2bd564f8154a7d1a85cfb2a2b695325690042dbb",
+            "bytes": 649490
+          },
+          "occlusion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw22p5-anatomy-eye-near-occlusion.png",
+            "sha256": "80fba799d6165c15b61e96ede8745a49c71212058f11e007f9247b23d24f3327",
+            "bytes": 57898
+          }
+        }
+      },
+      {
+        "angle": 22.5,
+        "variant": "anatomy-strokes",
+        "semanticId": "hair.front",
+        "verifiedSourceImages": 3,
+        "gapRatio": 0.15256,
+        "screenshots": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw22p5-anatomy-strokes-hair-front-motion.png",
+            "sha256": "636588ef360ee6b268c20e8e18f6724270caf1450faae226bd5494fc78693a0e",
+            "bytes": 651217
+          },
+          "occlusion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw22p5-anatomy-strokes-hair-front-occlusion.png",
+            "sha256": "f93c7627622359fcbd482db3c54d8060f948918f8159ba7aedb4d4510fc626fe",
+            "bytes": 177690
+          }
+        }
+      },
+      {
+        "angle": 67.5,
+        "variant": "anatomy-strokes",
+        "semanticId": "hair.front",
+        "verifiedSourceImages": 3,
+        "gapRatio": 0.15256,
+        "screenshots": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw67p5-anatomy-strokes-hair-front-motion.png",
+            "sha256": "bd2f26b68a4270203a473598a40767ceabb69ce9edacc5d0a7781ffbed1eb4b0",
+            "bytes": 614332
+          },
+          "occlusion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw67p5-anatomy-strokes-hair-front-occlusion.png",
+            "sha256": "f93c7627622359fcbd482db3c54d8060f948918f8159ba7aedb4d4510fc626fe",
+            "bytes": 177690
+          }
+        }
+      },
+      {
+        "angle": 67.5,
+        "variant": "stroke-wide",
+        "semanticId": "ear.near",
+        "verifiedSourceImages": 3,
+        "gapRatio": 0.674,
+        "screenshots": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw67p5-stroke-wide-ear-near-motion.png",
+            "sha256": "2ecacb696185a6a7ef5dbb86d9807cd05b71bf05df111df16bcd97058e951512",
+            "bytes": 614799
+          },
+          "occlusion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw67p5-stroke-wide-ear-near-occlusion.png",
+            "sha256": "9b52da3274a65064ca166577a6e5397ff198703750b49bd2d2f7cf0d42883375",
+            "bytes": 51951
+          }
+        }
+      },
+      {
+        "angle": 67.5,
+        "variant": "affine-face",
+        "semanticId": "face.skin",
+        "verifiedSourceImages": 3,
+        "gapRatio": 0.00997,
+        "screenshots": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw67p5-affine-face-face-skin-motion.png",
+            "sha256": "2fef14f1ff66b167e2bcce956e39bca5dc38af434f90a9eb58e18715d02326e6",
+            "bytes": 617109
+          },
+          "occlusion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw67p5-affine-face-face-skin-occlusion.png",
+            "sha256": "d816dbf1dd436d6c9dfe4f5bbd024adfffc6e0e0c15b5550c04adde594b1c9c6",
+            "bytes": 95731
+          }
+        }
+      },
+      {
+        "angle": 72.5,
+        "variant": "anatomy",
+        "semanticId": "nose",
+        "verifiedSourceImages": 3,
+        "gapRatio": 0.49618,
+        "screenshots": {
+          "motion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw72p5-anatomy-nose-motion.png",
+            "sha256": "707859c7ca74faabf505a14350ec3ede9abc5c90ed03a8bd08e3e3fecf518d17",
+            "bytes": 602417
+          },
+          "occlusion": {
+            "path": "/root/koma-motion-r1999/work/koma-motion-lab/experiments/gif-multiview-keyparts-mvp/private-assets/p12-comparison/browser/yaw72p5-anatomy-nose-occlusion.png",
+            "sha256": "bdc30a5ce59bfd616a00898801dd7132fad5e1840f6ae21e3ba9512426befb52",
+            "bytes": 26641
+          }
+        }
+      }
+    ],
+    "runtimeErrors": [],
+    "requestFailures": []
+  },
+  "archive": {
+    "path": "private-assets/exports/p0-character-001-view-correspondence-review-v13.zip",
+    "bytes": 74272775,
+    "sha256": "3cc06280b043b53f96171e9b2edd8b3c14d7d62edc094b626ce93312973fc959",
+    "entryCount": 166,
+    "contentSHA256AndCRCVerified": true
+  },
+  "regressions": {
+    "testsRun": 103,
+    "testsPassed": 103,
+    "testsFailed": 0,
+    "structuralAcceptanceItems": 150,
+    "testEnvironment": "VPS isolated Python and Chromium",
+    "githubActionsUsed": false
+  },
+  "nextStage": {
+    "name": "P13_P0_SEMANTIC_ORIGINAL_ART_SOURCE_REFINEMENT",
+    "goal": "Acquire precise intermediate P0 painted reference layers and track near-eye, fringe and silhouette stroke identity into full 0-90 view-dependent motion",
+    "priorityAngles": [
+      67.5,
+      72.5,
+      22.5
+    ],
+    "priorityParts": [
+      "eye.near",
+      "face.skin",
+      "hair.front",
+      "hair.back",
+      "ear.near",
+      "nose",
+      "mouth",
+      "body.reference"
+    ],
+    "acceptance": [
+      "same approved P0 character",
+      "native RGBA 1024 squared",
+      "individual semantic part per frame",
+      "visibility ID / physical anchors",
+      "true browser screenshots at heldout views",
+      "motion sequence 37 native RGBA frames"
+    ]
+  }
+}

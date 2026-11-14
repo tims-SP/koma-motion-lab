@@ -1,0 +1,287 @@
+{
+  "schema": "KOMA_P15_123_PART_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceKeyAngles": [
+    90,
+    135,
+    180
+  ],
+  "yawSamples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0,
+    146.25,
+    157.5,
+    168.75,
+    180.0
+  ],
+  "partRoles": [
+    "garment.visible",
+    "skin.visible",
+    "hair.visible"
+  ],
+  "candidateGeometry": "per-part DIS inverse flow, candidate anchors and native visibility ownership",
+  "sourceViewAnchors": {
+    "90": {
+      "garment.visible": [
+        238.001,
+        380.302
+      ],
+      "skin.visible": [
+        289.063,
+        243.883
+      ],
+      "hair.visible": [
+        212.938,
+        178.012
+      ]
+    },
+    "135": {
+      "garment.visible": [
+        230.035,
+        386.087
+      ],
+      "skin.visible": [
+        310.277,
+        253.319
+      ],
+      "hair.visible": [
+        222.637,
+        185.197
+      ]
+    },
+    "180": {
+      "garment.visible": [
+        222.927,
+        388.305
+      ],
+      "skin.visible": [
+        0.0,
+        0.0
+      ],
+      "hair.visible": [
+        225.151,
+        188.875
+      ]
+    }
+  },
+  "frames": [
+    {
+      "yaw": 90.0,
+      "sourceOwner": {
+        "garment.visible": 90.0,
+        "skin.visible": 90.0,
+        "hair.visible": 90.0
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          238.001,
+          380.302
+        ],
+        "skin.visible": [
+          289.063,
+          243.883
+        ],
+        "hair.visible": [
+          212.938,
+          178.012
+        ]
+      }
+    },
+    {
+      "yaw": 101.25,
+      "sourceOwner": {
+        "garment.visible": 90,
+        "skin.visible": 90,
+        "hair.visible": 90
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          234.416,
+          382.32
+        ],
+        "skin.visible": [
+          291.448,
+          245.891
+        ],
+        "hair.visible": [
+          214.906,
+          179.107
+        ]
+      }
+    },
+    {
+      "yaw": 112.5,
+      "sourceOwner": {
+        "garment.visible": 135,
+        "skin.visible": 135,
+        "hair.visible": 135
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          233.482,
+          381.387
+        ],
+        "skin.visible": [
+          305.753,
+          239.937
+        ],
+        "hair.visible": [
+          218.373,
+          183.094
+        ]
+      }
+    },
+    {
+      "yaw": 123.75,
+      "sourceOwner": {
+        "garment.visible": 135,
+        "skin.visible": 135,
+        "hair.visible": 135
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          232.424,
+          384.545
+        ],
+        "skin.visible": [
+          308.333,
+          248.152
+        ],
+        "hair.visible": [
+          220.569,
+          183.793
+        ]
+      }
+    },
+    {
+      "yaw": 135.0,
+      "sourceOwner": {
+        "garment.visible": 135.0,
+        "skin.visible": 135.0,
+        "hair.visible": 135.0
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          230.035,
+          386.087
+        ],
+        "skin.visible": [
+          310.277,
+          253.319
+        ],
+        "hair.visible": [
+          222.637,
+          185.197
+        ]
+      }
+    },
+    {
+      "yaw": 146.25,
+      "sourceOwner": {
+        "garment.visible": 135,
+        "skin.visible": 135,
+        "hair.visible": 135
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          228.486,
+          386.202
+        ],
+        "skin.visible": [
+          310.276,
+          253.429
+        ],
+        "hair.visible": [
+          222.553,
+          185.817
+        ]
+      }
+    },
+    {
+      "yaw": 157.5,
+      "sourceOwner": {
+        "garment.visible": 180,
+        "skin.visible": 180,
+        "hair.visible": 180
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          219.438,
+          383.701
+        ],
+        "skin.visible": [
+          0.0,
+          0.0
+        ],
+        "hair.visible": [
+          224.111,
+          185.447
+        ]
+      }
+    },
+    {
+      "yaw": 168.75,
+      "sourceOwner": {
+        "garment.visible": 180,
+        "skin.visible": 180,
+        "hair.visible": 180
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          222.41,
+          385.994
+        ],
+        "skin.visible": [
+          0.0,
+          0.0
+        ],
+        "hair.visible": [
+          224.758,
+          187.335
+        ]
+      }
+    },
+    {
+      "yaw": 180.0,
+      "sourceOwner": {
+        "garment.visible": 180.0,
+        "skin.visible": 180.0,
+        "hair.visible": 180.0
+      },
+      "layerAnchors": {
+        "garment.visible": [
+          222.927,
+          388.305
+        ],
+        "skin.visible": [
+          0.0,
+          0.0
+        ],
+        "hair.visible": [
+          225.151,
+          188.875
+        ]
+      }
+    }
+  ],
+  "adjacentCompositeRGBMAE": [
+    7.9331,
+    10.6396,
+    7.0723,
+    6.7256,
+    5.8175,
+    7.5385,
+    5.698,
+    5.9909
+  ],
+  "maxAdjacentCompositeRGBMAE": 10.6396,
+  "nativeKeyframesPixelExact": true,
+  "hiddenUnderpaintVerified": false,
+  "physicalAnchorCorrespondenceValidated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-123-part-vdd/index.html",
+  "next": "Inspect per-part distortion and owner switches, then replace heuristic boundaries with painted correspondence/underpaint."
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "KOMA-P15-91-HAIR_SEMANTIC_SOURCE_QA_V1",
+  "imageModelSourceSHA256": "1ee321b0b7104efe7ab3cffcfbad2138c2e2a4dbd7beef99f4f4ec88dcb04b8d",
+  "zeroPoseSourceSHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+  "sourceHairSHA256": "5857c2a67bfc2d4bf545f24d707fd945830ce3d8cccfc47d86e59d42770dc128",
+  "hairAlphaPreserved": true,
+  "variants": {
+    "tight": {
+      "hairMaskSHA256": "9d69d42dbda53610baa2460a9909262acd2ca031fd35f130f803d985f934be47",
+      "hairLayerSHA256": "3b65f4f55c862aef199349e66e0cbfe4e04cd9ae83a121eac1d200e8179c22ae",
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsidePermittedPixels": 0,
+          "newHoles": 0,
+          "darkBefore": 14,
+          "darkAfter": 14,
+          "fringeBefore": 17,
+          "fringeAfter": 17
+        },
+        "9": {
+          "sha256": "9686fbdf4dbc13d8131c6d785692b1c9f080c6182007a97bb86ccbe41b2d14e5",
+          "changedPixels": 197,
+          "outsidePermittedPixels": 0,
+          "newHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0,
+          "fringeBefore": 15,
+          "fringeAfter": 0
+        },
+        "18": {
+          "sha256": "5749c6206993c0e7ceede9542c996e8791335ea6fbcbbf6d499ef6a28285dbc0",
+          "changedPixels": 197,
+          "outsidePermittedPixels": 0,
+          "newHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0,
+          "fringeBefore": 15,
+          "fringeAfter": 0
+        }
+      }
+    },
+    "soft": {
+      "hairMaskSHA256": "ad6e6a45457573308d11a8fcd2812ed7fb2f0f5d426606a09a51d33fa23975f3",
+      "hairLayerSHA256": "c8e89336e5c96346bab321de03a0b15d72d0633d1c2ff2f34f4cb18a57f3e4d7",
+      "frames": {
+        "0": {
+          "sha256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+          "changedPixels": 0,
+          "outsidePermittedPixels": 0,
+          "newHoles": 0,
+          "darkBefore": 14,
+          "darkAfter": 14,
+          "fringeBefore": 17,
+          "fringeAfter": 17
+        },
+        "9": {
+          "sha256": "d923602f98d26572055199a4315833f2af687dbf0f5af43ea2842a363659d2c4",
+          "changedPixels": 306,
+          "outsidePermittedPixels": 0,
+          "newHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0,
+          "fringeBefore": 15,
+          "fringeAfter": 0
+        },
+        "18": {
+          "sha256": "8f830ea8e9936df509ab17c8f10533f07304d5e5f83a31169b4c10fa11b50dcc",
+          "changedPixels": 306,
+          "outsidePermittedPixels": 0,
+          "newHoles": 0,
+          "darkBefore": 2,
+          "darkAfter": 0,
+          "fringeBefore": 15,
+          "fringeAfter": 0
+        }
+      }
+    }
+  },
+  "formalArtMeshAccepted": false,
+  "candidateAccepted": false,
+  "visualGate": "PENDING_LOCAL_VISUAL_COMPARISON",
+  "contact": "private-assets/exports/p15-91-hair-ownership/dynamic-contact.jpg"
+}

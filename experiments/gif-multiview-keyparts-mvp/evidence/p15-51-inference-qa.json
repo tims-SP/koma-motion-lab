@@ -1,0 +1,10 @@
+{
+  "schema": "KOMA-P15-CONTROLNET-AUTH-PREFLIGHT-V1",
+  "status": "BLOCKED_HF_TOKEN_NOT_CONFIGURED",
+  "space": "https://hugging-apps-qwen-image-2-1-controlnet-union-demo.hf.space",
+  "seed": 65445,
+  "steps": 24,
+  "tokenPresent": false,
+  "newImageGenerated": false,
+  "artMeshModified": false
+}

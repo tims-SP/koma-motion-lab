@@ -1,0 +1,78 @@
+{
+  "schema": "KOMA_P15_142_FACE_HAIR_PIXEL_OWNERSHIP_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "protectedRoles": [
+    "eye.near.center",
+    "ear.center",
+    "nose.tip",
+    "chin"
+  ],
+  "referenceMaxAdjacentRGBMAE": 17.3248,
+  "variants": {
+    "face_guard_075": {
+      "maxAdjacentRGBMAE": 17.3355,
+      "adjacentRGBMAE": [
+        8.3139,
+        17.3355,
+        6.1717,
+        15.8528
+      ],
+      "reassignedFacePixelsByYaw": {
+        "90.0": 1010,
+        "112.5": 1011,
+        "135.0": 136
+      },
+      "nativeKeyframesPixelExact": true
+    },
+    "face_guard_100": {
+      "maxAdjacentRGBMAE": 17.3181,
+      "adjacentRGBMAE": [
+        8.112,
+        17.3181,
+        6.0445,
+        15.8331
+      ],
+      "reassignedFacePixelsByYaw": {
+        "90.0": 2098,
+        "112.5": 1659,
+        "135.0": 325
+      },
+      "nativeKeyframesPixelExact": true
+    },
+    "face_guard_125": {
+      "maxAdjacentRGBMAE": 17.2557,
+      "adjacentRGBMAE": [
+        7.7015,
+        17.2557,
+        5.7573,
+        15.7816
+      ],
+      "reassignedFacePixelsByYaw": {
+        "90.0": 3571,
+        "112.5": 2604,
+        "135.0": 734
+      },
+      "nativeKeyframesPixelExact": true
+    }
+  },
+  "sourceReconstructionExact": true,
+  "originalSourceUnmodified": true,
+  "sourceRoleStatus": "image-space feature protection proposals; eye/ear/face extraction not artist-approved",
+  "physicalSourceCorrespondenceValidated": false,
+  "hiddenSurfaceRegistrationValidated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-142-face-ownership/index.html",
+  "next": "Validate feature owner boundaries against true source-painted eye/ear/face layer artwork, then register hair strand identities and view-specific underpaint."
+}

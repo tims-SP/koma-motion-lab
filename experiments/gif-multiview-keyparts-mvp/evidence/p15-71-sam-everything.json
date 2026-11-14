@@ -1,0 +1,17 @@
+{
+  "schema": "KOMA-P15-71-SAM2-PROBE-V1",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "cropBox": [
+    350,
+    125,
+    862,
+    637
+  ],
+  "space": "Premkishor0007/sam2-image-segmentation",
+  "model": "SAM2",
+  "operation": "handle_segment_everything",
+  "sourceSameView": true,
+  "status": "FAILED",
+  "formalArtMeshAccepted": false,
+  "error": "RuntimeError(\"{'msg': 'process_completed', 'event_id': '1e8ecda4006c4127ac03d80f8a06c15f', 'output': {'error': 'You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens', 'duration': 10, 'visible': True, 'title': 'ZeroGPU quota exceeded'}, 'success': False, 'title': 'ZeroGPU quota exceeded'}\")"
+}

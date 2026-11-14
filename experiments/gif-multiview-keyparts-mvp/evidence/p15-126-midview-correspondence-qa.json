@@ -1,0 +1,62 @@
+{
+  "schema": "KOMA_P15_126_MIDVIEW_CORRESPONDENCE_AUDIT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90,
+    135
+  ],
+  "targetYaw": 112.5,
+  "inputClass": "authored recovered whole-frame keyviews and existing provisional semantic candidates",
+  "directionalRegionDisagreement": {
+    "hair": {
+      "meanBackgroundCompositeRGBDisagreement": 12.2044,
+      "p95BackgroundCompositeRGBDisagreement": 56.6667,
+      "pixelsGreaterThan20": 17397,
+      "regionPixels": 83700
+    },
+    "face": {
+      "meanBackgroundCompositeRGBDisagreement": 15.0851,
+      "p95BackgroundCompositeRGBDisagreement": 73.6667,
+      "pixelsGreaterThan20": 6465,
+      "regionPixels": 25650
+    },
+    "neck_collar": {
+      "meanBackgroundCompositeRGBDisagreement": 16.41,
+      "p95BackgroundCompositeRGBDisagreement": 86.0961,
+      "pixelsGreaterThan20": 6555,
+      "regionPixels": 24500
+    },
+    "jacket": {
+      "meanBackgroundCompositeRGBDisagreement": 11.1206,
+      "p95BackgroundCompositeRGBDisagreement": 50.6667,
+      "pixelsGreaterThan20": 5756,
+      "regionPixels": 31360
+    }
+  },
+  "semanticBoundaryAgreement": {
+    "garment.visible": {
+      "midpointWarpMaskIoU": 0.81023,
+      "forwardPixels": 22344,
+      "backwardPixels": 22061,
+      "unmatchedVisiblePixels": 4655
+    },
+    "skin.visible": {
+      "midpointWarpMaskIoU": 0.34339,
+      "forwardPixels": 3986,
+      "backwardPixels": 1980,
+      "unmatchedVisiblePixels": 2916
+    },
+    "hair.visible": {
+      "midpointWarpMaskIoU": 0.89861,
+      "forwardPixels": 50169,
+      "backwardPixels": 52050,
+      "unmatchedVisiblePixels": 5459
+    }
+  },
+  "actualIndependent112p5SourceAvailable": false,
+  "physicalHiddenSurfacesVerified": false,
+  "nativeSourcePixelsModified": false,
+  "artistApproved": false,
+  "next": "Paint and register independent native 112.5-degree hair, face/ear, neck/collar and coat material and hidden surfaces, then validate against both directional predictions.",
+  "review": "private-assets/exports/p15-126-midview-correspondence/index.html"
+}

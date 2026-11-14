@@ -1,0 +1,176 @@
+{
+  "schema": "KOMA-P15-36-SOURCE_REGISTERED-CEL-KEYPARTS-V1",
+  "characterId": "p0_character_001",
+  "sourceP15_35SHA256": "6dba4a97b9a7d31fecaec6bc94ed2062f967e5b7cd0fc9ccada37817e839b96a",
+  "sourceP0_45SHA256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+  "angles": [
+    57.5,
+    60.0
+  ],
+  "roleNames": [
+    "body.reference",
+    "hair.back",
+    "face.skin",
+    "ear.far",
+    "ear.near",
+    "hair.side",
+    "eye.far",
+    "eye.near",
+    "nose",
+    "mouth",
+    "hair.front",
+    "hair.ahoge",
+    "hair.clip.cross_gold"
+  ],
+  "frames": [
+    {
+      "yaw": 57.5,
+      "roles": 13,
+      "strokeRoles": [
+        "eye.far",
+        "face.skin",
+        "nose",
+        "hair.front"
+      ],
+      "sourceCompositeSHA256": "cddc53493c961f4292607c9e747c240eecd3aa04a020b9cdfe78f98008d80dc0",
+      "compositeSHA256": "63f8833a9c93e10a30ef140d0e439e94cdc64e45a52400de2cbdfd3f774469e5",
+      "sourceEyeUnderpaintSHA256": "cf6fc808e7b3ab59403f8ebe0a22afec55f5083ebe323c68c8a121ba1cdaf79f",
+      "retainedHiddenEyeSHA256": "d043cea4afc1378295724caef8269f94d1171c260f6ffa8244c3d2bc8a5fac3d",
+      "newAuthorPaintedRoleCount": 4,
+      "painted": {
+        "eye.far": {
+          "strokePath": "p15-36-keypart-cel/yaw57p5/eye.far.authored-strokes.png",
+          "strokeSHA256": "15bf3ed53fbaa19ccf9e279ffbcd7c864d0e4848340982b37d75082f53e0dd55",
+          "strokePixelCount": 236,
+          "rolePath": "p15-36-keypart-cel/yaw57p5/eye.far.png",
+          "roleSHA256": "61c5e3060fd4f4c0ae8efebebe175f3b70dfad97752ffed04d977203611a91f7",
+          "sourceRoleSHA256": "63eb8f0fc83a167ba22ba5d3fd73fc9c4b8099f0f989c89abeacc0c233b4e15d",
+          "changedRolePixels": 2440,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        },
+        "face.skin": {
+          "strokePath": "p15-36-keypart-cel/yaw57p5/face.skin.authored-strokes.png",
+          "strokeSHA256": "12ee94681a5a42ba6b24b872fa237a833b5a7f8a5aa0817da44930c20fe8f735",
+          "strokePixelCount": 502,
+          "rolePath": "p15-36-keypart-cel/yaw57p5/face.skin.png",
+          "roleSHA256": "be4ef152cd96248ca34308507baf89237fe5d97376bb9fe7111b518ed71035b1",
+          "sourceRoleSHA256": "a225e35faf55735d200c876b2c6bafd09619d864e28f7e282116b16215abe8d3",
+          "changedRolePixels": 1055,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        },
+        "nose": {
+          "strokePath": "p15-36-keypart-cel/yaw57p5/nose.authored-strokes.png",
+          "strokeSHA256": "ed42d34145ffee3117f9b6b64a390e2e4c0bfd68b046fba336067b24e62cae9b",
+          "strokePixelCount": 25,
+          "rolePath": "p15-36-keypart-cel/yaw57p5/nose.png",
+          "roleSHA256": "7101c8dcc3d151da91f57b4a1e452ca3df8b85fbf352df0938583f9c25ea083b",
+          "sourceRoleSHA256": "91fada926676cbafcd5c23f3f8b878fb767fd3e2eec1f229803e9462e62b1063",
+          "changedRolePixels": 109,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        },
+        "hair.front": {
+          "strokePath": "p15-36-keypart-cel/yaw57p5/hair.front.authored-strokes.png",
+          "strokeSHA256": "874024fe9d10600e19b58a629b1cb24253dd5129c23bf5a2bf1b8341506d2a75",
+          "strokePixelCount": 213,
+          "rolePath": "p15-36-keypart-cel/yaw57p5/hair.front.png",
+          "roleSHA256": "3274d7182fee250ab377e8adcb23f696c50bcefb975f6ee577169ba4cc5ea58d",
+          "sourceRoleSHA256": "1f4703c72d819ae8a08fbcf247732da005afc86ca16864bc243835809e8c19af",
+          "changedRolePixels": 986,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        }
+      },
+      "outputChangedPixels1024": 15887,
+      "firstEyeDepthEdge443": 311.2063,
+      "artApproval": false
+    },
+    {
+      "yaw": 60.0,
+      "roles": 13,
+      "strokeRoles": [
+        "eye.far",
+        "face.skin",
+        "nose",
+        "hair.front"
+      ],
+      "sourceCompositeSHA256": "c904bf58801fc3786a5942591cef3c21cd7702052f36926d709c42f30e269ad8",
+      "compositeSHA256": "69289a40a0525a2aaff09653246916f58c595eb260d7e6770bb4b6c57d4ae914",
+      "sourceEyeUnderpaintSHA256": "f86e250d9b901d6b5827e05a3df10103b03f7763b78a084b9f4baa8c153154e0",
+      "retainedHiddenEyeSHA256": "05f7fb83713dd44faa7e2c94b353b4d6bc2c308ec77e643778545bec54b69c01",
+      "newAuthorPaintedRoleCount": 4,
+      "painted": {
+        "eye.far": {
+          "strokePath": "p15-36-keypart-cel/yaw60/eye.far.authored-strokes.png",
+          "strokeSHA256": "0260d39c9704211652d478d165ca31e61160ab08a3243d58491d16596a784e92",
+          "strokePixelCount": 182,
+          "rolePath": "p15-36-keypart-cel/yaw60/eye.far.png",
+          "roleSHA256": "bb65fd04bd27484742a923d0a0dbc16b673c49789c27257a28831d39b14846c8",
+          "sourceRoleSHA256": "eab4c1b88e60669ce00da4a1a007697e45a27b0306fda92cdf8c773ed9dff96f",
+          "changedRolePixels": 2329,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        },
+        "face.skin": {
+          "strokePath": "p15-36-keypart-cel/yaw60/face.skin.authored-strokes.png",
+          "strokeSHA256": "40b3047ed28012a7979e3cbf85bb16a887417a0f17f127eb95afc1657694433f",
+          "strokePixelCount": 501,
+          "rolePath": "p15-36-keypart-cel/yaw60/face.skin.png",
+          "roleSHA256": "af6aa77ea34298b7982e975c12e9cce6c138041feeedf78f1966445d2e853bfd",
+          "sourceRoleSHA256": "d63470eb4abd566b6bbccab70b285aeed934477071e6991529fd2b81077f4748",
+          "changedRolePixels": 1041,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        },
+        "nose": {
+          "strokePath": "p15-36-keypart-cel/yaw60/nose.authored-strokes.png",
+          "strokeSHA256": "d92beba857c5fef15a9ce7d7d874e4e81585e4126a1d6c2a35cf0e9151626da7",
+          "strokePixelCount": 27,
+          "rolePath": "p15-36-keypart-cel/yaw60/nose.png",
+          "roleSHA256": "d50bf73ed5112693ab43a023402647d5e6164a3490ea05e1a7c720af3c78baaa",
+          "sourceRoleSHA256": "e55a3dda7b4b29146ecd3a0d47e56ca70a1b4b792870fbc07c95ee0ad874b8a6",
+          "changedRolePixels": 96,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        },
+        "hair.front": {
+          "strokePath": "p15-36-keypart-cel/yaw60/hair.front.authored-strokes.png",
+          "strokeSHA256": "66d182f1a64389a571a0561d3dec838b099381467a7907512d035bf256c1c0c2",
+          "strokePixelCount": 213,
+          "rolePath": "p15-36-keypart-cel/yaw60/hair.front.png",
+          "roleSHA256": "37565c789593716f617ae6fd77efd6d8a7f7fe417763dd7d5f4811ec92adb7c3",
+          "sourceRoleSHA256": "393975293e5641efe2c2917868151826a1ecaae22eb7a38f6d34606064f79b3f",
+          "changedRolePixels": 991,
+          "origin": "ORIGINAL_HAND_AUTHORED_VECTOR_CEL_STROKES",
+          "artisticApproval": false
+        }
+      },
+      "outputChangedPixels1024": 12522,
+      "firstEyeDepthEdge443": 326.05,
+      "artApproval": false
+    }
+  ],
+  "newAuthoredKeyparts": [
+    "eye.far",
+    "face.skin",
+    "nose",
+    "hair.front"
+  ],
+  "semanticRolesPerAngle": 13,
+  "artworkMethod": "vector original ink and cel color drawn at P5-registered features",
+  "diffusionCandidates": {
+    "yaw060-dual-source-qwen.png": "d8b7c57ac3dd81b3eb37be38058612134b2b7491",
+    "yaw060-pose-retouch-qwen.png": "2d61b0583e54a0a591542d02be3c6012a42117b3",
+    "yaw057p5-dual-source-qwen.png": "38021280c4c5cb97600a038a8e5860af23a46b63"
+  },
+  "diffusionFullKeyViewsAccepted": 0,
+  "independentlyPaintedCompleteRoleSetsApproved": 0,
+  "actualHandAuthoredStrokeRolesPerAngle": 4,
+  "underpaintMode": "preserved original P15-35 hidden RGB and alpha",
+  "fullKeyviewArtistApproval": false,
+  "P0HeroOriginalHashVerified": false,
+  "productionVddModified": false,
+  "status": "TWO_ANGLE_AUTHORED_KEYPART_CANDIDATES_RECORDED"
+}

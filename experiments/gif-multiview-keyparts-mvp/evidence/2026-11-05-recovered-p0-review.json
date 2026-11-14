@@ -1,0 +1,155 @@
+{
+  "schema": "KOMA-P0-RECONSTRUCTED-MULTIVIEW-QA-V1",
+  "date": "2026-11-05",
+  "characterId": "p0_character_001",
+  "recoveredOriginal": {
+    "zipSha256": "8ce3596f60a01b82df49926304c47041d8a8734689ae2a3126acada583666547",
+    "entries": 53,
+    "sourceGIFs": 4,
+    "decodedFrames": 38
+  },
+  "rgbaLayers": {
+    "total": 39,
+    "primarySemanticSlots": 30,
+    "pixelParity": {
+      "0": {
+        "maxChannelDelta": 0,
+        "pixelsDifferent": 0,
+        "sourceSha256": "626f9105d4413477aed256d3bca340166c767a84821bd289d37144449bd67dd3",
+        "viewBbox": [
+          152,
+          13,
+          877,
+          1020
+        ],
+        "visibleLayerCount": 13
+      },
+      "45": {
+        "maxChannelDelta": 0,
+        "pixelsDifferent": 0,
+        "sourceSha256": "78a08d5f010a8f449efda915a710a2de8958c3b1a32375df491d806fca251e40",
+        "viewBbox": [
+          158,
+          13,
+          856,
+          1020
+        ],
+        "visibleLayerCount": 12
+      },
+      "90": {
+        "maxChannelDelta": 0,
+        "pixelsDifferent": 0,
+        "sourceSha256": "ff9822159bd954860761963cf65e3a2df5cd3ec04a9d1806f860ee31e986ff16",
+        "viewBbox": [
+          175,
+          11,
+          812,
+          1020
+        ],
+        "visibleLayerCount": 9
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "yawDeg": 0,
+      "screenshot": "yaw000.png",
+      "sha256": "6cdab9c12cfafc0d776e2fcd113da687d0dc65efab00c7ce1a800c610157a2d6",
+      "pixels": 486056,
+      "rgbaSum": 2090188785
+    },
+    {
+      "yawDeg": 22.5,
+      "screenshot": "yaw22p5.png",
+      "sha256": "bbac0e0a0ec75ef9c1d2e44e980480dbbf39f7dbfbc43eb83aee9c62c41c964c",
+      "pixels": 466034,
+      "rgbaSum": 1985194874
+    },
+    {
+      "yawDeg": 45,
+      "screenshot": "yaw045.png",
+      "sha256": "46f5048736d9a496e576d2a7b33d95d0e3f58f30c10f2b4c8fc6774b56928d8a",
+      "pixels": 486700,
+      "rgbaSum": 2101352807
+    },
+    {
+      "yawDeg": 67.5,
+      "screenshot": "yaw67p5.png",
+      "sha256": "bf0b4fe51228712a186a6ebde1acd05f338daf2884ff5261f081eb014272316a",
+      "pixels": 438443,
+      "rgbaSum": 1854252023
+    },
+    {
+      "yawDeg": 90,
+      "screenshot": "yaw090.png",
+      "sha256": "766bfe6e265bc9a45a324e97f46683a1c79d452e104172c440770724a63805c7",
+      "pixels": 418703,
+      "rgbaSum": 1823827491
+    }
+  ],
+  "chromium": {
+    "status": "CANDIDATE_RENDER_ENGINEERING_PASS",
+    "javascriptErrors": [],
+    "httpErrors": []
+  },
+  "flowStudy": {
+    "candidateFrames": 37,
+    "method": "OpenCV DIS with spatial flow smoothing sigma=12 and single-source warp",
+    "gifSha256": "4f9421ca88ac7dd6dafea533108c50002dd6128ebd155d022c1f802724359da3",
+    "temporalContinuity": "CANDIDATE_REQUIRES_TRANSITION_REFINEMENT",
+    "maximumAdjacentChangeOverMedian": 2.66
+  },
+  "nativeViews": [
+    {
+      "yawDeg": 22.5,
+      "semanticId": "head.whole",
+      "filename": "yaw022p5.png",
+      "sha256": "1d5dd7dfbabb043377e8b721bb6ae1501ed0bd0ec7f670cbbe4353f736d8ac4e"
+    },
+    {
+      "yawDeg": 67.5,
+      "semanticId": "head.whole",
+      "filename": "yaw067p5.png",
+      "sha256": "f1080252b3ce10b238bceb8df4f6cb886726d2a28c7e3b0bb6af9c720052416a"
+    },
+    {
+      "yawDeg": 0,
+      "semanticId": "eye.far",
+      "filename": "eye_far_yaw000.png",
+      "sha256": "b22b5ae0f3b249f230cc2d67dff70572ff2ea28281e81202fd140ebe69e17a25"
+    }
+  ],
+  "sourceIdentity": {
+    "approvedHeroSha256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+    "approvedHeroBytesValidated": false,
+    "recoveredMasterSha256": "7868cdcde95ac5bf605c26be05af9525d1e0e51c329c1ddb65c108198c779e9b"
+  },
+  "qa": {
+    "engineeringRegressionTests": 13,
+    "originalVddRegressionTests": 5,
+    "candidateBrowserViews": 5,
+    "visualEndpoints": "KEYFRAME_ORIGINAL_PIXEL_PARITY",
+    "visualHoldouts": "ARTMESH_DEFORMATION_NEEDS_REFINEMENT",
+    "temporalSampledFrames": 37,
+    "temporalOutliers": [
+      {
+        "fromYaw": 20,
+        "toYaw": 22.5,
+        "meanRGBAbsoluteDelta": 11.2824,
+        "relativeToMedian": 2.081
+      },
+      {
+        "fromYaw": 65,
+        "toYaw": 67.5,
+        "meanRGBAbsoluteDelta": 14.4204,
+        "relativeToMedian": 2.66
+      }
+    ]
+  },
+  "privateReviewPackage": {
+    "sha256": "d0b68de1589ba65a5f2db49ad7a3604d2f9f36d2fd8fc65fccff34067ed43fac",
+    "bytes": 19022502,
+    "path": "experiments/gif-multiview-keyparts-mvp/private-assets/exports/p0-character-001-multiview-review-v2.zip"
+  },
+  "acceptance": "REVIEW_CANDIDATE"
+}

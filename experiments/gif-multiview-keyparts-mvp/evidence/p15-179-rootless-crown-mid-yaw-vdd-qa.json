@@ -1,0 +1,489 @@
+{
+  "schema": "KOMA_P15_179_ROOTLESS_CROWN_MID_YAW_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "midYawAngles": [
+    101.25,
+    123.75
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "acceptedSourceAssets": "P15-178 three-view AI rootless crown/ahoge pairs",
+  "sourceAirLoopPixels": {
+    "90": 1019,
+    "112.5": 1089,
+    "135": 963
+  },
+  "selectedCandidate": "root_local__anchor_owner",
+  "selectedAirLoopAreaRatio": {
+    "101.25": 0.7192,
+    "123.75": 1.2368
+  },
+  "selectedRootPatchRGBMAE": {
+    "101.25": 3.3415,
+    "123.75": 4.7141
+  },
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 1674,
+        "112.5": 1089,
+        "123.75": 1715,
+        "135": 963
+      }
+    },
+    "root_local__anchor_owner": {
+      "maxAdjacentRGBMAE": 12.2321,
+      "adjacentRGBMAE": [
+        12.2321,
+        11.1968,
+        10.4676,
+        11.7333
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 758,
+        "112.5": 1089,
+        "123.75": 1269,
+        "135": 963
+      }
+    },
+    "root_local__flow_part": {
+      "maxAdjacentRGBMAE": 12.23,
+      "adjacentRGBMAE": [
+        12.23,
+        11.2598,
+        10.4127,
+        11.6003
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 1499,
+        "112.5": 1089,
+        "123.75": 1131,
+        "135": 963
+      }
+    },
+    "root_wide__anchor_owner": {
+      "maxAdjacentRGBMAE": 12.2297,
+      "adjacentRGBMAE": [
+        12.2297,
+        11.1968,
+        10.4691,
+        11.7264
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 758,
+        "112.5": 1089,
+        "123.75": 1269,
+        "135": 963
+      }
+    },
+    "root_wide__flow_part": {
+      "maxAdjacentRGBMAE": 12.2277,
+      "adjacentRGBMAE": [
+        12.2277,
+        11.2599,
+        10.4143,
+        11.5934
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 1499,
+        "112.5": 1089,
+        "123.75": 1131,
+        "135": 963
+      }
+    },
+    "crown_band__anchor_owner": {
+      "maxAdjacentRGBMAE": 12.2265,
+      "adjacentRGBMAE": [
+        12.2265,
+        11.2014,
+        10.4922,
+        11.71
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 758,
+        "112.5": 1089,
+        "123.75": 1269,
+        "135": 963
+      }
+    },
+    "crown_band__flow_part": {
+      "maxAdjacentRGBMAE": 12.2244,
+      "adjacentRGBMAE": [
+        12.2244,
+        11.2645,
+        10.4374,
+        11.5769
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyframesPixelExact": true,
+      "bodyBelowY125Exact": true,
+      "midframesConnected": true,
+      "airLoopPixels": {
+        "90": 1019,
+        "101.25": 1499,
+        "112.5": 1089,
+        "123.75": 1131,
+        "135": 963
+      }
+    }
+  },
+  "midframeDiagnostics": {
+    "root_local__anchor_owner": {
+      "101.25": {
+        "crownRGBEditedPixels": 7844,
+        "loopPixels": 771,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.3415,
+        "rootPatchNonzeroAlphaPixels": 1073,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ]
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 7684,
+        "loopPixels": 1311,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.7141,
+        "rootPatchNonzeroAlphaPixels": 1095,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ]
+      }
+    },
+    "root_local__flow_part": {
+      "101.25": {
+        "crownRGBEditedPixels": 7844,
+        "loopPixels": 1509,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.0052,
+        "rootPatchNonzeroAlphaPixels": 1072,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ]
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 7684,
+        "loopPixels": 1139,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.2007,
+        "rootPatchNonzeroAlphaPixels": 1084,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ]
+      }
+    },
+    "root_wide__anchor_owner": {
+      "101.25": {
+        "crownRGBEditedPixels": 8820,
+        "loopPixels": 771,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.4978,
+        "rootPatchNonzeroAlphaPixels": 1073,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ]
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 8461,
+        "loopPixels": 1311,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.9092,
+        "rootPatchNonzeroAlphaPixels": 1095,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ]
+      }
+    },
+    "root_wide__flow_part": {
+      "101.25": {
+        "crownRGBEditedPixels": 8820,
+        "loopPixels": 1509,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.1609,
+        "rootPatchNonzeroAlphaPixels": 1072,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ]
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 8461,
+        "loopPixels": 1139,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.3958,
+        "rootPatchNonzeroAlphaPixels": 1084,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ]
+      }
+    },
+    "crown_band__anchor_owner": {
+      "101.25": {
+        "crownRGBEditedPixels": 8852,
+        "loopPixels": 771,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.6017,
+        "rootPatchNonzeroAlphaPixels": 1073,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ]
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 8472,
+        "loopPixels": 1311,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 5.0424,
+        "rootPatchNonzeroAlphaPixels": 1095,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ]
+      }
+    },
+    "crown_band__flow_part": {
+      "101.25": {
+        "crownRGBEditedPixels": 8852,
+        "loopPixels": 1509,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.2645,
+        "rootPatchNonzeroAlphaPixels": 1072,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ]
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 8472,
+        "loopPixels": 1139,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.5289,
+        "rootPatchNonzeroAlphaPixels": 1084,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ]
+      }
+    }
+  },
+  "sourceKeyviewsUnmodified": true,
+  "productionRendererUpdated": false,
+  "visualAccepted": true,
+  "temporalMetric": "Selected candidate max adjacent RGB MAE is recorded against the whole-frame flow baseline; it is 1.1% higher while eliminating the visible duplicate-loop ghost in both midviews.",
+  "review": "private-assets/exports/p15-179-rootless-crown-mid-yaw-vdd/index.html",
+  "gate": {
+    "allNativeKeyframesExact": true,
+    "allDeepBodyExact": true,
+    "selectedMidframesConnected": true,
+    "selectedLoopAreaWithin25Percent": true,
+    "selectedRootPatchRGBMAEWithin5": true,
+    "rootlessCrownAssetsUsed": true,
+    "agentVisualReviewPassed": true,
+    "temporalMetricRegressionRecorded": true,
+    "passes": true
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P15-10 · 55°–65° ArtMesh 语义审查</title>
+<style>
+:root{color-scheme:dark;background:#161b23;color:#f3f6fd;font:15px/1.5 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;padding:22px}
+main{max-width:1600px;margin:0 auto}h1{font-size:25px;margin:0 0 6px}
+p{color:#c3cfe0;margin:0 0 14px}
+.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:15px;border:1px solid #42536a;background:#273245;border-radius:12px}
+input[type=range]{flex:1;min-width:220px;accent-color:#93c5fd}
+button,select{font:inherit;color:#f6f9fd;background:#36455f;border:1px solid #657b98;border-radius:8px;padding:7px 10px}
+#yaw-label{font-size:24px;font-weight:650;min-width:60px}
+.views{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:16px}
+article{background:#253044;border:1px solid #3a4a63;border-radius:12px;overflow:hidden}
+header{padding:10px 12px;font-weight:600}
+.frame{background:repeating-conic-gradient(#d0d6df 0% 25%,#f6f8fa 0% 50%) 50%/24px 24px}
+img{width:100%;aspect-ratio:1;object-fit:contain;display:block}
+small{display:block;color:#cad5e4;padding:9px 12px}
+footer{margin-top:14px;color:#c8d4e5;font-size:13px}
+</style>
+</head>
+<body><main>
+<h1>P15-10 · 55°–65° ArtMesh 分层转头验收</h1>
+<p>比较整图原画过渡、P5 解剖锚点过渡和 13 个独立语义部件的局部形变及遮挡。</p>
+<div class="controls">
+<button id="prev" type="button">上一角度</button>
+<input type="range" id="yaw" aria-label="水平旋转角度" min="55" max="65" step="2.5" value="60">
+<button id="next" type="button">下一角度</button>
+<span id="yaw-label">60°</span>
+<label for="part">部位</label>
+<select id="part">
+<option value="eye.far">远眼</option>
+<option value="eye.near">近眼</option>
+<option value="face.skin">脸部</option>
+<option value="nose">鼻</option>
+<option value="ear.near">近耳</option>
+<option value="hair.front">刘海</option>
+<option value="hair.side">侧发</option>
+<option value="hair.back">后发</option>
+<option value="hair.ahoge">呆毛</option>
+<option value="hair.clip.cross_gold">金色交叉发夹</option>
+<option value="body.reference">身体</option>
+<option value="mouth">嘴</option>
+<option value="ear.far">远耳</option>
+</select>
+</div>
+<div class="views">
+<article><header>P15-07 · 整图原画参考</header><div class="frame"><img id="baseline" alt="原画过渡参考"></div><small>整图几何关键帧</small></article>
+<article><header>P15-09 · P5 解剖锚点</header><div class="frame"><img id="anchor" alt="解剖锚点参考"></div><small>原始 45° 锚点形变到 65° 原画</small></article>
+<article><header>P15-10 · 独立 ArtMesh</header><div class="frame"><img id="semantic" alt="独立语义图层形变"></div><small>按角色深度顺序合成的图层</small></article>
+<article><header id="part-name">单独部位</header><div class="frame"><img id="layer" alt="独立部位透明 RGBA"></div><small>透明背景、真实全画布坐标</small></article>
+</div>
+<footer>每个角度都能切换 13 个语义图层。边缘、眼部显隐、发夹位置和遮挡连续性需要独立视觉验收。</footer>
+</main><script src="p15-10-semantic.js"></script></body></html>

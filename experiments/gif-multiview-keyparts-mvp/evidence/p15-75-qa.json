@@ -1,0 +1,80 @@
+{
+  "schema": "KOMA-P15-75-MOVING-HAIR-SUPPRESSION-V1",
+  "characterId": "p0_character_001",
+  "sourceSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "baseSHA256": "e9c70be74a5331ea15ce627933cb73b0b7c5a4fa13a160b73381d7c30a441dcd",
+  "eyeSHA256": "8b20d57b2189dacb3b3c849dd8307b401edb9a9862714ad764fd442b93fea625",
+  "hairSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2",
+  "clipSHA256": "c5a2cdc743b97d1d12fee85a1b2b250bb86cc13bfee2507904ed76ea877a26d5",
+  "guardSHA256": "a6452dd2920031996efa045131c674503fbd007f48a3a5699b2bbd46968823c9",
+  "method": "POSE_WEIGHTED_LOCAL_HAIR_ALPHA_SUPPRESSION_NOT_SEMANTIC_MATTE",
+  "sourceUnchanged": true,
+  "guardPolygon": [
+    [
+      513,
+      442
+    ],
+    [
+      541,
+      419
+    ],
+    [
+      577,
+      416
+    ],
+    [
+      604,
+      432
+    ],
+    [
+      604,
+      445
+    ],
+    [
+      560,
+      461
+    ],
+    [
+      536,
+      478
+    ],
+    [
+      513,
+      467
+    ]
+  ],
+  "guardBlurPx": 5,
+  "zeroPosePixelExact": true,
+  "frameHashes": [
+    {
+      "dx": 0,
+      "sha256": "22ae4a488901a29f2051025a4a432df1a50247bdc21ba4d8b4c70712cc273e99",
+      "hairSHA256": "7135d244e0f23fecbb45241ec34e687e348ae464bc26697b350ffde0a6090df2"
+    },
+    {
+      "dx": 9,
+      "sha256": "b3ba88376bcce841b97c0ca2ac7f674f52993cedb457f627d9d1b8848638b049",
+      "hairSHA256": "79598ea95efbf8a2ad1430d71567d67b7c347ee3c66b01afd7f2ac99ef41227b"
+    },
+    {
+      "dx": 18,
+      "sha256": "9c8f19dc9c81c8eef00740f772ec44afd3ce8af2be2479fbdf4060cbe91e1fd3",
+      "hairSHA256": "ddd4a5fde65b72a40366ef980483032555010ddfaa63f61bf24e04fa1d1041ae"
+    }
+  ],
+  "changedRGBOrAlphaPixelsAt18InDetail": 1130,
+  "transparentHoleCounts": {
+    "0": 0,
+    "9": 0,
+    "18": 0
+  },
+  "rejectedCandidateExperiments": [
+    "solid_skin_color_patch_due_to_obvious_flat_polygon",
+    "overwide_hair_suppression_due_to_loss_of_real_strands"
+  ],
+  "visualAssessment": "Moving-pose suppression reduces the broad reddish edge block at the eye outer corner and suppresses part of the dashed lash/forehead contamination. Remaining thin dotted marks and eye-to-bang seam are still visible at enlarged 18px, and the correction is not true semantic separation.",
+  "visualGate": "LOCAL_MOVING_ARTIFACT_REDUCED_BUT_SEMANTIC_HAIR_VISUAL_FAIL",
+  "formalArtMeshAccepted": false,
+  "formalKeyframeAccepted": false,
+  "next": "P15-76 obtain accurate isolated near-eye lash/eyebrow and bang overlap artwork; stop extending masks since remaining thin dashed contour is drawn inside source/base."
+}

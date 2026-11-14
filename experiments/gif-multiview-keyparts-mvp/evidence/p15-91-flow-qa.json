@@ -1,0 +1,64 @@
+{
+  "schema": "KOMA-P15-91-SOURCE_FLOW_TRANSITION_QA_V1",
+  "source0SHA256": "b31847299f16567c7ed17a5c49819e295b4e3959357872d871e377388d6a2730",
+  "source9SHA256": "9686fbdf4dbc13d8131c6d785692b1c9f080c6182007a97bb86ccbe41b2d14e5",
+  "method": "existing OpenCV DIS bidirectional flow",
+  "modes": {
+    "blend": {
+      "adjacentLocalMAE": [
+        3.7055,
+        3.4358,
+        3.3436,
+        3.3491,
+        3.4912,
+        3.5705,
+        3.6049,
+        3.6087,
+        3.8451,
+        2.7265,
+        2.6357,
+        2.5577,
+        2.4988,
+        2.4176,
+        2.3169,
+        2.2038,
+        2.1255,
+        1.996
+      ],
+      "max": 3.8451,
+      "first": 3.7055,
+      "firstRatio": 1.0614,
+      "totalFrames": 19,
+      "gifSHA256": "f1479d5f912a69e69a34daa38689d29e7b6f270f709c781230376f3e6094e0b3"
+    },
+    "single": {
+      "adjacentLocalMAE": [
+        3.4647,
+        3.4697,
+        3.4793,
+        3.4496,
+        6.325,
+        3.7082,
+        3.5565,
+        3.4174,
+        3.4501,
+        2.7265,
+        2.6357,
+        2.5577,
+        2.4988,
+        2.4176,
+        2.3169,
+        2.2038,
+        2.1255,
+        1.996
+      ],
+      "max": 6.325,
+      "first": 3.4647,
+      "firstRatio": 0.9958,
+      "totalFrames": 19,
+      "gifSHA256": "a65330f0a2970ad3e987acbf97c743c9b3710d28712c63fc3cc20b85126e93b0"
+    }
+  },
+  "sourceOwnedEndpointsExact": true,
+  "visualGate": "PENDING_REAL_REVIEW"
+}

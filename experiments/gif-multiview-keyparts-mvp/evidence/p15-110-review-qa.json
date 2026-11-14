@@ -1,0 +1,92 @@
+{
+  "schema": "KOMA_P15_110_VISION_PATH_REVIEW_V1",
+  "sourceAngles": [
+    60,
+    67.5,
+    75
+  ],
+  "renderedAngles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methodFrames": {
+    "P15-101-original": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "P15-107-native": {
+      "60": "../p15-107-companion-render/companion_direct_native_keys-yaw60.png",
+      "61.875": "../p15-107-companion-render/companion_direct_native_keys-yaw61p875.png",
+      "63.75": "../p15-107-companion-render/companion_direct_native_keys-yaw63p75.png",
+      "65.625": "../p15-107-companion-render/companion_direct_native_keys-yaw65p625.png",
+      "67.5": "../p15-107-companion-render/companion_direct_native_keys-yaw67p5.png",
+      "69.375": "../p15-107-companion-render/companion_direct_native_keys-yaw69p375.png",
+      "71.25": "../p15-107-companion-render/companion_direct_native_keys-yaw71p25.png",
+      "73.125": "../p15-107-companion-render/companion_direct_native_keys-yaw73p125.png",
+      "75": "../p15-107-companion-render/companion_direct_native_keys-yaw75.png"
+    },
+    "matched_path_direct": {
+      "60": "matched_path_direct-yaw60.png",
+      "61.875": "matched_path_direct-yaw61p875.png",
+      "63.75": "matched_path_direct-yaw63p75.png",
+      "65.625": "matched_path_direct-yaw65p625.png",
+      "67.5": "matched_path_direct-yaw67p5.png",
+      "69.375": "matched_path_direct-yaw69p375.png",
+      "71.25": "matched_path_direct-yaw71p25.png",
+      "73.125": "matched_path_direct-yaw73p125.png",
+      "75": "matched_path_direct-yaw75.png"
+    },
+    "matched_path_owner": {
+      "60": "matched_path_owner-yaw60.png",
+      "61.875": "matched_path_owner-yaw61p875.png",
+      "63.75": "matched_path_owner-yaw63p75.png",
+      "65.625": "matched_path_owner-yaw65p625.png",
+      "67.5": "matched_path_owner-yaw67p5.png",
+      "69.375": "matched_path_owner-yaw69p375.png",
+      "71.25": "matched_path_owner-yaw71p25.png",
+      "73.125": "matched_path_owner-yaw73p125.png",
+      "75": "matched_path_owner-yaw75.png"
+    }
+  },
+  "animations": {
+    "P15-101-original": {
+      "path": "private-assets/exports/p15-110-path-vdd/P15-101-original-loop.gif",
+      "sha256": "56c83a4a9158fb76d16139c2d2184a7e6fad2744cfc9932650d4a8a4a6990c42"
+    },
+    "P15-107-native": {
+      "path": "private-assets/exports/p15-110-path-vdd/P15-107-native-loop.gif",
+      "sha256": "3b80c1f76ef580a2fb906fe2b0ac5275c4a56a31e52719a6b10441bea324da8c"
+    },
+    "matched_path_direct": {
+      "path": "private-assets/exports/p15-110-path-vdd/matched_path_direct-loop.gif",
+      "sha256": "ba02f9263b20f644f8598311d8e753ace66091b297304b711fba186693694860"
+    },
+    "matched_path_owner": {
+      "path": "private-assets/exports/p15-110-path-vdd/matched_path_owner-loop.gif",
+      "sha256": "401d7ba8cef174f2617b62df2dd8ec1054a53dcb3c7ed4742ea28cb42c982e6f"
+    }
+  },
+  "acceptedObservedStrokeRoles": [
+    "bow.left_outer_outline",
+    "bow.right_outer_outline",
+    "bow.left_inner_fold",
+    "bow.left_tail_fold"
+  ],
+  "entry": "private-assets/exports/p15-110-path-vdd/index.html",
+  "sourceInkArtistApproved": false,
+  "fullYawVisualAccepted": false
+}

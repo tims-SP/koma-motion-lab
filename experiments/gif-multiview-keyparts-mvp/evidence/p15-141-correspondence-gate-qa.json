@@ -1,0 +1,443 @@
+{
+  "schema": "KOMA_P15_141_MATERIAL_CORRESPONDENCE_GATE_V1",
+  "characterId": "p0_character_001",
+  "referenceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "keyPairs": [
+    [
+      90.0,
+      112.5
+    ],
+    [
+      112.5,
+      135.0
+    ]
+  ],
+  "method": "warp each source hair texture onto the adjacent keyview contour mesh; compare alpha, color, and interior line strokes",
+  "comparisonRois": {
+    "ahoge_crown": [
+      0,
+      135,
+      125,
+      395
+    ],
+    "rear_hair": [
+      100,
+      325,
+      55,
+      260
+    ],
+    "face_ear": [
+      160,
+      335,
+      205,
+      400
+    ],
+    "lower_hair_boundary": [
+      275,
+      345,
+      95,
+      365
+    ]
+  },
+  "pairs": {
+    "90-112.5": {
+      "directionalHairAgreement": {
+        "forward": {
+          "ahoge_crown": {
+            "alphaIoU": 0.74033,
+            "rgbMAE": 24.3182,
+            "overlapRGBMAE": 32.8146,
+            "edgeAgreement3px": 0.35021,
+            "foregroundXorPixels": 4357,
+            "regionPixels": 36450
+          },
+          "rear_hair": {
+            "alphaIoU": 0.88202,
+            "rgbMAE": 23.45,
+            "overlapRGBMAE": 33.5749,
+            "edgeAgreement3px": 0.40293,
+            "foregroundXorPixels": 3313,
+            "regionPixels": 46125
+          },
+          "face_ear": {
+            "alphaIoU": 0.66585,
+            "rgbMAE": 21.3314,
+            "overlapRGBMAE": 38.0729,
+            "edgeAgreement3px": 0.36464,
+            "foregroundXorPixels": 4480,
+            "regionPixels": 34125
+          },
+          "lower_hair_boundary": {
+            "alphaIoU": 0.33299,
+            "rgbMAE": 4.8547,
+            "overlapRGBMAE": 32.7464,
+            "edgeAgreement3px": 0.17083,
+            "foregroundXorPixels": 1292,
+            "regionPixels": 18900
+          }
+        },
+        "reverse": {
+          "ahoge_crown": {
+            "alphaIoU": 0.72447,
+            "rgbMAE": 25.4843,
+            "overlapRGBMAE": 33.427,
+            "edgeAgreement3px": 0.33601,
+            "foregroundXorPixels": 4694,
+            "regionPixels": 36450
+          },
+          "rear_hair": {
+            "alphaIoU": 0.87095,
+            "rgbMAE": 27.9821,
+            "overlapRGBMAE": 34.2151,
+            "edgeAgreement3px": 0.40347,
+            "foregroundXorPixels": 4188,
+            "regionPixels": 46125
+          },
+          "face_ear": {
+            "alphaIoU": 0.6299,
+            "rgbMAE": 25.0869,
+            "overlapRGBMAE": 39.4208,
+            "edgeAgreement3px": 0.35626,
+            "foregroundXorPixels": 5509,
+            "regionPixels": 34125
+          },
+          "lower_hair_boundary": {
+            "alphaIoU": 0.44302,
+            "rgbMAE": 15.8191,
+            "overlapRGBMAE": 34.2767,
+            "edgeAgreement3px": 0.23113,
+            "foregroundXorPixels": 3172,
+            "regionPixels": 18900
+          }
+        }
+      },
+      "landmarkProposals": {
+        "hair.ahoge.root": {
+          "deltaXY": [
+            89.0,
+            7.0
+          ],
+          "distancePx": 89.275
+        },
+        "hair.ahoge.apex": {
+          "deltaXY": [
+            55.0,
+            16.0
+          ],
+          "distancePx": 57.28
+        },
+        "hair.crown": {
+          "deltaXY": [
+            25.0,
+            10.0
+          ],
+          "distancePx": 26.926
+        },
+        "hair.back.tip": {
+          "deltaXY": [
+            28.0,
+            -7.0
+          ],
+          "distancePx": 28.862
+        },
+        "ear.center": {
+          "deltaXY": [
+            17.0,
+            10.0
+          ],
+          "distancePx": 19.723
+        },
+        "eye.near.center": {
+          "deltaXY": [
+            25.0,
+            0.0
+          ],
+          "distancePx": 25.0
+        },
+        "nose.tip": {
+          "deltaXY": [
+            -15.0,
+            3.0
+          ],
+          "distancePx": 15.297
+        },
+        "chin": {
+          "deltaXY": [
+            18.0,
+            -17.0
+          ],
+          "distancePx": 24.759
+        },
+        "collar.back.center": {
+          "deltaXY": [
+            7.0,
+            -10.0
+          ],
+          "distancePx": 12.207
+        },
+        "shoulder.near.outer": {
+          "deltaXY": [
+            9.0,
+            -5.0
+          ],
+          "distancePx": 10.296
+        },
+        "jacket.gold.trim": {
+          "deltaXY": [
+            41.0,
+            -24.0
+          ],
+          "distancePx": 47.508
+        },
+        "bow.center": {
+          "deltaXY": [
+            20.0,
+            -7.0
+          ],
+          "distancePx": 21.19
+        }
+      },
+      "hasValidatedPhysicalStrandLabels": false
+    },
+    "112.5-135": {
+      "directionalHairAgreement": {
+        "forward": {
+          "ahoge_crown": {
+            "alphaIoU": 0.75595,
+            "rgbMAE": 21.2213,
+            "overlapRGBMAE": 31.978,
+            "edgeAgreement3px": 0.27945,
+            "foregroundXorPixels": 3703,
+            "regionPixels": 36450
+          },
+          "rear_hair": {
+            "alphaIoU": 0.88855,
+            "rgbMAE": 25.5963,
+            "overlapRGBMAE": 34.5919,
+            "edgeAgreement3px": 0.4179,
+            "foregroundXorPixels": 3522,
+            "regionPixels": 46125
+          },
+          "face_ear": {
+            "alphaIoU": 0.74737,
+            "rgbMAE": 25.3312,
+            "overlapRGBMAE": 36.9547,
+            "edgeAgreement3px": 0.36613,
+            "foregroundXorPixels": 4349,
+            "regionPixels": 34125
+          },
+          "lower_hair_boundary": {
+            "alphaIoU": 0.48759,
+            "rgbMAE": 15.9876,
+            "overlapRGBMAE": 30.9185,
+            "edgeAgreement3px": 0.25233,
+            "foregroundXorPixels": 3593,
+            "regionPixels": 18900
+          }
+        },
+        "reverse": {
+          "ahoge_crown": {
+            "alphaIoU": 0.78899,
+            "rgbMAE": 21.724,
+            "overlapRGBMAE": 30.5369,
+            "edgeAgreement3px": 0.28916,
+            "foregroundXorPixels": 3502,
+            "regionPixels": 36450
+          },
+          "rear_hair": {
+            "alphaIoU": 0.89412,
+            "rgbMAE": 22.0745,
+            "overlapRGBMAE": 33.9881,
+            "edgeAgreement3px": 0.39931,
+            "foregroundXorPixels": 2957,
+            "regionPixels": 46125
+          },
+          "face_ear": {
+            "alphaIoU": 0.6864,
+            "rgbMAE": 23.4068,
+            "overlapRGBMAE": 37.2957,
+            "edgeAgreement3px": 0.35366,
+            "foregroundXorPixels": 4672,
+            "regionPixels": 34125
+          },
+          "lower_hair_boundary": {
+            "alphaIoU": 0.184,
+            "rgbMAE": 4.9297,
+            "overlapRGBMAE": 33.4423,
+            "edgeAgreement3px": 0.03109,
+            "foregroundXorPixels": 1632,
+            "regionPixels": 18900
+          }
+        }
+      },
+      "landmarkProposals": {
+        "hair.ahoge.root": {
+          "deltaXY": [
+            -30.0,
+            -5.0
+          ],
+          "distancePx": 30.414
+        },
+        "hair.ahoge.apex": {
+          "deltaXY": [
+            -30.0,
+            -13.0
+          ],
+          "distancePx": 32.696
+        },
+        "hair.crown": {
+          "deltaXY": [
+            -4.0,
+            -4.0
+          ],
+          "distancePx": 5.657
+        },
+        "hair.back.tip": {
+          "deltaXY": [
+            23.0,
+            11.0
+          ],
+          "distancePx": 25.495
+        },
+        "ear.center": {
+          "deltaXY": [
+            54.0,
+            14.0
+          ],
+          "distancePx": 55.785
+        },
+        "nose.tip": {
+          "deltaXY": [
+            4.0,
+            22.0
+          ],
+          "distancePx": 22.361
+        },
+        "chin": {
+          "deltaXY": [
+            -2.0,
+            5.0
+          ],
+          "distancePx": 5.385
+        },
+        "collar.back.center": {
+          "deltaXY": [
+            6.0,
+            -2.0
+          ],
+          "distancePx": 6.325
+        },
+        "shoulder.near.outer": {
+          "deltaXY": [
+            17.0,
+            -9.0
+          ],
+          "distancePx": 19.235
+        },
+        "jacket.gold.trim": {
+          "deltaXY": [
+            17.0,
+            -5.0
+          ],
+          "distancePx": 17.72
+        }
+      },
+      "hasValidatedPhysicalStrandLabels": false
+    }
+  },
+  "artistVerifiedStrandIdentity": false,
+  "physical3DAnchorCorrespondenceVerified": false,
+  "perViewUnderpaintComplete": false,
+  "productionVDDApproved": false,
+  "sourceArtClassification": "provisional appearance masks; some eye and face ink is included in the hair source",
+  "gateRGBThreshold": 15.0,
+  "next": "Replace source-view hair masks with matched strand layers. Draw/approve actual root-tip-corresponding parts and ear/face/neck underpaint before shared mesh production.",
+  "rankedVisibleDisagreements": [
+    {
+      "pair": "112.5-135",
+      "region": "rear_hair",
+      "rgbMAE": 25.5963
+    },
+    {
+      "pair": "112.5-135",
+      "region": "face_ear",
+      "rgbMAE": 25.3312
+    },
+    {
+      "pair": "90-112.5",
+      "region": "ahoge_crown",
+      "rgbMAE": 24.3182
+    },
+    {
+      "pair": "90-112.5",
+      "region": "rear_hair",
+      "rgbMAE": 23.45
+    },
+    {
+      "pair": "90-112.5",
+      "region": "face_ear",
+      "rgbMAE": 21.3314
+    },
+    {
+      "pair": "112.5-135",
+      "region": "ahoge_crown",
+      "rgbMAE": 21.2213
+    },
+    {
+      "pair": "112.5-135",
+      "region": "lower_hair_boundary",
+      "rgbMAE": 15.9876
+    },
+    {
+      "pair": "90-112.5",
+      "region": "lower_hair_boundary",
+      "rgbMAE": 4.8547
+    }
+  ],
+  "gateResults": {
+    "sourceVisibilityAndIdentityGatePassed": false,
+    "regionsOverThreshold": [
+      {
+        "pair": "112.5-135",
+        "region": "rear_hair",
+        "rgbMAE": 25.5963
+      },
+      {
+        "pair": "112.5-135",
+        "region": "face_ear",
+        "rgbMAE": 25.3312
+      },
+      {
+        "pair": "90-112.5",
+        "region": "ahoge_crown",
+        "rgbMAE": 24.3182
+      },
+      {
+        "pair": "90-112.5",
+        "region": "rear_hair",
+        "rgbMAE": 23.45
+      },
+      {
+        "pair": "90-112.5",
+        "region": "face_ear",
+        "rgbMAE": 21.3314
+      },
+      {
+        "pair": "112.5-135",
+        "region": "ahoge_crown",
+        "rgbMAE": 21.2213
+      },
+      {
+        "pair": "112.5-135",
+        "region": "lower_hair_boundary",
+        "rgbMAE": 15.9876
+      }
+    ],
+    "interpretation": "Image-space forward texture disagreement threshold is a candidate selection check, not physical identity proof."
+  },
+  "review": "private-assets/exports/p15-141-correspondence-gate/index.html"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "KOMA-P0-P15-06-HOLDOUT-ARTWORK-ENGINEERING-STATUS-V1",
+  "characterId": "p0_character_001",
+  "originalKeyViewAnglesVerified": [
+    0,
+    45,
+    90
+  ],
+  "originalKeyViewSHA256Verified": true,
+  "approvedHeroExpectedSHA256": "e95a4b694777f4dcd2e085b25b10d76058d65cd1f8c6ef46971caa8005cb7e54",
+  "approvedHeroSourceSHA256Verified": false,
+  "newIndependentArtworkAngles": [
+    65.0,
+    77.5
+  ],
+  "requiredIndependentRGBAFullCanvasLayers": 26,
+  "newIndependentPaintingsAccepted": 0,
+  "importerRealSourceRegression": {
+    "67p5": {
+      "yaw": 67.5,
+      "partsVerified": 13,
+      "compositeSHA256": "775329992ba0f1bcba8a8b2de22294b3b0b92f3c2b6dfff54fb462b78532ee17",
+      "recomposition": {
+        "maximumAlphaDifference": 0,
+        "maximumVisibleRGBDifference": 0,
+        "meanVisibleRGBDifference": 0.0
+      },
+      "QA_SHA256": "8d2713c276517398eb3c0640e8095da8848bc8e8eb7b8971988b2b0b9bcf1894"
+    },
+    "72p5": {
+      "yaw": 72.5,
+      "partsVerified": 13,
+      "compositeSHA256": "2ce0c819868975f689635fa465f6376201885ca8229728d3a19031cd9c3684eb",
+      "recomposition": {
+        "maximumAlphaDifference": 0,
+        "maximumVisibleRGBDifference": 0,
+        "meanVisibleRGBDifference": 0.0
+      },
+      "QA_SHA256": "578205ac3d5a20096138ecc567d37ffc5da5369a55b57f513ef9cb232df87e1d"
+    }
+  },
+  "importerRecompositionMaxDifference": 0,
+  "generationSourceRequirement": "independently authored painted keyframes with separate semantic RGBA parts",
+  "projectRenderBaseline": "P8_SEMANTIC_OCCLUSION_ARTMESH",
+  "nextStage": "P15-06 independent 65 and 77.5 paintings, P0 Hero source identity review and P0 visual signoff",
+  "engineeringStatus": "P15_06_SOURCE_AND_ARTMESH_IMPORTER_VERIFIED",
+  "artisticAcceptance": "PENDING",
+  "sourceReadinessQA_SHA256": "2a0ef4a601813312ebad89e6ed3d98eab1b6e4fb4bef7a0113ce4803f98e29af",
+  "assetContractSHA256": "203a0eb2bee711c8416c927400b6c953bfa837b3c27cc39a5f8e921bb246b3dc"
+}

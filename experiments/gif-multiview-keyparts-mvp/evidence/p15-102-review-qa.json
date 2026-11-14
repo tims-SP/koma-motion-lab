@@ -1,0 +1,140 @@
+{
+  "schema": "KOMA_P15_102_INTERACTIVE_REVIEW_V1",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "baseline_head": {
+      "60": "../p15-101-head-render/head_alpha_blend-yaw60.png",
+      "61.875": "../p15-101-head-render/head_alpha_blend-yaw61p875.png",
+      "63.75": "../p15-101-head-render/head_alpha_blend-yaw63p75.png",
+      "65.625": "../p15-101-head-render/head_alpha_blend-yaw65p625.png",
+      "67.5": "../p15-101-head-render/head_alpha_blend-yaw67p5.png",
+      "69.375": "../p15-101-head-render/head_alpha_blend-yaw69p375.png",
+      "71.25": "../p15-101-head-render/head_alpha_blend-yaw71p25.png",
+      "73.125": "../p15-101-head-render/head_alpha_blend-yaw73p125.png",
+      "75": "../p15-101-head-render/head_alpha_blend-yaw75.png"
+    },
+    "neck_mesh": {
+      "60": "neck_mesh-yaw60.png",
+      "61.875": "neck_mesh-yaw61p875.png",
+      "63.75": "neck_mesh-yaw63p75.png",
+      "65.625": "neck_mesh-yaw65p625.png",
+      "67.5": "neck_mesh-yaw67p5.png",
+      "69.375": "neck_mesh-yaw69p375.png",
+      "71.25": "neck_mesh-yaw71p25.png",
+      "73.125": "neck_mesh-yaw73p125.png",
+      "75": "neck_mesh-yaw75.png"
+    },
+    "neck_eye_owner": {
+      "60": "neck_eye_owner-yaw60.png",
+      "61.875": "neck_eye_owner-yaw61p875.png",
+      "63.75": "neck_eye_owner-yaw63p75.png",
+      "65.625": "neck_eye_owner-yaw65p625.png",
+      "67.5": "neck_eye_owner-yaw67p5.png",
+      "69.375": "neck_eye_owner-yaw69p375.png",
+      "71.25": "neck_eye_owner-yaw71p25.png",
+      "73.125": "neck_eye_owner-yaw73p125.png",
+      "75": "neck_eye_owner-yaw75.png"
+    },
+    "neck_eye_dissolve": {
+      "60": "neck_eye_dissolve-yaw60.png",
+      "61.875": "neck_eye_dissolve-yaw61p875.png",
+      "63.75": "neck_eye_dissolve-yaw63p75.png",
+      "65.625": "neck_eye_dissolve-yaw65p625.png",
+      "67.5": "neck_eye_dissolve-yaw67p5.png",
+      "69.375": "neck_eye_dissolve-yaw69p375.png",
+      "71.25": "neck_eye_dissolve-yaw71p25.png",
+      "73.125": "neck_eye_dissolve-yaw73p125.png",
+      "75": "neck_eye_dissolve-yaw75.png"
+    },
+    "neck_eye_profile": {
+      "60": "neck_eye_profile-yaw60.png",
+      "61.875": "neck_eye_profile-yaw61p875.png",
+      "63.75": "neck_eye_profile-yaw63p75.png",
+      "65.625": "neck_eye_profile-yaw65p625.png",
+      "67.5": "neck_eye_profile-yaw67p5.png",
+      "69.375": "neck_eye_profile-yaw69p375.png",
+      "71.25": "neck_eye_profile-yaw71p25.png",
+      "73.125": "neck_eye_profile-yaw73p125.png",
+      "75": "neck_eye_profile-yaw75.png"
+    },
+    "gold_owner_static": {
+      "60": "gold_owner_static-yaw60.png",
+      "61.875": "gold_owner_static-yaw61p875.png",
+      "63.75": "gold_owner_static-yaw63p75.png",
+      "65.625": "gold_owner_static-yaw65p625.png",
+      "67.5": "gold_owner_static-yaw67p5.png",
+      "69.375": "gold_owner_static-yaw69p375.png",
+      "71.25": "gold_owner_static-yaw71p25.png",
+      "73.125": "gold_owner_static-yaw73p125.png",
+      "75": "gold_owner_static-yaw75.png"
+    },
+    "gold_owner_mesh": {
+      "60": "gold_owner_mesh-yaw60.png",
+      "61.875": "gold_owner_mesh-yaw61p875.png",
+      "63.75": "gold_owner_mesh-yaw63p75.png",
+      "65.625": "gold_owner_mesh-yaw65p625.png",
+      "67.5": "gold_owner_mesh-yaw67p5.png",
+      "69.375": "gold_owner_mesh-yaw69p375.png",
+      "71.25": "gold_owner_mesh-yaw71p25.png",
+      "73.125": "gold_owner_mesh-yaw73p125.png",
+      "75": "gold_owner_mesh-yaw75.png"
+    },
+    "gold_crossfade_mesh": {
+      "60": "gold_crossfade_mesh-yaw60.png",
+      "61.875": "gold_crossfade_mesh-yaw61p875.png",
+      "63.75": "gold_crossfade_mesh-yaw63p75.png",
+      "65.625": "gold_crossfade_mesh-yaw65p625.png",
+      "67.5": "gold_crossfade_mesh-yaw67p5.png",
+      "69.375": "gold_crossfade_mesh-yaw69p375.png",
+      "71.25": "gold_crossfade_mesh-yaw71p25.png",
+      "73.125": "gold_crossfade_mesh-yaw73p125.png",
+      "75": "gold_crossfade_mesh-yaw75.png"
+    }
+  },
+  "animations": {
+    "baseline_head": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/baseline_head-loop.gif",
+      "sha256": "c082971548930c28ad49a3605473a4d51ff3dbc7a52535343fcf07aacdbad513"
+    },
+    "neck_mesh": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/neck_mesh-loop.gif",
+      "sha256": "9df9afad156f61ec85cfad643e6bf503d66ca844efa6945b88e236144f747504"
+    },
+    "neck_eye_owner": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_owner-loop.gif",
+      "sha256": "56856b2604072f56162da4983e268e8978bc941b17e8ea45404270f426f2688e"
+    },
+    "neck_eye_dissolve": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_dissolve-loop.gif",
+      "sha256": "e641afabc2e3dfe61b6221889b9948d8cd500ecf800cfeaeccc260a98f07a466"
+    },
+    "neck_eye_profile": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/neck_eye_profile-loop.gif",
+      "sha256": "c4278dca76ea903eafe7a9b067c1cdcd7f2b8dbce0fff65c825b8dd423df22fe"
+    },
+    "gold_owner_static": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_static-loop.gif",
+      "sha256": "c97dea51790ff8cf4e54d5efa5c93dfbf192ef44453b1164943fae8fffe5edfd"
+    },
+    "gold_owner_mesh": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/gold_owner_mesh-loop.gif",
+      "sha256": "778298d913fb1308637751b1ab7066f775fc63e1705d92d5fd19b079d799741c"
+    },
+    "gold_crossfade_mesh": {
+      "path": "private-assets/exports/p15-102-neck-eye-profile/gold_crossfade_mesh-loop.gif",
+      "sha256": "4e1a7189bba08e2b6a4ffc359fe0d8085e2167420c9b2a1a5b1cef3228df5ee2"
+    }
+  },
+  "entry": "private-assets/exports/p15-102-neck-eye-profile/index.html",
+  "continuousVisualAccepted": false
+}

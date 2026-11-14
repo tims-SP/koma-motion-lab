@@ -1,0 +1,624 @@
+{
+  "schema": "KOMA_P15_107_SOURCE_INK_SINGLE_OWNER_V1",
+  "character": "p0_character_001",
+  "sourceModel": "genuine registered 67.5-degree native garment artwork",
+  "sourceImageSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+  "baseTopologySHA256": "74f60b76ec7ea803425d516c8e1e64a6881a1ec3f0c9a12a20585f2d53df730c",
+  "method": "regularized piecewise two-dimensional TPS on existing P15-106 multiview semantic anchors",
+  "angles": [
+    60,
+    61.875,
+    63.75,
+    65.625,
+    67.5,
+    69.375,
+    71.25,
+    73.125,
+    75
+  ],
+  "methods": {
+    "canonical_full": {
+      "60": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw61p875.png",
+        "sha256": "4c22a2ebdfc3c9e435fd38dac8f88f65a3b271820f562e24c28d36f3f748bbdd"
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw63p75.png",
+        "sha256": "2fd2cc824eff738033a00d803f77874444d7af7a9435abe0dda98e09cd31f7f5"
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw65p625.png",
+        "sha256": "f0c9065a9097c69e29bfbf699d4bc4ea4e30320e254273fc9a727be9509edc87"
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw67p5.png",
+        "sha256": "e730751d756c953d5254530736f638b61346d3adf2a7f88f606bf06e2e88f6fa"
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw69p375.png",
+        "sha256": "1497ca6c19cd962afa8013d4f85624f1f2c36d8ddba8e246e8ae07c494fddff0"
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw71p25.png",
+        "sha256": "f1b26c2fde64d7eeb741077293a2d34e8727f6a8c622520f99142b2c106c4aa7"
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw73p125.png",
+        "sha256": "16f29726a1f1041796418c8fbe3b7a871be5327e79b4788850bc59e2a92145f4"
+      },
+      "75": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_full-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    },
+    "canonical_bow": {
+      "60": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw61p875.png",
+        "sha256": "28bc8690d972d38e9ef7fa9f435722d03c167c2c4a0f786ea6b6f0cb5274f08c"
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw63p75.png",
+        "sha256": "5cd76aa9e8aeacaf174921ae39462722f4a3a298ced3b82a0fd83a10c4018528"
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw65p625.png",
+        "sha256": "77b021685de0068323dc7233bbeb8df500c78c6d3f3d0e2ead33cd9505caf538"
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw67p5.png",
+        "sha256": "51bccb7c646bfa661af90cde21b67509ab5690f1d62e250a3924037969b4326d"
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw69p375.png",
+        "sha256": "a8fdcc0f65eb7066d6c23cdad3e99d3b686d6066b12b334c98db6ec553ac3405"
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw71p25.png",
+        "sha256": "ff73110cee4a905b239a3ee6e8653253b5deb59d1c1d1e0a6f02c79cbccf3b29"
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw73p125.png",
+        "sha256": "d2373ec0ac359949e7f5908489dea16767e0befde29a9fde043c4fcc0cc8c529"
+      },
+      "75": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    },
+    "canonical_bow_soft_edge": {
+      "60": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw60.png",
+        "sha256": "8cc976eb30b2871f81bb6c1a2f8a7c2efd1944dd9f04b73de1d00075f96cf659"
+      },
+      "61.875": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw61p875.png",
+        "sha256": "e9444462c9dad2052c940e23381d14c92e632c5765d6f56429d0cc05a20793bf"
+      },
+      "63.75": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw63p75.png",
+        "sha256": "7af24de46c5b74510d808c30b2a69ba9a8248a7cc3181f6fbf7bb7f1729901a7"
+      },
+      "65.625": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw65p625.png",
+        "sha256": "b197c5d32041de8b1c1c43add0d5a99f7f5cc238a9d10addaab044dfc8813df3"
+      },
+      "67.5": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw67p5.png",
+        "sha256": "e306f7eccf5e2438d9ced1673907e4485b882c82fcb82517c093ed2ceb08df41"
+      },
+      "69.375": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw69p375.png",
+        "sha256": "076b6c73c538fbc9ac2f665ef39644101b19082507410cb132105549c44c6969"
+      },
+      "71.25": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw71p25.png",
+        "sha256": "885be9c82e1b51be89692d7f739cde9e8fdc585bb7b07b1b2f087f6589f68067"
+      },
+      "73.125": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw73p125.png",
+        "sha256": "7e8e493715e86f9bc98bef8a1bf77fc1c08eeb709dd047dd14ea17b86472723f"
+      },
+      "75": {
+        "path": "private-assets/exports/p15-107-canonical-ink/canonical_bow_soft_edge-yaw75.png",
+        "sha256": "7b3aec2907618de4a61969862a5be7e2b2dc7a7d7292425b21155a6711736492"
+      }
+    }
+  },
+  "maps": {
+    "61.875": {
+      "landmarks": 56,
+      "minimumJacobian": 33.79241,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 7.4333
+    },
+    "63.75": {
+      "landmarks": 57,
+      "minimumJacobian": 42.68007,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 4.7751
+    },
+    "65.625": {
+      "landmarks": 57,
+      "minimumJacobian": 53.12818,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 2.2549
+    },
+    "67.5": {
+      "landmarks": 58,
+      "minimumJacobian": 64.0,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 0.0
+    },
+    "69.375": {
+      "landmarks": 58,
+      "minimumJacobian": 53.35728,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 1.2398
+    },
+    "71.25": {
+      "landmarks": 58,
+      "minimumJacobian": 43.28492,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 2.5175
+    },
+    "73.125": {
+      "landmarks": 56,
+      "minimumJacobian": 35.11168,
+      "negativeJacobianSamples": 0,
+      "meanWarpPixelShift": 3.8706
+    }
+  },
+  "sourceFoldArtistApproved": false,
+  "fullYawVisualAccepted": false,
+  "metrics": {
+    "P15-101-head_alpha_blend": {
+      "garment": {
+        "adjacentRGBMAE": [
+          8.0853,
+          5.9747,
+          5.7633,
+          5.6403,
+          5.5823,
+          5.5583,
+          5.6086,
+          7.5854
+        ],
+        "maxAdjacentRGBMAE": 8.0853,
+        "interiorMaxRGBMAE": 5.9747,
+        "midpointRGBMAE": 5.6403,
+        "meanAdjacentRGBMAE": 6.2248
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          9.9103,
+          7.2775,
+          7.269,
+          7.2258,
+          7.2519,
+          7.252,
+          7.2592,
+          10.1016
+        ],
+        "maxAdjacentRGBMAE": 10.1016,
+        "interiorMaxRGBMAE": 7.2775,
+        "midpointRGBMAE": 7.2519,
+        "meanAdjacentRGBMAE": 7.9434
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          9.1631,
+          5.1833,
+          5.1612,
+          5.1769,
+          5.1791,
+          5.1609,
+          5.1665,
+          9.0894
+        ],
+        "maxAdjacentRGBMAE": 9.1631,
+        "interiorMaxRGBMAE": 5.1833,
+        "midpointRGBMAE": 5.1791,
+        "meanAdjacentRGBMAE": 6.1601
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.5625,
+          6.7573,
+          6.4919,
+          6.291,
+          6.1889,
+          6.2016,
+          6.2264,
+          8.6793
+        ],
+        "maxAdjacentRGBMAE": 9.5625,
+        "interiorMaxRGBMAE": 6.7573,
+        "midpointRGBMAE": 6.291,
+        "meanAdjacentRGBMAE": 7.0499
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "interiorMaxRGBMAE": 11.7003,
+        "midpointRGBMAE": 10.2164,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "P15-105-three_key_direct": {
+      "garment": {
+        "adjacentRGBMAE": [
+          8.6766,
+          6.661,
+          6.6147,
+          7.0437,
+          9.5856,
+          9.1875,
+          9.0895,
+          10.8569
+        ],
+        "maxAdjacentRGBMAE": 10.8569,
+        "interiorMaxRGBMAE": 9.5856,
+        "midpointRGBMAE": 9.5856,
+        "meanAdjacentRGBMAE": 8.4644
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          9.5295,
+          6.8264,
+          6.9317,
+          8.0346,
+          13.4768,
+          12.6596,
+          12.4983,
+          14.9315
+        ],
+        "maxAdjacentRGBMAE": 14.9315,
+        "interiorMaxRGBMAE": 13.4768,
+        "midpointRGBMAE": 13.4768,
+        "meanAdjacentRGBMAE": 10.6111
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          10.3755,
+          6.9599,
+          7.079,
+          8.2945,
+          10.2295,
+          9.0715,
+          8.9172,
+          12.2252
+        ],
+        "maxAdjacentRGBMAE": 12.2252,
+        "interiorMaxRGBMAE": 10.2295,
+        "midpointRGBMAE": 10.2295,
+        "meanAdjacentRGBMAE": 9.144
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          9.7092,
+          7.2566,
+          7.0841,
+          7.2934,
+          9.339,
+          9.0284,
+          9.0067,
+          11.2075
+        ],
+        "maxAdjacentRGBMAE": 11.2075,
+        "interiorMaxRGBMAE": 9.339,
+        "midpointRGBMAE": 9.339,
+        "meanAdjacentRGBMAE": 8.7406
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          15.0192,
+          11.8921,
+          11.0844,
+          10.3898,
+          9.922,
+          10.1136,
+          10.6984,
+          13.4757
+        ],
+        "maxAdjacentRGBMAE": 15.0192,
+        "interiorMaxRGBMAE": 11.8921,
+        "midpointRGBMAE": 10.3898,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "canonical_full": {
+      "garment": {
+        "adjacentRGBMAE": [
+          22.6199,
+          7.5051,
+          7.1997,
+          7.0257,
+          11.1542,
+          10.6376,
+          10.7996,
+          30.23
+        ],
+        "maxAdjacentRGBMAE": 30.23,
+        "interiorMaxRGBMAE": 11.1542,
+        "midpointRGBMAE": 11.1542,
+        "meanAdjacentRGBMAE": 13.3965
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          25.6218,
+          8.2727,
+          7.9022,
+          8.1849,
+          15.9114,
+          14.943,
+          15.3509,
+          42.0378
+        ],
+        "maxAdjacentRGBMAE": 42.0378,
+        "interiorMaxRGBMAE": 15.9114,
+        "midpointRGBMAE": 15.9114,
+        "meanAdjacentRGBMAE": 17.2781
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          22.402,
+          6.6904,
+          7.0591,
+          7.6884,
+          10.5248,
+          8.4021,
+          11.0799,
+          31.2623
+        ],
+        "maxAdjacentRGBMAE": 31.2623,
+        "interiorMaxRGBMAE": 11.0799,
+        "midpointRGBMAE": 10.5248,
+        "meanAdjacentRGBMAE": 13.1386
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          19.8844,
+          9.7743,
+          9.6248,
+          9.2706,
+          10.5539,
+          9.8825,
+          10.0666,
+          26.0815
+        ],
+        "maxAdjacentRGBMAE": 26.0815,
+        "interiorMaxRGBMAE": 10.5539,
+        "midpointRGBMAE": 10.5539,
+        "meanAdjacentRGBMAE": 13.1423
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          16.0265,
+          11.566,
+          10.8173,
+          10.1128,
+          9.922,
+          10.1137,
+          10.6983,
+          13.4756
+        ],
+        "maxAdjacentRGBMAE": 16.0265,
+        "interiorMaxRGBMAE": 11.566,
+        "midpointRGBMAE": 10.1128,
+        "meanAdjacentRGBMAE": 11.5915
+      }
+    },
+    "canonical_bow": {
+      "garment": {
+        "adjacentRGBMAE": [
+          12.1586,
+          6.3201,
+          6.0767,
+          6.1744,
+          7.5414,
+          7.3963,
+          7.6895,
+          12.9693
+        ],
+        "maxAdjacentRGBMAE": 12.9693,
+        "interiorMaxRGBMAE": 7.6895,
+        "midpointRGBMAE": 7.5414,
+        "meanAdjacentRGBMAE": 8.2908
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          20.4546,
+          8.0484,
+          7.9649,
+          8.2797,
+          11.9066,
+          11.8096,
+          12.7506,
+          24.6827
+        ],
+        "maxAdjacentRGBMAE": 24.6827,
+        "interiorMaxRGBMAE": 12.7506,
+        "midpointRGBMAE": 11.9066,
+        "meanAdjacentRGBMAE": 13.2371
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          23.1751,
+          7.4618,
+          7.6605,
+          8.4468,
+          11.414,
+          9.5984,
+          12.8108,
+          30.7315
+        ],
+        "maxAdjacentRGBMAE": 30.7315,
+        "interiorMaxRGBMAE": 12.8108,
+        "midpointRGBMAE": 11.414,
+        "meanAdjacentRGBMAE": 13.9124
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          13.3157,
+          7.776,
+          7.4793,
+          7.2131,
+          8.0493,
+          7.7749,
+          8.2794,
+          13.4293
+        ],
+        "maxAdjacentRGBMAE": 13.4293,
+        "interiorMaxRGBMAE": 8.2794,
+        "midpointRGBMAE": 8.0493,
+        "meanAdjacentRGBMAE": 9.1646
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "interiorMaxRGBMAE": 11.7003,
+        "midpointRGBMAE": 10.2164,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    },
+    "canonical_bow_soft_edge": {
+      "garment": {
+        "adjacentRGBMAE": [
+          12.1716,
+          6.3174,
+          6.0881,
+          6.2228,
+          7.5956,
+          7.3539,
+          7.635,
+          12.987
+        ],
+        "maxAdjacentRGBMAE": 12.987,
+        "interiorMaxRGBMAE": 7.635,
+        "midpointRGBMAE": 7.5956,
+        "meanAdjacentRGBMAE": 8.2964
+      },
+      "bow": {
+        "adjacentRGBMAE": [
+          20.4759,
+          8.0498,
+          7.9875,
+          8.3908,
+          12.0148,
+          11.6922,
+          12.5948,
+          24.7312
+        ],
+        "maxAdjacentRGBMAE": 24.7312,
+        "interiorMaxRGBMAE": 12.5948,
+        "midpointRGBMAE": 12.0148,
+        "meanAdjacentRGBMAE": 13.2421
+      },
+      "jewel": {
+        "adjacentRGBMAE": [
+          23.388,
+          7.4401,
+          7.6774,
+          8.4907,
+          11.5449,
+          9.3368,
+          12.4756,
+          30.7753
+        ],
+        "maxAdjacentRGBMAE": 30.7753,
+        "interiorMaxRGBMAE": 12.4756,
+        "midpointRGBMAE": 11.5449,
+        "meanAdjacentRGBMAE": 13.8911
+      },
+      "collar": {
+        "adjacentRGBMAE": [
+          13.3629,
+          7.7921,
+          7.5128,
+          7.2736,
+          8.1374,
+          7.7681,
+          8.2309,
+          13.507
+        ],
+        "maxAdjacentRGBMAE": 13.507,
+        "interiorMaxRGBMAE": 8.2309,
+        "midpointRGBMAE": 8.1374,
+        "meanAdjacentRGBMAE": 9.1981
+      },
+      "head": {
+        "adjacentRGBMAE": [
+          14.9137,
+          11.7003,
+          10.9153,
+          10.2164,
+          10.0393,
+          10.2508,
+          10.8777,
+          13.6813
+        ],
+        "maxAdjacentRGBMAE": 14.9137,
+        "interiorMaxRGBMAE": 11.7003,
+        "midpointRGBMAE": 10.2164,
+        "meanAdjacentRGBMAE": 11.5744
+      }
+    }
+  },
+  "contact": "private-assets/exports/p15-107-canonical-ink/single-source-ink-contact.jpg",
+  "visualReview": {
+    "performed": true,
+    "sourceOwnedRibbonInk": "a single registered middle source owns the detailed folds in each interpolated bow component",
+    "nativeSourceConsistency": "all rendered interior texture coordinates originate from one registered 67.5-degree art",
+    "geometry": "regularized 2D thin plate spline over original three-view semantic correspondence anchors",
+    "lineArtObservation": "middle ribbon ink is coherent within each frame, while keyview switches remain abrupt at original endpoints",
+    "garmentOcclusionObservation": "background shoulder, trim and collar lines still exhibit cross-view ghosting in bow-only composition",
+    "nativeFullGarmentObservation": "single-source whole-garment source remains recognizable but source keyview shape differences make endpoint continuity worse",
+    "regionalMetrics": {
+      "bow": {
+        "baselineMaxAdjacentRGBMAE": 10.1016,
+        "singleSourceFullMaxAdjacentRGBMAE": 42.0378,
+        "singleSourceBowMaxAdjacentRGBMAE": 24.6827
+      },
+      "jewel": {
+        "baselineMaxAdjacentRGBMAE": 9.1631,
+        "singleSourceFullMaxAdjacentRGBMAE": 31.2623,
+        "singleSourceBowMaxAdjacentRGBMAE": 30.7315
+      },
+      "collar": {
+        "baselineMaxAdjacentRGBMAE": 9.5625,
+        "singleSourceFullMaxAdjacentRGBMAE": 26.0815,
+        "singleSourceBowMaxAdjacentRGBMAE": 13.4293
+      }
+    },
+    "preferredVisualBenchmark": "P15-101 head_alpha_blend",
+    "engineeringQA": "PASS",
+    "artisticContinuity": "REQUIRES_STROKE_IDENTITY_AND_OCCLUSION_CORRESPONDENCE",
+    "nextCriticalProblem": "stroke-level ribbon and collar correspondence plus foreground/background occlusion and truly matching garment keyart"
+  }
+}

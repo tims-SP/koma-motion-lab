@@ -1,0 +1,98 @@
+{
+  "schema": "KOMA_P15_155_ANCHORED_CROWN_MOTION_V1",
+  "characterId": "p0_character_001",
+  "sourceYaw": 90.0,
+  "motionParameters": {
+    "tipY": 27,
+    "rootY": 54,
+    "maxTipShiftPx": [
+      0,
+      2,
+      4,
+      8
+    ]
+  },
+  "results": {
+    "rigid_00": {
+      "exposedFormerHairPixels": 0,
+      "exposedAirPixels": 0,
+      "exposedCrownPixels": 0,
+      "rootPatchRGBMAE": 0.0,
+      "rootPixelExact": true,
+      "partRGBAAtRootExact": true,
+      "localRGBMAE": 0.0
+    },
+    "anchored_00": {
+      "exposedFormerHairPixels": 0,
+      "exposedAirPixels": 0,
+      "exposedCrownPixels": 0,
+      "rootPatchRGBMAE": 0.0,
+      "rootPixelExact": true,
+      "partRGBAAtRootExact": true,
+      "localRGBMAE": 0.0
+    },
+    "rigid_02": {
+      "exposedFormerHairPixels": 50,
+      "exposedAirPixels": 48,
+      "exposedCrownPixels": 2,
+      "rootPatchRGBMAE": 13.75,
+      "rootPixelExact": false,
+      "partRGBAAtRootExact": false,
+      "localRGBMAE": 1.013
+    },
+    "anchored_02": {
+      "exposedFormerHairPixels": 17,
+      "exposedAirPixels": 17,
+      "exposedCrownPixels": 0,
+      "rootPatchRGBMAE": 1.6645,
+      "rootPixelExact": true,
+      "partRGBAAtRootExact": true,
+      "localRGBMAE": 0.4683
+    },
+    "rigid_04": {
+      "exposedFormerHairPixels": 55,
+      "exposedAirPixels": 53,
+      "exposedCrownPixels": 2,
+      "rootPatchRGBMAE": 13.75,
+      "rootPixelExact": false,
+      "partRGBAAtRootExact": false,
+      "localRGBMAE": 1.138
+    },
+    "anchored_04": {
+      "exposedFormerHairPixels": 33,
+      "exposedAirPixels": 33,
+      "exposedCrownPixels": 0,
+      "rootPatchRGBMAE": 2.8288,
+      "rootPixelExact": true,
+      "partRGBAAtRootExact": true,
+      "localRGBMAE": 0.7413
+    },
+    "rigid_08": {
+      "exposedFormerHairPixels": 55,
+      "exposedAirPixels": 53,
+      "exposedCrownPixels": 2,
+      "rootPatchRGBMAE": 13.75,
+      "rootPixelExact": false,
+      "partRGBAAtRootExact": false,
+      "localRGBMAE": 1.1465
+    },
+    "anchored_08": {
+      "exposedFormerHairPixels": 46,
+      "exposedAirPixels": 46,
+      "exposedCrownPixels": 0,
+      "rootPatchRGBMAE": 5.3758,
+      "rootPixelExact": true,
+      "partRGBAAtRootExact": true,
+      "localRGBMAE": 0.9041
+    }
+  },
+  "nativeSourceUnchanged": true,
+  "zeroShiftSourceExact": true,
+  "reinterpretedAlphaGaps": "Displaced above-crown hair reveals transparent air, which should not be counted as missing scalp. Only newly exposed pixels within the scalp/attachment region constitute underpaint defects.",
+  "physicalSecondStrandIdentityVerified": false,
+  "rootBelowCrownGeometryVerified": false,
+  "continuousYawVisualAccepted": false,
+  "artistApproved": false,
+  "review": "private-assets/exports/p15-155-anchored-crown-motion/index.html",
+  "next": "Use artist-defined root and tip contour anchors, rather than a horizontal cutoff, to track the full connected loop. Validate 90/112.5/135 independent hair masks before animation interpolation."
+}

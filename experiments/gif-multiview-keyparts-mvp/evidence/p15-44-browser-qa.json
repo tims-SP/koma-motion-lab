@@ -1,0 +1,25 @@
+{
+  "schema": "KOMA-P15-44-BROWSER-V1",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "images": 5
+    },
+    {
+      "viewport": "mobile",
+      "images": 5
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "browser-desktop.png",
+      "sha256": "ea746822ba1e3bd702abf05932ee1e530fa627d259eabb8d2b1d30f54f4a5bae"
+    },
+    {
+      "file": "browser-mobile.png",
+      "sha256": "40144dcc5443f4b7d8e8d89e3a57c672906fb66e313e855be382a869ed8e7c00"
+    }
+  ],
+  "errors": [],
+  "status": "P15_44_CONTROL_INPUTS_BROWSER_VERIFIED_NO_MODEL_GENERATION"
+}

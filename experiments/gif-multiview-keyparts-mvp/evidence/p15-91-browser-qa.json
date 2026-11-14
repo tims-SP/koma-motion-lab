@@ -1,0 +1,89 @@
+{
+  "schema": "KOMA-P15-91-BROWSER_QA_V1",
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "pose": 0,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 1,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 2,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 3,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 6,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 9,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 12,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "desktop",
+      "pose": 18,
+      "imagesLoaded": 4,
+      "screenshotSHA256": "11cd76a3b69bc6582e7e8fa0dc5c572d7c116d34df568962a3b90739425956ca"
+    },
+    {
+      "viewport": "mobile",
+      "pose": 0,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 1,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 2,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 3,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 6,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 9,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 12,
+      "imagesLoaded": 4
+    },
+    {
+      "viewport": "mobile",
+      "pose": 18,
+      "imagesLoaded": 4,
+      "screenshotSHA256": "334f93b43051c5b4932dd7b011894b8006a53f08cf4d029d2342492db2efd27b"
+    }
+  ],
+  "errors": []
+}

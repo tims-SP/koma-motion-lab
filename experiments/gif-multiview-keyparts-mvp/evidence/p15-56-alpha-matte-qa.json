@@ -1,0 +1,55 @@
+{
+  "schema": "KOMA-P15-56-ALPHA-MATTE-V1",
+  "characterId": "p0_character_001",
+  "sourceClipSHA256": "883d78458817e878c0d6e73dec88ce5872d446a135dfededf05d80a6bde2c095",
+  "underlaySHA256": "47edf106e3057da96f8c88e73214b235d2d1087cee3df43f728b28b45db4d8e2",
+  "sourceClipRGBPreserved": true,
+  "variants": {
+    "1": {
+      "bbox": [
+        692,
+        280,
+        759,
+        369
+      ],
+      "nonzeroAlpha": 3464,
+      "alphaPixelsReduced": 392,
+      "candidateSHA256": "1c2454eb0ab95e47219b15a09ad2f16a6bf52e1f7af2b3857d4d30fa4801da6a"
+    },
+    "2": {
+      "bbox": [
+        693,
+        281,
+        758,
+        368
+      ],
+      "nonzeroAlpha": 3081,
+      "alphaPixelsReduced": 775,
+      "candidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed"
+    },
+    "3": {
+      "bbox": [
+        694,
+        282,
+        757,
+        367
+      ],
+      "nonzeroAlpha": 2708,
+      "alphaPixelsReduced": 1148,
+      "candidateSHA256": "ff717526d89ced5eae8df0a1386790ab84e7dee8c14e739ffcfba3c67d22b114"
+    }
+  },
+  "selectedErosionPx": 2,
+  "selectedCandidateSHA256": "e2682450d960de63b5fcdac3ec22e69bdb57bf93ba2879e2105256cd8105c2ed",
+  "selectedClipBBox": [
+    693,
+    281,
+    758,
+    368
+  ],
+  "visualAssessment": "2px alpha erosion suppresses pink matte fringe while retaining both gold crossing arms; 3px is visibly too aggressive, 1px leaves more pink fringe. Hair/face source remains unchanged.",
+  "formalArtMeshChanged": false,
+  "absoluteYaw65Verified": false,
+  "identityApproved": false,
+  "formalKeyframeAccepted": false
+}

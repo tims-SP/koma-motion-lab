@@ -1,0 +1,51 @@
+{
+  "schema": "KOMA_P15_105_NATIVE_MIDDLE_GARMENT_QA_V1",
+  "model": "Codex built-in image_gen.imagegen",
+  "character": "p0_character_001",
+  "requestedAngle": 67.5,
+  "nativePath": "private-assets/p15-105-yaw0675/yaw0675-garment-native.png",
+  "nativeSHA256": "b91745a58412bc856e75af27fead2574f9da051f1027a00c987a8e8f9868ecf0",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeRGBA": true,
+  "registeredPath": "private-assets/exports/p15-105-middle-art/yaw067p5-garment-registered.png",
+  "registeredSHA256": "2020f5a7224d992777466b3f9f6283afc18e737937df43503a420abb5eeb9261",
+  "registeredDimensions": [
+    1024,
+    1024
+  ],
+  "registration": "native golden brooch centroid to mean original source golden brooch",
+  "nativeGoldMeasuredCanvas1024": [
+    641.606201171875,
+    779.3018188476562
+  ],
+  "sourceTargetGoldCenter": [
+    639.2899780273438,
+    808.8200073242188
+  ],
+  "translation1024": [
+    -2.315999984741211,
+    29.51799964904785
+  ],
+  "goldSourceComponentArea": 1889,
+  "sourceContentBBox": [
+    202,
+    646,
+    826,
+    1024
+  ],
+  "registeredOpaquePixels": 168124,
+  "bowHuePixels": 30305,
+  "opaqueAboveFaceROI": 0,
+  "nativeImagePreserved": true,
+  "angleGeometricallyVerified": false,
+  "artStyleArtistApproved": false,
+  "visualObservations": [
+    "single source bow and gold brooch visible",
+    "source garment registered by measured brooch centroid",
+    "collar height and natural cloth folds must be evaluated in continuous sequence"
+  ],
+  "contact": "private-assets/exports/p15-105-middle-art/native-garment-contact.jpg"
+}
