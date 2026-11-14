@@ -10114,5 +10114,73 @@
     ],
     "review": "private-assets/exports/p15-174-ai-root-patch/index.html",
     "next": "Extend the AI-guided edit only after confirming the intended strand ownership boundary; generate a separate rootless crown and ahoge loop with explicit transparent layers, then verify lossless source-key reconstruction and mid-yaw motion."
+  },
+  "p15_175LayeredCrownAndAhogeAssets": {
+    "status": "THREE_VIEW_TRANSPARENT_LAYER_PAIRS_GENERATED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "canvas": [
+      443,
+      443
+    ],
+    "layerTypes": [
+      "crown_underpaint",
+      "source_ahoge"
+    ],
+    "methods": [
+      "root_contact",
+      "root_band",
+      "source_ai"
+    ],
+    "reference": "P15-167 source ownership; P15-174 AI root texture crop",
+    "sourceOwnerReassemblyRootContact": {
+      "90": 0,
+      "112.5": 0,
+      "135": 0
+    },
+    "alphaOverVisibleMismatchRootContact": {
+      "90": 0,
+      "112.5": 155,
+      "135": 0
+    },
+    "repaintMismatch": {
+      "root_band": {
+        "90": 147,
+        "112.5": 84,
+        "135": 125
+      },
+      "source_ai": {
+        "90": 147,
+        "112.5": 85,
+        "135": 125
+      }
+    },
+    "transparentRGBAReady": true,
+    "sourceBelowY125Exact": true,
+    "visualFindings": "The three view-native 443x443 crown/ahoge transparent layer pairs have correct origin and source ownership. Root-contact owner-matte restoration is source-pixel exact (all 3 views), but native alpha-over of 112.5-degree pair differs in 155 visible pixels and extended root-band underpainting changes source-visible pixels. Rootless crown visual closeups show a residual 112.5-degree vertical post and thin contact remnants in 90/135. The layer assets are diagnostics, not production art.",
+    "rootlessCrownVisualAccepted": false,
+    "nativeStandardAlphaCompositeExact": false,
+    "fiveAngleVDDRun": false,
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "allThreePairsPresent": true,
+      "allPairsTransparent": true,
+      "losslessOwnerReassembly": false,
+      "deepHeadPreserved": true,
+      "normalAlphaOverSourceExact": false,
+      "visualApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-175-layered-crown-assets-qa.json"
+    ],
+    "review": "private-assets/exports/p15-175-layered-crown-assets/index.html",
+    "assets": "private-assets/exports/p15-175-layered-crown-assets/{mode}/{yaw}/",
+    "next": "Complete the 112.5-degree source-matched crown linework and semitransparent root boundary. Validate standard alpha-over keyview fidelity and absence of crown stubs at 90,112.5,135 before continuing to 101.25/123.75 yaw."
   }
 }
