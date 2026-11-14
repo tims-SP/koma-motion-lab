@@ -11419,5 +11419,79 @@
     "review": "private-assets/exports/p15-188-root-occlusion-sweep/index.html",
     "assets": "private-assets/exports/p15-188-root-occlusion-sweep/",
     "next": "Audit the 13-yaw root emergence crossing path, including the three native keyviews. Measure crossing position/tangent and root material continuity across the 108.75°–112.5°–116.25° transition; determine whether the generated underpaint is consistent with the source root geometry before any production integration."
+  },
+  "p15_189RootEmergenceAudit": {
+    "status": "THIRTEEN_YAW_ROOT_EMERGENCE_MEASURED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "metrics": {
+      "allFramesHaveMeasuredCrossing": true,
+      "maxAdjacentCrossingDisplacementPixels": 12.4504,
+      "maxAdjacentTangentDeltaDegrees": 11.7172,
+      "maxAdjacentColorSeamDelta": 29.1103,
+      "sourceRootProposalOffsets": {
+        "90": 10.0,
+        "112.5": 6.0,
+        "135": 6.0
+      },
+      "referenceLocalRGBMAE": 7.8619,
+      "referenceGlobalRGBMAE": 6.9103
+    },
+    "middleKeyTransitions": {
+      "108.75-112.5": {
+        "measurable": true,
+        "crossingDisplacementPixels": 12.4504,
+        "tangentAngleDeltaDegrees": 2.4175,
+        "rootColorSeamDelta": 24.5499
+      },
+      "112.5-116.25": {
+        "measurable": true,
+        "crossingDisplacementPixels": 6.5835,
+        "tangentAngleDeltaDegrees": 2.4712,
+        "rootColorSeamDelta": 24.9704
+      }
+    },
+    "finding": "The 13-yaw visible root crossing is measurable in every view. The 108.75-to-112.5 crossing shifts 12.4504 px and the 112.5-to-116.25 crossing shifts 6.5835 px. Tangent deviations near the middle native key are only 2.4175 and 2.4712 degrees, whereas local color seam delta changes by about 25 RGB levels. This isolates geometry anchor and root color registration as the highest-priority continuity issues.",
+    "nativeSourceRootProposalOffsetPixels": {
+      "90": 10.0,
+      "112.5": 6.0,
+      "135": 6.0
+    },
+    "rootEmergenceVisuallyAccepted": false,
+    "semanticRootCorrespondenceVerified": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "sourceKeysPresent": true,
+      "allCrossingsMeasured": true,
+      "sourceRootSemanticsVerified": false,
+      "middleKeyContinuityAccepted": false,
+      "productionApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-189-root-emergence-audit-qa.json"
+    ],
+    "review": "private-assets/exports/p15-189-root-emergence-audit/index.html",
+    "assets": "private-assets/exports/p15-189-root-emergence-audit/",
+    "next": "Register the root-emergence crossing to the verified source contact landmarks at all three keys, using a bounded near-root geometry warp only. Blend the source-derived root color in a local crown-contact region, and accept only if 13-yaw crossings, seams and whole-frame timing improve without changing native keys or head pixels below y=125."
   }
 }

@@ -1,0 +1,413 @@
+{
+  "schema": "KOMA_P15_189_ROOT_EMERGENCE_AUDIT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "diagnostics": {
+    "90": {
+      "hasCrossing": true,
+      "nativeKeyframe": true,
+      "crossing": [
+        186.0,
+        56.83649826049805
+      ],
+      "tangent": [
+        -0.14010000228881836,
+        -0.9901400208473206
+      ],
+      "crossingControlSegment": 7,
+      "rootAnchor": [
+        184.0,
+        53.0
+      ],
+      "rootAnchorToCrossingPixels": 4.3265,
+      "sourceMedialRootToProposalPixels": 10.0,
+      "rootContactColorDeltaRGB": 22.3333,
+      "crownAlphaAtEmergence": 0
+    },
+    "93.75": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        196.3332977294922,
+        53.39179992675781
+      ],
+      "tangent": [
+        0.0,
+        -1.0
+      ],
+      "crossingControlSegment": 15,
+      "rootAnchor": [
+        196.3332977294922,
+        57.0
+      ],
+      "rootAnchorToCrossingPixels": 3.6082,
+      "sourceMedialRootToProposalPixels": 9.3333,
+      "rootContactColorDeltaRGB": 0.851,
+      "crownAlphaAtEmergence": 0
+    },
+    "97.5": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        208.30340576171875,
+        51.03219985961914
+      ],
+      "tangent": [
+        -0.06693000346422195,
+        -0.997759997844696
+      ],
+      "crossingControlSegment": 20,
+      "rootAnchor": [
+        208.6667022705078,
+        61.0
+      ],
+      "rootAnchorToCrossingPixels": 9.9744,
+      "sourceMedialRootToProposalPixels": 8.6667,
+      "rootContactColorDeltaRGB": 8.7656,
+      "crownAlphaAtEmergence": 0
+    },
+    "101.25": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        220.5,
+        51.048099517822266
+      ],
+      "tangent": [
+        0.09967999905347824,
+        -0.9950199723243713
+      ],
+      "crossingControlSegment": 24,
+      "rootAnchor": [
+        221.0,
+        65.0
+      ],
+      "rootAnchorToCrossingPixels": 13.9609,
+      "sourceMedialRootToProposalPixels": 8.0,
+      "rootContactColorDeltaRGB": 32.2209,
+      "crownAlphaAtEmergence": 0
+    },
+    "105": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        232.3332977294922,
+        52.4536018371582
+      ],
+      "tangent": [
+        0.08533000200986862,
+        -0.9963499903678894
+      ],
+      "crossingControlSegment": 25,
+      "rootAnchor": [
+        233.33340454101562,
+        69.0
+      ],
+      "rootAnchorToCrossingPixels": 16.5766,
+      "sourceMedialRootToProposalPixels": 7.3333,
+      "rootContactColorDeltaRGB": 26.2998,
+      "crownAlphaAtEmergence": 0
+    },
+    "108.75": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        244.16659545898438,
+        55.686500549316406
+      ],
+      "tangent": [
+        0.04222999885678291,
+        -0.9991099834442139
+      ],
+      "crossingControlSegment": 25,
+      "rootAnchor": [
+        245.6667022705078,
+        73.0
+      ],
+      "rootAnchorToCrossingPixels": 17.3784,
+      "sourceMedialRootToProposalPixels": 6.6667,
+      "rootContactColorDeltaRGB": 37.756,
+      "crownAlphaAtEmergence": 3
+    },
+    "112.5": {
+      "hasCrossing": true,
+      "nativeKeyframe": true,
+      "crossing": [
+        256.0,
+        59.55720138549805
+      ],
+      "tangent": [
+        0.0,
+        -1.0
+      ],
+      "crossingControlSegment": 25,
+      "rootAnchor": [
+        258.0,
+        77.0
+      ],
+      "rootAnchorToCrossingPixels": 17.5571,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 62.3059,
+      "crownAlphaAtEmergence": 0
+    },
+    "116.25": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        250.17379760742188,
+        56.491600036621094
+      ],
+      "tangent": [
+        0.043219998478889465,
+        -0.9990699887275696
+      ],
+      "crossingControlSegment": 25,
+      "rootAnchor": [
+        252.0,
+        73.33329772949219
+      ],
+      "rootAnchorToCrossingPixels": 16.9405,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 37.3355,
+      "crownAlphaAtEmergence": 0
+    },
+    "120": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        244.33340454101562,
+        53.51750183105469
+      ],
+      "tangent": [
+        0.0894400030374527,
+        -0.995989978313446
+      ],
+      "crossingControlSegment": 24,
+      "rootAnchor": [
+        246.0,
+        69.66670227050781
+      ],
+      "rootAnchorToCrossingPixels": 16.2349,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 24.7961,
+      "crownAlphaAtEmergence": 0
+    },
+    "123.75": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        238.5,
+        51.36140060424805
+      ],
+      "tangent": [
+        0.0810299962759018,
+        -0.9967100024223328
+      ],
+      "crossingControlSegment": 23,
+      "rootAnchor": [
+        240.0,
+        66.0
+      ],
+      "rootAnchorToCrossingPixels": 14.7153,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 39.5355,
+      "crownAlphaAtEmergence": 0
+    },
+    "127.5": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        232.84939575195312,
+        50.1963005065918
+      ],
+      "tangent": [
+        -0.12308000028133392,
+        -0.9923999905586243
+      ],
+      "crossingControlSegment": 21,
+      "rootAnchor": [
+        234.0,
+        62.33330154418945
+      ],
+      "rootAnchorToCrossingPixels": 12.1915,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 37.5386,
+      "crownAlphaAtEmergence": 0
+    },
+    "131.25": {
+      "hasCrossing": true,
+      "nativeKeyframe": false,
+      "crossing": [
+        227.16659545898438,
+        50.15800094604492
+      ],
+      "tangent": [
+        -0.03200000151991844,
+        -0.9994900226593018
+      ],
+      "crossingControlSegment": 17,
+      "rootAnchor": [
+        228.0,
+        58.66669845581055
+      ],
+      "rootAnchorToCrossingPixels": 8.5494,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 8.4283,
+      "crownAlphaAtEmergence": 4
+    },
+    "135": {
+      "hasCrossing": true,
+      "nativeKeyframe": true,
+      "crossing": [
+        221.0,
+        51.655399322509766
+      ],
+      "tangent": [
+        0.0,
+        -1.0
+      ],
+      "crossingControlSegment": 11,
+      "rootAnchor": [
+        222.0,
+        55.0
+      ],
+      "rootAnchorToCrossingPixels": 3.4909,
+      "sourceMedialRootToProposalPixels": 6.0,
+      "rootContactColorDeltaRGB": 17.3333,
+      "crownAlphaAtEmergence": 0
+    }
+  },
+  "adjacentDiscontinuities": {
+    "90-93.75": {
+      "measurable": true,
+      "crossingDisplacementPixels": 10.8923,
+      "tangentAngleDeltaDegrees": 8.0525,
+      "rootColorSeamDelta": 21.4823
+    },
+    "93.75-97.5": {
+      "measurable": true,
+      "crossingDisplacementPixels": 12.2005,
+      "tangentAngleDeltaDegrees": 3.8357,
+      "rootColorSeamDelta": 7.9146
+    },
+    "97.5-101.25": {
+      "measurable": true,
+      "crossingDisplacementPixels": 12.1966,
+      "tangentAngleDeltaDegrees": 9.5575,
+      "rootColorSeamDelta": 23.4553
+    },
+    "101.25-105": {
+      "measurable": true,
+      "crossingDisplacementPixels": 11.9165,
+      "tangentAngleDeltaDegrees": 0.8349,
+      "rootColorSeamDelta": 5.9211
+    },
+    "105-108.75": {
+      "measurable": true,
+      "crossingDisplacementPixels": 12.267,
+      "tangentAngleDeltaDegrees": 2.4756,
+      "rootColorSeamDelta": 11.4562
+    },
+    "108.75-112.5": {
+      "measurable": true,
+      "crossingDisplacementPixels": 12.4504,
+      "tangentAngleDeltaDegrees": 2.4175,
+      "rootColorSeamDelta": 24.5499
+    },
+    "112.5-116.25": {
+      "measurable": true,
+      "crossingDisplacementPixels": 6.5835,
+      "tangentAngleDeltaDegrees": 2.4712,
+      "rootColorSeamDelta": 24.9704
+    },
+    "116.25-120": {
+      "measurable": true,
+      "crossingDisplacementPixels": 6.554,
+      "tangentAngleDeltaDegrees": 2.6516,
+      "rootColorSeamDelta": 12.5394
+    },
+    "120-123.75": {
+      "measurable": true,
+      "crossingDisplacementPixels": 6.2191,
+      "tangentAngleDeltaDegrees": 0.5093,
+      "rootColorSeamDelta": 14.7394
+    },
+    "123.75-127.5": {
+      "measurable": true,
+      "crossingDisplacementPixels": 5.7695,
+      "tangentAngleDeltaDegrees": 11.7172,
+      "rootColorSeamDelta": 1.9969
+    },
+    "127.5-131.25": {
+      "measurable": true,
+      "crossingDisplacementPixels": 5.6829,
+      "tangentAngleDeltaDegrees": 5.2327,
+      "rootColorSeamDelta": 29.1103
+    },
+    "131.25-135": {
+      "measurable": true,
+      "crossingDisplacementPixels": 6.3458,
+      "tangentAngleDeltaDegrees": 1.8299,
+      "rootColorSeamDelta": 8.905
+    }
+  },
+  "middleKeyTransitions": {
+    "108.75-112.5": {
+      "measurable": true,
+      "crossingDisplacementPixels": 12.4504,
+      "tangentAngleDeltaDegrees": 2.4175,
+      "rootColorSeamDelta": 24.5499
+    },
+    "112.5-116.25": {
+      "measurable": true,
+      "crossingDisplacementPixels": 6.5835,
+      "tangentAngleDeltaDegrees": 2.4712,
+      "rootColorSeamDelta": 24.9704
+    }
+  },
+  "metrics": {
+    "allFramesHaveMeasuredCrossing": true,
+    "maxAdjacentCrossingDisplacementPixels": 12.4504,
+    "maxAdjacentTangentDeltaDegrees": 11.7172,
+    "maxAdjacentColorSeamDelta": 29.1103,
+    "sourceRootProposalOffsets": {
+      "90": 10.0,
+      "112.5": 6.0,
+      "135": 6.0
+    },
+    "referenceLocalRGBMAE": 7.8619,
+    "referenceGlobalRGBMAE": 6.9103
+  },
+  "interpretation": "A root/scalp intersection extracted from source-owned raster art is compared with the same measurement on interpolated geometry and generated crown underpaint. A curve intersection, silhouette continuity and matching color are separate gates; a three-key pixel-exact preservation does not establish physical source-root correspondence.",
+  "sourceImagesModified": false,
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-189-root-emergence-audit/index.html",
+  "gate": {
+    "sourceKeysPresent": true,
+    "allCrossingsMeasured": true,
+    "sourceRootSemanticsVerified": false,
+    "middleKeyContinuityAccepted": false,
+    "productionApproved": false,
+    "passes": false
+  }
+}
