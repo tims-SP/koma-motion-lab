@@ -10281,5 +10281,68 @@
     "review": "private-assets/exports/p15-177-crown-root-repaint/index.html",
     "assets": "private-assets/exports/p15-177-crown-root-repaint/{method}/{yaw}/",
     "next": "Obtain independent source-matched clean crown art, starting with 112.5-degree root-ink post. Verify the crown-only image closeup and the source ahoge reconnection before intermediate-yaw rendering."
+  },
+  "p15_178AIRootlessCrownRepair": {
+    "status": "THREE_VIEW_AI_ROOTLESS_CROWN_ACCEPTED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "model": "Flux.2 Klein 4B via Hugging Face Spaces",
+    "modelSeeds": {
+      "90": "1770090",
+      "112.5": "1781128",
+      "135": "1770135"
+    },
+    "registrationMethod": "SIFT feature matching below y=40, ratio test 0.72, RANSAC homography, then 270x150 native crop registration",
+    "layerContracts": {
+      "ahoge": "original source-owned RGBA loop and root attachment",
+      "crownMotionUnderpaint": "AI-registered rootless RGB patch plus root-air alpha cleanup",
+      "crownStaticKeyframe": "motion underpaint with alpha cleared beneath ahoge owner matte and root-air cleanup"
+    },
+    "rootAirAlphaClearedPixels": {
+      "90": 116,
+      "112.5": 433,
+      "135": 133
+    },
+    "aiRegisteredInliers": {
+      "90": 20,
+      "112.5": 19,
+      "135": 19
+    },
+    "changedRGBPixels": {
+      "90": 619,
+      "112.5": 628,
+      "135": 622
+    },
+    "noDoubleAlphaOwnership": true,
+    "outsidePatchRGBExact": true,
+    "deepHeadExact": true,
+    "compositeDiffLocalized": true,
+    "visualFindings": "Three source-registered AI crown patches remove the detached loop-root posts from the motion underpaint. Static keyframe alpha is cleared under the original ahoge owner matte and root-air fringe; standard alpha-over reconnects the original ahoge naturally. Canonical source keyframes, source ahoge RGBA, and head pixels below y=125 remain preserved. All three closeups and full-view composites passed agent visual inspection.",
+    "visualAccepted": true,
+    "userReviewAvailable": true,
+    "midYawVDDRun": false,
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "threeAIViewsAvailable": true,
+      "rootAirAlphaCleared": true,
+      "outsidePatchRGBExact": true,
+      "sourceAlphaExactOutsideRootAir": true,
+      "deepHeadExact": true,
+      "noDoubleAlpha": true,
+      "compositeDiffLocalized": true,
+      "rootlessCrownVisualAccepted": true,
+      "passes": true
+    },
+    "evidence": [
+      "evidence/p15-178-ai-rootless-crown-qa.json"
+    ],
+    "review": "private-assets/exports/p15-178-ai-rootless-crown/index.html",
+    "assets": "private-assets/exports/p15-178-ai-rootless-crown/{yaw}-ai-rootless-full.png and private-assets/exports/p15-178-ai-rootless-crown/local/{yaw}/",
+    "next": "Use the accepted three-view crown/ahoge pair as the VDD source for 101.25 and 123.75 degree intermediate-yaw rendering. Measure root seam, silhouette continuity, and temporal stability before changing the production renderer."
   }
 }
