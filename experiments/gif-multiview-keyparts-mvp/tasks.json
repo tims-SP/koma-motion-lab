@@ -11183,5 +11183,241 @@
     "review": "private-assets/exports/p15-187-full-skeleton-vdd/index.html",
     "assets": "private-assets/exports/p15-187-full-skeleton-vdd/",
     "next": "Measure root-seam and tip drift across the 13-yaw sequence, verify medial-path orientation against source masks, and refine only the observed root transition while retaining source keys and the linear variable-width centerline. Evaluate whether global temporal stability can match DIS before production integration."
+  },
+  "p15_188RootOcclusionSweep": {
+    "status": "CROWN_FRONT_DEPTH_ORDERING_BEST_LOCAL_TEMPORAL_CANDIDATE",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "methods": {
+      "hair_front": {
+        "maxAdjacentRootEmergenceDisplacement": 12.268,
+        "rootEmergencePoints": [
+          [
+            196.33299255371094,
+            53.422000885009766
+          ],
+          [
+            208.43699645996094,
+            51.55400085449219
+          ],
+          [
+            220.5,
+            51.17399978637695
+          ],
+          [
+            232.33299255371094,
+            53.39500045776367
+          ],
+          [
+            244.16700744628906,
+            56.62799835205078
+          ],
+          [
+            250.16700744628906,
+            56.558998107910156
+          ],
+          [
+            244.33299255371094,
+            54.220001220703125
+          ],
+          [
+            238.5,
+            51.84400177001953
+          ],
+          [
+            233.10400390625,
+            51.104000091552734
+          ],
+          [
+            227.16700744628906,
+            50.47999954223633
+          ]
+        ],
+        "maxAdjacentLocalRGBMAE": 7.9214,
+        "maxAdjacentGlobalRGBMAE": 6.9209,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "allMidframesConnected": true,
+        "allRootsHiddenBehindCrown": true,
+        "meanHairPixelsOverOpaqueCrown": 126.0,
+        "meanRootDepthBelowCrown": 19.851
+      },
+      "crown_front": {
+        "maxAdjacentRootEmergenceDisplacement": 12.268,
+        "rootEmergencePoints": [
+          [
+            196.33299255371094,
+            53.422000885009766
+          ],
+          [
+            208.43699645996094,
+            51.55400085449219
+          ],
+          [
+            220.5,
+            51.17399978637695
+          ],
+          [
+            232.33299255371094,
+            53.39500045776367
+          ],
+          [
+            244.16700744628906,
+            56.62799835205078
+          ],
+          [
+            250.16700744628906,
+            56.558998107910156
+          ],
+          [
+            244.33299255371094,
+            54.220001220703125
+          ],
+          [
+            238.5,
+            51.84400177001953
+          ],
+          [
+            233.10400390625,
+            51.104000091552734
+          ],
+          [
+            227.16700744628906,
+            50.47999954223633
+          ]
+        ],
+        "maxAdjacentLocalRGBMAE": 7.8619,
+        "maxAdjacentGlobalRGBMAE": 6.9103,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "allMidframesConnected": true,
+        "allRootsHiddenBehindCrown": true,
+        "meanHairPixelsOverOpaqueCrown": 126.0,
+        "meanRootDepthBelowCrown": 19.851
+      },
+      "crown_front_root_slot": {
+        "maxAdjacentRootEmergenceDisplacement": 12.268,
+        "rootEmergencePoints": [
+          [
+            196.33299255371094,
+            53.422000885009766
+          ],
+          [
+            208.43699645996094,
+            51.55400085449219
+          ],
+          [
+            220.5,
+            51.17399978637695
+          ],
+          [
+            232.33299255371094,
+            53.39500045776367
+          ],
+          [
+            244.16700744628906,
+            56.62799835205078
+          ],
+          [
+            250.16700744628906,
+            56.558998107910156
+          ],
+          [
+            244.33299255371094,
+            54.220001220703125
+          ],
+          [
+            238.5,
+            51.84400177001953
+          ],
+          [
+            233.10400390625,
+            51.104000091552734
+          ],
+          [
+            227.16700744628906,
+            50.47999954223633
+          ]
+        ],
+        "maxAdjacentLocalRGBMAE": 7.9709,
+        "maxAdjacentGlobalRGBMAE": 6.9298,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "allMidframesConnected": true,
+        "allRootsHiddenBehindCrown": true,
+        "meanHairPixelsOverOpaqueCrown": 126.0,
+        "meanRootDepthBelowCrown": 19.851
+      }
+    },
+    "rootUnderpaintCoverage": {
+      "93.75": 1.0,
+      "97.5": 1.0,
+      "101.25": 1.0,
+      "105": 1.0,
+      "108.75": 1.0,
+      "116.25": 1.0,
+      "120": 1.0,
+      "123.75": 1.0,
+      "127.5": 1.0,
+      "131.25": 0.9333
+    },
+    "finding": "The P15-187 strand centerline root endpoint is inside the head silhouette. The correct depth order is strand behind crown, not strand over crown. Crown-front compositing covers at least 90% of sampled centerline points that lie beneath the crown edge, hiding the root under existing source-owned scalp pixels. The root-slot variant worsens local temporal error and is not selected.",
+    "visualFinding": "The crown-front preview produces a more plausible scalp emergence than hair-front compositing. The narrow slot creates a visible seam and is not selected. This remains a diagnostic preview pending visual review and semantic endpoint confirmation.",
+    "localTemporalBest": 7.8619,
+    "localTemporalDIS": 7.9475,
+    "globalTemporal": 6.9103,
+    "globalTemporalDIS": 6.6299,
+    "sourceKeysExact": true,
+    "deepBodyExact": true,
+    "singleConnectedStrand": true,
+    "rootHiddenBehindCrown": true,
+    "localTemporalBeatsDIS": true,
+    "globalTemporalBeatsDIS": false,
+    "rootEmergenceVisuallyAccepted": false,
+    "semanticRootCorrespondenceVerified": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "nativeKeyframesExact": true,
+      "deepBodyExact": true,
+      "singleConnectedStrand": true,
+      "rootHiddenBehindCrown": true,
+      "localTemporalBeatsDIS": true,
+      "globalTemporalBeatsDIS": false,
+      "rootEmergenceVisuallyAccepted": false,
+      "semanticRootCorrespondenceVerified": false,
+      "productionApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-188-root-occlusion-sweep-qa.json"
+    ],
+    "review": "private-assets/exports/p15-188-root-occlusion-sweep/index.html",
+    "assets": "private-assets/exports/p15-188-root-occlusion-sweep/",
+    "next": "Audit the 13-yaw root emergence crossing path, including the three native keyviews. Measure crossing position/tangent and root material continuity across the 108.75°–112.5°–116.25° transition; determine whether the generated underpaint is consistent with the source root geometry before any production integration."
   }
 }

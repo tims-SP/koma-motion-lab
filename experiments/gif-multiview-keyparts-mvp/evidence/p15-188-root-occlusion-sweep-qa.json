@@ -1,0 +1,1176 @@
+{
+  "schema": "KOMA_P15_188_ROOT_OCCLUSION_SWEEP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "methods": {
+    "hair_front": {
+      "maxAdjacentRootEmergenceDisplacement": 12.268,
+      "rootEmergencePoints": [
+        [
+          196.33299255371094,
+          53.422000885009766
+        ],
+        [
+          208.43699645996094,
+          51.55400085449219
+        ],
+        [
+          220.5,
+          51.17399978637695
+        ],
+        [
+          232.33299255371094,
+          53.39500045776367
+        ],
+        [
+          244.16700744628906,
+          56.62799835205078
+        ],
+        [
+          250.16700744628906,
+          56.558998107910156
+        ],
+        [
+          244.33299255371094,
+          54.220001220703125
+        ],
+        [
+          238.5,
+          51.84400177001953
+        ],
+        [
+          233.10400390625,
+          51.104000091552734
+        ],
+        [
+          227.16700744628906,
+          50.47999954223633
+        ]
+      ],
+      "maxAdjacentLocalRGBMAE": 7.9214,
+      "maxAdjacentGlobalRGBMAE": 6.9209,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesConnected": true,
+      "allRootsHiddenBehindCrown": true,
+      "meanHairPixelsOverOpaqueCrown": 126.0,
+      "meanRootDepthBelowCrown": 19.851
+    },
+    "crown_front": {
+      "maxAdjacentRootEmergenceDisplacement": 12.268,
+      "rootEmergencePoints": [
+        [
+          196.33299255371094,
+          53.422000885009766
+        ],
+        [
+          208.43699645996094,
+          51.55400085449219
+        ],
+        [
+          220.5,
+          51.17399978637695
+        ],
+        [
+          232.33299255371094,
+          53.39500045776367
+        ],
+        [
+          244.16700744628906,
+          56.62799835205078
+        ],
+        [
+          250.16700744628906,
+          56.558998107910156
+        ],
+        [
+          244.33299255371094,
+          54.220001220703125
+        ],
+        [
+          238.5,
+          51.84400177001953
+        ],
+        [
+          233.10400390625,
+          51.104000091552734
+        ],
+        [
+          227.16700744628906,
+          50.47999954223633
+        ]
+      ],
+      "maxAdjacentLocalRGBMAE": 7.8619,
+      "maxAdjacentGlobalRGBMAE": 6.9103,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesConnected": true,
+      "allRootsHiddenBehindCrown": true,
+      "meanHairPixelsOverOpaqueCrown": 126.0,
+      "meanRootDepthBelowCrown": 19.851
+    },
+    "crown_front_root_slot": {
+      "maxAdjacentRootEmergenceDisplacement": 12.268,
+      "rootEmergencePoints": [
+        [
+          196.33299255371094,
+          53.422000885009766
+        ],
+        [
+          208.43699645996094,
+          51.55400085449219
+        ],
+        [
+          220.5,
+          51.17399978637695
+        ],
+        [
+          232.33299255371094,
+          53.39500045776367
+        ],
+        [
+          244.16700744628906,
+          56.62799835205078
+        ],
+        [
+          250.16700744628906,
+          56.558998107910156
+        ],
+        [
+          244.33299255371094,
+          54.220001220703125
+        ],
+        [
+          238.5,
+          51.84400177001953
+        ],
+        [
+          233.10400390625,
+          51.104000091552734
+        ],
+        [
+          227.16700744628906,
+          50.47999954223633
+        ]
+      ],
+      "maxAdjacentLocalRGBMAE": 7.9709,
+      "maxAdjacentGlobalRGBMAE": 6.9298,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesConnected": true,
+      "allRootsHiddenBehindCrown": true,
+      "meanHairPixelsOverOpaqueCrown": 126.0,
+      "meanRootDepthBelowCrown": 19.851
+    }
+  },
+  "details": {
+    "hair_front": {
+      "93.75": {
+        "visibleStrandPixels": 1266,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.61,
+        "root": [
+          196.3300018310547,
+          66.33000183105469
+        ],
+        "freeTip": [
+          269.3299865722656,
+          54.33000183105469
+        ],
+        "rootCenterline": [
+          196.33299255371094,
+          66.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.392,
+        "rootDepthBelowCrownEdge": 12.942,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 13,
+        "centerlineCrownCrossingIndex": 14,
+        "centerlineCrownCrossingPoint": [
+          196.33299255371094,
+          53.422000885009766
+        ],
+        "visibleHairAlphaPixels": 74309,
+        "hairPixelsOverOpaqueCrown": 78,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "97.5": {
+        "visibleStrandPixels": 1289,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.638,
+        "root": [
+          208.6699981689453,
+          69.66999816894531
+        ],
+        "freeTip": [
+          276.6700134277344,
+          58.66999816894531
+        ],
+        "rootCenterline": [
+          208.66700744628906,
+          69.66699981689453
+        ],
+        "crownEdgeAtRoot": 50.886,
+        "rootDepthBelowCrownEdge": 18.781,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 18,
+        "centerlineCrownCrossingIndex": 19,
+        "centerlineCrownCrossingPoint": [
+          208.43699645996094,
+          51.55400085449219
+        ],
+        "visibleHairAlphaPixels": 77873,
+        "hairPixelsOverOpaqueCrown": 103,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "101.25": {
+        "visibleStrandPixels": 1331,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.675,
+        "root": [
+          221.0,
+          73.0
+        ],
+        "freeTip": [
+          284.0,
+          63.0
+        ],
+        "rootCenterline": [
+          221.0,
+          73.0
+        ],
+        "crownEdgeAtRoot": 51.039,
+        "rootDepthBelowCrownEdge": 21.961,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 21,
+        "centerlineCrownCrossingIndex": 23,
+        "centerlineCrownCrossingPoint": [
+          220.5,
+          51.17399978637695
+        ],
+        "visibleHairAlphaPixels": 77665,
+        "hairPixelsOverOpaqueCrown": 130,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "105": {
+        "visibleStrandPixels": 1399,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.892,
+        "root": [
+          233.3300018310547,
+          76.33000183105469
+        ],
+        "freeTip": [
+          291.3299865722656,
+          67.33000183105469
+        ],
+        "rootCenterline": [
+          233.33299255371094,
+          76.33300018310547
+        ],
+        "crownEdgeAtRoot": 52.54,
+        "rootDepthBelowCrownEdge": 23.793,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          232.33299255371094,
+          53.39500045776367
+        ],
+        "visibleHairAlphaPixels": 77313,
+        "hairPixelsOverOpaqueCrown": 157,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "108.75": {
+        "visibleStrandPixels": 1464,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.64,
+        "root": [
+          245.6699981689453,
+          79.66999816894531
+        ],
+        "freeTip": [
+          298.6700134277344,
+          71.66999816894531
+        ],
+        "rootCenterline": [
+          245.66700744628906,
+          79.66699981689453
+        ],
+        "crownEdgeAtRoot": 56.072,
+        "rootDepthBelowCrownEdge": 23.595,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          244.16700744628906,
+          56.62799835205078
+        ],
+        "visibleHairAlphaPixels": 76017,
+        "hairPixelsOverOpaqueCrown": 166,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "116.25": {
+        "visibleStrandPixels": 1450,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.973,
+        "root": [
+          252.0,
+          79.33000183105469
+        ],
+        "freeTip": [
+          301.3299865722656,
+          72.16999816894531
+        ],
+        "rootCenterline": [
+          252.0,
+          79.33300018310547
+        ],
+        "crownEdgeAtRoot": 56.875,
+        "rootDepthBelowCrownEdge": 22.458,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          250.16700744628906,
+          56.558998107910156
+        ],
+        "visibleHairAlphaPixels": 75997,
+        "hairPixelsOverOpaqueCrown": 155,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "120": {
+        "visibleStrandPixels": 1375,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.558,
+        "root": [
+          246.0,
+          75.66999816894531
+        ],
+        "freeTip": [
+          296.6700134277344,
+          68.33000183105469
+        ],
+        "rootCenterline": [
+          246.0,
+          75.66699981689453
+        ],
+        "crownEdgeAtRoot": 53.925,
+        "rootDepthBelowCrownEdge": 21.742,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 22,
+        "centerlineCrownCrossingIndex": 23,
+        "centerlineCrownCrossingPoint": [
+          244.33299255371094,
+          54.220001220703125
+        ],
+        "visibleHairAlphaPixels": 78513,
+        "hairPixelsOverOpaqueCrown": 149,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "123.75": {
+        "visibleStrandPixels": 1302,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.144,
+        "root": [
+          240.0,
+          72.0
+        ],
+        "freeTip": [
+          292.0,
+          64.5
+        ],
+        "rootCenterline": [
+          240.0,
+          72.0
+        ],
+        "crownEdgeAtRoot": 51.527,
+        "rootDepthBelowCrownEdge": 20.473,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 21,
+        "centerlineCrownCrossingIndex": 22,
+        "centerlineCrownCrossingPoint": [
+          238.5,
+          51.84400177001953
+        ],
+        "visibleHairAlphaPixels": 78296,
+        "hairPixelsOverOpaqueCrown": 124,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "127.5": {
+        "visibleStrandPixels": 1251,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.918,
+        "root": [
+          234.0,
+          68.33000183105469
+        ],
+        "freeTip": [
+          287.3299865722656,
+          60.66999816894531
+        ],
+        "rootCenterline": [
+          234.0,
+          68.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.191,
+        "rootDepthBelowCrownEdge": 18.142,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 18,
+        "centerlineCrownCrossingIndex": 19,
+        "centerlineCrownCrossingPoint": [
+          233.10400390625,
+          51.104000091552734
+        ],
+        "visibleHairAlphaPixels": 78048,
+        "hairPixelsOverOpaqueCrown": 111,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "131.25": {
+        "visibleStrandPixels": 1198,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.762,
+        "root": [
+          228.0,
+          64.66999816894531
+        ],
+        "freeTip": [
+          282.6700134277344,
+          56.83000183105469
+        ],
+        "rootCenterline": [
+          228.0,
+          64.66699981689453
+        ],
+        "crownEdgeAtRoot": 50.045,
+        "rootDepthBelowCrownEdge": 14.622,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 0.9333,
+        "rootUnderpaintSampleCount": 15,
+        "centerlineCrownCrossingIndex": 16,
+        "centerlineCrownCrossingPoint": [
+          227.16700744628906,
+          50.47999954223633
+        ],
+        "visibleHairAlphaPixels": 75899,
+        "hairPixelsOverOpaqueCrown": 87,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      }
+    },
+    "crown_front": {
+      "93.75": {
+        "visibleStrandPixels": 1266,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.61,
+        "root": [
+          196.3300018310547,
+          66.33000183105469
+        ],
+        "freeTip": [
+          269.3299865722656,
+          54.33000183105469
+        ],
+        "rootCenterline": [
+          196.33299255371094,
+          66.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.392,
+        "rootDepthBelowCrownEdge": 12.942,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 13,
+        "centerlineCrownCrossingIndex": 14,
+        "centerlineCrownCrossingPoint": [
+          196.33299255371094,
+          53.422000885009766
+        ],
+        "visibleHairAlphaPixels": 74309,
+        "hairPixelsOverOpaqueCrown": 78,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "97.5": {
+        "visibleStrandPixels": 1289,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.638,
+        "root": [
+          208.6699981689453,
+          69.66999816894531
+        ],
+        "freeTip": [
+          276.6700134277344,
+          58.66999816894531
+        ],
+        "rootCenterline": [
+          208.66700744628906,
+          69.66699981689453
+        ],
+        "crownEdgeAtRoot": 50.886,
+        "rootDepthBelowCrownEdge": 18.781,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 18,
+        "centerlineCrownCrossingIndex": 19,
+        "centerlineCrownCrossingPoint": [
+          208.43699645996094,
+          51.55400085449219
+        ],
+        "visibleHairAlphaPixels": 77873,
+        "hairPixelsOverOpaqueCrown": 103,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "101.25": {
+        "visibleStrandPixels": 1331,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.675,
+        "root": [
+          221.0,
+          73.0
+        ],
+        "freeTip": [
+          284.0,
+          63.0
+        ],
+        "rootCenterline": [
+          221.0,
+          73.0
+        ],
+        "crownEdgeAtRoot": 51.039,
+        "rootDepthBelowCrownEdge": 21.961,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 21,
+        "centerlineCrownCrossingIndex": 23,
+        "centerlineCrownCrossingPoint": [
+          220.5,
+          51.17399978637695
+        ],
+        "visibleHairAlphaPixels": 77665,
+        "hairPixelsOverOpaqueCrown": 130,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "105": {
+        "visibleStrandPixels": 1399,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.892,
+        "root": [
+          233.3300018310547,
+          76.33000183105469
+        ],
+        "freeTip": [
+          291.3299865722656,
+          67.33000183105469
+        ],
+        "rootCenterline": [
+          233.33299255371094,
+          76.33300018310547
+        ],
+        "crownEdgeAtRoot": 52.54,
+        "rootDepthBelowCrownEdge": 23.793,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          232.33299255371094,
+          53.39500045776367
+        ],
+        "visibleHairAlphaPixels": 77313,
+        "hairPixelsOverOpaqueCrown": 157,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "108.75": {
+        "visibleStrandPixels": 1464,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.64,
+        "root": [
+          245.6699981689453,
+          79.66999816894531
+        ],
+        "freeTip": [
+          298.6700134277344,
+          71.66999816894531
+        ],
+        "rootCenterline": [
+          245.66700744628906,
+          79.66699981689453
+        ],
+        "crownEdgeAtRoot": 56.072,
+        "rootDepthBelowCrownEdge": 23.595,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          244.16700744628906,
+          56.62799835205078
+        ],
+        "visibleHairAlphaPixels": 76017,
+        "hairPixelsOverOpaqueCrown": 166,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "116.25": {
+        "visibleStrandPixels": 1450,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.973,
+        "root": [
+          252.0,
+          79.33000183105469
+        ],
+        "freeTip": [
+          301.3299865722656,
+          72.16999816894531
+        ],
+        "rootCenterline": [
+          252.0,
+          79.33300018310547
+        ],
+        "crownEdgeAtRoot": 56.875,
+        "rootDepthBelowCrownEdge": 22.458,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          250.16700744628906,
+          56.558998107910156
+        ],
+        "visibleHairAlphaPixels": 75997,
+        "hairPixelsOverOpaqueCrown": 155,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "120": {
+        "visibleStrandPixels": 1375,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.558,
+        "root": [
+          246.0,
+          75.66999816894531
+        ],
+        "freeTip": [
+          296.6700134277344,
+          68.33000183105469
+        ],
+        "rootCenterline": [
+          246.0,
+          75.66699981689453
+        ],
+        "crownEdgeAtRoot": 53.925,
+        "rootDepthBelowCrownEdge": 21.742,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 22,
+        "centerlineCrownCrossingIndex": 23,
+        "centerlineCrownCrossingPoint": [
+          244.33299255371094,
+          54.220001220703125
+        ],
+        "visibleHairAlphaPixels": 78513,
+        "hairPixelsOverOpaqueCrown": 149,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "123.75": {
+        "visibleStrandPixels": 1302,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.144,
+        "root": [
+          240.0,
+          72.0
+        ],
+        "freeTip": [
+          292.0,
+          64.5
+        ],
+        "rootCenterline": [
+          240.0,
+          72.0
+        ],
+        "crownEdgeAtRoot": 51.527,
+        "rootDepthBelowCrownEdge": 20.473,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 21,
+        "centerlineCrownCrossingIndex": 22,
+        "centerlineCrownCrossingPoint": [
+          238.5,
+          51.84400177001953
+        ],
+        "visibleHairAlphaPixels": 78296,
+        "hairPixelsOverOpaqueCrown": 124,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "127.5": {
+        "visibleStrandPixels": 1251,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.918,
+        "root": [
+          234.0,
+          68.33000183105469
+        ],
+        "freeTip": [
+          287.3299865722656,
+          60.66999816894531
+        ],
+        "rootCenterline": [
+          234.0,
+          68.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.191,
+        "rootDepthBelowCrownEdge": 18.142,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 18,
+        "centerlineCrownCrossingIndex": 19,
+        "centerlineCrownCrossingPoint": [
+          233.10400390625,
+          51.104000091552734
+        ],
+        "visibleHairAlphaPixels": 78048,
+        "hairPixelsOverOpaqueCrown": 111,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "131.25": {
+        "visibleStrandPixels": 1198,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.762,
+        "root": [
+          228.0,
+          64.66999816894531
+        ],
+        "freeTip": [
+          282.6700134277344,
+          56.83000183105469
+        ],
+        "rootCenterline": [
+          228.0,
+          64.66699981689453
+        ],
+        "crownEdgeAtRoot": 50.045,
+        "rootDepthBelowCrownEdge": 14.622,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 0.9333,
+        "rootUnderpaintSampleCount": 15,
+        "centerlineCrownCrossingIndex": 16,
+        "centerlineCrownCrossingPoint": [
+          227.16700744628906,
+          50.47999954223633
+        ],
+        "visibleHairAlphaPixels": 75899,
+        "hairPixelsOverOpaqueCrown": 87,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      }
+    },
+    "crown_front_root_slot": {
+      "93.75": {
+        "visibleStrandPixels": 1266,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.61,
+        "root": [
+          196.3300018310547,
+          66.33000183105469
+        ],
+        "freeTip": [
+          269.3299865722656,
+          54.33000183105469
+        ],
+        "rootCenterline": [
+          196.33299255371094,
+          66.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.392,
+        "rootDepthBelowCrownEdge": 12.942,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 13,
+        "centerlineCrownCrossingIndex": 14,
+        "centerlineCrownCrossingPoint": [
+          196.33299255371094,
+          53.422000885009766
+        ],
+        "visibleHairAlphaPixels": 74291,
+        "hairPixelsOverOpaqueCrown": 78,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "97.5": {
+        "visibleStrandPixels": 1289,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.638,
+        "root": [
+          208.6699981689453,
+          69.66999816894531
+        ],
+        "freeTip": [
+          276.6700134277344,
+          58.66999816894531
+        ],
+        "rootCenterline": [
+          208.66700744628906,
+          69.66699981689453
+        ],
+        "crownEdgeAtRoot": 50.886,
+        "rootDepthBelowCrownEdge": 18.781,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 18,
+        "centerlineCrownCrossingIndex": 19,
+        "centerlineCrownCrossingPoint": [
+          208.43699645996094,
+          51.55400085449219
+        ],
+        "visibleHairAlphaPixels": 77853,
+        "hairPixelsOverOpaqueCrown": 103,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "101.25": {
+        "visibleStrandPixels": 1331,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.675,
+        "root": [
+          221.0,
+          73.0
+        ],
+        "freeTip": [
+          284.0,
+          63.0
+        ],
+        "rootCenterline": [
+          221.0,
+          73.0
+        ],
+        "crownEdgeAtRoot": 51.039,
+        "rootDepthBelowCrownEdge": 21.961,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 21,
+        "centerlineCrownCrossingIndex": 23,
+        "centerlineCrownCrossingPoint": [
+          220.5,
+          51.17399978637695
+        ],
+        "visibleHairAlphaPixels": 77635,
+        "hairPixelsOverOpaqueCrown": 130,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "105": {
+        "visibleStrandPixels": 1399,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.892,
+        "root": [
+          233.3300018310547,
+          76.33000183105469
+        ],
+        "freeTip": [
+          291.3299865722656,
+          67.33000183105469
+        ],
+        "rootCenterline": [
+          233.33299255371094,
+          76.33300018310547
+        ],
+        "crownEdgeAtRoot": 52.54,
+        "rootDepthBelowCrownEdge": 23.793,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          232.33299255371094,
+          53.39500045776367
+        ],
+        "visibleHairAlphaPixels": 77291,
+        "hairPixelsOverOpaqueCrown": 157,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "108.75": {
+        "visibleStrandPixels": 1464,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.64,
+        "root": [
+          245.6699981689453,
+          79.66999816894531
+        ],
+        "freeTip": [
+          298.6700134277344,
+          71.66999816894531
+        ],
+        "rootCenterline": [
+          245.66700744628906,
+          79.66699981689453
+        ],
+        "crownEdgeAtRoot": 56.072,
+        "rootDepthBelowCrownEdge": 23.595,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          244.16700744628906,
+          56.62799835205078
+        ],
+        "visibleHairAlphaPixels": 75996,
+        "hairPixelsOverOpaqueCrown": 166,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "116.25": {
+        "visibleStrandPixels": 1450,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.973,
+        "root": [
+          252.0,
+          79.33000183105469
+        ],
+        "freeTip": [
+          301.3299865722656,
+          72.16999816894531
+        ],
+        "rootCenterline": [
+          252.0,
+          79.33300018310547
+        ],
+        "crownEdgeAtRoot": 56.875,
+        "rootDepthBelowCrownEdge": 22.458,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 23,
+        "centerlineCrownCrossingIndex": 24,
+        "centerlineCrownCrossingPoint": [
+          250.16700744628906,
+          56.558998107910156
+        ],
+        "visibleHairAlphaPixels": 75978,
+        "hairPixelsOverOpaqueCrown": 155,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "120": {
+        "visibleStrandPixels": 1375,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.558,
+        "root": [
+          246.0,
+          75.66999816894531
+        ],
+        "freeTip": [
+          296.6700134277344,
+          68.33000183105469
+        ],
+        "rootCenterline": [
+          246.0,
+          75.66699981689453
+        ],
+        "crownEdgeAtRoot": 53.925,
+        "rootDepthBelowCrownEdge": 21.742,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 22,
+        "centerlineCrownCrossingIndex": 23,
+        "centerlineCrownCrossingPoint": [
+          244.33299255371094,
+          54.220001220703125
+        ],
+        "visibleHairAlphaPixels": 78487,
+        "hairPixelsOverOpaqueCrown": 149,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "123.75": {
+        "visibleStrandPixels": 1302,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.144,
+        "root": [
+          240.0,
+          72.0
+        ],
+        "freeTip": [
+          292.0,
+          64.5
+        ],
+        "rootCenterline": [
+          240.0,
+          72.0
+        ],
+        "crownEdgeAtRoot": 51.527,
+        "rootDepthBelowCrownEdge": 20.473,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 21,
+        "centerlineCrownCrossingIndex": 22,
+        "centerlineCrownCrossingPoint": [
+          238.5,
+          51.84400177001953
+        ],
+        "visibleHairAlphaPixels": 78270,
+        "hairPixelsOverOpaqueCrown": 124,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "127.5": {
+        "visibleStrandPixels": 1251,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.918,
+        "root": [
+          234.0,
+          68.33000183105469
+        ],
+        "freeTip": [
+          287.3299865722656,
+          60.66999816894531
+        ],
+        "rootCenterline": [
+          234.0,
+          68.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.191,
+        "rootDepthBelowCrownEdge": 18.142,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 1.0,
+        "rootUnderpaintSampleCount": 18,
+        "centerlineCrownCrossingIndex": 19,
+        "centerlineCrownCrossingPoint": [
+          233.10400390625,
+          51.104000091552734
+        ],
+        "visibleHairAlphaPixels": 78035,
+        "hairPixelsOverOpaqueCrown": 111,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      },
+      "131.25": {
+        "visibleStrandPixels": 1198,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.762,
+        "root": [
+          228.0,
+          64.66999816894531
+        ],
+        "freeTip": [
+          282.6700134277344,
+          56.83000183105469
+        ],
+        "rootCenterline": [
+          228.0,
+          64.66699981689453
+        ],
+        "crownEdgeAtRoot": 50.045,
+        "rootDepthBelowCrownEdge": 14.622,
+        "rootHiddenByCrown": true,
+        "rootUnderpaintCoverageRatio": 0.9333,
+        "rootUnderpaintSampleCount": 15,
+        "centerlineCrownCrossingIndex": 16,
+        "centerlineCrownCrossingPoint": [
+          227.16700744628906,
+          50.47999954223633
+        ],
+        "visibleHairAlphaPixels": 75885,
+        "hairPixelsOverOpaqueCrown": 87,
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "freeTipPreserved": true
+      }
+    }
+  },
+  "selectedByLocalTemporalError": "crown_front",
+  "interpretation": "A scalp-contact endpoint lies inside the head silhouette. Hair should be composited behind the crown until the centerline crosses the crown boundary; drawing the entire strand over the crown places root material on top of the head. The narrow slot is only a diagnostic approximation.",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-188-root-occlusion-sweep/index.html",
+  "gate": {
+    "nativeKeyframesExact": true,
+    "deepBodyExact": true,
+    "singleConnectedStrand": true,
+    "rootHiddenBehindCrown": true,
+    "localTemporalBeatsDIS": true,
+    "globalTemporalBeatsDIS": false,
+    "rootEmergenceVisuallyAccepted": false,
+    "semanticRootCorrespondenceVerified": false,
+    "productionApproved": false,
+    "passes": false
+  }
+}
