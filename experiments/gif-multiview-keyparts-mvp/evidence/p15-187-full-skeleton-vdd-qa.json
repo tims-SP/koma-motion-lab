@@ -1,0 +1,517 @@
+{
+  "schema": "KOMA_P15_187_FULL_SKELETON_VDD_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "sourceCurveSamples": 160,
+  "methods": {
+    "linear_centerline": {
+      "maxAdjacentLocalRGBMAE": 7.9214,
+      "maxAdjacentGlobalRGBMAE": 6.9209,
+      "maxAdjacentLocalDIS": 7.9475,
+      "maxAdjacentGlobalDIS": 6.6299,
+      "allNativeKeyframesExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesConnected": true,
+      "variableWidthConfirmed": true,
+      "midframeAreaMinMax": [
+        1198,
+        1464
+      ],
+      "midframeMaxStrokeWidths": [
+        12.61,
+        12.638,
+        12.675,
+        12.892,
+        13.64,
+        13.973,
+        13.558,
+        13.144,
+        12.918,
+        12.762
+      ]
+    },
+    "pchip_centerline": {
+      "maxAdjacentLocalRGBMAE": 9.1861,
+      "maxAdjacentGlobalRGBMAE": 7.0924,
+      "maxAdjacentLocalDIS": 7.9475,
+      "maxAdjacentGlobalDIS": 6.6299,
+      "allNativeKeyframesExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesConnected": true,
+      "variableWidthConfirmed": true,
+      "midframeAreaMinMax": [
+        1245,
+        1527
+      ],
+      "midframeMaxStrokeWidths": [
+        12.645,
+        12.705,
+        13.141,
+        13.815,
+        14.24,
+        14.342,
+        14.185,
+        13.891,
+        13.43,
+        13.0
+      ]
+    }
+  },
+  "intermediateDetails": {
+    "linear_centerline": {
+      "93.75": {
+        "visibleStrandPixels": 1266,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.61,
+        "root": [
+          196.3300018310547,
+          66.33000183105469
+        ],
+        "freeTip": [
+          269.3299865722656,
+          54.33000183105469
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "97.5": {
+        "visibleStrandPixels": 1289,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.638,
+        "root": [
+          208.6699981689453,
+          69.66999816894531
+        ],
+        "freeTip": [
+          276.6700134277344,
+          58.66999816894531
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "101.25": {
+        "visibleStrandPixels": 1331,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.675,
+        "root": [
+          221.0,
+          73.0
+        ],
+        "freeTip": [
+          284.0,
+          63.0
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "105": {
+        "visibleStrandPixels": 1399,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.892,
+        "root": [
+          233.3300018310547,
+          76.33000183105469
+        ],
+        "freeTip": [
+          291.3299865722656,
+          67.33000183105469
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "108.75": {
+        "visibleStrandPixels": 1464,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.64,
+        "root": [
+          245.6699981689453,
+          79.66999816894531
+        ],
+        "freeTip": [
+          298.6700134277344,
+          71.66999816894531
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "116.25": {
+        "visibleStrandPixels": 1450,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.973,
+        "root": [
+          252.0,
+          79.33000183105469
+        ],
+        "freeTip": [
+          301.3299865722656,
+          72.16999816894531
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "120": {
+        "visibleStrandPixels": 1375,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.558,
+        "root": [
+          246.0,
+          75.66999816894531
+        ],
+        "freeTip": [
+          296.6700134277344,
+          68.33000183105469
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "123.75": {
+        "visibleStrandPixels": 1302,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.144,
+        "root": [
+          240.0,
+          72.0
+        ],
+        "freeTip": [
+          292.0,
+          64.5
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "127.5": {
+        "visibleStrandPixels": 1251,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.918,
+        "root": [
+          234.0,
+          68.33000183105469
+        ],
+        "freeTip": [
+          287.3299865722656,
+          60.66999816894531
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "131.25": {
+        "visibleStrandPixels": 1198,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.762,
+        "root": [
+          228.0,
+          64.66999816894531
+        ],
+        "freeTip": [
+          282.6700134277344,
+          56.83000183105469
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      }
+    },
+    "pchip_centerline": {
+      "93.75": {
+        "visibleStrandPixels": 1294,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.645,
+        "root": [
+          204.41000366210938,
+          69.2300033569336
+        ],
+        "freeTip": [
+          274.5199890136719,
+          57.77000045776367
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "97.5": {
+        "visibleStrandPixels": 1376,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 12.705,
+        "root": [
+          222.3000030517578,
+          74.26000213623047
+        ],
+        "freeTip": [
+          285.260009765625,
+          64.22000122070312
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "101.25": {
+        "visibleStrandPixels": 1430,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.141,
+        "root": [
+          237.1199951171875,
+          78.12000274658203
+        ],
+        "freeTip": [
+          294.0,
+          69.30999755859375
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "105": {
+        "visibleStrandPixels": 1502,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.815,
+        "root": [
+          248.3699951171875,
+          80.8499984741211
+        ],
+        "freeTip": [
+          300.5199890136719,
+          73.0
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "108.75": {
+        "visibleStrandPixels": 1522,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 14.24,
+        "root": [
+          255.5,
+          82.47000122070312
+        ],
+        "freeTip": [
+          304.5899963378906,
+          75.23999786376953
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "116.25": {
+        "visibleStrandPixels": 1527,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 14.342,
+        "root": [
+          257.44000244140625,
+          82.37000274658203
+        ],
+        "freeTip": [
+          305.4100036621094,
+          75.4000015258789
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "120": {
+        "visibleStrandPixels": 1477,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 14.185,
+        "root": [
+          255.41000366210938,
+          80.4800033569336
+        ],
+        "freeTip": [
+          303.4800109863281,
+          73.55999755859375
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "123.75": {
+        "visibleStrandPixels": 1415,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.891,
+        "root": [
+          251.3800048828125,
+          77.37999725341797
+        ],
+        "freeTip": [
+          300.0,
+          70.44000244140625
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "127.5": {
+        "visibleStrandPixels": 1333,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.43,
+        "root": [
+          244.80999755859375,
+          73.06999969482422
+        ],
+        "freeTip": [
+          294.739990234375,
+          66.0
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      },
+      "131.25": {
+        "visibleStrandPixels": 1245,
+        "strokeWidthMin": 2.0,
+        "strokeWidthMax": 13.0,
+        "root": [
+          235.1999969482422,
+          67.61000061035156
+        ],
+        "freeTip": [
+          287.4800109863281,
+          60.20000076293945
+        ],
+        "topConnectedComponents": 1,
+        "deepBodyExact": true,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "sourceEndpointCoordinatesConsistent": true
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "linear_centerline",
+  "sourceGeometry": {
+    "90": {
+      "skeletonLength": 140,
+      "sourceMaskArea": 1064,
+      "root": [
+        184.0,
+        63.0
+      ],
+      "freeTip": [
+        262.0,
+        50.0
+      ],
+      "widthPercentiles": [
+        2.0,
+        6.759,
+        10.717
+      ],
+      "sourcePixelSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+    },
+    "112.5": {
+      "skeletonLength": 137,
+      "sourceMaskArea": 1350,
+      "root": [
+        258.0,
+        83.0
+      ],
+      "freeTip": [
+        306.0,
+        76.0
+      ],
+      "widthPercentiles": [
+        4.923,
+        7.987,
+        13.55
+      ],
+      "sourcePixelSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+    },
+    "135": {
+      "skeletonLength": 121,
+      "sourceMaskArea": 1033,
+      "root": [
+        222.0,
+        61.0
+      ],
+      "freeTip": [
+        278.0,
+        53.0
+      ],
+      "widthPercentiles": [
+        2.049,
+        7.54,
+        11.534
+      ],
+      "sourcePixelSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+    }
+  },
+  "method": "Ordered full-source skeleton root-to-tip, distance-transform width profile, per-node normal texture sampling, linear/PCHIP shape interpolation",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-187-full-skeleton-vdd/index.html",
+  "gate": {
+    "nativeKeysExact": true,
+    "deepBodyExact": true,
+    "midframesConnected": true,
+    "variableWidthConfirmed": true,
+    "localTemporalBeatsDIS": true,
+    "globalTemporalBeatsDIS": false,
+    "crossViewSemanticCorrespondenceVerified": false,
+    "visualAccepted": false,
+    "passes": false
+  }
+}
