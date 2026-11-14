@@ -9467,5 +9467,82 @@
     ],
     "review": "private-assets/exports/p15-167-endpoint-pair/index.html",
     "next": "Use the root/contact and free-tip distinction to paint a source-matched hidden crown and finished loop attachment in each view. Confirm the paired artwork closeup, then repeat 101.25/123.75° continuity and occlusion checks."
+  },
+  "p15_168RootOcclusionOwnership": {
+    "status": "SOURCE_ROOT_OCCLUSION_MIDFRAME_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "rootOcclusionVariants": [
+      "upper_only",
+      "root_front",
+      "crown_front"
+    ],
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "upper_only": 12.2313,
+      "root_front": 12.2304,
+      "crown_front": 12.2297
+    },
+    "topConnectedComponents": {
+      "reference": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "upper_only": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "root_front": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "crown_front": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "originalKeyframePixelExact": true,
+    "sourceHeadBelowY125PixelExact": true,
+    "midframeTopologicallyConnected": true,
+    "visualFindings": "Root-front and crown-front variants produce a single connected upper silhouette at 101.25 and 123.75 yaw. Restricting RGB underpaint to opaque crown fixes the dark synthetic halo. Close-ups still show residual scalp ink and an unregistered hair attachment. Both variants increase max adjacent RGB MAE over reference, and source-matched painter-authored underpaint remains unverified.",
+    "productionRendererUpdated": false,
+    "continuousYawVisualAccepted": false,
+    "overall360VisualAccepted": false,
+    "acceptanceGate": {
+      "originalKeyviewsPixelExact": true,
+      "bothMidframesConnected": true,
+      "zeroChangedPixelsBelowY125": true,
+      "beatsCurrentBaseline": false,
+      "visualApproval": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-168-root-occlusion-qa.json"
+    ],
+    "review": "private-assets/exports/p15-168-root-occlusion/index.html",
+    "next": "Use the verified single-source root/crown ownership and raster exact keyframes to paint clean native crown linework and attachment shading. Check 101.25/123.75 closeups and adjacent motion before VDD admission."
   }
 }
