@@ -9370,5 +9370,102 @@
     ],
     "review": "private-assets/exports/p15-166-crown-silhouette/index.html",
     "next": "Prepare matched source-painted crown and complete attached-loop roots as a paired asset, then verify per-view source reconstruction and intermediate root attachment against real frames."
+  },
+  "p15_167CanonicalLoopEndpointPairs": {
+    "status": "SOURCE_MATCHED_ENDPOINT_AND_PAIRED_RGBA_ART_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderedAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "endpointProposal": {
+      "90": {
+        "crownRoot": [
+          184,
+          53
+        ],
+        "visibleFreeTip": [
+          264,
+          46
+        ],
+        "rootAlpha": 255,
+        "tipCrownSignedGapY": 7.16
+      },
+      "112.5": {
+        "crownRoot": [
+          258,
+          77
+        ],
+        "visibleFreeTip": [
+          315,
+          72
+        ],
+        "rootAlpha": 253,
+        "tipCrownSignedGapY": 14.84
+      },
+      "135": {
+        "crownRoot": [
+          222,
+          55
+        ],
+        "visibleFreeTip": [
+          286,
+          46
+        ],
+        "rootAlpha": 255,
+        "tipCrownSignedGapY": 13.07
+      }
+    },
+    "sourceArtifactSHA256RGBA": {
+      "90": {
+        "canonicalSource": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "visibleLoop": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+        "crownUnderpaint": "4478a8bf89cdd689a45c5476f21e13a83371d56f42feae3a1d7a5a78113e706d"
+      },
+      "112.5": {
+        "canonicalSource": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "visibleLoop": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+        "crownUnderpaint": "3ccd8b31422d7fe9494edbffdb50826ddbaaa0d394be0395795a5d4bbd4cbd76"
+      },
+      "135": {
+        "canonicalSource": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "visibleLoop": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+        "crownUnderpaint": "c3af3ece1fc13b529807526e90a74bef133a0df9ed9938302356fa743d4419a4"
+      }
+    },
+    "assetDirectory": "private-assets/exports/p15-167-endpoint-pair/",
+    "pairedSourceReassemblyPixelExact": true,
+    "sourceRootCandidatePixels": {
+      "90": 45,
+      "112.5": 155,
+      "135": 70
+    },
+    "visibleLoopConnected": true,
+    "rootAlphaValid": true,
+    "legacy112p5RootAlpha": 0,
+    "referenceMaxAdjacentRGBMAE": 12.0984,
+    "candidateMaxAdjacentRGBMAE": 12.2313,
+    "midviewTopConnectedComponents": {
+      "101.25": 2,
+      "123.75": 2
+    },
+    "hiddenCrownProvenance": "source RGB with bounded synthetic inpainting; source-native RGBA and owner matte are preserved separately",
+    "sourceKeysPixelExact": true,
+    "singleFrameAssetGatePassed": true,
+    "animationVisualAccepted": false,
+    "productionRendererChanged": false,
+    "evidence": [
+      "evidence/p15-167-endpoint-pair-qa.json"
+    ],
+    "review": "private-assets/exports/p15-167-endpoint-pair/index.html",
+    "next": "Use the root/contact and free-tip distinction to paint a source-matched hidden crown and finished loop attachment in each view. Confirm the paired artwork closeup, then repeat 101.25/123.75° continuity and occlusion checks."
   }
 }

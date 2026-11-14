@@ -1,0 +1,166 @@
+{
+  "schema": "KOMA_P15_167_SOURCE_ENDPOINT_PAIRED_LAYERS_V1",
+  "characterId": "p0_character_001",
+  "angles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "endpointModel": "one root contact and a second visible free-tip candidate in each source view",
+  "legacyLandmarkDiagnostic": {
+    "yaw112p5": [
+      294,
+      72
+    ],
+    "sourceAlphaAtLegacyYaw112p5Root": 0
+  },
+  "keyviewPairs": {
+    "90": {
+      "aboveCrownPixels": 1019,
+      "rootSourcePixels": 45,
+      "ownerPixels": 1064,
+      "ownerComponents": 1,
+      "originalPixelExact": true,
+      "inpaintedCrownPixels": 45,
+      "headBelowY120Exact": true,
+      "sourceAlphaAtRoot": 255,
+      "sourceAlphaAtTip": 255,
+      "rootCrownSignedGapY": 4.76,
+      "tipCrownSignedGapY": 7.16,
+      "root": [
+        184,
+        53
+      ],
+      "freeTipProposal": [
+        264,
+        46
+      ],
+      "sourceSHA256RGBA": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+      "strandSHA256RGBA": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+      "crownSHA256RGBA": "4478a8bf89cdd689a45c5476f21e13a83371d56f42feae3a1d7a5a78113e706d"
+    },
+    "112.5": {
+      "aboveCrownPixels": 1195,
+      "rootSourcePixels": 155,
+      "ownerPixels": 1350,
+      "ownerComponents": 1,
+      "originalPixelExact": true,
+      "inpaintedCrownPixels": 155,
+      "headBelowY120Exact": true,
+      "sourceAlphaAtRoot": 253,
+      "sourceAlphaAtTip": 253,
+      "rootCrownSignedGapY": -17.16,
+      "tipCrownSignedGapY": 14.84,
+      "root": [
+        258,
+        77
+      ],
+      "freeTipProposal": [
+        315,
+        72
+      ],
+      "sourceSHA256RGBA": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+      "strandSHA256RGBA": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+      "crownSHA256RGBA": "3ccd8b31422d7fe9494edbffdb50826ddbaaa0d394be0395795a5d4bbd4cbd76"
+    },
+    "135": {
+      "aboveCrownPixels": 963,
+      "rootSourcePixels": 70,
+      "ownerPixels": 1033,
+      "ownerComponents": 1,
+      "originalPixelExact": true,
+      "inpaintedCrownPixels": 70,
+      "headBelowY120Exact": true,
+      "sourceAlphaAtRoot": 255,
+      "sourceAlphaAtTip": 255,
+      "rootCrownSignedGapY": -3.53,
+      "tipCrownSignedGapY": 13.07,
+      "root": [
+        222,
+        55
+      ],
+      "freeTipProposal": [
+        286,
+        46
+      ],
+      "sourceSHA256RGBA": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+      "strandSHA256RGBA": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+      "crownSHA256RGBA": "c3af3ece1fc13b529807526e90a74bef133a0df9ed9938302356fa743d4419a4"
+    }
+  },
+  "intermediateViews": {
+    "101.25": {
+      "donor": 90.0,
+      "interpolatedRoot": [
+        221.0,
+        65.0
+      ],
+      "interpolatedFreeTip": [
+        289.5,
+        59.0
+      ],
+      "upperSourceOpaquePixels": 759,
+      "sourceCrownAlphaExact": true
+    },
+    "123.75": {
+      "donor": 112.5,
+      "interpolatedRoot": [
+        240.0,
+        66.0
+      ],
+      "interpolatedFreeTip": [
+        300.5,
+        59.0
+      ],
+      "upperSourceOpaquePixels": 1274,
+      "sourceCrownAlphaExact": true
+    }
+  },
+  "reference": {
+    "maxAdjacentRGBMAE": 12.0984,
+    "topConnectedComponents": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "candidate": {
+    "maxAdjacentRGBMAE": 12.2313,
+    "topConnectedComponents": [
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    "originalKeyviewsPixelExact": true
+  },
+  "sourceArtworkPixelExact": true,
+  "hiddenCrownGeneratedByInpainting": true,
+  "endpointLabelsArtistApproved": false,
+  "physicalHairRigAccepted": false,
+  "continuousYawVisualAccepted": false,
+  "productionRendererChanged": false,
+  "review": "private-assets/exports/p15-167-endpoint-pair/index.html",
+  "gate": {
+    "keyviewPairReassemblyExact": true,
+    "rootAnchorHasSourceAlpha": true,
+    "allSourcePairsHaveRootMaterial": true,
+    "allSecondEndpointsAboveCrown": true,
+    "allSourceLoopMasksConnected": true,
+    "keyviewOriginalsPreserved": true,
+    "bothMidviewsSingleComponent": false,
+    "preservesIntermediateCrownAlpha": true,
+    "visualAccepted": false,
+    "passes": false
+  }
+}
