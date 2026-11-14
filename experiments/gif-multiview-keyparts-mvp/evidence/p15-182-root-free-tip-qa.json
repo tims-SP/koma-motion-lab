@@ -1,0 +1,381 @@
+{
+  "schema": "KOMA_P15_182_ROOT_FREE_TIP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "sourceTopology": "Left/root endpoint joins crown; right endpoint is visible free tip",
+  "methods": {
+    "root_tangent_08": {
+      "maxAdjacentRGBMAE": 12.2739,
+      "adjacentRGBMAE": [
+        12.2739,
+        11.15,
+        10.4065,
+        11.6334
+      ],
+      "loopAreaRatios": {
+        "101.25": 1.1274,
+        "123.75": 1.1508
+      },
+      "midframesSingleComponent": true,
+      "allFreeTipsPreserved": true,
+      "allDeepBodyExact": true,
+      "allKeyframesExact": true,
+      "areaWithin25Percent": true
+    },
+    "root_tangent_14": {
+      "maxAdjacentRGBMAE": 12.2744,
+      "adjacentRGBMAE": [
+        12.2744,
+        11.15,
+        10.4065,
+        11.6336
+      ],
+      "loopAreaRatios": {
+        "101.25": 1.1274,
+        "123.75": 1.1508
+      },
+      "midframesSingleComponent": true,
+      "allFreeTipsPreserved": true,
+      "allDeepBodyExact": true,
+      "allKeyframesExact": true,
+      "areaWithin25Percent": true
+    },
+    "root_tangent_20": {
+      "maxAdjacentRGBMAE": 12.2751,
+      "adjacentRGBMAE": [
+        12.2751,
+        11.1504,
+        10.4069,
+        11.634
+      ],
+      "loopAreaRatios": {
+        "101.25": 1.1274,
+        "123.75": 1.1508
+      },
+      "midframesSingleComponent": true,
+      "allFreeTipsPreserved": true,
+      "allDeepBodyExact": true,
+      "allKeyframesExact": true,
+      "areaWithin25Percent": true
+    },
+    "root_tangent_28": {
+      "maxAdjacentRGBMAE": 12.2755,
+      "adjacentRGBMAE": [
+        12.2755,
+        11.1508,
+        10.4075,
+        11.6346
+      ],
+      "loopAreaRatios": {
+        "101.25": 1.1274,
+        "123.75": 1.1508
+      },
+      "midframesSingleComponent": true,
+      "allFreeTipsPreserved": true,
+      "allDeepBodyExact": true,
+      "allKeyframesExact": true,
+      "areaWithin25Percent": true
+    }
+  },
+  "details": {
+    "root_tangent_08": {
+      "101.25": {
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "coreArea": 1212,
+        "rootAddedArea": 69,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceFreeTip": [
+          264,
+          46
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      },
+      "123.75": {
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "coreArea": 1160,
+        "rootAddedArea": 94,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceFreeTip": [
+          315,
+          72
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      }
+    },
+    "root_tangent_14": {
+      "101.25": {
+        "curveLength": 122.546,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1283,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "coreArea": 1212,
+        "rootAddedArea": 71,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceFreeTip": [
+          264,
+          46
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      },
+      "123.75": {
+        "curveLength": 115.002,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1255,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "coreArea": 1160,
+        "rootAddedArea": 95,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceFreeTip": [
+          315,
+          72
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      }
+    },
+    "root_tangent_20": {
+      "101.25": {
+        "curveLength": 122.497,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1283,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "coreArea": 1212,
+        "rootAddedArea": 71,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceFreeTip": [
+          264,
+          46
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      },
+      "123.75": {
+        "curveLength": 114.926,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "coreArea": 1160,
+        "rootAddedArea": 94,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceFreeTip": [
+          315,
+          72
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      }
+    },
+    "root_tangent_28": {
+      "101.25": {
+        "curveLength": 122.478,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1283,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "coreArea": 1212,
+        "rootAddedArea": 71,
+        "sourceRoot": [
+          184,
+          53
+        ],
+        "sourceFreeTip": [
+          264,
+          46
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      },
+      "123.75": {
+        "curveLength": 114.892,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1256,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "coreArea": 1160,
+        "rootAddedArea": 96,
+        "sourceRoot": [
+          258,
+          77
+        ],
+        "sourceFreeTip": [
+          315,
+          72
+        ],
+        "topComponents": 1,
+        "belowY125Exact": true
+      }
+    }
+  },
+  "bestTemporalCandidate": "root_tangent_08",
+  "reference": {
+    "maxAdjacentRGBMAE": 12.0984,
+    "adjacentRGBMAE": [
+      12.0984,
+      11.067,
+      10.4616,
+      11.6306
+    ]
+  },
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-182-root-free-tip/index.html",
+  "gate": {
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "freeTipIdentityPreserved": true,
+    "singleLoop": true,
+    "areaWithin25Percent": true,
+    "betterThanP15181": true,
+    "beatsWholeFrameReference": false,
+    "rootContactVisuallyAccepted": false,
+    "passes": false
+  }
+}

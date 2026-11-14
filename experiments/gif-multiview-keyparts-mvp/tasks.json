@@ -10596,5 +10596,58 @@
     ],
     "review": "private-assets/exports/p15-181-curve-correspondence/index.html",
     "next": "Improve source texture and root-contact appearance, then reduce temporal RGB MAE below the whole-frame DIS baseline. Keep source keyviews and deep head pixels exact; rerun 5-view visual review before any dense-yaw rollout."
+  },
+  "p15_182RootFreeTipCurve": {
+    "status": "SINGLE_ROOT_FREE_TIP_CURVE_RENDERED_AND_STRUCTURALLY_VERIFIED",
+    "characterId": "p0_character_001",
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sourceTopology": "Left/root endpoint joins crown; right endpoint is visible free tip",
+    "testedRootTangents": [
+      8,
+      14,
+      20,
+      28
+    ],
+    "diagnosticCandidate": "root_tangent_08",
+    "maxAdjacentRGBMAE": 12.2739,
+    "p15_181MaxAdjacentRGBMAE": 12.3552,
+    "wholeFrameBaselineMaxAdjacentRGBMAE": 12.0984,
+    "singleLoop": true,
+    "freeTipPreserved": true,
+    "coreAreaWithin25Percent": true,
+    "nativeSourceExact": true,
+    "deepBodyExact": true,
+    "visualFindings": "The source-visible right endpoint is a free tip; retaining it removes the artificial vertical right-leg connection seen in P15-181. Root tangent variants now produce one continuous arc with a source-matched crown attachment. The upper strand still shows a dark uneven edge, and the frame-wise RGB MAE remains above the whole-frame reference.",
+    "temporalBaselineMet": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "freeTipIdentityPreserved": true,
+      "singleLoop": true,
+      "areaWithin25Percent": true,
+      "betterThanP15181": true,
+      "beatsWholeFrameReference": false,
+      "rootContactVisuallyAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-182-root-free-tip-qa.json"
+    ],
+    "review": "private-assets/exports/p15-182-root-free-tip/index.html",
+    "assets": "private-assets/exports/p15-182-root-free-tip/",
+    "next": "Repair source texture sampling at the curved upper boundary using valid strand pixels, then evaluate root attachment and full 13-yaw motion under a local perceptual/temporal gate. Retain the single-root/free-tip geometry and unchanged canonical keyframes."
   }
 }
