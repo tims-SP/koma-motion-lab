@@ -1,0 +1,268 @@
+{
+  "schema": "KOMA_P15_192_ROOT_CONTROL_ASSET_AUDIT_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "nativeViews": {
+    "90": {
+      "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+      "strandSHA256": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12",
+      "crownPairSHA256": "4478a8bf89cdd689a45c5476f21e13a83371d56f42feae3a1d7a5a78113e706d",
+      "aiRootlessFullSHA256": "1d5eeffc40aa34abe7aceebbeffa5918f7f2b5bd897444b4d9d82d10fdf8a124",
+      "motionUnderpaintSHA256": "cf821a6a860756b15c874cd6fd82f905ea646f769d544c76476610a6733ee7fc",
+      "sourcePairReassemblyExact": true,
+      "rootAnchor": [
+        184.0,
+        53.0
+      ],
+      "rootAnchorAlpha": 255,
+      "visibleCrownCrossing": [
+        186.0,
+        56.83649826049805
+      ],
+      "crossingTangent": [
+        -0.14010000228881836,
+        -0.9901400208473206
+      ],
+      "crossingControlSegment": 7,
+      "rootToCrossingDistance": 4.3265,
+      "sourceAlphaAtCrossing": 255,
+      "motionUnderpaintAlphaAtCrossing": 0,
+      "sourceRootRegionOpaquePixels": 103,
+      "sourceGeometryRoot": [
+        184.0,
+        63.0
+      ],
+      "sourceGeometryFreeTip": [
+        262.0,
+        50.0
+      ],
+      "centerlineStart": [
+        184.0,
+        63.0
+      ],
+      "centerlineAtCrossing": [
+        186.0,
+        56.83649826049805
+      ],
+      "crop": [
+        146,
+        34,
+        228,
+        108
+      ],
+      "staleP15_189Crossing": [
+        186.0,
+        56.83649826049805
+      ],
+      "staleP15_189CrossingDeltaPixels": 0.0,
+      "underpaintEdgeAtCrossingX": 56.8365
+    },
+    "112.5": {
+      "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+      "strandSHA256": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4",
+      "crownPairSHA256": "3ccd8b31422d7fe9494edbffdb50826ddbaaa0d394be0395795a5d4bbd4cbd76",
+      "aiRootlessFullSHA256": "cd6996663b1afbbfb74c62c68056134265c4281152f996e945fcda6e30df1195",
+      "motionUnderpaintSHA256": "55c69ae70360471450f7b9c2d924f0fc3a05779f2a01316e35348391bfb87c12",
+      "sourcePairReassemblyExact": true,
+      "rootAnchor": [
+        258.0,
+        77.0
+      ],
+      "rootAnchorAlpha": 253,
+      "visibleCrownCrossing": [
+        256.0,
+        59.55720138549805
+      ],
+      "crossingTangent": [
+        0.0,
+        -1.0
+      ],
+      "crossingControlSegment": 25,
+      "rootToCrossingDistance": 17.5571,
+      "sourceAlphaAtCrossing": 243,
+      "motionUnderpaintAlphaAtCrossing": 0,
+      "sourceRootRegionOpaquePixels": 181,
+      "sourceGeometryRoot": [
+        258.0,
+        83.0
+      ],
+      "sourceGeometryFreeTip": [
+        306.0,
+        76.0
+      ],
+      "centerlineStart": [
+        258.0,
+        83.0
+      ],
+      "centerlineAtCrossing": [
+        256.0,
+        59.55720138549805
+      ],
+      "crop": [
+        220,
+        34,
+        302,
+        108
+      ],
+      "staleP15_189Crossing": [
+        256.0,
+        59.55720138549805
+      ],
+      "staleP15_189CrossingDeltaPixels": 0.0001,
+      "underpaintEdgeAtCrossingX": 59.5571
+    },
+    "135": {
+      "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+      "strandSHA256": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8",
+      "crownPairSHA256": "c3af3ece1fc13b529807526e90a74bef133a0df9ed9938302356fa743d4419a4",
+      "aiRootlessFullSHA256": "46fd6a6258e63d3224aab6bd641dfbaef629b61682f47c860d9c6da91807ddbf",
+      "motionUnderpaintSHA256": "b6f9fe980678765d014148234e995420ea2fe72b0a886b499f59f548292e5b48",
+      "sourcePairReassemblyExact": true,
+      "rootAnchor": [
+        222.0,
+        55.0
+      ],
+      "rootAnchorAlpha": 255,
+      "visibleCrownCrossing": [
+        221.0,
+        51.655399322509766
+      ],
+      "crossingTangent": [
+        0.0,
+        -1.0
+      ],
+      "crossingControlSegment": 11,
+      "rootToCrossingDistance": 3.4909,
+      "sourceAlphaAtCrossing": 255,
+      "motionUnderpaintAlphaAtCrossing": 0,
+      "sourceRootRegionOpaquePixels": 125,
+      "sourceGeometryRoot": [
+        222.0,
+        61.0
+      ],
+      "sourceGeometryFreeTip": [
+        278.0,
+        53.0
+      ],
+      "centerlineStart": [
+        222.0,
+        61.0
+      ],
+      "centerlineAtCrossing": [
+        221.0,
+        51.655399322509766
+      ],
+      "crop": [
+        184,
+        34,
+        266,
+        108
+      ],
+      "staleP15_189Crossing": [
+        221.0,
+        51.655399322509766
+      ],
+      "staleP15_189CrossingDeltaPixels": 0.0,
+      "underpaintEdgeAtCrossingX": 51.6554
+    }
+  },
+  "heldOut112p5Prediction": {
+    "method": "Hold out 112.5-degree source key and interpolate centerline/width from the 90- and 135-degree source-owned strands; sample texture only from those two native sources.",
+    "sourceKeysUsed": [
+      90.0,
+      135.0
+    ],
+    "heldOutNativeKey": 112.5,
+    "predictedRoot": [
+      203.0,
+      62.0
+    ],
+    "predictedFreeTip": [
+      270.0,
+      51.5
+    ],
+    "nativeRoot": [
+      258.0,
+      83.0
+    ],
+    "nativeFreeTip": [
+      306.0,
+      76.0
+    ],
+    "meanCenterlineDeltaPixels": 49.4794,
+    "maxCenterlineDeltaPixels": 58.8727,
+    "nativeWidthPercentiles": [
+      4.923,
+      7.987,
+      13.55
+    ],
+    "predictedWidthPercentiles": [
+      2.345,
+      7.313,
+      11.0
+    ],
+    "nativeMaskArea": 1350,
+    "predictedMaskArea": 1217,
+    "maskIoU": 0.04054,
+    "nativeCrossing": [
+      256.0,
+      59.55720138549805
+    ],
+    "predictedCrossing": [
+      203.67909240722656,
+      55.33039855957031
+    ],
+    "crossingDisplacementPixels": 52.4914,
+    "predictedTangent": [
+      -0.28088998794555664,
+      -0.9597399830818176
+    ],
+    "nativeTangent": [
+      0.0,
+      -1.0
+    ],
+    "candidateVisiblePixels": 1157,
+    "candidateRootlessCrownComposite": true,
+    "nativeKeyframeModified": false,
+    "candidateSHA256": "9eb8340c6b9db9a075d38ee9f8c316023229d803cf133e267cff2767cb7dce7b"
+  },
+  "finding": "The 112.5-degree native ahoge is a distinct source-owned shape and cannot be reconstructed by simply interpolating the 90- and 135-degree strands: the held-out prediction has only 0.04054 mask IoU and its visible crossing is 52.49 px from the native crossing. Preserve 112.5 degrees as an independent key/control asset. The earlier 7.57 px crossing discrepancy was caused by this audit script indexing the key list against the 13-frame crown sequence; correcting the frame index reproduces the P15-189 measurement within 0.0001 px. P15-189 now records SHA-256 fingerprints for all mutable source and underpaint inputs. The local control package preserves source RGBA, source-owned strand, ownership matte and generated crown donor as distinct layers.",
+  "staleEvidenceDetected": false,
+  "sourceAssetsModified": false,
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-192-root-control-asset/index.html",
+  "gate": {
+    "allThreeSourcePairsReassembleExact": true,
+    "allRootAnchorsHaveSourceAlpha": true,
+    "allCrossingsMeasured": true,
+    "allInputsFingerprinted": true,
+    "112p5LocalControlPackageComplete": true,
+    "independent112p5PredictionRendered": true,
+    "predictionRemainsSeparateFromNativeKey": true,
+    "heldOutPredictionMatchesNativeKey": false,
+    "evidenceReproducible": true,
+    "sourceRootSemanticsApproved": false,
+    "productionApproved": false,
+    "passes": false
+  }
+}

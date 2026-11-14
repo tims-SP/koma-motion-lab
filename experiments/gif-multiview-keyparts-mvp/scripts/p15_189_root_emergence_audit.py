@@ -6,7 +6,7 @@ source-root endpoint offset and color seam. Original source views and the
 P15-188 crown-front rasterization remain unchanged. This is a diagnostic
 for deciding if the 112.5-degree source key can be joined continuously.
 """
-import json,math
+import json,math,hashlib
 from pathlib import Path
 import cv2,numpy as np
 from PIL import Image,ImageDraw
@@ -111,9 +111,16 @@ def evaluate(save=True):
     nearby={k:v for k,v in discontinuities.items() if k in ('108.75-112.5','112.5-116.25')}
     measurable=[x for x in discontinuities.values() if x['measurable']]
     comparison=json.loads((ROOT/'evidence/p15-188-root-occlusion-sweep-qa.json').read_text())
+    tags={90.:'yaw090',112.5:'yaw112p5',135.:'yaw135'}
+    fingerprints={}
+    for a in KEYS:
+        tag=tags[a]
+        for label,path in [('aiRootlessFull',P/f'exports/p15-178-ai-rootless-crown/{tag}-ai-rootless-full.png'),('motionUnderpaint',P/f'exports/p15-178-ai-rootless-crown/local/{tag}/crown-motion-underpaint.png')]:
+            fingerprints[f'{a:g}:{label}']=hashlib.sha256(path.read_bytes()).hexdigest()
+        fingerprints[f'{a:g}:sourceRGBA']=hashlib.sha256(src[a].tobytes()).hexdigest()
     qa={'schema':'KOMA_P15_189_ROOT_EMERGENCE_AUDIT_V1',
       'characterId':'p0_character_001','sourceAngles':list(KEYS),
-      'renderAngles':list(ANGLES),'diagnostics':all_details,
+      'renderAngles':list(ANGLES),'diagnostics':all_details,'inputFingerprints':fingerprints,
       'adjacentDiscontinuities':discontinuities,'middleKeyTransitions':nearby,
       'metrics':{
         'allFramesHaveMeasuredCrossing':all(x['hasCrossing'] for x in all_details.values()),

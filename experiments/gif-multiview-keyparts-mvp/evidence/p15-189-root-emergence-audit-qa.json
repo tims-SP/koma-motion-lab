@@ -296,6 +296,17 @@
       "crownAlphaAtEmergence": 0
     }
   },
+  "inputFingerprints": {
+    "90:aiRootlessFull": "1d5eeffc40aa34abe7aceebbeffa5918f7f2b5bd897444b4d9d82d10fdf8a124",
+    "90:motionUnderpaint": "cf821a6a860756b15c874cd6fd82f905ea646f769d544c76476610a6733ee7fc",
+    "90:sourceRGBA": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+    "112.5:aiRootlessFull": "cd6996663b1afbbfb74c62c68056134265c4281152f996e945fcda6e30df1195",
+    "112.5:motionUnderpaint": "55c69ae70360471450f7b9c2d924f0fc3a05779f2a01316e35348391bfb87c12",
+    "112.5:sourceRGBA": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+    "135:aiRootlessFull": "46fd6a6258e63d3224aab6bd641dfbaef629b61682f47c860d9c6da91807ddbf",
+    "135:motionUnderpaint": "b6f9fe980678765d014148234e995420ea2fe72b0a886b499f59f548292e5b48",
+    "135:sourceRGBA": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+  },
   "adjacentDiscontinuities": {
     "90-93.75": {
       "measurable": true,
