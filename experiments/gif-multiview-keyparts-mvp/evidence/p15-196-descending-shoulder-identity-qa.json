@@ -1,0 +1,1302 @@
+{
+  "schema": "KOMA_P15_196_DESCENDING_SHOULDER_IDENTITY_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "featureNames": [
+    "root",
+    "entry_shoulder",
+    "outer_arc_apex",
+    "exit_shoulder",
+    "free_tip"
+  ],
+  "sharedFeatureCoordinates": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "sourceLandmarks": {
+    "90": {
+      "indices": [
+        0,
+        12,
+        87,
+        142,
+        159
+      ],
+      "coordinates": [
+        [
+          184.0,
+          63.0
+        ],
+        [
+          184.24969482421875,
+          52.249698638916016
+        ],
+        [
+          232.3614044189453,
+          8.0
+        ],
+        [
+          270.0,
+          35.883399963378906
+        ],
+        [
+          262.0,
+          50.0
+        ]
+      ],
+      "normalizedArcPositions": [
+        0.0,
+        0.07547,
+        0.54717,
+        0.89308,
+        1.0
+      ],
+      "curvatureAtFeatures": [
+        0.1367889940738678,
+        0.14705400168895721,
+        0.19261200726032257,
+        0.180090993642807,
+        0.010959000326693058
+      ],
+      "widthAtFeatures": [
+        6.0,
+        2.0,
+        8.0,
+        10.0,
+        2.0
+      ],
+      "windows": {
+        "entryWindow": [
+          12,
+          51
+        ],
+        "apexIndex": 87,
+        "exitWindow": [
+          121,
+          152
+        ]
+      },
+      "exitShoulderBranch": "descending-after-apex",
+      "sourceRGBAHash": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+    },
+    "112.5": {
+      "indices": [
+        0,
+        20,
+        79,
+        129,
+        159
+      ],
+      "coordinates": [
+        [
+          258.0,
+          83.0
+        ],
+        [
+          256.6051940917969,
+          63.605201721191406
+        ],
+        [
+          284.7789001464844,
+          24.0
+        ],
+        [
+          318.00830078125,
+          53.00830078125
+        ],
+        [
+          306.0,
+          76.0
+        ]
+      ],
+      "normalizedArcPositions": [
+        0.0,
+        0.12579,
+        0.49686,
+        0.81132,
+        1.0
+      ],
+      "curvatureAtFeatures": [
+        0.0,
+        0.18091200292110443,
+        0.02805499918758869,
+        0.24482999742031097,
+        0.1605679988861084
+      ],
+      "widthAtFeatures": [
+        6.0,
+        4.800099849700928,
+        8.307700157165527,
+        12.393799781799316,
+        2.0
+      ],
+      "windows": {
+        "entryWindow": [
+          12,
+          51
+        ],
+        "apexIndex": 79,
+        "exitWindow": [
+          121,
+          152
+        ]
+      },
+      "exitShoulderBranch": "descending-after-apex",
+      "sourceRGBAHash": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+    },
+    "135": {
+      "indices": [
+        0,
+        26,
+        82,
+        139,
+        159
+      ],
+      "coordinates": [
+        [
+          222.0,
+          61.0
+        ],
+        [
+          222.0,
+          38.68370056152344
+        ],
+        [
+          257.05389404296875,
+          11.0
+        ],
+        [
+          288.0,
+          39.92430114746094
+        ],
+        [
+          278.0,
+          53.0
+        ]
+      ],
+      "normalizedArcPositions": [
+        0.0,
+        0.16352,
+        0.51572,
+        0.87421,
+        1.0
+      ],
+      "curvatureAtFeatures": [
+        0.02071099914610386,
+        0.17493799328804016,
+        0.24117699265480042,
+        0.2017049938440323,
+        0.1632699966430664
+      ],
+      "widthAtFeatures": [
+        6.0,
+        3.625,
+        8.0,
+        10.0,
+        2.0
+      ],
+      "windows": {
+        "entryWindow": [
+          12,
+          51
+        ],
+        "apexIndex": 82,
+        "exitWindow": [
+          121,
+          152
+        ]
+      },
+      "exitShoulderBranch": "descending-after-apex",
+      "sourceRGBAHash": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+    }
+  },
+  "methods": {
+    "P15_194_old_feature_linear": {
+      "maxAdjacentLocalRGBMAE": 7.8031,
+      "maxAdjacentGlobalRGBMAE": 6.8688,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.3922,
+      "middleRootCrossingStepsPixels": [
+        12.3922,
+        6.4443
+      ],
+      "maxAdjacentSeamChange": 30.0628,
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    },
+    "P15_196_corrected_feature_linear": {
+      "maxAdjacentLocalRGBMAE": 7.9427,
+      "maxAdjacentGlobalRGBMAE": 6.9247,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.6088,
+      "middleRootCrossingStepsPixels": [
+        12.6088,
+        6.3353
+      ],
+      "maxAdjacentSeamChange": 37.8775,
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    },
+    "P15_196_corrected_light_smooth": {
+      "maxAdjacentLocalRGBMAE": 7.9149,
+      "maxAdjacentGlobalRGBMAE": 6.9198,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.6667,
+      "middleRootCrossingStepsPixels": [
+        12.6667,
+        6.1736
+      ],
+      "maxAdjacentSeamChange": 37.8318,
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    }
+  },
+  "details": {
+    "P15_194_old_feature_linear": {
+      "93.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "seam": 0.9377,
+        "featureCoordinates": [
+          [
+            196.3332977294922,
+            66.33329772949219
+          ],
+          [
+            196.216796875,
+            46.0989990234375
+          ],
+          [
+            239.7001953125,
+            10.66670036315918
+          ],
+          [
+            258.752197265625,
+            17.244300842285156
+          ],
+          [
+            269.33331298828125,
+            54.33330154418945
+          ]
+        ],
+        "visibleStrandPixels": 1195
+      },
+      "97.5": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          208.30349731445312,
+          51.03219985961914
+        ],
+        "seam": 3.4558,
+        "featureCoordinates": [
+          [
+            208.6667022705078,
+            69.66670227050781
+          ],
+          [
+            208.17340087890625,
+            49.38410186767578
+          ],
+          [
+            247.85800170898438,
+            13.33329963684082
+          ],
+          [
+            270.69488525390625,
+            24.48859977722168
+          ],
+          [
+            276.66668701171875,
+            58.66669845581055
+          ]
+        ],
+        "visibleStrandPixels": 1209
+      },
+      "101.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "seam": 28.1198,
+        "featureCoordinates": [
+          [
+            221.0,
+            73.0
+          ],
+          [
+            220.13009643554688,
+            52.66910171508789
+          ],
+          [
+            256.01580810546875,
+            16.0
+          ],
+          [
+            282.6376037597656,
+            31.732900619506836
+          ],
+          [
+            284.0,
+            63.0
+          ]
+        ],
+        "visibleStrandPixels": 1238
+      },
+      "105": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          232.43099975585938,
+          52.49589920043945
+        ],
+        "seam": 21.139,
+        "featureCoordinates": [
+          [
+            233.33340454101562,
+            76.33329772949219
+          ],
+          [
+            232.08670043945312,
+            55.954200744628906
+          ],
+          [
+            264.1736145019531,
+            18.66670036315918
+          ],
+          [
+            294.5802917480469,
+            38.97719955444336
+          ],
+          [
+            291.3334045410156,
+            67.33329772949219
+          ]
+        ],
+        "visibleStrandPixels": 1318
+      },
+      "108.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          244.22779846191406,
+          55.686500549316406
+        ],
+        "seam": 35.0641,
+        "featureCoordinates": [
+          [
+            245.6667022705078,
+            79.66670227050781
+          ],
+          [
+            244.04339599609375,
+            59.23929977416992
+          ],
+          [
+            272.3313903808594,
+            21.33329963684082
+          ],
+          [
+            306.52301025390625,
+            46.22140121459961
+          ],
+          [
+            298.6665954589844,
+            71.66670227050781
+          ]
+        ],
+        "visibleStrandPixels": 1400
+      },
+      "116.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          250.33160400390625,
+          56.491600036621094
+        ],
+        "seam": 32.2431,
+        "featureCoordinates": [
+          [
+            252.0,
+            79.33329772949219
+          ],
+          [
+            250.2021942138672,
+            58.7401008605957
+          ],
+          [
+            276.4573059082031,
+            21.83329963684082
+          ],
+          [
+            309.7164001464844,
+            46.71369934082031
+          ],
+          [
+            301.3334045410156,
+            72.16670227050781
+          ]
+        ],
+        "visibleStrandPixels": 1386
+      },
+      "120": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          244.6392059326172,
+          53.71659851074219
+        ],
+        "seam": 55.8824,
+        "featureCoordinates": [
+          [
+            246.0,
+            75.66670227050781
+          ],
+          [
+            244.40440368652344,
+            54.95589828491211
+          ],
+          [
+            272.4255065917969,
+            19.66670036315918
+          ],
+          [
+            300.9670104980469,
+            39.96160125732422
+          ],
+          [
+            296.66668701171875,
+            68.33329772949219
+          ]
+        ],
+        "visibleStrandPixels": 1279
+      },
+      "123.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          238.61219787597656,
+          51.4380989074707
+        ],
+        "seam": 32.4824,
+        "featureCoordinates": [
+          [
+            240.0,
+            72.0
+          ],
+          [
+            238.60650634765625,
+            51.171600341796875
+          ],
+          [
+            268.3935852050781,
+            17.5
+          ],
+          [
+            292.21759033203125,
+            33.209598541259766
+          ],
+          [
+            292.0,
+            64.5
+          ]
+        ],
+        "visibleStrandPixels": 1202
+      },
+      "127.5": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          233.27529907226562,
+          50.1963005065918
+        ],
+        "seam": 6.8335,
+        "featureCoordinates": [
+          [
+            234.0,
+            68.33329772949219
+          ],
+          [
+            232.80870056152344,
+            47.38740158081055
+          ],
+          [
+            264.3617858886719,
+            15.33329963684082
+          ],
+          [
+            283.4682922363281,
+            26.457500457763672
+          ],
+          [
+            287.3334045410156,
+            60.66669845581055
+          ]
+        ],
+        "visibleStrandPixels": 1162
+      },
+      "131.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "seam": 2.8893,
+        "featureCoordinates": [
+          [
+            228.0,
+            64.66670227050781
+          ],
+          [
+            227.01089477539062,
+            43.60319900512695
+          ],
+          [
+            260.32989501953125,
+            13.16670036315918
+          ],
+          [
+            274.7189025878906,
+            19.70549964904785
+          ],
+          [
+            282.6665954589844,
+            56.83330154418945
+          ]
+        ],
+        "visibleStrandPixels": 1140
+      }
+    },
+    "P15_196_corrected_feature_linear": {
+      "93.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          196.14019775390625,
+          53.39179992675781
+        ],
+        "seam": 0.5551,
+        "featureCoordinates": [
+          [
+            196.3332977294922,
+            66.33329772949219
+          ],
+          [
+            196.17340087890625,
+            53.73360061645508
+          ],
+          [
+            241.7281951904297,
+            10.824299812316895
+          ],
+          [
+            278.02978515625,
+            38.401798248291016
+          ],
+          [
+            269.33331298828125,
+            54.33330154418945
+          ]
+        ],
+        "visibleStrandPixels": 1248
+      },
+      "97.5": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          208.0,
+          51.03219985961914
+        ],
+        "seam": 27.2641,
+        "featureCoordinates": [
+          [
+            208.6667022705078,
+            69.66670227050781
+          ],
+          [
+            208.2147979736328,
+            55.652400970458984
+          ],
+          [
+            250.46389770507812,
+            13.459500312805176
+          ],
+          [
+            286.0249938964844,
+            41.260501861572266
+          ],
+          [
+            276.66668701171875,
+            58.66669845581055
+          ]
+        ],
+        "visibleStrandPixels": 1297
+      },
+      "101.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          220.0,
+          51.048099517822266
+        ],
+        "seam": 33.2941,
+        "featureCoordinates": [
+          [
+            221.0,
+            73.0
+          ],
+          [
+            220.25619506835938,
+            57.57120132446289
+          ],
+          [
+            259.19970703125,
+            16.094600677490234
+          ],
+          [
+            294.02020263671875,
+            44.11920166015625
+          ],
+          [
+            284.0,
+            63.0
+          ]
+        ],
+        "visibleStrandPixels": 1344
+      },
+      "105": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          232.0583038330078,
+          52.4536018371582
+        ],
+        "seam": 27.0397,
+        "featureCoordinates": [
+          [
+            233.33340454101562,
+            76.33329772949219
+          ],
+          [
+            232.29769897460938,
+            59.4900016784668
+          ],
+          [
+            267.9353942871094,
+            18.729700088500977
+          ],
+          [
+            302.0154113769531,
+            46.97800064086914
+          ],
+          [
+            291.3334045410156,
+            67.33329772949219
+          ]
+        ],
+        "visibleStrandPixels": 1394
+      },
+      "108.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          244.0,
+          55.686500549316406
+        ],
+        "seam": 52.0941,
+        "featureCoordinates": [
+          [
+            245.6667022705078,
+            79.66670227050781
+          ],
+          [
+            244.33920288085938,
+            61.40879821777344
+          ],
+          [
+            276.67120361328125,
+            21.364900588989258
+          ],
+          [
+            310.010498046875,
+            49.836700439453125
+          ],
+          [
+            298.6665954589844,
+            71.66670227050781
+          ]
+        ],
+        "visibleStrandPixels": 1460
+      },
+      "116.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          250.45579528808594,
+          56.491600036621094
+        ],
+        "seam": 25.2867,
+        "featureCoordinates": [
+          [
+            252.0,
+            79.33329772949219
+          ],
+          [
+            250.65049743652344,
+            59.16809844970703
+          ],
+          [
+            280.7878112792969,
+            21.83329963684082
+          ],
+          [
+            313.00469970703125,
+            50.51369857788086
+          ],
+          [
+            301.3334045410156,
+            72.16670227050781
+          ]
+        ],
+        "visibleStrandPixels": 1449
+      },
+      "120": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          244.6844024658203,
+          53.71659851074219
+        ],
+        "seam": 40.6662,
+        "featureCoordinates": [
+          [
+            246.0,
+            75.66670227050781
+          ],
+          [
+            244.92039489746094,
+            55.00849914550781
+          ],
+          [
+            276.168701171875,
+            19.66670036315918
+          ],
+          [
+            308.0038146972656,
+            48.332000732421875
+          ],
+          [
+            296.66668701171875,
+            68.33329772949219
+          ]
+        ],
+        "visibleStrandPixels": 1366
+      },
+      "123.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          239.33230590820312,
+          51.4380989074707
+        ],
+        "seam": 2.7887,
+        "featureCoordinates": [
+          [
+            240.0,
+            72.0
+          ],
+          [
+            239.1903076171875,
+            50.848899841308594
+          ],
+          [
+            271.5495910644531,
+            17.5
+          ],
+          [
+            303.0028076171875,
+            46.150299072265625
+          ],
+          [
+            292.0,
+            64.5
+          ]
+        ],
+        "visibleStrandPixels": 1291
+      },
+      "127.5": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          233.33340454101562,
+          50.1963005065918
+        ],
+        "seam": 14.9098,
+        "featureCoordinates": [
+          [
+            234.0,
+            68.33329772949219
+          ],
+          [
+            233.460205078125,
+            46.689300537109375
+          ],
+          [
+            266.9303894042969,
+            15.33329963684082
+          ],
+          [
+            298.00189208984375,
+            43.96860122680664
+          ],
+          [
+            287.3334045410156,
+            60.66669845581055
+          ]
+        ],
+        "visibleStrandPixels": 1243
+      },
+      "131.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "seam": 4.4065,
+        "featureCoordinates": [
+          [
+            228.0,
+            64.66670227050781
+          ],
+          [
+            227.7301025390625,
+            42.529701232910156
+          ],
+          [
+            262.3113098144531,
+            13.16670036315918
+          ],
+          [
+            293.0010070800781,
+            41.786800384521484
+          ],
+          [
+            282.6665954589844,
+            56.83330154418945
+          ]
+        ],
+        "visibleStrandPixels": 1189
+      }
+    },
+    "P15_196_corrected_light_smooth": {
+      "93.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          196.3730926513672,
+          53.39179992675781
+        ],
+        "seam": 9.715,
+        "featureCoordinates": [
+          [
+            196.3332977294922,
+            66.33329772949219
+          ],
+          [
+            196.27589416503906,
+            52.95719909667969
+          ],
+          [
+            241.51600646972656,
+            11.134900093078613
+          ],
+          [
+            278.2720031738281,
+            38.04159927368164
+          ],
+          [
+            269.33331298828125,
+            54.33330154418945
+          ]
+        ],
+        "visibleStrandPixels": 1231
+      },
+      "97.5": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          208.07000732421875,
+          51.03219985961914
+        ],
+        "seam": 24.6654,
+        "featureCoordinates": [
+          [
+            208.6667022705078,
+            69.66670227050781
+          ],
+          [
+            208.31959533691406,
+            54.927101135253906
+          ],
+          [
+            250.27650451660156,
+            13.708200454711914
+          ],
+          [
+            286.24688720703125,
+            40.90549850463867
+          ],
+          [
+            276.66668701171875,
+            58.66669845581055
+          ]
+        ],
+        "visibleStrandPixels": 1282
+      },
+      "101.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          220.07240295410156,
+          51.048099517822266
+        ],
+        "seam": 29.268,
+        "featureCoordinates": [
+          [
+            221.0,
+            73.0
+          ],
+          [
+            220.3634033203125,
+            56.89690017700195
+          ],
+          [
+            259.0369873046875,
+            16.281600952148438
+          ],
+          [
+            294.2218933105469,
+            43.76940155029297
+          ],
+          [
+            284.0,
+            63.0
+          ]
+        ],
+        "visibleStrandPixels": 1328
+      },
+      "105": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          231.98390197753906,
+          52.4536018371582
+        ],
+        "seam": 34.8641,
+        "featureCoordinates": [
+          [
+            233.33340454101562,
+            76.33329772949219
+          ],
+          [
+            232.40699768066406,
+            58.86669921875
+          ],
+          [
+            267.7973937988281,
+            18.854900360107422
+          ],
+          [
+            302.1968994140625,
+            46.63330078125
+          ],
+          [
+            291.3334045410156,
+            67.33329772949219
+          ]
+        ],
+        "visibleStrandPixels": 1389
+      },
+      "108.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          243.93919372558594,
+          55.686500549316406
+        ],
+        "seam": 46.4405,
+        "featureCoordinates": [
+          [
+            245.6667022705078,
+            79.66670227050781
+          ],
+          [
+            244.45069885253906,
+            60.83649826049805
+          ],
+          [
+            276.5580139160156,
+            21.428199768066406
+          ],
+          [
+            310.17181396484375,
+            49.49720001220703
+          ],
+          [
+            298.6665954589844,
+            71.66670227050781
+          ]
+        ],
+        "visibleStrandPixels": 1440
+      },
+      "116.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          250.53480529785156,
+          56.685699462890625
+        ],
+        "seam": 76.7224,
+        "featureCoordinates": [
+          [
+            252.0,
+            79.33329772949219
+          ],
+          [
+            250.747802734375,
+            58.68040084838867
+          ],
+          [
+            280.70269775390625,
+            21.90130043029785
+          ],
+          [
+            313.1650085449219,
+            50.1859016418457
+          ],
+          [
+            301.3334045410156,
+            72.16670227050781
+          ]
+        ],
+        "visibleStrandPixels": 1425
+      },
+      "120": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          244.94639587402344,
+          53.71659851074219
+        ],
+        "seam": 39.322,
+        "featureCoordinates": [
+          [
+            246.0,
+            75.66670227050781
+          ],
+          [
+            245.00100708007812,
+            54.554500579833984
+          ],
+          [
+            276.0869140625,
+            19.801000595092773
+          ],
+          [
+            308.1831970214844,
+            48.010799407958984
+          ],
+          [
+            296.66668701171875,
+            68.33329772949219
+          ]
+        ],
+        "visibleStrandPixels": 1364
+      },
+      "123.75": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          239.30990600585938,
+          51.4380989074707
+        ],
+        "seam": 1.4902,
+        "featureCoordinates": [
+          [
+            240.0,
+            72.0
+          ],
+          [
+            239.25439453125,
+            50.4286003112793
+          ],
+          [
+            271.4710998535156,
+            17.700700759887695
+          ],
+          [
+            303.2013854980469,
+            45.835601806640625
+          ],
+          [
+            292.0,
+            64.5
+          ]
+        ],
+        "visibleStrandPixels": 1289
+      },
+      "127.5": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          233.33160400390625,
+          50.1963005065918
+        ],
+        "seam": 14.8593,
+        "featureCoordinates": [
+          [
+            234.0,
+            68.33329772949219
+          ],
+          [
+            233.50770568847656,
+            46.30270004272461
+          ],
+          [
+            266.85540771484375,
+            15.6003999710083
+          ],
+          [
+            298.2196044921875,
+            43.660499572753906
+          ],
+          [
+            287.3334045410156,
+            60.66669845581055
+          ]
+        ],
+        "visibleStrandPixels": 1234
+      },
+      "131.25": {
+        "actualCrownCrossing": true,
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "rootCrossing": [
+          227.1667022705078,
+          50.15800094604492
+        ],
+        "seam": 4.688,
+        "featureCoordinates": [
+          [
+            228.0,
+            64.66670227050781
+          ],
+          [
+            227.76100158691406,
+            42.17679977416992
+          ],
+          [
+            262.2395935058594,
+            13.500100135803223
+          ],
+          [
+            293.23779296875,
+            41.48529815673828
+          ],
+          [
+            282.6665954589844,
+            56.83330154418945
+          ]
+        ],
+        "visibleStrandPixels": 1173
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "P15_196_corrected_light_smooth",
+  "finding": "P15-194 exit shoulder search selected curvature maxima from a window overlapping the outer-arc apex. The corrected detector constrains the exit shoulder to the descending branch after the apex (76%-96% source arc). This produces semantically ordered and visually distinct features. Promotion is still gated by temporal metrics and full-resolution review.",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-196-descending-shoulder-identity/index.html",
+  "gate": {
+    "allFeatureIndicesOrdered": true,
+    "exitShouldersOnDescendingBranch": true,
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "allMidframesSingleComponent": true,
+    "allMidframesHaveCrownCrossing": true,
+    "localTemporalImproved": false,
+    "globalTemporalBeatsDIS": false,
+    "rootAndSeamNotWorse": false,
+    "visualAccepted": false,
+    "semanticFeatureCorrespondenceApproved": false,
+    "passes": false
+  }
+}

@@ -12787,5 +12787,321 @@
     "review": "private-assets/exports/p15-195-width-curvature-regularization/index.html",
     "assets": "private-assets/exports/p15-195-width-curvature-regularization/",
     "next": "Check source-identity validity of the 112.5-degree exit shoulder and analyze the actual middle-key visual mismatch in full-resolution alpha/paint. Use targeted geometry correction and compare source-key transitions with global DIS; only adopt a production method when both visual and temporal gates are satisfied."
+  },
+  "p15_196DescendingShoulderIdentity": {
+    "status": "DESCENDING_BRANCH_FEATURE_IDENTITY_CORRECTED_VDD_REGRESSION_REJECTED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "featureNames": [
+      "root",
+      "entry_shoulder",
+      "outer_arc_apex",
+      "exit_shoulder",
+      "free_tip"
+    ],
+    "sharedFeatureCoordinates": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "sourceLandmarks": {
+      "90": {
+        "indices": [
+          0,
+          12,
+          87,
+          142,
+          159
+        ],
+        "coordinates": [
+          [
+            184.0,
+            63.0
+          ],
+          [
+            184.24969482421875,
+            52.249698638916016
+          ],
+          [
+            232.3614044189453,
+            8.0
+          ],
+          [
+            270.0,
+            35.883399963378906
+          ],
+          [
+            262.0,
+            50.0
+          ]
+        ],
+        "normalizedArcPositions": [
+          0.0,
+          0.07547,
+          0.54717,
+          0.89308,
+          1.0
+        ],
+        "curvatureAtFeatures": [
+          0.1367889940738678,
+          0.14705400168895721,
+          0.19261200726032257,
+          0.180090993642807,
+          0.010959000326693058
+        ],
+        "widthAtFeatures": [
+          6.0,
+          2.0,
+          8.0,
+          10.0,
+          2.0
+        ],
+        "windows": {
+          "entryWindow": [
+            12,
+            51
+          ],
+          "apexIndex": 87,
+          "exitWindow": [
+            121,
+            152
+          ]
+        },
+        "exitShoulderBranch": "descending-after-apex",
+        "sourceRGBAHash": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+      },
+      "112.5": {
+        "indices": [
+          0,
+          20,
+          79,
+          129,
+          159
+        ],
+        "coordinates": [
+          [
+            258.0,
+            83.0
+          ],
+          [
+            256.6051940917969,
+            63.605201721191406
+          ],
+          [
+            284.7789001464844,
+            24.0
+          ],
+          [
+            318.00830078125,
+            53.00830078125
+          ],
+          [
+            306.0,
+            76.0
+          ]
+        ],
+        "normalizedArcPositions": [
+          0.0,
+          0.12579,
+          0.49686,
+          0.81132,
+          1.0
+        ],
+        "curvatureAtFeatures": [
+          0.0,
+          0.18091200292110443,
+          0.02805499918758869,
+          0.24482999742031097,
+          0.1605679988861084
+        ],
+        "widthAtFeatures": [
+          6.0,
+          4.800099849700928,
+          8.307700157165527,
+          12.393799781799316,
+          2.0
+        ],
+        "windows": {
+          "entryWindow": [
+            12,
+            51
+          ],
+          "apexIndex": 79,
+          "exitWindow": [
+            121,
+            152
+          ]
+        },
+        "exitShoulderBranch": "descending-after-apex",
+        "sourceRGBAHash": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+      },
+      "135": {
+        "indices": [
+          0,
+          26,
+          82,
+          139,
+          159
+        ],
+        "coordinates": [
+          [
+            222.0,
+            61.0
+          ],
+          [
+            222.0,
+            38.68370056152344
+          ],
+          [
+            257.05389404296875,
+            11.0
+          ],
+          [
+            288.0,
+            39.92430114746094
+          ],
+          [
+            278.0,
+            53.0
+          ]
+        ],
+        "normalizedArcPositions": [
+          0.0,
+          0.16352,
+          0.51572,
+          0.87421,
+          1.0
+        ],
+        "curvatureAtFeatures": [
+          0.02071099914610386,
+          0.17493799328804016,
+          0.24117699265480042,
+          0.2017049938440323,
+          0.1632699966430664
+        ],
+        "widthAtFeatures": [
+          6.0,
+          3.625,
+          8.0,
+          10.0,
+          2.0
+        ],
+        "windows": {
+          "entryWindow": [
+            12,
+            51
+          ],
+          "apexIndex": 82,
+          "exitWindow": [
+            121,
+            152
+          ]
+        },
+        "exitShoulderBranch": "descending-after-apex",
+        "sourceRGBAHash": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+      }
+    },
+    "methods": {
+      "P15_194_old_feature_linear": {
+        "maxAdjacentLocalRGBMAE": 7.8031,
+        "maxAdjacentGlobalRGBMAE": 6.8688,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.3922,
+        "middleRootCrossingStepsPixels": [
+          12.3922,
+          6.4443
+        ],
+        "maxAdjacentSeamChange": 30.0628,
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      },
+      "P15_196_corrected_feature_linear": {
+        "maxAdjacentLocalRGBMAE": 7.9427,
+        "maxAdjacentGlobalRGBMAE": 6.9247,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.6088,
+        "middleRootCrossingStepsPixels": [
+          12.6088,
+          6.3353
+        ],
+        "maxAdjacentSeamChange": 37.8775,
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      },
+      "P15_196_corrected_light_smooth": {
+        "maxAdjacentLocalRGBMAE": 7.9149,
+        "maxAdjacentGlobalRGBMAE": 6.9198,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.6667,
+        "middleRootCrossingStepsPixels": [
+          12.6667,
+          6.1736
+        ],
+        "maxAdjacentSeamChange": 37.8318,
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      }
+    },
+    "selectedDiagnosticMethod": "P15_196_corrected_light_smooth",
+    "finding": "P15-194 exit shoulder search was semantically invalid: its search interval overlapped the outer-arc apex, selecting top-arc points at 90/135 degrees but a descending-side point at 112.5 degrees. P15-196 constrains exit-shoulder curvature search to 76%-96% of the source centerline after the apex. Corrected source points are 90° index 142 at (270.0,35.88), 112.5° index 129 at (318.01,53.01), and 135° index 139 at (288.0,39.92); widths 10.0, 12.39, 10.0 px. The corrected feature map is semantically ordered but worsens all major interpolation metrics versus P15-194: local MAE 7.8031→7.9149, global MAE 6.8688→6.9198, max root crossing step 12.3922→12.6667 px, max seam change 30.0628→37.8318. Therefore the corrected point detector is useful for measurement but this feature reparameterization is rejected for rendering. Keep P15-194 as diagnostic baseline only; no production change.",
+    "allFeatureIndicesOrdered": true,
+    "exitShouldersOnDescendingBranch": true,
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "allMidframesSingleComponent": true,
+    "allMidframesHaveCrownCrossing": true,
+    "visualAccepted": false,
+    "semanticFeatureCorrespondenceApproved": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allFeatureIndicesOrdered": true,
+      "exitShouldersOnDescendingBranch": true,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "allMidframesHaveCrownCrossing": true,
+      "localTemporalImproved": false,
+      "globalTemporalBeatsDIS": false,
+      "rootAndSeamNotWorse": false,
+      "visualAccepted": false,
+      "semanticFeatureCorrespondenceApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-196-descending-shoulder-identity-qa.json"
+    ],
+    "review": "private-assets/exports/p15-196-descending-shoulder-identity/index.html",
+    "assets": "private-assets/exports/p15-196-descending-shoulder-identity/",
+    "next": "Investigate why the native 112.5-degree descending shoulder is 48 px farther right and 13-17 px lower than the corresponding 90/135-degree shoulders relative to their roots. Separate true view-dependent shape change from source-curve tracing/endpoint correspondence error. Test root-relative rigid/affine normalization and silhouette-derived contour anchors before further feature-parameter interpolation. Compare the held-out 112.5 native key and neighboring 108.75/116.25 views; do not promote feature reparameterization unless it improves both full-frame and local temporal metrics."
   }
 }
