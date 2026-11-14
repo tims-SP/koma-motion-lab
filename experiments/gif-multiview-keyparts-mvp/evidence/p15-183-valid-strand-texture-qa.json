@@ -1,0 +1,383 @@
+{
+  "schema": "KOMA_P15_183_VALID_STRAND_TEXTURE_V1",
+  "characterId": "p0_character_001",
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "modes": {
+    "native": {
+      "maxAdjacentRGBMAE": 12.2739,
+      "adjacentRGBMAE": [
+        12.2739,
+        11.15,
+        10.4065,
+        11.6334
+      ],
+      "meanDarkEdgeRatio": 0.72974,
+      "totalDarkEdgePixels": 275,
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "nearest_valid": {
+      "maxAdjacentRGBMAE": 12.3388,
+      "adjacentRGBMAE": [
+        12.3388,
+        11.2223,
+        10.4716,
+        11.6851
+      ],
+      "meanDarkEdgeRatio": 0.00531,
+      "totalDarkEdgePixels": 2,
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "alpha_normalized": {
+      "maxAdjacentRGBMAE": 12.3589,
+      "adjacentRGBMAE": [
+        12.3589,
+        11.2398,
+        10.4889,
+        11.7041
+      ],
+      "meanDarkEdgeRatio": 0.0,
+      "totalDarkEdgePixels": 0,
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "valid_mix_50": {
+      "maxAdjacentRGBMAE": 12.2793,
+      "adjacentRGBMAE": [
+        12.2793,
+        11.1598,
+        10.4127,
+        11.6336
+      ],
+      "meanDarkEdgeRatio": 0.45629,
+      "totalDarkEdgePixels": 172,
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "valid_mix_75": {
+      "maxAdjacentRGBMAE": 12.3082,
+      "adjacentRGBMAE": [
+        12.3082,
+        11.1905,
+        10.4414,
+        11.6585
+      ],
+      "meanDarkEdgeRatio": 0.05587,
+      "totalDarkEdgePixels": 21,
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    }
+  },
+  "intermediateDetails": {
+    "native": {
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "edgePixelCount": 192,
+        "darkEdgePixels": 137,
+        "darkEdgeRatio": 0.71354,
+        "coreArea": 1212,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "edgePixelCount": 185,
+        "darkEdgePixels": 138,
+        "darkEdgeRatio": 0.74595,
+        "coreArea": 1160,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      }
+    },
+    "nearest_valid": {
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "edgePixelCount": 192,
+        "darkEdgePixels": 1,
+        "darkEdgeRatio": 0.00521,
+        "coreArea": 1212,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "edgePixelCount": 185,
+        "darkEdgePixels": 1,
+        "darkEdgeRatio": 0.00541,
+        "coreArea": 1160,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      }
+    },
+    "alpha_normalized": {
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "edgePixelCount": 192,
+        "darkEdgePixels": 0,
+        "darkEdgeRatio": 0.0,
+        "coreArea": 1212,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "edgePixelCount": 185,
+        "darkEdgePixels": 0,
+        "darkEdgeRatio": 0.0,
+        "coreArea": 1160,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      }
+    },
+    "valid_mix_50": {
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "edgePixelCount": 192,
+        "darkEdgePixels": 87,
+        "darkEdgeRatio": 0.45312,
+        "coreArea": 1212,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "edgePixelCount": 185,
+        "darkEdgePixels": 85,
+        "darkEdgeRatio": 0.45946,
+        "coreArea": 1160,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      }
+    },
+    "valid_mix_75": {
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "edgePixelCount": 192,
+        "darkEdgePixels": 9,
+        "darkEdgeRatio": 0.04688,
+        "coreArea": 1212,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "edgePixelCount": 185,
+        "darkEdgePixels": 12,
+        "darkEdgeRatio": 0.06486,
+        "coreArea": 1160,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "valid_mix_75",
+  "priorMaxAdjacentRGBMAE": 12.2739,
+  "wholeFrameBaselineMaxAdjacentRGBMAE": 12.0984,
+  "selectionRule": "Among candidates with at most 25 dark antialias edge pixels, minimize adjacent RGB MAE",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-183-valid-strand-texture/index.html",
+  "gate": {
+    "allSourceKeysExact": true,
+    "allDeepBodyExact": true,
+    "freeTipPreserved": true,
+    "singleConnectedStrand": true,
+    "textureDarkEdgeReduced": true,
+    "temporalBetterThanP15182": false,
+    "temporalBeatsWholeFrameBaseline": false,
+    "visualAccepted": false,
+    "passes": false
+  }
+}

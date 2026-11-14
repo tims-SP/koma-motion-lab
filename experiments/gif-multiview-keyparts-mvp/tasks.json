@@ -10649,5 +10649,60 @@
     "review": "private-assets/exports/p15-182-root-free-tip/index.html",
     "assets": "private-assets/exports/p15-182-root-free-tip/",
     "next": "Repair source texture sampling at the curved upper boundary using valid strand pixels, then evaluate root attachment and full 13-yaw motion under a local perceptual/temporal gate. Retain the single-root/free-tip geometry and unchanged canonical keyframes."
+  },
+  "p15_183ValidStrandTexture": {
+    "status": "SOURCE_VALID_TEXTURE_RECONSTRUCTION_VERIFIED",
+    "characterId": "p0_character_001",
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "testedMethods": [
+      "native",
+      "nearest_valid",
+      "alpha_normalized",
+      "valid_mix_50",
+      "valid_mix_75"
+    ],
+    "diagnosticCandidate": "valid_mix_75",
+    "selectionRule": "Among candidates with at most 25 dark antialias edge pixels, minimize adjacent RGB MAE",
+    "sourceDarkEdgePixels": 275,
+    "candidateDarkEdgePixels": 21,
+    "candidateMaxAdjacentRGBMAE": 12.3082,
+    "priorMaxAdjacentRGBMAE": 12.2739,
+    "wholeFrameBaselineMaxAdjacentRGBMAE": 12.0984,
+    "visualFindings": "Source-owned alpha mask provides valid painting-color donors for extrapolation. Inpaint and alpha-normalized sampling suppress the dark upper fringe, while 75-percent valid donor mix preserves more source linework and has the lowest frame RGB MAE among methods with <=25 dark edge pixels. Remaining temporal MAE exceeds the P15-182 and DIS baselines; root detail and upper-edge AA still need visual refinement.",
+    "nativeKeyframesExact": true,
+    "deepBodyExact": true,
+    "singleConnectedStrand": true,
+    "freeTipPreserved": true,
+    "temporalGatePassed": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "freeTipPreserved": true,
+      "singleConnectedStrand": true,
+      "textureDarkEdgeReduced": true,
+      "temporalBetterThanP15182": false,
+      "temporalBeatsWholeFrameBaseline": false,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-183-valid-strand-texture-qa.json"
+    ],
+    "review": "private-assets/exports/p15-183-valid-strand-texture/index.html",
+    "assets": "private-assets/exports/p15-183-valid-strand-texture/",
+    "next": "Use alpha-aware source donor with conservative edge blending and improved root color junction, then evaluate region-weighted temporal stability in a 13-yaw sweep before renderer adoption."
   }
 }
