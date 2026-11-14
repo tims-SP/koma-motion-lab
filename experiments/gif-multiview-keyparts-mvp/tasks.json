@@ -10182,5 +10182,54 @@
     "review": "private-assets/exports/p15-175-layered-crown-assets/index.html",
     "assets": "private-assets/exports/p15-175-layered-crown-assets/{mode}/{yaw}/",
     "next": "Complete the 112.5-degree source-matched crown linework and semitransparent root boundary. Validate standard alpha-over keyview fidelity and absence of crown stubs at 90,112.5,135 before continuing to 101.25/123.75 yaw."
+  },
+  "p15_176AlphaSafeCrownOwnership": {
+    "status": "ALPHA_SAFE_KEYFRAME_LAYER_CONTRACT_IMPLEMENTED_VISUAL_REPAIR_PENDING",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "layerContracts": {
+      "ahoge": "source-owned RGBA strand including its root attachment",
+      "crownMotionUnderpaint": "full reconstructed head texture/alpha for deformation and exposure",
+      "crownStaticKeyframe": "same underpaint RGB but alpha zero under the source-owned ahoge matte"
+    },
+    "standardAlphaOverChangesOnlyRootBand": true,
+    "doubleAlphaOwnershipPixels": {
+      "90": 0,
+      "112.5": 0,
+      "135": 0
+    },
+    "visibleCompositeDifferencePixels": {
+      "90": 147,
+      "112.5": 84,
+      "135": 125
+    },
+    "motionUnderpaintRetained": true,
+    "deepUnderpaintPreserved": true,
+    "visualFindings": "The three layer contracts are now distinct and non-overlapping in the static keyframe composite. The motion underpaint still shows small source-root remnants at 90, 112.5, and 135 degrees; the alpha-safe keyframe version has transparent holes under the ahoge that are filled by the matching strand at rest. Artist-matched crown cleanup is still required before VDD.",
+    "rootlessCrownVisualAccepted": false,
+    "fiveAngleVDDRun": false,
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "allThreePairsPresent": true,
+      "standardAlphaOverChangesOnlyRootBand": true,
+      "noDoubleAlphaOwnership": true,
+      "staticCrownTransparentUnderStrand": true,
+      "motionUnderpaintRetained": true,
+      "deepUnderpaintPreserved": true,
+      "visualRootRepairApproved": false,
+      "rootlessCrownVisualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-176-alpha-safe-crown-qa.json"
+    ],
+    "review": "private-assets/exports/p15-176-alpha-safe-crown/index.html",
+    "assets": "private-assets/exports/p15-176-alpha-safe-crown/{yaw}/",
+    "next": "Artist-match and remove the residual root remnants in motion underpaint while preserving ahoge attachment contour. Recheck three keyviews, then run 101.25/123.75 yaw."
   }
 }
