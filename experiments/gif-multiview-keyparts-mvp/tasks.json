@@ -11493,5 +11493,144 @@
     "review": "private-assets/exports/p15-189-root-emergence-audit/index.html",
     "assets": "private-assets/exports/p15-189-root-emergence-audit/",
     "next": "Register the root-emergence crossing to the verified source contact landmarks at all three keys, using a bounded near-root geometry warp only. Blend the source-derived root color in a local crown-contact region, and accept only if 13-yaw crossings, seams and whole-frame timing improve without changing native keys or head pixels below y=125."
+  },
+  "p15_190RootRegistration": {
+    "status": "THIRTEEN_YAW_ROOT_REGISTRATION_DIAGNOSTIC_COMPLETE",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "method": "Smooth bounded displacement of the root section of the full-source medial centerline toward linearly interpolated native scalp crossing landmarks. Only generated midframes are deformed; width, free tip and source keys remain unchanged.",
+    "testedRootControlExtents": [
+      0,
+      24,
+      40,
+      64
+    ],
+    "selectedDiagnosticMethod": "anchor_40",
+    "metrics": {
+      "baseline": {
+        "maxAdjacentCrossingDisplacementPixels": 12.4504,
+        "middleCrossingSteps": [
+          12.4504,
+          6.5835
+        ],
+        "maxAdjacentColorSeamChange": 29.1103,
+        "middleColorSeamChanges": [
+          24.5499,
+          24.9704
+        ],
+        "maxRootTargetResidualPixels": 7.1662,
+        "maxAdjacentLocalRGBMAE": 7.8619,
+        "maxAdjacentGlobalRGBMAE": 6.9103,
+        "allNativeKeysExact": true,
+        "allBodyBelow125Exact": true,
+        "allConnected": true,
+        "allFreeTipsExact": true
+      },
+      "anchor_24": {
+        "maxAdjacentCrossingDisplacementPixels": 12.4504,
+        "middleCrossingSteps": [
+          12.4504,
+          6.5835
+        ],
+        "maxAdjacentColorSeamChange": 25.1873,
+        "middleColorSeamChanges": [
+          24.5499,
+          24.9704
+        ],
+        "maxRootTargetResidualPixels": 7.1732,
+        "maxAdjacentLocalRGBMAE": 7.8578,
+        "maxAdjacentGlobalRGBMAE": 6.9095,
+        "allNativeKeysExact": true,
+        "allBodyBelow125Exact": true,
+        "allConnected": true,
+        "allFreeTipsExact": true
+      },
+      "anchor_40": {
+        "maxAdjacentCrossingDisplacementPixels": 12.2926,
+        "middleCrossingSteps": [
+          12.2926,
+          6.5168
+        ],
+        "maxAdjacentColorSeamChange": 31.3973,
+        "middleColorSeamChanges": [
+          29.5974,
+          26.8353
+        ],
+        "maxRootTargetResidualPixels": 7.1575,
+        "maxAdjacentLocalRGBMAE": 7.8544,
+        "maxAdjacentGlobalRGBMAE": 6.9089,
+        "allNativeKeysExact": true,
+        "allBodyBelow125Exact": true,
+        "allConnected": true,
+        "allFreeTipsExact": true
+      },
+      "anchor_64": {
+        "maxAdjacentCrossingDisplacementPixels": 12.7535,
+        "middleCrossingSteps": [
+          12.7535,
+          6.5279
+        ],
+        "maxAdjacentColorSeamChange": 46.8244,
+        "middleColorSeamChanges": [
+          42.8458,
+          27.3068
+        ],
+        "maxRootTargetResidualPixels": 7.1725,
+        "maxAdjacentLocalRGBMAE": 7.8651,
+        "maxAdjacentGlobalRGBMAE": 6.9096,
+        "allNativeKeysExact": true,
+        "allBodyBelow125Exact": true,
+        "allConnected": true,
+        "allFreeTipsExact": true
+      }
+    },
+    "finding": "The 40-control-point root registration decreases maximum neighboring root crossing displacement from 12.4504 to 12.2926 px and lowers local RGB MAE from 7.8619 to 7.8544, but the maximum neighboring color seam change rises from 29.1103 to 31.3973 and global RGB MAE remains above DIS. Source keyframe shape and crown color mismatch remains a limiting factor; additional near-root deformation alone is insufficient.",
+    "sourceKeysExact": true,
+    "deepBodyExact": true,
+    "freeTipExact": true,
+    "singleStrandConnected": true,
+    "crossingBetterThanReference": true,
+    "localTemporalBeatsDIS": true,
+    "globalTemporalBeatsDIS": false,
+    "colorSeamContinuityAccepted": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allSourceKeysExact": true,
+      "allBodyBelow125Exact": true,
+      "allFreeTipsExact": true,
+      "allMidframesConnected": true,
+      "crossingBetterThanReference": true,
+      "localTemporalBeatsDIS": true,
+      "globalTemporalBeatsDIS": false,
+      "colorSeamContinuityAccepted": false,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-190-root-registration-qa.json"
+    ],
+    "review": "private-assets/exports/p15-190-root-registration/index.html",
+    "assets": "private-assets/exports/p15-190-root-registration/",
+    "next": "Review source 112.5-degree crown/strand registration, including both alpha and paint-color identity. Validate whether source key art needs an independently authored, matched mid-yaw control asset. Test root color seam and geometric crossing together, not isolated displacement."
   }
 }
