@@ -10704,5 +10704,127 @@
     "review": "private-assets/exports/p15-183-valid-strand-texture/index.html",
     "assets": "private-assets/exports/p15-183-valid-strand-texture/",
     "next": "Use alpha-aware source donor with conservative edge blending and improved root color junction, then evaluate region-weighted temporal stability in a 13-yaw sweep before renderer adoption."
+  },
+  "p15_184AlphaAwareTemporalSweep": {
+    "status": "13_YAW_SWEEP_COMPLETE_TEMPORAL_AND_EDGE_GATES_PENDING",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "testedTextureMixes": [
+      "valid_mix_65",
+      "valid_mix_70",
+      "valid_mix_75",
+      "valid_mix_80"
+    ],
+    "diagnosticCandidate": "valid_mix_80",
+    "selectionRule": "Minimize total dark antialias edge pixels; use local ROI RGB MAE as tie-breaker. The 5-view <=25-pixel threshold is not reused because this sweep has twice as many generated intermediate views.",
+    "candidateMetrics": {
+      "maxAdjacentLocalRGBMAE": 9.025,
+      "adjacentLocalRGBMAE": [
+        9.025,
+        7.8044,
+        7.1297,
+        6.841,
+        6.4663,
+        6.5978,
+        7.0877,
+        6.0898,
+        6.4291,
+        6.6912,
+        7.0936,
+        8.9672
+      ],
+      "maxAdjacentGlobalRGBMAE": 7.1183,
+      "adjacentGlobalRGBMAE": [
+        7.1183,
+        5.9276,
+        5.646,
+        5.6067,
+        5.626,
+        5.9873,
+        5.7673,
+        5.2077,
+        5.259,
+        5.3894,
+        5.6707,
+        6.7559
+      ],
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "totalDarkEdgePixels": 99,
+      "meanDarkEdgeRatio": 0.0536,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "comparisonMetrics": {
+      "valid_mix_65": {
+        "maxAdjacentLocalRGBMAE": 8.9018,
+        "maxAdjacentGlobalRGBMAE": 7.0963,
+        "totalDarkEdgePixels": 319
+      },
+      "valid_mix_70": {
+        "maxAdjacentLocalRGBMAE": 8.9424,
+        "maxAdjacentGlobalRGBMAE": 7.1035,
+        "totalDarkEdgePixels": 211
+      },
+      "valid_mix_75": {
+        "maxAdjacentLocalRGBMAE": 8.9838,
+        "maxAdjacentGlobalRGBMAE": 7.1109,
+        "totalDarkEdgePixels": 146
+      },
+      "valid_mix_80": {
+        "maxAdjacentLocalRGBMAE": 9.025,
+        "maxAdjacentGlobalRGBMAE": 7.1183,
+        "totalDarkEdgePixels": 99
+      }
+    },
+    "visualFindings": "13-yaw sweep confirms a single root-connected/free-tip strand at every generated intermediate yaw and preserves the three canonical source keyframes. Higher valid-source donor proportion reduces dark edge pixels (319 at 65% to 99 at 80%) but increases local and global frame-to-frame RGB MAE. The 80% diagnostic candidate has local ROI max MAE 9.025 versus DIS baseline 7.9475, and global max MAE 7.1183 versus DIS 6.6299. The middle source keyframe at 112.5 degrees remains a visibly different loop shape from adjacent generated frames, indicating a geometric correspondence discontinuity that texture blending cannot solve.",
+    "nativeKeyframesExact": true,
+    "deepBodyExact": true,
+    "singleConnectedStrand": true,
+    "freeTipPreserved": true,
+    "darkEdgeGatePassed": false,
+    "localTemporalGatePassed": false,
+    "globalTemporalGatePassed": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true,
+      "darkEdgePixelsAtMost25": false,
+      "localTemporalBeatsDIS": false,
+      "globalTemporalBeatsDIS": false,
+      "temporalBeatsP15182": true,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-184-alpha-aware-temporal-sweep-qa.json"
+    ],
+    "review": "private-assets/exports/p15-184-alpha-aware-temporal-sweep/index.html",
+    "assets": "private-assets/exports/p15-184-alpha-aware-temporal-sweep/",
+    "next": "Resolve curve-shape correspondence across the 112.5-degree native keyframe before further texture tuning. The current interpolation creates a geometry mismatch at the middle view; evaluate source curve landmarks, tangent orientation, and width profile, retaining native keyframe pixels exactly."
   }
 }

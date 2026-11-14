@@ -1,0 +1,1259 @@
+{
+  "schema": "KOMA_P15_184_ALPHA_AWARE_TEMPORAL_SWEEP_V1",
+  "characterId": "p0_character_001",
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "textureMixVariants": [
+    "valid_mix_65",
+    "valid_mix_70",
+    "valid_mix_75",
+    "valid_mix_80"
+  ],
+  "metrics": {
+    "valid_mix_65": {
+      "maxAdjacentLocalRGBMAE": 8.9018,
+      "adjacentLocalRGBMAE": [
+        8.9018,
+        7.6061,
+        6.9797,
+        6.7202,
+        6.3621,
+        6.5189,
+        6.9849,
+        6.0636,
+        6.3879,
+        6.6431,
+        7.0329,
+        8.8658
+      ],
+      "maxAdjacentGlobalRGBMAE": 7.0963,
+      "adjacentGlobalRGBMAE": [
+        7.0963,
+        5.8921,
+        5.6192,
+        5.5851,
+        5.6073,
+        5.9731,
+        5.749,
+        5.203,
+        5.2516,
+        5.3808,
+        5.6598,
+        6.7377
+      ],
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "totalDarkEdgePixels": 319,
+      "meanDarkEdgeRatio": 0.17159,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "valid_mix_70": {
+      "maxAdjacentLocalRGBMAE": 8.9424,
+      "adjacentLocalRGBMAE": [
+        8.9424,
+        7.6714,
+        7.0287,
+        6.7595,
+        6.3956,
+        6.5431,
+        7.0174,
+        6.0708,
+        6.4005,
+        6.6583,
+        7.0518,
+        8.8988
+      ],
+      "maxAdjacentGlobalRGBMAE": 7.1035,
+      "adjacentGlobalRGBMAE": [
+        7.1035,
+        5.9038,
+        5.6279,
+        5.5921,
+        5.6133,
+        5.9775,
+        5.7548,
+        5.2043,
+        5.2539,
+        5.3835,
+        5.6632,
+        6.7436
+      ],
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "totalDarkEdgePixels": 211,
+      "meanDarkEdgeRatio": 0.11378,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "valid_mix_75": {
+      "maxAdjacentLocalRGBMAE": 8.9838,
+      "adjacentLocalRGBMAE": [
+        8.9838,
+        7.7383,
+        7.0791,
+        6.8001,
+        6.43,
+        6.5696,
+        7.0517,
+        6.0795,
+        6.4144,
+        6.6748,
+        7.0717,
+        8.9322
+      ],
+      "maxAdjacentGlobalRGBMAE": 7.1109,
+      "adjacentGlobalRGBMAE": [
+        7.1109,
+        5.9158,
+        5.637,
+        5.5994,
+        5.6195,
+        5.9822,
+        5.7609,
+        5.2058,
+        5.2564,
+        5.3864,
+        5.6668,
+        6.7496
+      ],
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "totalDarkEdgePixels": 146,
+      "meanDarkEdgeRatio": 0.0789,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    },
+    "valid_mix_80": {
+      "maxAdjacentLocalRGBMAE": 9.025,
+      "adjacentLocalRGBMAE": [
+        9.025,
+        7.8044,
+        7.1297,
+        6.841,
+        6.4663,
+        6.5978,
+        7.0877,
+        6.0898,
+        6.4291,
+        6.6912,
+        7.0936,
+        8.9672
+      ],
+      "maxAdjacentGlobalRGBMAE": 7.1183,
+      "adjacentGlobalRGBMAE": [
+        7.1183,
+        5.9276,
+        5.646,
+        5.6067,
+        5.626,
+        5.9873,
+        5.7673,
+        5.2077,
+        5.259,
+        5.3894,
+        5.6707,
+        6.7559
+      ],
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "totalDarkEdgePixels": 99,
+      "meanDarkEdgeRatio": 0.0536,
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "singleConnectedStrand": true,
+      "freeTipPreserved": true
+    }
+  },
+  "intermediateDetails": {
+    "valid_mix_65": {
+      "93.75": {
+        "rootExtensionDistance": 25.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          285.6669921875,
+          37.16699981689453
+        ],
+        "crownEdgeAtRoot": 60.794,
+        "curveLength": 148.52,
+        "targetStrokeWidth": 9.239,
+        "loopPixels": 1594,
+        "curveStart": [
+          177.66000366210938,
+          60.0099983215332
+        ],
+        "curveEnd": [
+          285.6700134277344,
+          37.16999816894531
+        ],
+        "darkEdgePixels": 2,
+        "edgePixels": 230,
+        "darkEdgeRatio": 0.0087,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1338
+      },
+      "97.5": {
+        "rootExtensionDistance": 12.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          293.3330078125,
+          40.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.216,
+        "curveLength": 131.548,
+        "targetStrokeWidth": 9.144,
+        "loopPixels": 1417,
+        "curveStart": [
+          197.8300018310547,
+          52.5099983215332
+        ],
+        "curveEnd": [
+          293.3299865722656,
+          40.33000183105469
+        ],
+        "darkEdgePixels": 11,
+        "edgePixels": 204,
+        "darkEdgeRatio": 0.05392,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1295
+      },
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "darkEdgePixels": 20,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.10417,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1212
+      },
+      "105": {
+        "rootExtensionDistance": 7.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          308.6669921875,
+          46.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.085,
+        "curveLength": 118.841,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1247,
+        "curveStart": [
+          224.3800048828125,
+          51.279998779296875
+        ],
+        "curveEnd": [
+          308.6700134277344,
+          46.66999816894531
+        ],
+        "darkEdgePixels": 43,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.23243,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1184
+      },
+      "108.75": {
+        "rootExtensionDistance": 8.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          316.3330078125,
+          49.83300018310547
+        ],
+        "crownEdgeAtRoot": 54.159,
+        "curveLength": 117.224,
+        "targetStrokeWidth": 8.859,
+        "loopPixels": 1200,
+        "curveStart": [
+          235.00999450683594,
+          53.31999969482422
+        ],
+        "curveEnd": [
+          316.3299865722656,
+          49.83000183105469
+        ],
+        "darkEdgePixels": 75,
+        "edgePixels": 178,
+        "darkEdgeRatio": 0.42135,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1127
+      },
+      "116.25": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          319.5,
+          50.33300018310547
+        ],
+        "crownEdgeAtRoot": 54.496,
+        "curveLength": 115.354,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1211,
+        "curveStart": [
+          240.47000122070312,
+          53.529998779296875
+        ],
+        "curveEnd": [
+          319.5,
+          50.33000183105469
+        ],
+        "darkEdgePixels": 91,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.47396,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1128
+      },
+      "120": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          315.0,
+          47.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.322,
+        "curveLength": 114.783,
+        "targetStrokeWidth": 9.143,
+        "loopPixels": 1246,
+        "curveStart": [
+          235.3000030517578,
+          51.70000076293945
+        ],
+        "curveEnd": [
+          315.0,
+          47.66999816894531
+        ],
+        "darkEdgePixels": 37,
+        "edgePixels": 182,
+        "darkEdgeRatio": 0.2033,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1156
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "darkEdgePixels": 25,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.13514,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1160
+      },
+      "127.5": {
+        "rootExtensionDistance": 12.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          306.0,
+          42.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.853,
+        "curveLength": 117.911,
+        "targetStrokeWidth": 9.521,
+        "loopPixels": 1297,
+        "curveStart": [
+          222.85000610351562,
+          50.150001525878906
+        ],
+        "curveEnd": [
+          306.0,
+          42.33000183105469
+        ],
+        "darkEdgePixels": 14,
+        "edgePixels": 181,
+        "darkEdgeRatio": 0.07735,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1182
+      },
+      "131.25": {
+        "rootExtensionDistance": 16.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.5,
+          39.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.109,
+        "curveLength": 122.615,
+        "targetStrokeWidth": 9.71,
+        "loopPixels": 1387,
+        "curveStart": [
+          214.85000610351562,
+          51.150001525878906
+        ],
+        "curveEnd": [
+          301.5,
+          39.66999816894531
+        ],
+        "darkEdgePixels": 1,
+        "edgePixels": 179,
+        "darkEdgeRatio": 0.00559,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1219
+      }
+    },
+    "valid_mix_70": {
+      "93.75": {
+        "rootExtensionDistance": 25.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          285.6669921875,
+          37.16699981689453
+        ],
+        "crownEdgeAtRoot": 60.794,
+        "curveLength": 148.52,
+        "targetStrokeWidth": 9.239,
+        "loopPixels": 1594,
+        "curveStart": [
+          177.66000366210938,
+          60.0099983215332
+        ],
+        "curveEnd": [
+          285.6700134277344,
+          37.16999816894531
+        ],
+        "darkEdgePixels": 0,
+        "edgePixels": 230,
+        "darkEdgeRatio": 0.0,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1338
+      },
+      "97.5": {
+        "rootExtensionDistance": 12.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          293.3330078125,
+          40.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.216,
+        "curveLength": 131.548,
+        "targetStrokeWidth": 9.144,
+        "loopPixels": 1417,
+        "curveStart": [
+          197.8300018310547,
+          52.5099983215332
+        ],
+        "curveEnd": [
+          293.3299865722656,
+          40.33000183105469
+        ],
+        "darkEdgePixels": 8,
+        "edgePixels": 204,
+        "darkEdgeRatio": 0.03922,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1295
+      },
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "darkEdgePixels": 12,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.0625,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1212
+      },
+      "105": {
+        "rootExtensionDistance": 7.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          308.6669921875,
+          46.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.085,
+        "curveLength": 118.841,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1247,
+        "curveStart": [
+          224.3800048828125,
+          51.279998779296875
+        ],
+        "curveEnd": [
+          308.6700134277344,
+          46.66999816894531
+        ],
+        "darkEdgePixels": 29,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.15676,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1184
+      },
+      "108.75": {
+        "rootExtensionDistance": 8.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          316.3330078125,
+          49.83300018310547
+        ],
+        "crownEdgeAtRoot": 54.159,
+        "curveLength": 117.224,
+        "targetStrokeWidth": 8.859,
+        "loopPixels": 1200,
+        "curveStart": [
+          235.00999450683594,
+          53.31999969482422
+        ],
+        "curveEnd": [
+          316.3299865722656,
+          49.83000183105469
+        ],
+        "darkEdgePixels": 54,
+        "edgePixels": 178,
+        "darkEdgeRatio": 0.30337,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1127
+      },
+      "116.25": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          319.5,
+          50.33300018310547
+        ],
+        "crownEdgeAtRoot": 54.496,
+        "curveLength": 115.354,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1211,
+        "curveStart": [
+          240.47000122070312,
+          53.529998779296875
+        ],
+        "curveEnd": [
+          319.5,
+          50.33000183105469
+        ],
+        "darkEdgePixels": 56,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.29167,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1128
+      },
+      "120": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          315.0,
+          47.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.322,
+        "curveLength": 114.783,
+        "targetStrokeWidth": 9.143,
+        "loopPixels": 1246,
+        "curveStart": [
+          235.3000030517578,
+          51.70000076293945
+        ],
+        "curveEnd": [
+          315.0,
+          47.66999816894531
+        ],
+        "darkEdgePixels": 27,
+        "edgePixels": 182,
+        "darkEdgeRatio": 0.14835,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1156
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "darkEdgePixels": 18,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.0973,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1160
+      },
+      "127.5": {
+        "rootExtensionDistance": 12.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          306.0,
+          42.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.853,
+        "curveLength": 117.911,
+        "targetStrokeWidth": 9.521,
+        "loopPixels": 1297,
+        "curveStart": [
+          222.85000610351562,
+          50.150001525878906
+        ],
+        "curveEnd": [
+          306.0,
+          42.33000183105469
+        ],
+        "darkEdgePixels": 7,
+        "edgePixels": 181,
+        "darkEdgeRatio": 0.03867,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1182
+      },
+      "131.25": {
+        "rootExtensionDistance": 16.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.5,
+          39.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.109,
+        "curveLength": 122.615,
+        "targetStrokeWidth": 9.71,
+        "loopPixels": 1387,
+        "curveStart": [
+          214.85000610351562,
+          51.150001525878906
+        ],
+        "curveEnd": [
+          301.5,
+          39.66999816894531
+        ],
+        "darkEdgePixels": 0,
+        "edgePixels": 179,
+        "darkEdgeRatio": 0.0,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1219
+      }
+    },
+    "valid_mix_75": {
+      "93.75": {
+        "rootExtensionDistance": 25.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          285.6669921875,
+          37.16699981689453
+        ],
+        "crownEdgeAtRoot": 60.794,
+        "curveLength": 148.52,
+        "targetStrokeWidth": 9.239,
+        "loopPixels": 1594,
+        "curveStart": [
+          177.66000366210938,
+          60.0099983215332
+        ],
+        "curveEnd": [
+          285.6700134277344,
+          37.16999816894531
+        ],
+        "darkEdgePixels": 0,
+        "edgePixels": 230,
+        "darkEdgeRatio": 0.0,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1338
+      },
+      "97.5": {
+        "rootExtensionDistance": 12.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          293.3330078125,
+          40.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.216,
+        "curveLength": 131.548,
+        "targetStrokeWidth": 9.144,
+        "loopPixels": 1417,
+        "curveStart": [
+          197.8300018310547,
+          52.5099983215332
+        ],
+        "curveEnd": [
+          293.3299865722656,
+          40.33000183105469
+        ],
+        "darkEdgePixels": 5,
+        "edgePixels": 204,
+        "darkEdgeRatio": 0.02451,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1295
+      },
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "darkEdgePixels": 9,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.04688,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1212
+      },
+      "105": {
+        "rootExtensionDistance": 7.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          308.6669921875,
+          46.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.085,
+        "curveLength": 118.841,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1247,
+        "curveStart": [
+          224.3800048828125,
+          51.279998779296875
+        ],
+        "curveEnd": [
+          308.6700134277344,
+          46.66999816894531
+        ],
+        "darkEdgePixels": 21,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.11351,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1184
+      },
+      "108.75": {
+        "rootExtensionDistance": 8.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          316.3330078125,
+          49.83300018310547
+        ],
+        "crownEdgeAtRoot": 54.159,
+        "curveLength": 117.224,
+        "targetStrokeWidth": 8.859,
+        "loopPixels": 1200,
+        "curveStart": [
+          235.00999450683594,
+          53.31999969482422
+        ],
+        "curveEnd": [
+          316.3299865722656,
+          49.83000183105469
+        ],
+        "darkEdgePixels": 42,
+        "edgePixels": 178,
+        "darkEdgeRatio": 0.23596,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1127
+      },
+      "116.25": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          319.5,
+          50.33300018310547
+        ],
+        "crownEdgeAtRoot": 54.496,
+        "curveLength": 115.354,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1211,
+        "curveStart": [
+          240.47000122070312,
+          53.529998779296875
+        ],
+        "curveEnd": [
+          319.5,
+          50.33000183105469
+        ],
+        "darkEdgePixels": 35,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.18229,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1128
+      },
+      "120": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          315.0,
+          47.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.322,
+        "curveLength": 114.783,
+        "targetStrokeWidth": 9.143,
+        "loopPixels": 1246,
+        "curveStart": [
+          235.3000030517578,
+          51.70000076293945
+        ],
+        "curveEnd": [
+          315.0,
+          47.66999816894531
+        ],
+        "darkEdgePixels": 18,
+        "edgePixels": 182,
+        "darkEdgeRatio": 0.0989,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1156
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "darkEdgePixels": 12,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.06486,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1160
+      },
+      "127.5": {
+        "rootExtensionDistance": 12.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          306.0,
+          42.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.853,
+        "curveLength": 117.911,
+        "targetStrokeWidth": 9.521,
+        "loopPixels": 1297,
+        "curveStart": [
+          222.85000610351562,
+          50.150001525878906
+        ],
+        "curveEnd": [
+          306.0,
+          42.33000183105469
+        ],
+        "darkEdgePixels": 4,
+        "edgePixels": 181,
+        "darkEdgeRatio": 0.0221,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1182
+      },
+      "131.25": {
+        "rootExtensionDistance": 16.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.5,
+          39.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.109,
+        "curveLength": 122.615,
+        "targetStrokeWidth": 9.71,
+        "loopPixels": 1387,
+        "curveStart": [
+          214.85000610351562,
+          51.150001525878906
+        ],
+        "curveEnd": [
+          301.5,
+          39.66999816894531
+        ],
+        "darkEdgePixels": 0,
+        "edgePixels": 179,
+        "darkEdgeRatio": 0.0,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1219
+      }
+    },
+    "valid_mix_80": {
+      "93.75": {
+        "rootExtensionDistance": 25.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          285.6669921875,
+          37.16699981689453
+        ],
+        "crownEdgeAtRoot": 60.794,
+        "curveLength": 148.52,
+        "targetStrokeWidth": 9.239,
+        "loopPixels": 1594,
+        "curveStart": [
+          177.66000366210938,
+          60.0099983215332
+        ],
+        "curveEnd": [
+          285.6700134277344,
+          37.16999816894531
+        ],
+        "darkEdgePixels": 0,
+        "edgePixels": 230,
+        "darkEdgeRatio": 0.0,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1338
+      },
+      "97.5": {
+        "rootExtensionDistance": 12.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          293.3330078125,
+          40.33300018310547
+        ],
+        "crownEdgeAtRoot": 53.216,
+        "curveLength": 131.548,
+        "targetStrokeWidth": 9.144,
+        "loopPixels": 1417,
+        "curveStart": [
+          197.8300018310547,
+          52.5099983215332
+        ],
+        "curveEnd": [
+          293.3299865722656,
+          40.33000183105469
+        ],
+        "darkEdgePixels": 1,
+        "edgePixels": 204,
+        "darkEdgeRatio": 0.0049,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1295
+      },
+      "101.25": {
+        "rootExtensionDistance": 7.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.0,
+          43.5
+        ],
+        "crownEdgeAtRoot": 51.285,
+        "curveLength": 122.643,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1281,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          43.5
+        ],
+        "darkEdgePixels": 6,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.03125,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1212
+      },
+      "105": {
+        "rootExtensionDistance": 7.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          308.6669921875,
+          46.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.085,
+        "curveLength": 118.841,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1247,
+        "curveStart": [
+          224.3800048828125,
+          51.279998779296875
+        ],
+        "curveEnd": [
+          308.6700134277344,
+          46.66999816894531
+        ],
+        "darkEdgePixels": 13,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.07027,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1184
+      },
+      "108.75": {
+        "rootExtensionDistance": 8.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          316.3330078125,
+          49.83300018310547
+        ],
+        "crownEdgeAtRoot": 54.159,
+        "curveLength": 117.224,
+        "targetStrokeWidth": 8.859,
+        "loopPixels": 1200,
+        "curveStart": [
+          235.00999450683594,
+          53.31999969482422
+        ],
+        "curveEnd": [
+          316.3299865722656,
+          49.83000183105469
+        ],
+        "darkEdgePixels": 31,
+        "edgePixels": 178,
+        "darkEdgeRatio": 0.17416,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1127
+      },
+      "116.25": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          319.5,
+          50.33300018310547
+        ],
+        "crownEdgeAtRoot": 54.496,
+        "curveLength": 115.354,
+        "targetStrokeWidth": 8.954,
+        "loopPixels": 1211,
+        "curveStart": [
+          240.47000122070312,
+          53.529998779296875
+        ],
+        "curveEnd": [
+          319.5,
+          50.33000183105469
+        ],
+        "darkEdgePixels": 27,
+        "edgePixels": 192,
+        "darkEdgeRatio": 0.14062,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1128
+      },
+      "120": {
+        "rootExtensionDistance": 9.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          315.0,
+          47.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.322,
+        "curveLength": 114.783,
+        "targetStrokeWidth": 9.143,
+        "loopPixels": 1246,
+        "curveStart": [
+          235.3000030517578,
+          51.70000076293945
+        ],
+        "curveEnd": [
+          315.0,
+          47.66999816894531
+        ],
+        "darkEdgePixels": 12,
+        "edgePixels": 182,
+        "darkEdgeRatio": 0.06593,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1156
+      },
+      "123.75": {
+        "rootExtensionDistance": 9.5,
+        "freeTipPreserved": true,
+        "freeTip": [
+          310.5,
+          45.0
+        ],
+        "crownEdgeAtRoot": 51.164,
+        "curveLength": 115.137,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1254,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          45.0
+        ],
+        "darkEdgePixels": 7,
+        "edgePixels": 185,
+        "darkEdgeRatio": 0.03784,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1160
+      },
+      "127.5": {
+        "rootExtensionDistance": 12.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          306.0,
+          42.33300018310547
+        ],
+        "crownEdgeAtRoot": 50.853,
+        "curveLength": 117.911,
+        "targetStrokeWidth": 9.521,
+        "loopPixels": 1297,
+        "curveStart": [
+          222.85000610351562,
+          50.150001525878906
+        ],
+        "curveEnd": [
+          306.0,
+          42.33000183105469
+        ],
+        "darkEdgePixels": 2,
+        "edgePixels": 181,
+        "darkEdgeRatio": 0.01105,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1182
+      },
+      "131.25": {
+        "rootExtensionDistance": 16.0,
+        "freeTipPreserved": true,
+        "freeTip": [
+          301.5,
+          39.66699981689453
+        ],
+        "crownEdgeAtRoot": 52.109,
+        "curveLength": 122.615,
+        "targetStrokeWidth": 9.71,
+        "loopPixels": 1387,
+        "curveStart": [
+          214.85000610351562,
+          51.150001525878906
+        ],
+        "curveEnd": [
+          301.5,
+          39.66999816894531
+        ],
+        "darkEdgePixels": 0,
+        "edgePixels": 179,
+        "darkEdgeRatio": 0.0,
+        "topComponents": 1,
+        "deepBodyExact": true,
+        "coreArea": 1219
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "valid_mix_80",
+  "selectionRule": "Minimize total dark antialias edge pixels; use local ROI RGB MAE as tie-breaker. The 5-view <=25-pixel threshold is not reused because this sweep has twice as many generated intermediate views.",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-184-alpha-aware-temporal-sweep/index.html",
+  "gate": {
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "singleConnectedStrand": true,
+    "freeTipPreserved": true,
+    "darkEdgePixelsAtMost25": false,
+    "localTemporalBeatsDIS": false,
+    "globalTemporalBeatsDIS": false,
+    "temporalBeatsP15182": true,
+    "visualAccepted": false,
+    "passes": false
+  }
+}
