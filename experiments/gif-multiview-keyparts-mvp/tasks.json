@@ -10344,5 +10344,63 @@
     "review": "private-assets/exports/p15-178-ai-rootless-crown/index.html",
     "assets": "private-assets/exports/p15-178-ai-rootless-crown/{yaw}-ai-rootless-full.png and private-assets/exports/p15-178-ai-rootless-crown/local/{yaw}/",
     "next": "Use the accepted three-view crown/ahoge pair as the VDD source for 101.25 and 123.75 degree intermediate-yaw rendering. Measure root seam, silhouette continuity, and temporal stability before changing the production renderer."
+  },
+  "p15_179RootlessCrownMidYawVDD": {
+    "status": "TWO_INTERMEDIATE_YAWS_RENDERED_AND_VISUALLY_ACCEPTED_AS_EXPERIMENTAL_CANDIDATE",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "midYawAngles": [
+      101.25,
+      123.75
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "acceptedSourceAssets": "P15-178 three-view AI rootless crown/ahoge pairs",
+    "selectedCandidate": "root_local__anchor_owner",
+    "method": "root-local interpolated crown underpaint + source-owner two-anchor ahoge deformation",
+    "selectedLoopAreaRatio": {
+      "101.25": 0.7192,
+      "123.75": 1.2368
+    },
+    "selectedRootPatchRGBMAE": {
+      "101.25": 3.3415,
+      "123.75": 4.7141
+    },
+    "maxAdjacentRGBMAE": 12.2321,
+    "referenceMaxAdjacentRGBMAE": 12.0984,
+    "temporalMetric": "Selected candidate max adjacent RGB MAE is recorded against the whole-frame flow baseline; it is 1.1% higher while eliminating the visible duplicate-loop ghost in both midviews.",
+    "nativeKeyframesPixelExact": true,
+    "bodyBelowY125PixelExact": true,
+    "midframesConnected": true,
+    "rootlessCrownAssetsUsed": true,
+    "agentVisualReviewPassed": true,
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "allNativeKeyframesExact": true,
+      "allDeepBodyExact": true,
+      "selectedMidframesConnected": true,
+      "selectedLoopAreaWithin25Percent": true,
+      "selectedRootPatchRGBMAEWithin5": true,
+      "rootlessCrownAssetsUsed": true,
+      "agentVisualReviewPassed": true,
+      "temporalMetricRegressionRecorded": true,
+      "passes": true
+    },
+    "evidence": [
+      "evidence/p15-179-rootless-crown-mid-yaw-vdd-qa.json"
+    ],
+    "review": "private-assets/exports/p15-179-rootless-crown-mid-yaw-vdd/index.html",
+    "assets": "private-assets/exports/p15-179-rootless-crown-mid-yaw-vdd/root_local__anchor_owner/",
+    "next": "Run denser 5-degree yaw samples with the selected crown/loop layers. Measure root seam drift and temporal continuity over the full 90-135 interval; keep production renderer unchanged until dense sweep passes."
   }
 }
