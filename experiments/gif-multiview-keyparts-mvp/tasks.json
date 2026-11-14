@@ -12235,5 +12235,319 @@
     "review": "private-assets/exports/p15-193-landmark-parameter-vdd/index.html",
     "assets": "private-assets/exports/p15-193-landmark-parameter-vdd/",
     "next": "Validate motion of independently painted root, outer arc peak and free tip across 90/112.5/135 using source-specific multi-landmark registration; avoid treating arc-length or one scalp crossing as sufficient semantic correspondence. Quantify apparent silhouette drift and painted-tip identity in the 108.75/112.5/116.25 neighborhood before adopting a new interpolation."
+  },
+  "p15_194MultiFeatureCorrespondence": {
+    "status": "FIVE_FEATURE_SOURCE_CORRESPONDENCE_EVALUATED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "featureNames": [
+      "root",
+      "entry_shoulder",
+      "outer_arc_apex",
+      "exit_shoulder",
+      "free_tip"
+    ],
+    "sharedFeatureCoordinates": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "sourceFeatureLandmarks": {
+      "90": {
+        "indices": [
+          0,
+          21,
+          86,
+          102,
+          159
+        ],
+        "coordinates": [
+          [
+            184.0,
+            63.0
+          ],
+          [
+            184.0,
+            43.125301361083984
+          ],
+          [
+            231.3361053466797,
+            8.0
+          ],
+          [
+            246.91259765625,
+            10.0
+          ],
+          [
+            262.0,
+            50.0
+          ]
+        ],
+        "normalizedArcPositions": [
+          0.0,
+          0.13208,
+          0.54088,
+          0.64151,
+          1.0
+        ],
+        "curvatureAtFeatures": [
+          0.01702599972486496,
+          0.3004109859466553,
+          0.3578529953956604,
+          0.3009999990463257,
+          9.999999974752427e-07
+        ],
+        "featureNames": [
+          "root",
+          "entry_shoulder",
+          "outer_arc_apex",
+          "exit_shoulder",
+          "free_tip"
+        ],
+        "widthAtFeatures": [
+          6.0,
+          2.0,
+          8.0,
+          7.269000053405762,
+          2.0
+        ],
+        "widthPercentiles": [
+          2.0,
+          6.759,
+          10.717
+        ],
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+      },
+      "112.5": {
+        "indices": [
+          0,
+          21,
+          74,
+          130,
+          159
+        ],
+        "coordinates": [
+          [
+            258.0,
+            83.0
+          ],
+          [
+            256.0,
+            62.857200622558594
+          ],
+          [
+            279.78570556640625,
+            24.0
+          ],
+          [
+            318.7143859863281,
+            53.71440124511719
+          ],
+          [
+            306.0,
+            76.0
+          ]
+        ],
+        "normalizedArcPositions": [
+          0.0,
+          0.13208,
+          0.46541,
+          0.81761,
+          1.0
+        ],
+        "curvatureAtFeatures": [
+          0.0,
+          0.41468799114227295,
+          0.23406599462032318,
+          0.532588005065918,
+          0.3535510003566742
+        ],
+        "featureNames": [
+          "root",
+          "entry_shoulder",
+          "outer_arc_apex",
+          "exit_shoulder",
+          "free_tip"
+        ],
+        "widthAtFeatures": [
+          6.0,
+          4.0,
+          7.019000053405762,
+          11.947999954223633,
+          2.0
+        ],
+        "widthPercentiles": [
+          4.923,
+          7.987,
+          13.55
+        ],
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+      },
+      "135": {
+        "indices": [
+          0,
+          24,
+          81,
+          93,
+          159
+        ],
+        "coordinates": [
+          [
+            222.0,
+            61.0
+          ],
+          [
+            221.0,
+            40.049800872802734
+          ],
+          [
+            256.1636962890625,
+            11.0
+          ],
+          [
+            266.0174865722656,
+            13.0
+          ],
+          [
+            278.0,
+            53.0
+          ]
+        ],
+        "normalizedArcPositions": [
+          0.0,
+          0.15094,
+          0.50943,
+          0.58491,
+          1.0
+        ],
+        "curvatureAtFeatures": [
+          0.0,
+          0.39974701404571533,
+          0.3966139853000641,
+          0.4000200033187866,
+          0.1633629947900772
+        ],
+        "featureNames": [
+          "root",
+          "entry_shoulder",
+          "outer_arc_apex",
+          "exit_shoulder",
+          "free_tip"
+        ],
+        "widthAtFeatures": [
+          6.0,
+          2.0,
+          8.0,
+          8.394000053405762,
+          2.0
+        ],
+        "widthPercentiles": [
+          2.049,
+          7.54,
+          11.534
+        ],
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+      }
+    },
+    "methods": {
+      "arc_linear": {
+        "maxAdjacentLocalRGBMAE": 7.8619,
+        "maxAdjacentGlobalRGBMAE": 6.9103,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.4503,
+        "middleRootCrossingStepsPixels": [
+          12.4503,
+          6.5835
+        ],
+        "maxAdjacentFeatureStepByName": {
+          "root": 12.7759,
+          "entry_shoulder": 23.0261,
+          "outer_arc_apex": 10.3367,
+          "exit_shoulder": 27.7626,
+          "free_tip": 8.518
+        },
+        "meanFeatureStepPixels": 9.8112,
+        "allNativeKeysExact": true,
+        "allMidframesSingleComponent": true,
+        "allMidframesHaveActualCrownCrossing": true,
+        "allDeepBodyExact": true
+      },
+      "multi_feature_linear": {
+        "maxAdjacentLocalRGBMAE": 7.8031,
+        "maxAdjacentGlobalRGBMAE": 6.8688,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.3922,
+        "middleRootCrossingStepsPixels": [
+          12.3922,
+          6.4443
+        ],
+        "maxAdjacentFeatureStepByName": {
+          "root": 12.7759,
+          "entry_shoulder": 12.5735,
+          "outer_arc_apex": 8.7789,
+          "exit_shoulder": 14.3099,
+          "free_tip": 8.518
+        },
+        "meanFeatureStepPixels": 9.1883,
+        "allNativeKeysExact": true,
+        "allMidframesSingleComponent": true,
+        "allMidframesHaveActualCrownCrossing": true,
+        "allDeepBodyExact": true
+      }
+    },
+    "selectedDiagnosticMethod": "multi_feature_linear",
+    "finding": "Five source landmarks (root, entry curvature shoulder, outer-arc apex, exit curvature shoulder, free tip) provide a small but consistent improvement over raw arc-length linear VDD. Maximum adjacent crown-crossing displacement decreases 12.4503 to 12.3922 px; local max RGB MAE decreases 7.8619 to 7.8031. Entry/exit shoulder max adjacent motion decreases 23.0261 to 12.5735 px and 27.7626 to 14.3099 px respectively. Every native key remains pixel-exact; all intermediate strands remain connected and have a measured crown crossing. Global max RGB MAE 6.8688 remains above DIS 6.6299, so visual/production acceptance remains closed.",
+    "nativeKeysExact": true,
+    "allMidframesSingleComponent": true,
+    "allMidframesHaveActualCrownCrossing": true,
+    "deepBodyExact": true,
+    "rootCrossingImproved": true,
+    "localTemporalImproved": true,
+    "globalTemporalBeatsDIS": false,
+    "visualAccepted": false,
+    "semanticFeatureCorrespondenceApproved": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allFiveFeaturesOrderedInAllKeys": true,
+      "allNativeKeysExact": true,
+      "allMidframesSingleComponent": true,
+      "allMidframesHaveActualCrownCrossing": true,
+      "allDeepBodyExact": true,
+      "rootCrossingImprovedOverArc": true,
+      "localTemporalBeatsArc": true,
+      "globalTemporalBeatsDIS": false,
+      "visualAccepted": false,
+      "semanticFeatureCorrespondenceApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-194-multifeature-correspondence-qa.json"
+    ],
+    "review": "private-assets/exports/p15-194-multifeature-correspondence/index.html",
+    "assets": "private-assets/exports/p15-194-multifeature-correspondence/",
+    "next": "Audit the two curvature-shoulder identities against the actual source contour and local width extrema, especially the 112.5-degree exit shoulder. Test monotone feature interpolation with curvature/width regularization and compare the 108.75/112.5/116.25 sequence at full resolution. Do not promote unless global temporal error and visual seam both improve."
   }
 }

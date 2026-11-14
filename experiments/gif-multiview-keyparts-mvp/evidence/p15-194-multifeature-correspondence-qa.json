@@ -1,0 +1,1207 @@
+{
+  "schema": "KOMA_P15_194_MULTIFEATURE_CORRESPONDENCE_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "featureNames": [
+    "root",
+    "entry_shoulder",
+    "outer_arc_apex",
+    "exit_shoulder",
+    "free_tip"
+  ],
+  "sharedFeatureCoordinates": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "sourceFeatureLandmarks": {
+    "90": {
+      "indices": [
+        0,
+        21,
+        86,
+        102,
+        159
+      ],
+      "coordinates": [
+        [
+          184.0,
+          63.0
+        ],
+        [
+          184.0,
+          43.125301361083984
+        ],
+        [
+          231.3361053466797,
+          8.0
+        ],
+        [
+          246.91259765625,
+          10.0
+        ],
+        [
+          262.0,
+          50.0
+        ]
+      ],
+      "normalizedArcPositions": [
+        0.0,
+        0.13208,
+        0.54088,
+        0.64151,
+        1.0
+      ],
+      "curvatureAtFeatures": [
+        0.01702599972486496,
+        0.3004109859466553,
+        0.3578529953956604,
+        0.3009999990463257,
+        9.999999974752427e-07
+      ],
+      "featureNames": [
+        "root",
+        "entry_shoulder",
+        "outer_arc_apex",
+        "exit_shoulder",
+        "free_tip"
+      ],
+      "widthAtFeatures": [
+        6.0,
+        2.0,
+        8.0,
+        7.269000053405762,
+        2.0
+      ],
+      "widthPercentiles": [
+        2.0,
+        6.759,
+        10.717
+      ],
+      "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+    },
+    "112.5": {
+      "indices": [
+        0,
+        21,
+        74,
+        130,
+        159
+      ],
+      "coordinates": [
+        [
+          258.0,
+          83.0
+        ],
+        [
+          256.0,
+          62.857200622558594
+        ],
+        [
+          279.78570556640625,
+          24.0
+        ],
+        [
+          318.7143859863281,
+          53.71440124511719
+        ],
+        [
+          306.0,
+          76.0
+        ]
+      ],
+      "normalizedArcPositions": [
+        0.0,
+        0.13208,
+        0.46541,
+        0.81761,
+        1.0
+      ],
+      "curvatureAtFeatures": [
+        0.0,
+        0.41468799114227295,
+        0.23406599462032318,
+        0.532588005065918,
+        0.3535510003566742
+      ],
+      "featureNames": [
+        "root",
+        "entry_shoulder",
+        "outer_arc_apex",
+        "exit_shoulder",
+        "free_tip"
+      ],
+      "widthAtFeatures": [
+        6.0,
+        4.0,
+        7.019000053405762,
+        11.947999954223633,
+        2.0
+      ],
+      "widthPercentiles": [
+        4.923,
+        7.987,
+        13.55
+      ],
+      "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+    },
+    "135": {
+      "indices": [
+        0,
+        24,
+        81,
+        93,
+        159
+      ],
+      "coordinates": [
+        [
+          222.0,
+          61.0
+        ],
+        [
+          221.0,
+          40.049800872802734
+        ],
+        [
+          256.1636962890625,
+          11.0
+        ],
+        [
+          266.0174865722656,
+          13.0
+        ],
+        [
+          278.0,
+          53.0
+        ]
+      ],
+      "normalizedArcPositions": [
+        0.0,
+        0.15094,
+        0.50943,
+        0.58491,
+        1.0
+      ],
+      "curvatureAtFeatures": [
+        0.0,
+        0.39974701404571533,
+        0.3966139853000641,
+        0.4000200033187866,
+        0.1633629947900772
+      ],
+      "featureNames": [
+        "root",
+        "entry_shoulder",
+        "outer_arc_apex",
+        "exit_shoulder",
+        "free_tip"
+      ],
+      "widthAtFeatures": [
+        6.0,
+        2.0,
+        8.0,
+        8.394000053405762,
+        2.0
+      ],
+      "widthPercentiles": [
+        2.049,
+        7.54,
+        11.534
+      ],
+      "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+    }
+  },
+  "methods": {
+    "arc_linear": {
+      "maxAdjacentLocalRGBMAE": 7.8619,
+      "maxAdjacentGlobalRGBMAE": 6.9103,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.4503,
+      "middleRootCrossingStepsPixels": [
+        12.4503,
+        6.5835
+      ],
+      "maxAdjacentFeatureStepByName": {
+        "root": 12.7759,
+        "entry_shoulder": 23.0261,
+        "outer_arc_apex": 10.3367,
+        "exit_shoulder": 27.7626,
+        "free_tip": 8.518
+      },
+      "meanFeatureStepPixels": 9.8112,
+      "allNativeKeysExact": true,
+      "allMidframesSingleComponent": true,
+      "allMidframesHaveActualCrownCrossing": true,
+      "allDeepBodyExact": true
+    },
+    "multi_feature_linear": {
+      "maxAdjacentLocalRGBMAE": 7.8031,
+      "maxAdjacentGlobalRGBMAE": 6.8688,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.3922,
+      "middleRootCrossingStepsPixels": [
+        12.3922,
+        6.4443
+      ],
+      "maxAdjacentFeatureStepByName": {
+        "root": 12.7759,
+        "entry_shoulder": 12.5735,
+        "outer_arc_apex": 8.7789,
+        "exit_shoulder": 14.3099,
+        "free_tip": 8.518
+      },
+      "meanFeatureStepPixels": 9.1883,
+      "allNativeKeysExact": true,
+      "allMidframesSingleComponent": true,
+      "allMidframesHaveActualCrownCrossing": true,
+      "allDeepBodyExact": true
+    }
+  },
+  "details": {
+    "arc_linear": {
+      "93.75": {
+        "featureCoordinates": [
+          [
+            196.3332977294922,
+            66.33329772949219
+          ],
+          [
+            202.84320068359375,
+            29.99020004272461
+          ],
+          [
+            235.6282958984375,
+            11.5
+          ],
+          [
+            270.4010925292969,
+            21.531600952148438
+          ],
+          [
+            269.33331298828125,
+            54.33330154418945
+          ]
+        ],
+        "rootCrownCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "crossingTangent": [
+          0.0,
+          -1.0
+        ],
+        "crossingSegment": 15,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          4.9731879234313965,
+          8.11690902709961,
+          10.225086212158203,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1266,
+        "colorSeam": 0.851
+      },
+      "97.5": {
+        "featureCoordinates": [
+          [
+            208.6667022705078,
+            69.66670227050781
+          ],
+          [
+            213.65679931640625,
+            33.0099983215332
+          ],
+          [
+            245.658203125,
+            14.0
+          ],
+          [
+            279.3587951660156,
+            26.063199996948242
+          ],
+          [
+            276.66668701171875,
+            58.66669845581055
+          ]
+        ],
+        "rootCrownCrossing": [
+          208.30340576171875,
+          51.03219985961914
+        ],
+        "crossingTangent": [
+          -0.06693000346422195,
+          -0.997759997844696
+        ],
+        "crossingSegment": 20,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          5.600826263427734,
+          8.233819007873535,
+          10.984086990356445,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1289,
+        "colorSeam": 8.7656
+      },
+      "101.25": {
+        "featureCoordinates": [
+          [
+            221.0,
+            73.0
+          ],
+          [
+            224.47030639648438,
+            36.029701232910156
+          ],
+          [
+            255.68800354003906,
+            16.5
+          ],
+          [
+            288.3164978027344,
+            30.59480094909668
+          ],
+          [
+            284.0,
+            63.0
+          ]
+        ],
+        "rootCrownCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "crossingTangent": [
+          0.09967999905347824,
+          -0.9950199723243713
+        ],
+        "crossingSegment": 24,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          6.228464126586914,
+          8.350728034973145,
+          11.743085861206055,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1331,
+        "colorSeam": 32.2209
+      },
+      "105": {
+        "featureCoordinates": [
+          [
+            233.33340454101562,
+            76.33329772949219
+          ],
+          [
+            235.28379821777344,
+            39.04949951171875
+          ],
+          [
+            265.7178039550781,
+            19.0
+          ],
+          [
+            297.2742004394531,
+            35.126399993896484
+          ],
+          [
+            291.3334045410156,
+            67.33329772949219
+          ]
+        ],
+        "rootCrownCrossing": [
+          232.3332977294922,
+          52.4536018371582
+        ],
+        "crossingTangent": [
+          0.08533000200986862,
+          -0.9963499903678894
+        ],
+        "crossingSegment": 25,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          6.856101989746094,
+          8.46763801574707,
+          12.502086639404297,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1399,
+        "colorSeam": 26.2998
+      },
+      "108.75": {
+        "featureCoordinates": [
+          [
+            245.6667022705078,
+            79.66670227050781
+          ],
+          [
+            246.09739685058594,
+            42.06930160522461
+          ],
+          [
+            275.7475891113281,
+            21.5
+          ],
+          [
+            306.2319030761719,
+            39.65800094604492
+          ],
+          [
+            298.6665954589844,
+            71.66670227050781
+          ]
+        ],
+        "rootCrownCrossing": [
+          244.16659545898438,
+          55.686500549316406
+        ],
+        "crossingTangent": [
+          0.04222999885678291,
+          -0.9991099834442139
+        ],
+        "crossingSegment": 25,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          7.483739852905273,
+          8.584546089172363,
+          13.261085510253906,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1464,
+        "colorSeam": 37.756
+      },
+      "116.25": {
+        "featureCoordinates": [
+          [
+            252.0,
+            79.33329772949219
+          ],
+          [
+            251.92579650878906,
+            42.28960037231445
+          ],
+          [
+            280.72900390625,
+            21.918899536132812
+          ],
+          [
+            310.0627136230469,
+            40.89609909057617
+          ],
+          [
+            301.3334045410156,
+            72.16670227050781
+          ]
+        ],
+        "rootCrownCrossing": [
+          250.17379760742188,
+          56.491600036621094
+        ],
+        "crossingTangent": [
+          0.043219998478889465,
+          -0.9990699887275696
+        ],
+        "crossingSegment": 25,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          7.5483222007751465,
+          8.584546089172363,
+          13.512962341308594,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1450,
+        "colorSeam": 37.3355
+      },
+      "120": {
+        "featureCoordinates": [
+          [
+            246.0,
+            75.66670227050781
+          ],
+          [
+            246.9405975341797,
+            39.4901008605957
+          ],
+          [
+            275.6803894042969,
+            19.837900161743164
+          ],
+          [
+            304.935791015625,
+            37.602500915527344
+          ],
+          [
+            296.66668701171875,
+            68.33329772949219
+          ]
+        ],
+        "rootCrownCrossing": [
+          244.33340454101562,
+          53.51750183105469
+        ],
+        "crossingTangent": [
+          0.0894400030374527,
+          -0.995989978313446
+        ],
+        "crossingSegment": 24,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          6.98526668548584,
+          8.46763801574707,
+          13.005840301513672,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1375,
+        "colorSeam": 24.7961
+      },
+      "123.75": {
+        "featureCoordinates": [
+          [
+            240.0,
+            72.0
+          ],
+          [
+            241.95550537109375,
+            36.69060134887695
+          ],
+          [
+            270.63189697265625,
+            17.756799697875977
+          ],
+          [
+            299.8089904785156,
+            34.308998107910156
+          ],
+          [
+            292.0,
+            64.5
+          ]
+        ],
+        "rootCrownCrossing": [
+          238.5,
+          51.36140060424805
+        ],
+        "crossingTangent": [
+          0.0810299962759018,
+          -0.9967100024223328
+        ],
+        "crossingSegment": 23,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          6.422210693359375,
+          8.350728034973145,
+          12.49871826171875,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1302,
+        "colorSeam": 39.5355
+      },
+      "127.5": {
+        "featureCoordinates": [
+          [
+            234.0,
+            68.33329772949219
+          ],
+          [
+            236.97030639648438,
+            33.8911018371582
+          ],
+          [
+            265.5834045410156,
+            15.675800323486328
+          ],
+          [
+            294.68218994140625,
+            31.015499114990234
+          ],
+          [
+            287.3334045410156,
+            60.66669845581055
+          ]
+        ],
+        "rootCrownCrossing": [
+          232.84939575195312,
+          50.1963005065918
+        ],
+        "crossingTangent": [
+          -0.12308000028133392,
+          -0.9923999905586243
+        ],
+        "crossingSegment": 21,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          5.859155178070068,
+          8.233819007873535,
+          11.991595268249512,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1251,
+        "colorSeam": 37.5386
+      },
+      "131.25": {
+        "featureCoordinates": [
+          [
+            228.0,
+            64.66670227050781
+          ],
+          [
+            231.98519897460938,
+            31.09160041809082
+          ],
+          [
+            260.5347900390625,
+            13.59469985961914
+          ],
+          [
+            289.5552978515625,
+            27.722000122070312
+          ],
+          [
+            282.6665954589844,
+            56.83330154418945
+          ]
+        ],
+        "rootCrownCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "crossingTangent": [
+          -0.03200000151991844,
+          -0.9994900226593018
+        ],
+        "crossingSegment": 17,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          5.2960991859436035,
+          8.11690902709961,
+          11.484472274780273,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1198,
+        "colorSeam": 8.4283
+      }
+    },
+    "multi_feature_linear": {
+      "93.75": {
+        "featureCoordinates": [
+          [
+            196.3332977294922,
+            66.33329772949219
+          ],
+          [
+            196.216796875,
+            46.0989990234375
+          ],
+          [
+            239.7001953125,
+            10.66670036315918
+          ],
+          [
+            258.752197265625,
+            17.244300842285156
+          ],
+          [
+            269.33331298828125,
+            54.33330154418945
+          ]
+        ],
+        "rootCrownCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "crossingTangent": [
+          0.0,
+          -1.0
+        ],
+        "crossingSegment": 27,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          2.6633589267730713,
+          7.930954933166504,
+          8.136566162109375,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1195,
+        "colorSeam": 0.9377
+      },
+      "97.5": {
+        "featureCoordinates": [
+          [
+            208.6667022705078,
+            69.66670227050781
+          ],
+          [
+            208.17340087890625,
+            49.38410186767578
+          ],
+          [
+            247.85800170898438,
+            13.33329963684082
+          ],
+          [
+            270.69488525390625,
+            24.48859977722168
+          ],
+          [
+            276.66668701171875,
+            58.66669845581055
+          ]
+        ],
+        "rootCrownCrossing": [
+          208.30349731445312,
+          51.03219985961914
+        ],
+        "crossingTangent": [
+          -0.11953999847173691,
+          -0.9928299784660339
+        ],
+        "crossingSegment": 38,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          2.930687189102173,
+          7.861910820007324,
+          8.930227279663086,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1209,
+        "colorSeam": 3.4558
+      },
+      "101.25": {
+        "featureCoordinates": [
+          [
+            221.0,
+            73.0
+          ],
+          [
+            220.13009643554688,
+            52.66910171508789
+          ],
+          [
+            256.01580810546875,
+            16.0
+          ],
+          [
+            282.6376037597656,
+            31.732900619506836
+          ],
+          [
+            284.0,
+            63.0
+          ]
+        ],
+        "rootCrownCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "crossingTangent": [
+          0.1656699925661087,
+          -0.9861800074577332
+        ],
+        "crossingSegment": 42,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          3.1980152130126953,
+          7.792865753173828,
+          9.723888397216797,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1238,
+        "colorSeam": 28.1198
+      },
+      "105": {
+        "featureCoordinates": [
+          [
+            233.33340454101562,
+            76.33329772949219
+          ],
+          [
+            232.08670043945312,
+            55.954200744628906
+          ],
+          [
+            264.1736145019531,
+            18.66670036315918
+          ],
+          [
+            294.5802917480469,
+            38.97719955444336
+          ],
+          [
+            291.3334045410156,
+            67.33329772949219
+          ]
+        ],
+        "rootCrownCrossing": [
+          232.43099975585938,
+          52.49589920043945
+        ],
+        "crossingTangent": [
+          0.10643000155687332,
+          -0.9943199753761292
+        ],
+        "crossingSegment": 43,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          3.465343713760376,
+          7.723820686340332,
+          10.517549514770508,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1318,
+        "colorSeam": 21.139
+      },
+      "108.75": {
+        "featureCoordinates": [
+          [
+            245.6667022705078,
+            79.66670227050781
+          ],
+          [
+            244.04339599609375,
+            59.23929977416992
+          ],
+          [
+            272.3313903808594,
+            21.33329963684082
+          ],
+          [
+            306.52301025390625,
+            46.22140121459961
+          ],
+          [
+            298.6665954589844,
+            71.66670227050781
+          ]
+        ],
+        "rootCrownCrossing": [
+          244.22779846191406,
+          55.686500549316406
+        ],
+        "crossingTangent": [
+          0.04574999958276749,
+          -0.9989500045776367
+        ],
+        "crossingSegment": 43,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          3.7326717376708984,
+          7.654776096343994,
+          11.311210632324219,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1400,
+        "colorSeam": 35.0641
+      },
+      "116.25": {
+        "featureCoordinates": [
+          [
+            252.0,
+            79.33329772949219
+          ],
+          [
+            250.2021942138672,
+            58.7401008605957
+          ],
+          [
+            276.4573059082031,
+            21.83329963684082
+          ],
+          [
+            309.7164001464844,
+            46.71369934082031
+          ],
+          [
+            301.3334045410156,
+            72.16670227050781
+          ]
+        ],
+        "rootCrownCrossing": [
+          250.33160400390625,
+          56.491600036621094
+        ],
+        "crossingTangent": [
+          0.058329999446868896,
+          -0.9983000159263611
+        ],
+        "crossingSegment": 42,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          3.720323324203491,
+          7.654776096343994,
+          11.47972583770752,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1386,
+        "colorSeam": 32.2431
+      },
+      "120": {
+        "featureCoordinates": [
+          [
+            246.0,
+            75.66670227050781
+          ],
+          [
+            244.40440368652344,
+            54.95589828491211
+          ],
+          [
+            272.4255065917969,
+            19.66670036315918
+          ],
+          [
+            300.9670104980469,
+            39.96160125732422
+          ],
+          [
+            296.66668701171875,
+            68.33329772949219
+          ]
+        ],
+        "rootCrownCrossing": [
+          244.6392059326172,
+          53.71659851074219
+        ],
+        "crossingTangent": [
+          0.11976999789476395,
+          -0.9927999973297119
+        ],
+        "crossingSegment": 42,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          3.4406471252441406,
+          7.723820686340332,
+          10.854581832885742,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1279,
+        "colorSeam": 55.8824
+      },
+      "123.75": {
+        "featureCoordinates": [
+          [
+            240.0,
+            72.0
+          ],
+          [
+            238.60650634765625,
+            51.171600341796875
+          ],
+          [
+            268.3935852050781,
+            17.5
+          ],
+          [
+            292.21759033203125,
+            33.209598541259766
+          ],
+          [
+            292.0,
+            64.5
+          ]
+        ],
+        "rootCrownCrossing": [
+          238.61219787597656,
+          51.4380989074707
+        ],
+        "crossingTangent": [
+          0.06428000330924988,
+          -0.9979299902915955
+        ],
+        "crossingSegment": 40,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          3.160970449447632,
+          7.792865753173828,
+          10.229434967041016,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1202,
+        "colorSeam": 32.4824
+      },
+      "127.5": {
+        "featureCoordinates": [
+          [
+            234.0,
+            68.33329772949219
+          ],
+          [
+            232.80870056152344,
+            47.38740158081055
+          ],
+          [
+            264.3617858886719,
+            15.33329963684082
+          ],
+          [
+            283.4682922363281,
+            26.457500457763672
+          ],
+          [
+            287.3334045410156,
+            60.66669845581055
+          ]
+        ],
+        "rootCrownCrossing": [
+          233.27529907226562,
+          50.1963005065918
+        ],
+        "crossingTangent": [
+          -0.17736999690532684,
+          -0.9841399788856506
+        ],
+        "crossingSegment": 35,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          2.881294012069702,
+          7.861910820007324,
+          9.604290008544922,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1162,
+        "colorSeam": 6.8335
+      },
+      "131.25": {
+        "featureCoordinates": [
+          [
+            228.0,
+            64.66670227050781
+          ],
+          [
+            227.01089477539062,
+            43.60319900512695
+          ],
+          [
+            260.32989501953125,
+            13.16670036315918
+          ],
+          [
+            274.7189025878906,
+            19.70549964904785
+          ],
+          [
+            282.6665954589844,
+            56.83330154418945
+          ]
+        ],
+        "rootCrownCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "crossingTangent": [
+          0.0,
+          -1.0
+        ],
+        "crossingSegment": 28,
+        "actualCrownCrossingFound": true,
+        "featureWidths": [
+          6.0,
+          2.6016173362731934,
+          7.930954933166504,
+          8.979144096374512,
+          2.0
+        ],
+        "connectedComponents": 1,
+        "deepBodyExact": true,
+        "visibleStrandPixels": 1140,
+        "colorSeam": 2.8893
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "multi_feature_linear",
+  "method": "Source-owned medial curve multi-feature correspondence: root, two windowed curvature shoulders, minimum-y outer-arc apex, free tip; jointly reparameterize centerline, width and donor texture at shared u={0,.25,.5,.75,1}.",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-194-multifeature-correspondence/index.html",
+  "gate": {
+    "allFiveFeaturesOrderedInAllKeys": true,
+    "allNativeKeysExact": true,
+    "allMidframesSingleComponent": true,
+    "allMidframesHaveActualCrownCrossing": true,
+    "allDeepBodyExact": true,
+    "rootCrossingImprovedOverArc": true,
+    "localTemporalBeatsArc": true,
+    "globalTemporalBeatsDIS": false,
+    "visualAccepted": false,
+    "semanticFeatureCorrespondenceApproved": false,
+    "passes": false
+  }
+}
