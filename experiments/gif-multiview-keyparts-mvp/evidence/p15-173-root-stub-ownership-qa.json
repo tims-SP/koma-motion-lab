@@ -1,0 +1,179 @@
+{
+  "schema": "KOMA_P15_173_ROOT_STUB_OWNERSHIP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "methods": {
+    "narrow": {
+      "90": {
+        "root": [
+          184,
+          53
+        ],
+        "paintPixels": 114,
+        "airpostPixels": 6,
+        "editedPixels": 137,
+        "darkRootPixelCount": 20,
+        "alphaAboveCrownRemaining": 0,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "crownSHA256": "ff4be00ffdf0f4ebc7f70479efa1b885b712ef3f26109a25bef63873f86cb7d1",
+        "sourceStrandSHA256": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12"
+      },
+      "112.5": {
+        "root": [
+          258,
+          77
+        ],
+        "paintPixels": 259,
+        "airpostPixels": 26,
+        "editedPixels": 294,
+        "darkRootPixelCount": 19,
+        "alphaAboveCrownRemaining": 20,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "crownSHA256": "01bf0c34e3117add160b8d1367edf01a4a86d3787bec2dcf7ea6cdf9a12c1ee0",
+        "sourceStrandSHA256": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4"
+      },
+      "135": {
+        "root": [
+          222,
+          55
+        ],
+        "paintPixels": 150,
+        "airpostPixels": 12,
+        "editedPixels": 174,
+        "darkRootPixelCount": 18,
+        "alphaAboveCrownRemaining": 0,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "crownSHA256": "d17d7afd7b4aa97669e5abca2e87acc6621e34aa96377d3dfa6a249187d8f508",
+        "sourceStrandSHA256": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8"
+      }
+    },
+    "wide": {
+      "90": {
+        "root": [
+          184,
+          53
+        ],
+        "paintPixels": 187,
+        "airpostPixels": 6,
+        "editedPixels": 219,
+        "darkRootPixelCount": 30,
+        "alphaAboveCrownRemaining": 0,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "crownSHA256": "3151b7a9e1c8e455bc253c6694551a9b185f3b82cad6d62376b0c56dc6d44ba7",
+        "sourceStrandSHA256": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12"
+      },
+      "112.5": {
+        "root": [
+          258,
+          77
+        ],
+        "paintPixels": 425,
+        "airpostPixels": 37,
+        "editedPixels": 469,
+        "darkRootPixelCount": 11,
+        "alphaAboveCrownRemaining": 29,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "crownSHA256": "e14aaad474b0a00ade18604442909cb3d87a869fdc18a1813762d5d75774d53b",
+        "sourceStrandSHA256": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4"
+      },
+      "135": {
+        "root": [
+          222,
+          55
+        ],
+        "paintPixels": 249,
+        "airpostPixels": 12,
+        "editedPixels": 284,
+        "darkRootPixelCount": 33,
+        "alphaAboveCrownRemaining": 0,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "crownSHA256": "13644cb2480b949276eb9cc574b1e5782a46cfdf286d422d0abf8ac46ee872da",
+        "sourceStrandSHA256": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8"
+      }
+    },
+    "cap": {
+      "90": {
+        "root": [
+          184,
+          53
+        ],
+        "paintPixels": 211,
+        "airpostPixels": 6,
+        "editedPixels": 209,
+        "darkRootPixelCount": 31,
+        "alphaAboveCrownRemaining": 0,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1",
+        "crownSHA256": "9e89cc63f4f149a71c56cd6553700c4bcf4c6d9b4dbcce35167fd61dd6b1d564",
+        "sourceStrandSHA256": "7981123ae5d802189a2fe1b5e95e017731635ac0929064340f87f978ff3fcc12"
+      },
+      "112.5": {
+        "root": [
+          258,
+          77
+        ],
+        "paintPixels": 480,
+        "airpostPixels": 37,
+        "editedPixels": 487,
+        "darkRootPixelCount": 2,
+        "alphaAboveCrownRemaining": 37,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+        "crownSHA256": "336d210c21f88d52aa0070baae97f1f9d45deb7ea4972f13558d840d58d806a7",
+        "sourceStrandSHA256": "a290cde63f6e5f3158d1d7fc85d6e6c0a4f8e048cef2e6b02decec73079b4ab4"
+      },
+      "135": {
+        "root": [
+          222,
+          55
+        ],
+        "paintPixels": 282,
+        "airpostPixels": 12,
+        "editedPixels": 283,
+        "darkRootPixelCount": 35,
+        "alphaAboveCrownRemaining": 0,
+        "belowY125Exact": true,
+        "sourceKeyReassembledExact": true,
+        "sourceSHA256": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137",
+        "crownSHA256": "a06ade5bec403efc8a895dfb2246e615c893c2f42a03ef9e60b62cbd57ff5b12",
+        "sourceStrandSHA256": "9acae90d0840b75a33093ab440acb525e1502311d31fc4db1e62a95fe88650e8"
+      }
+    }
+  },
+  "sourceLayerPairsExact": true,
+  "paintingType": "source-registered opaque-crown bounded underpaint and above-crown hair ownership",
+  "nativeKeyArtworkUnchanged": true,
+  "sourceMatchedHiddenPaintApproved": false,
+  "continuousMotionAccepted": false,
+  "canonicalRendererUpdated": false,
+  "review": "private-assets/exports/p15-173-root-stub-ownership/index.html",
+  "visualFindings": "Source-only RGB donors limit dark fill artifacts. Narrow mask leaves a 112.5 degree vertical post. Wider repair introduces loss of natural crown hair ink near 90 and 135. No visually acceptable crown part yet.",
+  "gate": {
+    "sourcePairExact": true,
+    "deepHeadPixelExact": true,
+    "allRootROIsPainted": true,
+    "allAirPostsCleared": false,
+    "crownLineworkArtistApproved": false,
+    "rootStubVisuallyCleared": false,
+    "sourceCrownContourVisuallyMatched": false,
+    "passes": false
+  }
+}

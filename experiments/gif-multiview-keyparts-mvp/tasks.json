@@ -10007,5 +10007,75 @@
     ],
     "review": "private-assets/exports/p15-172-crown-underpaint/index.html",
     "next": "Create source-matched rootless crown paint at 90/112.5/135, explicitly including the 112.5 crown-edge post; after visual approval, retest intermediate yaw against unchanged optical-flow baseline."
+  },
+  "p15_173RootStubSourceOwnership": {
+    "status": "SOURCE_CROWN_ROOT_STUB_CANDIDATES_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "candidateMethods": [
+      "narrow",
+      "wide",
+      "cap"
+    ],
+    "rootPaintPixels": {
+      "narrow": {
+        "90": 114,
+        "112.5": 259,
+        "135": 150
+      },
+      "wide": {
+        "90": 187,
+        "112.5": 425,
+        "135": 249
+      },
+      "cap": {
+        "90": 211,
+        "112.5": 480,
+        "135": 282
+      }
+    },
+    "remainingAirpostAlphaPixels": {
+      "narrow": {
+        "90": 0,
+        "112.5": 20,
+        "135": 0
+      },
+      "wide": {
+        "90": 0,
+        "112.5": 29,
+        "135": 0
+      },
+      "cap": {
+        "90": 0,
+        "112.5": 37,
+        "135": 0
+      }
+    },
+    "sourceRecompositionPixelExact": true,
+    "deepHeadBelowY125PixelExact": true,
+    "visualFindings": "Source-only RGB donors limit dark fill artifacts. Narrow mask leaves a 112.5 degree vertical post. Wider repair introduces loss of natural crown hair ink near 90 and 135. No visually acceptable crown part yet.",
+    "sourceHairlineVisuallyAccepted": false,
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "fiveAngleVDDRun": false,
+    "acceptanceGate": {
+      "sourcePairExact": true,
+      "deepHeadPixelExact": true,
+      "allRootROIsPainted": true,
+      "allAirPostsCleared": false,
+      "crownLineworkArtistApproved": false,
+      "rootStubVisuallyCleared": false,
+      "sourceCrownContourVisuallyMatched": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-173-root-stub-ownership-qa.json"
+    ],
+    "review": "private-assets/exports/p15-173-root-stub-ownership/index.html",
+    "next": "Obtain corrected artist-matched crown texture and alpha edge around the 112.5-degree root, preserving 90/135 head highlights. Verify source-layer reconstruction and closeup before mid-yaw VDD tests."
   }
 }
