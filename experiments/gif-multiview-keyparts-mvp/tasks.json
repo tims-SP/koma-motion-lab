@@ -10077,5 +10077,42 @@
     ],
     "review": "private-assets/exports/p15-173-root-stub-ownership/index.html",
     "next": "Obtain corrected artist-matched crown texture and alpha edge around the 112.5-degree root, preserving 90/135 head highlights. Verify source-layer reconstruction and closeup before mid-yaw VDD tests."
+  },
+  "p15_174AIAssistedRootTexturePatch": {
+    "status": "AI_EDITED_SOURCE_PATCH_RENDERED_AND_PIXEL_SCOPE_VERIFIED",
+    "characterId": "p0_character_001",
+    "angle": 112.5,
+    "method": "Flux.2 Klein 4B visual edit as a source-color-matched 14x14 patch donor",
+    "modelOutputScope": "Only 14x14 patch around root is sampled; all other generated pixels discarded",
+    "anchor": [
+      258,
+      77
+    ],
+    "patchSize": [
+      14,
+      14
+    ],
+    "changedPixels": 169,
+    "sourceAlphaExact": true,
+    "outsidePatchPixelExact": true,
+    "model": "Flux.2 Klein 4B via Hugging Face Space",
+    "visualFindings": "The image-edit model produces a cleaner single-point ahoge attachment in the full edited crop. Only a source-color-matched 14x14 patch was transferred to the original 443x443 RGBA source, changing 169 pixels while preserving original alpha and all pixels outside the patch. The closeup comparison shows a localized texture adjustment but the remaining narrow stem/line still requires artist review; this is not accepted as a rootless crown.",
+    "candidateVisualApproved": false,
+    "canonicalRendererUpdated": false,
+    "crossViewVDDRun": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "sourceAlphaExact": true,
+      "outsidePatchExact": true,
+      "editBounded": true,
+      "candidateRendered": true,
+      "rootAttachmentVisuallyAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-174-ai-root-patch-qa.json"
+    ],
+    "review": "private-assets/exports/p15-174-ai-root-patch/index.html",
+    "next": "Extend the AI-guided edit only after confirming the intended strand ownership boundary; generate a separate rootless crown and ahoge loop with explicit transparent layers, then verify lossless source-key reconstruction and mid-yaw motion."
   }
 }

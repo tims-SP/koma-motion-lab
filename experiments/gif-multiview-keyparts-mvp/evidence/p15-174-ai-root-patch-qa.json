@@ -1,0 +1,41 @@
+{
+  "schema": "KOMA_P15_174_AI_ROOT_PATCH_V1",
+  "characterId": "p0_character_001",
+  "angle": 112.5,
+  "method": "Flux.2 Klein 4B visual edit as a source-color-matched 14x14 patch donor",
+  "modelOutputScope": "Only 14x14 patch around root is sampled; all other generated pixels discarded",
+  "diagnostics": {
+    "sourceSha256": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a",
+    "editedModelSha256": "62294448583548ef74a56aacc342ddb3316b469bd3f042e35ace819cff208af4",
+    "candidateSha256": "5d6590c83dbc19b3effa33f29651b4eeac39a665376118216d1cecd91bd6ef75",
+    "anchor": [
+      258,
+      77
+    ],
+    "patchSize": [
+      14,
+      14
+    ],
+    "changedPixels": 169,
+    "bbox": [
+      251,
+      70,
+      264,
+      83
+    ],
+    "outsidePatchPixelExact": true,
+    "sourceAlphaExact": true
+  },
+  "nativeSourceUnchanged": true,
+  "artistApproval": false,
+  "intermediateYawAccepted": false,
+  "canonicalRendererUpdated": false,
+  "gate": {
+    "sourceAlphaExact": true,
+    "outsidePatchExact": true,
+    "editBounded": true,
+    "candidateRendered": true,
+    "rootAttachmentVisuallyAccepted": false,
+    "passes": false
+  }
+}
