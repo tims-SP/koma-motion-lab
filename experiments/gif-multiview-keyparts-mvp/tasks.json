@@ -9544,5 +9544,227 @@
     ],
     "review": "private-assets/exports/p15-168-root-occlusion/index.html",
     "next": "Use the verified single-source root/crown ownership and raster exact keyframes to paint clean native crown linework and attachment shading. Check 101.25/123.75 closeups and adjacent motion before VDD admission."
+  },
+  "p15_169RootJunctionMatting": {
+    "status": "ROOT_JUNCTION_MATTING_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "sampleAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "methods": {
+      "reference": {
+        "maxAdjacentRGBMAE": 12.0984,
+        "topConnectedComponents": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "crown_front": {
+        "maxAdjacentRGBMAE": 12.2297,
+        "topConnectedComponents": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "junction_06": {
+        "maxAdjacentRGBMAE": 12.2284,
+        "topConnectedComponents": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "junction_10": {
+        "maxAdjacentRGBMAE": 12.2317,
+        "topConnectedComponents": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "junction_14": {
+        "maxAdjacentRGBMAE": 12.242,
+        "topConnectedComponents": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "registeredSource": "P15-167 source contact/free-tip pair",
+    "sourcePixelExact": true,
+    "belowY125PixelExact": true,
+    "scalpAlphaPreserved": true,
+    "localRGBMaterialChecks": {
+      "crown_front": {
+        "101.25": {
+          "visibleHairPixels": 775,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.959,
+          "foregroundAlphaPixelsInCrownBand": 16,
+          "editedPixels": 0,
+          "maxCrownRGBChange": 0,
+          "belowY125Exact": true
+        },
+        "123.75": {
+          "visibleHairPixels": 1306,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.872,
+          "foregroundAlphaPixelsInCrownBand": 32,
+          "editedPixels": 0,
+          "maxCrownRGBChange": 0,
+          "belowY125Exact": true
+        }
+      },
+      "junction_06": {
+        "101.25": {
+          "visibleHairPixels": 775,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.959,
+          "foregroundAlphaPixelsInCrownBand": 16,
+          "editedPixels": 167,
+          "maxCrownRGBChange": 24,
+          "belowY125Exact": true,
+          "scalpAlphaIdenticalToBase": true,
+          "editBBox": [
+            214,
+            52,
+            228,
+            67
+          ]
+        },
+        "123.75": {
+          "visibleHairPixels": 1306,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.872,
+          "foregroundAlphaPixelsInCrownBand": 32,
+          "editedPixels": 200,
+          "maxCrownRGBChange": 38,
+          "belowY125Exact": true,
+          "scalpAlphaIdenticalToBase": true,
+          "editBBox": [
+            233,
+            52,
+            247,
+            68
+          ]
+        }
+      },
+      "junction_10": {
+        "101.25": {
+          "visibleHairPixels": 775,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.959,
+          "foregroundAlphaPixelsInCrownBand": 16,
+          "editedPixels": 219,
+          "maxCrownRGBChange": 20,
+          "belowY125Exact": true,
+          "scalpAlphaIdenticalToBase": true,
+          "editBBox": [
+            212,
+            52,
+            230,
+            67
+          ]
+        },
+        "123.75": {
+          "visibleHairPixels": 1306,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.872,
+          "foregroundAlphaPixelsInCrownBand": 32,
+          "editedPixels": 249,
+          "maxCrownRGBChange": 34,
+          "belowY125Exact": true,
+          "scalpAlphaIdenticalToBase": true,
+          "editBBox": [
+            231,
+            52,
+            249,
+            69
+          ]
+        }
+      },
+      "junction_14": {
+        "101.25": {
+          "visibleHairPixels": 775,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.959,
+          "foregroundAlphaPixelsInCrownBand": 16,
+          "editedPixels": 325,
+          "maxCrownRGBChange": 82,
+          "belowY125Exact": true,
+          "scalpAlphaIdenticalToBase": true,
+          "editBBox": [
+            208,
+            52,
+            234,
+            67
+          ]
+        },
+        "123.75": {
+          "visibleHairPixels": 1306,
+          "headFarBelowCrownChangedChannels": 0,
+          "nativeBelowY125Exact": true,
+          "rootDistanceToCrown": 13.872,
+          "foregroundAlphaPixelsInCrownBand": 32,
+          "editedPixels": 347,
+          "maxCrownRGBChange": 42,
+          "belowY125Exact": true,
+          "scalpAlphaIdenticalToBase": true,
+          "editBBox": [
+            227,
+            52,
+            253,
+            70
+          ]
+        }
+      }
+    },
+    "visualFindings": "An opaque-crown bounded RGB matte reduces the minor dark seam in closeups, with the six-pixel treatment the best measured variant. The source interpolation still retains short old-root ink fragments near both midway views. Larger patches worsen adjacent-frame error, and the artwork lacks a painter-authored rootless crown.",
+    "canonicalRendererUpdated": false,
+    "continuousVisualAccepted": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "nativeKeyviewsExact": true,
+      "deepBodyExact": true,
+      "bothMidviewsTopologicallyConnected": true,
+      "alphaRetained": true,
+      "noMotionRegression": false,
+      "visualApproval": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-169-junction-matting-qa.json"
+    ],
+    "review": "private-assets/exports/p15-169-junction-matting/index.html",
+    "next": "Use the root-owned canonical layer to explicitly separate old hairline strokes by semantic source material; paint matching crown linework and verify the actual junction under motion before renderer admission."
   }
 }

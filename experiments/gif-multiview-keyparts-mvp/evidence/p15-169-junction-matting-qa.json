@@ -1,0 +1,256 @@
+{
+  "schema": "KOMA_P15_169_ROOT_JUNCTION_MATTING_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "samples": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyviewsPixelExact": true,
+      "deepBodyPixelExact": true
+    },
+    "crown_front": {
+      "maxAdjacentRGBMAE": 12.2297,
+      "adjacentRGBMAE": [
+        12.2297,
+        11.1971,
+        10.4569,
+        11.7481
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyviewsPixelExact": true,
+      "deepBodyPixelExact": true
+    },
+    "junction_06": {
+      "maxAdjacentRGBMAE": 12.2284,
+      "adjacentRGBMAE": [
+        12.2284,
+        11.197,
+        10.4572,
+        11.7456
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyviewsPixelExact": true,
+      "deepBodyPixelExact": true
+    },
+    "junction_10": {
+      "maxAdjacentRGBMAE": 12.2317,
+      "adjacentRGBMAE": [
+        12.2317,
+        11.1961,
+        10.4546,
+        11.7511
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyviewsPixelExact": true,
+      "deepBodyPixelExact": true
+    },
+    "junction_14": {
+      "maxAdjacentRGBMAE": 12.242,
+      "adjacentRGBMAE": [
+        12.242,
+        11.193,
+        10.45,
+        11.7537
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeyviewsPixelExact": true,
+      "deepBodyPixelExact": true
+    }
+  },
+  "localMaterialChecks": {
+    "crown_front": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "editedPixels": 0,
+        "maxCrownRGBChange": 0,
+        "belowY125Exact": true
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "editedPixels": 0,
+        "maxCrownRGBChange": 0,
+        "belowY125Exact": true
+      }
+    },
+    "junction_06": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "editedPixels": 167,
+        "maxCrownRGBChange": 24,
+        "belowY125Exact": true,
+        "scalpAlphaIdenticalToBase": true,
+        "editBBox": [
+          214,
+          52,
+          228,
+          67
+        ]
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "editedPixels": 200,
+        "maxCrownRGBChange": 38,
+        "belowY125Exact": true,
+        "scalpAlphaIdenticalToBase": true,
+        "editBBox": [
+          233,
+          52,
+          247,
+          68
+        ]
+      }
+    },
+    "junction_10": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "editedPixels": 219,
+        "maxCrownRGBChange": 20,
+        "belowY125Exact": true,
+        "scalpAlphaIdenticalToBase": true,
+        "editBBox": [
+          212,
+          52,
+          230,
+          67
+        ]
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "editedPixels": 249,
+        "maxCrownRGBChange": 34,
+        "belowY125Exact": true,
+        "scalpAlphaIdenticalToBase": true,
+        "editBBox": [
+          231,
+          52,
+          249,
+          69
+        ]
+      }
+    },
+    "junction_14": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "editedPixels": 325,
+        "maxCrownRGBChange": 82,
+        "belowY125Exact": true,
+        "scalpAlphaIdenticalToBase": true,
+        "editBBox": [
+          208,
+          52,
+          234,
+          67
+        ]
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "editedPixels": 347,
+        "maxCrownRGBChange": 42,
+        "belowY125Exact": true,
+        "scalpAlphaIdenticalToBase": true,
+        "editBBox": [
+          227,
+          52,
+          253,
+          70
+        ]
+      }
+    }
+  },
+  "method": "Opaque-crown bounded inpaint with soft RGB matte; independent registered source loop; original RGBA keys",
+  "nativeArtUnchanged": true,
+  "hiddenCrownPaintArtistApproved": false,
+  "rootAttachmentArtistApproved": false,
+  "fullYawVisualAccepted": false,
+  "canonicalRendererUpdated": false,
+  "review": "private-assets/exports/p15-169-junction-matting/index.html",
+  "gate": {
+    "nativeKeyviewsExact": true,
+    "deepBodyExact": true,
+    "bothMidviewsTopologicallyConnected": true,
+    "alphaRetained": true,
+    "noMotionRegression": false,
+    "visualApproval": false,
+    "passes": false
+  }
+}
