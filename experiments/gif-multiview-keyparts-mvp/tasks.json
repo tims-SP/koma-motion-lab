@@ -10231,5 +10231,55 @@
     "review": "private-assets/exports/p15-176-alpha-safe-crown/index.html",
     "assets": "private-assets/exports/p15-176-alpha-safe-crown/{yaw}/",
     "next": "Artist-match and remove the residual root remnants in motion underpaint while preserving ahoge attachment contour. Recheck three keyviews, then run 101.25/123.75 yaw."
+  },
+  "p15_177SourceRootCrownRepaint": {
+    "status": "THREE_VIEW_CROWN_ROOT_CANDIDATES_RENDERED_AND_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "materialMethod": "source-ahoge ownership seed, opaque-crown pixel inpainting, separate static alpha-safe and motion crown",
+    "maskRadii": {
+      "tight": 1,
+      "local": 2,
+      "broad": 3
+    },
+    "localPaintPixels": {
+      "90": 91,
+      "112.5": 211,
+      "135": 132
+    },
+    "rootAirPixelCounts": {
+      "90": 116,
+      "112.5": 433,
+      "135": 133
+    },
+    "sourceAlphaOutsideRootAirPreserved": true,
+    "newCompositeDeltaLocalized": true,
+    "deepHeadPixelExact": true,
+    "doubleAlphaOwnershipResolved": true,
+    "visualFindings": "Three keyview motion underpaints were rendered with opaque-crown owner-matte inpaint and source root-air alpha cleanup. The wider paint makes the 112.5-degree vertical root less pronounced, but a visible post and irregular scalp boundary remain; 90 and 135 retain small protrusions. Source hairline identity and high-quality hidden crown material require further original-art correction.",
+    "rootlessCrownVisualAccepted": false,
+    "midframeVDDRun": false,
+    "productionRendererUpdated": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "threeViewsRepainted": true,
+      "originalAlphaOutsideRootAirPreserved": true,
+      "inpaintInsideSourceRootMaskAndAir": true,
+      "belowY125PixelExact": true,
+      "noDoubleAlphaOwnership": true,
+      "newCompositeDeltaLocalized": true,
+      "rootlessCrownVisualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-177-crown-root-repaint-qa.json"
+    ],
+    "review": "private-assets/exports/p15-177-crown-root-repaint/index.html",
+    "assets": "private-assets/exports/p15-177-crown-root-repaint/{method}/{yaw}/",
+    "next": "Obtain independent source-matched clean crown art, starting with 112.5-degree root-ink post. Verify the crown-only image closeup and the source ahoge reconnection before intermediate-yaw rendering."
   }
 }
