@@ -16,9 +16,11 @@ class CrownAndAhogePairTests(unittest.TestCase):
   self.assertTrue(self.qa['gate']['allPairsTransparent'])
   for a in m.KEYS:
    folder=m.OUT/'root_contact'/m.TAGS[a]
-   self.assertEqual(Image.open(folder/'ahoge.png').mode,'RGBA')
-   self.assertEqual(Image.open(folder/'crown.png').mode,'RGBA')
-   self.assertEqual(Image.open(folder/'ahoge.png').size,(443,443))
+   with Image.open(folder/'ahoge.png') as strand, Image.open(folder/'crown.png') as crown:
+    self.assertEqual(strand.mode,'RGBA')
+    self.assertEqual(crown.mode,'RGBA')
+    self.assertEqual(strand.size,(443,443))
+    self.assertEqual(crown.size,(443,443))
  def test_owner_reassembly_restores_original_for_source_owned_region(self):
   for a in m.KEYS:
    original,strand,crown,owner,reassembled,_,metrics=m.build(a,'root_contact')
