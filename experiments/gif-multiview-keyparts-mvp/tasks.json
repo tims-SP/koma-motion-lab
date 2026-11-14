@@ -10826,5 +10826,91 @@
     "review": "private-assets/exports/p15-184-alpha-aware-temporal-sweep/index.html",
     "assets": "private-assets/exports/p15-184-alpha-aware-temporal-sweep/",
     "next": "Resolve curve-shape correspondence across the 112.5-degree native keyframe before further texture tuning. The current interpolation creates a geometry mismatch at the middle view; evaluate source curve landmarks, tangent orientation, and width profile, retaining native keyframe pixels exactly."
+  },
+  "p15_185KeyviewGeometryCorrespondence": {
+    "status": "PCHIP_GEOMETRY_CONTINUITY_EVALUATED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "methods": [
+      "linear",
+      "pchip"
+    ],
+    "reference": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.PchipInterpolator.html",
+    "method": "Fritsch-Butland PCHIP 3-keyview per-coordinate Hermite with source curve control points",
+    "metrics": {
+      "linear": {
+        "maxAdjacentCurveRMSStep": 2.03811,
+        "meanAdjacentCurveRMSStep": 1.56872,
+        "middleKeyDerivativeJump": 3.12693,
+        "widthMin": 8.7645,
+        "widthMax": 9.8985,
+        "maxAdjacentLocalRGBMAE": 9.025,
+        "maxAdjacentGlobalRGBMAE": 7.1183,
+        "totalDarkEdgePixels": 99,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "singleConnectedStrand": true,
+        "freeTipPreserved": true
+      },
+      "pchip": {
+        "maxAdjacentCurveRMSStep": 3.56318,
+        "meanAdjacentCurveRMSStep": 1.56984,
+        "middleKeyDerivativeJump": 0.10423,
+        "widthMin": 8.7645,
+        "widthMax": 9.8985,
+        "maxAdjacentLocalRGBMAE": 9.902,
+        "maxAdjacentGlobalRGBMAE": 7.2098,
+        "totalDarkEdgePixels": 102,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "singleConnectedStrand": true,
+        "freeTipPreserved": true
+      }
+    },
+    "preferredGeometryDiagnostic": "pchip",
+    "geometryFinding": "Source-point PCHIP reduces the middle-key control derivative discontinuity, but increases the maximum adjacent curve displacement and rendered local/global RGB MAE. The 112.5-degree native loop silhouette differs visibly from the open free-tip shapes in adjacent interpolations. Three image-space keys alone do not establish a physically consistent control-point identity or width profile.",
+    "canonicalSourceKeysExact": true,
+    "deepBodyExact": true,
+    "singleStrandConnected": true,
+    "freeTipPreserved": true,
+    "temporalGatePassed": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "sourceKeyviewsExact": true,
+      "bodyExact": true,
+      "strandConnected": true,
+      "tipPreserved": true,
+      "derivativeJumpReduced": true,
+      "pchipLocalTemporalBeatsLinear": false,
+      "pchipLocalTemporalBeatsDIS": false,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-185-keyview-geometry-correspondence-qa.json"
+    ],
+    "review": "private-assets/exports/p15-185-keyview-geometry-correspondence/index.html",
+    "assets": "private-assets/exports/p15-185-keyview-geometry-correspondence/",
+    "next": "Establish reliable source-local 112.5-degree strand correspondence and classify the source free-tip/crown-contact topology before further interpolation. Verify source landmark and variable width profile against actual alpha silhouettes; use only measured correction to re-run 13-yaw continuity."
   }
 }
