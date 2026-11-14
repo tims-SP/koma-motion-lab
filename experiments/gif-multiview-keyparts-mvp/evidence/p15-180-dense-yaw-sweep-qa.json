@@ -1,0 +1,1473 @@
+{
+  "schema": "KOMA_P15_180_DENSE_YAW_SWEEP_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    95.0,
+    100.0,
+    101.25,
+    105.0,
+    110.0,
+    112.5,
+    115.0,
+    120.0,
+    123.75,
+    125.0,
+    130.0,
+    135.0
+  ],
+  "intermediateAngles": [
+    95.0,
+    100.0,
+    101.25,
+    105.0,
+    110.0,
+    115.0,
+    120.0,
+    123.75,
+    125.0,
+    130.0
+  ],
+  "methods": {
+    "anchor_owner": {
+      "perFrame": {
+        "90": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1019,
+          "rootToEdgeDistance": -4.757,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        },
+        "95": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 935,
+          "expectedAirLoopPixels": 1034.56,
+          "airLoopAreaRatio": 0.9038,
+          "rootToEdgeDistance": 6.335,
+          "rootPatchRGBMAE": 3.1261,
+          "loopPixels": 949,
+          "belowY125Exact": true
+        },
+        "100": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 786,
+          "expectedAirLoopPixels": 1050.11,
+          "airLoopAreaRatio": 0.7485,
+          "rootToEdgeDistance": 12.681,
+          "rootPatchRGBMAE": 2.7929,
+          "loopPixels": 803,
+          "belowY125Exact": true
+        },
+        "101.25": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 758,
+          "expectedAirLoopPixels": 1054.0,
+          "airLoopAreaRatio": 0.7192,
+          "rootToEdgeDistance": 13.961,
+          "rootPatchRGBMAE": 3.3415,
+          "loopPixels": 771,
+          "belowY125Exact": true
+        },
+        "105": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1426,
+          "expectedAirLoopPixels": 1065.67,
+          "airLoopAreaRatio": 1.3381,
+          "rootToEdgeDistance": 16.46,
+          "rootPatchRGBMAE": 5.119,
+          "loopPixels": 1475,
+          "belowY125Exact": true
+        },
+        "110": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1208,
+          "expectedAirLoopPixels": 1081.22,
+          "airLoopAreaRatio": 1.1173,
+          "rootToEdgeDistance": 16.84,
+          "rootPatchRGBMAE": 4.6421,
+          "loopPixels": 1235,
+          "belowY125Exact": true
+        },
+        "112.5": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1089,
+          "rootToEdgeDistance": 17.155,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        },
+        "115": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1144,
+          "expectedAirLoopPixels": 1075.0,
+          "airLoopAreaRatio": 1.0642,
+          "rootToEdgeDistance": 16.542,
+          "rootPatchRGBMAE": 5.3194,
+          "loopPixels": 1170,
+          "belowY125Exact": true
+        },
+        "120": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1215,
+          "expectedAirLoopPixels": 1047.0,
+          "airLoopAreaRatio": 1.1605,
+          "rootToEdgeDistance": 15.742,
+          "rootPatchRGBMAE": 6.0477,
+          "loopPixels": 1248,
+          "belowY125Exact": true
+        },
+        "123.75": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1269,
+          "expectedAirLoopPixels": 1026.0,
+          "airLoopAreaRatio": 1.2368,
+          "rootToEdgeDistance": 14.473,
+          "rootPatchRGBMAE": 4.7141,
+          "loopPixels": 1311,
+          "belowY125Exact": true
+        },
+        "125": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 896,
+          "expectedAirLoopPixels": 1019.0,
+          "airLoopAreaRatio": 0.8793,
+          "rootToEdgeDistance": 13.616,
+          "rootPatchRGBMAE": 4.1294,
+          "loopPixels": 912,
+          "belowY125Exact": true
+        },
+        "130": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 961,
+          "expectedAirLoopPixels": 991.0,
+          "airLoopAreaRatio": 0.9697,
+          "rootToEdgeDistance": 9.728,
+          "rootPatchRGBMAE": 4.9055,
+          "loopPixels": 979,
+          "belowY125Exact": true
+        },
+        "135": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 963,
+          "rootToEdgeDistance": 3.528,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        }
+      },
+      "temporal": {
+        "candidateAdjacentRGBMAE": [
+          8.1857,
+          6.7882,
+          2.4468,
+          5.8614,
+          6.9006,
+          4.569,
+          4.2972,
+          6.3617,
+          5.374,
+          2.8358,
+          6.7051,
+          7.8084
+        ],
+        "baselineAdjacentRGBMAE": [
+          7.8319,
+          6.4744,
+          2.2527,
+          5.279,
+          6.555,
+          4.2873,
+          4.2825,
+          6.351,
+          5.2986,
+          2.312,
+          6.6399,
+          7.7018
+        ],
+        "candidateMaxAdjacentRGBMAE": 8.1857,
+        "baselineMaxAdjacentRGBMAE": 7.8319,
+        "rootToEdgeDistances": [
+          -4.757,
+          6.335,
+          12.681,
+          13.961,
+          16.46,
+          16.84,
+          17.155,
+          16.542,
+          15.742,
+          14.473,
+          13.616,
+          9.728,
+          3.528
+        ],
+        "adjacentRootDistanceDeltas": [
+          11.091999999999999,
+          6.345999999999999,
+          1.2800000000000011,
+          2.4990000000000006,
+          0.379999999999999,
+          0.3150000000000013,
+          0.6129999999999995,
+          0.8000000000000007,
+          1.2690000000000001,
+          0.8570000000000011,
+          3.888,
+          6.199999999999999
+        ],
+        "maxAdjacentRootDistanceDelta": 11.091999999999999,
+        "loopAreaRatios": [
+          0.9038,
+          0.7485,
+          0.7192,
+          1.3381,
+          1.1173,
+          1.0642,
+          1.1605,
+          1.2368,
+          0.8793,
+          0.9697
+        ],
+        "maxAdjacentRelativeAirLoopAreaJump": 0.6117,
+        "adjacentRelativeAirLoopAreaJumps": [
+          0.086,
+          0.1732,
+          0.0363,
+          0.6117,
+          0.1655,
+          0.1036,
+          0.0493,
+          0.0602,
+          0.0435,
+          0.3446,
+          0.07,
+          0.0021
+        ],
+        "maxRootPatchRGBMAE": 6.0477,
+        "allNativeKeysPixelExact": true,
+        "allBodyBelowY125Exact": true
+      }
+    },
+    "anchor_blend": {
+      "perFrame": {
+        "90": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1019,
+          "rootToEdgeDistance": -4.757,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        },
+        "95": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 944,
+          "expectedAirLoopPixels": 1034.56,
+          "airLoopAreaRatio": 0.9125,
+          "rootToEdgeDistance": 6.335,
+          "rootPatchRGBMAE": 4.0349,
+          "loopPixels": 957,
+          "belowY125Exact": true
+        },
+        "100": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1852,
+          "expectedAirLoopPixels": 1050.11,
+          "airLoopAreaRatio": 1.7636,
+          "rootToEdgeDistance": 12.681,
+          "rootPatchRGBMAE": 3.5474,
+          "loopPixels": 1883,
+          "belowY125Exact": true
+        },
+        "101.25": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1880,
+          "expectedAirLoopPixels": 1054.0,
+          "airLoopAreaRatio": 1.7837,
+          "rootToEdgeDistance": 13.961,
+          "rootPatchRGBMAE": 3.9005,
+          "loopPixels": 1909,
+          "belowY125Exact": true
+        },
+        "105": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1715,
+          "expectedAirLoopPixels": 1065.67,
+          "airLoopAreaRatio": 1.6093,
+          "rootToEdgeDistance": 16.46,
+          "rootPatchRGBMAE": 4.9719,
+          "loopPixels": 1747,
+          "belowY125Exact": true
+        },
+        "110": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1183,
+          "expectedAirLoopPixels": 1081.22,
+          "airLoopAreaRatio": 1.0941,
+          "rootToEdgeDistance": 16.84,
+          "rootPatchRGBMAE": 4.6014,
+          "loopPixels": 1207,
+          "belowY125Exact": true
+        },
+        "112.5": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1089,
+          "rootToEdgeDistance": 17.155,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        },
+        "115": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1139,
+          "expectedAirLoopPixels": 1075.0,
+          "airLoopAreaRatio": 1.0595,
+          "rootToEdgeDistance": 16.542,
+          "rootPatchRGBMAE": 5.3048,
+          "loopPixels": 1164,
+          "belowY125Exact": true
+        },
+        "120": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1602,
+          "expectedAirLoopPixels": 1047.0,
+          "airLoopAreaRatio": 1.5301,
+          "rootToEdgeDistance": 15.742,
+          "rootPatchRGBMAE": 5.925,
+          "loopPixels": 1624,
+          "belowY125Exact": true
+        },
+        "123.75": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1670,
+          "expectedAirLoopPixels": 1026.0,
+          "airLoopAreaRatio": 1.6277,
+          "rootToEdgeDistance": 14.473,
+          "rootPatchRGBMAE": 4.3911,
+          "loopPixels": 1691,
+          "belowY125Exact": true
+        },
+        "125": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1701,
+          "expectedAirLoopPixels": 1019.0,
+          "airLoopAreaRatio": 1.6693,
+          "rootToEdgeDistance": 13.616,
+          "rootPatchRGBMAE": 4.4042,
+          "loopPixels": 1723,
+          "belowY125Exact": true
+        },
+        "130": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 941,
+          "expectedAirLoopPixels": 991.0,
+          "airLoopAreaRatio": 0.9495,
+          "rootToEdgeDistance": 9.728,
+          "rootPatchRGBMAE": 5.2287,
+          "loopPixels": 957,
+          "belowY125Exact": true
+        },
+        "135": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 963,
+          "rootToEdgeDistance": 3.528,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        }
+      },
+      "temporal": {
+        "candidateAdjacentRGBMAE": [
+          8.2257,
+          6.85,
+          2.4952,
+          5.6472,
+          6.8678,
+          4.5748,
+          4.3161,
+          6.3703,
+          5.3686,
+          2.3775,
+          6.7261,
+          7.8426
+        ],
+        "baselineAdjacentRGBMAE": [
+          7.8319,
+          6.4744,
+          2.2527,
+          5.279,
+          6.555,
+          4.2873,
+          4.2825,
+          6.351,
+          5.2986,
+          2.312,
+          6.6399,
+          7.7018
+        ],
+        "candidateMaxAdjacentRGBMAE": 8.2257,
+        "baselineMaxAdjacentRGBMAE": 7.8319,
+        "rootToEdgeDistances": [
+          -4.757,
+          6.335,
+          12.681,
+          13.961,
+          16.46,
+          16.84,
+          17.155,
+          16.542,
+          15.742,
+          14.473,
+          13.616,
+          9.728,
+          3.528
+        ],
+        "adjacentRootDistanceDeltas": [
+          11.091999999999999,
+          6.345999999999999,
+          1.2800000000000011,
+          2.4990000000000006,
+          0.379999999999999,
+          0.3150000000000013,
+          0.6129999999999995,
+          0.8000000000000007,
+          1.2690000000000001,
+          0.8570000000000011,
+          3.888,
+          6.199999999999999
+        ],
+        "maxAdjacentRootDistanceDelta": 11.091999999999999,
+        "loopAreaRatios": [
+          0.9125,
+          1.7636,
+          1.7837,
+          1.6093,
+          1.0941,
+          1.0595,
+          1.5301,
+          1.6277,
+          1.6693,
+          0.9495
+        ],
+        "maxAdjacentRelativeAirLoopAreaJump": 0.6495,
+        "adjacentRelativeAirLoopAreaJumps": [
+          0.0764,
+          0.6495,
+          0.015,
+          0.0918,
+          0.3671,
+          0.0827,
+          0.0449,
+          0.3378,
+          0.0416,
+          0.0184,
+          0.5753,
+          0.0231
+        ],
+        "maxRootPatchRGBMAE": 5.925,
+        "allNativeKeysPixelExact": true,
+        "allBodyBelowY125Exact": true
+      }
+    },
+    "anchor_sdf": {
+      "perFrame": {
+        "90": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1019,
+          "rootToEdgeDistance": -4.757,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        },
+        "95": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 535,
+          "expectedAirLoopPixels": 1034.56,
+          "airLoopAreaRatio": 0.5171,
+          "rootToEdgeDistance": 6.335,
+          "rootPatchRGBMAE": 1.4895,
+          "loopPixels": 540,
+          "belowY125Exact": true
+        },
+        "100": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 458,
+          "expectedAirLoopPixels": 1050.11,
+          "airLoopAreaRatio": 0.4361,
+          "rootToEdgeDistance": 12.681,
+          "rootPatchRGBMAE": 1.9887,
+          "loopPixels": 461,
+          "belowY125Exact": true
+        },
+        "101.25": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 452,
+          "expectedAirLoopPixels": 1054.0,
+          "airLoopAreaRatio": 0.4288,
+          "rootToEdgeDistance": 13.961,
+          "rootPatchRGBMAE": 2.6252,
+          "loopPixels": 453,
+          "belowY125Exact": true
+        },
+        "105": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 504,
+          "expectedAirLoopPixels": 1065.67,
+          "airLoopAreaRatio": 0.4729,
+          "rootToEdgeDistance": 16.46,
+          "rootPatchRGBMAE": 4.3062,
+          "loopPixels": 504,
+          "belowY125Exact": true
+        },
+        "110": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 928,
+          "expectedAirLoopPixels": 1081.22,
+          "airLoopAreaRatio": 0.8583,
+          "rootToEdgeDistance": 16.84,
+          "rootPatchRGBMAE": 4.7447,
+          "loopPixels": 969,
+          "belowY125Exact": true
+        },
+        "112.5": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 1089,
+          "rootToEdgeDistance": 17.155,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        },
+        "115": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 983,
+          "expectedAirLoopPixels": 1075.0,
+          "airLoopAreaRatio": 0.9144,
+          "rootToEdgeDistance": 16.542,
+          "rootPatchRGBMAE": 5.396,
+          "loopPixels": 1015,
+          "belowY125Exact": true
+        },
+        "120": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 596,
+          "expectedAirLoopPixels": 1047.0,
+          "airLoopAreaRatio": 0.5692,
+          "rootToEdgeDistance": 15.742,
+          "rootPatchRGBMAE": 5.5022,
+          "loopPixels": 598,
+          "belowY125Exact": true
+        },
+        "123.75": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 521,
+          "expectedAirLoopPixels": 1026.0,
+          "airLoopAreaRatio": 0.5078,
+          "rootToEdgeDistance": 14.473,
+          "rootPatchRGBMAE": 3.6515,
+          "loopPixels": 521,
+          "belowY125Exact": true
+        },
+        "125": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 540,
+          "expectedAirLoopPixels": 1019.0,
+          "airLoopAreaRatio": 0.5299,
+          "rootToEdgeDistance": 13.616,
+          "rootPatchRGBMAE": 3.6009,
+          "loopPixels": 542,
+          "belowY125Exact": true
+        },
+        "130": {
+          "nativeKeyframe": false,
+          "topConnectedComponents": 2,
+          "airLoopPixels": 654,
+          "expectedAirLoopPixels": 991.0,
+          "airLoopAreaRatio": 0.6599,
+          "rootToEdgeDistance": 9.728,
+          "rootPatchRGBMAE": 3.7475,
+          "loopPixels": 660,
+          "belowY125Exact": true
+        },
+        "135": {
+          "nativeKeyframe": true,
+          "topConnectedComponents": 1,
+          "airLoopPixels": 963,
+          "rootToEdgeDistance": 3.528,
+          "rootPatchRGBMAE": 0.0,
+          "belowY125Exact": true
+        }
+      },
+      "temporal": {
+        "candidateAdjacentRGBMAE": [
+          8.0646,
+          6.5811,
+          2.3072,
+          5.3861,
+          6.6716,
+          4.5294,
+          4.2842,
+          6.2123,
+          5.1333,
+          2.3096,
+          6.5343,
+          7.7105
+        ],
+        "baselineAdjacentRGBMAE": [
+          7.8319,
+          6.4744,
+          2.2527,
+          5.279,
+          6.555,
+          4.2873,
+          4.2825,
+          6.351,
+          5.2986,
+          2.312,
+          6.6399,
+          7.7018
+        ],
+        "candidateMaxAdjacentRGBMAE": 8.0646,
+        "baselineMaxAdjacentRGBMAE": 7.8319,
+        "rootToEdgeDistances": [
+          -4.757,
+          6.335,
+          12.681,
+          13.961,
+          16.46,
+          16.84,
+          17.155,
+          16.542,
+          15.742,
+          14.473,
+          13.616,
+          9.728,
+          3.528
+        ],
+        "adjacentRootDistanceDeltas": [
+          11.091999999999999,
+          6.345999999999999,
+          1.2800000000000011,
+          2.4990000000000006,
+          0.379999999999999,
+          0.3150000000000013,
+          0.6129999999999995,
+          0.8000000000000007,
+          1.2690000000000001,
+          0.8570000000000011,
+          3.888,
+          6.199999999999999
+        ],
+        "maxAdjacentRootDistanceDelta": 11.091999999999999,
+        "loopAreaRatios": [
+          0.5171,
+          0.4361,
+          0.4288,
+          0.4729,
+          0.8583,
+          0.9144,
+          0.5692,
+          0.5078,
+          0.5299,
+          0.6599
+        ],
+        "maxAdjacentRelativeAirLoopAreaJump": 0.6229,
+        "adjacentRelativeAirLoopAreaJumps": [
+          0.6229,
+          0.1551,
+          0.0132,
+          0.1088,
+          0.5922,
+          0.1596,
+          0.1023,
+          0.4902,
+          0.1343,
+          0.0358,
+          0.191,
+          0.3822
+        ],
+        "maxRootPatchRGBMAE": 5.5022,
+        "allNativeKeysPixelExact": true,
+        "allBodyBelowY125Exact": true
+      }
+    }
+  },
+  "midframeDiagnostics": {
+    "anchor_owner": {
+      "95": {
+        "crownRGBEditedPixels": 7322,
+        "loopPixels": 949,
+        "topConnectedComponents": 1,
+        "root": [
+          200.44444274902344,
+          58.33333206176758
+        ],
+        "crownEdgeAtRoot": 51.99843215942383,
+        "rootToEdgeDistance": 6.335,
+        "rootPatchRGBMAE": 3.1261,
+        "rootPatchNonzeroAlphaPixels": 839,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          184,
+          40,
+          217,
+          78
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.22222,
+        "loopOwner": 90.0
+      },
+      "100": {
+        "crownRGBEditedPixels": 7781,
+        "loopPixels": 803,
+        "topConnectedComponents": 1,
+        "root": [
+          216.88888549804688,
+          63.66666793823242
+        ],
+        "crownEdgeAtRoot": 50.98569869995117,
+        "rootToEdgeDistance": 12.681,
+        "rootPatchRGBMAE": 2.7929,
+        "rootPatchNonzeroAlphaPixels": 1039,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          201,
+          46,
+          234,
+          84
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.44444,
+        "loopOwner": 90.0
+      },
+      "101.25": {
+        "crownRGBEditedPixels": 7844,
+        "loopPixels": 771,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.3415,
+        "rootPatchNonzeroAlphaPixels": 1073,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.5,
+        "loopOwner": 90.0
+      },
+      "105": {
+        "crownRGBEditedPixels": 7791,
+        "loopPixels": 1475,
+        "topConnectedComponents": 1,
+        "root": [
+          233.33334350585938,
+          69.0
+        ],
+        "crownEdgeAtRoot": 52.54000473022461,
+        "rootToEdgeDistance": 16.46,
+        "rootPatchRGBMAE": 5.119,
+        "rootPatchNonzeroAlphaPixels": 1152,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          217,
+          51,
+          250,
+          89
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.66667,
+        "loopOwner": 112.5
+      },
+      "110": {
+        "crownRGBEditedPixels": 7219,
+        "loopPixels": 1235,
+        "topConnectedComponents": 1,
+        "root": [
+          249.77777099609375,
+          74.33332824707031
+        ],
+        "crownEdgeAtRoot": 57.493404388427734,
+        "rootToEdgeDistance": 16.84,
+        "rootPatchRGBMAE": 4.6421,
+        "rootPatchNonzeroAlphaPixels": 1183,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          234,
+          56,
+          267,
+          94
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.88889,
+        "loopOwner": 112.5
+      },
+      "115": {
+        "crownRGBEditedPixels": 7058,
+        "loopPixels": 1170,
+        "topConnectedComponents": 1,
+        "root": [
+          254.0,
+          74.55555725097656
+        ],
+        "crownEdgeAtRoot": 58.01368713378906,
+        "rootToEdgeDistance": 16.542,
+        "rootPatchRGBMAE": 5.3194,
+        "rootPatchNonzeroAlphaPixels": 1176,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          238,
+          57,
+          271,
+          95
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.11111,
+        "loopOwner": 112.5
+      },
+      "120": {
+        "crownRGBEditedPixels": 7489,
+        "loopPixels": 1248,
+        "topConnectedComponents": 1,
+        "root": [
+          246.0,
+          69.66667175292969
+        ],
+        "crownEdgeAtRoot": 53.92463684082031,
+        "rootToEdgeDistance": 15.742,
+        "rootPatchRGBMAE": 6.0477,
+        "rootPatchNonzeroAlphaPixels": 1142,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          230,
+          52,
+          263,
+          90
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.33333,
+        "loopOwner": 112.5
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 7684,
+        "loopPixels": 1311,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.7141,
+        "rootPatchNonzeroAlphaPixels": 1095,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.5,
+        "loopOwner": 112.5
+      },
+      "125": {
+        "crownRGBEditedPixels": 7727,
+        "loopPixels": 912,
+        "topConnectedComponents": 1,
+        "root": [
+          238.0,
+          64.77777862548828
+        ],
+        "crownEdgeAtRoot": 51.161582946777344,
+        "rootToEdgeDistance": 13.616,
+        "rootPatchRGBMAE": 4.1294,
+        "rootPatchNonzeroAlphaPixels": 1074,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          222,
+          47,
+          255,
+          85
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.55556,
+        "loopOwner": 135.0
+      },
+      "130": {
+        "crownRGBEditedPixels": 7786,
+        "loopPixels": 979,
+        "topConnectedComponents": 1,
+        "root": [
+          230.0,
+          59.88888931274414
+        ],
+        "crownEdgeAtRoot": 50.160865783691406,
+        "rootToEdgeDistance": 9.728,
+        "rootPatchRGBMAE": 4.9055,
+        "rootPatchNonzeroAlphaPixels": 980,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          214,
+          42,
+          247,
+          80
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.77778,
+        "loopOwner": 135.0
+      }
+    },
+    "anchor_blend": {
+      "95": {
+        "crownRGBEditedPixels": 7322,
+        "loopPixels": 957,
+        "topConnectedComponents": 1,
+        "root": [
+          200.44444274902344,
+          58.33333206176758
+        ],
+        "crownEdgeAtRoot": 51.99843215942383,
+        "rootToEdgeDistance": 6.335,
+        "rootPatchRGBMAE": 4.0349,
+        "rootPatchNonzeroAlphaPixels": 901,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          184,
+          40,
+          217,
+          78
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.22222,
+        "loopOwner": 90.0
+      },
+      "100": {
+        "crownRGBEditedPixels": 7781,
+        "loopPixels": 1883,
+        "topConnectedComponents": 1,
+        "root": [
+          216.88888549804688,
+          63.66666793823242
+        ],
+        "crownEdgeAtRoot": 50.98569869995117,
+        "rootToEdgeDistance": 12.681,
+        "rootPatchRGBMAE": 3.5474,
+        "rootPatchNonzeroAlphaPixels": 1077,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          201,
+          46,
+          234,
+          84
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.44444,
+        "loopOwner": 90.0
+      },
+      "101.25": {
+        "crownRGBEditedPixels": 7844,
+        "loopPixels": 1909,
+        "topConnectedComponents": 1,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 3.9005,
+        "rootPatchNonzeroAlphaPixels": 1109,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.5,
+        "loopOwner": 90.0
+      },
+      "105": {
+        "crownRGBEditedPixels": 7791,
+        "loopPixels": 1747,
+        "topConnectedComponents": 1,
+        "root": [
+          233.33334350585938,
+          69.0
+        ],
+        "crownEdgeAtRoot": 52.54000473022461,
+        "rootToEdgeDistance": 16.46,
+        "rootPatchRGBMAE": 4.9719,
+        "rootPatchNonzeroAlphaPixels": 1158,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          217,
+          51,
+          250,
+          89
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.66667,
+        "loopOwner": 112.5
+      },
+      "110": {
+        "crownRGBEditedPixels": 7219,
+        "loopPixels": 1207,
+        "topConnectedComponents": 1,
+        "root": [
+          249.77777099609375,
+          74.33332824707031
+        ],
+        "crownEdgeAtRoot": 57.493404388427734,
+        "rootToEdgeDistance": 16.84,
+        "rootPatchRGBMAE": 4.6014,
+        "rootPatchNonzeroAlphaPixels": 1185,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          234,
+          56,
+          267,
+          94
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.88889,
+        "loopOwner": 112.5
+      },
+      "115": {
+        "crownRGBEditedPixels": 7058,
+        "loopPixels": 1164,
+        "topConnectedComponents": 1,
+        "root": [
+          254.0,
+          74.55555725097656
+        ],
+        "crownEdgeAtRoot": 58.01368713378906,
+        "rootToEdgeDistance": 16.542,
+        "rootPatchRGBMAE": 5.3048,
+        "rootPatchNonzeroAlphaPixels": 1177,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          238,
+          57,
+          271,
+          95
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.11111,
+        "loopOwner": 112.5
+      },
+      "120": {
+        "crownRGBEditedPixels": 7489,
+        "loopPixels": 1624,
+        "topConnectedComponents": 1,
+        "root": [
+          246.0,
+          69.66667175292969
+        ],
+        "crownEdgeAtRoot": 53.92463684082031,
+        "rootToEdgeDistance": 15.742,
+        "rootPatchRGBMAE": 5.925,
+        "rootPatchNonzeroAlphaPixels": 1143,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          230,
+          52,
+          263,
+          90
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.33333,
+        "loopOwner": 112.5
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 7684,
+        "loopPixels": 1691,
+        "topConnectedComponents": 1,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 4.3911,
+        "rootPatchNonzeroAlphaPixels": 1100,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.5,
+        "loopOwner": 112.5
+      },
+      "125": {
+        "crownRGBEditedPixels": 7727,
+        "loopPixels": 1723,
+        "topConnectedComponents": 1,
+        "root": [
+          238.0,
+          64.77777862548828
+        ],
+        "crownEdgeAtRoot": 51.161582946777344,
+        "rootToEdgeDistance": 13.616,
+        "rootPatchRGBMAE": 4.4042,
+        "rootPatchNonzeroAlphaPixels": 1097,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          222,
+          47,
+          255,
+          85
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.55556,
+        "loopOwner": 135.0
+      },
+      "130": {
+        "crownRGBEditedPixels": 7786,
+        "loopPixels": 957,
+        "topConnectedComponents": 1,
+        "root": [
+          230.0,
+          59.88888931274414
+        ],
+        "crownEdgeAtRoot": 50.160865783691406,
+        "rootToEdgeDistance": 9.728,
+        "rootPatchRGBMAE": 5.2287,
+        "rootPatchNonzeroAlphaPixels": 1017,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          214,
+          42,
+          247,
+          80
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.77778,
+        "loopOwner": 135.0
+      }
+    },
+    "anchor_sdf": {
+      "95": {
+        "crownRGBEditedPixels": 7322,
+        "loopPixels": 540,
+        "topConnectedComponents": 2,
+        "root": [
+          200.44444274902344,
+          58.33333206176758
+        ],
+        "crownEdgeAtRoot": 51.99843215942383,
+        "rootToEdgeDistance": 6.335,
+        "rootPatchRGBMAE": 1.4895,
+        "rootPatchNonzeroAlphaPixels": 792,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          184,
+          40,
+          217,
+          78
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.22222,
+        "loopOwner": 90.0
+      },
+      "100": {
+        "crownRGBEditedPixels": 7781,
+        "loopPixels": 461,
+        "topConnectedComponents": 2,
+        "root": [
+          216.88888549804688,
+          63.66666793823242
+        ],
+        "crownEdgeAtRoot": 50.98569869995117,
+        "rootToEdgeDistance": 12.681,
+        "rootPatchRGBMAE": 1.9887,
+        "rootPatchNonzeroAlphaPixels": 1013,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          201,
+          46,
+          234,
+          84
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.44444,
+        "loopOwner": 90.0
+      },
+      "101.25": {
+        "crownRGBEditedPixels": 7844,
+        "loopPixels": 453,
+        "topConnectedComponents": 2,
+        "root": [
+          221.0,
+          65.0
+        ],
+        "crownEdgeAtRoot": 51.039344787597656,
+        "rootToEdgeDistance": 13.961,
+        "rootPatchRGBMAE": 2.6252,
+        "rootPatchNonzeroAlphaPixels": 1053,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          205,
+          47,
+          238,
+          85
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.5,
+        "loopOwner": 90.0
+      },
+      "105": {
+        "crownRGBEditedPixels": 7791,
+        "loopPixels": 504,
+        "topConnectedComponents": 2,
+        "root": [
+          233.33334350585938,
+          69.0
+        ],
+        "crownEdgeAtRoot": 52.54000473022461,
+        "rootToEdgeDistance": 16.46,
+        "rootPatchRGBMAE": 4.3062,
+        "rootPatchNonzeroAlphaPixels": 1133,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          217,
+          51,
+          250,
+          89
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.66667,
+        "loopOwner": 112.5
+      },
+      "110": {
+        "crownRGBEditedPixels": 7219,
+        "loopPixels": 969,
+        "topConnectedComponents": 1,
+        "root": [
+          249.77777099609375,
+          74.33332824707031
+        ],
+        "crownEdgeAtRoot": 57.493404388427734,
+        "rootToEdgeDistance": 16.84,
+        "rootPatchRGBMAE": 4.7447,
+        "rootPatchNonzeroAlphaPixels": 1182,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          234,
+          56,
+          267,
+          94
+        ],
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "interpolationT": 0.88889,
+        "loopOwner": 112.5
+      },
+      "115": {
+        "crownRGBEditedPixels": 7058,
+        "loopPixels": 1015,
+        "topConnectedComponents": 1,
+        "root": [
+          254.0,
+          74.55555725097656
+        ],
+        "crownEdgeAtRoot": 58.01368713378906,
+        "rootToEdgeDistance": 16.542,
+        "rootPatchRGBMAE": 5.396,
+        "rootPatchNonzeroAlphaPixels": 1175,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          238,
+          57,
+          271,
+          95
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.11111,
+        "loopOwner": 112.5
+      },
+      "120": {
+        "crownRGBEditedPixels": 7489,
+        "loopPixels": 598,
+        "topConnectedComponents": 2,
+        "root": [
+          246.0,
+          69.66667175292969
+        ],
+        "crownEdgeAtRoot": 53.92463684082031,
+        "rootToEdgeDistance": 15.742,
+        "rootPatchRGBMAE": 5.5022,
+        "rootPatchNonzeroAlphaPixels": 1122,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          230,
+          52,
+          263,
+          90
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.33333,
+        "loopOwner": 112.5
+      },
+      "123.75": {
+        "crownRGBEditedPixels": 7684,
+        "loopPixels": 521,
+        "topConnectedComponents": 2,
+        "root": [
+          240.0,
+          66.0
+        ],
+        "crownEdgeAtRoot": 51.527469635009766,
+        "rootToEdgeDistance": 14.473,
+        "rootPatchRGBMAE": 3.6515,
+        "rootPatchNonzeroAlphaPixels": 1058,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          224,
+          48,
+          257,
+          86
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.5,
+        "loopOwner": 112.5
+      },
+      "125": {
+        "crownRGBEditedPixels": 7727,
+        "loopPixels": 542,
+        "topConnectedComponents": 2,
+        "root": [
+          238.0,
+          64.77777862548828
+        ],
+        "crownEdgeAtRoot": 51.161582946777344,
+        "rootToEdgeDistance": 13.616,
+        "rootPatchRGBMAE": 3.6009,
+        "rootPatchNonzeroAlphaPixels": 1053,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          222,
+          47,
+          255,
+          85
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.55556,
+        "loopOwner": 135.0
+      },
+      "130": {
+        "crownRGBEditedPixels": 7786,
+        "loopPixels": 660,
+        "topConnectedComponents": 2,
+        "root": [
+          230.0,
+          59.88888931274414
+        ],
+        "crownEdgeAtRoot": 50.160865783691406,
+        "rootToEdgeDistance": 9.728,
+        "rootPatchRGBMAE": 3.7475,
+        "rootPatchNonzeroAlphaPixels": 956,
+        "belowY125Exact": true,
+        "rootPatchBounds": [
+          214,
+          42,
+          247,
+          80
+        ],
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "interpolationT": 0.77778,
+        "loopOwner": 135.0
+      }
+    }
+  },
+  "sourceKeyframesUnmodified": true,
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "selectedDiagnosticMethod": "anchor_owner",
+  "review": "private-assets/exports/p15-180-dense-yaw-sweep/index.html",
+  "gate": {
+    "allSourceKeysExact": true,
+    "allDeepBodyExact": true,
+    "allMidframesConnected": true,
+    "maxAdjacentRelativeAreaJump": 0.6117,
+    "maxMidframeRootRGBMAE": 6.0477,
+    "loopAreaWithin25Percent": false,
+    "rootRGBMAEWithin5": false,
+    "temporalBetterThanReference": false,
+    "rootTemporalVisualAccepted": false,
+    "passes": false
+  }
+}

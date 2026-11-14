@@ -10402,5 +10402,67 @@
     "review": "private-assets/exports/p15-179-rootless-crown-mid-yaw-vdd/index.html",
     "assets": "private-assets/exports/p15-179-rootless-crown-mid-yaw-vdd/root_local__anchor_owner/",
     "next": "Run denser 5-degree yaw samples with the selected crown/loop layers. Measure root seam drift and temporal continuity over the full 90-135 interval; keep production renderer unchanged until dense sweep passes."
+  },
+  "p15_180DenseYawContinuitySweep": {
+    "status": "DENSE_13_YAW_DIAGNOSTIC_COMPLETED",
+    "characterId": "p0_character_001",
+    "renderAngles": [
+      90.0,
+      95.0,
+      100.0,
+      101.25,
+      105.0,
+      110.0,
+      112.5,
+      115.0,
+      120.0,
+      123.75,
+      125.0,
+      130.0,
+      135.0
+    ],
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "testedMethods": [
+      "anchor_owner",
+      "anchor_blend",
+      "anchor_sdf"
+    ],
+    "selectedDiagnosticMethod": "anchor_owner",
+    "technicalPass": {
+      "nativeKeysExact": true,
+      "deepBodyExact": true,
+      "midframesConnected": true
+    },
+    "motionFindings": {
+      "maxAdjacentRelativeLoopAreaJump": 0.6117,
+      "maxMidframeRootRGBMAE": 6.0477,
+      "areaWithin25Percent": false,
+      "temporalBetterThanReference": false,
+      "anchorBlendGhostLoops": true,
+      "anchorSDFLoopThinning": true
+    },
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allSourceKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesConnected": true,
+      "maxAdjacentRelativeAreaJump": 0.6117,
+      "maxMidframeRootRGBMAE": 6.0477,
+      "loopAreaWithin25Percent": false,
+      "rootRGBMAEWithin5": false,
+      "temporalBetterThanReference": false,
+      "rootTemporalVisualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-180-dense-yaw-sweep-qa.json"
+    ],
+    "review": "private-assets/exports/p15-180-dense-yaw-sweep/index.html",
+    "next": "Improve single-strand identity through source curve point correspondence and continuous deformation across source-owner boundaries; preserve native keyviews. Verify 5-degree sequence, root/area continuity, and visual connection before production adoption."
   }
 }
