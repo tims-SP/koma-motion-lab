@@ -12080,5 +12080,160 @@
     "review": "private-assets/exports/p15-192-root-control-asset/index.html",
     "assets": "private-assets/exports/p15-192-root-control-asset/",
     "next": "Keep the native 112.5-degree source strand as a required independent key. Investigate its own local root/tip correspondence and width/shape parameterization, then interpolate 108.75 and 116.25 from the native 90/112.5/135 key geometry without altering the source key."
+  },
+  "p15_193LandmarkParameterVDD": {
+    "status": "13_YAW_SOURCE_LANDMARK_PARAMETERIZATION_EVALUATED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "method": "Native-source root/crown crossing aligned to shared u=0.2; root and free tip are u=0,1. Jointly resample 160-point medial centerline, source donor sampling normals and variable width, then compare linear and PCHIP geometry.",
+    "landmarkNode": 32,
+    "sourceLandmarks": {
+      "90": {
+        "originalCrossingSegment": 7,
+        "sourceCrossingFractionalNode": 6.8193,
+        "newCrossingNode": 32,
+        "sourceCrossing": [
+          186.0,
+          56.83649826049805
+        ],
+        "newCrossingControl": [
+          186.0,
+          56.83649826049805
+        ],
+        "landmarkResidualPixels": 0.0,
+        "freeTipExact": true
+      },
+      "112.5": {
+        "originalCrossingSegment": 25,
+        "sourceCrossingFractionalNode": 24.3046,
+        "newCrossingNode": 32,
+        "sourceCrossing": [
+          256.0,
+          59.55720138549805
+        ],
+        "newCrossingControl": [
+          256.0,
+          59.55720138549805
+        ],
+        "landmarkResidualPixels": 0.0,
+        "freeTipExact": true
+      },
+      "135": {
+        "originalCrossingSegment": 11,
+        "sourceCrossingFractionalNode": 10.9627,
+        "newCrossingNode": 32,
+        "sourceCrossing": [
+          221.0,
+          51.655399322509766
+        ],
+        "newCrossingControl": [
+          221.0,
+          51.655399322509766
+        ],
+        "landmarkResidualPixels": 0.0,
+        "freeTipExact": true
+      }
+    },
+    "comparison": {
+      "arc_linear": {
+        "maxAdjacentLocalRGBMAE": 7.8619,
+        "maxAdjacentGlobalRGBMAE": 6.9103,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.4503,
+        "middleRootCrossingStepsPixels": [
+          12.4503,
+          6.5835
+        ],
+        "meanRootCrossingTargetResidual": 4.4033,
+        "maxRootCrossingTargetResidual": 7.1662,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "allMidframesSingleComponent": true,
+        "allFreeTipsSourceInterpolated": true
+      },
+      "landmark_linear": {
+        "maxAdjacentLocalRGBMAE": 7.8493,
+        "maxAdjacentGlobalRGBMAE": 6.908,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 13.1017,
+        "middleRootCrossingStepsPixels": [
+          12.5991,
+          6.5898
+        ],
+        "meanRootCrossingTargetResidual": 4.4539,
+        "maxRootCrossingTargetResidual": 7.3044,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "allMidframesSingleComponent": true,
+        "allFreeTipsSourceInterpolated": true
+      },
+      "landmark_pchip": {
+        "maxAdjacentLocalRGBMAE": 9.0897,
+        "maxAdjacentGlobalRGBMAE": 7.0684,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 18.4372,
+        "middleRootCrossingStepsPixels": [
+          3.1518,
+          2.2132
+        ],
+        "meanRootCrossingTargetResidual": 10.459,
+        "maxRootCrossingTargetResidual": 15.4704,
+        "allNativeKeysExact": true,
+        "allDeepBodyExact": true,
+        "allMidframesSingleComponent": true,
+        "allFreeTipsSourceInterpolated": true
+      }
+    },
+    "selectedDiagnosticMethod": "arc_linear",
+    "finding": "Aligning the crown-emergence landmark at normalized curve u=.2, with joint source texture/width resampling, slightly lowers adjacent local RGB MAE (7.8619 to 7.8493) but increases maximum crossing step (12.4503 to 13.1017 px) and crossing target residual. Landmark PCHIP further raises global/local RGB MAE and maximum crossing step. Retain original arc-length linear VDD as the diagnostic baseline.",
+    "originalKeyframesPixelExact": true,
+    "deepBodyExact": true,
+    "singleStrandConnected": true,
+    "sourceLandmarksAligned": true,
+    "rootCrossingImproved": false,
+    "globalTemporalBeatsDIS": false,
+    "visualAccepted": false,
+    "semanticCorrespondenceApproved": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "allSourceLandmarksWithinPixel": true,
+      "crossingImprovedOverArc": false,
+      "localTemporalBeatsDIS": true,
+      "globalTemporalBeatsDIS": false,
+      "visualAccepted": false,
+      "semanticCorrespondenceApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-193-landmark-parameter-vdd-qa.json"
+    ],
+    "review": "private-assets/exports/p15-193-landmark-parameter-vdd/index.html",
+    "assets": "private-assets/exports/p15-193-landmark-parameter-vdd/",
+    "next": "Validate motion of independently painted root, outer arc peak and free tip across 90/112.5/135 using source-specific multi-landmark registration; avoid treating arc-length or one scalp crossing as sufficient semantic correspondence. Quantify apparent silhouette drift and painted-tip identity in the 108.75/112.5/116.25 neighborhood before adopting a new interpolation."
   }
 }
