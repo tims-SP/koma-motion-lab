@@ -1,0 +1,256 @@
+{
+  "schema": "KOMA_P15_170_SEMANTIC_INK_V1",
+  "characterId": "p0_character_001",
+  "keyAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    101.25,
+    112.5,
+    123.75,
+    135.0
+  ],
+  "methods": {
+    "reference": {
+      "maxAdjacentRGBMAE": 12.0984,
+      "adjacentRGBMAE": [
+        12.0984,
+        11.067,
+        10.4616,
+        11.6306
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "belowY125Exact": true
+    },
+    "crown_front": {
+      "maxAdjacentRGBMAE": 12.2297,
+      "adjacentRGBMAE": [
+        12.2297,
+        11.1971,
+        10.4569,
+        11.7481
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "belowY125Exact": true
+    },
+    "ink_10": {
+      "maxAdjacentRGBMAE": 12.228,
+      "adjacentRGBMAE": [
+        12.228,
+        11.1978,
+        10.4595,
+        11.7453
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "belowY125Exact": true
+    },
+    "ink_18": {
+      "maxAdjacentRGBMAE": 12.229,
+      "adjacentRGBMAE": [
+        12.229,
+        11.1965,
+        10.4587,
+        11.7459
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "belowY125Exact": true
+    },
+    "ink_26": {
+      "maxAdjacentRGBMAE": 12.2304,
+      "adjacentRGBMAE": [
+        12.2304,
+        11.1965,
+        10.4584,
+        11.7462
+      ],
+      "topConnectedComponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "nativeKeysExact": true,
+      "belowY125Exact": true
+    }
+  },
+  "pixelDiagnostics": {
+    "crown_front": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32
+      }
+    },
+    "ink_10": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "semanticInkPixels": 124,
+        "editPixels": 217,
+        "editBBox": [
+          206,
+          56,
+          237,
+          72
+        ],
+        "sourceAlphaExact": true,
+        "sourceBodyY125Exact": true,
+        "maxRGBChange": 33
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "semanticInkPixels": 96,
+        "editPixels": 188,
+        "editBBox": [
+          225,
+          56,
+          256,
+          71
+        ],
+        "sourceAlphaExact": true,
+        "sourceBodyY125Exact": true,
+        "maxRGBChange": 64
+      }
+    },
+    "ink_18": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "semanticInkPixels": 83,
+        "editPixels": 150,
+        "editBBox": [
+          206,
+          58,
+          237,
+          72
+        ],
+        "sourceAlphaExact": true,
+        "sourceBodyY125Exact": true,
+        "maxRGBChange": 30
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "semanticInkPixels": 66,
+        "editPixels": 157,
+        "editBBox": [
+          225,
+          56,
+          256,
+          71
+        ],
+        "sourceAlphaExact": true,
+        "sourceBodyY125Exact": true,
+        "maxRGBChange": 60
+      }
+    },
+    "ink_26": {
+      "101.25": {
+        "visibleHairPixels": 775,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.959,
+        "foregroundAlphaPixelsInCrownBand": 16,
+        "semanticInkPixels": 25,
+        "editPixels": 71,
+        "editBBox": [
+          215,
+          58,
+          237,
+          72
+        ],
+        "sourceAlphaExact": true,
+        "sourceBodyY125Exact": true,
+        "maxRGBChange": 18
+      },
+      "123.75": {
+        "visibleHairPixels": 1306,
+        "headFarBelowCrownChangedChannels": 0,
+        "nativeBelowY125Exact": true,
+        "rootDistanceToCrown": 13.872,
+        "foregroundAlphaPixelsInCrownBand": 32,
+        "semanticInkPixels": 33,
+        "editPixels": 68,
+        "editBBox": [
+          229,
+          57,
+          256,
+          71
+        ],
+        "sourceAlphaExact": true,
+        "sourceBodyY125Exact": true,
+        "maxRGBChange": 59
+      }
+    }
+  },
+  "model": "Local morphological blackhat source-ink ownership outside protected donor loop",
+  "originalArtPreserved": true,
+  "painterApprovedSourceLineOwnership": false,
+  "painterApprovedRootlessCrown": false,
+  "continuousYawVisuallyAccepted": false,
+  "productionRendererUpdated": false,
+  "review": "private-assets/exports/p15-170-semantic-ink/index.html",
+  "gate": {
+    "allKeyviewsExact": true,
+    "bodyExact": true,
+    "allMidviewsConnected": true,
+    "alphaExactToCrownFront": true,
+    "beatsBaseline": false,
+    "artistApproved": false,
+    "passes": false
+  }
+}

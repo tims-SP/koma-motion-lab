@@ -9766,5 +9766,109 @@
     ],
     "review": "private-assets/exports/p15-169-junction-matting/index.html",
     "next": "Use the root-owned canonical layer to explicitly separate old hairline strokes by semantic source material; paint matching crown linework and verify the actual junction under motion before renderer admission."
+  },
+  "p15_170SemanticRootInkOwnership": {
+    "status": "SOURCE_ROOT_INK_MASK_RENDERED_AND_VISUALLY_REVIEWED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderedAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "lineThresholds": [
+      10,
+      18,
+      26
+    ],
+    "maxAdjacentRGBMAE": {
+      "reference": 12.0984,
+      "crown_front": 12.2297,
+      "ink_10": 12.228,
+      "ink_18": 12.229,
+      "ink_26": 12.2304
+    },
+    "topConnectedComponents": {
+      "reference": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "crown_front": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ink_10": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ink_18": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ink_26": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "rootInkPixelCounts": {
+      "crown_front": {
+        "101.25": 0,
+        "123.75": 0
+      },
+      "ink_10": {
+        "101.25": 124,
+        "123.75": 96
+      },
+      "ink_18": {
+        "101.25": 83,
+        "123.75": 66
+      },
+      "ink_26": {
+        "101.25": 25,
+        "123.75": 33
+      }
+    },
+    "keyframeSourcePixelExact": true,
+    "bodyBelowY125PixelExact": true,
+    "scalpAlphaPreserved": true,
+    "visualFindings": "Source-line morphological blackhat masking in an opaque crown-only region gives modest local improvements with a 10-level contrast threshold. Midway root ink residuals remain visible in both frames and the result still exceeds baseline adjacent-frame error; these source pixels cannot be unambiguously classified as old-root artwork without painted semantic ownership.",
+    "canonicalRendererUpdated": false,
+    "continuousYawVisualAccepted": false,
+    "full360VisualAccepted": false,
+    "acceptanceGate": {
+      "allKeyviewsExact": true,
+      "bodyExact": true,
+      "allMidviewsConnected": true,
+      "alphaExactToCrownFront": true,
+      "beatsBaseline": false,
+      "artistApproved": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-170-semantic-ink-qa.json"
+    ],
+    "review": "private-assets/exports/p15-170-semantic-ink/index.html",
+    "next": "Produce a painter-confirmed rootless crown and root-connected strand for each original view, using the validated pixel-ownership mask and source contact point. Verify local composite with zero ghost ink at 101.25/123.75 before any renderer adoption."
   }
 }
