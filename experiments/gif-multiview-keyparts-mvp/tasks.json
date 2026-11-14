@@ -11632,5 +11632,175 @@
     "review": "private-assets/exports/p15-190-root-registration/index.html",
     "assets": "private-assets/exports/p15-190-root-registration/",
     "next": "Review source 112.5-degree crown/strand registration, including both alpha and paint-color identity. Validate whether source key art needs an independently authored, matched mid-yaw control asset. Test root color seam and geometric crossing together, not isolated displacement."
+  },
+  "p15_191SourceRootColor": {
+    "status": "NATIVE_ROOT_COLOR_IDENTITY_AUDITED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "rootAnchorVsCrossing": {
+      "90": {
+        "anchor": [
+          184.0,
+          53.0
+        ],
+        "crossing": [
+          186.0,
+          56.83649826049805
+        ],
+        "distance": 4.3265
+      },
+      "112.5": {
+        "anchor": [
+          258.0,
+          77.0
+        ],
+        "crossing": [
+          256.0,
+          59.55720138549805
+        ],
+        "distance": 17.5571
+      },
+      "135": {
+        "anchor": [
+          222.0,
+          55.0
+        ],
+        "crossing": [
+          221.0,
+          51.655399322509766
+        ],
+        "distance": 3.4909
+      }
+    },
+    "nativeVisibleColorPalette": {
+      "90": [
+        165.343994140625,
+        126.63200378417969,
+        148.4149932861328
+      ],
+      "112.5": [
+        143.59300231933594,
+        97.57499694824219,
+        122.21199798583984
+      ],
+      "135": [
+        150.96800231933594,
+        110.11599731445312,
+        135.6510009765625
+      ]
+    },
+    "testedMethods": {
+      "original": {
+        "maxAdjacentRootColorSeamChange": 29.1103,
+        "middleSeamChanges": [
+          24.5499,
+          24.9704
+        ],
+        "maxAdjacentLocalRGBMAE": 7.8619,
+        "maxAdjacentGlobalRGBMAE": 6.9103,
+        "changedRGBPixels": 0,
+        "alphaExact": true,
+        "below125Exact": true,
+        "nativeKeysExact": true
+      },
+      "radius_5": {
+        "maxAdjacentRootColorSeamChange": 43.2697,
+        "middleSeamChanges": [
+          43.2697,
+          43.2506
+        ],
+        "maxAdjacentLocalRGBMAE": 7.8841,
+        "maxAdjacentGlobalRGBMAE": 6.9142,
+        "changedRGBPixels": 3615,
+        "alphaExact": true,
+        "below125Exact": true,
+        "nativeKeysExact": true
+      },
+      "radius_8": {
+        "maxAdjacentRootColorSeamChange": 43.7024,
+        "middleSeamChanges": [
+          43.7024,
+          43.4044
+        ],
+        "maxAdjacentLocalRGBMAE": 7.946,
+        "maxAdjacentGlobalRGBMAE": 6.9253,
+        "changedRGBPixels": 8925,
+        "alphaExact": true,
+        "below125Exact": true,
+        "nativeKeysExact": true
+      },
+      "radius_12": {
+        "maxAdjacentRootColorSeamChange": 43.7103,
+        "middleSeamChanges": [
+          43.7103,
+          43.5996
+        ],
+        "maxAdjacentLocalRGBMAE": 8.0799,
+        "maxAdjacentGlobalRGBMAE": 6.9493,
+        "changedRGBPixels": 19383,
+        "alphaExact": true,
+        "below125Exact": true,
+        "nativeKeysExact": true
+      },
+      "radius_8_strong": {
+        "maxAdjacentRootColorSeamChange": 54.0567,
+        "middleSeamChanges": [
+          54.0567,
+          53.5316
+        ],
+        "maxAdjacentLocalRGBMAE": 8.0061,
+        "maxAdjacentGlobalRGBMAE": 6.9361,
+        "changedRGBPixels": 9796,
+        "alphaExact": true,
+        "below125Exact": true,
+        "nativeKeysExact": true
+      }
+    },
+    "selectedDiagnosticMethod": "original",
+    "finding": "The 112.5-degree native source root proposal (258,77) describes an embedded attachment whereas the measured visible scalp emergence is (256,59.5572), 17.6 px away. Native underpaint alpha at the measured emergence is zero, so underlying transparent RGB is not a valid source-painted color target. A composite-palette Gaussian color bridge at radius 5,8,12 px (and 8 px strong) increases maximum adjacent seam change versus the original 29.1103; the smallest tested candidate yields 43.2697. It also worsens local temporal RGB MAE. Preserve source keys and original P15-188 crown-front composite as the current diagnostic baseline.",
+    "nativeKeysExact": true,
+    "alphaExact": true,
+    "deepBodyExact": true,
+    "rootSeamImproved": false,
+    "globalTemporalBeatsDIS": false,
+    "sourceRootIdentityApproved": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "nativeKeysExact": true,
+      "allAlphaExact": true,
+      "deepBodyExact": true,
+      "rootSeamImproved": false,
+      "localTemporalBeatsDIS": true,
+      "globalTemporalBeatsDIS": false,
+      "sourceRootIdentityApproved": false,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-191-source-root-color-qa.json"
+    ],
+    "review": "private-assets/exports/p15-191-source-root-color/index.html",
+    "assets": "private-assets/exports/p15-191-source-root-color/",
+    "next": "Resolve the 112.5-degree source strand/crown visual identity with an independently validated local control asset or corrected source-owned strand geometry. Compare original source colors and alpha from visible, painted pixels at the emergence rather than transparent underpaint RGB. Re-evaluate 108.75-to-112.5-to-116.25 geometry and seam before production integration."
   }
 }
