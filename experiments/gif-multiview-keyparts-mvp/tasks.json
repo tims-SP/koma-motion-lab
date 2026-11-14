@@ -10464,5 +10464,137 @@
     ],
     "review": "private-assets/exports/p15-180-dense-yaw-sweep/index.html",
     "next": "Improve single-strand identity through source curve point correspondence and continuous deformation across source-owner boundaries; preserve native keyviews. Verify 5-degree sequence, root/area continuity, and visual connection before production adoption."
+  },
+  "p15_181CurveCorrespondence": {
+    "status": "SINGLE_STRAND_CURVE_RENDERED_STRUCTURAL_GATES_PASS_VISUAL_TEMPORAL_PENDING",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      101.25,
+      112.5,
+      123.75,
+      135.0
+    ],
+    "curveSamples": 160,
+    "method": "Extract source loop upper contour as centerline, resample by normalized arc length, interpolate control points and estimated stroke width, continue endpoint tangents to rootless crown silhouette, and sample both source textures in matching curve/normal coordinates.",
+    "sourceGeometry": {
+      "90": {
+        "start": [
+          184.0,
+          41.0
+        ],
+        "end": [
+          278.0,
+          34.0
+        ],
+        "length": 129.09629821777344,
+        "visibleArea": 1205,
+        "estimatedStrokeWidth": 9.334117373120003
+      },
+      "112.5": {
+        "start": [
+          252.0,
+          49.0
+        ],
+        "end": [
+          324.0,
+          53.0
+        ],
+        "length": 107.82136535644531,
+        "visibleArea": 945,
+        "estimatedStrokeWidth": 8.764496692060392
+      },
+      "135": {
+        "start": [
+          221.0,
+          38.0
+        ],
+        "end": [
+          297.0,
+          37.0
+        ],
+        "length": 108.19792175292969,
+        "visibleArea": 1071,
+        "estimatedStrokeWidth": 9.898526539591325
+      }
+    },
+    "intermediateDiagnostics": {
+      "101.25": {
+        "curveLength": 149.598,
+        "targetStrokeWidth": 9.049,
+        "loopPixels": 1552,
+        "curveStart": [
+          212.6999969482422,
+          50.29999923706055
+        ],
+        "curveEnd": [
+          301.0,
+          71.0
+        ],
+        "coreLoopPixels": 1212,
+        "rootExtensionPixels": 340,
+        "leftKey": 90.0,
+        "rightKey": 112.5,
+        "t": 0.5,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      },
+      "123.75": {
+        "curveLength": 147.058,
+        "targetStrokeWidth": 9.332,
+        "loopPixels": 1606,
+        "curveStart": [
+          229.77999877929688,
+          50.220001220703125
+        ],
+        "curveEnd": [
+          310.5,
+          77.5
+        ],
+        "coreLoopPixels": 1160,
+        "rootExtensionPixels": 446,
+        "leftKey": 112.5,
+        "rightKey": 135.0,
+        "t": 0.5,
+        "belowY125Exact": true,
+        "topConnectedComponents": 1
+      }
+    },
+    "loopAreaRatios": {
+      "101.25": 1.1274,
+      "123.75": 1.1508
+    },
+    "structuralGate": {
+      "nativeKeysExact": true,
+      "deepBodyExact": true,
+      "singleConnectedStrand": true,
+      "coreAreaWithin25Percent": true
+    },
+    "temporalGate": {
+      "maxAdjacentRGBMAE": 12.3552,
+      "baselineMaxAdjacentRGBMAE": 12.0984,
+      "regressionRecorded": true
+    },
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "nativeKeyframesPixelExact": true,
+      "deepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "loopAreaWithin25Percent": true,
+      "temporalNoWorseThanBaseline": false,
+      "temporalRegressionRecorded": true,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-181-curve-correspondence-qa.json"
+    ],
+    "review": "private-assets/exports/p15-181-curve-correspondence/index.html",
+    "next": "Improve source texture and root-contact appearance, then reduce temporal RGB MAE below the whole-frame DIS baseline. Keep source keyviews and deep head pixels exact; rerun 5-view visual review before any dense-yaw rollout."
   }
 }
