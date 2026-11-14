@@ -1,0 +1,1137 @@
+{
+  "schema": "KOMA_P15_195_WIDTH_CURVATURE_REGULARIZATION_V1",
+  "characterId": "p0_character_001",
+  "sourceAngles": [
+    90.0,
+    112.5,
+    135.0
+  ],
+  "renderAngles": [
+    90.0,
+    93.75,
+    97.5,
+    101.25,
+    105.0,
+    108.75,
+    112.5,
+    116.25,
+    120.0,
+    123.75,
+    127.5,
+    131.25,
+    135.0
+  ],
+  "sourceFeatureEvidence": {
+    "90": {
+      "landmarkIndices": [
+        0,
+        21,
+        86,
+        102,
+        159
+      ],
+      "exitShoulder": [
+        246.9126434326172,
+        10.0
+      ],
+      "exitShoulderWidth": 7.2694,
+      "exitShoulderCurvature": 0.301,
+      "apex": [
+        231.3361053466797,
+        8.0
+      ],
+      "sourceRGBAHash": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+    },
+    "112.5": {
+      "landmarkIndices": [
+        0,
+        21,
+        74,
+        130,
+        159
+      ],
+      "exitShoulder": [
+        318.7144470214844,
+        53.714439392089844
+      ],
+      "exitShoulderWidth": 11.9478,
+      "exitShoulderCurvature": 0.53259,
+      "apex": [
+        279.7857360839844,
+        24.0
+      ],
+      "sourceRGBAHash": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+    },
+    "135": {
+      "landmarkIndices": [
+        0,
+        24,
+        81,
+        93,
+        159
+      ],
+      "exitShoulder": [
+        266.0174865722656,
+        13.0
+      ],
+      "exitShoulderWidth": 8.3938,
+      "exitShoulderCurvature": 0.40002,
+      "apex": [
+        256.1637268066406,
+        11.0
+      ],
+      "sourceRGBAHash": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+    }
+  },
+  "methods": {
+    "feature_linear": {
+      "maxAdjacentLocalRGBMAE": 7.8031,
+      "maxAdjacentGlobalRGBMAE": 6.8688,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.3922,
+      "middleRootCrossingStepPixels": [
+        12.3922,
+        6.4443
+      ],
+      "maxAdjacentColorSeamChange": 30.0628,
+      "middleSeamChanges": [
+        27.2418,
+        30.0628
+      ],
+      "intermediateAreaMinMax": [
+        1140,
+        1400
+      ],
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    },
+    "width_s3": {
+      "maxAdjacentLocalRGBMAE": 7.7957,
+      "maxAdjacentGlobalRGBMAE": 6.8683,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.3922,
+      "middleRootCrossingStepPixels": [
+        12.3922,
+        6.4443
+      ],
+      "maxAdjacentColorSeamChange": 28.2,
+      "middleSeamChanges": [
+        26.6802,
+        28.2
+      ],
+      "intermediateAreaMinMax": [
+        1132,
+        1380
+      ],
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    },
+    "width_s6": {
+      "maxAdjacentLocalRGBMAE": 7.7999,
+      "maxAdjacentGlobalRGBMAE": 6.8681,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.3922,
+      "middleRootCrossingStepPixels": [
+        12.3922,
+        6.4443
+      ],
+      "maxAdjacentColorSeamChange": 35.9164,
+      "middleSeamChanges": [
+        28.5416,
+        27.7713
+      ],
+      "intermediateAreaMinMax": [
+        1126,
+        1385
+      ],
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    },
+    "curve_s1p5_width_s3": {
+      "maxAdjacentLocalRGBMAE": 7.7853,
+      "maxAdjacentGlobalRGBMAE": 6.865,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.39,
+      "middleRootCrossingStepPixels": [
+        12.39,
+        6.4253
+      ],
+      "maxAdjacentColorSeamChange": 29.8854,
+      "middleSeamChanges": [
+        27.0737,
+        29.8854
+      ],
+      "intermediateAreaMinMax": [
+        1115,
+        1367
+      ],
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    },
+    "curve_s3_width_s6": {
+      "maxAdjacentLocalRGBMAE": 7.763,
+      "maxAdjacentGlobalRGBMAE": 6.8562,
+      "maxAdjacentDISLocalRGBMAE": 7.9475,
+      "maxAdjacentDISGlobalRGBMAE": 6.6299,
+      "maxAdjacentRootCrossingStepPixels": 12.3782,
+      "middleRootCrossingStepPixels": [
+        12.3782,
+        6.3537
+      ],
+      "maxAdjacentColorSeamChange": 40.3848,
+      "middleSeamChanges": [
+        27.6981,
+        40.3848
+      ],
+      "intermediateAreaMinMax": [
+        1103,
+        1362
+      ],
+      "allNativeKeysExact": true,
+      "allMidframesHaveCrownCrossing": true,
+      "allMidframesSingleComponent": true,
+      "allDeepBodyExact": true
+    }
+  },
+  "details": {
+    "feature_linear": {
+      "93.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "rootCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "colorSeam": 0.9377,
+        "visibleStrandPixels": 1195,
+        "maxWidth": 11.8893,
+        "curvatureMax": 0.32625
+      },
+      "97.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "rootCrossing": [
+          208.30349731445312,
+          51.03219985961914
+        ],
+        "colorSeam": 3.4558,
+        "visibleStrandPixels": 1209,
+        "maxWidth": 10.9147,
+        "curvatureMax": 0.26055
+      },
+      "101.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          284.0,
+          63.0
+        ],
+        "rootCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "colorSeam": 28.1198,
+        "visibleStrandPixels": 1238,
+        "maxWidth": 11.1245,
+        "curvatureMax": 0.2131
+      },
+      "105": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "rootCrossing": [
+          232.43099975585938,
+          52.49589920043945
+        ],
+        "colorSeam": 21.139,
+        "visibleStrandPixels": 1318,
+        "maxWidth": 12.1659,
+        "curvatureMax": 0.23845
+      },
+      "108.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "rootCrossing": [
+          244.22779846191406,
+          55.686500549316406
+        ],
+        "colorSeam": 35.0641,
+        "visibleStrandPixels": 1400,
+        "maxWidth": 13.2074,
+        "curvatureMax": 0.26496
+      },
+      "116.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "rootCrossing": [
+          250.33160400390625,
+          56.491600036621094
+        ],
+        "colorSeam": 32.2431,
+        "visibleStrandPixels": 1386,
+        "maxWidth": 13.2074,
+        "curvatureMax": 0.26453
+      },
+      "120": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "rootCrossing": [
+          244.6392059326172,
+          53.71659851074219
+        ],
+        "colorSeam": 55.8824,
+        "visibleStrandPixels": 1279,
+        "maxWidth": 12.1659,
+        "curvatureMax": 0.23615
+      },
+      "123.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          292.0,
+          64.5
+        ],
+        "rootCrossing": [
+          238.61219787597656,
+          51.4380989074707
+        ],
+        "colorSeam": 32.4824,
+        "visibleStrandPixels": 1202,
+        "maxWidth": 11.1245,
+        "curvatureMax": 0.21356
+      },
+      "127.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "rootCrossing": [
+          233.27529907226562,
+          50.1963005065918
+        ],
+        "colorSeam": 6.8335,
+        "visibleStrandPixels": 1162,
+        "maxWidth": 11.1558,
+        "curvatureMax": 0.26829
+      },
+      "131.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "rootCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "colorSeam": 2.8893,
+        "visibleStrandPixels": 1140,
+        "maxWidth": 11.7491,
+        "curvatureMax": 0.4025
+      }
+    },
+    "width_s3": {
+      "93.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "rootCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "colorSeam": 0.9407,
+        "visibleStrandPixels": 1192,
+        "maxWidth": 11.3016,
+        "curvatureMax": 0.32625
+      },
+      "97.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "rootCrossing": [
+          208.30349731445312,
+          51.03219985961914
+        ],
+        "colorSeam": 0.8248,
+        "visibleStrandPixels": 1203,
+        "maxWidth": 10.5389,
+        "curvatureMax": 0.26055
+      },
+      "101.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          284.0,
+          63.0
+        ],
+        "rootCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "colorSeam": 23.1917,
+        "visibleStrandPixels": 1240,
+        "maxWidth": 10.9243,
+        "curvatureMax": 0.2131
+      },
+      "105": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "rootCrossing": [
+          232.43099975585938,
+          52.49589920043945
+        ],
+        "colorSeam": 17.2706,
+        "visibleStrandPixels": 1311,
+        "maxWidth": 11.9002,
+        "curvatureMax": 0.23845
+      },
+      "108.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "rootCrossing": [
+          244.22779846191406,
+          55.686500549316406
+        ],
+        "colorSeam": 35.6257,
+        "visibleStrandPixels": 1380,
+        "maxWidth": 12.876,
+        "curvatureMax": 0.26496
+      },
+      "116.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "rootCrossing": [
+          250.33160400390625,
+          56.491600036621094
+        ],
+        "colorSeam": 34.1059,
+        "visibleStrandPixels": 1376,
+        "maxWidth": 12.8752,
+        "curvatureMax": 0.26453
+      },
+      "120": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "rootCrossing": [
+          244.6392059326172,
+          53.71659851074219
+        ],
+        "colorSeam": 57.858,
+        "visibleStrandPixels": 1279,
+        "maxWidth": 11.8986,
+        "curvatureMax": 0.23615
+      },
+      "123.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          292.0,
+          64.5
+        ],
+        "rootCrossing": [
+          238.61219787597656,
+          51.4380989074707
+        ],
+        "colorSeam": 37.3647,
+        "visibleStrandPixels": 1187,
+        "maxWidth": 10.922,
+        "curvatureMax": 0.21356
+      },
+      "127.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "rootCrossing": [
+          233.27529907226562,
+          50.1963005065918
+        ],
+        "colorSeam": 9.6902,
+        "visibleStrandPixels": 1155,
+        "maxWidth": 10.5898,
+        "curvatureMax": 0.26829
+      },
+      "131.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "rootCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "colorSeam": 3.1133,
+        "visibleStrandPixels": 1132,
+        "maxWidth": 11.2764,
+        "curvatureMax": 0.4025
+      }
+    },
+    "width_s6": {
+      "93.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "rootCrossing": [
+          196.3332977294922,
+          53.39179992675781
+        ],
+        "colorSeam": 1.1473,
+        "visibleStrandPixels": 1188,
+        "maxWidth": 10.4796,
+        "curvatureMax": 0.32625
+      },
+      "97.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "rootCrossing": [
+          208.30349731445312,
+          51.03219985961914
+        ],
+        "colorSeam": 2.2863,
+        "visibleStrandPixels": 1203,
+        "maxWidth": 9.9313,
+        "curvatureMax": 0.26055
+      },
+      "101.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          284.0,
+          63.0
+        ],
+        "rootCrossing": [
+          220.5,
+          51.048099517822266
+        ],
+        "colorSeam": 22.4514,
+        "visibleStrandPixels": 1244,
+        "maxWidth": 10.759,
+        "curvatureMax": 0.2131
+      },
+      "105": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "rootCrossing": [
+          232.43099975585938,
+          52.49589920043945
+        ],
+        "colorSeam": 14.4575,
+        "visibleStrandPixels": 1295,
+        "maxWidth": 11.686,
+        "curvatureMax": 0.23845
+      },
+      "108.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "rootCrossing": [
+          244.22779846191406,
+          55.686500549316406
+        ],
+        "colorSeam": 33.7643,
+        "visibleStrandPixels": 1385,
+        "maxWidth": 12.613,
+        "curvatureMax": 0.26496
+      },
+      "116.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "rootCrossing": [
+          250.33160400390625,
+          56.491600036621094
+        ],
+        "colorSeam": 34.5346,
+        "visibleStrandPixels": 1376,
+        "maxWidth": 12.619,
+        "curvatureMax": 0.26453
+      },
+      "120": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "rootCrossing": [
+          244.6392059326172,
+          53.71659851074219
+        ],
+        "colorSeam": 55.7316,
+        "visibleStrandPixels": 1273,
+        "maxWidth": 11.6979,
+        "curvatureMax": 0.23615
+      },
+      "123.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          292.0,
+          64.5
+        ],
+        "rootCrossing": [
+          238.61219787597656,
+          51.4380989074707
+        ],
+        "colorSeam": 44.3007,
+        "visibleStrandPixels": 1193,
+        "maxWidth": 10.7768,
+        "curvatureMax": 0.21356
+      },
+      "127.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "rootCrossing": [
+          233.27529907226562,
+          50.1963005065918
+        ],
+        "colorSeam": 8.3843,
+        "visibleStrandPixels": 1155,
+        "maxWidth": 10.2001,
+        "curvatureMax": 0.26829
+      },
+      "131.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "rootCrossing": [
+          227.16659545898438,
+          50.15800094604492
+        ],
+        "colorSeam": 3.2893,
+        "visibleStrandPixels": 1126,
+        "maxWidth": 10.7182,
+        "curvatureMax": 0.4025
+      }
+    },
+    "curve_s1p5_width_s3": {
+      "93.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "rootCrossing": [
+          196.3437042236328,
+          53.39179992675781
+        ],
+        "colorSeam": 0.8309,
+        "visibleStrandPixels": 1184,
+        "maxWidth": 11.3016,
+        "curvatureMax": 0.22821
+      },
+      "97.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "rootCrossing": [
+          208.3249969482422,
+          51.03219985961914
+        ],
+        "colorSeam": 2.3399,
+        "visibleStrandPixels": 1190,
+        "maxWidth": 10.5389,
+        "curvatureMax": 0.17927
+      },
+      "101.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          284.0,
+          63.0
+        ],
+        "rootCrossing": [
+          220.4409942626953,
+          51.047698974609375
+        ],
+        "colorSeam": 1.1678,
+        "visibleStrandPixels": 1232,
+        "maxWidth": 10.9243,
+        "curvatureMax": 0.1337
+      },
+      "105": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "rootCrossing": [
+          232.472900390625,
+          52.49620056152344
+        ],
+        "colorSeam": 10.1603,
+        "visibleStrandPixels": 1307,
+        "maxWidth": 11.9002,
+        "curvatureMax": 0.1651
+      },
+      "108.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "rootCrossing": [
+          244.2301025390625,
+          55.686500549316406
+        ],
+        "colorSeam": 35.2322,
+        "visibleStrandPixels": 1365,
+        "maxWidth": 12.876,
+        "curvatureMax": 0.20352
+      },
+      "116.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "rootCrossing": [
+          250.3531951904297,
+          56.491600036621094
+        ],
+        "colorSeam": 32.4205,
+        "visibleStrandPixels": 1367,
+        "maxWidth": 12.8752,
+        "curvatureMax": 0.20412
+      },
+      "120": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "rootCrossing": [
+          244.61729431152344,
+          53.71659851074219
+        ],
+        "colorSeam": 48.559,
+        "visibleStrandPixels": 1271,
+        "maxWidth": 11.8986,
+        "curvatureMax": 0.1669
+      },
+      "123.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          292.0,
+          64.5
+        ],
+        "rootCrossing": [
+          238.77560424804688,
+          51.4380989074707
+        ],
+        "colorSeam": 25.8954,
+        "visibleStrandPixels": 1183,
+        "maxWidth": 10.922,
+        "curvatureMax": 0.13924
+      },
+      "127.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "rootCrossing": [
+          233.2252960205078,
+          50.1963005065918
+        ],
+        "colorSeam": 10.0157,
+        "visibleStrandPixels": 1145,
+        "maxWidth": 10.5898,
+        "curvatureMax": 0.13981
+      },
+      "131.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "rootCrossing": [
+          227.1667022705078,
+          50.15800094604492
+        ],
+        "colorSeam": 3.1133,
+        "visibleStrandPixels": 1115,
+        "maxWidth": 11.2764,
+        "curvatureMax": 0.19077
+      }
+    },
+    "curve_s3_width_s6": {
+      "93.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          269.33331298828125,
+          54.33330154418945
+        ],
+        "rootCrossing": [
+          196.40960693359375,
+          53.39179992675781
+        ],
+        "colorSeam": 11.0026,
+        "visibleStrandPixels": 1164,
+        "maxWidth": 10.4796,
+        "curvatureMax": 0.27508
+      },
+      "97.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          276.66668701171875,
+          58.66669845581055
+        ],
+        "rootCrossing": [
+          208.44610595703125,
+          51.03219985961914
+        ],
+        "colorSeam": 9.122,
+        "visibleStrandPixels": 1184,
+        "maxWidth": 9.9313,
+        "curvatureMax": 0.21641
+      },
+      "101.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          284.0,
+          63.0
+        ],
+        "rootCrossing": [
+          220.58799743652344,
+          51.03929901123047
+        ],
+        "colorSeam": 42.9203,
+        "visibleStrandPixels": 1221,
+        "maxWidth": 10.759,
+        "curvatureMax": 0.15835
+      },
+      "105": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          291.3334045410156,
+          67.33329772949219
+        ],
+        "rootCrossing": [
+          232.52520751953125,
+          52.540000915527344
+        ],
+        "colorSeam": 55.1586,
+        "visibleStrandPixels": 1284,
+        "maxWidth": 11.686,
+        "curvatureMax": 0.13216
+      },
+      "108.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          298.6665954589844,
+          71.66670227050781
+        ],
+        "rootCrossing": [
+          244.2425994873047,
+          55.686500549316406
+        ],
+        "colorSeam": 34.6078,
+        "visibleStrandPixels": 1362,
+        "maxWidth": 12.613,
+        "curvatureMax": 0.16813
+      },
+      "116.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          301.3334045410156,
+          72.16670227050781
+        ],
+        "rootCrossing": [
+          250.43479919433594,
+          56.491600036621094
+        ],
+        "colorSeam": 21.9211,
+        "visibleStrandPixels": 1357,
+        "maxWidth": 12.619,
+        "curvatureMax": 0.16933
+      },
+      "120": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          296.66668701171875,
+          68.33329772949219
+        ],
+        "rootCrossing": [
+          244.76950073242188,
+          53.71659851074219
+        ],
+        "colorSeam": 38.624,
+        "visibleStrandPixels": 1261,
+        "maxWidth": 11.6979,
+        "curvatureMax": 0.13368
+      },
+      "123.75": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          292.0,
+          64.5
+        ],
+        "rootCrossing": [
+          238.98989868164062,
+          51.4380989074707
+        ],
+        "colorSeam": 40.2471,
+        "visibleStrandPixels": 1182,
+        "maxWidth": 10.7768,
+        "curvatureMax": 0.10906
+      },
+      "127.5": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          287.3334045410156,
+          60.66669845581055
+        ],
+        "rootCrossing": [
+          233.18580627441406,
+          50.1963005065918
+        ],
+        "colorSeam": 11.4601,
+        "visibleStrandPixels": 1138,
+        "maxWidth": 10.2001,
+        "curvatureMax": 0.09609
+      },
+      "131.25": {
+        "hasCrownCrossing": true,
+        "sourceKeysExact": true,
+        "belowY125Exact": true,
+        "singleComponent": true,
+        "tipCoordinate": [
+          282.6665954589844,
+          56.83330154418945
+        ],
+        "rootCrossing": [
+          227.16549682617188,
+          50.15800094604492
+        ],
+        "colorSeam": 3.1002,
+        "visibleStrandPixels": 1103,
+        "maxWidth": 10.7182,
+        "curvatureMax": 0.15327
+      }
+    }
+  },
+  "selectedDiagnosticMethod": "curve_s1p5_width_s3",
+  "selectionRule": "Require source-key, alpha-region, root-crossing, single-component and seam continuity gates. Among candidates that do not worsen local MAE, crossing displacement or maximum seam change, minimize global RGB MAE.",
+  "productionRendererUpdated": false,
+  "visualAccepted": false,
+  "review": "private-assets/exports/p15-195-width-curvature-regularization/index.html",
+  "gate": {
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "allMidframesSingleComponent": true,
+    "allMidframesHaveCrownCrossing": true,
+    "localTemporalBetterThanP15194": true,
+    "globalTemporalBeatsDIS": false,
+    "rootAndSeamNotWorse": true,
+    "sourceShoulderSemanticIdentityApproved": false,
+    "visualAccepted": false,
+    "passes": false
+  }
+}

@@ -12549,5 +12549,243 @@
     "review": "private-assets/exports/p15-194-multifeature-correspondence/index.html",
     "assets": "private-assets/exports/p15-194-multifeature-correspondence/",
     "next": "Audit the two curvature-shoulder identities against the actual source contour and local width extrema, especially the 112.5-degree exit shoulder. Test monotone feature interpolation with curvature/width regularization and compare the 108.75/112.5/116.25 sequence at full resolution. Do not promote unless global temporal error and visual seam both improve."
+  },
+  "p15_195WidthCurvatureRegularization": {
+    "status": "FIVE_FEATURE_WIDTH_CURVATURE_SWEEP_EVALUATED",
+    "characterId": "p0_character_001",
+    "sourceAngles": [
+      90.0,
+      112.5,
+      135.0
+    ],
+    "renderAngles": [
+      90.0,
+      93.75,
+      97.5,
+      101.25,
+      105.0,
+      108.75,
+      112.5,
+      116.25,
+      120.0,
+      123.75,
+      127.5,
+      131.25,
+      135.0
+    ],
+    "sourceFeatureEvidence": {
+      "90": {
+        "landmarkIndices": [
+          0,
+          21,
+          86,
+          102,
+          159
+        ],
+        "exitShoulder": [
+          246.9126434326172,
+          10.0
+        ],
+        "exitShoulderWidth": 7.2694,
+        "exitShoulderCurvature": 0.301,
+        "apex": [
+          231.3361053466797,
+          8.0
+        ],
+        "sourceRGBAHash": "b01edc996ba25a3280924f55bb8f65d66ac5cf33adeac61968a3e219974409c1"
+      },
+      "112.5": {
+        "landmarkIndices": [
+          0,
+          21,
+          74,
+          130,
+          159
+        ],
+        "exitShoulder": [
+          318.7144470214844,
+          53.714439392089844
+        ],
+        "exitShoulderWidth": 11.9478,
+        "exitShoulderCurvature": 0.53259,
+        "apex": [
+          279.7857360839844,
+          24.0
+        ],
+        "sourceRGBAHash": "6fd8cab410009078fd1e88fb127796f900e69f61062f34e9a5c9a1ef08eaf87a"
+      },
+      "135": {
+        "landmarkIndices": [
+          0,
+          24,
+          81,
+          93,
+          159
+        ],
+        "exitShoulder": [
+          266.0174865722656,
+          13.0
+        ],
+        "exitShoulderWidth": 8.3938,
+        "exitShoulderCurvature": 0.40002,
+        "apex": [
+          256.1637268066406,
+          11.0
+        ],
+        "sourceRGBAHash": "e0de9ba7bea66e27cf2532afd7211678ea4d946f3e3232474269810ada53e137"
+      }
+    },
+    "methods": {
+      "feature_linear": {
+        "maxAdjacentLocalRGBMAE": 7.8031,
+        "maxAdjacentGlobalRGBMAE": 6.8688,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.3922,
+        "middleRootCrossingStepPixels": [
+          12.3922,
+          6.4443
+        ],
+        "maxAdjacentColorSeamChange": 30.0628,
+        "middleSeamChanges": [
+          27.2418,
+          30.0628
+        ],
+        "intermediateAreaMinMax": [
+          1140,
+          1400
+        ],
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      },
+      "width_s3": {
+        "maxAdjacentLocalRGBMAE": 7.7957,
+        "maxAdjacentGlobalRGBMAE": 6.8683,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.3922,
+        "middleRootCrossingStepPixels": [
+          12.3922,
+          6.4443
+        ],
+        "maxAdjacentColorSeamChange": 28.2,
+        "middleSeamChanges": [
+          26.6802,
+          28.2
+        ],
+        "intermediateAreaMinMax": [
+          1132,
+          1380
+        ],
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      },
+      "width_s6": {
+        "maxAdjacentLocalRGBMAE": 7.7999,
+        "maxAdjacentGlobalRGBMAE": 6.8681,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.3922,
+        "middleRootCrossingStepPixels": [
+          12.3922,
+          6.4443
+        ],
+        "maxAdjacentColorSeamChange": 35.9164,
+        "middleSeamChanges": [
+          28.5416,
+          27.7713
+        ],
+        "intermediateAreaMinMax": [
+          1126,
+          1385
+        ],
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      },
+      "curve_s1p5_width_s3": {
+        "maxAdjacentLocalRGBMAE": 7.7853,
+        "maxAdjacentGlobalRGBMAE": 6.865,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.39,
+        "middleRootCrossingStepPixels": [
+          12.39,
+          6.4253
+        ],
+        "maxAdjacentColorSeamChange": 29.8854,
+        "middleSeamChanges": [
+          27.0737,
+          29.8854
+        ],
+        "intermediateAreaMinMax": [
+          1115,
+          1367
+        ],
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      },
+      "curve_s3_width_s6": {
+        "maxAdjacentLocalRGBMAE": 7.763,
+        "maxAdjacentGlobalRGBMAE": 6.8562,
+        "maxAdjacentDISLocalRGBMAE": 7.9475,
+        "maxAdjacentDISGlobalRGBMAE": 6.6299,
+        "maxAdjacentRootCrossingStepPixels": 12.3782,
+        "middleRootCrossingStepPixels": [
+          12.3782,
+          6.3537
+        ],
+        "maxAdjacentColorSeamChange": 40.3848,
+        "middleSeamChanges": [
+          27.6981,
+          40.3848
+        ],
+        "intermediateAreaMinMax": [
+          1103,
+          1362
+        ],
+        "allNativeKeysExact": true,
+        "allMidframesHaveCrownCrossing": true,
+        "allMidframesSingleComponent": true,
+        "allDeepBodyExact": true
+      }
+    },
+    "selectedDiagnosticMethod": "curve_s1p5_width_s3",
+    "selectionRule": "Require source-key, alpha-region, root-crossing, single-component and seam continuity gates. Among candidates that do not worsen local MAE, crossing displacement or maximum seam change, minimize global RGB MAE.",
+    "finding": "Local centerline and source-width Gaussian regularization was tested on the P15-194 five-feature mapping. Light joint smoothing (curve sigma 1.5, width sigma 3) reduces local maximum RGB MAE 7.8031 to 7.7853, global maximum RGB MAE 6.8688 to 6.8650, root crossing step 12.3922 to 12.3900 px, and max root color seam change 30.0628 to 29.8854. Stronger sigma 3/6 smoothing improves temporal MAE further but worsens seam change to 40.3848. The chosen candidate does not meet DIS global temporal baseline 6.6299; source landmark semantics and final visual acceptance remain pending.",
+    "allNativeKeysExact": true,
+    "allDeepBodyExact": true,
+    "allMidframesSingleComponent": true,
+    "allMidframesHaveCrownCrossing": true,
+    "localTemporalBetterThanP15194": true,
+    "globalTemporalBeatsDIS": false,
+    "sourceShoulderSemanticIdentityApproved": false,
+    "visualAccepted": false,
+    "productionRendererUpdated": false,
+    "acceptanceGate": {
+      "allNativeKeysExact": true,
+      "allDeepBodyExact": true,
+      "allMidframesSingleComponent": true,
+      "allMidframesHaveCrownCrossing": true,
+      "localTemporalBetterThanP15194": true,
+      "globalTemporalBeatsDIS": false,
+      "rootAndSeamNotWorse": true,
+      "sourceShoulderSemanticIdentityApproved": false,
+      "visualAccepted": false,
+      "passes": false
+    },
+    "evidence": [
+      "evidence/p15-195-width-curvature-regularization-qa.json"
+    ],
+    "review": "private-assets/exports/p15-195-width-curvature-regularization/index.html",
+    "assets": "private-assets/exports/p15-195-width-curvature-regularization/",
+    "next": "Check source-identity validity of the 112.5-degree exit shoulder and analyze the actual middle-key visual mismatch in full-resolution alpha/paint. Use targeted geometry correction and compare source-key transitions with global DIS; only adopt a production method when both visual and temporal gates are satisfied."
   }
 }
